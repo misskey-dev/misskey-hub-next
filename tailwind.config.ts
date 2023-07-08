@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss"
 import defaultTheme from "tailwindcss/defaultTheme";
 
 export default <Config> {
+  darkMode: 'class',
   content: [
     './components/**/*.{js,vue,ts}',
     "./layouts/**/*.vue",
@@ -30,6 +31,7 @@ export default <Config> {
       },
     },
     fontFamily: {
+      'title': ['Capriola', 'GenJyuuGothicX', ...defaultTheme.fontFamily.sans],
       'sans': ['Nunito', 'GenJyuuGothicX', ...defaultTheme.fontFamily.sans],
       'content-sans': ['Nunito', 'GenJyuuGothicXP', ...defaultTheme.fontFamily.sans],
     }

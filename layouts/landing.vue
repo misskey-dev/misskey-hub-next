@@ -3,8 +3,7 @@ const isNavOpen = ref<boolean>(false);
 </script>
 <template>
     <div>
-        <GNav @toggleNav="isNavOpen = !isNavOpen" :is-open="isNavOpen" />
-        <div class="main-content overflow-x-hidden">
+        <div class="main-content">
             <slot></slot>
         </div>
         <GFooter />

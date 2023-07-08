@@ -11,13 +11,14 @@ export default defineNuxtConfig({
 	modules: [
 		'@nuxt/content',
 		'@nuxtjs/i18n',
+		'@nuxtjs/color-mode',
 	],
 	app: {
 		head: {
 			link: [
 				{ rel: 'preconnect', href: 'https://fonts.googleapis.com' },
 				{ rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap' },
+				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Capriola&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap' },
 				{ rel: 'stylesheet', href: '/fonts/fonts.css' },
 			],
 		},
@@ -25,11 +26,18 @@ export default defineNuxtConfig({
 	i18n: {
 		vueI18n: './i18n.config.ts',
 		locales: [
-			{ code: 'ja', iso: 'ja-JP' },
-			{ code: 'en', iso: 'en-US' },
+			{ code: 'ja', iso: 'ja-JP', name: '日本語' },
+			{ code: 'en', iso: 'en-US', name: 'English' },
+			{ code: 'ko', iso: 'ko-KR', name: '한국어' },
+			{ code: 'it', iso: 'it-IT', name: 'Italiano' },
+			{ code: 'pl', iso: 'pl-PL', name: 'Polski' },
+			{ code: 'fr', iso: 'fr-FR', name: 'Français' }
 		],
 		defaultLocale: 'ja',
 		strategy: 'prefix',
+	},
+	colorMode: {
+		classSuffix: '',
 	},
 	postcss: {
 		plugins: {

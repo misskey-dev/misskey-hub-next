@@ -1,5 +1,5 @@
 <template>
-    <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+    <div class="absolute z-0 top-0 left-0 w-full h-full overflow-hidden">
 		<div v-parallax="1.2" class="blobs object1"><Blob1 aria-hidden="true" /></div>
 		<div v-parallax="1.2" class="blobs object2"><Blob2 aria-hidden="true" /></div>
 		<div v-parallax="1.2" class="blobs object3"><Blob2 aria-hidden="true" /></div>
@@ -7,20 +7,11 @@
 </template>
 
 <script setup lang="ts">
-import type { Ref } from 'vue';
+import { vParallax } from '@/assets/js/parallax';
 
 import Blob1 from '@/assets/svg/top-bg-object1.svg';
 import Blob2 from '@/assets/svg/top-bg-object2.svg';
 
-const vParallax = {
-	mounted: (src: HTMLElement, binding: Ref<number>) => {
-		src.style.willChange = 'transform';
-
-		window.addEventListener('scroll', () => {
-			src.style.transform = `translateY(${window.scrollY / binding.value}px)`;
-		}, { passive: true });
-	}
-}
 </script>
 
 <style scoped>
@@ -46,6 +37,7 @@ const vParallax = {
 	left: -250px;
 	top: 500px;
 	width: 1000px;
+	opacity: .5;
 }
 
 .object2 > svg {
@@ -56,6 +48,7 @@ const vParallax = {
 	right: -300px;
 	top: 1400px;
 	width: 1000px;
+	opacity: .5;
 }
 
 .object3 > svg {
@@ -67,3 +60,4 @@ const vParallax = {
 	100% { transform: rotate(360deg); }
 }
 </style>
+assets/js/paralax

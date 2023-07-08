@@ -1,3 +1,24 @@
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before,
+.bi {
+	display: inline-block;
+	font-family: bootstrap-icons !important;
+	font-style: normal;
+	font-weight: normal !important;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	vertical-align: -.125em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.bi {
+	width: 1em;
+	height: 1em;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

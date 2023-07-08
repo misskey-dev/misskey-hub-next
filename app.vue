@@ -3,6 +3,8 @@ import type { Graph, Thing } from 'schema-dts';
 
 const { t, locale } = useI18n();
 const route = useRoute();
+const colorMode = useColorMode();
+
 const getDescription = (): string => {
     if (route.meta.description != null && route.meta.description != "") {
         return route.meta.description;
@@ -82,7 +84,7 @@ useHead((): Record<string, any> => ({
 }));
 </script>
 <template>
-	<div>
+	<div class="text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-gray-900">
 		<noscript class="block bg-accent-800 text-white text-center py-1.5 px-3 keep-all relative z-[10005]">Please turn on Javascript from your browser's settings.</noscript>
 		<NuxtLayout>
 			<NuxtPage />
