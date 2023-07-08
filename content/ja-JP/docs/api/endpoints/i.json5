@@ -1,0 +1,17 @@
+{
+	summary: '自身のアカウント情報を取得します。',
+	description: '自身のアカウント情報を取得します。',
+	tags: [
+		'account',
+	],
+	requireCredential: true,
+	req: {},
+	res: {
+		type: 'object',
+		optional: false,
+		nullable: false,
+		ref: 'MeDetailed',
+		$ref: 'misskey://MeDetailed',
+	},
+	errors: {},
+}

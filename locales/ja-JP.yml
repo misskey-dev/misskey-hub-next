@@ -1,0 +1,10 @@
+noScript: "現在Javascriptが無効になっています。サイトの表示にはJavascriptが必須となりますので有効にしてください。"
+_seo:
+  siteName: "Misskey Hub"
+  defaultTitleTagline: "ノートでひろがるネットワーク"
+  defaultDescription: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
+_landing:
+  _hero:
+    description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
+    gettingStarted: "はじめる"
+    learnMore: "詳しく知る"
