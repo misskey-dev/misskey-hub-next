@@ -31,9 +31,9 @@ export default <Config> {
       },
     },
     fontFamily: {
-      'title': ['Capriola', 'GenJyuuGothicX', ...defaultTheme.fontFamily.sans],
-      'sans': ['Nunito', 'GenJyuuGothicX', ...defaultTheme.fontFamily.sans],
-      'content-sans': ['Nunito', 'GenJyuuGothicXP', ...defaultTheme.fontFamily.sans],
+      'title': ['Capriola', 'var(--mi-localized-font, \'\')', ...defaultTheme.fontFamily.sans],
+      'sans': ['Nunito', 'var(--mi-localized-font, \'\')', ...defaultTheme.fontFamily.sans],
+      'content-sans': ['Nunito', 'var(--mi-localized-font-p, var(--mi-localized-font))', ...defaultTheme.fontFamily.sans],
     }
   },
   plugins: [],

@@ -1,4 +1,16 @@
+/** Japanese (GenjyuuGothicX) */
 @import url('./GenJyuuGothicX-Bold/GenJyuuGothicX-Bold.css');
 @import url('./GenJyuuGothicX-P-Bold/GenJyuuGothicX-P-Bold.css');
 @import url('./GenJyuuGothicX-P-Regular/GenJyuuGothicX-P-Regular.css');
 @import url('./GenJyuuGothicX-Regular/GenJyuuGothicX-Regular.css');
+/** Korean (Pretendard) */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css");
+
+html[lang='ja'] {
+    --mi-localized-font: 'GenJyuuGothicX';
+    --mi-localized-font-p: 'GenJyuuGothicXP';
+}
+
+html[lang='ko'] {
+    --mi-localized-font: 'Pretendard';
+}

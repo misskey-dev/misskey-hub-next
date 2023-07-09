@@ -1,5 +1,5 @@
 <template>
-    <div class="relative min-h-full">
+    <div class="relative min-h-full pb-24">
         <IndexHeroBg />
         <IndexHeroParticles />
         <IndexNav />
@@ -16,6 +16,7 @@
             <IndexGetStarted id="getStarted" />
             <GDots class="w-[95%] mx-auto text-accent-600" :space="30" />
             <IndexDonation />
+            <IndexSponsors />
         </main>
     </div>
 </template>

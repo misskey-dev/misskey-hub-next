@@ -19,11 +19,11 @@ export type InstanceItem = {
     /** Icon Image existance */
     icon: boolean;
     /** nodeinfo */
-    nodeinfo: Object | null,
+    nodeinfo: Record<string, any> | null,
     /** result of api/meta */
-    meta: Object | null,
+    meta: Record<string, any> | null,
 
-    stats?: Object,   //  deprecated (result of api/stats)
+    stats?: Record<string, any>,   //  deprecated (result of api/stats)
 };
 
 /** JSON Object Returned from `joinmisskey/api`. */

@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import { Loader } from '@/assets/js/particles/loader';
-import tailwindConfig from 'tailwindcss/resolveConfig';
+import resolveConfig from 'tailwindcss/resolveConfig';
 
 const colorMode = useColorMode();
 const container = ref<HTMLElement>();
@@ -16,9 +16,11 @@ const isMounted = ref<boolean>(false);
 const particleEnabled = ref<boolean>(true);
 
 const colorVars = computed<string>(() => {
-    const out = [`--c-brand: ${tailwindConfig.theme?.extend.colors.accent['600'] || '#86b300'}`]
-    if (colorMode.preference == 'dark') {
-        out.join(`--c-text: `)
+    const out = [`--c-brand: #86b300;`];
+    if (colorMode.value == 'dark') {
+        out.push(`--c-text: rgb(226 232 240);`);
+    } else {
+        out.push(`--c-text: rgb(51 65 85);`);
     }
     return out.join(' ');
 });
@@ -27,9 +29,11 @@ onMounted(() => {
     isMounted.value = true;
 });
 
+let loader: Loader;
+
 watch(container, (to) => {
     if (isMounted.value && process.client && to) {
-        const loader = new Loader(to);
+        loader = new Loader(to);
 
         window.addEventListener('scroll', () => {
             particleEnabled.value = false;
@@ -38,14 +42,15 @@ watch(container, (to) => {
             once: true,
         });
         
-
-        onUnmounted(() => {
-            setTimeout(() => {
-                loader.destroy();
-            })
-        })
     }
 })
+
+onUnmounted(() => {
+    setTimeout(() => {
+        loader.destroy();
+    }, 1);
+});
+
 </script>
 
 <style>

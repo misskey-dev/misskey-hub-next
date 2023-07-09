@@ -9,23 +9,23 @@ export default [
     },
     {
         "lang": "es",
-        "label": "español"
+        "label": "Español"
     },
     {
         "lang": "es-419",
-        "label": "español (Latinoamérica)"
+        "label": "Español (Latinoamérica)"
     },
     {
         "lang": "fr",
-        "label": "français"
+        "label": "Français"
     },
     {
         "lang": "hr",
-        "label": "hrvatski"
+        "label": "Hrvatski"
     },
     {
         "lang": "it",
-        "label": "italiano"
+        "label": "Italiano"
     },
     {
         "lang": "nl",
@@ -33,15 +33,15 @@ export default [
     },
     {
         "lang": "pl",
-        "label": "polski"
+        "label": "Polski"
     },
     {
         "lang": "pt-BR",
-        "label": "português (Brasil)"
+        "label": "Português (Brasil)"
     },
     {
         "lang": "pt-PT",
-        "label": "português (Portugal)"
+        "label": "Português (Portugal)"
     },
     {
         "lang": "vi",

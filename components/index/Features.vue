@@ -69,7 +69,7 @@ import { vFadeIn } from '@/assets/js/fadein';
 }
 
 .item > .content {
-    @apply p-5 bg-white dark:bg-slate-700 rounded-xl;
+    @apply p-5 bg-white dark:bg-slate-800 rounded-xl;
 }
 
 .item .img {

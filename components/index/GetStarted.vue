@@ -38,7 +38,7 @@ const localePath = useLocalePath();
 
 <style scoped>
 .item {
-    @apply rounded-2xl py-12 px-4 text-center bg-white dark:bg-slate-700;
+    @apply rounded-2xl py-12 px-4 text-center bg-white dark:bg-slate-800;
 }
 
 .find > .item {
@@ -54,10 +54,10 @@ const localePath = useLocalePath();
 }
 
 .item > .link {
-    @apply px-6 py-3 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors font-bold text-lg;
+    @apply px-6 py-3 rounded-lg bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors font-bold text-lg;
 }
 
 .find .link {
-    @apply text-accent-600 bg-white hover:bg-accent-100;
+    @apply text-accent-600 dark:text-slate-200 bg-white dark:bg-accent-950 hover:bg-accent-100 dark:hover:bg-accent-900;
 }
 </style>
