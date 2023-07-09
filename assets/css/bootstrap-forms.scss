@@ -1,0 +1,29 @@
+@import "bootstrap/scss/mixins/banner";
+@include bsBanner("Forms & Buttons");
+
+//$primary: #4a4c94;
+$primary: #86b300;
+
+// scss-docs-start import-stack
+// Configuration
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+// Layout & components
+@import "bootstrap/scss/root";
+
+// Breaking down form components
+@import "bootstrap/scss/forms/labels";
+@import "bootstrap/scss/forms/form-control";
+@import "bootstrap/scss/forms/form-select";
+@import "bootstrap/scss/forms/form-range";
+@import "bootstrap/scss/forms/form-check";
+@import "bootstrap/scss/forms/input-group";
+
+// button
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/button-group";

@@ -73,3 +73,28 @@ _landing:
   _donation:
     title: "寄付のお願い"
     description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
+_servers:
+  title: "サーバー一覧"
+  description: "Misskeyは単一のサービスではなく、各々がサービスを提供する分散型ネットワークとなっています。Misskeyを利用するには、サービスを提供しているサーバーでアカウントを作成する必要があります。"
+  addYourServer: "あなたのサーバーが表示されませんか？{0}から登録してください！"
+  addYourServerLink: "こちら"
+  _system:
+    fetchError: "データの読み込みに失敗しました。後でもう一度お試しください。"
+  _statistics:
+    notes: "ノート数"
+    users: "ユーザー数"
+    servers: "サーバー数"
+  _search:
+    title: "絞り込み検索"
+    all: "すべて"
+    lang: "言語"
+    orderBy: "並び替え"
+    recomendded: "デフォルト"
+    notesCount: "ノート数"
+    usersCount: "ユーザー数"
+    _registerAcceptance:
+      title: "新規登録"
+      public: "開放"
+      inviteOnly: "招待のみ"
+
+    

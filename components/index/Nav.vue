@@ -3,7 +3,7 @@
         <div class="">
             <GNuxtLink to="/" class="flex items-center space-x-2 hover:opacity-80">
                 <MiIcon class="h-8 w-8" />
-                <div class="font-title font-bold text-lg">Misskey Hub</div>
+                <div class="font-title font-bold text-lg">{{ $t('_seo.siteName') }}</div>
             </GNuxtLink>
         </div>
         <ul class="hidden lg:col-span-4 lg:space-x-8 xl:space-x-10 lg:flex justify-center">

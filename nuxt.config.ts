@@ -7,6 +7,7 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 	css: [
 		"@/assets/css/tailwind.css",
+		"@/assets/css/bootstrap-forms.scss",
 	],
 	modules: [
 		'@nuxt/content',
