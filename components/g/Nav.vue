@@ -1,5 +1,5 @@
 <template>
-    <div :class="['bg-slate-100 dark:bg-gray-900 bg-opacity-80 backdrop-blur-lg sticky top-0 z-[9900]', { 'shadow': scrollPos >= 40 }]">
+    <div :class="['bg-slate-100 dark:bg-gray-900 bg-opacity-80 backdrop-blur-lg sticky top-0 z-[9900] transition-[box-shadow]', { 'shadow': scrollPos <= -40 }]">
         <nav class="container mx-auto max-w-screen-xl h-16 lg:h-20 grid items-center grid-cols-2 md:grid-cols-4 lg:grid-cols-6 p-4">
             <div class="">
                 <GNuxtLink :to="localePath('/')" class="flex items-center space-x-2 hover:opacity-80">
@@ -9,7 +9,7 @@
             </div>
             <ul class="hidden lg:col-span-4 lg:space-x-8 xl:space-x-10 lg:flex justify-center">
                 <li v-for="item in NavData.center">
-                    <GNuxtLink :to="localePath(item.to)" :class="['rounded-full px-4 py-1.5 hover:bg-slate-300 dark:hover:bg-slate-800 hover:bg-opacity-50 bg-blend-multiply', { 'bg-slate-200 dark:bg-slate-800': path.includes(item.to) }]">
+                    <GNuxtLink :to="localePath(item.to)" :class="['rounded-full px-4 py-1.5 hover:bg-slate-300 dark:hover:bg-slate-800 hover:bg-opacity-50 bg-blend-multiply', { 'bg-slate-200 dark:bg-slate-800': path.replace(/\/$/, '') === localePath(item.to).replace(/\/$/, '') }]">
                         <component v-if="item.icon" :is="item.icon" class="h-5 w-5" />
                         <template v-else>
                             {{ $t(item.i18n) }}
@@ -79,20 +79,19 @@ function rotateColorMode() {
 
 const scrollPos = ref(0);
 
-function updatePos() {
-    scrollPos.value = window.screenY;
+async function updatePos() {
+    scrollPos.value = document.body.getBoundingClientRect().y;
 }
-onMounted(() => {
-    if (process.client) {
-        window.addEventListener('scroll', updatePos());
-        window.addEventListener('resize', updatePos());
-    }
-});
+
+if (process.client) {
+    window.addEventListener('scroll', updatePos);
+    window.addEventListener('resize', updatePos);
+}
 
 onUnmounted(() => {
     if (process.client) {
-        window.removeEventListener('scroll', updatePos());
-        window.removeEventListener('resize', updatePos());
+        window.removeEventListener('scroll', updatePos);
+        window.removeEventListener('resize', updatePos);
     }
 });
 </script>

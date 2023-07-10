@@ -100,4 +100,5 @@ _servers:
     public: "開放"
     inviteOnly: "招待のみ"
   _list:
+    notFound: "指定された条件に合致するサーバーは見つかりませんでした。"
     showMore: "もっと見る"    
