@@ -101,4 +101,10 @@ _servers:
     inviteOnly: "招待のみ"
   _list:
     notFound: "指定された条件に合致するサーバーは見つかりませんでした。"
-    showMore: "もっと見る"    
+    showMore: "もっと見る"
+_docs:
+  title: "ドキュメント"
+  description: "Misskeyの上手なつかいかたから、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
+_blog:
+  title: "ブログ"
+  description: "Misskey開発本部から、Misskeyに関する最新情報やTips等をお届けします！"

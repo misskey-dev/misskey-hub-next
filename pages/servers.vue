@@ -29,7 +29,7 @@
                 </div>
             </template>
         </GHero>
-        <div class="my-12 pt-6 bg-white dark:bg-slate-950">
+        <div class="mb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
             <div class="container mx-auto max-w-screen-xl px-6 grid server-list gap-8">
                 <aside class="hidden lg:block">
                     <div class="sticky top-24 py-2 space-y-4">

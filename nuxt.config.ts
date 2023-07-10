@@ -4,7 +4,6 @@ import svgLoader from 'vite-svg-loader';
 import genSitemap from './scripts/gen-sitemap';
 
 export default defineNuxtConfig({
-	devtools: { enabled: true },
 	css: [
 		"@/assets/css/tailwind.css",
 		"@/assets/css/bootstrap-forms.scss",

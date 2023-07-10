@@ -18,7 +18,7 @@ const props = withDefaults(defineProps<({
     to: string;
 }) & {
     /** 色設定 */
-    color: 'accent' | 'plain';
+    color?: 'accent' | 'plain';
 }>(), {
     color: 'plain',
 });
