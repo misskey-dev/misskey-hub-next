@@ -113,7 +113,7 @@ Just `NODE_ENV=production pnpm run start`. GLHF!
 
 2. Edit it, and paste this and save:
 
-	:::details
+	:::g-details
 	```
 	[Unit]
 	Description=Misskey daemon
@@ -149,7 +149,7 @@ You can check if the service is running with `systemctl status misskey`.
 
 1. Copy the following text to `/etc/init.d/misskey`:
 
-	:::details
+	:::g-details
 	```sh
 	#!/sbin/openrc-run
 

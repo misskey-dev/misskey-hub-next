@@ -1,0 +1,59 @@
+<template>
+    <ul class="flex flex-wrap p-4" :class="$style.localNavRoot">
+        <li v-for="item in items">
+            <button v-if="item.anchor" class="hover:text-slate-950 focus:text-slate-950 dark:hover:text-slate-200 dark:focus:text-slate-200 " @click="scrollTo(item.anchor)">
+                {{ item.name }}
+                <ArrowIco class="ml-2 stroke-1 stroke-current" />
+            </button>
+        </li>
+    </ul>
+</template>
+<script setup lang="ts">
+import ArrowIco from 'bi/arrow-down.svg';
+
+interface LocalNavItem {
+    name: string;
+    to?: string;
+    anchor?: string;
+}
+
+const props = defineProps<{
+    items: LocalNavItem[]
+}>();
+
+function scrollTo(qs: string): void {
+    if (process.client) {
+        document.querySelector<HTMLElement>(`${qs} a, ${qs} button, ${qs} input, ${qs} textarea`)?.focus({
+            preventScroll: true,
+        });
+        document.querySelector(qs)?.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+}
+</script>
+<style module>
+.localNavRoot li a,
+.localNavRoot li button {
+    @apply font-bold tracking-wide relative px-2 py-4 text-slate-400 transition-colors;
+}
+.localNavRoot li:not(:last-child) {
+    @apply mr-4;
+}
+
+@media (max-width: 768px) {
+    .localNavRoot li:not(:last-child) {
+        @apply mr-0;
+    }
+    .localNavRoot li a,
+    .localNavRoot li button {
+        @apply w-full text-sm text-end
+    }
+    .localNavRoot li {
+        width: calc((100% - 24px) / 2);
+    }
+    .localNavRoot li:nth-child(2n) {
+        margin-left: 24px;
+    }
+}
+</style>

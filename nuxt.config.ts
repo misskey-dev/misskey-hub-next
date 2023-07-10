@@ -3,8 +3,17 @@ import ViteYaml from '@modyfi/vite-plugin-yaml';
 import svgLoader from 'vite-svg-loader';
 import genSitemap from './scripts/gen-sitemap';
 
+// 公開時のドメイン（末尾スラッシュなし）
+const baseUrl = 'https://misskey-hub.net';
+
 export default defineNuxtConfig({
+	runtimeConfig: {
+		public: {
+			baseUrl,
+		}
+	},
 	css: [
+		"github-markdown-css/github-markdown.css",
 		"@/assets/css/tailwind.css",
 		"@/assets/css/bootstrap-forms.scss",
 	],
@@ -23,7 +32,15 @@ export default defineNuxtConfig({
 			],
 		},
 	},
+	content: {
+		navigation: {
+			fields: [
+				'date',
+			]
+		}
+	},
 	i18n: {
+		baseUrl,
 		vueI18n: './i18n.config.ts',
 		locales: [
 			{ code: 'ja', iso: 'ja-JP', name: '日本語' },

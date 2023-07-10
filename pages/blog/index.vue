@@ -15,12 +15,27 @@
                 </div>
             </template>
         </GHero>
-
+        <div class="mb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
+            <div class="container mx-auto max-w-screen-lg px-6 space-y-4 lg:space-y-2">
+                <ContentNavigation v-slot="{ navigation }" :query="blogQuery">
+                    <GNuxtLink
+                        class="block p-4 rounded-lg border border-slate-200 dark:border-accent-900 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800"
+                        v-for="item in navigation[0].children"
+                        :key="item._path"
+                        :to="localePath(item._path, 'ja')"
+                    >
+                        <h3 class="text-lg font-bold mb-2">{{ item.navTitle || item.title }}</h3>
+                        <p class="text-sm">{{ item.date ? $d(new Date(item.date)) : '' }}</p>
+                    </GNuxtLink>
+                </ContentNavigation>
+            </div>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
-
+const blogQuery = queryContent('blog').sort({ date: -1 });
+const localePath = useLocalePath();
 </script>
 
 <style scoped>

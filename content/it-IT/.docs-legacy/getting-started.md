@@ -7,7 +7,7 @@ Per entrare subito nel Fediverso, crea il tuo profilo su una delle [Istanze Miss
 :::tip
 Qualsiasi Istanza tu scelga, potrai interagire con i profili delle persone registrate su altre istanze.
 
-:::details
+:::g-details
 Misskey ha la capacità di federarsi e scambiare informazioni tramite protocollo ActivityPub.
 
 In questo modo puoi comunicare con istanze di tipo Mastodon, Pixelfed, PeerTube, Soapbox o Pleroma.

@@ -8,7 +8,7 @@ You can select an instance of your choice from the [instance list](../instances.
 :::tip
 No matter which instance you choose, you will be able to interact with users on other instances.
 
-:::details
+:::g-details
 Misskey has the ability to federate.
 
 Misskey has built-in federation support, which allows users in different instances to follow, react, and renote in the same way as users on the same instance.

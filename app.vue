@@ -4,6 +4,7 @@ import type { Graph, Thing } from 'schema-dts';
 const { t, locale } = useI18n();
 const route = useRoute();
 const colorMode = useColorMode();
+const baseUrl = useRuntimeConfig().public.baseUrl as string;
 
 const getDescription = (): string => {
     if (route.meta.description != null && route.meta.description != "") {
@@ -19,9 +20,9 @@ const getLdJson = (additionalGraphes: Thing[] = []): string => {
         "@graph": [
             {
                 "@type": "Organization",
-                "@id": "https://misskey-hub.net/#Organization",
+                "@id": `${baseUrl}/#Organization`,
                 "name": "Misskey",
-                "url": `https://misskey-hub.net/`,
+                "url": `${baseUrl}/`,
                 "sameAs": [
                     "https://join.misskey.page/",
 					"https://ja.wikipedia.org/wiki/Misskey",
@@ -29,18 +30,18 @@ const getLdJson = (additionalGraphes: Thing[] = []): string => {
                 "logo": {
                     "@type": "ImageObject",
                     // TODO
-                    "url": "https://misskey-hub.net/img/logo.png"
+                    "url": `${baseUrl}/img/logo.png`
                 }
             },
             {
                 "@type": "WebSite",
-                "@id": "https://misskey-hub.net/#WebPage",
+                "@id": `${baseUrl}/#WebPage`,
                 "name": t('_seo.siteName'),
                 "inLanguage": locale.value,
-                "url": `https://misskey-hub.net${route.path}`,
+                "url": `${baseUrl}${route.path}`,
                 "publisher": {
                     "@type": "Organization",
-                    "@id": "https://misskey-hub.net/#Organization"
+                    "@id": `${baseUrl}/#Organization`
                 },
                 "headline": getTitle(),
                 "description": getDescription()
@@ -50,6 +51,10 @@ const getLdJson = (additionalGraphes: Thing[] = []): string => {
     ldJson['@graph'] = ldJson['@graph'].concat(additionalGraphes);
     return JSON.stringify(ldJson);
 };
+
+const head = useLocaleHead({
+    addSeoAttributes: true
+});
 
 useHead((): Record<string, any> => ({
     htmlAttrs: {
@@ -73,11 +78,12 @@ useHead((): Record<string, any> => ({
         {
             property: "og:image",
             // TODO
-            content: () => route.meta.thumbnail ? route.meta.thumbnail : "https://misskey-hub.net/img/logo.jpg",
-        }
+            content: () => route.meta.thumbnail ? route.meta.thumbnail : `${baseUrl}/img/logo.jpg`,
+        },
+        ...(head.value.meta?.map((e) => ({ property: e.property, content: e.content, })) || []),
     ],
     link: [
-        { rel: "canonical", href: "https://misskey-hub.net" + route.path },
+        ...(head.value.link?.map((e) => ({ rel: e.rel, href: (e.href.endsWith('/') ? e.href : e.href + '/'), hreflang: e.hreflang, })) || []),
     ],
     script: [
         { type: "application/ld+json", children: getLdJson(route.meta.graph) }

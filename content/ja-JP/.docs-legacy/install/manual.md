@@ -76,7 +76,7 @@ NODE_ENV=production pnpm run start
 
 GLHF✨
 
-::::details systemdを用いた管理
+::::g-details{summary="systemdを用いた管理"}
 
 systemdサービスのファイルを作成
 

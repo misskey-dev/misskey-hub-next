@@ -7,5 +7,25 @@ export default defineI18nConfig(() => ({
 	messages: {
 		ja,
 		en,
+	},
+	datetimeFormats: {
+		'en-US': {
+			short: {
+				year: 'numeric', month: 'short', day: 'numeric'
+			},
+			long: {
+				year: 'numeric', month: 'short', day: 'numeric',
+				weekday: 'short', hour: 'numeric', minute: 'numeric'
+			}
+		},
+		'ja-JP': {
+			short: {
+				year: 'numeric', month: 'short', day: 'numeric'
+			},
+			long: {
+				year: 'numeric', month: 'short', day: 'numeric',
+				weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: true
+			}
+		}
 	}
 }));

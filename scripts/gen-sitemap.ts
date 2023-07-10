@@ -1,11 +1,13 @@
 import type { Nitro } from "nitropack";
+//import { useRuntimeConfig } from "nuxt/app";
 import { SitemapStream, streamToPromise, SitemapItem } from 'sitemap';
 import { Readable } from 'stream';
 import { writeFileSync } from 'fs';
 import path from 'path';
 
 // サイトドメインを指定（最後スラッシュ不要）
-const domain = "https://YOUR_DOMAIN";
+//const domain = useRuntimeConfig().public.baseUrl;
+const domain = "your-app.com";
 
 export default async function genSitemap(nitro: Nitro) {
     if (!nitro._prerenderedRoutes) {

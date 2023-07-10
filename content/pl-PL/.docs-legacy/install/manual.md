@@ -124,7 +124,7 @@ Wystarczy `NODE_ENV=production pnpm run start` i GLHF!
 
 2. Edytuj plik i wklej następujący kod:
 
- :::details
+ :::g-details
 
  ```
  [Unit]
@@ -166,7 +166,7 @@ Możesz sprawdzić działanie usługi wpisując
 
 1. Skopiuj poniższy tekst do  `/etc/init.d/misskey`:
 
- :::details
+ :::g-details
 
  ```sh
  #!/sbin/openrc-run
