@@ -105,15 +105,28 @@ _servers:
 _docs:
   title: "ドキュメント"
   description: "Misskeyの上手なつかいかたから、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
+  indexTitle: "目次ページ"
   _aboutMisskey:
     title: "Misskeyについて"
     description: "Misskeyをはじめて知ったかたや、これから使うかた向け！基本的なしくみや機能を見ていきましょう。"
+  _changelog:
+    title: "リリースノート"
+    description: "Misskeyのバージョンアップ履歴をご覧いただけます。最新のバージョンで何が変わったのかを確認しましょう！"
   _forUsers:
     title: "Misskeyユーザー向け"
   _forAdmin:
     title: "サーバー運営者向け"
   _forDevelopers:
     title: "開発者向け"
+  _toc:
+    title: "このページの内容"
+    toPageTop: "ページ上部に戻る"
 _blog:
   title: "ブログ"
   description: "Misskey開発本部から、Misskeyに関する最新情報やTips等をお届けします！（日本語のみ）"
+_other:
+  title: "お楽しみ"
+_brandAssets:
+  title: "アセット集"
+_links:
+  title: "リンク"

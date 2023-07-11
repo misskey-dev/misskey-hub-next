@@ -12,6 +12,12 @@ export default <Config> {
     "./app.vue",
     "./error.vue",
   ],
+  safelist: [
+    'scroll-pt-16',
+    'scroll-pt-20',
+    'lg:scroll-pt-4',
+    'lg:scroll-pt-24',
+  ],
   theme: {
     extend: {
       colors: {

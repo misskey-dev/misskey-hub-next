@@ -2,9 +2,19 @@
 import ViteYaml from '@modyfi/vite-plugin-yaml';
 import svgLoader from 'vite-svg-loader';
 import genSitemap from './scripts/gen-sitemap';
+import { resolve } from 'path';
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl = 'https://misskey-hub.net';
+
+const locales = [
+	{ code: 'ja', iso: 'ja-JP', name: '日本語' },
+	{ code: 'en', iso: 'en-US', name: 'English' },
+	{ code: 'ko', iso: 'ko-KR', name: '한국어' },
+	{ code: 'it', iso: 'it-IT', name: 'Italiano' },
+	{ code: 'pl', iso: 'pl-PL', name: 'Polski' },
+	{ code: 'fr', iso: 'fr-FR', name: 'Français' },
+];
 
 export default defineNuxtConfig({
 	runtimeConfig: {
@@ -33,6 +43,7 @@ export default defineNuxtConfig({
 		},
 	},
 	content: {
+		//sources: Object.fromEntries(locales.map((e) => [e.code, { driver: 'fs', prefix: `/${e.code}`, base: resolve(__dirname, `content/${e.iso}`), }])),
 		navigation: {
 			fields: [
 				'date',
@@ -42,14 +53,7 @@ export default defineNuxtConfig({
 	i18n: {
 		baseUrl,
 		vueI18n: './i18n.config.ts',
-		locales: [
-			{ code: 'ja', iso: 'ja-JP', name: '日本語' },
-			{ code: 'en', iso: 'en-US', name: 'English' },
-			{ code: 'ko', iso: 'ko-KR', name: '한국어' },
-			{ code: 'it', iso: 'it-IT', name: 'Italiano' },
-			{ code: 'pl', iso: 'pl-PL', name: 'Polski' },
-			{ code: 'fr', iso: 'fr-FR', name: 'Français' }
-		],
+		locales,
 		defaultLocale: 'ja',
 		strategy: 'prefix',
 	},

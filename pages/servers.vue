@@ -29,7 +29,7 @@
                 </div>
             </template>
         </GHero>
-        <div class="mb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
+        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
             <div class="container mx-auto max-w-screen-xl px-6 grid server-list gap-8">
                 <aside class="hidden lg:block">
                     <div class="sticky top-24 py-2 space-y-4">
@@ -90,9 +90,9 @@
                 <div>
                     <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2">
                         <ServersItem v-if="filteredInstances.length > 0" v-for="item in filteredInstances.slice(0, f_limit)" :instance="item" />
-                        <div v-else class="rounded-lg p-6 min-h-[40vh] flex items-center sm:col-span-2 md:col-span-2 lg:col-span-2 bg-slate-100">
+                        <div v-else class="rounded-lg p-6 min-h-[40vh] flex items-center sm:col-span-2 md:col-span-2 lg:col-span-2 bg-slate-100 dark:bg-slate-800">
                             <div class="mx-auto text-center">
-                                <img src="https://xn--931a.moe/assets/info.jpg" class="rounded mx-auto mb-4" />
+                                <img src="https://xn--931a.moe/assets/info.jpg" class="rounded-lg mx-auto mb-4" />
                                 <p class="max-w-xs">{{ $t('_servers._list.notFound') }}</p>
                             </div>
                         </div>

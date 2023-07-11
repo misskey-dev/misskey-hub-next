@@ -1,6 +1,6 @@
 <template>
-    <div :class="['bg-slate-100 dark:bg-gray-900 bg-opacity-80 backdrop-blur-lg sticky top-0 z-[9900] transition-[box-shadow]', { 'shadow': scrollPos <= -40 }]">
-        <nav class="container mx-auto max-w-screen-xl h-16 lg:h-20 grid items-center grid-cols-2 md:grid-cols-4 lg:grid-cols-6 p-4">
+    <div :class="['bg-slate-100 dark:bg-gray-900 bg-opacity-80 backdrop-blur-lg sticky top-0 z-[9900] transition-[box-shadow]', { 'shadow': (!disableShadow && scrollPos <= -40) }]">
+        <nav :class="['container mx-auto max-w-screen-xl  grid items-center grid-cols-2 md:grid-cols-4 lg:grid-cols-6 p-4', (slim ? 'h-16' : 'h-16 lg:h-20')]">
             <div class="">
                 <GNuxtLink :to="localePath('/')" class="flex items-center space-x-2 hover:opacity-80">
                     <MiIcon class="h-8 w-8" />
@@ -55,13 +55,21 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import MiIcon from '@/assets/svg/misskey_mi_bi.svg';
 import I18nIcon from 'bi/translate.svg';
 import SunIcon from 'bi/sun.svg';
 import MoonIcon from 'bi/moon-stars.svg';
 import DisplayIcon from 'bi/display.svg';
 import NavData from '@/assets/data/nav';
+
+const props = withDefaults(defineProps<{
+    disableShadow?: boolean;
+    slim?: boolean;
+}>(), {
+    disableShadow: false,
+    slim: false,
+});
 
 const { locales, locale: currentLocale } = useI18n();
 const { path } = useRoute();
@@ -83,13 +91,13 @@ async function updatePos() {
     scrollPos.value = document.body.getBoundingClientRect().y;
 }
 
-if (process.client) {
+if (process.client && !props.disableShadow) {
     window.addEventListener('scroll', updatePos);
     window.addEventListener('resize', updatePos);
 }
 
 onUnmounted(() => {
-    if (process.client) {
+    if (process.client && !props.disableShadow) {
         window.removeEventListener('scroll', updatePos);
         window.removeEventListener('resize', updatePos);
     }

@@ -1,11 +1,16 @@
 <script setup lang="ts">
 const isNavOpen = ref<boolean>(false);
+
+useHead({
+    htmlAttrs: {
+        class: 'scroll-pt-20 lg:scroll-pt-4',
+    },
+});
 </script>
 <template>
     <div>
         <div class="main-content">
             <slot></slot>
         </div>
-        <GFooter />
     </div>
 </template>

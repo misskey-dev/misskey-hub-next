@@ -15,7 +15,7 @@
                 </div>
             </template>
         </GHero>
-        <div class="mb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
+        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
             <div class="container mx-auto max-w-screen-xl px-6 space-y-6 lg:space-y-8">
                 <GLocalNav :items="[
                     {
@@ -31,7 +31,7 @@
                         anchor: '#forDevelopers',
                     }
                 ]" />
-                <GNuxtLink :to="useLocalePath('/docs/about')" class="rounded-xl border border-slate-200 dark:border-accent-900 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 p-4 sm:pt-0 sm:pb-0 sm:pl-6 sm:pr-0 overflow-hidden flex">
+                <GNuxtLink :to="localePath(`/docs/about-misskey`)" class="rounded-xl border border-slate-200 dark:border-accent-900 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 p-4 sm:pt-0 sm:pb-0 sm:pl-6 sm:pr-0 overflow-hidden flex">
                     <div class="flex flex-col justify-center">
                         <h2 class="text-xl sm:text-2xl font-bold mb-2">{{ $t('_docs._aboutMisskey.title') }}<ArrowRightIco class="ml-2" /></h2>
                         <p class="text-slate-500 dark:text-slate-300">{{ $t('_docs._aboutMisskey.description') }}</p>
@@ -42,9 +42,20 @@
                         <img class="relative h-full" src="/img/docs/mi_ai_docs.png" />
                     </div>
                 </GNuxtLink>
+                <GNuxtLink :to="localePath(`/docs/releases`)" class="rounded-xl border border-slate-200 dark:border-accent-900 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 p-4 sm:pt-0 sm:pb-0 sm:pl-6 sm:pr-0 overflow-hidden flex">
+                    <div class="flex flex-col justify-center">
+                        <h2 class="text-xl sm:text-2xl font-bold mb-2">{{ $t('_docs._changelog.title') }}<ArrowRightIco class="ml-2" /></h2>
+                        <p class="text-slate-500 dark:text-slate-300">{{ $t('_docs._changelog.description') }}</p>
+                    </div>
+                    <div class="hidden sm:block ml-auto flex-shrink-0 relative py-4 pr-4 h-48 w-auto">
+                        <GDots class="absolute top-0 right-0 h-20 w-20 text-accent-600" />
+                        <GDots class="absolute bottom-0 -left-2 h-14 w-20 text-accent-600" />
+                        <img class="relative h-full" src="/img/emojis/rocket_3d.png" />
+                    </div>
+                </GNuxtLink>
                 <DocsReadersNav section-id="forUsers" id="forUsers" />
-                <DocsReadersNav section-id="forAdmin" id="forAdmin" />
-                <DocsReadersNav section-id="forDevelopers" id="forDevelopers" />
+                <!--<DocsReadersNav section-id="forAdmin" id="forAdmin" />
+                <DocsReadersNav section-id="forDevelopers" id="forDevelopers" />-->
             </div>
         </div>
     </div>

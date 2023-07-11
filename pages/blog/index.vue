@@ -15,7 +15,7 @@
                 </div>
             </template>
         </GHero>
-        <div class="mb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
+        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
             <div class="container mx-auto max-w-screen-lg px-6 space-y-4 lg:space-y-2">
                 <ContentNavigation v-slot="{ navigation }" :query="blogQuery">
                     <GNuxtLink
