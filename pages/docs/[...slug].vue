@@ -2,7 +2,7 @@
     <div class="relative container mx-auto max-w-screen-xl p-6 lg:py-0 grid docs-root pb-12">
         <div class="hidden lg:block">
             <div class="sticky top-16 h-[calc(100vh-4rem)] overflow-y-scroll border-r border-slate-200 dark:border-slate-700 py-6 pr-6">
-                あ
+                <DocsAsideTree :links="navigation" />
             </div>
         </div>
         <div class="lg:p-6 w-full overflow-x-hidden">
@@ -41,6 +41,7 @@ const currentLocaleISO = () => {
 }
 
 const { data } = await useAsyncData(`blog-${locale.value}-${slugs.join('-')}`, () => queryContent(`/${locale.value}/docs/${slugs.join('/')}`).findOne());
+const { navigation } = await useAsyncData('navigation', () => fetchContentNavigation());
 
 route.meta.title = data.value?.title;
 </script>

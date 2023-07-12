@@ -21,7 +21,6 @@ let realTarget = props.target;
 
 try {
     const url = new URL(props.href);
-    console.log(url);
     if (!url.hostname || rootDomain.hostname === url.hostname) {
         realHref = localePath(realHref);
     }

@@ -18,7 +18,7 @@
             <IndexDonation />
             <IndexSponsors />
         </main>
-        <GFooter class="relative bg-transparent dark:bg-transparent" />
+        <GFooter class="relative !bg-transparent dark:!bg-transparent" />
     </div>
 </template>
 
