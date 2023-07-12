@@ -1,11 +1,20 @@
 <template>
     <div class="root bg-yellow-100 dark:bg-yellow-900 dark:bg-opacity-25 border border-yellow-200 dark:border-yellow-500 rounded-lg px-4 py-3 mb-4">
+        <div class="mb-1.5 text-sm font-sans text-orange-600 dark:text-yellow-300">
+            <GIcon :icon="'exclamation-triangle'" class="mr-1" />{{ realLabel }}
+        </div>
         <slot></slot>
     </div>
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
 
+const props = defineProps<{
+    label?: string;
+}>();
+
+const realLabel = computed(() => props.label ? props.label : t('_content.warning'));
 </script>
 
 <style scoped>
