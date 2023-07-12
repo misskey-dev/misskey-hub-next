@@ -3,13 +3,12 @@
         <li v-for="item in items">
             <button v-if="item.anchor" class="hover:text-slate-950 focus:text-slate-950 dark:hover:text-slate-200 dark:focus:text-slate-200 " @click="scrollTo(item.anchor)">
                 {{ item.name }}
-                <ArrowIco class="ml-2 stroke-1 stroke-current" />
+                <GIcon :icon="'arrow-down'" class="ml-2 stroke-1 stroke-current" />
             </button>
         </li>
     </ul>
 </template>
 <script setup lang="ts">
-import ArrowIco from 'bi/arrow-down.svg';
 
 interface LocalNavItem {
     name: string;

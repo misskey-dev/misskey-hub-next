@@ -39,7 +39,7 @@
                             <div class="input-group">
                                 <input class="form-control" type="search" autocomplete="off" id="query" v-model="f_query_partial" />
                                 <button type="submit" class="btn btn-outline-primary hover:!text-white">
-                                    <SearchIco class="stroke-[0.5] stroke-current" />
+                                    <GIcon :icon="'search'" class="stroke-[0.5] stroke-current" />
                                 </button>
                             </div>
                         </form>
@@ -59,8 +59,8 @@
                                     <option value="usersCount">{{ $t('_servers._search.usersCount') }}</option>
                                 </select>
                                 <button class="btn btn-outline-primary hover:!text-white" @click="switchOrder()">
-                                    <SortDownIco v-if="f_order === 'desc'" class="stroke-[0.5] stroke-current" />
-                                    <SortUpIco v-else class="stroke-[0.5] stroke-current" />
+                                    <GIcon :icon="'sort-down'" v-if="f_order === 'desc'" class="stroke-[0.5] stroke-current" />
+                                    <GIcon :icon="'sort-down-alt'" v-else class="stroke-[0.5] stroke-current" />
                                 </button>
                             </div>
                         </div>
@@ -97,7 +97,7 @@
                             </div>
                         </div>
                         <button v-if="f_limit < filteredInstances.length" @click="f_limit += 20" class="btn btn-outline-primary btn-lg hover:!text-white block sm:col-span-2 md:col-span-2 lg:col-span-2 px-4">
-                            <ArrowIco class="mr-1" />{{ $t('_servers._list.showMore') }}
+                            <GIcon :icon="'arrow-down-circle'" />{{ $t('_servers._list.showMore') }}
                         </button>
                     </div>
                 </div>
@@ -107,11 +107,6 @@
 </template>
 
 <script setup lang="ts">
-import SearchIco from 'bi/search.svg';
-import SortUpIco from 'bi/sort-down-alt.svg';
-import SortDownIco from 'bi/sort-down.svg';
-import ArrowIco from 'bi/arrow-down-circle.svg';
-
 import type { InstanceInfo, InstanceItem } from '@/types/instances-info';
 import { resolveObjPath } from '@/assets/js/misc';
 import langs from '@/assets/data/lang';

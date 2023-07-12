@@ -33,7 +33,7 @@
                 ]" />
                 <GNuxtLink :to="localePath(`/docs/about-misskey`)" class="rounded-xl border border-slate-200 dark:border-accent-900 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 p-4 sm:pt-0 sm:pb-0 sm:pl-6 sm:pr-0 overflow-hidden flex">
                     <div class="flex flex-col justify-center">
-                        <h2 class="text-xl sm:text-2xl font-bold mb-2">{{ $t('_docs._aboutMisskey.title') }}<ArrowRightIco class="ml-2" /></h2>
+                        <h2 class="text-xl sm:text-2xl font-bold mb-2">{{ $t('_docs._aboutMisskey.title') }}<GIcon :icon="'arrow-right'" class="ml-2" /></h2>
                         <p class="text-slate-500 dark:text-slate-300">{{ $t('_docs._aboutMisskey.description') }}</p>
                     </div>
                     <div class="hidden sm:block ml-auto flex-shrink-0 relative pt-4 pr-4 h-48 w-auto">
@@ -44,7 +44,7 @@
                 </GNuxtLink>
                 <GNuxtLink :to="localePath(`/docs/releases`)" class="rounded-xl border border-slate-200 dark:border-accent-900 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 p-4 sm:pt-0 sm:pb-0 sm:pl-6 sm:pr-0 overflow-hidden flex">
                     <div class="flex flex-col justify-center">
-                        <h2 class="text-xl sm:text-2xl font-bold mb-2">{{ $t('_docs._changelog.title') }}<ArrowRightIco class="ml-2" /></h2>
+                        <h2 class="text-xl sm:text-2xl font-bold mb-2">{{ $t('_docs._changelog.title') }}<GIcon :icon="'arrow-right'" class="ml-2" /></h2>
                         <p class="text-slate-500 dark:text-slate-300">{{ $t('_docs._changelog.description') }}</p>
                     </div>
                     <div class="hidden sm:block ml-auto flex-shrink-0 relative py-4 pr-4 h-48 w-auto">
@@ -62,8 +62,6 @@
 </template>
 
 <script setup lang="ts">
-import ArrowRightIco from 'bi/arrow-right.svg';
-
 const localePath = useLocalePath();
 </script>
 
