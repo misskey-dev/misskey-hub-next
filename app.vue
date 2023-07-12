@@ -96,5 +96,8 @@ useHead((): Record<string, any> => ({
 		<NuxtLayout>
 			<NuxtPage />
 		</NuxtLayout>
+        <ClientOnly>
+            <GAiChan />
+        </ClientOnly>
 	</div>
 </template>

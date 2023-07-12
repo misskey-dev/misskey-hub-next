@@ -143,7 +143,7 @@ vuepress標準の機能で、右上にあるやつです。各ページの見出
 ## 藍モード
 もちろん藍モードも搭載しています。藍モードを有効にすることで藍ちゃんをサイト上に召喚することが可能です。~~スマホだとそれなりに邪魔ですがそれも含めて~~お楽しみください。藍は地球を救う
 
-<button onclick="localStorage.setItem('aimode', 'true'); location.reload();">今すぐ藍モードをオンにする</button>
+:AiModeB
 
 →→→[Live2D藍ちゃん創造神](https://misskey.io/@shinamu476)←←←
 
