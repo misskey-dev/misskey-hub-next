@@ -6,8 +6,9 @@
             </div>
         </div>
         <div class="lg:p-6 w-full overflow-x-hidden">
-            <ContentRenderer :value="data" class="markdown-body w-full">
+            <ContentRenderer :value="data" class="markdown-body w-full mb-6">
             </ContentRenderer>
+            <DocsPrevNext :ignore-dir-based-nav="data?.ignoreDirBasedNav ?? false" />
         </div>
         <div class="hidden lg:block text-sm">
             <div class="sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto py-6 pl-6">
@@ -33,12 +34,6 @@ defineI18nRoute({
 
 const route = useRoute();
 const slugs = (route.params.slug as string[]).filter((v) => v !== '');
-const currentLocaleISO = () => {
-    if (!locales.value) {
-        return null;
-    }
-    return (locales.value as LocaleObject[]).find((v) => v.code === locale.value)?.iso || null;
-}
 
 const { data } = await useAsyncData(`blog-${locale.value}-${slugs.join('-')}`, () => queryContent(`/${locale.value}/docs/${slugs.join('/')}`).findOne());
 const { navigation } = await useAsyncData('navigation', () => fetchContentNavigation());
