@@ -104,5 +104,8 @@ export default defineNuxtConfig({
 		plugins: [
 			'@/server/plugins/appendComment.ts',
 		],
-	}
+	},
+	experimental: {
+		inlineSSRStyles: false,
+	},
 })
