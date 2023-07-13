@@ -21,15 +21,15 @@
                 <li>
                     <button class="text-white hover:opacity-80" @click="rotateColorMode()" aria-label="Change Color Mode">
                         <ClientOnly>
-                            <GIcon :icon="'sun'" class="h-5 w-5" v-if="colorMode.preference === 'light'" />
-                            <GIcon :icon="'moon-stars'" class="h-5 w-5" v-else-if="colorMode.preference === 'dark'" />
-                            <GIcon :icon="'display'" class="h-5 w-5" v-else />
+                            <SunIcon class="h-5 w-5" v-if="colorMode.preference === 'light'" />
+                            <MoonIcon class="h-5 w-5" v-else-if="colorMode.preference === 'dark'" />
+                            <DisplayIcon class="h-5 w-5" v-else />
                         </ClientOnly>
                     </button>
                 </li>
                 <li class="relative group">
-                    <a class="text-white hover:opacity-80" href="#"><GIcon :icon="'translate'" class="h-5 w-5" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></a>
-                    <div class="absolute top-6 right-0 hidden group-hover:block group-focus-within:block z-[9955]">
+                    <a class="text-white hover:opacity-80" href="#"><I18nIcon class="h-5 w-5" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></a>
+                    <div class="absolute top-6 right-0 hidden group-hover:block z-[9955]">
                         <ul class="px-4 py-2 bg-slate-50 dark:bg-slate-800 rounded-lg shadow-lg space-y-2">
                             <li v-for="locale in locales">
                                 <GNuxtLink :to="switchLocalePath(locale.code)" :class="['hover:text-accent-600 py-1', {'text-accent-600 font-bold': currentLocale === locale.code}]">
@@ -56,6 +56,10 @@
 
 <script setup>
 import MiIcon from '@/assets/svg/misskey_mi_bi.svg';
+import I18nIcon from 'bi/translate.svg';
+import SunIcon from 'bi/sun.svg';
+import MoonIcon from 'bi/moon-stars.svg';
+import DisplayIcon from 'bi/display.svg';
 import NavData from '@/assets/data/nav';
 
 const { locales, locale: currentLocale } = useI18n();

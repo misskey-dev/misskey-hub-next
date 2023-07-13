@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import ExtIco from 'bi/box-arrow-up-right.svg';
+
 const runtimeConfig = useRuntimeConfig();
 const rootDomain = new URL(runtimeConfig.public.baseUrl);
 const localePath = useLocalePath();
@@ -36,6 +38,6 @@ try {
 
 <template>
     <GNuxtLink :href="realHref" :target="realTarget">
-        <slot></slot><GIcon :icon="'box-arrow-up-right'" v-if="realTarget === '_blank'" class="text-xs mx-1" />
+        <slot></slot><ExtIco v-if="realTarget === '_blank'" class="text-xs mx-1" />
     </GNuxtLink>
 </template>

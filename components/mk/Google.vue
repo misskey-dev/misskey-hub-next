@@ -1,12 +1,13 @@
 <template>
     <div :class="$style.root">
         <input v-model="query" :class="$style.input" type="search" :placeholder="q">
-        <button :class="$style.button" @click="search"><GIcon :icon="'search'" /> 検索</button>
+        <button :class="$style.button" @click="search"><SearchIco /> 検索</button>
     </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import SearchIco from 'bi/search.svg';
 
 const props = defineProps<{
     q: string;
