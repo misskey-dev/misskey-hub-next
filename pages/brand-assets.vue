@@ -1,0 +1,66 @@
+<template>
+    <div>
+        <GHero>
+            <template #title>{{ $t('_brandAssets.title') }}</template>
+            <template #description>
+                {{ $t('_brandAssets.description') }}
+            </template>
+            <template #icon>
+                <div class="hidden lg:block relative px-6 py-8">
+                    <GDots class="absolute top-0 left-0 w-32 h-32 text-accent-600" />
+                    <GDots class="absolute bottom-0 right-0 w-32 h-32 text-accent-600" />
+                    <div class="relative lg:w-72">
+                        <img class="drop-shadow-xl" src="/img/emojis/artist_palette_3d.png" />
+                    </div>
+                </div>
+            </template>
+        </GHero>
+        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
+            <div class="container mx-auto max-w-screen-lg px-6 space-y-6 lg:space-y-8">
+                <GLocalNav :items="[
+                    {
+                        name: $t('_brandAssets.logo'),
+                        anchor: '#logo',
+                    },
+                    {
+                        name: $t('_brandAssets.icon'),
+                        anchor: '#icon',
+                    },
+                    {
+                        name: $t('_brandAssets.banner'),
+                        anchor: '#banner',
+                    }
+                ]" />
+                <Tip>
+                    <p class="mb-2">{{ $t('_brandAssets.license') }}</p>
+                    <NuxtLink class="inline-block" to="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" /></NuxtLink>
+                </Tip>
+                <div id="logo">
+                    <h2 class="text-2xl lg:text-3xl font-bold mb-4">{{ $t(`_brandAssets.logo`) }}</h2>
+                    <BrandAssetsImgPreview src="https://raw.githubusercontent.com/misskey-dev/assets/main/misskey.svg" />
+                </div>
+                <div id="icon">
+                    <h2 class="text-2xl lg:text-3xl font-bold mb-4">{{ $t(`_brandAssets.icon`) }}</h2>
+                    <BrandAssetsImgPreview src="https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png" />
+                </div>
+                <div id="banner">
+                    <h2 class="text-2xl lg:text-3xl font-bold mb-4">{{ $t(`_brandAssets.banner`) }}</h2>
+                    <a class="mb-4 block mx-auto" href="https://raw.githubusercontent.com/misskey-dev/assets/main/banner.png" target="_blank">
+                        <img class="border border-slate-200 dark:border-slate-800" src="https://raw.githubusercontent.com/misskey-dev/assets/main/banner.png" />
+                    </a>
+                    <a class="block mx-auto" href="https://raw.githubusercontent.com/misskey-dev/assets/main/banner-2.png" target="_blank">
+                        <img class="border border-slate-200 dark:border-slate-800" src="https://raw.githubusercontent.com/misskey-dev/assets/main/banner-2.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup lang="ts">
+
+</script>
+
+<style scoped>
+
+</style>
