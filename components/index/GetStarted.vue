@@ -15,7 +15,7 @@
 					<div class="icon"><img src="/img/emojis/package_1f4e6.png" aria-hidden="true"></div>
 					<h3 class="title">{{ $t('_landing._getStarted._create.title') }}</h3>
 					<div class="description"></div>
-					<GNuxtLink class="link" to="./docs/install.html">{{ $t('_landing._getStarted._create.guide') }}</GNuxtLink>
+					<GNuxtLink class="link">{{ $t('_landing._getStarted._create.guide') }}</GNuxtLink>
 				</div>
 			</div>
 			<div v-fade-in class="docs">
@@ -23,7 +23,7 @@
 					<div class="icon"><img src="/img/emojis/light-bulb_1f4a1.png" aria-hidden="true"></div>
 					<h3 class="title">{{ $t('_landing._getStarted._docs.title') }}</h3>
 					<div class="description"></div>
-					<GNuxtLink class="link" to="./docs/misskey.html">{{ $t('_landing._getStarted._docs.docs') }}</GNuxtLink>
+					<GNuxtLink class="link" :to="localePath('/docs/')">{{ $t('_landing._getStarted._docs.docs') }}</GNuxtLink>
 				</div>
 			</div>
         </div>
