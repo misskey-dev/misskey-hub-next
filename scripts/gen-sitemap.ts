@@ -5,15 +5,12 @@ import { Readable } from 'stream';
 import { writeFileSync } from 'fs';
 import path from 'path';
 
-// サイトドメインを指定（最後スラッシュ不要）
-//const domain = useRuntimeConfig().public.baseUrl;
-const domain = "your-app.com";
-
 export default async function genSitemap(nitro: Nitro) {
     if (!nitro._prerenderedRoutes) {
         return;
     }
 
+    const domain = nitro.options.runtimeConfig.public.baseUrl;
     const publicDir = nitro.options.output.publicDir;
 
     const routes = nitro._prerenderedRoutes?.map((e) => e.fileName || null).filter((e, i, a) => e && a.indexOf(e) === i && e.endsWith("index.html")).map((e) => {

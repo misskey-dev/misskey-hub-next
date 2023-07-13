@@ -29,7 +29,9 @@ definePageMeta({
 });
 
 defineI18nRoute({
-    locales: (locales.value as LocaleObject[]).map((e) => e.code),
+    //locales: (locales.value as LocaleObject[]).map((e) => e.code),
+    // 【一時対応】とりあえずビルドできるようにする
+    locales: ['ja'],
 });
 
 const route = useRoute();
@@ -37,6 +39,10 @@ const slugs = (route.params.slug as string[]).filter((v) => v !== '');
 
 const { data } = await useAsyncData(`blog-${locale.value}-${slugs.join('-')}`, () => queryContent(`/${locale.value}/docs/${slugs.join('/')}`).findOne());
 const { navigation } = await useAsyncData('navigation', () => fetchContentNavigation());
+
+if (!data.value) {
+    throw createError({ statusCode: 404, statusMessage: 'page not found' });
+}
 
 route.meta.title = data.value?.title;
 </script>
