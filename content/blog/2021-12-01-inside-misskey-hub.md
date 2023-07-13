@@ -135,7 +135,6 @@ vuepress標準の機能で、右上にあるやつです。各ページの見出
 自動で目次を生成してくれます。(ページ左)
 
 こんな感じでページ内に埋め込むこともできます:
-[[toc]]
 
 ### HMR
 **HMR**(Hot Module Replacementの略)は、開発中に使われる機能で、ブラウザをリロードすることなしにページ内容の変更を反映してくれます。エディタで編集し、保存するだけでリアルタイムでページに反映されるので、開発がとても快適になります。
@@ -170,24 +169,15 @@ vuepress標準の機能で、右上にあるやつです。各ページの見出
 
 参考までに、同じ文章をMarkdownとHTMLとで書いた場合の比較を載せます。
 
-<CodeGroup>
-  <CodeGroupItem title="Markdown" active>
-
-```md:no-line-numbers
+```md
 ## 静的サイト is 何
 Misskey Hub内のMisskey Hub説明ページにもあるように、Misskey Hubは[vuepress](https://v2.vuepress.vuejs.org/)を使った**静的サイト**(Static site)です。
 ```
 
-  </CodeGroupItem>
-  <CodeGroupItem title="HTML">
-
-```html:no-line-numbers
+```html
 <h2>静的サイト is 何</h2>
 <p>Misskey Hub内のMisskey Hub説明ページにもあるように、Misskey Hubは<a href="https://v2.vuepress.vuejs.org/" target="_blank">vuepress</a>を使った<strong>静的サイト</strong>(Static site)です。</p>
 ```
-
-  </CodeGroupItem>
-</CodeGroup>
 
 ## インスタンス一覧
 「プラグイン」のセクションでも触れましたが、vuepressでは、Markdownで書かれたページ以外にも、プログラムで(コンパイル時に)生成するページを用意することができます。
