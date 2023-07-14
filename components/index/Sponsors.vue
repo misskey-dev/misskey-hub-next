@@ -6,6 +6,9 @@
             <NuxtLink to="https://rss3.io/" target="_blank">
                 <img src="/img/sponsors/rss3.svg" />
             </NuxtLink>
+            <NuxtLink to="https://skeb.jp/" target="_blank">
+                <img src="/img/sponsors/skeb.svg" />
+            </NuxtLink>
             <NuxtLink to="https://www.dotchain.ltd/advirth" target="_blank">
                 <img src="/img/sponsors/dcadvirth.png" />
             </NuxtLink>
