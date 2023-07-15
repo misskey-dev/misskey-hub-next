@@ -3,6 +3,7 @@
         <NuxtLink :to="`https://${instance.url}`" target="_blank">
             <div class="relative aspect-video bg-gray-200 dark:bg-gray-600">
                 <img v-if="instance.banner" :src="`https://instanceapp.misskey.page/instance-banners/${instance.url}.webp`" class="w-full h-full object-cover" />
+                <img v-else-if="instance.background" :src="`https://instanceapp.misskey.page/instance-backgrounds/${instance.url}.webp`" class="w-full h-full object-cover" />
                 <div class="absolute h-1/2 bottom-0 left-0 w-full bg-gradient-to-b from-transparent to-black text-white p-4 flex items-end">
                     <div class="h-14 w-14 min-w-0 flex-shrink-0 mr-4">
                         <img v-if="instance.icon" :src="`https://instanceapp.misskey.page/instance-icons/${instance.url}.webp`" class="w-full h-full" />
