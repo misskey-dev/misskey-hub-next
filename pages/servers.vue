@@ -12,7 +12,7 @@
                 <div class="relative px-6 py-8">
                     <GDots class="absolute top-0 left-0 w-32 h-32 text-accent-600" />
                     <GDots class="absolute bottom-0 right-0 w-32 h-32 text-accent-600" />
-                    <div class="relative bg-white dark:bg-slate-800 shadow-lg rounded-lg lg:w-72 p-6 space-y-4">
+                    <div class="relative bg-white dark:bg-slate-800 shadow-lg rounded-lg lg:w-64 p-6 space-y-4">
                         <dl>
                             <dt>{{ $t('_servers._statistics.notes') }}</dt>
                             <dd class="font-bold text-accent-600 text-2xl">{{ instancesStats?.notesCount?.toLocaleString() || $t('loading') }}</dd>

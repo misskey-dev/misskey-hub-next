@@ -38,7 +38,7 @@ import { vParallax } from '@/assets/js/parallax';
 }
 
 .screenshot.desktop {
-    width: 800px;
+    width: 750px;
     top: 128px;
     right: 300px;
 }
