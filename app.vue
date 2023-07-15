@@ -72,6 +72,10 @@ useHead((): Record<string, any> => ({
             content: getTitle(),
         },
         {
+            property: "og:site_name",
+            content: t('_seo.siteName'),
+        },
+        {
             property: "og:description",
             content: getDescription(),
         },
