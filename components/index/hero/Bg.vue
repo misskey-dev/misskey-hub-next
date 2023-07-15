@@ -30,6 +30,7 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 }
 
 .object1 > svg {
+	@apply invisible lg:visible;
 	animation: 60s linear 0s infinite normal none running spin;
 }
 

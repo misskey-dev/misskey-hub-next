@@ -10,6 +10,7 @@
 </template>
 <script setup lang="ts">
 import ArrowIco from 'bi/arrow-down.svg';
+import { scrollTo } from '@/assets/js/scroll-to';
 
 interface LocalNavItem {
     name: string;
@@ -21,16 +22,6 @@ const props = defineProps<{
     items: LocalNavItem[]
 }>();
 
-function scrollTo(qs: string): void {
-    if (process.client) {
-        document.querySelector<HTMLElement>(`${qs} a, ${qs} button, ${qs} input, ${qs} textarea`)?.focus({
-            preventScroll: true,
-        });
-        document.querySelector(qs)?.scrollIntoView({
-            behavior: "smooth"
-        });
-    }
-}
 </script>
 <style module>
 .localNavRoot li a,

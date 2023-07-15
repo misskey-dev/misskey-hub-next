@@ -1,7 +1,7 @@
 <template>
-	<div class="relative space-y-6">
-        <MkLogo class="block mx-auto lg:ml-0 w-full max-w-[250px]" />
-		<h2 ref="tagline" class="text-center font-title lg:text-start font-bold tracking-wide text-3xl sm:text-5xl md:text-6xl leading-relaxed sm:leading-relaxed md:leading-relaxed" id="tagline">
+	<div class="relative space-y-3 lg:space-y-6">
+        <MkLogo class="block mx-auto lg:ml-0 w-full max-w-[120px] lg:max-w-[250px]" />
+		<h2 ref="tagline" class="text-center font-title lg:text-start font-bold tracking-wide text-3xl sm:text-5xl lg:text-6xl leading-relaxed sm:leading-relaxed lg:leading-relaxed" id="tagline">
 			<div class="row">Interplanetary</div>
 			<div class="row">microblogging</div>
 			<div class="row">platform.🚀</div>
@@ -11,12 +11,18 @@
 			<GButton button-type="button" color="accent" @click="scrollTo('#getStarted')">{{ $t('_landing._hero.gettingStarted') }}</GButton>
 			<GButton button-type="button" @click="scrollTo('#learnMore')">{{ $t('learnMore') }}</GButton>
 		</div>
+		<div class="lg:hidden relative py-6">
+			<GDots class="dots w-40 h-40 top-0 left-6" />
+			<GDots class="dots w-40 h-40 bottom-0 right-6" />
+			<img class="relative mx-auto rounded-lg max-w-[240px]" src="/img/hero/screenshot-mobile.png" />
+		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
 import MkLogo from '@/assets/svg/misskey-logotype.svg';
 import { scrollTo } from '@/assets/js/scroll-to';
+import { vParallax } from 'assets/js/parallax';
 
 const tagline = ref<HTMLElement>();
 
@@ -34,9 +40,13 @@ onMounted(() => {
 
 <style scoped>
 .row {
-	@apply opacity-0 translate-x-24 transition duration-1000
+	@apply lg:opacity-0 lg:translate-x-24 transition duration-1000
 }
 .row.shown {
-	@apply opacity-100 translate-x-0;
+	@apply lg:opacity-100 lg:translate-x-0;
+}
+
+.dots {
+	@apply absolute pointer-events-none select-none text-accent-600;
 }
 </style>

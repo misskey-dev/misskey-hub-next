@@ -1,7 +1,7 @@
 <template>
     <a :href="src" target="_blank">
         <div class="p-6 prevroot">
-            <img :src="src" class="mx-auto max-w-sm" />
+            <img :src="src" class="mx-auto w-full max-w-sm" />
         </div>
     </a>
 </template>

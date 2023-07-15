@@ -1,6 +1,6 @@
 <template>
-	<div class="flex justify-between space-y-3 lg:space-y-0 items-center">
-		<div class="lg:w-2/5">
+	<div class="flex flex-col lg:flex-row justify-between items-center">
+		<div class="order-2 mt-4 lg:mt-0 lg:order-1 w-full lg:w-2/5">
 			<GNuxtLink v-if="prev && (ignoreDirBasedNav || prev._path.includes(currentDirectory))" :to="prev._path" class="rounded-lg transition-colors p-4 border dark:border-slate-800 hover:bg-slate-200 dark:hover:bg-slate-800 text-start flex justify-start items-center">
 				<div class="mr-3"><LeftIco /></div>
 				<div>
@@ -9,7 +9,7 @@
 				</div>
 			</GNuxtLink>
 		</div>
-		<div class="lg:w-2/5">
+		<div class="order-1 lg:order-2 w-full lg:w-2/5">
 			<GNuxtLink v-if="next && (ignoreDirBasedNav || prev._path.includes(currentDirectory))" :to="next._path" class="rounded-lg transition-colors p-4 border dark:border-slate-800 hover:bg-slate-200 dark:hover:bg-slate-800 text-end flex justify-end items-center">
 				<div>
 					<div class="mb-1 text-sm">{{ $t('_docs._prevNext.next') }}</div>
