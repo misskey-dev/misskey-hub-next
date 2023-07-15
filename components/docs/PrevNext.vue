@@ -10,7 +10,7 @@
 			</GNuxtLink>
 		</div>
 		<div class="order-1 lg:order-2 w-full lg:w-2/5">
-			<GNuxtLink v-if="next && (ignoreDirBasedNav || prev._path.includes(currentDirectory))" :to="next._path" class="rounded-lg transition-colors p-4 border dark:border-slate-800 hover:bg-slate-200 dark:hover:bg-slate-800 text-end flex justify-end items-center">
+			<GNuxtLink v-if="next && (ignoreDirBasedNav || next._path.includes(currentDirectory))" :to="next._path" class="rounded-lg transition-colors p-4 border dark:border-slate-800 hover:bg-slate-200 dark:hover:bg-slate-800 text-end flex justify-end items-center">
 				<div>
 					<div class="mb-1 text-sm">{{ $t('_docs._prevNext.next') }}</div>
 					<div class="font-bold text-lg">{{ next.title }}</div>
