@@ -55,7 +55,15 @@ https://example.com
 [example link](https://example.com)
 ```
 
+:::tip
+リンクテキストの前に`?`をつけると、リンクプレビューを非表示にすることができます。
+```
+?[example link](https://example.com)
+```
+:::
+
 <MfmPreview text="[example link](https://example.com)"></MfmPreview>
+
 
 ### カスタム絵文字
 コロンでカスタム絵文字名を囲むと、カスタム絵文字を表示させることができます。
