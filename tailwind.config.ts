@@ -13,9 +13,10 @@ export default <Config> {
     "./error.vue",
   ],
   safelist: [
-    'scroll-pt-16',
     'scroll-pt-20',
+    'scroll-pt-32',
     'lg:scroll-pt-4',
+    'lg:scroll-pt-20',
     'lg:scroll-pt-24',
   ],
   theme: {

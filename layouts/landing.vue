@@ -3,7 +3,7 @@ const isNavOpen = ref<boolean>(false);
 
 useHead({
     htmlAttrs: {
-        class: 'scroll-pt-20 lg:scroll-pt-4',
+        class: 'scroll-pt-20 lg:scroll-pt-24',
     },
 });
 </script>
