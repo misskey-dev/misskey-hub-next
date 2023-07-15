@@ -133,9 +133,17 @@ html.light .markdown-body {
 .markdown-body h4 > a[href^='#'],
 .markdown-body h5 > a[href^='#'],
 .markdown-body h6 > a[href^='#'] {
-	all: unset;
 	color: var(--color-fg-default);
 	cursor: pointer;
+}
+
+.markdown-body h1 > a[href^='#']:hover,
+.markdown-body h2 > a[href^='#']:hover,
+.markdown-body h3 > a[href^='#']:hover,
+.markdown-body h4 > a[href^='#']:hover,
+.markdown-body h5 > a[href^='#']:hover,
+.markdown-body h6 > a[href^='#']:hover {
+	text-decoration: none;
 }
 
 .markdown-body ul {

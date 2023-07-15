@@ -14,7 +14,7 @@ const props = defineProps({
         type: String,
         default: undefined,
         required: false
-    }
+    },
 })
 
 let realHref = props.href;
