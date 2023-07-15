@@ -1,8 +1,8 @@
 <template>
     <div class="grid features gap-12">
         <div>
-            <div class="sticky top-12">
-                <h2 class="font-title font-bold text-2xl lg:text-4xl mb-6">{{ $t('_landing._features._root.title') }}</h2>
+            <div class="lg:sticky lg:top-32">
+                <h2 class="font-title font-bold text-2xl lg:text-4xl mb-2 lg:mb-6">{{ $t('_landing._features._root.title') }}</h2>
                 <p class="text-lg">{{ $t('_landing._features._root.description') }}</p>
             </div>
         </div>

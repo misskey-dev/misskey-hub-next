@@ -44,10 +44,10 @@ export default defineNuxtConfig({
 		},
 	},
 	content: {
-		//sources: Object.fromEntries(locales.map((e) => [e.code, { driver: 'fs', prefix: `/${e.code}`, base: resolve(__dirname, `content/${e.iso}`), }])),
 		navigation: {
 			fields: [
 				'date',
+				'description',
 			]
 		}
 	},
@@ -107,5 +107,6 @@ export default defineNuxtConfig({
 	},
 	experimental: {
 		inlineSSRStyles: false,
+		payloadExtraction: true,
 	},
 })

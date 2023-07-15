@@ -1,5 +1,5 @@
 <template>
-    <div :class="['bg-slate-100 dark:bg-gray-900 bg-opacity-80 backdrop-blur-lg sticky top-0 z-[9900] transition-[box-shadow]', { 'shadow': (!disableShadow && scrollPos <= -40) }]">
+    <div :class="['sticky top-0 z-[9900] transition', { 'backdrop-blur-lg shadow bg-opacity-80': (!disableShadow && scrollPos <= -40), 'bg-slate-100 dark:bg-gray-900': (disableShadow || scrollPos <= -40) }]">
         <nav :class="['container mx-auto max-w-screen-xl grid items-center grid-cols-2 md:grid-cols-4 lg:grid-cols-6 p-4', (slim ? 'h-16' : 'h-16 lg:h-20')]">
             <div class="">
                 <GNuxtLink :to="localePath('/')" class="flex items-center space-x-2 hover:opacity-80">
@@ -20,7 +20,7 @@
             <div>
                 <ul class="hidden lg:col-span-4 lg:space-x-4 lg:flex justify-center">
                     <li>
-                        <button class="hover:opacity-80" @click="rotateColorMode()" aria-label="Change Color Mode">
+                        <button :class="['hover:opacity-80 transition-colors', { 'text-white': (landing && scrollPos >= -40) }]" @click="rotateColorMode()" aria-label="Change Color Mode">
                             <ClientOnly>
                                 <SunIcon class="h-5 w-5" v-if="colorMode.preference === 'light'" />
                                 <MoonIcon class="h-5 w-5" v-else-if="colorMode.preference === 'dark'" />
@@ -28,7 +28,7 @@
                             </ClientOnly>
                         </button>
                     </li>
-                    <li class="relative group">
+                    <li :class="['relative group transition-colors', { 'text-white': (landing && scrollPos >= -40) }]">
                         <a class="hover:opacity-80" href="#"><I18nIcon class="h-5 w-5" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></a>
                         <div class="absolute top-6 right-0 hidden group-hover:block z-[9955]">
                             <ul class="px-4 py-2 bg-slate-50 dark:bg-slate-800 rounded-lg shadow-lg space-y-1">
@@ -41,7 +41,7 @@
                         </div>
                     </li>
                     <li class="border-l"></li>
-                    <li v-for="item in NavData.right">
+                    <li v-for="item in NavData.right" :class="['transition-colors', { 'text-white': (landing && scrollPos >= -40) }]">
                         <GNuxtLink :to="item.to" class="hover:opacity-80">
                             <component v-if="item.icon" :is="item.icon" class="h-5 w-5" />
                             <template v-else>
@@ -66,9 +66,11 @@ import NavData from '@/assets/data/nav';
 const props = withDefaults(defineProps<{
     disableShadow?: boolean;
     slim?: boolean;
+    landing?: boolean;
 }>(), {
     disableShadow: false,
     slim: false,
+    landing: false,
 });
 
 const { locales, locale: currentLocale } = useI18n();

@@ -2,7 +2,7 @@
     <div class="relative min-h-full">
         <IndexHeroBg />
         <IndexHeroParticles />
-        <IndexNav />
+        <GNav :landing="true" />
         <IndexHeroRight />
         <div class="relative container mx-auto p-6 md:p-8 max-w-screen-sm lg:max-w-screen-xl">
             <IndexHeroLeft />

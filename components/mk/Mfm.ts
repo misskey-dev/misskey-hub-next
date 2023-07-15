@@ -9,8 +9,8 @@ const QUOTE_STYLE = `
 display: block;
 margin: 8px;
 padding: 6px 0 6px 12px;
-color: var(--fg);
-border-left: solid 3px var(--fg);
+color: currentColor;
+border-left: solid 3px currentColor;
 opacity: 0.7;
 `.split('\n').join(' ');
 
@@ -231,7 +231,7 @@ export default function(props: {
 			}
 
 			case 'link': {
-				return [h(NuxtLink, {
+				return [h(ProseAVue, {
 					key: Math.random(),
 					to: token.props.url,
 					rel: 'nofollow noopener',

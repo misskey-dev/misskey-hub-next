@@ -9,7 +9,7 @@ type NavItem = {
     to: string;
 } | {
     /** アイコン（svgをインポートして貼り付け） */
-    icon: FunctionalComponent;
+    icon: FunctionalComponent | string;
     /** リンク先 */
     to: string;
 };
@@ -36,6 +36,10 @@ export default <{
         {
             i18n: '_nav.blog',
             to: '/blog/',
+        },
+        {
+            i18n: '_nav.other',
+            to: '/learn-more/',
         }
     ],
     right: [

@@ -7,10 +7,10 @@
 				:key="item._path"
 				:to="localePath(item._path)"
 			>
-				<h3 class="font-bold text-lg mb-2">
+				<h3 class="font-bold !text-lg !mt-0 !mb-2">
 					{{ item.navTitle || item.title }}<ArrowRightIco class="ml-1.5" />
 				</h3>
-				<p class="text-sm opacity-80">
+				<p class="text-sm text-slate-500 dark:text-slate-400 !mb-0 truncate-box">
 					{{ item.description ?? "" }}
 				</p>
 			</GNuxtLink>
@@ -47,7 +47,6 @@ const findDeepObject = (obj: Record<string, any>, condition: (v: any) => boolean
 
 	if (obj?.children && obj.children.length > 0) {
 		for (let i = 0; i < obj.children.length; i++) {
-            console.log(obj.children[i]);
 			const result = findDeepObject(obj.children[i], condition);
 			if (result) {
 				return result;
@@ -61,4 +60,13 @@ const findDeepObject = (obj: Record<string, any>, condition: (v: any) => boolean
 const query = queryContent(realBasePath.value);
 </script>
 
-<style scoped></style>
+<style scoped>
+.truncate-box {
+	-webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    display: -webkit-box;
+}
+</style>
