@@ -47,7 +47,6 @@ const findDeepObject = (obj: Record<string, any>, condition: (v: any) => boolean
 
 	if (obj?.children && obj.children.length > 0) {
 		for (let i = 0; i < obj.children.length; i++) {
-            console.log(obj.children[i]);
 			const result = findDeepObject(obj.children[i], condition);
 			if (result) {
 				return result;

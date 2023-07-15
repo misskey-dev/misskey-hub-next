@@ -50,7 +50,6 @@ type InstancesStatsObj = {
 const instancesStats = ref<InstancesStatsObj>();
 
 function setServerStats(val: InstancesStatsObj) {
-    console.log(val);
     instancesStats.value = val;
 }
 
