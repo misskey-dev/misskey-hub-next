@@ -29,9 +29,14 @@
                 </div>
             </template>
         </GHero>
-        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
+        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950 min-h-screen">
             <ClientOnly>
                 <ServersFinder @load="setServerStats" />
+                <template #fallback>
+                    <div class="container mx-auto max-w-screen-xl p-6">
+                        <p class="text-center">{{ $t('loading') }}</p>
+                    </div>
+                </template>
             </ClientOnly>
         </div>
     </div>
@@ -57,9 +62,4 @@ route.meta.title = t('_servers.title');
 </script>
 
 <style scoped>
-@screen lg {
-    .server-list {
-        grid-template-columns: 300px 1fr;
-    }
-}
 </style>

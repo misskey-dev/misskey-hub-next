@@ -59,10 +59,15 @@
         <div>
             <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2">
                 <ServersItem v-if="filteredInstances.length > 0" v-for="item in filteredInstances.slice(0, f_limit)" :instance="item" />
-                <div v-else class="rounded-lg p-6 min-h-[40vh] flex items-center sm:col-span-2 md:col-span-2 lg:col-span-2 bg-slate-100 dark:bg-slate-800">
+                <div v-else-if="data" class="rounded-lg p-6 min-h-[40vh] flex items-center sm:col-span-2 md:col-span-2 lg:col-span-2 bg-slate-100 dark:bg-slate-800">
                     <div class="mx-auto text-center">
                         <img src="https://xn--931a.moe/assets/info.jpg" class="rounded-lg mx-auto mb-4" />
                         <p class="max-w-xs">{{ $t('_servers._list.notFound') }}</p>
+                    </div>
+                </div>
+                <div v-else class="rounded-lg p-6 min-h-[40vh] flex items-center sm:col-span-2 md:col-span-2 lg:col-span-2 bg-slate-100 dark:bg-slate-800">
+                    <div class="mx-auto text-center">
+                        <p class="max-w-xs">{{ $t('loading') }}</p>
                     </div>
                 </div>
                 <button v-if="f_limit < filteredInstances.length" @click="f_limit += 20" class="btn btn-outline-primary btn-lg hover:!text-white block sm:col-span-2 md:col-span-2 lg:col-span-2 px-4">
@@ -218,5 +223,9 @@ function switchOrder() {
 </script>
 
 <style scoped>
-
+@screen lg {
+    .server-list {
+        grid-template-columns: 300px 1fr;
+    }
+}
 </style>
