@@ -32,6 +32,6 @@
 </template>
 
 <script setup lang="ts">
-const { data } = await useAsyncData('blog', () => queryContent('blog').sort({ date: -1 }).find());
+const { data } = await useAsyncData('blog', () => queryContent('blog').only(['_path', 'navTitle', 'title', 'date']).sort({ date: -1 }).find());
 const localePath = useLocalePath();
 </script>
