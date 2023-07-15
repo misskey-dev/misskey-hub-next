@@ -7,7 +7,7 @@
         >
             <a
                 :href="`#${link.id}`"
-                @click.prevent="scrollToHeading(link.id)"
+                @click.prevent="emit('child-click'); scrollToHeading(link.id);"
                 :class="['hover:text-accent-600', activeHeadings.includes(link.id) ? 'font-bold text-accent-600' : '']"
             >
                 {{ link.text }}
@@ -33,7 +33,7 @@ const props = defineProps({
     }
 });
 
-const emit = defineEmits(['move'])
+const emit = defineEmits(['move', 'child-click']);
 
 const { activeHeadings, updateHeadings } = useScrollspy();
 
