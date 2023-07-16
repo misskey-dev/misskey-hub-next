@@ -28,8 +28,8 @@
                             </ClientOnly>
                         </button>
                     </li>
-                    <li class="relative group transition-colors">
-                        <a class="hover:opacity-80" href="#"><I18nIcon :class="['h-5 w-5', { 'text-white': (landing && scrollPos >= -40) }]" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></a>
+                    <li class="relative group">
+                        <a class="hover:opacity-80" href="#"><I18nIcon :class="['h-5 w-5 transition-colors', { 'text-white': (landing && scrollPos >= -40) }]" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></a>
                         <div class="absolute top-6 right-0 hidden group-hover:block z-[9955]">
                             <ul class="px-4 py-2 bg-slate-50 dark:bg-slate-800 rounded-lg shadow-lg space-y-1">
                                 <li v-for="locale in locales">
