@@ -20,6 +20,9 @@ devDependencies:
   '@types/node':
     specifier: ^18
     version: 18.0.0
+  '@types/rellax':
+    specifier: ^1.7.4
+    version: 1.7.4
   '@types/three':
     specifier: ^0.153.0
     version: 0.153.0
@@ -50,6 +53,9 @@ devDependencies:
   postcss:
     specifier: ^8.4.25
     version: 8.4.25
+  rellax:
+    specifier: ^1.12.1
+    version: 1.12.1
   sass:
     specifier: ^1.63.6
     version: 1.63.6
@@ -1512,6 +1518,10 @@ packages:
 
   /@types/parse5@6.0.3:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
+    dev: true
+
+  /@types/rellax@1.7.4:
+    resolution: {integrity: sha512-2WAC+xAhLuJZjm/es2L7JL9BSSRo85bwzWPxGvXInN0YtOlyTjrVgpOinUKBV4xydtQuHntXKCMdkSlO8awimw==}
     dev: true
 
   /@types/resolve@1.20.2:
@@ -5266,6 +5276,10 @@ packages:
       '@types/hast': 2.3.4
       unified: 10.1.2
       unist-util-visit: 4.1.2
+    dev: true
+
+  /rellax@1.12.1:
+    resolution: {integrity: sha512-XBIi0CDpW5FLTujYjYBn1CIbK2CJL6TsAg/w409KghP2LucjjzBjsujXDAjyBLWgsfupfUcL5WzdnIPcGfK7XA==}
     dev: true
 
   /remark-emoji@3.1.1:

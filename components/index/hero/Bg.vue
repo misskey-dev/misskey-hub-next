@@ -1,8 +1,8 @@
 <template>
     <div class="absolute z-0 top-0 left-0 w-full h-full overflow-hidden">
-		<div v-parallax="1.2" class="blobs object1"><Blob1 aria-hidden="true" /></div>
-		<div v-parallax="1.2" class="blobs object2"><Blob2 aria-hidden="true" /></div>
-		<div v-parallax="1.2" class="blobs object3"><Blob2 aria-hidden="true" /></div>
+		<div v-parallax="6" class="blobs object1"><Blob1 aria-hidden="true" /></div>
+		<div v-parallax="6" class="blobs object2"><Blob2 aria-hidden="true" /></div>
+		<div v-parallax="6" class="blobs object3"><Blob2 aria-hidden="true" /></div>
     </div>
 </template>
 

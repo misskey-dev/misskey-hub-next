@@ -1,9 +1,18 @@
+import Rellax from 'rellax';
+
+let rellax: Rellax.RellaxInstance;
+
 export const vParallax = {
 	mounted: (src: HTMLElement, binding: Ref<number>) => {
 		src.style.willChange = 'transform';
 
-		window.addEventListener('scroll', () => {
-			src.style.transform = `translateY(${window.scrollY / binding.value}px)`;
-		}, { passive: true });
+		rellax = new Rellax(src, {
+			speed: Math.pow(binding.value, 1.4) * -1,
+		});
+	},
+	unmounted: () => {
+		if (rellax) {
+			rellax.destroy();
+		}
 	}
 }
