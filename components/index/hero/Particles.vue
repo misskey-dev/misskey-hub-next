@@ -8,7 +8,6 @@
 
 <script setup lang="ts">
 import { Loader } from '@/assets/js/particles/loader';
-import resolveConfig from 'tailwindcss/resolveConfig';
 
 const colorMode = useColorMode();
 const container = ref<HTMLElement>();
