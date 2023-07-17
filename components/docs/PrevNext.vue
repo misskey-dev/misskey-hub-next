@@ -29,14 +29,16 @@ const { locale } = useI18n();
 const route = useRoute();
 const slugs = (route.params.slug as string[]).filter((v) => v !== '');
 
-withDefaults(defineProps<{
+const props = withDefaults(defineProps<{
 	ignoreDirBasedNav?: boolean;
+	isDir?: boolean;
 }>(), {
 	ignoreDirBasedNav: false,
+	isDir: false
 });
 
 const currentPath = `/${locale.value}/docs/${slugs.join('/')}`;
-const currentDirectory = `/${locale.value}/docs/${slugs.slice(0, -1).join('/')}`;
+const currentDirectory = props.isDir ? `/${locale.value}/docs/${slugs.join('/')}` : `/${locale.value}/docs/${slugs.slice(0, -1).join('/')}`;
 
 const [prev, next] = await queryContent().only(['_path', 'title']).where({ _path: { $contains: 'docs' }, _partial: false }).findSurround(currentPath);
 </script>

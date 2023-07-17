@@ -47,8 +47,8 @@
                     }
                 ]" />
                 <DocsReadersNav section-id="forUsers" id="forUsers" />
-                <!--<DocsReadersNav section-id="forAdmin" id="forAdmin" />
-                <DocsReadersNav section-id="forDevelopers" id="forDevelopers" />-->
+                <DocsReadersNav section-id="forAdmin" id="forAdmin" />
+                <DocsReadersNav section-id="forDevelopers" id="forDevelopers" />
             </div>
         </div>
     </div>
