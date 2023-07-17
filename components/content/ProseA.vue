@@ -31,7 +31,11 @@ try {
     }
 } catch(_) {
     if(realHref !== '') {
-        realHref = localePath(realHref);
+        if (!realHref.startsWith('.') || !realHref.startsWith('http')) {
+            realHref = localePath(realHref);
+        } else {
+            realHref = '../' + realHref;
+        }
     }
 }
 </script>
