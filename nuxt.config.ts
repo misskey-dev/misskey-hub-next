@@ -2,12 +2,13 @@
 import ViteYaml from '@modyfi/vite-plugin-yaml';
 import svgLoader from 'vite-svg-loader';
 import genSitemap from './scripts/gen-sitemap';
+import { genApiTranslationFiles } from './scripts/gen-api-translations';
 import { resolve } from 'path';
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl = 'https://misskey-hub.net';
 
-const locales = [
+export const locales = [
 	{ code: 'ja', iso: 'ja-JP', name: '日本語' },
 	{ code: 'en', iso: 'en-US', name: 'English' },
 	{ code: 'ko', iso: 'ko-KR', name: '한국어' },
@@ -49,7 +50,15 @@ export default defineNuxtConfig({
 				'date',
 				'description',
 			]
-		}
+		},
+		highlight: {
+			theme: {
+				// Default theme (same as single string)
+				default: 'github-light',
+				// Theme used if `html.dark`
+				dark: 'github-dark',
+			},
+		},
 	},
 	i18n: {
 		baseUrl,
@@ -104,6 +113,9 @@ export default defineNuxtConfig({
 		plugins: [
 			'@/server/plugins/appendComment.ts',
 		],
+	},
+	hooks: {
+		'build:before': genApiTranslationFiles,
 	},
 	experimental: {
 		inlineSSRStyles: false,

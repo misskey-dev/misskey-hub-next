@@ -1,6 +1,6 @@
 <template>
     <div class="relative container mx-auto max-w-screen-xl p-6 lg:py-0 grid docs-root pb-12">
-        <div class="lg:hidden sticky top-16 -mx-6 -mt-6 bg-white px-6 bg-opacity-60 backdrop-blur-lg z-[9890] border-b text-sm">
+        <div v-if="data?.body" class="lg:hidden sticky top-16 -mx-6 -mt-6 bg-white px-6 bg-opacity-60 backdrop-blur-lg z-[9890] border-b text-sm">
             <details :open="openState">
                 <summary class="py-4 cursor-pointer">{{ $t('_docs._toc.title') }}</summary>
                 <div class="pb-4 overflow-y-auto">
@@ -14,14 +14,22 @@
             </div>
         </div>
         <div class="pt-6 lg:p-6 w-full overflow-x-hidden">
-            <ContentRenderer :value="data" class="markdown-body w-full mb-6">
-            </ContentRenderer>
-            <DocsPrevNext :ignore-dir-based-nav="data?.ignoreDirBasedNav ?? false" />
+            <template v-if="data?.body">
+                <ContentRenderer v-if="data.body.children.length > 0" :value="data" class="markdown-body w-full mb-6">
+                </ContentRenderer>
+                <DocsPrevNext :ignore-dir-based-nav="data?.ignoreDirBasedNav ?? false" />
+            </template>
+            <template v-else>
+                <div class="markdown-body">
+                    <h1>{{ data?.title ?? data?._dir?.title }}</h1>
+                    <MkIndex :is-dir="data?._file?.endsWith('index.md') || (!data?._file)" />
+                </div>
+            </template>
         </div>
         <div class="hidden lg:block text-sm">
             <div class="sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto py-6 pl-6">
                 <h3 class="font-bold mb-6">{{ $t('_docs._toc.title') }}</h3>
-                <DocsTocLinks :links="data?.body.toc.links" />
+                <DocsTocLinks v-if="data?.body" :links="data?.body.toc.links" class="break-words" />
             </div>
         </div>
     </div>
@@ -49,9 +57,10 @@ const slugs = (route.params.slug as string[]).filter((v) => v !== '');
 const { data } = await useAsyncData(`blog-${locale.value}-${slugs.join('-')}`, () => queryContent(`/${locale.value}/docs/${slugs.join('/')}`).findOne());
 const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation(queryContent(`/${locale.value}/docs/${slugs[0]}`)));
 
+/*
 if (!data.value) {
     throw createError({ statusCode: 404, statusMessage: 'page not found' });
-}
+}*/
 
 route.meta.title = data.value?.title;
 </script>
