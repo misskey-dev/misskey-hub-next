@@ -10,7 +10,7 @@
         </div>
         <div class="hidden lg:block">
             <div class="sticky top-16 h-[calc(100vh-4rem)] overflow-y-scroll border-r border-slate-200 dark:border-slate-700 py-6 pr-6">
-                <DocsAsideTree :links="navigation" />
+                <DocsAsideNav :links="navigation" />
             </div>
         </div>
         <div class="pt-6 lg:p-6 w-full overflow-x-hidden">
@@ -47,7 +47,7 @@ const route = useRoute();
 const slugs = (route.params.slug as string[]).filter((v) => v !== '');
 
 const { data } = await useAsyncData(`blog-${locale.value}-${slugs.join('-')}`, () => queryContent(`/${locale.value}/docs/${slugs.join('/')}`).findOne());
-const { navigation } = await useAsyncData('navigation', () => fetchContentNavigation());
+const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation(queryContent(`/${locale.value}/docs/${slugs[0]}`)));
 
 if (!data.value) {
     throw createError({ statusCode: 404, statusMessage: 'page not found' });

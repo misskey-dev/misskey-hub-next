@@ -20,6 +20,7 @@
 
 <script setup lang="ts">
 import ArrowRightIco from "bi/arrow-right.svg";
+import { findDeepObject } from "assets/js/misc";
 
 const route = useRoute();
 const { locale } = useI18n();
@@ -39,23 +40,6 @@ const realBasePath = computed<string>(() => {
 });
 
 const localePath = useLocalePath();
-
-const findDeepObject = (obj: Record<string, any>, condition: (v: any) => boolean): Record<string, any> | null => {
-	if (condition(obj)) {
-		return obj;
-	}
-
-	if (obj?.children && obj.children.length > 0) {
-		for (let i = 0; i < obj.children.length; i++) {
-			const result = findDeepObject(obj.children[i], condition);
-			if (result) {
-				return result;
-			}
-		}
-	}
-
-	return null;
-};
 
 const query = queryContent(realBasePath.value);
 </script>
