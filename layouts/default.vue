@@ -13,6 +13,6 @@ useHead({
         <div class="main-content">
             <slot></slot>
         </div>
-        <GFooter />
+        <GFooter class="bg-white dark:bg-slate-950" />
     </div>
 </template>

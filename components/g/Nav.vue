@@ -1,6 +1,6 @@
 <template>
-    <div :class="['sticky top-0 z-[9900] transition', { 'backdrop-blur-lg shadow bg-opacity-80': (!disableShadow && scrollPos <= -40), 'bg-slate-100 dark:bg-gray-900': (disableShadow || scrollPos <= -40) }]">
-        <nav :class="['container mx-auto max-w-screen-xl grid items-center grid-cols-2 md:grid-cols-4 lg:grid-cols-6 p-4', (slim ? 'h-16' : 'h-16 lg:h-20')]">
+    <div :class="['sticky top-0 z-[9900] transition', { 'backdrop-blur-lg shadow bg-opacity-75': (!disableShadow && scrollPos <= -40), 'bg-white dark:bg-gray-950': (disableShadow || scrollPos <= -40)}, (slim ? 'h-16 border-b border-slate-300' : 'h-16 lg:h-20')]">
+        <nav :class="['container mx-auto max-w-screen-xl grid items-center grid-cols-2 md:grid-cols-4 lg:grid-cols-6 p-4 h-full transition-[height]']">
             <div class="">
                 <GNuxtLink :to="localePath('/')" class="flex items-center space-x-2 hover:opacity-80">
                     <MiIcon class="h-8 w-8" />
@@ -9,7 +9,7 @@
             </div>
             <ul class="hidden lg:col-span-4 lg:space-x-8 xl:space-x-10 lg:flex justify-center">
                 <li v-for="item in NavData.center">
-                    <GNuxtLink :to="localePath(item.to)" :class="['rounded-full px-4 py-1.5 hover:bg-slate-300 dark:hover:bg-slate-800 hover:bg-opacity-50 bg-blend-multiply', { 'bg-slate-200 dark:bg-slate-800': path.replace(/\/$/, '') === localePath(item.to).replace(/\/$/, '') }]">
+                    <GNuxtLink :to="localePath(item.to)" :class="['rounded-full px-4 py-1.5 hover:bg-slate-300 dark:hover:bg-slate-800 hover:bg-opacity-50 bg-blend-multiply', { 'bg-slate-200 dark:bg-slate-800 font-bold': currentPath.replace(/\/$/, '').includes(localePath(item.to).replace(/\/$/, '')) }]">
                         <component v-if="item.icon" :is="item.icon" class="h-5 w-5" />
                         <template v-else>
                             {{ $t(item.i18n) }}
@@ -75,6 +75,11 @@ const props = withDefaults(defineProps<{
 
 const { locales, locale: currentLocale } = useI18n();
 const { path } = useRoute();
+const { afterEach } = useRouter();
+const currentPath = ref(path);
+afterEach((to) => {
+    currentPath.value = to.path;
+})
 const switchLocalePath = useSwitchLocalePath();
 const localePath = useLocalePath();
 

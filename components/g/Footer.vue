@@ -1,6 +1,6 @@
 <template>
-    <footer class="p-4 sm:p-6 bg-white dark:bg-slate-950">
-        <div class="mx-auto max-w-screen-xl">
+    <footer class="p-6 sm:pt-12">
+        <div class="mx-auto container max-w-screen-xl">
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
                     <GNuxtLink :to="localePath('/')" class="flex items-center">
@@ -56,7 +56,7 @@
                     </div>
                 </div>
             </div>
-            <hr class="my-6 border-slate-200 sm:mx-auto dark:border-slate-700 lg:my-8" />
+            <hr class="my-6 border-slate-200 sm:mx-auto dark:border-slate-700" />
             <div class="sm:flex sm:items-center sm:justify-between">
                 <span class="text-sm text-slate-500 sm:text-center dark:text-slate-400">&copy; 2023 Misskey, syuilo, and other contributors
                 </span>
