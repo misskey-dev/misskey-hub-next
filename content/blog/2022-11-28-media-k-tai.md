@@ -1,6 +1,6 @@
 ---
 description: 'Misskeyが「ケータイ Watch」にて取り上げられました'
-createdTimeOverride: 1669593600000
+date: 2022-11-28
 ---
 
 # メディアによる紹介: ケータイ Watch

@@ -1,6 +1,6 @@
 ---
 description: 'Misskeyが「日本経済新聞」にて取り上げられました'
-createdTimeOverride: 1689465600000
+date: 2023-07-16
 ---
 
 # メディアによる紹介: 日本経済新聞

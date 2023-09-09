@@ -1,5 +1,6 @@
 ---
 description: 'Real SoundによるMisskeyプロジェクトリーダー syuiloおよびMisskey最大サーバー管理人 村上さんへのインタビューが公開されました'
+date: 2023-09-09
 ---
 
 # 被インタビュー: Real Sound

@@ -1,6 +1,6 @@
 ---
 description: '「Misskey」の商標登録が認められました'
-createdTimeOverride: 1689120000000
+date: 2023-07-12
 ---
 
 # NEWS: 「Misskey」の商標登録が認められました

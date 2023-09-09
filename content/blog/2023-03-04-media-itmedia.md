@@ -1,6 +1,6 @@
 ---
 description: 'Misskeyが「ITmedia NEWS」にて取り上げられました'
-createdTimeOverride: 1677888000000
+date: 2023-03-04
 ---
 
 # メディアによる紹介: ITmedia NEWS

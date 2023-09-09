@@ -1,5 +1,6 @@
 ---
 description: 'はてなブログがMisskeyへの記事シェアに対応'
+date: 2023-09-07
 ---
 
 # NEWS: はてなブログがMisskeyへの記事シェアに対応

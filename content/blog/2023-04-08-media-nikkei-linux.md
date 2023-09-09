@@ -1,6 +1,6 @@
 ---
 description: 'Misskeyが「日経Linux 2023年5月号」にて取り上げられました'
-createdTimeOverride: 1680912000000
+date: 2023-04-08
 ---
 
 # メディアによる紹介: 日経Linux

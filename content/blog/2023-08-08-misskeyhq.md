@@ -1,6 +1,6 @@
 ---
 description: 'Misskey最大サーバーmisskey.ioが法人化しました。'
-createdTimeOverride: 1691452800000
+date: 2023-08-08
 ---
 
 # NEWS: misskey.ioが株式会社MisskeyHQとして法人化

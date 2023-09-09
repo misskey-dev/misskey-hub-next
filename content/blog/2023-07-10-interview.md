@@ -1,6 +1,6 @@
 ---
 description: 'レバテックLABによるMisskeyプロジェクトリーダー syuiloへのインタビューが公開されました'
-createdTimeOverride: 1688947200000
+date: 2023-07-10
 ---
 
 # 被インタビュー: レバテックLAB
