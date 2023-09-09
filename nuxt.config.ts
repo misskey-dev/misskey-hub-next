@@ -66,6 +66,7 @@ export default defineNuxtConfig({
 		locales,
 		defaultLocale: 'ja',
 		strategy: 'prefix',
+		trailingSlash: true,
 	},
 	colorMode: {
 		classSuffix: '',
