@@ -18,7 +18,7 @@ Misskeyを簡単にインストールするためのシェルスクリプトが�
 3. Cloudflareアカウント（推奨）
 
 :::danger
-一度使用を始めたサーバーのドメイン・ホスト名は、決して変更しないでください！
+一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
 :::
 
 Let's Encryptの認証を試行できる回数が少ないので、サーバーのネットワークやDNSの設定を十分確認してからインストールを開始してください。
@@ -47,7 +47,7 @@ sudo apt update; sudo apt full-upgrade -y; sudo reboot
 ### 3. インストールをはじめる
 SSHを接続しなおして、Misskeyのインストールを始めましょう。
 
-ただ、インストール前に[Tips](#Tips)を読むことを強くお勧めします。
+ただ、インストール前に[Tips](#tips)を読むことを強くお勧めします。
 
 ```
 wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/ubuntu.sh -O ubuntu.sh; sudo bash ubuntu.sh

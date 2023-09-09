@@ -27,7 +27,7 @@
 [docker-compose](./docker/)なら、手作業でももうちょっと簡単に実行できるはずです。
 
 :::danger
-一度使用を始めたサーバーのドメイン・ホスト名は、決して変更しないでください！
+一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
 :::
 
 ## はじめに
@@ -137,7 +137,7 @@ Misskeyで使うユーザーを作成する。\
 （LinuxのユーザーとPostgreSQLのユーザーは別物なので、混同しないよう注意すること。）
 
 ```sql
-CREATE ROLE misskey LOGIN CREATEDB PASSWORD 'hoge';
+CREATE ROLE misskey LOGIN PASSWORD 'hoge';
 ```
 
 データベースを作成。データベース名をmk1としている。
