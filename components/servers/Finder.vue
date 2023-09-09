@@ -70,7 +70,7 @@
                         <p class="max-w-xs">{{ $t('loading') }}</p>
                     </div>
                 </div>
-                <button v-if="f_limit < filteredInstances.length" @click="f_limit += 20" class="btn btn-outline-primary btn-lg hover:!text-white block sm:col-span-2 md:col-span-2 lg:col-span-2 px-4">
+                <button v-if="f_limit < filteredInstances.length" @click="f_limit += 24" class="btn btn-outline-primary btn-lg hover:!text-white block sm:col-span-2 md:col-span-3 lg:col-span-2 px-4">
                     <ArrowIco />{{ $t('_servers._list.showMore') }}
                 </button>
             </div>
@@ -119,12 +119,12 @@ const f_orderBy = ref<MiHubSFStorage['f_orderBy']>(savedSettings?.f_orderBy ?? '
 const f_order = ref<MiHubSFStorage['f_order']>(savedSettings?.f_order ?? 'desc');
 const f_registerAcceptance = ref<MiHubSFStorage['f_registerAcceptance']>(savedSettings?.f_registerAcceptance || null);
 
-const f_limit = ref<number>(20);
+const f_limit = ref<number>(24);
 // ▲フォームデータ初期化▲
 
 // ▼フォームデータ保存処理▼
 watch([f_langs, f_orderBy, f_order, f_registerAcceptance], (to, from) => {
-    f_limit.value = 20;
+    f_limit.value = 24;
 
     const newSettings: MiHubSFStorage = {
         f_langs: to[0],
