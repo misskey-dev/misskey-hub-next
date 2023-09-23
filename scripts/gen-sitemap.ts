@@ -27,4 +27,5 @@ export default async function genSitemap(nitro: Nitro) {
     const data = await streamToPromise(smStream);
 
     writeFileSync(path.join(publicDir, 'sitemap.xml'), data.toString());
+    console.log("Sitemap was generated");
 }

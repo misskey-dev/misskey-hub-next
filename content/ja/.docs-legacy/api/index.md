@@ -54,7 +54,7 @@ UUIDを生成する。以後これを**セッションID**と呼びます。
 #### Step 2
 アプリケーション認証フォームをユーザーのブラウザで表示させる。認証フォームは、以下の形式のURLで開くことができます:
 
-```:no-line-numbers
+```
 https://{host}/miauth/{session}
 ```
 
@@ -72,7 +72,7 @@ https://{host}/miauth/{session}
 | `permission` | アプリケーションが要求する権限。<br>要求する権限を`,`で区切って列挙します。権限の一覧は[こちら](./permission.md)で確認できます。 |
 
 :::tip 例
-```:no-line-numbers
+```
 https://misskey.io/miauth/c1f6d42b-468b-4fd2-8274-e58abdedef6f?name=MyApp&callback=https%3A%2F%2Fmyapp.example.com%2Fcallback&permission=write:notes,write:following,read:drive
 ```
 :::
@@ -80,7 +80,7 @@ https://misskey.io/miauth/c1f6d42b-468b-4fd2-8274-e58abdedef6f?name=MyApp&callba
 #### Step 3
 ユーザーがアプリケーションアクセスを許可した後、次の形式のURLにPOSTリクエストすると、レスポンスとしてアクセストークンを含むJSONが返ります。
 
-```:no-line-numbers
+```
 https://{host}/api/miauth/{session}/check
 ```
 
