@@ -1,7 +1,7 @@
 <template>
     <NuxtLink
-        v-bind="rawProps"
         :to="realHref"
+        :href="undefined"
     >
         <slot></slot>
     </NuxtLink>
@@ -9,9 +9,12 @@
 
 <script setup lang="ts">
 import { parseURL, cleanDoubleSlashes, withTrailingSlash } from 'ufo';
-import { NuxtLinkProps } from 'nuxt/app';
+import { RouteLocationRaw } from '#vue-router';
 
-const rawProps = defineProps<NuxtLinkProps>();
+const rawProps = defineProps<{
+    to?: RouteLocationRaw | string;
+    href?: RouteLocationRaw | string;
+}>();
 const realHref = ref(rawProps.to ?? rawProps.href);
 
 if (realHref.value && typeof realHref.value === 'string') {
