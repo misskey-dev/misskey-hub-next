@@ -9,6 +9,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@babel/parser": "^7.22.16",
     "@modyfi/vite-plugin-yaml": "^1.0.4",
     "@nuxt/content": "^2.8.0",
     "@nuxtjs/color-mode": "^3.3.0",

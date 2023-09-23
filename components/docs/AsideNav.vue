@@ -1,61 +1,78 @@
 <template>
-    <ul class="toc-links mb-4 space-y-2">
+    <ul class="toc-links text-sm" :class="[
+        `depth-${depth}`,
+        depth === 1 ? 'mb-4' : 'mb-2',
+    ]">
         <li
-            v-for="link in findDeepObject((links[0] as NavItem), (v) => realBasePath.replace(/\/$/, '') === v?._path.replace(/\/$/, ''))?.children ?? []"
+            v-for="link in realLinks ?? []"
             :key="link.text"
-            :class="[`depth-${link.depth}`]"
+            :class="[
+                depth === 2 && 'border-l-2 flex flex-col',
+                path.includes(link._path) ? 'border-accent-500' : 'border-gray-300',
+            ]"
         >
             <GNuxtLink
                 :to="link._path"
                 @click.passive="emit('child-click');"
-                :class="['hover:text-accent-600']"
+                :class="[
+                    'block hover:text-accent-600',
+                    depth === 1 && 'text-base',
+                    depth === 2 ? 'px-2 py-1' : 'py-1',
+                    isSamePath(path, link._path) && 'text-accent-600 font-bold',
+                ]"
             >
-                {{ link.text }}
+                <div class="flex">
+                    <div v-if="link.children && link.children.filter((v) => !isSamePath(v._path, link._path)).length > 0" class="mr-2">
+                        <ArrowIco 
+                            :class="[
+                                'transition-transform',
+                                path.includes(link._path) && 'rotate-90'
+                            ]"
+                        />
+                    </div>
+                    <div>{{ link.title }}</div>
+                </div>
             </GNuxtLink>
             <AsideNav
-                class="mt-2"
-                v-if="link.children"
-                :links="link.children"
+                v-if="link.children && link.children.filter((v) => !isSamePath(v._path, link._path)).length > 0"
+                v-show="path.includes(link._path)"
+                :links="[link]"
+                :depth="depth + 1"
             />
         </li>
     </ul>
 </template>
 
 <script setup lang="ts">
-import type { PropType } from 'vue'
 import type { NavItem } from '@nuxt/content/dist/runtime/types'
-import { findDeepObject } from 'assets/js/misc';
+import { findDeepObject } from '@/assets/js/misc';
+import { isSamePath } from 'ufo';
+import ArrowIco from "bi/chevron-right.svg";
 
-const props = defineProps({
-    links: {
-        type: Array as PropType<NavItem[]>,
-        default: () => []
-    },
-    basePath: {
-        type: String,
-        default: '',
-    }
+const props = withDefaults(defineProps<{
+    links: NavItem[];
+    depth?: number;
+}>(), {
+    depth: 1,
 });
 
 const { locale } = useI18n();
-const route = useRoute();
+const { path } = useRoute();
 
-const realBasePath = computed<string>(() => {
-    if (props.basePath) {
-        return props.basePath;
+const realLinks = findDeepObject(props.links[0], (v) => {
+    if (props.depth === 1) {
+        return isSamePath(`/${locale.value}/docs/`, v._path);
+    } else {
+        return v._path.includes(props.links[0]._path);
     }
-    return route.path.replace(/^.*\/docs/, `/${locale.value}/docs`);
-});
+})?.children?.filter((v) => !isSamePath(v._path, props.links[0]._path));
 
 const emit = defineEmits(['move', 'child-click']);
 
 </script>
 
 <style scoped>
-.toc-links ::v-deep(.depth-3) {
-    @apply ml-2;
-}
-.toc-links ::v-deep(.depth-4) {
-    @apply ml-4;
+.toc-links:not(.depth-1) {
+    @apply ml-6;
 }
 </style>

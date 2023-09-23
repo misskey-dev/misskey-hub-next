@@ -160,3 +160,7 @@ _links:
   _aiChan:
     title: "藍"
     description: "Misskeyの看板娘、藍のウェブサイトです。"
+_api:
+  _permissions:
+    title: "権限"
+    description: "説明"

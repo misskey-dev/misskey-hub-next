@@ -2,7 +2,9 @@
 import { locales } from "@/nuxt.config";
 import * as misskey from "misskey-js";
 import yaml from "js-yaml";
+import fs from "fs";
 import path from "path";
+import { parse } from "@babel/parser";
 
 // オブジェクト obj1 にないキーだけを、元オブジェクトにマージする関数
 function mergeObjects(obj1: Record<string, any>, obj2: Record<string, any>): Record<string, any> {
@@ -27,6 +29,19 @@ export function genApiTranslationFiles() {
     misskey.permissions.forEach((permission) => {
         out._permissions[permission] = 'Untranslated / 未翻訳';
     });
-    
-    // エンティティ(TODO)
+
+    const endpointDTSPath = require.resolve('misskey-js', { paths: ['/built/api.types.d.ts'] });
+    /*
+    const ep = fs.readFileSync(endpointDTSPath, "utf-8");
+    const parsedEP = parse(ep, {
+        sourceType: "module",
+        plugins: [[
+            "typescript", {
+                dts: true,
+            },
+        ]],
+    });
+
+    console.log(JSON.stringify(parsedEP));
+    */
 }

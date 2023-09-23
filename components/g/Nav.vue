@@ -9,7 +9,7 @@
             </div>
             <ul class="hidden lg:col-span-4 lg:space-x-8 xl:space-x-10 lg:flex justify-center">
                 <li v-for="item in NavData.center">
-                    <GNuxtLink :to="localePath(item.to)" :class="['rounded-full px-4 py-1.5 hover:bg-slate-300 dark:hover:bg-slate-800 hover:bg-opacity-50 bg-blend-multiply', { 'bg-slate-200 dark:bg-slate-800 font-bold': currentPath.replace(/\/$/, '').includes(localePath(item.to).replace(/\/$/, '')) }]">
+                    <GNuxtLink :to="localePath(item.to)" :class="['rounded-full px-4 py-1.5 hover:bg-slate-300 dark:hover:bg-slate-800 hover:bg-opacity-50 bg-blend-multiply', { 'bg-slate-200 dark:bg-slate-800 font-bold': currentPath.includes(item.to) }]">
                         <component v-if="item.icon" :is="item.icon" class="h-5 w-5" />
                         <template v-else>
                             {{ $t(item.i18n) }}
@@ -77,9 +77,11 @@ const { locales, locale: currentLocale } = useI18n();
 const { path } = useRoute();
 const { afterEach } = useRouter();
 const currentPath = ref(path);
+
 afterEach((to) => {
     currentPath.value = to.path;
-})
+});
+
 const switchLocalePath = useSwitchLocalePath();
 const localePath = useLocalePath();
 

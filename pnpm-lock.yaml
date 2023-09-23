@@ -10,6 +10,9 @@ dependencies:
     version: 4.1.0
 
 devDependencies:
+  '@babel/parser':
+    specifier: ^7.22.16
+    version: 7.22.16
   '@modyfi/vite-plugin-yaml':
     specifier: ^1.0.4
     version: 1.0.4(vite@4.4.9)

@@ -1,3 +1,5 @@
+import type { NavItem } from '@nuxt/content/dist/runtime/types';
+
 export function resolveObjPath(o: object, s: string): any {
     s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
     s = s.replace(/^\./, '');           // strip a leading dot
@@ -40,7 +42,7 @@ export function isLocalPath(link: string, base?: string): boolean {
     
 }
 
-export const findDeepObject = (obj: Record<string, any>, condition: (v: any) => boolean): Record<string, any> | null => {
+export const findDeepObject = (obj: NavItem, condition: (v: NavItem) => boolean): NavItem | null => {
 	if (condition(obj)) {
 		return obj;
 	}
