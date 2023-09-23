@@ -3,7 +3,6 @@ import ViteYaml from '@modyfi/vite-plugin-yaml';
 import svgLoader from 'vite-svg-loader';
 import genSitemap from './scripts/gen-sitemap';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
-import { resolve } from 'path';
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl = 'https://misskey-hub.net';

@@ -16,7 +16,8 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 <style scoped>
 .blobs {
 	@apply absolute select-none pointer-events-none;
-	animation: parallax linear;
+	animation-name: parallax;
+	animation-timing-function: linear;
 	animation-timeline: scroll(root y);
 	--coefficient-parallax: 6;
 }

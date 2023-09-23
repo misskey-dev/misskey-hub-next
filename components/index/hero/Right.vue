@@ -16,7 +16,8 @@
 .dots1 {
     right: 900px;
     top: 200px;
-    animation: parallax linear;
+	animation-name: parallax;
+	animation-timing-function: linear;
 	animation-timeline: scroll(root y);
 	--coefficient-parallax: 1.4;
 }
@@ -24,7 +25,8 @@
 .dots2 {
     right: 120px;
     top: 500px;
-    animation: parallax linear;
+	animation-name: parallax;
+	animation-timing-function: linear;
 	animation-timeline: scroll(root y);
 	--coefficient-parallax: 1.5;
 }
@@ -37,7 +39,8 @@
     right: 650px;
     top: 400px;
     height: 400px;
-    animation: parallax linear;
+	animation-name: parallax;
+	animation-timing-function: linear;
 	animation-timeline: scroll(root y);
 	--coefficient-parallax: 3;
 }
@@ -46,7 +49,8 @@
     width: 750px;
     top: 128px;
     right: 300px;
-    animation: parallax linear;
+	animation-name: parallax;
+	animation-timing-function: linear;
 	animation-timeline: scroll(root y);
 	--coefficient-parallax: 2;
 }
@@ -56,7 +60,8 @@
     right: 130px;
     top: 128px;
     height: 900px;
-    animation: parallax linear;
+	animation-name: parallax;
+	animation-timing-function: linear;
 	animation-timeline: scroll(root y);
 	--coefficient-parallax: 4;
 }
