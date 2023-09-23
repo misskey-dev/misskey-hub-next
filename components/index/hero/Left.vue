@@ -22,7 +22,6 @@
 <script setup lang="ts">
 import MkLogo from '@/assets/svg/misskey-logotype.svg';
 import { scrollTo } from '@/assets/js/scroll-to';
-import { vParallax } from 'assets/js/parallax';
 
 const tagline = ref<HTMLElement>();
 

@@ -1,14 +1,13 @@
 <template>
     <div class="absolute z-0 top-0 left-0 w-full h-full overflow-hidden">
-		<div v-parallax="6" class="blobs object1"><Blob1 aria-hidden="true" /></div>
-		<div v-parallax="6" class="blobs object2"><Blob2 aria-hidden="true" /></div>
-		<div v-parallax="6" class="blobs object3"><Blob2 aria-hidden="true" /></div>
+		<div class="bg1 absolute -z-10 invisible h-[200vh]"></div>
+		<div class="blobs object1"><Blob1 aria-hidden="true" /></div>
+		<div class="blobs object2"><Blob2 aria-hidden="true" /></div>
+		<div class="blobs object3"><Blob2 aria-hidden="true" /></div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { vParallax } from '@/assets/js/parallax';
-
 import Blob1 from '@/assets/svg/top-bg-object1.svg';
 import Blob2 from '@/assets/svg/top-bg-object2.svg';
 
@@ -17,6 +16,9 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 <style scoped>
 .blobs {
 	@apply absolute select-none pointer-events-none;
+	animation: parallax linear;
+	animation-timeline: scroll(root y);
+	--coefficient-parallax: 6;
 }
 
 .blobs > svg {
@@ -60,5 +62,9 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
 }
+
+@keyframes parallax {
+	from { transform: translateY(0); }
+	to { transform: translateY(calc(var(--coefficient-parallax) * 66vh)); }
+}
 </style>
-assets/js/paralax

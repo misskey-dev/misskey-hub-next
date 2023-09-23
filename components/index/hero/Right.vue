@@ -1,16 +1,12 @@
 <template>
     <div class="absolute top-0 w-full hidden lg:block">
-		<GDots v-parallax="1.4" class="dots dots1" :space="30"/>
-		<GDots v-parallax="1.5" class="dots dots2" :space="30"/>
-		<img v-parallax="2" src="/img/hero/screenshot-desktop.png" class="screenshot desktop" alt="screenshot of Misskey in a PC browser">
-		<img v-parallax="3" src="/img/hero/screenshot-mobile.png" class="screenshot mobile" alt="screenshot of Misskey in a mobile browser">
-		<img v-parallax="4" src="/img/hero/ai.png" class="ai" alt="Ai-chan, Misskey's mascott">
+		<GDots class="dots dots1" :space="30"/>
+		<GDots class="dots dots2" :space="30"/>
+		<img src="/img/hero/screenshot-desktop.png" class="screenshot desktop" alt="screenshot of Misskey in a PC browser">
+		<img src="/img/hero/screenshot-mobile.png" class="screenshot mobile" alt="screenshot of Misskey in a mobile browser">
+		<img src="/img/hero/ai.png" class="ai" alt="Ai-chan, Misskey's mascott">
     </div>
 </template>
-
-<script setup lang="ts">
-import { vParallax } from '@/assets/js/parallax';
-</script>
 
 <style scoped>
 .dots {
@@ -20,11 +16,17 @@ import { vParallax } from '@/assets/js/parallax';
 .dots1 {
     right: 900px;
     top: 200px;
+    animation: parallax linear;
+	animation-timeline: scroll(root y);
+	--coefficient-parallax: 1.4;
 }
 
 .dots2 {
     right: 120px;
     top: 500px;
+    animation: parallax linear;
+	animation-timeline: scroll(root y);
+	--coefficient-parallax: 1.5;
 }
 
 .screenshot {
@@ -35,12 +37,18 @@ import { vParallax } from '@/assets/js/parallax';
     right: 650px;
     top: 400px;
     height: 400px;
+    animation: parallax linear;
+	animation-timeline: scroll(root y);
+	--coefficient-parallax: 3;
 }
 
 .screenshot.desktop {
     width: 750px;
     top: 128px;
     right: 300px;
+    animation: parallax linear;
+	animation-timeline: scroll(root y);
+	--coefficient-parallax: 2;
 }
 
 .ai {
@@ -48,6 +56,9 @@ import { vParallax } from '@/assets/js/parallax';
     right: 130px;
     top: 128px;
     height: 900px;
+    animation: parallax linear;
+	animation-timeline: scroll(root y);
+	--coefficient-parallax: 4;
 }
 
 @media (max-width: 1800px) {
@@ -101,5 +112,10 @@ import { vParallax } from '@/assets/js/parallax';
     .screenshot.mobile {
         right: 450px
     }
+}
+
+@keyframes parallax {
+	from { transform: translateY(0); }
+	to { transform: translateY(calc(var(--coefficient-parallax) * 66vh)); }
 }
 </style>
