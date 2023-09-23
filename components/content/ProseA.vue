@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ExtIco from 'bi/box-arrow-up-right.svg';
-import { $URL, isRelative, joinURL, cleanDoubleSlashes } from 'ufo';
+import { $URL, isRelative, joinURL } from 'ufo';
 
 const runtimeConfig = useRuntimeConfig();
 const rootDomain = new $URL(runtimeConfig.public.baseUrl);

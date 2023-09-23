@@ -4,6 +4,7 @@ import en from '@/locales/en-US.yml';
 export default defineI18nConfig(() => ({
 	legacy: false,
 	locale: 'ja',
+	fallbackLocale: 'ja',
 	messages: {
 		ja,
 		en,

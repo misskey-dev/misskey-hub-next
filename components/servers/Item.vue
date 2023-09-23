@@ -1,6 +1,6 @@
 <template>
     <div class="border border-gray-300 dark:border-gray-800 dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden focus-within:ring-2 ring-accent-500 ring-offset-2">
-        <NuxtLink :to="`https://${instance.url}`" target="_blank">
+        <GNuxtLink :to="`https://${instance.url}`" target="_blank">
             <div class="relative aspect-video bg-gray-200 dark:bg-gray-600">
                 <img v-if="instance.banner" :src="`https://instanceapp.misskey.page/instance-banners/${instance.url}.webp`" class="w-full h-full object-cover" />
                 <img v-else-if="instance.background" :src="`https://instanceapp.misskey.page/instance-backgrounds/${instance.url}.webp`" class="w-full h-full object-cover" />
@@ -31,7 +31,7 @@
                     </dl>
                 </div>
             </div>
-        </NuxtLink>
+        </GNuxtLink>
     </div>
 </template>
 

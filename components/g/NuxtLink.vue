@@ -1,29 +1,29 @@
 <template>
-    <RealNuxtLink v-bind="props">
+    <NuxtLink
+        v-bind="rawProps"
+        :to="realHref"
+    >
         <slot></slot>
-    </RealNuxtLink>
+    </NuxtLink>
 </template>
 
 <script setup lang="ts">
-import { cleanDoubleSlashes } from 'ufo';
+import { parseURL, cleanDoubleSlashes, withTrailingSlash } from 'ufo';
 import { NuxtLinkProps } from 'nuxt/app';
 
-const rawProps = defineProps();
-const props = ref<NuxtLinkProps>(Object.assign({}, rawProps));
+const rawProps = defineProps<NuxtLinkProps>();
+const realHref = ref(rawProps.to ?? rawProps.href);
 
-if (props.value.to && typeof props.value.to === 'string') {
-    props.value.to = cleanDoubleSlashes(props.value.to);
+if (realHref.value && typeof realHref.value === 'string') {
+    const runtimeConfig = useRuntimeConfig();
+    const rootDomain = parseURL(runtimeConfig.public.baseUrl);
+    const url = parseURL(realHref.value);
+
+    if (!url.host || rootDomain.host === url.host) {
+        realHref.value = withTrailingSlash(realHref.value, true);
+    }
+
+    realHref.value = cleanDoubleSlashes(realHref.value);
 }
 
-if (props.value.href && typeof props.value.href === 'string') {
-    props.value.href = cleanDoubleSlashes(props.value.href);
-}
-
-const RealNuxtLink = defineNuxtLink({
-    trailingSlash: "append",
-});
 </script>
-
-<style scoped>
-
-</style>
