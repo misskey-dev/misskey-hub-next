@@ -1,19 +1,16 @@
 <template>
-    <NuxtLayout name="docs">
-        <template #spToc>
-            <div v-if="data?.body" class="lg:hidden sticky top-16 -mx-6 -mt-6 bg-white px-6 bg-opacity-60 backdrop-blur-lg z-[9890] border-b text-sm">
-                <details :open="openState">
-                    <summary class="py-4 cursor-pointer">
-                        {{ $t('_docs._toc.title') }}
-                    </summary>
-                    <div class="pb-4 overflow-y-auto">
-                        <DocsTocLinks :links="data?.body.toc.links" @child-click="openState = false" />
-                    </div>
-                </details>
-            </div>
-        </template>
-
-        <template #main>
+    <div class="lg:grid docs-main">
+        <div v-if="data?.body" class="lg:hidden sticky top-16 -mx-6 -mt-6 bg-white px-6 bg-opacity-60 backdrop-blur-lg z-[9890] border-b text-sm">
+            <details :open="openState">
+                <summary class="py-4 cursor-pointer">
+                    {{ $t('_docs._toc.title') }}
+                </summary>
+                <div class="pb-4 overflow-y-auto">
+                    <DocsTocLinks :links="data?.body.toc.links" @child-click="openState = false" />
+                </div>
+            </details>
+        </div>
+        <div class="pt-6 lg:p-6 w-full overflow-x-hidden">
             <template v-if="data?.body">
                 <ContentRenderer v-if="data.body.children.length > 0" :value="data" class="markdown-body w-full mb-6">
                 </ContentRenderer>
@@ -25,15 +22,14 @@
                     <MkIndex :is-dir="data?._file?.endsWith('index.md') || (!data?._file)" />
                 </div>
             </template>
-        </template>
-
-        <template #left>
+        </div>
+        <div class="hidden lg:block text-sm">
             <div class="sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto py-6 pl-6">
                 <h3 class="font-bold mb-6">{{ $t('_docs._toc.title') }}</h3>
                 <DocsTocLinks v-if="data?.body" :links="data?.body.toc.links" class="break-words" />
             </div>
-        </template>
-    </NuxtLayout>
+        </div>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -43,7 +39,7 @@ const { locale, locales } = useI18n();
 const openState = ref<boolean>(false);
 
 definePageMeta({
-    layout: false,
+    layout: 'docs',
 });
 
 defineI18nRoute({
@@ -63,3 +59,11 @@ if (!data.value) {
 
 route.meta.title = data.value?.title;
 </script>
+
+<style scoped>
+@screen lg {
+    .docs-main {
+        grid-template-columns: 1fr 14rem;
+    }
+}
+</style>

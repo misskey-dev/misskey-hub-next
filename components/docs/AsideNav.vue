@@ -57,7 +57,18 @@ const props = withDefaults(defineProps<{
 });
 
 const { locale } = useI18n();
-const { path } = useRoute();
+const router = useRouter();
+const route = useRoute();
+const path = ref(route.path);
+
+router.afterEach((to) => {
+    path.value = to.path;
+});
+
+onMounted(() => {
+    const _route = useRoute();
+    path.value = _route.path;
+});
 
 const realLinks = findDeepObject(props.links[0], (v) => {
     if (props.depth === 1) {

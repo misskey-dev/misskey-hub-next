@@ -82,6 +82,11 @@ afterEach((to) => {
     currentPath.value = to.path;
 });
 
+onMounted(() => {
+    const _route = useRoute();
+    currentPath.value = _route.path;
+});
+
 const switchLocalePath = useSwitchLocalePath();
 const localePath = useLocalePath();
 
