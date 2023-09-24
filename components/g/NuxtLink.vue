@@ -15,18 +15,21 @@ const rawProps = defineProps<{
     to?: RouteLocationRaw | string;
     href?: RouteLocationRaw | string;
 }>();
-const realHref = ref(rawProps.to ?? rawProps.href);
 
-if (realHref.value && typeof realHref.value === 'string') {
-    const runtimeConfig = useRuntimeConfig();
-    const rootDomain = parseURL(runtimeConfig.public.baseUrl);
-    const url = parseURL(realHref.value);
+const realHref = computed(() => {
+    const rhf = rawProps.to ?? rawProps.href;
 
-    if (!url.host || rootDomain.host === url.host) {
-        realHref.value = withTrailingSlash(realHref.value, true);
+    if (rhf && typeof rhf === 'string') {
+        const runtimeConfig = useRuntimeConfig();
+        const rootDomain = parseURL(runtimeConfig.public.baseUrl);
+        const url = parseURL(rhf);
+
+        if (!url.host || rootDomain.host === url.host) {
+            return withTrailingSlash(rhf, true);
+        }
+
+        return cleanDoubleSlashes(rhf);
     }
-
-    realHref.value = cleanDoubleSlashes(realHref.value);
-}
+});
 
 </script>
