@@ -1,7 +1,7 @@
 <template>
     <div class="flex gap-4 mb-4" :class="direction">
         <div class="flex-shrink-0" :class="direction === 'right' && 'order-2'">
-            <div class="w-20 h-20 rounded-full bg-slate-100 dark:bg-slate-800 border-[3px] border-slate-300 dark:border-slate-500">
+            <div class="w-14 h-14 rounded-full bg-slate-100 dark:bg-slate-800 border-[3px] border-slate-300 dark:border-slate-500">
                 <img :src="`/img/docs/fukidashi/${chara}.webp`" :class="direction === 'left' && '-scale-x-100'" class="w-full h-full rounded-full object-cover" />
             </div>
             <div v-if="charaName" class="mt-1 text-sm text-center">{{ charaName }}</div>

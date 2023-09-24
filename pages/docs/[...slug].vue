@@ -1,5 +1,5 @@
 <template>
-    <div class="lg:grid docs-main">
+    <div class="grid docs-main">
         <div v-if="data?.body" class="lg:hidden sticky top-16 -mx-6 -mt-6 bg-white px-6 bg-opacity-60 backdrop-blur-lg z-[9890] border-b text-sm">
             <details :open="openState">
                 <summary class="py-4 cursor-pointer">
@@ -61,6 +61,10 @@ route.meta.title = data.value?.title;
 </script>
 
 <style scoped>
+.docs-main {
+    grid-template-columns: 1fr;
+}
+
 @screen lg {
     .docs-main {
         grid-template-columns: 1fr 14rem;
