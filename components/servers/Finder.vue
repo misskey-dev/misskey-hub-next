@@ -5,7 +5,7 @@
             :class="sortOpen ? 'translate-y-0' : 'translate-y-[calc(100%-3rem)]'"
         >
             <button
-                class="transition-[height] block w-full font-bold text-lg leading-[3rem] overflow-hidden lg:hidden text-center"
+                class="transition-[height] block w-full font-bold text-lg leading-[3rem] overflow-hidden text-center rounded-t-xl hover:bg-slate-300 dark:hover:bg-slate-700 lg:hidden"
                 :class="sortOpen ? 'h-0' : 'h-12'"
                 @click="sortOpen = true"
             >

@@ -1,0 +1,166 @@
+noScript: "Javascript is currently disabled. Please enable it as JavaScript is required for site functionality."
+learnMore: "Learn More"
+loading: "Loading..."
+_seo:
+  siteName: "Misskey Hub"
+  defaultTitleTagline: "A Network Expanding with Notes"
+  defaultDescription: "Misskey is an open-source decentralized social networking platform."
+_nav:
+  servers: "Servers"
+  docs: "Docs"
+  blog: "Blog"
+  other: "More!"
+  switchLang: "Language Settings"
+_landing:
+  _hero:
+    description: "Misskey is an open source, decentralized social media platform that's free forever!"
+    gettingStarted: "Get Started"
+  _keyFeatures:
+    _open:
+      title: "Open"
+      description: "Misskey is open-source software, and anyone can use it freely."
+    _federated:
+      title: "Federated"
+      description: "Misskey is a decentralized platform, so communities on different servers can connect with each other."
+    _multifunction:
+      title: "Powerful"
+      description: "Misskey is both easy to understand for beginners and has powerful features for advanced users."
+    _customizable:
+      title: "Highly Customizable"
+      description: "Make Misskey yours! With themes, widgets, layouts and more, you make make Misskey just the way you like it."
+  _decenterized:
+    title: "Misskey is a {0} Platform."
+    decenterizedPlatform: "Decentralized"
+    description: "Misskey is just a platform for server owners to make their own instances of Misskey, and they can all talk to each other! There's large instances for the masses, smaller ones for groups, fandoms, and subcultures, and even instances just for individuals and their friends. Want to have even more control? You can make your own instance on your server with relative ease, cutting ties from any large company who wants to spy on you and sell your data. Misskey is about community and sharing, not corporations and big tech. Have friends not on Misskey? No problem! Because Misskey is on the Fediverse ({0}), you can interact with people on other platforms like Mastodon, PixelFed, PeerTube, and more!"
+    activityPub: "ActivityPub"
+  _features:
+    _root:
+      title: "Key Features"
+      description: "Misskey offers a wide variety of unique features! Here are some highlights."
+    _note:
+      title: "Notes"
+      description: "On Misskey, user posts are called 'Notes.' Reply, quote, add custom emojis, animated text, content warnings, attach multiple images, videos, GIFs, audio clips, or anything else!"
+    _federation:
+      title: "Federation"
+      description: "Not on Misskey? No problem! Not only can Misskey instances talk to each other, but you can make friends with people on other networks like Mastodon and Pixelfed!"
+    _reaction:
+      title: "Reactions"
+      description: "You can add emoji reactions to any post! No longer are you bound by a like button, show everyone exactly how you feel with the tap of a button."
+    _drive:
+      title: "Drive"
+      description: "Hate not being able to find something you uploaded? With Drive, you get managed and powerful cloud storage right in your social media!"
+    _theme:
+      title: "Themes"
+      description: "Why be limited by just a Light or Dark theme when you can change all the colors? Use Misskey's intuitive theming functions to make Misskey just how you like it."
+    _thread:
+      title: "Threads"
+      description: "Have a lot on your mind? Make a thread! Each post can have up to 3,000 characters by default, and you can keep the conversation going for hours."
+    _charts:
+      title: "Charts"
+      description: "For those who need to see everything, Misskey has powerful charts for both users and admins to see what exactly is going on in your instance in real time."
+    _widgets:
+      title: "Widgets"
+      description: "Have everything at your fingertips with over a dozen customizable widgets!"
+  _getStarted:
+    title: "Getting Started with Misskey"
+    _find:
+      title: "Find a Server"
+      list: "Server List"
+    _create:
+      title: "Create a Server"
+      guide: "Setup Guide"
+    _docs:
+      title: "Learn More"
+      docs: "See Documentation"
+  _donation:
+    title: "Donation"
+    description: "Misskey is a non-profit project, and development funding relies on donations from users like you. If you enjoy using Misskey, please consider supporting us so that we can continue to make Misskey awesome for years to come!"
+  _sponsors:
+    title: "Sponsors"
+_servers:
+  title: "Server List"
+  description: "Misskey is not a single service but a decentralized network where individuals provide services. To use Misskey, you need to create an account on a server that offers the service."
+  addYourServer: "Is your server not listed? Please register it {0}!"
+  addYourServerLink: "here"
+  _system:
+    fetchError: "Failed to fetch data. Please try again later."
+  _statistics:
+    notes: "Notes"
+    users: "Users"
+    servers: "Servers"
+  _search:
+    title: "Advanced Search"
+    all: "All"
+    query: "Search by keyword"
+    lang: "Language"
+    orderBy: "Sort by"
+    recomendded: "Default"
+    notesCount: "Notes Count"
+    usersCount: "Users Count"
+  _registerAcceptance:
+    title: "Sign-up Policy"
+    public: "Public"
+    inviteOnly: "Invite Only"
+  _list:
+    notFound: "No servers matching the specified criteria were found."
+    showMore: "Show More"
+_docs:
+  title: "Documentation"
+  description: " Comprehensive information ranging from how to use Misskey to resources for server operators and developers."
+  indexTitle: "Table of Contents"
+  _aboutMisskey:
+    title: "About Misskey"
+    description: "A complete guide for those new to Misskey or considering using it! Let's explore the basics and features."
+  _changelog:
+    title: "Release Notes"
+    description: "View the version history of Misskey. Find out what's new in the latest version!"
+  _forUsers:
+    title: "For Misskey Users"
+  _forAdmin:
+    title: "For Server Operators"
+  _forDevelopers:
+    title: "For Developers"
+  _prevNext:
+    prev: "Previous"
+    next: "Next"
+  _toc:
+    title: "Table of Contents"
+    toPageTop: "Back to Top"
+_blog:
+  title: "Blog"
+  description: "Get the latest information and tips about Misskey straight from the Misskey Development Team! (Japanese only)"
+  back: "Back"
+_content:
+  tip: "Tips"
+  warning: "Warning"
+  danger: "Danger"
+  preview: "Preview"
+_other:
+  title: "More!"
+  description: "Introducing more enjoyable resources for Misskey!"
+_brandAssets:
+  title: "Brand Assets"
+  description: "A collection of Misskey's logo, icons, and other assets. Feel free to use for literally anything under the CC BY-NC-SA License!"
+  license: "Assets are available under the CC BY-NC-SA license 🎉"
+  assetsDirectory: "All assets are managed on {0}."
+  logo: "Logo"
+  icon: "Icon"
+  banner: "Banner"
+_links:
+  title: "Links"
+  _github:
+    title: "GitHub"
+    description: "Misskey development takes place on GitHub. You can submit feature requests and bug reports here."
+  _crowdin:
+    title: "Crowdin"
+    description: "Translations for Misskey core and documentation are managed here. We appreciate your contributions."
+  _discord:
+    title: "Discord Server"
+    description: "Engage in discussions and ask questions about Misskey here."
+  _aiChan:
+    title: "AI-chan"
+    description: "Visit the website of AI-chan, the mascot of Misskey."
+_api:
+  _permissions:
+    title: "Permissions"
+    description: "Description"
