@@ -1,8 +1,23 @@
 <template>
     <div class="container mx-auto max-w-screen-xl px-6 grid server-list gap-8">
-        <aside class="hidden lg:block">
-            <div class="sticky top-24 py-2 space-y-4">
-                <h3 class="text-xl font-bold">{{ $t('_servers._search.title') }}</h3>
+        <aside
+            class="fixed z-50 transition-transform -mx-6 w-full bg-slate-200 dark:bg-slate-800 bottom-0 rounded-t-xl lg:translate-y-0 lg:shadow-none lg:bg-transparent dark:lg:bg-transparent lg:mx-0 lg:relative"
+            :class="sortOpen ? 'translate-y-0' : 'translate-y-[calc(100%-3rem)]'"
+        >
+            <button
+                class="transition-[height] block w-full font-bold text-lg leading-[3rem] overflow-hidden lg:hidden text-center"
+                :class="sortOpen ? 'h-0' : 'h-12'"
+                @click="sortOpen = true"
+            >
+                {{ $t('_servers._search.title') }}
+            </button>
+            <div class="lg:sticky lg:top-24 p-6 lg:px-0 lg:py-2 space-y-4">
+                <div class="flex items-center">
+                    <h3 class="text-xl font-bold">{{ $t('_servers._search.title') }}</h3>
+                    <button @click="sortOpen = false" class="ml-auto w-8 h-8 p-0.5 rounded-full bg-slate-100 dark:bg-slate-900 lg:hidden">
+                        <XIco class="w-7 h-7" />
+                    </button>
+                </div>
                 <form @submit.prevent="() => { f_query = f_query_partial }">
                     <label class="form-label" for="query">{{ $t('_servers._search.query') }}</label>
                     <div class="input-group">
@@ -71,7 +86,7 @@
                     </div>
                 </div>
                 <button v-if="f_limit < filteredInstances.length" @click="f_limit += 24" class="btn btn-outline-primary btn-lg hover:!text-white block sm:col-span-2 md:col-span-3 lg:col-span-2 px-4">
-                    <ArrowIco />{{ $t('_servers._list.showMore') }}
+                    <ArrowIco class="mr-1" />{{ $t('_servers._list.showMore') }}
                 </button>
             </div>
         </div>
@@ -87,6 +102,7 @@ import SearchIco from 'bi/search.svg';
 import SortUpIco from 'bi/sort-down-alt.svg';
 import SortDownIco from 'bi/sort-down.svg';
 import ArrowIco from 'bi/arrow-down-circle.svg';
+import XIco from 'bi/x.svg';
 
 const { t, locale } = useI18n();
 const route = useRoute();
@@ -97,6 +113,11 @@ const emits = defineEmits<{
         instancesCount?: number;
     }): void;
 }>();
+
+// ▼スマホ用ソート▼
+const sortOpen = ref(false);
+
+// ▲スマホ用ソート▲
 
 // ▼フォームデータ初期化▼
 type MiHubSFStorage = {
