@@ -30,6 +30,8 @@ const realHref = computed(() => {
 
         return cleanDoubleSlashes(rhf);
     }
+
+    return rhf;
 });
 
 </script>
