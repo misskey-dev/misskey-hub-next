@@ -4,7 +4,17 @@
             {{ $t(`_mfmPlayground.title`) }}
         </h1>
         <div class='rounded-lg grid grid-cols-2'>
-            WIP
+            <div class="p-4" :class="$style.mfmRoot">
+                <MkMfm :text="mfmText" :baseHost="mfmHost" />
+            </div>
+            <div class="p-4">
+                <textarea
+                :rows="(mfmText || '').split('\n').length >= 8 ? mfmText.split('\n').length + 2 : 10"
+                    class="form-control"
+                    v-model="mfmText"
+                ></textarea>
+                <input type="text" class="form-control" v-model="mfmHost" />
+            </div>
         </div>
     </div>
 </template>

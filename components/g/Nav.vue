@@ -1,6 +1,6 @@
 <template>
     <div :class="['sticky top-0 z-[9900] transition', { 'backdrop-blur-lg shadow bg-opacity-75': (!disableShadow && scrollPos <= -40), 'bg-white dark:bg-gray-950': (disableShadow || scrollPos <= -40)}, (slim ? 'h-16 border-b border-slate-300' : 'h-16 lg:h-20')]">
-        <nav :class="['container mx-auto max-w-screen-xl grid items-center grid-cols-2 md:grid-cols-4 lg:grid-cols-6 p-4 h-full transition-[height]']">
+        <nav :class="['container mx-auto max-w-screen-xl grid items-center grid-cols-2 md:grid-cols-4 lg:grid-cols-6 py-4 px-6 h-full transition-[height]']">
             <div class="">
                 <GNuxtLink :to="localePath('/')" class="flex items-center space-x-2 hover:opacity-80">
                     <MiIcon class="h-8 w-8" />

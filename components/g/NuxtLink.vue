@@ -8,7 +8,8 @@
 </template>
 
 <script setup lang="ts">
-import { parseURL, cleanDoubleSlashes, withTrailingSlash } from 'ufo';
+import { cleanDoubleSlashes, withTrailingSlash } from 'ufo';
+import { isLocalPath } from '@/assets/js/misc';
 import { RouteLocationRaw } from '#vue-router';
 
 /**
@@ -26,11 +27,8 @@ const realHref = computed(() => {
     const rhf = rawProps.to ?? rawProps.href;
 
     if (rhf && typeof rhf === 'string') {
-        const runtimeConfig = useRuntimeConfig();
-        const rootDomain = parseURL(runtimeConfig.public.baseUrl);
-        const url = parseURL(rhf);
 
-        if (!url.host || rootDomain.host === url.host) {
+        if (isLocalPath(rhf)) {
             return withTrailingSlash(cleanDoubleSlashes(rhf), true);
         }
 

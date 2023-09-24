@@ -2,6 +2,8 @@ import { VNode, h } from 'vue';
 import * as mfm from 'mfm-js';
 import MkGoogle from '@/components/mk/Google.vue';
 import MkSparkle from '@/components/mk/Sparkle.vue';
+import MkCustomEmoji from '@/components/mk/CustomEmoji.vue';
+import MkMention from '@/components/mk/Mention.vue';
 import NuxtLink from '@/components/g/NuxtLink';
 import ProseAVue from '@/components/content/ProseA.vue';
 
@@ -21,6 +23,7 @@ export default function(props: {
 	isNote?: boolean;
 	emojiUrls?: string[];
 	rootScale?: number;
+	baseHost?: string;
 }) {
 	const isNote = props.isNote !== undefined ? props.isNote : true;
 
@@ -239,9 +242,11 @@ export default function(props: {
 			}
 
 			case 'mention': {
+				//@ts-ignore
 				return [h(MkMention, {
 					key: Math.random(),
-					host: (token.props.host) || host,
+					host: (token.props.host) ?? props.baseHost,
+					localHost: props.baseHost,
 					username: token.props.username,
 				})];
 			}
@@ -249,7 +254,7 @@ export default function(props: {
 			case 'hashtag': {
 				return [h(NuxtLink, {
 					key: Math.random(),
-					to: `https://misskey.io/tags/${encodeURIComponent(token.props.hashtag)}`,
+					to: `https://${props.baseHost ?? 'misskey.io'}/tags/${encodeURIComponent(token.props.hashtag)}`,
 					style: 'color:rgb(255, 145, 86);',
 				}, `#${token.props.hashtag}`)];
 			}
@@ -268,30 +273,13 @@ export default function(props: {
 
 			case 'emojiCode': {
 				// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-				if (props.author?.host == null) {
-					return [h(MkCustomEmoji, {
-						key: Math.random(),
-						name: token.props.name,
-						normal: props.plain,
-						host: null,
-						useOriginalSize: scale >= 2.5,
-					})];
-				} else {
-					// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-					if (props.emojiUrls && (props.emojiUrls[token.props.name] == null)) {
-						return [h('span', `:${token.props.name}:`)];
-					} else {
-						return [h(MkCustomEmoji, {
-							key: Math.random(),
-							name: token.props.name,
-							// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-							url: props.emojiUrls ? props.emojiUrls[token.props.name] : null,
-							normal: props.plain,
-							host: props.author.host,
-							useOriginalSize: scale >= 2.5,
-						})];
-					}
-				}
+				return [h(MkCustomEmoji, {
+					key: Math.random(),
+					name: token.props.name,
+					normal: props.plain,
+					host: props.baseHost,
+					useOriginalSize: scale >= 2.5,
+				})];
 			}
 
 			case 'unicodeEmoji': {
