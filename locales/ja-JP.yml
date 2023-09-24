@@ -1,16 +1,19 @@
 noScript: "現在Javascriptが無効になっています。サイトの表示にはJavascriptが必須となりますので有効にしてください。"
 learnMore: "詳しく知る"
 loading: "読み込み中…"
+
 _seo:
   siteName: "Misskey Hub"
   defaultTitleTagline: "ノートでひろがるネットワーク"
   defaultDescription: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
+
 _nav:
   servers: "サーバー"
   docs: "ドキュメント"
   blog: "ブログ"
   other: "もっと！"
   switchLang: "言語の設定"
+
 _landing:
   _hero:
     description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
@@ -77,6 +80,7 @@ _landing:
     description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
   _sponsors:
     title: "スポンサー"
+
 _servers:
   title: "サーバー一覧"
   description: "Misskeyは単一のサービスではなく、各々がサービスを提供する分散型ネットワークとなっています。Misskeyを利用するには、サービスを提供しているサーバーでアカウントを作成する必要があります。"
@@ -104,6 +108,7 @@ _servers:
   _list:
     notFound: "指定された条件に合致するサーバーは見つかりませんでした。"
     showMore: "もっと見る"
+
 _docs:
   title: "ドキュメント"
   description: "Misskeyの上手なつかいかたから、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
@@ -126,18 +131,22 @@ _docs:
   _toc:
     title: "このページの内容"
     toPageTop: "ページ上部に戻る"
+
 _blog:
   title: "ブログ"
   description: "Misskey開発本部から、Misskeyに関する最新情報やTips等をお届けします！（日本語のみ）"
   back: "戻る"
+
 _content:
   tip: "ヒント"
   warning: "注意"
   danger: "警告"
   preview: "プレビュー"
+
 _other:
   title: "もっと！"
   description: "Misskeyをもっと楽しめるその他のリソースをご紹介しています。"
+
 _brandAssets:
   title: "アセット集"
   description: "Misskeyのロゴ、アイコンなどのアセットのコレクションです。一定のライセンスのもとでご自由にお使いいただけます。"
@@ -146,6 +155,7 @@ _brandAssets:
   logo: "ロゴ"
   icon: "アイコン"
   banner: "バナー"
+
 _links:
   title: "リンク"
   _github:
@@ -160,6 +170,17 @@ _links:
   _aiChan:
     title: "藍"
     description: "Misskeyの看板娘、藍のウェブサイトです。"
+
+_tools:
+  title: "ツール集"
+  description: "Misskey向けの便利ツールを公開中！"
+  _forUsers:
+    title: "Misskeyユーザー向け"
+
+_mfmPlayground:
+  title: "MFMお試しコーナー"
+  description: "MFMを自由に練習できます！Misskeyの投稿画面・ノートの画面を再現！"
+
 _api:
   _permissions:
     title: "権限"

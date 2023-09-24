@@ -25,6 +25,12 @@
                         img: '/img/emojis/artist_palette_3d.png',
                     },
                     {
+                        to: localePath('/tools/'),
+                        title: $t('_tools.title'),
+                        description: $t('_tools.description'),
+                        img: '/img/emojis/toolbox_3d.png',
+                    },
+                    {
                         to: 'https://github.com/misskey-dev',
                         title: $t('_links._github.title'),
                         description: $t('_links._github.description'),
