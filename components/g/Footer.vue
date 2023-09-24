@@ -39,6 +39,9 @@
                                 <GNuxtLink :to="localePath('/brand-assets/')" class="hover:underline">{{ $t('_brandAssets.title') }}</GNuxtLink>
                             </li>
                             <li>
+                                <GNuxtLink :to="localePath('/tools/')" class="hover:underline">{{ $t('_tools.title') }}</GNuxtLink>
+                            </li>
+                            <li>
                                 <GNuxtLink :to="localePath('/learn-more/')" class="hover:underline">{{ $t('_links.title') }}</GNuxtLink>
                             </li>
                         </ul>
