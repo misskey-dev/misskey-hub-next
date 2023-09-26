@@ -4,6 +4,10 @@ Misskey website.
 
 Built with [Nuxt](https://nuxt.com/).
 
+## お知らせの文言のいじり方
+
+`app.config.ts` から指定できます。詳しい書き方はTypescriptの型補完に書いてあります
+
 ## Setup
 
 Make sure to install the dependencies:

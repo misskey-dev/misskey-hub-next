@@ -17,8 +17,8 @@ devDependencies:
     specifier: ^1.0.4
     version: 1.0.4(vite@4.4.9)
   '@nuxt/content':
-    specifier: ^2.8.0
-    version: 2.8.2(vue@3.3.4)
+    specifier: npm:@nuxt/content-edge@2.8.2-28233414.6d70135
+    version: /@nuxt/content-edge@2.8.2-28233414.6d70135(vue@3.3.4)
   '@nuxtjs/color-mode':
     specifier: ^3.3.0
     version: 3.3.0
@@ -1092,8 +1092,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@nuxt/content@2.8.2(vue@3.3.4):
-    resolution: {integrity: sha512-fi5/axuYNGccJ/dXyaf5C/WqgEd5wSijpGHZ9O+pH7754S2NeKyx8fUFGfXsLN9VyJP+Mx8EUihfWKJm09SCRA==}
+  /@nuxt/content-edge@2.8.2-28233414.6d70135(vue@3.3.4):
+    resolution: {integrity: sha512-JBhIByJpVsIi/NJnNrNjiEWygP81K1CMaqOdhmSnPukYE+Mawp6CeYEsm2baYXKsLISAUDsC9h17JAxdVOJCRA==}
     dependencies:
       '@nuxt/kit': 3.7.3
       '@nuxtjs/mdc': 0.1.6

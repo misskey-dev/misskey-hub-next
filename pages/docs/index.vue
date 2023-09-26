@@ -3,7 +3,7 @@
         <GHero>
             <template #title>{{ $t('_docs.title') }}</template>
             <template #description>
-                {{ $t('_seo.defaultDescription') + $t('_docs.description') }}
+                {{ $t('_seo.defaultDescription') + ' ' + $t('_docs.description') }}
             </template>
             <template #icon>
                 <div class="hidden lg:block relative px-6 py-8">
@@ -55,10 +55,12 @@
 </template>
 
 <script setup lang="ts">
-import ArrowRightIco from 'bi/arrow-right.svg';
-import { title } from 'process';
-
 const localePath = useLocalePath();
+const { t, locale } = useI18n();
+const route = useRoute();
+
+route.meta.title = t('_docs.title');
+route.meta.description = t('_seo.defaultDescription') + ' ' + t('_docs.description');
 </script>
 
 <style scoped>

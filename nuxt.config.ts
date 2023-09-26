@@ -51,6 +51,7 @@ export default defineNuxtConfig({
 			]
 		},
 		highlight: {
+			preload: ['ini', ],
 			theme: {
 				// Default theme (same as single string)
 				default: 'github-light',

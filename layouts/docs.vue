@@ -29,6 +29,9 @@ const { data: navigation } = await useAsyncData('navigation', () => fetchContent
 </template>
 
 <style scoped>
+.docs-root {
+    grid-template-columns: 1fr;
+}
 @screen lg {
     .docs-root {
         grid-template-columns: 16rem 1fr;

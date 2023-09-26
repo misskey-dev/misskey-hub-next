@@ -19,7 +19,7 @@
 	animation-name: parallax;
 	animation-timing-function: linear;
 	animation-timeline: scroll(root y);
-	--coefficient-parallax: 1.4;
+	--coefficient-parallax: 3;
 }
 
 .dots2 {
@@ -28,7 +28,7 @@
 	animation-name: parallax;
 	animation-timing-function: linear;
 	animation-timeline: scroll(root y);
-	--coefficient-parallax: 1.5;
+	--coefficient-parallax: 4.5;
 }
 
 .screenshot {
@@ -42,7 +42,7 @@
 	animation-name: parallax;
 	animation-timing-function: linear;
 	animation-timeline: scroll(root y);
-	--coefficient-parallax: 3;
+	--coefficient-parallax: 3.5;
 }
 
 .screenshot.desktop {
@@ -52,7 +52,7 @@
 	animation-name: parallax;
 	animation-timing-function: linear;
 	animation-timeline: scroll(root y);
-	--coefficient-parallax: 2;
+	--coefficient-parallax: 3.25;
 }
 
 .ai {
