@@ -41,7 +41,6 @@ useHead({
                 <div :class="$style.slimPageRoot">
                     <slot />
                 </div>
-                <GFooter class="-ml-8 lg:ml-0 bg-slate-100 dark:bg-gray-900" />
             </main>
         </div>
     </div>
