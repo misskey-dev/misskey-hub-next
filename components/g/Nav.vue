@@ -1,5 +1,5 @@
 <template>
-    <div :class="['sticky top-0 z-[9900] transition', { 'backdrop-blur-lg shadow bg-opacity-75': (!disableShadow && scrollPos <= -40), 'bg-white dark:bg-gray-950': (disableShadow || scrollPos <= -40)}, (slim ? 'h-16 border-b border-slate-300' : 'h-16 lg:h-20')]">
+    <div :class="['sticky top-0 z-[9900] transition', { 'shadow bg-opacity-90': (!disableShadow && scrollPos <= -40), 'bg-white dark:bg-gray-950': (disableShadow || scrollPos <= -40)}, (slim ? 'h-16 border-b border-slate-300' : 'h-16 lg:h-20')]">
         <nav :class="['container mx-auto max-w-screen-xl grid items-center grid-cols-2 md:grid-cols-4 lg:grid-cols-6 p-4 h-full transition-[height]']">
             <div class="">
                 <GNuxtLink :to="localePath('/')" class="flex items-center space-x-2 hover:opacity-80">
@@ -7,20 +7,42 @@
                     <div class="font-title font-bold text-lg">{{ $t('_seo.siteName') }}</div>
                 </GNuxtLink>
             </div>
-            <ul class="hidden lg:col-span-4 lg:space-x-8 xl:space-x-10 lg:flex justify-center">
+            <ul
+                class="fixed z-[9902] top-16 right-0 text-right p-4 w-[80vw] sm:w-[50vw] bg-slate-300/90 dark:bg-slate-950/90 shadow-lg space-y-2 transition lg:transition-none lg:translate-x-0 lg:backdrop-blur-none lg:w-auto lg:rounded-none lg:shadow-none lg:space-y-0 lg:p-0 lg:relative lg:top-0 lg:right-auto lg:bg-transparent lg:col-span-4 lg:space-x-8 xl:space-x-10 lg:flex lg:justify-center"
+                :class="[(scrollPos <= -40) ? 'rounded-bl-lg' : 'rounded-l-lg', navOpen ? 'translate-x-0' : 'translate-x-full']"
+            >
                 <li v-for="item in NavData.center">
-                    <GNuxtLink :to="localePath(item.to)" :class="['rounded-full px-4 py-1.5 hover:bg-slate-300 dark:hover:bg-slate-800 hover:bg-opacity-50 bg-blend-multiply', { 'bg-slate-200 dark:bg-slate-800 font-bold': currentPath.includes(item.to) }]">
+                    <GNuxtLink :to="localePath(item.to)" @click.native="navOpen = !navOpen" :class="['block rounded-full px-4 py-2 lg:px-4 lg:py-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 hover:bg-opacity-50 bg-blend-multiply', { 'bg-slate-200 dark:bg-slate-800 font-bold': currentPath.includes(item.to) }]">
                         <component v-if="item.icon" :is="item.icon" class="h-5 w-5" />
                         <template v-else>
                             {{ $t(item.i18n) }}
                         </template>
                     </GNuxtLink>
                 </li>
+                <li class="lg:hidden px-4 py-2 flex justify-end items-center space-x-4">
+                    <button class="hover:opacity-80 h-5 w-5" @click="rotateColorMode()" aria-label="Change Color Mode">
+                        <ClientOnly>
+                            <SunIcon class="h-5 w-5" v-if="colorMode.preference === 'light'" />
+                            <MoonIcon class="h-5 w-5" v-else-if="colorMode.preference === 'dark'" />
+                            <DisplayIcon class="h-5 w-5" v-else />
+                        </ClientOnly>
+                    </button>
+                    <div class="input-group">
+                        <span class="input-group-text !rounded-l-full"><I18nIcon class="h-5 w-5" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></span>
+                        <select class="form-select !rounded-r-full" v-model="spLocaleOption" @change="changeLocale()">
+                            <option v-for="locale in locales" :value="locale.code">{{ locale.name }}</option>
+                        </select>
+                    </div>
+                </li>
             </ul>
-            <div>
+            <div class="text-right">
+                <button class="p-1 lg:hidden" @click="navOpen = !navOpen">
+                    <XIcon v-if="navOpen" class="h-5 w-5" />
+                    <MenuIcon v-else class="h-5 w-5" />
+                </button>
                 <ul class="hidden lg:col-span-4 lg:space-x-4 lg:flex justify-center">
                     <li>
-                        <button :class="['hover:opacity-80 transition-colors', { 'text-white': (landing && scrollPos >= -40) }]" @click="rotateColorMode()" aria-label="Change Color Mode">
+                        <button :class="['hover:opacity-80', { 'text-white': (landing && scrollPos >= -40) }]" @click="rotateColorMode()" aria-label="Change Color Mode">
                             <ClientOnly>
                                 <SunIcon class="h-5 w-5" v-if="colorMode.preference === 'light'" />
                                 <MoonIcon class="h-5 w-5" v-else-if="colorMode.preference === 'dark'" />
@@ -29,7 +51,7 @@
                         </button>
                     </li>
                     <li class="relative group">
-                        <a class="hover:opacity-80" href="#"><I18nIcon :class="['h-5 w-5 transition-colors', { 'text-white': (landing && scrollPos >= -40) }]" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></a>
+                        <a class="hover:opacity-80" href="#"><I18nIcon :class="['h-5 w-5', { 'text-white': (landing && scrollPos >= -40) }]" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></a>
                         <div class="absolute top-6 right-0 hidden group-hover:block z-[9955]">
                             <ul class="px-4 py-2 bg-slate-50 dark:bg-slate-800 rounded-lg shadow-lg space-y-1">
                                 <li v-for="locale in locales">
@@ -61,6 +83,8 @@ import I18nIcon from 'bi/translate.svg';
 import SunIcon from 'bi/sun.svg';
 import MoonIcon from 'bi/moon-stars.svg';
 import DisplayIcon from 'bi/display.svg';
+import MenuIcon from 'bi/list.svg';
+import XIcon from 'bi/x.svg';
 import NavData from '@/assets/data/nav';
 
 const props = withDefaults(defineProps<{
@@ -73,9 +97,11 @@ const props = withDefaults(defineProps<{
     landing: false,
 });
 
+const navOpen = ref(false);
+
 const { locales, locale: currentLocale } = useI18n();
 const { path } = useRoute();
-const { afterEach } = useRouter();
+const { afterEach, push } = useRouter();
 const currentPath = ref(path);
 
 afterEach((to) => {
@@ -89,6 +115,11 @@ onMounted(() => {
 
 const switchLocalePath = useSwitchLocalePath();
 const localePath = useLocalePath();
+const spLocaleOption = ref<string>(currentLocale.value);
+function changeLocale() {
+    const path = switchLocalePath(spLocaleOption.value);
+    push(path);
+}
 
 const colorMode = useColorMode();
 function rotateColorMode() {
@@ -105,13 +136,13 @@ async function updatePos() {
     scrollPos.value = document.body.getBoundingClientRect().y;
 }
 
-if (process.client && !props.disableShadow) {
+if (process.client) {
     window.addEventListener('scroll', updatePos);
     window.addEventListener('resize', updatePos);
 }
 
 onUnmounted(() => {
-    if (process.client && !props.disableShadow) {
+    if (process.client) {
         window.removeEventListener('scroll', updatePos);
         window.removeEventListener('resize', updatePos);
     }
