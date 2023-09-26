@@ -127,28 +127,42 @@ html.light .markdown-body {
 	@apply font-content-sans;
 }
 
-.markdown-body h1 > a[href^='#'],
-.markdown-body h2 > a[href^='#'],
-.markdown-body h3 > a[href^='#'],
-.markdown-body h4 > a[href^='#'],
-.markdown-body h5 > a[href^='#'],
-.markdown-body h6 > a[href^='#'] {
+.markdown-body > h1 > a[href^='#'],
+.markdown-body :not(.ignore) h1 > a[href^='#'],
+.markdown-body > h2 > a[href^='#'],
+.markdown-body :not(.ignore) h2 > a[href^='#'],
+.markdown-body > h3 > a[href^='#'],
+.markdown-body :not(.ignore) h3 > a[href^='#'],
+.markdown-body > h4 > a[href^='#'],
+.markdown-body :not(.ignore) h4 > a[href^='#'],
+.markdown-body > h5 > a[href^='#'],
+.markdown-body :not(.ignore) h5 > a[href^='#'],
+.markdown-body > h6 > a[href^='#'] ,
+.markdown-body :not(.ignore) h6 > a[href^='#'] {
 	color: var(--color-fg-default);
 	cursor: pointer;
 }
 
-.markdown-body h1 > a[href^='#']:hover,
-.markdown-body h2 > a[href^='#']:hover,
-.markdown-body h3 > a[href^='#']:hover,
-.markdown-body h4 > a[href^='#']:hover,
-.markdown-body h5 > a[href^='#']:hover,
-.markdown-body h6 > a[href^='#']:hover {
+.markdown-body > h1 > a[href^='#']:hover,
+.markdown-body :not(.ignore) h1 > a[href^='#']:hover,
+.markdown-body > h2 > a[href^='#']:hover,
+.markdown-body :not(.ignore) h2 > a[href^='#']:hover,
+.markdown-body > h3 > a[href^='#']:hover,
+.markdown-body :not(.ignore) h3 > a[href^='#']:hover,
+.markdown-body > h4 > a[href^='#']:hover,
+.markdown-body :not(.ignore) h4 > a[href^='#']:hover,
+.markdown-body > h5 > a[href^='#']:hover,
+.markdown-body :not(.ignore) h5 > a[href^='#']:hover,
+.markdown-body > h6 > a[href^='#']:hover ,
+.markdown-body :not(.ignore) h6 > a[href^='#']:hover {
 	text-decoration: none;
 }
 
-.markdown-body ul {
+.markdown-body > ul ,
+.markdown-body :not(.ignore) ul {
     list-style: disc;
 }
-.markdown-body ol {
+.markdown-body > ol ,
+.markdown-body :not(.ignore) ol {
     list-style: decimal;
 }

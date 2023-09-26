@@ -1,8 +1,15 @@
+/*
+ * SPDX-FileCopyrightText: syuilo and other misskey contributors
+ * SPDX-License-Identifier: AGPL-3.0-only
+ */
+
 import { VNode, h } from 'vue';
 import * as mfm from 'mfm-js';
 import MkGoogle from '@/components/mk/Google.vue';
 import MkSparkle from '@/components/mk/Sparkle.vue';
-import NuxtLink from '@/components/g/NuxtLink';
+import MkCustomEmoji from '@/components/mk/CustomEmoji.vue';
+import MkMention from '@/components/mk/Mention.vue';
+import NuxtLink from '@/components/g/NuxtLink.vue';
 import ProseAVue from '@/components/content/ProseA.vue';
 
 const QUOTE_STYLE = `
@@ -21,6 +28,7 @@ export default function(props: {
 	isNote?: boolean;
 	emojiUrls?: string[];
 	rootScale?: number;
+	baseHost?: string;
 }) {
 	const isNote = props.isNote !== undefined ? props.isNote : true;
 
@@ -99,12 +107,12 @@ export default function(props: {
 					case 'spin': {
 						const direction =
 							token.props.args.left ? 'reverse' :
-							token.props.args.alternate ? 'alternate' :
-							'normal';
+								token.props.args.alternate ? 'alternate' :
+									'normal';
 						const anime =
 							token.props.args.x ? 'mfm-spinX' :
-							token.props.args.y ? 'mfm-spinY' :
-							'mfm-spin';
+								token.props.args.y ? 'mfm-spinY' :
+									'mfm-spin';
 						const speed = validTime(token.props.args.speed) ?? '1.5s';
 						style = useAnim ? `animation: ${anime} ${speed} linear infinite; animation-direction: ${direction};` : '';
 						break;
@@ -122,8 +130,8 @@ export default function(props: {
 					case 'flip': {
 						const transform =
 							(token.props.args.h && token.props.args.v) ? 'scale(-1, -1)' :
-							token.props.args.v ? 'scaleY(-1)' :
-							'scaleX(-1)';
+								token.props.args.v ? 'scaleY(-1)' :
+									'scaleX(-1)';
 						style = `transform: ${transform};`;
 						break;
 					}
@@ -145,12 +153,12 @@ export default function(props: {
 					case 'font': {
 						const family =
 							token.props.args.serif ? 'serif' :
-							token.props.args.monospace ? 'monospace' :
-							token.props.args.cursive ? 'cursive' :
-							token.props.args.fantasy ? 'fantasy' :
-							token.props.args.emoji ? 'emoji' :
-							token.props.args.math ? 'math' :
-							null;
+								token.props.args.monospace ? 'monospace' :
+									token.props.args.cursive ? 'cursive' :
+										token.props.args.fantasy ? 'fantasy' :
+											token.props.args.emoji ? 'emoji' :
+												token.props.args.math ? 'math' :
+													null;
 						if (family) style = `font-family: ${family};`;
 						break;
 					}
@@ -226,22 +234,26 @@ export default function(props: {
 				return [h(ProseAVue, {
 					key: Math.random(),
 					href: token.props.url,
+					target: '_blank',
 					rel: 'nofollow noopener',
 				}, token.props.url)];
 			}
 
 			case 'link': {
-				return [h(ProseAVue, {
+				return [h(NuxtLink, {
 					key: Math.random(),
 					to: token.props.url,
+					target: '_blank',
 					rel: 'nofollow noopener',
 				}, genEl(token.children, scale))];
 			}
 
 			case 'mention': {
+				//@ts-ignore
 				return [h(MkMention, {
 					key: Math.random(),
-					host: (token.props.host) || host,
+					host: (token.props.host) ?? props.baseHost,
+					localHost: props.baseHost,
 					username: token.props.username,
 				})];
 			}
@@ -249,7 +261,7 @@ export default function(props: {
 			case 'hashtag': {
 				return [h(NuxtLink, {
 					key: Math.random(),
-					to: `https://misskey.io/tags/${encodeURIComponent(token.props.hashtag)}`,
+					to: `https://${props.baseHost ?? 'misskey.io'}/tags/${encodeURIComponent(token.props.hashtag)}`,
 					style: 'color:rgb(255, 145, 86);',
 				}, `#${token.props.hashtag}`)];
 			}
@@ -268,34 +280,20 @@ export default function(props: {
 
 			case 'emojiCode': {
 				// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-				if (props.author?.host == null) {
-					return [h(MkCustomEmoji, {
-						key: Math.random(),
-						name: token.props.name,
-						normal: props.plain,
-						host: null,
-						useOriginalSize: scale >= 2.5,
-					})];
-				} else {
-					// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-					if (props.emojiUrls && (props.emojiUrls[token.props.name] == null)) {
-						return [h('span', `:${token.props.name}:`)];
-					} else {
-						return [h(MkCustomEmoji, {
-							key: Math.random(),
-							name: token.props.name,
-							// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-							url: props.emojiUrls ? props.emojiUrls[token.props.name] : null,
-							normal: props.plain,
-							host: props.author.host,
-							useOriginalSize: scale >= 2.5,
-						})];
-					}
-				}
+				return [h(MkCustomEmoji, {
+					key: Math.random(),
+					name: token.props.name,
+					normal: props.plain,
+					host: props.baseHost,
+					useOriginalSize: scale >= 2.5,
+				})];
 			}
 
 			case 'unicodeEmoji': {
-				return [h('span', token.props.emoji)];
+				return [h('img', {
+					style: 'display:inline;height:1.25em;vertical-align:-.25em;',
+					src: `https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/svg/${token.props.emoji.codePointAt(0)?.toString(16)}.svg`,
+				})];
 			}
 
 			case 'mathInline': {
@@ -304,6 +302,16 @@ export default function(props: {
 
 			case 'mathBlock': {
 				return [h('code', token.props.formula)];
+			}
+
+			case 'inlineCode': {
+				return [h('code', token.props.code)];
+			}
+
+			case 'blockCode': {
+				return [h('pre', {
+					class: 'p-4 bg-gray-200/50 rounded',
+				}, h('code', token.props.code))];
 			}
 
 			case 'search': {

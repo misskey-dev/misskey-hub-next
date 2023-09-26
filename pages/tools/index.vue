@@ -17,23 +17,19 @@
         </GHero>
         <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
             <div class="container mx-auto max-w-screen-xl px-6 space-y-6 lg:space-y-8">
-                <GLocalNav :items="[
-                    {
-                        name: $t('_tools._forUsers.title'),
-                        anchor: '#forUsers',
-                    },
-                ]" />
-                <section>
+                <GLocalNav :items="sections.map((v) => ({
+                    name: $t(v.title),
+                    anchor: '#' + v.title.replaceAll('.', '_'),
+                }))" />
+                <section :id="section.title.replaceAll('.', '_')" v-for="section in sections">
                     <h2 class="text-2xl lg:text-3xl font-bold mb-4">
-                        {{ $t(`_tools._forUsers.title`) }}
+                        {{ $t(section.title) }}
                     </h2>
-                    <GLinks :wide="true" :items="[
-                        {
-                            to: localePath('/tools/mfm-playground/'),
-                            title: $t('_mfmPlayground.title'),
-                            description: $t('_mfmPlayground.description'),
-                        }
-                    ]" />
+                    <GLinks :wide="true" :items="section.items.map((e) => ({
+                        title: $t(e.i18n),
+                        description: $t(e.description),
+                        to: localePath(e.to),
+                    }))" />
                 </section>
             </div>
         </div>
@@ -41,6 +37,8 @@
 </template>
 
 <script setup lang="ts">
+import sections from '@/assets/data/toolsNav';
+
 const localePath = useLocalePath();
 </script>
 

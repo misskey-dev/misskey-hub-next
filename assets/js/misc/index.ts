@@ -1,5 +1,12 @@
 import type { NavItem } from '@nuxt/content/dist/runtime/types';
+import { parseURL } from 'ufo';
 
+/**
+ * オブジェクトのパス文字列からオブジェクトの内部を参照
+ * @param o オブジェクト
+ * @param s パス
+ * @returns パスの先にあるもの
+ */
 export function resolveObjPath(o: object, s: string): any {
     s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
     s = s.replace(/^\./, '');           // strip a leading dot
@@ -15,33 +22,33 @@ export function resolveObjPath(o: object, s: string): any {
     return o;
 }
 
+/**
+ * URLがドメイン内部かどうかを判別
+ * @param link 判別したいURL
+ * @param base ローカルの基準となるドメイン
+ */
 export function isLocalPath(link: string, base?: string): boolean {
     let baseUrl;
+
     if (base) {
         baseUrl = base;
     } else {
         const runtimeConfig = useRuntimeConfig();
         baseUrl = runtimeConfig.public.baseUrl;
     }
-    const rootDomain = new URL(baseUrl);
-    try {
-        const url = new URL(link);
-        if (!url.hostname || rootDomain.hostname === url.hostname) {
-            return true;
-        } else if (rootDomain.hostname !== url.hostname) {
-            return false;
-        }
-        return false;
-    } catch(error) {
-        if(link !== '') {
-            return true;
-        } else {
-            throw error;
-        }
-    }
-    
+
+    const rootDomain = parseURL(base);
+    const url = parseURL(link);
+
+    return (!url.host || rootDomain.host === url.host);
 }
 
+/**
+ * ナビゲーションObjectを合致する条件まで深掘り
+ * @param obj ナビゲーションObject
+ * @param condition 深掘りを停止する条件
+ * @returns 深掘りしたナビゲーションObject
+ */
 export const findDeepObject = (obj: NavItem, condition: (v: NavItem) => boolean): NavItem | null => {
 	if (condition(obj)) {
 		return obj;
