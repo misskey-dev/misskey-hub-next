@@ -5,7 +5,7 @@
 				class="block p-4 rounded-lg border border-slate-200 dark:border-accent-900 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 hover:!no-underline"
 				v-for="item in findDeepObject((navigation[0] as Record<string, any>), (v) => realBasePath.replace(/\/$/, '') === v?._path.replace(/\/$/, ''))?.children ?? []"
 				:key="item._path"
-				:to="localePath(item._path)"
+				:to="localePath(isApiDoc ? item._path : item._path.replace('api-docs', 'docs/for-developers/api'))"
 			>
 				<h3 class="font-bold !text-lg !mt-0 !mb-2">
 					{{ item.navTitle || item.title }}<ArrowRightIco class="ml-1.5" />
@@ -24,6 +24,8 @@ import { findDeepObject } from "assets/js/misc";
 
 const route = useRoute();
 const { locale } = useI18n();
+const slugs = (route.params.slug as string[]).filter((v) => v !== '');
+const isApiDoc = ref(false);
 
 const props = withDefaults(defineProps<{
     basePath?: string;
@@ -35,7 +37,11 @@ const props = withDefaults(defineProps<{
 const realBasePath = computed<string>(() => {
     if (props.basePath) {
         return props.basePath;
-    }
+    } else if (slugs[0] === 'for-developers' && slugs[1] === 'api' && slugs[2] === 'endpoints') {
+    	// APIドキュメントの翻訳はymlで当てるのでjsonは共通
+    	return `/api-docs/${slugs.slice(2).join('/')}`;
+	}
+	isApiDoc.value = true;
     return route.path.replace(/^.*\/docs/, `/${locale.value}/docs`);
 });
 

@@ -12,7 +12,7 @@
         </div>
         <div class="pt-6 lg:p-6 w-full overflow-x-hidden">
             <template v-if="data?.body">
-                <ContentRenderer v-if="data.body.children.length > 0 && data._extension === 'md'" :value="data" class="markdown-body w-full mb-6">
+                <ContentRenderer v-if="data.body.children.length > 0" :value="data" class="markdown-body w-full mb-6">
                 </ContentRenderer>
                 <DocsPrevNext :ignore-dir-based-nav="data?.ignoreDirBasedNav ?? false" />
             </template>
@@ -53,9 +53,9 @@ const slugs = (route.params.slug as string[]).filter((v) => v !== '');
 
 let path = `/${locale.value}/docs/${slugs.join('/')}`;
 
-if (slugs[0] === 'for-developers' && slugs[1] === 'api' && slugs[2] === 'endpoints') {
+if (slugs[0] === 'for-developers' && slugs[1] === 'api' && slugs[2] === 'endpoints' && slugs[3]) {
     // APIドキュメントの翻訳はymlで当てるのでjsonは共通
-    path = `/api-docs/${slugs.slice(2)}`;
+    path = `/api-docs/${slugs.slice(2).join('/')}`;
 }
 
 const { data } = await useAsyncData(`blog-${locale.value}-${slugs.join('-')}`, () => queryContent(path).findOne());
