@@ -1,6 +1,6 @@
 <template>
     <div :class="['sticky top-0 z-[9900] transition', { 'shadow bg-opacity-90': (!disableShadow && scrollPos <= -40), 'bg-white dark:bg-gray-950': (disableShadow || scrollPos <= -40)}, (slim ? 'h-16 border-b border-slate-300' : 'h-16 lg:h-20')]">
-        <nav :class="['container mx-auto max-w-screen-xl grid items-center grid-cols-2 md:grid-cols-4 lg:grid-cols-6 p-4 h-full transition-[height]']">
+        <nav class="container mx-auto max-w-screen-xl grid items-center grid-cols-2 lg:grid-cols-6 p-4 h-full transition-[height]">
             <div class="">
                 <GNuxtLink :to="localePath('/')" class="flex items-center space-x-2 hover:opacity-80">
                     <MiIcon class="h-8 w-8" />
@@ -8,7 +8,7 @@
                 </GNuxtLink>
             </div>
             <ul
-                class="fixed z-[9902] top-16 right-0 text-right p-4 w-[80vw] sm:w-[50vw] bg-slate-300/90 dark:bg-slate-950/90 shadow-lg space-y-2 transition lg:transition-none lg:translate-x-0 lg:backdrop-blur-none lg:w-auto lg:rounded-none lg:shadow-none lg:space-y-0 lg:p-0 lg:relative lg:top-0 lg:right-auto lg:bg-transparent lg:col-span-4 lg:space-x-8 xl:space-x-10 lg:flex lg:justify-center"
+                class="fixed z-[9902] top-16 right-0 text-right p-4 w-[80vw] sm:w-[50vw] bg-slate-300/90 dark:bg-slate-950/90 shadow-lg space-y-2 transition-[transform,border-radius] lg:transition-none lg:translate-x-0 lg:backdrop-blur-none lg:w-auto lg:rounded-none lg:shadow-none lg:space-y-0 lg:p-0 lg:relative lg:top-0 lg:right-auto lg:bg-transparent lg:col-span-4 lg:space-x-8 xl:space-x-10 lg:flex lg:justify-center"
                 :class="[(scrollPos <= -40) ? 'rounded-bl-lg' : 'rounded-l-lg', navOpen ? 'translate-x-0' : 'translate-x-full']"
             >
                 <li v-for="item in NavData.center">
@@ -20,7 +20,7 @@
                     </GNuxtLink>
                 </li>
                 <li class="lg:hidden px-4 py-2 flex justify-end items-center space-x-4">
-                    <button class="hover:opacity-80 h-5 w-5" @click="rotateColorMode()" aria-label="Change Color Mode">
+                    <button class="hover:opacity-80 relative before:absolute before:-z-10 before:-top-2 before:-left-2 before:w-9 before:h-9 before:rounded-full hover:before:bg-slate-100 dark:hover:before:bg-slate-600 h-5 w-5" @click="rotateColorMode()" aria-label="Change Color Mode">
                         <ClientOnly>
                             <SunIcon class="h-5 w-5" v-if="colorMode.preference === 'light'" />
                             <MoonIcon class="h-5 w-5" v-else-if="colorMode.preference === 'dark'" />

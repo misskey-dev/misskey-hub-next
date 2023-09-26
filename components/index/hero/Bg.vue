@@ -27,13 +27,23 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 }
 
 .object1 {
-	right: -300px;
-	top: -400px;
+	top: 2500px;
+	left: -300px;
 	width: 1000px;
+	opacity: .5;
+}
+
+@screen lg {
+	.object1 {
+		left: auto;
+		right: -300px;
+		top: -400px;
+		width: 1000px;
+		opacity: 1;
+	}
 }
 
 .object1 > svg {
-	@apply invisible lg:visible;
 	animation: 60s linear 0s infinite normal none running spin;
 }
 
@@ -66,6 +76,13 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 
 @keyframes parallax {
 	from { transform: translateY(0); }
-	to { transform: translateY(calc(var(--coefficient-parallax) * 66vh)); }
+	to { transform: translateY(calc(var(--coefficient-parallax) * 100vh)); }
+}
+
+@screen lg {
+	@keyframes parallax {
+		from { transform: translateY(0); }
+		to { transform: translateY(calc(var(--coefficient-parallax) * 66vh)); }
+	}
 }
 </style>

@@ -15,7 +15,7 @@
 					<div class="icon"><img src="/img/emojis/package_1f4e6.png" aria-hidden="true"></div>
 					<h3 class="title">{{ $t('_landing._getStarted._create.title') }}</h3>
 					<div class="description"></div>
-					<GNuxtLink class="link">{{ $t('_landing._getStarted._create.guide') }}</GNuxtLink>
+					<GNuxtLink class="link" :to="localePath('/docs/for-admin/install/guides/')">{{ $t('_landing._getStarted._create.guide') }}</GNuxtLink>
 				</div>
 			</div>
 			<div v-fade-in class="docs">
