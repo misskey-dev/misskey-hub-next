@@ -30,8 +30,8 @@ const url = `https://${props.localHost}/${canonical}`;
     display: inline-block;
     padding: 4px 8px 4px 4px;
     border-radius: 999px;
-    color: rgb(134, 179, 0);
-    background-color: rgba(134, 179, 0, 0.1);
+    color: rgb(134, 179, 0)!important;
+    background-color: rgba(134, 179, 0, 0.1)!important;
 }
 
 .icon {

@@ -1,10 +1,19 @@
 import { FunctionalComponent } from "nuxt/dist/app/compat/capi";
 import GHIcon from "bi/github.svg";
 
+export type NavSection = {
+    /** セクションタイトル 翻訳キー */
+    title: string;
+    /** アイテム */
+    items: NavItem[];
+};
+
 /** ナビゲーションバー アイテム */
-type NavItem = {
+export type NavItem = {
     /** 翻訳キー */
     i18n: string;
+    /** 説明文 翻訳キー */
+    description?: string;
     /** リンク先 */
     to: string;
 } | {

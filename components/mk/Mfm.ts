@@ -1,10 +1,15 @@
+/*
+ * SPDX-FileCopyrightText: syuilo and other misskey contributors
+ * SPDX-License-Identifier: AGPL-3.0-only
+ */
+
 import { VNode, h } from 'vue';
 import * as mfm from 'mfm-js';
 import MkGoogle from '@/components/mk/Google.vue';
 import MkSparkle from '@/components/mk/Sparkle.vue';
 import MkCustomEmoji from '@/components/mk/CustomEmoji.vue';
 import MkMention from '@/components/mk/Mention.vue';
-import NuxtLink from '@/components/g/NuxtLink';
+import NuxtLink from '@/components/g/NuxtLink.vue';
 import ProseAVue from '@/components/content/ProseA.vue';
 
 const QUOTE_STYLE = `
@@ -102,12 +107,12 @@ export default function(props: {
 					case 'spin': {
 						const direction =
 							token.props.args.left ? 'reverse' :
-							token.props.args.alternate ? 'alternate' :
-							'normal';
+								token.props.args.alternate ? 'alternate' :
+									'normal';
 						const anime =
 							token.props.args.x ? 'mfm-spinX' :
-							token.props.args.y ? 'mfm-spinY' :
-							'mfm-spin';
+								token.props.args.y ? 'mfm-spinY' :
+									'mfm-spin';
 						const speed = validTime(token.props.args.speed) ?? '1.5s';
 						style = useAnim ? `animation: ${anime} ${speed} linear infinite; animation-direction: ${direction};` : '';
 						break;
@@ -125,8 +130,8 @@ export default function(props: {
 					case 'flip': {
 						const transform =
 							(token.props.args.h && token.props.args.v) ? 'scale(-1, -1)' :
-							token.props.args.v ? 'scaleY(-1)' :
-							'scaleX(-1)';
+								token.props.args.v ? 'scaleY(-1)' :
+									'scaleX(-1)';
 						style = `transform: ${transform};`;
 						break;
 					}
@@ -148,12 +153,12 @@ export default function(props: {
 					case 'font': {
 						const family =
 							token.props.args.serif ? 'serif' :
-							token.props.args.monospace ? 'monospace' :
-							token.props.args.cursive ? 'cursive' :
-							token.props.args.fantasy ? 'fantasy' :
-							token.props.args.emoji ? 'emoji' :
-							token.props.args.math ? 'math' :
-							null;
+								token.props.args.monospace ? 'monospace' :
+									token.props.args.cursive ? 'cursive' :
+										token.props.args.fantasy ? 'fantasy' :
+											token.props.args.emoji ? 'emoji' :
+												token.props.args.math ? 'math' :
+													null;
 						if (family) style = `font-family: ${family};`;
 						break;
 					}
@@ -229,14 +234,16 @@ export default function(props: {
 				return [h(ProseAVue, {
 					key: Math.random(),
 					href: token.props.url,
+					target: '_blank',
 					rel: 'nofollow noopener',
 				}, token.props.url)];
 			}
 
 			case 'link': {
-				return [h(ProseAVue, {
+				return [h(NuxtLink, {
 					key: Math.random(),
 					to: token.props.url,
+					target: '_blank',
 					rel: 'nofollow noopener',
 				}, genEl(token.children, scale))];
 			}
@@ -283,7 +290,10 @@ export default function(props: {
 			}
 
 			case 'unicodeEmoji': {
-				return [h('span', token.props.emoji)];
+				return [h('img', {
+					style: 'display:inline;height:1.25em;vertical-align:-.25em;',
+					src: `https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/svg/${token.props.emoji.codePointAt(0)?.toString(16)}.svg`,
+				})];
 			}
 
 			case 'mathInline': {
@@ -292,6 +302,16 @@ export default function(props: {
 
 			case 'mathBlock': {
 				return [h('code', token.props.formula)];
+			}
+
+			case 'inlineCode': {
+				return [h('code', token.props.code)];
+			}
+
+			case 'blockCode': {
+				return [h('pre', {
+					class: 'p-4 bg-gray-200/50 rounded',
+				}, h('code', token.props.code))];
 			}
 
 			case 'search': {

@@ -23,11 +23,16 @@ MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使�
 :::
 
 ```
-@alice
+@ai
 ```
+
+<MfmPreview text="@ai"></MfmPreview>
+
 ```
-@alice@example.com
+@repo@p1.a9z.dev
 ```
+
+<MfmPreview text="@repo@p1.a9z.dev"></MfmPreview>
 
 ### ハッシュタグ
 ナンバーサイン + タグで、ハッシュタグを示すことができます。
@@ -74,6 +79,8 @@ https://example.com
 ```
 :misskey:
 ```
+
+<MfmPreview text=":misskey:"></MfmPreview>
 
 ### 太字
 文字を太く表示して強調することができます。
