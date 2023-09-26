@@ -37,7 +37,7 @@ useHead({
                     <button @click="isAsideNavOpen = !isAsideNavOpen" class="bg-slate-300 dark:bg-slate-800 hover:bg-slate-400 dark:hover:bg-slate-700" :class="$style.toolsMenuToggle"><span>{{ $t('_tools.menuToggle') }}</span></button>
                 </div>
             </aside>
-            <main class="ml-8 lg:ml-72 lg:translate-x-0 transition-transform" :class="[isAsideNavOpen ? 'translate-x-72' : 'translate-x-0']">
+            <main class="ml-8 lg:ml-72 lg:translate-x-0 transition-transform bg-slate-100 dark:bg-slate-900" :class="[isAsideNavOpen ? 'translate-x-72' : 'translate-x-0']">
                 <div :class="$style.slimPageRoot">
                     <slot />
                 </div>
