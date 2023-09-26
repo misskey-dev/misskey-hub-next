@@ -1,4 +1,4 @@
-// API用翻訳ファイル自動生成
+// API用ファイル自動生成
 import { locales } from "@/nuxt.config";
 import * as misskey from "misskey-js";
 import yaml from "js-yaml";
@@ -18,30 +18,89 @@ function mergeObjects(obj1: Record<string, any>, obj2: Record<string, any>): Rec
     return obj1;
 }
 
-export function genApiTranslationFiles() {
+const createFile = (filename: string, data: string): void => {
+    const filePath = filename;
+
+    fs.writeFile(filePath, data, { encoding: 'utf-8' }, (err) => {
+        // ディレクトリ作成できなかったとき
+        if (err && err.code === "ENOENT") {
+            // ディレクトリ部分だけ切り取り
+            const dir = filePath.substring(0, Math.max(filePath.lastIndexOf("/"), filePath.lastIndexOf("\\")));
+
+            // 親ディレクトリ作成
+            fs.mkdir(dir, { recursive: true }, (err) => {
+                if (err) throw err;
+                createFile(filename, data);
+            });
+            return;
+        }
+    });
+};
+
+/** API関連のファイルを自動生成 */
+export async function genApiFiles() {
 
     const out: Record<string, any> = {
-        _permissions: {},
-        _entities: {},
+        _api: {
+            _permissions: {},
+            _endpoints: {},
+            _responseCodes: {},
+            _errors: {},
+        }
     };
 
     // 権限
     misskey.permissions.forEach((permission) => {
-        out._permissions[permission] = 'Untranslated / 未翻訳';
+        out._api._permissions[permission] = 'Untranslated / 未翻訳';
     });
 
-    const endpointDTSPath = require.resolve('misskey-js', { paths: ['/built/api.types.d.ts'] });
-    /*
-    const ep = fs.readFileSync(endpointDTSPath, "utf-8");
-    const parsedEP = parse(ep, {
-        sourceType: "module",
-        plugins: [[
-            "typescript", {
-                dts: true,
-            },
-        ]],
+    // エンドポイント
+    const ep = await fetch('https://misskey.noellabo.jp/api.json');
+    const epj = await ep.json();
+    Object.keys(epj.paths).forEach((path) => {
+        Object.keys(epj.paths[path]).forEach((method) => {
+            out._api._endpoints[path] = {};
+
+            out._api._endpoints[path][method] = {
+                description: 'Untranslated / 未翻訳',
+            };
+
+            Object.keys(epj.paths[path][method].responses).forEach((responseCode) => {
+                const responseBody = epj.paths[path][method].responses[responseCode].content ? epj.paths[path][method].responses[responseCode].content["application/json"] : null;
+
+                if (!out._api._responseCodes[responseCode]) {
+                    out._api._responseCodes[responseCode] = epj.paths[path][method].responses[responseCode].description;
+                }
+
+                if (!responseBody) {
+                    return;
+                }
+
+                if (responseBody.schema['$ref'] === "#/components/schemas/Error") {
+                    const key = Object.keys(responseBody.examples)[0];
+                    if (!out._api._errors[responseBody.examples[key].value.error.id]) {
+                        out._api._errors[responseBody.examples[key].value.error.id] = responseBody.examples[key].value.error.message;
+                    }
+                }
+            });
+
+        });
     });
 
-    console.log(JSON.stringify(parsedEP));
-    */
+    // 翻訳を追記
+    const tlSourceFilePath = path.resolve(__dirname, '../locales/ja-JP.yml');
+    const tlSourceFile = fs.readFileSync(tlSourceFilePath, 'utf-8');
+    const tlSourceObj = yaml.load(tlSourceFile) as object;
+    const newTlSource = mergeObjects(tlSourceObj, out);
+    fs.writeFileSync(tlSourceFilePath, yaml.dump(newTlSource, { indent: 2, forceQuotes: true, quotingType: '"', }));
+    console.log("翻訳の書き込み完了");
+
+    // Contentのjsonを更新
+    const targetEPPath = path.resolve(__dirname, '../content/api-docs/endpoints');
+    Object.keys(epj.paths).forEach((eppath) => {
+        const targetObj = epj.paths[eppath];
+
+        createFile(path.join(targetEPPath, `${eppath}.json`), JSON.stringify(targetObj));
+    });
+    console.log("エンドポイント定義上書き完了");
 }

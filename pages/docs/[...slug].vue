@@ -12,7 +12,7 @@
         </div>
         <div class="pt-6 lg:p-6 w-full overflow-x-hidden">
             <template v-if="data?.body">
-                <ContentRenderer v-if="data.body.children.length > 0" :value="data" class="markdown-body w-full mb-6">
+                <ContentRenderer v-if="data.body.children.length > 0 && data._extension === 'md'" :value="data" class="markdown-body w-full mb-6">
                 </ContentRenderer>
                 <DocsPrevNext :ignore-dir-based-nav="data?.ignoreDirBasedNav ?? false" />
             </template>
@@ -51,7 +51,14 @@ defineI18nRoute({
 const route = useRoute();
 const slugs = (route.params.slug as string[]).filter((v) => v !== '');
 
-const { data } = await useAsyncData(`blog-${locale.value}-${slugs.join('-')}`, () => queryContent(`/${locale.value}/docs/${slugs.join('/')}`).findOne());
+let path = `/${locale.value}/docs/${slugs.join('/')}`;
+
+if (slugs[0] === 'for-developers' && slugs[1] === 'api' && slugs[2] === 'endpoints') {
+    // APIドキュメントの翻訳はymlで当てるのでjsonは共通
+    path = `/api-docs/${slugs.slice(2)}`;
+}
+
+const { data } = await useAsyncData(`blog-${locale.value}-${slugs.join('-')}`, () => queryContent(path).findOne());
 
 if (!data.value) {
     throw createError({ statusCode: 404, statusMessage: 'page not found' });

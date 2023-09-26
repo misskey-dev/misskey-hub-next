@@ -2,7 +2,7 @@
 import ViteYaml from '@modyfi/vite-plugin-yaml';
 import svgLoader from 'vite-svg-loader';
 import genSitemap from './scripts/gen-sitemap';
-import { genApiTranslationFiles } from './scripts/gen-api-translations';
+import { genApiFiles } from './scripts/gen-api-translations';
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl = 'https://misskey-hub.net';
@@ -116,7 +116,7 @@ export default defineNuxtConfig({
 		],
 	},
 	hooks: {
-		'build:before': genApiTranslationFiles,
+		'build:before': genApiFiles,
 	},
 	experimental: {
 		inlineSSRStyles: false,
