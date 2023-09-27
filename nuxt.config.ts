@@ -48,6 +48,7 @@ export default defineNuxtConfig({
 			fields: [
 				'date',
 				'description',
+				'_extension',
 			]
 		},
 		highlight: {

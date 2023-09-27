@@ -5,7 +5,7 @@
 				class="block p-4 rounded-lg border border-slate-200 dark:border-accent-900 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 hover:!no-underline"
 				v-for="item in findDeepObject((navigation[0] as Record<string, any>), (v) => realBasePath.replace(/\/$/, '') === v?._path.replace(/\/$/, ''))?.children ?? []"
 				:key="item._path"
-				:to="localePath(isApiDoc ? item._path : item._path.replace('api-docs', 'docs/for-developers/api'))"
+				:to="isApiDoc && !item._path.includes('docs/for-developers/api/endpoints') ? localePath(item._path.replace('api-docs', 'docs/for-developers/api')) : item._path"
 			>
 				<h3 class="font-bold !text-lg !mt-0 !mb-2">
 					{{ item.navTitle || item.title }}<ArrowRightIco class="ml-1.5" />
@@ -24,7 +24,7 @@ import { findDeepObject } from "assets/js/misc";
 
 const route = useRoute();
 const { locale } = useI18n();
-const slugs = (route.params.slug as string[]).filter((v) => v !== '');
+const slugs = (Array.isArray(route.params.slug) ? route.params.slug : [route.params.slug]).filter((v) => v !== '');
 const isApiDoc = ref(false);
 
 const props = withDefaults(defineProps<{

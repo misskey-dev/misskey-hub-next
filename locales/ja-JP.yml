@@ -178,957 +178,984 @@ _mfmPlayground:
   noteIt: "ノート"
   clearEmojiCache: "絵文字のキャッシュを削除"
 _api:
+  _paramViewer:
+    _header:
+      name: "名前"
+      type: "型"
+      default: "既定値"
+      example: "例"
+      none: "なし"
+    _tip:
+      optional: "任意"
+      required: "必須"
+    _types:
+      object: "オブジェクト"
+      array: "配列（内容: {0}）"
+      string: "文字列"
+      integer: "整数"
+      number: "数字"
+      boolean: "真偽値"
+    _integer:
+      maximum: "最大"
+      minimum: "最小"
+  _apiRenderer:
+    description: "APIの概要"
+    seeImplementation: "実装を見る"
+    requestBody: "パラメータ"
+    responseBody: "レスポンス"
+    error: "エラー"
   _permissions:
     title: "権限"
     description: "説明"
-    read:account: "Untranslated / 未翻訳"
-    write:account: "Untranslated / 未翻訳"
-    read:blocks: "Untranslated / 未翻訳"
-    write:blocks: "Untranslated / 未翻訳"
-    read:drive: "Untranslated / 未翻訳"
-    write:drive: "Untranslated / 未翻訳"
-    read:favorites: "Untranslated / 未翻訳"
-    write:favorites: "Untranslated / 未翻訳"
-    read:following: "Untranslated / 未翻訳"
-    write:following: "Untranslated / 未翻訳"
-    read:messaging: "Untranslated / 未翻訳"
-    write:messaging: "Untranslated / 未翻訳"
-    read:mutes: "Untranslated / 未翻訳"
-    write:mutes: "Untranslated / 未翻訳"
-    write:notes: "Untranslated / 未翻訳"
-    read:notifications: "Untranslated / 未翻訳"
-    write:notifications: "Untranslated / 未翻訳"
-    read:reactions: "Untranslated / 未翻訳"
-    write:reactions: "Untranslated / 未翻訳"
-    write:votes: "Untranslated / 未翻訳"
-    read:pages: "Untranslated / 未翻訳"
-    write:pages: "Untranslated / 未翻訳"
-    write:page-likes: "Untranslated / 未翻訳"
-    read:page-likes: "Untranslated / 未翻訳"
-    read:user-groups: "Untranslated / 未翻訳"
-    write:user-groups: "Untranslated / 未翻訳"
-    read:channels: "Untranslated / 未翻訳"
-    write:channels: "Untranslated / 未翻訳"
-    read:gallery: "Untranslated / 未翻訳"
-    write:gallery: "Untranslated / 未翻訳"
-    read:gallery-likes: "Untranslated / 未翻訳"
-    write:gallery-likes: "Untranslated / 未翻訳"
+    read:account: "アカウントの情報を見る"
+    write:account: "アカウントの情報を変更する"
+    read:blocks: "ブロックを見る"
+    write:blocks: "ブロックを操作する"
+    read:drive: "ドライブを見る"
+    write:drive: "ドライブを操作する"
+    read:favorites: "お気に入りを見る"
+    write:favorites: "お気に入りを操作する"
+    read:following: "フォローの情報を見る"
+    write:following: "フォロー・フォロー解除する"
+    read:messaging: "チャットを見る"
+    write:messaging: "チャットを操作する"
+    read:mutes: "ミュートを見る"
+    write:mutes: "ミュートを操作する"
+    write:notes: "ノートを作成・削除する"
+    read:notifications: "通知を見る"
+    write:notifications: "通知を操作する"
+    read:reactions: "リアクションを見る"
+    write:reactions: "リアクションを操作する"
+    write:votes: "投票する"
+    read:pages: "ページを見る"
+    write:pages: "ページを操作する"
+    read:page-likes: "ページのいいねを見る"
+    write:page-likes: "ページのいいねを操作する"
+    read:user-groups: "ユーザーグループを見る"
+    write:user-groups: "ユーザーグループを操作する"
+    read:channels: "チャンネルを見る"
+    write:channels: "チャンネルを操作する"
+    read:gallery: "ギャラリーを見る"
+    write:gallery: "ギャラリーを操作する"
+    read:gallery-likes: "ギャラリーのいいねを見る"
+    write:gallery-likes: "ギャラリーのいいねを操作する"
   _endpoints:
-    /admin/meta:
+    title: "エンドポイント一覧"
+    admin/meta:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/abuse-user-reports:
+    admin/abuse-user-reports:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/accounts/create:
+    admin/accounts/create:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/accounts/delete:
+    admin/accounts/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/ad/create:
+    admin/ad/create:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/ad/delete:
+    admin/ad/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/ad/list:
+    admin/ad/list:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/ad/update:
+    admin/ad/update:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/announcements/create:
+    admin/announcements/create:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/announcements/delete:
+    admin/announcements/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/announcements/list:
+    admin/announcements/list:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/announcements/update:
+    admin/announcements/update:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/delete-all-files-of-a-user:
+    admin/delete-all-files-of-a-user:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/drive/clean-remote-files:
+    admin/drive/clean-remote-files:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/drive/cleanup:
+    admin/drive/cleanup:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/drive/files:
+    admin/drive/files:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/drive/show-file:
+    admin/drive/show-file:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/emoji/add-aliases-bulk:
+    admin/emoji/add-aliases-bulk:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/emoji/add:
+    admin/emoji/add:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/emoji/copy:
+    admin/emoji/copy:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/emoji/delete-bulk:
+    admin/emoji/delete-bulk:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/emoji/delete:
+    admin/emoji/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/emoji/list-remote:
+    admin/emoji/list-remote:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/emoji/list:
+    admin/emoji/list:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/emoji/remove-aliases-bulk:
+    admin/emoji/remove-aliases-bulk:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/emoji/set-aliases-bulk:
+    admin/emoji/set-aliases-bulk:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/emoji/set-category-bulk:
+    admin/emoji/set-category-bulk:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/emoji/set-license-bulk:
+    admin/emoji/set-license-bulk:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/emoji/update:
+    admin/emoji/update:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/federation/delete-all-files:
+    admin/federation/delete-all-files:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/federation/refresh-remote-instance-metadata:
+    admin/federation/refresh-remote-instance-metadata:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/federation/remove-all-following:
+    admin/federation/remove-all-following:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/federation/update-instance:
+    admin/federation/update-instance:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/get-index-stats:
+    admin/get-index-stats:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/get-table-stats:
+    admin/get-table-stats:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/get-user-ips:
+    admin/get-user-ips:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/invite/create:
+    admin/invite/create:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/invite/list:
+    admin/invite/list:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/promo/create:
+    admin/promo/create:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/queue/clear:
+    admin/queue/clear:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/queue/deliver-delayed:
+    admin/queue/deliver-delayed:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/queue/inbox-delayed:
+    admin/queue/inbox-delayed:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/queue/promote:
+    admin/queue/promote:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/queue/stats:
+    admin/queue/stats:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/relays/add:
+    admin/relays/add:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/relays/list:
+    admin/relays/list:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/relays/remove:
+    admin/relays/remove:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/reset-password:
+    admin/reset-password:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/resolve-abuse-user-report:
+    admin/resolve-abuse-user-report:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/send-email:
+    admin/send-email:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/server-info:
+    admin/server-info:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/show-moderation-logs:
+    admin/show-moderation-logs:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/show-user:
+    admin/show-user:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/show-users:
+    admin/show-users:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/suspend-user:
+    admin/suspend-user:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/unsuspend-user:
+    admin/unsuspend-user:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/update-meta:
+    admin/update-meta:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/delete-account:
+    admin/delete-account:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/update-user-note:
+    admin/update-user-note:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/roles/create:
+    admin/roles/create:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/roles/delete:
+    admin/roles/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/roles/list:
+    admin/roles/list:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/roles/show:
+    admin/roles/show:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/roles/update:
+    admin/roles/update:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/roles/assign:
+    admin/roles/assign:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/roles/unassign:
+    admin/roles/unassign:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/roles/update-default-policies:
+    admin/roles/update-default-policies:
       post:
         description: "Untranslated / 未翻訳"
-    /admin/roles/users:
+    admin/roles/users:
       post:
         description: "Untranslated / 未翻訳"
-    /announcements:
+    announcements:
       post:
         description: "Untranslated / 未翻訳"
-    /antennas/create:
+    antennas/create:
       post:
         description: "Untranslated / 未翻訳"
-    /antennas/delete:
+    antennas/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /antennas/list:
+    antennas/list:
       post:
         description: "Untranslated / 未翻訳"
-    /antennas/notes:
+    antennas/notes:
       post:
         description: "Untranslated / 未翻訳"
-    /antennas/show:
+    antennas/show:
       post:
         description: "Untranslated / 未翻訳"
-    /antennas/update:
+    antennas/update:
       post:
         description: "Untranslated / 未翻訳"
-    /ap/get:
+    ap/get:
       post:
         description: "Untranslated / 未翻訳"
-    /ap/show:
+    ap/show:
       post:
         description: "Untranslated / 未翻訳"
-    /app/create:
+    app/create:
       post:
         description: "Untranslated / 未翻訳"
-    /app/show:
+    app/show:
       post:
         description: "Untranslated / 未翻訳"
-    /auth/session/generate:
+    auth/session/generate:
       post:
         description: "Untranslated / 未翻訳"
-    /auth/session/show:
+    auth/session/show:
       post:
         description: "Untranslated / 未翻訳"
-    /auth/session/userkey:
+    auth/session/userkey:
       post:
         description: "Untranslated / 未翻訳"
-    /blocking/create:
+    blocking/create:
       post:
         description: "Untranslated / 未翻訳"
-    /blocking/delete:
+    blocking/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /blocking/list:
+    blocking/list:
       post:
         description: "Untranslated / 未翻訳"
-    /channels/create:
+    channels/create:
       post:
         description: "Untranslated / 未翻訳"
-    /channels/featured:
+    channels/featured:
       post:
         description: "Untranslated / 未翻訳"
-    /channels/follow:
+    channels/follow:
       post:
         description: "Untranslated / 未翻訳"
-    /channels/followed:
+    channels/followed:
       post:
         description: "Untranslated / 未翻訳"
-    /channels/owned:
+    channels/owned:
       post:
         description: "Untranslated / 未翻訳"
-    /channels/show:
+    channels/show:
       post:
         description: "Untranslated / 未翻訳"
-    /channels/timeline:
+    channels/timeline:
       post:
         description: "Untranslated / 未翻訳"
-    /channels/unfollow:
+    channels/unfollow:
       post:
         description: "Untranslated / 未翻訳"
-    /channels/update:
+    channels/update:
       post:
         description: "Untranslated / 未翻訳"
-    /channels/favorite:
+    channels/favorite:
       post:
         description: "Untranslated / 未翻訳"
-    /channels/unfavorite:
+    channels/unfavorite:
       post:
         description: "Untranslated / 未翻訳"
-    /channels/my-favorites:
+    channels/my-favorites:
       post:
         description: "Untranslated / 未翻訳"
-    /channels/search:
+    channels/search:
       post:
         description: "Untranslated / 未翻訳"
-    /charts/active-users:
+    charts/active-users:
       post:
         description: "Untranslated / 未翻訳"
-    /charts/ap-request:
+    charts/ap-request:
       post:
         description: "Untranslated / 未翻訳"
-    /charts/drive:
+    charts/drive:
       post:
         description: "Untranslated / 未翻訳"
-    /charts/federation:
+    charts/federation:
       post:
         description: "Untranslated / 未翻訳"
-    /charts/instance:
+    charts/instance:
       post:
         description: "Untranslated / 未翻訳"
-    /charts/notes:
+    charts/notes:
       post:
         description: "Untranslated / 未翻訳"
-    /charts/user/drive:
+    charts/user/drive:
       post:
         description: "Untranslated / 未翻訳"
-    /charts/user/following:
+    charts/user/following:
       post:
         description: "Untranslated / 未翻訳"
-    /charts/user/notes:
+    charts/user/notes:
       post:
         description: "Untranslated / 未翻訳"
-    /charts/user/pv:
+    charts/user/pv:
       post:
         description: "Untranslated / 未翻訳"
-    /charts/user/reactions:
+    charts/user/reactions:
       post:
         description: "Untranslated / 未翻訳"
-    /charts/users:
+    charts/users:
       post:
         description: "Untranslated / 未翻訳"
-    /clips/add-note:
+    clips/add-note:
       post:
         description: "Untranslated / 未翻訳"
-    /clips/remove-note:
+    clips/remove-note:
       post:
         description: "Untranslated / 未翻訳"
-    /clips/create:
+    clips/create:
       post:
         description: "Untranslated / 未翻訳"
-    /clips/delete:
+    clips/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /clips/list:
+    clips/list:
       post:
         description: "Untranslated / 未翻訳"
-    /clips/notes:
+    clips/notes:
       post:
         description: "Untranslated / 未翻訳"
-    /clips/show:
+    clips/show:
       post:
         description: "Untranslated / 未翻訳"
-    /clips/update:
+    clips/update:
       post:
         description: "Untranslated / 未翻訳"
-    /clips/favorite:
+    clips/favorite:
       post:
         description: "Untranslated / 未翻訳"
-    /clips/unfavorite:
+    clips/unfavorite:
       post:
         description: "Untranslated / 未翻訳"
-    /clips/my-favorites:
+    clips/my-favorites:
       post:
         description: "Untranslated / 未翻訳"
-    /drive:
+    drive:
       post:
         description: "Untranslated / 未翻訳"
-    /drive/files:
+    drive/files:
       post:
         description: "Untranslated / 未翻訳"
-    /drive/files/attached-notes:
+    drive/files/attached-notes:
       post:
         description: "Untranslated / 未翻訳"
-    /drive/files/check-existence:
+    drive/files/check-existence:
       post:
         description: "Untranslated / 未翻訳"
-    /drive/files/create:
+    drive/files/create:
       post:
         description: "Untranslated / 未翻訳"
-    /drive/files/delete:
+    drive/files/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /drive/files/find-by-hash:
+    drive/files/find-by-hash:
       post:
         description: "Untranslated / 未翻訳"
-    /drive/files/find:
+    drive/files/find:
       post:
         description: "Untranslated / 未翻訳"
-    /drive/files/show:
+    drive/files/show:
       post:
         description: "Untranslated / 未翻訳"
-    /drive/files/update:
+    drive/files/update:
       post:
         description: "Untranslated / 未翻訳"
-    /drive/files/upload-from-url:
+    drive/files/upload-from-url:
       post:
         description: "Untranslated / 未翻訳"
-    /drive/folders:
+    drive/folders:
       post:
         description: "Untranslated / 未翻訳"
-    /drive/folders/create:
+    drive/folders/create:
       post:
         description: "Untranslated / 未翻訳"
-    /drive/folders/delete:
+    drive/folders/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /drive/folders/find:
+    drive/folders/find:
       post:
         description: "Untranslated / 未翻訳"
-    /drive/folders/show:
+    drive/folders/show:
       post:
         description: "Untranslated / 未翻訳"
-    /drive/folders/update:
+    drive/folders/update:
       post:
         description: "Untranslated / 未翻訳"
-    /drive/stream:
+    drive/stream:
       post:
         description: "Untranslated / 未翻訳"
-    /email-address/available:
+    email-address/available:
       post:
         description: "Untranslated / 未翻訳"
-    /endpoint:
+    endpoint:
       post:
         description: "Untranslated / 未翻訳"
-    /endpoints:
+    endpoints:
       post:
         description: "Untranslated / 未翻訳"
-    /federation/followers:
+    federation/followers:
       post:
         description: "Untranslated / 未翻訳"
-    /federation/following:
+    federation/following:
       post:
         description: "Untranslated / 未翻訳"
-    /federation/instances:
+    federation/instances:
       post:
         description: "Untranslated / 未翻訳"
-    /federation/show-instance:
+    federation/show-instance:
       post:
         description: "Untranslated / 未翻訳"
-    /federation/update-remote-user:
+    federation/update-remote-user:
       post:
         description: "Untranslated / 未翻訳"
-    /federation/users:
+    federation/users:
       post:
         description: "Untranslated / 未翻訳"
-    /federation/stats:
+    federation/stats:
       post:
         description: "Untranslated / 未翻訳"
-    /following/create:
+    following/create:
       post:
         description: "Untranslated / 未翻訳"
-    /following/delete:
+    following/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /following/update:
+    following/update:
       post:
         description: "Untranslated / 未翻訳"
-    /following/invalidate:
+    following/invalidate:
       post:
         description: "Untranslated / 未翻訳"
-    /following/requests/accept:
+    following/requests/accept:
       post:
         description: "Untranslated / 未翻訳"
-    /following/requests/cancel:
+    following/requests/cancel:
       post:
         description: "Untranslated / 未翻訳"
-    /following/requests/list:
+    following/requests/list:
       post:
         description: "Untranslated / 未翻訳"
-    /following/requests/reject:
+    following/requests/reject:
       post:
         description: "Untranslated / 未翻訳"
-    /gallery/featured:
+    gallery/featured:
       post:
         description: "Untranslated / 未翻訳"
-    /gallery/popular:
+    gallery/popular:
       post:
         description: "Untranslated / 未翻訳"
-    /gallery/posts:
+    gallery/posts:
       post:
         description: "Untranslated / 未翻訳"
-    /gallery/posts/create:
+    gallery/posts/create:
       post:
         description: "Untranslated / 未翻訳"
-    /gallery/posts/delete:
+    gallery/posts/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /gallery/posts/like:
+    gallery/posts/like:
       post:
         description: "Untranslated / 未翻訳"
-    /gallery/posts/show:
+    gallery/posts/show:
       post:
         description: "Untranslated / 未翻訳"
-    /gallery/posts/unlike:
+    gallery/posts/unlike:
       post:
         description: "Untranslated / 未翻訳"
-    /gallery/posts/update:
+    gallery/posts/update:
       post:
         description: "Untranslated / 未翻訳"
-    /get-online-users-count:
+    get-online-users-count:
       post:
         description: "Untranslated / 未翻訳"
-    /hashtags/list:
+    hashtags/list:
       post:
         description: "Untranslated / 未翻訳"
-    /hashtags/search:
+    hashtags/search:
       post:
         description: "Untranslated / 未翻訳"
-    /hashtags/show:
+    hashtags/show:
       post:
         description: "Untranslated / 未翻訳"
-    /hashtags/trend:
+    hashtags/trend:
       post:
         description: "Untranslated / 未翻訳"
-    /hashtags/users:
+    hashtags/users:
       post:
         description: "Untranslated / 未翻訳"
-    /i:
+    i:
       post:
         description: "Untranslated / 未翻訳"
-    /i/claim-achievement:
+    i/claim-achievement:
       post:
         description: "Untranslated / 未翻訳"
-    /i/favorites:
+    i/favorites:
       post:
         description: "Untranslated / 未翻訳"
-    /i/gallery/likes:
+    i/gallery/likes:
       post:
         description: "Untranslated / 未翻訳"
-    /i/gallery/posts:
+    i/gallery/posts:
       post:
         description: "Untranslated / 未翻訳"
-    /i/get-word-muted-notes-count:
+    i/get-word-muted-notes-count:
       post:
         description: "Untranslated / 未翻訳"
-    /i/notifications:
+    i/notifications:
       post:
         description: "Untranslated / 未翻訳"
-    /i/page-likes:
+    i/page-likes:
       post:
         description: "Untranslated / 未翻訳"
-    /i/pages:
+    i/pages:
       post:
         description: "Untranslated / 未翻訳"
-    /i/pin:
+    i/pin:
       post:
         description: "Untranslated / 未翻訳"
-    /i/read-all-unread-notes:
+    i/read-all-unread-notes:
       post:
         description: "Untranslated / 未翻訳"
-    /i/read-announcement:
+    i/read-announcement:
       post:
         description: "Untranslated / 未翻訳"
-    /i/unpin:
+    i/unpin:
       post:
         description: "Untranslated / 未翻訳"
-    /i/update:
+    i/update:
       post:
         description: "Untranslated / 未翻訳"
-    /i/webhooks/create:
+    i/webhooks/create:
       post:
         description: "Untranslated / 未翻訳"
-    /i/webhooks/list:
+    i/webhooks/list:
       post:
         description: "Untranslated / 未翻訳"
-    /i/webhooks/show:
+    i/webhooks/show:
       post:
         description: "Untranslated / 未翻訳"
-    /i/webhooks/update:
+    i/webhooks/update:
       post:
         description: "Untranslated / 未翻訳"
-    /i/webhooks/delete:
+    i/webhooks/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /invite/create:
+    invite/create:
       post:
         description: "Untranslated / 未翻訳"
-    /invite/delete:
+    invite/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /invite/list:
+    invite/list:
       post:
         description: "Untranslated / 未翻訳"
-    /invite/limit:
+    invite/limit:
       post:
         description: "Untranslated / 未翻訳"
-    /meta:
+    meta:
       post:
         description: "Untranslated / 未翻訳"
-    /emojis:
+    emojis:
       post:
         description: "Untranslated / 未翻訳"
-    /emoji:
+    emoji:
       post:
         description: "Untranslated / 未翻訳"
-    /mute/create:
+    mute/create:
       post:
         description: "Untranslated / 未翻訳"
-    /mute/delete:
+    mute/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /mute/list:
+    mute/list:
       post:
         description: "Untranslated / 未翻訳"
-    /renote-mute/create:
+    renote-mute/create:
       post:
         description: "Untranslated / 未翻訳"
-    /renote-mute/delete:
+    renote-mute/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /renote-mute/list:
+    renote-mute/list:
       post:
         description: "Untranslated / 未翻訳"
-    /my/apps:
+    my/apps:
       post:
         description: "Untranslated / 未翻訳"
-    /notes:
+    notes:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/children:
+    notes/children:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/clips:
+    notes/clips:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/conversation:
+    notes/conversation:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/create:
+    notes/create:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/delete:
+    notes/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/favorites/create:
+    notes/favorites/create:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/favorites/delete:
+    notes/favorites/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/featured:
+    notes/featured:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/global-timeline:
+    notes/global-timeline:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/hybrid-timeline:
+    notes/hybrid-timeline:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/local-timeline:
+    notes/local-timeline:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/mentions:
+    notes/mentions:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/polls/recommendation:
+    notes/polls/recommendation:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/polls/vote:
+    notes/polls/vote:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/reactions:
+    notes/reactions:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/reactions/create:
+    notes/reactions/create:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/reactions/delete:
+    notes/reactions/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/renotes:
+    notes/renotes:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/replies:
+    notes/replies:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/search-by-tag:
+    notes/search-by-tag:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/search:
+    notes/search:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/show:
+    notes/show:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/state:
+    notes/state:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/thread-muting/create:
+    notes/thread-muting/create:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/thread-muting/delete:
+    notes/thread-muting/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/timeline:
+    notes/timeline:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/translate:
+    notes/translate:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/unrenote:
+    notes/unrenote:
       post:
         description: "Untranslated / 未翻訳"
-    /notes/user-list-timeline:
+    notes/user-list-timeline:
       post:
         description: "Untranslated / 未翻訳"
-    /notifications/create:
+    notifications/create:
       post:
         description: "Untranslated / 未翻訳"
-    /notifications/mark-all-as-read:
+    notifications/mark-all-as-read:
       post:
         description: "Untranslated / 未翻訳"
-    /notifications/test-notification:
+    notifications/test-notification:
       post:
         description: "Untranslated / 未翻訳"
-    /pages/create:
+    pages/create:
       post:
         description: "Untranslated / 未翻訳"
-    /pages/delete:
+    pages/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /pages/featured:
+    pages/featured:
       post:
         description: "Untranslated / 未翻訳"
-    /pages/like:
+    pages/like:
       post:
         description: "Untranslated / 未翻訳"
-    /pages/show:
+    pages/show:
       post:
         description: "Untranslated / 未翻訳"
-    /pages/unlike:
+    pages/unlike:
       post:
         description: "Untranslated / 未翻訳"
-    /pages/update:
+    pages/update:
       post:
         description: "Untranslated / 未翻訳"
-    /flash/create:
+    flash/create:
       post:
         description: "Untranslated / 未翻訳"
-    /flash/delete:
+    flash/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /flash/featured:
+    flash/featured:
       post:
         description: "Untranslated / 未翻訳"
-    /flash/like:
+    flash/like:
       post:
         description: "Untranslated / 未翻訳"
-    /flash/show:
+    flash/show:
       post:
         description: "Untranslated / 未翻訳"
-    /flash/unlike:
+    flash/unlike:
       post:
         description: "Untranslated / 未翻訳"
-    /flash/update:
+    flash/update:
       post:
         description: "Untranslated / 未翻訳"
-    /flash/my:
+    flash/my:
       post:
         description: "Untranslated / 未翻訳"
-    /flash/my-likes:
+    flash/my-likes:
       post:
         description: "Untranslated / 未翻訳"
-    /ping:
+    ping:
       post:
         description: "Untranslated / 未翻訳"
-    /pinned-users:
+    pinned-users:
       post:
         description: "Untranslated / 未翻訳"
-    /promo/read:
+    promo/read:
       post:
         description: "Untranslated / 未翻訳"
-    /roles/list:
+    roles/list:
       post:
         description: "Untranslated / 未翻訳"
-    /roles/show:
+    roles/show:
       post:
         description: "Untranslated / 未翻訳"
-    /roles/users:
+    roles/users:
       post:
         description: "Untranslated / 未翻訳"
-    /roles/notes:
+    roles/notes:
       post:
         description: "Untranslated / 未翻訳"
-    /request-reset-password:
+    request-reset-password:
       post:
         description: "Untranslated / 未翻訳"
-    /reset-db:
+    reset-db:
       post:
         description: "Untranslated / 未翻訳"
-    /reset-password:
+    reset-password:
       post:
         description: "Untranslated / 未翻訳"
-    /server-info:
+    server-info:
       post:
         description: "Untranslated / 未翻訳"
-    /stats:
+    stats:
       post:
         description: "Untranslated / 未翻訳"
-    /sw/show-registration:
+    sw/show-registration:
       post:
         description: "Untranslated / 未翻訳"
-    /sw/update-registration:
+    sw/update-registration:
       post:
         description: "Untranslated / 未翻訳"
-    /sw/register:
+    sw/register:
       post:
         description: "Untranslated / 未翻訳"
-    /sw/unregister:
+    sw/unregister:
       post:
         description: "Untranslated / 未翻訳"
-    /test:
+    test:
       post:
         description: "Untranslated / 未翻訳"
-    /username/available:
+    username/available:
       post:
         description: "Untranslated / 未翻訳"
-    /users:
+    users:
       post:
         description: "Untranslated / 未翻訳"
-    /users/clips:
+    users/clips:
       post:
         description: "Untranslated / 未翻訳"
-    /users/followers:
+    users/followers:
       post:
         description: "Untranslated / 未翻訳"
-    /users/following:
+    users/following:
       post:
         description: "Untranslated / 未翻訳"
-    /users/gallery/posts:
+    users/gallery/posts:
       post:
         description: "Untranslated / 未翻訳"
-    /users/get-frequently-replied-users:
+    users/get-frequently-replied-users:
       post:
         description: "Untranslated / 未翻訳"
-    /users/lists/create:
+    users/lists/create:
       post:
         description: "Untranslated / 未翻訳"
-    /users/lists/delete:
+    users/lists/delete:
       post:
         description: "Untranslated / 未翻訳"
-    /users/lists/list:
+    users/lists/list:
       post:
         description: "Untranslated / 未翻訳"
-    /users/lists/pull:
+    users/lists/pull:
       post:
         description: "Untranslated / 未翻訳"
-    /users/lists/push:
+    users/lists/push:
       post:
         description: "Untranslated / 未翻訳"
-    /users/lists/show:
+    users/lists/show:
       post:
         description: "Untranslated / 未翻訳"
-    /users/lists/favorite:
+    users/lists/favorite:
       post:
         description: "Untranslated / 未翻訳"
-    /users/lists/unfavorite:
+    users/lists/unfavorite:
       post:
         description: "Untranslated / 未翻訳"
-    /users/lists/update:
+    users/lists/update:
       post:
         description: "Untranslated / 未翻訳"
-    /users/lists/create-from-public:
+    users/lists/create-from-public:
       post:
         description: "Untranslated / 未翻訳"
-    /users/notes:
+    users/notes:
       post:
         description: "Untranslated / 未翻訳"
-    /users/pages:
+    users/pages:
       post:
         description: "Untranslated / 未翻訳"
-    /users/flashs:
+    users/flashs:
       post:
         description: "Untranslated / 未翻訳"
-    /users/reactions:
+    users/reactions:
       post:
         description: "Untranslated / 未翻訳"
-    /users/recommendation:
+    users/recommendation:
       post:
         description: "Untranslated / 未翻訳"
-    /users/relation:
+    users/relation:
       post:
         description: "Untranslated / 未翻訳"
-    /users/report-abuse:
+    users/report-abuse:
       post:
         description: "Untranslated / 未翻訳"
-    /users/search-by-username-and-host:
+    users/search-by-username-and-host:
       post:
         description: "Untranslated / 未翻訳"
-    /users/search:
+    users/search:
       post:
         description: "Untranslated / 未翻訳"
-    /users/show:
+    users/show:
       post:
         description: "Untranslated / 未翻訳"
-    /users/achievements:
+    users/achievements:
       post:
         description: "Untranslated / 未翻訳"
-    /users/update-memo:
+    users/update-memo:
       post:
         description: "Untranslated / 未翻訳"
-    /fetch-rss:
+    fetch-rss:
       post:
         description: "Untranslated / 未翻訳"
-    /retention:
+    retention:
       post:
         description: "Untranslated / 未翻訳"
   _responseCodes:
-    "200": "OK (with results)"
-    "204": "OK (without any results)"
-    "400": "Client error"
-    "401": "Authentication error"
-    "403": "Forbidden error"
+    "200": "リクエスト成功（内容あり）"
+    "204": "リクエスト成功（内容なし）"
+    "400": "クライアント側エラー"
+    "401": "認証エラー"
+    "403": "権限関連のエラー"
     "418": "I'm Ai"
-    "429": "To many requests"
-    "500": "Internal server error"
+    "429": "レートリミット"
+    "500": "サーバー内部エラー"
   _errors:
     3d81ceae-475f-4600-b2a8-2bc116157532: "Invalid param."
     1384574d-a912-4b81-8601-c7b1c4085df1: "Credential required."

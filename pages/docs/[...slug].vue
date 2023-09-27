@@ -11,7 +11,8 @@
             </details>
         </div>
         <div class="pt-6 lg:p-6 w-full overflow-x-hidden">
-            <template v-if="data?.body">
+            <ApiRenderer v-if="slugs[0] === 'for-developers' && slugs[1] === 'api' && slugs[2] === 'endpoints' && slugs[3]" :apiData="data" />
+            <template v-else-if="data?.body">
                 <ContentRenderer v-if="data.body.children.length > 0" :value="data" class="markdown-body w-full mb-6">
                 </ContentRenderer>
                 <DocsPrevNext :ignore-dir-based-nav="data?.ignoreDirBasedNav ?? false" />

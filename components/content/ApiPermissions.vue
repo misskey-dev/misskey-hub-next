@@ -9,7 +9,7 @@
         <tbody>
             <tr v-for="permission in permissions">
                 <td><code>{{ permission }}</code></td>
-                <td>{{ $t(`_api._permissions._types.${permission}`) }}</td>
+                <td>{{ $t(`_api._permissions.${permission}`) }}</td>
             </tr>
         </tbody>
     </table>

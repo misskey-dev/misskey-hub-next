@@ -42,9 +42,16 @@ export async function genApiFiles() {
 
     const out: Record<string, any> = {
         _api: {
+            // 権限
             _permissions: {},
+
+            // 各エンドポイント
             _endpoints: {},
+
+            // レスポンスコードの説明
             _responseCodes: {},
+
+            // エラーの説明
             _errors: {},
         }
     };
@@ -58,10 +65,13 @@ export async function genApiFiles() {
     const ep = await fetch('https://misskey.noellabo.jp/api.json');
     const epj = await ep.json();
     Object.keys(epj.paths).forEach((path) => {
-        Object.keys(epj.paths[path]).forEach((method) => {
-            out._api._endpoints[path] = {};
+        const sanitizedPathName = path.replace(/^\//, '');
 
-            out._api._endpoints[path][method] = {
+        Object.keys(epj.paths[path]).forEach((method) => {
+            out._api._endpoints[sanitizedPathName] = {};
+
+            // 各エンドポイントのページ要素に合わせる
+            out._api._endpoints[sanitizedPathName][method] = {
                 description: 'Untranslated / 未翻訳',
             };
 
@@ -98,7 +108,12 @@ export async function genApiFiles() {
     // Contentのjsonを更新
     const targetEPPath = path.resolve(__dirname, '../content/api-docs/endpoints');
     Object.keys(epj.paths).forEach((eppath) => {
-        const targetObj = epj.paths[eppath];
+        const sanitizedPathName = eppath.replace(/^\//, '');
+
+        const targetObj: Record<string, any> = {
+            data: epj.paths[eppath],
+        };
+        targetObj.title = sanitizedPathName;
 
         createFile(path.join(targetEPPath, `${eppath}.json`), JSON.stringify(targetObj));
     });
