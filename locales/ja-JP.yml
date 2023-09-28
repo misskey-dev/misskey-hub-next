@@ -173,13 +173,22 @@ _links:
 
 _tools:
   title: "ツール集"
+  index: "ツール集 ホーム画面"
   description: "Misskey向けの便利ツールを公開中！"
+  menuToggle: "メニュー"
   _forUsers:
     title: "Misskeyユーザー向け"
 
 _mfmPlayground:
   title: "MFMお試しコーナー"
   description: "MFMを自由に練習できます！Misskeyの投稿画面・ノートの画面を再現！"
+  preview: "プレビュー"
+  disclaimer: "ここに表示される通りに描画されるとは限りません。コードのシンタックスハイライトには対応していません。"
+  mfm: "MFM"
+  character: "{0} 文字"
+  domain: "表示を再現するサーバー"
+  noteIt: "ノート"
+  clearEmojiCache: "絵文字のキャッシュを削除"
 
 _api:
   _permissions:

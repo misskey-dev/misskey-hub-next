@@ -23,8 +23,8 @@ export default defineNuxtConfig({
 		}
 	},
 	css: [
-		"@/assets/css/mfm.scss",
 		"github-markdown-css/github-markdown.css",
+		"@/assets/css/mfm.scss",
 		"@/assets/css/tailwind.css",
 		"@/assets/css/bootstrap-forms.scss",
 	],
