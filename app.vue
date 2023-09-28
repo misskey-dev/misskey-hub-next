@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Graph, Thing } from 'schema-dts';
+import ExtIco from 'bi/box-arrow-up-right.svg';
 
 const { t, locale } = useI18n();
 const route = useRoute();
@@ -96,7 +97,13 @@ useHead((): Record<string, any> => ({
 </script>
 <template>
 	<div class="text-slate-800 dark:text-slate-200 bg-slate-100 dark:bg-gray-900">
-		<noscript class="block bg-accent-800 text-white text-center py-1.5 px-3 keep-all relative z-[10005]">Please turn on Javascript from your browser's settings.</noscript>
+        <NuxtIsland name="commonNoScript">
+            <noscript class="block bg-accent-800 text-white text-center py-1.5 px-3 keep-all relative z-[10005]">Please turn on Javascript from your browser's settings.</noscript>
+        </NuxtIsland>
+		<div class="block bg-accent-800 text-white text-center py-1.5 px-3 keep-all relative z-[10005]">
+            このウェブサイトはMisskeyプロジェクト公式ではありません。<br>
+            <GNuxtLink to="https://misskey-hub.net" target="_blank" class="hover:underline text-accent-200">公式のMisskey Hubはこちら<ExtIco class="ml-0.5" /></GNuxtLink>
+        </div>
 		<NuxtLayout>
 			<NuxtPage />
 		</NuxtLayout>
