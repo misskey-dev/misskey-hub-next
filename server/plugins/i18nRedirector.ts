@@ -2,6 +2,11 @@ import { useRuntimeConfig } from '#imports';
 
 export default defineNitroPlugin((nitroApp) => {
   nitroApp.hooks.hook('render:html', (html, { event }) => {
+    if (event.path.includes("_nuxt") || event.path.match(/\d{3}\.html/)) {
+      return;
+    }
+
+    console.log(event.path);
     const runtimeConfig = useRuntimeConfig();
     //@ts-ignore
     if (!event.path.match(new RegExp(`^/(${runtimeConfig.public.locales.map((l) => l.code).join('|')})/`))) {
