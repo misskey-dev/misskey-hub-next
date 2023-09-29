@@ -20,6 +20,7 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
 			baseUrl,
+			locales,
 		}
 	},
 	css: [
@@ -51,7 +52,7 @@ export default defineNuxtConfig({
 			]
 		},
 		highlight: {
-			preload: ['ini', ],
+			preload: ['ini',],
 			theme: {
 				// Default theme (same as single string)
 				default: 'github-light',
@@ -66,6 +67,9 @@ export default defineNuxtConfig({
 		locales,
 		defaultLocale: 'ja',
 		strategy: 'prefix',
+		detectBrowserLanguage: {
+			fallbackLocale: 'ja',
+		},
 		trailingSlash: true,
 	},
 	colorMode: {
@@ -113,6 +117,7 @@ export default defineNuxtConfig({
 		},
 		plugins: [
 			'@/server/plugins/appendComment.ts',
+			'@/server/plugins/i18nRedirector.ts',
 		],
 	},
 	hooks: {
