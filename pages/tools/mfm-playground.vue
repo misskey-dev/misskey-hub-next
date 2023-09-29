@@ -38,10 +38,10 @@
                 </div>
                 <div>
                     <div class="flex">
-                        <div class="w-1/2 md:w-1/3 pr-2 col-form-label">
-                            絵文字が表示されないとき
+                        <div class="w-1/2 pr-2 col-form-label">
+                            {{ $t('_mfmPlayground.clearEmojiCacheDescription') }}
                         </div>
-                        <div class="w-1/2 md:w-2/3">
+                        <div class="w-1/2">
                             <button @click="clearEmojiCache()" class="btn w-full btn-outline-primary hover:!text-white">{{ $t('_mfmPlayground.clearEmojiCache') }}</button>
                         </div>
                     </div>

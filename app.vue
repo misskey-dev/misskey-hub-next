@@ -100,10 +100,6 @@ useHead((): Record<string, any> => ({
         <NuxtIsland name="commonNoScript">
             <noscript class="block bg-accent-800 text-white text-center py-1.5 px-3 keep-all relative z-[10005]">Please turn on Javascript from your browser's settings.</noscript>
         </NuxtIsland>
-		<div class="block bg-accent-800 text-white text-center py-1.5 px-3 keep-all relative z-[10005]">
-            このウェブサイトはMisskeyプロジェクト公式ではありません。<br>
-            <GNuxtLink to="https://misskey-hub.net" target="_blank" class="hover:underline text-accent-200">公式のMisskey Hubはこちら<ExtIco class="ml-0.5" /></GNuxtLink>
-        </div>
 		<NuxtLayout>
 			<NuxtPage />
 		</NuxtLayout>

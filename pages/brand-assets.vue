@@ -36,20 +36,20 @@
                     <GNuxtLink class="inline-block" to="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" /></GNuxtLink>
                 </Tip>
                 <div id="logo">
-                    <h2 class="text-2xl lg:text-3xl font-bold mb-4">{{ $t(`_brandAssets.logo`) }}</h2>
+                    <h2 class="text-2xl lg:text-3xl font-title font-bold mb-4">{{ $t(`_brandAssets.logo`) }}</h2>
                     <BrandAssetsImgPreview src="https://raw.githubusercontent.com/misskey-dev/assets/main/misskey.svg" />
                 </div>
                 <div id="icon">
-                    <h2 class="text-2xl lg:text-3xl font-bold mb-4">{{ $t(`_brandAssets.icon`) }}</h2>
+                    <h2 class="text-2xl lg:text-3xl font-title font-bold mb-4">{{ $t(`_brandAssets.icon`) }}</h2>
                     <BrandAssetsImgPreview src="https://raw.githubusercontent.com/misskey-dev/assets/main/icon.png" />
                 </div>
                 <div id="banner">
-                    <h2 class="text-2xl lg:text-3xl font-bold mb-4">{{ $t(`_brandAssets.banner`) }}</h2>
+                    <h2 class="text-2xl lg:text-3xl font-title font-bold mb-4">{{ $t(`_brandAssets.banner`) }}</h2>
                     <a class="mb-4 block mx-auto" href="https://raw.githubusercontent.com/misskey-dev/assets/main/banner.png" target="_blank">
-                        <img class="border border-slate-200 dark:border-slate-800" src="https://raw.githubusercontent.com/misskey-dev/assets/main/banner.png" />
+                        <img class="border border-slate-200 dark:border-slate-700" src="https://raw.githubusercontent.com/misskey-dev/assets/main/banner.png" />
                     </a>
                     <a class="block mx-auto" href="https://raw.githubusercontent.com/misskey-dev/assets/main/banner-2.png" target="_blank">
-                        <img class="border border-slate-200 dark:border-slate-800" src="https://raw.githubusercontent.com/misskey-dev/assets/main/banner-2.png" />
+                        <img class="border border-slate-200 dark:border-slate-700" src="https://raw.githubusercontent.com/misskey-dev/assets/main/banner-2.png" />
                     </a>
                 </div>
             </div>

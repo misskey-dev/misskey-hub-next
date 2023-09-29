@@ -28,6 +28,7 @@ export default function(props: {
 	isNote?: boolean;
 	emojiUrls?: string[];
 	rootScale?: number;
+	/** 表示の基準にするMisskeyサーバーのドメイン */
 	baseHost?: string;
 }) {
 	const isNote = props.isNote !== undefined ? props.isNote : true;

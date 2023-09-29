@@ -1,14 +1,17 @@
 <template>
     <div class="grid docs-main">
-        <div v-if="data?.body" class="lg:hidden sticky top-16 -mx-6 -mt-6 overflow-y-auto bg-white bg-opacity-60 backdrop-blur-lg z-[9890] border-b text-sm">
-            <details :open="openState">
-                <summary class="py-4 px-6 cursor-pointer">
+        <div class="lg:hidden sticky top-16 -mx-6 -mt-6 overflow-y-auto bg-slate-50 dark:bg-slate-900 z-[9890] border-b dark:border-slate-700 text-sm flex items-start">
+            <details v-if="data?.body && data.body.toc.links.length > 0" class="peer order-2 flex-grow flex-shrink-0" :open="openState">
+                <summary class="py-4 cursor-pointer">
                     {{ $t('_docs._toc.title') }}
                 </summary>
                 <div class="pb-4 px-6 max-h-[65vh] overflow-y-auto">
                     <DocsTocLinks :links="data?.body.toc.links" @child-click="openState = false" />
                 </div>
             </details>
+            <button @click="isAsideNavOpen = !isAsideNavOpen" class="p-4 order-1 dark:border-slate-800 border-r peer-open:border-b mr-2">
+                <AsideNavIco class="block w-5 h-5" />
+            </button>
         </div>
         <div class="pt-6 lg:p-6 w-full overflow-x-hidden">
             <template v-if="data?.body">
@@ -34,6 +37,9 @@
 
 <script setup lang="ts">
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
+import AsideNavIco from 'bi/text-indent-left.svg';
+
+const isAsideNavOpen = useState<boolean>('miHub_docs_asideNav_openState', () => false);
 
 const { locale, locales } = useI18n();
 const openState = ref<boolean>(false);

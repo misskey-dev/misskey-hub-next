@@ -13,7 +13,7 @@
         >
             <GNuxtLink
                 :to="link._path"
-                @click.passive="emit('child-click');"
+                @click.passive="isAsideNavOpen = false"
                 :class="[
                     'block hover:text-accent-600',
                     depth === 1 && 'text-base',
@@ -48,6 +48,8 @@ import type { NavItem } from '@nuxt/content/dist/runtime/types'
 import { findDeepObject } from '@/assets/js/misc';
 import { isSamePath } from 'ufo';
 import ArrowIco from "bi/chevron-right.svg";
+
+const isAsideNavOpen = useState<boolean>('miHub_docs_asideNav_openState', () => false);
 
 const props = withDefaults(defineProps<{
     links: NavItem[];

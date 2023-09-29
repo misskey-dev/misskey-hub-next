@@ -1,5 +1,5 @@
 <template>
-	<img :src="refinedSrc" :alt="alt" :width="width" :height="height" loading="lazy" />
+	<img class="rounded-lg" :src="refinedSrc" :alt="alt" :width="width" :height="height" loading="lazy" />
 </template>
 
 <script setup lang="ts">

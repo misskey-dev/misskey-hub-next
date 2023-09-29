@@ -160,6 +160,24 @@ _links:
   _aiChan:
     title: "AI-chan"
     description: "Visit the website of AI-chan, the mascot of Misskey."
+_tools:
+  title: "Tool Collection"
+  index: "Tool Collection Home"
+  description: "Discover handy tools for Misskey, crafted by the original developers!"
+  menuToggle: "Menu"
+  _forUsers:
+    title: "For Misskey Users"
+_mfmPlayground:
+  title: "MFM Playground"
+  description: "Practice MFM freely!"
+  preview: "Preview"
+  disclaimer: "It may not render exactly as shown here. Syntax highlighting for code is not supported for performance reason."
+  mfm: "MFM"
+  character: "{0} characters"
+  domain: "Server to replicate the appearance (e.g. custom emojis)"
+  noteIt: "Note It"
+  clearEmojiCacheDescription: "When emojis are not displayed:"
+  clearEmojiCache: "Clear Emoji Cache"
 _api:
   _permissions:
     title: "Permissions"

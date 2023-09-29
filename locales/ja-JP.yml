@@ -188,6 +188,7 @@ _mfmPlayground:
   character: "{0} 文字"
   domain: "表示を再現するサーバー"
   noteIt: "ノート"
+  clearEmojiCacheDescription: "絵文字が表示されないとき"
   clearEmojiCache: "絵文字のキャッシュを削除"
 
 _api:

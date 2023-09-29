@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const isNavOpen = ref<boolean>(false);
+const isAsideNavOpen = useState<boolean>('miHub_docs_asideNav_openState', () => false);
 
 useHead({
     htmlAttrs: {
@@ -16,12 +17,22 @@ const { data: navigation } = await useAsyncData('navigation', () => fetchContent
         <GNav @toggleNav="isNavOpen = !isNavOpen" :is-open="isNavOpen" :slim="true" :disable-shadow="true" />
         <div class="main-content">
             <div class="relative container mx-auto max-w-screen-xl p-6 lg:py-0 grid docs-root pb-12">
-                <div class="hidden lg:block">
-                    <div class="sticky top-16 h-[calc(100vh-4rem)] overflow-y-scroll border-r border-slate-200 dark:border-slate-700 py-6 pr-3">
+                <div
+                    class="fixed top-[7.25rem] left-0 z-20 w-64 pl-6 transition-transform bg-slate-50 dark:bg-slate-900 lg:top-auto lg:bg-transparent dark:lg:bg-transparent lg:pl-0 lg:transform-none lg:relative"
+                    :class="isAsideNavOpen ? 'translate-x-0' : '-translate-x-64'"
+                >
+                    <div class="lg:sticky lg:top-16 h-[calc(100vh-7.25rem)] lg:h-[calc(100vh-4rem)] overflow-y-scroll border-r border-slate-200 dark:border-slate-700 py-6 pr-3">
                         <DocsAsideNav :links="navigation ?? []" />
                     </div>
                 </div>
-                <slot />
+                <div 
+                    :class="[
+                        'relative after:fixed after:top-16 after:z-10 after:w-full after:h-full lg:after:hidden',
+                        isAsideNavOpen ? 'after:bg-black/70' : 'after:invisible',
+                    ]"
+                >
+                    <slot></slot>
+                </div>
             </div>
         </div>
         <GFooter class="bg-slate-100 dark:bg-gray-900" />
