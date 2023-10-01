@@ -14,6 +14,7 @@ defineProps<{
 
 <style scoped>
 .prevroot {
+    @apply rounded-lg;
     background: linear-gradient(45deg, #aaa 25%, transparent 25%, transparent 75%, #aaa 75%),
               linear-gradient(45deg, #aaa 25%, transparent 25%, transparent 75%, #aaa 75%);
     background-color: #888;

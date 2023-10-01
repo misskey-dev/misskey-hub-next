@@ -9,7 +9,7 @@ export default defineNitroPlugin((nitroApp) => {
     console.log(event.path);
     const runtimeConfig = useRuntimeConfig();
     //@ts-ignore
-    if (!event.path.match(new RegExp(`^/(${runtimeConfig.public.locales.map((l) => l.code).join('|')})/`))) {
+    if (!event.path.match(new RegExp(`^/(${runtimeConfig.locales.map((l) => l.code).join('|')})/`))) {
       html.htmlAttrs = [];
 
       const remainingList: string[] = [];

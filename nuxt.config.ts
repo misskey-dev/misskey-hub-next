@@ -18,9 +18,9 @@ export const locales = [
 
 export default defineNuxtConfig({
 	runtimeConfig: {
+		locales,
 		public: {
 			baseUrl,
-			locales,
 		}
 	},
 	css: [
