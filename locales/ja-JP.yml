@@ -191,6 +191,13 @@ _mfmPlayground:
   clearEmojiCacheDescription: "絵文字が表示されないとき"
   clearEmojiCache: "絵文字のキャッシュを削除"
 
+_aidConverter:
+  title: "aid/aidxツール"
+  aidToDate: "aid/aidx→日付時刻"
+  dateToAid: "日付時刻→aid/aidx"
+  mode: "作成するid"
+  date: "日付時刻"
+
 _api:
   _permissions:
     title: "権限"
