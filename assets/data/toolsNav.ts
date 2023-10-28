@@ -12,7 +12,7 @@ export default <NavSection[]>[
             {
                 i18n: "_aidConverter.title",
                 description: "_aidConverter.description",
-                to: "/tools/mfm-playground/",
+                to: "/tools/aid-converter/",
             }
         ]
     }
