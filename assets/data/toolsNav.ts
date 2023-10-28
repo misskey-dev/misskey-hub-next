@@ -8,6 +8,11 @@ export default <NavSection[]>[
                 i18n: "_mfmPlayground.title",
                 description: "_mfmPlayground.description",
                 to: "/tools/mfm-playground/",
+            },
+            {
+                i18n: "_aidConverter.title",
+                description: "_aidConverter.description",
+                to: "/tools/mfm-playground/",
             }
         ]
     }

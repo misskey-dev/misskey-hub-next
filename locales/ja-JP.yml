@@ -193,6 +193,7 @@ _mfmPlayground:
 
 _aidConverter:
   title: "aid/aidxツール"
+  description: "Misskeyの内部で使用されているランダムID生成アルゴリズム「aid」と「aidx」の変換・生成ができます。"
   aidToDate: "aid/aidx→日付時刻"
   dateToAid: "日付時刻→aid/aidx"
   mode: "作成するid"
