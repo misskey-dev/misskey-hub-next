@@ -69,6 +69,14 @@ const head = useLocaleHead({
     addSeoAttributes: true
 });
 
+/** 
+ * 中国大陸で Google Fonts を使う裏技
+ * fonts.googleapis.com → fonts.googleapis.cn
+ **/
+const cnHead = (locale.value === 'cn') ? [
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.cn/css2?family=Capriola&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap' }
+] : [];
+
 useHead((): Record<string, any> => ({
     htmlAttrs: {
         lang: locale.value,
@@ -101,6 +109,7 @@ useHead((): Record<string, any> => ({
     ],
     link: [
         ...(head.value.link?.map((e) => ({ rel: e.rel, href: (e.href.endsWith('/') ? e.href : e.href + '/'), hreflang: e.hreflang, })) || []),
+        ...cnHead,
     ],
     script: [
         { type: "application/ld+json", children: getLdJson(route.meta.graph) }
