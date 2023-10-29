@@ -1,11 +1,21 @@
 <script setup lang="ts">
+import NProgress from 'nprogress';
 import type { Graph, Thing } from 'schema-dts';
-import ExtIco from 'bi/box-arrow-up-right.svg';
 
 const { t, locale } = useI18n();
 const route = useRoute();
+const router = useRouter();
 const colorMode = useColorMode();
 const baseUrl = useRuntimeConfig().public.baseUrl as string;
+
+router.beforeEach(() => {
+    NProgress.start();
+});
+router.afterEach(() => {
+    setTimeout(() => {
+        NProgress.done();
+    }, 100);
+});
 
 const getDescription = (): string => {
     if (route.meta.description != null && route.meta.description != "") {

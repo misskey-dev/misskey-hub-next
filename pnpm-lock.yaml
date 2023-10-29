@@ -34,6 +34,9 @@ devDependencies:
   '@types/node':
     specifier: ^18.17.15
     version: 18.17.18
+  '@types/nprogress':
+    specifier: ^0.2.2
+    version: 0.2.2
   '@types/rellax':
     specifier: ^1.7.4
     version: 1.7.4
@@ -64,6 +67,9 @@ devDependencies:
   misskey-js:
     specifier: ^0.0.16
     version: 0.0.16
+  nprogress:
+    specifier: ^0.2.0
+    version: 0.2.0
   nuxt:
     specifier: ^3.7.3
     version: 3.7.3(@types/node@18.17.18)(sass@1.68.0)(typescript@5.2.2)
@@ -1098,7 +1104,7 @@ packages:
   /@nuxt/content-edge@2.8.2-28233414.6d70135(vue@3.3.4):
     resolution: {integrity: sha512-JBhIByJpVsIi/NJnNrNjiEWygP81K1CMaqOdhmSnPukYE+Mawp6CeYEsm2baYXKsLISAUDsC9h17JAxdVOJCRA==}
     dependencies:
-      '@nuxt/kit': 3.7.3
+      '@nuxt/kit': 3.8.0
       '@nuxtjs/mdc': 0.1.6
       '@vueuse/head': 1.3.1(vue@3.3.4)
       consola: 3.2.3
@@ -1116,7 +1122,7 @@ packages:
       shiki-es: 0.14.0
       slugify: 1.6.6
       socket.io-client: 4.7.2
-      ufo: 1.3.0
+      ufo: 1.3.1
       unstorage: 1.9.0
       ws: 8.14.2
     transitivePeerDependencies:
@@ -1417,7 +1423,7 @@ packages:
       remark-rehype: 10.1.0
       scule: 1.0.0
       shiki-es: 0.14.0
-      ufo: 1.3.0
+      ufo: 1.3.1
       unified: 11.0.3
       unist-builder: 4.0.0
       unist-util-visit: 5.0.0
@@ -1966,6 +1972,10 @@ packages:
 
   /@types/node@18.17.18:
     resolution: {integrity: sha512-/4QOuy3ZpV7Ya1GTRz5CYSz3DgkKpyUptXuQ5PPce7uuyJAOR7r9FhkmxJfvcNUXyklbC63a+YvB3jxy7s9ngw==}
+    dev: true
+
+  /@types/nprogress@0.2.2:
+    resolution: {integrity: sha512-2wLrSJXLztGmr7wXwM0hA/wuIOY9DznVdd+ZFofHOiXcj9JnVt+2ZeLRJ7v5ZVlmheSkUOSg3Q3O4Ce7yji79A==}
     dev: true
 
   /@types/parse5@6.0.3:
@@ -4317,7 +4327,7 @@ packages:
       node-forge: 1.3.1
       pathe: 1.1.1
       std-env: 3.4.3
-      ufo: 1.3.0
+      ufo: 1.3.1
       untun: 0.1.2
       uqr: 0.1.2
     dev: true
@@ -5462,6 +5472,10 @@ packages:
       console-control-strings: 1.1.0
       gauge: 3.0.2
       set-blocking: 2.0.0
+    dev: true
+
+  /nprogress@0.2.0:
+    resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==}
     dev: true
 
   /nth-check@2.1.1:
