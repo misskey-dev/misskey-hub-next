@@ -10,10 +10,13 @@ const baseUrl = 'https://misskey-hub.net';
 export const locales = [
 	{ code: 'ja', iso: 'ja-JP', name: '日本語' },
 	{ code: 'en', iso: 'en-US', name: 'English' },
+	{ code: 'id', iso: 'id-ID', name: 'Bahasa Indonesia' },
 	{ code: 'ko', iso: 'ko-KR', name: '한국어' },
 	{ code: 'it', iso: 'it-IT', name: 'Italiano' },
 	{ code: 'pl', iso: 'pl-PL', name: 'Polski' },
 	{ code: 'fr', iso: 'fr-FR', name: 'Français' },
+	{ code: 'cn', iso: 'zh-CN', name: '简体中文' },
+	{ code: 'tw', iso: 'zh-TW', name: '繁体中文' },
 ];
 
 export default defineNuxtConfig({

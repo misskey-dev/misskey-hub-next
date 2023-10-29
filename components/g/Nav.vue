@@ -55,7 +55,7 @@
                         <div class="absolute top-6 right-0 hidden group-hover:block z-[9955]">
                             <ul class="px-4 py-2 bg-slate-50 dark:bg-slate-800 rounded-lg shadow-lg space-y-1">
                                 <li v-for="locale in locales">
-                                    <GNuxtLink :to="switchLocalePath(locale.code)" :class="['hover:text-accent-600 py-1', {'text-accent-600 font-bold': currentLocale === locale.code}]">
+                                    <GNuxtLink :to="switchLocalePath(locale.code)" :lang="locale.code" :class="['_i18n whitespace-nowrap hover:text-accent-600 py-1', {'text-accent-600 font-bold': currentLocale === locale.code}]">
                                         {{ locale.name }}
                                     </GNuxtLink>
                                 </li>

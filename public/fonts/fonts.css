@@ -10,19 +10,27 @@
 /** Traditional Chinese (Noto Sans TC) */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
 
-html[lang='ja'] {
+._i18n {
+    font-family: Nunito, var(--mi-localized-font, ''), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html[lang='ja'],
+._i18n[lang='ja'] {
     --mi-localized-font: 'GenJyuuGothicX';
     --mi-localized-font-p: 'GenJyuuGothicXP';
 }
 
-html[lang='ko'] {
+html[lang='ko'],
+._i18n[lang='ko'] {
     --mi-localized-font: 'Pretendard';
 }
 
-html[lang='cn'] {
+html[lang='cn'],
+._i18n[lang='cn'] {
     --mi-localized-font: 'Noto Sans SC';
 }
 
-html[lang='tw'] {
+html[lang='tw'],
+._i18n[lang='tw'] {
     --mi-localized-font: 'Noto Sans TC';
 }
