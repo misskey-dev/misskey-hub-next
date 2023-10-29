@@ -25,13 +25,13 @@ const { data: navigation } = await useAsyncData('navigation', () => fetchContent
                         <DocsAsideNav :links="navigation ?? []" />
                     </div>
                 </div>
-                <div 
-                    :class="[
-                        'relative after:fixed after:top-16 after:z-10 after:w-full after:h-full lg:after:hidden',
-                        isAsideNavOpen ? 'after:bg-black/70' : 'after:invisible',
-                    ]"
-                >
+                <div class="relative">
                     <slot></slot>
+                    <div
+                        class="fixed top-16 z-10 w-full h-full lg:hidden transition-opacity bg-black"
+                        :class="isAsideNavOpen ? 'opacity-70' : 'opacity-0 pointer-events-none'"
+                        @click="isAsideNavOpen = false"
+                    ></div>
                 </div>
             </div>
         </div>
