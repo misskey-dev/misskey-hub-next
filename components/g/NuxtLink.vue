@@ -10,7 +10,7 @@
 <script setup lang="ts">
 import { cleanDoubleSlashes, withTrailingSlash } from 'ufo';
 import { isLocalPath } from '@/assets/js/misc';
-import { RouteLocationRaw } from '#vue-router';
+import type { RouteLocationRaw } from '#vue-router';
 
 /**
  * TrailingSlashをつけている（pnpm generate時の出力ディレクトリ構造の関係）ので、

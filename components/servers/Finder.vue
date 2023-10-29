@@ -82,6 +82,7 @@
                 </div>
                 <div v-else class="rounded-lg p-6 min-h-[40vh] flex items-center sm:col-span-2 md:col-span-2 lg:col-span-2 bg-slate-100 dark:bg-slate-800">
                     <div class="mx-auto text-center">
+                        <MkLoading class="mx-auto"></MkLoading>
                         <p class="max-w-xs">{{ $t('loading') }}</p>
                     </div>
                 </div>
