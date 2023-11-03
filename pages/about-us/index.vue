@@ -1,16 +1,16 @@
 <template>
     <div>
         <GHero>
-            <template #title>{{ $t('_other.title') }}</template>
+            <template #title>{{ $t('_aboutUs.title') }}</template>
             <template #description>
-                {{ $t('_other.description') }}
+                {{ $t('_aboutUs.description') }}
             </template>
             <template #icon>
                 <div class="hidden lg:block relative px-6 py-8">
                     <GDots class="absolute top-0 left-0 w-32 h-32 text-accent-600" />
                     <GDots class="absolute bottom-0 right-0 w-32 h-32 text-accent-600" />
                     <div class="relative lg:w-64 h-64 flex items-center">
-                        <img class="drop-shadow-xl learnMoreHeroPudding" src="/img/emojis/custard_3d.png" />
+                        <img class="drop-shadow-xl rounded-xl" src="/img/misc/midev.png" />
                     </div>
                 </div>
             </template>
@@ -34,7 +34,7 @@
                         to: localePath('/about-us/'),
                         title: $t('_aboutUs.title'),
                         description: $t('_aboutUs.description'),
-                        img: '/img/misc/midev.png',
+                        img: '/img/emojis/technologist_3d.png',
                     },
                     {
                         to: 'https://github.com/misskey-dev',
@@ -72,8 +72,4 @@
 const localePath = useLocalePath();
 </script>
 
-<style>
-.learnMoreHeroPudding:hover {
-animation: .75s linear 0s 1 normal both running mfm-rubberBand;
-}
-</style>
+<style></style>
