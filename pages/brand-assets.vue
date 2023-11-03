@@ -29,6 +29,10 @@
                     {
                         name: $t('_brandAssets.banner'),
                         anchor: '#banner',
+                    },
+                    {
+                        name: $t('_brandAssets.avatarDecorationTemplate'),
+                        anchor: '#avatar-decoration'
                     }
                 ]" />
                 <Tip>
@@ -51,6 +55,10 @@
                     <a class="block mx-auto" href="https://raw.githubusercontent.com/misskey-dev/assets/main/banner-2.png" target="_blank">
                         <img class="border border-slate-200 dark:border-slate-700" src="https://raw.githubusercontent.com/misskey-dev/assets/main/banner-2.png" />
                     </a>
+                </div>
+                <div id="avatar-decoration">
+                    <h2 class="text-2xl lg:text-3xl font-title font-bold mb-4">{{ $t(`_brandAssets.avatarDecorationTemplate`) }}</h2>
+                    <BrandAssetsImgPreview src="/img/misc/avatar-decoration-template.png" />
                 </div>
             </div>
         </div>

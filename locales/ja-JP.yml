@@ -155,6 +155,7 @@ _brandAssets:
   logo: "ロゴ"
   icon: "アイコン"
   banner: "バナー"
+  avatarDecorationTemplate: "アバターデコレーション テンプレート"
 
 _links:
   title: "リンク"
