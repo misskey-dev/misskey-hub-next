@@ -8,10 +8,12 @@ const router = useRouter();
 const colorMode = useColorMode();
 const baseUrl = useRuntimeConfig().public.baseUrl as string;
 
-router.beforeEach(() => {
+router.beforeEach((to, from) => {
+    if (to.path === from.path) return;
     NProgress.start();
 });
-router.afterEach(() => {
+router.afterEach((to, from) => {
+    if (to.path === from.path) return;
     nextTick(() => {
         setTimeout(() => {
             NProgress.done();
