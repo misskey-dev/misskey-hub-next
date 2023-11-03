@@ -2,7 +2,7 @@ import { useRuntimeConfig } from '#imports';
 
 export default defineNitroPlugin((nitroApp) => {
   nitroApp.hooks.hook('render:html', (html, { event }) => {
-    if (event.path.includes("_nuxt") || event.path.match(/\d{3}\.html/)) {
+    if (event.path.includes("_nuxt") || event.path.match(/\d{3}\.html/) || event.path.match(/^\/ns/)) {
       return;
     }
 
