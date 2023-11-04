@@ -19,48 +19,10 @@
             <div class="container mx-auto max-w-screen-xl px-6 space-y-6 lg:space-y-8">
                 <GLargeLinks :items="[
                     {
-                        to: localePath('/brand-assets/'),
-                        title: $t('_brandAssets.title'),
-                        description: $t('_brandAssets.description'),
-                        img: '/img/emojis/artist_palette_3d.png',
-                    },
-                    {
-                        to: localePath('/tools/'),
-                        title: $t('_tools.title'),
-                        description: $t('_tools.description'),
-                        img: '/img/emojis/toolbox_3d.png',
-                    },
-                    {
-                        to: localePath('/about-us/'),
-                        title: $t('_aboutUs.title'),
-                        description: $t('_aboutUs.description'),
+                        to: localePath('/about-us/team/'),
+                        title: $t('_aboutUs._team.title'),
+                        description: $t('_aboutUs._team.description'),
                         img: '/img/emojis/technologist_3d.png',
-                    },
-                    {
-                        to: 'https://github.com/misskey-dev',
-                        title: $t('_links._github.title'),
-                        description: $t('_links._github.description'),
-                        img: '/img/links/github.png',
-                    },
-                    {
-                        to: 'https://crowdin.com/project/misskey',
-                        title: $t('_links._crowdin.title'),
-                        description: $t('_links._crowdin.description'),
-                        img: '/img/links/crowdin.svg',
-                    },
-                    {
-                        to: 'https://discord.com/invite/Wp8gVStHW3',
-                        title: $t('_links._discord.title'),
-                        description: $t('_links._discord.description'),
-                        img: '/img/links/discord.png',
-                    },
-                    {
-                        to: 'https://藍.moe/',
-                        title: $t('_links._aiChan.title'),
-                        description: $t('_links._aiChan.description'),
-                        img: '/img/links/ai.png',
-                        cutBottom: true,
-                        cutLeft: true,
                     },
                 ]" />
             </div>

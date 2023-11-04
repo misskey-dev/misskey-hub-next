@@ -204,6 +204,8 @@ _aboutUs:
   title: "Misskey Development Divisionについて"
   description: "Misskey開発チームについての情報を掲載しています。"
   _team:
+    title: "開発メンバー"
+    description: "Misskeyの開発に関わっている方を紹介しています。"
     _core:
       title: "コア チームメンバー"
       description: "こちらのコアチームメンバーは、Misskey関連のプロジェクトを積極的にメンテナンスしています。"
@@ -213,6 +215,9 @@ _aboutUs:
     _contributors:
       title: "コントリビューター"
       description: "こちらの皆さんは、Misskeyに特に貢献してくださっています。"
+    _orgPartner:
+      title: "企業・団体パートナー"
+      description: "こちらの企業・団体から、金銭的・技術的な観点でMisskeyの開発へご協力いただいております。"
 
 _api:
   _permissions:

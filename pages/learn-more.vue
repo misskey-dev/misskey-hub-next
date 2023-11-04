@@ -31,12 +31,6 @@
                         img: '/img/emojis/toolbox_3d.png',
                     },
                     {
-                        to: localePath('/about-us/'),
-                        title: $t('_aboutUs.title'),
-                        description: $t('_aboutUs.description'),
-                        img: '/img/misc/midev.png',
-                    },
-                    {
                         to: 'https://github.com/misskey-dev',
                         title: $t('_links._github.title'),
                         description: $t('_links._github.description'),
@@ -61,6 +55,12 @@
                         img: '/img/links/ai.png',
                         cutBottom: true,
                         cutLeft: true,
+                    },
+                    {
+                        to: localePath('/about-us/'),
+                        title: $t('_aboutUs.title'),
+                        description: $t('_aboutUs.description'),
+                        img: '/img/misc/midev.png',
                     },
                 ]" />
             </div>
