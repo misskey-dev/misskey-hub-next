@@ -215,6 +215,7 @@ _aboutUs:
     _contributors:
       title: "コントリビューター"
       description: "こちらの皆さんは、Misskeyに特に貢献してくださっています。"
+      seeMore: "すべてのコントリビューター"
     _orgPartner:
       title: "企業・団体パートナー"
       description: "こちらの企業・団体から、金銭的・技術的な観点でMisskeyの開発へご協力いただいております。"
