@@ -3,10 +3,12 @@ import ViteYaml from '@modyfi/vite-plugin-yaml';
 import svgLoader from 'vite-svg-loader';
 import genSitemap from './scripts/gen-sitemap';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
+import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl = 'https://misskey-hub.net';
 
+// 言語定義
 export const locales = [
 	{ code: 'ja', iso: 'ja-JP', name: '日本語' },
 	{ code: 'en', iso: 'en-US', name: 'English' },
@@ -17,7 +19,7 @@ export const locales = [
 	{ code: 'fr', iso: 'fr-FR', name: 'Français' },
 	{ code: 'cn', iso: 'zh-CN', name: '简体中文' },
 	{ code: 'tw', iso: 'zh-TW', name: '繁体中文' },
-];
+] as LocaleObject[];
 
 export default defineNuxtConfig({
 	runtimeConfig: {
@@ -52,7 +54,9 @@ export default defineNuxtConfig({
 			]
 		},
 		highlight: {
-			preload: ['ini',],
+			preload: [
+				'ini',
+			],
 			theme: {
 				// Default theme (same as single string)
 				default: 'github-light',

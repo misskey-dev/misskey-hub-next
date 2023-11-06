@@ -20,6 +20,7 @@
     "@types/rellax": "^1.7.4",
     "@types/three": "^0.153.0",
     "@types/tinycolor2": "^1.4.3",
+    "aiscript-vscode": "github:aiscript-dev/aiscript-vscode#v0.0.5",
     "autoprefixer": "^10.4.15",
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.10.5",
