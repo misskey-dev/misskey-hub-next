@@ -1,20 +1,22 @@
 <template>
     <div class="pt-12">
-        <GHero class="bg-white dark:bg-slate-950 mx-auto max-w-screen-xl p-6 rounded-2xl">
-            <template #title>{{ $t('_tools.title') }}</template>
-            <template #description>
-                {{ $t('_tools.description') }}
-            </template>
-            <template #icon>
-                <div class="hidden lg:block relative px-6 py-8">
-                    <GDots class="absolute top-0 left-0 w-28 h-28 text-accent-600" />
-                    <GDots class="absolute bottom-0 right-0 w-28 h-28 text-accent-600" />
-                    <div class="relative lg:w-48 h-48 flex items-center">
-                        <img class="drop-shadow-xl toolsHeroToolbox" src="/img/emojis/toolbox_3d.png" />
+        <div class="mx-auto max-w-screen-xl">
+            <GHero class="bg-white dark:bg-slate-950 mx-6 px-3 rounded-2xl">
+                <template #title>{{ $t('_tools.title') }}</template>
+                <template #description>
+                    {{ $t('_tools.description') }}
+                </template>
+                <template #icon>
+                    <div class="hidden lg:block relative px-6 py-8">
+                        <GDots class="absolute top-0 left-0 w-28 h-28 text-accent-600" />
+                        <GDots class="absolute bottom-0 right-0 w-28 h-28 text-accent-600" />
+                        <div class="relative lg:w-48 h-48 flex items-center">
+                            <img class="drop-shadow-xl toolsHeroToolbox" src="/img/emojis/toolbox_3d.png" />
+                        </div>
                     </div>
-                </div>
-            </template>
-        </GHero>
+                </template>
+            </GHero>
+        </div>
         <div class="pb-12 pt-6">
             <div class="container mx-auto max-w-screen-xl px-6 space-y-6">
                 <GLocalNav :items="sections.map((v) => ({

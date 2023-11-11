@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import sections from '@/assets/data/toolsNav';
+import { isSamePath } from 'ufo';
 
 const emit = defineEmits([
     'toggleNav',
@@ -21,6 +22,7 @@ useHead({
     },
 });
 
+const route = useRoute();
 </script>
 
 <template>
@@ -32,7 +34,12 @@ useHead({
                 :class="[isAsideNavOpen ? 'translate-x-0' : '-translate-x-72']"
             >
                 <nav class="border-r pr-2 py-5 flex flex-col w-72 overflow-y-scroll">
-                    <NuxtLink @click.native="clickNav()" class="block pl-6 pr-4 py-2 rounded-r-full hover:text-accent-600 hover:bg-accent-50 dark:hover:text-accent-100 dark:hover:bg-accent-800" :to="localePath('/tools/')">
+                    <NuxtLink
+                        @click.native="clickNav()"
+                        class="block pl-6 pr-4 py-2 rounded-r-full hover:text-accent-600 hover:bg-accent-50 dark:hover:text-accent-100 dark:hover:bg-accent-800"
+                        :class="isSamePath(route.path, localePath('/tools/')) && 'bg-accent-100 text-accent-600 dark:text-accent-100 dark:bg-accent-800 font-bold'"
+                        :to="localePath('/tools/')"
+                    >
                         {{ $t('_tools.index') }}
                     </NuxtLink>
                     <hr class="mb-1 mt-2" />
