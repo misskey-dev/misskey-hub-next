@@ -25,7 +25,7 @@
                     <h2 class="text-2xl lg:text-3xl font-title font-bold mb-4">
                         {{ $t(section.title) }}
                     </h2>
-                    <GLinks :wide="true" :items="section.items.map((e) => ({
+                    <GLinks :wide="true" :gray="true" :items="section.items.map((e) => ({
                         title: $t(e.i18n),
                         description: $t(e.description),
                         to: localePath(e.to),

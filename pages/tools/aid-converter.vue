@@ -49,7 +49,8 @@ const tab = ref<'aidToDate' | 'dateToAid'>('aidToDate');
 const aidToDateAid = ref<string>('');
 const aidToDateResult = ref<string>('');
 function doAidToDate() {
-    const d = new Date(parseInt(aidToDateAid.value.slice(0, 8), 36) + TIME2000);
+    const time = parseInt(aidToDateAid.value.slice(0, 8), 36) + TIME2000;
+    const d = new Date(time);
     aidToDateResult.value = d.toLocaleString();
 }
 
