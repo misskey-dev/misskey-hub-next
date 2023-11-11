@@ -24,7 +24,7 @@
 		<div class="lg:hidden relative py-6">
 			<GDots class="dots w-40 h-40 top-0 left-6" />
 			<GDots class="dots w-40 h-40 bottom-0 right-6" />
-			<img class="relative mx-auto rounded-lg max-w-[240px]" src="/img/hero/screenshot-mobile.png" />
+			<img class="relative mx-auto rounded-lg max-w-[240px]" :src="mobileScreenShot" />
 		</div>
 	</div>
 </template>
@@ -41,6 +41,8 @@ const { notice } = useAppConfig();
 const { locale, fallbackLocale } = useI18n();
 const localePath = useLocalePath();
 const showTagline = ref(false);
+const colorMode = useColorMode();
+const mobileScreenShot = computed(() => (colorMode.preference === 'dark') ? '/img/hero/screenshot-mobile-en.png' : '/img/hero/screenshot-mobile.png');
 
 onMounted(() => {
 	setTimeout(() => {
