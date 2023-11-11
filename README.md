@@ -1,10 +1,10 @@
 # About Misskey
 
-Misskey website.
+![Screenshot of Misskey Hub](./public/img/og/misskey-hub-screenshot-dr.png)
 
-Built with [Nuxt](https://nuxt.com/).
+Website for Misskey, built with [Nuxt](https://nuxt.com/).
 
-Release date: TBD
+Release date: **TBD（未定）**
 
 ## お知らせの文言のいじり方
 
