@@ -1,4 +1,4 @@
-# About Misskey
+# Misskey Hub (Next)
 
 ![Screenshot of Misskey Hub](./public/img/og/misskey-hub-screenshot-dr.png)
 
