@@ -5,6 +5,11 @@ const emit = defineEmits([
     'toggleNav',
 ]);
 
+function clickNav() {
+    isAsideNavOpen.value = false;
+    emit('toggleNav');
+}
+
 const isNavOpen = ref<boolean>(false);
 const isAsideNavOpen = ref<boolean>(false);
 
@@ -27,13 +32,13 @@ useHead({
                 :class="[isAsideNavOpen ? 'translate-x-0' : '-translate-x-72']"
             >
                 <nav class="border-r pr-2 py-5 flex flex-col w-72 overflow-y-scroll">
-                    <NuxtLink @click.native="emit('toggleNav')" class="block pl-6 pr-4 py-2 rounded-r-full hover:text-accent-600 hover:bg-accent-50 dark:hover:text-accent-100 dark:hover:bg-accent-800" :to="localePath('/tools/')">
+                    <NuxtLink @click.native="clickNav()" class="block pl-6 pr-4 py-2 rounded-r-full hover:text-accent-600 hover:bg-accent-50 dark:hover:text-accent-100 dark:hover:bg-accent-800" :to="localePath('/tools/')">
                         {{ $t('_tools.index') }}
                     </NuxtLink>
                     <hr class="mb-1 mt-2" />
-                    <ToolsAsideNavSection :d="section" @toggleNav="emit('toggleNav')" v-for="section in sections" />
+                    <ToolsAsideNavSection :d="section" @toggleNav="clickNav()" v-for="section in sections" />
                 </nav>
-                <div class="lg:hidden">
+                <div class="lg:hidden bg-slate-100 dark:bg-slate-900">
                     <button @click="isAsideNavOpen = !isAsideNavOpen" class="bg-slate-300 dark:bg-slate-800 hover:bg-slate-400 dark:hover:bg-slate-700" :class="$style.toolsMenuToggle"><span>{{ $t('_tools.menuToggle') }}</span></button>
                 </div>
             </aside>
