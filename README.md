@@ -4,9 +4,15 @@ Misskey website.
 
 Built with [Nuxt](https://nuxt.com/).
 
+Release date: TBD
+
 ## お知らせの文言のいじり方
 
-`app.config.ts` から指定できます。詳しい書き方はTypescriptの型補完に書いてあります
+`app.config.ts` から指定できます。
+
+## Docsの書き方
+
+`/content/.README.md` をご覧ください
 
 ## Setup
 
@@ -67,3 +73,9 @@ yarn preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## License
+
+GNU Affero General Public License v3.0
+
+(c) 2023 Misskey, syuilo, kakkokari-gtyih and other contributors
