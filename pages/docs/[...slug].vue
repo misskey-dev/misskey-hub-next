@@ -29,14 +29,13 @@
         <div class="hidden lg:block text-sm">
             <div class="sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto py-6 pl-6">
                 <h3 class="font-bold mb-6">{{ $t('_docs._toc.title') }}</h3>
-                <DocsTocLinks v-if="data?.body" :links="data?.body.toc.links" class="break-words" />
+                <DocsTocLinks v-if="data?.body" :links="data?.body.toc?.links" :max-depth="data?.maxTocDepth ?? undefined" class="break-words" />
             </div>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import AsideNavIco from 'bi/text-indent-left.svg';
 
 const isAsideNavOpen = useState<boolean>('miHub_docs_asideNav_openState', () => false);
