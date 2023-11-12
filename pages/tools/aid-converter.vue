@@ -5,7 +5,7 @@
         </h1>
         <div class="grid grid-cols-2 gap-2 md:gap-8 mx-auto max-w-lg mb-4">
             <button :class="['rounded-full py-2 hover:bg-accent-600/60', {'bg-accent-600/40': (tab === 'aidToDate')}]" @click="tab = 'aidToDate'">{{ $t('_aidConverter.aidToDate') }}</button>
-            <button :class="['rounded-full py-2 hover:bg-accent-600/60', {'bg-accent-600/40': (tab === 'dateToAid')}]" @click="tab = 'dateToAid'">{{ $t('_aidConverter.aidToDate') }}</button>
+            <button :class="['rounded-full py-2 hover:bg-accent-600/60', {'bg-accent-600/40': (tab === 'dateToAid')}]" @click="tab = 'dateToAid'">{{ $t('_aidConverter.dateToAid') }}</button>
         </div>
         <div v-if="tab === 'aidToDate'" class="mx-auto max-w-lg">
             <label class="mb-1" for="aidToDateAid">aid / aidx</label>
