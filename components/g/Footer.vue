@@ -8,7 +8,7 @@
                         <span class="self-center text-2xl font-bold font-title whitespace-nowrap">{{ $t('_seo.siteName') }}</span>
                     </GNuxtLink>
                 </div>
-                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <div class="grid grid-cols-2 gap-8 sm:gap-6">
                     <div>
                         <h2 class="mb-6 text-sm font-bold">{{ $t('_docs.title') }}</h2>
                         <ul class="text-slate-600 dark:text-slate-400 space-y-4">
@@ -43,17 +43,6 @@
                             </li>
                             <li>
                                 <GNuxtLink :to="localePath('/learn-more/')" class="hover:underline">{{ $t('_links.title') }}</GNuxtLink>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="mb-6 text-sm font-bold text-transparent">_</h2>
-                        <ul class="text-slate-600 dark:text-slate-400">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
                             </li>
                         </ul>
                     </div>

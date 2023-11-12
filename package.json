@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "@babel/parser": "^7.23.3",
-    "@modyfi/vite-plugin-yaml": "^1.0.4",
     "@nuxt/content": "npm:@nuxt/content-edge@2.9.0-28315240.7dcbf13",
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/i18n": "8.0.0-rc.5",
@@ -26,6 +25,7 @@
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.1",
     "github-markdown-css": "^5.4.0",
+    "js-yaml": "^4.1.0",
     "meshline": "^3.1.7",
     "mfm-js": "^0.23.3",
     "misskey-js": "^0.0.16",

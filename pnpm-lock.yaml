@@ -13,9 +13,6 @@ devDependencies:
   '@babel/parser':
     specifier: ^7.23.3
     version: 7.23.3
-  '@modyfi/vite-plugin-yaml':
-    specifier: ^1.0.4
-    version: 1.0.4(vite@4.5.0)
   '@nuxt/content':
     specifier: npm:@nuxt/content-edge@2.9.0-28315240.7dcbf13
     version: /@nuxt/content-edge@2.9.0-28315240.7dcbf13(nuxt@3.8.1)(vue@3.3.8)
@@ -61,6 +58,9 @@ devDependencies:
   github-markdown-css:
     specifier: ^5.4.0
     version: 5.4.0
+  js-yaml:
+    specifier: ^4.1.0
+    version: 4.1.0
   meshline:
     specifier: ^3.1.7
     version: 3.1.7(three@0.158.0)
@@ -1089,19 +1089,6 @@ packages:
       lines-and-columns: 1.2.4
     dev: true
 
-  /@modyfi/vite-plugin-yaml@1.0.4(vite@4.5.0):
-    resolution: {integrity: sha512-qkT0KiR3AQQRfUvDzLv4+1rYAzXj+QmGhAbyUd0Ordf9xynK76i758lk5GiEfxuQxbvdqDaJ9oXkH/KacbSjQQ==}
-    peerDependencies:
-      vite: ^2.6.0 || ^3.0.0 || ^4.0.0
-    dependencies:
-      '@rollup/pluginutils': 5.0.2
-      js-yaml: 4.1.0
-      tosource: 2.0.0-alpha.3
-      vite: 4.5.0(@types/node@20.9.0)(sass@1.69.5)
-    transitivePeerDependencies:
-      - rollup
-    dev: true
-
   /@mole-inc/bin-wrapper@8.0.1:
     resolution: {integrity: sha512-sTGoeZnjI8N4KS+sW2AN95gDBErhAguvkw/tWdCjeM8bvxpz5lqrnd0vOJABA1A+Ic3zED7PYoLP/RANLgVotA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -1968,20 +1955,6 @@ packages:
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
     engines: {node: '>= 8.0.0'}
     dependencies:
-      estree-walker: 2.0.2
-      picomatch: 2.3.1
-    dev: true
-
-  /@rollup/pluginutils@5.0.2:
-    resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      rollup: ^1.20.0||^2.0.0||^3.0.0
-    peerDependenciesMeta:
-      rollup:
-        optional: true
-    dependencies:
-      '@types/estree': 1.0.3
       estree-walker: 2.0.2
       picomatch: 2.3.1
     dev: true
