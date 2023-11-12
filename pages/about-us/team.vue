@@ -75,7 +75,10 @@ const { data } = await useFetch<{ contributors: MiHubMember[] }>('https://ungh.c
     }
 });
 
-const contributors = computed(() => data.value?.contributors.filter((v) => !v.username?.includes('[bot]') && !coreTeamMember.map((e) => e.id).includes(v.id)) ?? []);
+const contributors = computed(() =>
+	data.value?.contributors.filter((v) =>
+	!v.username?.includes('[bot]') && !coreTeamMember.map((e) => e.id).includes(v.id) && !coreTeamEmeriti.map((e) => e.id).includes(v.id))
+);
 
 const localePath = useLocalePath();
 </script>

@@ -48,10 +48,19 @@ export const coreTeamMember: MiHubMember[] = [
         id: 67428053,
         username: 'kakkokari-gtyih',
         name: 'かっこかり',
-    }
+    },
 ];
 
 /** 過去のコアチームメンバー */
 export const coreTeamEmeriti: MiHubMember[] = [
-    // TODO
+    {
+        id: 30769358,
+        username: 'mei23',
+        name: 'MeiMei',
+    },
+	{
+        id: 8159402,
+        username: 'robflop',
+        name: 'robflop',
+    },
 ];
