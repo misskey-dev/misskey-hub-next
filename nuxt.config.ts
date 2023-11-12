@@ -9,7 +9,7 @@ import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 const baseUrl = 'https://misskey-hub.net';
 
 // 言語定義
-export const locales = [
+export const localesConst = [
 	{ code: 'ja', iso: 'ja-JP', name: '日本語' },
 	{ code: 'en', iso: 'en-US', name: 'English' },
 	{ code: 'id', iso: 'id-ID', name: 'Bahasa Indonesia' },
@@ -19,7 +19,11 @@ export const locales = [
 	{ code: 'fr', iso: 'fr-FR', name: 'Français' },
 	{ code: 'cn', iso: 'zh-CN', name: '简体中文' },
 	{ code: 'tw', iso: 'zh-TW', name: '繁体中文' },
-] as LocaleObject[];
+] as const;
+
+export type LocaleCodes = typeof localesConst[number]['code'];
+
+export const locales = localesConst as unknown as LocaleObject[];
 
 export default defineNuxtConfig({
 	runtimeConfig: {
