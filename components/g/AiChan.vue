@@ -16,9 +16,13 @@ if (process.client) {
 }
 
 function initAiChan() {
+	if (!live2d.value) return;
+
     const iframeRect = live2d.value.getBoundingClientRect();
 	window.addEventListener('mousemove', ev => {
-		live2d.value?.contentWindow.postMessage({
+		if (!live2d.value) return;
+
+		live2d.value.contentWindow?.postMessage({
 			type: 'moveCursor',
 			body: {
 				x: ev.clientX - iframeRect.left,
@@ -27,7 +31,9 @@ function initAiChan() {
 		}, '*');
 	}, { passive: true });
 	window.addEventListener('touchmove', ev => {
-		live2d.value?.contentWindow.postMessage({
+		if (!live2d.value) return;
+		
+		live2d.value.contentWindow?.postMessage({
 			type: 'moveCursor',
 			body: {
 				x: ev.touches[0].clientX - iframeRect.left,
