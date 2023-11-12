@@ -63,13 +63,10 @@ const router = useRouter();
 const route = useRoute();
 const path = ref(route.path);
 
-router.afterEach((to) => {
-    path.value = to.path;
-});
-
-onMounted(() => {
-    const _route = useRoute();
-    path.value = _route.path;
+watch(() => route.path, (to) => {
+    path.value = to;
+}, {
+    immediate: true,
 });
 
 const realLinks = findDeepObject(props.links[0], (v) => {

@@ -2,11 +2,28 @@
     <div class="absolute top-0 w-full hidden lg:block">
 		<GDots class="dots dots1" :space="30"/>
 		<GDots class="dots dots2" :space="30"/>
-		<img src="/img/hero/screenshot-desktop.png" class="screenshot desktop" alt="screenshot of Misskey in a PC browser">
-		<img src="/img/hero/screenshot-mobile.png" class="screenshot mobile" alt="screenshot of Misskey in a mobile browser">
+		<img :src="screenshots.desktop" class="screenshot desktop" alt="screenshot of Misskey in a PC browser">
+		<img :src="screenshots.mobile" class="screenshot mobile" alt="screenshot of Misskey in a mobile browser">
 		<img src="/img/hero/ai.png" class="ai" alt="Ai-chan, Misskey's mascott">
     </div>
 </template>
+
+<script setup>
+const colorMode = useColorMode();
+const screenshots = computed(() => {
+    if (colorMode.preference === 'dark') {
+        return {
+            desktop: '/img/hero/misskey-dark.png',
+            mobile: '/img/hero/screenshot-mobile-en.png',
+        };
+    } else {
+        return {
+            desktop: '/img/hero/misskey-light.png',
+            mobile: '/img/hero/screenshot-mobile.png',
+        };
+    }
+});
+</script>
 
 <style scoped>
 .dots {

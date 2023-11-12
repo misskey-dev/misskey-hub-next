@@ -100,17 +100,14 @@ const props = withDefaults(defineProps<{
 const navOpen = ref(false);
 
 const { locales, locale: currentLocale } = useI18n();
-const { path } = useRoute();
+const route = useRoute();
 const { afterEach, push } = useRouter();
-const currentPath = ref(path);
+const currentPath = ref(route.path);
 
-afterEach((to) => {
-    currentPath.value = to.path;
-});
-
-onMounted(() => {
-    const _route = useRoute();
-    currentPath.value = _route.path;
+watch(() => route.path,(to) => {
+    currentPath.value = to;
+}, {
+    immediate: true,
 });
 
 const switchLocalePath = useSwitchLocalePath();

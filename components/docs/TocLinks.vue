@@ -14,7 +14,7 @@
             </a>
             <TocLinks
                 class="mt-2"
-                v-if="link.children"
+                v-if="link.children && (link.depth ?? 0 + 1) < maxDepth"
                 :links="link.children"
                 @move="childMove($event)"
             />
@@ -23,14 +23,13 @@
 </template>
 
 <script setup lang="ts">
-import type { PropType } from 'vue'
-import type { TocLink } from '@nuxt/content/dist/runtime/types'
+import type { TocLink } from '@nuxt/content/dist/runtime/types';
 
-const props = defineProps({
-    links: {
-        type: Array as PropType<TocLink[]>,
-        default: () => []
-    }
+const props = withDefaults(defineProps<{
+    links?: TocLink[];
+    maxDepth?: number;
+}>(), {
+    maxDepth: Infinity,
 });
 
 const emit = defineEmits(['move', 'child-click']);
