@@ -1,24 +1,25 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import ViteYaml from '@modyfi/vite-plugin-yaml';
+import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
 import genSitemap from './scripts/gen-sitemap';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
+import { genLocalesJson } from './scripts/gen-locales';
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl = 'https://misskey-hub.net';
 
 // 言語定義
 export const localesConst = [
-	{ code: 'ja', iso: 'ja-JP', name: '日本語' },
-	{ code: 'en', iso: 'en-US', name: 'English' },
-	{ code: 'id', iso: 'id-ID', name: 'Bahasa Indonesia' },
-	{ code: 'ko', iso: 'ko-KR', name: '한국어' },
-	{ code: 'it', iso: 'it-IT', name: 'Italiano' },
-	{ code: 'pl', iso: 'pl-PL', name: 'Polski' },
-	{ code: 'fr', iso: 'fr-FR', name: 'Français' },
-	{ code: 'cn', iso: 'zh-CN', name: '简体中文' },
-	{ code: 'tw', iso: 'zh-TW', name: '繁体中文' },
+	{ files: [ 'ja-JP.json' ], code: 'ja', iso: 'ja-JP', name: '日本語' },
+	{ files: [ 'en-US.json' ], code: 'en', iso: 'en-US', name: 'English' },
+	{ files: [ 'id-ID.json' ], code: 'id', iso: 'id-ID', name: 'Bahasa Indonesia' },
+	{ files: [ 'ko-KR.json' ], code: 'ko', iso: 'ko-KR', name: '한국어' },
+	{ files: [ 'it-IT.json' ], code: 'it', iso: 'it-IT', name: 'Italiano' },
+	{ files: [ 'pl-PL.json' ], code: 'pl', iso: 'pl-PL', name: 'Polski' },
+	{ files: [ 'fr-FR.json' ], code: 'fr', iso: 'fr-FR', name: 'Français' },
+	{ files: [ 'zh-CN.json' ], code: 'cn', iso: 'zh-CN', name: '简体中文' },
+	{ files: [ 'zh-TW.json' ], code: 'tw', iso: 'zh-TW', name: '繁体中文' },
 ] as const;
 
 export type LocaleCodes = typeof localesConst[number]['code'];
@@ -73,6 +74,8 @@ export default defineNuxtConfig({
 		baseUrl,
 		vueI18n: './i18n.config.ts',
 		locales,
+		lazy: true,
+		langDir: 'locales_dist',
 		defaultLocale: 'ja',
 		strategy: 'prefix',
 		detectBrowserLanguage: {
@@ -94,7 +97,7 @@ export default defineNuxtConfig({
 	},
 	vite: {
 		plugins: [
-			ViteYaml(),
+			yaml(),
 			svgLoader({
 				defaultImport: 'component',
 				svgoConfig: {
@@ -110,7 +113,7 @@ export default defineNuxtConfig({
 					]
 				}
 			}),
-		]
+		],
 	},
 	nitro: {
 		hooks: {
@@ -129,7 +132,10 @@ export default defineNuxtConfig({
 		],
 	},
 	hooks: {
-		'build:before': genApiTranslationFiles,
+		'build:before': (...args) => {
+			genApiTranslationFiles(...args);
+			genLocalesJson(...args);
+		},
 	},
 	experimental: {
 		inlineSSRStyles: false,
