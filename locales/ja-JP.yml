@@ -113,6 +113,9 @@ _docs:
   title: "ドキュメント"
   description: "Misskeyの上手なつかいかたから、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
   indexTitle: "目次ページ"
+  _contribute:
+    editThis: "このページを編集"
+    translateThis: "このページを翻訳"
   _aboutMisskey:
     title: "Misskeyについて"
     description: "Misskeyをはじめて知ったかたや、これから使うかた向け！基本的なしくみや機能を見ていきましょう。"
