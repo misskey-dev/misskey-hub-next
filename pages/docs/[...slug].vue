@@ -6,7 +6,7 @@
                     {{ $t('_docs._toc.title') }}
                 </summary>
                 <div class="pb-4 px-6 max-h-[65vh] overflow-y-auto">
-                    <DocsTocLinks :links="data?.body.toc.links" @child-click="openState = false" />
+                    <DocsTocLinks :links="data?.body.toc.links" :max-depth="data?.maxTocDepth ?? undefined" @child-click="openState = false" />
                 </div>
             </details>
             <button @click="isAsideNavOpen = !isAsideNavOpen" class="p-4 order-1 dark:border-slate-800 border-r peer-open:border-b mr-2">
