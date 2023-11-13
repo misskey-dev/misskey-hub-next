@@ -5,7 +5,7 @@
                 <div class="mb-6 md:mb-0">
                     <GNuxtLink :to="localePath('/')" class="flex items-center">
                         <MiIcon class="h-8 w-8 mr-3" />
-                        <span class="self-center text-2xl font-bold whitespace-nowrap">{{ $t('_seo.siteName') }}</span>
+                        <span class="self-center text-2xl font-bold font-title whitespace-nowrap">{{ $t('_seo.siteName') }}</span>
                     </GNuxtLink>
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6">

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2 class="mb-12 text-2xl lg:text-3xl text-center font-bold">{{ $t('_landing._getStarted.title') }}</h2>
+        <h2 class="mb-12 text-2xl lg:text-3xl text-center font-bold font-title">{{ $t('_landing._getStarted.title') }}</h2>
         <div class="grid gap-12 lg:grid-cols-3">
             <div v-fade-in class="find">
 				<div class="item">
@@ -50,7 +50,7 @@ const localePath = useLocalePath();
 }
 
 .item > .title {
-    @apply font-bold text-xl text-center mb-6;
+    @apply font-title font-bold text-xl text-center mb-6;
 }
 
 .item > .link {

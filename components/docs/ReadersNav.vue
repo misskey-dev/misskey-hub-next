@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<h2 class="text-2xl lg:text-3xl font-bold mb-4">
+		<h2 class="text-2xl lg:text-3xl font-title font-bold mb-4">
 			{{ $t(`_docs._${sectionId}.title`) }}
 		</h2>
 		<MkIndex :wide="true" :base-path="basePath" />

@@ -33,7 +33,7 @@
 }
 
 .title {
-    @apply font-bold text-center text-xl md:text-2xl;
+    @apply font-title font-bold text-center text-xl md:text-2xl;
 }
 
 .icon {

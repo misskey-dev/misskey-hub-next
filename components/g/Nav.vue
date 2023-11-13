@@ -4,7 +4,7 @@
             <div class="">
                 <GNuxtLink :to="localePath('/')" class="flex items-center space-x-2 hover:opacity-80">
                     <MiIcon class="h-8 w-8" />
-                    <div class="font-bold text-lg">{{ $t('_seo.siteName') }}</div>
+                    <div class="font-title font-bold text-lg">{{ $t('_seo.siteName') }}</div>
                 </GNuxtLink>
             </div>
             <ul

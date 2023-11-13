@@ -1,7 +1,7 @@
 <template>
 	<div class="relative space-y-3 lg:space-y-6">
         <MkLogo class="block mx-auto lg:ml-0 w-full max-w-[120px] lg:max-w-[250px]" />
-		<h2 class="text-center lg:text-start font-bold tracking-wide text-3xl sm:text-5xl lg:text-6xl leading-relaxed sm:leading-relaxed lg:leading-relaxed tagline" :class="showTagline && 'shown'">
+		<h2 class="text-center font-title lg:text-start font-bold tracking-wide text-3xl sm:text-5xl lg:text-6xl leading-relaxed sm:leading-relaxed lg:leading-relaxed tagline" :class="showTagline && 'shown'">
 			<div class="row">Interplanetary</div>
 			<div class="row">microblogging</div>
 			<div class="row">platform.🚀</div>
