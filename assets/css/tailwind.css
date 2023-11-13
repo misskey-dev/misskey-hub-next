@@ -124,6 +124,7 @@ html.light .markdown-body {
 
 .markdown-body {
 	--color-canvas-default: transparent!important;
+	@apply font-content-sans;
 }
 
 .markdown-body > h1 > a[href^='#'],
