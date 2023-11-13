@@ -24,7 +24,7 @@
                     anchor: '#' + v.title.replaceAll('.', '_'),
                 }))" />
                 <section :id="section.title.replaceAll('.', '_')" v-for="section in sections">
-                    <h2 class="text-2xl lg:text-3xl font-title font-bold mb-4">
+                    <h2 class="text-2xl lg:text-3xl font-bold mb-4">
                         {{ $t(section.title) }}
                     </h2>
                     <GLinks :wide="true" :gray="true" :items="section.items.map((e) => ({

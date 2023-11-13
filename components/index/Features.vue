@@ -2,7 +2,7 @@
     <div class="grid features gap-12">
         <div>
             <div class="lg:sticky lg:top-32">
-                <h2 class="font-title font-bold text-2xl lg:text-4xl mb-2 lg:mb-6">{{ $t('_landing._features._root.title') }}</h2>
+                <h2 class="font-bold text-2xl lg:text-4xl mb-2 lg:mb-6">{{ $t('_landing._features._root.title') }}</h2>
                 <p class="text-lg">{{ $t('_landing._features._root.description') }}</p>
             </div>
         </div>
@@ -77,7 +77,7 @@ import { vFadeIn } from '@/assets/js/fadein';
 }
 
 .item .title {
-    @apply font-title text-xl lg:text-2xl font-bold mb-2;
+    @apply text-xl lg:text-2xl font-bold mb-2;
 }
 
 .__v_fadeIn_out > * {

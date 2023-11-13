@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2 class="mb-12 text-2xl lg:text-3xl text-center font-bold font-title">{{ $t('_landing._sponsors.title') }}</h2>
+        <h2 class="mb-12 text-2xl lg:text-3xl text-center font-bold">{{ $t('_landing._sponsors.title') }}</h2>
         <div class="mx-auto max-w-screen-lg gap-8 grid items-center lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2">
             <!-- スポンサーはscriptタグから追加してください -->
             <GNuxtLink

@@ -20,7 +20,7 @@
                 <div class="grid gap-x-12 gap-y-4 w-full" :class="$style.teamRoot">
                     <div>
                         <div class="lg:sticky lg:top-32">
-                            <h3 class="font-title font-bold text-2xl lg:text-2xl mb-2 lg:mb-4">{{ $t('_aboutUs._team._core.title') }}</h3>
+                            <h3 class="font-bold text-2xl lg:text-2xl mb-2 lg:mb-4">{{ $t('_aboutUs._team._core.title') }}</h3>
                             <p>{{ $t('_aboutUs._team._core.description') }}</p>
                         </div>
                     </div>
@@ -31,7 +31,7 @@
                 <div class="grid gap-x-12 gap-y-4 w-full" :class="$style.teamRoot">
                     <div>
                         <div class="lg:sticky lg:top-32">
-                            <h3 class="font-title font-bold text-2xl lg:text-2xl mb-2 lg:mb-4">{{ $t('_aboutUs._team._coreEmeriti.title') }}</h3>
+                            <h3 class="font-bold text-2xl lg:text-2xl mb-2 lg:mb-4">{{ $t('_aboutUs._team._coreEmeriti.title') }}</h3>
                             <p>{{ $t('_aboutUs._team._coreEmeriti.description') }}</p>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                 <div class="grid gap-x-12 gap-y-4 w-full" :class="$style.teamRoot">
                     <div>
                         <div class="lg:sticky lg:top-32">
-                            <h3 class="font-title font-bold text-2xl lg:text-2xl mb-2 lg:mb-4">{{ $t('_aboutUs._team._contributors.title') }}</h3>
+                            <h3 class="font-bold text-2xl lg:text-2xl mb-2 lg:mb-4">{{ $t('_aboutUs._team._contributors.title') }}</h3>
                             <p>{{ $t('_aboutUs._team._contributors.description') }}</p>
                         </div>
                     </div>
