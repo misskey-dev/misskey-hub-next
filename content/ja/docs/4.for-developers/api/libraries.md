@@ -6,7 +6,7 @@ description: 'Misskey APIに関連するライブラリの一覧'
 
 ## JavaScript
 
-- [misskey.js](https://github.com/misskey-dev/misskey.js)
+- [misskey.js](https://github.com/misskey-dev/misskey/tree/develop/packages/misskey-js)
 
 ## Java
 

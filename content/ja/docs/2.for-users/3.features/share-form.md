@@ -39,7 +39,7 @@ URLにクエリパラメータとして共有内容をはじめとするいく�
 | `visibility` | `public`, `home`, `followers`, `specified` のいずれか |
 | `localOnly` | 0(false) or 1(true) |
 | `visibleUserIds` | 対象ユーザーID(カンマ区切り) |
-| `visibleAccts` | 対象ユーザー[acct](../glossary.md#acct)(カンマ区切り) |
+| `visibleAccts` | 対象ユーザー[acct](../resources/glossary/#Acct)(カンマ区切り) |
 
 :::warning
 `visibility`に`specified`を指定した場合は、`visibleUserIds`または`visibleAccts`の指定も必要です。
