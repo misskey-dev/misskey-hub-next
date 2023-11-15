@@ -3,7 +3,7 @@
 ## その他のMisskeyインストール方法
 
 - [基本版 Misskey構築の手引き (manual)](./manual/)
-- [その他のインストール方法一覧](./docs/for-admin/install/)
+- [その他のインストール方法一覧](/docs/for-admin/install/guides/#インストール方法一覧)
 
 ## シェルスクリプトのお知らせ
 
@@ -279,7 +279,7 @@ ufwは、netfilter(iptables)を人間が操作しやすいようにするアプ�
 
 CloudFlareは、自分のドメインに対してDNSサーバー・リバースプロキシ・CDNをいっぺんに提供してくれるたいへん便利なサービスである。\
 CloudFlareを経由せずにサーバーを公開することも可能だが、たいへん便利なので導入することをお勧めする。
-[**→ CDNの設定**](/docs/admin/cdn/)
+[**→ CDNの設定**](../resources/cdn/)
 
 [CloudFlareにサインアップ](https://dash.cloudflare.com/sign-up) し、購入したドメインを案内に従って登録する。
 
@@ -584,7 +584,7 @@ Misskeyサーバーに自分のアカウントを登録・ログインし、設�
 
 ## Misskeyのアップデート
 
-[Misskeyのアップデート方法](../guides/manual/)
+[Misskeyのアップデート方法](./manual/#misskeyのアップデート方法)
 
 作業中はMisskeyを使うことができません。
 

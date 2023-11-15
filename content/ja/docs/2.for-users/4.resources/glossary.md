@@ -14,11 +14,11 @@ Fediverseと呼ばれる、非中央集権型で連合したソーシャルネ�
 
 ## AiScript
 (読み: あいすくりぷと)<br>
-Misskeyで使用できる、JavaScript上で動作するプログラミング言語です。詳しくは[こちら。](../advanced/aiscript)
+Misskeyで使用できる、JavaScript上で動作するプログラミング言語です。詳しくは[こちら。](https://github.com/aiscript-dev/aiscript/blob/master/README.md)
 
 ## API
 (読み: えーぴーあい)<br>
-Misskeyのサーバーが公開している、プログラムからMisskeyを扱うためのインターフェース。詳しくは[こちら。](../docs/api)
+Misskeyのサーバーが公開している、プログラムからMisskeyを扱うためのインターフェース。詳しくは[こちら。](../../for-developers/api)
 
 ## Bot
 (読み: ぼっと)<br>
@@ -26,7 +26,7 @@ Misskeyのサーバーが公開している、プログラムからMisskeyを扱
 
 ## CW
 (読み: こんてんつわーにんぐ)<br>
-Contents Warningの略。ノートの内容を、操作なしには表示しないようにできる機能。主に長大な内容を隠すためや、ネタバレ防止などに使われます。詳しくは[こちら。](../docs/features/note.html#cw)
+Contents Warningの略。ノートの内容を、操作なしには表示しないようにできる機能。主に長大な内容を隠すためや、ネタバレ防止などに使われます。詳しくは[こちら。](../features/note/#cw)
 
 ## Fediverse
 (読み: ふぇでぃばーす)<br>
@@ -43,7 +43,7 @@ Contents Warningの略。ノートの内容を、操作なしには表示しな�
 
 ## MFM
 (読み: えむえふえむ)<br>
-Markup language For Misskeyの略で、Misskey上で使用できるマークアップ言語です。詳しくは[こちら。](../docs/features/mfm)
+Markup language For Misskeyの略で、Misskey上で使用できるマークアップ言語です。詳しくは[こちら。](../features/mfm)
 
 ## Misskey Web
 (読み: みすきーうぇぶ)<br>
@@ -55,7 +55,7 @@ Not Safe For Workの略。画像を「センシティブ」扱いにし、操作
 
 ## Renote
 (読み: りのーと)<br>
-既にあるノートを引用、もしくはそのノートを新しいノートとして共有する行為、またそれによって作成されたノート。詳しくは[こちら。](../docs/features/note.html#renote)
+既にあるノートを引用、もしくはそのノートを新しいノートとして共有する行為、またそれによって作成されたノート。詳しくは[こちら。](../features/note/#renote)
 
 ## STL
 ソーシャルタイムライン(Social TimeLine)の略。タイムラインについて、詳しくは[こちら。](../features/timeline)
@@ -68,7 +68,7 @@ Misskeyの看板娘(公式キャラクター)です。詳しくは[こちら。]
 todo
 
 ## カスタム絵文字
-各Misskeyサーバーの管理者やユーザーによって独自に作られる絵文字。カスタム絵文字ではない通常の絵文字は「Unicode絵文字」と区別して呼ばれます。詳しくは[こちら。](../docs/features/custom-emoji)
+各Misskeyサーバーの管理者やユーザーによって独自に作られる絵文字。カスタム絵文字ではない通常の絵文字は「Unicode絵文字」と区別して呼ばれます。詳しくは[こちら。](../features/custom-emoji)
 
 ## コントロールパネル
 Misskeyサーバーの設定画面のことを指します。
@@ -78,10 +78,10 @@ Misskeyサーバーの設定画面のことを指します。
 アカウントが使用不可に設定されている状態を指します。
 
 ## ドライブ
-Misskeyのサーバーでユーザーがアップロードした画像や音楽などのファイルを管理する機能です。詳しくは[こちら。](../docs/features/drive)
+Misskeyのサーバーでユーザーがアップロードした画像や音楽などのファイルを管理する機能です。詳しくは[こちら。](../features/drive)
 
 ## ノート
-Misskeyのサーバー上でユーザーが投稿する文章のこと。画像や音楽などのファイル、アンケートなど、Misskey独自の様々なコンテンツを含めることができます。詳しくは[こちら。](../docs/features/note)
+Misskeyのサーバー上でユーザーが投稿する文章のこと。画像や音楽などのファイル、アンケートなど、Misskey独自の様々なコンテンツを含めることができます。詳しくは[こちら。](../features/note)
 
 ## ミスキスト
 Misskeyのサーバーにアカウントを持つユーザー。またはその中でもヘビーユーザーを指す言葉です。
