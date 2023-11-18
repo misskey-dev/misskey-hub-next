@@ -5,4 +5,3 @@ files:
   - source: /content/ja/docs/**/*.*
     translation: /content/%two_letters_code%/docs/**/%original_file_name%
     update_option: update_as_unapproved
-  
