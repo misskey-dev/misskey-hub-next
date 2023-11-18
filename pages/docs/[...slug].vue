@@ -13,7 +13,7 @@
                 <AsideNavIco class="block w-5 h-5" />
             </button>
         </div>
-        <div class="pt-6 lg:p-6 w-full overflow-x-hidden">
+        <div class="pt-6 p-0 sm:p-12 lg:p-6 w-full overflow-x-hidden">
             <template v-if="data?.body">
                 <ContentRenderer v-if="data.body.children.length > 0" :value="data" class="markdown-body w-full mb-6">
                 </ContentRenderer>
