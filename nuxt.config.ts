@@ -59,9 +59,6 @@ export default defineNuxtConfig({
 			]
 		},
 		highlight: {
-			preload: [
-				'ini',
-			],
 			theme: {
 				// Default theme (same as single string)
 				default: 'github-light',
@@ -120,6 +117,7 @@ export default defineNuxtConfig({
 			'compiled': genSitemap,
 		},
 		prerender: {
+			concurrency: 5,
 			routes: [
 				"/404.html"
 			],
