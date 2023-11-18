@@ -4,7 +4,7 @@ description: 'Misskeyを利用する際のよくある質問について掲載�
 
 # よくある質問
 ここではMisskeyを利用する際のよくある質問について掲載しています。<br>
-Misskeyプロジェクト自体についてのよくある質問は[こちら](../misskey#%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F)をご覧ください。
+Misskeyプロジェクト自体についてのよくある質問は[こちら](../../about-misskey#よくある質問)をご覧ください。
 
 ## Android/iOSのアプリはありますか？
 MisskeyプロジェクトではそういったモバイルOS向けのネイティブアプリを開発していませんが、サードパーティ製のアプリがいくつかあります。詳しくは[こちら](./apps)をご覧ください。<br>
@@ -35,7 +35,7 @@ misskey.ioはMisskey公式サーバーではなく、またMisskeyプロジェ�
 
 ## Renoteを削除するには？
 Renoteの時刻表示の隣にある「...」を押し、「Renote解除」を選択します。<br>
-Renoteについて詳しくは[こちら](../docs/features/note.html#renote)をご覧ください。
+Renoteについて詳しくは[こちら](../features/note/#renote)をご覧ください。
 
 ## ノート内のURLのプレビューを表示させたくない
 MFM(Markup language For Misskey)というMisskey独自のマークアップ言語には、URLのプレビューを無効にする構文があります。詳しくはMFMチートシートをご覧ください。MFMチートシートは、あなたが属するサーバーで次のアドレスを入力すると見ることができます。`https://あなたのサーバーのホスト名/mfm-cheat-sheet`
@@ -44,7 +44,7 @@ MFM(Markup language For Misskey)というMisskey独自のマークアップ言�
 あなたが属するサーバーの管理者のみが、カスタム絵文字を追加、編集、削除できます。それらを希望する場合は、サーバー管理者に直接連絡してください。
 
 ## Botを開発したい
-Misskey APIを利用したBotの開発が可能です。詳しくは[こちら](../docs/api)をご覧ください。
+Misskey APIを利用したBotの開発が可能です。詳しくは[こちら](../../for-developers/api/)をご覧ください。
 
 ## ノートの翻訳機能はどのサービスを使用していますか？
 機械翻訳サービスの[DeepL翻訳](https://www.deepl.com/)を使用しています。
