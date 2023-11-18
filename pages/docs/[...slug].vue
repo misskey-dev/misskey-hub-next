@@ -52,16 +52,10 @@ definePageMeta({
     layout: 'docs',
 });
 
-defineI18nRoute({
-    //locales: (locales.value as LocaleObject[]).map((e) => e.code),
-    // 【一時対応】とりあえずビルドできるようにする
-    locales: ['ja'],
-});
-
 const route = useRoute();
 const slugs = (route.params.slug as string[]).filter((v) => v !== '');
 
-const { data } = await useAsyncData(`blog-${locale.value}-${slugs.join('-')}`, () => queryContent(`/${locale.value}/docs/${slugs.join('/')}`).findOne());
+const { data } = await useAsyncData(`docs-${locale.value}-${slugs.join('-')}`, () => queryContent(`/${locale.value}/docs/${slugs.join('/')}`).findOne());
 
 if (!data.value) {
     throw createError({ statusCode: 404, statusMessage: 'page not found' });
