@@ -7,3 +7,7 @@ files:
     update_option: update_as_unapproved
     ignore:
       - "/content/ja/docs/**/_*.*"
+    languages_mapping:
+      two_letters_code:
+        zh-TW: tw
+        zh-CN: cn
