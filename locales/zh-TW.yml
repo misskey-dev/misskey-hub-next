@@ -1,4 +1,4 @@
-noScript: "現在Javascriptが無効になっています。サイトの表示にはJavascriptが必須となりますので有効にしてください。"
+noScript: "Javascript 目前處於禁用狀態。必須啟用 Javascript 才能瀏覽網站。"
 learnMore: "了解更多"
 loading: "載入中..."
 _seo:
@@ -73,12 +73,12 @@ _landing:
       title: "進一步瞭解"
       docs: "查看文件"
   _donation:
-    title: "寄付のお願い"
-    description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
+    title: "請求捐款"
+    description: "Misskey 是一家非營利組織，因此我們依靠您的捐款來資助我們的發展。如果你喜歡 Misskey，請支持我們，以便我們繼續開發它。"
   _sponsors:
-    title: "スポンサー"
+    title: "贊助者"
 _servers:
-  title: "サーバー一覧"
+  title: "伺服器一覽"
   description: "Misskeyは単一のサービスではなく、各々がサービスを提供する分散型ネットワークとなっています。Misskeyを利用するには、サービスを提供しているサーバーでアカウントを作成する必要があります。"
   addYourServer: "あなたのサーバーが表示されませんか？{0}から登録してください！"
   addYourServerLink: "こちら"
