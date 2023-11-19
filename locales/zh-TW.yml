@@ -1,44 +1,44 @@
 noScript: "現在Javascriptが無効になっています。サイトの表示にはJavascriptが必須となりますので有効にしてください。"
-learnMore: "詳しく知る"
-loading: "読み込み中…"
+learnMore: "了解更多"
+loading: "載入中..."
 _seo:
   siteName: "Misskey Hub"
-  defaultTitleTagline: "ノートでひろがるネットワーク"
-  defaultDescription: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
+  defaultTitleTagline: "貼文傳播網路"
+  defaultDescription: "Misskey 是一個開源的去中心化社群網路平台。"
 _nav:
-  servers: "サーバー"
-  docs: "ドキュメント"
-  blog: "ブログ"
-  other: "もっと！"
-  switchLang: "言語の設定"
+  servers: "伺服器"
+  docs: "文件"
+  blog: "網誌"
+  other: "更多！"
+  switchLang: "語言設定"
 _landing:
   _hero:
-    description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
-    gettingStarted: "はじめる"
+    description: "Misskey 是一個開源的去中心化社群網路平台。"
+    gettingStarted: "入門"
   _keyFeatures:
     _open:
-      title: "オープン"
-      description: "Misskeyはオープンソースのソフトウェアで、誰でも自由にMisskeyを利用できます。"
+      title: "打開"
+      description: "Misskey 是開放原始碼的軟體，任何人都可以自由使用。"
     _federated:
-      title: "分散"
-      description: "Misskeyは分散型のプロトコルを実装しているため、異なるサーバーのコミュニティ同士が繋がります。"
+      title: "去中心化"
+      description: "Misskey 採用去中心化協議，將不同伺服器的社群連結起來。"
     _multifunction:
-      title: "高機能"
-      description: "Misskeyは他にはない様々な機能を備えていて、プロのようにmicro-blogging可能です。"
+      title: "多功能"
+      description: "Misskey 提供了一系列其他網站無法提供的功能，並能像專業人士一樣發布微網誌。"
     _customizable:
-      title: "高カスタマイズ性"
-      description: "Misskeyの柔軟なWebインターフェイスにより、自分好みのUIを作れます。"
+      title: "高自訂性"
+      description: "Misskey 靈活的網頁介面可讓您建立自己的使用者介面。"
   _decenterized:
-    title: "Misskeyは{0}"
-    decenterizedPlatform: "分散型プラットフォーム"
-    description: "Misskeyはフリーかつオープンなプロジェクトで、誰でも自由にMisskeyを使ったサーバーを作成できるため、既に様々なサーバーがインターネット上に公開されています。また重要な特徴として、Misskeyは{0}と呼ばれる分散通信プロトコルを実装しているので、どのサーバーを選んでも他のサーバーのユーザーとやりとりすることができます。これが分散型と言われる所以で、単一の運営者によって単一のURLで公開されるような、Twitterなどの他サービスとは根本的に異なっています。サーバーによって主な話題のテーマやユーザー層、言語などは異なり、自分にあったサーバーを探すのも楽しみのひとつです(もちろん自分のサーバーを作るのも一興です)。"
+    title: "Misskey 是{0}"
+    decenterizedPlatform: "去中心化平台"
+    description: "Misskey 是一個自由開放的項目，這意味著任何人都可以自由地使用 Misskey 創建伺服器，因此網路上已經出現了各種各樣的伺服器。另一個重要特點是，Misskey 實作了一種名為 {0} 的分散式通訊協議，這意味著無論您選擇哪台伺服器，都可以與其他伺服器上的使用者進行互動。這就是它被稱為去中心化的原因，也是它與 Twitter 等其他服務的根本不同之處。不同伺服器的主要話題、用戶群和語言各不相同，找到適合自己的伺服器也是樂趣之一（當然，創建自己的伺服器也很有趣）。"
     activityPub: "ActivityPub"
   _features:
     _root:
-      title: "主な機能"
-      description: "Misskeyは一般的なものから特別なものまで、様々な機能を持っています。その一部を紹介します。"
+      title: "主要功能"
+      description: "Misskey 具有多種功能，既有一般功能，也有特殊功能。以下會介紹其中一部份。"
     _note:
-      title: "ノート"
+      title: "貼文"
       description: "Misskeyでは、ユーザーの投稿は「ノート」と呼ばれます。他のノートを引用したり、画像、動画、オーディオ、その他の任意のファイルを添付することもできます。"
     _federation:
       title: "連合"
