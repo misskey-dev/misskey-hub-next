@@ -17,7 +17,7 @@ _landing:
     gettingStarted: "入門"
   _keyFeatures:
     _open:
-      title: "打開"
+      title: "開放"
       description: "Misskey 是開放原始碼的軟體，任何人都可以自由使用。"
     _federated:
       title: "去中心化"
@@ -80,7 +80,7 @@ _landing:
 _servers:
   title: "伺服器一覽"
   description: "Misskey 不是單一的服務，而是由各服務提供者組成的分散式網路。要使用 Misskey，您需要在提供服務的伺服器上建立帳戶。"
-  addYourServer: "看不到您的伺服器？請從 {0} 註冊！"
+  addYourServer: "看不到您的伺服器？請 {0} 註冊！"
   addYourServerLink: "按這裡"
   _system:
     fetchError: "資料載入失敗。請稍後再試。"
@@ -99,14 +99,14 @@ _servers:
     usersCount: "使用者數"
   _registerAcceptance:
     title: "是否開放註冊"
-    public: "開啟"
+    public: "開放"
     inviteOnly: "僅限邀請"
   _list:
     notFound: "未找到符合指定條件的伺服器。"
     showMore: "查看更多"
 _docs:
   title: "文件"
-  description: "它涵蓋了從如何有效使用 Misskey 到為伺服器操作員和程式開發人員提供的資訊的所有內容。"
+  description: "以下涵蓋了從如何有效使用 Misskey 到為伺服器操作員和程式開發人員提供的資訊的所有內容。"
   indexTitle: "目錄頁"
   _contribute:
     editThis: "編輯此頁面"
