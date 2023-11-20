@@ -134,7 +134,7 @@ _blog:
   description: "來自 Misskey 開發部的有關 Misskey 的最新消息、技巧和竅門！ (僅限日文）"
   back: "返回"
 _content:
-  tip: "溫馨提示"
+  tip: "提示"
   warning: "注意"
   danger: "警告"
   preview: "預覽"
