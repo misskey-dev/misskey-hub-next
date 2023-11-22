@@ -1,29 +1,29 @@
 ---
-description: MFMは、Misskeyの様々な場所で使用できる専用のマークアップ言語です。
+description: MFM 是一種專有的標記語言，可以在 Misskey 的各個地方使用。
 ---
 
 # MFM
 
-MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使用できる専用のマークアップ言語です。
+MFM 代表 Markup language For Misskey，是一種專有的標記語言，可以在 Misskey 的各個地方使用。
 
 :::tip
-一部の構文はMarkdownやHTMLと互換性があります。
+某些語法與 Markdown 和 HTML 相容。
 :::
 
-## MFMが使用可能な場所の例
+## 可使用 MFM 的地方
 
-- ノート本文
-- CW注釈
-- ユーザーの名前
-- ユーザーの自己紹介
+- 貼文的正文
+- CW註釋
+- 使用者名稱
+- 使用者的自我介紹
 
-## 構文
+## 語法
 
-### メンション
+### 提及
 
-アットマーク + ユーザー名で、特定のユーザーを示すことができます。
+「@ + 使用者名稱」可用來表示特定使用者。
 :::tip
-メンションについての詳細は[こちら](./mention.md)を参照してください。
+有關提及的更多信息，請參閱[此處](./mention.md)。
 :::
 
 ```
@@ -38,11 +38,11 @@ MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使�
 
 <MfmPreview text="@repo@p1.a9z.dev"></MfmPreview>
 
-### ハッシュタグ
+### 主題標籤
 
-ナンバーサイン + タグで、ハッシュタグを示すことができます。
+「# + 標籤」來表示主題標籤。
 :::tip
-ハッシュタグについての詳細は[こちら](./hashtag.md)を参照してください。
+有關主題標籤的更多信息，請參閱[此處](./hashtag.md)。
 :::
 
 ```
@@ -51,9 +51,9 @@ MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使�
 
 <MfmPreview text="#misskey"></MfmPreview>
 
-### URL
+### 網址
 
-URLを示すことができます。
+可以標出網址。
 
 ```
 https://example.com
@@ -61,9 +61,9 @@ https://example.com
 
 <MfmPreview text="https://example.com"></MfmPreview>
 
-### リンク
+### 連結
 
-文章の特定の範囲を、URLに紐づけることができます。
+可將特定範圍的文字與網址綁定。
 
 ```
 [example link](https://example.com)
@@ -80,11 +80,11 @@ https://example.com
 
 <MfmPreview text="[example link](https://example.com)"></MfmPreview>
 
-### カスタム絵文字
+### 自訂表情符號
 
-コロンでカスタム絵文字名を囲むと、カスタム絵文字を表示させることができます。
+您可以透過用冒號包圍自訂表情符號名稱來顯示自訂表情符號。
 :::tip
-カスタム絵文字についての詳細は[こちら](./custom-emoji.md)を参照してください。
+有關自訂表情符號的更多信息，請參閱[此處](./custom-emoji.md)。
 :::
 
 ```
@@ -93,9 +93,9 @@ https://example.com
 
 <MfmPreview text=":misskey:"></MfmPreview>
 
-### 太字
+### 粗體
 
-文字を太く表示して強調することができます。
+可以將文字顯示为粗體来強調。
 
 ```
 **太字**
@@ -103,47 +103,47 @@ https://example.com
 
 <MfmPreview text="**太字**"></MfmPreview>
 
-### 目立たなくする
+### 縮小
 
-内容を小さく・薄く表示させることができます。
+可以使內容文字變小、變淡。
 
 ```
-<small>MisskeyでFediverseの世界が広がります</small>
+<small>Misskey 擴展了聯邦宇宙的世界</small>
 ```
 
 <MfmPreview text="<small>MisskeyでFediverseの世界が広がります</small>"></MfmPreview>
 
 ### 引用
 
-内容が引用であることを示すことができます。
+可以用來表示引用的内容。
 
 ```
-> MisskeyでFediverseの世界が広がります
+> Misskey 擴展了聯邦宇宙的世界
 ```
 
 <MfmPreview text="> MisskeyでFediverseの世界が広がります"></MfmPreview>
 
-### 中央寄せ
+### 置中
 
-内容を中央寄せで表示させることができます。
+可以將內容置中顯示。
 
 ```
-<center>MisskeyでFediverseの世界が広がります</center>
+<center>Misskey 擴展了聯邦宇宙的世界</center>
 ```
 
 <MfmPreview text="<center>MisskeyでFediverseの世界が広がります</center>"></MfmPreview>
 
-### コード(インライン)
+### 程式碼(内嵌)
 
-プログラムなどのコードをインラインでシンタックスハイライトします。
+在行內用高亮度顯示，例如程式碼語法。
 
 ```
 `<: "Hello, world!"`
 ```
 
-### コード(ブロック)
+### 程式碼(區塊)
 
-複数行のプログラムなどのコードをブロックでシンタックスハイライトします。
+在區塊中用高亮度顯示，例如複數行的程式碼語法。
 
 ```
 ~ (#i, 100) {
@@ -154,23 +154,23 @@ https://example.com
 }
 ```
 
-### 反転
+### 翻轉
 
-内容を上下または左右に反転させます。
+將內容上下或左右翻轉。
 
 ```
-$[flip MisskeyでFediverseの世界が広がります]
-$[flip.v MisskeyでFediverseの世界が広がります]
-$[flip.h,v MisskeyでFediverseの世界が広がります]
+$[flip Misskey 擴展了聯邦宇宙的世界]
+$[flip.v Misskey 擴展了聯邦宇宙的世界]
+$[flip.h,v Misskey 擴展了聯邦宇宙的世界]
 ```
 
 <MfmPreview text="$[flip MisskeyでFediverseの世界が広がります]
 $[flip.v MisskeyでFediverseの世界が広がります]
 $[flip.h,v MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
-### フォント
+### 字型
 
-内容のフォントを指定することができます。
+您可以設定顯示內容的字型
 
 ```
 $[font.serif MisskeyでFediverseの世界が広がります]
@@ -184,9 +184,9 @@ $[font.monospace MisskeyでFediverseの世界が広がります]
 $[font.cursive MisskeyでFediverseの世界が広がります]
 $[font.fantasy MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
-### ぼかし
+### 模糊化
 
-内容をぼかすことができます。ポインターを上に乗せるとはっきり見えるようになります。
+内容をぼかすことができます。將滑鼠懸停在其上時可以清楚地看到它。
 
 ```
 $[blur MisskeyでFediverseの世界が広がります]
@@ -194,9 +194,9 @@ $[blur MisskeyでFediverseの世界が広がります]
 
 <MfmPreview text="$[blur MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
-### 検索
+### 搜尋
 
-検索ボックスを表示できます。
+可以顯示搜尋框。
 
 ```
 misskey 検索
@@ -204,11 +204,11 @@ misskey 検索
 
 <MfmPreview text="misskey 検索"></MfmPreview>
 
-### 文字色・背景色
+### 文字和背景顏色
 
-文字色と背景色を変更することができます。
+可以變更文字顏色和背景顏色。
 
-3,4,6桁のカラーコードで色を表現します。
+顏色使用 3、4 或 6 位顏色代碼表示。
 
 ```
 $[fg.color=f00 赤字]
@@ -218,9 +218,9 @@ $[bg.color=ff0 黄背景]
 <MfmPreview text="$[fg.color=f00 赤字]
 $[bg.color=ff0 黄背景]"></MfmPreview>
 
-### 角度変更
+### 角度變化
 
-指定した角度で回転させます。
+以指定的角度旋轉。
 
 ```
 $[rotate.deg=30 misskey]
@@ -228,9 +228,9 @@ $[rotate.deg=30 misskey]
 
 <MfmPreview text="$[rotate.deg=30 misskey]"></MfmPreview>
 
-### 位置変更
+### 變更位置
 
-位置をずらすことができます。
+可以移動位置。
 
 ```
 😏$[position.x=0.8,y=0.5 🍮]😀
