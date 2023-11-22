@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import NProgress from 'nprogress';
 import type { Graph, Thing } from 'schema-dts';
 
-const { t, locale } = useI18n();
+const { t, locale, locales } = useI18n();
 const route = useRoute();
 const router = useRouter();
 const colorMode = useColorMode();
@@ -66,6 +67,7 @@ const getLdJson = (additionalGraphes: Thing[] = []): string => {
     ldJson['@graph'] = ldJson['@graph'].concat(additionalGraphes);
     return JSON.stringify(ldJson);
 };
+const currentLocaleIso = computed(() => (locales.value as LocaleObject[]).find((e) => e?.code === locale.value)?.iso);
 
 const head = useLocaleHead({
     addSeoAttributes: true
@@ -87,7 +89,7 @@ const cnHead = (locale.value === 'cn') ? [
 
 useHead((): Record<string, any> => ({
     htmlAttrs: {
-        lang: locale.value,
+        lang: currentLocaleIso.value,
         'data-bs-theme': colorMode.value,
     },
     title: getTitle(),
