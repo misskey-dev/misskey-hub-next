@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
+import { cpus } from 'node:os';
 import genSitemap from './scripts/gen-sitemap';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
@@ -117,7 +118,7 @@ export default defineNuxtConfig({
 			'compiled': genSitemap,
 		},
 		prerender: {
-			concurrency: 5,
+			concurrency: cpus().length * 8 ?? 12,
 			routes: [
 				"/404.html"
 			],
