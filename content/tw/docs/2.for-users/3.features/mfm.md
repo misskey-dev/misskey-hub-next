@@ -238,9 +238,9 @@ $[rotate.deg=30 misskey]
 
 <MfmPreview text="😏$[position.x=0.8,y=0.5 🍮]😀"></MfmPreview>
 
-### 拡大
+### 擴展
 
-文字を引き延ばして表示します。
+透過拉伸顯示文字。
 
 ```
 $[scale.x=4,y=2 🍮]
@@ -258,7 +258,7 @@ $[x4 x4]
 $[x3 x3]
 $[x4 x4]"></MfmPreview>
 
-### アニメーション(びよんびよん)
+### 動畫(果凍)
 
 ```
 $[jelly 🍮] $[jelly.speed=5s 🍮]
@@ -266,7 +266,7 @@ $[jelly 🍮] $[jelly.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[jelly 🍮] $[jelly.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(じゃーん)
+### 動畫（鏘～）
 
 ```
 $[tada 🍮] $[tada.speed=5s 🍮]
@@ -274,7 +274,7 @@ $[tada 🍮] $[tada.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[tada 🍮] $[tada.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(ジャンプ)
+### 動畫(跳動)
 
 ```
 $[jump 🍮] $[jump.speed=5s 🍮]
@@ -282,7 +282,7 @@ $[jump 🍮] $[jump.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[jump 🍮] $[jump.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(バウンド)
+### 動畫(反彈)
 
 ```
 $[bounce 🍮] $[bounce.speed=5s 🍮]
@@ -290,7 +290,7 @@ $[bounce 🍮] $[bounce.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[bounce 🍮] $[bounce.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(回転)
+### 動畫(旋轉)
 
 ```
 $[spin 🍮] $[spin.left 🍮] $[spin.alternate 🍮]
@@ -305,7 +305,7 @@ $[spin.x 🍮] $[spin.x,left 🍮] $[spin.x,alternate 🍮]
 $[spin.y 🍮] $[spin.y,left 🍮] $[spin.y,alternate 🍮]
 $[spin.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(ぶるぶる)
+### 動畫(搖晃)
 
 ```
 $[shake 🍮] $[shake.speed=5s 🍮]
@@ -313,7 +313,7 @@ $[shake 🍮] $[shake.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[shake 🍮] $[shake.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(ブレ)
+### 動畫(顫抖)
 
 ```
 $[twitch 🍮] $[twitch.speed=5s 🍮]
@@ -321,7 +321,7 @@ $[twitch 🍮] $[twitch.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[twitch 🍮] $[twitch.speed=5s 🍮]]"></MfmPreview>
 
-### レインボー
+### 彩虹
 
 ```
 $[rainbow 🍮] $[rainbow.speed=5s 🍮]
@@ -333,7 +333,7 @@ $[rainbow $[fg.color=f0f 色付き文字]]
 $[rainbow 色なし文字]
 $[rainbow $[fg.color=f0f 色付き文字]]"></MfmPreview>
 
-### キラキラ
+### 閃閃發光
 
 ```
 $[sparkle 🍮]
@@ -341,9 +341,9 @@ $[sparkle 🍮]
 
 <MfmPreview text="$[x2 $[sparkle 🍮]]"></MfmPreview>
 
-### プレーン
+### 簡化
 
-内側の構文を全て無効にします。
+停用全部的內部語法。
 
 ```
 <plain>**bold** @mention #hashtag `code` $[x2 🍮]</plain>
@@ -351,8 +351,8 @@ $[sparkle 🍮]
 
 <MfmPreview text="<plain>**bold** @mention #hashtag `code` $[x2 🍮]</plain>"></MfmPreview>
 
-## 開発者向け情報
+## 為開發人員提供的信息
 
-MFMのパーサー実装はライブラリとして公開されており、簡単にクライアントにMFMを組み込むことが可能です。
+MFM 的解析器實作會作為函式庫發布，可以輕鬆地將 MFM 合併到客戶端。
 
-- [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - JavaScriptパーサー実装
+- [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - JavaScript 解析器實作
