@@ -3,8 +3,10 @@ files:
     translation: /locales/%locale%.yml
     update_option: update_as_unapproved
   - source: /content/ja/docs/**/*.*
-    translation: /content/%two_letters_code%/docs/**/%original_file_name%.%file_extension%
+    translation: /content/%two_letters_code%/docs/**/%original_file_name%
     update_option: update_as_unapproved
+    ignore:
+      - "/content/ja/docs/**/_*.*"
     languages_mapping:
       two_letters_code:
         zh-TW: tw
