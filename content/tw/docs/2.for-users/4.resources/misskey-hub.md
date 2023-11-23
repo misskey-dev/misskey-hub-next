@@ -1,14 +1,14 @@
-# Misskey Hubについて
+# 關於 Misskey Hub
 
-Misskey Hubは、Misskeyに関するナレッジなどのドキュメント、開発ブログ、プラグインストアなどを提供するMisskeyのオフィシャルサイトです。
-「Misskeyの全てがここにある」を目指しています。
+Misskey Hub 是 Misskey 的官方網站，提供有關 Misskey 的知識和其他文件、開發部落格和外掛程式商店。
+它的目標是「關於 Misskey 的一切都在這裡」。
 
-Misskey Hubも[オープンソースで公開されています。](https://github.com/misskey-dev/misskey-hub)
+Misskey Hub 也是[開放原始碼](https://github.com/misskey-dev/misskey-hub)
 
 :::tip
-Misskey HubはNuxtを使ってビルドされた静的サイトです。
+Misskey Hub 是使用 Nuxt 建置的靜態網站。
 :::
 
-## Misskey Hubに貢献する
+## 為 Misskey Hub 做出貢獻
 
-ドキュメントの追加や、翻訳など歓迎です。
+歡迎提供更多文件和翻譯。

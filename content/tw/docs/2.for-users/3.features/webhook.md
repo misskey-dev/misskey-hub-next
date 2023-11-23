@@ -1,21 +1,21 @@
 # Webhook
 
 :::tip
-バージョン 12.109.0 以降の機能です。
+從 v12.109.0 新增的功能。
 :::
 
 :::warning
-実験的な機能であるため、動作が不安定だったり今後仕様が変更される可能性があります。
+由於這是一項試驗性功能，因此可能不穩定，或者將來規格可能會發生變化。
 :::
 
-MisskeyにはWebhookが用意されています。Webhookを利用すると、Misskey上の様々なイベントをリアルタイムに受け取ることが可能です。
+Misskey 提供了 Webhook。使用 Webhook，您可以即時接收 Misskey 上的各種事件。
 
-設定>Webhook でWebhookの管理を行えます。
+您可以在「設定」>「Webhook」中管理您的 Webhook。
 
-Webhookが登録されると、指定したイベントが発生した際に、指定したURLにHTTPリクエストが送信されます。リクエストのメソッドはPOSTで、ボディはJSONです。
-さらに、リクエストヘッダーには`X-Misskey-Hook-Secret`という名前で、登録時に設定したシークレットが含まれます。このシークレットが正しいか検証することで、リクエストが正規のものか判定することができます。
+Webhook 註冊後，當指定事件發生時，將向指定 URL 傳送 HTTP 請求。請求方法為 POST，內文為 JSON。
+此外，請求標頭將包含您在註冊期間設定的金鑰，名為「X-Misskey-Hook-Secret」。透過驗證此機密，可以確定請求是否合法。
 
-リクエストペイロードは以下のプロパティが入ります。
+請求負載包含以下屬性。
 
 <MkSchemaViewerItemObject :schema="{
  type: 'object',
@@ -47,17 +47,17 @@ Webhookが登録されると、指定したイベントが発生した際に、�
  }
 }"/>
 
-送信先サーバーが5xxエラーを返すか、応答しなかった場合は時間を開けてリクエストが再送されます。
+如果目標伺服器傳回 5xx 錯誤或無回應，則請求將在一段時間後重新傳輸。
 
-Webhookは管理画面から個別にアクティブ状態を設定でき、一時的にリクエストの送信を停止させることができます。
+您可以從管理畫面單獨設定 Webhook 的活動狀態，並且可以暫時停止傳送請求。
 
-## イベント
+## 事件
 
-イベントごとに説明とペイロードを示します。
+提供每個事件的描述和負載。
 
 ### follow
 
-自分が誰かをフォローした際に発生します。
+當您追隨某人時會發生。
 
 <MkSchemaViewerItemObject :schema="{
  type: 'object',
@@ -71,7 +71,7 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
 
 ### followed
 
-自分が誰かからフォローされた際に発生します。
+當有人追隨您時發生。
 
 <MkSchemaViewerItemObject :schema="{
  type: 'object',
@@ -85,7 +85,7 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
 
 ### unfollow
 
-自分が誰かをフォロー解除した際に発生します。
+當您取消追隨某人時會發生。
 
 <MkSchemaViewerItemObject :schema="{
  type: 'object',
@@ -99,7 +99,7 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
 
 ### note
 
-自分がノートを投稿した際に発生します。
+當您發布貼文時發生。
 
 <MkSchemaViewerItemObject :schema="{
  type: 'object',
@@ -113,7 +113,7 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
 
 ### reply
 
-自分のノートに返信された際に発生します。
+當您回覆貼文時發生。
 
 <MkSchemaViewerItemObject :schema="{
  type: 'object',
@@ -127,7 +127,7 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
 
 ### renote
 
-自分のノートがRenoteされた際に発生します。
+當您自己的貼文被轉發時發生。
 
 <MkSchemaViewerItemObject :schema="{
  type: 'object',
@@ -141,7 +141,7 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
 
 ### mention
 
-自分にメンションされた際に発生します。
+當有人提到你時發生。
 
 <MkSchemaViewerItemObject :schema="{
  type: 'object',
