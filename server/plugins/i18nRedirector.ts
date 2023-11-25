@@ -14,7 +14,7 @@ export default defineNitroPlugin((nitroApp) => {
     }
 
     const runtimeConfig: MiHubRuntimeConfig = useRuntimeConfig();
-    if (!event.path.match(new RegExp(`^/(${runtimeConfig.locales.map((l) => l.code).join('|')})/`))) {
+    if (!event.path.match(new RegExp(`^/(${runtimeConfig.public.locales.map((l) => l.code).join('|')})/`))) {
       const links = runtimeConfig.locales.map((l) => {
         const url = withTrailingSlash(`/${l.code}${event.path.replace(/\.html$/g, '/')}`);
         return `<a href="${url}">${l.name}</a>`;

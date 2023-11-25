@@ -43,6 +43,11 @@ export function isLocalPath(link: string, base?: string): boolean {
     return (!url.host || rootDomain.host === url.host);
 }
 
+export function sanitizeInternalPath(path: string): string {
+    const runtimeConfig = useRuntimeConfig();
+    return path.replace(new RegExp(`^(\/(${runtimeConfig.public.locales.map((l) => l.code).join('|')})\/?){2,}(.*)$`, 'g'), '$1$2');
+}
+
 /**
  * ナビゲーションObjectを合致する条件まで深掘り
  * @param obj ナビゲーションObject

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ExtIco from 'bi/box-arrow-up-right.svg';
 import { $URL, isRelative, joinURL } from 'ufo';
+import { isLocalPath, sanitizeInternalPath } from '@/assets/js/misc';
 
 const runtimeConfig = useRuntimeConfig();
 const rootDomain = new $URL(runtimeConfig.public.baseUrl);
@@ -23,12 +24,12 @@ const realHref = ref(props.href);
 const realTarget = ref(props.target);
 
 const url = new $URL(realHref.value);
-if (url.host === '' || rootDomain.host === url.host) {
+if (isLocalPath(realHref.value)) {
     // 内部リンクの場合
     const route = resolve(realHref.value);
     if (route.name && !route.name.toString().includes('___')) {
         // 渡されたパスがローカライズされたルートではない場合はローカライズされたパスを返す
-        realHref.value = localePath(url.fullpath);
+        realHref.value = sanitizeInternalPath(localePath(url.fullpath));
     }
 
     // 相対パスの場合（trailing slashがあるので１つくり下げる）

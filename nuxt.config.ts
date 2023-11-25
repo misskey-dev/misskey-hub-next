@@ -29,9 +29,9 @@ export const locales = localesConst as unknown as LocaleObject[];
 
 export default defineNuxtConfig({
 	runtimeConfig: {
-		locales,
 		public: {
 			baseUrl,
+			locales,
 		}
 	},
 	css: [
