@@ -9,7 +9,7 @@ useHead({
 });
 
 const { locale } = useI18n();
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation(queryContent(`/${locale.value}/docs/`)));
+const { data: navigation } = await useAsyncData(`navigation_${locale.value}`, () => fetchContentNavigation(queryContent(`/${locale.value}/docs/`)));
 </script>
 
 <template>
