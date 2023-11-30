@@ -3,23 +3,22 @@ import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import NProgress from 'nprogress';
 import type { Graph, Thing } from 'schema-dts';
 
+const nuxtApp = useNuxtApp();
+
 const { t, locale, locales } = useI18n();
 const route = useRoute();
-const router = useRouter();
 const colorMode = useColorMode();
 const baseUrl = useRuntimeConfig().public.baseUrl as string;
 
-router.beforeEach((to, from) => {
-    if (to.path === from.path) return;
+nuxtApp.hook('page:start', () => {
     NProgress.start();
 });
-router.afterEach((to, from) => {
-    if (to.path === from.path) return;
+nuxtApp.hook('page:finish', () => {
     nextTick(() => {
         setTimeout(() => {
             NProgress.done();
         }, 100);
-    });
+    });    
 });
 
 const getDescription = (): string => {
