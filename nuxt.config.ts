@@ -6,6 +6,7 @@ import genSitemap from './scripts/gen-sitemap';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import { genLocalesJson } from './scripts/gen-locales';
+import type { NuxtConfig } from 'nuxt/schema';
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl = 'https://misskey-hub.net';
@@ -26,6 +27,33 @@ export const localesConst = [
 export type LocaleCodes = typeof localesConst[number]['code'];
 
 export const locales = localesConst as unknown as LocaleObject[];
+
+function getRouteRules(): NuxtConfig['routeRules'] {
+	// 言語ごとに割り当てる必要のないRouteRules
+	const staticRules: NuxtConfig['routeRules'] = {
+		'/**': { prerender: true },
+		'/ja/blog/**': { isr: true },
+	};
+
+	// それぞれの言語について割り当てる必要のあるRouteRules
+	const localeBasedRules: NuxtConfig['routeRules'] = {
+		'/docs/**': { isr: true },
+	};
+
+	// 言語ごとにすべて割り当てていく
+	const _localeBasedRules: NuxtConfig['routeRules'] = {};
+	const localeCodes = locales.map((v) => v.code);
+	Object.keys(localeBasedRules).forEach((route) => {
+		localeCodes.forEach((code) => {
+			_localeBasedRules[`/${code}${route}`] = localeBasedRules[route];
+		});
+	})
+
+	return {
+		...staticRules,
+		..._localeBasedRules,
+	};
+}
 
 export default defineNuxtConfig({
 	runtimeConfig: {
@@ -141,4 +169,5 @@ export default defineNuxtConfig({
 		payloadExtraction: true,
 		componentIslands: true,
 	},
-})
+	routeRules: getRouteRules(),
+});
