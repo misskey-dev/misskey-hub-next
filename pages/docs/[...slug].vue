@@ -1,12 +1,12 @@
 <template>
     <div class="grid docs-main">
         <div class="lg:hidden sticky top-16 -mx-6 -mt-6 overflow-y-auto bg-slate-50 dark:bg-slate-900 z-[9890] border-b dark:border-slate-700 text-sm flex items-start">
-            <details v-if="data?.body && data.body.toc.links.length > 0" class="peer order-2 flex-grow flex-shrink-0" :open="openState">
+            <details v-if="data?.body && data.body.toc?.links.length > 0" class="peer order-2 flex-grow flex-shrink-0" :open="openState">
                 <summary class="py-4 cursor-pointer">
                     {{ $t('_docs._toc.title') }}
                 </summary>
                 <div class="pb-4 px-6 max-h-[65vh] overflow-y-auto">
-                    <DocsTocLinks :links="data?.body.toc.links" :max-depth="data?.maxTocDepth ?? undefined" @child-click="openState = false" />
+                    <DocsTocLinks :links="data?.body.toc?.links" :max-depth="data?.maxTocDepth ?? undefined" @child-click="openState = false" />
                 </div>
             </details>
             <button @click="isAsideNavOpen = !isAsideNavOpen" class="p-4 order-1 dark:border-slate-800 border-r peer-open:border-b mr-2">
@@ -42,6 +42,7 @@
 <script setup lang="ts">
 import AsideNavIco from 'bi/text-indent-left.svg';
 import ExtIco from 'bi/box-arrow-up-right.svg';
+import type { MiDocsParsedContent } from '~/types/content';
 
 const isAsideNavOpen = useState<boolean>('miHub_docs_asideNav_openState', () => false);
 
@@ -55,7 +56,7 @@ definePageMeta({
 const route = useRoute();
 const slugs = (route.params.slug as string[]).filter((v) => v !== '');
 
-const { data } = await useAsyncData(`docs-${locale.value}-${slugs.join('-')}`, () => queryContent(`/${locale.value}/docs/${slugs.join('/')}`).findOne());
+const { data } = await useAsyncData(`docs-${locale.value}-${slugs.join('-')}`, () => queryContent<MiDocsParsedContent>(`/${locale.value}/docs/${slugs.join('/')}`).findOne());
 
 if (!data.value) {
     throw createError({ statusCode: 404, statusMessage: 'page not found' });
