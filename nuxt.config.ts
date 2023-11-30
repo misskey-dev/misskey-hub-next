@@ -37,6 +37,7 @@ function getRouteRules(): NuxtConfig['routeRules'] {
 
 	// それぞれの言語について割り当てる必要のあるRouteRules
 	const localeBasedRules: NuxtConfig['routeRules'] = {
+		'/': { prerender: true },
 		'/docs/**': { isr: true },
 	};
 
@@ -142,6 +143,7 @@ export default defineNuxtConfig({
 		],
 	},
 	nitro: {
+		preset: 'vercel',
 		hooks: {
 			'compiled': genSitemap,
 		},

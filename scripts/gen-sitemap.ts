@@ -21,6 +21,9 @@ export default async function genSitemap(nitro: Nitro) {
             priority: .7,
         } as SitemapItem;
     });
+
+    if (routes.length === 0) return;
+    
     const smStream = new SitemapStream({ hostname: domain });
     Readable.from(routes).pipe(smStream);
 
