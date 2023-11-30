@@ -145,14 +145,15 @@ export default defineNuxtConfig({
 		hooks: {
 			'compiled': genSitemap,
 		},
-		prerender: {
+		/*prerender: {
 			concurrency: cpus().length * 8 ?? 12,
 			routes: [
-				"/404.html"
+				"/404.html",
+				"/200.html"
 			],
 			// 【一時対応】とりあえずビルドできるようにする
 			failOnError: false,
-		},
+		},*/
 		plugins: [
 			'@/server/plugins/appendComment.ts',
 			'@/server/plugins/i18nRedirector.ts',
