@@ -1,8 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
-import { cpus } from 'node:os';
-import genSitemap from './scripts/gen-sitemap';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import { genLocalesJson } from './scripts/gen-locales';
@@ -31,7 +29,7 @@ export const locales = localesConst as unknown as LocaleObject[];
 function getRouteRules(): NuxtConfig['routeRules'] {
 	// 言語ごとに割り当てる必要のないRouteRules
 	const staticRules: NuxtConfig['routeRules'] = {
-		'/**': { prerender: true },
+		'/': { prerender: true },
 		'/ja/blog/**': { isr: true },
 	};
 
@@ -144,9 +142,6 @@ export default defineNuxtConfig({
 	},
 	nitro: {
 		preset: 'vercel',
-		hooks: {
-			'compiled': genSitemap,
-		},
 		plugins: [
 			'@/server/plugins/appendComment.ts',
 			'@/server/plugins/i18nRedirector.ts',
