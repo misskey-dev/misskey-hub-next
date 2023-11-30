@@ -1,11 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
-import { cpus } from 'node:os';
-import genSitemap from './scripts/gen-sitemap';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import { genLocalesJson } from './scripts/gen-locales';
+import { getStaticEndpoints } from './scripts/get-static-endpoints';
 import type { NuxtConfig } from 'nuxt/schema';
 
 // 公開時のドメイン（末尾スラッシュなし）
@@ -31,14 +30,22 @@ export const locales = localesConst as unknown as LocaleObject[];
 function getRouteRules(): NuxtConfig['routeRules'] {
 	// 言語ごとに割り当てる必要のないRouteRules
 	const staticRules: NuxtConfig['routeRules'] = {
-		'/**': { prerender: true },
 		'/ja/blog/**': { isr: true },
+		'/ns/': { prerender: true },
 	};
 
 	// それぞれの言語について割り当てる必要のあるRouteRules
 	const localeBasedRules: NuxtConfig['routeRules'] = {
 		'/docs/**': { isr: true },
 	};
+
+	// 静的ページをすべて追加
+	getStaticEndpoints().forEach((route) => {
+		if (!route.includes('ns')) {
+			localeBasedRules[route] = { prerender: true };
+			staticRules[route] = { prerender: true };
+		}
+	});
 
 	// 言語ごとにすべて割り当てていく
 	const _localeBasedRules: NuxtConfig['routeRules'] = {};
@@ -142,18 +149,7 @@ export default defineNuxtConfig({
 		],
 	},
 	nitro: {
-		hooks: {
-			'compiled': genSitemap,
-		},
-		/*prerender: {
-			concurrency: cpus().length * 8 ?? 12,
-			routes: [
-				"/404.html",
-				"/200.html"
-			],
-			// 【一時対応】とりあえずビルドできるようにする
-			failOnError: false,
-		},*/
+		preset: 'vercel',
 		plugins: [
 			'@/server/plugins/appendComment.ts',
 			'@/server/plugins/i18nRedirector.ts',
