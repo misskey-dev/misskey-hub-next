@@ -4,6 +4,7 @@ import svgLoader from 'vite-svg-loader';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import { genLocalesJson } from './scripts/gen-locales';
+import { getStaticEndpoints } from './scripts/get-static-endpoints';
 import type { NuxtConfig } from 'nuxt/schema';
 
 // 公開時のドメイン（末尾スラッシュなし）
@@ -29,15 +30,21 @@ export const locales = localesConst as unknown as LocaleObject[];
 function getRouteRules(): NuxtConfig['routeRules'] {
 	// 言語ごとに割り当てる必要のないRouteRules
 	const staticRules: NuxtConfig['routeRules'] = {
-		'/': { prerender: true },
 		'/ja/blog/**': { isr: true },
+		'/ns/': { prerender: true },
 	};
 
 	// それぞれの言語について割り当てる必要のあるRouteRules
 	const localeBasedRules: NuxtConfig['routeRules'] = {
-		'/': { prerender: true },
 		'/docs/**': { isr: true },
 	};
+
+	// 静的ページをすべて追加
+	getStaticEndpoints().forEach((route) => {
+		if (!route.includes('ns')) {
+			localeBasedRules[route] = { prerender: true };
+		}
+	});
 
 	// 言語ごとにすべて割り当てていく
 	const _localeBasedRules: NuxtConfig['routeRules'] = {};
