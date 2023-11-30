@@ -23,8 +23,7 @@
 
 <script setup lang="ts">
 import LeftIco from 'bi/arrow-left.svg';
-import { isLocalPath } from '~/assets/js/misc';
-import { joinURL } from 'ufo';
+import { joinURL, parseURL } from 'ufo';
 import type { MiBlogParsedContent } from '~/types/content';
 // 日本語でしか提供されない
 defineI18nRoute({
@@ -38,7 +37,7 @@ const runtimeConfig = useRuntimeConfig();
 const { data } = await useAsyncData(`blog-${route.params.slug}`, () => queryContent<MiBlogParsedContent>(`/blog/${route.params.slug}`).findOne());
 
 if (data.value?.thumbnail) {
-    route.meta.thumbnail = isLocalPath(data.value.thumbnail) ? joinURL(runtimeConfig.public.baseUrl, data.value.thumbnail) : data.value.thumbnail;
+    route.meta.thumbnail = (parseURL(data.value.thumbnail).host == null) ? joinURL(runtimeConfig.public.baseUrl, data.value.thumbnail) : data.value.thumbnail;
 }
 
 if (!data.value) {
