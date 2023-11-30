@@ -43,6 +43,7 @@ function getRouteRules(): NuxtConfig['routeRules'] {
 	getStaticEndpoints().forEach((route) => {
 		if (!route.includes('ns')) {
 			localeBasedRules[route] = { prerender: true };
+			staticRules[route] = { prerender: true };
 		}
 	});
 
