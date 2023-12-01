@@ -109,8 +109,8 @@ _docs:
   description: " Comprehensive information ranging from how to use Misskey to resources for server operators and developers."
   indexTitle: "Table of Contents"
   _contribute:
-    editThis: "このページを編集"
-    translateThis: "このページを翻訳"
+    editThis: "Edit this page"
+    translateThis: "Translate this page"
   _aboutMisskey:
     title: "About Misskey"
     description: "A complete guide for those new to Misskey or considering using it! Let's explore the basics and features."
@@ -149,7 +149,7 @@ _brandAssets:
   logo: "Logo"
   icon: "Icon"
   banner: "Banner"
-  avatarDecorationTemplate: "アバターデコレーション テンプレート"
+  avatarDecorationTemplate: "Avatar Decoration Template"
 _links:
   title: "Links"
   _github:
@@ -183,31 +183,31 @@ _mfmPlayground:
   clearEmojiCacheDescription: "When emojis are not displayed:"
   clearEmojiCache: "Clear Emoji Cache"
 _aidConverter:
-  title: "aid/aidxツール"
-  description: "Misskeyの内部で使用されているランダムID生成アルゴリズム「aid」と「aidx」の変換・生成ができます。"
-  aidToDate: "aid/aidx→日付時刻"
-  dateToAid: "日付時刻→aid/aidx"
-  mode: "作成するid"
-  date: "日付時刻"
+  title: "aid/aidx utilities"
+  description: "This tool can convert and generate aid and aidx, the random ID generation algorithms used inside Misskey."
+  aidToDate: "aid/aidx to Date"
+  dateToAid: "Date to aid/aidx"
+  mode: "Type of ID"
+  date: "Date/Time"
 _aboutUs:
-  title: "Misskey Development Divisionについて"
-  description: "Misskey開発チームについての情報を掲載しています。"
+  title: "About Misskey Development Division"
+  description: "Information about the Misskey development team."
   _team:
-    title: "開発メンバー"
-    description: "Misskeyの開発に関わっている方を紹介しています。"
+    title: "Dev Members"
+    description: "Introducing the people involved in the development of Misskey!"
     _core:
-      title: "コア チームメンバー"
-      description: "こちらのコアチームメンバーは、Misskey関連のプロジェクトを積極的にメンテナンスしています。"
+      title: "Core Team Member"
+      description: "These core team members are actively maintaining Misskey-related projects."
     _coreEmeriti:
-      title: "名誉コアチームメンバー"
-      description: "過去に価値のある貢献をしてくださっていた、元コアチームメンバーの皆さんです。"
+      title: "Core Team Member Emeriti"
+      description: "These are former core team members who have made valuable contributions in the past."
     _contributors:
-      title: "コントリビューター"
-      description: "こちらの皆さんは、Misskeyに特に貢献してくださっています。"
-      seeMore: "すべてのコントリビューター"
+      title: "Contributors"
+      description: "These are some of the most active Misskey contributors."
+      seeMore: "All contributors"
     _orgPartner:
-      title: "企業・団体パートナー"
-      description: "こちらの企業・団体から、金銭的・技術的な観点でMisskeyの開発へご協力いただいております。"
+      title: "Corporate & Organization Partners"
+      description: "These companies and organizations have contributed financially and technically to the development of Misskey."
 _api:
   _permissions:
     title: "Permissions"
