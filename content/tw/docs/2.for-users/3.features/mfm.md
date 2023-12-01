@@ -12,14 +12,14 @@ MFM 代表 Markup language For Misskey，是一種專有的標記語言，可以
 
 ## 可使用 MFM 的地方
 
-- 貼文的正文
-- CW註釋
+- ノート本文
+- CW注釈
 - 使用者名稱
 - 使用者的自我介紹
 
 ## 語法
 
-### 提及
+### メンション
 
 「@ + 使用者名稱」可用來表示特定使用者。
 :::tip
@@ -38,11 +38,11 @@ MFM 代表 Markup language For Misskey，是一種專有的標記語言，可以
 
 <MfmPreview text="@repo@p1.a9z.dev"></MfmPreview>
 
-### 主題標籤
+### ハッシュタグ
 
-「# + 標籤」來表示主題標籤。
+ナンバーサイン + タグで、ハッシュタグを示すことができます。
 :::tip
-有關主題標籤的更多信息，請參閱[此處](./hashtag.md)。
+ハッシュタグについての詳細は[こちら](./hashtag.md)を参照してください。
 :::
 
 ```
@@ -103,7 +103,7 @@ https://example.com
 
 <MfmPreview text="**太字**"></MfmPreview>
 
-### 縮小
+### 目立たなくする
 
 可以使內容文字變小、變淡。
 
@@ -123,9 +123,9 @@ https://example.com
 
 <MfmPreview text="> MisskeyでFediverseの世界が広がります"></MfmPreview>
 
-### 置中
+### 中央寄せ
 
-可以將內容置中顯示。
+内容を中央寄せで表示させることができます。
 
 ```
 <center>Misskey 擴展了聯邦宇宙的世界</center>
@@ -141,7 +141,7 @@ https://example.com
 `<: "Hello, world!"`
 ```
 
-### 程式碼(區塊)
+### コード(ブロック)
 
 在區塊中用高亮度顯示，例如複數行的程式碼語法。
 
@@ -170,7 +170,7 @@ $[flip.h,v MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
 ### 字型
 
-您可以設定顯示內容的字型
+内容のフォントを指定することができます。
 
 ```
 $[font.serif MisskeyでFediverseの世界が広がります]
@@ -184,9 +184,9 @@ $[font.monospace MisskeyでFediverseの世界が広がります]
 $[font.cursive MisskeyでFediverseの世界が広がります]
 $[font.fantasy MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
-### 模糊化
+### ぼかし
 
-可以模糊內容。將滑鼠懸停在其上時可以清楚地看到它。
+内容をぼかすことができます。ポインターを上に乗せるとはっきり見えるようになります。
 
 ```
 $[blur MisskeyでFediverseの世界が広がります]
@@ -258,7 +258,7 @@ $[x4 x4]
 $[x3 x3]
 $[x4 x4]"></MfmPreview>
 
-### 動畫(果凍)
+### 動畫(搖晃)
 
 ```
 $[jelly 🍮] $[jelly.speed=5s 🍮]
@@ -305,7 +305,7 @@ $[spin.x 🍮] $[spin.x,left 🍮] $[spin.x,alternate 🍮]
 $[spin.y 🍮] $[spin.y,left 🍮] $[spin.y,alternate 🍮]
 $[spin.speed=5s 🍮]]"></MfmPreview>
 
-### 動畫(搖晃)
+### 動畫(果凍)
 
 ```
 $[shake 🍮] $[shake.speed=5s 🍮]
@@ -333,7 +333,7 @@ $[rainbow $[fg.color=f0f 色付き文字]]
 $[rainbow 色なし文字]
 $[rainbow $[fg.color=f0f 色付き文字]]"></MfmPreview>
 
-### 閃閃發光
+### キラキラ
 
 ```
 $[sparkle 🍮]
@@ -341,7 +341,7 @@ $[sparkle 🍮]
 
 <MfmPreview text="$[x2 $[sparkle 🍮]]"></MfmPreview>
 
-### 簡化
+### プレーン
 
 將內部語法全部禁用。
 
