@@ -36,13 +36,29 @@ const route = useRoute();
 const runtimeConfig = useRuntimeConfig();
 const { data } = await useAsyncData(`blog-${route.params.slug}`, () => queryContent<MiBlogParsedContent>(`/blog/${route.params.slug}`).findOne());
 
-if (data.value?.thumbnail) {
-    route.meta.thumbnail = (parseURL(data.value.thumbnail).host == null) ? joinURL(runtimeConfig.public.baseUrl, data.value.thumbnail) : data.value.thumbnail;
-}
-
 if (!data.value) {
     throw createError({ statusCode: 404, statusMessage: 'page not found' });
 }
+
+const thumbnail = !data.value.thumbnail ? undefined : (parseURL(data.value.thumbnail).host == null) ? joinURL(runtimeConfig.public.baseUrl, data.value.thumbnail) : data.value.thumbnail;
+
+route.meta.thumbnail = thumbnail;
+route.meta.title = data.value?.title;
+
+const pd = data.value.date ? new Date(data.value.date).toISOString() : undefined;
+
+route.meta.graph = [
+    {
+        "@type": "BlogPosting",
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `${runtimeConfig.public.baseUrl}/#WebPage`,
+        },
+        headline: "b",
+        image: thumbnail,  
+        datePublished: pd,
+    },
+];
 </script>
 
 <style scoped>
