@@ -61,7 +61,7 @@ MFM（Markup language For Misskey）是 Misskey 自己的標記語言，它有�
 
 可使用[DeepL翻譯](https://www.deepl.com/)。
 
-## 我已經創建了伺服器，需要提交電信業務通知嗎？(日本專屬問題)
+## 我已經創建了伺服器，需要提交電信業務通知嗎？
 
 ### 簡短回答
 
