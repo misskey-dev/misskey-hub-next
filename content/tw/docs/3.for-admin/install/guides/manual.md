@@ -71,7 +71,7 @@ pnpm run init
 
 ## 啟動
 
-您做到了！可以使用以下指令啟動 Misskey。
+お疲れ様でした。可以使用以下指令啟動 Misskey。
 
 ```sh
 NODE_ENV=production pnpm run start
