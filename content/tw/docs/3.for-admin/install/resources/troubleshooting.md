@@ -28,7 +28,7 @@ Ubuntu向け解説はコピペばかりでつまらない！時間がかかる�
 
 ## ImageMagick関連
 
-_**ImageMagickは不要です！**_
+\_**ImageMagickは不要です！**\*
 
 ## ビルドが失敗する
 
