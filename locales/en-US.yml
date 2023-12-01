@@ -1,6 +1,7 @@
 noScript: "Javascript is currently disabled. Please enable it as JavaScript is required for site functionality."
 learnMore: "Learn More"
 loading: "Loading..."
+clickToExpand: "（クリックして展開）"
 _seo:
   siteName: "Misskey Hub"
   defaultTitleTagline: "A Network Expanding with Notes"
