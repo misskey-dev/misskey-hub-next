@@ -35,6 +35,7 @@ cp ./docker-compose.yml.example ./docker-compose.yml
 
 `default.yml`と`docker.env`をファイル内の説明に従って編集してください。\
 \
+\
 また、必要に応じて、`docker-compose.yml`を編集します。(ポートを変更したい場合など)
 
 ## ビルドと初期化
@@ -61,7 +62,9 @@ GLHF✨
 
 :::warning
 :::warning
+:::warning
 アップデートの際は必ず[リリースノート](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)を確認し、変更点や追加で必要になる作業の有無(ほとんどの場合ありません)を予め把握するようにしてください。
+:::
 :::
 :::
 
