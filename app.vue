@@ -2,24 +2,24 @@
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import NProgress from 'nprogress';
 import type { Graph, Thing } from 'schema-dts';
+import { normalizeURL, withTrailingSlash } from 'ufo';
+
+const nuxtApp = useNuxtApp();
 
 const { t, locale, locales } = useI18n();
 const route = useRoute();
-const router = useRouter();
 const colorMode = useColorMode();
 const baseUrl = useRuntimeConfig().public.baseUrl as string;
 
-router.beforeEach((to, from) => {
-    if (to.path === from.path) return;
+nuxtApp.hook('page:start', () => {
     NProgress.start();
 });
-router.afterEach((to, from) => {
-    if (to.path === from.path) return;
+nuxtApp.hook('page:finish', () => {
     nextTick(() => {
         setTimeout(() => {
             NProgress.done();
         }, 100);
-    });
+    });    
 });
 
 const getDescription = (): string => {
@@ -70,7 +70,7 @@ const getLdJson = (additionalGraphes: Thing[] = []): string => {
 const currentLocaleIso = computed(() => (locales.value as LocaleObject[]).find((e) => e?.code === locale.value)?.iso);
 
 const head = useLocaleHead({
-    addSeoAttributes: true
+    addSeoAttributes: true,
 });
 
 /** 
@@ -118,7 +118,7 @@ useHead((): Record<string, any> => ({
         ...(head.value.meta?.map((e) => ({ property: e.property, content: e.content, })) || []),
     ],
     link: [
-        ...(head.value.link?.map((e) => ({ rel: e.rel, href: (e.href.endsWith('/') ? e.href : e.href + '/'), hreflang: e.hreflang, })) || []),
+        ...(head.value.link?.map((e) => ({ rel: e.rel, href: normalizeURL(withTrailingSlash(e.href)), hreflang: e.hreflang, })) || []),
         ...cnHead,
     ],
     script: [
