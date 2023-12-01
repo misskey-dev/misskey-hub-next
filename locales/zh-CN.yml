@@ -1,6 +1,7 @@
 noScript: "現在Javascriptが無効になっています。サイトの表示にはJavascriptが必須となりますので有効にしてください。"
 learnMore: "詳しく知る"
 loading: "読み込み中…"
+clickToExpand: "（クリックして展開）"
 _seo:
   siteName: "Misskey Hub"
   defaultTitleTagline: "ノートでひろがるネットワーク"
