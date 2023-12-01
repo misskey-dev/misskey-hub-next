@@ -109,6 +109,7 @@ export default defineNuxtConfig({
 				dark: 'github-dark',
 			},
 			preload: [
+				'ini', 'sql', 'yml', 'nginx', 'bash',
 				JSON.parse(readFileSync('./node_modules/aiscript-vscode/aiscript/syntaxes/aiscript.tmLanguage.json', { encoding: 'utf-8' })),
 			],
 		},
