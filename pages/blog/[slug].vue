@@ -24,18 +24,35 @@
 <script setup lang="ts">
 import LeftIco from 'bi/arrow-left.svg';
 import { joinURL, parseURL } from 'ufo';
+import { isLocalPath } from '@/assets/js/misc';
 import type { MiBlogParsedContent } from '~/types/content';
 // 日本語でしか提供されない
 defineI18nRoute({
     locales: ['ja'],
 });
 
-// 他言語からやってきたときに正しいパスに戻す
-const originalLocale = useState('miHub_blog_originalLocale', () => 'ja');
-
-const localePath = useLocalePath();
-
 const route = useRoute();
+
+// ▼他言語からやってきたときに正しいパスに戻す▼
+const originalLocale = useState('miHub_blog_originalLocale', () => 'ja');
+const localePath = useLocalePath();
+const getRouteBaseName = useRouteBaseName();
+let isTransformed = false;
+
+onBeforeRouteLeave((to) => {
+    if (isTransformed || !isLocalPath(to.fullPath ?? to)) {
+        return;
+    }
+
+    const brn = getRouteBaseName(to);
+    if (!brn) {
+        return to;
+    }
+    isTransformed = true;
+    return localePath({ name: brn }, originalLocale.value);
+});
+// ▲他言語からやってきたときに正しいパスに戻す▲
+
 const runtimeConfig = useRuntimeConfig();
 const { data } = await useAsyncData(`blog-${route.params.slug}`, () => queryContent<MiBlogParsedContent>(`/blog/${route.params.slug}`).findOne());
 
