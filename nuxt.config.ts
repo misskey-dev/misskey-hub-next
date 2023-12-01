@@ -1,10 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
-import genSitemap from './scripts/gen-sitemap';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import { genLocalesJson } from './scripts/gen-locales';
+import { getStaticEndpoints } from './scripts/get-static-endpoints';
+import type { NuxtConfig } from 'nuxt/schema';
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl = 'https://misskey-hub.net';
@@ -26,11 +27,46 @@ export type LocaleCodes = typeof localesConst[number]['code'];
 
 export const locales = localesConst as unknown as LocaleObject[];
 
+function getRouteRules(): NuxtConfig['routeRules'] {
+	// 言語ごとに割り当てる必要のないRouteRules
+	const staticRules: NuxtConfig['routeRules'] = {
+		'/ja/blog/**': { isr: true },
+		'/ns/': { prerender: true },
+	};
+
+	// それぞれの言語について割り当てる必要のあるRouteRules
+	const localeBasedRules: NuxtConfig['routeRules'] = {
+		'/docs/**': { isr: true },
+	};
+
+	// 静的ページをすべて追加
+	getStaticEndpoints().forEach((route) => {
+		if (!route.includes('ns')) {
+			localeBasedRules[route] = { prerender: true };
+			staticRules[route] = { prerender: true };
+		}
+	});
+
+	// 言語ごとにすべて割り当てていく
+	const _localeBasedRules: NuxtConfig['routeRules'] = {};
+	const localeCodes = locales.map((v) => v.code);
+	Object.keys(localeBasedRules).forEach((route) => {
+		localeCodes.forEach((code) => {
+			_localeBasedRules[`/${code}${route}`] = localeBasedRules[route];
+		});
+	})
+
+	return {
+		...staticRules,
+		..._localeBasedRules,
+	};
+}
+
 export default defineNuxtConfig({
 	runtimeConfig: {
-		locales,
 		public: {
 			baseUrl,
+			locales,
 		}
 	},
 	css: [
@@ -59,9 +95,6 @@ export default defineNuxtConfig({
 			]
 		},
 		highlight: {
-			preload: [
-				'ini',
-			],
 			theme: {
 				// Default theme (same as single string)
 				default: 'github-light',
@@ -116,16 +149,7 @@ export default defineNuxtConfig({
 		],
 	},
 	nitro: {
-		hooks: {
-			'compiled': genSitemap,
-		},
-		prerender: {
-			routes: [
-				"/404.html"
-			],
-			// 【一時対応】とりあえずビルドできるようにする
-			failOnError: false,
-		},
+		preset: 'vercel',
 		plugins: [
 			'@/server/plugins/appendComment.ts',
 			'@/server/plugins/i18nRedirector.ts',
@@ -142,4 +166,5 @@ export default defineNuxtConfig({
 		payloadExtraction: true,
 		componentIslands: true,
 	},
-})
+	routeRules: getRouteRules(),
+});

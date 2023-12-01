@@ -1,24 +1,25 @@
 <script setup lang="ts">
+import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import NProgress from 'nprogress';
 import type { Graph, Thing } from 'schema-dts';
+import { normalizeURL, withTrailingSlash } from 'ufo';
 
-const { t, locale } = useI18n();
+const nuxtApp = useNuxtApp();
+
+const { t, locale, locales } = useI18n();
 const route = useRoute();
-const router = useRouter();
 const colorMode = useColorMode();
 const baseUrl = useRuntimeConfig().public.baseUrl as string;
 
-router.beforeEach((to, from) => {
-    if (to.path === from.path) return;
+nuxtApp.hook('page:start', () => {
     NProgress.start();
 });
-router.afterEach((to, from) => {
-    if (to.path === from.path) return;
+nuxtApp.hook('page:finish', () => {
     nextTick(() => {
         setTimeout(() => {
             NProgress.done();
         }, 100);
-    });
+    });    
 });
 
 const getDescription = (): string => {
@@ -66,9 +67,10 @@ const getLdJson = (additionalGraphes: Thing[] = []): string => {
     ldJson['@graph'] = ldJson['@graph'].concat(additionalGraphes);
     return JSON.stringify(ldJson);
 };
+const currentLocaleIso = computed(() => (locales.value as LocaleObject[]).find((e) => e?.code === locale.value)?.iso);
 
 const head = useLocaleHead({
-    addSeoAttributes: true
+    addSeoAttributes: true,
 });
 
 /** 
@@ -87,7 +89,7 @@ const cnHead = (locale.value === 'cn') ? [
 
 useHead((): Record<string, any> => ({
     htmlAttrs: {
-        lang: locale.value,
+        lang: currentLocaleIso.value,
         'data-bs-theme': colorMode.value,
     },
     title: getTitle(),
@@ -116,7 +118,7 @@ useHead((): Record<string, any> => ({
         ...(head.value.meta?.map((e) => ({ property: e.property, content: e.content, })) || []),
     ],
     link: [
-        ...(head.value.link?.map((e) => ({ rel: e.rel, href: (e.href.endsWith('/') ? e.href : e.href + '/'), hreflang: e.hreflang, })) || []),
+        ...(head.value.link?.map((e) => ({ rel: e.rel, href: normalizeURL(withTrailingSlash(e.href)), hreflang: e.hreflang, })) || []),
         ...cnHead,
     ],
     script: [
@@ -126,10 +128,7 @@ useHead((): Record<string, any> => ({
 </script>
 <template>
     <div class="text-slate-800 dark:text-slate-200 bg-slate-100 dark:bg-gray-900">
-        <NuxtIsland name="commonNoScript">
-            <noscript class="block bg-accent-800 text-white text-center py-1.5 px-3 keep-all relative z-[10005]">Please turn
-                on Javascript from your browser's settings.</noscript>
-        </NuxtIsland>
+        <NuxtIsland name="GNoScript" />
         <NuxtLayout>
             <NuxtPage />
         </NuxtLayout>

@@ -14,23 +14,27 @@
     font-family: Nunito, var(--mi-localized-font, ''), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-html[lang='ja'],
-._i18n[lang='ja'] {
+html[lang='ja-JP'],
+._i18n[lang='ja'],
+._i18n[lang='ja-JP'] {
     --mi-localized-font: 'GenJyuuGothicX';
     --mi-localized-font-p: 'GenJyuuGothicXP';
 }
 
-html[lang='ko'],
-._i18n[lang='ko'] {
+html[lang='ko-KR'],
+._i18n[lang='ko'],
+._i18n[lang='ko-KR'] {
     --mi-localized-font: 'Pretendard';
 }
 
-html[lang='cn'],
-._i18n[lang='cn'] {
+html[lang='zh-CN'],
+._i18n[lang='cn'],
+._i18n[lang='zh-CN'] {
     --mi-localized-font: 'Noto Sans SC';
 }
 
-html[lang='tw'],
-._i18n[lang='tw'] {
+html[lang='zh-TW'],
+._i18n[lang='tw'],
+._i18n[lang='zh-TW'] {
     --mi-localized-font: 'Noto Sans TC';
 }

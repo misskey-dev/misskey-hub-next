@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { cleanDoubleSlashes, withTrailingSlash } from 'ufo';
-import { isLocalPath } from '@/assets/js/misc';
+import { isLocalPath, sanitizeInternalPath } from '@/assets/js/misc';
 import type { RouteLocationRaw } from '#vue-router';
 
 /**
@@ -29,7 +29,7 @@ const realHref = computed(() => {
     if (rhf && typeof rhf === 'string') {
 
         if (isLocalPath(rhf)) {
-            return withTrailingSlash(cleanDoubleSlashes(rhf), true);
+            return withTrailingSlash(cleanDoubleSlashes(sanitizeInternalPath(rhf)), true);
         }
 
         return rhf;

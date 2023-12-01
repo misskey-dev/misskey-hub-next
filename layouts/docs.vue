@@ -8,8 +8,19 @@ useHead({
     },
 });
 
+const route = useRoute();
 const { locale } = useI18n();
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation(queryContent(`/${locale.value}/docs/`)));
+const navigation = ref();
+const asideNavKey = ref(0);
+const { data } = await useAsyncData(`navigation_${locale.value}`, () => fetchContentNavigation(queryContent(`/${locale.value}/docs/`)));
+navigation.value = data.value;
+
+watch(locale, async (to) => {
+    console.log('locale changed');
+    const { data } = await useAsyncData(`navigation_${to}`, () => fetchContentNavigation(queryContent(`/${to}/docs/`)));
+    navigation.value = data.value;
+    asideNavKey.value++;
+});
 </script>
 
 <template>
@@ -22,7 +33,7 @@ const { data: navigation } = await useAsyncData('navigation', () => fetchContent
                     :class="isAsideNavOpen ? 'translate-x-0' : '-translate-x-64'"
                 >
                     <div class="lg:sticky lg:top-16 h-[calc(100vh-7.25rem)] lg:h-[calc(100vh-4rem)] overflow-y-scroll border-r border-slate-200 dark:border-slate-700 py-6 pr-3">
-                        <DocsAsideNav :links="navigation ?? []" />
+                        <DocsAsideNav :links="navigation ?? []" :key="asideNavKey" />
                     </div>
                 </div>
                 <div class="relative">
