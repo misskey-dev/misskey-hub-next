@@ -54,8 +54,12 @@ route.meta.graph = [
             "@type": "WebPage",
             "@id": `${runtimeConfig.public.baseUrl}/#WebPage`,
         },
-        headline: "b",
-        image: thumbnail,  
+        headline: data.value.title,
+        image: thumbnail,
+        author: {
+            "@type": "Organization",
+            "@id":  `${runtimeConfig.public.baseUrl}/#Organization`,
+        },
         datePublished: pd,
     },
 ];
