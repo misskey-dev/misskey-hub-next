@@ -17,7 +17,7 @@ _landing:
     gettingStarted: "入門"
   _keyFeatures:
     _open:
-      title: "打開"
+      title: "開放"
       description: "Misskey 是開放原始碼的軟體，任何人都可以自由使用。"
     _federated:
       title: "去中心化"
