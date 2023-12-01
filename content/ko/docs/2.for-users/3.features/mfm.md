@@ -1,29 +1,29 @@
 ---
-description: MFMは、Misskeyの様々な場所で使用できる専用のマークアップ言語です。
+description: MFM은 미스키에서 사용할 수 있는 전용 마크업 언어입니다.
 ---
 
 # MFM
 
-MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使用できる専用のマークアップ言語です。
+MFM은 Markup langauge For Misskey의 약자로 Misskey의 여러 곳에서 사용할 수 있는 전용 마크업 언어입니다.
 
 :::tip
-一部の構文はMarkdownやHTMLと互換性があります。
+일부 구문은 Markdown이나 HTML과 호환성이 있습니다.
 :::
 
-## MFMが使用可能な場所の例
+## MFM을 사용할 수 있는 곳 (예시)
 
-- ノート本文
-- CW注釈
-- ユーザーの名前
-- ユーザーの自己紹介
+- 노트 본문
+- CW 주석
+- 유저 이름
+- 유저 자기소개
 
-## 構文
+## 구문
 
-### メンション
+### 맨션
 
-アットマーク + ユーザー名で、特定のユーザーを示すことができます。
+골뱅이표(@) + 유저명으로 특정 유저를 표현할 수 있습니다.
 :::tip
-メンションについての詳細は[こちら](./mention.md)を参照してください。
+멘션에 대한 자세한 내용은 [여기](./mention.md)를 참조하세요.
 :::
 
 ```
@@ -38,11 +38,11 @@ MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使�
 
 <MfmPreview text="@repo@p1.a9z.dev"></MfmPreview>
 
-### ハッシュタグ
+### 해시태그
 
-ナンバーサイン + タグで、ハッシュタグを示すことができます。
+넘버 사인 + 태그로 해시태그를 표현할 수 있습니다.
 :::tip
-ハッシュタグについての詳細は[こちら](./hashtag.md)を参照してください。
+해시태그에 대한 자세한 내용은 [여기](./hashtag.md)를 참조하세요.
 :::
 
 ```
@@ -53,7 +53,7 @@ MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使�
 
 ### URL
 
-URLを示すことができます。
+URL을 표현할 수 있습니다.
 
 ```
 https://example.com
@@ -61,9 +61,9 @@ https://example.com
 
 <MfmPreview text="https://example.com"></MfmPreview>
 
-### リンク
+### 링크
 
-文章の特定の範囲を、URLに紐づけることができます。
+문장 중 특정한 범위를 URL로 표시할 수 있습니다.
 
 ```
 [example link](https://example.com)
@@ -80,11 +80,11 @@ https://example.com
 
 <MfmPreview text="[example link](https://example.com)"></MfmPreview>
 
-### カスタム絵文字
+### 커스텀 이모지
 
-コロンでカスタム絵文字名を囲むと、カスタム絵文字を表示させることができます。
+콜론으로 커스텀 이모지명을 감싸면 커스텀 이모지를 표시할 수 있습니다.
 :::tip
-カスタム絵文字についての詳細は[こちら](./custom-emoji.md)を参照してください。
+커스텀 이모지에 대한 자세한 내용은 [여기](./custom-emoji.md)를 참조하세요.
 :::
 
 ```
@@ -93,57 +93,57 @@ https://example.com
 
 <MfmPreview text=":misskey:"></MfmPreview>
 
-### 太字
+### 굵은 문자
 
-文字を太く表示して強調することができます。
+문자를 굵게 표시하여 강조할 수 있습니다.
 
 ```
-**太字**
+**굵은 문자**
 ```
 
 <MfmPreview text="**太字**"></MfmPreview>
 
-### 目立たなくする
+### 눈에 띄지 않게 하기
 
-内容を小さく・薄く表示させることができます。
-
-```
-<small>MisskeyでFediverseの世界が広がります</small>
-```
-
-<MfmPreview text="<small>MisskeyでFediverseの世界が広がります</small>"></MfmPreview>
-
-### 引用
-
-内容が引用であることを示すことができます。
+내용을 작게, 연하게 할 수 있습니다.
 
 ```
-> MisskeyでFediverseの世界が広がります
+<small>Misskey로 연합 우주의 세계가 펼쳐집니다.</small>
 ```
 
-<MfmPreview text="> MisskeyでFediverseの世界が広がります"></MfmPreview>
+<MfmPreview text="<small>Misskey로 연합 우주의 세계가 펼쳐집니다.</small>"></MfmPreview>
 
-### 中央寄せ
+### 인용
 
-内容を中央寄せで表示させることができます。
+내용을 인용하여 표시 할 수 있습니다.
 
 ```
-<center>MisskeyでFediverseの世界が広がります</center>
+> Misskey로 연합 우주의 세계가 펼쳐집니다.
 ```
 
-<MfmPreview text="<center>MisskeyでFediverseの世界が広がります</center>"></MfmPreview>
+<MfmPreview text="> Misskey로 연합 우주의 세계가 펼쳐집니다."></MfmPreview>
 
-### コード(インライン)
+### 가운데 정렬
 
-プログラムなどのコードをインラインでシンタックスハイライトします。
+내용을 가운데 정렬로 보이게 합니다.
+
+```
+<center>Misskey로 연합 우주의 세계가 펼쳐집니다.</center>
+```
+
+<MfmPreview text="<center>Misskey로 연합 우주의 세계가 펼쳐집니다.</center>"></MfmPreview>
+
+### 코드 (인라인)
+
+프로그래밍 코드 등을 인라인으로 구문 강조를 할 수 있습니다.
 
 ```
 `<: "Hello, world!"`
 ```
 
-### コード(ブロック)
+### 코드 (블록)
 
-複数行のプログラムなどのコードをブロックでシンタックスハイライトします。
+여러 행의 프로그래밍 코드 등을 코드 블록으로 구문 강조를 할 수 있습니다.
 
 ```
 ~ (#i, 100) {
@@ -154,29 +154,29 @@ https://example.com
 }
 ```
 
-### 反転
+### 반전
 
-内容を上下または左右に反転させます。
+내용을 상하 또는 좌우로 반전 시킵니다.
 
 ```
-$[flip MisskeyでFediverseの世界が広がります]
-$[flip.v MisskeyでFediverseの世界が広がります]
-$[flip.h,v MisskeyでFediverseの世界が広がります]
+$[flip Misskey로 연합 우주의 세계가 펼쳐집니다.]
+$[flip.v Misskey로 연합 우주의 세계가 펼쳐집니다.]
+$[flip.h,v Misskey로 연합 우주의 세계가 펼쳐집니다.]
 ```
 
 <MfmPreview text="$[flip MisskeyでFediverseの世界が広がります]
 $[flip.v MisskeyでFediverseの世界が広がります]
 $[flip.h,v MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
-### フォント
+### 폰트
 
-内容のフォントを指定することができます。
+내용에 폰트를 지정할 수 있습니다.
 
 ```
-$[font.serif MisskeyでFediverseの世界が広がります]
-$[font.monospace MisskeyでFediverseの世界が広がります]
-$[font.cursive MisskeyでFediverseの世界が広がります]
-$[font.fantasy MisskeyでFediverseの世界が広がります]
+$[font.serif Misskey로 연합 우주의 세계가 펼쳐집니다.]
+$[font.monospace Misskey로 연합 우주의 세계가 펼쳐집니다.]
+$[font.cursive Misskey로 연합 우주의 세계가 펼쳐집니다.]
+$[font.fantasy Misskey로 연합 우주의 세계가 펼쳐집니다.]
 ```
 
 <MfmPreview text="$[font.serif MisskeyでFediverseの世界が広がります]
@@ -184,43 +184,43 @@ $[font.monospace MisskeyでFediverseの世界が広がります]
 $[font.cursive MisskeyでFediverseの世界が広がります]
 $[font.fantasy MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
-### ぼかし
+### 흐림 효과
 
-内容をぼかすことができます。ポインターを上に乗せるとはっきり見えるようになります。
+내용을 흐리게 표시할 수 있습니다.커서를 위에 올려서 제대로 보이게 할 수도 있습니다.
 
 ```
-$[blur MisskeyでFediverseの世界が広がります]
+$[blur Misskey로 연합 우주의 세계가 펼쳐집니다.]
 ```
 
 <MfmPreview text="$[blur MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
-### 検索
+### 검색
 
-検索ボックスを表示できます。
+검색창을 표시할 수 있습니다.
 
 ```
-misskey 検索
+misskey 검색
 ```
 
 <MfmPreview text="misskey 検索"></MfmPreview>
 
-### 文字色・背景色
+### 문자색, 배경색
 
-文字色と背景色を変更することができます。
+문자색과 배경색을 바꿀 수 있습니다.
 
-3,4,6桁のカラーコードで色を表現します。
+3, 4, 6번째 행의 컬러 코드를 색으로 표현합니다.
 
 ```
-$[fg.color=f00 赤字]
-$[bg.color=ff0 黄背景]
+$[fg.color=f00 빨간 글자]
+$[bg.color=ff0 노란색 배경]
 ```
 
 <MfmPreview text="$[fg.color=f00 赤字]
 $[bg.color=ff0 黄背景]"></MfmPreview>
 
-### 角度変更
+### 각도 변경
 
-指定した角度で回転させます。
+지정한 각도로 회전시킵니다.
 
 ```
 $[rotate.deg=30 misskey]
@@ -228,9 +228,9 @@ $[rotate.deg=30 misskey]
 
 <MfmPreview text="$[rotate.deg=30 misskey]"></MfmPreview>
 
-### 位置変更
+### 위치 변경
 
-位置をずらすことができます。
+위치를 바꿀 수 있습니다.
 
 ```
 😏$[position.x=0.8,y=0.5 🍮]😀
@@ -238,9 +238,9 @@ $[rotate.deg=30 misskey]
 
 <MfmPreview text="😏$[position.x=0.8,y=0.5 🍮]😀"></MfmPreview>
 
-### 拡大
+### 확대
 
-文字を引き延ばして表示します。
+문자 크기를 조절할 수 있습니다.
 
 ```
 $[scale.x=4,y=2 🍮]
@@ -258,7 +258,7 @@ $[x4 x4]
 $[x3 x3]
 $[x4 x4]"></MfmPreview>
 
-### アニメーション(びよんびよん)
+### 애니메이션 (젤리)
 
 ```
 $[jelly 🍮] $[jelly.speed=5s 🍮]
@@ -266,7 +266,7 @@ $[jelly 🍮] $[jelly.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[jelly 🍮] $[jelly.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(じゃーん)
+### 애니메이션 (짠!)
 
 ```
 $[tada 🍮] $[tada.speed=5s 🍮]
@@ -274,7 +274,7 @@ $[tada 🍮] $[tada.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[tada 🍮] $[tada.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(ジャンプ)
+### 애니메이션 (점프)
 
 ```
 $[jump 🍮] $[jump.speed=5s 🍮]
@@ -282,7 +282,7 @@ $[jump 🍮] $[jump.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[jump 🍮] $[jump.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(バウンド)
+### 애니메이션 (바운스)
 
 ```
 $[bounce 🍮] $[bounce.speed=5s 🍮]
@@ -290,7 +290,7 @@ $[bounce 🍮] $[bounce.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[bounce 🍮] $[bounce.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(回転)
+### 애니메이션 (회전)
 
 ```
 $[spin 🍮] $[spin.left 🍮] $[spin.alternate 🍮]
@@ -305,7 +305,7 @@ $[spin.x 🍮] $[spin.x,left 🍮] $[spin.x,alternate 🍮]
 $[spin.y 🍮] $[spin.y,left 🍮] $[spin.y,alternate 🍮]
 $[spin.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(ぶるぶる)
+### 애니메이션 (부들부들)
 
 ```
 $[shake 🍮] $[shake.speed=5s 🍮]
@@ -313,7 +313,7 @@ $[shake 🍮] $[shake.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[shake 🍮] $[shake.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(ブレ)
+### 애니메이션 (경련)
 
 ```
 $[twitch 🍮] $[twitch.speed=5s 🍮]
@@ -321,19 +321,19 @@ $[twitch 🍮] $[twitch.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[twitch 🍮] $[twitch.speed=5s 🍮]]"></MfmPreview>
 
-### レインボー
+### 무지개 효과
 
 ```
 $[rainbow 🍮] $[rainbow.speed=5s 🍮]
-$[rainbow 色なし文字]
-$[rainbow $[fg.color=f0f 色付き文字]]
+$[rainbow 색깔 없는 문자]
+$[rainbow $[fg.color=f0f 색깔 있는 문자]]
 ```
 
 <MfmPreview text="$[rainbow 🍮] $[rainbow.speed=5s 🍮]
 $[rainbow 色なし文字]
 $[rainbow $[fg.color=f0f 色付き文字]]"></MfmPreview>
 
-### キラキラ
+### 반짝반짝
 
 ```
 $[sparkle 🍮]
@@ -341,9 +341,9 @@ $[sparkle 🍮]
 
 <MfmPreview text="$[x2 $[sparkle 🍮]]"></MfmPreview>
 
-### プレーン
+### 평문
 
-内側の構文を全て無効にします。
+안에 있는 MFM 구문을 모두 무시하고 평문으로 표시합니다.
 
 ```
 <plain>**bold** @mention #hashtag `code` $[x2 🍮]</plain>
@@ -351,8 +351,8 @@ $[sparkle 🍮]
 
 <MfmPreview text="<plain>**bold** @mention #hashtag `code` $[x2 🍮]</plain>"></MfmPreview>
 
-## 開発者向け情報
+## 개발자용 정보
 
-MFMのパーサー実装はライブラリとして公開されており、簡単にクライアントにMFMを組み込むことが可能です。
+MFM 기능은 라이브러리를 통해 공개하고 있으니, 간단하게 클라이언트에 MFM 기능을 추가하실 수 있습니다.
 
-- [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - JavaScriptパーサー実装
+- [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - JavaScript 기반 MFM 기능 구현
