@@ -186,7 +186,7 @@ $[font.fantasy MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
 ### 模糊化
 
-内容をぼかすことができます。將滑鼠懸停在其上時可以清楚地看到它。
+可以模糊內容。將滑鼠懸停在其上時可以清楚地看到它。
 
 ```
 $[blur MisskeyでFediverseの世界が広がります]
@@ -343,7 +343,7 @@ $[sparkle 🍮]
 
 ### 簡化
 
-停用全部的內部語法。
+將內部語法全部禁用。
 
 ```
 <plain>**bold** @mention #hashtag `code` $[x2 🍮]</plain>

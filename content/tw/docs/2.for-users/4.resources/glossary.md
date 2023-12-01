@@ -89,14 +89,13 @@ todo
 
 ## 雲端硬碟
 
-這是管理 Misskey 伺服器上使用者上傳的圖像和音樂等檔案的功能。詳情參考這裡。
-]\(../features/drive)
+這是管理 Misskey 伺服器上使用者上傳的圖像和音樂等檔案的功能。詳情參考[這裡。](../features/drive)
 
 ## 貼文
 
 使用者在 Misskey 伺服器上發布的文章。它可以包括各種 Misskey 自己的內容，如圖片、音樂和其他文件、投票等。詳情參考[這裡](../features/note)
 
-## Misskist
+## Miskist
 
 在 Misskey 伺服器上擁有帳戶的使用者。或者說是最沈迷其中的使用者。
 
