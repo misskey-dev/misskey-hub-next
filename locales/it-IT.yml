@@ -1,41 +1,42 @@
-noScript: "現在Javascriptが無効になっています。サイトの表示にはJavascriptが必須となりますので有効にしてください。"
-learnMore: "詳しく知る"
-loading: "読み込み中…"
+noScript: "Javascript sembra essere disabilitato. Per visualizzare il sito è necessario Javascript, per favore attivalo."
+learnMore: "Per saperne di più"
+loading: "Caricamento"
+clickToExpand: "Clicca per espandere"
 _seo:
   siteName: "Misskey Hub"
-  defaultTitleTagline: "ノートでひろがるネットワーク"
-  defaultDescription: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
+  defaultTitleTagline: "Rete in espansione per mezzo di Note"
+  defaultDescription: "Misskey è una piattaforma decentralizzata, open source, per il social networking."
 _nav:
-  servers: "サーバー"
-  docs: "ドキュメント"
-  blog: "ブログ"
-  other: "もっと！"
-  switchLang: "言語の設定"
+  servers: "Server"
+  docs: "Documentazione"
+  blog: "Blog"
+  other: "Di più!"
+  switchLang: "Cambia lingua"
 _landing:
   _hero:
-    description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
-    gettingStarted: "はじめる"
+    description: "Misskey è una piattaforma decentralizzata, open source, per il social networking."
+    gettingStarted: "Iniziamo!"
   _keyFeatures:
     _open:
-      title: "オープン"
-      description: "Misskeyはオープンソースのソフトウェアで、誰でも自由にMisskeyを利用できます。"
+      title: "Open source"
+      description: "Misskey è software open source, chiunque può usarlo liberamente."
     _federated:
-      title: "分散"
-      description: "Misskeyは分散型のプロトコルを実装しているため、異なるサーバーのコミュニティ同士が繋がります。"
+      title: "Decentralizzazione"
+      description: "Misskey sfrutta un protocollo di comunicazione decentralizzato che collega tante comunità su server diversi."
     _multifunction:
-      title: "高機能"
-      description: "Misskeyは他にはない様々な機能を備えていて、プロのようにmicro-blogging可能です。"
+      title: "Multifunzionalità"
+      description: "Misskey ha tante funzionalità esclusive, che ti permettono di fare microblogging al top."
     _customizable:
-      title: "高カスタマイズ性"
-      description: "Misskeyの柔軟なWebインターフェイスにより、自分好みのUIを作れます。"
+      title: "Altamente personalizzabile"
+      description: "La grafica web di Misskey è altamente flessibile, ti consente di creare la tua interfaccia personalizzata."
   _decenterized:
-    title: "Misskeyは{0}"
-    decenterizedPlatform: "分散型プラットフォーム"
+    title: "Misskey è {0}"
+    decenterizedPlatform: "una piattaforma decentralizzata"
     description: "Misskeyはフリーかつオープンなプロジェクトで、誰でも自由にMisskeyを使ったサーバーを作成できるため、既に様々なサーバーがインターネット上に公開されています。また重要な特徴として、Misskeyは{0}と呼ばれる分散通信プロトコルを実装しているので、どのサーバーを選んでも他のサーバーのユーザーとやりとりすることができます。これが分散型と言われる所以で、単一の運営者によって単一のURLで公開されるような、Twitterなどの他サービスとは根本的に異なっています。サーバーによって主な話題のテーマやユーザー層、言語などは異なり、自分にあったサーバーを探すのも楽しみのひとつです(もちろん自分のサーバーを作るのも一興です)。"
     activityPub: "ActivityPub"
   _features:
     _root:
-      title: "主な機能"
+      title: "Caratteristiche principali"
       description: "Misskeyは一般的なものから特別なものまで、様々な機能を持っています。その一部を紹介します。"
     _note:
       title: "ノート"

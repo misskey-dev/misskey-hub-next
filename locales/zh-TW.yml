@@ -1,6 +1,7 @@
 noScript: "Javascript 目前處於禁用狀態。必須啟用 Javascript 才能瀏覽網站。"
 learnMore: "了解更多"
 loading: "載入中..."
+clickToExpand: "（クリックして展開）"
 _seo:
   siteName: "Misskey Hub"
   defaultTitleTagline: "貼文傳播網路"
