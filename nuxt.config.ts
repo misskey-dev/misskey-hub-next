@@ -8,7 +8,7 @@ import { getStaticEndpoints } from './scripts/get-static-endpoints';
 import type { NuxtConfig } from 'nuxt/schema';
 
 // 公開時のドメイン（末尾スラッシュなし）
-const baseUrl = 'https://misskey-hub.net';
+const baseUrl = 'https://misskey-hub-next.vercel.app';
 
 // 言語定義
 export const localesConst = [
