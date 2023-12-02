@@ -1,12 +1,12 @@
 noScript: "Javascript is currently disabled. Please enable it as JavaScript is required for site functionality."
 learnMore: "Learn More"
 loading: "Loading..."
-clickToExpand: "（クリックして展開）"
+clickToExpand: "(Click to expand)"
 _seo:
   siteName: "Misskey Hub"
-  siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
+  siteNameLong: "Misskey Hub – Official website of the Misskey Project"
   defaultTitleTagline: "A Network Expanding with Notes"
-  defaultDescription: "Misskey is an open-source decentralized social networking platform."
+  defaultDescription: "This is the official site for Misskey, a decentralized social networking software. Find out how to get started, a list of servers, and lots more information about Misskey!"
 _nav:
   servers: "Servers"
   docs: "Docs"
@@ -210,6 +210,11 @@ _aboutUs:
     _orgPartner:
       title: "Corporate & Organization Partners"
       description: "These companies and organizations have contributed financially and technically to the development of Misskey."
+_i18n:
+  _missing:
+    title: "翻訳にご協力ください"
+    description: "このドキュメントはコミュニティによる翻訳です。ドキュメントの翻訳は{link}から行えます。ご協力をお願いします🙏"
+    linkLabel: "Crowdin"
 _api:
   _permissions:
     title: "Permissions"
