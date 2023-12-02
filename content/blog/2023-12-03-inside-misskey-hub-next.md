@@ -188,7 +188,7 @@ Misskey関連のさまざまな便利ツールを提供するページ「[ツー
 
 
 :::fukidashi{chara="doya_ai" charaName="藍"}
-Misskey Hub Nextでは、藍も色々なところにいます！  
+Misskey Hub Nextでは、わたし・藍も色々なところにいます！  
 ほら、こんなところにも！
 
 ![](https://media.misskeyusercontent.com/io/7f980e50-bbd8-4527-b9f7-f6f97564956a.png)
