@@ -17,12 +17,12 @@ date: 2023-12-03
 
 ## リニューアル後の構成
 
-現行のMisskey HubはVuePressをベースに作成されています。これは、ドキュメントを用意さえすればサイトの部分はある程度よしなにやってくれるというものです。
+現行のMisskey Hubは[VuePress](https://v2.vuepress.vuejs.org/)をベースに作成されています。これは、ドキュメントを用意さえすればサイトの部分はある程度よしなにやってくれるというものです。
 
 しかし、もともとのMisskey Hubの計画上、ドキュメント以外のページもかなり必要になるということで、ドキュメント生成に特化したフレームワークではなく、より拡張性が高く、汎用的な[Nuxt](https://nuxt.com/)をフレームワークとして採用しました。
 
 :::warning
-VuePressは現在アクティブにメンテナンスされていませんが、後継として[VitePress](https://vitepress.dev/)があります。
+VuePressよりは、今はどちらかというと[VitePress](https://vitepress.dev/)のほうがメジャーな感じがします。
 :::
 
 :::g-details{summary="詳しい技術スタックはこちら"}
@@ -38,6 +38,11 @@ VuePressは現在アクティブにメンテナンスされていませんが、
 - [Nuxt Content](https://content.nuxt.com/)
 - [Nuxt i18n](https://i18n.nuxtjs.org/)
 - [Nuxt Color Mode](https://color-mode.nuxtjs.org/)
+
+### その他
+- [Bootstrap Icons](https://icons.getbootstrap.com/)
+- [ufo](https://github.com/unjs/ufo) - URLのパースなどができるライブラリ。超便利
+- [AiScript VSCode](https://github.com/aiscript-dev/aiscript-vscode) - AiScriptのコードハイライトに使用
 
 ### 各種サービス
 
@@ -94,7 +99,7 @@ VuePressは現在アクティブにメンテナンスされていませんが、
 
 ### スマホでの操作感の改善
 
-現行のMisskey Hubでは、モバイルナビゲーションが肥大化し、見にくくなってしまっていたほか、一部では文字が見えにくい部分もあります。
+現行のMisskey Hubでは、モバイルナビゲーションが肥大化し、見にくくなってしまっていたほか、一部では文字が背景と重なって見えにくい部分もありました。
 また、スクロールの際にアニメーションがもたついて背景がカクカクする・・・といった問題も起きていました。
 
 そこで、Misskey Hub Nextではスマホ表示でのデザインを改善し、一部ではスマホ専用のUIを設けて対応しました。上で紹介したドキュメントページの各種UIも、スマホの小さい画面でもアクセスできるように配置してあります。
@@ -183,6 +188,19 @@ Misskey関連のさまざまな便利ツールを提供するページ「[ツー
 [MFMお試しコーナー](/tools/mfm-playground/)の再現精度は割と高いのでMFMアートづくりにもおすすめです
 :::
 
+### 【新機能】AiScriptに対応
+
+Misskey Hub上で、AiScriptをハイライト表示することができるようになりました！プラグインの作り方やAiScript入門なども、Misskey Hub上で書けるようになるかも…！
+
+```AiScript
+for (let i, 100) {
+  <: if (i % 15 == 0) "FizzBuzz"
+    elif (i % 3 == 0) "Fizz"
+    elif (i % 5 == 0) "Buzz"
+    else i
+}
+```
+
 ### 藍
 
 
@@ -206,7 +224,7 @@ Misskey Hub Nextでは、わたし・藍も色々なところにいます！
 
 ## 今後実装する予定の機能
 
-※以下はすべて「予定」です。
+※以下はすべて「予定」です。いつ実装されるかわかりませんし、そもそも実装されないかもしれません。
 
 ### APIエンドポイント ドキュメント
 
@@ -230,4 +248,4 @@ Misskey v2023.11.0から、外部サイトを介してプラグイン・テー�
 
 このように、Misskey Hubは様々な部分で改善・追加を行い、パワーアップします！現在鋭意開発中で、**近いうちに現行のMisskey Hubを置き換えてリニューアルを行う予定です。** それまでの間、Misskey Hub Next は現在のURL（`misskey-hub-next.vercel.app`）でご覧いただけます。ぜひ色々なページをご覧いただき、ご意見やご感想をお寄せください。
 
-それでは、新しいMisskey Hubの登場を楽しみにお待ちください♪
+それでは、新しいMisskey Hubの正式リリースを楽しみにお待ちください♪
