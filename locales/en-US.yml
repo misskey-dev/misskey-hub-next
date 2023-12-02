@@ -4,6 +4,7 @@ loading: "Loading..."
 clickToExpand: "（クリックして展開）"
 _seo:
   siteName: "Misskey Hub"
+  siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
   defaultTitleTagline: "A Network Expanding with Notes"
   defaultDescription: "Misskey is an open-source decentralized social networking platform."
 _nav:
