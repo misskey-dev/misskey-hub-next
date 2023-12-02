@@ -37,6 +37,9 @@ function getRouteRules(): NuxtConfig['routeRules'] {
 
 	// それぞれの言語について割り当てる必要のあるRouteRules
 	const localeBasedRules: NuxtConfig['routeRules'] = {
+		// リリースページはどうせアクセス集中するので先に作っておく
+		'/docs/releases/': { prerender: true },
+		
 		'/docs/**': { isr: true },
 	};
 
