@@ -4,6 +4,7 @@ loading: "載入中..."
 clickToExpand: "（クリックして展開）"
 _seo:
   siteName: "Misskey Hub"
+  siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
   defaultTitleTagline: "貼文傳播網路"
   defaultDescription: "Misskey 是一個開源的去中心化社群網路平台。"
 _nav:
