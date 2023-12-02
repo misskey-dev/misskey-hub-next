@@ -4,8 +4,9 @@ loading: "読み込み中…"
 clickToExpand: "（クリックして展開）"
 _seo:
   siteName: "Misskey Hub"
+  siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
   defaultTitleTagline: "ノートでひろがるネットワーク"
-  defaultDescription: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
+  defaultDescription: "【ノートでひろがるネットワーク】分散型SNS Misskeyの公式サイト。Misskeyのはじめかたやサーバー一覧など、Misskeyに関する情報が満載！"
 _nav:
   servers: "サーバー"
   docs: "ドキュメント"
