@@ -6,20 +6,20 @@ date: 2023-12-03
 # インサイド Misskey Hub Next
 
 :::tip
-この記事は、[Misskey Alt Advent Calendar 2023](https://adventar.org/calendars/8658) n日目の記事です。
+この記事は、[Misskey Alt Advent Calendar 2023](https://adventar.org/calendars/8658) 3日目の記事です。
 :::
 
 ![](/img/og/misskey-hub-screenshot-d.png)
 
-こんにちは！Misskey 開発メンバーのかっこかりと申します。[Misskeyで某公立高校の部活動広報アカウント](https://misskey.io/@natureofmad_)を運営したりもしています。
+こんにちは！Misskey 開発メンバーのかっこかりと申します。[Misskey.ioで某公立高校の部活動広報アカウント](https://misskey.io/@natureofmad_)の運営に参加したりもしています。
 
-先日[しゅいろママからも発表](/blog/2023-12-01-2023recap/)がありましたように、このたび、Misskeyプロジェクト公式サイト「Misskey Hub」の全面リニューアルを行うことになりました！今回、私が開発主担として、いまご覧いただいているこのサイトを制作しております。そこで、今日はこの新Misskey Hubの**機能・こだわり・今後のアップデート**についてご紹介していきます！
+先日[しゅいろママからも発表](/blog/2023-12-01-2023recap/#misskey-hub-next)がありましたように、このたび、Misskeyプロジェクト公式サイト「Misskey Hub」の全面リニューアルを行うことになりました！今回、私が開発主担として、いまご覧いただいているこのサイトを制作しております。そこで、今日はこの新Misskey Hubの**機能・頑張った点・今後のアップデート**についてご紹介していきます！
 
 ## リニューアルのきっかけ
 
 実はこのプロジェクト、私の持ち込み企画のような形でスタートしています。現行のMisskey Hubは、ドキュメントの多さからナビゲーションが肥大化してしまったり、翻訳に開発ツール（Git）を使う必要があったりと、様々な課題がありました。また、デザインについても改善できそうな場所が見られました。
 
-そこで、自分でMisskey Hub作ってしまおう！ということになったのです。（？？）
+そこで、自分でMisskey Hub作ってしまおう！ということにしたのです。（？？）
 
 ## リニューアル後の構成
 
@@ -54,11 +54,15 @@ VuePressは現在アクティブにメンテナンスされていませんが、
 
 ## Nuxtとは？
 
-Nuxtは、Vue.jsを使ったWebアプリケーションフレームワークです。[静的サイト](/blog/2021-12-01-inside-misskey-hub/#静的サイト-is-何)の作成に使うための[SSG (Static Site Generator) モード](/blog/2021-12-01-inside-misskey-hub/#ssg-is-何)の他に、Nuxt自体がサーバー本体となって動作するSSR (Server Side Rendering) モード、さらにSSGモードとSSRモードのいいとこ取りをしたISR (Incremental Static Rendering) モードがあり、それらを**サイトのディレクトリごとに切り替えて**使うことができます。
+[Nuxt](https://nuxt.com)は、Vue.jsを使ったWebアプリケーションフレームワークです。[静的サイト](/blog/2021-12-01-inside-misskey-hub/#静的サイト-is-何)の作成に使うための[SSG (Static Site Generator) モード](/blog/2021-12-01-inside-misskey-hub/#ssg-is-何)の他に、Nuxt自体がサーバー本体となって動作するSSR (Server Side Rendering) モード、さらにSSGモードとSSRモードのいいとこ取りをしたISR (Incremental Static Rendering) モードがあり、それらを**サイトのディレクトリごとに切り替えて**使うことができます。
 
 ・・・まとめて言うと、NuxtとはWeb制作に使える**とても万能なツール**だということで大丈夫です。
 
 そして、今回のMisskey Hub Nextでは、ドキュメントページとブログページに**ISRモード**を、それ以外のページに**SSGモード**を適用しています。
+
+:::tip
+プロジェクト名に`Next`と入っているのでReactフレームワークの[Next.js](https://nextjs.org/)のほうを思い浮かべたかもしれませんが、**罠です。** Nuxtで作ってあります。
+:::
 
 ## ISRとは？
 
@@ -72,7 +76,7 @@ Nuxtは、Vue.jsを使ったWebアプリケーションフレームワークで�
 
 ## デザイン
 
-デザインに関しては、現行Misskey Hubの面影を残しつつ、主に以下の項目を重視してリニューアルを行いました。
+デザインに関しては、現行Misskey Hubのデザインをベースに、主に以下の項目を重視してリニューアルを行いました。
 
 - ページを見つける導線の改善
 - スマホでの操作感の改善
@@ -84,7 +88,7 @@ Nuxtは、Vue.jsを使ったWebアプリケーションフレームワークで�
 
 ![](/img/blog/2023-12-03-inside-misskey-hub-next/1.png)
 
-そこで、Misskey Hub Nextでは、ドキュメントページをディレクトリ構造から抜本的に見直し。利用者別にページ階層を分けたほか、各セクションに見出しページを設けられるようにしました。
+そこで、Misskey Hub Nextでは、ドキュメントページをディレクトリ構造から抜本的に見直しました。利用者別にページ階層を分けたほか、各セクションに見出しページを設けられるようにしました。
 
 [ドキュメントのトップページ](/docs/)もかなり整理されたかと思います。
 
@@ -99,7 +103,7 @@ Nuxtは、Vue.jsを使ったWebアプリケーションフレームワークで�
 現行のMisskey Hubでは、モバイルナビゲーションが肥大化し、見にくくなってしまっていたほか、一部では文字が見えにくい部分もあります。
 また、スクロールの際にアニメーションがもたついて背景がカクカクする・・・といった問題も起きていました。
 
-そこで、Misskey Hub Nextではスマホ表示でのデザインを改善し、一部ではスマホ専用のUIを設けて対応しました。
+そこで、Misskey Hub Nextではスマホ表示でのデザインを改善し、一部ではスマホ専用のUIを設けて対応しました。上で紹介したドキュメントページの各種UIも、スマホの小さい画面でもアクセスできるように配置してあります。
 
 ### ドキュメント更新にかかる手間の改善
 
@@ -109,8 +113,9 @@ Nuxtは、Vue.jsを使ったWebアプリケーションフレームワークで�
 
 依然として新しいドキュメントの追加にはGithubが必要になってしまいますが、コレも今後どうにかしたいなぁ・・・と検討中です。Githubを使える方は、ドキュメントの拡充に引き続きご協力お願いします🙏
 
-:::tip
-現在、翻訳にご協力いただける方を募集中です！
+:::tip{label='お知らせ'}
+
+現在、翻訳にご協力いただける方を募集中です！ We are looking for translators for this site!
 
 [![](/img/blog/2023-12-03-inside-misskey-hub-next/5.png)](https://crowdin.com/project/misskey-hub)
 
@@ -119,6 +124,7 @@ Nuxtは、Vue.jsを使ったWebアプリケーションフレームワークで�
 リストにない言語でも、[ご連絡](https://misskey.io/@kakkokari_gtyih)いただければ言語を追加します。
 
 Misskeyをより多くの人に広めるために、ぜひご協力お願いします🙏
+
 :::
 
 :::g-details{summary="【マニアック】フォントのはなし"}
@@ -152,8 +158,7 @@ Misskey Hub Nextでは、フォントの改善も行いました。
 
 ## 機能紹介
 
-ここからは、Misskey Hub Nextに搭載された機能をご紹介します！  
-（新機能には `【新】` と書いています）
+ここからは、Misskey Hub Nextに搭載された機能をご紹介します！
 
 ### Misskeyサーバー一覧
 
@@ -161,13 +166,13 @@ Misskeyの[サーバー一覧](/servers/)を、[Misskeyをはじめよう(joinmi
 
 ![](/img/blog/2023-12-03-inside-misskey-hub-next/6.png)
 
-これにより、基本的には**サーバーを追加するのに特別な作業や申請は必要なくなり、新しいサーバーは自動的に追加されるようになりました！**
+これにより、基本的には**サーバーを追加するのに特別な作業や申請は必要なくなり、新しく見つかったサーバーは自動的に追加されるようになりました！**
 
 :::tip
-なので近日中にjoinmisskeyはMisskey Hubに統合されるかも…？（わからん）
+なので近日中にjoinmisskeyはMisskey Hubに統合されるかも…？
 :::
 
-### 【新】ツール集
+### 【新機能】ツール集
 
 Misskey関連のさまざまな便利ツールを提供するページ「[ツール集](/tools/)」を新たに開発しました！
 
@@ -203,9 +208,11 @@ Misskey Hub Nextでは、わたし・藍も色々なところにいます！
 
 :AiModeB
 
-[制作協力：しなむ 様](https://misskey.io/@shinamu476)
+[制作：しなむ 様](https://misskey.io/@shinamu476)
 
 ## 今後実装する予定の機能
+
+※以下はすべて「予定」です。
 
 ### APIエンドポイント ドキュメント
 
@@ -215,11 +222,11 @@ Misskey Hub Nextでは、わたし・藍も色々なところにいます！
 ドキュメントの拡充にご協力いただける方は、[こちら](https://misskey.io/notes/9l0i92bvr1)をご覧のうえ、ぜひご参加ください！
 :::
 
-### シェアボタン中継サービス
+### シェアボタン中継機能
 
-Misskeyへシェアする機能を、Misskey Hubを中継して行えるようにする予定です（[Misskey Share](https://misskeyshare.link/) や [DonShare](https://donshare.net/)にあたる機能を実装します）！
+MisskeyへWebページをシェアする機能を、Misskey Hubを中継して行えるようにする予定です（[Misskey Share](https://misskeyshare.link/) や [DonShare](https://donshare.net/)にあたる機能を実装します）！
 
-これにより、ウェブサイトにMisskeyへのシェアボタンを埋め込みやすくなります🎉
+これにより、サーバーごとの投稿処理などの複雑な実装なしで、ウェブサイトにMisskeyへのシェアボタンを埋め込めるようになります🎉
 
 ### プラグイン・テーマストア
 
@@ -227,6 +234,6 @@ Misskey v2023.11.0から、外部サイトを介してプラグイン・テー�
 
 ## まとめ
 
-このように、Misskey Hubは様々な部分で改善・追加を行い、パワーアップします！現在鋭意開発中で、近日中に現行のMisskey Hubを置き換えてリニューアルを行う予定です。それまでの間、Misskey Hub Next は現在のURL（`misskey-hub-next.vercel.app`）でご覧いただけます。ぜひ色々なページをご覧いただき、ご意見やご感想をお寄せください。
+このように、Misskey Hubは様々な部分で改善・追加を行い、パワーアップします！現在鋭意開発中で、**近いうちに現行のMisskey Hubを置き換えてリニューアルを行う予定です。** それまでの間、Misskey Hub Next は現在のURL（`misskey-hub-next.vercel.app`）でご覧いただけます。ぜひ色々なページをご覧いただき、ご意見やご感想をお寄せください。
 
 それでは、新しいMisskey Hubの登場を楽しみにお待ちください♪
