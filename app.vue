@@ -29,7 +29,7 @@ const getDescription = (): string => {
         return t('_seo.defaultDescription');
     }
 }
-const getTitle = () => route.meta.title ? `${route.meta.title} | ${t('_seo.siteName')}` : t('_seo.siteName');
+const getTitle = () => route.meta.title ? `${route.meta.title} | ${t('_seo.siteName')}` : t('_seo.siteNameLong');
 const getLdJson = (additionalGraphes: Thing[] = []): string => {
     const ldJson: Graph = {
         "@context": "https://schema.org",
