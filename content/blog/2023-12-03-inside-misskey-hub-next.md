@@ -54,7 +54,7 @@ VuePressは現在アクティブにメンテナンスされていませんが、
 
 ## Nuxtとは？
 
-Nuxtは、Vue.jsを使ったWebアプリケーションフレームワークです。[静的サイト](/blog/2021-12-01-inside-misskey-hub/#静的サイト-is-何)の作成に使うための[SSG (Static Site Generator) モード](/blog/2021-12-01-inside-misskey-hub/#ssg-is-何)の他に、Nuxt自体がサーバー本体となるSSR (Server Side Rendering) モード、さらにSSGモードとSSRモードのいいとこ取りをしたISR (Incremental Static Rendering) モードがあり、それらを**サイトのディレクトリごとに切り替えて**使うことができます。
+Nuxtは、Vue.jsを使ったWebアプリケーションフレームワークです。[静的サイト](/blog/2021-12-01-inside-misskey-hub/#静的サイト-is-何)の作成に使うための[SSG (Static Site Generator) モード](/blog/2021-12-01-inside-misskey-hub/#ssg-is-何)の他に、Nuxt自体がサーバー本体となって動作するSSR (Server Side Rendering) モード、さらにSSGモードとSSRモードのいいとこ取りをしたISR (Incremental Static Rendering) モードがあり、それらを**サイトのディレクトリごとに切り替えて**使うことができます。
 
 ・・・まとめて言うと、NuxtとはWeb制作に使える**とても万能なツール**だということで大丈夫です。
 
