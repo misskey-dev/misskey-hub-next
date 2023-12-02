@@ -48,11 +48,11 @@ VuePressは現在アクティブにメンテナンスされていませんが、
 
 ## Nuxtとは？
 
-[Nuxt](https://nuxt.com)は、Vue.jsを使ったWebアプリケーションフレームワークです。[静的サイト](/blog/2021-12-01-inside-misskey-hub/#静的サイト-is-何)の作成に使うための[SSG (Static Site Generator) モード](/blog/2021-12-01-inside-misskey-hub/#ssg-is-何)の他に、Nuxt自体がサーバー本体となって動作するSSR (Server Side Rendering) モード、さらにSSGモードとSSRモードのいいとこ取りをしたISR (Incremental Static Rendering) モードがあり、それらを**サイトのディレクトリごとに切り替えて**使うことができます。
+[Nuxt](https://nuxt.com)は、Vue.jsを使ったWebアプリケーションフレームワークです。[静的サイト](/blog/2021-12-01-inside-misskey-hub/#静的サイト-is-何)の作成に使うための[SSG (Static Site Generator) ](/blog/2021-12-01-inside-misskey-hub/#ssg-is-何)の他に、Nuxt自体がサーバー本体となって動作するSSR (Server Side Rendering)、さらにSSGとSSRのいいとこ取りをしたISR (Incremental Static Regeneration) があり、それらを**サイトのディレクトリごとに切り替えて**使うことができます。
 
 ・・・まとめて言うと、NuxtとはWeb制作に使える**とても万能なツール**だということで大丈夫です。
 
-そして、今回のMisskey Hub Nextでは、ドキュメントページとブログページに**ISRモード**を、それ以外のページに**SSGモード**を適用しています。
+そして、今回のMisskey Hub Nextでは、ドキュメントページとブログページに**ISR**を、それ以外のページに**SSG**を適用しています。略称多くてこんがらがりそう。
 
 :::tip
 プロジェクト名に`Next`と入っているのでReactフレームワークの[Next.js](https://nextjs.org/)のほうを思い浮かべたかもしれませんが、**罠です。** Nuxtで作ってあります。
@@ -60,11 +60,11 @@ VuePressは現在アクティブにメンテナンスされていませんが、
 
 ## ISRとは？
 
-[SSG](/blog/2021-12-01-inside-misskey-hub/#ssg-is-何)では、サイトの生成時にまとめてすべてのページを書き出してしまう必要があります。しかし、Misskey Hubには大量のドキュメントとブログページがあり、さらに翻訳版ページもあります。それらをすべて前もって生成すると、**とんでもなく時間がかかってしまいます。**
+[SSG](/blog/2021-12-01-inside-misskey-hub/#ssg-is-何)では、サイトの生成時にまとめてすべてのページを書き出してしまう必要があります。しかし、Misskey Hubには大量のドキュメントとブログページ、さらには翻訳版ページもあります。それらをすべて前もって生成すると、**とんでもなく時間がかかってしまいます。**
 
 ![ビルド時間: 27分49秒](https://media.misskeyusercontent.com/io/b7b8180f-302e-4e4d-a1a4-ad60d3985051.png)
 
-そこで登場するのがISRです。ISR (Incremental Static Rendering) とは、サイトの書き出しのタイミングではページの生成は行わず、**最初にそのページに訪問されたときにページの生成を行います。** これを、特にページ数の多い[ドキュメントページ](/docs/)と[ブログページ](/blog/)に適用したことで、実に**13倍**も高速な生成が可能となりました。
+そこで登場するのがISRです。ISR (Incremental Static Regeneration) を使用すると、サイトの書き出しのタイミングではページの生成は行わず、**最初にそのページに訪問されたときにページの生成を行います。** これを、特にページ数の多い[ドキュメントページ](/docs/)と[ブログページ](/blog/)に適用したことで、実に**13倍**も高速な生成が可能となりました。
 
 ![ビルド時間: 1分32秒](https://media.misskeyusercontent.com/io/298919ff-fb33-4fa7-8a5c-cc3c89f65c58.webp)
 
