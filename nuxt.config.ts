@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
+import { readFileSync } from 'fs';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import { genLocalesJson } from './scripts/gen-locales';
@@ -84,7 +85,13 @@ export default defineNuxtConfig({
 		head: {
 			link: [
 				{ rel: 'stylesheet', href: '/fonts/fonts.css' },
+				{ rel: 'apple-touch-icon', href: '/img/icon/apple-touch-icon.png' },
+				{ rel: 'shortcut icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
+				{ rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
 			],
+			meta: [
+				{ name: 'twitter:card', content: 'summary_large_image' },
+			]
 		},
 	},
 	content: {
@@ -101,6 +108,10 @@ export default defineNuxtConfig({
 				// Theme used if `html.dark`
 				dark: 'github-dark',
 			},
+			preload: [
+				'ini', 'sql', 'yml', 'nginx', 'bash',
+				JSON.parse(readFileSync('./node_modules/aiscript-vscode/aiscript/syntaxes/aiscript.tmLanguage.json', { encoding: 'utf-8' })),
+			],
 		},
 	},
 	i18n: {

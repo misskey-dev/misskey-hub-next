@@ -113,7 +113,7 @@ useHead((): Record<string, any> => ({
         {
             property: "og:image",
             // TODO
-            content: () => route.meta.thumbnail ? route.meta.thumbnail : `${baseUrl}/img/logo.jpg`,
+            content: () => route.meta.thumbnail ? route.meta.thumbnail : `${baseUrl}/img/og/misskey-hub-screenshot-l.png`,
         },
         ...(head.value.meta?.map((e) => ({ property: e.property, content: e.content, })) || []),
     ],

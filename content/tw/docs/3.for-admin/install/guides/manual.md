@@ -128,6 +128,8 @@ sudo systemctl start misskey
 鍵入 `systemctl status misskey` 查看服務狀態。
 :::
 
+::::
+
 ## 如何更新Miskey
 
 :::warning

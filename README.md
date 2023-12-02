@@ -12,11 +12,11 @@ Release date: **TBD（未定）**
 
 ## Docsの書き方
 
-`/content/.README.md` をご覧ください
+**必ず [`/content/.README.md`](./content/.README.md) をご覧ください**
 
 ## NuxtLinkについて
 
-内部リンク・外部リンクに関する処理を強化した[`<GNuxtLink>`](./tree/master/components/g/NuxtLink.vue)を使用していますので、**リンクを追加する際は`<NuxtLink>`ではなく`<GNuxtLink>`を使用してください。**
+内部リンク・外部リンクに関する処理を強化した[`<GNuxtLink>`](./components/g/NuxtLink.vue)を使用していますので、**リンクを追加する際は`<NuxtLink>`ではなく`<GNuxtLink>`を使用してください。**
 
 ## Setup
 

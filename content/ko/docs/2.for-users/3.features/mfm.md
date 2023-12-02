@@ -22,9 +22,6 @@ MFM은 Markup langauge For Misskey의 약자로 Misskey의 여러 곳에서 사�
 ### 맨션
 
 골뱅이표(@) + 유저명으로 특정 유저를 표현할 수 있습니다.
-:::tip
-멘션에 대한 자세한 내용은 [여기](./mention.md)를 참조하세요.
-:::
 
 ```
 @ai
@@ -41,9 +38,6 @@ MFM은 Markup langauge For Misskey의 약자로 Misskey의 여러 곳에서 사�
 ### 해시태그
 
 넘버 사인 + 태그로 해시태그를 표현할 수 있습니다.
-:::tip
-해시태그에 대한 자세한 내용은 [여기](./hashtag.md)를 참조하세요.
-:::
 
 ```
 #misskey
@@ -82,10 +76,8 @@ https://example.com
 
 ### 커스텀 이모지
 
-콜론으로 커스텀 이모지명을 감싸면 커스텀 이모지를 표시할 수 있습니다.
 :::tip
 커스텀 이모지에 대한 자세한 내용은 [여기](./custom-emoji.md)를 참조하세요.
-:::
 
 ```
 :misskey:
@@ -105,7 +97,7 @@ https://example.com
 
 ### 눈에 띄지 않게 하기
 
-내용을 작게, 연하게 할 수 있습니다.
+내용을 흐리게 표시할 수 있습니다.커서를 위에 올려서 제대로 보이게 할 수도 있습니다.
 
 ```
 <small>Misskey로 연합 우주의 세계가 펼쳐집니다.</small>
@@ -186,7 +178,7 @@ $[font.fantasy MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
 ### 흐림 효과
 
-내용을 흐리게 표시할 수 있습니다.커서를 위에 올려서 제대로 보이게 할 수도 있습니다.
+내용을 작게, 연하게 할 수 있습니다.커서를 위에 올려서 제대로 보이게 할 수도 있습니다.
 
 ```
 $[blur Misskey로 연합 우주의 세계가 펼쳐집니다.]
@@ -258,7 +250,7 @@ $[x4 x4]
 $[x3 x3]
 $[x4 x4]"></MfmPreview>
 
-### 애니메이션 (젤리)
+### 애니메이션 (짠!)
 
 ```
 $[jelly 🍮] $[jelly.speed=5s 🍮]
@@ -266,7 +258,7 @@ $[jelly 🍮] $[jelly.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[jelly 🍮] $[jelly.speed=5s 🍮]]"></MfmPreview>
 
-### 애니메이션 (짠!)
+### 애니메이션 (경련)
 
 ```
 $[tada 🍮] $[tada.speed=5s 🍮]
@@ -305,7 +297,7 @@ $[spin.x 🍮] $[spin.x,left 🍮] $[spin.x,alternate 🍮]
 $[spin.y 🍮] $[spin.y,left 🍮] $[spin.y,alternate 🍮]
 $[spin.speed=5s 🍮]]"></MfmPreview>
 
-### 애니메이션 (부들부들)
+### 애니메이션 (젤리)
 
 ```
 $[shake 🍮] $[shake.speed=5s 🍮]
@@ -313,7 +305,7 @@ $[shake 🍮] $[shake.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[shake 🍮] $[shake.speed=5s 🍮]]"></MfmPreview>
 
-### 애니메이션 (경련)
+### 애니메이션 (부들부들)
 
 ```
 $[twitch 🍮] $[twitch.speed=5s 🍮]

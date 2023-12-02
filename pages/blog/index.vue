@@ -32,6 +32,11 @@
 </template>
 
 <script setup lang="ts">
+const { locale } = useI18n();
+
+const localeState = useState('miHub_blog_originalLocale', () => locale.value);
+localeState.value = locale.value;
+
 const { data } = await useAsyncData('blog', () => queryContent('blog').only(['_path', 'navTitle', 'title', 'date']).sort({ date: -1 }).find());
 const localePath = useLocalePath();
 </script>

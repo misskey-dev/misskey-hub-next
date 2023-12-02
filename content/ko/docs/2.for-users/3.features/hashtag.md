@@ -2,7 +2,7 @@
 
 해시태그란, 게시글에 검색할 수 있는 태그를 추가하는 기능입니다.
 
-세계 처음으로 쓰인 해시태그 ── #barcamp 는, [2007년 8월 24일 오전 4:25](https://twitter.com/chrismessina/status/223115412)에 크리스 메시나 씨[@chrismessina@mastodon.xyz](https://mastodon.xyz/@chrismessina)가 고안했습니다.이후 이 "파운드 기호 `#`를 사용하여 검색을 편하게 하자"라는 제안은, 영어로 "썰다, 흩어지다"를 의미하는 "해시"랑 "표"를 끝하는 "태그"를 합해서 만든── "해시태그"라는 말이 만들어져 당시 트위터에 공식적으로 채용되었습니다.참고로 크리스 메시나씨는 `#`로 정한 이유는 IRC의 채널명이 `#`로 시작했던 것을 연상했다고 합니다.
+세계 처음으로 쓰인 해시태그 ── #barcamp 는, [2007년 8월 24일 오전 4:25](https://twitter.com/chrismessina/status/223115412)에 크리스 메시나 씨[@chrismessina@mastodon.xyz](https://mastodon.xyz/@chrismessina)가 고안했습니다.이후 이 "파운드 기호 `#`를 사용하여 검색을 편하게 하자"라는 제안은, 영어로 "썰다, 흩어지다"를 의미하는 "해시"랑 "표"를 끝하는 "태그"를 합해서 만든── "해시태그"라는 말이 만들어져 당시 트위터에 공식적으로 채용되었습니다.참고로 크리스 메시나씨는 `#`로 정한 이유는 IRC의 채널명이 `#`로 시작했던 것을 연상했다고 합니다.이후 이 "파운드 기호 `#`를 사용하여 검색을 편하게 하자"라는 제안은, 영어로 "썰다, 흩어지다"를 의미하는 "해시"랑 "표"를 끝하는 "태그"를 합해서 만든── "해시태그"라는 말이 만들어져 당시 트위터에 공식적으로 채용되었습니다.참고로 크리스 메시나씨는 `#`로 정한 이유는 IRC의 채널명이 `#`로 시작했던 것을 연상했다고 합니다.
 
 ![Screenshot of Chris Messina's first hashtag tweet that says "how do you feel about using # (pound) for groups. As in #barcamp \[msg\]?"](/img/docs/for-users/features/hashtag/1.ko.png)
 

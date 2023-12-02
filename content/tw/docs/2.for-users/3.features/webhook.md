@@ -18,33 +18,33 @@ Webhook 註冊後，當指定事件發生時，將向指定 URL 傳送 HTTP 請�
 請求負載包含以下屬性。
 
 <MkSchemaViewerItemObject :schema="{
- type: 'object',
- properties: {
- 	hookId: {
- 		type: 'string',
- 		description: 'Webhook ID',
- 	},
- 	userId: {
- 		type: 'string',
- 		description: 'Webhook作成者のユーザーID',
- 	},
- 	eventId: {
- 		type: 'string',
- 		description: 'イベントのID',
- 	},
- 	createdAt: {
- 		type: 'integer',
- 		description: 'イベントが発生した日時(UNIX time、ミリ秒)',
- 	},
- 	type: {
- 		type: 'string',
- 		description: 'イベントの種類',
- 	},
- 	body: {
- 		type: 'object',
- 		description: 'イベントのペイロード',
- 	},
- }
+type: 'object',
+properties: {
+ hookId: {
+ 	type: 'string',
+ 	description: 'Webhook ID',
+ },
+ userId: {
+ 	type: 'string',
+ 	description: 'Webhook作成者のユーザーID',
+ },
+ eventId: {
+ 	type: 'string',
+ 	description: 'イベントのID',
+ },
+ createdAt: {
+ 	type: 'integer',
+ 	description: 'イベントが発生した日時(UNIX time、ミリ秒)',
+ },
+ type: {
+ 	type: 'string',
+ 	description: 'イベントの種類',
+ },
+ body: {
+ 	type: 'object',
+ 	description: 'イベントのペイロード',
+ },
+}
 }"/>
 
 如果目標伺服器傳回 5xx 錯誤或無回應，則請求將在一段時間後重新傳輸。
@@ -60,13 +60,13 @@ Webhook 註冊後，當指定事件發生時，將向指定 URL 傳送 HTTP 請�
 當您追隨某人時會發生。
 
 <MkSchemaViewerItemObject :schema="{
- type: 'object',
- properties: {
- 	user: {
- 		$ref: 'misskey://User',
- 		description: 'フォローしたユーザー',
- 	},
- }
+type: 'object',
+properties: {
+ user: {
+ 	$ref: 'misskey://User',
+ 	description: 'フォローしたユーザー',
+ },
+}
 }"/>
 
 ### followed
@@ -74,27 +74,27 @@ Webhook 註冊後，當指定事件發生時，將向指定 URL 傳送 HTTP 請�
 當有人追隨您時發生。
 
 <MkSchemaViewerItemObject :schema="{
- type: 'object',
- properties: {
- 	user: {
- 		$ref: 'misskey://User',
- 		description: 'フォローを行ったユーザー',
- 	},
- }
+type: 'object',
+properties: {
+ user: {
+ 	$ref: 'misskey://User',
+ 	description: 'フォローを行ったユーザー',
+ },
+}
 }"/>
 
 ### unfollow
 
-當您取消追隨某人時會發生。
+當您取消追隨某人時會發生。 當您發布貼文時發生。
 
 <MkSchemaViewerItemObject :schema="{
- type: 'object',
- properties: {
- 	user: {
- 		$ref: 'misskey://User',
- 		description: 'フォロー解除したユーザー',
- 	},
- }
+type: 'object',
+properties: {
+ user: {
+ 	$ref: 'misskey://User',
+ 	description: 'フォロー解除したユーザー',
+ },
+}
 }"/>
 
 ### note
@@ -102,13 +102,13 @@ Webhook 註冊後，當指定事件發生時，將向指定 URL 傳送 HTTP 請�
 當您發布貼文時發生。
 
 <MkSchemaViewerItemObject :schema="{
- type: 'object',
- properties: {
- 	note: {
- 		$ref: 'misskey://Note',
- 		description: '作成されたノート',
- 	},
- }
+type: 'object',
+properties: {
+ note: {
+ 	$ref: 'misskey://Note',
+ 	description: '作成されたノート',
+ },
+}
 }"/>
 
 ### reply
@@ -116,13 +116,13 @@ Webhook 註冊後，當指定事件發生時，將向指定 URL 傳送 HTTP 請�
 當您回覆貼文時發生。
 
 <MkSchemaViewerItemObject :schema="{
- type: 'object',
- properties: {
- 	note: {
- 		$ref: 'misskey://Note',
- 		description: '返信',
- 	},
- }
+type: 'object',
+properties: {
+ note: {
+ 	$ref: 'misskey://Note',
+ 	description: '返信',
+ },
+}
 }"/>
 
 ### renote
@@ -130,13 +130,13 @@ Webhook 註冊後，當指定事件發生時，將向指定 URL 傳送 HTTP 請�
 當您自己的貼文被轉發時發生。
 
 <MkSchemaViewerItemObject :schema="{
- type: 'object',
- properties: {
- 	note: {
- 		$ref: 'misskey://Note',
- 		description: 'Renote',
- 	},
- }
+type: 'object',
+properties: {
+ note: {
+ 	$ref: 'misskey://Note',
+ 	description: 'Renote',
+ },
+}
 }"/>
 
 ### mention
@@ -144,11 +144,11 @@ Webhook 註冊後，當指定事件發生時，將向指定 URL 傳送 HTTP 請�
 當有人提到你時發生。
 
 <MkSchemaViewerItemObject :schema="{
- type: 'object',
- properties: {
- 	note: {
- 		$ref: 'misskey://Note',
- 		description: 'メンションを含むノート',
- 	},
- }
+type: 'object',
+properties: {
+ note: {
+ 	$ref: 'misskey://Note',
+ 	description: 'メンションを含むノート',
+ },
+}
 }"/>

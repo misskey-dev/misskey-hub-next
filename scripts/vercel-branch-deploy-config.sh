@@ -10,5 +10,5 @@ if [[ "$VERCEL_GIT_COMMIT_REF" == "l10n_master" ]] ; then
 else
     # Proceed with the build
     echo "✅ - Build can proceed"
-    exit 0;
+    exit 1;
 fi

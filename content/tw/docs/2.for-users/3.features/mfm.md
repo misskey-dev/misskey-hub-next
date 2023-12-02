@@ -258,7 +258,7 @@ $[x4 x4]
 $[x3 x3]
 $[x4 x4]"></MfmPreview>
 
-### 動畫(果凍)
+### 動畫(搖晃)
 
 ```
 $[jelly 🍮] $[jelly.speed=5s 🍮]
@@ -305,7 +305,7 @@ $[spin.x 🍮] $[spin.x,left 🍮] $[spin.x,alternate 🍮]
 $[spin.y 🍮] $[spin.y,left 🍮] $[spin.y,alternate 🍮]
 $[spin.speed=5s 🍮]]"></MfmPreview>
 
-### 動畫(搖晃)
+### 動畫(果凍)
 
 ```
 $[shake 🍮] $[shake.speed=5s 🍮]
