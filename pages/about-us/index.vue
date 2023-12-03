@@ -35,8 +35,8 @@ const localePath = useLocalePath();
 const { t } = useI18n();
 const route = useRoute();
 
-route.meta.title = t('_aboutUs._team.title');
-route.meta.description = t('_aboutUs._team.description');
+route.meta.title = t('_aboutUs.title');
+route.meta.description = t('_aboutUs.description');
 </script>
 
 <style></style>
