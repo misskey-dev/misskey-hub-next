@@ -212,8 +212,8 @@ _aboutUs:
       description: "These companies and organizations have contributed financially and technically to the development of Misskey."
 _i18n:
   _missing:
-    title: "翻訳にご協力ください"
-    description: "このドキュメントはコミュニティによる翻訳です。ドキュメントの翻訳は{link}から行えます。ご協力をお願いします🙏"
+    title: "Help us translate"
+    description: "This document is translated by the community. You can contribute on {link}. We appreciate your cooperation 🙏."
     linkLabel: "Crowdin"
 _api:
   _permissions:
