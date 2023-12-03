@@ -65,6 +65,7 @@ const thumbnail = !data.value.thumbnail ? undefined : (parseURL(data.value.thumb
 
 route.meta.thumbnail = thumbnail;
 route.meta.title = data.value?.title;
+route.meta.description = data.value?.description;
 
 const pd = data.value.date ? new Date(data.value.date).toISOString() : undefined;
 

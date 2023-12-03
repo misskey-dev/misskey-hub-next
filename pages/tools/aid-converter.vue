@@ -65,6 +65,12 @@ function doDateToAid() {
         dateToAidResult.value = genAidx(d.getTime());
     }
 }
+
+const { t } = useI18n();
+const route = useRoute();
+
+route.meta.title = t('_aidConverter.title');
+route.meta.description = t('_aidConverter.description');
 </script>
 
 <style module>

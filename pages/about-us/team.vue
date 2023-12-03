@@ -68,6 +68,7 @@ import { coreTeamMember, coreTeamEmeriti } from '@/assets/data/team-members';
 import type { MiHubMember } from '@/assets/data/team-members';
 
 const { t } = useI18n();
+const route = useRoute();
 
 const { data } = await useFetch<{ contributors: MiHubMember[] }>('https://ungh.cc/repos/misskey-dev/misskey/contributors', {
     onRequestError: () => {
@@ -80,7 +81,8 @@ const contributors = computed(() =>
 	!v.username?.includes('[bot]') && !coreTeamMember.map((e) => e.id).includes(v.id) && !coreTeamEmeriti.map((e) => e.id).includes(v.id))
 );
 
-const localePath = useLocalePath();
+route.meta.title = t('_aboutUs._team.title');
+route.meta.description = t('_aboutUs._team.description');
 </script>
 
 <style module>
