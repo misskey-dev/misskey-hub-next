@@ -16,11 +16,14 @@
                                 :to="`https://${instance.url}/share?${stringifyQuery(query)}`"
                                 class="group-first:rounded-t-lg group-last:rounded-b-lg p-4 w-full flex items-center hover:bg-gray-100 dark:hover:bg-gray-700"
                             >
-                                <div class="h-9 w-9 flex-shrink-0 rounded bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 mr-3">
+                                <div
+                                    class="h-9 w-9 flex-shrink-0 rounded bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 mr-3"
+                                    :class="instance.isUserDefined && 'transition-[border-color] hover:border-red-600 dark:hover:border-red-600'"
+                                >
                                     <template v-if="instance.isUserDefined">
                                         <button class="relative w-full h-full rounded group/delete" @click.stop.prevent="deleteInstance(instance.url)">
                                             <img v-if="instance.icon" :src="instance.meta?.iconUrl" class="w-full h-full rounded" />
-                                            <div class="pointer-events-none absolute top-0 left-0 w-full h-full rounded bg-white dark:bg-gray-800 ring-inset ring-1 ring-red-600 transition-opacity opacity-0 group-hover/delete:opacity-100 p-2 text-red-600">
+                                            <div class="pointer-events-none absolute top-0 left-0 w-full h-full rounded bg-white dark:bg-gray-800 transition-opacity opacity-0 group-hover/delete:opacity-100 p-2 text-red-600">
                                                 <DeleteIco class="h-5 w-5" />
                                             </div>
                                         </button>
