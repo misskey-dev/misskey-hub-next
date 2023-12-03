@@ -18,7 +18,7 @@
 
 <script setup lang="ts">
 import ArrowRightIco from "bi/arrow-right.svg";
-import { NavItem as ContentNavItem } from '@nuxt/content/dist/runtime/types';
+import type { NavItem as ContentNavItem } from '@nuxt/content/dist/runtime/types';
 
 const props = withDefaults(defineProps<{
     wide?: boolean;

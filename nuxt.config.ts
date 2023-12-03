@@ -171,8 +171,8 @@ export default defineNuxtConfig({
 		],
 	},
 	hooks: {
-		'build:before': (...args) => {
-			genApiFiles(...args);
+		'build:before': async (...args) => {
+			await genApiFiles(...args);
 			genLocalesJson(...args);
 		},
 	},

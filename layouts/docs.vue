@@ -14,9 +14,9 @@ const docsNavigation = ref();
 const epDocsNavigation = ref();
 const asideNavKey = ref(0);
 const { data: docsNavigationRes } = await useAsyncData(`navigation_${locale.value}`, () => fetchContentNavigation(queryContent(`/${locale.value}/docs/`)));
-const { data: epDocsNavigationRes } = await useAsyncData(`ep_navigation_${locale.value}`, () => fetchContentNavigation(queryContent(`/api-docs/endpoints`)));
-docsNavigation.value = docsNavigationRes;
-epDocsNavigation.value = epDocsNavigationRes;
+const { data: epDocsNavigationRes } = await useAsyncData(`ep_navigation_${locale.value}`, () => fetchContentNavigation(queryContent(`/api-docs/endpoints/`)));
+docsNavigation.value = docsNavigationRes.value;
+epDocsNavigation.value = epDocsNavigationRes.value;
 const slugs = (Array.isArray(route.params.slug) ? route.params.slug : [route.params.slug]).filter((v) => v !== '');
 const isEPDocs = ref((slugs[0] === 'for-developers' && slugs[1] === 'api' && slugs[2] === 'endpoints'));
 
@@ -28,7 +28,7 @@ watch(() => route.path, (_) => {
 watch(locale, async (to) => {
     console.log('locale changed');
     const { data: docsNavigationRes } = await useAsyncData(`navigation_${to}`, () => fetchContentNavigation(queryContent(`/${to}/docs/`)));
-    docsNavigation.value = docsNavigationRes;
+    docsNavigation.value = docsNavigationRes.value;
     asideNavKey.value++;
 });
 </script>
