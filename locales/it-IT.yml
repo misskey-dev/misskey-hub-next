@@ -4,7 +4,7 @@ loading: "Caricamento"
 clickToExpand: "Clicca per espandere"
 _seo:
   siteName: "Misskey Hub"
-  siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
+  siteNameLong: "Misskey Hub – Sito ufficiale del progetto Misskey"
   defaultTitleTagline: "Rete in espansione per mezzo di Note"
   defaultDescription: "Misskey è una piattaforma decentralizzata, open source, per il social networking."
 _nav:
@@ -40,50 +40,50 @@ _landing:
       title: "Caratteristiche principali"
       description: "Misskeyは一般的なものから特別なものまで、様々な機能を持っています。その一部を紹介します。"
     _note:
-      title: "ノート"
+      title: "Note"
       description: "Misskeyでは、ユーザーの投稿は「ノート」と呼ばれます。他のノートを引用したり、画像、動画、オーディオ、その他の任意のファイルを添付することもできます。"
     _federation:
-      title: "連合"
-      description: "オープンな分散プロトコルであるActivityPubを実装しているため、他のMisskeyサーバーだけでなく、ActivityPubをサポートする他のソフトウェアともやりとりできます。"
+      title: "Federazione"
+      description: "Il protocollo di comunicazione ActivityPub, è distribuito e aperto, quindi ogni profilo su un server Misskey può interagire con gli altri del Fediverso."
     _reaction:
-      title: "リアクション"
+      title: "Reazioni"
       description: "ノートには「リアクション」を付けることができ、簡単・気軽に自分のフィーリングを表現して伝えることが出来ます。"
     _drive:
-      title: "ドライブ"
+      title: "Drive"
       description: "アップロードしたファイルを管理するインターフェイスがあります。そのため、お気に入りの画像をフォルダにまとめたり、再度共有することも簡単に行えます。"
     _theme:
-      title: "テーマ"
+      title: "Colorazioni"
       description: "自分の好きなデザインでMisskeyを使えます。もちろんダークモードも完全サポート。自分で高度にテーマを作ることも可能です。"
     _thread:
-      title: "スレッド"
+      title: "Conversazioni"
       description: "もちろんノートはスレッドにすることができ、気が済むまで会話を続けられます。"
     _charts:
-      title: "チャート"
+      title: "Statistiche"
       description: "Misskeyは組み込みのチャートエンジンを備えていて、サーバーの利用状況などが簡単に可視化できます。"
     _widgets:
-      title: "ウィジェット"
-      description: "様々な種類のウィジェットを配置し、UIを好みにカスタマイズできます。"
+      title: "Riquadri"
+      description: "Per scoprire cos'è cambiato dall'ultima versione di Misskey, è possibile leggere il registro dei cambiamenti."
   _getStarted:
-    title: "Misskeyをはじめよう"
+    title: "Iniziamo con Misskey"
     _find:
-      title: "サーバーを見つける"
-      list: "サーバーのリスト"
+      title: "Trova il tuo server"
+      list: "Elenco dei server"
     _create:
-      title: "サーバーを作成"
-      guide: "セットアップガイド"
+      title: "Crea un server"
+      guide: "Guida per l'ìnstallazione"
     _docs:
-      title: "さらに詳しく知る"
-      docs: "ドキュメントを見る"
+      title: "Per saperne di più"
+      docs: "Sfoglia la documentazione"
   _donation:
-    title: "寄付のお願い"
-    description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
+    title: "Donazioni"
+    description: "Misskey è un'organizzazione no-profit, contiamo sulle donazioni per finanziare lo sviluppo. Se ti piace Misskey, sostienici così potremo continuare a svilupparlo anche in futuro."
   _sponsors:
-    title: "スポンサー"
+    title: "Sponsorizzato"
 _servers:
-  title: "サーバー一覧"
-  description: "Misskeyは単一のサービスではなく、各々がサービスを提供する分散型ネットワークとなっています。Misskeyを利用するには、サービスを提供しているサーバーでアカウントを作成する必要があります。"
-  addYourServer: "あなたのサーバーが表示されませんか？{0}から登録してください！"
-  addYourServerLink: "こちら"
+  title: "Elenco dei server"
+  description: "Misskey non è un social network unico, ma una rete decentralizzata in cui ogni server fornisce servizi federati. Per utilizzare Misskey occorre creare un profilo su uno dei server federati."
+  addYourServer: "Il tuo server non compare? {0}!"
+  addYourServerLink: "aggiungilo"
   _system:
     fetchError: "Impossibile caricare i dati. Per favore riprova più tardi."
   _statistics:
@@ -120,28 +120,28 @@ _docs:
     title: "リリースノート"
     description: "Misskeyのバージョンアップ履歴をご覧いただけます。最新のバージョンで何が変わったのかを確認しましょう！"
   _forUsers:
-    title: "Misskeyユーザー向け"
+    title: "Per utilizzare"
   _forAdmin:
-    title: "サーバー運営者向け"
+    title: "Per amministrare"
   _forDevelopers:
-    title: "開発者向け"
+    title: "Per sviluppare"
   _prevNext:
-    prev: "前へ"
-    next: "次へ"
+    prev: "Precedente"
+    next: "Successivo"
   _toc:
-    title: "このページの内容"
-    toPageTop: "ページ上部に戻る"
+    title: "Sommario"
+    toPageTop: "Torna su"
 _blog:
-  title: "ブログ"
-  description: "Misskey開発本部から、Misskeyに関する最新情報やTips等をお届けします！（日本語のみ）"
-  back: "戻る"
+  title: "Blog"
+  description: "Contiene informazioni e suggerimenti recenti su Misskey, direttamente dal quartier generale dello sviluppo di Misskey! (solo in Giapponese)"
+  back: "Indietro"
 _content:
-  tip: "ヒント"
-  warning: "注意"
-  danger: "警告"
-  preview: "プレビュー"
+  tip: "Suggerimento"
+  warning: "Avvertimento"
+  danger: "Pericolo"
+  preview: "Anteprima"
 _other:
-  title: "もっと！"
+  title: "Di più!"
   description: "Misskeyをもっと楽しめるその他のリソースをご紹介しています。"
 _brandAssets:
   title: "アセット集"
