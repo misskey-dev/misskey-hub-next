@@ -1,4 +1,5 @@
 import type { NavItem } from '@nuxt/content/dist/runtime/types';
+import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import { parseURL } from 'ufo';
 
 /**
@@ -41,6 +42,13 @@ export function isLocalPath(link: string, base?: string): boolean {
     const url = parseURL(link);
 
     return (!url.host || rootDomain.host === url.host);
+}
+
+export function sanitizeInternalPath(path: string): string {
+    const runtimeConfig = useRuntimeConfig();
+    return path
+        .replace(/^(\/((?!ja)[a-z]{2}))?\/blog\/(.+)/g, '/ja/blog/$3')
+        .replace(new RegExp(`^(\/(${(runtimeConfig.public.locales as LocaleObject[]).map((l) => l.code).join('|')})\/?){2,}(.*)$`, 'g'), '$1$2');
 }
 
 /**

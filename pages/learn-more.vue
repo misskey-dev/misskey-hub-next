@@ -56,6 +56,12 @@
                         cutBottom: true,
                         cutLeft: true,
                     },
+                    {
+                        to: localePath('/about-us/'),
+                        title: $t('_aboutUs.title'),
+                        description: $t('_aboutUs.description'),
+                        img: '/img/misc/midev.png',
+                    },
                 ]" />
             </div>
         </div>
@@ -63,7 +69,12 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
 const localePath = useLocalePath();
+const route = useRoute();
+
+route.meta.title = t('_other.title');
+route.meta.description = t('_other.description');
 </script>
 
 <style>

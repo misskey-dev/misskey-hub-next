@@ -1,7 +1,8 @@
 <template>
 	<div :class="['grid grid-cols-1 md:grid-cols-2 gap-4', wide && 'lg:grid-cols-3']">
 	    <GNuxtLink
-	    	class="block p-4 rounded-lg border border-slate-200 dark:border-accent-900 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 hover:!no-underline"
+	    	class="block p-4 rounded-lg border transition-colors hover:!no-underline"
+			:class="gray ? 'hover:bg-white dark:hover:bg-slate-950 border-slate-300 dark:border-accent-800' : 'hover:bg-slate-100 dark:hover:bg-slate-800 border-slate-200 dark:border-accent-900'"
 	    	v-for="item in items"
 	    	:key="item.to"
 	    	:to="item.to"
@@ -29,9 +30,11 @@ withDefaults(defineProps<{
         description?: string;
     }[];
     basePath?: string;
-    wide?: boolean;
+	wide?: boolean;
+	gray?: boolean;
 }>(), {
-    wide: false,
+	wide: false,
+	gray: false,
 });
 
 </script>

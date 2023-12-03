@@ -45,3 +45,9 @@ export type InstanceInfo = {
     instancesInfos: InstanceItem[];
 
 }
+
+export type InstancesStatsObj = { 
+    notesCount?: number;
+    usersCount?: number;
+    instancesCount?: number;
+};

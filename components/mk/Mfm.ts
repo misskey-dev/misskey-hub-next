@@ -3,7 +3,8 @@
  * SPDX-License-Identifier: AGPL-3.0-only
  */
 
-import { VNode, h } from 'vue';
+import { h } from 'vue';
+import type { VNode } from 'vue';
 import * as mfm from 'mfm-js';
 import MkGoogle from '@/components/mk/Google.vue';
 import MkSparkle from '@/components/mk/Sparkle.vue';
@@ -11,6 +12,7 @@ import MkCustomEmoji from '@/components/mk/CustomEmoji.vue';
 import MkMention from '@/components/mk/Mention.vue';
 import NuxtLink from '@/components/g/NuxtLink.vue';
 import ProseAVue from '@/components/content/ProseA.vue';
+import '@/assets/css/mfm.scss';
 
 const QUOTE_STYLE = `
 display: block;
@@ -28,6 +30,7 @@ export default function(props: {
 	isNote?: boolean;
 	emojiUrls?: string[];
 	rootScale?: number;
+	/** 表示の基準にするMisskeyサーバーのドメイン */
 	baseHost?: string;
 }) {
 	const isNote = props.isNote !== undefined ? props.isNote : true;

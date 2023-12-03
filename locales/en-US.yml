@@ -1,6 +1,7 @@
 noScript: "Javascript is currently disabled. Please enable it as JavaScript is required for site functionality."
 learnMore: "Learn More"
 loading: "Loading..."
+clickToExpand: "（クリックして展開）"
 _seo:
   siteName: "Misskey Hub"
   defaultTitleTagline: "A Network Expanding with Notes"
@@ -108,6 +109,9 @@ _docs:
   title: "Documentation"
   description: " Comprehensive information ranging from how to use Misskey to resources for server operators and developers."
   indexTitle: "Table of Contents"
+  _contribute:
+    editThis: "Edit this page"
+    translateThis: "Translate this page"
   _aboutMisskey:
     title: "About Misskey"
     description: "A complete guide for those new to Misskey or considering using it! Let's explore the basics and features."
@@ -146,6 +150,7 @@ _brandAssets:
   logo: "Logo"
   icon: "Icon"
   banner: "Banner"
+  avatarDecorationTemplate: "Avatar Decoration Template"
 _links:
   title: "Links"
   _github:
@@ -160,6 +165,50 @@ _links:
   _aiChan:
     title: "AI-chan"
     description: "Visit the website of AI-chan, the mascot of Misskey."
+_tools:
+  title: "Tool Collection"
+  index: "Tool Collection Home"
+  description: "Discover handy tools for Misskey, crafted by the original developers!"
+  menuToggle: "Menu"
+  _forUsers:
+    title: "For Misskey Users"
+_mfmPlayground:
+  title: "MFM Playground"
+  description: "Practice MFM freely!"
+  preview: "Preview"
+  disclaimer: "It may not render exactly as shown here. Syntax highlighting for code is not supported for performance reason."
+  mfm: "MFM"
+  character: "{0} characters"
+  domain: "Server to replicate the appearance (e.g. custom emojis)"
+  noteIt: "Note It"
+  clearEmojiCacheDescription: "When emojis are not displayed:"
+  clearEmojiCache: "Clear Emoji Cache"
+_aidConverter:
+  title: "aid/aidx utilities"
+  description: "This tool can convert and generate aid and aidx, the random ID generation algorithms used inside Misskey."
+  aidToDate: "aid/aidx to Date"
+  dateToAid: "Date to aid/aidx"
+  mode: "Type of ID"
+  date: "Date/Time"
+_aboutUs:
+  title: "About Misskey Development Division"
+  description: "Information about the Misskey development team."
+  _team:
+    title: "Dev Members"
+    description: "Introducing the people involved in the development of Misskey!"
+    _core:
+      title: "Core Team Member"
+      description: "These core team members are actively maintaining Misskey-related projects."
+    _coreEmeriti:
+      title: "Core Team Member Emeriti"
+      description: "These are former core team members who have made valuable contributions in the past."
+    _contributors:
+      title: "Contributors"
+      description: "These are some of the most active Misskey contributors."
+      seeMore: "All contributors"
+    _orgPartner:
+      title: "Corporate & Organization Partners"
+      description: "These companies and organizations have contributed financially and technically to the development of Misskey."
 _api:
   _permissions:
     title: "Permissions"

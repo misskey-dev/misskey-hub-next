@@ -1,7 +1,7 @@
 <template>
 	<div class="relative space-y-3 lg:space-y-6">
         <MkLogo class="block mx-auto lg:ml-0 w-full max-w-[120px] lg:max-w-[250px]" />
-		<h2 ref="tagline" class="text-center font-title lg:text-start font-bold tracking-wide text-3xl sm:text-5xl lg:text-6xl leading-relaxed sm:leading-relaxed lg:leading-relaxed" id="tagline">
+		<h2 class="text-center font-title lg:text-start font-bold tracking-wide text-3xl sm:text-5xl lg:text-6xl leading-relaxed sm:leading-relaxed lg:leading-relaxed tagline" :class="showTagline && 'shown'">
 			<div class="row">Interplanetary</div>
 			<div class="row">microblogging</div>
 			<div class="row">platform.🚀</div>
@@ -13,7 +13,7 @@
 					<div class="notice h-9 w-9 rounded-full mr-2 p-2">
 						<MegaphoneIco class="h-5 w-5 text-white -rotate-12" />
 					</div>
-					<div class="font-bold text-sm md:text-base mr-2">{{ notice.title[locale] ?? notice.title.ja }}<ArrowRightIco v-if="isLocalPath(notice.to)" class="ml-0.5" /><ArrowUpRightIco v-else class="ml-0.5" /></div>
+					<div class="font-bold text-sm md:text-base mr-2">{{ notice.title[locale] ?? notice.title?.en ?? notice.title.ja }}<ArrowRightIco v-if="isLocalPath(notice.to)" class="ml-0.5" /><ArrowUpRightIco v-else class="ml-0.5" /></div>
 				</div>
 			</GNuxtLink>
 		</div>
@@ -24,7 +24,7 @@
 		<div class="lg:hidden relative py-6">
 			<GDots class="dots w-40 h-40 top-0 left-6" />
 			<GDots class="dots w-40 h-40 bottom-0 right-6" />
-			<img class="relative mx-auto rounded-lg max-w-[240px]" src="/img/hero/screenshot-mobile.png" />
+			<img class="relative mx-auto rounded-lg max-w-[240px]" :src="mobileScreenShot" />
 		</div>
 	</div>
 </template>
@@ -40,26 +40,36 @@ import { isLocalPath } from '~/assets/js/misc';
 const { notice } = useAppConfig();
 const { locale, fallbackLocale } = useI18n();
 const localePath = useLocalePath();
-const tagline = ref<HTMLElement>();
+const showTagline = ref(false);
+const colorMode = useColorMode();
+const mobileScreenShot = computed(() => (colorMode.preference === 'dark') ? '/img/hero/screenshot-mobile-en.png' : '/img/hero/screenshot-mobile.png');
+
+// お知らせ欄にブログが来る可能性もあるので
+const localeState = useState('miHub_blog_originalLocale', () => locale.value);
+localeState.value = locale.value;
 
 onMounted(() => {
-	window.setTimeout(() => {
-		if (tagline.value) {
-			for (let i = 0; i < tagline.value.children.length; i++) {
-				const row = tagline.value.children[i];
-				window.setTimeout(() => { row.classList.add('shown'); }, 200 * i);
-			}
-		}
-	}, 250);
+	setTimeout(() => {
+		showTagline.value = true;
+	}, 100);
 });
 </script>
 
 <style scoped>
 .row {
-	@apply lg:opacity-0 lg:translate-x-24 transition duration-1000
+	@apply lg:opacity-0 lg:translate-x-24 transition duration-1000 pointer-events-none;
 }
-.row.shown {
-	@apply lg:opacity-100 lg:translate-x-0;
+.tagline.shown .row {
+	@apply lg:opacity-100 lg:translate-x-0 pointer-events-auto;
+}
+.tagline.shown .row:nth-child(1) {
+	@apply delay-[200ms];
+}
+.tagline.shown .row:nth-child(2) {
+	@apply delay-[400ms];
+}
+.tagline.shown .row:nth-child(3) {
+	@apply delay-[600ms];
 }
 
 .dots {

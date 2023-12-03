@@ -124,6 +124,7 @@ sudo systemctl start misskey
 :::tip
 `systemctl status misskey`と入力すると、サービスの状態を調べることができます。
 :::
+
 ::::
 
 ## Misskeyのアップデート方法

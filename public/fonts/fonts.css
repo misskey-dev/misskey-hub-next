@@ -5,12 +5,36 @@
 @import url('./GenJyuuGothicX-Regular/GenJyuuGothicX-Regular.css');
 /** Korean (Pretendard) */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css");
+/** Simplified Chinese (Noto Sans SC) */
+@import url('https://fonts.googleapis.cn/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
+/** Traditional Chinese (Noto Sans TC) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
 
-html[lang='ja'] {
+._i18n {
+    font-family: Nunito, var(--mi-localized-font, ''), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html[lang='ja-JP'],
+._i18n[lang='ja'],
+._i18n[lang='ja-JP'] {
     --mi-localized-font: 'GenJyuuGothicX';
     --mi-localized-font-p: 'GenJyuuGothicXP';
 }
 
-html[lang='ko'] {
+html[lang='ko-KR'],
+._i18n[lang='ko'],
+._i18n[lang='ko-KR'] {
     --mi-localized-font: 'Pretendard';
+}
+
+html[lang='zh-CN'],
+._i18n[lang='cn'],
+._i18n[lang='zh-CN'] {
+    --mi-localized-font: 'Noto Sans SC';
+}
+
+html[lang='zh-TW'],
+._i18n[lang='tw'],
+._i18n[lang='zh-TW'] {
+    --mi-localized-font: 'Noto Sans TC';
 }

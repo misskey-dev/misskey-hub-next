@@ -1,12 +1,22 @@
-# About Misskey
+# Misskey Hub (Next)
 
-Misskey website.
+![Screenshot of Misskey Hub](./public/img/og/misskey-hub-screenshot-dr.png)
 
-Built with [Nuxt](https://nuxt.com/).
+Website for Misskey, built with [Nuxt](https://nuxt.com/).
+
+Release date: **TBD（未定）**
 
 ## お知らせの文言のいじり方
 
-`app.config.ts` から指定できます。詳しい書き方はTypescriptの型補完に書いてあります
+`app.config.ts` から指定できます。
+
+## Docsの書き方
+
+**必ず [`/content/.README.md`](./content/.README.md) をご覧ください**
+
+## NuxtLinkについて
+
+内部リンク・外部リンクに関する処理を強化した[`<GNuxtLink>`](./components/g/NuxtLink.vue)を使用していますので、**リンクを追加する際は`<NuxtLink>`ではなく`<GNuxtLink>`を使用してください。**
 
 ## Setup
 
@@ -67,3 +77,9 @@ yarn preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## License
+
+GNU Affero General Public License v3.0
+
+(c) 2023 Misskey, syuilo, kakkokari-gtyih and other contributors

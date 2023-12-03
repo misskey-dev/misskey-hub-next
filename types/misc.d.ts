@@ -1,3 +1,5 @@
+import type { LocaleCodes } from './../nuxt.config';
+
 declare module '*.svg' {
     import { FunctionalComponent, SVGAttributes } from 'vue'
     const src: FunctionalComponent<SVGAttributes>
@@ -5,7 +7,8 @@ declare module '*.svg' {
 }
 
 declare module 'nuxt/schema' {
-    interface AppConfig {
+
+    interface CustomAppConfig {
         
         /** お知らせ */
         notice?: {
@@ -27,7 +30,7 @@ declare module 'nuxt/schema' {
              * ```
              * 
              **/
-            title: { ja: string; } & Record<string, string>;
+            title: { ja: string; } & Partial<Record<LocaleCodes, string>>;
 
             /**
              * リンク先

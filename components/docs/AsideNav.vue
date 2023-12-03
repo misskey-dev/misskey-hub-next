@@ -25,7 +25,7 @@
                     }
                 }"
                 
-                @click.passive="emit('child-click');"
+                @click.passive="isAsideNavOpen = false"
                 :class="[
                     'block hover:text-accent-600',
                     depth === 1 && 'text-base',
@@ -64,6 +64,8 @@ import { isSamePath } from 'ufo';
 import ArrowIco from "bi/chevron-right.svg";
 import GNuxtLink from '@/components/g/NuxtLink.vue';
 
+const isAsideNavOpen = useState<boolean>('miHub_docs_asideNav_openState', () => false);
+
 const props = withDefaults(defineProps<{
     links: NavItem[];
     depth?: number;
@@ -88,6 +90,8 @@ const localePath = useLocalePath();
 
 watch(() => route.path, (to) => {
     path.value = to;
+}, {
+    immediate: true,
 });
 
 onMounted(() => {

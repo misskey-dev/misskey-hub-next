@@ -82,6 +82,7 @@
                 </div>
                 <div v-else class="rounded-lg p-6 min-h-[40vh] flex items-center sm:col-span-2 md:col-span-2 lg:col-span-2 bg-slate-100 dark:bg-slate-800">
                     <div class="mx-auto text-center">
+                        <MkLoading class="mx-auto"></MkLoading>
                         <p class="max-w-xs">{{ $t('loading') }}</p>
                     </div>
                 </div>
@@ -94,7 +95,7 @@
 </template>
 
 <script setup lang="ts">
-import type { InstanceInfo, InstanceItem } from '@/types/instances-info';
+import type { InstanceInfo, InstanceItem, InstancesStatsObj } from '@/types/instances-info';
 import { resolveObjPath } from '@/assets/js/misc';
 import langs from '@/assets/data/lang';
 
@@ -107,11 +108,7 @@ import XIco from 'bi/x.svg';
 const { t, locale } = useI18n();
 const route = useRoute();
 const emits = defineEmits<{
-    (e: 'load', value?: { 
-        notesCount?: number;
-        usersCount?: number;
-        instancesCount?: number;
-    }): void;
+    (e: 'load', value?: InstancesStatsObj): void;
 }>();
 
 // ▼スマホ用ソート▼

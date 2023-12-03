@@ -104,7 +104,8 @@ https://{host}/api/miauth/{session}/check
 }
 ```
 
-APIの詳細は、[APIリファレンス](./endpoints.html)を参照してください。
+<!--TODO:「APIリファレンス」をリンクに差し替え-->
+APIの詳細は、APIリファレンスを参照してください。
 
 :::warning
 MisskeyはRESTを採用していません。

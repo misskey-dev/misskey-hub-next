@@ -1,30 +1,81 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import ViteYaml from '@modyfi/vite-plugin-yaml';
+import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
-import genSitemap from './scripts/gen-sitemap';
+import { readFileSync } from 'fs';
 import { genApiFiles } from './scripts/gen-api-translations';
+import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
+import { genLocalesJson } from './scripts/gen-locales';
+import { getStaticEndpoints } from './scripts/get-static-endpoints';
+import type { NuxtConfig } from 'nuxt/schema';
 
 // 公開時のドメイン（末尾スラッシュなし）
-const baseUrl = 'https://misskey-hub.net';
+const baseUrl = 'https://misskey-hub-next.vercel.app';
 
-export const locales = [
-	{ code: 'ja', iso: 'ja-JP', name: '日本語' },
-	{ code: 'en', iso: 'en-US', name: 'English' },
-	{ code: 'ko', iso: 'ko-KR', name: '한국어' },
-	{ code: 'it', iso: 'it-IT', name: 'Italiano' },
-	{ code: 'pl', iso: 'pl-PL', name: 'Polski' },
-	{ code: 'fr', iso: 'fr-FR', name: 'Français' },
-];
+// 言語定義
+export const localesConst = [
+	{ files: [ 'ja-JP.json' ], code: 'ja', iso: 'ja-JP', name: '日本語' },
+	{ files: [ 'en-US.json' ], code: 'en', iso: 'en-US', name: 'English' },
+	{ files: [ 'id-ID.json' ], code: 'id', iso: 'id-ID', name: 'Bahasa Indonesia' },
+	{ files: [ 'ko-KR.json' ], code: 'ko', iso: 'ko-KR', name: '한국어' },
+	{ files: [ 'it-IT.json' ], code: 'it', iso: 'it-IT', name: 'Italiano' },
+	{ files: [ 'pl-PL.json' ], code: 'pl', iso: 'pl-PL', name: 'Polski' },
+	{ files: [ 'fr-FR.json' ], code: 'fr', iso: 'fr-FR', name: 'Français' },
+	{ files: [ 'zh-CN.json' ], code: 'cn', iso: 'zh-CN', name: '简体中文' },
+	{ files: [ 'zh-TW.json' ], code: 'tw', iso: 'zh-TW', name: '繁体中文' },
+] as const;
+
+export type LocaleCodes = typeof localesConst[number]['code'];
+
+export const locales = localesConst as unknown as LocaleObject[];
+
+function getRouteRules(): NuxtConfig['routeRules'] {
+	// 言語ごとに割り当てる必要のないRouteRules
+	const staticRules: NuxtConfig['routeRules'] = {
+		'/ja/blog/**': { isr: true },
+		'/ns/': { prerender: true },
+	};
+
+	// それぞれの言語について割り当てる必要のあるRouteRules
+	const localeBasedRules: NuxtConfig['routeRules'] = {
+		// リリースページはどうせアクセス集中するので先に作っておく
+		'/docs/releases/': { prerender: true },
+		
+		'/docs/**': { isr: true },
+	};
+
+	// 静的ページをすべて追加
+	getStaticEndpoints().forEach((route) => {
+		if (!route.includes('ns')) {
+			localeBasedRules[route] = { prerender: true };
+			staticRules[route] = { prerender: true };
+		}
+	});
+
+	// 言語ごとにすべて割り当てていく
+	const _localeBasedRules: NuxtConfig['routeRules'] = {};
+	const localeCodes = locales.map((v) => v.code);
+	Object.keys(localeBasedRules).forEach((route) => {
+		localeCodes.forEach((code) => {
+			_localeBasedRules[`/${code}${route}`] = localeBasedRules[route];
+		});
+	})
+
+	return {
+		...staticRules,
+		..._localeBasedRules,
+	};
+}
 
 export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
 			baseUrl,
+			locales,
 		}
 	},
 	css: [
 		"github-markdown-css/github-markdown.css",
-		"@/assets/css/mfm.scss",
+		"@/assets/css/nprogress.css",
 		"@/assets/css/tailwind.css",
 		"@/assets/css/bootstrap-forms.scss",
 	],
@@ -36,11 +87,14 @@ export default defineNuxtConfig({
 	app: {
 		head: {
 			link: [
-				{ rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-				{ rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-				{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Capriola&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap' },
 				{ rel: 'stylesheet', href: '/fonts/fonts.css' },
+				{ rel: 'apple-touch-icon', href: '/img/icon/apple-touch-icon.png' },
+				{ rel: 'shortcut icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
+				{ rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
 			],
+			meta: [
+				{ name: 'twitter:card', content: 'summary_large_image' },
+			]
 		},
 	},
 	content: {
@@ -52,21 +106,29 @@ export default defineNuxtConfig({
 			]
 		},
 		highlight: {
-			preload: ['ini', ],
 			theme: {
 				// Default theme (same as single string)
 				default: 'github-light',
 				// Theme used if `html.dark`
 				dark: 'github-dark',
 			},
+			preload: [
+				'ini', 'sql', 'yml', 'nginx', 'bash',
+				JSON.parse(readFileSync('./node_modules/aiscript-vscode/aiscript/syntaxes/aiscript.tmLanguage.json', { encoding: 'utf-8' })),
+			],
 		},
 	},
 	i18n: {
 		baseUrl,
 		vueI18n: './i18n.config.ts',
 		locales,
+		lazy: true,
+		langDir: 'locales_dist',
 		defaultLocale: 'ja',
 		strategy: 'prefix',
+		detectBrowserLanguage: {
+			fallbackLocale: 'ja',
+		},
 		trailingSlash: true,
 	},
 	colorMode: {
@@ -83,7 +145,7 @@ export default defineNuxtConfig({
 	},
 	vite: {
 		plugins: [
-			ViteYaml(),
+			yaml(),
 			svgLoader({
 				defaultImport: 'component',
 				svgoConfig: {
@@ -99,28 +161,24 @@ export default defineNuxtConfig({
 					]
 				}
 			}),
-		]
+		],
 	},
 	nitro: {
-		hooks: {
-			'compiled': genSitemap,
-		},
-		prerender: {
-			routes: [
-				"/404.html"
-			],
-			// 【一時対応】とりあえずビルドできるようにする
-			failOnError: false,
-		},
+		preset: 'vercel',
 		plugins: [
 			'@/server/plugins/appendComment.ts',
+			'@/server/plugins/i18nRedirector.ts',
 		],
 	},
 	hooks: {
-		'build:before': genApiFiles,
+		'build:before': (...args) => {
+			genApiFiles(...args);
+			genLocalesJson(...args);
+		},
 	},
 	experimental: {
 		inlineSSRStyles: false,
-		payloadExtraction: true,
+		componentIslands: true,
 	},
-})
+	routeRules: getRouteRules(),
+});
