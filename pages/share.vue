@@ -109,7 +109,7 @@ const displayInstances = computed(() => [
 const userDefinedInstanceInput = ref<string>('');
 
 async function getAndSetInstanceInfo() {
-    if (!process.client) return;
+    if (!process.client || !userDefinedInstanceInput.value || !userDefinedInstanceInput.value.includes('.')) return;
     iFetching.value = true;
 
     nextTick(async () => {
