@@ -45,8 +45,7 @@ const getLdJson = (additionalGraphes: Thing[] = []): string => {
                 ],
                 "logo": {
                     "@type": "ImageObject",
-                    // TODO
-                    "url": `${baseUrl}/img/logo.png`
+                    "url": `${baseUrl}/img/icons/icon-256x256.png`
                 }
             },
             {
