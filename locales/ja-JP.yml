@@ -2,13 +2,11 @@ noScript: "現在Javascriptが無効になっています。サイトの表示�
 learnMore: "詳しく知る"
 loading: "読み込み中…"
 clickToExpand: "（クリックして展開）"
-
 _seo:
   siteName: "Misskey Hub"
   siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
   defaultTitleTagline: "ノートでひろがるネットワーク"
   defaultDescription: "【ノートでひろがるネットワーク】分散型SNS Misskeyの公式サイト。Misskeyのはじめかたやサーバー一覧など、Misskeyに関する情報が満載！"
-
 _nav:
   servers: "サーバー"
   docs: "ドキュメント"
@@ -154,7 +152,6 @@ _brandAssets:
   icon: "アイコン"
   banner: "バナー"
   avatarDecorationTemplate: "アバターデコレーション テンプレート"
-
 _links:
   title: "リンク"
   _github:
@@ -187,7 +184,6 @@ _mfmPlayground:
   noteIt: "ノート"
   clearEmojiCacheDescription: "絵文字が表示されないとき"
   clearEmojiCache: "絵文字のキャッシュを削除"
-
 _aidConverter:
   title: "aid/aidxツール"
   description: "Misskeyの内部で使用されているランダムID生成アルゴリズム「aid」と「aidx」の変換・生成ができます。"
@@ -195,7 +191,6 @@ _aidConverter:
   dateToAid: "日付時刻→aid/aidx"
   mode: "作成するid"
   date: "日付時刻"
-
 _aboutUs:
   title: "Misskey Development Divisionについて"
   description: "Misskey開発チームについての情報を掲載しています。"
@@ -215,13 +210,11 @@ _aboutUs:
     _orgPartner:
       title: "企業・団体パートナー"
       description: "こちらの企業・団体から、金銭的・技術的な観点でMisskeyの開発へご協力いただいております。"
-
 _i18n:
   _missing:
     title: "翻訳にご協力ください"
     description: "このドキュメントはコミュニティによる翻訳です。ドキュメントの翻訳は{link}から行えます。ご協力をお願いします🙏"
     linkLabel: "Crowdin"
-
 _api:
   _paramViewer:
     _header:
@@ -1192,6 +1185,63 @@ _api:
     retention:
       post:
         description: "Untranslated / 未翻訳"
+    admin/accounts/find-by-email:
+      post:
+        description: "Untranslated / 未翻訳"
+    admin/avatar-decorations/create:
+      post:
+        description: "Untranslated / 未翻訳"
+    admin/avatar-decorations/delete:
+      post:
+        description: "Untranslated / 未翻訳"
+    admin/avatar-decorations/list:
+      post:
+        description: "Untranslated / 未翻訳"
+    admin/avatar-decorations/update:
+      post:
+        description: "Untranslated / 未翻訳"
+    following/update-all:
+      post:
+        description: "Untranslated / 未翻訳"
+    get-avatar-decorations:
+      post:
+        description: "Untranslated / 未翻訳"
+    i/notifications-grouped:
+      post:
+        description: "Untranslated / 未翻訳"
+    i/registry/get-all:
+      post:
+        description: "Untranslated / 未翻訳"
+    i/registry/get-detail:
+      post:
+        description: "Untranslated / 未翻訳"
+    i/registry/get:
+      post:
+        description: "Untranslated / 未翻訳"
+    i/registry/keys-with-type:
+      post:
+        description: "Untranslated / 未翻訳"
+    i/registry/keys:
+      post:
+        description: "Untranslated / 未翻訳"
+    i/registry/remove:
+      post:
+        description: "Untranslated / 未翻訳"
+    i/registry/set:
+      post:
+        description: "Untranslated / 未翻訳"
+    users/featured-notes:
+      post:
+        description: "Untranslated / 未翻訳"
+    users/lists/update-membership:
+      post:
+        description: "Untranslated / 未翻訳"
+    users/lists/get-memberships:
+      post:
+        description: "Untranslated / 未翻訳"
+    fetch-external-resources:
+      post:
+        description: "Untranslated / 未翻訳"
   _responseCodes:
     "200": "リクエスト成功（内容あり）"
     "204": "リクエスト成功（内容なし）"
@@ -1344,3 +1394,9 @@ _api:
     673a7dd2-6924-1093-e0c0-e68456ceae5c: "Reactions of the user is not public."
     1acefcb5-0959-43fd-9685-b48305736cb5: "No such user."
     ef7b9be4-9cba-4e6f-ab41-90ed171c7d3c: "Failed to resolve remote user."
+    cb865949-8af5-4062-a88c-ef55e8786d1d: "No such user who has the email address."
+    97a1e8e7-c0f7-47d2-957a-92e61256e01a: "No such key."
+    ac3ed68a-62f0-422b-a7bc-d5e09e8f6a6a: "No such key."
+    1fac4e8a-a6cd-4e39-a4a5-3a7e11f1b019: "No such key."
+    50a70314-2d8a-431b-b433-efa5cc56444c: "Translate of notes unavailable."
+    bb774091-7a15-4a70-9dc5-6ac8cf125856: "External resource returned invalid schema."
