@@ -43,6 +43,7 @@ if (!data.value) {
 }
 
 route.meta.title = data.value?.title;
+route.meta.description = data.value?.description;
 </script>
 
 <style scoped>

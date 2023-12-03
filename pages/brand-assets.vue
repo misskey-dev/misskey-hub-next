@@ -66,7 +66,11 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
+const route = useRoute();
 
+route.meta.title = t('_brandAssets.title');
+route.meta.description = t('_brandAssets.description');
 </script>
 
 <style scoped>

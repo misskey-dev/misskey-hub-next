@@ -45,7 +45,12 @@ definePageMeta({
     layout: 'tools',
 });
 
+const { t } = useI18n();
 const localePath = useLocalePath();
+const route = useRoute();
+
+route.meta.title = t('_tools.title');
+route.meta.description = t('_tools.description');
 </script>
 
 <style module>
