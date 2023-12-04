@@ -17,18 +17,23 @@
                                 class="group-first:rounded-t-lg group-last:rounded-b-lg p-4 w-full flex items-center hover:bg-gray-100 dark:hover:bg-gray-700"
                             >
                                 <div
-                                    class="h-9 w-9 flex-shrink-0 rounded bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 mr-3"
+                                    class="h-9 w-9 flex-shrink-0 overflow-hidden rounded bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 mr-3"
                                     :class="instance.isUserDefined && 'transition-[border-color] hover:border-red-600 dark:hover:border-red-600'"
                                 >
                                     <template v-if="instance.isUserDefined">
-                                        <button class="relative w-full h-full rounded group/delete" @click.stop.prevent="deleteInstance(instance.url)">
-                                            <img v-if="instance.icon" :src="instance.meta?.iconUrl" class="w-full h-full rounded" />
-                                            <div class="pointer-events-none absolute top-0 left-0 w-full h-full rounded bg-white dark:bg-gray-800 transition-opacity opacity-0 group-hover/delete:opacity-100 p-2 text-red-600">
+                                        <button class="relative w-full h-full group/delete" @click.stop.prevent="deleteInstance(instance.url)">
+                                            <img v-if="instance.icon && instance.meta?.iconUrl" :src="getInstanceImage(instance)" class="w-full h-full" />
+                                            <div v-else-if="['forked', 'notDetermined'].includes(getPlaceholderImage(instance))" class="w-full h-full bg-accent-600/20 p-2 text-accent-600">
+                                                <ForkedIco v-if="getPlaceholderImage(instance) === 'forked'" class="bi h-5 w-5 stroke-1 stroke-current" />
+                                                <QuestionIco v-else class="h-5 w-5" />
+                                            </div>
+                                            <img v-else :src="getPlaceholderImage(instance)" class="w-full h-full" />
+                                            <div class="pointer-events-none absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 transition-opacity opacity-0 group-hover/delete:opacity-100 p-2 text-red-600">
                                                 <DeleteIco class="h-5 w-5" />
                                             </div>
                                         </button>
                                     </template>
-                                    <img v-else-if="instance.icon" :src="instance.meta?.iconUrl" class="w-full h-full rounded" />
+                                    <img v-else-if="instance.icon && instance.meta?.iconUrl" :src="instance.meta?.iconUrl" class="w-full h-full" />
                                 </div>
                                 <div class="min-w-0 mr-3">
                                     <h2 class="font-bold truncate">{{ instance.name }}</h2>
@@ -76,9 +81,12 @@ import ShareIco from 'bi/share-fill.svg';
 import ArrowRightIco from 'bi/chevron-right.svg';
 import PlusIco from 'bi/plus-lg.svg';
 import DeleteIco from 'bi/trash.svg';
-import { resolveObjPath } from '@/assets/js/misc';
-import { stringifyQuery, parseURL } from 'ufo';
+import QuestionIco from 'bi/question-lg.svg';
+import ForkedIco from '@/assets/svg/repo-forked.svg';
+import { isLocalPath, resolveObjPath } from '@/assets/js/misc';
+import { stringifyQuery, parseURL, joinURL } from 'ufo';
 import { api as misskeyApi } from 'misskey-js';
+import { forkedSoftwares } from '~/assets/data/forks';
 import type { InstanceInfo, InstanceItem } from '@/types/instances-info';
 
 definePageMeta({
@@ -159,6 +167,27 @@ async function getAndSetInstanceInfo() {
 function deleteInstance(host: string) {
     const i = userDefinedInstances.value.findIndex((v) => v.url === host);
     userDefinedInstances.value.splice(i, 1);
+}
+
+function getInstanceImage(instance: ExtendedInstanceItem | InstanceItem) {
+    if (!instance.meta?.iconUrl) return;
+
+    if (isLocalPath(instance.meta.iconUrl)) {
+        return joinURL(`https://${instance.url}`, instance.meta.iconUrl);
+    }
+    return instance.meta.iconUrl;
+}
+
+function getPlaceholderImage(instance: ExtendedInstanceItem | InstanceItem) {
+    if (instance.meta?.repositoryUrl) {
+        if (forkedSoftwares.some((v) => instance.meta?.repositoryUrl.toLowerCase().includes(v))) {
+            return 'forked';
+        }
+        if (instance.meta.repositoryUrl.includes('misskey')) {
+            return '/img/icons/f/mi.png';
+        }
+    }
+    return 'notDetermined';
 }
 
 onMounted(async () => {

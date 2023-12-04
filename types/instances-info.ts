@@ -1,3 +1,5 @@
+import type * as Misskey from 'misskey-js';
+
 /** 各インスタンスの情報 */
 export type InstanceItem = {
     /** Hostname (e.g. `misskey.io`) */
@@ -21,7 +23,7 @@ export type InstanceItem = {
     /** nodeinfo */
     nodeinfo: Record<string, any> | null,
     /** result of api/meta */
-    meta: Record<string, any> | null,
+    meta: Misskey.entities.InstanceMetadata | null,
 
     stats?: Record<string, any>,   //  deprecated (result of api/stats)
 };
