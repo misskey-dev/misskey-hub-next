@@ -5,8 +5,9 @@ clickToExpand: "（クリックして展開）"
 
 _seo:
   siteName: "Misskey Hub"
+  siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
   defaultTitleTagline: "ノートでひろがるネットワーク"
-  defaultDescription: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
+  defaultDescription: "【ノートでひろがるネットワーク】分散型SNS Misskeyの公式サイト。Misskeyのはじめかたやサーバー一覧など、Misskeyに関する情報が満載！"
 
 _nav:
   servers: "サーバー"
@@ -112,7 +113,7 @@ _servers:
 
 _docs:
   title: "ドキュメント"
-  description: "Misskeyの上手なつかいかたから、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
+  description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。Misskeyの上手な使い方から、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
   indexTitle: "目次ページ"
   _contribute:
     editThis: "このページを編集"
@@ -223,6 +224,19 @@ _aboutUs:
     _orgPartner:
       title: "企業・団体パートナー"
       description: "こちらの企業・団体から、金銭的・技術的な観点でMisskeyの開発へご協力いただいております。"
+
+_i18n:
+  _missing:
+    title: "翻訳にご協力ください"
+    description: "このドキュメントはコミュニティによる翻訳です。ドキュメントの翻訳は{link}から行えます。ご協力をお願いします🙏"
+    linkLabel: "Crowdin"
+
+_share:
+  title: "Misskeyへノート"
+  chooseServer: "ノートするサーバーを選択してください"
+  addServer: "サーバーを追加"
+  domain: "サーバーのドメイン"
+  compatibleWith: "Misskeyと、一部のMisskeyフォークに対応しています。"
 
 _api:
   _permissions:

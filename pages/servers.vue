@@ -44,14 +44,10 @@
 </template>
 
 <script setup lang="ts">
+import type { InstancesStatsObj } from '@/types/instances-info';
+
 const { t, locale } = useI18n();
 const route = useRoute();
-
-type InstancesStatsObj = { 
-    notesCount?: number;
-    usersCount?: number;
-    instancesCount?: number;
-};
 
 const instancesStats = ref<InstancesStatsObj>();
 
@@ -60,6 +56,7 @@ function setServerStats(val: InstancesStatsObj) {
 }
 
 route.meta.title = t('_servers.title');
+route.meta.description = t('_servers.description');
 </script>
 
 <style scoped>

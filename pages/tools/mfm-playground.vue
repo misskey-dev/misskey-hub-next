@@ -72,6 +72,12 @@ function clearEmojiCache() {
         location.reload();
     }
 }
+
+const { t } = useI18n();
+const route = useRoute();
+
+route.meta.title = t('_mfmPlayground.title');
+route.meta.description = t('_mfmPlayground.description');
 </script>
 
 <style module>

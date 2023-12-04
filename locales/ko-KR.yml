@@ -1,6 +1,7 @@
 noScript: "JavaScript가 비활성화 상태입니다. 페이지를 표시하시려면 JavaScript를 활성화 해야합니다."
 learnMore: "자세하게"
 loading: "로딩 중..."
+clickToExpand: "（クリックして展開）"
 _seo:
   siteName: "Misskey Hub"
   defaultTitleTagline: "노트로 펼쳐지는 네트워크"

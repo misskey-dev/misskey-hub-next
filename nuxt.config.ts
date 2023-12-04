@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
+import { readFileSync } from 'fs';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import { genLocalesJson } from './scripts/gen-locales';
@@ -8,7 +9,7 @@ import { getStaticEndpoints } from './scripts/get-static-endpoints';
 import type { NuxtConfig } from 'nuxt/schema';
 
 // 公開時のドメイン（末尾スラッシュなし）
-const baseUrl = 'https://misskey-hub.net';
+const baseUrl = 'https://misskey-hub-next.vercel.app';
 
 // 言語定義
 export const localesConst = [
@@ -36,6 +37,9 @@ function getRouteRules(): NuxtConfig['routeRules'] {
 
 	// それぞれの言語について割り当てる必要のあるRouteRules
 	const localeBasedRules: NuxtConfig['routeRules'] = {
+		// リリースページはどうせアクセス集中するので先に作っておく
+		'/docs/releases/': { prerender: true },
+		
 		'/docs/**': { isr: true },
 	};
 
@@ -84,7 +88,7 @@ export default defineNuxtConfig({
 		head: {
 			link: [
 				{ rel: 'stylesheet', href: '/fonts/fonts.css' },
-				{ rel: 'apple-touch-icon', href: '/img/icon/apple-touch-icon.png' },
+				{ rel: 'apple-touch-icon', href: '/img/icons/apple-touch-icon.png' },
 				{ rel: 'shortcut icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
 				{ rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
 			],
@@ -107,6 +111,10 @@ export default defineNuxtConfig({
 				// Theme used if `html.dark`
 				dark: 'github-dark',
 			},
+			preload: [
+				'ini', 'sql', 'yml', 'nginx', 'bash',
+				JSON.parse(readFileSync('./node_modules/aiscript-vscode/aiscript/syntaxes/aiscript.tmLanguage.json', { encoding: 'utf-8' })),
+			],
 		},
 	},
 	i18n: {

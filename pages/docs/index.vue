@@ -3,7 +3,7 @@
         <GHero>
             <template #title>{{ $t('_docs.title') }}</template>
             <template #description>
-                {{ $t('_seo.defaultDescription') + ' ' + $t('_docs.description') }}
+                {{ $t('_docs.description') }}
             </template>
             <template #icon>
                 <div class="hidden lg:block relative px-6 py-8">
@@ -60,7 +60,7 @@ const { t, locale } = useI18n();
 const route = useRoute();
 
 route.meta.title = t('_docs.title');
-route.meta.description = t('_seo.defaultDescription') + ' ' + t('_docs.description');
+route.meta.description = t('_docs.description');
 </script>
 
 <style scoped>

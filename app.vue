@@ -8,11 +8,21 @@ const nuxtApp = useNuxtApp();
 
 const { t, locale, locales } = useI18n();
 const route = useRoute();
+const router = useRouter();
 const colorMode = useColorMode();
 const baseUrl = useRuntimeConfig().public.baseUrl as string;
 
+router.beforeEach((to, from) => {
+    if (to.path === from.path) return;
+    if (!NProgress.isStarted()) {
+        NProgress.start();
+    }
+})
+
 nuxtApp.hook('page:start', () => {
-    NProgress.start();
+    if (!NProgress.isStarted()) {
+        NProgress.start();
+    }
 });
 nuxtApp.hook('page:finish', () => {
     nextTick(() => {
@@ -29,7 +39,7 @@ const getDescription = (): string => {
         return t('_seo.defaultDescription');
     }
 }
-const getTitle = () => route.meta.title ? `${route.meta.title} | ${t('_seo.siteName')}` : t('_seo.siteName');
+const getTitle = () => route.meta.title ? `${route.meta.title} | ${t('_seo.siteName')}` : t('_seo.siteNameLong');
 const getLdJson = (additionalGraphes: Thing[] = []): string => {
     const ldJson: Graph = {
         "@context": "https://schema.org",
@@ -45,8 +55,7 @@ const getLdJson = (additionalGraphes: Thing[] = []): string => {
                 ],
                 "logo": {
                     "@type": "ImageObject",
-                    // TODO
-                    "url": `${baseUrl}/img/logo.png`
+                    "url": `${baseUrl}/img/icons/icon-256x256.png`
                 }
             },
             {

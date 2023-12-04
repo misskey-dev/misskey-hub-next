@@ -1,5 +1,6 @@
 export default defineI18nConfig(() => ({
 	legacy: false,
+	fallbackLocale: ['en', 'ja'],
 	datetimeFormats: {
 		'en-US': {
 			short: {

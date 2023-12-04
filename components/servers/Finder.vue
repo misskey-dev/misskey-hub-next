@@ -95,7 +95,7 @@
 </template>
 
 <script setup lang="ts">
-import type { InstanceInfo, InstanceItem } from '@/types/instances-info';
+import type { InstanceInfo, InstanceItem, InstancesStatsObj } from '@/types/instances-info';
 import { resolveObjPath } from '@/assets/js/misc';
 import langs from '@/assets/data/lang';
 
@@ -108,11 +108,7 @@ import XIco from 'bi/x.svg';
 const { t, locale } = useI18n();
 const route = useRoute();
 const emits = defineEmits<{
-    (e: 'load', value?: { 
-        notesCount?: number;
-        usersCount?: number;
-        instancesCount?: number;
-    }): void;
+    (e: 'load', value?: InstancesStatsObj): void;
 }>();
 
 // ▼スマホ用ソート▼

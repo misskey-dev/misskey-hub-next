@@ -1,8 +1,9 @@
 <template>
     <div>
         <div class="mx-auto container max-w-screen-md relative px-6 py-5">
-            <GNuxtLink :to="localePath('/blog/', originalLocale)" class="absolute top-2.5 left-6 p-2.5 opacity-40">
+            <GNuxtLink :to="localePath('/blog/', originalLocale)" class="absolute top-2.5 left-6 p-2.5 opacity-40 hover:opacity-100 hover:-translate-x-2.5 group transition-[opacity,transform] flex items-center">
                 <LeftIco class="mr-2 stroke-1 stroke-current" />
+                <div class="font-bold opacity-0 group-hover:opacity-100 transition-opacity">{{ $t('_blog.back') }}</div>
             </GNuxtLink>
             <p class="text-center mb-4">{{ $t('_blog.title') }}</p>
             <h1 class="text-center font-bold text-2xl lg:text-3xl mb-4">{{ data?.title }}</h1>
@@ -64,6 +65,7 @@ const thumbnail = !data.value.thumbnail ? undefined : (parseURL(data.value.thumb
 
 route.meta.thumbnail = thumbnail;
 route.meta.title = data.value?.title;
+route.meta.description = data.value?.description;
 
 const pd = data.value.date ? new Date(data.value.date).toISOString() : undefined;
 

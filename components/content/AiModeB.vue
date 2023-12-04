@@ -1,5 +1,5 @@
 <template>
-    <button class="btn btn-primary inline-block mb-4" @click="click()">
+    <button class="btn btn-primary inline-block mb-4 !text-white hover:!text-white" @click="click()">
         {{ isEnabledAiChanMode ? '藍モードを無効にする' : '藍モードを有効にする' }}
     </button>
 </template>

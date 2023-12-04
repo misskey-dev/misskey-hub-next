@@ -15,6 +15,13 @@
         </div>
         <div class="pt-6 p-0 sm:p-12 lg:p-6 w-full overflow-x-hidden">
             <template v-if="data?.body">
+                <Tip v-if="locale !== 'ja'" class="mb-6" :label="$t('_i18n._missing.title')">
+                    <I18nT keypath="_i18n._missing.description" tag="p">
+                        <template #link>
+                            <GNuxtLink class="font-bold hover:underline underline-offset-2" to="https://crowdin.com/project/misskey-hub" target="_blank">{{ $t('_i18n._missing.linkLabel') }}</GNuxtLink>
+                        </template>
+                    </I18nT>
+                </Tip>
                 <ContentRenderer v-if="data.body.children.length > 0" :value="data" class="markdown-body w-full mb-6">
                 </ContentRenderer>
                 <div class="mt-8 mb-4 flex flex-wrap justify-end gap-3">
@@ -63,6 +70,9 @@ if (!data.value) {
 }
 
 route.meta.title = data.value?.title;
+if (data.value.description) {
+    route.meta.description = data.value.description;
+}
 </script>
 
 <style scoped>
