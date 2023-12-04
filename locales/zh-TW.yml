@@ -2,6 +2,7 @@ noScript: "Javascript 目前處於禁用狀態。必須啟用 Javascript 才能�
 learnMore: "了解更多"
 loading: "載入中..."
 clickToExpand: "（點擊展開）"
+copy: "コピー"
 _seo:
   siteName: "Misskey Hub"
   siteNameLong: "Misskey Hub – Misskey 專案官方網站"
@@ -221,6 +222,27 @@ _share:
   addServer: "サーバーを追加"
   domain: "サーバーのドメイン"
   compatibleWith: "Misskeyと、一部のMisskeyフォークに対応しています。"
+_noteVisibility:
+  public: "パブリック"
+  home: "ホーム"
+  followers: "フォロワー"
+  specified: "ダイレクト"
+  localOnly: "連合なし"
+_shareLinkGenerator:
+  title: "共有ボタンジェネレーター"
+  description: "Misskey Hubの共有ボタン中継サービスを利用して、Misskey用の共有ボタンを作成できます。"
+  body: "本文"
+  bodyWarning: "どのサーバーでも共有できるようにするため、カスタム絵文字は使用できません。"
+  url: "URL"
+  urlCaption: "任意。本文の後ろに挿入されます。"
+  settings: "詳細設定"
+  visibility: "公開範囲"
+  recipents: "ダイレクトを受け取る人のacct（改行区切り）"
+  resultLink: "リンク生成結果"
+  resultButton: "共有ボタンのサンプル"
+  testLink: "共有リンクを試す"
+  typeSomethingToGetLink: "本文を入力するとリンクが生成されます。"
+  typeSomethingToGetButton: "本文を入力するとボタンが生成されます。"
 _api:
   _permissions:
     title: "權限"
