@@ -215,6 +215,12 @@ _i18n:
     title: "Help us translate"
     description: "This document is translated by the community. You can contribute on {link}. We appreciate your cooperation 🙏."
     linkLabel: "Crowdin"
+_share:
+  title: "Misskeyへノート"
+  chooseServer: "ノートするサーバーを選択してください"
+  addServer: "サーバーを追加"
+  domain: "サーバーのドメイン"
+  compatibleWith: "Misskeyと、一部のMisskeyフォークに対応しています。"
 _api:
   _permissions:
     title: "Permissions"
