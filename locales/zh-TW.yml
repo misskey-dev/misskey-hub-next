@@ -1,10 +1,10 @@
 noScript: "Javascript 目前處於禁用狀態。必須啟用 Javascript 才能瀏覽網站。"
 learnMore: "了解更多"
 loading: "載入中..."
-clickToExpand: "（クリックして展開）"
+clickToExpand: "（點擊展開）"
 _seo:
   siteName: "Misskey Hub"
-  siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
+  siteNameLong: "Misskey Hub – Misskey 專案官方網站"
   defaultTitleTagline: "貼文傳播網路"
   defaultDescription: "Misskey 是一個開源的去中心化社群網路平台。"
 _nav:
