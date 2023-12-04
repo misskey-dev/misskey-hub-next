@@ -1,9 +1,10 @@
 noScript: "Javascript 目前處於禁用狀態。必須啟用 Javascript 才能瀏覽網站。"
 learnMore: "了解更多"
 loading: "載入中..."
-clickToExpand: "（クリックして展開）"
+clickToExpand: "（點擊展開）"
 _seo:
   siteName: "Misskey Hub"
+  siteNameLong: "Misskey Hub – Misskey 專案官方網站"
   defaultTitleTagline: "貼文傳播網路"
   defaultDescription: "Misskey 是一個開源的去中心化社群網路平台。"
 _nav:
@@ -179,7 +180,7 @@ _mfmPlayground:
   disclaimer: "不一定會按照這裡顯示的方式繪製。不支援程式碼的的語法突顯。"
   mfm: "MFM"
   character: "{0} 文字"
-  domain: "表示を再現するサーバー"
+  domain: "再現顯示的伺服器。"
   noteIt: "貼文"
   clearEmojiCacheDescription: "當表情符號無法顯示時"
   clearEmojiCache: "清除表情符號的快取"
@@ -209,6 +210,17 @@ _aboutUs:
     _orgPartner:
       title: "企業和組織合作夥伴"
       description: "這些公司和組織在資金和技術上為 Misskey 的發展做出了貢獻。"
+_i18n:
+  _missing:
+    title: "請協助翻譯"
+    description: "這份文件是由社群協作翻譯的。您可以從{link}進行文件翻譯。感謝您的協助🙏"
+    linkLabel: "Crowdin"
+_share:
+  title: "Misskeyへノート"
+  chooseServer: "ノートするサーバーを選択してください"
+  addServer: "サーバーを追加"
+  domain: "サーバーのドメイン"
+  compatibleWith: "Misskeyと、一部のMisskeyフォークに対応しています。"
 _api:
   _permissions:
     title: "權限"
