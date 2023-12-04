@@ -180,7 +180,7 @@ _mfmPlayground:
   disclaimer: "不一定會按照這裡顯示的方式繪製。不支援程式碼的的語法突顯。"
   mfm: "MFM"
   character: "{0} 文字"
-  domain: "表示を再現するサーバー"
+  domain: "再現顯示的伺服器。"
   noteIt: "貼文"
   clearEmojiCacheDescription: "當表情符號無法顯示時"
   clearEmojiCache: "清除表情符號的快取"
@@ -212,8 +212,8 @@ _aboutUs:
       description: "這些公司和組織在資金和技術上為 Misskey 的發展做出了貢獻。"
 _i18n:
   _missing:
-    title: "翻訳にご協力ください"
-    description: "このドキュメントはコミュニティによる翻訳です。ドキュメントの翻訳は{link}から行えます。ご協力をお願いします🙏"
+    title: "幫助我們翻譯"
+    description: "這份文件是由社群協作翻譯的。您可以從{link}進行文件翻譯。感謝您的協助🙏"
     linkLabel: "Crowdin"
 _api:
   _permissions:
