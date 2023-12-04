@@ -1,13 +1,13 @@
 ---
-description: このガイドはDockerを使ったMisskeyセットアップ方法を説明します。
+description: 本指南介紹如何使用 Docker 安裝設置 Misskey。
 ---
 
-# Docker Composeを使ったMisskey構築
+# 使用 Docker Compose 建置 Misskey
 
 このガイドはDocker Composeを使ったMisskeyセットアップ方法を説明します。
 
 :::danger
-一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
+一旦開始使用，請勿使用伺服器的網域名稱/主機名稱重新建立資料庫！
 :::
 
 :::tip{label='前提条件'}
