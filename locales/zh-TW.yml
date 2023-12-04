@@ -212,7 +212,7 @@ _aboutUs:
       description: "這些公司和組織在資金和技術上為 Misskey 的發展做出了貢獻。"
 _i18n:
   _missing:
-    title: "幫助我們翻譯"
+    title: "請協助翻譯"
     description: "這份文件是由社群協作翻譯的。您可以從{link}進行文件翻譯。感謝您的協助🙏"
     linkLabel: "Crowdin"
 _api:
