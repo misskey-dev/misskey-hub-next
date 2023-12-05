@@ -9,7 +9,7 @@
                     <div class="w-12 h-12 mx-auto bg-accent-600/20 text-accent-600 rounded-full p-3">
                         <ShareIco class="w-6 h-6" />
                     </div>
-                    <h1 class="font-bold text-center text-lg md:text-xl">{{ $t('_share.chooseServer') }}</h1>
+                    <h1 class="font-bold text-center text-lg md:text-xl">{{ $t('_share.chooseServer') }}<div class="inline-block ml-1 text-sm px-2 bg-orange-100 text-orange-600 rounded-full">BETA</div></h1>
                     <ul class="rounded-lg border divide-y border-gray-300 dark:border-gray-600 divide-gray-300 dark:divide-gray-600">
                         <li v-for="instance in displayInstances" :key="instance.url" class="group">
                             <GNuxtLink
@@ -68,7 +68,7 @@
                     </ul>
                     <div class="text-sm text-center">
                         &copy; 2023 Misskey, syuilo, and other contributors<br>
-                        <GNuxtLink :to="localePath('/')" target="_blank" class="hover:underline underline-offset-1">Misskey Hub</GNuxtLink>
+                        <GNuxtLink to="https://misskey-hub.net/" target="_blank" class="hover:underline underline-offset-1">Misskey Hub</GNuxtLink>
                     </div>
                 </div>
             </div>

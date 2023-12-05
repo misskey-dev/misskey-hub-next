@@ -132,7 +132,8 @@ const generatedUrl = computed(() => {
         visibleAccts: (visibility.value === 'specified') ? recipents.value.split('\n').join(',') : undefined,
     };
 
-    return withQuery(joinURL(runtimeConfig.public.baseUrl, '/share/'), query);
+    const baseUrl = 'https://misskey-hub.net'; /* ←正式リリース時に runtimeConfig.public.baseUrl に置換 */
+    return withQuery(joinURL(baseUrl, '/share/'), query);
 });
 
 const generatedHtml = computed(() => '');
