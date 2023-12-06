@@ -6,72 +6,72 @@ copy: "Copier"
 _seo:
   siteName: "Misskey Hub"
   siteNameLong: "Misskey Hub – Site web officiel du projet Misskey"
-  defaultTitleTagline: "ノートでひろがるネットワーク"
-  defaultDescription: "【ノートでひろがるネットワーク】分散型SNS Misskeyの公式サイト。Misskeyのはじめかたやサーバー一覧など、Misskeyに関する情報が満載！"
+  defaultTitleTagline: "Un réseau étendu par des notes"
+  defaultDescription: "Le site officiel de Misskey, un réseau social décentralisé. Découvrez le tutoriel, la liste d'instances et plus d'information sur Misskey !"
 _nav:
   servers: "Instances"
-  docs: "ドキュメント"
-  blog: "ブログ"
-  other: "もっと！"
-  switchLang: "言語の設定"
+  docs: "Documentation"
+  blog: "Blogue"
+  other: "Plus !"
+  switchLang: "Paramètres de langue"
 _landing:
   _hero:
-    description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
-    gettingStarted: "はじめる"
+    description: "Misskey est une plateforme de réseautage social décentralisée à code source ouvert."
+    gettingStarted: "Commencer"
   _keyFeatures:
     _open:
-      title: "オープン"
-      description: "Misskeyはオープンソースのソフトウェアで、誰でも自由にMisskeyを利用できます。"
+      title: "Ouvert"
+      description: "Misskey est un logiciel à code source ouvert que n'importe qui peut utiliser librement."
     _federated:
-      title: "分散"
-      description: "Misskeyは分散型のプロトコルを実装しているため、異なるサーバーのコミュニティ同士が繋がります。"
+      title: "Décentralisé"
+      description: "Misskey implémente un protocole décentralisé de sorte que les communautés de différentes instances peuvent se connecter les unes aux autres."
     _multifunction:
-      title: "高機能"
-      description: "Misskeyは他にはない様々な機能を備えていて、プロのようにmicro-blogging可能です。"
+      title: "Plein de fonctionnalités"
+      description: "Misskey est à la fois facile à comprendre pour les débutants et rempli de fonctionnalités puissantes pour les utilisateurs avancés."
     _customizable:
-      title: "高カスタマイズ性"
-      description: "Misskeyの柔軟なWebインターフェイスにより、自分好みのUIを作れます。"
+      title: "Hautement personnalisable"
+      description: "Avec l'interface web flexible de Misskey, vous pouvez créer votre propre interface utilisateur préférée."
   _decenterized:
-    title: "Misskeyは{0}"
-    decenterizedPlatform: "分散型プラットフォーム"
+    title: "Misskey est une {0}"
+    decenterizedPlatform: "plateforme décentralisée"
     description: "Misskeyはフリーかつオープンなプロジェクトで、誰でも自由にMisskeyを使ったサーバーを作成できるため、既に様々なサーバーがインターネット上に公開されています。また重要な特徴として、Misskeyは{0}と呼ばれる分散通信プロトコルを実装しているので、どのサーバーを選んでも他のサーバーのユーザーとやりとりすることができます。これが分散型と言われる所以で、単一の運営者によって単一のURLで公開されるような、Twitterなどの他サービスとは根本的に異なっています。サーバーによって主な話題のテーマやユーザー層、言語などは異なり、自分にあったサーバーを探すのも楽しみのひとつです(もちろん自分のサーバーを作るのも一興です)。"
     activityPub: "ActivityPub"
   _features:
     _root:
-      title: "主な機能"
-      description: "Misskeyは一般的なものから特別なものまで、様々な機能を持っています。その一部を紹介します。"
+      title: "Fonctionnalités principales"
+      description: "Misskey offre une large variété de fonctionnalités uniques ! En voici une partie."
     _note:
-      title: "ノート"
+      title: "Notes"
       description: "Misskeyでは、ユーザーの投稿は「ノート」と呼ばれます。他のノートを引用したり、画像、動画、オーディオ、その他の任意のファイルを添付することもできます。"
     _federation:
-      title: "連合"
+      title: "Fédération"
       description: "オープンな分散プロトコルであるActivityPubを実装しているため、他のMisskeyサーバーだけでなく、ActivityPubをサポートする他のソフトウェアともやりとりできます。"
     _reaction:
-      title: "リアクション"
+      title: "Réactions"
       description: "ノートには「リアクション」を付けることができ、簡単・気軽に自分のフィーリングを表現して伝えることが出来ます。"
     _drive:
-      title: "ドライブ"
+      title: "Disque"
       description: "アップロードしたファイルを管理するインターフェイスがあります。そのため、お気に入りの画像をフォルダにまとめたり、再度共有することも簡単に行えます。"
     _theme:
-      title: "テーマ"
+      title: "Thèmes"
       description: "自分の好きなデザインでMisskeyを使えます。もちろんダークモードも完全サポート。自分で高度にテーマを作ることも可能です。"
     _thread:
-      title: "スレッド"
+      title: "Fils de discussion"
       description: "もちろんノートはスレッドにすることができ、気が済むまで会話を続けられます。"
     _charts:
-      title: "チャート"
+      title: "Graphiques"
       description: "Misskeyは組み込みのチャートエンジンを備えていて、サーバーの利用状況などが簡単に可視化できます。"
     _widgets:
-      title: "ウィジェット"
+      title: "Widgets"
       description: "様々な種類のウィジェットを配置し、UIを好みにカスタマイズできます。"
   _getStarted:
-    title: "Misskeyをはじめよう"
+    title: "Commencer à utiliser Misskey"
     _find:
-      title: "サーバーを見つける"
-      list: "サーバーのリスト"
+      title: "Trouver une instance"
+      list: "Liste d'instances"
     _create:
-      title: "サーバーを作成"
-      guide: "セットアップガイド"
+      title: "Créer une instance"
+      guide: "Guide d'installation"
     _docs:
       title: "さらに詳しく知る"
       docs: "ドキュメントを見る"
