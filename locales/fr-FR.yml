@@ -73,10 +73,10 @@ _landing:
       title: "Créer une instance"
       guide: "Guide d'installation"
     _docs:
-      title: "さらに詳しく知る"
-      docs: "ドキュメントを見る"
+      title: "En savoir plus"
+      docs: "Consulter la documentation"
   _donation:
-    title: "寄付のお願い"
+    title: "Demande de don"
     description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
   _sponsors:
     title: "Parrains"
@@ -88,25 +88,25 @@ _servers:
   _system:
     fetchError: "データの読み込みに失敗しました。後でもう一度お試しください。"
   _statistics:
-    notes: "ノート数"
-    users: "ユーザー数"
-    servers: "サーバー数"
+    notes: "Nombre de notes"
+    users: "Nombre d’utilisateurs"
+    servers: "Nombre d'instances"
   _search:
-    title: "絞り込み検索"
-    all: "すべて"
-    query: "キーワードで検索"
-    lang: "言語"
-    orderBy: "並び替え"
-    recomendded: "デフォルト"
-    notesCount: "ノート数"
-    usersCount: "ユーザー数"
+    title: "Recherche avancée"
+    all: "Tout"
+    query: "Recherche par mots clés"
+    lang: "Langue"
+    orderBy: "Trier par"
+    recomendded: "Par défaut"
+    notesCount: "Nombre de notes"
+    usersCount: "Nombre d’utilisateurs"
   _registerAcceptance:
-    title: "新規登録"
-    public: "開放"
-    inviteOnly: "招待のみ"
+    title: "Politique d'Inscription"
+    public: "Publique"
+    inviteOnly: "Sur invitation seulement"
   _list:
-    notFound: "指定された条件に合致するサーバーは見つかりませんでした。"
-    showMore: "もっと見る"
+    notFound: "Aucune instance qui correspond aux critères spécifiés a été trouvée."
+    showMore: "Afficher plus"
 _docs:
   title: "ドキュメント"
   description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。Misskeyの上手な使い方から、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
