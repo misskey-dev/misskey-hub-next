@@ -2,11 +2,8 @@ noScript: "現在Javascriptが無効になっています。サイトの表示�
 learnMore: "詳しく知る"
 loading: "読み込み中…"
 clickToExpand: "（クリックして展開）"
-<<<<<<< HEAD
-=======
 copy: "コピー"
 
->>>>>>> 73b2925db9b4a37a131acf052fb0a19ff85df30d
 _seo:
   siteName: "Misskey Hub"
   siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
