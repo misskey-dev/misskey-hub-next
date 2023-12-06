@@ -1,10 +1,8 @@
 // API用ファイル自動生成
-import { locales } from "@/nuxt.config";
 import * as misskey from "misskey-js";
 import yaml from "js-yaml";
 import fs from "fs";
 import path from "path";
-import { parse } from "@babel/parser";
 
 // オブジェクト obj1 にないキーだけを、元オブジェクトにマージする関数
 function mergeObjects(obj1: Record<string, any>, obj2: Record<string, any>): Record<string, any> {
@@ -50,9 +48,6 @@ export async function genApiFiles() {
 
             // レスポンスコードの説明
             _responseCodes: {},
-
-            // エラーの説明
-            _errors: {},
         }
     };
 
@@ -86,12 +81,14 @@ export async function genApiFiles() {
                     return;
                 }
 
+                /*
                 if (responseBody.schema['$ref'] === "#/components/schemas/Error") {
                     const key = Object.keys(responseBody.examples)[0];
                     if (!out._api._errors[responseBody.examples[key].value.error.id]) {
                         out._api._errors[responseBody.examples[key].value.error.id] = responseBody.examples[key].value.error.message;
                     }
                 }
+                */
             });
 
         });
@@ -118,4 +115,14 @@ export async function genApiFiles() {
         createFile(path.join(targetEPPath, `${eppath}.json`), JSON.stringify(targetObj));
     });
     console.log("エンドポイント定義上書き完了");
+
+    // スキーマを取り出す
+    const schemaSourceFilePath = path.resolve(__dirname, '../assets/data/api-schemas.ts');
+    const schemas = epj.components.schemas;
+    const schemaTsOut = ['/** This file is auto-generated */'];
+    Object.keys(schemas).forEach((schema) => {
+        schemaTsOut.push(`export const ${schema} = ${JSON.stringify(schemas[schema])};`);
+    });
+    fs.writeFileSync(schemaSourceFilePath, schemaTsOut.join('\n'));
+    console.log("APIスキーマの上書き完了");
 }

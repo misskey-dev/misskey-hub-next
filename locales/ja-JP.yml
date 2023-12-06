@@ -3,7 +3,6 @@ learnMore: "詳しく知る"
 loading: "読み込み中…"
 clickToExpand: "（クリックして展開）"
 copy: "コピー"
-
 _seo:
   siteName: "Misskey Hub"
   siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
@@ -217,21 +216,18 @@ _i18n:
     title: "翻訳にご協力ください"
     description: "このドキュメントはコミュニティによる翻訳です。ドキュメントの翻訳は{link}から行えます。ご協力をお願いします🙏"
     linkLabel: "Crowdin"
-
 _share:
   title: "Misskeyへノート"
   chooseServer: "ノートするサーバーを選択してください"
   addServer: "サーバーを追加"
   domain: "サーバーのドメイン"
   compatibleWith: "Misskeyと、一部のMisskeyフォークに対応しています。"
-
 _noteVisibility:
   public: "パブリック"
   home: "ホーム"
   followers: "フォロワー"
   specified: "ダイレクト"
   localOnly: "連合なし"
-
 _shareLinkGenerator:
   title: "共有ボタンジェネレーター"
   description: "Misskey Hubの共有ボタン中継サービスを利用して、Misskey用の共有ボタンを作成できます。"
@@ -247,7 +243,6 @@ _shareLinkGenerator:
   testLink: "共有リンクを試す"
   typeSomethingToGetLink: "本文を入力するとリンクが生成されます。"
   typeSomethingToGetButton: "本文を入力するとボタンが生成されます。"
-
 _api:
   _paramViewer:
     _header:
@@ -324,6 +319,9 @@ _api:
     admin/accounts/delete:
       post:
         description: "Untranslated / 未翻訳"
+    admin/accounts/find-by-email:
+      post:
+        description: "Untranslated / 未翻訳"
     admin/ad/create:
       post:
         description: "Untranslated / 未翻訳"
@@ -346,6 +344,18 @@ _api:
       post:
         description: "Untranslated / 未翻訳"
     admin/announcements/update:
+      post:
+        description: "Untranslated / 未翻訳"
+    admin/avatar-decorations/create:
+      post:
+        description: "Untranslated / 未翻訳"
+    admin/avatar-decorations/delete:
+      post:
+        description: "Untranslated / 未翻訳"
+    admin/avatar-decorations/list:
+      post:
+        description: "Untranslated / 未翻訳"
+    admin/avatar-decorations/update:
       post:
         description: "Untranslated / 未翻訳"
     admin/delete-all-files-of-a-user:
@@ -768,6 +778,9 @@ _api:
     following/update:
       post:
         description: "Untranslated / 未翻訳"
+    following/update-all:
+      post:
+        description: "Untranslated / 未翻訳"
     following/invalidate:
       post:
         description: "Untranslated / 未翻訳"
@@ -813,6 +826,9 @@ _api:
     get-online-users-count:
       post:
         description: "Untranslated / 未翻訳"
+    get-avatar-decorations:
+      post:
+        description: "Untranslated / 未翻訳"
     hashtags/list:
       post:
         description: "Untranslated / 未翻訳"
@@ -843,10 +859,10 @@ _api:
     i/gallery/posts:
       post:
         description: "Untranslated / 未翻訳"
-    i/get-word-muted-notes-count:
+    i/notifications:
       post:
         description: "Untranslated / 未翻訳"
-    i/notifications:
+    i/notifications-grouped:
       post:
         description: "Untranslated / 未翻訳"
     i/page-likes:
@@ -862,6 +878,27 @@ _api:
       post:
         description: "Untranslated / 未翻訳"
     i/read-announcement:
+      post:
+        description: "Untranslated / 未翻訳"
+    i/registry/get-all:
+      post:
+        description: "Untranslated / 未翻訳"
+    i/registry/get-detail:
+      post:
+        description: "Untranslated / 未翻訳"
+    i/registry/get:
+      post:
+        description: "Untranslated / 未翻訳"
+    i/registry/keys-with-type:
+      post:
+        description: "Untranslated / 未翻訳"
+    i/registry/keys:
+      post:
+        description: "Untranslated / 未翻訳"
+    i/registry/remove:
+      post:
+        description: "Untranslated / 未翻訳"
+    i/registry/set:
       post:
         description: "Untranslated / 未翻訳"
     i/unpin:
@@ -1146,6 +1183,9 @@ _api:
     users/get-frequently-replied-users:
       post:
         description: "Untranslated / 未翻訳"
+    users/featured-notes:
+      post:
+        description: "Untranslated / 未翻訳"
     users/lists/create:
       post:
         description: "Untranslated / 未翻訳"
@@ -1174,6 +1214,12 @@ _api:
       post:
         description: "Untranslated / 未翻訳"
     users/lists/create-from-public:
+      post:
+        description: "Untranslated / 未翻訳"
+    users/lists/update-membership:
+      post:
+        description: "Untranslated / 未翻訳"
+    users/lists/get-memberships:
       post:
         description: "Untranslated / 未翻訳"
     users/notes:
@@ -1215,64 +1261,10 @@ _api:
     fetch-rss:
       post:
         description: "Untranslated / 未翻訳"
-    retention:
-      post:
-        description: "Untranslated / 未翻訳"
-    admin/accounts/find-by-email:
-      post:
-        description: "Untranslated / 未翻訳"
-    admin/avatar-decorations/create:
-      post:
-        description: "Untranslated / 未翻訳"
-    admin/avatar-decorations/delete:
-      post:
-        description: "Untranslated / 未翻訳"
-    admin/avatar-decorations/list:
-      post:
-        description: "Untranslated / 未翻訳"
-    admin/avatar-decorations/update:
-      post:
-        description: "Untranslated / 未翻訳"
-    following/update-all:
-      post:
-        description: "Untranslated / 未翻訳"
-    get-avatar-decorations:
-      post:
-        description: "Untranslated / 未翻訳"
-    i/notifications-grouped:
-      post:
-        description: "Untranslated / 未翻訳"
-    i/registry/get-all:
-      post:
-        description: "Untranslated / 未翻訳"
-    i/registry/get-detail:
-      post:
-        description: "Untranslated / 未翻訳"
-    i/registry/get:
-      post:
-        description: "Untranslated / 未翻訳"
-    i/registry/keys-with-type:
-      post:
-        description: "Untranslated / 未翻訳"
-    i/registry/keys:
-      post:
-        description: "Untranslated / 未翻訳"
-    i/registry/remove:
-      post:
-        description: "Untranslated / 未翻訳"
-    i/registry/set:
-      post:
-        description: "Untranslated / 未翻訳"
-    users/featured-notes:
-      post:
-        description: "Untranslated / 未翻訳"
-    users/lists/update-membership:
-      post:
-        description: "Untranslated / 未翻訳"
-    users/lists/get-memberships:
-      post:
-        description: "Untranslated / 未翻訳"
     fetch-external-resources:
+      post:
+        description: "Untranslated / 未翻訳"
+    retention:
       post:
         description: "Untranslated / 未翻訳"
   _responseCodes:
@@ -1284,152 +1276,3 @@ _api:
     "418": "I'm Ai"
     "429": "レートリミット"
     "500": "サーバー内部エラー"
-  _errors:
-    3d81ceae-475f-4600-b2a8-2bc116157532: "Invalid param."
-    1384574d-a912-4b81-8601-c7b1c4085df1: "Credential required."
-    b0a7f5f8-dc2f-4171-b91f-de88ad238e14: "Authentication failed. Please ensure your token is correct."
-    60c46cd1-f23a-46b1-bebe-5d2b73951a84: "You sent a request to Ai-chan, Misskey's showgirl, instead of the server."
-    5d37dbcb-891e-41ca-a3d6-e690c97775ac: "Internal error occurred. Please contact us if the error persists."
-    ccac9863-3a03-416e-b899-8a64041118b1: "No such ad."
-    b7aa1727-1354-47bc-a182-3a9c3973d300: "No such ad."
-    ecad8040-a276-4e85-bda9-015a708d291e: "No such announcement."
-    d3aae5a7-6372-4cb4-b61c-f511ffc2d7cc: "No such announcement."
-    caf3ca38-c6e5-472e-a30c-b05377dcc240: "No such file."
-    fc46b5a4-6b92-4c33-ac66-b806659bb5cf: "No such file."
-    e2785b66-dca3-4087-9cac-b93c541cc425: "No such emoji."
-    be83669b-773a-44b7-b1f8-e5e5170ac3c2: "No such emoji."
-    684dec9d-a8c2-4364-9aa8-456c49cb1dc8: "No such emoji."
-    f1380b15-3760-4c6c-a1db-5c3aaf1cbd49: "Invalid date-time format"
-    ee449fbe-af2a-453b-9cae-cf2fe7c895fc: "No such note."
-    fb8c92d3-d4e5-44e7-b3d4-800d5cef8b2c: "Invalid URL"
-    de0d6ecd-8e0a-4253-88ff-74bc89ae3d45: "No such role."
-    07dc7d34-c0d8-49b7-96c6-db3ce64ee0b3: "No such role."
-    cd23ef55-09ad-428a-ac61-95a45e124b32: "No such role."
-    6503c040-6af4-4ed9-bf07-f2dd16678eab: "No such role."
-    6e519036-a70d-4c76-b679-bc8fb18194e2: "No such role."
-    224eff5e-2488-4b18-b3e7-f50d94421648: "No such role."
-    95063e93-a283-4b8b-9aa5-bcdb8df69a7f: "No such user list."
-    b34dcf9d-348f-44bb-99d0-6c9314cfe2df: "No such antenna."
-    850926e0-fd3b-49b6-b69a-b28a5dbd82fe: "No such antenna."
-    c06569fb-b025-4f23-b22d-1fcd20d2816b: "No such antenna."
-    10c673ac-8852-48eb-aa1f-f5b67f069290: "No such antenna."
-    d5826d14-3982-4d2e-8011-b9e9f02499ef: "Rate limit exceeded. Please try again later."
-    dc94d745-1262-4e63-a17d-fecaa57efc82: "No such object."
-    dce83913-2dc6-4093-8a7b-71dbb11718a3: "No such app."
-    92f93e63-428e-4f2f-a5a4-39e1407fe998: "No such app."
-    bd72c97d-eba7-4adb-a467-f171b8847250: "No such session."
-    fcab192a-2c5a-43b7-8ad8-9b7054d8d40d: "No such app."
-    7cc4f851-e2f1-4621-9633-ec9e1d00c01e: "No such user."
-    8621d8bf-c358-4303-a066-5ea78610eb3f: "No such user."
-    cd1e9f3e-5a12-4ab4-96f6-5d0a2cc32050: "No such file."
-    c0031718-d573-4e85-928e-10039f1fbb68: "No such channel."
-    6f6c314b-7486-4897-8966-c04a66a02923: "No such channel."
-    4d0eeeba-a02c-4c3c-9966-ef60d38d2e7f: "No such channel."
-    19959ee9-0153-4c51-bbd9-a98c49dc59d6: "No such channel."
-    f9c5467f-d492-4c3c-9a8d-a70dacc86512: "No such channel."
-    4938f5f3-6167-4c04-9149-6607b7542861: "No such channel."
-    353c68dd-131a-476c-aa99-88a345e83668: "No such channel."
-    d6e76cc0-a1b5-4c7c-a287-73fa9c716dcf: "No such clip."
-    b80525c6-97f7-49d7-a42d-ebccd49cfd52: "No such clip."
-    920f7c2d-6208-4b76-8082-e632020f5883: "You cannot create clip any more."
-    70ca08ba-6865-4630-b6fb-8494759aa754: "No such clip."
-    1d7645e6-2b6d-4635-b0fe-fe22b0e72e00: "No such clip."
-    c3c5fe33-d62c-44d2-9ea5-d997703f5c20: "No such clip."
-    b4d92d70-b216-46fa-9a3f-a8c811699257: "No such clip."
-    4c2aaeae-80d8-4250-9606-26cb1fdb77a5: "No such clip."
-    2603966e-b865-426c-94a7-af4a01241dc1: "No such clip."
-    c118ece3-2e4b-4296-99d1-51756e32d232: "No such file."
-    f449b209-0c60-4e51-84d5-29486263bfd4: "Invalid file name."
-    908939ec-e52b-4458-b395-1025195cea58: "No such file."
-    067bc436-2718-4795-b0fb-ecbe43949e31: "No such file."
-    395e7156-f9f0-475e-af89-53c3c23080c2: "Invalid file name."
-    53326628-a00d-40a6-a3cd-8975105c0f95: "No such folder."
-    1069098f-c281-440f-b085-f9932edbe091: "No such folder."
-    d74ab9eb-bb09-4bba-bf24-fb58f761e1e9: "No such folder."
-    f7974dac-2c0d-4a27-926e-23583b28e98e: "No such folder."
-    fcd2eef9-a9b2-4c4f-8624-038099e90aa5: "No such user."
-    5b12c78d-2b28-4dca-99d2-f56139b42ff8: "No such user."
-    14318698-f67e-492a-99da-5353a5ac52be: "No such user."
-    b77e6ae6-a3e5-40da-9cc8-c240115479cc: "No such user."
-    66ce1645-d66c-46bb-8b79-96739af885bd: "No such user."
-    4e68c551-fc4c-4e46-bb41-7d4a37bf9dab: "No such user."
-    abc2ffa6-25b2-4380-ba99-321ff3a94555: "No such user."
-    ae52f367-4bd7-4ecd-afc6-5672fff427f5: "No such post."
-    56c06af3-1287-442f-9701-c93f7c4a62ff: "No such post."
-    1137bf14-c5b0-4604-85bb-5b5371b1cd45: "No such post."
-    c32e6dd0-b555-4413-925e-b3757d19ed84: "No such post."
-    110ee688-193e-4a3a-9ecf-c167b2e6981e: "No such hashtag."
-    e5b3b9f0-2b8f-4b9f-9c1f-8c5c1b2e1b1a: "User is deleted."
-    56734f8b-3928-431e-bf80-6ff87df40cb3: "No such note."
-    454170ce-9d63-4a43-9da1-ea10afe81e21: "No such note."
-    539f3a45-f215-4f81-a9a8-31293640207f: "No such avatar file."
-    87a9bb19-111e-4e37-81d3-a3e7426453b0: "You cannot create webhook any more."
-    50f614d9-3047-4f7e-90d8-ad6b2d5fb098: "No such webhook."
-    fb0fea69-da18-45b1-828d-bd4fd1612518: "No such webhook."
-    bae73e5a-5522-4965-ae19-3a8688e71d82: "No such webhook."
-    8b165dd3-6f37-4557-8db1-73175d63c641: "You have exceeded the limit for creating an invitation code."
-    cd4f9ae4-7854-4e3e-8df9-c296f051e634: "No such invite code."
-    6fef56f3-e765-4957-88e5-c6f65329b8a5: "No such user."
-    b851d00b-8ab1-4a56-8b1b-e24187cb48ef: "No such user."
-    5e0a5dff-1e94-4202-87ae-4d9c89eb2271: "No such user."
-    9b6728cf-638c-4aa1-bedb-e07d8101474d: "No such user."
-    47db1a1c-b0af-458d-8fb4-986e4efafe1e: "No such note."
-    e1035875-9551-45ec-afa8-1ded1fcb53c8: "No such note."
-    b5c90186-4ab0-49c8-9bba-a1f76c282ba4: "No such renote target."
-    490be23f-8c1f-4796-819f-94cb4f9d1630: "No such note."
-    6dd26674-e060-4816-909a-45ba3f4da458: "No such note."
-    80848a2c-398f-4343-baa9-df1d57696c56: "No such note."
-    0332fc13-6ab2-4427-ae80-a9fadffd1a6b: "Global timeline has been disabled."
-    620763f4-f621-4533-ab33-0577a1a3c342: "Hybrid timeline has been disabled."
-    45a6eb02-7695-4393-b023-dd3be9aaaefd: "Local timeline has been disabled."
-    ecafbd2e-c283-4d6d-aecb-1a0a33b75396: "No such note."
-    263fff3d-d0e1-4af4-bea7-8408059b451a: "No such note."
-    033d0620-5bfe-4027-965d-980b0c85a3ea: "No such note."
-    764d9fce-f9f2-4a0e-92b1-6ceac9a7ad37: "No such note."
-    12908022-2e21-46cd-ba6a-3edaf6093f46: "No such note."
-    0b44998d-77aa-4427-80d0-d2c9b8523011: "Search of notes unavailable."
-    24fcbfc6-2e37-42b6-8388-c29b3861a08d: "No such note."
-    5ff67ada-ed3b-2e71-8e87-a1a421e177d2: "No such note."
-    bddd57ac-ceb3-b29d-4334-86ea5fae481a: "No such note."
-    bea9b03f-36e0-49c5-a4db-627a029f8971: "No such note."
-    efd4a259-2442-496b-8dd7-b255aa1a160f: "No such note."
-    8fb1fbd5-e476-4c37-9fb0-43d55b63a2ff: "No such list."
-    b7b97489-0f66-4b12-a5ff-b21bd63f6e1c: "No such file."
-    eb0c6e1d-d519-4764-9486-52a7e1c6392a: "No such page."
-    cc98a8a2-0dc3-4123-b198-62c71df18ed3: "No such page."
-    222120c0-3ead-4528-811b-b96f233388d7: "No such page."
-    a0d41e20-1993-40bd-890e-f6e560ae648e: "No such page."
-    21149b9e-3616-4778-9592-c4ce89f5a864: "No such page."
-    de1623ef-bbb3-4289-a71e-14cfa83d9740: "No such flash."
-    c07c1491-9161-4c5c-9d75-01906f911f73: "No such flash."
-    f0d34a1a-d29a-401d-90ba-1982122b5630: "No such flash."
-    afe8424a-a69e-432d-a5f2-2f0740c62410: "No such flash."
-    611e13d2-309e-419a-a5e4-e0422da39b02: "No such flash."
-    d785b897-fcd3-4fe9-8fc3-b85c26e6c932: "No such note."
-    de5502bf-009a-4639-86c1-fec349e46dcb: "No such role."
-    30aaaee3-4792-48dc-ab0d-cf501a575ac5: "No such role."
-    eb70323a-df61-4dd4-ad90-89c83c7cf26e: "No such role."
-    " b09d8066-8064-5613-efb6-0e963b21d012": "No such registration."
-    27fa5435-88ab-43de-9360-387de88727cd: "No such user."
-    63e4aba4-4156-4e53-be25-c9559e42d71b: "No such user."
-    e6965129-7b2a-40a4-bae2-cd84cd434822: "No such user."
-    0cf21a28-7715-4f39-a20d-777bfdb8d138: "You cannot create user list any more."
-    78436795-db79-42f5-b1e2-55ea2cf19166: "No such list."
-    a8af4a82-0980-4cc4-a6af-8b0ffd54465e: "No such user."
-    7f44670e-ab16-43b8-b4c1-ccd2ee89cc02: "No such list."
-    2214501d-ac96-4049-b717-91e42272a711: "No such list."
-    7bc05c21-1d7a-41ae-88f1-66820f4dc686: "No such list."
-    7dbaf3cf-7b42-4b8f-b431-b3919e580dbe: "No such user list."
-    baedb33e-76b8-4b0c-86a8-9375c0a7b94b: "No such user list."
-    796666fe-3dff-4d39-becb-8a5932c1d5b7: "No such list."
-    e9c105b2-c595-47de-97fb-7f7c2c33e92f: "You cannot create user list any more."
-    27e494ba-2ac2-48e8-893b-10d4d8c2387b: "No such user."
-    673a7dd2-6924-1093-e0c0-e68456ceae5c: "Reactions of the user is not public."
-    1acefcb5-0959-43fd-9685-b48305736cb5: "No such user."
-    ef7b9be4-9cba-4e6f-ab41-90ed171c7d3c: "Failed to resolve remote user."
-    cb865949-8af5-4062-a88c-ef55e8786d1d: "No such user who has the email address."
-    97a1e8e7-c0f7-47d2-957a-92e61256e01a: "No such key."
-    ac3ed68a-62f0-422b-a7bc-d5e09e8f6a6a: "No such key."
-    1fac4e8a-a6cd-4e39-a4a5-3a7e11f1b019: "No such key."
-    50a70314-2d8a-431b-b433-efa5cc56444c: "Translate of notes unavailable."
-    bb774091-7a15-4a70-9dc5-6ac8cf125856: "External resource returned invalid schema."

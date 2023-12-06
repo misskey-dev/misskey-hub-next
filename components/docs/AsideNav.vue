@@ -12,13 +12,13 @@
             ]"
         >
             <component
-                :is="(!isEPDocs || link._extension === 'json') ? GNuxtLink : 'button'"
+                :is="(!isEPDocs || (isEPDocs && link._extension === 'json')) ? GNuxtLink : 'button'"
 
-                v-bind="(!isEPDocs || link._extension === 'json') ? {
+                v-bind="(!isEPDocs || (isEPDocs && link._extension === 'json')) ? {
                     to: link._path,
                 } : {}"
 
-                v-on="(!isEPDocs || link._extension === 'json') ? {} : {
+                v-on="(!isEPDocs || (isEPDocs && link._extension === 'json')) ? {} : {
                     'click': () => {
                         if (!isEPDocs) return;
                         manualOpen[link._path] = !manualOpen[link._path] ?? true;
@@ -38,7 +38,7 @@
                         <ArrowIco 
                             :class="[
                                 'transition-transform',
-                                (path.includes(link._path) || manualOpen[link._path]) && 'rotate-90'
+                                ((path.includes(link._path) && (manualOpen[link._path] !== false)) || manualOpen[link._path]) && 'rotate-90'
                             ]"
                         />
                     </div>
@@ -47,7 +47,7 @@
             </component>
             <AsideNav
                 v-if="link.children && link.children.filter((v) => !isSamePath(v._path, link._path)).length > 0"
-                v-show="path.includes(link._path) || manualOpen[link._path]"
+                v-show="(path.includes(link._path) && (manualOpen[link._path] !== false)) || manualOpen[link._path]"
                 :links="[link]"
                 :isEPDocs="isEPDocs"
                 :depth="depth + 1"

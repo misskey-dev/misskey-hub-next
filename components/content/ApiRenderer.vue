@@ -2,7 +2,7 @@
     <div class="space-y-4">
         <div class="markdown-body">
             <div class="font-semibold"><GNuxtLink :to="localePath('/docs/for-developers/api/endpoints/')">{{ $t('_api._endpoints.title') }}</GNuxtLink></div>
-            <h1 class="!mt-0 font-mono">{{ apiData.title }}</h1>
+            <h1 class="!mt-0 font-mono">/{{ apiData.title }}</h1>
         </div>
         <div class="space-y-8" v-for="detail, method in apiData.data">
             <div class="markdown-body">
