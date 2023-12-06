@@ -42,7 +42,7 @@ _landing:
       description: "Misskey offre une large variété de fonctionnalités uniques ! En voici une partie."
     _note:
       title: "Notes"
-      description: "Misskeyでは、ユーザーの投稿は「ノート」と呼ばれます。他のノートを引用したり、画像、動画、オーディオ、その他の任意のファイルを添付することもできます。"
+      description: "Sur Misskey, les messages des utilisateurs sont appelés des « notes ». Vous pouvez citer les notes et joindre plusieurs images, vidéos, clips audio ou quoi que ce soit d'autre."
     _federation:
       title: "Fédération"
       description: "オープンな分散プロトコルであるActivityPubを実装しているため、他のMisskeyサーバーだけでなく、ActivityPubをサポートする他のソフトウェアともやりとりできます。"
