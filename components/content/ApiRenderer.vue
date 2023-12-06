@@ -44,11 +44,13 @@
                 <summary class="cursor-pointer outline-none p-2 border dark:border-slate-800 rounded-lg bg-white dark:bg-slate-700 shadow-md group-open:rounded-b-none group-open:bg-slate-200 dark:group-open:bg-slate-800 group-open:shadow-none group-open:border-b-0">
                     <h3 class="inline-block font-bold text-lg">
                         <span
-                            class="text-[75%] font-mono align-center inline-block leading-none bg-sky-600 py-0.5 px-1 mr-1 rounded text-white"
+                            class="text-[75%] font-mono align-center inline-block leading-none py-0.5 px-1 mr-1 rounded text-white"
                             :class="{
                                 'bg-green-600': (code >= 200 && code <= 299),
                                 'bg-yellow-600': (code >= 300 && code <= 399),
-                                'bg-red-600': (code >= 400 && code <= 599),
+                                'bg-orange-600': (code >= 400 && code <= 499),
+                                'bg-red-600': (code >= 500 && code <= 599),
+                                'bg-sky-600': (code < 200 || code > 600 || !code),
                             }"
                         >{{ code }}</span>
                         {{ code >= 400 ? $t('_api._apiRenderer.error') : $t('_api._apiRenderer.responseBody') }} <small>{{ $t(`_api._responseCodes[${code}]`) }}</small>
@@ -88,11 +90,14 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <GDetails summary="Raw JSON Schema">
+                            <MDC :value="`\`\`\`json\n${JSON.stringify(res.schema, null, 2)}\n\`\`\``" />
+                        </GDetails>
                     </template>
                 </div>
             </details>
 
-            <div class="markdown-body" >
+            <div class="markdown-body">
             </div>
         </div>
         <pre>
