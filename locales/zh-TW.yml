@@ -240,7 +240,7 @@ _shareLinkGenerator:
   recipents: "指定接收訊息的帳號（以換行符號區分）"
   resultLink: "連結生成結果"
   resultButton: "分享按鈕的範例"
-  testLink: "使用分享連結"
+  testLink: "測試分享連結"
   typeSomethingToGetLink: "輸入本文後將生成連結。"
   typeSomethingToGetButton: "輸入本文後將生成按鈕。"
 _api:
