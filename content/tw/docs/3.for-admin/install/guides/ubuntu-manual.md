@@ -1,4 +1,4 @@
-# Ubuntu版Misskeyインストール方法詳説
+# 在 Ubuntu 安裝 Misskey 的詳細說明
 
 ## その他のMisskeyインストール方法
 

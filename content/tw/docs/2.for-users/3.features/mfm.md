@@ -23,7 +23,7 @@ MFM 代表 Markup language For Misskey，是一種專有的標記語言，可以
 
 「@ + 使用者名稱」可用來表示特定使用者。
 :::tip
-有關提及的更多信息，請參閱[此處](./mention.md)。
+有關提及的更多資訊，請參閱[此處](./mention.md)。
 :::
 
 ```
@@ -42,7 +42,7 @@ MFM 代表 Markup language For Misskey，是一種專有的標記語言，可以
 
 「# + 標籤」來表示主題標籤。
 :::tip
-有關主題標籤的更多信息，請參閱[此處](./hashtag.md)。
+有關主題標籤的更多資訊，請參閱[此處](./hashtag.md)。
 :::
 
 ```
