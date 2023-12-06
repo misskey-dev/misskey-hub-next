@@ -35,6 +35,10 @@ const createFile = (filename: string, data: string): void => {
     });
 };
 
+function getSchemaKeys(content: any): string[] | null {
+    return content["application/json"]?.schema?.properties ? Object.keys(content["application/json"].schema.properties) : null;
+}
+
 /** API関連のファイルを自動生成 */
 export async function genApiFiles() {
 
@@ -53,7 +57,7 @@ export async function genApiFiles() {
 
     // 権限
     misskey.permissions.forEach((permission) => {
-        out._api._permissions[permission] = 'Untranslated / 未翻訳';
+        out._api._permissions[permission] = '（説明がありません）';
     });
 
     // エンドポイント
@@ -67,14 +71,21 @@ export async function genApiFiles() {
 
             // 各エンドポイントのページ要素に合わせる
             out._api._endpoints[sanitizedPathName][method] = {
-                description: 'Untranslated / 未翻訳',
+                description: '（説明がありません）',
             };
+
+            if (getSchemaKeys(epj.paths[path][method].requestBody?.content ?? {}) !== null) {
+                out._api._endpoints[sanitizedPathName][method]._requestBody = Object.fromEntries(getSchemaKeys(epj.paths[path][method].requestBody.content)!.map((v) => [v, '（説明がありません）']));
+            }
 
             Object.keys(epj.paths[path][method].responses).forEach((responseCode) => {
                 const responseBody = epj.paths[path][method].responses[responseCode].content ? epj.paths[path][method].responses[responseCode].content["application/json"] : null;
 
                 if (!out._api._responseCodes[responseCode]) {
                     out._api._responseCodes[responseCode] = epj.paths[path][method].responses[responseCode].description;
+                    if (getSchemaKeys(epj.paths[path][method].responses[responseCode].content ?? {}) !== null) {
+                        out._api._endpoints[sanitizedPathName][method]._response = Object.fromEntries(getSchemaKeys(epj.paths[path][method].responses[responseCode].content)!.map((v) => [v, '（説明がありません）']));
+                    }
                 }
 
                 if (!responseBody) {
