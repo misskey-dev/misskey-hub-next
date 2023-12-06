@@ -88,7 +88,7 @@ export default defineNuxtConfig({
 		head: {
 			link: [
 				{ rel: 'stylesheet', href: '/fonts/fonts.css' },
-				{ rel: 'apple-touch-icon', href: '/img/icon/apple-touch-icon.png' },
+				{ rel: 'apple-touch-icon', href: '/img/icons/apple-touch-icon.png' },
 				{ rel: 'shortcut icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
 				{ rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
 			],

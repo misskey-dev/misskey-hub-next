@@ -8,11 +8,21 @@ const nuxtApp = useNuxtApp();
 
 const { t, locale, locales } = useI18n();
 const route = useRoute();
+const router = useRouter();
 const colorMode = useColorMode();
 const baseUrl = useRuntimeConfig().public.baseUrl as string;
 
+router.beforeEach((to, from) => {
+    if (to.path === from.path) return;
+    if (!NProgress.isStarted()) {
+        NProgress.start();
+    }
+})
+
 nuxtApp.hook('page:start', () => {
-    NProgress.start();
+    if (!NProgress.isStarted()) {
+        NProgress.start();
+    }
 });
 nuxtApp.hook('page:finish', () => {
     nextTick(() => {

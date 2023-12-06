@@ -2,10 +2,12 @@ noScript: "現在Javascriptが無効になっています。サイトの表示�
 learnMore: "詳しく知る"
 loading: "読み込み中…"
 clickToExpand: "（クリックして展開）"
+copy: "コピー"
 _seo:
   siteName: "Misskey Hub"
+  siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
   defaultTitleTagline: "ノートでひろがるネットワーク"
-  defaultDescription: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
+  defaultDescription: "【ノートでひろがるネットワーク】分散型SNS Misskeyの公式サイト。Misskeyのはじめかたやサーバー一覧など、Misskeyに関する情報が満載！"
 _nav:
   servers: "サーバー"
   docs: "ドキュメント"
@@ -107,7 +109,7 @@ _servers:
     showMore: "もっと見る"
 _docs:
   title: "ドキュメント"
-  description: "Misskeyの上手なつかいかたから、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
+  description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。Misskeyの上手な使い方から、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
   indexTitle: "目次ページ"
   _contribute:
     editThis: "このページを編集"
@@ -209,6 +211,38 @@ _aboutUs:
     _orgPartner:
       title: "企業・団体パートナー"
       description: "こちらの企業・団体から、金銭的・技術的な観点でMisskeyの開発へご協力いただいております。"
+_i18n:
+  _missing:
+    title: "翻訳にご協力ください"
+    description: "このドキュメントはコミュニティによる翻訳です。ドキュメントの翻訳は{link}から行えます。ご協力をお願いします🙏"
+    linkLabel: "Crowdin"
+_share:
+  title: "Misskeyへノート"
+  chooseServer: "ノートするサーバーを選択してください"
+  addServer: "サーバーを追加"
+  domain: "サーバーのドメイン"
+  compatibleWith: "Misskeyと、一部のMisskeyフォークに対応しています。"
+_noteVisibility:
+  public: "パブリック"
+  home: "ホーム"
+  followers: "フォロワー"
+  specified: "ダイレクト"
+  localOnly: "連合なし"
+_shareLinkGenerator:
+  title: "共有ボタンジェネレーター"
+  description: "Misskey Hubの共有ボタン中継サービスを利用して、Misskey用の共有ボタンを作成できます。"
+  body: "本文"
+  bodyWarning: "どのサーバーでも共有できるようにするため、カスタム絵文字は使用できません。"
+  url: "URL"
+  urlCaption: "任意。本文の後ろに挿入されます。"
+  settings: "詳細設定"
+  visibility: "公開範囲"
+  recipents: "ダイレクトを受け取る人のacct（改行区切り）"
+  resultLink: "リンク生成結果"
+  resultButton: "共有ボタンのサンプル"
+  testLink: "共有リンクを試す"
+  typeSomethingToGetLink: "本文を入力するとリンクが生成されます。"
+  typeSomethingToGetButton: "本文を入力するとボタンが生成されます。"
 _api:
   _permissions:
     title: "権限"

@@ -53,6 +53,7 @@ const route = useRoute();
                 <div :class="$style.slimPageRoot">
                     <slot />
                 </div>
+                <GFooter class="mt-12 rounded-tl-3xl lg:rounded-tl-none bg-white dark:bg-slate-950" />
             </main>
         </div>
     </div>

@@ -1,7 +1,6 @@
-# GitHub Actionsを使用してDocker Hubへpushする方法
+# 如何使用 GitHub Actions 推送到 Docker Hub
 
-[/.github/workflows/docker.yml](https://github.com/misskey-dev/misskey/blob/develop/.github/workflows/docker.yml) に\
-GitHub ActionによりDocker Hubへpushするワークフローが記述されています。
+[/.github/workflows/docker.yml](https://github.com/misskey-dev/misskey/blob/develop/.github/workflows/docker.yml) 描述了使用 GitHub Action 推送到 Docker Hub 的工作流程。
 
 オリジナルリポジトリでは、リリースされたタイミングで `latest`, `<リリース名>` それぞれのタグでDocker Hubにpushされます。\
 \

@@ -13,7 +13,12 @@ export default <NavSection[]>[
                 i18n: "_aidConverter.title",
                 description: "_aidConverter.description",
                 to: "/tools/aid-converter/",
-            }
-        ]
-    }
+            },
+            {
+                i18n: "_shareLinkGenerator.title",
+                description: "_shareLinkGenerator.description",
+                to: "/tools/share-link-generator/",
+            },
+        ],
+    },
 ];

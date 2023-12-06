@@ -23,7 +23,7 @@ MFM 代表 Markup language For Misskey，是一種專有的標記語言，可以
 
 「@ + 使用者名稱」可用來表示特定使用者。
 :::tip
-有關提及的更多信息，請參閱[此處](./mention.md)。
+有關提及的更多資訊，請參閱[此處](./mention.md)。
 :::
 
 ```
@@ -42,7 +42,7 @@ MFM 代表 Markup language For Misskey，是一種專有的標記語言，可以
 
 「# + 標籤」來表示主題標籤。
 :::tip
-有關主題標籤的更多信息，請參閱[此處](./hashtag.md)。
+有關主題標籤的更多資訊，請參閱[此處](./hashtag.md)。
 :::
 
 ```
@@ -98,7 +98,7 @@ https://example.com
 可以將文字顯示为粗體来強調。
 
 ```
-**太字**
+**粗體**
 ```
 
 <MfmPreview text="**太字**"></MfmPreview>
@@ -135,7 +135,7 @@ https://example.com
 
 ### 程式碼(内嵌)
 
-在行內用高亮度顯示，例如程式碼語法。
+程式碼的行內語法突出顯示。
 
 ```
 `<: "Hello, world!"`
@@ -143,7 +143,7 @@ https://example.com
 
 ### 程式碼(區塊)
 
-在區塊中用高亮度顯示，例如複數行的程式碼語法。
+在區塊中用突出顯示，例如複數行的程式碼語法。
 
 ```
 ~ (#i, 100) {
@@ -159,9 +159,9 @@ https://example.com
 將內容上下或左右翻轉。
 
 ```
-$[flip Misskey 擴展了聯邦宇宙的世界]
-$[flip.v Misskey 擴展了聯邦宇宙的世界]
-$[flip.h,v Misskey 擴展了聯邦宇宙的世界]
+$[flip Misskey擴展了聯邦宇宙的世界]
+$[flip.v Misskey擴展了聯邦宇宙的世界]
+$[flip.h,v Misskey擴展了聯邦宇宙的世界]
 ```
 
 <MfmPreview text="$[flip MisskeyでFediverseの世界が広がります]
@@ -173,10 +173,10 @@ $[flip.h,v MisskeyでFediverseの世界が広がります]"></MfmPreview>
 您可以設定顯示內容的字型
 
 ```
-$[font.serif MisskeyでFediverseの世界が広がります]
-$[font.monospace MisskeyでFediverseの世界が広がります]
-$[font.cursive MisskeyでFediverseの世界が広がります]
-$[font.fantasy MisskeyでFediverseの世界が広がります]
+$[font.serif Misskey擴展了聯邦宇宙的世界]
+$[font.monospace Misskey擴展了聯邦宇宙的世界]
+$[font.cursive Misskey擴展了聯邦宇宙的世界]
+$[font.fantasy Misskey擴展了聯邦宇宙的世界]
 ```
 
 <MfmPreview text="$[font.serif MisskeyでFediverseの世界が広がります]
@@ -189,7 +189,7 @@ $[font.fantasy MisskeyでFediverseの世界が広がります]"></MfmPreview>
 可以模糊內容。將滑鼠懸停在其上時可以清楚地看到它。
 
 ```
-$[blur MisskeyでFediverseの世界が広がります]
+$[blur Misskey擴展了聯邦宇宙的世界]
 ```
 
 <MfmPreview text="$[blur MisskeyでFediverseの世界が広がります]"></MfmPreview>
@@ -211,8 +211,8 @@ misskey 検索
 顏色使用 3、4 或 6 位顏色代碼表示。
 
 ```
-$[fg.color=f00 赤字]
-$[bg.color=ff0 黄背景]
+$[fg.color=f00 紅色字]
+$[bg.color=ff0 黃色背景]
 ```
 
 <MfmPreview text="$[fg.color=f00 赤字]
@@ -351,7 +351,7 @@ $[sparkle 🍮]
 
 <MfmPreview text="<plain>**bold** @mention #hashtag `code` $[x2 🍮]</plain>"></MfmPreview>
 
-## 為開發人員提供的信息
+## 為開發人員提供的資訊
 
 MFM 的解析器實作會作為函式庫發布，可以輕鬆地將 MFM 合併到客戶端。
 

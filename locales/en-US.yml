@@ -1,11 +1,13 @@
 noScript: "Javascript is currently disabled. Please enable it as JavaScript is required for site functionality."
 learnMore: "Learn More"
 loading: "Loading..."
-clickToExpand: "（クリックして展開）"
+clickToExpand: "(Click to expand)"
+copy: "Copy"
 _seo:
   siteName: "Misskey Hub"
+  siteNameLong: "Misskey Hub – Official website of the Misskey Project"
   defaultTitleTagline: "A Network Expanding with Notes"
-  defaultDescription: "Misskey is an open-source decentralized social networking platform."
+  defaultDescription: "This is the official site for Misskey, a decentralized social networking software. Find out how to get started, a list of servers, and lots more information about Misskey!"
 _nav:
   servers: "Servers"
   docs: "Docs"
@@ -209,6 +211,38 @@ _aboutUs:
     _orgPartner:
       title: "Corporate & Organization Partners"
       description: "These companies and organizations have contributed financially and technically to the development of Misskey."
+_i18n:
+  _missing:
+    title: "Help us translate"
+    description: "This document is translated by the community. You can contribute on {link}. We appreciate your cooperation 🙏."
+    linkLabel: "Crowdin"
+_share:
+  title: "Note to Misskey"
+  chooseServer: "Choose the server you want to note"
+  addServer: "Add Server"
+  domain: "Server domain"
+  compatibleWith: "Compatible with Misskey and certain Misskey forks."
+_noteVisibility:
+  public: "Public"
+  home: "Home"
+  followers: "Followers"
+  specified: "Direct"
+  localOnly: "Defederate"
+_shareLinkGenerator:
+  title: "Share Button Generator"
+  description: "Create share buttons for Misskey using the Misskey Hub's url share relay service."
+  body: "Body"
+  bodyWarning: "You can't use custom emojis in order to make them compatible with any server."
+  url: "URL"
+  urlCaption: "Optional. Inserted after the body."
+  settings: "Advanced Settings"
+  visibility: "Visibility"
+  recipents: "Acct of the person receiving the direct (enter on a new line separator)"
+  resultLink: "Generated results of shared links"
+  resultButton: "Sample share button"
+  testLink: "Test the sharing link"
+  typeSomethingToGetLink: "Enter the body to generate sharing link."
+  typeSomethingToGetButton: "Enter the body to generate share button code."
 _api:
   _permissions:
     title: "Permissions"

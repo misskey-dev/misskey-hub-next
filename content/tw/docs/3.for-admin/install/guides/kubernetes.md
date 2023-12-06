@@ -1,6 +1,6 @@
-# Kubernetes/TrueNASを使ったMisskey構築
+# 使用 Kubernetes/TrueNAS 建置 Misskey
 
-このガイドでは、Kubernetes と HelmChartを使用したMisskeyセットアップ方法について説明します。
+本指南說明如何使用 Kubernetes 和 HelmChart 設定 Misskey。
 
 :::danger
 一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！

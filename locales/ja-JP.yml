@@ -2,6 +2,11 @@ noScript: "現在Javascriptが無効になっています。サイトの表示�
 learnMore: "詳しく知る"
 loading: "読み込み中…"
 clickToExpand: "（クリックして展開）"
+<<<<<<< HEAD
+=======
+copy: "コピー"
+
+>>>>>>> 73b2925db9b4a37a131acf052fb0a19ff85df30d
 _seo:
   siteName: "Misskey Hub"
   siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
@@ -215,6 +220,37 @@ _i18n:
     title: "翻訳にご協力ください"
     description: "このドキュメントはコミュニティによる翻訳です。ドキュメントの翻訳は{link}から行えます。ご協力をお願いします🙏"
     linkLabel: "Crowdin"
+
+_share:
+  title: "Misskeyへノート"
+  chooseServer: "ノートするサーバーを選択してください"
+  addServer: "サーバーを追加"
+  domain: "サーバーのドメイン"
+  compatibleWith: "Misskeyと、一部のMisskeyフォークに対応しています。"
+
+_noteVisibility:
+  public: "パブリック"
+  home: "ホーム"
+  followers: "フォロワー"
+  specified: "ダイレクト"
+  localOnly: "連合なし"
+
+_shareLinkGenerator:
+  title: "共有ボタンジェネレーター"
+  description: "Misskey Hubの共有ボタン中継サービスを利用して、Misskey用の共有ボタンを作成できます。"
+  body: "本文"
+  bodyWarning: "どのサーバーでも共有できるようにするため、カスタム絵文字は使用できません。"
+  url: "URL"
+  urlCaption: "任意。本文の後ろに挿入されます。"
+  settings: "詳細設定"
+  visibility: "公開範囲"
+  recipents: "ダイレクトを受け取る人のacct（改行区切り）"
+  resultLink: "リンク生成結果"
+  resultButton: "共有ボタンのサンプル"
+  testLink: "共有リンクを試す"
+  typeSomethingToGetLink: "本文を入力するとリンクが生成されます。"
+  typeSomethingToGetButton: "本文を入力するとボタンが生成されます。"
+
 _api:
   _paramViewer:
     _header:

@@ -1,75 +1,77 @@
-noScript: "現在Javascriptが無効になっています。サイトの表示にはJavascriptが必須となりますので有効にしてください。"
-learnMore: "詳しく知る"
-loading: "読み込み中…"
-clickToExpand: "（クリックして展開）"
+noScript: "JavaScript est actuellement désactivé. Veuillez l'activer puisque les fonctionnalités du site en dépendent."
+learnMore: "En savoir plus"
+loading: "Chargement en cours…"
+clickToExpand: "Cliquer pour développer"
+copy: "Copier"
 _seo:
   siteName: "Misskey Hub"
-  defaultTitleTagline: "ノートでひろがるネットワーク"
-  defaultDescription: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
+  siteNameLong: "Misskey Hub – Site web officiel du projet Misskey"
+  defaultTitleTagline: "Un réseau étendu par des notes"
+  defaultDescription: "Le site officiel de Misskey, un réseau social décentralisé. Découvrez le tutoriel, la liste d'instances et plus d'information sur Misskey !"
 _nav:
-  servers: "サーバー"
-  docs: "ドキュメント"
-  blog: "ブログ"
-  other: "もっと！"
-  switchLang: "言語の設定"
+  servers: "Instances"
+  docs: "Documentation"
+  blog: "Blogue"
+  other: "Plus !"
+  switchLang: "Paramètres de langue"
 _landing:
   _hero:
-    description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
-    gettingStarted: "はじめる"
+    description: "Misskey est une plateforme de réseautage social décentralisée à code source ouvert."
+    gettingStarted: "Commencer"
   _keyFeatures:
     _open:
-      title: "オープン"
-      description: "Misskeyはオープンソースのソフトウェアで、誰でも自由にMisskeyを利用できます。"
+      title: "Ouvert"
+      description: "Misskey est un logiciel à code source ouvert que n'importe qui peut utiliser librement."
     _federated:
-      title: "分散"
-      description: "Misskeyは分散型のプロトコルを実装しているため、異なるサーバーのコミュニティ同士が繋がります。"
+      title: "Décentralisé"
+      description: "Misskey implémente un protocole décentralisé de sorte que les communautés de différentes instances peuvent se connecter les unes aux autres."
     _multifunction:
-      title: "高機能"
-      description: "Misskeyは他にはない様々な機能を備えていて、プロのようにmicro-blogging可能です。"
+      title: "Plein de fonctionnalités"
+      description: "Misskey est à la fois facile à comprendre pour les débutants et rempli de fonctionnalités puissantes pour les utilisateurs avancés."
     _customizable:
-      title: "高カスタマイズ性"
-      description: "Misskeyの柔軟なWebインターフェイスにより、自分好みのUIを作れます。"
+      title: "Hautement personnalisable"
+      description: "Avec l'interface web flexible de Misskey, vous pouvez créer votre propre interface utilisateur préférée."
   _decenterized:
-    title: "Misskeyは{0}"
-    decenterizedPlatform: "分散型プラットフォーム"
+    title: "Misskey est une {0}"
+    decenterizedPlatform: "plateforme décentralisée"
     description: "Misskeyはフリーかつオープンなプロジェクトで、誰でも自由にMisskeyを使ったサーバーを作成できるため、既に様々なサーバーがインターネット上に公開されています。また重要な特徴として、Misskeyは{0}と呼ばれる分散通信プロトコルを実装しているので、どのサーバーを選んでも他のサーバーのユーザーとやりとりすることができます。これが分散型と言われる所以で、単一の運営者によって単一のURLで公開されるような、Twitterなどの他サービスとは根本的に異なっています。サーバーによって主な話題のテーマやユーザー層、言語などは異なり、自分にあったサーバーを探すのも楽しみのひとつです(もちろん自分のサーバーを作るのも一興です)。"
     activityPub: "ActivityPub"
   _features:
     _root:
-      title: "主な機能"
-      description: "Misskeyは一般的なものから特別なものまで、様々な機能を持っています。その一部を紹介します。"
+      title: "Fonctionnalités principales"
+      description: "Misskey offre une large variété de fonctionnalités uniques ! En voici une partie."
     _note:
-      title: "ノート"
-      description: "Misskeyでは、ユーザーの投稿は「ノート」と呼ばれます。他のノートを引用したり、画像、動画、オーディオ、その他の任意のファイルを添付することもできます。"
+      title: "Notes"
+      description: "Sur Misskey, les messages des utilisateurs sont appelés des « notes ». Vous pouvez citer les notes et joindre plusieurs images, vidéos, clips audio ou quoi que ce soit d'autre."
     _federation:
-      title: "連合"
+      title: "Fédération"
       description: "オープンな分散プロトコルであるActivityPubを実装しているため、他のMisskeyサーバーだけでなく、ActivityPubをサポートする他のソフトウェアともやりとりできます。"
     _reaction:
-      title: "リアクション"
+      title: "Réactions"
       description: "ノートには「リアクション」を付けることができ、簡単・気軽に自分のフィーリングを表現して伝えることが出来ます。"
     _drive:
-      title: "ドライブ"
+      title: "Disque"
       description: "アップロードしたファイルを管理するインターフェイスがあります。そのため、お気に入りの画像をフォルダにまとめたり、再度共有することも簡単に行えます。"
     _theme:
-      title: "テーマ"
+      title: "Thèmes"
       description: "自分の好きなデザインでMisskeyを使えます。もちろんダークモードも完全サポート。自分で高度にテーマを作ることも可能です。"
     _thread:
-      title: "スレッド"
+      title: "Fils de discussion"
       description: "もちろんノートはスレッドにすることができ、気が済むまで会話を続けられます。"
     _charts:
-      title: "チャート"
+      title: "Graphiques"
       description: "Misskeyは組み込みのチャートエンジンを備えていて、サーバーの利用状況などが簡単に可視化できます。"
     _widgets:
-      title: "ウィジェット"
+      title: "Widgets"
       description: "様々な種類のウィジェットを配置し、UIを好みにカスタマイズできます。"
   _getStarted:
-    title: "Misskeyをはじめよう"
+    title: "Commencer à utiliser Misskey"
     _find:
-      title: "サーバーを見つける"
-      list: "サーバーのリスト"
+      title: "Trouver une instance"
+      list: "Liste d'instances"
     _create:
-      title: "サーバーを作成"
-      guide: "セットアップガイド"
+      title: "Créer une instance"
+      guide: "Guide d'installation"
     _docs:
       title: "さらに詳しく知る"
       docs: "ドキュメントを見る"
@@ -107,7 +109,7 @@ _servers:
     showMore: "もっと見る"
 _docs:
   title: "ドキュメント"
-  description: "Misskeyの上手なつかいかたから、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
+  description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。Misskeyの上手な使い方から、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
   indexTitle: "目次ページ"
   _contribute:
     editThis: "このページを編集"
@@ -209,6 +211,38 @@ _aboutUs:
     _orgPartner:
       title: "企業・団体パートナー"
       description: "こちらの企業・団体から、金銭的・技術的な観点でMisskeyの開発へご協力いただいております。"
+_i18n:
+  _missing:
+    title: "翻訳にご協力ください"
+    description: "このドキュメントはコミュニティによる翻訳です。ドキュメントの翻訳は{link}から行えます。ご協力をお願いします🙏"
+    linkLabel: "Crowdin"
+_share:
+  title: "Misskeyへノート"
+  chooseServer: "ノートするサーバーを選択してください"
+  addServer: "サーバーを追加"
+  domain: "サーバーのドメイン"
+  compatibleWith: "Misskeyと、一部のMisskeyフォークに対応しています。"
+_noteVisibility:
+  public: "パブリック"
+  home: "ホーム"
+  followers: "フォロワー"
+  specified: "ダイレクト"
+  localOnly: "連合なし"
+_shareLinkGenerator:
+  title: "共有ボタンジェネレーター"
+  description: "Misskey Hubの共有ボタン中継サービスを利用して、Misskey用の共有ボタンを作成できます。"
+  body: "本文"
+  bodyWarning: "どのサーバーでも共有できるようにするため、カスタム絵文字は使用できません。"
+  url: "URL"
+  urlCaption: "任意。本文の後ろに挿入されます。"
+  settings: "詳細設定"
+  visibility: "公開範囲"
+  recipents: "ダイレクトを受け取る人のacct（改行区切り）"
+  resultLink: "リンク生成結果"
+  resultButton: "共有ボタンのサンプル"
+  testLink: "共有リンクを試す"
+  typeSomethingToGetLink: "本文を入力するとリンクが生成されます。"
+  typeSomethingToGetButton: "本文を入力するとボタンが生成されます。"
 _api:
   _permissions:
     title: "権限"

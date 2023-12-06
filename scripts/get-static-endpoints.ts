@@ -8,6 +8,7 @@ export function getStaticEndpoints(): string[] {
     const files = getFiles(dir);
     const filtered = files
         .filter((file) => !file.includes('slug')) // exclude dynamic content
+        .filter((file) => !/-ignore\.vue$/.test(file)) // ignore
         .map((file) => file.split('pages')[1])
         .map((file) => file.replaceAll('\\', '/'))
         .map((file) => {
