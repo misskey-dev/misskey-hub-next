@@ -47,9 +47,6 @@ export async function genApiFiles() {
             // 権限
             _permissions: {},
 
-            // 各エンドポイント
-            _endpoints: {},
-
             // レスポンスコードの説明
             _responseCodes: {},
         }
@@ -63,19 +60,19 @@ export async function genApiFiles() {
     // エンドポイント
     const ep = await fetch('https://misskey.noellabo.jp/api.json');
     const epj = await ep.json();
+    const endpointsTLs: Record<string, any> = {};
     Object.keys(epj.paths).forEach((path) => {
-        const sanitizedPathName = path.replace(/^\//, '');
 
         Object.keys(epj.paths[path]).forEach((method) => {
-            out._api._endpoints[sanitizedPathName] = {};
+            endpointsTLs[path] = {};
 
             // 各エンドポイントのページ要素に合わせる
-            out._api._endpoints[sanitizedPathName][method] = {
+            endpointsTLs[path][method] = {
                 description: '（説明がありません）',
             };
 
             if (getSchemaKeys(epj.paths[path][method].requestBody?.content ?? {}) !== null) {
-                out._api._endpoints[sanitizedPathName][method]._requestBody = Object.fromEntries(getSchemaKeys(epj.paths[path][method].requestBody.content)!.map((v) => [v, '（説明がありません）']));
+                endpointsTLs[path][method].requestBody = Object.fromEntries(getSchemaKeys(epj.paths[path][method].requestBody.content)!.map((v) => [v, '（説明がありません）']));
             }
 
             Object.keys(epj.paths[path][method].responses).forEach((responseCode) => {
@@ -83,13 +80,14 @@ export async function genApiFiles() {
 
                 if (!out._api._responseCodes[responseCode]) {
                     out._api._responseCodes[responseCode] = epj.paths[path][method].responses[responseCode].description;
-                    if (getSchemaKeys(epj.paths[path][method].responses[responseCode].content ?? {}) !== null) {
-                        out._api._endpoints[sanitizedPathName][method]._response = Object.fromEntries(getSchemaKeys(epj.paths[path][method].responses[responseCode].content)!.map((v) => [v, '（説明がありません）']));
-                    }
                 }
 
                 if (!responseBody) {
                     return;
+                }
+
+                if (getSchemaKeys(responseBody) !== null) {
+                    endpointsTLs[path][method].response = Object.fromEntries(getSchemaKeys(responseBody)!.map((v) => [v, '（説明がありません）']));
                 }
 
                 /*
@@ -126,6 +124,28 @@ export async function genApiFiles() {
         createFile(path.join(targetEPPath, `${eppath}.json`), JSON.stringify(targetObj));
     });
     console.log("エンドポイント定義上書き完了");
+
+    // Contentの翻訳用jsonを更新【2023.12.07 WIP そのまま動かすとまずい】
+    const targetEPIPath = path.resolve(__dirname, '../content/ja/endpoints-i18n');
+    Object.keys(endpointsTLs).forEach((eppath) => {
+        const sanitizedPathName = eppath.replace(/^\//, '');
+
+        const targetObj: Record<string, any> = {
+            data: endpointsTLs[eppath],
+        };
+        targetObj.title = sanitizedPathName;
+
+        let out = targetObj;
+
+        if (fs.existsSync(path.join(targetEPIPath, `${eppath}.json`))) {
+            const mobj = JSON.parse(fs.readFileSync(path.join(targetEPIPath, `${eppath}.json`), 'utf-8'));
+            out = mergeObjects(mobj, targetObj);
+        }
+
+        createFile(path.join(targetEPIPath, `${eppath}.json`), JSON.stringify(out));
+    });
+    console.log("エンドポイント定義上書き完了");
+
 
     // スキーマを取り出す
     const schemaSourceFilePath = path.resolve(__dirname, '../assets/data/api-schemas.ts');
