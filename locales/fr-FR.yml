@@ -82,11 +82,11 @@ _landing:
     title: "Parrains"
 _servers:
   title: "Liste d'instances"
-  description: "Misskeyは単一のサービスではなく、各々がサービスを提供する分散型ネットワークとなっています。Misskeyを利用するには、サービスを提供しているサーバーでアカウントを作成する必要があります。"
+  description: "Misskey n'est pas un seul service, mais un réseau décentralisé où le service est fourni par des individus. Pour utiliser Misskey, vous devez créer un compte sur une instance qui fournit le service."
   addYourServer: "Votre instance n'apparaît pas dans la liste ? Veuillez l'enregistrer {0} !"
   addYourServerLink: "ici"
   _system:
-    fetchError: "データの読み込みに失敗しました。後でもう一度お試しください。"
+    fetchError: "Le chargement de données a échoué. Veuillez réessayer plus tard."
   _statistics:
     notes: "Nombre de notes"
     users: "Nombre d’utilisateurs"
@@ -108,7 +108,7 @@ _servers:
     notFound: "Aucune instance qui correspond aux critères spécifiés a été trouvée."
     showMore: "Afficher plus"
 _docs:
-  title: "ドキュメント"
+  title: "Documentation"
   description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。Misskeyの上手な使い方から、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
   indexTitle: "目次ページ"
   _contribute:
@@ -127,18 +127,18 @@ _docs:
   _forDevelopers:
     title: "開発者向け"
   _prevNext:
-    prev: "前へ"
-    next: "次へ"
+    prev: "Précédent"
+    next: "Suivant"
   _toc:
     title: "このページの内容"
     toPageTop: "ページ上部に戻る"
 _blog:
-  title: "ブログ"
+  title: "Blogue"
   description: "Misskey開発本部から、Misskeyに関する最新情報やTips等をお届けします！（日本語のみ）"
-  back: "戻る"
+  back: "Retour"
 _content:
-  tip: "ヒント"
-  warning: "注意"
+  tip: "Astuces"
+  warning: "Avertissement"
   danger: "警告"
   preview: "プレビュー"
 _other:
