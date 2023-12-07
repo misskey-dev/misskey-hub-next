@@ -45,7 +45,7 @@ _landing:
       description: "Sur Misskey, les messages des utilisateurs sont appelés des « notes ». Vous pouvez citer les notes et joindre plusieurs images, vidéos, clips audio ou quoi que ce soit d'autre."
     _federation:
       title: "Fédération"
-      description: "オープンな分散プロトコルであるActivityPubを実装しているため、他のMisskeyサーバーだけでなく、ActivityPubをサポートする他のソフトウェアともやりとりできます。"
+      description: "Grâce à l'implémentation d'ActivityPub, un protocole ouvert et décentralisé, Misskey peut interagir avec d'autres plateformes qui prennent en charge ActivityPub en plus d'autres instances de Misskey."
     _reaction:
       title: "Réactions"
       description: "ノートには「リアクション」を付けることができ、簡単・気軽に自分のフィーリングを表現して伝えることが出来ます。"
