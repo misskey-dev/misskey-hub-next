@@ -34,7 +34,7 @@ _landing:
   _decenterized:
     title: "Misskey est une {0}"
     decenterizedPlatform: "plateforme décentralisée"
-    description: "Misskeyはフリーかつオープンなプロジェクトで、誰でも自由にMisskeyを使ったサーバーを作成できるため、既に様々なサーバーがインターネット上に公開されています。また重要な特徴として、Misskeyは{0}と呼ばれる分散通信プロトコルを実装しているので、どのサーバーを選んでも他のサーバーのユーザーとやりとりすることができます。これが分散型と言われる所以で、単一の運営者によって単一のURLで公開されるような、Twitterなどの他サービスとは根本的に異なっています。サーバーによって主な話題のテーマやユーザー層、言語などは異なり、自分にあったサーバーを探すのも楽しみのひとつです(もちろん自分のサーバーを作るのも一興です)。"
+    description: "Misskey est un projet libre et ouvert, ce qui signifie que n'importe qui est libre de créer une instance de Misskey. Ainsi, une grande variété d'instances sont déjà disponibles sur l'Internet. Une autre caractéristique importante est que Misskey implémente un protocole de communication décentralisé appelé {0}, ce qui signifie que quelle que soit l'instance que vous choisissez, vous pouvez interagir avec des utilisateurs sur d'autres instances. C'est pour cette raison qu'il est qualifié de décentralisé et qu'il est fondamentalement différent d'autres services tels que Twitter, qui n'ont qu'un serveur centralisé contrôlé par un seul opérateur. Les thèmes principaux, le groupe d'utilisateurs et les langues varient d'une instance à l'autre, et trouver l'instance qui vous convient fait partie du plaisir. (Bien sûr, créer votre propre instance est également amusant !)"
     activityPub: "ActivityPub"
   _features:
     _root:
