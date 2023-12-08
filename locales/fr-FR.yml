@@ -63,7 +63,7 @@ _landing:
       description: "Misskey dispose d'un moteur graphique intégré qui permet de visualiser facilement l'utilisation du serveur et d'autres informations."
     _widgets:
       title: "Widgets"
-      description: "様々な種類のウィジェットを配置し、UIを好みにカスタマイズできます。"
+      description: "Différents types de widgets peuvent être placés pour personnaliser l'interface utilisateur à votre guise."
   _getStarted:
     title: "Commencer à utiliser Misskey"
     _find:
@@ -77,7 +77,7 @@ _landing:
       docs: "Consulter la documentation"
   _donation:
     title: "Demande de don"
-    description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
+    description: "Misskey est une organisation à but non lucratif, nous dépendons de vos dons pour financer le développement. Si vous aimez Misskey, veuillez considérer de nous soutenir."
   _sponsors:
     title: "Parrains"
 _servers:
@@ -112,16 +112,16 @@ _docs:
   description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。Misskeyの上手な使い方から、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
   indexTitle: "目次ページ"
   _contribute:
-    editThis: "このページを編集"
-    translateThis: "このページを翻訳"
+    editThis: "Éditer cette page"
+    translateThis: "Traduire cette page"
   _aboutMisskey:
-    title: "Misskeyについて"
+    title: "À propos de Misskey"
     description: "Misskeyをはじめて知ったかたや、これから使うかた向け！基本的なしくみや機能を見ていきましょう。"
   _changelog:
-    title: "リリースノート"
-    description: "Misskeyのバージョンアップ履歴をご覧いただけます。最新のバージョンで何が変わったのかを確認しましょう！"
+    title: "Journal des modifications"
+    description: "Voir l'historique des mises à jour de Misskey. Découvrez les nouveautés de la dernière version !"
   _forUsers:
-    title: "Misskeyユーザー向け"
+    title: "Pour les utilisateurs de Misskey"
   _forAdmin:
     title: "サーバー運営者向け"
   _forDevelopers:
