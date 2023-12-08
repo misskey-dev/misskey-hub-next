@@ -48,13 +48,13 @@ _landing:
       description: "Grâce à l'implémentation d'ActivityPub, un protocole ouvert et décentralisé, Misskey peut interagir avec d'autres plateformes qui prennent en charge ActivityPub en plus d'autres instances de Misskey."
     _reaction:
       title: "Réactions"
-      description: "ノートには「リアクション」を付けることができ、簡単・気軽に自分のフィーリングを表現して伝えることが出来ます。"
+      description: "Vous pouvez ajouter des réactions aux notes, ce qui vous permet d'exprimer et de communiquer vos sentiments facilement."
     _drive:
       title: "Disque"
-      description: "アップロードしたファイルを管理するインターフェイスがあります。そのため、お気に入りの画像をフォルダにまとめたり、再度共有することも簡単に行えます。"
+      description: "L'interface Disque vous permet de gérer les fichiers téléversés. Ainsi, il est facile d'organiser vos images préférées dans des dossiers et de les partager à nouveau."
     _theme:
       title: "Thèmes"
-      description: "自分の好きなデザインでMisskeyを使えます。もちろんダークモードも完全サポート。自分で高度にテーマを作ることも可能です。"
+      description: "Vous pouvez utiliser Misskey dans votre esthétique préférée. Bien entendu, le mode sombre est entièrement pris en charge. Vous pouvez également créer vos propres thèmes avancés."
     _thread:
       title: "Fils de discussion"
       description: "もちろんノートはスレッドにすることができ、気が済むまで会話を続けられます。"
