@@ -57,10 +57,10 @@ _landing:
       description: "Vous pouvez utiliser Misskey dans votre esthétique préférée. Bien entendu, le mode sombre est entièrement pris en charge. Vous pouvez également créer vos propres thèmes avancés."
     _thread:
       title: "Fils de discussion"
-      description: "もちろんノートはスレッドにすることができ、気が済むまで会話を続けられます。"
+      description: "Naturellement, les notes peuvent former un fil de discussion, ce qui vous permet de poursuivre la conversation à votre aise."
     _charts:
       title: "Graphiques"
-      description: "Misskeyは組み込みのチャートエンジンを備えていて、サーバーの利用状況などが簡単に可視化できます。"
+      description: "Misskey dispose d'un moteur graphique intégré qui permet de visualiser facilement l'utilisation du serveur et d'autres informations."
     _widgets:
       title: "Widgets"
       description: "様々な種類のウィジェットを配置し、UIを好みにカスタマイズできます。"
