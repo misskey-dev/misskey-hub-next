@@ -2,9 +2,10 @@
 
 1. 建立 `/etc/nginx/conf.d/misskey.conf` 或 `/etc/nginx/sites-available/misskey.conf` 並複製下面的設定範例。（檔名不必是misskey。）
 2. 編輯內容如下
-   1. 將 example.tld 替換為您自己的網域。將 `ssl_certificate` 和 `ssl_certificate_key` 設定為透過 Let's Encrypt 取得的憑證的路徑。
+   1. 將 example.tld 替換為您自己的網域。\
+      將 `ssl_certificate` 和 `ssl_certificate_key` 設定為透過 Let's Encrypt 取得的憑證的路徑。
    2. 如果您使用 Cloudflare 等 CDN，請刪除「If it's behind another reverse proxy or CDN, remove the following.」中的 4 行。
-3. 編輯內容如下如果建立了 `/etc/nginx/sites-available/misskey.conf`，請建立軟連結作為 `/etc/nginx/sites-enabled/misskey.conf`。
+3. 如果建立了 `/etc/nginx/sites-available/misskey.conf`，請建立軟連結作為 `/etc/nginx/sites-enabled/misskey.conf`。\
    `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`
 4. 使用 `sudo nginx -t` 檢查設定檔是否載入成功。
 5. 使用 `sudo systemctl restart nginx` 重啟 nginx。
