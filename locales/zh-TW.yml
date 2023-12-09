@@ -109,7 +109,7 @@ _servers:
     showMore: "查看更多"
 _docs:
   title: "文件"
-  description: "它涵蓋了從如何有效使用 Misskey 到為伺服器操作員和程式開發人員提供的資訊的所有內容。"
+  description: "Misskey 是一個開源去中心化社群網路平台。它涵蓋了從如何正確使用 Misskey 到為伺服器營運者和程式開發人員提供的資訊的所有內容。"
   indexTitle: "目錄頁"
   _contribute:
     editThis: "編輯此頁面"
