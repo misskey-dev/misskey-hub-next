@@ -8,7 +8,7 @@ description: 介紹使用 Misskey 所需的應用程式。
 
 當您從瀏覽器登入 Misskey 伺服器時，將顯示時間軸。此時出現的 Misskey 唯一的官方客戶端 **Misskey Web**。雖然它是一個在瀏覽器中運行的應用程序，但它也支援 PWA，因此您可以像行動作業系統上的原生應用程式一樣運行它。欲了解更多資訊，請參閱[這裡](todo)。請注意，Misskey 專案未開發原生應用程式。
 
-熟悉 Misskey Web 後，您可以試用志工開發的非官方應用程式。以下是使用最廣泛的應用程式（按字母順序排列）。
+熟悉 Misskey Web 後，您可以試用志願者開發的非官方應用程式。以下是使用最廣泛的應用程式（按字母順序排列）。
 
 - **Kaiteki** (Web, Android, Windows, Linux): 幅広いプラットフォームで動作する。Mastodon, Pleroma, Twitterにも対応。[公式サイト](https://kaiteki.app)。[ソースコード](https://github.com/Kaiteki-Fedi/Kaiteki)。
 - **Milktea** (Android): タイムラインや特定の検索結果にタブから素早くアクセスできる。他のユーザーにニックネームを与えることができる。[Google Play](https://play.google.com/store/apps/details?id=jp.panta.misskeyandroidclient)。[ソースコード](https://github.com/pantasystem/Milktea)。
