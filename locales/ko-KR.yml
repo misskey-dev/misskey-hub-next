@@ -1,8 +1,8 @@
 noScript: "JavaScript가 비활성화 상태입니다. 페이지를 표시하시려면 JavaScript를 활성화 해야합니다."
-learnMore: "자세하게"
-loading: "로딩 중..."
+learnMore: "자세히 보기"
+loading: "읽는 중…"
 clickToExpand: "（クリックして展開）"
-copy: "コピー"
+copy: "복사하기"
 _seo:
   siteName: "Misskey Hub"
   siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
@@ -12,7 +12,7 @@ _nav:
   servers: "서버"
   docs: "문서"
   blog: "블로그"
-  other: "더보기"
+  other: "더 보기"
   switchLang: "언어 설정"
 _landing:
   _hero:
@@ -68,20 +68,20 @@ _landing:
     title: "Misskey 시작하기"
     _find:
       title: "서버 찾기"
-      list: "서버 리스트"
+      list: "서버 목록"
     _create:
-      title: "서버 작성"
+      title: "서버 만들기"
       guide: "셋업 가이드"
     _docs:
-      title: "좀 더 자세히보기"
+      title: "자세히 보기"
       docs: "문서 보기"
   _donation:
-    title: "기부 부탁"
+    title: "기부하기"
     description: "Misskey는 비영리 입니다. 개발 자금은 여러분의 기부를 통해 모아지고 있습니다. Misskey가 마음에 드셨다면 계속해서 개발을 할 수 있도록 꼭 지원을 부탁드립니다."
   _sponsors:
-    title: "스폰서"
+    title: "후원자"
 _servers:
-  title: "서버 리스트"
+  title: "서버 목록"
   description: "Misskey는 하나의 서비스가 아닌, 각자가 서비스 제공을 하는 분산형 네트워크입니다. Misskey를 이용하시려면, 서비스를 제공하고 있는 서버에 계정을 만드실 필요가 있습니다."
   addYourServer: "당신의 서버에는 표시되지 않나요? {0}을 통해 등록해주세요!"
   addYourServerLink: "여기"
@@ -89,12 +89,12 @@ _servers:
     fetchError: "데이터 로딩을 실패했습니다. 시간을 두고 다시 시도해보세요."
   _statistics:
     notes: "노트 수"
-    users: "유저 수"
+    users: "사용자 수"
     servers: "서버 수"
   _search:
-    title: "필터 검색"
-    all: "전부"
-    query: "키워드 검색"
+    title: "고급 검색"
+    all: "모두"
+    query: "검색어로 찾기"
     lang: "언어"
     orderBy: "정렬"
     recomendded: "기본"
@@ -110,7 +110,7 @@ _servers:
 _docs:
   title: "문서"
   description: "Misskey의 고급적인 사용 방법부터, 서버의 운영자, 프로그래머를 위한 정보까지 망라하고 있습니다."
-  indexTitle: "목차 페이지"
+  indexTitle: "목차"
   _contribute:
     editThis: "이 페이지를 편집"
     translateThis: "이 페이지를 번역"
@@ -135,14 +135,14 @@ _docs:
 _blog:
   title: "블로그"
   description: "Misskey 개발 본부로부터 Misskey에 관한 최신 정보나 Tip 등을 전해드립니다. (일본어만)"
-  back: "뒤로"
+  back: "뒤로 가기"
 _content:
   tip: "도움말"
   warning: "주의"
   danger: "경고"
   preview: "미리보기"
 _other:
-  title: "더보기"
+  title: "더 보기!"
   description: "Misskey를 좀 더 즐기실 수 있는 다른 리소스도 소개합니다."
 _brandAssets:
   title: "자료집"
@@ -217,9 +217,9 @@ _i18n:
     description: "このドキュメントはコミュニティによる翻訳です。ドキュメントの翻訳は{link}から行えます。ご協力をお願いします🙏"
     linkLabel: "Crowdin"
 _share:
-  title: "Misskeyへノート"
+  title: "Misskey에 노트하기"
   chooseServer: "ノートするサーバーを選択してください"
-  addServer: "サーバーを追加"
+  addServer: "서버 추가하기"
   domain: "サーバーのドメイン"
   compatibleWith: "Misskeyと、一部のMisskeyフォークに対応しています。"
 _noteVisibility:
@@ -231,9 +231,9 @@ _noteVisibility:
 _shareLinkGenerator:
   title: "共有ボタンジェネレーター"
   description: "Misskey Hubの共有ボタン中継サービスを利用して、Misskey用の共有ボタンを作成できます。"
-  body: "本文"
+  body: "내용"
   bodyWarning: "どのサーバーでも共有できるようにするため、カスタム絵文字は使用できません。"
-  url: "URL"
+  url: "주소"
   urlCaption: "任意。本文の後ろに挿入されます。"
   settings: "詳細設定"
   visibility: "公開範囲"
