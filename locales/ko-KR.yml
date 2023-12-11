@@ -3,6 +3,8 @@ learnMore: "자세히 보기"
 loading: "읽는 중…"
 clickToExpand: "（クリックして展開）"
 copy: "복사하기"
+share: "共有する"
+note: "ノート"
 _seo:
   siteName: "Misskey Hub"
   siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
