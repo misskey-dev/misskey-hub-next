@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"listId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "users/lists/delete",
+	"description": "（説明がありません）"
+}

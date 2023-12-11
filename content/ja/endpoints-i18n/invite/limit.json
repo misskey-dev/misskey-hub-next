@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {},
+			"response": {
+				"remaining": "（説明がありません）"
+			}
+		}
+	},
+	"title": "invite/limit",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"name": "（説明がありません）",
+				"parentId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "drive/folders/find",
+	"description": "（説明がありません）"
+}

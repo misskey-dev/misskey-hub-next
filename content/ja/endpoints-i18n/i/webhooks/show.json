@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"webhookId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/webhooks/show",
+	"description": "（説明がありません）"
+}

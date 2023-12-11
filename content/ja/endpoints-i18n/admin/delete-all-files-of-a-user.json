@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"userId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/delete-all-files-of-a-user",
+	"description": "（説明がありません）"
+}

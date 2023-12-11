@@ -1,0 +1,15 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"userId": "（説明がありません）",
+				"userIds": "（説明がありません）",
+				"username": "（説明がありません）",
+				"host": "（説明がありません）"
+			}
+		}
+	},
+	"title": "users/show",
+	"description": "（説明がありません）"
+}

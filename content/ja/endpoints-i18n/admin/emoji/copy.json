@@ -1,0 +1,15 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"emojiId": "（説明がありません）"
+			},
+			"response": {
+				"id": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/emoji/copy",
+	"description": "（説明がありません）"
+}

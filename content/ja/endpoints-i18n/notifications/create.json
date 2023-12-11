@@ -1,0 +1,14 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"body": "（説明がありません）",
+				"header": "（説明がありません）",
+				"icon": "（説明がありません）"
+			}
+		}
+	},
+	"title": "notifications/create",
+	"description": "（説明がありません）"
+}

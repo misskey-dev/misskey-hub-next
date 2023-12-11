@@ -1,0 +1,14 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"to": "（説明がありません）",
+				"subject": "（説明がありません）",
+				"text": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/send-email",
+	"description": "（説明がありません）"
+}

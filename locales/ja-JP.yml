@@ -111,6 +111,7 @@ _docs:
   title: "ドキュメント"
   description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。Misskeyの上手な使い方から、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
   indexTitle: "目次ページ"
+  exitEndpointDocs: "「Misskey API」に戻る"
   _contribute:
     editThis: "このページを編集"
     translateThis: "このページを翻訳"

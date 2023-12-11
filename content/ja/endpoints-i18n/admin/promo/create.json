@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"noteId": "（説明がありません）",
+				"expiresAt": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/promo/create",
+	"description": "（説明がありません）"
+}

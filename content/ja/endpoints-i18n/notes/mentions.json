@@ -1,0 +1,16 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"following": "（説明がありません）",
+				"limit": "（説明がありません）",
+				"sinceId": "（説明がありません）",
+				"untilId": "（説明がありません）",
+				"visibility": "（説明がありません）"
+			}
+		}
+	},
+	"title": "notes/mentions",
+	"description": "（説明がありません）"
+}

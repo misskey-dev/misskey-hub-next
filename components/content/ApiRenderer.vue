@@ -97,12 +97,12 @@
                 </div>
             </details>
 
-            <div class="markdown-body">
+            <div class="pt-8 markdown-body">
+                <GDetails summary="Raw JSON Schema">
+                    <MDC :value="`\`\`\`json\n${JSON.stringify(apiData, null, 2)}\n\`\`\``" />
+                </GDetails>
             </div>
         </div>
-        <pre>
-<code>{{ apiData }}</code>
-        </pre>
     </div>
 </template>
 

@@ -1,0 +1,14 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"userId": "（説明がありません）",
+				"notify": "（説明がありません）",
+				"withReplies": "（説明がありません）"
+			}
+		}
+	},
+	"title": "following/update",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"count": "（説明がありません）",
+				"expiresAt": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/invite/create",
+	"description": "（説明がありません）"
+}

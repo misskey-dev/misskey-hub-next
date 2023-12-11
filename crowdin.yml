@@ -13,11 +13,12 @@ files:
       two_letters_code:
         zh-TW: tw
         zh-CN: cn
-  - source: /content/ja/endpoints-i18n/**/*.*
-    translation: /content/%two_letters_code%/endpoints-i18n/**/%original_file_name%
-    update_option: update_as_unapproved
-    skip_untranslated_files: true
-    languages_mapping:
-      two_letters_code:
-        zh-TW: tw
-        zh-CN: cn
+#  ↓HQの翻訳が終わり次第コメントアウト解除↓
+#  - source: /content/ja/endpoints-i18n/**/*.*
+#    translation: /content/%two_letters_code%/endpoints-i18n/**/%original_file_name%
+#    update_option: update_as_unapproved
+#    skip_untranslated_files: true
+#    languages_mapping:
+#      two_letters_code:
+#        zh-TW: tw
+#        zh-CN: cn

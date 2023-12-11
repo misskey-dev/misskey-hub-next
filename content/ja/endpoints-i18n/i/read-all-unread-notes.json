@@ -1,0 +1,10 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {}
+		}
+	},
+	"title": "i/read-all-unread-notes",
+	"description": "（説明がありません）"
+}

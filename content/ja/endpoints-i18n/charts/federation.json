@@ -1,0 +1,24 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"span": "（説明がありません）",
+				"limit": "（説明がありません）",
+				"offset": "（説明がありません）"
+			},
+			"response": {
+				"deliveredInstances": "（説明がありません）",
+				"inboxInstances": "（説明がありません）",
+				"stalled": "（説明がありません）",
+				"sub": "（説明がありません）",
+				"pub": "（説明がありません）",
+				"pubsub": "（説明がありません）",
+				"subActive": "（説明がありません）",
+				"pubActive": "（説明がありません）"
+			}
+		}
+	},
+	"title": "charts/federation",
+	"description": "（説明がありません）"
+}

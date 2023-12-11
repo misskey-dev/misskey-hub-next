@@ -1,0 +1,22 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"pageId": "（説明がありません）",
+				"title": "（説明がありません）",
+				"name": "（説明がありません）",
+				"summary": "（説明がありません）",
+				"content": "（説明がありません）",
+				"variables": "（説明がありません）",
+				"script": "（説明がありません）",
+				"eyeCatchingImageId": "（説明がありません）",
+				"font": "（説明がありません）",
+				"alignCenter": "（説明がありません）",
+				"hideTitleWhenPinned": "（説明がありません）"
+			}
+		}
+	},
+	"title": "pages/update",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,15 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"key": "（説明がありません）",
+				"value": "（説明がありません）",
+				"scope": "（説明がありません）",
+				"domain": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/registry/set",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"appId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "app/show",
+	"description": "（説明がありません）"
+}

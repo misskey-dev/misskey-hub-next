@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"url": "（説明がありません）",
+				"hash": "（説明がありません）"
+			}
+		}
+	},
+	"title": "fetch-external-resources",
+	"description": "（説明がありません）"
+}

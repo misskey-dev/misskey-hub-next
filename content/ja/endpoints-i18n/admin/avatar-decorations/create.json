@@ -1,0 +1,15 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"name": "（説明がありません）",
+				"description": "（説明がありません）",
+				"url": "（説明がありません）",
+				"roleIdsThatCanBeUsedThisDecoration": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/avatar-decorations/create",
+	"description": "（説明がありません）"
+}

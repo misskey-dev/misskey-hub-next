@@ -1,0 +1,18 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"withFiles": "（説明がありません）",
+				"withRenotes": "（説明がありません）",
+				"limit": "（説明がありません）",
+				"sinceId": "（説明がありません）",
+				"untilId": "（説明がありません）",
+				"sinceDate": "（説明がありません）",
+				"untilDate": "（説明がありません）"
+			}
+		}
+	},
+	"title": "notes/global-timeline",
+	"description": "（説明がありません）"
+}

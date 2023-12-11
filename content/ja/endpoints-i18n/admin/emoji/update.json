@@ -1,0 +1,20 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"id": "（説明がありません）",
+				"name": "（説明がありません）",
+				"fileId": "（説明がありません）",
+				"category": "（説明がありません）",
+				"aliases": "（説明がありません）",
+				"license": "（説明がありません）",
+				"isSensitive": "（説明がありません）",
+				"localOnly": "（説明がありません）",
+				"roleIdsThatCanBeUsedThisEmojiAsReaction": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/emoji/update",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,25 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"span": "（説明がありません）",
+				"limit": "（説明がありません）",
+				"offset": "（説明がありません）"
+			},
+			"response": {
+				"readWrite": "（説明がありません）",
+				"read": "（説明がありません）",
+				"write": "（説明がありません）",
+				"registeredWithinWeek": "（説明がありません）",
+				"registeredWithinMonth": "（説明がありません）",
+				"registeredWithinYear": "（説明がありません）",
+				"registeredOutsideWeek": "（説明がありません）",
+				"registeredOutsideMonth": "（説明がありません）",
+				"registeredOutsideYear": "（説明がありません）"
+			}
+		}
+	},
+	"title": "charts/active-users",
+	"description": "（説明がありません）"
+}

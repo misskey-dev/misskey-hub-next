@@ -1,0 +1,19 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"span": "（説明がありません）",
+				"limit": "（説明がありません）",
+				"offset": "（説明がありません）"
+			},
+			"response": {
+				"deliverFailed": "（説明がありません）",
+				"deliverSucceeded": "（説明がありません）",
+				"inboxReceived": "（説明がありません）"
+			}
+		}
+	},
+	"title": "charts/ap-request",
+	"description": "（説明がありません）"
+}

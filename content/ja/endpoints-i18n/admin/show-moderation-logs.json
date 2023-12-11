@@ -1,0 +1,16 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"limit": "（説明がありません）",
+				"sinceId": "（説明がありません）",
+				"untilId": "（説明がありません）",
+				"type": "（説明がありません）",
+				"userId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/show-moderation-logs",
+	"description": "（説明がありません）"
+}

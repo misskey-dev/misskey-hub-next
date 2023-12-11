@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"id": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/emoji/delete",
+	"description": "（説明がありません）"
+}

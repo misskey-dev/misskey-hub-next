@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {},
+			"response": {
+				"code": "（説明がありません）"
+			}
+		}
+	},
+	"title": "invite/create",
+	"description": "（説明がありません）"
+}

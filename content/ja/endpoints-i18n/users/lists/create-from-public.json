@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"name": "（説明がありません）",
+				"listId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "users/lists/create-from-public",
+	"description": "（説明がありません）"
+}

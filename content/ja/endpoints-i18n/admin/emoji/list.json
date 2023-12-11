@@ -1,0 +1,15 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"query": "（説明がありません）",
+				"limit": "（説明がありません）",
+				"sinceId": "（説明がありません）",
+				"untilId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/emoji/list",
+	"description": "（説明がありません）"
+}

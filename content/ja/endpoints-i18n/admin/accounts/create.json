@@ -1,0 +1,16 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"username": "（説明がありません）",
+				"password": "（説明がありません）"
+			},
+			"response": {
+				"token": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/accounts/create",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,16 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"listId": "（説明がありません）",
+				"forPublic": "（説明がありません）",
+				"limit": "（説明がありません）",
+				"sinceId": "（説明がありません）",
+				"untilId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "users/lists/get-memberships",
+	"description": "（説明がありません）"
+}

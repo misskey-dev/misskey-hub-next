@@ -1,0 +1,15 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"title": "（説明がありません）",
+				"summary": "（説明がありません）",
+				"script": "（説明がありません）",
+				"permissions": "（説明がありません）"
+			}
+		}
+	},
+	"title": "flash/create",
+	"description": "（説明がありません）"
+}

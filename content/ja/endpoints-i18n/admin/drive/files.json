@@ -1,0 +1,18 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"limit": "（説明がありません）",
+				"sinceId": "（説明がありません）",
+				"untilId": "（説明がありません）",
+				"userId": "（説明がありません）",
+				"type": "（説明がありません）",
+				"origin": "（説明がありません）",
+				"hostname": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/drive/files",
+	"description": "（説明がありません）"
+}

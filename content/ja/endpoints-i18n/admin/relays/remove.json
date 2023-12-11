@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"inbox": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/relays/remove",
+	"description": "（説明がありません）"
+}

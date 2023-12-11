@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"roleId": "（説明がありません）",
+				"userId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/roles/unassign",
+	"description": "（説明がありません）"
+}

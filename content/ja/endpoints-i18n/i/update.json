@@ -1,0 +1,41 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"name": "（説明がありません）",
+				"description": "（説明がありません）",
+				"location": "（説明がありません）",
+				"birthday": "（説明がありません）",
+				"lang": "（説明がありません）",
+				"avatarId": "（説明がありません）",
+				"avatarDecorations": "（説明がありません）",
+				"bannerId": "（説明がありません）",
+				"fields": "（説明がありません）",
+				"isLocked": "（説明がありません）",
+				"isExplorable": "（説明がありません）",
+				"hideOnlineStatus": "（説明がありません）",
+				"publicReactions": "（説明がありません）",
+				"carefulBot": "（説明がありません）",
+				"autoAcceptFollowed": "（説明がありません）",
+				"noCrawle": "（説明がありません）",
+				"preventAiLearning": "（説明がありません）",
+				"isBot": "（説明がありません）",
+				"isCat": "（説明がありません）",
+				"injectFeaturedNote": "（説明がありません）",
+				"receiveAnnouncementEmail": "（説明がありません）",
+				"alwaysMarkNsfw": "（説明がありません）",
+				"autoSensitive": "（説明がありません）",
+				"ffVisibility": "（説明がありません）",
+				"pinnedPageId": "（説明がありません）",
+				"mutedWords": "（説明がありません）",
+				"mutedInstances": "（説明がありません）",
+				"notificationRecieveConfig": "（説明がありません）",
+				"emailNotificationTypes": "（説明がありません）",
+				"alsoKnownAs": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/update",
+	"description": "（説明がありません）"
+}

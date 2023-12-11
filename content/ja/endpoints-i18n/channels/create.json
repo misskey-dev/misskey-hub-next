@@ -1,0 +1,17 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"name": "（説明がありません）",
+				"description": "（説明がありません）",
+				"bannerId": "（説明がありません）",
+				"color": "（説明がありません）",
+				"isSensitive": "（説明がありません）",
+				"allowRenoteToExternal": "（説明がありません）"
+			}
+		}
+	},
+	"title": "channels/create",
+	"description": "（説明がありません）"
+}

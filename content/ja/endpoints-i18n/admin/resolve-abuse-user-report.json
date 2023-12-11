@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"reportId": "（説明がありません）",
+				"forward": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/resolve-abuse-user-report",
+	"description": "（説明がありません）"
+}

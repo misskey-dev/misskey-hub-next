@@ -1,0 +1,15 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"title": "（説明がありません）",
+				"description": "（説明がありません）",
+				"fileIds": "（説明がありません）",
+				"isSensitive": "（説明がありません）"
+			}
+		}
+	},
+	"title": "gallery/posts/create",
+	"description": "（説明がありません）"
+}

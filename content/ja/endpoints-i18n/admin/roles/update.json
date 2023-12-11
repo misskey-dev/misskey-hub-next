@@ -1,0 +1,26 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"roleId": "（説明がありません）",
+				"name": "（説明がありません）",
+				"description": "（説明がありません）",
+				"color": "（説明がありません）",
+				"iconUrl": "（説明がありません）",
+				"target": "（説明がありません）",
+				"condFormula": "（説明がありません）",
+				"isPublic": "（説明がありません）",
+				"isModerator": "（説明がありません）",
+				"isAdministrator": "（説明がありません）",
+				"isExplorable": "（説明がありません）",
+				"asBadge": "（説明がありません）",
+				"canEditMembersByModerator": "（説明がありません）",
+				"displayOrder": "（説明がありません）",
+				"policies": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/roles/update",
+	"description": "（説明がありません）"
+}

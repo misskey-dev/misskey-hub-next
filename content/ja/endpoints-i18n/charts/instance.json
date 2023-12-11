@@ -1,0 +1,41 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"span": "（説明がありません）",
+				"limit": "（説明がありません）",
+				"offset": "（説明がありません）",
+				"host": "（説明がありません）"
+			},
+			"response": {
+				"requests.failed": "（説明がありません）",
+				"requests.succeeded": "（説明がありません）",
+				"requests.received": "（説明がありません）",
+				"notes.total": "（説明がありません）",
+				"notes.inc": "（説明がありません）",
+				"notes.dec": "（説明がありません）",
+				"notes.diffs.normal": "（説明がありません）",
+				"notes.diffs.reply": "（説明がありません）",
+				"notes.diffs.renote": "（説明がありません）",
+				"notes.diffs.withFile": "（説明がありません）",
+				"users.total": "（説明がありません）",
+				"users.inc": "（説明がありません）",
+				"users.dec": "（説明がありません）",
+				"following.total": "（説明がありません）",
+				"following.inc": "（説明がありません）",
+				"following.dec": "（説明がありません）",
+				"followers.total": "（説明がありません）",
+				"followers.inc": "（説明がありません）",
+				"followers.dec": "（説明がありません）",
+				"drive.totalFiles": "（説明がありません）",
+				"drive.incFiles": "（説明がありません）",
+				"drive.decFiles": "（説明がありません）",
+				"drive.incUsage": "（説明がありません）",
+				"drive.decUsage": "（説明がありません）"
+			}
+		}
+	},
+	"title": "charts/instance",
+	"description": "（説明がありません）"
+}

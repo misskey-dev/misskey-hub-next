@@ -1,0 +1,16 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"noteId": "（説明がありません）"
+			},
+			"response": {
+				"isFavorited": "（説明がありません）",
+				"isMutedThread": "（説明がありません）"
+			}
+		}
+	},
+	"title": "notes/state",
+	"description": "（説明がありません）"
+}

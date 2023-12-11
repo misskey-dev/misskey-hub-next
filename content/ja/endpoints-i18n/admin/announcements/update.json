@@ -1,0 +1,21 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"id": "（説明がありません）",
+				"title": "（説明がありません）",
+				"text": "（説明がありません）",
+				"imageUrl": "（説明がありません）",
+				"icon": "（説明がありません）",
+				"display": "（説明がありません）",
+				"forExistingUsers": "（説明がありません）",
+				"silence": "（説明がありません）",
+				"needConfirmationToRead": "（説明がありません）",
+				"isActive": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/announcements/update",
+	"description": "（説明がありません）"
+}

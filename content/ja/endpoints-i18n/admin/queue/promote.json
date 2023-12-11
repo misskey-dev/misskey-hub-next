@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"type": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/queue/promote",
+	"description": "（説明がありません）"
+}

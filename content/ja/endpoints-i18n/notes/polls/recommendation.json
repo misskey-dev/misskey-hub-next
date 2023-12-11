@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"limit": "（説明がありません）",
+				"offset": "（説明がありません）"
+			}
+		}
+	},
+	"title": "notes/polls/recommendation",
+	"description": "（説明がありません）"
+}

@@ -76,7 +76,7 @@ export async function genApiFiles() {
             }
 
             Object.keys(epj.paths[path][method].responses).forEach((responseCode) => {
-                const responseBody = epj.paths[path][method].responses[responseCode].content ? epj.paths[path][method].responses[responseCode].content["application/json"] : null;
+                const responseBody = epj.paths[path][method].responses[responseCode].content ? epj.paths[path][method].responses[responseCode].content : null;
 
                 if (!out._api._responseCodes[responseCode]) {
                     out._api._responseCodes[responseCode] = epj.paths[path][method].responses[responseCode].description;
@@ -125,15 +125,16 @@ export async function genApiFiles() {
     });
     console.log("エンドポイント定義上書き完了");
 
-    // Contentの翻訳用jsonを更新【2023.12.07 WIP そのまま動かすとまずい】
+    // Contentの翻訳用jsonを更新
     const targetEPIPath = path.resolve(__dirname, '../content/ja/endpoints-i18n');
     Object.keys(endpointsTLs).forEach((eppath) => {
         const sanitizedPathName = eppath.replace(/^\//, '');
 
         const targetObj: Record<string, any> = {
             data: endpointsTLs[eppath],
+            title: sanitizedPathName,
+            description: '（説明がありません）',
         };
-        targetObj.title = sanitizedPathName;
 
         let out = targetObj;
 
@@ -142,7 +143,7 @@ export async function genApiFiles() {
             out = mergeObjects(mobj, targetObj);
         }
 
-        createFile(path.join(targetEPIPath, `${eppath}.json`), JSON.stringify(out));
+        createFile(path.join(targetEPIPath, `${eppath}.json`), JSON.stringify(out, null, "\t"));
     });
     console.log("エンドポイント定義上書き完了");
 

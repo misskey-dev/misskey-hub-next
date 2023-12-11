@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"fileId": "（説明がありません）",
+				"url": "（説明がありません）"
+			}
+		}
+	},
+	"title": "drive/files/show",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,16 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {},
+			"response": {
+				"deliver": "（説明がありません）",
+				"inbox": "（説明がありません）",
+				"db": "（説明がありません）",
+				"objectStorage": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/queue/stats",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,20 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {},
+			"response": {
+				"machine": "（説明がありません）",
+				"os": "（説明がありません）",
+				"node": "（説明がありません）",
+				"psql": "（説明がありません）",
+				"cpu": "（説明がありません）",
+				"mem": "（説明がありません）",
+				"fs": "（説明がありません）",
+				"net": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/server-info",
+	"description": "（説明がありません）"
+}

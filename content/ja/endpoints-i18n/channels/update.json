@@ -1,0 +1,20 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"channelId": "（説明がありません）",
+				"name": "（説明がありません）",
+				"description": "（説明がありません）",
+				"bannerId": "（説明がありません）",
+				"isArchived": "（説明がありません）",
+				"pinnedNoteIds": "（説明がありません）",
+				"color": "（説明がありません）",
+				"isSensitive": "（説明がありません）",
+				"allowRenoteToExternal": "（説明がありません）"
+			}
+		}
+	},
+	"title": "channels/update",
+	"description": "（説明がありません）"
+}

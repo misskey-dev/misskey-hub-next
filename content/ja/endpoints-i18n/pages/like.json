@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"pageId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "pages/like",
+	"description": "（説明がありません）"
+}

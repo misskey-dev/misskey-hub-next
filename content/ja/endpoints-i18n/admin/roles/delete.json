@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"roleId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/roles/delete",
+	"description": "（説明がありません）"
+}

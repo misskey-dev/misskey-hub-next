@@ -1,0 +1,19 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {},
+			"response": {
+				"notesCount": "（説明がありません）",
+				"originalNotesCount": "（説明がありません）",
+				"usersCount": "（説明がありません）",
+				"originalUsersCount": "（説明がありません）",
+				"instances": "（説明がありません）",
+				"driveUsageLocal": "（説明がありません）",
+				"driveUsageRemote": "（説明がありません）"
+			}
+		}
+	},
+	"title": "stats",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"userId": "（説明がありません）",
+				"memo": "（説明がありません）"
+			}
+		}
+	},
+	"title": "users/update-memo",
+	"description": "（説明がありません）"
+}

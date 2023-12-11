@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"channelId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "channels/favorite",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"noteId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "notes/thread-muting/delete",
+	"description": "（説明がありません）"
+}

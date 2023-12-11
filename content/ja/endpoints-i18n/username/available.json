@@ -1,0 +1,15 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"username": "（説明がありません）"
+			},
+			"response": {
+				"available": "（説明がありません）"
+			}
+		}
+	},
+	"title": "username/available",
+	"description": "（説明がありません）"
+}

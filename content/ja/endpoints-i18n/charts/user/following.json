@@ -1,0 +1,29 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"span": "（説明がありません）",
+				"limit": "（説明がありません）",
+				"offset": "（説明がありません）",
+				"userId": "（説明がありません）"
+			},
+			"response": {
+				"local.followings.total": "（説明がありません）",
+				"local.followings.inc": "（説明がありません）",
+				"local.followings.dec": "（説明がありません）",
+				"local.followers.total": "（説明がありません）",
+				"local.followers.inc": "（説明がありません）",
+				"local.followers.dec": "（説明がありません）",
+				"remote.followings.total": "（説明がありません）",
+				"remote.followings.inc": "（説明がありません）",
+				"remote.followings.dec": "（説明がありません）",
+				"remote.followers.total": "（説明がありません）",
+				"remote.followers.inc": "（説明がありません）",
+				"remote.followers.dec": "（説明がありません）"
+			}
+		}
+	},
+	"title": "charts/user/following",
+	"description": "（説明がありません）"
+}

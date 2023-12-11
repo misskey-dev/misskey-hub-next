@@ -1,0 +1,21 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"span": "（説明がありません）",
+				"limit": "（説明がありません）",
+				"offset": "（説明がありません）",
+				"userId": "（説明がありません）"
+			},
+			"response": {
+				"upv.user": "（説明がありません）",
+				"pv.user": "（説明がありません）",
+				"upv.visitor": "（説明がありません）",
+				"pv.visitor": "（説明がありません）"
+			}
+		}
+	},
+	"title": "charts/user/pv",
+	"description": "（説明がありません）"
+}

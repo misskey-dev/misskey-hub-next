@@ -1,0 +1,14 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"limit": "（説明がありません）",
+				"sinceId": "（説明がありません）",
+				"untilId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/favorites",
+	"description": "（説明がありません）"
+}

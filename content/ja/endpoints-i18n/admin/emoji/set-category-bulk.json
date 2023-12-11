@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"ids": "（説明がありません）",
+				"category": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/emoji/set-category-bulk",
+	"description": "（説明がありません）"
+}

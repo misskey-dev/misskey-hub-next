@@ -1,0 +1,15 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"clipId": "（説明がありません）",
+				"name": "（説明がありません）",
+				"isPublic": "（説明がありません）",
+				"description": "（説明がありません）"
+			}
+		}
+	},
+	"title": "clips/update",
+	"description": "（説明がありません）"
+}

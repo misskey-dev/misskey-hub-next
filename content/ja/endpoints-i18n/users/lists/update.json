@@ -1,0 +1,14 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"listId": "（説明がありません）",
+				"name": "（説明がありません）",
+				"isPublic": "（説明がありません）"
+			}
+		}
+	},
+	"title": "users/lists/update",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"endpoint": "（説明がありません）"
+			}
+		}
+	},
+	"title": "sw/unregister",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,29 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"visibility": "（説明がありません）",
+				"visibleUserIds": "（説明がありません）",
+				"cw": "（説明がありません）",
+				"localOnly": "（説明がありません）",
+				"reactionAcceptance": "（説明がありません）",
+				"noExtractMentions": "（説明がありません）",
+				"noExtractHashtags": "（説明がありません）",
+				"noExtractEmojis": "（説明がありません）",
+				"replyId": "（説明がありません）",
+				"renoteId": "（説明がありません）",
+				"channelId": "（説明がありません）",
+				"text": "（説明がありません）",
+				"fileIds": "（説明がありません）",
+				"mediaIds": "（説明がありません）",
+				"poll": "（説明がありません）"
+			},
+			"response": {
+				"createdNote": "（説明がありません）"
+			}
+		}
+	},
+	"title": "notes/create",
+	"description": "（説明がありません）"
+}

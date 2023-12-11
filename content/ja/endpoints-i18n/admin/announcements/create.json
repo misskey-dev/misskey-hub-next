@@ -1,0 +1,28 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"title": "（説明がありません）",
+				"text": "（説明がありません）",
+				"imageUrl": "（説明がありません）",
+				"icon": "（説明がありません）",
+				"display": "（説明がありません）",
+				"forExistingUsers": "（説明がありません）",
+				"silence": "（説明がありません）",
+				"needConfirmationToRead": "（説明がありません）",
+				"userId": "（説明がありません）"
+			},
+			"response": {
+				"id": "（説明がありません）",
+				"createdAt": "（説明がありません）",
+				"updatedAt": "（説明がありません）",
+				"title": "（説明がありません）",
+				"text": "（説明がありません）",
+				"imageUrl": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/announcements/create",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,16 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"emailAddress": "（説明がありません）"
+			},
+			"response": {
+				"available": "（説明がありません）",
+				"reason": "（説明がありません）"
+			}
+		}
+	},
+	"title": "email-address/available",
+	"description": "（説明がありません）"
+}

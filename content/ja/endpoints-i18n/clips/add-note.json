@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"clipId": "（説明がありません）",
+				"noteId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "clips/add-note",
+	"description": "（説明がありません）"
+}

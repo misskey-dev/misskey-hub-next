@@ -1,0 +1,15 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"limit": "（説明がありません）",
+				"detail": "（説明がありません）",
+				"username": "（説明がありません）",
+				"host": "（説明がありません）"
+			}
+		}
+	},
+	"title": "users/search-by-username-and-host",
+	"description": "（説明がありません）"
+}

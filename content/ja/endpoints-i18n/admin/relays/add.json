@@ -1,0 +1,17 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"inbox": "（説明がありません）"
+			},
+			"response": {
+				"id": "（説明がありません）",
+				"inbox": "（説明がありません）",
+				"status": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/relays/add",
+	"description": "（説明がありません）"
+}

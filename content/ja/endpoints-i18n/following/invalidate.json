@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"userId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "following/invalidate",
+	"description": "（説明がありません）"
+}

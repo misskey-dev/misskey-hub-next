@@ -1,0 +1,21 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"id": "（説明がありません）",
+				"memo": "（説明がありません）",
+				"url": "（説明がありません）",
+				"imageUrl": "（説明がありません）",
+				"place": "（説明がありません）",
+				"priority": "（説明がありません）",
+				"ratio": "（説明がありません）",
+				"expiresAt": "（説明がありません）",
+				"startsAt": "（説明がありません）",
+				"dayOfWeek": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/ad/update",
+	"description": "（説明がありません）"
+}

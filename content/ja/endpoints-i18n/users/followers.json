@@ -1,0 +1,17 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"sinceId": "（説明がありません）",
+				"untilId": "（説明がありません）",
+				"limit": "（説明がありません）",
+				"userId": "（説明がありません）",
+				"username": "（説明がありません）",
+				"host": "（説明がありません）"
+			}
+		}
+	},
+	"title": "users/followers",
+	"description": "（説明がありません）"
+}

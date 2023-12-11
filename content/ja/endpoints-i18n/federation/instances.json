@@ -1,0 +1,22 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"host": "（説明がありません）",
+				"blocked": "（説明がありません）",
+				"notResponding": "（説明がありません）",
+				"suspended": "（説明がありません）",
+				"silenced": "（説明がありません）",
+				"federating": "（説明がありません）",
+				"subscribing": "（説明がありません）",
+				"publishing": "（説明がありません）",
+				"limit": "（説明がありません）",
+				"offset": "（説明がありません）",
+				"sort": "（説明がありません）"
+			}
+		}
+	},
+	"title": "federation/instances",
+	"description": "（説明がありません）"
+}

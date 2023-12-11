@@ -1,0 +1,17 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"url": "（説明がありません）",
+				"folderId": "（説明がありません）",
+				"isSensitive": "（説明がありません）",
+				"comment": "（説明がありません）",
+				"marker": "（説明がありません）",
+				"force": "（説明がありません）"
+			}
+		}
+	},
+	"title": "drive/files/upload-from-url",
+	"description": "（説明がありません）"
+}

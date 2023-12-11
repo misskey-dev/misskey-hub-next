@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"scope": "（説明がありません）",
+				"domain": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/registry/keys",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {},
+			"response": {
+				"pong": "（説明がありません）"
+			}
+		}
+	},
+	"title": "ping",
+	"description": "（説明がありません）"
+}

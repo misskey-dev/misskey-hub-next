@@ -1,0 +1,38 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"fileId": "（説明がありません）",
+				"url": "（説明がありません）"
+			},
+			"response": {
+				"id": "（説明がありません）",
+				"createdAt": "（説明がありません）",
+				"userId": "（説明がありません）",
+				"userHost": "（説明がありません）",
+				"md5": "（説明がありません）",
+				"name": "（説明がありません）",
+				"type": "（説明がありません）",
+				"size": "（説明がありません）",
+				"comment": "（説明がありません）",
+				"blurhash": "（説明がありません）",
+				"properties": "（説明がありません）",
+				"storedInternal": "（説明がありません）",
+				"url": "（説明がありません）",
+				"thumbnailUrl": "（説明がありません）",
+				"webpublicUrl": "（説明がありません）",
+				"accessKey": "（説明がありません）",
+				"thumbnailAccessKey": "（説明がありません）",
+				"webpublicAccessKey": "（説明がありません）",
+				"uri": "（説明がありません）",
+				"src": "（説明がありません）",
+				"folderId": "（説明がありません）",
+				"isSensitive": "（説明がありません）",
+				"isLink": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/drive/show-file",
+	"description": "（説明がありません）"
+}

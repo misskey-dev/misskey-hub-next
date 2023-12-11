@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"clipId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "clips/delete",
+	"description": "（説明がありません）"
+}

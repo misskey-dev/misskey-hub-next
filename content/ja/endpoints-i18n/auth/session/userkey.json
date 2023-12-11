@@ -1,0 +1,17 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"appSecret": "（説明がありません）",
+				"token": "（説明がありません）"
+			},
+			"response": {
+				"accessToken": "（説明がありません）",
+				"user": "（説明がありません）"
+			}
+		}
+	},
+	"title": "auth/session/userkey",
+	"description": "（説明がありません）"
+}

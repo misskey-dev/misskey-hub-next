@@ -1,0 +1,22 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"span": "（説明がありません）",
+				"limit": "（説明がありません）",
+				"offset": "（説明がありません）"
+			},
+			"response": {
+				"local.total": "（説明がありません）",
+				"local.inc": "（説明がありません）",
+				"local.dec": "（説明がありません）",
+				"remote.total": "（説明がありません）",
+				"remote.inc": "（説明がありません）",
+				"remote.dec": "（説明がありません）"
+			}
+		}
+	},
+	"title": "charts/users",
+	"description": "（説明がありません）"
+}

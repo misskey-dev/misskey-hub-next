@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"noteId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "notes/favorites/create",
+	"description": "（説明がありません）"
+}

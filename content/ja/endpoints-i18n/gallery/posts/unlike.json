@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"postId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "gallery/posts/unlike",
+	"description": "（説明がありません）"
+}

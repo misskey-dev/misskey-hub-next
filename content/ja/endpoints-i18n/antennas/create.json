@@ -1,0 +1,22 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"name": "（説明がありません）",
+				"src": "（説明がありません）",
+				"userListId": "（説明がありません）",
+				"keywords": "（説明がありません）",
+				"excludeKeywords": "（説明がありません）",
+				"users": "（説明がありません）",
+				"caseSensitive": "（説明がありません）",
+				"localOnly": "（説明がありません）",
+				"withReplies": "（説明がありません）",
+				"withFile": "（説明がありません）",
+				"notify": "（説明がありません）"
+			}
+		}
+	},
+	"title": "antennas/create",
+	"description": "（説明がありません）"
+}

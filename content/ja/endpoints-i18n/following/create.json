@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"userId": "（説明がありません）",
+				"withReplies": "（説明がありません）"
+			}
+		}
+	},
+	"title": "following/create",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"ids": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/emoji/delete-bulk",
+	"description": "（説明がありません）"
+}

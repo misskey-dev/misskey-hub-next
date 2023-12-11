@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {},
+			"response": {
+				"emojis": "（説明がありません）"
+			}
+		}
+	},
+	"title": "emojis",
+	"description": "（説明がありません）"
+}

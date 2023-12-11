@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"host": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/federation/refresh-remote-instance-metadata",
+	"description": "（説明がありません）"
+}

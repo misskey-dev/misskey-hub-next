@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"ids": "（説明がありません）",
+				"aliases": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/emoji/remove-aliases-bulk",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,14 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"noteId": "（説明がありません）",
+				"limit": "（説明がありません）",
+				"offset": "（説明がありません）"
+			}
+		}
+	},
+	"title": "notes/conversation",
+	"description": "（説明がありません）"
+}

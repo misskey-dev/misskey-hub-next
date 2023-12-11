@@ -3,6 +3,16 @@
         `depth-${depth}`,
         depth === 1 ? 'mb-4' : 'mb-2',
     ]">
+        <li v-if="isEPDocs && depth === 1" class="mb-4">
+            <GNuxtLink
+                class="block hover:text-accent-600 text-base"
+                :to="localePath('/docs/for-developers/api/')"
+                @click.passive="isAsideNavOpen = false"
+            >
+                <ArrowLeftIco class="mr-1" />{{ $t('_docs.exitEndpointDocs') }}
+            </GNuxtLink>
+            <div class="mt-4 border-b border-slate-300 dark:border-slate-800"></div>
+        </li>
         <li
             v-for="link in realLinks ?? []"
             :key="link._path"
@@ -27,7 +37,7 @@
                 
                 @click.passive="isAsideNavOpen = false"
                 :class="[
-                    'block hover:text-accent-600',
+                    'block w-full hover:text-accent-600',
                     depth === 1 && 'text-base',
                     depth === 2 ? 'px-2 py-1' : 'py-1',
                     isSamePath(path, link._path) && 'text-accent-600 font-bold',
@@ -62,6 +72,7 @@ import type { NavItem } from '@nuxt/content/dist/runtime/types'
 import { findDeepObject } from '@/assets/js/misc';
 import { isSamePath } from 'ufo';
 import ArrowIco from "bi/chevron-right.svg";
+import ArrowLeftIco from "bi/arrow-left.svg";
 import GNuxtLink from '@/components/g/NuxtLink.vue';
 
 const isAsideNavOpen = useState<boolean>('miHub_docs_asideNav_openState', () => false);

@@ -1,0 +1,17 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"token": "（説明がありません）"
+			},
+			"response": {
+				"id": "（説明がありません）",
+				"app": "（説明がありません）",
+				"token": "（説明がありません）"
+			}
+		}
+	},
+	"title": "auth/session/show",
+	"description": "（説明がありません）"
+}

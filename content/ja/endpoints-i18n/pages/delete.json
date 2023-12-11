@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"pageId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "pages/delete",
+	"description": "（説明がありません）"
+}

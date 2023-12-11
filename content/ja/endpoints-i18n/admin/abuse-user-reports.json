@@ -1,0 +1,18 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"limit": "（説明がありません）",
+				"sinceId": "（説明がありません）",
+				"untilId": "（説明がありません）",
+				"state": "（説明がありません）",
+				"reporterOrigin": "（説明がありません）",
+				"targetUserOrigin": "（説明がありません）",
+				"forwarded": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/abuse-user-reports",
+	"description": "（説明がありません）"
+}

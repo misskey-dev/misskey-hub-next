@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"policies": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/roles/update-default-policies",
+	"description": "（説明がありません）"
+}

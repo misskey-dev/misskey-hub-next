@@ -1,0 +1,54 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"detail": "（説明がありません）"
+			},
+			"response": {
+				"maintainerName": "（説明がありません）",
+				"maintainerEmail": "（説明がありません）",
+				"version": "（説明がありません）",
+				"name": "（説明がありません）",
+				"shortName": "（説明がありません）",
+				"uri": "（説明がありません）",
+				"description": "（説明がありません）",
+				"langs": "（説明がありません）",
+				"tosUrl": "（説明がありません）",
+				"repositoryUrl": "（説明がありません）",
+				"feedbackUrl": "（説明がありません）",
+				"defaultDarkTheme": "（説明がありません）",
+				"defaultLightTheme": "（説明がありません）",
+				"disableRegistration": "（説明がありません）",
+				"cacheRemoteFiles": "（説明がありません）",
+				"cacheRemoteSensitiveFiles": "（説明がありません）",
+				"emailRequiredForSignup": "（説明がありません）",
+				"enableHcaptcha": "（説明がありません）",
+				"hcaptchaSiteKey": "（説明がありません）",
+				"enableRecaptcha": "（説明がありません）",
+				"recaptchaSiteKey": "（説明がありません）",
+				"enableTurnstile": "（説明がありません）",
+				"turnstileSiteKey": "（説明がありません）",
+				"swPublickey": "（説明がありません）",
+				"mascotImageUrl": "（説明がありません）",
+				"bannerUrl": "（説明がありません）",
+				"serverErrorImageUrl": "（説明がありません）",
+				"infoImageUrl": "（説明がありません）",
+				"notFoundImageUrl": "（説明がありません）",
+				"iconUrl": "（説明がありません）",
+				"maxNoteTextLength": "（説明がありません）",
+				"ads": "（説明がありません）",
+				"notesPerOneAd": "（説明がありません）",
+				"requireSetup": "（説明がありません）",
+				"enableEmail": "（説明がありません）",
+				"enableServiceWorker": "（説明がありません）",
+				"translatorAvailable": "（説明がありません）",
+				"proxyAccountName": "（説明がありません）",
+				"mediaProxy": "（説明がありません）",
+				"features": "（説明がありません）"
+			}
+		}
+	},
+	"title": "meta",
+	"description": "（説明がありません）"
+}

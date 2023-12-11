@@ -1,0 +1,19 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"local": "（説明がありません）",
+				"reply": "（説明がありません）",
+				"renote": "（説明がありません）",
+				"withFiles": "（説明がありません）",
+				"poll": "（説明がありません）",
+				"limit": "（説明がありません）",
+				"sinceId": "（説明がありません）",
+				"untilId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "notes",
+	"description": "（説明がありません）"
+}

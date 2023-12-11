@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"inviteId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "invite/delete",
+	"description": "（説明がありません）"
+}

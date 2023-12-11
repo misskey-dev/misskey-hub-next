@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"userId": "（説明がありません）",
+				"text": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/update-user-note",
+	"description": "（説明がありません）"
+}

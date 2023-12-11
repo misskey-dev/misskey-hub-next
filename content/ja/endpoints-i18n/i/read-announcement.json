@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"announcementId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/read-announcement",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,18 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"endpoint": "（説明がありません）",
+				"sendReadMessage": "（説明がありません）"
+			},
+			"response": {
+				"userId": "（説明がありません）",
+				"endpoint": "（説明がありません）",
+				"sendReadMessage": "（説明がありません）"
+			}
+		}
+	},
+	"title": "sw/update-registration",
+	"description": "（説明がありません）"
+}

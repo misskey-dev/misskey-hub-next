@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"host": "（説明がありません）"
+			}
+		}
+	},
+	"title": "federation/show-instance",
+	"description": "（説明がありません）"
+}

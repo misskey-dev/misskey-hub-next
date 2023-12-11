@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"folderId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "drive/folders/delete",
+	"description": "（説明がありません）"
+}

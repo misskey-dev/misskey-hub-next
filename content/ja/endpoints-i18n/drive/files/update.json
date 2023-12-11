@@ -1,0 +1,16 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"fileId": "（説明がありません）",
+				"folderId": "（説明がありません）",
+				"name": "（説明がありません）",
+				"isSensitive": "（説明がありません）",
+				"comment": "（説明がありません）"
+			}
+		}
+	},
+	"title": "drive/files/update",
+	"description": "（説明がありません）"
+}

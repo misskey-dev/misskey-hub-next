@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"id": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/avatar-decorations/delete",
+	"description": "（説明がありません）"
+}

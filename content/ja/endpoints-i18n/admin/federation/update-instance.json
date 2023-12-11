@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"host": "（説明がありません）",
+				"isSuspended": "（説明がありません）"
+			}
+		}
+	},
+	"title": "admin/federation/update-instance",
+	"description": "（説明がありません）"
+}

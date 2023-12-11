@@ -1,0 +1,22 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"endpoint": "（説明がありません）",
+				"auth": "（説明がありません）",
+				"publickey": "（説明がありません）",
+				"sendReadMessage": "（説明がありません）"
+			},
+			"response": {
+				"state": "（説明がありません）",
+				"key": "（説明がありません）",
+				"userId": "（説明がありません）",
+				"endpoint": "（説明がありません）",
+				"sendReadMessage": "（説明がありません）"
+			}
+		}
+	},
+	"title": "sw/register",
+	"description": "（説明がありません）"
+}
