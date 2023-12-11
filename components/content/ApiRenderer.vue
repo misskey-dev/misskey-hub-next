@@ -99,7 +99,7 @@
 
             <div class="pt-8 markdown-body">
                 <GDetails summary="Raw JSON Schema">
-                    <MDC :value="`\`\`\`json\n${JSON.stringify(apiData, null, 2)}\n\`\`\``" />
+                    <MDC :value="`\`\`\`json\n${JSON.stringify(apiData.data, null, 2)}\n\`\`\``" />
                 </GDetails>
             </div>
         </div>
