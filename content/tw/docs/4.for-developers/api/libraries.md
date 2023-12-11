@@ -1,8 +1,8 @@
 ---
-description: Misskey APIに関連するライブラリの一覧
+description: 與 Misskey API 相關的函式庫列表
 ---
 
-# ライブラリの一覧
+# 函式庫一覽
 
 ## JavaScript
 
