@@ -18,7 +18,7 @@
                 <div class="mb-6 flex items-center justify-center w-full space-x-4">
                     <GNuxtLink :to="miShareUrl" target="_blank" class="h-12 p-3 flex items-center rounded-full bg-accent-600 hover:opacity-80 text-white"><MiIco class="w-7 h-7" /><span class="sr-only">Misskey</span><div class="ml-1.5 font-bold">{{ $t('note') }}</div></GNuxtLink>
                     <GNuxtLink :to="mtdShareUrl" target="_blank" class="w-12 h-12 p-3 rounded-full bg-[#563ACC] hover:opacity-80 text-white"><MastoIco class="w-6 h-6" /><span class="sr-only">Mastodon</span></GNuxtLink>
-                    <GNuxtLink :to="twShareUrl" target="_blank" class="w-12 h-12 p-3 rounded-full bg-black hover:opacity-80 text-white"><TwitterXIco class="w-6 h-6" /><span class="sr-only">X (Twitter)</span></GNuxtLink>
+                    <GNuxtLink :to="twShareUrl" target="_blank" class="w-12 h-12 p-3 rounded-full bg-black dark:bg-gray-700 hover:opacity-80 text-white"><TwitterXIco class="w-6 h-6" /><span class="sr-only">X (Twitter)</span></GNuxtLink>
                 </div>
                 <GNuxtLink :to="localePath('/blog/', originalLocale)" class="text-xl font-bold hover:opacity-70">
                     <LeftIco class="mr-2" />{{ $t('_blog.back') }}
