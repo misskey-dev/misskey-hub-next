@@ -3,30 +3,16 @@ import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
 import { readFileSync } from 'fs';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
-import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
+import { getOldHubRedirects } from './scripts/get-old-hub-redirects';
 import { genLocalesJson } from './scripts/gen-locales';
 import { getStaticEndpoints } from './scripts/get-static-endpoints';
+import { locales } from './assets/data/locales';
 import type { NuxtConfig } from 'nuxt/schema';
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl = 'https://misskey-hub-next.vercel.app';
 
-// 言語定義
-export const localesConst = [
-	{ files: [ 'ja-JP.json' ], code: 'ja', iso: 'ja-JP', name: '日本語' },
-	{ files: [ 'en-US.json' ], code: 'en', iso: 'en-US', name: 'English' },
-	{ files: [ 'id-ID.json' ], code: 'id', iso: 'id-ID', name: 'Bahasa Indonesia' },
-	{ files: [ 'ko-KR.json' ], code: 'ko', iso: 'ko-KR', name: '한국어' },
-	{ files: [ 'it-IT.json' ], code: 'it', iso: 'it-IT', name: 'Italiano' },
-	{ files: [ 'pl-PL.json' ], code: 'pl', iso: 'pl-PL', name: 'Polski' },
-	{ files: [ 'fr-FR.json' ], code: 'fr', iso: 'fr-FR', name: 'Français' },
-	{ files: [ 'zh-CN.json' ], code: 'cn', iso: 'zh-CN', name: '简体中文' },
-	{ files: [ 'zh-TW.json' ], code: 'tw', iso: 'zh-TW', name: '繁体中文' },
-] as const;
-
-export type LocaleCodes = typeof localesConst[number]['code'];
-
-export const locales = localesConst as unknown as LocaleObject[];
+// 言語定義は /assets/data/locales.ts に移動しました
 
 function getRouteRules(): NuxtConfig['routeRules'] {
 	// 言語ごとに割り当てる必要のないRouteRules
@@ -164,6 +150,13 @@ export default defineNuxtConfig({
 	},
 	nitro: {
 		preset: 'vercel',
+		vercel: {
+			config: {
+				routes: [
+					...getOldHubRedirects(),
+				],
+			}
+		},
 		plugins: [
 			'@/server/plugins/appendComment.ts',
 			'@/server/plugins/i18nRedirector.ts',

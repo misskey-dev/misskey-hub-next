@@ -1,8 +1,10 @@
 # AiScript
 AiScriptは、Misskeyで使用できるスクリプト言語です。
 
-::: tip
+:::tip
+
 AiScript実装はMisskeyとは別リポジトリで、[オープンソースで公開されています](https://github.com/syuilo/aiscript)。
+
 :::
 
 ## 使い方
