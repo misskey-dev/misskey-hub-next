@@ -101,6 +101,7 @@ _servers:
     orderBy: "Trier par"
     recomendded: "Par défaut"
     notesCount: "Nombre de notes"
+    notesPer15Days: "1日あたりのノート数（15日平均）"
     usersCount: "Nombre d’utilisateurs"
   _registerAcceptance:
     title: "Politique d'Inscription"
