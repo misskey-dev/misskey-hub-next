@@ -3,8 +3,8 @@
 @import url('./GenJyuuGothicX-P-Bold/GenJyuuGothicX-P-Bold.css');
 @import url('./GenJyuuGothicX-P-Regular/GenJyuuGothicX-P-Regular.css');
 @import url('./GenJyuuGothicX-Regular/GenJyuuGothicX-Regular.css');
-/** Korean (Pretendard) */
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css");
+/** Korean (Gothic A1) */
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap');
 /** Simplified Chinese (Noto Sans SC) */
 @import url('https://fonts.googleapis.cn/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
 /** Traditional Chinese (Noto Sans TC) */
@@ -24,7 +24,7 @@ html[lang='ja-JP'],
 html[lang='ko-KR'],
 ._i18n[lang='ko'],
 ._i18n[lang='ko-KR'] {
-    --mi-localized-font: 'Pretendard';
+    --mi-localized-font: 'Gothic A1';
 }
 
 html[lang='zh-CN'],

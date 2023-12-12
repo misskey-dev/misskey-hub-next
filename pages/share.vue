@@ -14,7 +14,7 @@
                         <li v-for="instance in displayInstances" :key="instance.url" class="group">
                             <GNuxtLink
                                 :to="`https://${instance.url}/share?${stringifyQuery(query)}`"
-                                class="group-first:rounded-t-lg group-last:rounded-b-lg p-4 w-full flex items-center hover:bg-gray-100 dark:hover:bg-gray-700"
+                                class="group-first:rounded-t-lg group-last:rounded-b-lg p-4 w-full flex items-center hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-gray-700 dark:active:bg-gray-600"
                             >
                                 <div
                                     class="h-9 w-9 flex-shrink-0 overflow-hidden rounded bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 mr-3"
