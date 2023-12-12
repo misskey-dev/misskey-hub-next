@@ -1089,7 +1089,7 @@ export const redirects = [
     ],
     [
         "/blog/2023-09-04-media-nlab.html",
-        "/ja/blog/2023-09-04-media-nlab.html"
+        "/ja/blog/2023-09-04-media-nlab/"
     ],
     [
         "/blog/2023-09-04-media-nlab",
@@ -1101,7 +1101,7 @@ export const redirects = [
     ],
     [
         "/blog/2023-09-07-hatenablog.html",
-        "/ja/blog/2023-09-07-hatenablog.html"
+        "/ja/blog/2023-09-07-hatenablog/"
     ],
     [
         "/blog/2023-09-07-hatenablog",
@@ -1113,7 +1113,7 @@ export const redirects = [
     ],
     [
         "/blog/2023-09-09-interview.html",
-        "/ja/blog/2023-09-09-interview.html"
+        "/ja/blog/2023-09-09-interview/"
     ],
     [
         "/blog/2023-09-09-interview",
@@ -1125,7 +1125,7 @@ export const redirects = [
     ],
     [
         "/blog/2023-09-11-gihyo.html",
-        "/ja/blog/2023-09-11-gihyo.html"
+        "/ja/blog/2023-09-11-gihyo/"
     ],
     [
         "/blog/2023-09-11-gihyo",
@@ -1137,7 +1137,7 @@ export const redirects = [
     ],
     [
         "/blog/2023-09-12-sakuravps.html",
-        "/ja/blog/2023-09-12-sakuravps.html"
+        "/ja/blog/2023-09-12-sakuravps/"
     ],
     [
         "/blog/2023-09-12-sakuravps",
@@ -1149,7 +1149,7 @@ export const redirects = [
     ],
     [
         "/blog/2023-09-24-release.html",
-        "/ja/blog/2023-09-24-release.html"
+        "/ja/blog/2023-09-24-release/"
     ],
     [
         "/blog/2023-09-24-release",
@@ -1161,7 +1161,7 @@ export const redirects = [
     ],
     [
         "/blog/2023-10-10-release.html",
-        "/ja/blog/2023-10-10-release.html"
+        "/ja/blog/2023-10-10-release/"
     ],
     [
         "/blog/2023-10-10-release",
@@ -1173,7 +1173,7 @@ export const redirects = [
     ],
     [
         "/blog/2023-10-24-gihyo.html",
-        "/ja/blog/2023-10-24-gihyo.html"
+        "/ja/blog/2023-10-24-gihyo/"
     ],
     [
         "/blog/2023-10-24-gihyo",
@@ -1185,7 +1185,7 @@ export const redirects = [
     ],
     [
         "/blog/2023-10-27-xserver.html",
-        "/ja/blog/2023-10-27-xserver.html"
+        "/ja/blog/2023-10-27-xserver/"
     ],
     [
         "/blog/2023-10-27-xserver",
@@ -1197,7 +1197,7 @@ export const redirects = [
     ],
     [
         "/blog/2023-11-05-mac2023.html",
-        "/ja/blog/2023-11-05-mac2023.html"
+        "/ja/blog/2023-11-05-mac2023/"
     ],
     [
         "/blog/2023-11-05-mac2023",
@@ -1209,7 +1209,7 @@ export const redirects = [
     ],
     [
         "/blog/2023-11-05-release.html",
-        "/ja/blog/2023-11-05-release.html"
+        "/ja/blog/2023-11-05-release/"
     ],
     [
         "/blog/2023-11-05-release",
@@ -1221,7 +1221,7 @@ export const redirects = [
     ],
     [
         "/blog/2023-11-14-gihyo.html",
-        "/ja/blog/2023-11-14-gihyo.html"
+        "/ja/blog/2023-11-14-gihyo/"
     ],
     [
         "/blog/2023-11-14-gihyo",
@@ -1233,7 +1233,7 @@ export const redirects = [
     ],
     [
         "/blog/2023-11-17-release.html",
-        "/ja/blog/2023-11-17-release.html"
+        "/ja/blog/2023-11-17-release/"
     ],
     [
         "/blog/2023-11-17-release",
@@ -1245,7 +1245,7 @@ export const redirects = [
     ],
     [
         "/blog/2023-12-01-2023recap.html",
-        "/ja/blog/2023-12-01-2023recap.html"
+        "/ja/blog/2023-12-01-2023recap/"
     ],
     [
         "/blog/2023-12-01-2023recap",
@@ -1254,6 +1254,18 @@ export const redirects = [
     [
         "/blog/2023-12-01-2023recap.md",
         "/blog/2023-12-01-2023recap.html"
+    ],
+    [
+        "/blog/2023-12-12-gihyo.html",
+        "/ja/blog/2023-12-12-gihyo/"
+    ],
+    [
+        "/blog/2023-12-12-gihyo",
+        "/blog/2023-12-12-gihyo.html"
+    ],
+    [
+        "/blog/2023-12-12-gihyo.md",
+        "/blog/2023-12-12-gihyo.html"
     ],
     [
         "/blog/index.html",
