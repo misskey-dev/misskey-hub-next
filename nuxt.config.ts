@@ -49,7 +49,6 @@ function getRouteRules(): NuxtConfig['routeRules'] {
 	return {
 		...staticRules,
 		..._localeBasedRules,
-		...getOldHubRedirects(),
 	};
 }
 
