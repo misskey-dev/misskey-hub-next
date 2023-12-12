@@ -39,6 +39,7 @@
                     <div class="input-group">
                         <select id="orderBy" v-model="f_orderBy" class="form-select">
                             <option value="recomendded">{{ $t('_servers._search.recomendded') }}</option>
+                            <option value="notesPer15Days">{{ $t('_servers._search.notesPer15Days') }}</option>
                             <option value="notesCount">{{ $t('_servers._search.notesCount') }}</option>
                             <option value="usersCount">{{ $t('_servers._search.usersCount') }}</option>
                         </select>
@@ -118,8 +119,8 @@ const sortOpen = ref(false);
 
 // ▼フォームデータ初期化▼
 type MiHubSFStorage = {
-    f_langs: string;
-    f_orderBy: 'recomendded' | 'notesCount' | 'usersCount';
+    f_langs: string | null;
+    f_orderBy: 'recomendded' | 'notesCount' | 'notesPer15Days' | 'usersCount';
     f_order: 'asc' | 'desc';
     f_registerAcceptance: 'public' | 'inviteOnly' | null;
 };
@@ -132,7 +133,7 @@ if (process.client) {
 const f_query_partial = ref<string>("");
 
 const f_query = ref<string>("");
-const f_langs = ref<MiHubSFStorage['f_langs']>(savedSettings?.f_langs ?? locale.value);
+const f_langs = ref<MiHubSFStorage['f_langs']>(savedSettings?.f_langs ?? null);
 const f_orderBy = ref<MiHubSFStorage['f_orderBy']>(savedSettings?.f_orderBy ?? 'recomendded');
 const f_order = ref<MiHubSFStorage['f_order']>(savedSettings?.f_order ?? 'desc');
 const f_registerAcceptance = ref<MiHubSFStorage['f_registerAcceptance']>(savedSettings?.f_registerAcceptance || null);
@@ -218,6 +219,9 @@ const filteredInstances = computed<InstanceItem[]>(() => {
                     break;
                 case 'notesCount':
                     orderKey = 'stats.originalNotesCount';
+                    break;
+                case 'notesPer15Days':
+                    orderKey = 'npd15';
                     break;
                 case 'usersCount':
                     orderKey = 'stats.originalUsersCount';

@@ -21,7 +21,7 @@ _nav:
 
 _landing:
   _hero:
-    description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
+    description: "Misskey（ミスキー）はオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
     gettingStarted: "はじめる"
   _keyFeatures:
     _open:
@@ -105,6 +105,7 @@ _servers:
     orderBy: "並び替え"
     recomendded: "デフォルト"
     notesCount: "ノート数"
+    notesPer15Days: "1日あたりのノート数（15日平均）"
     usersCount: "ユーザー数"
   _registerAcceptance:
     title: "新規登録"
