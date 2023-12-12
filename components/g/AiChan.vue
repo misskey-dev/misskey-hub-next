@@ -53,5 +53,7 @@ iframe {
 	height: 600px;
 	border: none;
 	pointer-events: none;
+	background: transparent;
+	color-scheme: light dark;
 }
 </style>
