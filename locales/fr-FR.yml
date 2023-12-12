@@ -3,6 +3,8 @@ learnMore: "En savoir plus"
 loading: "Chargement en cours…"
 clickToExpand: "Cliquer pour développer"
 copy: "Copier"
+share: "共有する"
+note: "ノート"
 _seo:
   siteName: "Misskey Hub"
   siteNameLong: "Misskey Hub – Site web officiel du projet Misskey"
