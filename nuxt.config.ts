@@ -150,6 +150,13 @@ export default defineNuxtConfig({
 	},
 	nitro: {
 		preset: 'vercel',
+		vercel: {
+			config: {
+				routes: [
+					...getOldHubRedirects(),
+				],
+			}
+		},
 		plugins: [
 			'@/server/plugins/appendComment.ts',
 			'@/server/plugins/i18nRedirector.ts',
