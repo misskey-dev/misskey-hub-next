@@ -101,6 +101,7 @@ _servers:
     orderBy: "정렬"
     recomendded: "기본"
     notesCount: "노트 수"
+    notesPer15Days: "1日あたりのノート数（15日平均）"
     usersCount: "유저 수"
   _registerAcceptance:
     title: "회원 가입"
