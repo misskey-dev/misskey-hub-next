@@ -101,6 +101,7 @@ _servers:
     orderBy: "Ordina per"
     recomendded: "Predefinito"
     notesCount: "Conteggio Note pubblicate"
+    notesPer15Days: "1日あたりのノート数（15日平均）"
     usersCount: "Conteggio iscrizioni"
   _registerAcceptance:
     title: "Modalità di iscrizione"
