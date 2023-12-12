@@ -101,6 +101,7 @@ _servers:
     orderBy: "排序方式"
     recomendded: "預設"
     notesCount: "貼文數"
+    notesPer15Days: "1日あたりのノート数（15日平均）"
     usersCount: "使用者數"
   _registerAcceptance:
     title: "是否開放註冊"
