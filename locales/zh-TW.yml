@@ -5,6 +5,13 @@ clickToExpand: "（點擊展開）"
 copy: "複製"
 share: "共有する"
 note: "ノート"
+_error:
+  notFound: "ページが見つかりませんでした"
+  notFoundDesc: "お探しのページは見つかりませんでした。URLをお確かめください。"
+  generalError: "エラーが発生しました"
+  generalErrorDesc: "これが意図した操作でない場合は、以下から不具合報告をお願いします。"
+  reportProblem: "問題を報告する"
+  goToTop: "トップページにもどる"
 _seo:
   siteName: "Misskey Hub"
   siteNameLong: "Misskey Hub – Misskey 專案官方網站"
