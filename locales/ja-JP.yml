@@ -273,6 +273,10 @@ _shareLinkGenerator:
   typeSomethingToGetLink: "本文を入力するとリンクが生成されます。"
   typeSomethingToGetButton: "本文を入力するとボタンが生成されます。"
 
+_goToMisskey:
+  title: "Misskey Webに移動"
+  heading: "このページを開きたいサーバーを選択してください"
+
 _api:
   _permissions:
     title: "権限"

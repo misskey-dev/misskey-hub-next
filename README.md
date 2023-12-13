@@ -18,6 +18,12 @@ Release date: **TBD（未定）**
 
 内部リンク・外部リンクに関する処理を強化した[`<GNuxtLink>`](./components/g/NuxtLink.vue)を使用していますので、**リンクを追加する際は`<NuxtLink>`ではなく`<GNuxtLink>`を使用してください。**
 
+### Misskey Webへのリンクについて
+
+GNuxtLinkおよび各種Docsで、アドレスに `x-mi-web://` から始め、続けてMisskeyの相対パスを入力すると、Misskey Webへのリンクに置き換えられます。
+
+例: `/play` → `x-mi-web://play`
+
 ## Setup
 
 Make sure to install the dependencies:
