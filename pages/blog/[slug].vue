@@ -69,7 +69,7 @@ const runtimeConfig = useRuntimeConfig();
 const { data } = await useAsyncData(`blog-${route.params.slug}`, () => queryContent<MiBlogParsedContent>(`/blog/${route.params.slug}`).findOne());
 
 if (!data.value) {
-    throw createError({ statusCode: 404, statusMessage: 'page not found' });
+    throw createError({ statusCode: 404, statusMessage: 'page not found', fatal: true });
 }
 
 const thumbnail = !data.value.thumbnail ? undefined : (parseURL(data.value.thumbnail).host == null) ? joinURL(runtimeConfig.public.baseUrl, data.value.thumbnail) : data.value.thumbnail;

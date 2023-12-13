@@ -39,7 +39,7 @@ const route = useRoute();
 const { data } = await useAsyncData('global-ns', () => queryContent(`/ns`).findOne());
 
 if (!data.value) {
-    throw createError({ statusCode: 404, statusMessage: 'page not found' });
+    throw createError({ statusCode: 404, statusMessage: 'page not found', fatal: true });
 }
 
 route.meta.title = data.value?.title;
