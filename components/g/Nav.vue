@@ -1,5 +1,14 @@
 <template>
-    <div :class="['sticky top-0 z-[9900] transition', { 'shadow bg-opacity-90': (!disableShadow && scrollPos <= -40), 'bg-white dark:bg-gray-950': (disableShadow || scrollPos <= -40)}, (slim ? 'h-16 border-b border-slate-300 dark:border-slate-800' : 'h-16 lg:h-20')]">
+    <div
+        :class="[
+            'sticky top-0 z-[9900] transition',
+            {
+                'shadow bg-opacity-90': (!disableShadow && scrollPos <= -40),
+                'bg-white dark:bg-gray-950': (disableShadow || scrollPos <= -40),
+                'border-b border-slate-300 dark:border-slate-800': hasBorder,
+            },
+            (slim ? 'h-16' : 'h-16 lg:h-20'),
+        ]">
         <nav class="container mx-auto max-w-screen-xl grid items-center grid-cols-2 lg:grid-cols-6 p-4 h-full transition-[height]">
             <div class="">
                 <GNuxtLink :to="localePath('/')" class="flex items-center space-x-2 hover:opacity-80">
@@ -90,10 +99,12 @@ import NavData from '@/assets/data/nav';
 const props = withDefaults(defineProps<{
     disableShadow?: boolean;
     slim?: boolean;
+    hasBorder?: boolean;
     landing?: boolean;
 }>(), {
     disableShadow: false,
     slim: false,
+    hasBorder: false,
     landing: false,
 });
 

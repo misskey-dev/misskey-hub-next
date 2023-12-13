@@ -27,7 +27,7 @@ const route = useRoute();
 
 <template>
     <div class="bg-white dark:bg-slate-950">
-        <GNav @toggleNav="isNavOpen = !isNavOpen" :is-open="isNavOpen" :slim="true" :disable-shadow="true" />
+        <GNav @toggleNav="isNavOpen = !isNavOpen" :is-open="isNavOpen" :slim="true" :disable-shadow="true" :hasBorder="true" />
         <div :class="$style.slimPageRoot" class="overflow-x-hidden">
             <aside
                 class="w-80 lg:w-72 fixed top-0 mt-16 h-screen flex transition-transform lg:translate-x-0"

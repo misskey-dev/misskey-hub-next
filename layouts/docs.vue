@@ -25,7 +25,7 @@ watch(locale, async (to) => {
 
 <template>
     <div class="bg-white dark:bg-slate-950">
-        <GNav @toggleNav="isNavOpen = !isNavOpen" :is-open="isNavOpen" :slim="true" :disable-shadow="true" />
+        <GNav @toggleNav="isNavOpen = !isNavOpen" :isOpen="isNavOpen" :slim="true" :disableShadow="true" :hasBorder="true" />
         <div class="main-content">
             <div class="relative container mx-auto max-w-screen-xl p-6 lg:py-0 grid docs-root pb-12">
                 <div
