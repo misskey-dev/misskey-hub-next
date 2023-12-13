@@ -50,5 +50,4 @@ const realHref = computed(() => {
 });
 
 const realTarget = computed(() => (needsToOpenExternally.value ? '_blank' : (rawProps.target ?? null)));
-console.log(realTarget.value);
 </script>
