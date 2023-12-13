@@ -253,6 +253,9 @@ _shareLinkGenerator:
   testLink: "測試分享連結"
   typeSomethingToGetLink: "輸入本文後將生成連結。"
   typeSomethingToGetButton: "輸入本文後將生成按鈕。"
+_goToMisskey:
+  title: "Misskey Webに移動"
+  heading: "このページを開きたいサーバーを選択してください"
 _api:
   _permissions:
     title: "權限"
