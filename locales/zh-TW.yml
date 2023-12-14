@@ -3,15 +3,15 @@ learnMore: "了解更多"
 loading: "載入中..."
 clickToExpand: "（點擊展開）"
 copy: "複製"
-share: "共有する"
-note: "ノート"
+share: "分享"
+note: "貼文"
 _error:
-  notFound: "ページが見つかりませんでした"
-  notFoundDesc: "お探しのページは見つかりませんでした。URLをお確かめください。"
-  generalError: "エラーが発生しました"
-  generalErrorDesc: "これが意図した操作でない場合は、以下から不具合報告をお願いします。"
-  reportProblem: "問題を報告する"
-  goToTop: "トップページにもどる"
+  notFound: "找不到此頁面"
+  notFoundDesc: "找不到此頁面，請確認網址是否正確。"
+  generalError: "發生錯誤"
+  generalErrorDesc: "如果這不是您預期的操作，請在下方回報錯誤。"
+  reportProblem: "回報問題"
+  goToTop: "回到首頁"
 _seo:
   siteName: "Misskey Hub"
   siteNameLong: "Misskey Hub – Misskey 專案官方網站"
@@ -108,7 +108,7 @@ _servers:
     orderBy: "排序方式"
     recomendded: "預設"
     notesCount: "貼文數"
-    notesPer15Days: "1日あたりのノート数（15日平均）"
+    notesPer15Days: "每日貼文數（15日平均）"
     usersCount: "使用者數"
   _registerAcceptance:
     title: "是否開放註冊"
@@ -254,8 +254,8 @@ _shareLinkGenerator:
   typeSomethingToGetLink: "輸入本文後將生成連結。"
   typeSomethingToGetButton: "輸入本文後將生成按鈕。"
 _goToMisskey:
-  title: "Misskey Webに移動"
-  heading: "このページを開きたいサーバーを選択してください"
+  title: "前往 Misskey Web"
+  heading: "請選擇要開啟此頁面的伺服器"
 _api:
   _permissions:
     title: "權限"
