@@ -102,7 +102,7 @@ _servers:
     servers: "伺服器數量"
   _search:
     title: "篩選搜尋"
-    all: "全部"
+    all: "顯示全部"
     query: "以關鍵字搜尋"
     lang: "語言"
     orderBy: "排序方式"
@@ -112,7 +112,7 @@ _servers:
     usersCount: "使用者數"
   _registerAcceptance:
     title: "是否開放註冊"
-    public: "開啟"
+    public: "開放註冊"
     inviteOnly: "僅限邀請"
   _list:
     notFound: "未找到符合指定條件的伺服器。"
