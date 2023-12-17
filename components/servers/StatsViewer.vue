@@ -15,7 +15,7 @@
             },
             {
                 name: $t('_servers._statistics.version'),
-                anchor: '#avatar-decoration'
+                anchor: '#version'
             }
         ]" />
         <div id="lang">
