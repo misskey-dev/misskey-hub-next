@@ -5,6 +5,13 @@ clickToExpand: "（クリックして展開）"
 copy: "コピー"
 share: "共有する"
 note: "ノート"
+_error:
+  notFound: "ページが見つかりませんでした"
+  notFoundDesc: "お探しのページは見つかりませんでした。URLをお確かめください。"
+  generalError: "エラーが発生しました"
+  generalErrorDesc: "これが意図した操作でない場合は、以下から不具合報告をお願いします。"
+  reportProblem: "問題を報告する"
+  goToTop: "トップページにもどる"
 _seo:
   siteName: "Misskey Hub"
   siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
@@ -18,7 +25,7 @@ _nav:
   switchLang: "言語の設定"
 _landing:
   _hero:
-    description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
+    description: "Misskey（ミスキー）はオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
     gettingStarted: "はじめる"
   _keyFeatures:
     _open:
@@ -101,6 +108,7 @@ _servers:
     orderBy: "並び替え"
     recomendded: "デフォルト"
     notesCount: "ノート数"
+    notesPer15Days: "1日あたりのノート数（15日平均）"
     usersCount: "ユーザー数"
   _registerAcceptance:
     title: "新規登録"
@@ -245,6 +253,9 @@ _shareLinkGenerator:
   testLink: "共有リンクを試す"
   typeSomethingToGetLink: "本文を入力するとリンクが生成されます。"
   typeSomethingToGetButton: "本文を入力するとボタンが生成されます。"
+_goToMisskey:
+  title: "Misskey Webに移動"
+  heading: "このページを開きたいサーバーを選択してください"
 _api:
   _permissions:
     title: "権限"

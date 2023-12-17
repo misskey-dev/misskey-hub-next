@@ -1,10 +1,17 @@
-noScript: "Javascript is currently disabled. Please enable it as JavaScript is required for site functionality."
+noScript: "Javascript is currently disabled. Please enable it as Javascript is required for site functionality."
 learnMore: "Learn More"
 loading: "Loading..."
 clickToExpand: "(Click to expand)"
 copy: "Copy"
-share: "共有する"
-note: "ノート"
+share: "Share"
+note: "Note"
+_error:
+  notFound: "Page not found"
+  notFoundDesc: "The page you are looking for could not be found. Please check the URL."
+  generalError: "Something went wrong"
+  generalErrorDesc: "If this is not what you meant to do, please click on the button below to report the problem."
+  reportProblem: "Report a Problem"
+  goToTop: "Back to top page"
 _seo:
   siteName: "Misskey Hub"
   siteNameLong: "Misskey Hub – Official website of the Misskey Project"
@@ -101,6 +108,7 @@ _servers:
     orderBy: "Sort by"
     recomendded: "Default"
     notesCount: "Notes Count"
+    notesPer15Days: "Number of notes per day (average of last 15 days)"
     usersCount: "Users Count"
   _registerAcceptance:
     title: "Sign-up Policy"
@@ -245,6 +253,9 @@ _shareLinkGenerator:
   testLink: "Test the sharing link"
   typeSomethingToGetLink: "Enter the body to generate sharing link."
   typeSomethingToGetButton: "Enter the body to generate share button code."
+_goToMisskey:
+  title: "Misskey Webに移動"
+  heading: "このページを開きたいサーバーを選択してください"
 _api:
   _permissions:
     title: "Permissions"

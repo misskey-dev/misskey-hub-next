@@ -199,7 +199,7 @@ $[blur Misskey擴展了聯邦宇宙的世界]
 可以顯示搜尋框。
 
 ```
-misskey 検索
+misskey search
 ```
 
 <MfmPreview text="misskey 検索"></MfmPreview>
