@@ -5,6 +5,13 @@ clickToExpand: "（クリックして展開）"
 copy: "복사하기"
 share: "共有する"
 note: "ノート"
+_error:
+  notFound: "ページが見つかりませんでした"
+  notFoundDesc: "お探しのページは見つかりませんでした。URLをお確かめください。"
+  generalError: "エラーが発生しました"
+  generalErrorDesc: "これが意図した操作でない場合は、以下から不具合報告をお願いします。"
+  reportProblem: "問題を報告する"
+  goToTop: "トップページにもどる"
 _seo:
   siteName: "Misskey Hub"
   siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
@@ -101,6 +108,7 @@ _servers:
     orderBy: "정렬"
     recomendded: "기본"
     notesCount: "노트 수"
+    notesPer15Days: "1日あたりのノート数（15日平均）"
     usersCount: "유저 수"
   _registerAcceptance:
     title: "회원 가입"
@@ -245,6 +253,9 @@ _shareLinkGenerator:
   testLink: "共有リンクを試す"
   typeSomethingToGetLink: "本文を入力するとリンクが生成されます。"
   typeSomethingToGetButton: "本文を入力するとボタンが生成されます。"
+_goToMisskey:
+  title: "Misskey Webに移動"
+  heading: "このページを開きたいサーバーを選択してください"
 _api:
   _permissions:
     title: "권한"
