@@ -5,6 +5,7 @@ clickToExpand: "（クリックして展開）"
 copy: "コピー"
 share: "共有する"
 note: "ノート"
+other: "その他"
 
 _error:
   notFound: "ページが見つかりませんでした"
@@ -102,6 +103,12 @@ _servers:
   _system:
     fetchError: "データの読み込みに失敗しました。後でもう一度お試しください。"
   _statistics:
+    title: "サーバー統計"
+    description: "Misskeyサーバーの統計データをグラフでご紹介。"
+    viewFullStats: "詳しい統計を見る"
+    lang: "プライマリ言語"
+    registerAcceptance: "新規登録受付方式"
+    version: "バージョン"
     notes: "ノート数"
     users: "ユーザー数"
     servers: "サーバー数"
