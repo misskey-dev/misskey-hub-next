@@ -13,12 +13,22 @@
 </template>
 
 <script setup lang="ts">
+/**
+ * 軽量円グラフ描画コンポーネント（すごい）
+ */
+
 const props = withDefaults(defineProps<{
+    /** グラフにしたいデータ（数字の配列 or kv形式のオブジェクト） */
     data: number[] | Record<string | number | symbol, number>;
+    /** 多い順にソートするか？（デフォルトON） */
     sort?: boolean;
+    /** 小さな値を「その他」としてまとめるか？（デフォルトON、数値指定でその割合以下の項目をまとめる） */
     truncMinor?: boolean | number;
+    /** グラデーション開始色（[r, g, b]の配列で指定） */
     startColor?: [number, number, number];
+    /** グラデーション終了色（[r, g, b]の配列で指定） */
     endColor?: [number, number, number];
+    /** 強調するindex番号を指定 */
     focusedIndex?: number;
 }>(), {
     sort: true,
