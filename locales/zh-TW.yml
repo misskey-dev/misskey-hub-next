@@ -5,6 +5,7 @@ clickToExpand: "（點擊展開）"
 copy: "複製"
 share: "分享"
 note: "貼文"
+other: "その他"
 _error:
   notFound: "找不到此頁面"
   notFoundDesc: "找不到此頁面，請確認網址是否正確。"
@@ -97,6 +98,12 @@ _servers:
   _system:
     fetchError: "資料載入失敗。請稍後再試。"
   _statistics:
+    title: "サーバー統計"
+    description: "Misskeyサーバーの統計データをグラフでご紹介。"
+    viewFullStats: "詳しい統計を見る"
+    lang: "プライマリ言語"
+    registerAcceptance: "新規登録受付方式"
+    version: "バージョン"
     notes: "貼文數"
     users: "使用者數"
     servers: "伺服器數量"
