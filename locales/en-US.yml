@@ -5,6 +5,7 @@ clickToExpand: "(Click to expand)"
 copy: "Copy"
 share: "Share"
 note: "Note"
+other: "その他"
 _error:
   notFound: "Page not found"
   notFoundDesc: "The page you are looking for could not be found. Please check the URL."
@@ -97,6 +98,12 @@ _servers:
   _system:
     fetchError: "Failed to fetch data. Please try again later."
   _statistics:
+    title: "サーバー統計"
+    description: "Misskeyサーバーの統計データをグラフでご紹介。"
+    viewFullStats: "詳しい統計を見る"
+    lang: "プライマリ言語"
+    registerAcceptance: "新規登録受付方式"
+    version: "バージョン"
     notes: "Notes"
     users: "Users"
     servers: "Servers"
