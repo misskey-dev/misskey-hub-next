@@ -15,7 +15,7 @@
                     <p class="text-center mb-4">{{ error?.statusCode === 404 ? $t('_error.notFoundDesc') : $t('_error.generalErrorDesc') }}</p>
                     <div class="max-w-lg w-full mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <button class="block rounded-full text-center px-4 py-2 border-2 hover:opacity-70" @click="handleError">{{ $t('_error.goToTop') }}</button>
-                        <GNuxtLink class="block rounded-full text-center px-4 py-2 border-2 hover:opacity-70" target="_blank" to="https://github.com/misskey-dev/misskey-hub/issues/new">{{ $t('_error.reportProblem') }}</GNuxtLink>
+                        <GNuxtLink class="block rounded-full text-center px-4 py-2 border-2 hover:opacity-70" target="_blank" :to="`${runtimeConfig.public.repositoryUrl}/issues/new`">{{ $t('_error.reportProblem') }}</GNuxtLink>
                     </div>
                 </div>
                 <div v-else class="mx-auto py-5">
@@ -31,6 +31,7 @@ import NProgress from 'nprogress';
 
 const error = useError();
 const colorMode = useColorMode();
+const runtimeConfig = useRuntimeConfig();
 
 const { locale, locales } = useI18n();
 const localePath = useLocalePath();

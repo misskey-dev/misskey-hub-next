@@ -25,7 +25,7 @@
                 <ContentRenderer v-if="data.body.children.length > 0" :value="data" class="markdown-body w-full mb-6">
                 </ContentRenderer>
                 <div class="mt-8 mb-4 flex flex-wrap justify-end gap-3">
-                    <div><GNuxtLink class="hover:underline underline-offset-4" target="_blank" :to="`https://github.com/misskey-dev/misskey-hub/tree/master/content/${data._file}`">{{ $t('_docs._contribute.editThis') }}<ExtIco class="ml-1" /></GNuxtLink></div>
+                    <div><GNuxtLink class="hover:underline underline-offset-4" target="_blank" :to="`${runtimeConfig.public.repositoryUrl}/tree/master/content/${data._file}`">{{ $t('_docs._contribute.editThis') }}<ExtIco class="ml-1" /></GNuxtLink></div>
                     <div><GNuxtLink class="hover:underline underline-offset-4" target="_blank" to="https://crowdin.com/project/misskey-hub">{{ $t('_docs._contribute.translateThis') }}<ExtIco class="ml-1" /></GNuxtLink></div>
                 </div>
                 <DocsPrevNext :ignore-dir-based-nav="data?.ignoreDirBasedNav ?? false" />
@@ -55,6 +55,7 @@ const isAsideNavOpen = useState<boolean>('miHub_docs_asideNav_openState', () => 
 
 const { locale, locales } = useI18n();
 const openState = ref<boolean>(false);
+const runtimeConfig = useRuntimeConfig();
 
 definePageMeta({
     layout: 'docs',

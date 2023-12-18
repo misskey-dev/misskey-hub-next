@@ -12,6 +12,9 @@ import type { NuxtConfig } from 'nuxt/schema';
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl = 'https://misskey-hub-next.vercel.app';
 
+// リポジトリURL（末尾スラッシュなし）
+const repositoryUrl = 'https://github.com/misskey-dev/misskey-hub-next';
+
 // 言語定義は /assets/data/locales.ts に移動しました
 
 function getRouteRules(): NuxtConfig['routeRules'] {
@@ -56,6 +59,7 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
 			baseUrl,
+			repositoryUrl,
 			locales,
 		}
 	},
