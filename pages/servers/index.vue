@@ -12,7 +12,7 @@
                 <div class="relative px-6 py-8">
                     <GDots class="absolute top-0 left-0 w-32 h-32 text-accent-600" />
                     <GDots class="absolute bottom-0 right-0 w-32 h-32 text-accent-600" />
-                    <div class="relative bg-white dark:bg-slate-800 shadow-lg rounded-lg lg:w-64 p-6 space-y-4">
+                    <div class="relative bg-white dark:bg-slate-800 shadow-lg rounded-lg w-full lg:w-80 p-6 space-y-4 break-words">
                         <dl>
                             <dt>{{ $t('_servers._statistics.notes') }}</dt>
                             <dd class="font-bold text-accent-600 text-2xl">{{ instancesStats?.notesCount?.toLocaleString() || $t('loading') }}</dd>
@@ -25,6 +25,9 @@
                             <dt>{{ $t('_servers._statistics.servers') }}</dt>
                             <dd class="font-bold text-accent-600 text-2xl">{{ instancesStats?.instancesCount?.toLocaleString() || $t('loading') }}</dd>
                         </dl>
+                        <div class="!mt-2">
+                            <GNuxtLink class="hover:underline underline-offset-2" :to="localePath('/servers/stats/')">{{ $t('_servers._statistics.viewFullStats') }}<ArrowRightIco class="ml-1" /></GNuxtLink>
+                        </div>
                     </div>
                 </div>
             </template>
@@ -45,8 +48,10 @@
 
 <script setup lang="ts">
 import type { InstancesStatsObj } from '@/types/instances-info';
+import ArrowRightIco from "bi/arrow-right.svg";
 
 const { t, locale } = useI18n();
+const localePath = useLocalePath();
 const route = useRoute();
 
 const instancesStats = ref<InstancesStatsObj>();
