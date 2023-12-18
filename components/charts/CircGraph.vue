@@ -2,6 +2,9 @@
     <svg viewBox="-3 -3 70 70">
         <circle
             v-for="(item, index) in sortedData"
+            cx="32"
+            cy="32"
+            r="16"
             :class="[
                 $style.pie,
                 (focusedIndex === index) && $style.focused,
@@ -90,7 +93,7 @@ const dasharrays = computed(() => {
 
 function getStyle(index: number) {
     return `stroke: rgb(${steppedColors.value[index][0]}, ${steppedColors.value[index][1]}, ${steppedColors.value[index][2]});
-    --dasharray: ${dasharrays.value[index]}`;
+    stroke-dasharray: ${dasharrays.value[index]}`;
 }
 
 onMounted(() => {
@@ -109,12 +112,8 @@ onMounted(() => {
     @apply transition-transform;
     transform-origin: center;
     fill: transparent;
-    cx: 32;
-    cy: 32;
-    r: 16;
     stroke-width: 32;
     stroke-dashoffset: 25;
-    stroke-dasharray: var(--dasharray);
 }
 
 .focused.pie {
