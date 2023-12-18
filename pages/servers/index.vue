@@ -15,15 +15,15 @@
                     <div class="relative bg-white dark:bg-slate-800 shadow-lg rounded-lg w-full lg:w-80 p-6 space-y-4 break-words">
                         <dl>
                             <dt>{{ $t('_servers._statistics.notes') }}</dt>
-                            <dd class="font-bold text-accent-600 text-2xl">{{ instancesStats?.notesCount?.toLocaleString() || $t('loading') }}</dd>
+                            <dd class="font-bold text-accent-600 text-2xl">{{ instancesStats?.notesCount ? $d(instancesStats.notesCount) : $t('loading') }}</dd>
                         </dl>
                         <dl>
                             <dt>{{ $t('_servers._statistics.users') }}</dt>
-                            <dd class="font-bold text-accent-600 text-2xl">{{ instancesStats?.usersCount?.toLocaleString() || $t('loading') }}</dd>
+                            <dd class="font-bold text-accent-600 text-2xl">{{ instancesStats?.usersCount ? $d(instancesStats.usersCount) : $t('loading') }}</dd>
                         </dl>
                         <dl>
                             <dt>{{ $t('_servers._statistics.servers') }}</dt>
-                            <dd class="font-bold text-accent-600 text-2xl">{{ instancesStats?.instancesCount?.toLocaleString() || $t('loading') }}</dd>
+                            <dd class="font-bold text-accent-600 text-2xl">{{ instancesStats?.instancesCount ? $d(instancesStats.instancesCount) : $t('loading') }}</dd>
                         </dl>
                         <div class="!mt-2">
                             <GNuxtLink class="hover:underline underline-offset-2" :to="localePath('/servers/stats/')">{{ $t('_servers._statistics.viewFullStats') }}<ArrowRightIco class="ml-1" /></GNuxtLink>
