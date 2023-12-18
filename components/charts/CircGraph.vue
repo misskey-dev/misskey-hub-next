@@ -34,7 +34,7 @@ const props = withDefaults(defineProps<{
     sort: true,
     truncMinor: true,
     startColor: [74, 179, 0],
-    endColor: [172, 230, 0],
+    endColor: [230, 255, 148],
 });
 
 const isReady = ref(false);
