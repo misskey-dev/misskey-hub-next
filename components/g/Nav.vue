@@ -51,7 +51,7 @@
                 </button>
                 <ul class="hidden lg:col-span-4 lg:space-x-4 lg:flex justify-center">
                     <li>
-                        <button :class="['hover:opacity-80', { 'text-white': (landing && scrollPos >= -40) }]" @click="rotateColorMode()" aria-label="Change Color Mode">
+                        <button :class="['hover:opacity-80', { 'text-white 3xl:text-slate-800 3xl:dark:text-slate-200': (landing && scrollPos >= -40) }]" @click="rotateColorMode()" aria-label="Change Color Mode">
                             <ClientOnly>
                                 <SunIcon class="h-5 w-5" v-if="colorMode.preference === 'light'" />
                                 <MoonIcon class="h-5 w-5" v-else-if="colorMode.preference === 'dark'" />
@@ -60,7 +60,7 @@
                         </button>
                     </li>
                     <li class="relative group">
-                        <button class="hover:opacity-80"><I18nIcon :class="['h-5 w-5', { 'text-white': (landing && scrollPos >= -40) }]" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></button>
+                        <button class="hover:opacity-80"><I18nIcon :class="['h-5 w-5', { 'text-white 3xl:text-slate-800 3xl:dark:text-slate-200': (landing && scrollPos >= -40) }]" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></button>
                         <div class="absolute top-6 right-0 hidden group-hover:block z-[9955]">
                             <ul class="px-4 py-2 bg-slate-50 dark:bg-slate-800 rounded-lg shadow-lg space-y-1">
                                 <li v-for="locale in locales">
@@ -72,7 +72,7 @@
                         </div>
                     </li>
                     <li class="border-l"></li>
-                    <li v-for="item in NavData.right" :class="['transition-colors', { 'text-white': (landing && scrollPos >= -40) }]">
+                    <li v-for="item in NavData.right" :class="['transition-colors', { 'text-white 3xl:text-slate-800 3xl:dark:text-slate-200': (landing && scrollPos >= -40) }]">
                         <GNuxtLink :to="item.to" class="hover:opacity-80">
                             <component v-if="item.icon" :is="item.icon" class="h-5 w-5" />
                             <template v-else>

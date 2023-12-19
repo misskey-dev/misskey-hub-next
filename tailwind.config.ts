@@ -36,6 +36,9 @@ export default <Config> {
           '950': '#223201',
         },
       },
+      screens: {
+        '3xl': '1970px',
+      },
     },
     fontFamily: {
       ...defaultTheme.fontFamily,
