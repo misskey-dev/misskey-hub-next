@@ -11,7 +11,7 @@
             >
                 {{ $t('_servers._search.title') }}
             </button>
-            <div class="lg:sticky lg:top-24 p-6 lg:px-0 lg:py-2 space-y-4">
+            <div class="lg:sticky lg:top-24 lg:overflow-y-auto lg:max-h-[calc(100vh-6rem)] p-6 lg:px-0 lg:py-2 space-y-4">
                 <div class="flex items-center">
                     <h3 class="text-xl font-bold">{{ $t('_servers._search.title') }}</h3>
                     <button @click="sortOpen = false" class="ml-auto w-8 h-8 p-0.5 rounded-full bg-slate-100 dark:bg-slate-900 lg:hidden">
