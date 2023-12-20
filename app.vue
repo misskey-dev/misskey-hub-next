@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import TopIco from 'bi/arrow-up.svg';
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import NProgress from 'nprogress';
 import type { Graph, Thing } from 'schema-dts';
@@ -133,6 +134,36 @@ useHead((): Record<string, any> => ({
         { type: "application/ld+json", children: getLdJson(route.meta.graph) }
     ],
 }));
+
+/** サイト全体でひとつのScroll Posiitionを使う */
+const scrollPos = useState('miHub_global_scrollPos', () => 0);
+
+async function updatePos() {
+    scrollPos.value = document.body.getBoundingClientRect().y;
+}
+
+if (process.client) {
+    window.addEventListener('scroll', updatePos);
+    window.addEventListener('resize', updatePos);
+}
+
+onUnmounted(() => {
+    if (process.client) {
+        window.removeEventListener('scroll', updatePos);
+        window.removeEventListener('resize', updatePos);
+    }
+});
+
+const hideFrom = computed(() => route.meta.scrollButton ? route.meta.scrollButton?.hideFrom ?? -45 : -45);
+const sbPosition = computed(() => route.meta.scrollButton ? { x: route.meta.scrollButton?.customPosition?.x ?? '2.5rem', y: route.meta.scrollButton?.customPosition?.y ?? '2.5rem' } ?? { x: '2.5rem', y: '2.5rem' } : { x: '2.5rem', y: '2.5rem' });
+
+function scrollToTop() {
+    if (!process.client) return;
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+}
 </script>
 <template>
     <div class="text-slate-800 dark:text-slate-200 bg-slate-100 dark:bg-gray-900">
@@ -143,5 +174,22 @@ useHead((): Record<string, any> => ({
         <ClientOnly>
             <LazyGAiChan />
         </ClientOnly>
+        <button
+            v-if="$route.meta.scrollButton !== false"
+            :class="[
+                'fixed h-14 w-14 p-[1.125rem] rounded-full bg-accent-600 text-white shadow-lg transition-opacity',
+                (hideFrom >= scrollPos) ? 'opacity-75 hover:opacity-100' : 'opacity-0 pointer-events-none',
+                $route.meta.scrollButton?.customClass ?? '',
+                $style.scrollToTopButton,
+            ]"
+            @click="scrollToTop"
+        ><TopIco class="h-5 w-5 stroke-1 stroke-current" /></button>
     </div>
 </template>
+
+<style module>
+.scrollToTopButton {
+    bottom: v-bind(sbPosition.y);
+    right: v-bind(sbPosition.x);
+}
+</style>

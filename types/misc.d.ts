@@ -1,4 +1,5 @@
 import type { LocaleCodes } from './../nuxt.config';
+import type { ComputedRef } from 'vue-demi'
 
 declare module '*.svg' {
     import { FunctionalComponent, SVGAttributes } from 'vue'
@@ -41,6 +42,13 @@ declare module 'nuxt/schema' {
              **/
             to: string;
         }
+    }
+}
+
+declare module 'vue-i18n' {
+    interface ComposerCustomProperties {
+        // 厳格に定義し直す
+        locales: ComputedRef<LocaleObject[]>
     }
 }
 

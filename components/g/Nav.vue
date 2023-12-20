@@ -138,21 +138,5 @@ function rotateColorMode() {
     colorMode.preference = values[next];
 }
 
-const scrollPos = ref(0);
-
-async function updatePos() {
-    scrollPos.value = document.body.getBoundingClientRect().y;
-}
-
-if (process.client) {
-    window.addEventListener('scroll', updatePos);
-    window.addEventListener('resize', updatePos);
-}
-
-onUnmounted(() => {
-    if (process.client) {
-        window.removeEventListener('scroll', updatePos);
-        window.removeEventListener('resize', updatePos);
-    }
-});
+const scrollPos = useState('miHub_global_scrollPos');
 </script>

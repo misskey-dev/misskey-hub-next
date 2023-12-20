@@ -62,6 +62,11 @@ function setServerStats(val: InstancesStatsObj) {
 
 route.meta.title = t('_servers.title');
 route.meta.description = t('_servers.description');
+route.meta.scrollButton = {
+    customPosition: {
+        y: '4.5rem',
+    }
+};
 </script>
 
 <style scoped>

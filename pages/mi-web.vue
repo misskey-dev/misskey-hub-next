@@ -35,4 +35,5 @@ const path = computed<string>(() => {
 })
 
 meta.title = t('_goToMisskey.title');
+meta.scrollButton = false;
 </script>

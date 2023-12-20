@@ -9,5 +9,13 @@ declare module 'vue-router' {
         title?: string;
         graph?: Thing[];
         thumbnail?: string;
+        scrollButton?: false | {
+            hideFrom?: number;
+            customPosition?: {
+                x?: string;
+                y?: string;
+            };
+            customClass?: string;
+        };
     }
 }

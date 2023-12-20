@@ -21,4 +21,5 @@ const { meta, query } = useRoute();
 const { t } = useI18n();
 
 meta.title = t('_share.title');
+meta.scrollButton = false;
 </script>
