@@ -50,7 +50,6 @@ const getLdJson = (additionalGraphes: Thing[] = []): string => {
                 "name": "Misskey",
                 "url": `${baseUrl}/`,
                 "sameAs": [
-                    "https://join.misskey.page/",
                     "https://ja.wikipedia.org/wiki/Misskey",
                 ],
                 "logo": {
