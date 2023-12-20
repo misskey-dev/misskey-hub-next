@@ -14,12 +14,12 @@ const screenshots = computed(() => {
     if (colorMode.preference === 'dark') {
         return {
             desktop: '/img/hero/misskey-dark.png',
-            mobile: '/img/hero/screenshot-mobile-en.png',
+            mobile: '/img/hero/misskey-mobile-dark.png',
         };
     } else {
         return {
             desktop: '/img/hero/misskey-light.png',
-            mobile: '/img/hero/screenshot-mobile.png',
+            mobile: '/img/hero/misskey-mobile-light.png',
         };
     }
 });
