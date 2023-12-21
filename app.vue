@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TopIco from 'bi/arrow-up.svg';
+import TopIco from 'bi/chevron-up.svg';
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import NProgress from 'nprogress';
 import type { Graph, Thing } from 'schema-dts';
