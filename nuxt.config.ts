@@ -67,6 +67,7 @@ export default defineNuxtConfig({
 		"github-markdown-css/github-markdown.css",
 		"@/assets/css/nprogress.css",
 		"@/assets/css/tailwind.css",
+		"@/assets/css/mfm.scss",
 		"@/assets/css/bootstrap-forms.scss",
 	],
 	modules: [
