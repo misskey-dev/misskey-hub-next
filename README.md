@@ -84,6 +84,12 @@ yarn preview
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
+## (おまけ) デプロイ時のオートメーションプログラム
+
+`/__misc/gas/` に、Misskey Hubデプロイ時に自動実行しているプログラムを同梱しています。
+
+Google Apps Scriptで動作します。
+
 ## License
 
 GNU Affero General Public License v3.0
