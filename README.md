@@ -16,6 +16,8 @@ Website for Misskey, built with [Nuxt](https://nuxt.com/).
 
 内部リンク・外部リンクに関する処理を強化した[`<GNuxtLink>`](./components/g/NuxtLink.vue)を使用していますので、**リンクを追加する際は`<NuxtLink>`ではなく`<GNuxtLink>`を使用してください。**
 
+また、Nuxtのルーティングストラテジに、ホスティング環境に適した設定を適用するため、動的リンクの作成に使用する`useLocalePath`をラップしたコンポーサブル関数`useGLocalePath`を使うようにしています。
+
 ### Misskey Webへのリンクについて
 
 GNuxtLinkおよび各種Docsで、アドレスに `x-mi-web://` から始め、続けてMisskeyの相対パスを入力すると、Misskey Webへのリンクに置き換えられます。

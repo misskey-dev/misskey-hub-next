@@ -14,7 +14,7 @@ function clickNav() {
 const isNavOpen = ref<boolean>(false);
 const isAsideNavOpen = ref<boolean>(false);
 
-const localePath = useLocalePath();
+const localePath = useGLocalePath();
 
 useHead({
     htmlAttrs: {

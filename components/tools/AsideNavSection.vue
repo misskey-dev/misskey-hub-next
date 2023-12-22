@@ -15,7 +15,7 @@ const navData = props.d;
 const route = useRoute();
 const router = useRouter();
 const isShown = ref(false);
-const localePath = useLocalePath();
+const localePath = useGLocalePath();
 
 watch(() => route.path, () => {
     if (navData.items.some((e) => isSamePath(route.path, localePath(e.to)))) {

@@ -117,7 +117,8 @@ export default defineNuxtConfig({
 		langDir: 'locales_dist',
 		defaultLocale: 'ja',
 		// ▼ Defaultルートは、nitroプラグインでオーバーライドする
-		strategy: 'prefix',
+		// 　 リンクはuseGLocalePath（ラッパー）を使う
+		strategy: 'prefix_and_default',
 		trailingSlash: true,
 	},
 	colorMode: {

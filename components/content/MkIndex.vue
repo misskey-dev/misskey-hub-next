@@ -39,7 +39,7 @@ const realBasePath = computed<string>(() => {
     return route.path.replace(/^.*\/docs/, `/${locale.value}/docs`);
 });
 
-const localePath = useLocalePath();
+const localePath = useGLocalePath();
 
 const query = queryContent(realBasePath.value);
 </script>

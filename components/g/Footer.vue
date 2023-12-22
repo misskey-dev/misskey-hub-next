@@ -64,7 +64,7 @@
 import MiIcon from '@/assets/svg/misskey_mi_bi.svg';
 import ExtIco from 'bi/box-arrow-up-right.svg';
 
-const localePath = useLocalePath();
+const localePath = useGLocalePath();
 </script>
 
 <style scoped>

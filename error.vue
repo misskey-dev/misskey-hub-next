@@ -34,7 +34,7 @@ const colorMode = useColorMode();
 const runtimeConfig = useRuntimeConfig();
 
 const { locale, locales } = useI18n();
-const localePath = useLocalePath();
+const localePath = useGLocalePath();
 const currentLocaleIso = computed(() => (locales.value as LocaleObject[]).find((e) => e?.code === locale.value)?.iso);
 
 const isNavOpen = ref<boolean>(false);

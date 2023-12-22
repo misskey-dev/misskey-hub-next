@@ -25,7 +25,7 @@ const rawProps = defineProps<{
     target?: unknown;
 }>();
 
-const localePath = useLocalePath();
+const localePath = useGLocalePath();
 
 const needsToOpenExternally = ref(false);
 const realHref = computed(() => {

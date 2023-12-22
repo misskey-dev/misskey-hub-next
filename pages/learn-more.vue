@@ -70,7 +70,7 @@
 
 <script setup lang="ts">
 const { t } = useI18n();
-const localePath = useLocalePath();
+const localePath = useGLocalePath();
 const route = useRoute();
 
 route.meta.title = t('_other.title');

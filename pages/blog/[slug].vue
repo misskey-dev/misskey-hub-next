@@ -47,7 +47,7 @@ const route = useRoute();
 
 // ▼他言語からやってきたときに正しいパスに戻す▼
 const originalLocale = useState('miHub_blog_originalLocale', () => 'ja');
-const localePath = useLocalePath();
+const localePath = useGLocalePath();
 const getRouteBaseName = useRouteBaseName();
 let isTransformed = false;
 

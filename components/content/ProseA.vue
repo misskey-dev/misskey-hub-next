@@ -7,7 +7,7 @@ import { isLocalPath, sanitizeInternalPath } from '@/assets/js/misc';
 const runtimeConfig = useRuntimeConfig();
 const rootDomain = new $URL(runtimeConfig.public.baseUrl);
 const { resolve } = useRouter();
-const localePath = useLocalePath();
+const localePath = useGLocalePath();
 
 const props = defineProps({
     href: {

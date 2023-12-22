@@ -31,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-const localePath = useLocalePath();
+const localePath = useGLocalePath();
 const { t } = useI18n();
 const route = useRoute();
 

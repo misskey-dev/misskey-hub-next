@@ -39,7 +39,7 @@ import { isLocalPath } from '~/assets/js/misc';
 
 const { notice } = useAppConfig();
 const { locale, fallbackLocale } = useI18n();
-const localePath = useLocalePath();
+const localePath = useGLocalePath();
 const showTagline = ref(false);
 const colorMode = useColorMode();
 const mobileScreenShot = computed(() => (colorMode.preference === 'dark') ? '/img/hero/misskey-mobile-dark.png' : '/img/hero/misskey-mobile-light.png');

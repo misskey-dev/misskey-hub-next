@@ -122,7 +122,7 @@ watch(() => route.path,(to) => {
 });
 
 const switchLocalePath = useSwitchLocalePath();
-const localePath = useLocalePath();
+const localePath = useGLocalePath();
 const spLocaleOption = ref<string>(currentLocale.value);
 function changeLocale() {
     const path = switchLocalePath(spLocaleOption.value);
