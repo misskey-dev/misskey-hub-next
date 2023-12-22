@@ -6,6 +6,7 @@ copy: "複製"
 share: "分享"
 note: "貼文"
 other: "其他"
+goToLegacyHub: "従来のMisskey Hub"
 _error:
   notFound: "找不到此頁面"
   notFoundDesc: "找不到此頁面，請確認網址是否正確。"
