@@ -4,8 +4,6 @@
 
 Website for Misskey, built with [Nuxt](https://nuxt.com/).
 
-Release date: **TBD（未定）**
-
 ## お知らせの文言のいじり方
 
 `app.config.ts` から指定できます。
