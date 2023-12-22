@@ -40,6 +40,9 @@ const currentLocaleIso = computed(() => (locales.value as LocaleObject[]).find((
 const isNavOpen = ref<boolean>(false);
 const isCanvasLoaded = ref<boolean>(false);
 
+const scrollPos = useState('miHub_global_scrollPos', () => 0);
+scrollPos.value = 0;
+
 const handleError = () => clearError({ redirect: localePath('/') });
 
 /** 
