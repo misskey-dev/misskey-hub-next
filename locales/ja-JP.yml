@@ -6,6 +6,7 @@ copy: "コピー"
 share: "共有する"
 note: "ノート"
 other: "その他"
+goToLegacyHub: "従来のMisskey Hub"
 
 _error:
   notFound: "ページが見つかりませんでした"

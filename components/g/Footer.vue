@@ -44,6 +44,9 @@
                             <li>
                                 <GNuxtLink :to="localePath('/learn-more/')" class="hover:underline">{{ $t('_links.title') }}</GNuxtLink>
                             </li>
+                            <li>
+                                <GNuxtLink to="https://legacy.misskey-hub.net/" target="_blank" class="hover:underline">{{ $t('goToLegacyHub') }}<ExtIco class="ml-1" /></GNuxtLink>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -59,6 +62,7 @@
 
 <script setup lang="ts">
 import MiIcon from '@/assets/svg/misskey_mi_bi.svg';
+import ExtIco from 'bi/box-arrow-up-right.svg';
 
 const localePath = useLocalePath();
 </script>
