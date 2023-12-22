@@ -116,10 +116,8 @@ export default defineNuxtConfig({
 		lazy: true,
 		langDir: 'locales_dist',
 		defaultLocale: 'ja',
-		strategy: 'prefix',
-		detectBrowserLanguage: {
-			fallbackLocale: 'ja',
-		},
+		// ▼ Defaultルートは、nitroプラグインでオーバーライドする
+		strategy: 'prefix_and_default',
 		trailingSlash: true,
 	},
 	colorMode: {
