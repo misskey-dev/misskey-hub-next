@@ -82,6 +82,7 @@ export default defineNuxtConfig({
 				{ rel: 'apple-touch-icon', href: '/img/icons/apple-touch-icon.png' },
 				{ rel: 'shortcut icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
 				{ rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
+				{ rel: 'me', href: 'https://misskey.io/@misskey_hub_deploy' },
 			],
 			meta: [
 				{ name: 'twitter:card', content: 'summary_large_image' },
