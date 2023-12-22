@@ -33,7 +33,7 @@ function doPost(e) {
 function postToMisskey(d) {
   var data = {
     i: MI_API_TOKEN,
-    text: `$[tada 📢] **Misskey Hub <small>(Next)</small> が更新されました！**
+    text: `$[tada 📢] **Misskey Hub が更新されました！**
 早速チェックしましょう ▶ ${d?.repository?.homepage ?? 'https://misskey-hub.net/'}`,
     visibility: 'public',
     cw: null,

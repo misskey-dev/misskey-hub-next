@@ -3,7 +3,7 @@ import TopIco from 'bi/chevron-up.svg';
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import NProgress from 'nprogress';
 import type { Graph, Thing } from 'schema-dts';
-import { normalizeURL, withTrailingSlash } from 'ufo';
+import { cleanDoubleSlashes, withTrailingSlash } from 'ufo';
 
 const nuxtApp = useNuxtApp();
 
@@ -127,7 +127,7 @@ useHead((): Record<string, any> => ({
         ...(head.value.meta?.map((e) => ({ property: e.property, content: e.content, })) || []),
     ],
     link: [
-        ...(head.value.link?.map((e) => ({ rel: e.rel, href: normalizeURL(withTrailingSlash(e.href)), hreflang: e.hreflang, })) || []),
+        ...(head.value.link?.map((e) => ({ rel: e.rel, href: cleanDoubleSlashes(withTrailingSlash(e.href)), hreflang: e.hreflang, })) || []),
         ...cnHead,
     ],
     script: [
