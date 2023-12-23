@@ -6,7 +6,7 @@ copy: "Copy"
 share: "Share"
 note: "Note"
 other: "Other"
-goToLegacyHub: "従来のMisskey Hub"
+goToLegacyHub: "Legacy Misskey Hub"
 _error:
   notFound: "Page not found"
   notFoundDesc: "The page you are looking for could not be found. Please check the URL."
