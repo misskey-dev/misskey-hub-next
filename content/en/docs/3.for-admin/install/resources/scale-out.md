@@ -1,18 +1,16 @@
-# Misskeyサーバーのスケールアウト
+# Scaling Misskey
 
-サーバーの利用者が増えるにしたがって、サーバーマシンのスペックを強化したり台数を増やして負荷に対応する必要が生じます。この記事ではMisskeyサーバーのスケールアウトに関するTipsを紹介します。
+As the number of your users increase, it becomes necessary to improve the specs of the server or increase the number of servers to handle the load.This article introduces tips on how to scale your Misskey server.
 
-## PostgreSQLのレプリケーション
+## PostgreSQL Replication
 
-PostgreSQLのレプリケーションを行うと、データベースの負荷を複数のサーバーマシンに分散させることができます
-レプリケーションについての詳細はPostgreSQLのドキュメントを参照してください。
-MisskeyではPostgreSQLのレプリケーションに対応しており、configファイルで以下のように設定します。(一部抜粋)
+PostgreSQL replication allows you to distribute the database load across multiple servers, Please refer to the PostgreSQL documentation for details on replication. Misskey supports PostgreSQL replication which can be configured in the config file as follows(excerpt)
 
 ```yml
-# レプリケーションを使用する場合は true にします
+# Set to true if replication is used
 dbReplications: true
 
-# リードレプリカのリストをここで設定します(いくつでも設定可能)
+# Configure all slaves to replicate the DB to
 dbSlaves:
   -
     host: foo
