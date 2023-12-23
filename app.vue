@@ -3,7 +3,7 @@ import TopIco from 'bi/chevron-up.svg';
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import NProgress from 'nprogress';
 import type { Graph, Thing } from 'schema-dts';
-import { cleanDoubleSlashes, withTrailingSlash } from 'ufo';
+import { cleanDoubleSlashes, joinURL, parseURL, stringifyParsedURL, withTrailingSlash } from 'ufo';
 
 const nuxtApp = useNuxtApp();
 
@@ -82,6 +82,27 @@ const head = useLocaleHead({
     addSeoAttributes: true,
 });
 
+const i18nLinks = computed(() => head.value.link?.map((e) => {
+    if (e.rel === 'alternate') {
+        let href = e.href;
+        if (typeof e.hreflang === 'string' && (e.hreflang.includes('ja') || e.hreflang === 'x-default')) {
+            const url = parseURL(href);
+            url.pathname = joinURL('/ja/', url.pathname);
+            href = cleanDoubleSlashes(withTrailingSlash(stringifyParsedURL(url)));
+        } else {
+            href = cleanDoubleSlashes(withTrailingSlash(href));
+        }
+        return { ...e, rel: e.rel, href, hreflang: e.hreflang };
+    } else if (e.rel === 'canonical' && locale.value === 'ja') {
+        let href = e.href;
+        const url = parseURL(href);
+        url.pathname = joinURL('/ja/', url.pathname);
+        href = cleanDoubleSlashes(withTrailingSlash(stringifyParsedURL(url)));
+        return { ...e, rel: e.rel, href, hreflang: e.hreflang };
+    }
+    return e;
+}));
+
 /** 
  * 中国大陸で Google Fonts を使う裏技
  * fonts.googleapis.com → fonts.googleapis.cn
@@ -127,7 +148,7 @@ useHead((): Record<string, any> => ({
         ...(head.value.meta?.map((e) => ({ property: e.property, content: e.content, })) || []),
     ],
     link: [
-        ...(head.value.link?.map((e) => ({ rel: e.rel, href: cleanDoubleSlashes(withTrailingSlash(e.href)), hreflang: e.hreflang, })) || []),
+        ...(i18nLinks.value || []),
         ...cnHead,
     ],
     script: [
