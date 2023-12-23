@@ -16,10 +16,7 @@ const baseUrl =
 		: "https://misskey-hub.net";
 
 // リポジトリURL（末尾スラッシュなし）
-const repositoryUrl =
-	process.env.NODE_ENV == "development"
-		? "http://localhost:3000"
-		: "https://github.com/misskey-dev/misskey-hub-next";
+const repositoryUrl = "https://github.com/misskey-dev/misskey-hub-next";
 
 // 言語定義は /assets/data/locales.ts に移動しました
 
