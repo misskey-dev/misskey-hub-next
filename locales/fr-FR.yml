@@ -125,6 +125,10 @@ _servers:
   _list:
     notFound: "Aucune instance qui correspond aux critères spécifiés a été trouvée."
     showMore: "Afficher plus"
+  _view:
+    title: "表示形式"
+    list: "リスト"
+    grid: "グリッド"
 _docs:
   title: "Documentation"
   description: "Misskey est une plateforme de réseautage social décentralisée à code source ouvert. La documentation couvre tous les aspects, de la bonne utilisation de Misskey aux informations destinées aux opérateurs d'instances et aux développeurs."
