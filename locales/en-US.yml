@@ -125,6 +125,10 @@ _servers:
   _list:
     notFound: "No servers matching the specified criteria were found."
     showMore: "Show More"
+  _view:
+    title: "表示形式"
+    list: "リスト"
+    grid: "グリッド"
 _docs:
   title: "Documentation"
   description: " Comprehensive information ranging from how to use Misskey to resources for server operators and developers."
