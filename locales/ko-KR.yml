@@ -125,6 +125,10 @@ _servers:
   _list:
     notFound: "지정하신 조건에 맞는 서버를 찾을 수 없습니다."
     showMore: "더 보기"
+  _view:
+    title: "表示形式"
+    list: "リスト"
+    grid: "グリッド"
 _docs:
   title: "문서"
   description: "Misskey의 고급적인 사용 방법부터, 서버의 운영자, 프로그래머를 위한 정보까지 망라하고 있습니다."

@@ -10,7 +10,10 @@ import { locales } from './assets/data/locales';
 import type { NuxtConfig } from 'nuxt/schema';
 
 // 公開時のドメイン（末尾スラッシュなし）
-const baseUrl = 'https://misskey-hub.net';
+const baseUrl =
+	process.env.NODE_ENV == 'development'
+		? 'http://localhost:3000'
+		: 'https://misskey-hub.net';
 
 // リポジトリURL（末尾スラッシュなし）
 const repositoryUrl = 'https://github.com/misskey-dev/misskey-hub-next';
@@ -29,7 +32,6 @@ function getRouteRules(): NuxtConfig['routeRules'] {
 	const localeBasedRules: NuxtConfig['routeRules'] = {
 		// リリースページはどうせアクセス集中するので先に作っておく
 		'/docs/releases/': { prerender: true },
-		
 		'/docs/**': { isr: true },
 	};
 

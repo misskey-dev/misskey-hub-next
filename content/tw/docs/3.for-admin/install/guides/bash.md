@@ -92,7 +92,7 @@ sudo bash update.sh
 このスクリプトは、Oracle Cloud InfrastructureのAlways Freeサービスで提供されている2種類のシェイプのいずれにおいても動作します。
 
 - VM.Standard.E2.1.Micro (AMD)
-- VM.Standard.A1.Flex (ARM) \[1OCPU RAM6GB or greater]
+- VM.Standard.A1.Flex (ARM) [1OCPU RAM6GB or greater]
 
 iptablesを使うようにしてください。
 

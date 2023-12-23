@@ -180,7 +180,7 @@ nginxは、主としてリバースプロキシに用いられるWebサーバー
 開発環境の場合はnginxのセットアップは不要です
 :::
 
-nginx.orgのドキュメント http\://nginx.org/en/linux\_packages.html#Ubuntu に従ってインストールする。
+nginx.orgのドキュメント http\://nginx.org/en/linux_packages.html#Ubuntu に従ってインストールする。
 
 ```sh
 sudo apt install ubuntu-keyring
@@ -310,7 +310,7 @@ mkdir /etc/cloudflare
 nano /etc/cloudflare/cloudflare.ini
 ```
 
-dns\_cloudflare\_email（下の例ではbar\@fuga.foo）にはCloudFlareで登録しているメールアドレスを設定する。
+dns_cloudflare_email（下の例ではbar\@fuga.foo）にはCloudFlareで登録しているメールアドレスを設定する。
 
 ```sh
 dns_cloudflare_email = bar@fuga.foo
