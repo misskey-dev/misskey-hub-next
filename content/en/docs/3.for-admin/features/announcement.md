@@ -21,6 +21,6 @@ You can select from the following types of display formats.
 - **Dialog** ... In addition to being posted on the announcements page it will also appear as a modal dialog when the user opens the site.
   - It is recommended that you proceed with caution when there are two or more dialog-type announcements at the same time, as they are very likely to adversely affect the UX.
 
-## お知らせの作成
+## Creating Announcements
 
 TODO
