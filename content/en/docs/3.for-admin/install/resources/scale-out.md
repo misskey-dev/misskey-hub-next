@@ -26,20 +26,20 @@ dbSlaves:
     pass: xxxxx
 ```
 
-このように設定すると、Misskeyがデータベースに対してreadクエリを発行するとき設定した`dbSlaves`の中からランダムにreadレプリカ選択してクエリを送信するようになり、データベースの負荷が分散されます。
+With this configuration, when Misskey issues a read query to the database, it will randomly select database replicas from the configured `dbSlaves` and send the query to one of them, thus distributing the load of the database.
 
-## 役割に応じたRedisの分割
+## Role-based Redis partitioning
 
-Misskeyは以下のように様々な用途でRedisを使用します。
+Misskey uses Redis for a variety of purposes, including
 
-- ジョブキューの管理
-- レートリミットの管理
-- キャッシュ
-- 通知などの情報の保存
-- グローバルなイベントのPub/Sub
+- Job Queue Management
+- Rate Limit Management
+- Cache
+- Storing notifications and other information
+- Pub/Sub for global events
 
-Misskeyでは、これらの用途ごとに異なるRedisサーバーを使用するように設定することができ、負荷を複数のサーバーマシンに分散させることができます。
-configファイルで以下のように設定します。(一部抜粋)
+Misskey can be configured to use a different Redis server for each of these uses, allowing the load to be distributed across multiple servers.
+Simply configure the following in the config file(excerpt)
 
 ```yml
 redisForPubsub:
@@ -59,9 +59,9 @@ redisForJobQueue:
   #db: 1
 ```
 
-現在設定可能なのはメインのRedisに加えて上記のように「グローバルなイベントのPub/Sub」と「ジョブキューの管理」用のRedisです。
+Currently, in addition to the main Redis configuration you can also configure Redis for "Pub/Sub for Global Events" and "Job Queue Management" as described above.
 
-## リモートのチャートの無効化
+## Disable remote charts
 
-個々のリモートユーザーのアクティビティなどのチャートや個々のリモートサーバーのチャートが必要無い場合、それらの生成を無効にするとパフォーマンスが向上します。
-コントロールパネルから、「リモートユーザーのチャートを生成」および「リモートサーバーのチャートを生成」をオフにすることで無効にできます。
+If you do not need charts such as activity for individual remote users or charts for individual remote servers, disabling their generation will improve performance.
+You can disable them by turning off "Generate remote user data charts" and "Generate remote instance data charts" from the control panel.
