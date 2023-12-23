@@ -21,7 +21,6 @@ const repositoryUrl = 'https://github.com/misskey-dev/misskey-hub-next';
 // 言語定義は /assets/data/locales.ts に移動しました
 
 function getRouteRules(): NuxtConfig['routeRules'] {
-	console.log('Vercel flag:', process.env.VERCEL);
 	// 言語ごとに割り当てる必要のないRouteRules
 	const staticRules: NuxtConfig['routeRules'] = {
 		'/ja/blog/**': { isr: true },
