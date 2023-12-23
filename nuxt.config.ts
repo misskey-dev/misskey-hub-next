@@ -20,7 +20,7 @@ const repositoryUrl = 'https://github.com/misskey-dev/misskey-hub-next';
 function getRouteRules(): NuxtConfig['routeRules'] {
 	// 言語ごとに割り当てる必要のないRouteRules
 	const staticRules: NuxtConfig['routeRules'] = {
-		'/ja/blog/**': { isr: true },
+		'/ja/blog/**': { swr: true },
 		'/ns/': { prerender: true },
 	};
 
@@ -29,7 +29,7 @@ function getRouteRules(): NuxtConfig['routeRules'] {
 		// リリースページはどうせアクセス集中するので先に作っておく
 		'/docs/releases/': { prerender: true },
 		
-		'/docs/**': { isr: true },
+		'/docs/**': { swr: true },
 	};
 
 	// 静的ページをすべて追加
@@ -52,6 +52,7 @@ function getRouteRules(): NuxtConfig['routeRules'] {
 	return {
 		...staticRules,
 		..._localeBasedRules,
+		...getOldHubRedirects(),
 	};
 }
 
@@ -154,14 +155,6 @@ export default defineNuxtConfig({
 		],
 	},
 	nitro: {
-		preset: 'vercel',
-		vercel: {
-			config: {
-				routes: [
-					...getOldHubRedirects(),
-				],
-			}
-		},
 		plugins: [
 			'@/server/plugins/appendComment.ts',
 			'@/server/plugins/i18nRedirector.ts',
