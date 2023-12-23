@@ -4,7 +4,7 @@
             <template #title>{{ $t('_servers.title') }}</template>
             <template #description>
                 {{ $t('_servers.description') }}<br>
-                <I18nT keypath="_servers.addYourServer" tag="span">
+                <I18nT scope="global" keypath="_servers.addYourServer" tag="span">
                     <GNuxtLink class="font-bold hover:underline underline-offset-4" to="https://github.com/joinmisskey/api">{{ $t('_servers.addYourServerLink') }}</GNuxtLink>
                 </I18nT>
             </template>

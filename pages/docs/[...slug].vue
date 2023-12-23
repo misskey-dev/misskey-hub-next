@@ -1,7 +1,7 @@
 <template>
     <div class="grid docs-main">
         <div class="lg:hidden sticky top-16 -mx-6 -mt-6 overflow-y-auto bg-slate-50 dark:bg-slate-900 z-[9890] border-b dark:border-slate-700 text-sm flex items-start">
-            <details v-if="data?.body && data.body.toc?.links.length > 0" class="peer order-2 flex-grow flex-shrink-0" :open="openState">
+            <details v-if="data?.body && (data.body.toc?.links ?? []).length > 0" class="peer order-2 flex-grow flex-shrink-0" :open="openState">
                 <summary class="py-4 cursor-pointer">
                     {{ $t('_docs._toc.title') }}
                 </summary>
@@ -16,7 +16,7 @@
         <div class="pt-6 p-0 sm:p-12 lg:p-6 w-full overflow-x-hidden">
             <template v-if="data?.body">
                 <Tip v-if="locale !== 'ja'" class="mb-6" :label="$t('_i18n._missing.title')">
-                    <I18nT keypath="_i18n._missing.description" tag="p">
+                    <I18nT scope="global" keypath="_i18n._missing.description" tag="p">
                         <template #link>
                             <GNuxtLink class="font-bold hover:underline underline-offset-2" to="https://crowdin.com/project/misskey-hub" target="_blank">{{ $t('_i18n._missing.linkLabel') }}</GNuxtLink>
                         </template>
@@ -53,7 +53,7 @@ import type { MiDocsParsedContent } from '~/types/content';
 
 const isAsideNavOpen = useState<boolean>('miHub_docs_asideNav_openState', () => false);
 
-const { locale, locales } = useI18n();
+const { locale } = useI18n();
 const openState = ref<boolean>(false);
 const runtimeConfig = useRuntimeConfig();
 
