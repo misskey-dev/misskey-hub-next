@@ -130,6 +130,10 @@ _servers:
   _list:
     notFound: "指定された条件に合致するサーバーは見つかりませんでした。"
     showMore: "もっと見る"
+  _view:
+    title: "表示形式"
+    list: "リスト"
+    grid: "グリッド"
 
 _docs:
   title: "ドキュメント"

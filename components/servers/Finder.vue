@@ -22,7 +22,7 @@
                     <label class="form-label" for="query">{{ $t('_servers._search.query') }}</label>
                     <div class="input-group">
                         <input class="form-control" type="search" autocomplete="off" id="query" v-model="f_query_partial" />
-                        <button type="submit" class="btn btn-outline-primary hover:!text-white">
+                        <button type="submit" class="btn btn-outline-primary">
                             <SearchIco class="stroke-[0.5] stroke-current" />
                         </button>
                     </div>
@@ -43,7 +43,7 @@
                             <option value="notesCount">{{ $t('_servers._search.notesCount') }}</option>
                             <option value="usersCount">{{ $t('_servers._search.usersCount') }}</option>
                         </select>
-                        <button class="btn btn-outline-primary hover:!text-white" @click="switchOrder()">
+                        <button class="btn btn-outline-primary" @click="switchOrder()">
                             <SortDownIco v-if="f_order === 'desc'" class="stroke-[0.5] stroke-current" />
                             <SortUpIco v-else class="stroke-[0.5] stroke-current" />
                         </button>
@@ -70,24 +70,56 @@
                         </label>
                     </div>
                 </div>
+                <h3 class="pt-2 text-xl font-bold">{{ $t('_servers._view.title') }}</h3>
+                <div class="btn-group w-full" role="group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" value="grid" v-model="v_view">
+                    <label class="btn btn-outline-primary truncate" for="btnradio1"><GridIco class="mr-1" />{{ $t('_servers._view.grid') }}</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" value="list" v-model="v_view">
+                    <label class="btn btn-outline-primary truncate" for="btnradio2"><ListIco class="mr-1" />{{ $t('_servers._view.list') }}</label>
+                </div>
             </div>
         </aside>
         <div>
-            <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2">
-                <ServersItem v-if="filteredInstances.length > 0" v-for="item in filteredInstances.slice(0, f_limit)" :instance="item" />
-                <div v-else-if="data" class="rounded-lg p-6 min-h-[40vh] flex items-center sm:col-span-2 md:col-span-2 lg:col-span-2 bg-slate-100 dark:bg-slate-800">
+            <div
+                class="grid gap-4"
+                :class="[
+                    (v_view === 'grid') && 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2',
+                    (v_view === 'list') && 'grid-cols-1',
+                ]"
+            >
+                <ServersItem v-if="filteredInstances.length > 0" v-for="item in filteredInstances.slice(0, f_limit)" :instance="item" :view="v_view" />
+                <div
+                    v-else-if="data"
+                    class="rounded-lg p-6 min-h-[40vh] flex items-center bg-slate-100 dark:bg-slate-800"
+                    :class="[
+                        (v_view === 'grid') && 'sm:col-span-2 md:col-span-2 lg:col-span-2'
+                    ]"
+                >
                     <div class="mx-auto text-center">
                         <img src="https://xn--931a.moe/assets/info.jpg" class="rounded-lg mx-auto mb-4" />
                         <p class="max-w-xs">{{ $t('_servers._list.notFound') }}</p>
                     </div>
                 </div>
-                <div v-else class="rounded-lg p-6 min-h-[40vh] flex items-center sm:col-span-2 md:col-span-2 lg:col-span-2 bg-slate-100 dark:bg-slate-800">
+                <div
+                    v-else
+                    class="rounded-lg p-6 min-h-[40vh] flex items-center bg-slate-100 dark:bg-slate-800"
+                    :class="[
+                        (v_view === 'grid') && 'sm:col-span-2 md:col-span-2 lg:col-span-2'
+                    ]"
+                >
                     <div class="mx-auto text-center">
                         <MkLoading class="mx-auto"></MkLoading>
                         <p class="max-w-xs">{{ $t('loading') }}</p>
                     </div>
                 </div>
-                <button v-if="f_limit < filteredInstances.length" @click="f_limit += 24" class="btn btn-outline-primary btn-lg hover:!text-white block sm:col-span-2 md:col-span-3 lg:col-span-2 px-4">
+                <button
+                    v-if="f_limit < filteredInstances.length" @click="f_limit += 24"
+                    class="btn btn-outline-primary btn-lg block px-4"
+                    :class="[
+                        (v_view === 'grid') && 'sm:col-span-2 md:col-span-2 lg:col-span-2'
+                    ]"
+                >
                     <ArrowIco class="mr-1" />{{ $t('_servers._list.showMore') }}
                 </button>
             </div>
@@ -105,6 +137,8 @@ import SortUpIco from 'bi/sort-down-alt.svg';
 import SortDownIco from 'bi/sort-down.svg';
 import ArrowIco from 'bi/arrow-down-circle.svg';
 import XIco from 'bi/x.svg';
+import GridIco from 'bi/grid-3x2-gap.svg';
+import ListIco from 'bi/view-stacked.svg';
 
 const { t, locale } = useI18n();
 const route = useRoute();
@@ -114,7 +148,6 @@ const emits = defineEmits<{
 
 // ▼スマホ用ソート▼
 const sortOpen = ref(false);
-
 // ▲スマホ用ソート▲
 
 // ▼フォームデータ初期化▼
@@ -123,6 +156,7 @@ type MiHubSFStorage = {
     f_orderBy: 'recomendded' | 'notesCount' | 'notesPer15Days' | 'usersCount';
     f_order: 'asc' | 'desc';
     f_registerAcceptance: 'public' | 'inviteOnly' | null;
+    v_view: 'grid' | 'list';
 };
 
 let savedSettings: MiHubSFStorage | null = null;
@@ -139,10 +173,12 @@ const f_order = ref<MiHubSFStorage['f_order']>(savedSettings?.f_order ?? 'desc')
 const f_registerAcceptance = ref<MiHubSFStorage['f_registerAcceptance']>(savedSettings?.f_registerAcceptance || null);
 
 const f_limit = ref<number>(24);
+
+const v_view = ref<MiHubSFStorage['v_view']>(savedSettings?.v_view ?? 'grid');
 // ▲フォームデータ初期化▲
 
 // ▼フォームデータ保存処理▼
-watch([f_langs, f_orderBy, f_order, f_registerAcceptance], (to, from) => {
+watch([f_langs, f_orderBy, f_order, f_registerAcceptance, v_view], (to, from) => {
     f_limit.value = 24;
 
     const newSettings: MiHubSFStorage = {
@@ -150,6 +186,7 @@ watch([f_langs, f_orderBy, f_order, f_registerAcceptance], (to, from) => {
         f_orderBy: to[1],
         f_order: to[2],
         f_registerAcceptance: to[3],
+        v_view: to[4],
     };
 
     if (process.client) {

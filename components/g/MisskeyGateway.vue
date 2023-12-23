@@ -58,7 +58,7 @@
                                         <label class="form-label inline-block" for="userDefinedInstanceInput">{{ $t('_share.domain') }}</label>
                                         <div class="input-group">
                                             <input id="userDefinedInstanceInput" class="form-control" autocomplete="off" placeholder="misskey.example.com" v-model="userDefinedInstanceInput" :disabled="iFetching" />
-                                            <button type="submit" class="btn btn-primary !text-white hover:!text-white focus-visible:!text-white" :disabled="iFetching"><PlusIco class="h-4 w-4 stroke-1 stroke-current" /></button>
+                                            <button type="submit" class="btn btn-primary" :disabled="iFetching"><PlusIco class="h-4 w-4 stroke-1 stroke-current" /></button>
                                         </div>
                                         <div class="form-text">{{ $t('_share.compatibleWith') }}</div>
                                     </form>

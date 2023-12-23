@@ -11,7 +11,7 @@
             <label class="mb-1" for="aidToDateAid">aid / aidx</label>
             <input class="form-control" id="aidToDateAid" v-model="aidToDateAid" />
             <div class="my-2">
-                <button class="btn btn-primary !text-white" @click="doAidToDate()">{{ $t('_aidConverter.aidToDate') }}</button>
+                <button class="btn btn-primary" @click="doAidToDate()">{{ $t('_aidConverter.aidToDate') }}</button>
             </div>
             <div class="mb-2 p-4 rounded-lg border bg-white dark:bg-[#212529] border-gray-200 dark:border-gray-600">
                 {{ aidToDateResult }}
@@ -26,7 +26,7 @@
                 <option value="aidx">aidx</option>
             </select>
             <div class="my-2">
-                <button class="btn btn-primary !text-white" @click="doDateToAid()">{{ $t('_aidConverter.dateToAid') }}</button>
+                <button class="btn btn-primary" @click="doDateToAid()">{{ $t('_aidConverter.dateToAid') }}</button>
             </div>
             <div class="mb-2 p-4 rounded-lg border bg-white dark:bg-[#212529] border-gray-200 dark:border-gray-600">
                 {{ dateToAidResult }}
