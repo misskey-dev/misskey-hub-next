@@ -1,32 +1,32 @@
-# GitHub Actionsを使用してDocker Hubへpushする方法
+# How to push to Docker Hub using GitHub Actions
 
-[/.github/workflows/docker.yml](https://github.com/misskey-dev/misskey/blob/develop/.github/workflows/docker.yml) に\
-GitHub ActionによりDocker Hubへpushするワークフローが記述されています。
+An example of how to push to Docker Hub using Github Actions can be found on the original repository in the file [/.github/workflows/docker.yml](https://github.com/misskey-dev/misskey/blob/develop/.github/workflows/docker.yml)
 
-オリジナルリポジトリでは、リリースされたタイミングで `latest`, `<リリース名>` それぞれのタグでDocker Hubにpushされます。\
+In the original workflow when a new release happens, it will be pushed to Docker Hub with the `latest` and `<release name>` tags.\
 \
-※ Docker Hub に`<ブランチ名>`のようなタグがあるかもしれませんが、こちらは自動push対象ではありません。
+\
+※ Docker Hub may have a tag like `<branch name>`, but those tags are not automatically pushed.
 
-Fork先でこのワークフローを実行すると失敗します。
+Executing this workflow in a fork will fail.
 
-以下では、Fork先で自分のDocker Hubリポジトリにpushするようにする方法を記述します。
+In the following information, we describe how to make the Fork push to its own Docker Hub repository.
 
-## 自分のDocker Hubリポジトリにpushするように設定する方法
+## How to set up a workflow to push to your own Docker Hub repository
 
-1. Docker Hubでリポジトリを作成します。
-2. ワークフローファイルの [images](https://github.com/misskey-dev/misskey/blob/53f3b779bf16abcda4f6e026c51384f3b8fbcc62/.github/workflows/docker.yml#L20) を作成したリポジトリに置き換えます。
-3. GitHubにて [暗号化されたシークレット](https://docs.github.com/ja/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) を作成します。\
+1. Create a repository on Docker Hub.
+2. Replace the [image mentions in the workflow file](https://github.com/misskey-dev/misskey/blob/53f3b779bf16abcda4f6e026c51384f3b8fbcc62/.github/workflows/docker.yml#L20) with the name of the repository you created.
+3. Create two [encrypted secrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-encrypted-secrets-for-a-repository) on GitHub.\
    \
-   作成が必要なのは `DOCKER_USERNAME` と `DOCKER_PASSWORD` で、それぞれDocker Hubのユーザーとパスワードになります。
+   You need to create `DOCKER_USERNAME` and `DOCKER_PASSWORD`, which are the Docker Hub username and password, respectively.
 
-## pushする方法
+## How to push
 
-上記設定によりリリース時に自動的にDocker Hubにpushされるようになります。\
+The default settings in the workflow will automatically push to Docker Hub upon a new release.\
 \
-具体的には、GitHubのリリース機能でリリースしたタイミングで `latest`, `<リリース名>` それぞれのタグでDocker Hubにpushされます。
+Specifically, when a release is made using GitHub's release function it is pushed to Docker Hub with the tags `latest` and `<release name>`
 
-また、GitHub上から手動でpushすることも出来ます。\
+You can also push manually from GitHub.\
 \
-それを行うには、Actions => Publish Docker image => Run workflow からbranchを選択してワークフローを実行します。\
+To do so, go to Actions => Publish Docker image => Run workflow and then select a branch.\
 \
-ただし、この場合作成されるタグは`<ブランチ名>`になります。
+However doing this will make it push with a tag labeled as `<branch name>`.

@@ -23,4 +23,4 @@
 
 ## デッキの設定
 
-デッキに関する設定は、[settings/deck](/settings/deck)で行えます。
+デッキに関する設定は、[settings/deck](x-mi-web://settings/deck)で行えます。
