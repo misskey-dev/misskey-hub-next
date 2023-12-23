@@ -125,6 +125,10 @@ _servers:
   _list:
     notFound: "未找到符合指定條件的伺服器。"
     showMore: "查看更多"
+  _view:
+    title: "表示形式"
+    list: "リスト"
+    grid: "グリッド"
 _docs:
   title: "文件"
   description: "Misskey 是一個開源去中心化社群網路平台。它涵蓋了從如何正確使用 Misskey 到為伺服器營運者和程式開發人員提供的資訊的所有內容。"
