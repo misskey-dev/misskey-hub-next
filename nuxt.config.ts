@@ -18,6 +18,7 @@ const repositoryUrl = 'https://github.com/misskey-dev/misskey-hub-next';
 // 言語定義は /assets/data/locales.ts に移動しました
 
 function getRouteRules(): NuxtConfig['routeRules'] {
+	console.log('Preset', process.env.NITRO_PRESET);
 	// 言語ごとに割り当てる必要のないRouteRules
 	const staticRules: NuxtConfig['routeRules'] = {
 		'/ja/blog/**': { isr: true },
@@ -52,6 +53,7 @@ function getRouteRules(): NuxtConfig['routeRules'] {
 	return {
 		...staticRules,
 		..._localeBasedRules,
+		//...((process.env.NITRO_PRESET !== 'vercel') ? getOldHubRedirects('nitro') : {}),
 	};
 }
 
@@ -154,11 +156,10 @@ export default defineNuxtConfig({
 		],
 	},
 	nitro: {
-		preset: 'vercel',
 		vercel: {
 			config: {
 				routes: [
-					...getOldHubRedirects(),
+					...getOldHubRedirects('vercel'),
 				],
 			}
 		},
