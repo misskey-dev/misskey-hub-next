@@ -21,7 +21,7 @@ export default defineNitroPlugin((nitroApp) => {
       const remainingList: string[] = [];
       html.head.forEach((v) => {
         remainingList.push(...(v.match(/<!--(.|\n)*(?<=-->)/gm) ?? []));
-        remainingList.push(...(v.match(/<link\s+rel="(og|alternate|canonical)[^>]+>/gm) ?? []));
+        remainingList.push(...(v.match(/<link\s+rel="(og|alternate|canonical|me)[^>]+>/gm) ?? []));
         remainingList.push(...(v.match(/<meta[^>]+>/gm) ?? []));
         remainingList.push(...(v.match(/<script type="application\/ld\+json">.*(?<=<\/script>)/gm) ?? []));
       });
