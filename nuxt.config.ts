@@ -11,12 +11,12 @@ import type { NuxtConfig } from 'nuxt/schema';
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl =
-	process.env.NODE_ENV == "development"
-		? "http://localhost:3000"
-		: "https://misskey-hub.net";
+	process.env.NODE_ENV == 'development'
+		? 'http://localhost:3000'
+		: 'https://misskey-hub.net';
 
 // リポジトリURL（末尾スラッシュなし）
-const repositoryUrl = "https://github.com/misskey-dev/misskey-hub-next";
+const repositoryUrl = 'https://github.com/misskey-dev/misskey-hub-next';
 
 // 言語定義は /assets/data/locales.ts に移動しました
 
