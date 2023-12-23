@@ -125,6 +125,10 @@ _servers:
   _list:
     notFound: "Non ci sono server corrispondenti ai criteri specificati."
     showMore: "Espandi"
+  _view:
+    title: "表示形式"
+    list: "リスト"
+    grid: "グリッド"
 _docs:
   title: "ドキュメント"
   description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。Misskeyの上手な使い方から、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
