@@ -104,6 +104,18 @@ export const redirects = [
         "/docs/api/streaming/note-capture-events.html"
     ],
     [
+        "/docs/api/endpoints.html",
+        "/docs/for-developers/api/endpoints/"
+    ],
+    [
+        "/docs/api/endpoints",
+        "/docs/api/endpoints.html"
+    ],
+    [
+        "/docs/api/endpoints.md",
+        "/docs/api/endpoints.html"
+    ],
+    [
         "/docs/admin/cdn.html",
         "/docs/for-admin/install/resources/cdn/"
     ],
