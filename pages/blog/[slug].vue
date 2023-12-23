@@ -66,7 +66,7 @@ onBeforeRouteLeave((to) => {
 // ▲他言語からやってきたときに正しいパスに戻す▲
 
 const runtimeConfig = useRuntimeConfig();
-const { data } = await useAsyncData(`blog-${route.params.slug}`, () => queryContent<MiBlogParsedContent>(`/blog/${route.params.slug}`).findOne());
+const { data } = await useGAsyncData(`blog-${route.params.slug}`, () => queryContent<MiBlogParsedContent>(`/blog/${route.params.slug}`).findOne());
 
 if (!data.value) {
     throw createError({ statusCode: 404, statusMessage: 'page not found', fatal: true });

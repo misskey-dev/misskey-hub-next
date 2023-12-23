@@ -64,7 +64,7 @@ definePageMeta({
 const route = useRoute();
 const slugs = (route.params.slug as string[]).filter((v) => v !== '');
 
-const { data } = await useAsyncData(`docs-${locale.value}-${slugs.join('-')}`, () => queryContent<MiDocsParsedContent>(`/${locale.value}/docs/${slugs.join('/')}`).findOne());
+const { data } = await useGAsyncData(`docs-${locale.value}-${slugs.join('-')}`, () => queryContent<MiDocsParsedContent>(`/${locale.value}/docs/${slugs.join('/')}`).findOne());
 
 if (!data.value) {
     throw createError({ statusCode: 404, statusMessage: 'page not found', fatal: true });

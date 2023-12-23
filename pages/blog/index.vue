@@ -38,7 +38,7 @@ const route = useRoute();
 const localeState = useState('miHub_blog_originalLocale', () => locale.value);
 localeState.value = locale.value;
 
-const { data } = await useAsyncData('blog', () => queryContent('blog').only(['_path', 'navTitle', 'title', 'date']).sort({ date: -1 }).find());
+const { data } = await useGAsyncData('blog', () => queryContent('blog').only(['_path', 'navTitle', 'title', 'date']).sort({ date: -1 }).find());
 const localePath = useGLocalePath();
 
 route.meta.title = t('_blog.title');
