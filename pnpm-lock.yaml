@@ -8619,8 +8619,8 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
 
-  '@gitpkg.now.sh/misskey-dev/misskey/packages/misskey-js?develop&scripts.postinstall=pnpm%2520tsc':
-    resolution: {tarball: https://gitpkg.now.sh/misskey-dev/misskey/packages/misskey-js?develop&scripts.postinstall=pnpm%20tsc}
+  '@gitpkg.now.sh/misskey-dev/misskey/packages/misskey-js?develop&scripts.postinstall=tsc':
+    resolution: {tarball: https://gitpkg.now.sh/misskey-dev/misskey/packages/misskey-js?develop&scripts.postinstall=tsc}
     name: misskey-js
     version: 0.0.16
     requiresBuild: true
