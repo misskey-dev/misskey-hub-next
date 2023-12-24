@@ -56,8 +56,8 @@ devDependencies:
     specifier: ^0.23.3
     version: 0.23.3
   misskey-js:
-    specifier: https://gitpkg.now.sh/misskey-dev/misskey/packages/misskey-js?develop&scripts.postinstall=tsc
-    version: '@gitpkg.now.sh/misskey-dev/misskey/packages/misskey-js?develop&scripts.postinstall=tsc'
+    specifier: https://gitpkg.now.sh/misskey-dev/misskey/packages/misskey-js?develop&scripts.postinstall=pnpm%20tsc
+    version: '@gitpkg.now.sh/misskey-dev/misskey/packages/misskey-js?develop&scripts.postinstall=pnpm%2520tsc'
   nprogress:
     specifier: ^0.2.0
     version: 0.2.0
@@ -8619,8 +8619,8 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
 
-  '@gitpkg.now.sh/misskey-dev/misskey/packages/misskey-js?develop&scripts.postinstall=tsc':
-    resolution: {tarball: https://gitpkg.now.sh/misskey-dev/misskey/packages/misskey-js?develop&scripts.postinstall=tsc}
+  '@gitpkg.now.sh/misskey-dev/misskey/packages/misskey-js?develop&scripts.postinstall=pnpm%2520tsc':
+    resolution: {tarball: https://gitpkg.now.sh/misskey-dev/misskey/packages/misskey-js?develop&scripts.postinstall=pnpm%20tsc}
     name: misskey-js
     version: 0.0.16
     requiresBuild: true
