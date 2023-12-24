@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
-import { readFileSync } from 'fs';
+import { readFileSync, watch as fsWatch } from 'fs';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
 import { getOldHubRedirects } from './scripts/get-old-hub-redirects';
 import { genLocalesJson } from './scripts/gen-locales';
@@ -175,6 +175,13 @@ export default defineNuxtConfig({
 		'build:before': async (...args) => {
 			genApiTranslationFiles(...args);
 			genLocalesJson(...args);
+			if (process.env.NODE_ENV === 'development') {
+				fsWatch('./locales/', (ev, filename) => {
+					if (filename && filename.endsWith('.yml')) {
+						genLocalesJson(...args);
+					}
+				});
+			}
 			await fetchCrowdinMembers(...args);
 		},
 	},
