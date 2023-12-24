@@ -11,12 +11,12 @@
                     </div>
                     <h1 class="font-bold text-center text-lg sm:text-xl">{{ branding?.heading ?? $t('_share.chooseServer') }}</h1>
                     
-                    <div>
+                    <div v-if="manualInstanceData">
                         <div class="text-xs sm:text-sm mb-1 opacity-70">
                             {{ $t('_share.recommendedByWebsite') }}
                             <NuxtLink :to="localePath('/docs/for-users/features/share-form/#hub-share-disclaimer')" target="_blank"><HelpIco class="ml-1" /></NuxtLink>
                         </div>
-                        <div v-if="manualInstanceData" class="rounded-lg border border-gray-300 dark:border-gray-600 group">
+                        <div class="rounded-lg border border-gray-300 dark:border-gray-600 group">
                             <GNuxtLink
                                 :to="joinURL(`https://${manualInstanceData.url}/`, path)"
                                 class="group-first:rounded-t-lg group-last:rounded-b-lg py-2 px-4 sm:p-4 w-full flex items-center hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-gray-700 dark:active:bg-gray-600"
