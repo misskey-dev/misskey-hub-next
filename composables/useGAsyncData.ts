@@ -4,7 +4,7 @@ export function useGAsyncData<ResT, DataE = Error, DataT = ResT, PickKeys extend
     if (!params[2]) {
         params[2] = {};
     }
-    params[2].getCachedData = (key) => useNuxtData(key).data.value ?? null;
+    params[2].getCachedData = (key) => useNuxtData(key).data.value ?? undefined;
     
     return useAsyncData<ResT, DataE, DataT, PickKeys, DefaultT>(...params);
 }
