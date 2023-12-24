@@ -10,6 +10,11 @@ export default <NavSection[]>[
                 to: "/tools/mfm-playground/",
             },
             {
+                i18n: "_avatarDecorationPreview.title",
+                description: "_avatarDecorationPreview.description",
+                to: "/tools/avatar-decoration-preview/",
+            },
+            {
                 i18n: "_aidConverter.title",
                 description: "_aidConverter.description",
                 to: "/tools/aid-converter/",

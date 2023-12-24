@@ -6,6 +6,7 @@ copy: "コピー"
 share: "共有する"
 note: "ノート"
 other: "その他"
+add: "追加"
 goToLegacyHub: "従来のMisskey Hub"
 
 _error:
@@ -294,6 +295,24 @@ _shareLinkGenerator:
 _goToMisskey:
   title: "Misskey Webに移動"
   heading: "このページを開きたいサーバーを選択してください"
+
+_avatarDecorationPreview:
+  title: "アバターデコレーション プレビュー"
+  description: "アバターデコレーションがきれいに反映できるかをチェックできます。"
+  preview: "プレビュー"
+  settings: "設定"
+  decoration: "デコ #{number}"
+  placeholder: "「追加」から、アバターデコレーションを追加してプレビューできます。"
+  _options:
+    offsetX: "横位置調整"
+    offsetY: "縦位置調整"
+    angle: "角度"
+    flip: "左右反転"
+    overlayTemplate: "テンプレートを重ねる"
+  _placeholder:
+    username: "藍"
+    noteText: "チョコのかかったドーナツを食べました🍩😋"
+    profileDescription: "Misskey常駐AIの藍です！よろしくお願いします♪"
 
 _api:
   _permissions:
