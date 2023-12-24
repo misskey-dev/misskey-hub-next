@@ -79,6 +79,9 @@ devDependencies:
   tailwindcss:
     specifier: ^3.4.0
     version: 3.4.0
+  typescript:
+    specifier: ^5.3.3
+    version: 5.3.3
   ufo:
     specifier: ^1.3.2
     version: 1.3.2
