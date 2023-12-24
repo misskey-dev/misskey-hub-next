@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"tokenId": "（説明がありません）",
+				"token": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/revoke-token",
+	"description": "（説明がありません）"
+}

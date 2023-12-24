@@ -2,7 +2,10 @@
 	"data": {
 		"post": {
 			"description": "（説明がありません）",
-			"requestBody": {}
+			"requestBody": {},
+			"response": {
+				"count": "（説明がありません）"
+			}
 		}
 	},
 	"title": "get-online-users-count",

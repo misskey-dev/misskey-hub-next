@@ -1,0 +1,14 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"password": "（説明がありません）",
+				"email": "（説明がありません）",
+				"token": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/update-email",
+	"description": "（説明がありません）"
+}

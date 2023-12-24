@@ -4,6 +4,12 @@
 			"description": "（説明がありません）",
 			"requestBody": {
 				"limit": "（説明がありません）"
+			},
+			"response": {
+				"topSubInstances": "（説明がありません）",
+				"otherFollowersCount": "（説明がありません）",
+				"topPubInstances": "（説明がありません）",
+				"otherFollowingCount": "（説明がありません）"
 			}
 		}
 	},

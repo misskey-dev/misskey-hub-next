@@ -1,0 +1,24 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"password": "（説明がありません）",
+				"token": "（説明がありません）"
+			},
+			"response": {
+				"rp": "（説明がありません）",
+				"user": "（説明がありません）",
+				"challenge": "（説明がありません）",
+				"pubKeyCredParams": "（説明がありません）",
+				"timeout": "（説明がありません）",
+				"excludeCredentials": "（説明がありません）",
+				"authenticatorSelection": "（説明がありません）",
+				"attestation": "（説明がありません）",
+				"extensions": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/2fa/register-key",
+	"description": "（説明がありません）"
+}

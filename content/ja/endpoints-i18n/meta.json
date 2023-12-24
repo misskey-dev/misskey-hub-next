@@ -45,7 +45,13 @@
 				"translatorAvailable": "（説明がありません）",
 				"proxyAccountName": "（説明がありません）",
 				"mediaProxy": "（説明がありません）",
-				"features": "（説明がありません）"
+				"features": "（説明がありません）",
+				"backgroundImageUrl": "（説明がありません）",
+				"impressumUrl": "（説明がありません）",
+				"logoImageUrl": "（説明がありません）",
+				"privacyPolicyUrl": "（説明がありません）",
+				"serverRules": "（説明がありません）",
+				"themeColor": "（説明がありません）"
 			}
 		}
 	},

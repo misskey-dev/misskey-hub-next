@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"excludeMuting": "（説明がありません）",
+				"excludeInactive": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/export-following",
+	"description": "（説明がありません）"
+}

@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"token": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/2fa/done",
+	"description": "（説明がありません）"
+}

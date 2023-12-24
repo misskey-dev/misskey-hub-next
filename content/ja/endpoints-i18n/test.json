@@ -8,6 +8,13 @@
 				"default": "（説明がありません）",
 				"nullableDefault": "（説明がありません）",
 				"id": "（説明がありません）"
+			},
+			"response": {
+				"id": "（説明がありません）",
+				"required": "（説明がありません）",
+				"string": "（説明がありません）",
+				"default": "（説明がありません）",
+				"nullableDefault": "（説明がありません）"
 			}
 		}
 	},

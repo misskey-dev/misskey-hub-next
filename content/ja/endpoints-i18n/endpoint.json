@@ -4,6 +4,9 @@
 			"description": "（説明がありません）",
 			"requestBody": {
 				"endpoint": "（説明がありません）"
+			},
+			"response": {
+				"params": "（説明がありません）"
 			}
 		}
 	},

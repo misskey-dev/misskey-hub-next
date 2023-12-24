@@ -4,6 +4,17 @@
 			"description": "（説明がありません）",
 			"requestBody": {
 				"webhookId": "（説明がありません）"
+			},
+			"response": {
+				"id": "（説明がありません）",
+				"userId": "（説明がありません）",
+				"name": "（説明がありません）",
+				"on": "（説明がありません）",
+				"url": "（説明がありません）",
+				"secret": "（説明がありません）",
+				"active": "（説明がありません）",
+				"latestSentAt": "（説明がありません）",
+				"latestStatus": "（説明がありません）"
 			}
 		}
 	},

@@ -1,0 +1,20 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"password": "（説明がありません）",
+				"token": "（説明がありません）"
+			},
+			"response": {
+				"qr": "（説明がありません）",
+				"url": "（説明がありません）",
+				"secret": "（説明がありません）",
+				"label": "（説明がありません）",
+				"issuer": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/2fa/register",
+	"description": "（説明がありません）"
+}

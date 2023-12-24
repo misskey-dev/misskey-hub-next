@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"password": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/regenerate-token",
+	"description": "（説明がありません）"
+}

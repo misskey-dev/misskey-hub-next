@@ -2,7 +2,13 @@
 	"data": {
 		"post": {
 			"description": "（説明がありません）",
-			"requestBody": {}
+			"requestBody": {},
+			"response": {
+				"machine": "（説明がありません）",
+				"cpu": "（説明がありません）",
+				"mem": "（説明がありません）",
+				"fs": "（説明がありません）"
+			}
 		}
 	},
 	"title": "server-info",

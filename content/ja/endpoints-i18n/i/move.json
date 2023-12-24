@@ -1,0 +1,12 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"moveToAccount": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/move",
+	"description": "（説明がありません）"
+}

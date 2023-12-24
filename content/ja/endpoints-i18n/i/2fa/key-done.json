@@ -1,0 +1,19 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"password": "（説明がありません）",
+				"token": "（説明がありません）",
+				"name": "（説明がありません）",
+				"credential": "（説明がありません）"
+			},
+			"response": {
+				"id": "（説明がありません）",
+				"name": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/2fa/key-done",
+	"description": "（説明がありません）"
+}

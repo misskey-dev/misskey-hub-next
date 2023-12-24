@@ -32,7 +32,10 @@
 				"mutedInstances": "（説明がありません）",
 				"notificationRecieveConfig": "（説明がありません）",
 				"emailNotificationTypes": "（説明がありません）",
-				"alsoKnownAs": "（説明がありません）"
+				"alsoKnownAs": "（説明がありません）",
+				"followingVisibility": "（説明がありません）",
+				"followersVisibility": "（説明がありません）",
+				"hardMutedWords": "（説明がありません）"
 			}
 		}
 	},

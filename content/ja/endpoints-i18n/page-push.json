@@ -1,0 +1,14 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"pageId": "（説明がありません）",
+				"event": "（説明がありません）",
+				"var": "（説明がありません）"
+			}
+		}
+	},
+	"title": "page-push",
+	"description": "（説明がありません）"
+}

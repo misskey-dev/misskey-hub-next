@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"password": "（説明がありません）",
+				"token": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/delete-account",
+	"description": "（説明がありません）"
+}

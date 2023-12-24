@@ -4,6 +4,9 @@
 			"description": "（説明がありません）",
 			"requestBody": {
 				"url": "（説明がありません）"
+			},
+			"response": {
+				"items": "（説明がありません）"
 			}
 		}
 	},

@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"fileId": "（説明がありません）",
+				"withReplies": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/import-following",
+	"description": "（説明がありません）"
+}

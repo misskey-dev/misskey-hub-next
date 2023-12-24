@@ -1,0 +1,19 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"session": "（説明がありません）",
+				"name": "（説明がありません）",
+				"description": "（説明がありません）",
+				"iconUrl": "（説明がありません）",
+				"permission": "（説明がありません）"
+			},
+			"response": {
+				"token": "（説明がありません）"
+			}
+		}
+	},
+	"title": "miauth/gen-token",
+	"description": "（説明がありません）"
+}

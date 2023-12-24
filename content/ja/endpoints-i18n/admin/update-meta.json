@@ -91,7 +91,10 @@
 				"perUserHomeTimelineCacheMax": "（説明がありません）",
 				"perUserListTimelineCacheMax": "（説明がありません）",
 				"notesPerOneAd": "（説明がありません）",
-				"silencedHosts": "（説明がありません）"
+				"silencedHosts": "（説明がありません）",
+				"enableVerifymailApi": "（説明がありません）",
+				"verifymailAuthKey": "（説明がありません）",
+				"bannedEmailDomains": "（説明がありません）"
 			}
 		}
 	},

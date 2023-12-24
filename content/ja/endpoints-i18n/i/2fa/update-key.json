@@ -1,0 +1,13 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"name": "（説明がありません）",
+				"credentialId": "（説明がありません）"
+			}
+		}
+	},
+	"title": "i/2fa/update-key",
+	"description": "（説明がありません）"
+}
