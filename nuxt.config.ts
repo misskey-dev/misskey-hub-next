@@ -8,6 +8,7 @@ import { genLocalesJson } from './scripts/gen-locales';
 import { getStaticEndpoints } from './scripts/get-static-endpoints';
 import { locales } from './assets/data/locales';
 import type { NuxtConfig } from 'nuxt/schema';
+import { fetchCrowdinMembers } from './scripts/fetch-crowdin';
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl =
@@ -64,7 +65,8 @@ export default defineNuxtConfig({
 			baseUrl,
 			repositoryUrl,
 			locales,
-		}
+		},
+		CROWDIN_INTG_API: process.env.CROWDIN_INTG_API,
 	},
 	css: [
 		"github-markdown-css/github-markdown.css",
@@ -170,9 +172,10 @@ export default defineNuxtConfig({
 		],
 	},
 	hooks: {
-		'build:before': (...args) => {
+		'build:before': async (...args) => {
 			genApiTranslationFiles(...args);
 			genLocalesJson(...args);
+			await fetchCrowdinMembers(...args);
 		},
 	},
 	experimental: {

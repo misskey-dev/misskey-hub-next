@@ -248,6 +248,12 @@ _aboutUs:
     _orgPartner:
       title: "企業・団体パートナー"
       description: "こちらの企業・団体から、金銭的・技術的な観点でMisskeyの開発へご協力いただいております。"
+    _hubTranslators:
+      title: "Misskey Hub ローカライザー"
+      description: "Misskey Hubの翻訳に協力いただいている皆さんです。"
+    _coreTranslators:
+      title: "Misskey ローカライザー"
+      description: "Misskeyの翻訳に協力いただいている皆さんです。"
 
 _i18n:
   _missing:
