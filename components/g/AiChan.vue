@@ -10,7 +10,7 @@ if (process.client) {
     isEnabledAiChanMode.value = ((localStorage.getItem('miHub_aichan_mode') ?? '') == 'true');
 
     // migration
-    if (!isEnabledAiChanMode.value) {
+    if (!localStorage.getItem('miHub_aichan_mode')) {
         isEnabledAiChanMode.value = ((localStorage.getItem('aimode') ?? '') == 'true');
     }
 }
@@ -53,5 +53,7 @@ iframe {
 	height: 600px;
 	border: none;
 	pointer-events: none;
+	background: transparent;
+	color-scheme: light dark;
 }
 </style>

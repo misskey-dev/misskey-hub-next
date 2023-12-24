@@ -36,12 +36,16 @@ export default <Config> {
           '950': '#223201',
         },
       },
-      fontFamily: {
-        'title': ['Capriola', 'var(--mi-localized-font, \'\')', ...defaultTheme.fontFamily.sans],
-        'sans': ['Nunito', 'var(--mi-localized-font, \'\')', ...defaultTheme.fontFamily.sans],
-        'content-sans': ['Nunito', 'var(--mi-localized-font-p, var(--mi-localized-font))', ...defaultTheme.fontFamily.sans],
+      screens: {
+        '3xl': '1970px',
       },
     },
+    fontFamily: {
+      ...defaultTheme.fontFamily,
+      'title': ['Capriola', 'var(--mi-localized-font, \'\')', ...defaultTheme.fontFamily.sans],
+      'sans': ['Nunito', 'var(--mi-localized-font, \'\')', ...defaultTheme.fontFamily.sans],
+      'content-sans': ['Nunito', 'var(--mi-localized-font-p, var(--mi-localized-font))', ...defaultTheme.fontFamily.sans],
+    }
   },
   plugins: [],
 }

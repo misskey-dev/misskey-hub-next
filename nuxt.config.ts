@@ -1,32 +1,25 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
-import { readFileSync } from 'fs';
+import { readFileSync, watch as fsWatch } from 'fs';
 import { genApiFiles } from './scripts/gen-api-translations';
-import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
+import { getOldHubRedirects } from './scripts/get-old-hub-redirects';
 import { genLocalesJson } from './scripts/gen-locales';
 import { getStaticEndpoints } from './scripts/get-static-endpoints';
+import { locales } from './assets/data/locales';
 import type { NuxtConfig } from 'nuxt/schema';
+import { fetchCrowdinMembers } from './scripts/fetch-crowdin';
 
 // 公開時のドメイン（末尾スラッシュなし）
-const baseUrl = 'https://misskey-hub-next.vercel.app';
+const baseUrl =
+	process.env.NODE_ENV == 'development'
+		? 'http://localhost:3000'
+		: 'https://misskey-hub.net';
 
-// 言語定義
-export const localesConst = [
-	{ files: [ 'ja-JP.json' ], code: 'ja', iso: 'ja-JP', name: '日本語' },
-	{ files: [ 'en-US.json' ], code: 'en', iso: 'en-US', name: 'English' },
-	{ files: [ 'id-ID.json' ], code: 'id', iso: 'id-ID', name: 'Bahasa Indonesia' },
-	{ files: [ 'ko-KR.json' ], code: 'ko', iso: 'ko-KR', name: '한국어' },
-	{ files: [ 'it-IT.json' ], code: 'it', iso: 'it-IT', name: 'Italiano' },
-	{ files: [ 'pl-PL.json' ], code: 'pl', iso: 'pl-PL', name: 'Polski' },
-	{ files: [ 'fr-FR.json' ], code: 'fr', iso: 'fr-FR', name: 'Français' },
-	{ files: [ 'zh-CN.json' ], code: 'cn', iso: 'zh-CN', name: '简体中文' },
-	{ files: [ 'zh-TW.json' ], code: 'tw', iso: 'zh-TW', name: '繁体中文' },
-] as const;
+// リポジトリURL（末尾スラッシュなし）
+const repositoryUrl = 'https://github.com/misskey-dev/misskey-hub-next';
 
-export type LocaleCodes = typeof localesConst[number]['code'];
-
-export const locales = localesConst as unknown as LocaleObject[];
+// 言語定義は /assets/data/locales.ts に移動しました
 
 function getRouteRules(): NuxtConfig['routeRules'] {
 	// 言語ごとに割り当てる必要のないRouteRules
@@ -39,7 +32,6 @@ function getRouteRules(): NuxtConfig['routeRules'] {
 	const localeBasedRules: NuxtConfig['routeRules'] = {
 		// リリースページはどうせアクセス集中するので先に作っておく
 		'/docs/releases/': { prerender: true },
-		
 		'/docs/**': { isr: true },
 	};
 
@@ -63,6 +55,7 @@ function getRouteRules(): NuxtConfig['routeRules'] {
 	return {
 		...staticRules,
 		..._localeBasedRules,
+		...((process.env.VERCEL !== '1') ? getOldHubRedirects('nitro') : {}),
 	};
 }
 
@@ -70,13 +63,16 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
 			baseUrl,
+			repositoryUrl,
 			locales,
-		}
+		},
+		CROWDIN_INTG_API: process.env.CROWDIN_INTG_API,
 	},
 	css: [
 		"github-markdown-css/github-markdown.css",
 		"@/assets/css/nprogress.css",
 		"@/assets/css/tailwind.css",
+		"@/assets/css/mfm.scss",
 		"@/assets/css/bootstrap-forms.scss",
 	],
 	modules: [
@@ -91,6 +87,7 @@ export default defineNuxtConfig({
 				{ rel: 'apple-touch-icon', href: '/img/icons/apple-touch-icon.png' },
 				{ rel: 'shortcut icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
 				{ rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
+				{ rel: 'me', href: 'https://misskey.io/@misskey_hub_deploy' },
 			],
 			meta: [
 				{ name: 'twitter:card', content: 'summary_large_image' },
@@ -125,10 +122,9 @@ export default defineNuxtConfig({
 		lazy: true,
 		langDir: 'locales_dist',
 		defaultLocale: 'ja',
-		strategy: 'prefix',
-		detectBrowserLanguage: {
-			fallbackLocale: 'ja',
-		},
+		// ▼ Defaultルートは、nitroプラグインでオーバーライドする
+		// 　 リンクはuseGLocalePath（ラッパー）を使う
+		strategy: 'prefix_and_default',
 		trailingSlash: true,
 	},
 	colorMode: {
@@ -164,7 +160,13 @@ export default defineNuxtConfig({
 		],
 	},
 	nitro: {
-		preset: 'vercel',
+		vercel: {
+			config: {
+				routes: [
+					...getOldHubRedirects('vercel'),
+				],
+			}
+		},
 		plugins: [
 			'@/server/plugins/appendComment.ts',
 			'@/server/plugins/i18nRedirector.ts',
@@ -174,6 +176,14 @@ export default defineNuxtConfig({
 		'build:before': async (...args) => {
 			await genApiFiles(...args);
 			genLocalesJson(...args);
+			if (process.env.NODE_ENV === 'development') {
+				fsWatch('./locales/', (ev, filename) => {
+					if (filename && filename.endsWith('.yml')) {
+						genLocalesJson(...args);
+					}
+				});
+			}
+			await fetchCrowdinMembers(...args);
 		},
 	},
 	experimental: {

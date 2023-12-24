@@ -1,4 +1,4 @@
-import { FunctionalComponent } from "nuxt/dist/app/compat/capi";
+import type { FunctionalComponent } from "nuxt/dist/app/compat/capi";
 import GHIcon from "bi/github.svg";
 
 export type NavSection = {
@@ -54,7 +54,7 @@ export default <{
     right: [
         {
             icon: GHIcon,
-            to: 'https://github.com/misskey-dev/misskey-hub',
+            to: 'https://github.com/misskey-dev/misskey-hub-next',
         },
     ]
 };

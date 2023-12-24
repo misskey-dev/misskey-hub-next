@@ -24,7 +24,8 @@ export type InstanceItem = {
     nodeinfo: Record<string, any> | null,
     /** result of api/meta */
     meta: Misskey.entities.InstanceMetadata | null,
-
+    /** Number of Notes per Day (15-day average) */
+    npd15: number, 
     stats?: Record<string, any>,   //  deprecated (result of api/stats)
 };
 

@@ -2,7 +2,7 @@
 	<div :class="['grid grid-cols-1 md:grid-cols-2 gap-4', wide && 'lg:grid-cols-3']">
 		<ContentNavigation v-slot="{ navigation }" :query="query">
 			<GNuxtLink
-				class="block p-4 rounded-lg border border-slate-200 dark:border-accent-900 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 hover:!no-underline"
+				class="block p-4 rounded-lg border border-slate-200 dark:border-slate-700 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 hover:!no-underline"
 				v-for="item in findDeepObject((navigation[0] as Record<string, any>), (v) => realBasePath.replace(/\/$/, '') === v?._path.replace(/\/$/, ''))?.children ?? []"
 				:key="item._path"
 				:to="isApiDoc && !item._path.includes('docs/for-developers/api/endpoints') ? localePath(item._path.replace('api-docs', 'docs/for-developers/api')) : item._path"
@@ -45,7 +45,7 @@ const realBasePath = computed<string>(() => {
     return route.path.replace(/^.*\/docs/, `/${locale.value}/docs`);
 });
 
-const localePath = useLocalePath();
+const localePath = useGLocalePath();
 
 const query = queryContent(realBasePath.value);
 </script>

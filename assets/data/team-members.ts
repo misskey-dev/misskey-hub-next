@@ -20,6 +20,11 @@ export type MiHubMember = {
         type: 'website';
         href: string;
     })[];
+} | {
+    id: 'crowdin';
+    username: string;
+    name?: string;
+    avatar?: string;
 };
 
 /** 現行のコアチームメンバー */

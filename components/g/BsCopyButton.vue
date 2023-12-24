@@ -1,5 +1,5 @@
 <template>
-<button class="btn btn-outline-primary hover:!text-white focus-visible:!text-white" @click="copy">
+<button class="btn btn-outline-primary" @click="copy">
     <CopyIco class="w-4 h-4" v-if="!copied" />
     <CheckIco class="w-4 h-4" v-else />
 </button>

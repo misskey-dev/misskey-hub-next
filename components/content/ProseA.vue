@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import MiIco from '@/assets/svg/misskey_mi_bi.svg';
 import ExtIco from 'bi/box-arrow-up-right.svg';
 import { $URL, isRelative, joinURL } from 'ufo';
 import { isLocalPath, sanitizeInternalPath } from '@/assets/js/misc';
@@ -6,7 +7,7 @@ import { isLocalPath, sanitizeInternalPath } from '@/assets/js/misc';
 const runtimeConfig = useRuntimeConfig();
 const rootDomain = new $URL(runtimeConfig.public.baseUrl);
 const { resolve } = useRouter();
-const localePath = useLocalePath();
+const localePath = useGLocalePath();
 
 const props = defineProps({
     href: {
@@ -24,6 +25,7 @@ const realHref = ref(props.href);
 const realTarget = ref(props.target);
 
 const url = new $URL(realHref.value);
+
 if (isLocalPath(realHref.value)) {
     // 内部リンクの場合
     const route = resolve(realHref.value);
@@ -43,6 +45,8 @@ if (isLocalPath(realHref.value)) {
 
 <template>
     <GNuxtLink :to="realHref" :target="realTarget">
-        <slot></slot><ExtIco v-if="realTarget === '_blank'" class="text-xs mx-1" />
+        <slot></slot>
+        <MiIco v-if="realHref.startsWith('x-mi-web://')" class="text-xs mx-1" />
+        <ExtIco v-else-if="realTarget === '_blank'" class="text-xs mx-1" />
     </GNuxtLink>
 </template>

@@ -13,8 +13,8 @@ const { locale } = useI18n();
 const docsNavigation = ref();
 const epDocsNavigation = ref();
 const asideNavKey = ref(0);
-const { data: docsNavigationRes } = await useAsyncData(`navigation_${locale.value}`, () => fetchContentNavigation(queryContent(`/${locale.value}/docs/`)));
-const { data: epDocsNavigationRes } = await useAsyncData(`ep_navigation_${locale.value}`, () => fetchContentNavigation(queryContent(`/api-docs/endpoints/`)));
+const { data: docsNavigationRes } = await useGAsyncData(`navigation_${locale.value}`, () => fetchContentNavigation(queryContent(`/${locale.value}/docs/`)));
+const { data: epDocsNavigationRes } = await useGAsyncData(`ep_navigation_${locale.value}`, () => fetchContentNavigation(queryContent(`/api-docs/endpoints/`)));
 docsNavigation.value = docsNavigationRes.value;
 epDocsNavigation.value = epDocsNavigationRes.value;
 const slugs = (Array.isArray(route.params.slug) ? route.params.slug : [route.params.slug]).filter((v) => v !== '');
@@ -27,7 +27,7 @@ watch(() => route.path, (_) => {
 
 watch(locale, async (to) => {
     console.log('locale changed');
-    const { data: docsNavigationRes } = await useAsyncData(`navigation_${to}`, () => fetchContentNavigation(queryContent(`/${to}/docs/`)));
+    const { data: docsNavigationRes } = await useGAsyncData(`navigation_${to}`, () => fetchContentNavigation(queryContent(`/${to}/docs/`)));
     docsNavigation.value = docsNavigationRes.value;
     asideNavKey.value++;
 });
@@ -35,7 +35,7 @@ watch(locale, async (to) => {
 
 <template>
     <div class="bg-white dark:bg-slate-950">
-        <GNav @toggleNav="isNavOpen = !isNavOpen" :is-open="isNavOpen" :slim="true" :disable-shadow="true" />
+        <GNav @toggleNav="isNavOpen = !isNavOpen" :isOpen="isNavOpen" :slim="true" :disableShadow="true" :hasBorder="true" />
         <div class="main-content">
             <div class="relative container mx-auto max-w-screen-xl p-6 lg:py-0 grid docs-root pb-12">
                 <div

@@ -4,8 +4,6 @@
 
 Website for Misskey, built with [Nuxt](https://nuxt.com/).
 
-Release date: **TBD（未定）**
-
 ## お知らせの文言のいじり方
 
 `app.config.ts` から指定できます。
@@ -17,6 +15,14 @@ Release date: **TBD（未定）**
 ## NuxtLinkについて
 
 内部リンク・外部リンクに関する処理を強化した[`<GNuxtLink>`](./components/g/NuxtLink.vue)を使用していますので、**リンクを追加する際は`<NuxtLink>`ではなく`<GNuxtLink>`を使用してください。**
+
+また、Nuxtのルーティングストラテジに、ホスティング環境に適した設定を適用するため、動的リンクの作成に使用する`useLocalePath`をラップしたコンポーサブル関数`useGLocalePath`を使うようにしています。
+
+### Misskey Webへのリンクについて
+
+GNuxtLinkおよび各種Docsで、アドレスに `x-mi-web://` から始め、続けてMisskeyの相対パスを入力すると、Misskey Webへのリンクに置き換えられます。
+
+例: `/play` → `x-mi-web://play`
 
 ## Setup
 
@@ -77,6 +83,12 @@ yarn preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## (おまけ) デプロイ時のオートメーションプログラム
+
+`/__misc/gas/` に、Misskey Hubデプロイ時に自動実行しているプログラムを同梱しています。
+
+Google Apps Scriptで動作します。
 
 ## License
 

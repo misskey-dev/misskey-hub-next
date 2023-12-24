@@ -18,7 +18,7 @@
             :key="link._path"
             :class="[
                 depth === 2 && 'border-l-2 flex flex-col',
-                path.includes(link._path) ? 'border-accent-500' : 'border-gray-300',
+                path.includes(link._path) ? 'border-accent-500' : 'border-gray-300 dark:border-gray-600',
             ]"
         >
             <component
@@ -44,7 +44,14 @@
                 ]"
             >
                 <div class="flex">
-                    <div v-if="link.children && link.children.filter((v) => !isSamePath(v._path, link._path)).length > 0" class="mr-2">
+                    <button
+                        v-if="link.children && link.children.filter((v) => !isSamePath(v._path, link._path)).length > 0"
+                        class="block px-1 mr-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
+                        @click.prevent.stop="() => {
+                            console.log('State:', path.includes(link._path));
+                            manualOpen[link._path] = !(manualOpen[link._path] ?? path.includes(link._path));
+                        }"
+                    >
                         <ArrowIco 
                             :class="[
                                 'transition-transform',
@@ -76,6 +83,12 @@ import ArrowLeftIco from "bi/arrow-left.svg";
 import GNuxtLink from '@/components/g/NuxtLink.vue';
 
 const isAsideNavOpen = useState<boolean>('miHub_docs_asideNav_openState', () => false);
+
+const manualOpen = useState<Record<string, boolean>>('miHub-docs-aside-manual-collapse', () => ({}));
+
+onUnmounted(() => {
+    manualOpen.value = {};
+});
 
 const props = withDefaults(defineProps<{
     links: NavItem[];

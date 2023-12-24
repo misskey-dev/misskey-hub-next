@@ -33,7 +33,7 @@
                     <label for="mfmPlaygroundDomain">{{ $t('_mfmPlayground.domain') }}</label>
                     <div class="input-group">
                         <input type="text" class="form-control" id="mfmPlaygroundDomain" v-model="mfmHost" />
-                        <GNuxtLink :to="shareURL" target="_blank" class="btn btn-primary !text-white">{{ $t('_mfmPlayground.noteIt') }}<SendIco class="ml-1" /></GNuxtLink>
+                        <GNuxtLink :to="shareURL" target="_blank" class="btn btn-primary">{{ $t('_mfmPlayground.noteIt') }}<SendIco class="ml-1" /></GNuxtLink>
                     </div>
                 </div>
                 <div>
@@ -42,7 +42,7 @@
                             {{ $t('_mfmPlayground.clearEmojiCacheDescription') }}
                         </div>
                         <div class="w-1/2">
-                            <button @click="clearEmojiCache()" class="btn w-full btn-outline-primary hover:!text-white">{{ $t('_mfmPlayground.clearEmojiCache') }}</button>
+                            <button @click="clearEmojiCache()" class="btn w-full btn-outline-primary">{{ $t('_mfmPlayground.clearEmojiCache') }}</button>
                         </div>
                     </div>
                 </div>

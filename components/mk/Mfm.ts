@@ -12,7 +12,6 @@ import MkCustomEmoji from '@/components/mk/CustomEmoji.vue';
 import MkMention from '@/components/mk/Mention.vue';
 import NuxtLink from '@/components/g/NuxtLink.vue';
 import ProseAVue from '@/components/content/ProseA.vue';
-import '@/assets/css/mfm.scss';
 
 const QUOTE_STYLE = `
 display: block;

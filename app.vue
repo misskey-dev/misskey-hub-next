@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import TopIco from 'bi/chevron-up.svg';
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import NProgress from 'nprogress';
 import type { Graph, Thing } from 'schema-dts';
-import { normalizeURL, withTrailingSlash } from 'ufo';
+import { cleanDoubleSlashes, joinURL, parseURL, stringifyParsedURL, withTrailingSlash } from 'ufo';
 
 const nuxtApp = useNuxtApp();
 
@@ -50,7 +51,6 @@ const getLdJson = (additionalGraphes: Thing[] = []): string => {
                 "name": "Misskey",
                 "url": `${baseUrl}/`,
                 "sameAs": [
-                    "https://join.misskey.page/",
                     "https://ja.wikipedia.org/wiki/Misskey",
                 ],
                 "logo": {
@@ -81,6 +81,27 @@ const currentLocaleIso = computed(() => (locales.value as LocaleObject[]).find((
 const head = useLocaleHead({
     addSeoAttributes: true,
 });
+
+const i18nLinks = computed(() => head.value.link?.map((e) => {
+    if (e.rel === 'alternate') {
+        let href = e.href;
+        if (typeof e.hreflang === 'string' && (e.hreflang.includes('ja') || e.hreflang === 'x-default')) {
+            const url = parseURL(href);
+            url.pathname = joinURL('/ja/', url.pathname);
+            href = cleanDoubleSlashes(withTrailingSlash(stringifyParsedURL(url)));
+        } else {
+            href = cleanDoubleSlashes(withTrailingSlash(href));
+        }
+        return { ...e, rel: e.rel, href, hreflang: e.hreflang };
+    } else if (e.rel === 'canonical' && locale.value === 'ja') {
+        let href = e.href;
+        const url = parseURL(href);
+        url.pathname = joinURL('/ja/', url.pathname);
+        href = cleanDoubleSlashes(withTrailingSlash(stringifyParsedURL(url)));
+        return { ...e, rel: e.rel, href, hreflang: e.hreflang };
+    }
+    return e;
+}));
 
 /** 
  * 中国大陸で Google Fonts を使う裏技
@@ -127,13 +148,43 @@ useHead((): Record<string, any> => ({
         ...(head.value.meta?.map((e) => ({ property: e.property, content: e.content, })) || []),
     ],
     link: [
-        ...(head.value.link?.map((e) => ({ rel: e.rel, href: normalizeURL(withTrailingSlash(e.href)), hreflang: e.hreflang, })) || []),
+        ...(i18nLinks.value || []),
         ...cnHead,
     ],
     script: [
         { type: "application/ld+json", children: getLdJson(route.meta.graph) }
     ],
 }));
+
+/** サイト全体でひとつのScroll Posiitionを使う */
+const scrollPos = useState('miHub_global_scrollPos', () => 0);
+
+async function updatePos() {
+    scrollPos.value = document.body.getBoundingClientRect().y;
+}
+
+if (process.client) {
+    window.addEventListener('scroll', updatePos);
+    window.addEventListener('resize', updatePos);
+}
+
+onUnmounted(() => {
+    if (process.client) {
+        window.removeEventListener('scroll', updatePos);
+        window.removeEventListener('resize', updatePos);
+    }
+});
+
+const hideFrom = computed(() => route.meta.scrollButton ? route.meta.scrollButton?.hideFrom ?? -45 : -45);
+const sbPosition = computed(() => route.meta.scrollButton ? { x: route.meta.scrollButton?.customPosition?.x ?? '2.5rem', y: route.meta.scrollButton?.customPosition?.y ?? '2.5rem' } ?? { x: '2.5rem', y: '2.5rem' } : { x: '2.5rem', y: '2.5rem' });
+
+function scrollToTop() {
+    if (!process.client) return;
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+}
 </script>
 <template>
     <div class="text-slate-800 dark:text-slate-200 bg-slate-100 dark:bg-gray-900">
@@ -144,5 +195,22 @@ useHead((): Record<string, any> => ({
         <ClientOnly>
             <LazyGAiChan />
         </ClientOnly>
+        <button
+            v-if="$route.meta.scrollButton !== false"
+            :class="[
+                'fixed h-14 w-14 p-[1.125rem] rounded-full bg-accent-600 text-white shadow-lg transition-opacity',
+                (hideFrom >= scrollPos) ? 'opacity-75 hover:opacity-100' : 'opacity-0 pointer-events-none',
+                $route.meta.scrollButton?.customClass ?? '',
+                $style.scrollToTopButton,
+            ]"
+            @click="scrollToTop"
+        ><TopIco class="h-5 w-5 stroke-1 stroke-current" /></button>
     </div>
 </template>
+
+<style module>
+.scrollToTopButton {
+    bottom: v-bind(sbPosition.y);
+    right: v-bind(sbPosition.x);
+}
+</style>

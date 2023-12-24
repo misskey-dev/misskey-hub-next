@@ -1,21 +1,20 @@
-# CDNの設定
+# CDN Configuration
 
-Misskeyサーバーを公開するときは、[Cloudflare](https://www.cloudflare.com/)などのCDNを使用することを強くおすすめします。
+We strongly recommend using a CDN such as [Cloudflare](https://www.cloudflare.com/) when publishing your Misskey server.
 
-CDNを使用することで、以下のようなメリットがあります。
+Using a CDN provides the following benefits
 
-- 静的なコンテンツをキャッシュしてもらうことができ、サーバーの負荷が低減する
-- サーバーのIPアドレスが露出しにくくなることで、DoS攻撃などを緩和できる
+- Reduce server load by having static content cached
+- Less exposure of the server's IP address which can mitigate DoS attacks, etc.
 
-## キャッシュ
+## Cache
 
-Misskey Webは、完全に静的であり、動作にサーバーを必要としません。したがってMisskey Web全体をCDNでキャッシュすることができます。
-Misskey APIはキャッシュすることはできません。
+The Misskey Client is completely static and does not require a server to operate.Thus, the entire Misskey Client can be cached by the CDN with the exception of the Misskey API which cannot be cached.
 
-CDNで以下の設定を行なってください。
+Please configure your CDN in the following way:
 
-- `/api/*`以外のリクエストをすべてキャッシュする
+- Cache all requests except `/api/*`
 
 :::tip
-Misskeyをアップデートした際にキャッシュのクリアは不要です。
+It is not necessary to clear the cache when updating Misskey.
 :::

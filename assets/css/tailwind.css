@@ -28,6 +28,14 @@ body {
 @tailwind components;
 @tailwind utilities;
 
+/*  */
+.hoverRubber:hover {
+    animation: .75s linear 0s 1 normal both running mfm-rubberBand;
+}
+
+.hoverTada:hover {
+    animation: .75s linear 0s 1 normal both running tada;
+}
 
 /* Github Markdown Css Override */
 html.dark .markdown-body {

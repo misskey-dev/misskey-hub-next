@@ -10,7 +10,7 @@
                     <GDots class="absolute top-0 left-0 w-32 h-32 text-accent-600" />
                     <GDots class="absolute bottom-0 right-0 w-32 h-32 text-accent-600" />
                     <div class="relative lg:w-64 h-64 flex items-center">
-                        <img class="drop-shadow-xl learnMoreHeroPudding" src="/img/emojis/custard_3d.png" />
+                        <img class="drop-shadow-xl hoverRubber" src="/img/emojis/custard_3d.png" />
                     </div>
                 </div>
             </template>
@@ -70,15 +70,9 @@
 
 <script setup lang="ts">
 const { t } = useI18n();
-const localePath = useLocalePath();
+const localePath = useGLocalePath();
 const route = useRoute();
 
 route.meta.title = t('_other.title');
 route.meta.description = t('_other.description');
 </script>
-
-<style>
-.learnMoreHeroPudding:hover {
-animation: .75s linear 0s 1 normal both running mfm-rubberBand;
-}
-</style>

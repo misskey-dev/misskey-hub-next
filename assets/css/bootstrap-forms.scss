@@ -28,3 +28,15 @@ $primary: #86b300;
 // button
 @import "bootstrap/scss/buttons";
 @import "bootstrap/scss/button-group";
+
+// Overrides
+.btn-outline-primary {
+    --bs-btn-hover-color: #fff;
+    --bs-btn-active-color: #fff;
+}
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-active-color: #fff;
+    --bs-btn-disabled-color: #fff;
+}

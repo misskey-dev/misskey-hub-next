@@ -1,5 +1,14 @@
 <template>
-    <div :class="['sticky top-0 z-[9900] transition', { 'shadow bg-opacity-90': (!disableShadow && scrollPos <= -40), 'bg-white dark:bg-gray-950': (disableShadow || scrollPos <= -40)}, (slim ? 'h-16 border-b border-slate-300 dark:border-slate-800' : 'h-16 lg:h-20')]">
+    <div
+        :class="[
+            'sticky top-0 z-[9900] transition',
+            {
+                'shadow bg-opacity-90': (!disableShadow && scrollPos <= -40),
+                'bg-white dark:bg-gray-950': (disableShadow || scrollPos <= -40),
+                'border-b border-slate-300 dark:border-slate-800': hasBorder,
+            },
+            (slim ? 'h-16' : 'h-16 lg:h-20'),
+        ]">
         <nav class="container mx-auto max-w-screen-xl grid items-center grid-cols-2 lg:grid-cols-6 p-4 h-full transition-[height]">
             <div class="">
                 <GNuxtLink :to="localePath('/')" class="flex items-center space-x-2 hover:opacity-80">
@@ -42,7 +51,7 @@
                 </button>
                 <ul class="hidden lg:col-span-4 lg:space-x-4 lg:flex justify-center">
                     <li>
-                        <button :class="['hover:opacity-80', { 'text-white': (landing && scrollPos >= -40) }]" @click="rotateColorMode()" aria-label="Change Color Mode">
+                        <button :class="['hover:opacity-80', { 'text-white 3xl:text-slate-800 3xl:dark:text-slate-200': (landing && scrollPos >= -40) }]" @click="rotateColorMode()" aria-label="Change Color Mode">
                             <ClientOnly>
                                 <SunIcon class="h-5 w-5" v-if="colorMode.preference === 'light'" />
                                 <MoonIcon class="h-5 w-5" v-else-if="colorMode.preference === 'dark'" />
@@ -51,7 +60,7 @@
                         </button>
                     </li>
                     <li class="relative group">
-                        <button class="hover:opacity-80"><I18nIcon :class="['h-5 w-5', { 'text-white': (landing && scrollPos >= -40) }]" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></button>
+                        <button class="hover:opacity-80"><I18nIcon :class="['h-5 w-5', { 'text-white 3xl:text-slate-800 3xl:dark:text-slate-200': (landing && scrollPos >= -40) }]" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></button>
                         <div class="absolute top-6 right-0 hidden group-hover:block z-[9955]">
                             <ul class="px-4 py-2 bg-slate-50 dark:bg-slate-800 rounded-lg shadow-lg space-y-1">
                                 <li v-for="locale in locales">
@@ -63,7 +72,7 @@
                         </div>
                     </li>
                     <li class="border-l"></li>
-                    <li v-for="item in NavData.right" :class="['transition-colors', { 'text-white': (landing && scrollPos >= -40) }]">
+                    <li v-for="item in NavData.right" :class="['transition-colors', { 'text-white 3xl:text-slate-800 3xl:dark:text-slate-200': (landing && scrollPos >= -40) }]">
                         <GNuxtLink :to="item.to" class="hover:opacity-80">
                             <component v-if="item.icon" :is="item.icon" class="h-5 w-5" />
                             <template v-else>
@@ -90,10 +99,12 @@ import NavData from '@/assets/data/nav';
 const props = withDefaults(defineProps<{
     disableShadow?: boolean;
     slim?: boolean;
+    hasBorder?: boolean;
     landing?: boolean;
 }>(), {
     disableShadow: false,
     slim: false,
+    hasBorder: false,
     landing: false,
 });
 
@@ -111,7 +122,7 @@ watch(() => route.path,(to) => {
 });
 
 const switchLocalePath = useSwitchLocalePath();
-const localePath = useLocalePath();
+const localePath = useGLocalePath();
 const spLocaleOption = ref<string>(currentLocale.value);
 function changeLocale() {
     const path = switchLocalePath(spLocaleOption.value);
@@ -127,21 +138,5 @@ function rotateColorMode() {
     colorMode.preference = values[next];
 }
 
-const scrollPos = ref(0);
-
-async function updatePos() {
-    scrollPos.value = document.body.getBoundingClientRect().y;
-}
-
-if (process.client) {
-    window.addEventListener('scroll', updatePos);
-    window.addEventListener('resize', updatePos);
-}
-
-onUnmounted(() => {
-    if (process.client) {
-        window.removeEventListener('scroll', updatePos);
-        window.removeEventListener('resize', updatePos);
-    }
-});
+const scrollPos = useState('miHub_global_scrollPos');
 </script>

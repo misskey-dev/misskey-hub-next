@@ -11,7 +11,7 @@ useHead({
 
 <template>
     <div class="bg-white dark:bg-slate-950">
-        <GNav @toggleNav="isNavOpen = !isNavOpen" :is-open="isNavOpen" :slim="true" :disable-shadow="true" />
+        <GNav @toggleNav="isNavOpen = !isNavOpen" :is-open="isNavOpen" :slim="true" :disable-shadow="true" :hasBorder="true" />
         <div class="main-content" :class="$style.slimPageRoot">
             <slot />
         </div>

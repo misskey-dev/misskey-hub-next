@@ -33,7 +33,7 @@
 <script setup lang="ts">
 import { vFadeIn } from 'assets/js/fadein';
 
-const localePath = useLocalePath();
+const localePath = useGLocalePath();
 </script>
 
 <style scoped>

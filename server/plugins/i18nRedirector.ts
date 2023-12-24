@@ -1,11 +1,6 @@
 import { useRuntimeConfig } from '#imports';
 import { withTrailingSlash } from 'ufo';
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
-import type { NitroRuntimeConfig } from "nitropack";
-
-interface MiHubRuntimeConfig extends NitroRuntimeConfig {
-  locales: LocaleObject[];
-}
 
 export default defineNitroPlugin((nitroApp) => {
   nitroApp.hooks.hook('render:html', (html, { event }) => {
@@ -13,9 +8,10 @@ export default defineNitroPlugin((nitroApp) => {
       return;
     }
 
-    const runtimeConfig: MiHubRuntimeConfig = useRuntimeConfig();
-    if (!event.path.match(new RegExp(`^/(${runtimeConfig.public.locales.map((l) => l.code).join('|')})/`))) {
-      const links = runtimeConfig.locales.map((l) => {
+    const runtimeConfig = useRuntimeConfig();
+    const locales = runtimeConfig.public.locales as LocaleObject[];
+    if (!event.path.match(new RegExp(`^/(${locales.map((l) => l.code).join('|')})/`))) {
+      const links = locales.map((l) => {
         const url = withTrailingSlash(`/${l.code}${event.path.replace(/\.html$/g, '/')}`);
         return `<a href="${url}">${l.name}</a>`;
       });
@@ -25,7 +21,7 @@ export default defineNitroPlugin((nitroApp) => {
       const remainingList: string[] = [];
       html.head.forEach((v) => {
         remainingList.push(...(v.match(/<!--(.|\n)*(?<=-->)/gm) ?? []));
-        remainingList.push(...(v.match(/<link\s+rel="(og|alternate|canonical)[^>]+>/gm) ?? []));
+        remainingList.push(...(v.match(/<link\s+rel="(og|alternate|canonical|me)[^>]+>/gm) ?? []));
         remainingList.push(...(v.match(/<meta[^>]+>/gm) ?? []));
         remainingList.push(...(v.match(/<script type="application\/ld\+json">.*(?<=<\/script>)/gm) ?? []));
       });
@@ -33,7 +29,7 @@ export default defineNitroPlugin((nitroApp) => {
 
       html.head = remainingList.map((v) => v + '\n');
       //@ts-ignore
-      html.head.push('<script type="text/javascript">const s = ' + JSON.stringify(runtimeConfig.locales.map((l) => l.code)) + '; const d = new URLSearchParams(document.cookie); if (d.get(\'i18n_redirected\')) { location.replace(\'/\' + d.get(\'i18n_redirected\') + location.pathname); } else if (s.includes(navigator.language.split("-")[0])) { location.replace(\'/\' + navigator.language.split("-")[0] + location.pathname); } else { location.replace(\'/ja\' + location.pathname); }</script>\n');
+      html.head.push('<script type="text/javascript">const s = ' + JSON.stringify(locales.map((l) => l.code)) + '; const d = new URLSearchParams(document.cookie); if (d.get(\'i18n_redirected\')) { location.replace(\'/\' + d.get(\'i18n_redirected\') + location.pathname + location.search); } else if (s.includes(navigator.language.split("-")[0])) { location.replace(\'/\' + navigator.language.split("-")[0] + location.pathname + location.search); } else { location.replace(\'/ja\' + location.pathname + location.search); }</script>\n');
       html.body = [
         '\n<noscript>Please enable Javascript to see this page properly.</noscript>\n',
         `<noscript>${links.join(', ')}</noscript>\n`,
