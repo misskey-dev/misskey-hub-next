@@ -24,7 +24,7 @@
     "github-markdown-css": "^5.5.0",
     "js-yaml": "^4.1.0",
     "mfm-js": "^0.23.3",
-    "misskey-js": "https://gitpkg.now.sh/misskey-dev/misskey/packages/misskey-js?develop&scripts.postinstall=pnpm%20tsc",
+    "misskey-js": "^0.0.16",
     "nprogress": "^0.2.0",
     "nuxt": "^3.8.2",
     "postcss": "^8.4.32",

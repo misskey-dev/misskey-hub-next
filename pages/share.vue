@@ -1,6 +1,14 @@
 <template>
+    <MkAnimBg
+        v-if="showAnimBg"
+        class="fixed z-0 top-0 left-0 w-screen h-screen transition-opacity duration-[2s]"
+        :class="isCanvasLoaded ? 'opacity-100' : 'opacity-0'"
+        @load="isCanvasLoaded = true"
+    ></MkAnimBg>
     <GMisskeyGateway
-        :path="`/share?${stringifyQuery(query)}`"
+        class="relative"
+        :path="`/share?${stringifyQuery(filteredQuery)}`"
+        :manualInstance="manualInstance"
     ></GMisskeyGateway>
 </template>
 
@@ -18,6 +26,25 @@ useHead({
 });
 
 const { meta, query } = useRoute();
+
+const manualInstance = (Array.isArray(query.manualInstance) ? query.manualInstance[0] : query.manualInstance) ?? undefined;
+
+const filteredQuery = computed(() => ({
+    ...query,
+    replyId: undefined,
+    renoteId: undefined,
+    visibleUserIds: undefined,
+    fileIds: undefined,
+    manualInstance: undefined,
+}));
+
+const isCanvasLoaded = ref(false);
+const showAnimBg = ref(false);
+
+if (process.client && window.innerWidth >= 768) {
+    showAnimBg.value = true;
+}
+
 const { t } = useI18n();
 
 meta.title = t('_share.title');

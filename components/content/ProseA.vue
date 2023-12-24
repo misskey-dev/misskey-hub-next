@@ -28,9 +28,10 @@ const url = new $URL(realHref.value);
 
 if (isLocalPath(realHref.value)) {
     // 内部リンクの場合
-    const route = resolve(realHref.value);
-    if (route.name && !route.name.toString().includes('___')) {
-        // 渡されたパスがローカライズされたルートではない場合はローカライズされたパスを返す
+    if (/^\/[a-z]{2}\//.test(realHref.value)) {
+        realHref.value = sanitizeInternalPath(url.fullpath);
+    } else {
+        // 渡されたパスがローカライズされたルートでない場合はローカライズされたパスを返す
         realHref.value = sanitizeInternalPath(localePath(url.fullpath));
     }
 
@@ -44,7 +45,7 @@ if (isLocalPath(realHref.value)) {
 </script>
 
 <template>
-    <GNuxtLink :to="realHref" :target="realTarget">
+    <GNuxtLink :href="realHref" :target="realTarget">
         <slot></slot>
         <MiIco v-if="realHref.startsWith('x-mi-web://')" class="text-xs mx-1" />
         <ExtIco v-else-if="realTarget === '_blank'" class="text-xs mx-1" />
