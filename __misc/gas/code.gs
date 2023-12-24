@@ -26,7 +26,7 @@ function doPost(e) {
 
   // デプロイされたことをMisskeyに通知する
   if (MI_API_TOKEN) {
-    setTimeout(() => postToMisskey(params), 5000);
+    postToMisskey(params);
   }
 
   // 今回のSHAを保存
