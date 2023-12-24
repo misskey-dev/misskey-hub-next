@@ -45,6 +45,11 @@
                         {{ $t('_shareLinkGenerator.settings') }}
                     </header>
                     <div>
+                        <label for="shareLinkGeneratorManualInstance">{{ $t('_shareLinkGenerator.manualInstance') }}</label>
+                        <input class="form-control" id="shareLinkGeneratorManualInstance" v-model="manualInstance" />
+                        <div class="form-text">{{ $t('_shareLinkGenerator.manualInstanceDescription') }}</div>
+                    </div>
+                    <div>
                         <label for="shareLinkGeneratorVisibility">{{ $t('_shareLinkGenerator.visibility') }}</label>
                         <select class="form-select" id="shareLinkGeneratorVisibility" v-model="visibility">
                             <option v-for="visibility in noteVisibilities" :key="visibility" :value="visibility">{{ $t(`_noteVisibility.${visibility}`) }}</option>
@@ -107,6 +112,7 @@ const mfmUrl = ref<string>('');
 const visibility = ref<MisskeyEntities.Note['visibility']>('public');
 const localOnly = ref<boolean>(false);
 const recipents = ref<string>('');
+const manualInstance = ref<string>('');
 const runtimeConfig = useRuntimeConfig();
 
 const mfmPreviewString = computed(() => {
@@ -126,10 +132,11 @@ const mfmPreviewString = computed(() => {
 const generatedUrl = computed(() => {
     const query: QueryObject = {
         text: mfmText.value,
-        url: (mfmUrl.value != '') ? mfmUrl.value : undefined,
+        url: mfmUrl.value ? mfmUrl.value : undefined,
         visibility: visibility.value,
         localOnly: localOnly.value ? '1' : '0',
         visibleAccts: (visibility.value === 'specified') ? recipents.value.split('\n').join(',') : undefined,
+        manualInstance: manualInstance.value ? manualInstance.value : undefined,
     };
 
     const baseUrl = runtimeConfig.public.baseUrl;

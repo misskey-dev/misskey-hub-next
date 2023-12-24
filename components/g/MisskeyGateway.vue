@@ -9,34 +9,59 @@
                     <div class="w-12 h-12 mx-auto bg-accent-600/20 text-accent-600 rounded-full p-3">
                         <component :is="branding?.icon ?? ShareIco" class="w-6 h-6" />
                     </div>
-                    <h1 class="font-bold text-center text-lg md:text-xl">{{ branding?.heading ?? $t('_share.chooseServer') }}</h1>
+                    <h1 class="font-bold text-center text-lg sm:text-xl">{{ branding?.heading ?? $t('_share.chooseServer') }}</h1>
+                    
+                    <div>
+                        <div class="text-xs sm:text-sm mb-1 opacity-70">
+                            {{ $t('_share.recommendedByWebsite') }}
+                            <NuxtLink :to="localePath('/docs/for-users/features/share-form/#hub-share-disclaimer')" target="_blank"><HelpIco class="ml-1" /></NuxtLink>
+                        </div>
+                        <div v-if="manualInstanceData" class="rounded-lg border border-gray-300 dark:border-gray-600 group">
+                            <GNuxtLink
+                                :to="joinURL(`https://${manualInstanceData.url}/`, path)"
+                                class="group-first:rounded-t-lg group-last:rounded-b-lg py-2 px-4 sm:p-4 w-full flex items-center hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-gray-700 dark:active:bg-gray-600"
+                            >
+                                <div
+                                    class="h-6 w-6 sm:h-9 sm:w-9 flex-shrink-0 overflow-hidden rounded bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 mr-3"
+                                >
+                                    <img v-if="manualInstanceData.icon && manualInstanceData.meta?.iconUrl" :src="manualInstanceData.meta?.iconUrl" class="w-full h-full" />
+                                </div>
+                                <div class="min-w-0 mr-3">
+                                    <h2 class="text-sm sm:text-base font-bold truncate">{{ manualInstanceData.name }}</h2>
+                                    <p class="text-xs truncate">{{ manualInstanceData.url }}</p>
+                                </div>
+                                <ArrowRightIco class="block ml-auto flex-shrink-0 h-4 w-4" />
+                            </GNuxtLink>
+                        </div>
+                    </div>
+
                     <ul class="rounded-lg border divide-y border-gray-300 dark:border-gray-600 divide-gray-300 dark:divide-gray-600">
                         <li v-for="instance in displayInstances" :key="instance.url" class="group">
                             <GNuxtLink
                                 :to="joinURL(`https://${instance.url}/`, path)"
-                                class="group-first:rounded-t-lg group-last:rounded-b-lg p-4 w-full flex items-center hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-gray-700 dark:active:bg-gray-600"
+                                class="group-first:rounded-t-lg group-last:rounded-b-lg py-2 px-4 sm:p-4 w-full flex items-center hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-gray-700 dark:active:bg-gray-600"
                             >
                                 <div
-                                    class="h-9 w-9 flex-shrink-0 overflow-hidden rounded bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 mr-3"
+                                    class="h-6 w-6 sm:h-9 sm:w-9 flex-shrink-0 overflow-hidden rounded bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 mr-3"
                                     :class="instance.isUserDefined && 'transition-[border-color] hover:border-red-600 dark:hover:border-red-600'"
                                 >
                                     <template v-if="instance.isUserDefined">
                                         <button class="relative w-full h-full group/delete" @click.stop.prevent="deleteInstance(instance.url)">
                                             <img v-if="instance.icon && instance.meta?.iconUrl" :src="getInstanceImage(instance)" class="w-full h-full" />
-                                            <div v-else-if="['forked', 'notDetermined'].includes(getPlaceholderImage(instance))" class="w-full h-full bg-accent-600/20 p-2 text-accent-600">
-                                                <ForkedIco v-if="getPlaceholderImage(instance) === 'forked'" class="bi h-5 w-5 stroke-1 stroke-current" />
-                                                <QuestionIco v-else class="h-5 w-5" />
+                                            <div v-else-if="['forked', 'notDetermined'].includes(getPlaceholderImage(instance))" class="w-full h-full bg-accent-600/20 p-1 sm:p-2 text-accent-600">
+                                                <ForkedIco v-if="getPlaceholderImage(instance) === 'forked'" class="block h-4 w-4 sm:h-5 sm:w-5 stroke-1 stroke-current" />
+                                                <QuestionIco v-else class="block h-4 w-4 sm:h-5 sm:w-5" />
                                             </div>
                                             <img v-else :src="getPlaceholderImage(instance)" class="w-full h-full" />
-                                            <div class="pointer-events-none absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 transition-opacity opacity-0 group-hover/delete:opacity-100 p-2 text-red-600">
-                                                <DeleteIco class="h-5 w-5" />
+                                            <div class="pointer-events-none absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 transition-opacity opacity-0 group-hover/delete:opacity-100 p-1 sm:p-2 text-red-600">
+                                                <DeleteIco class="block h-4 w-4 sm:h-5 sm:w-5" />
                                             </div>
                                         </button>
                                     </template>
                                     <img v-else-if="instance.icon && instance.meta?.iconUrl" :src="instance.meta?.iconUrl" class="w-full h-full" />
                                 </div>
                                 <div class="min-w-0 mr-3">
-                                    <h2 class="font-bold truncate">{{ instance.name }}</h2>
+                                    <h2 class="text-sm sm:text-base font-bold truncate">{{ instance.name }}</h2>
                                     <p class="text-xs truncate">{{ instance.url }}</p>
                                 </div>
                                 <ArrowRightIco class="block ml-auto flex-shrink-0 h-4 w-4" />
@@ -45,9 +70,9 @@
                         <li class="group">
                             <details class="group-first:rounded-t-lg group-last:rounded-b-lg group/details">
                                 <summary class="p-4 w-full flex items-center hover:bg-gray-100 dark:hover:bg-gray-700 group-first:rounded-t-lg group-last:rounded-b-lg group-last:group-open/details:rounded-b-none group-open/details:border-b cursor-pointer border-gray-300 dark:border-gray-600">
-                                    <div class="h-9 w-9 mr-2">
-                                        <div class="w-full h-full rounded bg-accent-600/20 p-2 text-accent-600">
-                                            <PlusIco class="h-5 w-5 stroke-1 stroke-current" />
+                                    <div class="h-6 w-6 sm:h-9 sm:w-9 mr-2">
+                                        <div class="w-full h-full rounded bg-accent-600/20 p-1 sm:p-2 text-accent-600">
+                                            <PlusIco class="block h-4 w-4 sm:h-5 sm:w-5 stroke-1 stroke-current" />
                                         </div>
                                     </div>
                                     <h2 class="font-bold">{{ $t('_share.addServer') }}</h2>
@@ -82,6 +107,7 @@ import ArrowRightIco from 'bi/chevron-right.svg';
 import PlusIco from 'bi/plus-lg.svg';
 import DeleteIco from 'bi/trash.svg';
 import QuestionIco from 'bi/question-lg.svg';
+import HelpIco from 'bi/question-circle.svg';
 import ForkedIco from '@/assets/svg/repo-forked.svg';
 import { isLocalPath, resolveObjPath } from '@/assets/js/misc';
 import { parseURL, joinURL } from 'ufo';
@@ -91,6 +117,7 @@ import type { InstanceInfo, InstanceItem } from '@/types/instances-info';
 import type { FunctionalComponent } from 'vue';
 
 const { t } = useI18n();
+const localePath = useGLocalePath();
 
 const props = defineProps<{
     path: string;
@@ -98,6 +125,7 @@ const props = defineProps<{
         heading?: string;
         icon?: FunctionalComponent | string;
     };
+    manualInstance?: string;
 }>();
 
 type ExtendedInstanceItem = InstanceItem & {
@@ -106,6 +134,7 @@ type ExtendedInstanceItem = InstanceItem & {
 
 const loading = ref(true);
 const iFetching = ref(false);
+const manualInstanceData = ref<ExtendedInstanceItem>();
 const featuredInstances = ref<ExtendedInstanceItem[]>([]);
 const userDefinedInstances = ref<ExtendedInstanceItem[]>([]);
 const displayInstances = computed(() => [
@@ -202,6 +231,43 @@ onMounted(async () => {
         if (ls) {
             const lsJ = JSON.parse(ls) as ExtendedInstanceItem[];
             userDefinedInstances.value = [...lsJ];
+        }
+
+        if (props.manualInstance) {
+            const realHost = parseURL(props.manualInstance.startsWith('https://') ? props.manualInstance : 'https://' + props.manualInstance);
+            if (!realHost.host) {
+                alert(t('_servers._system.fetchError'));
+                return;
+            }
+
+            const miApi = new misskeyApi.APIClient({
+                origin: `https://${realHost.host}`,
+            });
+
+            try {
+                const res = await miApi.request('meta', { detail: true });
+
+                manualInstanceData.value = {
+                    background: !(!res.backgroundImageUrl),
+                    banner: !(!res.bannerUrl),
+                    description: res.description,
+                    icon: !(!res.iconUrl),
+                    isAlive: true,
+                    langs: res.langs,
+                    meta: res,
+                    name: res.name ?? '',
+                    nodeinfo: null,
+                    npd15: 0,
+                    stats: {},
+                    url: realHost.host ?? '',
+                    value: 0,
+
+                    isUserDefined: true,
+                };
+            } catch (err) {
+                console.error(err);
+            }
+
         }
     }
 

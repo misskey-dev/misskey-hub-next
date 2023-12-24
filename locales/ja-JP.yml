@@ -268,6 +268,7 @@ _share:
   addServer: "サーバーを追加"
   domain: "サーバーのドメイン"
   compatibleWith: "Misskeyと、一部のMisskeyフォークに対応しています。"
+  recommendedByWebsite: "シェア元Webサイトからのおすすめ"
 
 _noteVisibility:
   public: "パブリック"
@@ -284,6 +285,8 @@ _shareLinkGenerator:
   url: "URL"
   urlCaption: "任意。本文の後ろに挿入されます。"
   settings: "詳細設定"
+  manualInstance: "おすすめサーバー ドメイン"
+  manualInstanceDescription: "ここに指定したサーバー（ひとつ）をシェアボタン中継ページのトップに表示できます。ご自身のサーバーに誘導する際などにお使いいただけます。"
   visibility: "公開範囲"
   recipents: "ダイレクトを受け取る人のacct（改行区切り）"
   resultLink: "リンク生成結果"
