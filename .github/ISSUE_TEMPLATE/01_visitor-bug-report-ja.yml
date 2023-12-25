@@ -1,0 +1,77 @@
+name: 🐛 【閲覧者】バグ報告 (Japanese)
+description: サイトの誤作動があった場合はこちらにご報告ください。
+labels: ["bug?", "maybe non-developer"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ご報告ありがとうございます！実際に問題を報告する前に、以下をお試しください：
+ 
+        - **ブラウザのキャッシュ・Cookieを削除**してみましたか？
+        - **時間を開けて再度アクセス**してみましたか？
+        - **URLが正しいか**お確かめになりましたか？
+
+        また、以下のことにもご注意ください。
+
+        - **このフォームはバグ報告専用です。**機能リクエストは[こちら](https://github.com/misskey-dev/misskey-hub-next/issues/new?assignees=&labels=feature&projects=&template=04_feature-request.yml)からお願いします。
+
+        以上のことを試してもまだ問題が解決しない場合は、以下に症状をできるだけ詳しく記入してください。**貴重なお時間を使ってご報告いただきありがとうございます！**
+
+  - type: textarea
+    attributes:
+      label: 💡 概要
+      description: どのような問題が起こっているかを簡潔にお書きください。
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 🥰 期待されるふるまい
+      description: 本当はどういうことがしたかったのかをお書きください。
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 🤬 実際のふるまい
+      description: |
+        実際には何が起きたのかをお書きください。
+        可能であれば、スクリーンショットやエラーログなども添付いただけますと幸いです。
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 📝 再現方法
+      description: その問題が起こるまでにどのような操作をしたかを、手順別に詳細にお書きください。
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: false
+
+  - id: environment
+    type: textarea
+    attributes:
+      label: 💻 動作環境
+      description: |
+        この問題が起きた環境をお教えください（既に埋まっている場合は記入不要です）。
+
+        例:
+          * Model and OS of the device(s): MacBook Pro (14inch, 2021), macOS Ventura 13.4
+          * Browser: Chrome 113.0.5672.126
+      value: |
+        * Model and OS of the device(s):
+        * Browser:
+      render: markdown
+    validations:
+      required: false
+
+  - type: checkboxes
+    attributes:
+    label: 【開発者向け】自分でこのバグに対処しますか？
+    description: これが何かわからない場合は、チェックボックスを開けたままにして、そのままフォームを送信してください。
+    options:
+      - label: はい、私はこのバグに自分で対処して、このリポジトリにPull Requestを送信する予定です。
