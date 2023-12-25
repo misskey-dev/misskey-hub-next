@@ -15,7 +15,7 @@
                     <p class="text-center mb-4">{{ error?.statusCode === 404 ? $t('_error.notFoundDesc') : $t('_error.generalErrorDesc') }}</p>
                     <div class="max-w-lg w-full mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <button class="block rounded-full text-center px-4 py-2 border-2 hover:opacity-70" @click="handleError">{{ $t('_error.goToTop') }}</button>
-                        <GNuxtLink class="block rounded-full text-center px-4 py-2 border-2 hover:opacity-70" target="_blank" :to="`${runtimeConfig.public.repositoryUrl}/issues/new`">{{ $t('_error.reportProblem') }}</GNuxtLink>
+                        <GNuxtLink class="block rounded-full text-center px-4 py-2 border-2 hover:opacity-70" target="_blank" :to="issueReportLink">{{ $t('_error.reportProblem') }}</GNuxtLink>
                     </div>
                 </div>
                 <div v-else class="mx-auto py-5">
@@ -27,7 +27,9 @@
 </template>
 
 <script setup lang="ts">
+import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import NProgress from 'nprogress';
+import { getGhIssueUrl } from './assets/js/misc/get-issue-url';
 
 const error = useError();
 const colorMode = useColorMode();
@@ -49,7 +51,7 @@ const handleError = () => clearError({ redirect: localePath('/') });
  * 中国大陸で Google Fonts を使う裏技
  * fonts.googleapis.com → fonts.googleapis.cn
  **/
- const cnHead = (locale.value === 'cn') ? [
+const cnHead = (locale.value === 'cn') ? [
     { rel: 'preconnect', href: 'https://fonts.googleapis.cn' },
     { rel: 'preconnect', href: 'https://fonts.gstatic.cn' },
     { rel: 'stylesheet', href: 'https://fonts.googleapis.cn/css2?family=Capriola&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap' }
@@ -58,6 +60,13 @@ const handleError = () => clearError({ redirect: localePath('/') });
     { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
     { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Capriola&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap' },
 ];
+
+const { data: issueReportLink } = await useAsyncData(`issueReportLink_${locale.value}`, () => getGhIssueUrl({
+    lang: locale.value,
+    repoUrl: runtimeConfig.public.repositoryUrl,
+}), {
+    server: false,
+});
 
 useHead({
     htmlAttrs: {
