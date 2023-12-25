@@ -21,6 +21,7 @@ export async function getGhIssueUrl(options: {
                 "fullVersionList",
                 "platformVersion",
             ]);
+
             let osVersion = 'v' + uaData.platformVersion;
             if (uaData.platform === 'Windows') {
                 // https://learn.microsoft.com/ja-jp/microsoft-edge/web-platform/how-to-detect-win11
@@ -35,12 +36,15 @@ export async function getGhIssueUrl(options: {
                     osVersion = '8.1 or before';
                 }
             }
+
             const browserData = uaData.fullVersionList.find((item: any) => item.brand.toLowerCase() !== 'not_a brand');
+            
             const env = [
                 `* Model and OS of the device(s): ${uaData.platform} ${osVersion}`,
                 `* Browser: ${browserData.brand} ${browserData.version}`,
                 `* Viewport Size: ${window.innerWidth}x${window.innerHeight}`,
                 `* (UA Detected Using getHighEntropyValues)`,
+                (options.lang === 'ja') ? '* 【自動入力済】追記は不要です' : '* [Auto-filled] No need to write additional information.',
             ];
             environment = env.join('\n');
         } else {
@@ -52,6 +56,7 @@ export async function getGhIssueUrl(options: {
                 `* Browser: ${uaRes.browser.name} (${uaRes.engine.name}) v${uaRes.browser.version}`,
                 `* Viewport Size: ${window.innerWidth}x${window.innerHeight}`,
                 `* Raw User Agent: ${uaRes.ua}`,
+                (options.lang === 'ja') ? '* 【自動入力済】追記は不要です' : '* [Auto-filled] No need to write additional information.',
             ];
             environment = env.join('\n');
         }
