@@ -1,13 +1,13 @@
-# プラグイン・テーマを配布する
+# Distributing Plugins and Themes
 
-Misskey v2023.11.0以降では、様々な追加リソースをあなたのウェブサイトから直接インストールできるようになりました。特に、プラグインやテーマなどをたくさん制作している方や、プラグイン配布サイトを作りたい方にとっては便利な機能です。
+Starting with Misskey v2023.11.0, you can now install various additional resources directly from your website.This feature is especially useful for those who produce a lot of plugins and themes, and for those who want to create a plugin distribution website.
 
-## 外部からのインストールに対応しているリソース
+## Resources that support external installation
 
-- [プラグイン](./plugin/create-plugin/) ... `plugin`
-- [テーマ](../for-users/features/theme/) ... `theme`
+- [Plugins](./plugin/create-plugin/) ... `plugin`
+- [Themes](../for-users/features/theme/) ... `theme`
 
-## しくみ
+## How it works
 
 インストール時に、Misskey Webで受け取るリソースに予期せぬ改ざんが起こらないようにするため、配布サイト側とMisskey双方でハッシュ値を計算し、Misskeyで照合を行います。
 

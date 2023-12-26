@@ -1,27 +1,27 @@
 ---
-description: このガイドではMisskeyのインストール・セットアップ方法について解説します。
+description: 이 가이드에서는 Misskey의 설치 및 설정 방법에 대해 설명합니다.
 ---
 
-# Misskeyを手動で構築する
+# Misskey를 수동으로 구축하기
 
-このガイドではMisskeyのインストール・セットアップ方法について解説します。
+이 가이드에서는 Misskey의 설치 및 설정 방법에 대해 설명합니다.
 
 :::danger
-一度使用を始めたサーバーのドメイン・ホスト名は、決して変更しないでください！
+일단 사용하기 시작한 서버의 도메인 및 호스트 이름은 절대로 변경하지 마십시오!
 :::
 
 :::tip{label='前提条件'}
 
-#### 以下のソフトウェアがインストール・設定されていること
+#### 다음 소프트웨어가 설치 및 설정되어 있어야 합니다.
 
-- **[Node.js](https://nodejs.org/en/)** (20.4.x以上)
-- **[PostgreSQL](https://www.postgresql.org/)** (15以上)
+- **[Node.js](https://nodejs.org/en/)** (20.4.x이상)
+- **[PostgreSQL](https://www.postgresql.org/)** (15이상)
 - **[Redis](https://redis.io/)**
 - **[FFmpeg](https://www.ffmpeg.org/)**
 
-Debian/Ubuntuをお使いであれば、`build-essential`パッケージをインストールしておくと良いです。
+데비안/우분투를 사용 중이라면 `build-essential` 패키지를 설치하면 좋습니다.
 
-#### corepackが有効化されていること
+#### corepack이 활성화되어 있어야 합니다.
 
 ```sh
 sudo corepack enable
@@ -29,16 +29,16 @@ sudo corepack enable
 
 :::
 
-## ユーザーの作成
+## 사용자 생성
 
-Misskeyはrootユーザーで実行しない方がよいため、代わりにユーザーを作成します。
-Debianの例:
+Misskey는 루트 사용자로 실행하지 않는 것이 좋으므로, 대신 사용자를 생성합니다.
+데비안 예시:
 
 ```sh
 adduser --disabled-password --disabled-login misskey
 ```
 
-## Misskeyのインストール
+## Misskey 설치하기
 
 ```sh
 sudo -iu misskey
@@ -49,29 +49,29 @@ git submodule update --init
 NODE_ENV=production pnpm install --frozen-lockfile
 ```
 
-## 設定
+## 설정
 
-設定サンプルの`.config/example.yml`をコピーし、`default.yml`にリネームします。
+설정 샘플의 `.config/example.yml`을 복사하여 `default.yml`로 이름을 바꿉니다.
 
 ```sh
 cp .config/example.yml .config/default.yml
 ```
 
-`default.yml` をファイル内の指示に従って編集します。
+파일 내 지침에 따라 `default.yml`을 편집합니다.
 
-## ビルドと初期化
+## 빌드 및 초기화
 
-次のコマンドでMisskeyのビルドとデータベースの初期化を行います。
-これにはしばらく時間がかかります。
+다음 명령어로 Misskey를 빌드하고 데이터베이스를 초기화합니다.
+이 작업은 시간이 좀 걸립니다.
 
 ```sh
 NODE_ENV=production pnpm run build
 pnpm run init
 ```
 
-## 起動
+## 실행
 
-お疲れ様でした。以下のコマンドでMisskeyを起動できます。
+수고하셨습니다.아래 명령어로 Misskey를 실행할 수 있습니다.
 
 ```sh
 NODE_ENV=production pnpm run start
@@ -79,13 +79,13 @@ NODE_ENV=production pnpm run start
 
 GLHF✨
 
-::::g-details{summary="systemdを用いた管理"}
+::::g-details{summary="systemd를 이용한 관리"}
 
-systemdサービスのファイルを作成
+systemd 서비스 파일 생성하기
 
 `/etc/systemd/system/misskey.service`
 
-エディタで開き、以下のコードを貼り付けて保存:
+편집기에서 열어, 다음 코드를 붙여넣고 저장합니다.
 
 ```ini
 [Unit]
@@ -108,35 +108,35 @@ WantedBy=multi-user.target
 ```
 
 :::warning
-CentOSで1024以下のポートを使用してMisskeyを使用する場合は`ExecStart=/usr/bin/sudo /usr/bin/npm start`に変更する必要があります。
+CentOS에서 1024 이하의 포트를 사용하여 Misskey를 사용하려면 `ExecStart=/usr/bin/sudo /usr/bin/npm start`로 변경해야 합니다.
 :::
 
-systemdを再読み込みしmisskeyサービスを有効化
+systemd 리로드 및 misskey 서비스 활성화
 
 ```sh
 sudo systemctl daemon-reload
 sudo systemctl enable misskey
 ```
 
-misskeyサービスの起動
+misskey 서비스 시작
 
 ```sh
 sudo systemctl start misskey
 ```
 
 :::tip
-`systemctl status misskey`と入力すると、サービスの状態を調べることができます。
+`systemctl status misskey`를 입력하면 서비스 상태를 확인할 수 있습니다.
 :::
 
 ::::
 
-## Misskeyのアップデート方法
+## Misskey 업데이트 방법
 
 :::warning
-アップデートの際は必ず[リリースノート](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)を確認し、変更点や追加で必要になる作業の有無(ほとんどの場合ありません)を予め把握するようにしてください。
+업데이트 시 반드시 [릴리스 노트](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)를 확인하여 변경 사항 및 추가 작업 여부(대부분 없음)를 미리 파악하시기 바랍니다.
 :::
 
-masterをpullし直し、インストール、ビルド、データベースのマイグレーションを行います:
+master를 다시 풀링하고, 설치, 빌드, 데이터베이스 마이그레이션을 수행합니다.
 
 ```sh
 git checkout master
@@ -147,9 +147,9 @@ NODE_ENV=production pnpm run build
 pnpm run migrate
 ```
 
-アップデート内容、およびデータベースの規模によっては時間がかかることがあります。
+업데이트 내용 및 데이터베이스 규모에 따라 시간이 걸릴 수 있습니다.
 
-アップデートが終わり次第、Misskeyプロセスを再起動してください。
+업데이트가 끝나면 Misskey 프로세스를 다시 시작하십시오.
 
 ```sh
 sudo systemctl restart misskey
@@ -158,6 +158,6 @@ sudo systemctl restart misskey
 :::tip
 ビルドや起動時にエラーが発生した場合は、以下のコマンドをお試しください:
 
-- `pnpm run clean`または`pnpm run clean-all`
+- `pnpm run clean` 또는 `pnpm run clean-all`을 실행합니다.
 - `pnpm rebuild`
   :::

@@ -1,61 +1,60 @@
-# プラグインAPIリファレンス
+# Plugin API Reference
 
 ## `Mk:dialog(title text type)`
 
-ダイアログを表示します。typeには以下の値が設定できます。\
+Display a dialog box.The following values ​​can be set for type.\
 `info` `success` `warn` `error` `question`\
-省略すると `info` になります。
+If omitted, it will be `info`.
 
 ## `Mk:confirm(title text type)`
 
-確認ダイアログを表示します。typeには以下の値が設定できます。\
+Display a confirmation dialog.The following values ​​can be set for type.\
 `info` `success` `warn` `error` `question`\
-省略すると `question` になります。\
-ユーザーが"OK"を選択した場合は `true` を、"キャンセル"を選択した場合は `false` が返ります。
+If omitted, it will be `question`.\
+Returns `true` if the user selects "OK" or `false` if the user selects "cancel".
 
 ## `Mk:api(endpoint params)`
 
-Misskey APIにリクエストします。第一引数にエンドポイント名、第二引数にパラメータオブジェクトを渡します。
+Make a request to the Misskey API.Passes the endpoint name as the first argument and the parameter object as the second argument.
 
 ## `Mk:save(key value)`
 
-任意の値に任意の名前を付けて永続化します。永続化した値は、AiScriptコンテキストが終了しても残り、Mk:loadで読み取ることができます。
+Persistently saves an arbitrary key with any given value.The saved value will remain after the AiScript context ends and can be loaded with Mk:load.
 
 ## `Mk:load(key)`
 
-Mk:saveで永続化した指定の名前の値を読み取ります。
+Reads the value of the specified name saved by Mk:save.
 
 ## `Plugin:register_post_form_action(title fn)`
 
-投稿フォームにアクションを追加します。第一引数にアクション名、第二引数にアクションが選択された際のコールバック関数を渡します。\
-コールバック関数には、第一引数に投稿フォームオブジェクトが渡されます。
+Adds an action in the post form.Passes the name of the action as the first argument and the callback function when the action is selected as the second argument.The post form object is passed to the callback function as the first argument.
 
 ## `Plugin:register_note_action(title fn)`
 
-ノートメニューに項目を追加します。第一引数に項目名、第二引数に項目が選択された際のコールバック関数を渡します。\
-コールバック関数には、第一引数に対象のノートオブジェクトが渡されます。
+Adds an action in the note menu.Passes the name of the item as the first argument and the callback function when the action is selected as the second argument.\
+The target note object is passed to the callback function as the first argument.
 
 ## `Plugin:register_user_action(title fn)`
 
-ユーザーメニューに項目を追加します。第一引数に項目名、第二引数に項目が選択された際のコールバック関数を渡します。\
-コールバック関数には、第一引数に対象のユーザーオブジェクトが渡されます。
+Adds an action in the user menu.Passes the name of the item as the first argument and the callback function when the action is selected as the second argument.\
+The target user object is passed to the callback function as the first argument.
 
 ## `Plugin:register_note_view_interruptor(fn)`
 
-UIに表示されるノート情報を書き換えます。\
-コールバック関数には、第一引数に対象のノートオブジェクトが渡されます。\
-コールバック関数の返り値でノートが書き換えられます。
+Rewrites the note information displayed on the UI.\
+The target note object is passed to the callback function as the first argument.\
+The note will be rewritten with the return value of the callback function.
 
 ## `Plugin:register_note_post_interruptor(fn)`
 
-ノート投稿時にノート情報を書き換えます。\
-コールバック関数には、第一引数に対象のノートオブジェクトが渡されます。\
-コールバック関数の返り値でノートが書き換えられます。
+Rewrite note information when posting notes.\
+The target note object is passed to the callback function as the first argument.\
+The note will be rewritten with the return value of the callback function.
 
 ## `Plugin:open_url(url)`
 
-第一引数に渡されたURLをブラウザの新しいタブで開きます。
+Opens the URL given as the first parameter in a new browser tab.
 
 ## `Plugin:config`
 
-プラグインの設定が格納されるオブジェクト。プラグイン定義のconfigで設定したキーで値が入ります。
+An object containing the plugin settings.The values set in the plugin definition's config are saved in the object keys.

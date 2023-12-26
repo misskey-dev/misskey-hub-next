@@ -1,74 +1,71 @@
-# チャート
+# Charts
 
-Misskeyはサーバーの様々なデータソースに対するチャートを生成し表示する機能を備えています。
-チャートを利用することで、サーバーの利用状況や連合の状況、各ユーザーのアクティビティなどを視覚的に把握することができます。
+Misskey has a feature that displays and generates charts from various server data sources. With charts, you can know server usage and federation status, each user's activities visually.
 
-サーバーのチャートはサーバー情報ページから表示することができます。
+The server chart can be displayed on the Server Information page.
 
-以下は各チャートとその各項目の説明です。
+Below is a description of each chart and each of its elements.
 
-## 連合チャート
+## Federation Charts
 
-連合しているサーバー化ついてのチャートです。
+Charts about federated servers.
 
 ### Pub
 
-アクティビティを配送しているサーバーの数。
-言い換えると、自サーバーのユーザーをフォローしているリモートユーザーの所属サーバーのユニークなカウントを表します。
+The number of servers providing activity. In other words, it displays the number of unique remote users that follow self-server users.
 
 ### Sub
 
-アクティビティを受信しているサーバーの数。
-言い換えると、自サーバーのユーザーがフォローしているリモートユーザーの所属サーバーのユニークなカウントを表します。
+The number of users receiving activities. In other words, it displays the number of unique number of remote users belonging to the remote server being followed by self-server users.
 
 ### Received
 
-アクティビティを送ってきたサーバーの数。
+Unique number of remote servers that have sent activity to the self-server.
 
 ### Delivered
 
-アクティビティを配送したサーバーの数。
+Unique number of self-server that has sent activities to remote servers.
 
 ### Stalled
 
-アクティビティを配送する際、エラーになったサーバーの数。
+Unique number of failures when the self-server attempted to deliver activities to remote servers.
 
-## アクティブユーザー数チャート
+## Active users charts
 
-自サーバーのユーザーの利用状況についてのチャートです。
+Self-server user usage charts.
 
 ### Read & Write
 
-閲覧と書き込みを行ったユーザーの数。
+Unique number of users who have browsed and written.
 
 ### Read
 
-閲覧を行ったユーザーの数。
+Unique number of users who have browsed.
 
 ### Write
 
-書き込みを行ったユーザーの数。
+Unique number of users who have written.
 
 ### < Week
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1週間未満であるユーザーの数。
+The number of users who have browsed and whose account creation date and time is less than one week.
 
 ### < Month
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1ヶ月未満であるユーザーの数。
+The number of users who have browsed and whose account creation date and time is less than one month.
 
 ### < Year
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1年未満であるユーザーの数。
+The number of users who have read and whose account creation date and time is less than one year.
 
-### > Week
+### Week
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1週間以上前であるユーザーの数。
+The number of users who have read and whose account creation date and time is one week ago.
 
-### > Month
+### Month
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1ヶ月以上前であるユーザーの数。
+The number of users who have read and whose account creation date and time is one month ago.
 
-### > Year
+### Year
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1年以上前であるユーザーの数。
+The number of users who have read and whose account creation date and time is one year ago.
