@@ -1,77 +1,76 @@
-# プラグインの作成
+# Creating Plugins
 
-Misskey Webクライアントのプラグイン機能を使うと、クライアントを拡張し、様々な機能を追加できます。
-このドキュメントではプラグインの作成方法について説明します。
+The plugin feature of the Misskey Web Client allows you to extend the client and add various features to it.
+This document describes how to create a Plugin.
 
 ## AiScript
 
-プラグインはAiScriptを使って記述されるスクリプトです。
+Plugins are scripts written using AiScript.
 
-## メタデータ
+## Metadata
 
-プラグインは、AiScriptのメタデータ埋め込み機能を使って、デフォルトとしてプラグインのメタデータを定義する必要があります。メタデータの例は以下の通りです。
+Plugins must use AiScript's metadata feature to define the plugin's metadata as the default.Example of some metadata are:
 
 ```AiScript
 /// @ 0.12.4
 ### {
-  name: "プラグイン名"
+  name: "Plugin Name"
   version: "4.2.1"
-  author: "作者名"
-  description: "説明文"
+  author: "Plugin Author"
+  description: "Plugin Description"
 }
 ```
 
-メタデータは次のプロパティを含むオブジェクトです。
+Metadata is an object that contains the following properties:
 
 ### name
 
-プラグイン名
+Plugin name
 
 ### author
 
-プラグイン作者
+Plugin author
 
 ### version
 
-プラグインバージョン。数値を指定してください。
+Plugin version.A number must be specified.
 
 ### description
 
-プラグインの説明
+Plugin description
 
 ### permissions
 
-プラグインが要求する権限。MisskeyAPIにリクエストする際に用いられます。
+Permissions required by the plugin.Used when making requests to the Misskey API.
 
 ### config
 
-プラグインの設定情報を表すオブジェクト。
-キーに設定名、値に以下のプロパティを含めます。
+An object representing the plugin's settings.
+Keys are setting names and values are any of the below properties.
 
 #### type
 
-設定値の種類を表す文字列。以下から選択します。
-string number boolean
+A string representing the setting's value type.Can be either a string, number, or boolean.
 
 #### label
 
-ユーザーに表示する設定名
+Setting name displayed to users
 
 #### description
 
-設定の説明
+Description of the setting
 
 #### default
 
-設定のデフォルト値
+Default value of the setting
 
 ## API
 
-Misskey Webはプラグインに対してAPIを公開していて、それらを利用することでクライアントの機能を拡張できます。
-どのようなAPIがあるかは[プラグインAPIリファレンス](./plugin-api-reference/)を参照してください。
+Misskey Web exposes APIs for Plugins, which can be used to extend client functionality.
+Please refer to the [Plugin API Reference](./plugin-api-reference/) for information on what APIs are available.
 
-## プラグインを配布する
+## Distributing Plugins
 
-v2023.11.0以降では、あなたのウェブサイトからワンクリックでプラグインを直接インストールできるようになっています。
+Starting with v2023.11.0, you can install plugins directly from your website with one click.
 
-プラグインのインストール機能を提供する場合は、あなたのサイト上にAPIを実装する必要があります。詳しくは[こちら](./publish-on-your-website.md)をご覧ください。
+If you want to provide plugin installation functionality, you will need to implement an API on your site.For more information, please see [here](./publish-on-your-website.md).
