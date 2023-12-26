@@ -1,5 +1,5 @@
-# アンテナ
+# Antennas
 
-アンテナは、自由に条件を設定して、合致するノートを自動で収集することができる機能です。
+Antennas are a function of Misskey that collects notes that match the set conditions.
 
-条件を設定したアンテナが作成された状態で、条件に合致するノートが投稿されると、リアルタイムでそのアンテナのタイムラインにノートが追加されます。
+When an antenna is created with set conditions and a note is posted that matches the conditions, the note is added to the antenna's timeline in real time.
