@@ -1,4 +1,4 @@
-noScript: "Javascript is currently disabled. Please enable it as Javascript is required for site functionality."
+noScript: "JavaScript is currently disabled. Please enable it as JavaScript is required for site functionality."
 learnMore: "Learn More"
 loading: "Loading..."
 clickToExpand: "(Click to expand)"
@@ -6,6 +6,7 @@ copy: "Copy"
 share: "Share"
 note: "Note"
 other: "Other"
+add: "Add"
 goToLegacyHub: "Legacy Misskey Hub"
 _error:
   notFound: "Page not found"
@@ -131,7 +132,7 @@ _servers:
     grid: "Grid"
 _docs:
   title: "Documentation"
-  description: " Comprehensive information ranging from how to use Misskey to resources for server operators and developers."
+  description: "Comprehensive information ranging from how to use Misskey to resources for server operators and developers."
   indexTitle: "Table of Contents"
   _contribute:
     editThis: "Edit this page"
@@ -187,8 +188,8 @@ _links:
     title: "Discord Server"
     description: "Engage in discussions and ask questions about Misskey here."
   _aiChan:
-    title: "AI-chan"
-    description: "Visit the website of AI-chan, the mascot of Misskey."
+    title: "Ai-Chan"
+    description: "Visit the website of Ai-Chan, the mascot of Misskey."
 _tools:
   title: "Tool Collection"
   index: "Tool Collection Home"
@@ -233,6 +234,12 @@ _aboutUs:
     _orgPartner:
       title: "Corporate & Organization Partners"
       description: "These companies and organizations have contributed financially and technically to the development of Misskey."
+    _hubTranslators:
+      title: "Misskey Hub Translators"
+      description: "Those are the people who are helping with translating Misskey Hub."
+    _coreTranslators:
+      title: "Misskey Translators"
+      description: "Those are the people who are helping with translating Misskey."
 _i18n:
   _missing:
     title: "Help us translate"
@@ -244,6 +251,7 @@ _share:
   addServer: "Add Server"
   domain: "Server domain"
   compatibleWith: "Compatible with Misskey and certain Misskey forks."
+  recommendedByWebsite: "シェア元Webサイトからのおすすめ"
 _noteVisibility:
   public: "Public"
   home: "Home"
@@ -258,6 +266,8 @@ _shareLinkGenerator:
   url: "URL"
   urlCaption: "Optional. Inserted after the body."
   settings: "Advanced Settings"
+  manualInstance: "おすすめサーバー ドメイン"
+  manualInstanceDescription: "ここに指定したサーバー（ひとつ）をシェアボタン中継ページのトップに表示できます。ご自身のサーバーに誘導する際などにお使いいただけます。"
   visibility: "Visibility"
   recipents: "Acct of the person receiving the direct (enter on a new line separator)"
   resultLink: "Generated results of shared links"
@@ -268,6 +278,23 @@ _shareLinkGenerator:
 _goToMisskey:
   title: "Go to your Misskey Web"
   heading: "Select the server you want to open the page and continue"
+_avatarDecorationPreview:
+  title: "Avatar Decoration Previewer"
+  description: "アバターデコレーションがきれいに反映できるかをチェックできます。"
+  preview: "Preview"
+  settings: "Settings"
+  decoration: "Decoration #{number}"
+  placeholder: "「追加」から、アバターデコレーションを追加してプレビューできます。"
+  _options:
+    offsetX: "横位置調整"
+    offsetY: "縦位置調整"
+    angle: "Angle"
+    flip: "Flip Horizontally"
+    overlayTemplate: "テンプレートを重ねる"
+  _placeholder:
+    username: "Ai"
+    noteText: "Just had a chocolate-glazed donut 🍩😋"
+    profileDescription: "Misskey常駐AIの藍です！よろしくお願いします♪"
 _api:
   _permissions:
     title: "Permissions"
