@@ -6,6 +6,7 @@ copy: "コピー"
 share: "共有する"
 note: "ノート"
 other: "その他"
+add: "追加"
 goToLegacyHub: "従来のMisskey Hub"
 _error:
   notFound: "ページが見つかりませんでした"
@@ -233,6 +234,12 @@ _aboutUs:
     _orgPartner:
       title: "企業・団体パートナー"
       description: "こちらの企業・団体から、金銭的・技術的な観点でMisskeyの開発へご協力いただいております。"
+    _hubTranslators:
+      title: "Misskey Hub ローカライザー"
+      description: "Misskey Hubの翻訳に協力いただいている皆さんです。"
+    _coreTranslators:
+      title: "Misskey ローカライザー"
+      description: "Misskeyの翻訳に協力いただいている皆さんです。"
 _i18n:
   _missing:
     title: "翻訳にご協力ください"
@@ -244,6 +251,7 @@ _share:
   addServer: "サーバーを追加"
   domain: "サーバーのドメイン"
   compatibleWith: "Misskeyと、一部のMisskeyフォークに対応しています。"
+  recommendedByWebsite: "シェア元Webサイトからのおすすめ"
 _noteVisibility:
   public: "パブリック"
   home: "ホーム"
@@ -258,6 +266,8 @@ _shareLinkGenerator:
   url: "URL"
   urlCaption: "任意。本文の後ろに挿入されます。"
   settings: "詳細設定"
+  manualInstance: "おすすめサーバー ドメイン"
+  manualInstanceDescription: "ここに指定したサーバー（ひとつ）をシェアボタン中継ページのトップに表示できます。ご自身のサーバーに誘導する際などにお使いいただけます。"
   visibility: "公開範囲"
   recipents: "ダイレクトを受け取る人のacct（改行区切り）"
   resultLink: "リンク生成結果"
@@ -268,6 +278,23 @@ _shareLinkGenerator:
 _goToMisskey:
   title: "Misskey Webに移動"
   heading: "このページを開きたいサーバーを選択してください"
+_avatarDecorationPreview:
+  title: "アバターデコレーション プレビュー"
+  description: "アバターデコレーションがきれいに反映できるかをチェックできます。"
+  preview: "プレビュー"
+  settings: "設定"
+  decoration: "デコ #{number}"
+  placeholder: "「追加」から、アバターデコレーションを追加してプレビューできます。"
+  _options:
+    offsetX: "横位置調整"
+    offsetY: "縦位置調整"
+    angle: "角度"
+    flip: "左右反転"
+    overlayTemplate: "テンプレートを重ねる"
+  _placeholder:
+    username: "藍"
+    noteText: "チョコのかかったドーナツを食べました🍩😋"
+    profileDescription: "Misskey常駐AIの藍です！よろしくお願いします♪"
 _api:
   _permissions:
     title: "権限"

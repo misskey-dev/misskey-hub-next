@@ -1,8 +1,7 @@
-# クリップ
+# Clips
 
-クリップは、複数のノートをまとめることができる機能です。自分のノート・他者のノートは問いません。
-クリップは複数作ることができ、それぞれに名前や説明を設定して管理することが可能です。また、クリップを他のユーザーに公開するかどうかも選択することができます。
+Clips are a feature of Misskey that summarize notes.They don't care if the notes are mine or someone else's. You can make more than one clips, and you can name them and give an explanation, and you can manage them.You can also choose between public and private clips.
 
-クリップを作るには、クリップ管理ページから「追加」をクリックします。
+To create clips, select "Add" on the Clip Management page.
 
-クリップにノートを追加するには、対象のノートのメニューから「クリップ」をクリックし、追加先のクリップを選択します。
+To add notes to clips, select Clips on the appropriate note page and select the target clip.
