@@ -8,14 +8,23 @@
         ></MkAnimBg>
         <GNav @toggleNav="isNavOpen = !isNavOpen" :is-open="isNavOpen" />
         <div :class="$style.errorContainer" class="relative z-10 flex items-center justify-center">
-            <div class="max-w-xl w-full p-6 mx-6 bg-white/70 dark:bg-white/20 shadow-black/10 shadow-xl rounded-xl">
+            <div class="max-w-xl w-full p-6 mx-6 bg-white/60 dark:bg-white/15 shadow-black/10 shadow-xl rounded-xl">
                 <img src="https://xn--931a.moe/assets/error.jpg" class="w-32 h-32 rounded-xl mx-auto mb-6" />
                 <div v-if="error">
                     <h1 class="text-center font-bold text-2xl mb-4">{{ error?.statusCode === 404 ? $t('_error.notFound') : $t('_error.generalError') }}</h1>
                     <p class="text-center mb-4">{{ error?.statusCode === 404 ? $t('_error.notFoundDesc') : $t('_error.generalErrorDesc') }}</p>
                     <div class="max-w-lg w-full mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <button class="block rounded-full text-center px-4 py-2 border-2 hover:opacity-70" @click="handleError">{{ $t('_error.goToTop') }}</button>
-                        <GNuxtLink class="block rounded-full text-center px-4 py-2 border-2 hover:opacity-70" target="_blank" :to="issueReportLink">{{ $t('_error.reportProblem') }}</GNuxtLink>
+                        <GNuxtLink
+                            class="block rounded-full text-center px-4 py-2 border-2 hover:opacity-70"
+                            :class="!issueReportLink && 'opacity-70'"
+                            target="_blank"
+                            :to="issueReportLink ?? ''"
+                        >{{ $t('_error.reportProblem') }}<div class="inline-block text-sm ml-1">
+                                <div v-if="!issueReportLink" class="bi animate-spin border-2 border-accent-500 rounded-full border-t-transparent"></div>
+                                <ExtIco v-else />
+                            </div>
+                        </GNuxtLink>
                     </div>
                 </div>
                 <div v-else class="mx-auto py-5">
@@ -30,6 +39,7 @@
 import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import NProgress from 'nprogress';
 import { getGhIssueUrl } from './assets/js/misc/get-issue-url';
+import ExtIco from 'bi/box-arrow-up-right.svg';
 
 const error = useError();
 const colorMode = useColorMode();
@@ -64,6 +74,9 @@ const cnHead = (locale.value === 'cn') ? [
 const { data: issueReportLink } = await useAsyncData(`issueReportLink_${locale.value}`, () => getGhIssueUrl({
     lang: locale.value,
     repoUrl: runtimeConfig.public.repositoryUrl,
+    additionalInfo: {
+        'Raw Error': (typeof error.value === 'string') ? error.value : JSON.stringify(error.value),
+    },
 }), {
     server: false,
 });

@@ -3,10 +3,13 @@ import { withQuery } from 'ufo';
 export async function getGhIssueUrl(options: {
     lang: string;
     repoUrl: string;
+    additionalInfo?: Record<string, string>;
 }) {
     // Issue Templateのプレフィル
-    let environment = `* Model and OS of the device(s):
-* Browser:`;
+    let environmentArr: string[] = [
+        '* Model and OS of the device(s):',
+        '* Browser:',
+    ];
     let template = '02_visitor-bug-report-en.yml';
 
     if (options.lang === 'ja') {
@@ -38,33 +41,38 @@ export async function getGhIssueUrl(options: {
             }
 
             const browserData = uaData.fullVersionList.find((item: any) => item.brand.toLowerCase() !== 'not_a brand');
-            
-            const env = [
+
+            environmentArr = [
                 `* Model and OS of the device(s): ${uaData.platform} ${osVersion}`,
                 `* Browser: ${browserData.brand} ${browserData.version}`,
                 `* Viewport Size: ${window.innerWidth}x${window.innerHeight}`,
                 `* (UA Detected Using getHighEntropyValues)`,
-                (options.lang === 'ja') ? '* 【自動入力済】追記は不要です' : '* [Auto-filled] No need to write additional information.',
             ];
-            environment = env.join('\n');
         } else {
             const UAParser = (await import('ua-parser-js')).default;
             const ua = new UAParser();
             const uaRes = ua.getResult();
-            const env = [
+            
+            environmentArr = [
                 `* Model and OS of the device(s): ${uaRes.os.name} v${uaRes.os.version}`,
                 `* Browser: ${uaRes.browser.name} (${uaRes.engine.name}) v${uaRes.browser.version}`,
                 `* Viewport Size: ${window.innerWidth}x${window.innerHeight}`,
                 `* Raw User Agent: ${uaRes.ua}`,
-                (options.lang === 'ja') ? '* 【自動入力済】追記は不要です' : '* [Auto-filled] No need to write additional information.',
             ];
-            environment = env.join('\n');
+        }
+        if (options.additionalInfo) {
+            environmentArr.push(...Object.entries(options.additionalInfo).map((v) => `* ${v[0]}: ${v[1]}`));
+        }
+        environmentArr.push((options.lang === 'ja') ? '* 【自動入力済】追記は不要です' : '* [Auto-filled] No need to write additional information.');
+    } else {
+        if (options.additionalInfo) {
+            environmentArr.push(...Object.entries(options.additionalInfo).map((v) => `* ${v[0]}: ${v[1]}`));
         }
     }
 
     return withQuery(`${options.repoUrl}/issues/new`, {
         template,
-        environment,
+        environment: environmentArr.join('\n'),
         labels: 'maybe non-developer,bug?',
     });
     
