@@ -1,12 +1,10 @@
 import type { RouterConfig } from '@nuxt/schema'
 
 export default <RouterConfig> {
-    scrollBehavior(to, from, savedPosition) {
-        const width = window ? window.innerWidth : 0;
+    scrollBehavior(to) {
+        if (to.meta.layout && to.hash) {
+            const width = window ? window.innerWidth : 0;
 
-        if (savedPosition) {
-            return savedPosition;
-        } else if (to.meta.layout && to.hash) {
             switch (to.meta.layout) {
                 case 'blank':
                     return { el: to.hash };
