@@ -1,17 +1,17 @@
-# Nginxの設定
+# Nginx 설정
 
-1. `/etc/nginx/conf.d/misskey.conf`もしくは`/etc/nginx/sites-available/misskey.conf`を作成し、下の設定例をコピーします。\
-   （ファイル名はmisskeyでなくても構いません。）
-2. 次のように編集します。
-   1. example.tldを自分が用意したドメインに置き換えます。\
-      `ssl_certificate`と`ssl_certificate_key`はLet's Encryptで取得した証明書のパスになるようにします。
-   2. CloudflareなどのCDNを使う場合は、「If it's behind another reverse proxy or CDN, remove the following.」から4行を削除します。
-3. `/etc/nginx/sites-available/misskey.conf`を作成した場合は、`/etc/nginx/sites-enabled/misskey.conf`としてシンボリックリンクを作成します。\
+1. `/etc/nginx/conf.d/misskey.conf` 또는 `/etc/nginx/sites-available/misskey.conf`를 생성하고 아래 설정 예시를 복사합니다..
+   (파일명은 misskey가 아니어도 상관없습니다.)）
+2. 다음과 같이 편집합니다.
+   1. example.tld를 자신이 준비한 도메인으로 대체합니다.\
+      `ssl_certificate`와 `ssl_certificate_key`는 Let's Encrypt에서 발급받은 인증서의 경로가 되도록 합니다.
+   2. Cloudflare 등의 CDN을 사용하는 경우 'If it's behind another reverse proxy or CDN, remove the following.’ 부터 4행을 제거합니다.
+3. `/etc/nginx/sites-available/misskey.conf`를 만들었다면 `/etc/nginx/sites-enabled/misskey.conf`로 심볼릭 링크를 생성합니다.\
    `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`
-4. `sudo nginx -t` で設定ファイルが正常に読み込まれるか確認します。
-5. `sudo systemctl restart nginx` でnginxを再起動します。
+4. `sudo nginx -t`로 설정 파일이 정상적으로 로드되는지 확인합니다.
+5. `sudo systemctl restart nginx`로 nginx를 리로드 합니다.
 
-## 設定例
+## 설정 예시
 
 ```nginx
 # For WebSocket

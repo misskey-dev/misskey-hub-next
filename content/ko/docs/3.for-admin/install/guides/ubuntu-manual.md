@@ -22,9 +22,9 @@
 
 ## 이 글에 대하여
 
-이 글에서는 [Misskey 구축 가이드 (manual)](. /manual/)에 소개된 대로 systemd에서 Misskey를 동작시키고 있습니다.
+이 글에서는 [Misskey 구축 가이드 (manual)](./manual/)에 소개된 대로 systemd에서 Misskey를 동작시키고 있습니다.
 
-[docker-compose](. /docker/)를 사용하면 수작업으로 조금 더 쉽게 실행할 수 있을 것입니다.
+[docker-compose](./docker/)를 사용하면 수작업으로 조금 더 쉽게 실행할 수 있을 것입니다.
 
 :::danger
 일단 작동하기 시작한 서버의 도메인 및 호스트 이름으로는 데이터베이스를 다시 만들지 마십시오!
@@ -32,7 +32,7 @@
 
 ## 소개
 
-이 글에서는 [Misskey 구축 가이드 (manual)](. /manual/)을 바탕으로 일반적인 우분투 서버에 Misskey를 설치하고 공개하는 방법을 하나하나 설명합니다.
+이 글에서는 [Misskey 구축 가이드 (manual)](./manual/)을 바탕으로 일반적인 우분투 서버에 Misskey를 설치하고 공개하는 방법을 하나하나 설명합니다.
 
 Bash 명령어 입력과 몇 가지 설정 파일 편집, 그리고 브라우저 조작만으로 설정이 완료될 수 있도록 했습니다.설치해야 할 소프트웨어에 대해 간략하게 설명하고 있지만, 크게 신경 쓸 필요는 없습니다.
 
@@ -40,7 +40,7 @@ Bash 명령어 입력과 몇 가지 설정 파일 편집, 그리고 브라우저
 
 OS의 차이, Misskey 본체나 의존하는 소프트웨어의 버전업으로 변경된 부분 등이 있을 수 있지만, 양해 부탁드립니다.
 
-모르는 단어에 대해서는 [『"알 것 같지만""모르지만""알았다""알 것 같지만""알았다""알 것 같지 않은 IT 용어사전』(https\://wa3.i-3-i.info/)에서 찾아보고 확인하시면 좋겠습니다.
+모르는 단어에 대해서는 ["알 것 같지만""모르지만""알았다""알 것 같지만""알았다""알 것 같지 않은 IT 용어사전](https://wa3.i-3-i.info/)에서 찾아보고 확인하시면 좋겠습니다.
 
 ## 환경 및 조건
 
@@ -427,41 +427,41 @@ sudo nano /etc/nginx/conf.d/misskey.conf
 
 [Misskey Hub](https://misskey-hub.net/docs/admin/nginx/)의 설정 예시를 nano에 복사하여 붙여넣고, 다음 부분을 자신의 것으로 바꿔서 작성합니다.
 
-- 18行目と30行目のドメイン名
-- 34-35行目の証明書へのパスをCertbotで取得したものに (基本的にexample.tldを置き換えるだけでOK)
-- 56行目 (If it's behind another reverse proxy or CDN, remove the following.) から4行を削除
+- 18행과 30행의 도메인 이름
+- 34-35번째 행의 인증서 경로를 Certbot으로 취득한 인증서로 바꾸면 됩니다(기본적으로 example.tld를 대체하면 됩니다).
+- 56행 (다른 리버스 프록시 또는 CDN 뒤에 있는 경우 다음을 제거합니다.) 에서 4행 삭제
 
-変更を保存する。
+변경 사항을 저장합니다.
 
-設定ファイルがきちんと機能するか確認。
+설정 파일이 제대로 작동하는지 확인합니다.
 
 ```sh
 sudo nginx -t
 ```
 
-OKならば、nginxデーモンを再起動。
+OK라면 nginx 데몬을 재시작합니다.
 
 ```sh
 sudo systemctl restart nginx
 ```
 
-ステータスを確認。
+상태를 확인합니다.
 
 ```sh
 sudo systemctl status nginx
 ```
 
-activeであればOK。
+active이면 OK.
 
-## Misskeyのビルド
+## Misskey 빌드
 
-misskeyユーザーにログインし直す。
+misskey 사용자로 다시 로그인합니다.
 
 ```sh
 sudo su - misskey
 ```
 
-ビルドをする。yes we can…
+빌드합니다.네, 할 수 있습니다...
 
 ```sh
 cd misskey
@@ -469,70 +469,70 @@ NODE_ENV=production pnpm run build
 ```
 
 :::tip
-開発環境の場合、`NODE_ENV=production`は不要です。以降のコマンドでも同様に削除してください。
+개발 환경의 경우 `NODE_ENV=production`은 필요하지 않습니다.이후 명령어에서도 마찬가지로 삭제해 주세요.
 :::
 
-### サーバーでビルドできない場合
+### 서버에서 빌드할 수 없는 경우
 
-RAMの不足が考えられる。
+RAM 부족이 원인일 수 있습니다.
 
-Misskeyのビルドやデータベースのマイグレーション（初期化を含む）には、RAMが2GB以上必要になっている。\
-RAMが足りない場合、以下のような解決策が考えられる。
+미스키의 빌드 및 데이터베이스 마이그레이션(초기화 포함)을 위해서는 2GB 이상의 RAM이 필요합니다.\
+RAM이 부족한 경우 다음과 같은 해결책을 생각해 볼 수 있습니다.
 
-- サーバーにスワップを追加する
-- ローカルでビルドしたもの（builtディレクトリ）をsftpで転送する
+- 서버에 스왑 추가하기
+- 로컬에서 빌드한 것(built 디렉토리)을 sftp로 전송하기
 
-## データベースの初期化
+## 데이터베이스 초기화
 
 ```sh
 pnpm run init
 ```
 
-## Misskeyを起動する
+## Misskey 실행하기
 
 ```sh
 NODE_ENV=production pnpm run start
 ```
 
-**Now listening on port 3000 on** [**http://example.tld**](http://example.tld) と表示されたら、設定したURLにアクセスする。
+**Now listening on port 3000 on** [**http://example.tld**](http://example.tld) 라고 표시되면 설정한 URL에 접속합니다.
 
-Misskeyのウェルカムページが表示されるはずだ。
+Misskey의 웰컴 페이지가 표시되어야 합니다.
 
-アカウントの作成、ノートの作成やファイルのアップロードといった一通りの操作が正しく行えるか確認しよう。
+계정 생성, 노트 작성, 파일 업로드 등 일련의 작업이 제대로 이루어지고 있는지 확인해 봅니다.
 
-### アクセスできない場合
+### 액세스 할 수 없는 경우
 
-#### CloudFlareのDNSを確認する
+#### CloudFlare의 DNS 확인하기
 
-CloudFlareのDNS設定が正しいIPアドレスになっているかもう一度確認しよう。
+CloudFlare의 DNS 설정이 올바른 IP 주소로 설정되어 있는지 다시 한 번 확인해봅니다.
 
-#### ルーターの設定を確認する
+#### 라우터 설정 확인하기
 
-自宅サーバーの場合、ルーターがサーバーと外部との80ポート・443ポートの通信を許可する設定になっているかどうか確認しよう。
+홈 서버의 경우, 라우터가 서버와 외부와의 80포트, 443포트 통신을 허용하도록 설정되어 있는지 확인합니다.
 
-クラウドの場合でも、ネットワーク設定でポート開放が必要な場合が多い。
+클라우드의 경우에도 네트워크 설정에서 포트 개방이 필요한 경우가 많습니다.
 
-## Misskeyのデーモンを作成
+## Misskey의 데몬 생성
 
 :::tip
-開発環境の場合、デーモンの作成は不要です。
+개발 환경의 경우, 데몬을 만들 필요가 없습니다.
 :::
 
-いったんCtrl+Cでプロセスをキルし、Misskeyをデーモンで起動する設定をしよう。
+일단 Ctrl+C로 프로세스를 죽이고, Misskey를 데몬으로 실행하도록 설정해 봅시다.
 
-ルート権限で行う。
+루트 권한으로 변경합니다.
 
 ```sh
 exit
 ```
 
-/etc/systemd/system/misskey.serviceを作成する。
+/etc/systemd/system/misskey.service를 만듭니다.
 
 ```sh
 sudo nano /etc/systemd/system/misskey.service
 ```
 
-次の内容を貼り付け、保存する。
+다음 내용을 붙여넣고 저장합니다.
 
 ```ini
 [Unit]
@@ -554,7 +554,7 @@ Restart=always
 WantedBy=multi-user.target
 ```
 
-systemdを設定し、misskeyデーモンを開始。
+systemd를 설정하고 misskey 데몬을 실행합니다.
 
 ```sh
 sudo systemctl daemon-reload
@@ -564,29 +564,29 @@ sudo systemctl enable misskey
 sudo systemctl start misskey
 ```
 
-systemctlでデーモンの状態を確認。起動に少し時間がかかるため、15秒程度待ってからのほうが良い。
+systemctl로 데몬 상태를 확인합니다.실행에 시간이 조금 걸리므로 15초 정도 기다렸다가 시작하는 것이 좋습니다.
 
 ```sh
 sudo systemctl status misskey
 ```
 
-activeならOK。
+active라면 OK.
 
-**これでMisskeyのインストールはほぼ完了だ。**
+**이것으로 Misskey 설치가 거의 완료되었습니다.**
 
-Misskeyサーバーに自分のアカウントを登録・ログインし、設定を続けよう。
+Misskey 서버에 자신의 계정을 등록하고 로그인하여 설정을 진행합니다.
 
-## Misskeyの設定を続ける
+## Misskey 설정 계속하기
 
-- [**Misskeyサーバーで最初に設定するべきサーバー設定とその他設定の説明**](https://hide.ac/articles/Y504SIabp)
-- [**Squidプロキシを設定してMisskeyを守る**](https://hide.ac/articles/MC7WsPDqw)
-- [**Misskeyのデータベースをバックアップしよう【OCIオブジェクトストレージ編】**](https://hide.ac/articles/E2Ea3cauk)
+- [Misskey 서버에서 가장 먼저 설정해야 할 서버 설정 및 기타 설정에 대한 설명\*\*](https://hide.ac/articles/Y504SIabp)
+- [**Squid 프록시를 설정하여 Misskey를 보호하세요**](https://hide.ac/articles/MC7WsPDqw)
+- [**Misskey의 데이터베이스를 백업하자【OCI 오브젝트 스토리지 편】**](https://hide.ac/articles/E2Ea3cauk)
 
-## Misskeyのアップデート
+## Misskey 업데이트
 
-[Misskeyのアップデート方法](./manual/#misskeyのアップデート方法)
+[Misskey 업데이트 방법](. /manual/#misskey 업데이트 방법)
 
-作業中はMisskeyを使うことができません。
+작업 중에는 Misskey를 사용할 수 없습니다.
 
 ```sh
 sudo systemctl stop misskey
@@ -602,7 +602,7 @@ pnpm run migrate;
 exit
 ```
 
-### Case 1: apt upgradeをする場合
+### Case 1: apt upgrade를 하는 경우
 
 ```sh
 sudo apt update -y
@@ -610,9 +610,9 @@ sudo apt full-upgrade -y
 sudo reboot
 ```
 
-再起動後はMisskeyは自動で起動します。
+재부팅 후 Misskey는 자동으로 시작됩니다.
 
-### Case 2: そのまま起動
+### Case 2: 그대로 실행
 
 ```sh
 sudo systemctl start misskey
