@@ -6,7 +6,9 @@ description: 'MFMは、Misskeyの様々な場所で使用できる専用のマ�
 MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使用できる専用のマークアップ言語です。
 
 :::tip
+
 一部の構文はMarkdownやHTMLと互換性があります。
+
 :::
 
 ## MFMが使用可能な場所の例
@@ -19,7 +21,9 @@ MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使�
 ### メンション
 アットマーク + ユーザー名で、特定のユーザーを示すことができます。
 :::tip
+
 メンションについての詳細は[こちら](./mention.md)を参照してください。
+
 :::
 
 ```
@@ -37,7 +41,9 @@ MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使�
 ### ハッシュタグ
 ナンバーサイン + タグで、ハッシュタグを示すことができます。
 :::tip
+
 ハッシュタグについての詳細は[こちら](./hashtag.md)を参照してください。
+
 :::
 
 ```
@@ -61,7 +67,9 @@ https://example.com
 ```
 
 :::tip
+
 リンクテキストの前に`?`をつけると、リンクプレビューを非表示にすることができます。
+
 ```
 ?[example link](https://example.com)
 ```
@@ -72,8 +80,11 @@ https://example.com
 
 ### カスタム絵文字
 コロンでカスタム絵文字名を囲むと、カスタム絵文字を表示させることができます。
+
 :::tip
+
 カスタム絵文字についての詳細は[こちら](./custom-emoji.md)を参照してください。
+
 :::
 
 ```
