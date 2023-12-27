@@ -68,12 +68,8 @@ export default [
         "label": "한국어"
     },
     {
-        "lang": "zh-CN",
-        "label": "中文 (简体)"
-    },
-    {
-        "lang": "zh-TW",
-        "label": "中文 (繁體)"
+        "lang": "zh",
+        "label": "中文"
     },
     {
         "lang": "ja",
