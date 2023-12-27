@@ -20,11 +20,6 @@ router.beforeEach((to, from) => {
     }
 })
 
-nuxtApp.hook('page:loading:start', () => {
-    if (!NProgress.isStarted()) {
-        NProgress.start();
-    }
-});
 nuxtApp.hook('page:loading:end', () => {
     nextTick(() => {
         setTimeout(() => {
