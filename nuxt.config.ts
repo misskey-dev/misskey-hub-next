@@ -185,8 +185,10 @@ export default defineNuxtConfig({
 			await fetchCrowdinMembers(...args);
 		},
 	},
+	features: {
+		inlineStyles: false,
+	},
 	experimental: {
-		inlineSSRStyles: false,
 		componentIslands: true,
 	},
 	routeRules: getRouteRules(),
