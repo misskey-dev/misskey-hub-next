@@ -54,6 +54,16 @@ export const coreTeamMember: MiHubMember[] = [
         username: 'kakkokari-gtyih',
         name: 'かっこかり',
     },
+    {
+        id: 46447427,
+        username: 'samunohito',
+        name: 'おさむのひと',
+    },
+    {
+        id: 22656849,
+        username: 'anatawa12',
+        name: 'anatawa12',
+    },
 ];
 
 /** 過去のコアチームメンバー */
