@@ -7,23 +7,21 @@ description: 本指南介紹如何安裝和設定 Misskey。
 本指南介紹如何安裝和設定 Misskey。
 
 :::danger
-
-一度使用を始めたサーバーのドメイン・ホスト名は、決して変更しないでください！
-
+一旦開始使用伺服器，切勿更改伺服器的網域名稱/主機名稱！
 :::
 
 :::tip{label='前提条件'}
 
-#### 以下のソフトウェアがインストール・設定されていること
+#### 必須安裝並設定以下軟體
 
 - **[Node.js](https://nodejs.org/en/)** (20.4.x以上)
 - **[PostgreSQL](https://www.postgresql.org/)** (15以上)
 - **[Redis](https://redis.io/)**
 - **[FFmpeg](https://www.ffmpeg.org/)**
 
-Debian/Ubuntuをお使いであれば、`build-essential`パッケージをインストールしておくと良いです。
+如果您使用 Debian/Ubuntu，最好安裝 `build-essential` 軟體包。
 
-#### corepackが有効化されていること
+#### 必須啟用 corepack
 
 ```sh
 sudo corepack enable
@@ -31,10 +29,16 @@ sudo corepack enable
 
 :::
 
-## ユーザーの作成
+## 建立使用者
 
-Misskeyはrootユーザーで実行しない方がよいため、代わりにユーザーを作成します。
-Debianの例:
+Misskey 不應以 root 使用者身分執行，因此應建立使用者。
+Debian 範例：
+
+```sh
+adduser --disabled-password --disabled-login misskey
+```
+
+## 安裝 Misskey
 
 ```sh
 sudo -iu misskey
@@ -47,53 +51,41 @@ NODE_ENV=production pnpm install --frozen-lockfile
 
 ## 設定
 
-```sh
-sudo -iu misskey
-git clone --recursive https://github.com/misskey-dev/misskey.git
-cd misskey
-git checkout master
-git submodule update --init
-NODE_ENV=production pnpm install --frozen-lockfile
-```
-
-## 設定
-
-根據檔案中的說明編輯 `default.yml`。
+複製設定範例 `.config/example.yml`，並將其重新命名為 `default.yml`。
 
 ```sh
 cp .config/example.yml .config/default.yml
 ```
 
+根據檔案中的說明編輯 `default.yml`。
+
+## 建構和初始化
+
 以下命令將建構 Misskey 並初始化資料庫。
 這需要一些時間。
-
-## ビルドと初期化
-
-次のコマンドでMisskeyのビルドとデータベースの初期化を行います。
-これにはしばらく時間がかかります。
 
 ```sh
 NODE_ENV=production pnpm run build
 pnpm run init
 ```
 
-## 起動
+## 啟動
 
-お疲れ様でした。以下のコマンドでMisskeyを起動できます。
+您做到了！可以使用以下指令啟動 Misskey。
 
 ```sh
 NODE_ENV=production pnpm run start
 ```
+
+GLHF✨
+
+::::g-details{summary="systemdを用いた管理"}
 
 建立 systemd 服務檔案
 
 `/etc/systemd/system/misskey.service`
 
 在編輯器中打開它，貼上下面的代碼並儲存：
-
-`/etc/systemd/system/misskey.service`
-
-エディタで開き、以下のコードを貼り付けて保存:
 
 ```ini
 [Unit]
@@ -116,41 +108,35 @@ WantedBy=multi-user.target
 ```
 
 :::warning
-
-啟動misskey服務
-
+如果你想在 CentOS 上讓  Misskey 使用的連接埠低於 1024，需要將其更改為 `ExecStart=/usr/bin/sudo /usr/bin/npm start`。
 :::
 
-systemdを再読み込みしmisskeyサービスを有効化
+重新載入 systemd 並啟用 misskey 服務。
 
 ```sh
 sudo systemctl daemon-reload
 sudo systemctl enable misskey
 ```
 
-misskeyサービスの起動
+啟動misskey服務
 
 ```sh
 sudo systemctl start misskey
 ```
 
 :::tip
-
-`systemctl status misskey`と入力すると、サービスの状態を調べることができます。
-
+鍵入 `systemctl status misskey` 查看服務狀態。
 :::
 
-更新完成後，請重新啟動 Misskey 服務。
+::::
 
-## Misskeyのアップデート方法
+## 如何更新Miskey
 
 :::warning
-
-アップデートの際は必ず[リリースノート](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)を確認し、変更点や追加で必要になる作業の有無(ほとんどの場合ありません)を予め把握するようにしてください。
-
+更新前請務必查看[版本說明](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)，以便提前了解所做的更改以及是否需要額外工作（大多數情況下不需要）。
 :::
 
-masterをpullし直し、インストール、ビルド、データベースのマイグレーションを行います:
+拉回 master，安裝、建置和遷移資料庫：
 
 ```sh
 git checkout master
@@ -161,16 +147,15 @@ NODE_ENV=production pnpm run build
 pnpm run migrate
 ```
 
-アップデート内容、およびデータベースの規模によっては時間がかかることがあります。
+根據更新內容和資料庫大小，可能需要一些時間。
 
-アップデートが終わり次第、Misskeyプロセスを再起動してください。
+更新完成後，請重新啟動 Misskey 服務。
 
 ```sh
 sudo systemctl restart misskey
 ```
 
 :::tip
-
 ビルドや起動時にエラーが発生した場合は、以下のコマンドをお試しください:
 
 - `pnpm run clean` 或 `pnpm run clean-all`

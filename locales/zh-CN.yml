@@ -1,19 +1,19 @@
-noScript: "JavaScript 目前处于禁用状态。必须启用 JavaScript 才能浏览网站。"
+noScript: "現在Javascriptが無効になっています。サイトの表示にはJavascriptが必須となりますので有効にしてください。"
 learnMore: "詳しく知る"
-loading: "加载中…"
-clickToExpand: "（点击以展开）"
-copy: "复制"
-share: "分享"
+loading: "読み込み中…"
+clickToExpand: "（クリックして展開）"
+copy: "コピー"
+share: "共有する"
 note: "ノート"
-other: "其他"
+other: "その他"
 add: "追加"
 goToLegacyHub: "従来のMisskey Hub"
 _error:
-  notFound: "找不到页面"
-  notFoundDesc: "找不到您要查找的页面，请检查 URL。"
-  generalError: "发生了错误"
+  notFound: "ページが見つかりませんでした"
+  notFoundDesc: "お探しのページは見つかりませんでした。URLをお確かめください。"
+  generalError: "エラーが発生しました"
   generalErrorDesc: "これが意図した操作でない場合は、以下から不具合報告をお願いします。"
-  reportProblem: "报告问题"
+  reportProblem: "問題を報告する"
   goToTop: "トップページにもどる"
 _seo:
   siteName: "Misskey Hub"
@@ -21,11 +21,11 @@ _seo:
   defaultTitleTagline: "ノートでひろがるネットワーク"
   defaultDescription: "【ノートでひろがるネットワーク】分散型SNS Misskeyの公式サイト。Misskeyのはじめかたやサーバー一覧など、Misskeyに関する情報が満載！"
 _nav:
-  servers: "服务器"
-  docs: "文档"
-  blog: "博客"
-  other: "更多！"
-  switchLang: "语音设定"
+  servers: "サーバー"
+  docs: "ドキュメント"
+  blog: "ブログ"
+  other: "もっと！"
+  switchLang: "言語の設定"
 _landing:
   _hero:
     description: "Misskey（ミスキー）はオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
@@ -91,24 +91,24 @@ _landing:
     title: "寄付のお願い"
     description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
   _sponsors:
-    title: "赞助者"
+    title: "スポンサー"
 _servers:
-  title: "服务器列表"
+  title: "サーバー一覧"
   description: "Misskeyは単一のサービスではなく、各々がサービスを提供する分散型ネットワークとなっています。Misskeyを利用するには、サービスを提供しているサーバーでアカウントを作成する必要があります。"
   addYourServer: "あなたのサーバーが表示されませんか？{0}から登録してください！"
   addYourServerLink: "こちら"
   _system:
     fetchError: "データの読み込みに失敗しました。後でもう一度お試しください。"
   _statistics:
-    title: "服务器统计数据"
+    title: "サーバー統計"
     description: "Misskeyサーバーの統計データをグラフでご紹介。"
     viewFullStats: "詳しい統計を見る"
     lang: "プライマリ言語"
     registerAcceptance: "新規登録受付方式"
-    version: "版本"
+    version: "バージョン"
     notes: "ノート数"
-    users: "用户数量"
-    servers: "服务器数量"
+    users: "ユーザー数"
+    servers: "サーバー数"
   _search:
     title: "絞り込み検索"
     all: "すべて"
@@ -135,13 +135,13 @@ _docs:
   description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。Misskeyの上手な使い方から、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
   indexTitle: "目次ページ"
   _contribute:
-    editThis: "编辑本页面"
-    translateThis: "翻译本页面"
+    editThis: "このページを編集"
+    translateThis: "このページを翻訳"
   _aboutMisskey:
     title: "Misskeyについて"
     description: "Misskeyをはじめて知ったかたや、これから使うかた向け！基本的なしくみや機能を見ていきましょう。"
   _changelog:
-    title: "发布日志"
+    title: "リリースノート"
     description: "Misskeyのバージョンアップ履歴をご覧いただけます。最新のバージョンで何が変わったのかを確認しましょう！"
   _forUsers:
     title: "Misskeyユーザー向け"
@@ -154,9 +154,9 @@ _docs:
     next: "次へ"
   _toc:
     title: "このページの内容"
-    toPageTop: "回到顶部"
+    toPageTop: "ページ上部に戻る"
 _blog:
-  title: "博客"
+  title: "ブログ"
   description: "Misskey開発本部から、Misskeyに関する最新情報やTips等をお届けします！（日本語のみ）"
   back: "戻る"
 _content:
@@ -179,7 +179,7 @@ _brandAssets:
 _links:
   title: "リンク"
   _github:
-    title: "GitHub"
+    title: "Github"
     description: "Misskeyの開発はGithub上で行われています。機能リクエストやバグ報告などはこちらから行えます。"
   _crowdin:
     title: "Crowdin"
@@ -242,13 +242,13 @@ _aboutUs:
       description: "Misskeyの翻訳に協力いただいている皆さんです。"
 _i18n:
   _missing:
-    title: "请协助我们进行翻译"
-    description: "本文档为社区翻译，您可以通过 {link} 翻译该文档。我们需要您的帮助🙏"
+    title: "翻訳にご協力ください"
+    description: "このドキュメントはコミュニティによる翻訳です。ドキュメントの翻訳は{link}から行えます。ご協力をお願いします🙏"
     linkLabel: "Crowdin"
 _share:
   title: "Misskeyへノート"
   chooseServer: "ノートするサーバーを選択してください"
-  addServer: "添加服务器"
+  addServer: "サーバーを追加"
   domain: "サーバーのドメイン"
   compatibleWith: "Misskeyと、一部のMisskeyフォークに対応しています。"
   recommendedByWebsite: "シェア元Webサイトからのおすすめ"
