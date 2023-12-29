@@ -11,15 +11,11 @@
 [**シェルスクリプトの詳細と使用方法はこちらから！**](./bash/)
 
 :::tip
-
 シェルスクリプトでの開発環境へのインストールは想定されていません。
-
 :::
 
 :::tip
-
 ドメインの購入とCloudflareのセットアップ、サーバーの確保についてはご自身でご準備ください。
-
 :::
 
 不具合があれば[ @aqz@p1.a9z.dev へのメンション](https://p1.a9z.dev/@aqz)にてお知らせいただければと思います。
@@ -31,9 +27,7 @@
 [docker-compose](./docker/)なら、手作業でももうちょっと簡単に実行できるはずです。
 
 :::danger
-
 一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
-
 :::
 
 ## はじめに
@@ -58,9 +52,7 @@ OSの違い、Misskey本体や依存するソフトウェアのバージョン�
 - ここではドメインをexample.tldとして解説を進めるので、自分が買ったドメインに適宜置き換えて読むこと。開発環境の場合はlocalhostと読み替えます（設定ファイルの項で別途説明）
 
 :::danger
-
 一度使用を始めたサーバーのドメイン・ホスト名は、決して変更しないでください！
-
 :::
 
 ## nanoの使い方
@@ -86,9 +78,7 @@ sudo adduser --disabled-password --disabled-login misskey
 ```
 
 :::tip
-
 開発環境の場合はユーザーを分ける必要はありません
-
 :::
 
 ## 基本的なソフトウェアのインストールと設定
@@ -184,12 +174,10 @@ activeならOK。
 
 ### nginx
 
-http\://localhost にアクセスし、\*Welcome to nginx!\*と表示されればOK。Misskeyには必須ではないが、キャッシュ等をするとパフォーマンスが向上したり、httpからhttpsへの転送などをするために、インストールしておこう。
+nginxは、主としてリバースプロキシに用いられるWebサーバーソフトである。Misskeyには必須ではないが、キャッシュ等をするとパフォーマンスが向上したり、httpからhttpsへの転送などをするために、インストールしておこう。
 
 :::tip
-
 開発環境の場合はnginxのセットアップは不要です
-
 :::
 
 nginx.orgのドキュメント http\://nginx.org/en/linux_packages.html#Ubuntu に従ってインストールする。
@@ -250,9 +238,7 @@ sudo apt install -y git build-essential
 サーバーをインターネットに公開する準備をする。
 
 :::tip
-
 開発環境の場合はファイヤーウォールやCloudFlare、Certbotの設定は不要です
-
 :::
 
 ### ファイヤーウォール
@@ -286,9 +272,7 @@ sudo systemctl enable ufw
 ```
 
 :::tip
-
 ufwは、netfilter(iptables)を人間が操作しやすいようにするアプリだ。インストールスクリプトは、OCI環境ではnetfilterを直接操作する。
-
 :::
 
 ### CloudFlare
@@ -392,9 +376,7 @@ nano .config/default.yml
 設定できる値と記述方法は[.config/example.yml](https://github.com/syuilo/misskey/blob/develop/.config/example.yml)に書かれている。
 
 :::tip
-
 開発環境の場合、urlは`url: http://localhost:3000`と指定します。
-
 :::
 
 ```yml
@@ -487,9 +469,7 @@ NODE_ENV=production pnpm run build
 ```
 
 :::tip
-
 開発環境の場合、`NODE_ENV=production`は不要です。以降のコマンドでも同様に削除してください。
-
 :::
 
 ### サーバーでビルドできない場合
@@ -535,9 +515,7 @@ CloudFlareのDNS設定が正しいIPアドレスになっているかもう一�
 ## Misskeyのデーモンを作成
 
 :::tip
-
 開発環境の場合、デーモンの作成は不要です。
-
 :::
 
 いったんCtrl+Cでプロセスをキルし、Misskeyをデーモンで起動する設定をしよう。

@@ -7,9 +7,7 @@ description: このガイドではMisskeyのインストール・セットアッ
 このガイドではMisskeyのインストール・セットアップ方法について解説します。
 
 :::danger
-
 一度使用を始めたサーバーのドメイン・ホスト名は、決して変更しないでください！
-
 :::
 
 :::tip{label='前提条件'}
@@ -110,9 +108,7 @@ WantedBy=multi-user.target
 ```
 
 :::warning
-
 CentOSで1024以下のポートを使用してMisskeyを使用する場合は`ExecStart=/usr/bin/sudo /usr/bin/npm start`に変更する必要があります。
-
 :::
 
 systemdを再読み込みしmisskeyサービスを有効化
@@ -129,9 +125,7 @@ sudo systemctl start misskey
 ```
 
 :::tip
-
 `systemctl status misskey`と入力すると、サービスの状態を調べることができます。
-
 :::
 
 ::::
@@ -139,9 +133,7 @@ sudo systemctl start misskey
 ## Misskeyのアップデート方法
 
 :::warning
-
 アップデートの際は必ず[リリースノート](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)を確認し、変更点や追加で必要になる作業の有無(ほとんどの場合ありません)を予め把握するようにしてください。
-
 :::
 
 masterをpullし直し、インストール、ビルド、データベースのマイグレーションを行います:
@@ -164,7 +156,6 @@ sudo systemctl restart misskey
 ```
 
 :::tip
-
 ビルドや起動時にエラーが発生した場合は、以下のコマンドをお試しください:
 
 - `pnpm run clean`または`pnpm run clean-all`

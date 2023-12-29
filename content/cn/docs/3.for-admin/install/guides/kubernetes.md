@@ -3,9 +3,7 @@
 このガイドでは、Kubernetes と HelmChartを使用したMisskeyセットアップ方法について説明します。
 
 :::danger
-
 一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
-
 :::
 
 ## TrueCharts と TrueNAS Scale
