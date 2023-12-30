@@ -7,6 +7,7 @@ import { isLocalPath, sanitizeInternalPath } from '@/assets/js/misc';
 const runtimeConfig = useRuntimeConfig();
 const rootDomain = parseURL(runtimeConfig.public.baseUrl);
 const { resolve } = useRouter();
+const route = useRoute();
 const localePath = useGLocalePath();
 
 const props = defineProps({
@@ -28,7 +29,7 @@ const url = parseURL(realHref.value);
 
 if (isLocalPath(realHref.value)) {
     // 相対パスの場合（trailing slashがあるので１つくり下げる）
-    if (isRelative(realHref.value)) {
+    if (isRelative(realHref.value) && route.meta.__isDocsIndexPage !== true) {
         realHref.value = joinURL('../', realHref.value.replace(/^\.\//, ''));
     }
 

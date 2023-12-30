@@ -17,5 +17,8 @@ declare module 'vue-router' {
             };
             customClass?: string;
         };
+
+        /** @private */
+        __isDocsIndexPage?: boolean;
     }
 }
