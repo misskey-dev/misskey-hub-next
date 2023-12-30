@@ -11,7 +11,7 @@
 <script setup>
 const colorMode = useColorMode();
 const screenshots = computed(() => {
-    if (colorMode.preference === 'dark') {
+    if (colorMode.value === 'dark') {
         return {
             desktop: '/img/hero/misskey-dark.png',
             mobile: '/img/hero/misskey-mobile-dark.png',
