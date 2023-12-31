@@ -4,9 +4,12 @@ Misskey has a feature that displays ads etc. on timelines.
 You can reduce the frequency of relevant ads by clicking the icon to the right of the ads.
 
 :::tip
-If the total number of ads is low, ads may reappear even though their frequency has been reduced.
+
+広告の総数が少ない場合は、表示頻度を下げた後も連続で表示される可能性があります。
+
 :::
 
-## Setting Up Ads (Administrators Only)
+## 広告の設定(管理者)
 
-You can add, edit, delete ads on your server control panel. You can set images, target URL, shape, percentage of display of ads.
+サーバーのコントロールパネルから広告の追加、編集、削除を行えます。
+広告には任意の画像、遷移先URL、形状、表示割合を設定できます。
