@@ -251,7 +251,7 @@ _share:
   addServer: "Add Server"
   domain: "Server domain"
   compatibleWith: "Compatible with Misskey and certain Misskey forks."
-  recommendedByWebsite: "シェア元Webサイトからのおすすめ"
+  recommendedByWebsite: "Recommended Server Domain"
 _noteVisibility:
   public: "Public"
   home: "Home"
