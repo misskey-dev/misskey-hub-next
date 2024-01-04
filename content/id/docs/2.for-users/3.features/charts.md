@@ -1,74 +1,73 @@
-# チャート
+# Bagan
 
-Misskeyはサーバーの様々なデータソースに対するチャートを生成し表示する機能を備えています。
-チャートを利用することで、サーバーの利用状況や連合の状況、各ユーザーのアクティビティなどを視覚的に把握することができます。
+Misskey dapat menghasilkan dan menampilkan bagan untuk sumber data berbagai instansi yang terfederasi. Bagan memungkinkan kamu untuk mendapatkan representasi gambaran dari penggunaan, status federasi, dan aktivitas setiap pengguna.
 
-サーバーのチャートはサーバー情報ページから表示することができます。
+Bagan instansi dapat dilihat dari halaman informasi instansi (dapat diakses dengan mengeklik logo instansi dalam menu navigasi).
 
-以下は各チャートとその各項目の説明です。
+Berikut di bawah ini merupakan deskripsi dari setiap bagan dan isinya.
 
-## 連合チャート
+## Bagan Federasi
 
-連合しているサーバー化ついてのチャートです。
+Bagan ini menampilkan informasi tentang instansi yang terfederasi.
 
 ### Pub
 
-アクティビティを配送しているサーバーの数。
-言い換えると、自サーバーのユーザーをフォローしているリモートユーザーの所属サーバーのユニークなカウントを表します。
+Jumlah instansi luar yang menerima aktivitas publikasi dari instansi ini.
+Dengan kata lain, menampilkan angka dari pengguna instansi luar unik yang mengikuti pengguna dari instansi sendiri.
 
 ### Sub
 
-アクティビティを受信しているサーバーの数。
-言い換えると、自サーバーのユーザーがフォローしているリモートユーザーの所属サーバーのユニークなカウントを表します。
+Jumlah instansi luar yang mempublikasikan aktivitasnya ke instansi ini.
+Dengan kata lain, menampilkan angka dari pengguna instansi luar unik dari instansi peladen luar yang diikuti oleh pengguna dari instansi sendiri.
 
 ### Received
 
-アクティビティを送ってきたサーバーの数。
+Jumlah instansi yang telah mengirim aktivitasnya ke instansi ini.
 
 ### Delivered
 
-アクティビティを配送したサーバーの数。
+Jumlah instansi yang menerima aktivitas dari kiriman instansi ini.
 
 ### Stalled
 
-アクティビティを配送する際、エラーになったサーバーの数。
+Jumlah instansi dimana kesalahan ditemukan ketika mengirimkan aktivitas.
 
-## アクティブユーザー数チャート
+## Bagan Pengguna Aktif
 
-自サーバーのユーザーの利用状況についてのチャートです。
+Bagan dari aktivitas pengguna pada instansi ini.
 
 ### Read & Write
 
-閲覧と書き込みを行ったユーザーの数。
+Jumlah pengguna yang telah melihat dan menulis konten.
 
 ### Read
 
-閲覧を行ったユーザーの数。
+Jumlah pengguna yang telah melihat konten.
 
 ### Write
 
-書き込みを行ったユーザーの数。
+Jumlah pengguna yang telah menulis konten.
 
 ### < Week
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1週間未満であるユーザーの数。
+Jumlah pengguna yang telah melihat konten dan umur akunnya kurang dari satu minggu.
 
 ### < Month
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1ヶ月未満であるユーザーの数。
+Jumlah pengguna yang telah melihat konten dan umur akunnya kurang dari satu bulan.
 
 ### < Year
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1年未満であるユーザーの数。
+Jumlah pengguna yang telah melihat konten dan umur akunnya kurang dari satu tahun.
 
 ### > Week
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1週間以上前であるユーザーの数。
+Jumlah pengguna yang telah melihat konten dan umur akunnya lebih dari satu minggu.
 
 ### > Month
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1ヶ月以上前であるユーザーの数。
+Jumlah pengguna yang telah melihat konten dan umur akunnya lebih dari satu bulan.
 
 ### > Year
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1年以上前であるユーザーの数。
+Jumlah pengguna yang telah melihat konten dan umur akunnya lebih dari satu tahun.
