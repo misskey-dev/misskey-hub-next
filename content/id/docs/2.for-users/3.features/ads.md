@@ -1,15 +1,13 @@
-# 広告
+# Iklan
 
-Misskeyではサーバーによる広告をタイムラインなどに表示できる機能があります。
-広告の右上に表示されるアイコンをクリックすることで、当該の広告の表示頻度を下げることができます。
+Misskey dapat menampilkan iklan di dalam lini masa instansi dan tempat lainnya apabila diaktifkan oleh administrator instansi. Kamu dapat mengurangi seberapa sering iklan akan dimunculkan dengan mengeklik di bagian pojok kanan dari iklan.
 
 :::tip
 
-広告の総数が少ない場合は、表示頻度を下げた後も連続で表示される可能性があります。
+Jika angka total dari iklan ditampilkan dari instansi lebih kecil, maka iklan kemungkinan akan tetap ditampilkan sering kepada kamu meskipun kamu telah memilih untuk mengurangi seberapa sering iklan dimunculkan.
 
 :::
 
-## 広告の設定(管理者)
+## Mengatur Iklan (Admin)
 
-サーバーのコントロールパネルから広告の追加、編集、削除を行えます。
-広告には任意の画像、遷移先URL、形状、表示割合を設定できます。
+Kamu dapat menambahkan, menyunting, dan menghapus iklan dari panel kendali instansi kamu. Dalam bilah panel tersebut kamu dapat mengatur gambar, URL tujuan, bentuk, dan presentasi penampilan untuk iklan.
