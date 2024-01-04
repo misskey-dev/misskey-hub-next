@@ -1,191 +1,190 @@
 # Misskey install shell script v3.0.0
 
-Misskeyを簡単にインストールするためのシェルスクリプトができました！
+Pasang Misskey dengan mudah hanya menggunakan satu shell script!
 
-いくつかの質問に答えるだけで、UbuntuサーバーへMisskey(v12)を簡単にインストールできます！
+Kamu dapat memasang misskey pada peladen Ubuntu hanya dengan menjawab beberapa pertanyaan saja.
 
-また、アップデートスクリプトもあります。
+Terdapat juga script untuk memutakhirkan.
 
-[v12の場合はこちら](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)\
-[**English version**](./README.en.md)
+[Untuk v12](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)\
+[**Versi Bahasa Inggris**](./README.en.md)
 
-## ライセンス
+## Lisensi
 
-[MIT License](./LICENSE)
+[Lisensi MIT](./LICENSE)
 
-## 準備するもの
+## Bahan Yang Perlu Disiapkan
 
-1. ドメイン
-2. Ubuntuがインストールされたサーバー
-3. Cloudflareアカウント（推奨）
+1. Domain
+2. Peladen Ubuntu
+3. Akun Cloudflare (Direkomendasikan)
 
 :::danger
 
-一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
+Jangan pernah mengganti nama domain (hostname) peladen ketika kamu sudah mulai menggunakannya!
 
 :::
 
-Let's Encryptの認証を試行できる回数が少ないので、サーバーのネットワークやDNSの設定を十分確認してからインストールを開始してください。
+Pastikan pengaturan jaringan peladen DNS anda telah benar secara menyeluruh sebelum memulai instalasi. Apabila tidak, proses otentikasi Let's Encrypt akan terhambat dikarenakan percobaan permintaan sertifikat Let's Encrypt dibatasi dalam jumlah yang kecil.
 
-## Cloudflareの設定
+## Pengaturan Cloudflare
 
 Cloudflareを使う場合、Cloudflareのドメインの設定を完了してからインストールを開始するようにしてください。\
 ネームサーバーの適用には最大で3日程度かかる場合があります。
 
-また、nginxとCloudflareを設定する場合、Cloudflareの設定画面にて、
+Jika kamu menggunakan nginx dan Cloudflare, kamu harus mengatur Cloudflare terlebih dahulu untuk:
 
-- DNSを設定してください。
-- SSL/TLS設定にて、暗号化モードを「フル」に設定してください。
+- Mengatur DNS.
+- Pada tab pengaturan SSL/TLS, ubah mode enkripsi menjadi "Full".
 
-## 操作
+## Prosedur
 
 ### 1. SSH
 
-サーバーにSSH接続します。\
-（サーバーのデスクトップを開いている方はシェルを開きましょう。）
+Menyambung ke peladen melalui SSH.\
+(Jika kamu memiliki peladen dengan lingkungan desktop terpasang, buka Terminal/shell）
 
-### 2. 環境を最新にする
+### 2. Perbaharui Lingkungan Peladen
 
-すべてのパッケージを最新にし、再起動します。
+Pastikan semua paket telah termutakhirkan dan boot ulang.
 
 ```
 sudo apt update; sudo apt full-upgrade -y; sudo reboot
 ```
 
-### 3. インストールをはじめる
+### 3. Jalankan Pemasangan
 
-SSHを接続しなおして、Misskeyのインストールを始めましょう。
+Hubungkan ulang SSH dan mulai pemasangan Misskey.
 
-ただ、インストール前に[Tips](#tips)を読むことを強くお勧めします。
+Pastikan untuk membaca [Tips](#tips) sebelum memulai proses pemasangan.
 
 ```
 wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/ubuntu.sh -O ubuntu.sh; sudo bash ubuntu.sh
 ```
 
-example.comは自分のドメインに置き換えてください。
+Ubah domain example.com menjadi domain milik kamu.
 
-### 4. アップデートする
+### 4. Untuk memutakhirkan
 
-アップデートのためのスクリプトもあります。
+Terdapat juga script untuk memutakhirkan peladen Misskey.
 
-アップデートスクリプトは、環境のアップデートは行いません。CHANGELOG（日本語）および[GitHubのリリース一覧（英語）](https://github.com/joinmisskey/bash-install/releases)を参考に、適宜マイグレーション操作を行なってください。
+Script pemutakhiran tidak memutakhirkan lingkungan peladen.Mohon untuk merujuk ke CHANGELOG (Bahasa Jepang) dan [Daftar rilis di GitHub (Bahasa Inggris)](https://github.com/joinmisskey/bash-install/releases) serta lakukan operasi migrasi sesuai arahan.
 
-まずはダウンロードします。
+Pertama, unduh script.
 
 ```
 wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/update.ubuntu.sh -O update.sh
 ```
 
-アップデートしたいときにスクリプトを実行してください。
+Jalankan ini ketika kamu ingin memutakhirkan Misskey.
 
 ```
 sudo bash update.sh
 ```
 
-- systemd環境では、`-r`オプションでシステムのアップデートと再起動を行うことができます。
-- docker環境では、引数に更新後のリポジトリ名:タグ名を指定することができます。
+- Pada lingkungan systemd, opsi `-r` dapat digunakan untuk memutakhirkan dan memboot ulang sistem.
+- Pada lingkungan docker, kamu dapat menentukan repository:tag sebagai argumen.
 
-## 動作を確認した環境
+## Lingkungan dimana operasi ini telah diuji
 
 ### Oracle Cloud Infrastructure
 
-このスクリプトは、Oracle Cloud InfrastructureのAlways Freeサービスで提供されている2種類のシェイプのいずれにおいても動作します。
+Script ini bekerja dengan baik pada bentuk compute berikut yang disediakan oleh Oracle Cloud Infrastructure Always Free services.
 
 - VM.Standard.E2.1.Micro (AMD)
-- VM.Standard.A1.Flex (ARM) [1OCPU RAM6GB or greater]
+- VM.Standard.A1.Flex (ARM) [1OCPU RAM6GB atau lebih]
 
-iptablesを使うようにしてください。
+Pastikan untuk menggunakan iptables.
 
-## Issues & PRs Welcome
+## Isu & PRs Dipersilahkan
 
-上記の環境で動作しない場合、バグの可能性があります。インストールの際に指定された条件を記載の上、GitHubのIssue機能にてご報告いただければ幸いです。
+Apabila script ini tidak dapat bekerja pada lingkungan diatas, kemungkinan karena bug.Kami mengapresiasi apabila kamu dapat melaporkan hal tersebut sebagai isu dengan syarat tertentu yang telah kamu input ke dalam script.
 
-上記以外の環境についてのサポートは難しいですが、状況を詳しくお教えいただければ解決できる可能性があります。
+Sangat sulit untuk memberikan bantuan untuk lingkungan selain yang disebutkan di atas, namun kami masih dapat membantu mencarikan solusi dari masalah kamu apabila kamu memberikan informasi detil mengenai lingkungan peladenmu.
 
-機能の提案についても歓迎いたします。
+Saran untuk fitur juga dipersilahkan.
 
 # Tips
 
-選択肢の選び方や仕様についてなど。
+Cara memilih opsi dan spesifikasi.
 
 ## Systemd or Docker?
 
-v1から、インストールメソッドにsystemdとDockerとを選べるようにしました。
+Mulai dari v1, terdapat metode pemasangan systemd atau Docker yang dapat dipilih.
 
-Dockerと言っても、**MisskeyだけをDockerで実行**し、RedisやPostgresなどはホストで直接実行します。\
+Ketika memilih metode pemasangan Docker, **Misskey akan dipasang dan dijalankan melalui Docker** sedangkan Redis, Postgres dan sebagainya akan dipasang dan dijalankan pada host peladen langsung.\
 [docker-composeですべての機能を動かす方法については、mamemonongaさんが作成したこちらの記事がおすすめです。](https://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0)
 
-Docker Hubイメージを使う設定であれば、Misskeyのビルドが不要になるため、**一番お勧めです**。\
-ただし、マイグレーションは必要なので、アップデート時にMisskeyを使えない時間がゼロになるわけではありません。\
-また、Misskeyのビルド環境を準備しない(git pullしない)ので、フォークを動かしたくなった時に設定が面倒になります。
+Apabila kamu memilih menggunakan image dari Docker Hub, kebutuhan untuk build Misskey tidak diperlukan dan pilihan ini merupakan **rekomendasi dari kami**.\
+Namun ketika melakukan pemutakhiran, migrasi tetap dibutuhkan dan downtime tetap tidak dapat terhindarkan.\
+Selain itu, dengan menggunakan image dari Docker Hub tidak perlu lagi menyiapkan lingkungan untuk build Misskey (tidak ada `git pull`). Dengan kata lain, apabila ingin menyiapkan dan menjalankan fork akan lebih merepotkan.
 
-ローカルでDockerをビルドする方式は、パフォーマンス面で非推奨です。
+Karena alasan performa, metode build Docker secara lokal tidak dipergunakan lagi.
 
-systemdは、Docker Hubにイメージを上げるまでもないものの、フォークを使いたい場合にお勧めです。
+Metode pemasangan systemd sangat direkomendasikan apabila kamu ingin menggunakan ataupun menjalankan fork. Metode pemasangan ini juga tidak mengharuskan kamu untuk mengunggah image ke Docker Hub.
 
-お勧めする順番は次の通りです。
+Urutan rekomendasi yang disarankan adalah sebagai berikut:
 
 1. Docker Hub
 2. systemd
-3. Dockerビルド
+3. Docker Build
 
-## nginxを使うかどうか
+## Gunakan nginx atau tidak?
 
-サーバー1台でMisskeyを構築する場合は、nginxの使用をお勧めします。
+Apabila kamu ingin membuat peladen Misskey pada satu peladen, disarankan untuk menggunakan nginx.
 
 ロードバランサーを設置する場合にはnginxをインストールせず、[Misskeyのnginx設定](../resources/nginx/)を参考にロードバランサーを設定するのがよいと思います。
 
-## Add more swaps!
+## Tambahkan swap!
 
-スワップを設定している場合、メモリが合計で3GB以上でなければスクリプトが動作しないようになっています。
+Apabila kamu menggunakan swap, pastikan swap kamu memiliki hingga ruang hingga 3GB. Karena script akan dapat berjalan lancar apabila memiliki memori dengan minimal 3GB.
 
-## 途中で失敗してまたスクリプトを実行する場合
+## Jika script gagal dan kamu ingin menjalankannya kembali
 
-万が一途中で失敗してもう一度スクリプトを動作させる場合、次のことに注意してください。
+Perhatikan arahan berikut ini:
 
-- RedisやPostgresのインストールが終わっている場合、「install locally」はNoにしてください。\
-  host・port設定はそのままEnterを押します。
-  ユーザー名やパスワードは、前回実行した際に指定したものを入力します。
+- Apabila Redis atau Postgres telah terpasang, atur `install locally` ke "No".\
+  Biarkan pengaturan `host・port` apa adanya lalu tekan Enter. Masukkan nama pengguna dan kata sandi seperti yang telah ditentukan pada proses sebelumnya.
 
-## .envファイルについて
+## Mengenai berkas .env
 
-インストールスクリプトは、2つの.envファイルを作成します。\
-アップデートの際に使用します。
+Script pemasangan membuat dua berkas.env yang dipergunakan untuk memutakhirkan Misskey.\
+Berkas ini dipergunakan pada saat memutakhirkan.
 
 ### /root/.misskey.env
 
-misskeyを実行するユーザーを覚えておくために必要です。
+Diperlukan untuk mengingat pengguna yang menjalankan proses misskey
 
-### /home/(misskeyユーザー)/.misskey.env
+### /home/(pengguna_misskey)/.misskey.env
 
-systemdの場合に生成されます。\
-主にディレクトリを覚えておくのに使用します。
+Dibuat untuk systemd yang dipertujukan mengingat direktori\
+.
 
-### /home/(misskeyユーザー)/.misskey-docker.env
+### /home/(pengguna_misskey)/.misskey-docker.env
 
-Dockerの場合に生成されます。\
-実行されているコンテナとイメージの番号を保存しています。\
-コンテナの番号はアップデートの際に更新されます。古いイメージは削除されます。
+Dibuat untuk Docker dengan tujuan menyimpan nomor kontainer beserta image yang sedang berjalan.\
+Nomor kontainer akan diperbarui selama pemutakhiran.\
+Image lama akan dihapus.
 
-## 自分で管理する
+## Manajemen Mandiri
 
-インストール後、構成を変更する際に役立つかもしれないメモです。
+Setelah pemasangan, ada beberapa catatan yang cukup berguna pada saat ingin mengubah konfigurasi.
 
-"example.com"を自分のドメインに置き換えて読んでください。
+Ganti domain "example.com" dengan domain kamu sendiri.
 
-### Misskeyディレクトリ
+### Direktori Misskey
 
-Misskeyのソースは`/home/ユーザー/ディレクトリ`としてcloneされます。\
-（ユーザー、ディレクトリの初期値はともにmisskeyです。）
+Sumber kode akan diklon pada direktori `/home/pengguna/direktori`.\
+(nilai default untuk pengguna dan direktori adalah misskey）
 
-Misskeyディレクトリへは、以下のように移動するとよいでしょう。
+Kamu dapat menavigasi ke direktori Misskey dengan melakukan perintah berikut.
 
 ```
-sudo -iu ユーザー
-cd ディレクトリ
+sudo -iu pengguna
+cd direktori
 ```
 
-もとのユーザーに戻るにはexitを実行します。
+Untuk kembali ke pengguna sebelumnya, jalankan perintah `exit`.
 
 ```
 exit
@@ -193,75 +192,75 @@ exit
 
 ### systemd
 
-systemdのプロセス名はexample.comです。\
-たとえば再起動するには次のようにします。
+Nama proses dalam systemd adalah `example.com`.\
+Sebagai contoh untuk memulai ulang proses, jalankan perintah berikut.
 
 ```
 sudo systemctl restart example.com
 ```
 
-journalctlでログを確認できます。
+Kamu dapat memeriksa logs dengan menggunakan `journalctl`.
 
 ```
 journalctl -t example.com
 ```
 
-設定ファイルは`/etc/systemd/system/example.com.service`として保存されています。
+Berkas konfigurasi systemd disimpan pada `/etc/systemd/system/example.com.service`.
 
 ### Docker
 
-DockerはMisskeyユーザーでrootless実行されています。
+Docker menggunakan pengguna Misskey untuk dijalankan secara tanpa root.
 
-sudo でMisskeyユーザーに入るときは、`XDG_RUNTIME_DIR`と`DOCKER_HOST`を変更する必要があります。
+Saat masuk ke pengguna Misskey menggunakan `sudo`, kamu perlu mengubah `XDG_RUNTIME_DIR` dan `DOCKER_HOST` terlebih dahulu.
 
 ```
-sudo -iu ユーザー
+sudo -iu pengguna
 export XDG_RUNTIME_DIR=/run/user/$UID
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 
-# プロセス一覧を表示
+# Tampilkan daftar Proses
 docker ps
 
-# ビルド (リポジトリ: local/misskey:latest)
+# Build (Repositori: local/misskey:latest)
 docker build -t local/misskey:latest ./misskey
 
-# docker run
+# Menjalankan Docker
 docker run -d -p 3000:3000 --add-host=docker_host:10.0.0.1 -v /home/misskey/misskey/files:/misskey/files -v "/home/misskey/misskey/.config/default.yml":/misskey/.config/default.yml:ro --restart unless-stopped -t "local/misskey:latest"
 
-# ログを表示
-docker logs --tail 50 -f コンテナID
+# Menampilkan log
+docker logs --tail 50 -f ID Kontainer
 ```
 
-ワンライナーなら次のようにします。
+Proses diatas dapat dilakukan dengan perintah satu baris berikut.
 
 ```
-sudo -u ユーザー XDG_RUNTIME_DIR=/run/user/$(id -u ユーザー) DOCKER_HOST=unix:///run/user/$(id -u ユーザー)/docker.sock docker ps
+sudo -u pengguna XDG_RUNTIME_DIR=/run/user/$(id -u pengguna) DOCKER_HOST=unix:///run/user/$(id -u pengguna)/docker.sock docker ps
 ```
 
 ### nginx
 
-nginxの設定は`/etc/nginx/conf.d/example.com.conf`として保存されています。
+Pengaturan situs pada nginx disimpan di `/etc/nginx/conf.d/example.com.conf`.
 
 ### Redis
 
-requirepassとbindを`/etc/redis/misskey.conf`で設定しています。
+Parameter `requirepass` dan `bind` diatur di `/etc/redis/misskey.conf`.
 
-## Q. アップデート後に502でアクセスできない
+## Q. Error 502 tidak dapat diakses setelah melakukan pemutakhiran
 
-Dockerでは、起動後にマイグレーションをするため、すぐにアクセスできません。\
-マイグレーションが終わっているかどうか確認してみてください。
+Apabila proses migrasi sedang berlangsung, Docker tidak dapat memberikan izin akses langsung.\
+Pastikan dan periksa apakah proses migrasi telah selesai.
 
-systemdの場合では、pnpm installに失敗している可能性があります。
+Pada kasus menggunankan systemd, perintah `pnpm install` kemungkinan gagal.
 
-Misskeyディレクトリで次の内容を実行し、もう一度アップデートを実行してみてください。
+Coba jalankan perintah berikut ini di direktori Misskey lalu jalankan pemutakhiran kembali.
 
 ```
 pnpm run clean-all
 ```
 
-journalctlでログを確認すると、たいていre2が云々という記述が見当たります。
+Apabila kamu memeriksa log dengan `journalctl`, umumnya kamu akan menemukan pernyataan dalam log yang menampilkan `re2`.
 
-## Q. 同じサーバーにもう1つMisskeyを建てたい
+## Q. Membangun instansi Misskey lebih dari 1 di peladen yang sama
 
 スクリプトは同じサーバーに追加でMisskeyをインストールすることは想定していません。\
 幾つかの設定が上書きされるか、途中でエラーになってしまうでしょう。
