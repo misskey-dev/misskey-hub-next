@@ -1,27 +1,27 @@
 ---
-description: MFMは、Misskeyの様々な場所で使用できる専用のマークアップ言語です。
+description: MFM, yang merupakan singkatan dari Misskey Flavoured Markdown, adalah bahasa markup yang dapat digunakan pada berbagai tempat di dalam Misskey.
 ---
 
 # MFM
 
-MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使用できる専用のマークアップ言語です。
+MFM, yang merupakan singkatan dari Misskey Flavoured Markdown, adalah bahasa markup yang dapat digunakan pada berbagai tempat di dalam Misskey.
 
 :::tip
 
-一部の構文はMarkdownやHTMLと互換性があります。
+Beberapa dari sintaks MFM memiliki kompatibilitas dengan Markdown.
 
 :::
 
-## MFMが使用可能な場所の例
+## Contoh dimana MFM diperbolehkan dalam Misskey
 
-- ノート本文
-- CW注釈
-- ユーザーの名前
-- ユーザーの自己紹介
+- Konten dalam catatan
+- Spoiler konten peringatan
+- Nama Pengguna
+- Profil Bio Pengguna
 
-## 構文
+## Sintaks
 
-### メンション
+### Sebutan
 
 アットマーク + ユーザー名で、特定のユーザーを示すことができます。
 :::tip
@@ -42,7 +42,7 @@ MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使�
 
 <MfmPreview text="@repo@p1.a9z.dev"></MfmPreview>
 
-### ハッシュタグ
+### Tagar
 
 ナンバーサイン + タグで、ハッシュタグを示すことができます。
 :::tip
@@ -67,12 +67,12 @@ https://example.com
 
 <MfmPreview text="https://example.com"></MfmPreview>
 
-### リンク
+### Tautan
 
 文章の特定の範囲を、URLに紐づけることができます。
 
 ```
-[example link](https://example.com)
+[contoh tautan](https://example.com)
 ```
 
 :::tip
@@ -80,14 +80,14 @@ https://example.com
 リンクテキストの前に`?`をつけると、リンクプレビューを非表示にすることができます。
 
 ```
-?[example link](https://example.com)
+?[contoh tautan](https://example.com)
 ```
 
 :::
 
 <MfmPreview text="[example link](https://example.com)"></MfmPreview>
 
-### カスタム絵文字
+### Emoji kustom
 
 コロンでカスタム絵文字名を囲むと、カスタム絵文字を表示させることができます。
 
@@ -103,47 +103,47 @@ https://example.com
 
 <MfmPreview text=":misskey:"></MfmPreview>
 
-### 太字
+### Huruf Tebal
 
 文字を太く表示して強調することができます。
 
 ```
-**太字**
+**Huruf Tebal**
 ```
 
 <MfmPreview text="**太字**"></MfmPreview>
 
-### 目立たなくする
+### Huruf Kecil
 
 内容を小さく・薄く表示させることができます。
 
 ```
-<small>MisskeyでFediverseの世界が広がります</small>
+<small>Misskey membentangkan dunia Fediverse</small>
 ```
 
 <MfmPreview text="<small>MisskeyでFediverseの世界が広がります</small>"></MfmPreview>
 
-### 引用
+### Kutip
 
 内容が引用であることを示すことができます。
 
 ```
-> MisskeyでFediverseの世界が広がります
+> Misskey membentangkan dunia Fediverse
 ```
 
 <MfmPreview text="> MisskeyでFediverseの世界が広がります"></MfmPreview>
 
-### 中央寄せ
+### Tengah
 
 内容を中央寄せで表示させることができます。
 
 ```
-<center>MisskeyでFediverseの世界が広がります</center>
+<center>Misskey membentangkan dunia Fediverse</center>
 ```
 
 <MfmPreview text="<center>MisskeyでFediverseの世界が広がります</center>"></MfmPreview>
 
-### コード(インライン)
+### Kode (Dalam baris)
 
 プログラムなどのコードをインラインでシンタックスハイライトします。
 
@@ -151,7 +151,7 @@ https://example.com
 `<: "Hello, world!"`
 ```
 
-### コード(ブロック)
+### Kode (Blok)
 
 複数行のプログラムなどのコードをブロックでシンタックスハイライトします。
 
@@ -164,29 +164,29 @@ https://example.com
 }
 ```
 
-### 反転
+### Putar Balik
 
 内容を上下または左右に反転させます。
 
 ```
-$[flip MisskeyでFediverseの世界が広がります]
-$[flip.v MisskeyでFediverseの世界が広がります]
-$[flip.h,v MisskeyでFediverseの世界が広がります]
+$[flip Misskey membentangkan dunia Fediverse]
+$[flip.v Misskey membentangkan dunia Fediverse]
+$[flip.h,v Misskey membentangkan dunia Fediverse]
 ```
 
 <MfmPreview text="$[flip MisskeyでFediverseの世界が広がります]
 $[flip.v MisskeyでFediverseの世界が広がります]
 $[flip.h,v MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
-### フォント
+### Font
 
 内容のフォントを指定することができます。
 
 ```
-$[font.serif MisskeyでFediverseの世界が広がります]
-$[font.monospace MisskeyでFediverseの世界が広がります]
-$[font.cursive MisskeyでFediverseの世界が広がります]
-$[font.fantasy MisskeyでFediverseの世界が広がります]
+$[font.serif Misskey membentangkan dunia Fediverse]
+$[font.monospace Misskey membentangkan dunia Fediverse]
+$[font.cursive Misskey membentangkan dunia Fediverse]
+$[font.fantasy Misskey membentangkan dunia Fediverse]
 ```
 
 <MfmPreview text="$[font.serif MisskeyでFediverseの世界が広がります]
@@ -194,41 +194,41 @@ $[font.monospace MisskeyでFediverseの世界が広がります]
 $[font.cursive MisskeyでFediverseの世界が広がります]
 $[font.fantasy MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
-### ぼかし
+### Buram/Kabur
 
 内容をぼかすことができます。ポインターを上に乗せるとはっきり見えるようになります。
 
 ```
-$[blur MisskeyでFediverseの世界が広がります]
+$[blur Misskey membentangkan dunia Fediverse]
 ```
 
 <MfmPreview text="$[blur MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
-### 検索
+### Kontak Pencarian
 
 検索ボックスを表示できます。
 
 ```
-misskey 検索
+misskey cari
 ```
 
 <MfmPreview text="misskey 検索"></MfmPreview>
 
-### 文字色・背景色
+### Warna Latar/Karakter
 
 文字色と背景色を変更することができます。
 
 3,4,6桁のカラーコードで色を表現します。
 
 ```
-$[fg.color=f00 赤字]
-$[bg.color=ff0 黄背景]
+$[fg.color=f00 Huruf Merah]
+$[bg.color=ff0 Latar Kuning]
 ```
 
 <MfmPreview text="$[fg.color=f00 赤字]
 $[bg.color=ff0 黄背景]"></MfmPreview>
 
-### 角度変更
+### Rotasi
 
 指定した角度で回転させます。
 
@@ -238,7 +238,7 @@ $[rotate.deg=30 misskey]
 
 <MfmPreview text="$[rotate.deg=30 misskey]"></MfmPreview>
 
-### 位置変更
+### Posisi
 
 位置をずらすことができます。
 
@@ -248,7 +248,7 @@ $[rotate.deg=30 misskey]
 
 <MfmPreview text="😏$[position.x=0.8,y=0.5 🍮]😀"></MfmPreview>
 
-### 拡大
+### Skala
 
 文字を引き延ばして表示します。
 
@@ -268,7 +268,7 @@ $[x4 x4]
 $[x3 x3]
 $[x4 x4]"></MfmPreview>
 
-### アニメーション(びよんびよん)
+### Animasi (Jelly)
 
 ```
 $[jelly 🍮] $[jelly.speed=5s 🍮]
@@ -276,7 +276,7 @@ $[jelly 🍮] $[jelly.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[jelly 🍮] $[jelly.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(じゃーん)
+### Animasi (Tada)
 
 ```
 $[tada 🍮] $[tada.speed=5s 🍮]
@@ -284,7 +284,7 @@ $[tada 🍮] $[tada.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[tada 🍮] $[tada.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(ジャンプ)
+### Animasi (Lompat)
 
 ```
 $[jump 🍮] $[jump.speed=5s 🍮]
@@ -292,7 +292,7 @@ $[jump 🍮] $[jump.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[jump 🍮] $[jump.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(バウンド)
+### Animasi (Memantul)
 
 ```
 $[bounce 🍮] $[bounce.speed=5s 🍮]
@@ -300,7 +300,7 @@ $[bounce 🍮] $[bounce.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[bounce 🍮] $[bounce.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(回転)
+### Animasi (Putar)
 
 ```
 $[spin 🍮] $[spin.left 🍮] $[spin.alternate 🍮]
@@ -315,7 +315,7 @@ $[spin.x 🍮] $[spin.x,left 🍮] $[spin.x,alternate 🍮]
 $[spin.y 🍮] $[spin.y,left 🍮] $[spin.y,alternate 🍮]
 $[spin.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(ぶるぶる)
+### Animasi (Goyang)
 
 ```
 $[shake 🍮] $[shake.speed=5s 🍮]
@@ -323,7 +323,7 @@ $[shake 🍮] $[shake.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[shake 🍮] $[shake.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(ブレ)
+### Animasi (Cubit)
 
 ```
 $[twitch 🍮] $[twitch.speed=5s 🍮]
@@ -331,19 +331,19 @@ $[twitch 🍮] $[twitch.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[twitch 🍮] $[twitch.speed=5s 🍮]]"></MfmPreview>
 
-### レインボー
+### Pelangi
 
 ```
 $[rainbow 🍮] $[rainbow.speed=5s 🍮]
-$[rainbow 色なし文字]
-$[rainbow $[fg.color=f0f 色付き文字]]
+$[rainbow Huruf Tanpa Warna]
+$[rainbow $[fg.color=f0f Huruf Dengan Warna]]
 ```
 
 <MfmPreview text="$[rainbow 🍮] $[rainbow.speed=5s 🍮]
 $[rainbow 色なし文字]
 $[rainbow $[fg.color=f0f 色付き文字]]"></MfmPreview>
 
-### キラキラ
+### Kelap-kelip
 
 ```
 $[sparkle 🍮]
@@ -351,7 +351,7 @@ $[sparkle 🍮]
 
 <MfmPreview text="$[x2 $[sparkle 🍮]]"></MfmPreview>
 
-### プレーン
+### Polos
 
 内側の構文を全て無効にします。
 
@@ -361,7 +361,7 @@ $[sparkle 🍮]
 
 <MfmPreview text="<plain>**bold** @mention #hashtag `code` $[x2 🍮]</plain>"></MfmPreview>
 
-## 開発者向け情報
+## Informasi untuk Pengembang
 
 MFMのパーサー実装はライブラリとして公開されており、簡単にクライアントにMFMを組み込むことが可能です。
 
