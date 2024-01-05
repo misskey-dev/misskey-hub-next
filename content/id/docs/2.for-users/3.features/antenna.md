@@ -1,5 +1,5 @@
-# アンテナ
+# Antena
 
-アンテナは、自由に条件を設定して、合致するノートを自動で収集することができる機能です。
+Antena merupakan fitur yang memperbolehkanmu mengatur kondisi set secara bebas untuk lini masa kustom dan secara otomatis mengumpulkan catatan yang cocok.
 
-条件を設定したアンテナが作成された状態で、条件に合致するノートが投稿されると、リアルタイムでそのアンテナのタイムラインにノートが追加されます。
+Kondisi antena bisa termasuk kondisi untuk mencakup/mengecualikan kata kunci tertentu dan tag dalam kombinasi berbeda serta opsi lainnya. Ketika catatan yang diposting cocok dengan sebuah kondisi antena, catatan akan ditambahkan secara otomatis ke dalam lini masa antena tersebut.

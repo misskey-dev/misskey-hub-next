@@ -6,7 +6,8 @@ copy: "複製"
 share: "分享"
 note: "貼文"
 other: "其他"
-goToLegacyHub: "従来のMisskey Hub"
+add: "新增"
+goToLegacyHub: "舊版的 Misskey Hub"
 _error:
   notFound: "找不到此頁面"
   notFoundDesc: "找不到此頁面，請確認網址是否正確。"
@@ -126,9 +127,9 @@ _servers:
     notFound: "未找到符合指定條件的伺服器。"
     showMore: "查看更多"
   _view:
-    title: "表示形式"
-    list: "リスト"
-    grid: "グリッド"
+    title: "顯示樣式"
+    list: "精簡"
+    grid: "完整"
 _docs:
   title: "文件"
   description: "Misskey 是一個開源去中心化社群網路平台。它涵蓋了從如何正確使用 Misskey 到為伺服器營運者和程式開發人員提供的資訊的所有內容。"
@@ -233,6 +234,12 @@ _aboutUs:
     _orgPartner:
       title: "企業和組織合作夥伴"
       description: "這些公司和組織在資金和技術上為 Misskey 的發展做出了貢獻。"
+    _hubTranslators:
+      title: "Misskey Hub 翻譯者"
+      description: "感謝所有幫助我們翻譯 Misskey Hub 的人。"
+    _coreTranslators:
+      title: "Misskey 翻譯者"
+      description: "感謝所有幫助我們翻譯 Misskey 的人。"
 _i18n:
   _missing:
     title: "請協助翻譯"
@@ -244,6 +251,7 @@ _share:
   addServer: "新增伺服器"
   domain: "伺服器的網域"
   compatibleWith: "相容 Misskey 與部份 Misskey 分支。"
+  recommendedByWebsite: "來自分享網站的推薦"
 _noteVisibility:
   public: "公開"
   home: "首頁"
@@ -258,6 +266,8 @@ _shareLinkGenerator:
   url: "網址"
   urlCaption: "可選。將插入在正文之後。"
   settings: "進階設定"
+  manualInstance: "推薦的伺服器網域"
+  manualInstanceDescription: "此處指定的伺服器（一個）可以顯示在共用按鈕中繼頁面的頂部。例如，您可以用它將人們引導到自己的伺服器。"
   visibility: "公開範圍"
   recipents: "指定接收訊息的帳號（以換行符號區分）"
   resultLink: "連結生成結果"
@@ -268,6 +278,23 @@ _shareLinkGenerator:
 _goToMisskey:
   title: "前往 Misskey Web"
   heading: "請選擇要開啟此頁面的伺服器"
+_avatarDecorationPreview:
+  title: "頭像裝飾預覽"
+  description: "您可以檢查頭像裝飾是否正確反映。"
+  preview: "預覽"
+  settings: "設定"
+  decoration: "裝飾 #{number}"
+  placeholder: "您可以透過「新增」按鈕來新增和預覽頭像裝飾。"
+  _options:
+    offsetX: "水平對齊"
+    offsetY: "垂直對齊"
+    angle: "角度"
+    flip: "左右翻轉"
+    overlayTemplate: "疊加模板"
+  _placeholder:
+    username: "小藍"
+    noteText: "我吃了一個巧克力甜甜圈🍩😋"
+    profileDescription: "我是 Misskey 的常駐人工智慧小藍！很高興見到你♪"
 _api:
   _permissions:
     title: "權限"
@@ -281,8 +308,8 @@ _api:
       "write:drive": "存取雲端硬碟"
       "read:favorites": "瀏覽我的最愛"
       "write:favorites": "編輯我的最愛列表"
-      "read:following": "フォローの情報を見る"
-      "write:following": "フォロー・フォロー解除する"
+      "read:following": "查看追隨中的使用者資訊"
+      "write:following": "追隨／解除追隨"
       "read:messaging": "チャットを見る"
       "write:messaging": "チャットを操作する"
       "read:mutes": "ミュートを見る"

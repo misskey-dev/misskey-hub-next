@@ -2,7 +2,7 @@
 description: Misskeyを使うためのアプリを紹介します。
 ---
 
-# アプリ
+# Aplikasi
 
 Misskeyを使うためのアプリ（クライアント）を紹介します。
 

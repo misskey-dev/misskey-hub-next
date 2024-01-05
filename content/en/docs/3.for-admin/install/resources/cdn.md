@@ -16,5 +16,7 @@ Please configure your CDN in the following way:
 - Cache all requests except `/api/*`
 
 :::tip
-It is not necessary to clear the cache when updating Misskey.
+
+Misskeyをアップデートした際にキャッシュのクリアは不要です。
+
 :::
