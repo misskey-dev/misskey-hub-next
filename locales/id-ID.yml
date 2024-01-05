@@ -18,7 +18,7 @@ _error:
 _seo:
   siteName: "Misskey Hub"
   siteNameLong: "Misskey Hub – Situs web resmi Proyek Misskey"
-  defaultTitleTagline: "ノートでひろがるネットワーク"
+  defaultTitleTagline: "Jaringan membentang melalui catatan"
   defaultDescription: "Situs web resmi Misskey, sebuah perangkat lunak jejaring sosial yang terdesentralisasi. Temukan cara untuk memulai, daftar peladen, dan informasi lebih lanjut tentang Misskey!"
 _nav:
   servers: "Peladen"
@@ -28,7 +28,7 @@ _nav:
   switchLang: "Pengaturan Bahasa"
 _landing:
   _hero:
-    description: "Misskey merupakan platform media sosial terdesentralisasi bersumber terbuka yang gratis selamanya!"
+    description: "Misskey merupakan platform media sosial terdesentralisasi bersumber terbuka."
     gettingStarted: "Memulai"
   _keyFeatures:
     _open:
@@ -38,44 +38,44 @@ _landing:
       title: "Federasi"
       description: "Misskey merupakan platform terdesentralisasi, sehingga komunitas dari peladen lain dapat terhubung dengan satu sama lain."
     _multifunction:
-      title: "Multifungsi"
-      description: "Misskey dapat mudah dipahami oleh pemula dan memiliki fitur yang canggih untuk pengguna mahir."
+      title: "Modern"
+      description: "Misskey menawarkan banyak fitur unggul yang mudah dipahami untuk pemula maupun pengguna mikro blog mahir."
     _customizable:
       title: "Ubahsuai"
-      description: "Buat Misskey sebagai milikmu! Dengan tema, gawit, tata letak dan lainnya, kamu dapat membuat Misskey sesuai dengan apa yang kamu inginkan."
+      description: "Antarmuka web Misskey yang fleksibel memungkinkanmu untuk mengubahsuaikan antarmuka sesuai keinginanmu sendiri."
   _decenterized:
     title: "Misskey merupakan platform {0}."
     decenterizedPlatform: "Terdesentralisasi"
-    description: "Misskeyはフリーかつオープンなプロジェクトで、誰でも自由にMisskeyを使ったサーバーを作成できるため、既に様々なサーバーがインターネット上に公開されています。また重要な特徴として、Misskeyは{0}と呼ばれる分散通信プロトコルを実装しているので、どのサーバーを選んでも他のサーバーのユーザーとやりとりすることができます。これが分散型と言われる所以で、単一の運営者によって単一のURLで公開されるような、Twitterなどの他サービスとは根本的に異なっています。サーバーによって主な話題のテーマやユーザー層、言語などは異なり、自分にあったサーバーを探すのも楽しみのひとつです(もちろん自分のサーバーを作るのも一興です)。"
+    description: "Misskey adalah proyek bebas dan terbuka. Semua orang dapat membuat instansi peladen Misskey secara bebas dan bermacam peladen Misskey di Internet telah tersedia. Salah satu fitur penting dari Misskey adalah implementasi protokol komunikasi terdesentralisasi bernama {0}. Dengan {0}, pengguna dapat berinteraksi dengan pengguna lain yang berbeda peladen dimana pun mereka terdaftar. Inilah kenapa disebut terdesentralisasi dan secara fundamental berbeda dengan layanan lain seperti Twitter yang mana disediakan dalam URL dan operator tunggal. Setiap peladen memiliki topik, grup pengguna, dan bahasa yang berbeda-beda dari satu peladen dengan peladen lain. Menemukan peladen yang tepat bagimu tersebut juga bagian dari hal yang menyenangkan (tidak lupa juga membuat peladenmu sendiri juga menyenangkan lho)."
     activityPub: "ActivityPub"
   _features:
     _root:
-      title: "Fitur Unggulan"
-      description: "Misskeyは一般的なものから特別なものまで、様々な機能を持っています。その一部を紹介します。"
+      title: "Fitur"
+      description: "Misskey memiliki banyak fitur yang diunggulkan. Temukan mulai dari yang umum hingga khusus."
     _note:
       title: "Catatan"
-      description: "Misskeyでは、ユーザーの投稿は「ノート」と呼ばれます。他のノートを引用したり、画像、動画、オーディオ、その他の任意のファイルを添付することもできます。"
+      description: "Di Misskey, postingan dari pengguna disebut sebagai \"catatan\". Kamu juga memberi balasan, kutipan, menambahkan emoji kustom, teks beranimasi, gambar, video, klip audio, dan masih banyak lagi!"
     _federation:
       title: "Federasi"
-      description: "オープンな分散プロトコルであるActivityPubを実装しているため、他のMisskeyサーバーだけでなく、ActivityPubをサポートする他のソフトウェアともやりとりできます。"
+      description: "Misskey menggunakan protokol ActivityPub untuk berkomunikasi dengan peladen lain. Tidak hanya terbatas untuk peladen Misskey saja, Misskey juga dapat berkomunikasi dengan perangkat lunak yang mendukung protokol ActivityPub seperti Pleroma, Mastodon, dan Pixelfed."
     _reaction:
       title: "Reaksi"
-      description: "ノートには「リアクション」を付けることができ、簡単・気軽に自分のフィーリングを表現して伝えることが出来ます。"
+      description: "Kamu juga dapat menambahkan reaksi emoji ke postingan apapun! Dengan begitu kamu tidak terbatas hanya pada tombol suka dan sekarang kamu bisa menunjukkan perasaanmu kepada semua orang."
     _drive:
       title: "Drive"
-      description: "アップロードしたファイルを管理するインターフェイスがあります。そのため、お気に入りの画像をフォルダにまとめたり、再度共有することも簡単に行えます。"
+      description: "Kesulitan untuk menemukan hal yang sudah kamu unggah sebelumnya? Adanya Drive membantumu untuk menyelesaikan masalah tersebut. Kamu dapat mengelola gambar atau video favoritmu yang telah kamu unggah dan membagikannya kembali."
     _theme:
       title: "Tema"
-      description: "自分の好きなデザインでMisskeyを使えます。もちろんダークモードも完全サポート。自分で高度にテーマを作ることも可能です。"
+      description: "Kamu dapat menggunakan Misskey dengan desain favoritmu. Tidak lagi terbatas tema gelap ataupun terang. Kamupun juga dapat membuat tema sesuai dengan keinginanmu sendiri."
     _thread:
       title: "Utas"
-      description: "もちろんノートはスレッドにすることができ、気が済むまで会話を続けられます。"
+      description: "Punya banyak hal yang diutarakan? Catatan di Misskey bisa dibuat sebagai utas. Kamu juga bisa membuat utas hingga maksimal 3000 karakter dan menyambungnya hingga menjadi percakapan panjang."
     _charts:
-      title: "Grafik"
-      description: "Misskeyは組み込みのチャートエンジンを備えていて、サーバーの利用状況などが簡単に可視化できます。"
+      title: "Bagan"
+      description: "Bagi kalian yang ingin melihat segalanya, Misskey memiliki mesin penggambar Bagan bawaan yang dapat dilihat oleh admin maupun pengguna untuk memvisualisasikan beban penggunaan peladen dan lain-lain secara realtime"
     _widgets:
       title: "Gawit"
-      description: "様々な種類のウィジェットを配置し、UIを好みにカスタマイズできます。"
+      description: "Buat dirimu mudah dengan banyaknya jenis gawit yang disediakan oleh Misskey. Ubahsuaikan antarmuka berandamu sesuai keinginanmu."
   _getStarted:
     title: "Memulai dengan Misskey"
     _find:
@@ -88,20 +88,20 @@ _landing:
       title: "Pelajari Lebih Lanjut"
       docs: "Lihat Dokumentasi"
   _donation:
-    title: "Donasi"
-    description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
+    title: "Permohonan Donasi"
+    description: "Misskey merupakan produk nirlaba, kami bergantung pada donasi kamu untuk mendanai pengembangan perangkat lunak ini. Apabila kamu menyukai Misskey, mohon pertimbangkan untuk berdonasi agar kami dapat terus melanjutkan pengembangan Misskey dan membuatnya semakin menarik untuk kedepannya."
   _sponsors:
     title: "Sponsor"
 _servers:
   title: "Daftar Peladen"
-  description: "Misskeyは単一のサービスではなく、各々がサービスを提供する分散型ネットワークとなっています。Misskeyを利用するには、サービスを提供しているサーバーでアカウントを作成する必要があります。"
-  addYourServer: "あなたのサーバーが表示されませんか？{0}から登録してください！"
+  description: "Misskey bukanlah layanan satuan namun jejaring terdesentralisasi dimana para individu menyediakan banyak layanan. Untuk menggunakan Misskey, kamu perlu membuat akun di peladen yang menawarkan layanan tersebut."
+  addYourServer: "Apakah peladenmu tidak terdaftar? Daftarkan segera di {0}!"
   addYourServerLink: "di sini"
   _system:
-    fetchError: "データの読み込みに失敗しました。後でもう一度お試しください。"
+    fetchError: "Gagal untuk mengambil data. Mohon coba lagi nanti."
   _statistics:
     title: "Statistik Peladen"
-    description: "Misskeyサーバーの統計データをグラフでご紹介。"
+    description: "Presentasikan statistik peladen Misskey ke dalam Bagan."
     viewFullStats: "Lihat statistik lengkap"
     lang: "Bahasa Utama"
     registerAcceptance: "Menerima pendaftaran"
@@ -267,10 +267,10 @@ _shareLinkGenerator:
   urlCaption: "Opsional. Akan dimasukkan setelah badan teks."
   settings: "Pengaturan Lanjutan"
   manualInstance: "Domain Peladen yang direkomendasikan"
-  manualInstanceDescription: "ここに指定したサーバー（ひとつ）をシェアボタン中継ページのトップに表示できます。ご自身のサーバーに誘導する際などにお使いいただけます。"
+  manualInstanceDescription: "Salah satu peladen yang disebutkan di sini dapat ditampilkan di atas tombol bagikan perantara. Hal ini membantu untuk mengarahkan pengguna ke peladen milikmu."
   visibility: "Visibilitas"
-  recipents: "ダイレクトを受け取る人のacct（改行区切り）"
-  resultLink: "リンク生成結果"
+  recipents: "Acct dari orang yang menerima pesan langsung (masukkan pada baris baru sebagai pemisah)"
+  resultLink: "Hasil dari tautan yang dibagikan"
   resultButton: "Contoh tombol bagikan"
   testLink: "Tes tautan yang dibagikan"
   typeSomethingToGetLink: "Masukkan teks untuk membuat tautan berbagi."
@@ -280,21 +280,21 @@ _goToMisskey:
   heading: "Pilih peladen yang kamu ingin buka halamannya dan lanjutkan"
 _avatarDecorationPreview:
   title: "Penampil Dekorasi Avatar"
-  description: "アバターデコレーションがきれいに反映できるかをチェックできます。"
+  description: "Kamu dapat mengecek apakah dekorasi avatar dapat ditampilkan dengan baik."
   preview: "Pratinjau"
   settings: "Pengaturan"
   decoration: "Dekorasi #{number}"
-  placeholder: "「追加」から、アバターデコレーションを追加してプレビューできます。"
+  placeholder: "Kamu dapat menambahkan serta mempratinjau dekorasi avatar dari menu \"Tambahkan\"."
   _options:
     offsetX: "Posisi x"
     offsetY: "Posisi y"
     angle: "Sudut"
     flip: "Balikkan Horizontal"
-    overlayTemplate: "テンプレートを重ねる"
+    overlayTemplate: "Templat lapisan"
   _placeholder:
     username: "Ai"
     noteText: "Baru aja makan donat berlapis coklat 🍩😋"
-    profileDescription: "Misskey常駐AIの藍です！よろしくお願いします♪"
+    profileDescription: "Aku Ai bertugas sebagai AI Misskey! Senang berkenalan denganmu♪"
 _api:
   _permissions:
     title: "Hak akses"
