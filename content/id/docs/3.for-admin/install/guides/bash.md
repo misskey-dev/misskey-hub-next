@@ -262,5 +262,5 @@ Apabila kamu memeriksa log dengan `journalctl`, umumnya kamu akan menemukan pern
 
 ## Q. Membangun instansi Misskey lebih dari 1 di peladen yang sama
 
-スクリプトは同じサーバーに追加でMisskeyをインストールすることは想定していません。\
-幾つかの設定が上書きされるか、途中でエラーになってしまうでしょう。
+Script ini tidak dapat melakukan pemasangan instansi Misskey lebih dari 1 pada peladen yang sama.\
+Hal ini dikarenakan beberapa pengaturan nantinya akan ditimpa dan kamu akan mendapatkan banyak galat dan kesalahan dalam proses menjalankan script ini.
