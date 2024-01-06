@@ -34,6 +34,7 @@ type Sponsor = {
 const sponsors: Sponsor[] = [
     {
         img: '/img/sponsors/mask.svg',
+        noMargin: true,
         to: 'https://mask.io/',
     },
     {
@@ -43,6 +44,7 @@ const sponsors: Sponsor[] = [
     },
     {
         img: '/img/sponsors/skeb.svg',
+        noMargin: true,
         to: 'https://skeb.jp/',
     },
     {
