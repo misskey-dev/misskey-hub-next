@@ -60,5 +60,15 @@ const sponsors: Sponsor[] = [
 </script>
 
 <style scoped>
+.block.aspect-square.bg-white.overflow-clip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.block img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
 </style>
