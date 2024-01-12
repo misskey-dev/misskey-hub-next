@@ -10,7 +10,7 @@ AiScriptは、Misskeyの以下の箇所で使用できるスクリプト言語�
 
 :::tip
 
-AiScriptの実装はMisskeyとは別リポジトリで、[オープンソースで公開されています](https://github.com/syuilo/aiscript)。
+AiScriptの実装はMisskeyとは別リポジトリで、[オープンソースで公開されています](https://github.com/aiscript-dev/aiscript)。
 
 :::
 
