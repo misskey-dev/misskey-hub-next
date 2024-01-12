@@ -6,7 +6,7 @@ AiScriptは、Misskeyの以下の箇所で使用できるスクリプト言語�
   - AiScriptコンソール
   - AiScript App
 - Misskey Play
-- Scratchpad
+- スクラッチパッド
 
 :::tip
 
