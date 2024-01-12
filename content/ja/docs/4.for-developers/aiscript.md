@@ -21,6 +21,7 @@ AiScript標準の構文や組み込み関数などが使用できます。
 
 ドキュメントは[こちら](https://github.com/aiscript-dev/aiscript/tree/master/docs)  
 Misskey本体のバージョンにより、使用できるAiScriptのバージョンが異なる場合があります。バージョンの確認には`<: Core:v`をScratchpadなどで実行してください。
+
 :::
 
 これらに加え、Misskey専用の組み込み定数・関数が３グループに分けて提供されています。
