@@ -5,18 +5,16 @@
 
 // AID
 // 長さ8の[2000年1月1日からの経過ミリ秒をbase36でエンコードしたもの] + 長さ2の[ノイズ文字列]
+import { customAlphabet } from 'nanoid';
+
 export const aidRegExp = /^[0-9a-z]{10}$/;
+
+const rand = customAlphabet('0123456789', 5);
 
 const TIME2000 = 946684800000;
 let counter: number;
 
-if (process.client) {
-	const arr = window.crypto.getRandomValues(new Uint16Array(2));
-	counter = parseInt(arr[0].toString());
-} else {
-	const crypto = require('crypto');
-	counter = crypto.randomBytes(2).readUInt16LE(0);
-}
+counter = parseInt(rand(), 10);
 
 function getTime(time: number): string {
 	time = time - TIME2000;
