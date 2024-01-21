@@ -27,14 +27,16 @@ function getTime(time: number): string {
 	return time.toString(36).padStart(TIME_LENGTH, '0').slice(-TIME_LENGTH);
 }
 
-function getNoise(): string {
+function getNoise(ctr: number): string {
 	return counter.toString(36).padStart(NOISE_LENGTH, '0').slice(-NOISE_LENGTH);
 }
 
-export function genAidx(t: number): string {
+export function genAidx(t: number, ctr: number | null = null): string {
 	if (isNaN(t)) throw new Error('Failed to create AIDX: Invalid Date');
-	counter++;
-	return getTime(t) + nodeId + getNoise();
+	if (!ctr) {
+		counter++;
+	}
+	return getTime(t) + nodeId + getNoise(ctr ?? counter);
 }
 
 export function parseAidx(id: string): { date: Date; } {
