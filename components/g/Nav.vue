@@ -115,7 +115,7 @@ const navOpen = ref(false);
 
 const { locales, locale: currentLocale } = useI18n();
 const route = useRoute();
-const { afterEach, push } = useRouter();
+const { push } = useRouter();
 const currentPath = ref(route.path);
 
 watch(() => route.path,(to) => {
@@ -124,7 +124,7 @@ watch(() => route.path,(to) => {
     immediate: true,
 });
 
-const switchLocalePath = useSwitchLocalePath();
+const switchLocalePath = useGSwitchLocalePath();
 const localePath = useGLocalePath();
 const spLocaleOption = ref<string>(currentLocale.value);
 function changeLocale() {
