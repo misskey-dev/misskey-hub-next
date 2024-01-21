@@ -55,7 +55,7 @@ const url = computed(() => {
 });
 
 const alt = computed(() => `:${customEmojiName.value}:`);
-const errored = ref(props.host == null);
+const errored = ref(props.host == null && !props.url);
 </script>
 
 <style lang="scss" module>
