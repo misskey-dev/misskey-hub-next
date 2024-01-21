@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210.00011mm"
+   height="38.506172mm"
+   viewBox="0 0 210.00011 38.506172"
+   version="1.1"
+   id="svg5"
+   xml:space="preserve"
+   sodipodi:docname="sg.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.8919783"
+     inkscape:cx="224.2207"
+     inkscape:cy="394.62843"
+     inkscape:window-width="1536"
+     inkscape:window-height="953"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" /><defs
+     id="defs2" /><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-61.269129)"><path
+       id="path962-3"
+       style="fill:#e0fbff;fill-opacity:1;stroke:none;stroke-width:0.576058;stroke-opacity:1"
+       d="M 0,61.269128 V 99.775305 H 210.0001 V 61.269128 h -0.62425 c 0.80484,11.546716 -9.92911,22.226722 -21.36304,21.433317 -2.47873,-0.772676 -2.96364,2.620092 -4.66224,3.780131 -14.22348,16.103184 -41.81407,16.721304 -56.9402,1.53014 -9.43065,6.826673 -22.65753,7.722488 -33.105471,2.682523 -2.810587,2.774307 -6.34507,5.261153 -10.224699,6.516398 C 70.898316,101.64958 56.252892,94.829435 51.738961,82.774276 37.826028,89.32433 18.824907,88.158576 7.2202311,77.121908 2.7191908,73.159418 0.0904729,67.212519 0.00465088,61.269128 Z"
+       inkscape:export-filename="..\..\..\node_boxes\about-misskey\assets\svg\drop-and-fusion\kv-wrap.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" /></g></svg>
