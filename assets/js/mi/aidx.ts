@@ -28,7 +28,7 @@ function getTime(time: number): string {
 }
 
 function getNoise(ctr: number): string {
-	return counter.toString(36).padStart(NOISE_LENGTH, '0').slice(-NOISE_LENGTH);
+	return ctr.toString(36).padStart(NOISE_LENGTH, '0').slice(-NOISE_LENGTH);
 }
 
 export function genAidx(t: number, ctr: number | null = null): string {
