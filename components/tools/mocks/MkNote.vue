@@ -1,5 +1,5 @@
 <template>
-    <div class="rounded-xl h-auto w-full px-4 py-3.5 md:px-8 md:py-7 flex max-w-sm border border-slate-300 dark:border-slate-950">
+    <div class="rounded-xl h-auto w-full px-4 py-3.5 md:px-8 md:py-7 flex max-w-md border border-slate-300 dark:border-slate-800">
         <div class="mr-3.5">
             <div class="w-[46px] h-[46px] md:w-[58px] md:h-[58px] relative rounded-full bg-slate-50 dark:bg-slate-900">
                 <img class="w-full h-full object-cover rounded-full" :src="avatar" />
@@ -16,7 +16,14 @@
                 <div class="font-bold">{{ $t('_avatarDecorationPreview._placeholder.username') }}</div>
                 <div class="opacity-70">@ai</div>
             </div>
-            <div>{{ $t('_avatarDecorationPreview._placeholder.noteText') }}</div>
+            <div><slot>{{ $t('_avatarDecorationPreview._placeholder.noteText') }}</slot></div>
+            <div class="mt-1 flex flex-wrap gap-2">
+                <span v-for="reaction in reactions" class="inline-flex items-center space-x-1 px-1.5 py-1 rounded bg-gray-100 dark:bg-gray-800">
+                    <MkCustomEmoji class="hover:!transform-none" v-if="reaction.name.startsWith(':')" :name="reaction.name" :url="reaction.url" :useOriginalSize="true" />
+                    <div v-else class="text-xl leading-[1.35] select-none">{{ reaction.name }}</div>
+                    <span class="text-sm">{{ reaction.count }}</span>
+                </span>
+            </div>
             <div class="flex space-x-3.5 md:space-x-7 opacity-60">
                 <div class="p-2"><ReplyIco class="w-3 h-3 md:h-4 md:w-4 block stroke-1 stroke-current reply" /></div>
                 <div class="p-2"><RenoteIco class="w-3 h-3 md:h-4 md:w-4 block stroke-1 stroke-current" /></div>
@@ -34,10 +41,17 @@ import RenoteIco from 'bi/repeat.svg';
 import ReactionIco from 'bi/plus-lg.svg';
 import MoreIco from 'bi/three-dots.svg';
 
-defineProps<{
-    avatar: string;
+withDefaults(defineProps<{
+    avatar?: string;
     decorations?: (Omit<Misskey.entities.User['avatarDecorations'][number], 'id'> & { offsetX?: number; offsetY?: number; })[];
-}>();
+    reactions?: {
+        name: string;
+        url?: string;
+        count: number;
+    }[];
+}>(), {
+    avatar: '/img/docs/fukidashi/doya_ai.webp',
+});
 
 function getStyle(decoration: Omit<Misskey.entities.User['avatarDecorations'][number], 'id'> & { offsetX?: number; offsetY?: number; }): HTMLAttributes['style'] {
     const angle = decoration.angle ?? 0;

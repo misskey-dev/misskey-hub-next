@@ -31,6 +31,8 @@ export default function(props: {
 	rootScale?: number;
 	/** 表示の基準にするMisskeyサーバーのドメイン */
 	baseHost?: string;
+	/** 差し込むカスタム絵文字（:key:と画像URL） */
+	customEmojis?: Record<string, string>;
 }) {
 	const isNote = props.isNote !== undefined ? props.isNote : true;
 
@@ -281,7 +283,15 @@ export default function(props: {
 			}
 
 			case 'emojiCode': {
-				// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+				if (props.customEmojis && props.customEmojis[token.props.name]) {
+					return [h(MkCustomEmoji, {
+						key: Math.random(),
+						name: token.props.name,
+						normal: props.plain,
+						useOriginalSize: scale >= 2.5,
+						url: props.customEmojis[token.props.name],
+					})]
+				}
 				return [h(MkCustomEmoji, {
 					key: Math.random(),
 					name: token.props.name,

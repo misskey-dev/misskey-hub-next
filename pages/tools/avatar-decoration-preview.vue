@@ -10,11 +10,11 @@
                     {{ $t('_avatarDecorationPreview.preview') }}
                 </header>
                 <div class="flex gap-8 items-center justify-center flex-wrap">
-                    <ToolsAvatarDecorationMkProf
+                    <ToolsMocksMkProf
                         :avatar="avatar"
                         :decorations="realDecorations"
                     />
-                    <ToolsAvatarDecorationMkNote
+                    <ToolsMocksMkNote
                         :avatar="avatar"
                         :decorations="realDecorations"
                     />
