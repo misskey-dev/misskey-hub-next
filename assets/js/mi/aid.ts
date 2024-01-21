@@ -14,7 +14,7 @@ if (process.client) {
 	const arr = window.crypto.getRandomValues(new Uint16Array(2));
 	counter = parseInt(arr[0].toString());
 } else {
-	const crypto = require('crypto');
+	const crypto = await import('crypto');
 	counter = crypto.randomBytes(2).readUInt16LE(0);
 }
 
