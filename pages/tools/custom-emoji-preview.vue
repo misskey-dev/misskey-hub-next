@@ -83,7 +83,6 @@ import PlusIco from 'bi/plus-lg.svg';
 import XIco from 'bi/x-lg.svg';
 import SunIco from 'bi/sun.svg';
 import MoonIco from 'bi/moon.svg';
-import { on } from 'events';
 
 definePageMeta({
     layout: 'tools',
@@ -100,7 +99,7 @@ const emojis = ref<{
     file: string | Blob;
     invertColorScheme: boolean;
 }[]>([{
-    id: 0,
+    id: 1,
     file: '/img/emojis/rocket_3d.png',
     invertColorScheme: false,
 }]);
@@ -113,6 +112,8 @@ const noteReactions = computed(() => emojis.value?.map((emoji) => ({
 })) ?? []);
 
 const customEmojisDefinition = computed(() => Object.fromEntries(noteReactions.value?.map((emoji) => [ emoji.code, emoji.url ]) ?? []));
+
+const nextId = computed(() => Math.max(0, ...emojis.value.map((emoji) => emoji.id)) + 1);
 
 function deleteEmoji(index: number) {
     emojis.value.splice(index, 1);
@@ -133,7 +134,7 @@ function addEmoji() {
         if (!file) return;
 
         emojis.value.push({
-            id: emojis.value.length,
+            id: nextId.value,
             file,
             invertColorScheme: false,
         });

@@ -331,7 +331,7 @@ _customEmojiPreview:
     text: "ノート文面"
     textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
   _placeholder:
-    noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_0:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
+    noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
 
 _api:
   _permissions:
