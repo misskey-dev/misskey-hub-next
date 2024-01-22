@@ -7,6 +7,8 @@ share: "공유"
 note: "노트"
 other: "기타"
 add: "추가"
+browse: "参照"
+settings: "設定"
 goToLegacyHub: "이전 Misskey Hub"
 _error:
   notFound: "페이지를 찾을 수 없습니다"
@@ -197,6 +199,8 @@ _tools:
   menuToggle: "메뉴"
   _forUsers:
     title: "Misskey 유저용"
+  _forAdmin:
+    title: "サーバー運営者向け"
 _mfmPlayground:
   title: "MFM 테스트 코너"
   description: "MFM를 자유롭게 연습하실 수 있습니다! Misskey의 글쓰기 화면, 노트 화면을 재현!"
@@ -295,6 +299,17 @@ _avatarDecorationPreview:
     username: "아이(Ai)"
     noteText: "방금 초코도넛을 먹었어요 🍩😋"
     profileDescription: "Misskey 상주 AI인 아이입니다! 잘 부탁드려요♪。"
+_customEmojiPreview:
+  title: "カスタム絵文字 プレビュー"
+  description: "カスタム絵文字の視認性をチェックできます。"
+  preview: "プレビュー"
+  emoji: "絵文字 #{number}"
+  placeholder: "「追加」から、カスタム絵文字を追加してプレビューできます。"
+  _options:
+    text: "ノート文面"
+    textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
+  _placeholder:
+    noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
 _api:
   _permissions:
     title: "권한"
