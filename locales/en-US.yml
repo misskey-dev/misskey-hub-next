@@ -7,6 +7,8 @@ share: "Share"
 note: "Note"
 other: "Other"
 add: "Add"
+browse: "参照"
+settings: "設定"
 goToLegacyHub: "Legacy Misskey Hub"
 _error:
   notFound: "Page not found"
@@ -197,6 +199,8 @@ _tools:
   menuToggle: "Menu"
   _forUsers:
     title: "For Misskey Users"
+  _forAdmin:
+    title: "サーバー運営者向け"
 _mfmPlayground:
   title: "MFM Playground"
   description: "Practice MFM freely!"
@@ -295,6 +299,17 @@ _avatarDecorationPreview:
     username: "Ai"
     noteText: "Just had a chocolate-glazed donut 🍩😋"
     profileDescription: "Misskey常駐AIの藍です！よろしくお願いします♪"
+_customEmojiPreview:
+  title: "カスタム絵文字 プレビュー"
+  description: "カスタム絵文字の視認性をチェックできます。"
+  preview: "プレビュー"
+  emoji: "絵文字 #{number}"
+  placeholder: "「追加」から、カスタム絵文字を追加してプレビューできます。"
+  _options:
+    text: "ノート文面"
+    textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
+  _placeholder:
+    noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
 _api:
   _permissions:
     title: "Permissions"
