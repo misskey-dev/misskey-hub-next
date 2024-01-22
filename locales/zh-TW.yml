@@ -7,6 +7,8 @@ share: "分享"
 note: "貼文"
 other: "其他"
 add: "新增"
+browse: "参照"
+settings: "設定"
 goToLegacyHub: "舊版的 Misskey Hub"
 _error:
   notFound: "找不到此頁面"
@@ -197,6 +199,8 @@ _tools:
   menuToggle: "選單"
   _forUsers:
     title: "針對 Misskey 的使用者"
+  _forAdmin:
+    title: "サーバー運営者向け"
 _mfmPlayground:
   title: "MFM 試用區"
   description: "您可以自由練習MFM！下面重現了 Misskey 的發文畫面/貼文畫面！"
@@ -295,6 +299,17 @@ _avatarDecorationPreview:
     username: "小藍"
     noteText: "我吃了一個巧克力甜甜圈🍩😋"
     profileDescription: "我是 Misskey 的常駐人工智慧小藍！很高興見到你♪"
+_customEmojiPreview:
+  title: "カスタム絵文字 プレビュー"
+  description: "カスタム絵文字の視認性をチェックできます。"
+  preview: "プレビュー"
+  emoji: "絵文字 #{number}"
+  placeholder: "「追加」から、カスタム絵文字を追加してプレビューできます。"
+  _options:
+    text: "ノート文面"
+    textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
+  _placeholder:
+    noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
 _api:
   _permissions:
     title: "權限"
