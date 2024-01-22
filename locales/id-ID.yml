@@ -7,6 +7,8 @@ share: "Bagikan"
 note: "Catatan"
 other: "Lainnya"
 add: "Tambahkan"
+browse: "参照"
+settings: "設定"
 goToLegacyHub: "Misskey Hub Jadul"
 _error:
   notFound: "Halaman Tidak Ditemukan"
@@ -197,6 +199,8 @@ _tools:
   menuToggle: "Menu"
   _forUsers:
     title: "Untuk Pengguna Misskey"
+  _forAdmin:
+    title: "サーバー運営者向け"
 _mfmPlayground:
   title: "Taman bermain MFM"
   description: "Berlatih MFM sebebasnya!"
@@ -295,6 +299,17 @@ _avatarDecorationPreview:
     username: "Ai"
     noteText: "Baru aja makan donat berlapis coklat 🍩😋"
     profileDescription: "Aku Ai bertugas sebagai AI Misskey! Senang berkenalan denganmu♪"
+_customEmojiPreview:
+  title: "カスタム絵文字 プレビュー"
+  description: "カスタム絵文字の視認性をチェックできます。"
+  preview: "プレビュー"
+  emoji: "絵文字 #{number}"
+  placeholder: "「追加」から、カスタム絵文字を追加してプレビューできます。"
+  _options:
+    text: "ノート文面"
+    textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
+  _placeholder:
+    noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
 _api:
   _permissions:
     title: "Hak akses"
