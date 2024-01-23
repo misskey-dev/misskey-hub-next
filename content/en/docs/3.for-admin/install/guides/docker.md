@@ -16,6 +16,8 @@ Do not recreate the database with the domain/hostname of the server once you hav
 
 - Make sure Docker and Docker Compose are installed on your system.
 
+:::
+
 ## Clone the Repository
 
 ```sh
