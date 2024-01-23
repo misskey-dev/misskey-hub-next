@@ -2,80 +2,36 @@
 
 :::tip
 
-從 v12.109.0 新增的功能。
+バージョン 12.109.0 以降の機能です。
 
 :::
 
 :::warning
 
-由於這是一項試驗性功能，因此可能不穩定，或者將來規格可能會發生變化。
+実験的な機能であるため、動作が不安定だったり今後仕様が変更される可能性があります。
 
 :::
 
-Misskey 提供了 Webhook。使用 Webhook，您可以即時接收 Misskey 上的各種事件。
-
-您可以在「設定」>「Webhook」中管理您的 Webhook。
-
-Webhook 註冊後，當指定事件發生時，將向指定 URL 傳送 HTTP 請求。請求方法為 POST，內文為 JSON。
-此外，請求標頭將包含您在註冊期間設定的金鑰，名為「X-Misskey-Hook-Secret」。透過驗證此機密，可以確定請求是否合法。
-
-請求負載包含以下屬性。
-
-<MkSchemaViewerItemObject :schema="{
-type: 'object',
-properties: {
- hookId: {
- 	type: 'string',
- 	description: 'Webhook ID',
- },
- userId: {
- 	type: 'string',
- 	description: 'Webhook作成者のユーザーID',
- },
- eventId: {
- 	type: 'string',
- 	description: 'イベントのID',
- },
- createdAt: {
- 	type: 'integer',
- 	description: 'イベントが発生した日時(UNIX time、ミリ秒)',
- },
- type: {
- 	type: 'string',
- 	description: 'イベントの種類',
- },
- body: {
- 	type: 'object',
- 	description: 'イベントのペイロード',
- },
-}
-}"/>
+MisskeyにはWebhookが用意されています。Webhookを利用すると、Misskey上の様々なイベントをリアルタイムに受け取ることが可能です。
 
 如果目標伺服器傳回 5xx 錯誤或無回應，則請求將在一段時間後重新傳輸。
 
-您可以從管理畫面單獨設定 Webhook 的活動狀態，並且可以暫時停止傳送請求。
+Webhookが登録されると、指定したイベントが発生した際に、指定したURLにHTTPリクエストが送信されます。リクエストのメソッドはPOSTで、ボディはJSONです。
+さらに、リクエストヘッダーには`X-Misskey-Hook-Secret`という名前で、登録時に設定したシークレットが含まれます。このシークレットが正しいか検証することで、リクエストが正規のものか判定することができます。
 
-## 事件
+リクエストペイロードは以下のプロパティが入ります。
 
 提供每個事件的描述和負載。
 
-### follow
+送信先サーバーが5xxエラーを返すか、応答しなかった場合は時間を開けてリクエストが再送されます。
 
 當您追隨某人時會發生。
 
-<MkSchemaViewerItemObject :schema="{
-type: 'object',
-properties: {
- user: {
- 	$ref: 'misskey://User',
- 	description: 'フォローしたユーザー',
- },
-}
-}"/>
+## イベント
 
-### followed
+イベントごとに説明とペイロードを示します。
 
-當有人追隨您時發生。
+### follow
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -87,9 +43,17 @@ properties: {
 }
 }"/>
 
-### unfollow
+<MkSchemaViewerItemObject :schema="{
+ type: 'object',
+ properties: {
+ 	user: {
+ 		$ref: 'misskey://User',
+ 		description: 'フォローしたユーザー',
+ 	},
+ }
+}"/>
 
-當您取消追隨某人時會發生。 當您發布貼文時發生。
+### followed
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -101,9 +65,17 @@ properties: {
 }
 }"/>
 
-### note
+<MkSchemaViewerItemObject :schema="{
+ type: 'object',
+ properties: {
+ 	user: {
+ 		$ref: 'misskey://User',
+ 		description: 'フォローを行ったユーザー',
+ 	},
+ }
+}"/>
 
-當您發布貼文時發生。
+### unfollow
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -115,9 +87,17 @@ properties: {
 }
 }"/>
 
-### reply
+<MkSchemaViewerItemObject :schema="{
+ type: 'object',
+ properties: {
+ 	user: {
+ 		$ref: 'misskey://User',
+ 		description: 'フォロー解除したユーザー',
+ 	},
+ }
+}"/>
 
-當您回覆貼文時發生。
+### note
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -129,9 +109,17 @@ properties: {
 }
 }"/>
 
-### renote
+<MkSchemaViewerItemObject :schema="{
+ type: 'object',
+ properties: {
+ 	note: {
+ 		$ref: 'misskey://Note',
+ 		description: '作成されたノート',
+ 	},
+ }
+}"/>
 
-當您自己的貼文被轉發時發生。
+### reply
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -143,9 +131,17 @@ properties: {
 }
 }"/>
 
-### mention
+<MkSchemaViewerItemObject :schema="{
+ type: 'object',
+ properties: {
+ 	note: {
+ 		$ref: 'misskey://Note',
+ 		description: '返信',
+ 	},
+ }
+}"/>
 
-當有人提到你時發生。
+### renote
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -155,4 +151,28 @@ properties: {
  	description: 'メンションを含むノート',
  },
 }
+}"/>
+
+<MkSchemaViewerItemObject :schema="{
+ type: 'object',
+ properties: {
+ 	note: {
+ 		$ref: 'misskey://Note',
+ 		description: 'Renote',
+ 	},
+ }
+}"/>
+
+### mention
+
+自分にメンションされた際に発生します。
+
+<MkSchemaViewerItemObject :schema="{
+ type: 'object',
+ properties: {
+ 	note: {
+ 		$ref: 'misskey://Note',
+ 		description: 'メンションを含むノート',
+ 	},
+ }
 }"/>
