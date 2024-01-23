@@ -23,15 +23,16 @@
 
 <script setup lang="ts">
 import type * as Misskey from 'misskey-js';
+import type { HTMLAttributes } from 'nuxt/dist/app/compat/capi';
 
 withDefaults(defineProps<{
     avatar?: string;
-    decorations?: (Omit<Misskey.entities.User['avatarDecorations'][number], 'id'> & { offsetX?: number; offsetY?: number; })[];
+    decorations?: (Omit<Misskey.entities.User['avatarDecorations'][number], 'id'>)[];
 }>(), {
     avatar: '/img/docs/fukidashi/doya_ai.webp',
 });
 
-function getStyle(decoration: Omit<Misskey.entities.User['avatarDecorations'][number], 'id'> & { offsetX?: number; offsetY?: number; }): HTMLAttributes['style'] {
+function getStyle(decoration: Omit<Misskey.entities.User['avatarDecorations'][number], 'id'>): HTMLAttributes['style'] {
     const angle = decoration.angle ?? 0;
     const rotate = angle === 0 ? undefined : `${angle * 360}deg`;
     const scaleX = decoration.flipH ? -1 : 1;
