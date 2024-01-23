@@ -51,7 +51,7 @@ const aidToDateResult = ref<string>('');
 function doAidToDate() {
     const time = parseInt(aidToDateAid.value.slice(0, 8), 36) + TIME2000;
     const d = new Date(time);
-    aidToDateResult.value = d.toLocaleString();
+    aidToDateResult.value = `${d.getFullYear().toString().padStart(4, '0')}-${(d.getMonth() + 1).toString().padStart(2, '0')}-${d.getDate().toString().padStart(2, '0')} ${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')}:${d.getSeconds().toString().padStart(2, '0')}.${d.getMilliseconds().toString().padStart(3, '0')}`;
 }
 
 const dateToAidDate = ref<string>('');
@@ -60,9 +60,9 @@ const dateToAidResult = ref<string>('');
 function doDateToAid() {
     const d = new Date(dateToAidDate.value);
     if (dateToAidMode.value === 'aid') {
-        dateToAidResult.value = genAid(d.getTime());
+        dateToAidResult.value = genAid(d.getTime(), 0);
     } else if (dateToAidMode.value === 'aidx') {
-        dateToAidResult.value = genAidx(d.getTime());
+        dateToAidResult.value = genAidx(d.getTime(), 0);
     }
 }
 

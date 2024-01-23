@@ -1,7 +1,8 @@
 <template>
     <div
         :class="[
-            'sticky top-0 z-[9900] transition',
+            'top-0 z-[9900] w-full transition',
+            fixed ? 'fixed' : 'sticky',
             {
                 'shadow bg-opacity-90': (!disableShadow && scrollPos <= -40),
                 'bg-white dark:bg-gray-950': (disableShadow || scrollPos <= -40),
@@ -101,18 +102,20 @@ const props = withDefaults(defineProps<{
     slim?: boolean;
     hasBorder?: boolean;
     landing?: boolean;
+    fixed?: boolean;
 }>(), {
     disableShadow: false,
     slim: false,
     hasBorder: false,
     landing: false,
+    fixed: false,
 });
 
 const navOpen = ref(false);
 
 const { locales, locale: currentLocale } = useI18n();
 const route = useRoute();
-const { afterEach, push } = useRouter();
+const { push } = useRouter();
 const currentPath = ref(route.path);
 
 watch(() => route.path,(to) => {
@@ -121,7 +124,7 @@ watch(() => route.path,(to) => {
     immediate: true,
 });
 
-const switchLocalePath = useSwitchLocalePath();
+const switchLocalePath = useGSwitchLocalePath();
 const localePath = useGLocalePath();
 const spLocaleOption = ref<string>(currentLocale.value);
 function changeLocale() {

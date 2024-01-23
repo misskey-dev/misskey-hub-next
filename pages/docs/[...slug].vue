@@ -70,6 +70,10 @@ if (!data.value) {
     throw createError({ statusCode: 404, statusMessage: 'page not found', fatal: true });
 }
 
+if (data.value._file && /index\.[a-z]+$/.test(data.value._file)) {
+    route.meta.__isDocsIndexPage = true;
+}
+
 route.meta.title = data.value?.title;
 if (data.value.description) {
     route.meta.description = data.value.description;

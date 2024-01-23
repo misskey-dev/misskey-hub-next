@@ -92,7 +92,7 @@
                         </li>
                     </ul>
                     <div class="text-sm text-center">
-                        &copy; 2023 Misskey, syuilo, and other contributors<br>
+                        &copy; 2024 Misskey, syuilo, and other contributors<br>
                         <GNuxtLink to="https://misskey-hub.net/" target="_blank" class="hover:underline underline-offset-1">Misskey Hub</GNuxtLink>
                     </div>
                 </div>

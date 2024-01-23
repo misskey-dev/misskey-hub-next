@@ -60,6 +60,10 @@ export default [
         "label": "العربية"
     },
     {
+        "lang": "uk",
+        "label": "Українська"
+    },
+    {
         "lang": "th",
         "label": "ไทย"
     },

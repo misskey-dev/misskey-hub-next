@@ -15,9 +15,9 @@ export default <NavSection[]>[
                 to: "/tools/avatar-decoration-preview/",
             },
             {
-                i18n: "_aidConverter.title",
-                description: "_aidConverter.description",
-                to: "/tools/aid-converter/",
+                i18n: "_customEmojiPreview.title",
+                description: "_customEmojiPreview.description",
+                to: "/tools/custom-emoji-preview/",
             },
             {
                 i18n: "_shareLinkGenerator.title",
@@ -26,4 +26,14 @@ export default <NavSection[]>[
             },
         ],
     },
+    {
+        title: "_tools._forAdmin.title",
+        items: [
+            {
+                i18n: "_aidConverter.title",
+                description: "_aidConverter.description",
+                to: "/tools/aid-converter/",
+            },
+        ],
+    }
 ];
