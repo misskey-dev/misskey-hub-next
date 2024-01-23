@@ -45,7 +45,7 @@ git submodule update --init
 NODE_ENV=production pnpm install --frozen-lockfile
 ```
 
-## 設定
+## 更新完成後，請重新啟動 Misskey 服務。
 
 ```sh
 sudo -iu misskey
@@ -64,8 +64,7 @@ NODE_ENV=production pnpm install --frozen-lockfile
 cp .config/example.yml .config/default.yml
 ```
 
-以下命令將建構 Misskey 並初始化資料庫。
-這需要一些時間。
+根據檔案中的說明編輯 `default.yml`。
 
 ## ビルドと初期化
 
@@ -89,7 +88,7 @@ NODE_ENV=production pnpm run start
 
 `/etc/systemd/system/misskey.service`
 
-在編輯器中打開它，貼上下面的代碼並儲存：
+建立 systemd 服務檔案
 
 `/etc/systemd/system/misskey.service`
 
