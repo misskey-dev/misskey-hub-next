@@ -18,7 +18,7 @@ description: 本指南介紹如何使用 Docker 安裝設置 Misskey。
 
 :::
 
-## 設定
+## リポジトリの取得
 
 ```sh
 git clone -b master https://github.com/misskey-dev/misskey.git
