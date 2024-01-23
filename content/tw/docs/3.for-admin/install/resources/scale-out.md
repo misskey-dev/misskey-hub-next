@@ -4,7 +4,7 @@
 
 ## PostgreSQL 的複寫機制
 
-進行 PostgreSQL 的複寫可以將資料庫的負擔分散到多台伺服器上。有關複寫的詳細資訊，請參閱PostgreSQL的文件。
+有關複寫的詳細資訊，請參閱PostgreSQL的文件。
 Misskey 支持 PostgreSQL的複寫機制，在 config 文件中進行以下配置。（摘錄一部分）
 
 ```yml
@@ -39,7 +39,7 @@ Misskey 將 Redis 用於多種目的，包括：
 - 儲存通知等訊息
 - 全域事件的Pub/Sub
 
-在 Misskey 中，您可以為不同的用途配置不同的 Redis 伺服器，從而將負擔分散到多台伺服器上。在 config 文件中進行以下配置。（摘錄一部分）
+在 Misskey 中，您可以為不同的用途配置不同的 Redis 伺服器，從而將負擔分散到多台伺服器上。（摘錄一部分）
 
 ```yml
 redisForPubsub:
