@@ -11,18 +11,19 @@ Using the announcement feature, you can post server-wide announcements to users,
 - Create an announcement with the "Existing Users Only" option enabled
 - Create an announcement with the "do not notify" option enabled
 - Archive closed announcements.
+  :::
 
 :::
 
-## Display format
+## 表示形式
 
-You can select from the following types of display formats.
+お知らせの表示形式を以下の種類から選択することができます。
 
-- **Normal** ... Announcements will be posted on the Announcements page.
-- **Banner** ... In addition to appearing on the announcements page a banner will appear at the top of the user's screen.
-- **Dialog** ... In addition to being posted on the announcements page it will also appear as a modal dialog when the user opens the site.
-  - It is recommended that you proceed with caution when there are two or more dialog-type announcements at the same time, as they are very likely to adversely affect the UX.
+- **通常** ... お知らせ一覧ページにお知らせが掲載されます。
+- **バナー** ... お知らせ一覧ページへの掲載に加えて、クライアントの画面上部にバナーとして表示されます。
+- **ダイアログ** ... お知らせ一覧ページへの掲載に加えて、クライアント起動時にモーダル ダイアログとして表示されます。
+  - ダイアログ形式のお知らせが同時に2つ以上ある場合、UXに悪影響を及ぼす可能性が非常に高いため、使用は慎重に行うことを推奨します。
 
-## Creating Announcements
+## お知らせの作成
 
 TODO
