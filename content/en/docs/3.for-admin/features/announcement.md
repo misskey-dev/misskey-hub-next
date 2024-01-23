@@ -11,7 +11,8 @@ Using the announcement feature, you can post server-wide announcements to users,
 - Create an announcement with the "Existing Users Only" option enabled
 - Create an announcement with the "do not notify" option enabled
 - Archive closed announcements.
-  :::
+
+:::
 
 ## Display format
 

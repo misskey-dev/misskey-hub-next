@@ -15,7 +15,8 @@ description: 本指南介紹如何使用 Docker 安裝設置 Misskey。
 :::tip{label='前提条件'}
 
 - DockerおよびDocker Composeがインストールされていること。
-  :::
+
+:::
 
 ## 設定
 

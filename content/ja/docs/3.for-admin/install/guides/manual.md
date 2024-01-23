@@ -14,6 +14,7 @@ Misskeyを手動で構築する
 :::
 
 :::tip{label='前提条件'}
+
 #### 以下のソフトウェアがインストール・設定されていること
 - **[Node.js](https://nodejs.org/en/)** (20.4.x以上)
 - **[PostgreSQL](https://www.postgresql.org/)** (15以上)
@@ -26,6 +27,7 @@ Debian/Ubuntuをお使いであれば、`build-essential`パッケージをイ�
 ```sh
 sudo corepack enable
 ```
+
 :::
 
 ユーザーの作成
@@ -165,4 +167,5 @@ sudo systemctl restart misskey
 
 - `pnpm run clean`または`pnpm run clean-all`
 - `pnpm rebuild`
+
 :::

@@ -11,7 +11,8 @@ Dengan menggunakan fitur pengumuman, kamu dapat memposting pengumuman kepada pen
 - 「既存ユーザーのみ」オプションを有効にしてお知らせを作成する
 - 「非通知」オプションを有効にしてお知らせを作成する
 - 終了したお知らせはアーカイブする
-  :::
+
+:::
 
 ## Gaya Tampilan
 

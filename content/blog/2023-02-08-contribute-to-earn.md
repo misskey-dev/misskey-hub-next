@@ -10,18 +10,22 @@ We offer campaigns you to recieve rewards for contributing to the development of
 <https://misskey.io/notes/9auj9aj1ww>
 
 :::tip
+
 条件や報奨金の額は、予告なく変更になる場合があります。  
 Conditions and reward amounts are subject to change without notice.
 
 これ以外にも貢献に応じて不定期に給付金を支給中  
 In addition to those, benefits are being paid at irregular intervals based on contributions.
+
 :::
 
 :::warning
+
 報奨金の原資はパトロンの皆様からの寄付で成り立っています。  
 Rewards come from donations from patrons.
 
 [**→ 寄付について / About Donations**](../docs/donate.html)
+
 :::
 
 ## カバレッジ上げ / Increase Coverage

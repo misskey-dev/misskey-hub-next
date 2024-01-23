@@ -15,7 +15,8 @@ description: このガイドはDockerを使ったMisskeyセットアップ方法
 :::tip{label='前提条件'}
 
 - DockerおよびDocker Composeがインストールされていること。
-  :::
+
+:::
 
 ## リポジトリの取得
 

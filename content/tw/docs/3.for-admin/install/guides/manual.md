@@ -175,4 +175,5 @@ sudo systemctl restart misskey
 
 - `pnpm run clean` 或 `pnpm run clean-all`
 - `pnpm rebuild`
-  :::
+
+:::

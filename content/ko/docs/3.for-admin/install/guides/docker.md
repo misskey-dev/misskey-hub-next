@@ -15,7 +15,8 @@ description: 이 가이드는 Docker를 사용하여 Misskey를 설정하는 방
 :::tip{label='前提条件'}
 
 - Docker 및 Docker Compose가 설치되어 있어야 합니다.
-  :::.
+
+:::.
 
 ## 설정
 

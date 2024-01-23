@@ -18,6 +18,7 @@ MisskeyのHelmChartsはTrueNAS Scaleで使用するためのTrueChartsで公開�
 
 
 :::前提条件
+
 - TrueNAS Scale
 または
 - KubernetesクラスターとHelm

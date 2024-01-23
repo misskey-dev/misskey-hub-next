@@ -12,8 +12,10 @@ The prefix `misskey` is used to refer to `https://misskey-hub-net/ns#`.
 - canonical IRI: `https://misskey-hub.net/ns#_misskey_content`
 
 :::warning
+
 This value is deprecated and might be removed in the future.
 See also <https://github.com/misskey-dev/misskey/pull/8787>.
+
 :::
 
 This value is identical to having a `source` property like this:
@@ -40,7 +42,9 @@ Used on actors to display their summary as MFM. The content is same as `summary`
 - canonical IRI: `https://misskey-hub.net/ns#_misskey_quote`
 
 :::tip
+
 Ways to potentially provide this information using the core ActivityPub vocabulary are currently underway, see <https://github.com/misskey-dev/misskey/issues/8722>.
+
 :::
 
 Indicates that this note is quoting another note. It contains the `id` of the note being quoted.

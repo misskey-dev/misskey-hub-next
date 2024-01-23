@@ -1,11 +1,15 @@
 # Webhook
 
 :::tip
+
 從 v12.109.0 新增的功能。
+
 :::
 
 :::warning
+
 由於這是一項試驗性功能，因此可能不穩定，或者將來規格可能會發生變化。
+
 :::
 
 Misskey 提供了 Webhook。使用 Webhook，您可以即時接收 Misskey 上的各種事件。

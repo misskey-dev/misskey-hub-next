@@ -6,7 +6,9 @@ date: 2023-12-03
 # インサイド Misskey Hub Next
 
 :::tip
+
 この記事は、[Misskey Alt Advent Calendar 2023](https://adventar.org/calendars/8658) 3日目の記事です。
+
 :::
 
 ![](/img/og/misskey-hub-screenshot-d.png)
@@ -22,7 +24,9 @@ date: 2023-12-03
 しかし、もともとのMisskey Hubの計画上、ドキュメント以外のページもかなり必要になるということで、ドキュメント生成に特化したフレームワークではなく、より拡張性が高く、汎用的な[Nuxt](https://nuxt.com/)をフレームワークとして採用しました。
 
 :::warning
+
 VuePressよりは、今はどちらかというと[VitePress](https://vitepress.dev/)のほうがメジャーな感じがします。
+
 :::
 
 :::g-details{summary="詳しい技術スタックはこちら"}
@@ -60,7 +64,9 @@ VuePressよりは、今はどちらかというと[VitePress](https://vitepress.
 そして、今回のMisskey Hub Nextでは、ドキュメントページとブログページに**ISR**を、それ以外のページに**SSG**を適用しています。略称多くてこんがらがりそう。
 
 :::tip
+
 プロジェクト名に`Next`と入っているのでReactフレームワークの[Next.js](https://nextjs.org/)のほうを思い浮かべたかもしれませんが、**罠です。** Nuxtで作ってあります。
+
 :::
 
 ## ISRとは？
@@ -127,6 +133,7 @@ Misskeyをより多くの人に広めるために、ぜひご協力お願いし�
 :::
 
 :::g-details{summary="【マニアック】フォントのはなし"}
+
 Misskey Hub Nextでは、フォントの改善も行いました。
 
 現行のMisskey Hubで使われているフォント（Kosugi Maru）は、英字が歪で、英単語や英文になると読みにくくなっていました。また、日本語の漢字部分が中国語とバッティングして不自然に見えてしまうという問題もありました。
@@ -168,7 +175,9 @@ Misskeyの[サーバー一覧](/servers/)を、[Misskeyをはじめよう(joinmi
 これにより、基本的には**サーバーを追加するのに特別な作業や申請は必要なくなり、新しく見つかったサーバーは自動的に追加されるようになりました！**
 
 :::tip
+
 なので近日中にjoinmisskeyはMisskey Hubに統合されるかも…？
+
 :::
 
 ### 【新機能】ツール集
@@ -185,7 +194,9 @@ Misskey関連のさまざまな便利ツールを提供するページ「[ツー
 をご利用いただけますが、今後も随時拡充していく予定です💪
 
 :::tip
+
 [MFMお試しコーナー](/tools/mfm-playground/)の再現精度は割と高いのでMFMアートづくりにもおすすめです
+
 :::
 
 ### 【新機能】AiScriptに対応
@@ -211,6 +222,7 @@ Misskey Hub Nextでは、わたし・藍も色々なところにいます！
 ![](https://media.misskeyusercontent.com/io/7f980e50-bbd8-4527-b9f7-f6f97564956a.png)
 
 ほかにも色々なところに隠れているので、ぜひ探してみてくださいね♪
+
 :::
 
 さらに、<ruby>古<rt>いにしえ</rt></ruby>のミスキストや、現行Misskey Hubのヘビーユーザーしか知らないであろう、知る人ぞ知る機能・**藍モード**も移植しました！
@@ -231,7 +243,9 @@ Misskey Hub Nextでは、わたし・藍も色々なところにいます！
 こちらは、現在[株式会社MisskeyHQ (村上さん)](https://misskey.io/notes/9l0i92bvr1)と連携しながら、ドキュメントの拡充に取り組んでいます。もう少しお待ち下さい🙏
 
 :::tip
+
 ドキュメントの拡充にご協力いただける方は、[こちら](https://misskey.io/notes/9l0i92bvr1)をご覧のうえ、ぜひご参加ください！
+
 :::
 
 ### シェアボタン中継機能
