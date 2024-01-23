@@ -22,33 +22,33 @@ Webhookが登録されると、指定したイベントが発生した際に、�
 リクエストペイロードは以下のプロパティが入ります。
 
 <MkSchemaViewerItemObject :schema="{
-type: 'object',
-properties: {
- hookId: {
- 	type: 'string',
- 	description: 'Webhook ID',
- },
- userId: {
- 	type: 'string',
- 	description: 'Webhook作成者のユーザーID',
- },
- eventId: {
- 	type: 'string',
- 	description: 'イベントのID',
- },
- createdAt: {
- 	type: 'integer',
- 	description: 'イベントが発生した日時(UNIX time、ミリ秒)',
- },
- type: {
- 	type: 'string',
- 	description: 'イベントの種類',
- },
- body: {
- 	type: 'object',
- 	description: 'イベントのペイロード',
- },
-}
+ type: 'object',
+ properties: {
+ 	hookId: {
+ 		type: 'string',
+ 		description: 'Webhook ID',
+ 	},
+ 	userId: {
+ 		type: 'string',
+ 		description: 'Webhook作成者のユーザーID',
+ 	},
+ 	eventId: {
+ 		type: 'string',
+ 		description: 'イベントのID',
+ 	},
+ 	createdAt: {
+ 		type: 'integer',
+ 		description: 'イベントが発生した日時(UNIX time、ミリ秒)',
+ 	},
+ 	type: {
+ 		type: 'string',
+ 		description: 'イベントの種類',
+ 	},
+ 	body: {
+ 		type: 'object',
+ 		description: 'イベントのペイロード',
+ 	},
+ }
 }"/>
 
 送信先サーバーが5xxエラーを返すか、応答しなかった場合は時間を開けてリクエストが再送されます。
@@ -61,22 +61,6 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
 
 ### follow
 
-自分が誰かをフォローした際に発生します。
-
-<MkSchemaViewerItemObject :schema="{
-type: 'object',
-properties: {
- user: {
- 	$ref: 'misskey://User',
- 	description: 'フォローしたユーザー',
- },
-}
-}"/>
-
-### followed
-
-自分が誰かからフォローされた際に発生します。
-
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
 properties: {
@@ -87,9 +71,17 @@ properties: {
 }
 }"/>
 
-### unfollow
+<MkSchemaViewerItemObject :schema="{
+ type: 'object',
+ properties: {
+ 	user: {
+ 		$ref: 'misskey://User',
+ 		description: 'フォローしたユーザー',
+ 	},
+ }
+}"/>
 
-自分が誰かをフォロー解除した際に発生します。
+### followed
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -101,9 +93,17 @@ properties: {
 }
 }"/>
 
-### note
+<MkSchemaViewerItemObject :schema="{
+ type: 'object',
+ properties: {
+ 	user: {
+ 		$ref: 'misskey://User',
+ 		description: 'フォローを行ったユーザー',
+ 	},
+ }
+}"/>
 
-自分がノートを投稿した際に発生します。
+### unfollow
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -115,9 +115,17 @@ properties: {
 }
 }"/>
 
-### reply
+<MkSchemaViewerItemObject :schema="{
+ type: 'object',
+ properties: {
+ 	user: {
+ 		$ref: 'misskey://User',
+ 		description: 'フォロー解除したユーザー',
+ 	},
+ }
+}"/>
 
-自分のノートに返信された際に発生します。
+### note
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -129,9 +137,17 @@ properties: {
 }
 }"/>
 
-### renote
+<MkSchemaViewerItemObject :schema="{
+ type: 'object',
+ properties: {
+ 	note: {
+ 		$ref: 'misskey://Note',
+ 		description: '作成されたノート',
+ 	},
+ }
+}"/>
 
-自分のノートがRenoteされた際に発生します。
+### reply
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -143,9 +159,17 @@ properties: {
 }
 }"/>
 
-### mention
+<MkSchemaViewerItemObject :schema="{
+ type: 'object',
+ properties: {
+ 	note: {
+ 		$ref: 'misskey://Note',
+ 		description: '返信',
+ 	},
+ }
+}"/>
 
-自分にメンションされた際に発生します。
+### renote
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -155,4 +179,28 @@ properties: {
  	description: 'メンションを含むノート',
  },
 }
+}"/>
+
+<MkSchemaViewerItemObject :schema="{
+ type: 'object',
+ properties: {
+ 	note: {
+ 		$ref: 'misskey://Note',
+ 		description: 'Renote',
+ 	},
+ }
+}"/>
+
+### mention
+
+自分にメンションされた際に発生します。
+
+<MkSchemaViewerItemObject :schema="{
+ type: 'object',
+ properties: {
+ 	note: {
+ 		$ref: 'misskey://Note',
+ 		description: 'メンションを含むノート',
+ 	},
+ }
 }"/>
