@@ -159,8 +159,7 @@ misskeyを実行するユーザーを覚えておくために必要です。
 ### /home/(misskeyユーザー)/.misskey.env
 
 systemdの場合に生成されます。\
-\
-実行されているコンテナとイメージの番号を保存しています。
+主にディレクトリを覚えておくのに使用します。
 
 ### /home/(misskeyユーザー)/.misskey-docker.env
 
