@@ -7,7 +7,9 @@
 ## 查詢參數
 
 :::tip
+
 所有參數均為**可選**參數，非必要參數。
+
 :::
 
 | 名稱      | 說明                                                                   |
@@ -46,7 +48,9 @@
 | `visibleAccts`   | 目標使用者 [acct](../resources/glossary/#acct)（逗號分隔）                         |
 
 :::warning
+
 如果為 `visibility` 指定了 `specified`，則也必須指定 `visibleUserIds` 或 `visibleAccts`。
+
 :::
 
 ### 附加檔案

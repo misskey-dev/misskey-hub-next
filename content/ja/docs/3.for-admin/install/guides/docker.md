@@ -14,7 +14,9 @@ Docker Composeを使ったMisskey構築
 :::
 
 :::tip{label='前提条件'}
+
 - DockerおよびDocker Composeがインストールされていること。
+
 :::
 
 リポジトリの取得

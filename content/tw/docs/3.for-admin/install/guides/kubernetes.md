@@ -3,14 +3,16 @@
 本指南說明如何使用 Kubernetes 和 HelmChart 設定 Misskey。
 
 :::danger
+
 一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
+
 :::
 
 ## TrueCharts と TrueNAS Scale
 
 MisskeyのHelmChartsはTrueNAS Scaleで使用するためのTrueChartsで公開されていますが、HelmChartsとしてインストールすることもできます。
 
-[TrueCharts](https://truecharts.org/charts/description_list) のサイトには利用可能なすべてのChartsやインストール方法などのドキュメントがあります。
+現在、Misskeyは_incubator_ trainで進行中です。
 
 また、不明な点があればTrueChartsの[Discord](https://discord.gg/Ax9ZgzKx9t)サーバーで質問をすることもできます。
 

@@ -1,26 +1,24 @@
-# デッキ
+# Antarmuka Deck
 
-デッキは利用可能なUIのひとつです。「カラム」と呼ばれるビューを複数並べて表示させることで、カスタマイズ性が高く、情報量の多いUIが構築できることが特徴です。\
-なお、メインカラムを追加しておくと、ノートやプロフィールをページで表示した際、メインカラムに内容が表示されます。
+Antarmuka Deck merupakan salah satu antarmuka yang tersedia di dalam Misskey.Antarmuka ini dikarakterisasikan dengan kemampuannya untuk membuat antarmuka yang informatif dan sangat disesuaikan dengan menampilkan beberapa tampilan yang disebut "kolom" secara berdampingan.\
+Opsi deck hanya tersedia pada layar yang membutuhkan ukuran besar seperti komputer/laptop.
 
-## カラムの追加
+## Menambahkan Kolom
 
-デッキの背景を右クリックし、「カラムを追加」して任意のカラムを追加できます。
+Kamu dapat menambahkan kolom dengan mengeklik kanan pada bagian latar deck dan memilih "Tambah Kolom". Kamu juga dapat mengeklik ikon '+' pada sisi kanan layar.
 
-## カラムの移動
+## Pindahkan Kolom
 
-カラムは、ドラッグアンドドロップで他のカラムと位置を入れ替えることが出来るほか、カラムメニュー(カラムのヘッダー右クリック)から位置を移動させることもできます。
+Kolom dapat diposisikan ulang dengan seret dan lepas atau dengan menggunakan menu kolom opsi "Pindah" (klik kanan pada kepala kolom).
 
-## カラムの水平分割
+## Pembagian Kolom Secara Horisontal
 
-カラムは左右だけでなく、上下に並べることもできます。
-カラムメニューを開き、「左に重ねる」を選択すると、左のカラムの下に現在のカラムが移動します。
-上下分割を解除するには、カラムメニューの「右に出す」を選択します。
+Kolom dapat disusun secara vertikal maupun horisontal. Buka menu kolom dan pilih "Tumpuk dengan kolom kiri" untuk memindahkan kolom saat ini ke bawah kolom yang ada di sebelah kiri kolom. Untuk membongkar kolom, pilih "Lepaskan kolom ke kanan" dari menu kolom.
 
-## カラムの設定
+## Atur Tata Letak Kolom
 
-カラムメニューの「編集」を選択するとカラムの設定を編集できます。カラムの名前を変えたり、幅を変えたりできます。
+Pilih "Atur Kolom" dalam menu kolom untuk menyunting aturan tata letak kolom. Jika kolom diatur ke fleksibel, maka kolom akan memperluas di luar aturan lebar untuk mengisi ruang horisontal pada layar.Dalam pengaturan ini kamu juga dapat mengubah nama dan lebar kolom.
 
-## デッキの設定
+## Pengaturan Deck
 
-デッキに関する設定は、[settings/deck](x-mi-web://settings/deck)で行えます。
+Pengaturan yang terkait dengan Deck dapat diubah pada menu [pengaturan](x-mi-web://settings/deck) (klik pada ikon gir di bawah kanan layar).

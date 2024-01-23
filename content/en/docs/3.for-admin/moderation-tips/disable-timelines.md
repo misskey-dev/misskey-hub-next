@@ -8,7 +8,9 @@ As the weight of these advantages and disadvantages may vary from server to serv
 If you feel like the demerits outweigh the merits, please consider deactivating these respective timelines.
 
 :::warning
+
 Disabling timelines can lead to confusion and possibly to a short-time drop in users.Therefore, please carefully consider the effects of disabling a timeline, and explain the reasoning for doing so in advance, so that your users can prepare by e. g. following users they often talk with on the LTL/STL.
+
 :::
 
 Additionally, Administrators / Moderators will be able to continue viewing these timelines even after they have been disabled.

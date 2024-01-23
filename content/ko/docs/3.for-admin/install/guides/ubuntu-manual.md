@@ -11,11 +11,15 @@
 [**쉘 스크립트에 대한 자세한 내용과 사용법은 여기에서 확인하세요!**](./bash/)
 
 :::tip
+
 쉘 스크립트를 통한 개발 환경에서의 설치는 예상하지 않았습니다.
+
 :::
 
 :::tip
+
 도메인 구매 및 Cloudflare 설정, 서버 확보는 여러분이 직접 준비해 주시기 바랍니다.
+
 :::
 
 문제가 있으면 [@aqz@p1.a9z.dev 에 멘션](https://p1.a9z.dev/@aqz)으로 알려주시면 감사하겠습니다.
@@ -27,7 +31,9 @@
 [docker-compose](./docker/)를 사용하면 수작업으로 조금 더 쉽게 실행할 수 있을 것입니다.
 
 :::danger
+
 일단 작동하기 시작한 서버의 도메인 및 호스트 이름으로는 데이터베이스를 다시 만들지 마십시오!
+
 :::
 
 ## 소개
@@ -52,7 +58,9 @@ OS의 차이, Misskey 본체나 의존하는 소프트웨어의 버전업으로 
 - 여기서는 도메인을 example.tld로 설명할 것이므로, 자신이 구입한 도메인으로 적절히 대체하여 읽도록 합니다.개발 환경의 경우 localhost로 대체합니다(설정 파일 항목에서 별도 설명).
 
 :::danger
+
 일단 사용하기 시작한 서버의 도메인 및 호스트 이름은 절대로 변경하지 마십시오!
+
 :::
 
 ## nano 사용법
@@ -78,7 +86,9 @@ sudo adduser --disabled-password --disabled-login misskey
 ```
 
 :::tip
+
 개발 환경의 경우 사용자를 구분할 필요가 없습니다.
+
 :::
 
 ## 기본적인 소프트웨어 설치 및 설정
@@ -177,7 +187,9 @@ active라면 OK.
 nginx는 주로 리버스 프록시에 사용되는 웹 서버 소프트웨어입니다.Misskey에 필수적인 것은 아니지만, 캐시 등을 하면 성능이 향상되고 http에서 https로 전송하는 등의 작업을 위해 설치해 둡니다.
 
 :::tip
+
 개발 환경의 경우 nginx 설정이 필요하지 않습니다.
+
 :::
 
 nginx.org의 문서 http\://nginx.org/en/linux_packages.html#Ubuntu 에 따라 설치합니다.
@@ -238,7 +250,9 @@ sudo apt install -y git build-essential
 서버를 인터넷에 공개할 준비를 합니다.
 
 :::tip
+
 개발 환경의 경우 방화벽, CloudFlare, Certbot 설정이 필요하지 않습니다.
+
 :::
 
 ### 방화벽
@@ -272,7 +286,9 @@ sudo systemctl enable ufw
 ```
 
 :::tip
+
 ufw는 넷필터(iptables)를 사람이 쉽게 조작할 수 있도록 하는 앱입니다.설치 스크립트는 OCI 환경에서는 netfilter를 직접 조작합니다.
+
 :::
 
 ### CloudFlare
@@ -376,7 +392,9 @@ nano .config/default.yml
 설정할 수 있는 값과 작성 방법은 [.config/example.yml](https://github.com/syuilo/misskey/blob/develop/.config/example.yml)에 나와 있습니다.
 
 :::tip
+
 개발 환경의 경우 url은 `url: http://localhost:3000`로 지정합니다.
+
 :::
 
 ```yml
@@ -469,7 +487,9 @@ NODE_ENV=production pnpm run build
 ```
 
 :::tip
+
 개발 환경의 경우 `NODE_ENV=production`은 필요하지 않습니다.이후 명령어에서도 마찬가지로 삭제해 주세요.
+
 :::
 
 ### 서버에서 빌드할 수 없는 경우
@@ -515,7 +535,9 @@ CloudFlare의 DNS 설정이 올바른 IP 주소로 설정되어 있는지 다시
 ## Misskey의 데몬 생성
 
 :::tip
+
 개발 환경의 경우, 데몬을 만들 필요가 없습니다.
+
 :::
 
 일단 Ctrl+C로 프로세스를 죽이고, Misskey를 데몬으로 실행하도록 설정해 봅시다.

@@ -1,56 +1,64 @@
-# ミュートとブロック
+# Bisukan dan Blokir
 
-好みではないユーザーがいる場合は、ミュートを行うことでそのユーザーが自分から見えないようにすることができます。
-また、より強力な措置として、ブロックを行うことでそのユーザーから自分のコンテンツが見えないようになるほか、自分に対して関わることができないようにすることができます。
-ミュートされていることは相手は分かりませんが、ブロックされていることは相手に分かります。どちらを選ぶかはご自身の判断で行ってください。
+Jika kamu tidak menyukai seorang pengguna, kamu dapat membisukan mereka untuk membuat mereka hilang dari lini masamu. Sebagai alternatif, kamu juga dapat memblokir pengguna untuk mencegah mereka melihat kontenmu atau berinteraksi dengan kamu dalam cara apapun. Orang tidak akan tahu bahwa kamu telah membisukan mereka, tetapi mereka tahu jika kamu memblokir mereka.Semua terserah pada keputusanmu untuk memilih opsi mana yang akan kamu pilih.
 
 :::tip
-ミュートとブロックは併用できます。
+
+Bisukan dan blokir dapat digunakan secara bersamaan.
+
 :::
 
 :::warning
-利用規約に違反するような、迷惑なユーザーがいる場合は運営者に報告することも検討してください。
+
+Mohon pertimbangkan untuk melaporkan pengguna manapun yang melanggar Syarat dan Ketentuan ke moderator.
+
 :::
 
-Misskey Webでは、設定>ミュートとブロック から、自分がミュートまたはブロックしているユーザー一覧を確認することができます。
+Dalam Misskey Web, kamu dapat melihat daftar pengguna yang telah kamu bisukan atau kamu blokir dengan menuju ke menu Pengaturan > Bisukan dan Blokir.
 
-## ミュート
+## Bisukan
 
-ユーザーをミュートすると、そのユーザーに関する次のコンテンツがMisskeyに表示されなくなります:
+Jika kamu membisukan seorang pengguna, konten berikut mengenai pengguna tersebut tidak akan muncul kembali di Misskey:
 
-- タイムラインや投稿の検索結果内の、そのユーザーの投稿(およびそれらの投稿に対する返信やRenote)
-- そのユーザーからの通知
-- メッセージ履歴一覧内の、そのユーザーとのメッセージ履歴
-- など
+- Postingan pengguna (balasan serta renote dari postingan tersebut) dalam lini masa dan hasil pencarian postingan
+- Notifikasi dari pengguna tersebut
+- Riwayat pesan dengan pengguna di dalam obrolan Misskey
+- dan lain-lain.
 
-Misskey Webでユーザーをミュートするには、対象のユーザーのユーザーページのメニューを開き、「ミュート」ボタンを押します。
+Untuk membisukan pengguna dalam Misskey Web, buka menu pada halaman profil pengguna dan tekan tombol "Bisukan".
 
 :::tip
-ミュートを行ったことは相手に通知されず、ミュートされていることを知ることもできません。
+
+Pengguna yang dibisukan tidak akan diberi tahu bahwa kamu telah membisukan mereka, dan mereka tidak akan tahu bahwa kamu telah membisukan mereka.
+
 :::
 
-## ブロック
+## Blokir
 
-ユーザーをブロックすると、そのユーザーからあなたのコンテンツが見えないようになり、またあなたに対して以下のようなアクションをすることができなくなります。
+Jika kamu memblokir pengguna, mereka tidak akan dapat melihat konten kamu dan mereka tidak akan dapat melakukan aksi berikut:
 
-- フォローする
-- ユーザーリストに追加する
-- 返信する、Renoteする
-- リアクションする、アンケートに投票する
-- メッセージを送信する
-- など
+- Mengikuti kamu
+- Menambahkanmu ke dalam daftar
+- Membalas atau merenote kamu
+- Memberikan reaksi atau memilih dari salah satu jajak pendapatmu
+- Mengirim pesan ke kamu
+- dan lain-lain.
 
-また、
+Serta juga,
 
-- ブロックする際に既にそのユーザーからフォローされていた場合はフォローが解除されます。
-- ブロックする際に既にそのユーザーがあなたをユーザーリストに入れていた場合はそのリストからあなたが削除されます。
+- Jika pengguna telah mengikuti kamu ketika kamu memblokir mereka, mereka akan membatalkan mengikuti kamu.
+- Jika pengguna telah memasukkan kamu ke daftar mereka ketika kamu memblokir mereka, kamu tidak akan dihapus dari daftar tersebut.
 
-Misskey Webでユーザーをブロックするには、対象のユーザーのユーザーページのメニューを開き、「ブロック」ボタンを押します。
+Untuk memblokir pengguna pada Misskey Web, buka menu pada halaman profil pengguna dan tekan tombol "Blokir".
 
 :::warning
-ブロックを行ったこと自体は相手に通知されませんが、フォローを行ったりなどの上記のアクションが行えなくなるので間接的にブロックされていることは分かります。
+
+Kamu tidak akan diberitahu bahwa kamu telah diblokir oleh seseorang, namun kamu tahu secara tidak langsung bahwa kamu telah diblokir karena kamu tidak dapat melakukan berbagai aksi yang disebutkan di atas, seperti mengikuti seseorang.
+
 :::
 
 :::warning
-相手から自分のコンテンツが見えなくなりますが、相手がアカウントを切り替えたりログアウト状態になれば見ることができます。あくまで簡易的、補助的なものとしてお考えください。
+
+Orang lain tidak dapat melihat konten kamu, namun mereka akan tetap dapat melihat konten kamu jika mereka beralih akun atau keluar.Mohon pertimbangkan aksi ini hanya sebagai tindakan pencegahan tambahan dan sederhana.
+
 :::

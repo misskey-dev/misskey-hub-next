@@ -1,10 +1,9 @@
-# お気に入り
+# Favorit
 
-[ノート](./note)をお気に入りとして登録できる機能です。
+Fitur ini memperbolehkanmu untuk menandai sebuah [catatan](./note) sebagai favorit.
 
 <!--TODO:「お気に入りページ」をMisskey Webに飛ばすリンクで置き換え-->
 
-お気に入り登録したノートは、お気に入りページで一覧することができます。
-お気に入りに登録したことは相手に通知されず、お気に入りは自分しか見ることができません。
+Kamu dapat melihat catatan yang kamu favoritkan pada halaman Favorit. Orang lain tidak akan diberitahu apabila kamu telah menambahkan catatan mereka ke dalam favoritmu, dan hanya kamu saja yang dapat melihat favoritmu.
 
-ノートをお気に入り登録するには、ノートメニューの「お気に入り」を押します。お気に入り解除するには、ノートメニューの「お気に入り解除」を押します。
+Untuk memfavoritkan catatan, tekan "Tambahkan ke favorit" pada menu catatan.Untuk menonfavoritkan catatan, klik "Hapus dari favorit" pada menu catatan.
