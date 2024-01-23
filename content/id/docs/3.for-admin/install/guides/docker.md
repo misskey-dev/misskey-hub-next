@@ -16,7 +16,9 @@ Jangan pernah mengubah nama domain (hostname) instansi peladen ketika kamu sudah
 
 - `docker` dan `dockercompose` terpasang
 
-## Dapatkan repositorinya
+:::
+
+## リポジトリの取得
 
 ```sh
 git clone -b master https://github.com/misskey-dev/misskey.git
@@ -24,9 +26,9 @@ cd misskey
 git checkout master
 ```
 
-## Atur
+## 設定
 
-Salin berkas konfigurasi dengan menjalankan perintah berikut:
+下記コマンドで、各種設定ファイルのサンプルをコピーします。
 
 ```sh
 cp .config/docker_example.yml .config/default.yml
@@ -34,21 +36,22 @@ cp .config/docker_example.env .config/docker.env
 cp ./docker-compose_example.yml ./docker-compose.yml
 ```
 
-Sunting `default.yml` dan `docker.env` sesuai dengan instruksi yang terdapat di dalam berkas.\
-Sunting `docker-compose.yml` bila perlu.(Contoh: Apabila kamu ingin mengganti port peladen).
+`default.yml`と`docker.env`をファイル内の説明に従って編集してください。\
+また、必要に応じて、`docker-compose.yml`を編集します。(ポートを変更したい場合など)
 
-## Bangun dan inisialisasi
+## ビルドと初期化
 
-Perintah berikut akan membangun Misskey dan menginisialisasi basis data. Proses ini akan memakan waktu sesaat.
+次のコマンドでMisskeyのビルドとデータベースの初期化を行います。
+これにはしばらく時間がかかります。
 
 ```shell
 sudo docker compose build
 sudo docker compose run --rm web pnpm run init
 ```
 
-## Jalankan
+## 起動
 
-Selamat!Kamu sudah dapat memulai peladen Misskey dengan perintah berikut.
+お疲れ様でした。以下のコマンドでMisskeyを起動できます。
 
 ```sh
 sudo docker compose up -d
@@ -56,11 +59,11 @@ sudo docker compose up -d
 
 GLHF✨
 
-## Bagaimana memutakhirkan peladen Misskey kamu?
+## Misskeyのアップデート方法
 
 :::warning
 
-Ketika memutakhirkan, pastikan mengecek [catatan rilisan](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md) untuk mengetahui lebih awal akan perubahan ataupun tambahan pekerjaan yang nantinya dibutuhkan (biasanya tidak perlu).
+アップデートの際は必ず[リリースノート](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)を確認し、変更点や追加で必要になる作業の有無(ほとんどの場合ありません)を予め把握するようにしてください。
 
 :::
 
@@ -74,9 +77,9 @@ sudo docker compose build
 sudo docker compose stop && sudo docker compose up -d
 ```
 
-Perintah tersebut akan memakan waktu sesaat bergantung dengan konten dari pemutakhiran dan ukuran basis data.
+アップデート内容、およびデータベースの規模によっては時間がかかることがあります。
 
-## Bagaimana cara mengeksekusi perintah CLI?
+## cliコマンドを実行する方法
 
 ```sh
 sudo docker compose run --rm web node packages/backend/built/tools/foo bar
