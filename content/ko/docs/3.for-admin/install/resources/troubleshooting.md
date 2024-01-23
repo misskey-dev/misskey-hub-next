@@ -248,9 +248,9 @@ Misskey에서는 오브젝트 스토리지 연결에 [aws-sdk](https://www.npmjs
 
 각 서비스/소프트웨어의 설명서를 잘 읽고 설정해 보세요.
 
-### ローディングが終わらない
+### 로딩이 끝나지 않음
 
-Cloudflare を使用している場合は、Rocket LoaderやAuto Minifyが有効になっていないか確認してください。有効になっている場合は無効にすることで解決する場合があります。
+Cloudflare를 사용하는 경우, Rocket Loader 또는 Auto Minify가 활성화되어 있는지 확인하십시오.활성화된 경우 비활성화하면 해결될 수 있습니다.
 
 ***
 
