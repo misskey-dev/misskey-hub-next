@@ -216,6 +216,7 @@ for (let i, 100) {
 
 
 :::fukidashi{chara="doya_ai" charaName="藍"}
+
 Misskey Hub Nextでは、わたし・藍も色々なところにいます！  
 ほら、こんなところにも！
 
