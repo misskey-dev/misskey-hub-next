@@ -18,7 +18,7 @@ Do not recreate the database with the domain/hostname of the server once you hav
 
 :::
 
-## Clone the Repository
+## リポジトリの取得
 
 ```sh
 git clone -b master https://github.com/misskey-dev/misskey.git
@@ -26,9 +26,9 @@ cd misskey
 git checkout master
 ```
 
-## Configuration
+## 設定
 
-The following commands will copy the various config files from examples to their actual config location.
+下記コマンドで、各種設定ファイルのサンプルをコピーします。
 
 ```sh
 cp .config/docker_example.yml .config/default.yml
@@ -36,22 +36,22 @@ cp .config/docker_example.env .config/docker.env
 cp ./docker-compose_example.yml ./docker-compose.yml
 ```
 
-Please edit `default.yml` and `docker.env` file as per the description.\
-Also edit `docker-compose.yml` as needed.(If you want to change the port etc.)
+`default.yml`と`docker.env`をファイル内の説明に従って編集してください。\
+また、必要に応じて、`docker-compose.yml`を編集します。(ポートを変更したい場合など)
 
-## Build & Initialize
+## ビルドと初期化
 
-The next set of commands will build Misskey image and perform database initialization.
-This will take some time.
+次のコマンドでMisskeyのビルドとデータベースの初期化を行います。
+これにはしばらく時間がかかります。
 
 ```shell
 sudo docker compose build
 sudo docker compose run --rm web pnpm run init
 ```
 
-## Startup
+## 起動
 
-お疲れ様でした。You can launch Misskey with the following command.
+お疲れ様でした。以下のコマンドでMisskeyを起動できます。
 
 ```sh
 sudo docker compose up -d
@@ -59,11 +59,11 @@ sudo docker compose up -d
 
 GLHF✨
 
-## Updating Misskey
+## Misskeyのアップデート方法
 
 :::warning
 
-Updates are always available in the [release notes](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md). Please make sure to check in advance for any changes that may be required.
+アップデートの際は必ず[リリースノート](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)を確認し、変更点や追加で必要になる作業の有無(ほとんどの場合ありません)を予め把握するようにしてください。
 
 :::
 
@@ -77,9 +77,9 @@ sudo docker compose build
 sudo docker compose stop && sudo docker compose up -d
 ```
 
-It may take time depending on the update content and the size of the database.
+アップデート内容、およびデータベースの規模によっては時間がかかることがあります。
 
-## How to execute CLI commands?
+## cliコマンドを実行する方法
 
 ```sh
 sudo docker compose run --rm web node packages/backend/built/tools/foo bar
