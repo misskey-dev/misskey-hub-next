@@ -16,10 +16,10 @@ Misskey 提供了 Webhook。使用 Webhook，您可以即時接收 Misskey 上�
 
 您可以在「設定」>「Webhook」中管理您的 Webhook。
 
-Webhook 註冊後，當指定事件發生時，將向指定 URL 傳送 HTTP 請求。リクエストのメソッドはPOSTで、ボディはJSONです。
-さらに、リクエストヘッダーには`X-Misskey-Hook-Secret`という名前で、登録時に設定したシークレットが含まれます。このシークレットが正しいか検証することで、リクエストが正規のものか判定することができます。
+Webhook 註冊後，當指定事件發生時，將向指定 URL 傳送 HTTP 請求。請求方法為 POST，內文為 JSON。
+此外，請求標頭將包含您在註冊期間設定的金鑰，名為「X-Misskey-Hook-Secret」。透過驗證此金鑰，可以確定請求是否合法。
 
-リクエストペイロードは以下のプロパティが入ります。
+請求負載包含以下屬性。
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -57,7 +57,7 @@ body: {
 
 ## 事件
 
-イベントごとに説明とペイロードを示します。
+提供每個事件的描述和負載。
 
 ### follow
 
@@ -185,7 +185,7 @@ note: {
 
 ### mention
 
-自分にメンションされた際に発生します。
+當有人提到你時發生。
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
