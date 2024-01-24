@@ -7,7 +7,7 @@ share: "分享"
 note: "貼文"
 other: "其他"
 add: "新增"
-browse: "参照"
+browse: "瀏覽"
 settings: "設定"
 goToLegacyHub: "舊版的 Misskey Hub"
 _error:
@@ -200,7 +200,7 @@ _tools:
   _forUsers:
     title: "針對 Misskey 的使用者"
   _forAdmin:
-    title: "サーバー運営者向け"
+    title: "針對伺服器營運者"
 _mfmPlayground:
   title: "MFM 試用區"
   description: "您可以自由練習MFM！下面重現了 Misskey 的發文畫面/貼文畫面！"
@@ -300,16 +300,16 @@ _avatarDecorationPreview:
     noteText: "我吃了一個巧克力甜甜圈🍩😋"
     profileDescription: "我是 Misskey 的常駐人工智慧小藍！很高興見到你♪"
 _customEmojiPreview:
-  title: "カスタム絵文字 プレビュー"
-  description: "カスタム絵文字の視認性をチェックできます。"
-  preview: "プレビュー"
-  emoji: "絵文字 #{number}"
-  placeholder: "「追加」から、カスタム絵文字を追加してプレビューできます。"
+  title: "預覽自訂表情符號"
+  description: "可以檢查自訂表情符號的可見性。"
+  preview: "預覽"
+  emoji: "表情符號 #{number}"
+  placeholder: "從「新增」中，您可以新增和預覽自訂表情符號。"
   _options:
-    text: "ノート文面"
-    textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
+    text: "貼文內容"
+    textDescription: "您可以透過 {emoji_id} 引用新增的自訂表情符號。"
   _placeholder:
-    noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
+    noteText: "自訂表情符號將顯示如下 → :emoji_preview_1:\n請重寫句子並嘗試可用性✨"
 _api:
   _permissions:
     title: "權限"
