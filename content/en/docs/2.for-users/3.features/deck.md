@@ -1,25 +1,23 @@
-# Decks
+# Deck
 
 Deck is one of the available UIs.It features the ability to create highly customizable and dense UIs by displaying multiple views side by side called "columns."\
 In addition, when notes or profiles are displayed on the page, if a main column is added then their contents will be displayed inside it.
 
 ## Adding columns
 
-デッキの背景を右クリックし、「カラムを追加」して任意のカラムを追加できます。
+Columns can be added by right-clicking on the deck background and selecting "Add Column."
 
 ## Moving columns
 
-カラムは、ドラッグアンドドロップで他のカラムと位置を入れ替えることが出来るほか、カラムメニュー(カラムのヘッダー右クリック)から位置を移動させることもできます。
+Columns can have move by swapping with other columns via drag and drop, as well as through the column menu, shown from right-clicking the column header.
 
-## カラムの水平分割
+## Splitting columns
 
-カラムは左右だけでなく、上下に並べることもできます。
-カラムメニューを開き、「左に重ねる」を選択すると、左のカラムの下に現在のカラムが移動します。
-上下分割を解除するには、カラムメニューの「右に出す」を選択します。
+Columns can be arranged not only horizontally but also vertically. Open the column menu and select "Stack to the left" to move the current column below the left column. To undo the split, select "Dock on the right."
 
 ## Column settings
 
-カラムメニューの「編集」を選択するとカラムの設定を編集できます。カラムの名前を変えたり、幅を変えたりできます。
+Column settings can be edited by selecting "Edit" from the column menu.Columns can be renamed and their widths can be changed.
 
 ## Deck settings
 
