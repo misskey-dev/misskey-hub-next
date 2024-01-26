@@ -45,6 +45,11 @@ export default function(props: {
 		return t.match(/^[0-9.]+s$/) ? t : null;
 	};
 
+	const validColor = (c: string | null | undefined): string | null => {
+		if (c == null) return null;
+		return c.match(/^[0-9a-f]{3,6}$/i) ? c : null;
+	};
+
 	const useAnim = true;
 
 	/**
@@ -201,16 +206,40 @@ export default function(props: {
 						break;
 					}
 					case 'fg': {
-						let color = token.props.args.color;
+						let color = validColor(token.props.args.color);
 						if (!/^[0-9a-f]{3,6}$/i.test(color)) color = 'f00';
 						style = `color: #${color};`;
 						break;
 					}
 					case 'bg': {
-						let color = token.props.args.color;
+						let color = validColor(token.props.args.color);
 						if (!/^[0-9a-f]{3,6}$/i.test(color)) color = 'f00';
 						style = `background-color: #${color};`;
 						break;
+					}
+					case 'border': {
+						let color = validColor(token.props.args.color);
+						color = color ? `#${color}` : '#86b300';
+						let b_style = token.props.args.style;
+						if (typeof b_style !== 'string' ||
+							!['hidden', 'dotted', 'dashed', 'solid', 'double', 'groove', 'ridge', 'inset', 'outset']
+								.includes(b_style)
+						) b_style = 'solid';
+						const width = parseFloat(token.props.args.width ?? '1');
+						const radius = parseFloat(token.props.args.radius ?? '0');
+						style = `border: ${width}px ${b_style} ${color}; border-radius: ${radius}px;${token.props.args.noclip ? '' : ' overflow: clip;'}`;
+						break;
+					}
+					case 'ruby': {
+						if (token.children.length === 1) {
+							const child = token.children[0];
+							let text = child.type === 'text' ? child.props.text : '';
+							return h('ruby', {}, [text.split(' ')[0], h('rt', text.split(' ')[1])]);
+						} else {
+							const rt = token.children.at(-1)!;
+							let text = rt.type === 'text' ? rt.props.text : '';
+							return h('ruby', {}, [...genEl(token.children.slice(0, token.children.length - 1), scale), h('rt', text.trim())]);
+						}
 					}
 				}
 				if (style == null) {
