@@ -7,7 +7,10 @@
     ></MkAnimBg>
     <GMisskeyGateway
         class="relative"
-        :path="`/share?${stringifyQuery(filteredQuery)}`"
+        :action="{
+            type: 'link',
+            path: `/share?${stringifyQuery(filteredQuery)}`,
+        }"
         :manualInstance="manualInstance"
     ></GMisskeyGateway>
 </template>
