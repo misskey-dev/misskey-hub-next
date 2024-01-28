@@ -192,8 +192,8 @@ _brandAssets:
 _links:
   title: "リンク"
   _github:
-    title: "Github"
-    description: "Misskeyの開発はGithub上で行われています。機能リクエストやバグ報告などはこちらから行えます。"
+    title: "GitHub"
+    description: "Misskeyの開発はGitHub上で行われています。機能リクエストやバグ報告などはこちらから行えます。"
   _crowdin:
     title: "Crowdin"
     description: "Misskey本体、およびドキュメントの翻訳はこちらで管理されています。皆さんのご協力をお願いします。"
