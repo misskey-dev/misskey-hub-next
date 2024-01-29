@@ -1,25 +1,25 @@
 noScript: "JavaScript 目前处于禁用状态。必须启用 JavaScript 才能浏览网站。"
-learnMore: "詳しく知る"
+learnMore: "了解更多"
 loading: "加载中…"
 clickToExpand: "（点击以展开）"
 copy: "复制"
 share: "分享"
-note: "ノート"
+note: "帖子"
 other: "其他"
-add: "追加"
-browse: "参照"
-settings: "設定"
-goToLegacyHub: "従来のMisskey Hub"
+add: "添加"
+browse: "查看"
+settings: "设置"
+goToLegacyHub: "Misskey Hub的历史"
 _error:
   notFound: "找不到页面"
   notFoundDesc: "找不到您要查找的页面，请检查 URL。"
   generalError: "发生了错误"
-  generalErrorDesc: "これが意図した操作でない場合は、以下から不具合報告をお願いします。"
+  generalErrorDesc: "如果此操作并非出于您本意，请根据指引将问题报告给我们。"
   reportProblem: "报告问题"
-  goToTop: "トップページにもどる"
+  goToTop: "返回主页"
 _seo:
   siteName: "Misskey Hub"
-  siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
+  siteNameLong: "Misskey Hub – Misskey项目官方网站"
   defaultTitleTagline: "ノートでひろがるネットワーク"
   defaultDescription: "【ノートでひろがるネットワーク】分散型SNS Misskeyの公式サイト。Misskeyのはじめかたやサーバー一覧など、Misskeyに関する情報が満載！"
 _nav:
@@ -27,17 +27,17 @@ _nav:
   docs: "文档"
   blog: "博客"
   other: "更多！"
-  switchLang: "语音设定"
+  switchLang: "语言设定"
 _landing:
   _hero:
-    description: "Misskey（ミスキー）はオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
-    gettingStarted: "はじめる"
+    description: "Misskey是一个去中心化开源社交平台。"
+    gettingStarted: "开始"
   _keyFeatures:
     _open:
       title: "オープン"
-      description: "Misskeyはオープンソースのソフトウェアで、誰でも自由にMisskeyを利用できます。"
+      description: "Misskey是一款开源的软件，任何人都可以自由地使用Misskey。"
     _federated:
-      title: "分散"
+      title: "去中心化"
       description: "Misskeyは分散型のプロトコルを実装しているため、異なるサーバーのコミュニティ同士が繋がります。"
     _multifunction:
       title: "高機能"
