@@ -24,17 +24,17 @@
                             <GNuxtLink
                                 :to="localePath('/legal/')"
                                 class="block px-4 py-2 rounded-xl"
-                                :class="isSamePath(path, localePath('/legal/')) ? 'bg-accent-500/20 text-accent-600' : 'hover:bg-accent-500/20 hover:text-accent-600'"
+                                :class="isSamePath(path, localePath('/legal/')) ? 'bg-accent-500/20 text-accent-600 font-bold' : 'hover:bg-accent-500/20 hover:text-accent-600'"
                             >{{ $t('index') }}</GNuxtLink>
                             <div class="py-1">
                                 <div class="w-full h-px bg-slate-300 dark:bg-slate-700"></div>
                             </div>
                             <GNuxtLink
-                                v-for="link in data"
+                                v-for="link in navigation"
                                 :key="link._path"
                                 :to="link._path"
                                 class="block px-4 py-2 rounded-xl text-wrap break-keep"
-                                :class="isSamePath(path, link._path) ? 'bg-accent-500/20 text-accent-600' : 'hover:bg-accent-500/20 hover:text-accent-600'"
+                                :class="isSamePath(path, link._path) ? 'bg-accent-500/20 text-accent-600 font-bold' : 'hover:bg-accent-500/20 hover:text-accent-600'"
                             >{{ link.title }}</GNuxtLink>
                         </nav>
                     </aside>
@@ -57,8 +57,10 @@ const route = useRoute();
 
 const { locale } = useI18n();
 const localePath = useGLocalePath();
+const navigation = ref();
 
 const { data } = await useGAsyncData(`legalLinksNav_${locale.value}`, () => queryContent(`/${locale.value}/legal/`).only(['title', '_path']).find());
+navigation.value = data.value;
 
 const path = ref(route.path);
 
@@ -68,6 +70,11 @@ watch(() => route.path, (to) => {
     immediate: true,
 });
 
+watch(locale, async (to) => {
+    console.log('locale changed');
+    const { data } = await useGAsyncData(`legalLinksNav_${to}`, () => queryContent(`/${to}/legal/`).only(['title', '_path']).find());
+    navigation.value = data.value;
+});
 
 useHead({
     htmlAttrs: {
