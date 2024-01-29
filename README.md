@@ -24,6 +24,12 @@ GNuxtLinkおよび各種Docsで、アドレスに `x-mi-web://` から始め、�
 
 例: `/play` → `x-mi-web://play`
 
+## Translation of Legal Documents / 法的文書の翻訳について
+
+As legal documents need to be translated accurately, they are intentionally made inaccessible from Crowdin, where translations can be done easily. If you are interested in translating legal documents, please submit a pull request after drafting it as an issue and waiting for approval by dev members. Thank you for your understanding.
+
+法的文書の翻訳は正確に行う必要があるため、あえてCrowdinから翻訳できないようにしてあります。法的文書の翻訳に興味がある場合は、まずはissueで草案を作成し、devメンバーの承認を得てからプルリクエストを送信してください。ご理解のほどよろしくお願いいたします。
+
 ## Setup
 
 Make sure to install the dependencies:

@@ -10,6 +10,7 @@ add: "追加"
 browse: "参照"
 settings: "設定"
 goToLegacyHub: "従来のMisskey Hub"
+index: "トップ"
 
 _error:
   notFound: "ページが見つかりませんでした"
@@ -332,6 +333,11 @@ _customEmojiPreview:
     textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
   _placeholder:
     noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
+
+_legal:
+  title: "規約・ガイドライン"
+  description: "Misskey Hubの利用規約や、Misskeyを利用したコンテンツについての配信ガイドラインなどを公開しています。"
+  disclaimer: "これらの規約は、Misskeyやその関連のオープンソースソフトウェア（ソースコード）に関する規約ではありません。オープンソースソフトウェア（ソースコード）の利用に関する規約は、各ソフトウェアのリポジトリをご覧ください。"
 
 _api:
   _permissions:
