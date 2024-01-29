@@ -100,11 +100,11 @@ sudo adduser --disabled-password --disabled-login misskey
 Node.jsは、サーバーサイドJavaScript環境であり、Misskeyの基本的な実行環境である。
 
 ```sh
-sudo apt install -y curl
-
-curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-
-sudo apt install -y nodejs
+sudo rm /usr/share/keyrings/nodesource.gpg;
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/nodesource.gpg;
+NODE_MAJOR=20; echo "deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list;
+sudo apt update;
+sudo apt install -y nodejs;
 
 # Node.jsがインストールされたので、バージョンを確認する。
 node -v
@@ -443,7 +443,7 @@ exit
 sudo nano /etc/nginx/conf.d/misskey.conf
 ```
 
-[Misskey Hub](https://misskey-hub.net/docs/admin/nginx/)の設定例をnanoへコピー＆ペーストし、次の部分を自分のものに書き換える。
+[Misskey Hub](/docs/for-admin/install/resources/nginx/)の設定例をnanoへコピー＆ペーストし、次の部分を自分のものに書き換える。
 
 - 18行目と30行目のドメイン名
 - 34-35行目の証明書へのパスをCertbotで取得したものに (基本的にexample.tldを置き換えるだけでOK)
