@@ -180,3 +180,8 @@ html.light .markdown-body {
 	text-decoration: underline;
 	text-underline-offset: .2em;
 }
+
+html[lang='ja-JP'] .markdown-body > p,
+html[lang='ja-JP'] .markdown-body :not(.ignore) p:not(.truncate-box) {
+	line-height: 1.8;
+}
