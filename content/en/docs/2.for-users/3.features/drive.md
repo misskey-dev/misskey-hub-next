@@ -1,6 +1,6 @@
-# ドライブ
+# Drive
 
-ドライブは、Misskey上でファイルを管理できる機能です。
+Drive is a feature to manage the files you have uploaded to Misskey.
 
 :::tip
 
@@ -20,7 +20,7 @@ Misskey Webのドライブページから任意のファイルをアップロー
 
 :::
 
-## センシティブ (NSFW)
+## Sensitive (NSFW)
 
 センシティブまたはNSFW (Not safe for work) は、ドライブのファイルに設定することができるフラグです。
 センシティブフラグを設定されたファイルは、表示される際に閲覧者の操作なしには表示されなくなります。
