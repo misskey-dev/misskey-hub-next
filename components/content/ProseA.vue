@@ -26,19 +26,27 @@ const realHref = ref(props.href);
 const realTarget = ref(props.target);
 
 const url = parseURL(realHref.value);
+let pathDetermined = false;
 
 if (isLocalPath(realHref.value)) {
     // 相対パスの場合（trailing slashがあるので１つくり下げる）
     if (isRelative(realHref.value) && route.meta.__isDocsIndexPage !== true) {
         realHref.value = joinURL('../', realHref.value.replace(/^\.\//, ''));
+        const resolved = resolve(realHref.value);
+        if (resolved.name && resolved.name.toString().includes('___')) {
+            // 相対パスがすでにローカライズされたパスの場合は以降の処理をスキップ
+            pathDetermined = true;
+        }
     }
 
-    // 内部リンクの場合
-    if (/^\/[a-z]{2}\//.test(realHref.value)) {
-        realHref.value = sanitizeInternalPath(realHref.value);
-    } else {
-        // 渡されたパスがローカライズされたルートでない場合はローカライズされたパスを返す
-        realHref.value = sanitizeInternalPath(localePath(resolve(realHref.value).fullPath));
+    if (!pathDetermined) {
+        // 内部リンクの場合
+        if (/^\/[a-z]{2}\//.test(realHref.value)) {
+            realHref.value = sanitizeInternalPath(realHref.value);
+        } else {
+            // 渡されたパスがローカライズされたルートでない場合はローカライズされたパスを返す
+            realHref.value = sanitizeInternalPath(localePath(resolve(realHref.value).fullPath));
+        }
     }
 } else if (rootDomain.host !== url.host) {
     realTarget.value = '_blank';
