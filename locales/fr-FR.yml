@@ -145,6 +145,9 @@ _docs:
   _changelog:
     title: "Journal des modifications"
     description: "Voir l'historique des mises à jour de Misskey. Découvrez les nouveautés de la dernière version !"
+  _donate:
+    title: "プロジェクトへの寄付"
+    description: "Misskeyは無料で使えるオープンソースのソフトウェアです。気に入っていただけたら、今後も開発を続けられるようにぜひ寄付をご検討ください。"
   _forUsers:
     title: "Pour les utilisateurs de Misskey"
   _forAdmin:
