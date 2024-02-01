@@ -1351,4 +1351,8 @@ export const redirects = [
         "/index.html",
         "/"
     ],
+    [
+		"/docs/for-users/resources/donate/",
+        "/docs/donate/"
+    ],
 ];
