@@ -56,7 +56,7 @@ const route = useRoute();
 
 const instancesStats = ref<InstancesStatsObj>();
 
-function setServerStats(val: InstancesStatsObj) {
+function setServerStats(val?: InstancesStatsObj) {
     instancesStats.value = val;
 }
 

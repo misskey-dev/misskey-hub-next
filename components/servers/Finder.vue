@@ -18,7 +18,7 @@
                         <XIco class="w-7 h-7" />
                     </button>
                 </div>
-                <form @submit.prevent="() => { f_query = f_query_partial }">
+                <form @submit.prevent="applyQuery">
                     <label class="form-label" for="query">{{ $t('_servers._search.query') }}</label>
                     <div class="input-group">
                         <input class="form-control" type="search" autocomplete="off" id="query" v-model="f_query_partial" />
@@ -129,7 +129,7 @@
 
 <script setup lang="ts">
 import type { InstanceInfo, InstanceItem, InstancesStatsObj } from '@/types/instances-info';
-import { resolveObjPath } from '@/assets/js/misc';
+import { resolveObjPath, kanaHalfToFull } from '@/assets/js/misc';
 import langs from '@/assets/data/lang';
 
 import SearchIco from 'bi/search.svg';
@@ -232,10 +232,10 @@ const filteredInstances = computed<InstanceItem[]>(() => {
     }
 
     if (f_query.value) {
-        instances = instances.filter((instance) => instance.name.includes(f_query.value) || instance.description?.includes(f_query.value));
+        instances = instances.filter((instance) => normalizeString(instance.name).includes(f_query.value) || normalizeString(instance?.description ?? '').includes(f_query.value));
     }
     if (f_langs.value) {
-        instances = instances.filter((instance) => instance.langs.includes(f_langs.value));
+        instances = instances.filter((instance) => instance.langs.includes(f_langs.value ?? ''));
     }
     if (f_registerAcceptance.value) {
         instances = instances.filter((instance) => {
@@ -278,6 +278,16 @@ const filteredInstances = computed<InstanceItem[]>(() => {
 
 function switchOrder() {
     f_order.value = f_order.value === 'asc' ? 'desc' : 'asc';
+}
+
+function normalizeString(str: string) {
+    // アルファベットは小文字に、半角カタカナは全角ひらがなに、全角カタカナは全角ひらがなに変換
+    const _res = kanaHalfToFull(str.toLowerCase()).replace(/[ァ-ン]/g, (s) => String.fromCharCode(s.charCodeAt(0) - 0x60));
+    return _res;
+}
+
+function applyQuery() {
+    f_query.value = normalizeString(f_query_partial.value);
 }
 </script>
 
