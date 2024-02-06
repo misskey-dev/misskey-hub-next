@@ -4,11 +4,11 @@ Drive is a feature to manage the files you have uploaded to Misskey.
 
 :::tip
 
-技術的に言うと、Misskeyのシステム上、すべてのファイルが一元管理されており、それをユーザーにも公開したインターフェイスがドライブと捉えることができます。
+Technically speaking, all files are centrally managed on Misskey's system, and the interface that exposes them to users can be thought of as a drive.
 
 :::
 
-Misskey Webのドライブページから任意のファイルをアップロードできるほか、アバターに設定した画像や、ノートに添付したファイルなどもすべてドライブにアップロードされます。
+In addition to being able to upload any file from Misskey Web's Drive page, images set as avatars and files attached to notes will all be uploaded to Drive.
 
 ドライブにアップロードされたファイルは、いつでもダウンロードすることができるほか、ノート作成時に「ドライブからファイルを添付」することでファイルを再利用することもできます。
 
