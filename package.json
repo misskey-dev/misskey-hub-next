@@ -12,7 +12,7 @@
     "@babel/parser": "^7.23.6",
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxtjs/color-mode": "^3.3.2",
-    "@nuxtjs/i18n": "8.1.0",
+    "@nuxtjs/i18n": "8.0.0",
     "@rollup/plugin-yaml": "^4.1.2",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^20.10.5",
