@@ -10,7 +10,7 @@ export const localesConst = [
 	{ files: [ 'fr-FR.json' ], code: 'fr', iso: 'fr-FR', name: 'Français' },
 	{ files: [ 'zh-CN.json' ], code: 'cn', iso: 'zh-CN', name: '简体中文' },
 	{ files: [ 'zh-TW.json' ], code: 'tw', iso: 'zh-TW', name: '繁体中文' },
-	{ files: [ 'ja-JP.json', 'ja-KS.json'], code: 'ja-ks', iso: 'ja-KS', name: '日本語（関西弁）' },
+	{ files: [ 'ja-KS.json' ], code: 'ja-ks', iso: 'ja-KS', name: '日本語（関西弁）' },
 ] as const;
 
 export type LocaleCodes = typeof localesConst[number]['code'];
