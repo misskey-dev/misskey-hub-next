@@ -6,6 +6,7 @@ import { isLocalPath, sanitizeInternalPath } from '@/assets/js/misc';
 
 const runtimeConfig = useRuntimeConfig();
 const rootDomain = parseURL(runtimeConfig.public.baseUrl);
+const { locale } = useI18n();
 const { resolve } = useRouter();
 const route = useRoute();
 const localePath = useGLocalePath();
@@ -47,6 +48,10 @@ if (isLocalPath(realHref.value)) {
             // 渡されたパスがローカライズされたルートでない場合はローカライズされたパスを返す
             realHref.value = sanitizeInternalPath(localePath(resolve(realHref.value).fullPath));
         }
+    }
+
+    if (locale.value === 'ja-ks') {
+        realHref.value = realHref.value.replace('/ja/', '/ja-ks/');
     }
 } else if (rootDomain.host !== url.host) {
     realTarget.value = '_blank';
