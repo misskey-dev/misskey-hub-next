@@ -13,9 +13,9 @@ goToLegacyHub: "前のMisskey Hub"
 
 _error:
   notFound: "ページ食べた"
-  notFoundDesc: "あんたが探してたページはあたしが食べた。嘘やと思うんやったらURL確認してみ。"
+  notFoundDesc: "あんたが探してたページはワテが食べた。嘘やと思うんやったらURL確認してみ。"
   generalError: "なんかあかんわ"
-  generalErrorDesc: "たまたまこの画面になったんやったら、このことを開発者に教えたげて。"
+  generalErrorDesc: "たまたまこの画面になったんやったら、このことを開発者に教えたげて。おおきに！"
   reportProblem: "問題を報告する"
   goToTop: "トップページにもどる"
 
@@ -29,7 +29,7 @@ _nav:
   servers: "サーバー"
   docs: "ドキュメント"
   blog: "ブログ"
-  other: "他のん"
+  other: "他のやつ"
   switchLang: "言語の設定"
 
 _landing:
@@ -41,7 +41,7 @@ _landing:
       title: "あけあけ"
       description: "Misskeyはオープンソースやから、誰でも使えんねん。"
     _federated:
-      title: "わけわけ"
+      title: "分散"
       description: "Misskeyは分散型のプロトコルがついとるから、よそのサーバーとつながれるんやで。"
     _multifunction:
       title: "なんでもできる"
@@ -56,26 +56,26 @@ _landing:
     activityPub: "ActivityPub"
   _features:
     _root:
-      title: "自慢" 
+      title: "自慢の機能" 
       description: "Misskeyには、当たり前なもんから普通はないもんまで、いろんな機能がついとるで。例えばこんなん！"
     _note:
       title: "ノート"
-      description: "Misskeyでは、ユーザーの投稿は「ノート」言うねん。他のノートを引用したり、画像、動画、オーディオ、その他なんでも添付できるで。"
+      description: "Misskeyでは、ユーザーの投稿は「ノート」言うねん。他のノートを引用したり、画像、動画、オーディオ、なんでも添付できるで。"
     _federation:
       title: "連合"
       description: "オープンな分散プロトコルのActivityPubがついてるから、他のMisskeyサーバーとだけじゃなくて、ActivityPubをサポートする他のソフトともやりとりできるようになっとんねん。"
     _reaction:
       title: "リアクション"
-      description: "ノートには「リアクション」を付けることができて、思ってることをパパっと伝えられるんやで。"
+      description: "ノートには「リアクション」を付けれて、思ってることをパパっと伝えられるんやで。"
     _drive:
       title: "ドライブ"
       description: "アップロードしたファイルがバーッって並ぶ画面があるから、好きな写真をフォルダにガー入れたり、もっかいノートしたいときもシュッってできるようになってるで。"
     _theme:
       title: "テーマ"
-      description: "好きな見た目でMisskeyを使えるで。もちろんダークモードもあるし、頑張ればヒョウ柄っぽいのも作れんで（あんまトラ柄見たころないけどなぁ）。"
+      description: "好きな見た目でMisskeyを使えるで。もちろんダークモードもあるし、頑張ればヒョウ柄っぽいのも作れんで（あんまヒョウ柄見たころないけどなぁ）。"
     _thread:
       title: "スレッド"
-      description: "ノートはスレッドにできて、気の合うおばちゃんとも何時間でもおしゃべりできんで。"
+      description: "ノートはスレッドにできて、気の合うおばちゃんと商店街で話すみたいに何時間でもおしゃべりできんで。"
     _charts:
       title: "チャート"
       description: "Misskeyにはチャートエンジンが入ってて、サーバーがどう使われとるかとかがパッとわかるようになっとるで。"
@@ -83,7 +83,7 @@ _landing:
       title: "ウィジェット"
       description: "いろんなウィジェットを画面上において、好きにカスタマイズできるで。"
   _getStarted:
-    title: "Misskeyはじめたらええねん"
+    title: "Misskey、やってみーひん？"
     _find:
       title: "サーバー見つける"
       list: "サーバー一覧"
@@ -147,7 +147,7 @@ _docs:
     translateThis: "このページを翻訳"
   _aboutMisskey:
     title: "Misskeyについて"
-    description: "Misskey知らんかった人とか、今から使いたいな思うてる人はここや！基本的な知識とか使い方はバッチリ教えんで。"
+    description: "Misskey知らんかった人とか、今から使いたいな思うてる人はここ！基本的な知識とか使い方はバッチリ教えんで。"
   _changelog:
     title: "リリースノート"
     description: "Misskeyのバージョンアップ履歴を見れるようになってるから、アプデ入ったら確認しに来てな！"
@@ -183,7 +183,7 @@ _brandAssets:
   title: "アセット集"
   description: "Misskeyのロゴ、アイコンとかのアセットっちゅうやつを置いてあるで。ライセンス守ったらなんにでも使ってええよ！"
   license: "アセットは、CC BY-NC-SAのライセンスの下でなんにでもつかってええことになってるで🎉"
-  assetsDirectory: "全てのアセットは、{0}で管理してあんで。"
+  assetsDirectory: "アセットは、ぜんぶ{0}で管理してあんで。"
   logo: "ロゴ"
   icon: "アイコン"
   banner: "バナー"
@@ -196,7 +196,7 @@ _links:
     description: "Misskeyの開発はGitHub上でやってんで。機能リクエストとかバグ報告はここに投げてや。"
   _crowdin:
     title: "Crowdin"
-    description: "Misskey本体とドキュメントの翻訳はここでやってもらってるで。興味あったらやってみてな。"
+    description: "Misskey本体とドキュメントの翻訳はここでやってもらってるで。あんたも興味あったらやってみてな。"
   _discord:
     title: "Discordサーバー"
     description: "Misskeyに関する色んな話はここでやってるで。"
@@ -263,7 +263,7 @@ _aboutUs:
 _i18n:
   _missing:
     title: "関西弁のドキュメントは作ってないで"
-    description: "さすがに関西弁のドキュメントを用意するのは疲れるし内容を更新すんのが大変やから、標準語の内容と同じにしてあんで。ごめんな。"
+    description: "さすがに関西弁のドキュメントを用意するのは大変やから、標準語の内容と同じにしてあんで。ごめんな。"
     linkLabel: "Crowdin"
 
 _share:
