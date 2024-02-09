@@ -2,6 +2,7 @@ import { writeFileSync } from 'fs';
 import { redirects } from './../assets/data/old-hub-redirects';
 import { localesConst } from './../assets/data/locales';
 import type { LocaleCodes } from './../assets/data/locales';
+import type { PartialRecord } from './../types/others';
 import type { NuxtConfig } from 'nuxt/schema';
 import { joinURL, cleanDoubleSlashes } from 'ufo';
 
@@ -30,7 +31,7 @@ export function getOldHubRedirects(mode: 'vercel'): VercelRouteSource[]
 export function getOldHubRedirects(mode: 'nitro' | 'vercel' = 'nitro'): NuxtConfig['routeRules'] | VercelRouteSource[] {
 
     // 旧Hub時代の各言語のプレフィックス
-    const hubLocales: Record<LocaleCodes, string> = {
+    const hubLocales: PartialRecord<LocaleCodes, string> = {
         ja: '/',
         en: '/en',
         id: '/id',
@@ -92,7 +93,7 @@ export function getOldHubRedirects(mode: 'nitro' | 'vercel' = 'nitro'): NuxtConf
                     destination = joinURL(`/${locale.code}`, destination);
                 }
     
-                out[joinURL(hubLocales[locale.code], route[0])] = {
+                out[joinURL(hubLocales[locale.code] ?? '/', route[0])] = {
                     redirect: {
                         to: destination,
                         statusCode: 301,

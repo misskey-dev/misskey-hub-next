@@ -1,6 +1,6 @@
 import { useRuntimeConfig } from '#imports';
 import { withTrailingSlash } from 'ufo';
-import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
+import type { LocaleObject } from '@nuxtjs/i18n';
 
 export default defineNitroPlugin((nitroApp) => {
   nitroApp.hooks.hook('render:html', (html, { event }) => {
@@ -19,7 +19,7 @@ export default defineNitroPlugin((nitroApp) => {
       html.htmlAttrs = [];
 
       const remainingList: string[] = [];
-      html.head.forEach((v) => {
+      html.head.forEach((v: string) => {
         remainingList.push(...(v.match(/<!--(.|\n)*(?<=-->)/gm) ?? []));
         remainingList.push(...(v.match(/<link\s+rel="(og|alternate|canonical|me)[^>]+>/gm) ?? []));
         remainingList.push(...(v.match(/<meta[^>]+>/gm) ?? []));

@@ -1,5 +1,6 @@
 import type { LocaleCodes } from './../nuxt.config';
-import type { ComputedRef } from 'vue-demi'
+import type { ComputedRef } from 'vue-demi';
+import type { LocaleObject } from '@nuxtjs/i18n';
 
 declare module '*.svg' {
     import { FunctionalComponent, SVGAttributes } from 'vue'

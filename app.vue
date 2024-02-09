@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import TopIco from 'bi/chevron-up.svg';
-import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
+import { locales } from '@/assets/data/locales';
 import NProgress from 'nprogress';
 import type { Graph, Thing } from 'schema-dts';
 import { cleanDoubleSlashes, joinURL, parseURL, stringifyParsedURL, withTrailingSlash } from 'ufo';
 
 const nuxtApp = useNuxtApp();
 
-const { t, locale, locales } = useI18n();
+const { t, locale } = useI18n();
 const route = useRoute();
 const router = useRouter();
 const colorMode = useColorMode();
@@ -71,7 +71,7 @@ const getLdJson = (additionalGraphes: Thing[] = []): string => {
     ldJson['@graph'] = ldJson['@graph'].concat(additionalGraphes);
     return JSON.stringify(ldJson);
 };
-const currentLocaleIso = computed(() => (locales.value as LocaleObject[]).find((e) => e?.code === locale.value)?.iso);
+const currentLocaleIso = computed(() => locales.find((e) => e?.code === locale.value)?.iso);
 
 const head = useLocaleHead({
     addSeoAttributes: true,

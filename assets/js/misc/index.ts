@@ -1,5 +1,5 @@
 import type { NavItem } from '@nuxt/content/dist/runtime/types';
-import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
+import type { LocaleObject } from '@nuxtjs/i18n';
 import { parseURL } from 'ufo';
 
 /**
@@ -8,7 +8,7 @@ import { parseURL } from 'ufo';
  * @param s パス
  * @returns パスの先にあるもの
  */
-export function resolveObjPath(o: object, s: string): any {
+export function resolveObjPath(o: Record<string, any>, s: string): any {
     s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
     s = s.replace(/^\./, '');           // strip a leading dot
     var a = s.split('.');
