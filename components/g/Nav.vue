@@ -65,8 +65,8 @@
                         <div class="absolute top-6 right-0 hidden group-hover:block z-[9955]">
                             <ul class="px-4 py-2 bg-slate-50 dark:bg-slate-800 rounded-lg shadow-lg space-y-1">
                                 <li v-for="locale in locales">
-                                    <GNuxtLink :to="switchLocalePath(locale.code)" :lang="locale.code" :class="['_i18n whitespace-nowrap hover:text-accent-600 py-1', {'text-accent-600 font-bold': currentLocale === locale.code}]">
-                                        {{ locale.name }}
+                                    <GNuxtLink :to="switchLocalePath(locale.code)" :lang="locale.code" :class="['block _i18n whitespace-nowrap hover:text-accent-600 py-0.5', {'text-accent-600 font-bold': currentLocale === locale.code}]">
+                                        <span v-if="currentLocale === locale.code"><DotIcon class="stroke-[3] stroke-current" /></span>{{ locale.name }}
                                     </GNuxtLink>
                                 </li>
                             </ul>
@@ -95,6 +95,7 @@ import MoonIcon from 'bi/moon-stars.svg';
 import DisplayIcon from 'bi/display.svg';
 import MenuIcon from 'bi/list.svg';
 import XIcon from 'bi/x.svg';
+import DotIcon from 'bi/dot.svg';
 import NavData from '@/assets/data/nav';
 
 const props = withDefaults(defineProps<{
