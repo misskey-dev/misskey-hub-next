@@ -80,7 +80,7 @@ const head = useLocaleHead({
 const i18nLinks = computed(() => head.value.link?.map((e) => {
     if (e.rel === 'alternate') {
         let href = e.href;
-        if (typeof e.hreflang === 'string' && (e.hreflang.includes('ja') || e.hreflang === 'x-default')) {
+        if (typeof e.hreflang === 'string' && (e.hreflang.includes('ja') || e.hreflang === 'x-default') && e.hreflang !== 'ja-KS') {
             const url = parseURL(href);
             url.pathname = joinURL('/ja/', url.pathname);
             href = cleanDoubleSlashes(withTrailingSlash(stringifyParsedURL(url)));
