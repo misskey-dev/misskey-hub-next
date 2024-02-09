@@ -29,7 +29,7 @@ _nav:
   servers: "サーバー"
   docs: "ドキュメント"
   blog: "ブログ"
-  other: "他のやつ"
+  other: "もっと！"
   switchLang: "言語の設定"
 
 _landing:
@@ -181,8 +181,8 @@ _other:
 
 _brandAssets:
   title: "アセット集"
-  description: "Misskeyのロゴ、アイコンとかのアセットっちゅうやつを置いてあるで。ライセンス守ったらなんにでも使ってええよ！"
-  license: "アセットは、CC BY-NC-SAのライセンスの下でなんにでもつかってええことになってるで🎉"
+  description: "Misskeyのロゴ、アイコンとかのアセットっちゅうやつを置いてあるで。ライセンスさえ守ってくれたらなんにでも使ってええよ！"
+  license: "アセットは、CC BY-NC-SAのライセンスの下でなんにでも使ってええことになってるで🎉"
   assetsDirectory: "アセットは、ぜんぶ{0}で管理してあんで。"
   logo: "ロゴ"
   icon: "アイコン"
