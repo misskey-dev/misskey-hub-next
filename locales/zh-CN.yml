@@ -52,22 +52,22 @@ _landing:
     activityPub: "ActivityPub"
   _features:
     _root:
-      title: "主な機能"
+      title: "主要功能"
       description: "Misskeyは一般的なものから特別なものまで、様々な機能を持っています。その一部を紹介します。"
     _note:
-      title: "ノート"
+      title: "帖子"
       description: "Misskeyでは、ユーザーの投稿は「ノート」と呼ばれます。他のノートを引用したり、画像、動画、オーディオ、その他の任意のファイルを添付することもできます。"
     _federation:
-      title: "連合"
+      title: "联合"
       description: "オープンな分散プロトコルであるActivityPubを実装しているため、他のMisskeyサーバーだけでなく、ActivityPubをサポートする他のソフトウェアともやりとりできます。"
     _reaction:
-      title: "リアクション"
+      title: "回应"
       description: "ノートには「リアクション」を付けることができ、簡単・気軽に自分のフィーリングを表現して伝えることが出来ます。"
     _drive:
-      title: "ドライブ"
+      title: "网盘"
       description: "アップロードしたファイルを管理するインターフェイスがあります。そのため、お気に入りの画像をフォルダにまとめたり、再度共有することも簡単に行えます。"
     _theme:
-      title: "テーマ"
+      title: "主题"
       description: "自分の好きなデザインでMisskeyを使えます。もちろんダークモードも完全サポート。自分で高度にテーマを作ることも可能です。"
     _thread:
       title: "スレッド"
@@ -82,10 +82,10 @@ _landing:
     title: "Misskeyをはじめよう"
     _find:
       title: "サーバーを見つける"
-      list: "サーバーのリスト"
+      list: "服务器列表"
     _create:
-      title: "サーバーを作成"
-      guide: "セットアップガイド"
+      title: "创建服务器"
+      guide: "配置指南"
     _docs:
       title: "さらに詳しく知る"
       docs: "ドキュメントを見る"
