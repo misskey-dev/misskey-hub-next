@@ -146,7 +146,7 @@ _docs:
     title: "Release Notes"
     description: "View the version history of Misskey. Find out what's new in the latest version!"
   _donate:
-    title: "プロジェクトへの寄付"
+    title: "Donating to the project"
     description: "Misskeyは無料で使えるオープンソースのソフトウェアです。気に入っていただけたら、今後も開発を続けられるようにぜひ寄付をご検討ください。"
   _forUsers:
     title: "For Misskey Users"
@@ -391,7 +391,7 @@ _api:
       "read:admin:emoji": "View emoji"
       "write:admin:queue": "Manage job queue"
       "read:admin:queue": "View job queue info"
-      "write:admin:promo": "プロモーションノートを操作する"
+      "write:admin:promo": "Manage promoted notes"
       "write:admin:drive": "Manage user drive"
       "read:admin:drive": "View user drive info"
       "read:admin:stream": "Use admin WebSocket API"
