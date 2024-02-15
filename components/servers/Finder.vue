@@ -1,5 +1,11 @@
 <template>
-    <div class="container mx-auto max-w-screen-xl px-6 grid server-list gap-8">
+    <div 
+        class="px-6 grid server-list gap-8"
+        :class="[
+            (v_view === 'list') && 'container mx-auto max-w-screen-xl',
+            (v_view === 'grid') && 'mx-auto max-w-[2560px]',
+        ]"
+    >
         <aside
             class="fixed z-50 transition-transform -mx-6 w-full bg-slate-200 dark:bg-slate-800 bottom-0 rounded-t-xl lg:translate-y-0 lg:shadow-none lg:bg-transparent dark:lg:bg-transparent lg:mx-0 lg:relative"
             :class="sortOpen ? 'translate-y-0' : 'translate-y-[calc(100%-3rem)]'"
@@ -84,7 +90,7 @@
             <div
                 class="grid gap-4"
                 :class="[
-                    (v_view === 'grid') && 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2',
+                    (v_view === 'grid') && 'grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5',
                     (v_view === 'list') && 'grid-cols-1',
                 ]"
             >
@@ -114,10 +120,10 @@
                     </div>
                 </div>
                 <button
-                    v-if="f_limit < filteredInstances.length" @click="f_limit += 24"
+                    v-if="f_limit < filteredInstances.length" @click="f_limit += 60"
                     class="btn btn-outline-primary btn-lg block px-4"
                     :class="[
-                        (v_view === 'grid') && 'sm:col-span-2 md:col-span-2 lg:col-span-2'
+                        (v_view === 'grid') && 'sm:col-span-2 xl:col-span-3 2xl:col-span-4 3xl:col-span-5'
                     ]"
                 >
                     <ArrowIco class="mr-1" />{{ $t('_servers._list.showMore') }}
@@ -172,14 +178,14 @@ const f_orderBy = ref<MiHubSFStorage['f_orderBy']>(savedSettings?.f_orderBy ?? '
 const f_order = ref<MiHubSFStorage['f_order']>(savedSettings?.f_order ?? 'desc');
 const f_registerAcceptance = ref<MiHubSFStorage['f_registerAcceptance']>(savedSettings?.f_registerAcceptance || null);
 
-const f_limit = ref<number>(24);
+const f_limit = ref<number>(60);
 
 const v_view = ref<MiHubSFStorage['v_view']>(savedSettings?.v_view ?? 'grid');
 // ▲フォームデータ初期化▲
 
 // ▼フォームデータ保存処理▼
 watch([f_langs, f_orderBy, f_order, f_registerAcceptance, v_view], (to, from) => {
-    f_limit.value = 24;
+    f_limit.value = 60;
 
     const newSettings: MiHubSFStorage = {
         f_langs: to[0],
