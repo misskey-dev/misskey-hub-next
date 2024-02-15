@@ -385,5 +385,9 @@ $[sparkle 🍮]
 <MfmPreview text="<plain>**bold** @mention #hashtag `code` $[x2 🍮]</plain>"></MfmPreview>
 
 ## 開発者向け情報
-MFMのパーサー実装はライブラリとして公開されており、簡単にクライアントにMFMを組み込むことが可能です。
+MFMのパーサーや描画の実装はライブラリとして公開されており、簡単にクライアントにMFMを組み込むことが可能です。
 - [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - JavaScriptパーサー実装
+- [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - Vue.js用コンポーネント
+- [mfm.kt](https://github.com/samunohito/mfm.kt) - Kotlinパーサー実装
+- [mfm_parser](https://pub.dev/packages/mfm_parser) - Dartパーサー実装
+- [mfm](https://pub.dev/packages/mfm) - Flutter用描画ウィジェット
