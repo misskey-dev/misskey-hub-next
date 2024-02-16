@@ -422,3 +422,7 @@ $[sparkle 🍮]
 MFM 기능은 라이브러리를 통해 공개하고 있으니, 간단하게 클라이언트에 MFM 기능을 추가하실 수 있습니다.
 
 - [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - JavaScript 기반 MFM 기능 구현
+- [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - Vue.js用コンポーネント
+- [mfm.kt](https://github.com/samunohito/mfm.kt) - Kotlinパーサー実装
+- [mfm_parser](https://pub.dev/packages/mfm_parser) - Dartパーサー実装
+- [mfm](https://pub.dev/packages/mfm) - Flutter用描画ウィジェット
