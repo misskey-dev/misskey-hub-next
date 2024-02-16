@@ -424,3 +424,7 @@ $[sparkle 🍮]
 MFM 的解析器實作會作為函式庫發布，可以輕鬆地將 MFM 合併到客戶端。
 
 - [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - JavaScript 解析器實作
+- [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - Vue.js用コンポーネント
+- [mfm.kt](https://github.com/samunohito/mfm.kt) - Kotlinパーサー実装
+- [mfm_parser](https://pub.dev/packages/mfm_parser) - Dartパーサー実装
+- [mfm](https://pub.dev/packages/mfm) - Flutter用描画ウィジェット
