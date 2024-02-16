@@ -25,6 +25,7 @@ description: 與 Misskey API 相關的函式庫列表
 ## Dart / Flutter
 
 - [misskey](https://github.com/misskey-dart/misskey)
+- [misskey_dart](https://github.com/shiosyakeyakini-info/misskey_dart)
 
 ## Go
 
