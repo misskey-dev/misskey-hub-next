@@ -1,8 +1,8 @@
 export default defineAppConfig({
     notice: {
         title: {
-            ja: "v2023.12.2をリリースしました！",
-            en: "Release v2023.12.2",
+            ja: "v2024.2.0をリリースしました！",
+            en: "v2024.2.0 is out now!",
         },
         to: "/docs/releases/"
     },
