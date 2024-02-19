@@ -4,13 +4,13 @@ description: 基本的な情報が流れるチャンネルです。
 
 # `main`
 
-基本的な情報が流れるチャンネルです。
+这是一个提供基本信息的频道。
 
-## パラメータ
+## 参数
 
-なし
+无
 
-## イベント
+## 事件
 
 ### `notification`
 
@@ -18,7 +18,7 @@ description: 基本的な情報が流れるチャンネルです。
 $ref: 'misskey://Notification'
 }"/>
 
-通知を受け取ったときに発生します。
+收到通知时触发。
 
 ### `mention`
 
@@ -26,7 +26,7 @@ $ref: 'misskey://Notification'
 $ref: 'misskey://Note'
 }"/>
 
-メンションされたときに発生します。
+当有人提到你时触发。
 
 ### `reply`
 
@@ -34,7 +34,7 @@ $ref: 'misskey://Note'
 $ref: 'misskey://Note'
 }"/>
 
-返信されたときに発生します。
+收到回复时触发。
 
 ### `renote`
 
