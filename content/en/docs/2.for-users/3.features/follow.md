@@ -1,4 +1,3 @@
-# フォロー
+# Follow
 
-ユーザーをフォローすると、タイムラインにそのユーザーの投稿が表示されるようになります。ただし、他のユーザーに対する返信は含まれません。
-ユーザーをフォローするには、ユーザーページの「フォロー」ボタンをクリックします。フォローを解除するには、もう一度クリックします。
+When you follow a user, you will see their posts on your timeline.However, this does not include replies to other users. To follow a user, click the "Follow" button on the user's page.Click once more to unfollow.
