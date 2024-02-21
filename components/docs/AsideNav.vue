@@ -58,7 +58,7 @@
                                 ((path.includes(link._path) && (manualOpen[link._path] !== false)) || manualOpen[link._path]) && 'rotate-90'
                             ]"
                         />
-                    </div>
+                    </button>
                     <div>{{ (isEPDocs && link._extension !== 'json') ? link.title.replace(/\s/g, '-').toLowerCase() + '/' : link.title }}</div>
                 </div>
             </component>
@@ -100,8 +100,6 @@ const props = withDefaults(defineProps<{
     parent: null,
     isEPDocs: false,
 });
-
-const manualOpen = useState<Record<string, boolean>>('miHub-docs-aside-manual-collapse', () => ({}));
 
 onUnmounted(() => {
     manualOpen.value = {};
