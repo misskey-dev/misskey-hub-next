@@ -6,7 +6,9 @@ description: 'MFMは、Misskeyの様々な場所で使用できる専用のマ�
 MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使用できる専用のマークアップ言語です。
 
 :::tip
+
 一部の構文はMarkdownやHTMLと互換性があります。
+
 :::
 
 ## MFMが使用可能な場所の例
@@ -19,7 +21,9 @@ MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使�
 ### メンション
 アットマーク + ユーザー名で、特定のユーザーを示すことができます。
 :::tip
+
 メンションについての詳細は[こちら](./mention.md)を参照してください。
+
 :::
 
 ```
@@ -37,7 +41,9 @@ MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使�
 ### ハッシュタグ
 ナンバーサイン + タグで、ハッシュタグを示すことができます。
 :::tip
+
 ハッシュタグについての詳細は[こちら](./hashtag.md)を参照してください。
+
 :::
 
 ```
@@ -61,10 +67,13 @@ https://example.com
 ```
 
 :::tip
+
 リンクテキストの前に`?`をつけると、リンクプレビューを非表示にすることができます。
+
 ```
 ?[example link](https://example.com)
 ```
+
 :::
 
 <MfmPreview text="[example link](https://example.com)"></MfmPreview>
@@ -72,8 +81,11 @@ https://example.com
 
 ### カスタム絵文字
 コロンでカスタム絵文字名を囲むと、カスタム絵文字を表示させることができます。
+
 :::tip
+
 カスタム絵文字についての詳細は[こちら](./custom-emoji.md)を参照してください。
+
 :::
 
 ```
@@ -113,6 +125,15 @@ https://example.com
 ```
 
 <MfmPreview text="<center>MisskeyでFediverseの世界が広がります</center>"></MfmPreview>
+
+### よみがな（ルビ）
+内容によみがなを付けることができます。
+
+```
+$[ruby Misskey ミスキー] 
+```
+
+<MfmPreview text="$[ruby Misskey ミスキー]"></MfmPreview>
 
 ### コード(インライン)
 プログラムなどのコードをインラインでシンタックスハイライトします。
@@ -187,6 +208,53 @@ $[bg.color=ff0 黄背景]
 
 <MfmPreview text="$[fg.color=f00 赤字]
 $[bg.color=ff0 黄背景]"></MfmPreview>
+
+### 枠線
+内容を枠線で囲むことができます。様々なスタイルを指定することができます。
+
+```
+$[border.style=solid,width=4 Default]
+
+$[border.style=hidden No border]
+
+$[border.style=dotted,width=2 Dotted]
+$[border.style=dashed,width=2 Dashed]
+$[border.style=double,width=4 Double]
+
+$[border.style=groove,width=4 Embossed A]
+$[border.style=ridge,width=4 Embossed B]
+
+$[border.style=inset,width=4 Inset A]
+$[border.style=outset,width=4 Inset B]
+
+$[border.color=d00 Border color]
+$[border.width=5 Border width]
+
+$[border.radius=6,width=2 Border radius]
+
+$[border.radius=5,width=2,color=888 $[position.x=1.5 ＣＳＳ]
+$[position.x=1.5 完全に理解した]]
+
+$[border.radius=5,width=2,color=888,noclip $[position.x=1.5 ＣＳＳ]
+$[position.x=1.5 完全に理解した]]
+```
+
+<MfmPreview text="$[border.style=solid,width=4 Default]\
+$[border.style=hidden No border]\
+$[border.style=dotted,width=2 Dotted]\
+$[border.style=dashed,width=2 Dashed]\
+$[border.style=double,width=4 Double]\
+$[border.style=groove,width=4 Embossed A]\
+$[border.style=ridge,width=4 Embossed B]\
+$[border.style=inset,width=4 Inset A]\
+$[border.style=outset,width=4 Inset B]\
+$[border.color=d00 Border color]\
+$[border.width=5 Border width]\
+$[border.radius=6,width=2 Border radius]\
+$[border.radius=5,width=2,color=888 $[position.x=1.5 ＣＳＳ]
+$[position.x=1.5 完全に理解した]]\
+$[border.radius=5,width=2,color=888,noclip $[position.x=1.5 ＣＳＳ]
+$[position.x=1.5 完全に理解した]]"></MfmPreview>
 
 ### 角度変更
 指定した角度で回転させます。
@@ -317,5 +385,9 @@ $[sparkle 🍮]
 <MfmPreview text="<plain>**bold** @mention #hashtag `code` $[x2 🍮]</plain>"></MfmPreview>
 
 ## 開発者向け情報
-MFMのパーサー実装はライブラリとして公開されており、簡単にクライアントにMFMを組み込むことが可能です。
+MFMのパーサーや描画の実装はライブラリとして公開されており、簡単にクライアントにMFMを組み込むことが可能です。
 - [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - JavaScriptパーサー実装
+- [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - Vue.js用コンポーネント
+- [mfm.kt](https://github.com/samunohito/mfm.kt) - Kotlinパーサー実装
+- [mfm_parser](https://pub.dev/packages/mfm_parser) - Dartパーサー実装
+- [mfm](https://pub.dev/packages/mfm) - Flutter用描画ウィジェット

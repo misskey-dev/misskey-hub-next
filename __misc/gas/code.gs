@@ -38,7 +38,7 @@ function getChangeLog(d) {
 
   const res = JSON.parse(UrlFetchApp.fetch(`https://api.github.com/repos/misskey-dev/misskey-hub-next/compare/${GH_PREVIOUS_COMMIT_SHA}...${d.deployment.sha}`).getContentText());
 
-  return res.commits.map((commit) => `・${commit.commit.message.split('\n')[0]}`).reverse().join('\n');
+  return res.commits.map((commit) => `・${commit.commit.message.split('\n')[0]}`).filter((v) => !v.startsWith('・Merge branch \'master\' of')).reverse().join('\n');
 }
 
 function postToMisskey(d) {

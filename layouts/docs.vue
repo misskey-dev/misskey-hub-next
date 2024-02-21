@@ -13,7 +13,7 @@ const { locale } = useI18n();
 const docsNavigation = ref();
 const epDocsNavigation = ref();
 const asideNavKey = ref(0);
-const { data: docsNavigationRes } = await useGAsyncData(`navigation_${locale.value}`, () => fetchContentNavigation(queryContent(`/${locale.value}/docs/`)));
+const { data: docsNavigationRes } = await useGAsyncData(`navigation_${locale.value}`, () => fetchContentNavigation(queryContent(`/${locale.value === 'ja-ks' ? 'ja' : locale.value}/docs/`)));
 const { data: epDocsNavigationRes } = await useGAsyncData(`ep_navigation_${locale.value}`, () => fetchContentNavigation(queryContent(`/api-docs/endpoints/`)));
 docsNavigation.value = docsNavigationRes.value;
 epDocsNavigation.value = epDocsNavigationRes.value;

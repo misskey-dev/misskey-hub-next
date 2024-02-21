@@ -1,8 +1,8 @@
 ---
-description: Misskey APIに関連するライブラリの一覧
+description: Misskey API 관련 라이브러리 목록
 ---
 
-# ライブラリの一覧
+# 라이브러리 목록
 
 ## JavaScript
 
@@ -15,6 +15,8 @@ description: Misskey APIに関連するライブラリの一覧
 ## Python
 
 - [Misskey.py](https://github.com/YuzuRyo61/Misskey.py)
+- [MiPA](https://github.com/yupix/MiPA)
+- [MiPAC](https://github.com/yupix/MiPAC)
 
 ## .Net
 

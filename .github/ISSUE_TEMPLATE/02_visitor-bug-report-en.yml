@@ -1,0 +1,77 @@
+name: 🐛 [For visitors] Bug Report (English)
+description: If you encounter any malfunction on the site, please report it here.
+labels: ["bug?", "maybe non-developer"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your report! Before reporting an issue, please try the following:
+
+        - Have you tried **clearing your browser cache and cookies**?
+        - Have you **waited for some time and tried accessing again**?
+        - Have you confirmed that the **URL is correct**?
+
+        Please also note the following:
+
+        - **This form is for bug reports only**. For feature requests, please [click here](https://github.com/misskey-dev/misskey-hub-next/issues/new?assignees=&labels=feature&projects=&template=04_feature-request.yml).
+
+        If the issue persists after trying the above, please provide details of the symptoms below. **Thank you for taking the time to report the issue!**
+
+  - type: textarea
+    attributes:
+      label: 💡 Summary
+      description: Please briefly describe the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 🥰 Expected Behavior
+      description: Please describe what you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 🤬 Actual Behavior
+      description: |
+        Please describe what actually happened.
+        If possible, attaching screenshots or error logs would be appreciated.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 📝 Steps to Reproduce
+      description: Please provide detailed steps on how to reproduce the issue.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: false
+
+  - id: environment
+    type: textarea
+    attributes:
+      label: 💻 Environment
+      description: |
+        Please provide information about the environment where the issue occurred (fill in if not already provided).
+
+        Example:
+          * Model and OS of the device(s): MacBook Pro (14inch, 2021), macOS Ventura 13.4
+          * Browser: Chrome 113.0.5672.126
+      value: |
+        * Model and OS of the device(s):
+        * Browser:
+      render: markdown
+    validations:
+      required: false
+
+  - type: checkboxes
+    attributes:
+      label: (For developer) Do you want to address this bug yourself?
+      description: If you do not know what this is, please leave the checkbox open and submit the form as is.
+      options:
+        - label: Yes, I will patch the bug myself and send a pull request

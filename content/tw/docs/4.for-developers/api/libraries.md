@@ -15,6 +15,8 @@ description: 與 Misskey API 相關的函式庫列表
 ## Python
 
 - [Misskey.py](https://github.com/YuzuRyo61/Misskey.py)
+- [MiPA](https://github.com/yupix/MiPA)
+- [MiPAC](https://github.com/yupix/MiPAC)
 
 ## .Net
 

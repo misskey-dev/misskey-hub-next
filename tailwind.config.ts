@@ -14,6 +14,7 @@ export default <Config> {
   ],
   safelist: [
     'scroll-pt-20',
+    'scroll-pt-24',
     'scroll-pt-32',
     'lg:scroll-pt-4',
     'lg:scroll-pt-20',

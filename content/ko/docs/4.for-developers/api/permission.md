@@ -1,11 +1,13 @@
 ---
-description: アプリケーションが要求する権限の一覧
+description: 애플리케이션이 요구하는 권한 목록
 ---
 
-# 権限の一覧
+# 권한 목록
 
 :::tip
-このページは[misskey-js](https://github.com/misskey-dev/misskey/tree/develop/packages/misskey-js)から自動生成しているため、ドキュメントや翻訳が不完全な場合があります。
+
+<ApiPermissions></ApiPermissions>
+
 :::
 
 <ApiPermissions></ApiPermissions>

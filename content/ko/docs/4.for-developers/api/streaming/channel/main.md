@@ -1,113 +1,113 @@
 ---
-description: 基本的な情報が流れるチャンネルです。
+description: 기본적인 정보가 흐르는 채널입니다.
 ---
 
 # `main`
 
-基本的な情報が流れるチャンネルです。
+기본적인 정보가 흐르는 채널입니다.
 
-## パラメータ
+## 파라미터
 
-なし
+없음
 
-## イベント
+## 이벤트
 
 ### `notification`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Notification'
+ $ref: 'misskey://Notification'
 }"/>
 
-通知を受け取ったときに発生します。
+알림을 받았을 때 발생합니다.
 
 ### `mention`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-メンションされたときに発生します。
+멘션을 받았을 때 발생합니다.
 
 ### `reply`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-返信されたときに発生します。
+답장을 받았을 때 발생합니다.
 
 ### `renote`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-Renoteされたときに発生します。
+Renote 될 때 발생합니다.
 
 ### `follow`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://User'
+ $ref: 'misskey://User'
 }"/>
 
-自分が他のユーザーをフォローしたときに発生します。
+자신이 다른 사용자를 팔로우했을 때 발생합니다.
 
 ### `followed`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://User'
+ $ref: 'misskey://User'
 }"/>
 
-他のユーザーが自分をフォローしたときに発生します。
+다른 사용자가 나를 팔로우했을 때 발생합니다.
 
 ### `unfollow`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://User'
+ $ref: 'misskey://User'
 }"/>
 
-自分が他のユーザーをフォロー解除したときに発生します。
+자신이 다른 사용자를 팔로우 해제했을 때 발생합니다.
 
 ### `messagingMessage`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://MessagingMessage'
+ $ref: 'misskey://MessagingMessage'
 }"/>
 
-メッセージを受け取ったときに発生します。
+메시지를 받았을 때 발생합니다.
 
 ### `readAllNotifications`
 
-全ての通知が既読になったときに発生します。
+모든 알림을 이미 읽었을 때 발생합니다.
 
 ### `unreadNotification`
 
-新しい通知があるときに発生します。
+새로운 알림이 있을 때 발생합니다.
 
 ### `unreadMention`
 
-新しいメンションがあるときに発生します。
+새로운 멘션이 있을 때 발생합니다.
 
 ### `readAllUnreadMentions`
 
-全てのメンションが既読になったときに発生します。
+모든 멘션이 이미 읽혔을 때 발생합니다.
 
 ### `unreadSpecifiedNote`
 
-新しいダイレクト投稿があるときに発生します。
+새로운 다이렉트 포스팅이 있을 때 발생합니다.
 
 ### `readAllUnreadSpecifiedNotes`
 
-全てのダイレクト投稿が既読になったときに発生します。
+모든 다이렉트 포스팅을 이미 읽었을 때 발생합니다.
 
 ### `unreadMessagingMessage`
 
-新しいメッセージがあるときに発生します。
+새로운 메시지가 있을 때 발생합니다.
 
 ### `readAllMessagingMessages`
 
-全てのメッセージが既読になったときに発生します。
+모든 메시지가 이미 읽은 상태일 때 발생합니다.
 
-## 操作
+## 조작
 
-なし
+없음

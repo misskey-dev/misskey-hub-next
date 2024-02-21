@@ -128,7 +128,7 @@ const realLinks = findDeepObject(props.links[0], (v) => {
         if (props.isEPDocs) {
             return isSamePath('/api-docs/endpoints/', v._path);
         }
-        return isSamePath(`/${locale.value}/docs/`, v._path);
+        return isSamePath(`/${locale.value === 'ja-ks' ? 'ja' : locale.value}/docs/`, v._path);
     } else {
         return v._path.includes(props.links[0]._path);
     }

@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import TopIco from 'bi/chevron-up.svg';
-import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
+import { locales } from '@/assets/data/locales';
 import NProgress from 'nprogress';
 import type { Graph, Thing } from 'schema-dts';
 import { cleanDoubleSlashes, joinURL, parseURL, stringifyParsedURL, withTrailingSlash } from 'ufo';
 
 const nuxtApp = useNuxtApp();
 
-const { t, locale, locales } = useI18n();
+const { t, locale } = useI18n();
 const route = useRoute();
 const router = useRouter();
 const colorMode = useColorMode();
@@ -20,12 +20,7 @@ router.beforeEach((to, from) => {
     }
 })
 
-nuxtApp.hook('page:start', () => {
-    if (!NProgress.isStarted()) {
-        NProgress.start();
-    }
-});
-nuxtApp.hook('page:finish', () => {
+nuxtApp.hook('page:loading:end', () => {
     nextTick(() => {
         setTimeout(() => {
             NProgress.done();
@@ -76,7 +71,7 @@ const getLdJson = (additionalGraphes: Thing[] = []): string => {
     ldJson['@graph'] = ldJson['@graph'].concat(additionalGraphes);
     return JSON.stringify(ldJson);
 };
-const currentLocaleIso = computed(() => (locales.value as LocaleObject[]).find((e) => e?.code === locale.value)?.iso);
+const currentLocaleIso = computed(() => locales.find((e) => e?.code === locale.value)?.iso);
 
 const head = useLocaleHead({
     addSeoAttributes: true,
@@ -85,7 +80,7 @@ const head = useLocaleHead({
 const i18nLinks = computed(() => head.value.link?.map((e) => {
     if (e.rel === 'alternate') {
         let href = e.href;
-        if (typeof e.hreflang === 'string' && (e.hreflang.includes('ja') || e.hreflang === 'x-default')) {
+        if (typeof e.hreflang === 'string' && (e.hreflang.includes('ja') || e.hreflang === 'x-default') && e.hreflang !== 'ja-KS') {
             const url = parseURL(href);
             url.pathname = joinURL('/ja/', url.pathname);
             href = cleanDoubleSlashes(withTrailingSlash(stringifyParsedURL(url)));

@@ -1,21 +1,24 @@
 ---
-description: このガイドはDockerを使ったMisskeyセットアップ方法を説明します。
+description: 이 가이드는 Docker를 사용하여 Misskey를 설정하는 방법을 설명합니다.
 ---
 
-# Docker Composeを使ったMisskey構築
+# Docker Compose로 Misskey 구축하기
 
-このガイドはDocker Composeを使ったMisskeyセットアップ方法を説明します。
+이 가이드는 Docker Compose를 사용하여 Misskey를 설정하는 방법을 설명합니다.
 
 :::danger
-一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
+
+일단 작동하기 시작한 서버의 도메인 및 호스트 이름으로는 데이터베이스를 다시 만들지 마십시오!
+
 :::
 
 :::tip{label='前提条件'}
 
-- DockerおよびDocker Composeがインストールされていること。
-  :::
+- Docker 및 Docker Compose가 설치되어 있어야 합니다.
 
-## リポジトリの取得
+:::.
+
+## 설정
 
 ```sh
 git clone -b master https://github.com/misskey-dev/misskey.git
@@ -23,9 +26,9 @@ cd misskey
 git checkout master
 ```
 
-## 設定
+## 설정
 
-下記コマンドで、各種設定ファイルのサンプルをコピーします。
+아래 명령어로 각종 설정 파일 샘플을 복사합니다.
 
 ```sh
 cp .config/docker_example.yml .config/default.yml
@@ -33,23 +36,23 @@ cp .config/docker_example.env .config/docker.env
 cp ./docker-compose_example.yml ./docker-compose.yml
 ```
 
-`default.yml`と`docker.env`をファイル内の説明に従って編集してください。\
+`default.yml`과 `docker.env`를 파일 내 설명에 따라 편집합니다.\
 \
-また、必要に応じて、`docker-compose.yml`を編集します。(ポートを変更したい場合など)
+또한 필요에 따라 `docker-compose.yml`을 편집합니다.(포트를 변경하고 싶은 경우 등)
 
-## ビルドと初期化
+## 빌드 및 초기화
 
-次のコマンドでMisskeyのビルドとデータベースの初期化を行います。
-これにはしばらく時間がかかります。
+다음 명령어로 Misskey를 빌드하고 데이터베이스를 초기화합니다.
+이 작업은 시간이 좀 걸립니다.
 
 ```shell
 sudo docker compose build
 sudo docker compose run --rm web pnpm run init
 ```
 
-## 起動
+## 실행
 
-お疲れ様でした。以下のコマンドでMisskeyを起動できます。
+수고하셨습니다.아래 명령어로 Misskey를 실행할 수 있습니다.
 
 ```sh
 sudo docker compose up -d
@@ -57,12 +60,12 @@ sudo docker compose up -d
 
 GLHF✨
 
-## Misskeyのアップデート方法
+## Misskey 업데이트 방법
 
 :::warning
-:::warning
-アップデートの際は必ず[リリースノート](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)を確認し、変更点や追加で必要になる作業の有無(ほとんどの場合ありません)を予め把握するようにしてください。
-:::
+
+업데이트 시 반드시 [릴리스 노트](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)를 확인하여 변경 사항 및 추가 작업 여부(대부분 없음)를 미리 파악하시기 바랍니다.
+
 :::
 
 ```sh
@@ -75,9 +78,9 @@ sudo docker compose build
 sudo docker compose stop && sudo docker compose up -d
 ```
 
-アップデート内容、およびデータベースの規模によっては時間がかかることがあります。
+업데이트 내용 및 데이터베이스 규모에 따라 시간이 걸릴 수 있습니다.
 
-## cliコマンドを実行する方法
+## cli 명령을 실행하는 방법
 
 ```sh
 sudo docker compose run --rm web node packages/backend/built/tools/foo bar

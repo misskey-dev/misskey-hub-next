@@ -697,7 +697,7 @@ export const redirects = [
     ],
     [
         "/docs/donate.html",
-        "/docs/for-users/resources/donate/"
+        "/docs/donate/"
     ],
     [
         "/docs/donate",
@@ -1350,5 +1350,9 @@ export const redirects = [
     [
         "/index.html",
         "/"
+    ],
+    [
+		"/docs/for-users/resources/donate/",
+        "/docs/donate/"
     ],
 ];

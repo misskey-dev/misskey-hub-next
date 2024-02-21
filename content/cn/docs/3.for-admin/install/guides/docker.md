@@ -7,13 +7,16 @@ description: このガイドはDockerを使ったMisskeyセットアップ方法
 このガイドはDocker Composeを使ったMisskeyセットアップ方法を説明します。
 
 :::danger
+
 一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
+
 :::
 
 :::tip{label='前提条件'}
 
 - DockerおよびDocker Composeがインストールされていること。
-  :::
+
+:::
 
 ## リポジトリの取得
 
@@ -59,7 +62,9 @@ GLHF✨
 ## Misskeyのアップデート方法
 
 :::warning
+
 アップデートの際は必ず[リリースノート](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)を確認し、変更点や追加で必要になる作業の有無(ほとんどの場合ありません)を予め把握するようにしてください。
+
 :::
 
 ```sh

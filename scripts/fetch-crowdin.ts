@@ -35,7 +35,17 @@ type CrowdinProjectMember = {
 
 //@ts-ignore
 export async function fetchCrowdinMembers() {
+    const sourceFilePath = path.resolve(__dirname, '../assets/data/i18n-members.ts');
+    const tsOut = [
+        '/** This file is auto-generated */',
+        'import type { LocaleCodes } from \'@/assets/data/locales\';',
+        'import type { PartialRecord } from \'@/types/others\';',
+        'import type { MiHubMember } from \'./team-members\';',
+    ];
+
     if (!process.env.CROWDIN_INTG_API) {
+        tsOut.push('export const hubI18nMembers: PartialRecord<LocaleCodes, MiHubMember[]> = {};');
+        writeFileSync(sourceFilePath, tsOut.join('\n'));    
         return;
     }
 
@@ -71,13 +81,6 @@ export async function fetchCrowdinMembers() {
 
     }
 
-    const sourceFilePath = path.resolve(__dirname, '../assets/data/i18n-members.ts');
-    const tsOut = [
-        '/** This file is auto-generated */',
-        'import type { LocaleCodes } from \'@/assets/data/locales\';',
-        'import type { PartialRecord } from \'@/types/others\';',
-        'import type { MiHubMember } from \'./team-members\';',
-    ];
     tsOut.push(`export const hubI18nMembers: PartialRecord<LocaleCodes, MiHubMember[]> = ${JSON.stringify(out)};`);
     writeFileSync(sourceFilePath, tsOut.join('\n'));
 

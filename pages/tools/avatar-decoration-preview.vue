@@ -10,11 +10,11 @@
                     {{ $t('_avatarDecorationPreview.preview') }}
                 </header>
                 <div class="flex gap-8 items-center justify-center flex-wrap">
-                    <ToolsAvatarDecorationMkProf
+                    <ToolsMocksMkProf
                         :avatar="avatar"
                         :decorations="realDecorations"
                     />
-                    <ToolsAvatarDecorationMkNote
+                    <ToolsMocksMkNote
                         :avatar="avatar"
                         :decorations="realDecorations"
                     />
@@ -118,10 +118,10 @@ const { t } = useI18n();
 const route = useRoute();
 
 const avatar = ref('/img/docs/fukidashi/doya_ai.webp');
-const decorations = ref<(Misskey.entities.User['avatarDecorations'][number] & { offsetX?: number; offsetY?: number; overlayTemplate?: boolean; })[]>([
+const decorations = ref<(Misskey.entities.User['avatarDecorations'][number] & { overlayTemplate?: boolean; })[]>([
 ]);
 
-function getStyle(decoration: Omit<Misskey.entities.User['avatarDecorations'][number], 'id'> & { offsetX?: number; offsetY?: number; }): HTMLAttributes['style'] {
+function getStyle(decoration: Omit<Misskey.entities.User['avatarDecorations'][number], 'id'>): HTMLAttributes['style'] {
     const angle = decoration.angle ?? 0;
     const rotate = angle === 0 ? undefined : `${angle * 360}deg`;
     const scaleX = decoration.flipH ? -1 : 1;

@@ -1,0 +1,4 @@
+contact_links:
+  - name: 💬 Bug reports and feature requests for Misskey itself
+    url: https://github.com/misskey-dev/misskey/issues
+    about: Misskey本体に関するバグ報告・機能リクエストはこちらから

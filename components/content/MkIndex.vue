@@ -42,7 +42,7 @@ const realBasePath = computed<string>(() => {
     	return `/api-docs/${slugs.slice(2).join('/')}`;
 	}
 	isApiDoc.value = true;
-    return route.path.replace(/^.*\/docs/, `/${locale.value}/docs`);
+    return route.path.replace(/^.*\/docs/, `/${locale.value === 'ja-ks' ? 'ja' : locale.value}/docs`);
 });
 
 const localePath = useGLocalePath();

@@ -1,18 +1,21 @@
-noScript: "現在Javascriptが無効になっています。サイトの表示にはJavascriptが必須となりますので有効にしてください。"
+noScript: "JavaScript 目前处于禁用状态。必须启用 JavaScript 才能浏览网站。"
 learnMore: "詳しく知る"
-loading: "読み込み中…"
-clickToExpand: "（クリックして展開）"
-copy: "コピー"
-share: "共有する"
+loading: "加载中…"
+clickToExpand: "（点击以展开）"
+copy: "复制"
+share: "分享"
 note: "ノート"
-other: "その他"
+other: "其他"
+add: "追加"
+browse: "参照"
+settings: "設定"
 goToLegacyHub: "従来のMisskey Hub"
 _error:
-  notFound: "ページが見つかりませんでした"
-  notFoundDesc: "お探しのページは見つかりませんでした。URLをお確かめください。"
-  generalError: "エラーが発生しました"
+  notFound: "找不到页面"
+  notFoundDesc: "找不到您要查找的页面，请检查 URL。"
+  generalError: "发生了错误"
   generalErrorDesc: "これが意図した操作でない場合は、以下から不具合報告をお願いします。"
-  reportProblem: "問題を報告する"
+  reportProblem: "报告问题"
   goToTop: "トップページにもどる"
 _seo:
   siteName: "Misskey Hub"
@@ -20,11 +23,11 @@ _seo:
   defaultTitleTagline: "ノートでひろがるネットワーク"
   defaultDescription: "【ノートでひろがるネットワーク】分散型SNS Misskeyの公式サイト。Misskeyのはじめかたやサーバー一覧など、Misskeyに関する情報が満載！"
 _nav:
-  servers: "サーバー"
-  docs: "ドキュメント"
-  blog: "ブログ"
-  other: "もっと！"
-  switchLang: "言語の設定"
+  servers: "服务器"
+  docs: "文档"
+  blog: "博客"
+  other: "更多！"
+  switchLang: "语音设定"
 _landing:
   _hero:
     description: "Misskey（ミスキー）はオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
@@ -90,24 +93,24 @@ _landing:
     title: "寄付のお願い"
     description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
   _sponsors:
-    title: "スポンサー"
+    title: "赞助者"
 _servers:
-  title: "サーバー一覧"
+  title: "服务器列表"
   description: "Misskeyは単一のサービスではなく、各々がサービスを提供する分散型ネットワークとなっています。Misskeyを利用するには、サービスを提供しているサーバーでアカウントを作成する必要があります。"
   addYourServer: "あなたのサーバーが表示されませんか？{0}から登録してください！"
   addYourServerLink: "こちら"
   _system:
     fetchError: "データの読み込みに失敗しました。後でもう一度お試しください。"
   _statistics:
-    title: "サーバー統計"
+    title: "服务器统计数据"
     description: "Misskeyサーバーの統計データをグラフでご紹介。"
     viewFullStats: "詳しい統計を見る"
     lang: "プライマリ言語"
     registerAcceptance: "新規登録受付方式"
-    version: "バージョン"
+    version: "版本"
     notes: "ノート数"
-    users: "ユーザー数"
-    servers: "サーバー数"
+    users: "用户数量"
+    servers: "服务器数量"
   _search:
     title: "絞り込み検索"
     all: "すべて"
@@ -134,13 +137,13 @@ _docs:
   description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。Misskeyの上手な使い方から、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
   indexTitle: "目次ページ"
   _contribute:
-    editThis: "このページを編集"
-    translateThis: "このページを翻訳"
+    editThis: "编辑本页面"
+    translateThis: "翻译本页面"
   _aboutMisskey:
     title: "Misskeyについて"
     description: "Misskeyをはじめて知ったかたや、これから使うかた向け！基本的なしくみや機能を見ていきましょう。"
   _changelog:
-    title: "リリースノート"
+    title: "发布日志"
     description: "Misskeyのバージョンアップ履歴をご覧いただけます。最新のバージョンで何が変わったのかを確認しましょう！"
   _forUsers:
     title: "Misskeyユーザー向け"
@@ -153,9 +156,9 @@ _docs:
     next: "次へ"
   _toc:
     title: "このページの内容"
-    toPageTop: "ページ上部に戻る"
+    toPageTop: "回到顶部"
 _blog:
-  title: "ブログ"
+  title: "博客"
   description: "Misskey開発本部から、Misskeyに関する最新情報やTips等をお届けします！（日本語のみ）"
   back: "戻る"
 _content:
@@ -178,7 +181,7 @@ _brandAssets:
 _links:
   title: "リンク"
   _github:
-    title: "Github"
+    title: "GitHub"
     description: "Misskeyの開発はGithub上で行われています。機能リクエストやバグ報告などはこちらから行えます。"
   _crowdin:
     title: "Crowdin"
@@ -196,6 +199,8 @@ _tools:
   menuToggle: "メニュー"
   _forUsers:
     title: "Misskeyユーザー向け"
+  _forAdmin:
+    title: "サーバー運営者向け"
 _mfmPlayground:
   title: "MFMお試しコーナー"
   description: "MFMを自由に練習できます！Misskeyの投稿画面・ノートの画面を再現！"
@@ -233,17 +238,24 @@ _aboutUs:
     _orgPartner:
       title: "企業・団体パートナー"
       description: "こちらの企業・団体から、金銭的・技術的な観点でMisskeyの開発へご協力いただいております。"
+    _hubTranslators:
+      title: "Misskey Hub ローカライザー"
+      description: "Misskey Hubの翻訳に協力いただいている皆さんです。"
+    _coreTranslators:
+      title: "Misskey ローカライザー"
+      description: "Misskeyの翻訳に協力いただいている皆さんです。"
 _i18n:
   _missing:
-    title: "翻訳にご協力ください"
-    description: "このドキュメントはコミュニティによる翻訳です。ドキュメントの翻訳は{link}から行えます。ご協力をお願いします🙏"
+    title: "请协助我们进行翻译"
+    description: "本文档为社区翻译，您可以通过 {link} 翻译该文档。我们需要您的帮助🙏"
     linkLabel: "Crowdin"
 _share:
   title: "Misskeyへノート"
   chooseServer: "ノートするサーバーを選択してください"
-  addServer: "サーバーを追加"
+  addServer: "添加服务器"
   domain: "サーバーのドメイン"
   compatibleWith: "Misskeyと、一部のMisskeyフォークに対応しています。"
+  recommendedByWebsite: "シェア元Webサイトからのおすすめ"
 _noteVisibility:
   public: "パブリック"
   home: "ホーム"
@@ -258,6 +270,8 @@ _shareLinkGenerator:
   url: "URL"
   urlCaption: "任意。本文の後ろに挿入されます。"
   settings: "詳細設定"
+  manualInstance: "おすすめサーバー ドメイン"
+  manualInstanceDescription: "ここに指定したサーバー（ひとつ）をシェアボタン中継ページのトップに表示できます。ご自身のサーバーに誘導する際などにお使いいただけます。"
   visibility: "公開範囲"
   recipents: "ダイレクトを受け取る人のacct（改行区切り）"
   resultLink: "リンク生成結果"
@@ -268,6 +282,34 @@ _shareLinkGenerator:
 _goToMisskey:
   title: "Misskey Webに移動"
   heading: "このページを開きたいサーバーを選択してください"
+_avatarDecorationPreview:
+  title: "アバターデコレーション プレビュー"
+  description: "アバターデコレーションがきれいに反映できるかをチェックできます。"
+  preview: "プレビュー"
+  settings: "設定"
+  decoration: "デコ #{number}"
+  placeholder: "「追加」から、アバターデコレーションを追加してプレビューできます。"
+  _options:
+    offsetX: "横位置調整"
+    offsetY: "縦位置調整"
+    angle: "角度"
+    flip: "左右反転"
+    overlayTemplate: "テンプレートを重ねる"
+  _placeholder:
+    username: "藍"
+    noteText: "チョコのかかったドーナツを食べました🍩😋"
+    profileDescription: "Misskey常駐AIの藍です！よろしくお願いします♪"
+_customEmojiPreview:
+  title: "カスタム絵文字 プレビュー"
+  description: "カスタム絵文字の視認性をチェックできます。"
+  preview: "プレビュー"
+  emoji: "絵文字 #{number}"
+  placeholder: "「追加」から、カスタム絵文字を追加してプレビューできます。"
+  _options:
+    text: "ノート文面"
+    textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
+  _placeholder:
+    noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
 _api:
   _permissions:
     title: "権限"
@@ -309,3 +351,52 @@ _api:
       "write:flash": "Playを操作する"
       "read:flash-likes": "Playのいいねを見る"
       "write:flash-likes": "Playのいいねを操作する"
+      "read:admin:abuse-user-reports": "ユーザーからの通報を見る"
+      "write:admin:delete-account": "ユーザーアカウントを削除する"
+      "write:admin:delete-all-files-of-a-user": "ユーザーのすべてのファイルを削除する"
+      "read:admin:index-stats": "データベースインデックスに関する情報を見る"
+      "read:admin:table-stats": "データベーステーブルに関する情報を見る"
+      "read:admin:user-ips": "ユーザーのIPアドレスを見る"
+      "read:admin:meta": "インスタンスのメタデータを見る"
+      "write:admin:reset-password": "ユーザーのパスワードをリセットする"
+      "write:admin:resolve-abuse-user-report": "ユーザーからの通報を解決する"
+      "write:admin:send-email": "メールを送る"
+      "read:admin:server-info": "サーバーの情報を見る"
+      "read:admin:show-moderation-log": "モデレーションログを見る"
+      "read:admin:show-user": "ユーザーのプライベートな情報を見る"
+      "read:admin:show-users": "ユーザーのプライベートな情報を見る"
+      "write:admin:suspend-user": "ユーザーを凍結する"
+      "write:admin:unset-user-avatar": "ユーザーのアバターを削除する"
+      "write:admin:unset-user-banner": "ユーザーのバーナーを削除する"
+      "write:admin:unsuspend-user": "ユーザーの凍結を解除する"
+      "write:admin:meta": "インスタンスのメタデータを操作する"
+      "write:admin:user-note": "モデレーションノートを操作する"
+      "write:admin:roles": "ロールを操作する"
+      "read:admin:roles": "ロールを見る"
+      "write:admin:relays": "リレーを操作する"
+      "read:admin:relays": "リレーを見る"
+      "write:admin:invite-codes": "招待コードを操作する"
+      "read:admin:invite-codes": "招待コードを見る"
+      "write:admin:announcements": "お知らせを操作する"
+      "read:admin:announcements": "お知らせを見る"
+      "write:admin:avatar-decorations": "アバターデコレーションを操作する"
+      "read:admin:avatar-decorations": "アバターデコレーションを見る"
+      "write:admin:federation": "連合に関する情報を操作する"
+      "write:admin:account": "ユーザーアカウントを操作する"
+      "read:admin:account": "ユーザーに関する情報を見る"
+      "write:admin:emoji": "絵文字を操作する"
+      "read:admin:emoji": "絵文字を見る"
+      "write:admin:queue": "ジョブキューを操作する"
+      "read:admin:queue": "ジョブキューに関する情報を見る"
+      "write:admin:promo": "プロモーションノートを操作する"
+      "write:admin:drive": "ユーザーのドライブを操作する"
+      "read:admin:drive": "ユーザーのドライブの関する情報を見る"
+      "read:admin:stream": "管理者用のWebsocket APIを使う"
+      "write:admin:ad": "広告を操作する"
+      "read:admin:ad": "広告を見る"
+      "write:invite-codes": "招待コードを作成する"
+      "read:invite-codes": "招待コードを取得する"
+      "write:clip-favorite": "クリップのいいねを操作する"
+      "read:clip-favorite": "クリップのいいねを見る"
+      "read:federation": "連合に関する情報を取得する"
+      "write:report-abuse": "違反を報告する"

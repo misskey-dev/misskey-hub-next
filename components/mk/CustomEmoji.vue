@@ -38,6 +38,10 @@ const rawUrl = computed(() => {
 const url = computed(() => {
 	if (rawUrl.value == null) return null;
 
+    if (props.url) {
+        return rawUrl.value;
+    }
+
 	const proxied =
 		(rawUrl.value.startsWith('/emoji/') || (props.useOriginalSize && isLocal.value))
 			? parseURL(rawUrl.value).host ? rawUrl.value : 'https://misskey.io' + rawUrl.value
@@ -51,7 +55,7 @@ const url = computed(() => {
 });
 
 const alt = computed(() => `:${customEmojiName.value}:`);
-const errored = ref(props.host == null);
+const errored = ref(props.host == null && !props.url);
 </script>
 
 <style lang="scss" module>

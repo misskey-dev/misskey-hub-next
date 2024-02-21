@@ -5,7 +5,9 @@ Misskey Hubは、Misskeyに関するナレッジなどのドキュメント、�
 Misskey Hubも[オープンソースで公開されています。](https://github.com/misskey-dev/misskey-hub)
 
 :::tip
+
 Misskey HubはNuxtを使ってビルドされた静的サイトです。
+
 :::
 
 ## Misskey Hubに貢献する

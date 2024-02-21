@@ -5,12 +5,14 @@ Announcements are one of the features available in Misskey.
 Using the announcement feature, you can post server-wide announcements to users, as well as send messages from the server to individual users.
 
 :::warning
+
 アクティブなお知らせの数が多いと、特に新規ユーザーの確認作業が増え、UXが低下する可能性があります。その場合、以下のオプションを検討できます。
 
 - Create an announcement with the "Existing Users Only" option enabled
 - Create an announcement with the "do not notify" option enabled
 - Archive closed announcements.
-  :::
+
+:::
 
 ## Display format
 

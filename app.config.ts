@@ -1,9 +1,9 @@
 export default defineAppConfig({
     notice: {
         title: {
-            ja: "2023年のMisskeyを振り返ろう",
-            en: "Recap Misskey in 2023",
+            ja: "v2024.2.0をリリースしました！",
+            en: "v2024.2.0 is out now!",
         },
-        to: "/blog/2023-12-01-2023recap/"
+        to: "/docs/releases/"
     },
 });

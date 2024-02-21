@@ -1,25 +1,27 @@
-# ドライブ
+# Drive
 
-ドライブは、Misskey上でファイルを管理できる機能です。
+Drive merupakan fitur yang memungkinkan kamu untuk mengelola berkasmu di dalam Misskey.
 
 :::tip
-技術的に言うと、Misskeyのシステム上、すべてのファイルが一元管理されており、それをユーザーにも公開したインターフェイスがドライブと捉えることができます。
+
+Secara teknis, drive dapat dilihat sebagai antarmuka dimana semua berkas secara sentral dikelola oleh sistem Misskey, yang mana juga terbuka untuk pengguna.
+
 :::
 
-Misskey Webのドライブページから任意のファイルをアップロードできるほか、アバターに設定した画像や、ノートに添付したファイルなどもすべてドライブにアップロードされます。
+Kamu dapat mengunggah berkas apapun secara langsung ke halaman Drive pada Misskey Web, dan gambar apapun yang kamu atur sebagai avatarmu atau berkas yang kamu lampirkan pada catatanmu juga akan diunggahkan ke Drive.
 
-ドライブにアップロードされたファイルは、いつでもダウンロードすることができるほか、ノート作成時に「ドライブからファイルを添付」することでファイルを再利用することもできます。
+Berkas yang diunggah ke drive dapat diunduh kapan saja, atau berkas dapat digunakan kembali dengan menggunakan 'lampirkan berkas dari drive' ketika membuat catatan.
 
-ドライブ内にフォルダを作り、複数のファイルをまとめて整理することもできます。
+Kamu juga dapat membuat folder di dalam drivemu untuk mengorganisir banyak berkas secara bersamaan.
 
 :::warning
-現時点で、ドライブからファイルを削除すると、そのファイルが添付された **すべてのコンテンツ(ノート、ページなど)** も同時に消えます。
+
+Untuk saat ini, ketika kamu menghapus sebuah berkas dari drive milikmu, semua konten (catatan, halaman, dll.) yang terlampirkan pada berkas tersebut juga akan dihapus.
+
 :::
 
-## センシティブ (NSFW)
+## Peringatan (NSFW)
 
-センシティブまたはNSFW (Not safe for work) は、ドライブのファイルに設定することができるフラグです。
-センシティブフラグを設定されたファイルは、表示される際に閲覧者の操作なしには表示されなくなります。
-このフラグは、例えば職場や公共の場で閲覧するのに適切でないと思われる画像などに設定し、そのような画像が突然表示されてしまうことを防ぐ目的で使われます。
+Peringatan atau NSFW (Not Safe For Work) merupakan tanda yang dapat diatur pada berkas di dalam drivemu. Berkas yang telah ditandai sebagai tidak aman untuk dilihat tidak akan ditampilkan tanpa interaksi pengguna. Penandaan ini dapat digunakan, sebagai contoh untuk mencegah gambar yang tidak sesuai untuk dilihat dan muncul tiba-tiba ketika sedang berada tempat kerja atau tempat publik.
 
-このフラグは手動でオンオフを切り替えられるほか、モデレーターの判断で設定される場合もあります。
+Penandaan ini dapat dinyalakan dan dimatikan secara manual, atau dapat ditetapkan berdasarkan kebijakan moderator.

@@ -62,6 +62,12 @@ definePageMeta({
     layout: 'docs',
 });
 
+useHead(() => locale.value === 'ja-ks' ? ({
+    meta: [
+        { name: 'robots', content: 'noindex' },
+    ],
+}) : ({}));
+
 const route = useRoute();
 const slugs = (Array.isArray(route.params.slug) ? route.params.slug : [route.params.slug]).filter((v) => v !== '');
 const isEPDocs = ref((slugs[0] === 'for-developers' && slugs[1] === 'api' && slugs[2] === 'endpoints' && slugs[3] != null));
@@ -71,7 +77,7 @@ watch(() => route.path, (_) => {
     isEPDocs.value = (slugs[0] === 'for-developers' && slugs[1] === 'api' && slugs[2] === 'endpoints' && slugs[3] != null);
 });
 
-let path = `/${locale.value}/docs/${slugs.join('/')}`;
+let path = `/${locale.value === 'ja-ks' ? 'ja' : locale.value}/docs/${slugs.join('/')}`;
 
 if (isEPDocs.value) {
     // APIドキュメントの翻訳はymlで当てるのでjsonは共通
@@ -82,6 +88,10 @@ const { data } = await useGAsyncData(`docs-${locale.value}-${slugs.join('-')}`, 
 
 if (!data.value) {
     throw createError({ statusCode: 404, statusMessage: 'page not found', fatal: true });
+}
+
+if (data.value._file && /index\.[a-z]+$/.test(data.value._file)) {
+    route.meta.__isDocsIndexPage = true;
 }
 
 route.meta.title = data.value?.title;

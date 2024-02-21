@@ -21,7 +21,9 @@ const repositoryUrl = 'https://github.com/misskey-dev/misskey-hub-next';
 
 // 言語定義は /assets/data/locales.ts に移動しました
 
-function getRouteRules(): NuxtConfig['routeRules'] {
+function getRouteRules(): NuxtConfig['routeRules'] | undefined {
+	if (process.env.NODE_ENV === 'development' || process.prerender) return undefined;
+
 	// 言語ごとに割り当てる必要のないRouteRules
 	const staticRules: NuxtConfig['routeRules'] = {
 		'/ja/blog/**': { isr: true },
@@ -171,6 +173,9 @@ export default defineNuxtConfig({
 			'@/server/plugins/appendComment.ts',
 			'@/server/plugins/i18nRedirector.ts',
 		],
+		prerender: {
+			failOnError: false,
+		}
 	},
 	hooks: {
 		'build:before': async (...args) => {
@@ -186,8 +191,10 @@ export default defineNuxtConfig({
 			await fetchCrowdinMembers(...args);
 		},
 	},
+	features: {
+		inlineStyles: false,
+	},
 	experimental: {
-		inlineSSRStyles: false,
 		componentIslands: true,
 	},
 	routeRules: getRouteRules(),
