@@ -1,0 +1,14 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"userId": "（説明がありません）",
+				"noIrregularRules": "（説明がありません）",
+				"multiple": "（説明がありません）"
+			}
+		}
+	},
+	"title": "reversi/match",
+	"description": "（説明がありません）"
+}

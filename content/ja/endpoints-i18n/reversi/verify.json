@@ -1,0 +1,17 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"gameId": "（説明がありません）",
+				"crc32": "（説明がありません）"
+			},
+			"response": {
+				"desynced": "（説明がありません）",
+				"game": "（説明がありません）"
+			}
+		}
+	},
+	"title": "reversi/verify",
+	"description": "（説明がありません）"
+}

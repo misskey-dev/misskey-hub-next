@@ -32,7 +32,13 @@
 				"drive.incFiles": "（説明がありません）",
 				"drive.decFiles": "（説明がありません）",
 				"drive.incUsage": "（説明がありません）",
-				"drive.decUsage": "（説明がありません）"
+				"drive.decUsage": "（説明がありません）",
+				"requests": "（説明がありません）",
+				"notes": "（説明がありません）",
+				"users": "（説明がありません）",
+				"following": "（説明がありません）",
+				"followers": "（説明がありません）",
+				"drive": "（説明がありません）"
 			}
 		}
 	},

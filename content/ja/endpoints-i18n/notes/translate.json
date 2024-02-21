@@ -5,6 +5,10 @@
 			"requestBody": {
 				"noteId": "（説明がありません）",
 				"targetLang": "（説明がありません）"
+			},
+			"response": {
+				"sourceLang": "（説明がありません）",
+				"text": "（説明がありません）"
 			}
 		}
 	},

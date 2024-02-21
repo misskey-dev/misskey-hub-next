@@ -94,7 +94,16 @@
 				"themeColor": "（説明がありません）",
 				"tosUrl": "（説明がありません）",
 				"uri": "（説明がありません）",
-				"version": "（説明がありません）"
+				"version": "（説明がありません）",
+				"enableMcaptcha": "（説明がありません）",
+				"mcaptchaSiteKey": "（説明がありません）",
+				"mcaptchaInstanceUrl": "（説明がありません）",
+				"prohibitedWords": "（説明がありません）",
+				"mcaptchaSecretKey": "（説明がありません）",
+				"enableTruemailApi": "（説明がありません）",
+				"truemailInstance": "（説明がありません）",
+				"truemailAuthKey": "（説明がありません）",
+				"shortName": "（説明がありません）"
 			}
 		}
 	},

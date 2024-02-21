@@ -21,7 +21,9 @@
 				"remote.diffs.normal": "（説明がありません）",
 				"remote.diffs.reply": "（説明がありません）",
 				"remote.diffs.renote": "（説明がありません）",
-				"remote.diffs.withFile": "（説明がありません）"
+				"remote.diffs.withFile": "（説明がありません）",
+				"local": "（説明がありません）",
+				"remote": "（説明がありません）"
 			}
 		}
 	},

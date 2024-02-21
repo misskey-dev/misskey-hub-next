@@ -20,7 +20,9 @@
 				"remote.followings.dec": "（説明がありません）",
 				"remote.followers.total": "（説明がありません）",
 				"remote.followers.inc": "（説明がありません）",
-				"remote.followers.dec": "（説明がありません）"
+				"remote.followers.dec": "（説明がありません）",
+				"local": "（説明がありません）",
+				"remote": "（説明がありません）"
 			}
 		}
 	},

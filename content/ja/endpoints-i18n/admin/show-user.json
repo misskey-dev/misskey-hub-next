@@ -4,6 +4,31 @@
 			"description": "（説明がありません）",
 			"requestBody": {
 				"userId": "（説明がありません）"
+			},
+			"response": {
+				"email": "（説明がありません）",
+				"emailVerified": "（説明がありません）",
+				"autoAcceptFollowed": "（説明がありません）",
+				"noCrawle": "（説明がありません）",
+				"preventAiLearning": "（説明がありません）",
+				"alwaysMarkNsfw": "（説明がありません）",
+				"autoSensitive": "（説明がありません）",
+				"carefulBot": "（説明がありません）",
+				"injectFeaturedNote": "（説明がありません）",
+				"receiveAnnouncementEmail": "（説明がありません）",
+				"mutedWords": "（説明がありません）",
+				"mutedInstances": "（説明がありません）",
+				"notificationRecieveConfig": "（説明がありません）",
+				"isModerator": "（説明がありません）",
+				"isSilenced": "（説明がありません）",
+				"isSuspended": "（説明がありません）",
+				"isHibernated": "（説明がありません）",
+				"lastActiveDate": "（説明がありません）",
+				"moderationNote": "（説明がありません）",
+				"signins": "（説明がありません）",
+				"policies": "（説明がありません）",
+				"roles": "（説明がありません）",
+				"roleAssigns": "（説明がありません）"
 			}
 		}
 	},

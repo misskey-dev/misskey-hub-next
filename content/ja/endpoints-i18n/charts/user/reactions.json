@@ -10,7 +10,9 @@
 			},
 			"response": {
 				"local.count": "（説明がありません）",
-				"remote.count": "（説明がありません）"
+				"remote.count": "（説明がありません）",
+				"local": "（説明がありません）",
+				"remote": "（説明がありません）"
 			}
 		}
 	},

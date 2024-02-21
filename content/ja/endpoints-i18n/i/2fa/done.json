@@ -4,6 +4,9 @@
 			"description": "（説明がありません）",
 			"requestBody": {
 				"token": "（説明がありません）"
+			},
+			"response": {
+				"backupCodes": "（説明がありません）"
 			}
 		}
 	},

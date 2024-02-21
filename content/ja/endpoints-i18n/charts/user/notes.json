@@ -15,7 +15,8 @@
 				"diffs.normal": "（説明がありません）",
 				"diffs.reply": "（説明がありません）",
 				"diffs.renote": "（説明がありません）",
-				"diffs.withFile": "（説明がありません）"
+				"diffs.withFile": "（説明がありません）",
+				"diffs": "（説明がありません）"
 			}
 		}
 	},

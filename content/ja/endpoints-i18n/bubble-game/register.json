@@ -1,0 +1,16 @@
+{
+	"data": {
+		"post": {
+			"description": "（説明がありません）",
+			"requestBody": {
+				"score": "（説明がありません）",
+				"seed": "（説明がありません）",
+				"logs": "（説明がありません）",
+				"gameMode": "（説明がありません）",
+				"gameVersion": "（説明がありません）"
+			}
+		}
+	},
+	"title": "bubble-game/register",
+	"description": "（説明がありません）"
+}

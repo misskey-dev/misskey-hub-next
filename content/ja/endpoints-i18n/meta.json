@@ -51,7 +51,12 @@
 				"logoImageUrl": "（説明がありません）",
 				"privacyPolicyUrl": "（説明がありません）",
 				"serverRules": "（説明がありません）",
-				"themeColor": "（説明がありません）"
+				"themeColor": "（説明がありません）",
+				"providesTarball": "（説明がありません）",
+				"enableMcaptcha": "（説明がありません）",
+				"mcaptchaSiteKey": "（説明がありません）",
+				"mcaptchaInstanceUrl": "（説明がありません）",
+				"policies": "（説明がありません）"
 			}
 		}
 	},

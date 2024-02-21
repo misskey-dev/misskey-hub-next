@@ -15,7 +15,9 @@
 				"remote.incCount": "（説明がありません）",
 				"remote.incSize": "（説明がありません）",
 				"remote.decCount": "（説明がありません）",
-				"remote.decSize": "（説明がありません）"
+				"remote.decSize": "（説明がありません）",
+				"local": "（説明がありません）",
+				"remote": "（説明がありません）"
 			}
 		}
 	},
