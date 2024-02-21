@@ -14,7 +14,7 @@
             </div>
             <div class="markdown-body">
                 <h3>{{ $t('_api._apiRenderer.requestBody') }}</h3>
-                <template v-for="req, contentType in detail.requestBody.content">
+                <template v-if="detail.requestBody?.content" v-for="req, contentType in detail.requestBody.content">
                     <table class="!table min-w-full table-fixed">
                         <thead>
                             <tr>
@@ -57,7 +57,7 @@
                     </h3>
                 </summary>
                 <div class="rounded-b-lg border dark:border-slate-800 p-3 bg-white dark:bg-slate-900 markdown-body">
-                    <p v-if="code == 204" class="text-center">{{ $t('_api._paramViewer._header.none') }}</p>
+                    <p v-if="code == 204 || !response.content" class="text-center">{{ $t('_api._paramViewer._header.none') }}</p>
                     <template v-else v-for="res, contentType in response.content">
                         <table class="!table min-w-full table-fixed">
                             <thead>

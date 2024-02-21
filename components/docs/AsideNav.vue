@@ -34,8 +34,9 @@
                         manualOpen[link._path] = !manualOpen[link._path] ?? true;
                     }
                 }"
-                
+
                 @click.passive="isAsideNavOpen = false"
+
                 :class="[
                     'block w-full hover:text-accent-600',
                     depth === 1 && 'text-base',
@@ -99,10 +100,6 @@ const props = withDefaults(defineProps<{
     depth: 1,
     parent: null,
     isEPDocs: false,
-});
-
-onUnmounted(() => {
-    manualOpen.value = {};
 });
 
 const { locale } = useI18n();
