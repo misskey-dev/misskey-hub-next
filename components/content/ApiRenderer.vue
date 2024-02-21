@@ -1,10 +1,10 @@
 <template>
-    <div class="space-y-4">
-        <div class="markdown-body">
+    <div>
+        <div class="markdown-body mb-4">
             <div class="font-semibold"><GNuxtLink :to="localePath('/docs/for-developers/api/endpoints/')">{{ $t('_api._endpoints.title') }}</GNuxtLink></div>
             <h1 class="!mt-0 font-mono">/{{ apiData.title }}</h1>
         </div>
-        <div class="space-y-8" v-for="detail, method in apiData.data">
+        <div class="space-y-4 mb-8 last:mb-0" v-for="detail, method in apiData.data">
             <div class="markdown-body">
                 <h2 class="flex items-baseline">
                     <span class="text-[75%] inline-block bg-sky-600 py-0.5 px-1 mr-1 rounded text-white">{{ method.toUpperCase() }}</span>{{ $t('_api._apiRenderer.description') }}
@@ -27,7 +27,7 @@
                             <tr v-for="property, name in req.schema.properties">
                                 <td>
                                     <span v-if="property?.nullable" class="text-[75%] inline-block bg-gray-600 py-0.5 px-1 mr-1 rounded text-white">{{ $t('_api._paramViewer._tip.optional') }}</span>
-                                    <span v-if="req.schema.required.includes(name)" class="text-[75%] inline-block bg-red-600 py-0.5 px-1 mr-1 rounded text-white">{{ $t('_api._paramViewer._tip.required') }}</span>
+                                    <span v-if="req.schema?.required && req.schema.required.includes(name)" class="text-[75%] inline-block bg-red-600 py-0.5 px-1 mr-1 rounded text-white">{{ $t('_api._paramViewer._tip.required') }}</span>
                                 </td>
                                 <td class="font-mono min-w-[150px]">{{ name }}</td>
                                 <td>{{ $t(`_api._paramViewer._types.${property.type}`, [ $t(`_api._paramViewer._types.${property.items?.type}`) || '' ]) }}</td>
@@ -97,7 +97,7 @@
                 </div>
             </details>
 
-            <div class="pt-8 markdown-body">
+            <div class="pt-4 markdown-body">
                 <GDetails summary="Raw JSON Schema">
                     <MDC :value="`\`\`\`json\n${JSON.stringify(apiData.data, null, 2)}\n\`\`\``" />
                 </GDetails>
