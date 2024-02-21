@@ -14,7 +14,7 @@ devDependencies:
     specifier: ^7.23.9
     version: 7.23.9
   '@nuxt/content':
-    specifier: npm:@nuxt/content-edge@2.12.0-28473949.a0ab377
+    specifier: npm:@nuxt/content-edge@latest
     version: /@nuxt/content-edge@2.12.0-28473949.a0ab377(nuxt@3.10.2)(rollup@4.12.0)(vue@3.4.19)
   '@nuxtjs/color-mode':
     specifier: ^3.3.2
