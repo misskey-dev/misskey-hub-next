@@ -14,58 +14,62 @@
             <div class="mt-4 border-b border-slate-300 dark:border-slate-800"></div>
         </li>
         <li
-            v-for="link in realLinks ?? []"
+            v-for="link in (realLinks ?? [])"
             :key="link._path"
             :class="[
                 depth === 2 && 'border-l-2 flex flex-col',
                 path.includes(link._path) ? 'border-accent-500' : 'border-gray-300 dark:border-gray-600',
             ]"
         >
-            <component
-                :is="(!isEPDocs || (isEPDocs && link._extension === 'json')) ? GNuxtLink : 'button'"
+            <div class="flex items-center">
+                <button
+                    v-if="link.children && link.children.filter((v) => !isSamePath(v._path, link._path)).length > 0"
+                    class="block px-1 mr-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
+                    @click.prevent.stop="() => {
+                        console.log('State:', path.includes(link._path));
+                        manualOpen[link._path] = !(manualOpen[link._path] ?? path.includes(link._path));
+                    }"
+                >
+                    <ArrowIco 
+                        :class="[
+                            'transition-transform',
+                            ((path.includes(link._path) && (manualOpen[link._path] !== false)) || manualOpen[link._path]) && 'rotate-90'
+                        ]"
+                    />
+                </button>
+                <component
+                    :is="(!isEPDocs || (isEPDocs && link._extension === 'json')) ? GNuxtLink : 'button'"
 
-                v-bind="(!isEPDocs || (isEPDocs && link._extension === 'json')) ? {
-                    to: link._path,
-                } : {}"
+                    v-bind="(!isEPDocs || (isEPDocs && link._extension === 'json')) ? {
+                        to: link._path,
+                    } : {}"
 
-                v-on="(!isEPDocs || (isEPDocs && link._extension === 'json')) ? {} : {
-                    'click': () => {
-                        if (!isEPDocs) return;
-                        manualOpen[link._path] = !manualOpen[link._path] ?? true;
-                    }
-                }"
+                    v-on="(!isEPDocs || (isEPDocs && link._extension === 'json')) ? {
+                        'click.passive': () => {
+                            isAsideNavOpen = false;
+                        },
+                    } : {
+                        'click': () => {
+                            isAsideNavOpen = false;
+                            if (!isEPDocs) return;
+                            manualOpen[link._path] = !manualOpen[link._path] ?? true;
+                        },
+                    }"
 
-                @click.passive="isAsideNavOpen = false"
-
-                :class="[
-                    'block w-full hover:text-accent-600',
-                    depth === 1 && 'text-base',
-                    depth === 2 ? 'px-2 py-1' : 'py-1',
-                    isSamePath(path, link._path) && 'text-accent-600 font-bold',
-                ]"
-            >
-                <div class="flex">
-                    <button
-                        v-if="link.children && link.children.filter((v) => !isSamePath(v._path, link._path)).length > 0"
-                        class="block px-1 mr-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
-                        @click.prevent.stop="() => {
-                            console.log('State:', path.includes(link._path));
-                            manualOpen[link._path] = !(manualOpen[link._path] ?? path.includes(link._path));
-                        }"
-                    >
-                        <ArrowIco 
-                            :class="[
-                                'transition-transform',
-                                ((path.includes(link._path) && (manualOpen[link._path] !== false)) || manualOpen[link._path]) && 'rotate-90'
-                            ]"
-                        />
-                    </button>
+                    :class="[
+                        'block text-start w-full hover:text-accent-600',
+                        depth === 1 && 'text-base',
+                        depth === 2 ? 'px-2 py-1' : 'py-1',
+                        isSamePath(path, link._path) && 'text-accent-600 font-bold',
+                    ]"
+                >
                     <div>{{ (isEPDocs && link._extension !== 'json') ? link.title.replace(/\s/g, '-').toLowerCase() + '/' : link.title }}</div>
-                </div>
-            </component>
+                </component>
+            </div>
             <AsideNav
                 v-if="link.children && link.children.filter((v) => !isSamePath(v._path, link._path)).length > 0"
                 v-show="(path.includes(link._path) && (manualOpen[link._path] !== false)) || manualOpen[link._path]"
+                :key="`${link._path}-${depth}-children`"
                 :links="[link]"
                 :isEPDocs="isEPDocs"
                 :depth="depth + 1"

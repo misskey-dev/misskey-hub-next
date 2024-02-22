@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { NavItem } from '@nuxt/content/types';
+
 const isNavOpen = ref<boolean>(false);
 const isAsideNavOpen = useState<boolean>('miHub_docs_asideNav_openState', () => false);
 
@@ -10,8 +12,8 @@ useHead({
 
 const route = useRoute();
 const { locale } = useI18n();
-const docsNavigation = ref();
-const epDocsNavigation = ref();
+const docsNavigation = ref<NavItem[] | null>(null);
+const epDocsNavigation = ref<NavItem[] | null>(null);
 const asideNavKey = ref(0);
 const { data: docsNavigationRes } = await useGAsyncData(`navigation_${locale.value}`, () => fetchContentNavigation(queryContent(`/${locale.value === 'ja-ks' ? 'ja' : locale.value}/docs/`)));
 const { data: epDocsNavigationRes } = await useGAsyncData(`ep_navigation_${locale.value}`, () => fetchContentNavigation(queryContent(`/api-docs/endpoints/`)));
@@ -37,7 +39,10 @@ watch(locale, async (to) => {
     <div class="bg-white dark:bg-slate-950">
         <GNav @toggleNav="isNavOpen = !isNavOpen" :isOpen="isNavOpen" :slim="true" :disableShadow="true" :hasBorder="true" />
         <div class="main-content">
-            <div class="relative container mx-auto max-w-screen-xl p-6 lg:py-0 grid docs-root pb-12">
+            <div
+                class="relative container mx-auto max-w-screen-xl p-6 lg:py-0 grid pb-12"
+                :class="$style.docsRoot"
+            >
                 <div
                     class="fixed top-[7.25rem] left-0 z-20 w-64 pl-6 transition-transform bg-slate-50 dark:bg-slate-900 lg:top-auto lg:bg-transparent dark:lg:bg-transparent lg:pl-0 lg:transform-none lg:relative"
                     :class="isAsideNavOpen ? 'translate-x-0' : '-translate-x-64'"
@@ -61,12 +66,13 @@ watch(locale, async (to) => {
     </div>
 </template>
 
-<style scoped>
-.docs-root {
+<style module>
+.docsRoot {
     grid-template-columns: 1fr;
 }
+
 @screen lg {
-    .docs-root {
+    .docsRoot {
         grid-template-columns: 16rem 1fr;
     }
 }

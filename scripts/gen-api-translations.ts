@@ -45,7 +45,9 @@ export async function genApiFiles() {
     const out: Record<string, any> = {
         _api: {
             // 権限
-            _permissions: {},
+            _permissions: {
+                _types: {},
+            },
 
             // レスポンスコードの説明
             _responseCodes: {},
@@ -54,7 +56,7 @@ export async function genApiFiles() {
 
     // 権限
     misskey.permissions.forEach((permission) => {
-        out._api._permissions[permission] = '（説明がありません）';
+        out._api._permissions._types[permission] = '（説明がありません）';
     });
 
     // エンドポイント
