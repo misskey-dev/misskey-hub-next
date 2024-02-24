@@ -402,4 +402,4 @@ _api:
       "write:clip-favorite": "클립의 좋아요 수정하기"
       "read:clip-favorite": "클립의 좋아요 보기"
       "read:federation": "연합 정보 불러오기"
-      "write:report-abuse": "違反を報告する"
+      "write:report-abuse": "위반 신고하기"
