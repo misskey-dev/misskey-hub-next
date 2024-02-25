@@ -147,7 +147,7 @@ _docs:
     description: "View the version history of Misskey. Find out what's new in the latest version!"
   _donate:
     title: "Donating to the project"
-    description: "Misskeyは無料で使えるオープンソースのソフトウェアです。気に入っていただけたら、今後も開発を続けられるようにぜひ寄付をご検討ください。"
+    description: "Misskey is free and open source software. If you like it, please consider donating so that we can continue to develop it."
   _forUsers:
     title: "For Misskey Users"
   _forAdmin:
@@ -273,8 +273,8 @@ _shareLinkGenerator:
   url: "URL"
   urlCaption: "Optional. Inserted after the body."
   settings: "Advanced Settings"
-  manualInstance: "おすすめサーバー ドメイン"
-  manualInstanceDescription: "ここに指定したサーバー（ひとつ）をシェアボタン中継ページのトップに表示できます。ご自身のサーバーに誘導する際などにお使いいただけます。"
+  manualInstance: "Recommended Server"
+  manualInstanceDescription: "The server specified here can be displayed at the top of the Share button relay page. You can use this to direct people to your own server, for example."
   visibility: "Visibility"
   recipents: "Acct of the person receiving the direct (enter on a new line separator)"
   resultLink: "Generated results of shared links"
@@ -287,11 +287,11 @@ _goToMisskey:
   heading: "Select the server you want to open the page and continue"
 _avatarDecorationPreview:
   title: "Avatar Decoration Previewer"
-  description: "アバターデコレーションがきれいに反映できるかをチェックできます。"
+  description: "You can check whether the avatar decoration fits properly."
   preview: "Preview"
   settings: "Settings"
   decoration: "Decoration #{number}"
-  placeholder: "「追加」から、アバターデコレーションを追加してプレビューできます。"
+  placeholder: "Through the 'Add' button you can add and preview the avatar decorations."
   _options:
     offsetX: "Horizontal Offset"
     offsetY: "Vertical Offset"
@@ -301,18 +301,18 @@ _avatarDecorationPreview:
   _placeholder:
     username: "Ai"
     noteText: "Just had a chocolate-glazed donut 🍩😋"
-    profileDescription: "Misskey常駐AIの藍です！よろしくお願いします♪"
+    profileDescription: "I am AI, Misskey resident AI! Pleased to meet you... ♪"
 _customEmojiPreview:
   title: "Custom Emoji Preview"
-  description: "カスタム絵文字の視認性をチェックできます。"
+  description: "The usability of custom emojis can be checked here."
   preview: "Preview"
   emoji: "Emoji #{number}"
-  placeholder: "「追加」から、カスタム絵文字を追加してプレビューできます。"
+  placeholder: "Under 'Add', you can add and preview custom emojis."
   _options:
     text: "Note text"
-    textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
+    textDescription: "The custom emoji you have added can be referenced by {emoji_id}"
   _placeholder:
-    noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
+    noteText: "Custom emoji will appear like this → :emoji_preview_1:\nYou can rewrite the text and test its usability✨."
 _api:
   _permissions:
     title: "Permissions"
