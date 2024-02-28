@@ -97,7 +97,7 @@ _landing:
 _servers:
   title: "Daftar Peladen"
   description: "Misskey bukanlah layanan satuan namun jejaring terdesentralisasi dimana para individu menyediakan banyak layanan. Untuk menggunakan Misskey, kamu perlu membuat akun di peladen yang menawarkan layanan tersebut."
-  addYourServer: "Apakah peladenmu tidak terdaftar? Daftarkan segera di {0}!"
+  addYourServer: "Apakah peladenmu tidak terdaftar? Daftarkan segera {0}!"
   addYourServerLink: "di sini"
   _system:
     fetchError: "Gagal untuk mengambil data. Mohon coba lagi nanti."
@@ -106,7 +106,7 @@ _servers:
     description: "Presentasikan statistik peladen Misskey ke dalam Bagan."
     viewFullStats: "Lihat statistik lengkap"
     lang: "Bahasa Utama"
-    registerAcceptance: "Menerima pendaftaran"
+    registerAcceptance: "Kebijakan pendaftaran"
     version: "Versi"
     notes: "Jumlah catatan"
     users: "Jumlah pengguna"
@@ -116,15 +116,15 @@ _servers:
     all: "Semua"
     query: "Pencarian dengan kata kunci"
     lang: "Bahasa"
-    orderBy: "Tata ulang"
+    orderBy: "Urutkan"
     recomendded: "Bawaan"
-    notesCount: "Jumlah catatan"
-    notesPer15Days: "Jumlah catatan per hari (rata-rata 15 hari terakhir)"
-    usersCount: "Jumlah pengguna"
+    notesCount: "Catatan"
+    notesPer15Days: "Catatan/hari (rata-rata 15 hari terakhir)"
+    usersCount: "Pengguna"
   _registerAcceptance:
     title: "Kebijakan Pendaftaran"
     public: "Publik"
-    inviteOnly: "Hanya Undangan"
+    inviteOnly: "Undangan"
   _list:
     notFound: "Tidak ada peladen yang cocok ditemukan dengan kriteria yang dimaksud."
     showMore: "Selebihnya"
@@ -147,7 +147,7 @@ _docs:
     description: "Lihat riwayat versi Misskey. Cari tahu apa yang terbaru di versi terakhir!"
   _donate:
     title: "Berdonasi ke proyek"
-    description: "Misskeyは無料で使えるオープンソースのソフトウェアです。気に入っていただけたら、今後も開発を続けられるようにぜひ寄付をご検討ください。"
+    description: "Misskey merupakan perangkat lunak bebas dan bersumber terbuka. Apabila kamu menyukai Misskey, mohon pertimbangkan untuk berdonasi agak kami dapat terus lanjut mengembangkan perangkat lunak ini."
   _forUsers:
     title: "Untuk Pengguna Misskey"
   _forAdmin:
@@ -250,7 +250,7 @@ _aboutUs:
 _i18n:
   _missing:
     title: "Bantu kami menerjemahkan"
-    description: "Dokumen ini diterjemahkan oleh komunitas. Kamu dapat berkontribusi di {link}. Kami sangat mengapresiasi atas kerjasamamu terhadap proyek ini 🙏."
+    description: "Dokumen ini diterjemahkan oleh komunitas. Kamu dapat ikut berkontribusi menyempurnakan terjemahan ini melalui {link}. Kami sangat mengapresiasi atas kerjasama yang telah kamu berikan dengan ikut berkontribusi dalam proyek ini 🙏."
     linkLabel: "Crowdin"
 _share:
   title: "Catat ke Misskey"
@@ -312,7 +312,7 @@ _customEmojiPreview:
     text: "Teks catatan"
     textDescription: "Kustom emoji yang ditambahkan dapat direferensikan dengan {emoji_id}"
   _placeholder:
-    noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
+    noteText: "Emoji kustom akan muncul seperti ini → :emoji_preview_1:\nKamu dapat menulis ulang teks dan mencoba kegunaannya ✨."
 _api:
   _permissions:
     title: "Hak akses"
