@@ -3,7 +3,7 @@ description: '日本で人気を博しているWordPressテーマ「Cocoon」に
 date: 2024-02-27
 ---
 
-# NEWS: 人気のWordPressテーマ「Cocoon」にMisskeyシェアボタンが追加されました！
+# NEWS: WordPressテーマ「Cocoon」にMisskeyシェアボタンが追加
 
 オープンソースCMS「WordPress」で使用できる、「[わいひら](https://twitter.com/MrYhira)」さんが開発しているテーマ「[Cocoon](https://wp-cocoon.com/)」のv2.7.1が公開され、[Misskey Hub 共有フォーム中継サービス](/docs/for-users/features/share-form/)を利用したMisskeyシェアボタンが追加されました！
 
