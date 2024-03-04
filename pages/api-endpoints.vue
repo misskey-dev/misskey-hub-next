@@ -12,7 +12,7 @@
                 <GNav @toggleNav="isNavOpen = !isNavOpen" slim disableShadow hasBorder :sticky="false" />
             </template>
             <template #content-end>
-                <GFooter />
+                <GFooter class="bg-slate-100 dark:bg-gray-900" />
             </template>
         </ApiReferenceBase>
     </div>
