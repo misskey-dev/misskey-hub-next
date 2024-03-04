@@ -11,6 +11,11 @@
             <template #header>
                 <GNav @toggleNav="isNavOpen = !isNavOpen" slim disableShadow hasBorder :sticky="false" />
             </template>
+            <template #sidebar-start="{ spec }">
+                <div :class="$style.searchBoxWrapper">
+                    <SearchButton :spec="spec" />
+                </div>
+            </template>
             <template #content-end>
                 <GFooter class="bg-slate-100 dark:bg-gray-900" />
             </template>
@@ -37,8 +42,15 @@ if (process.client) {
 
 <style module>
 .apiReferenceRoot {
+    @apply leading-normal;
     --theme-font: 'Nunito', var(--mi-localized-font, '');
     --theme-font-code: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
     --theme-header-height: 4rem;
+}
+
+.searchBoxWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 12px 6px 12px;
 }
 </style>
