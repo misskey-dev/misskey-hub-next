@@ -9,6 +9,7 @@ import { getStaticEndpoints } from './scripts/get-static-endpoints';
 import { locales } from './assets/data/locales';
 import type { NuxtConfig } from 'nuxt/schema';
 import { fetchCrowdinMembers } from './scripts/fetch-crowdin';
+import { fetchApiJson } from './scripts/fetch-api-json';
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl =
@@ -187,7 +188,10 @@ export default defineNuxtConfig({
 					}
 				});
 			}
-			await fetchCrowdinMembers(...args);
+			await Promise.all([
+				fetchCrowdinMembers(),
+				fetchApiJson(),
+			]);
 		},
 	},
 	features: {

@@ -20,5 +20,8 @@ declare module 'vue-router' {
 
         /** @private */
         __isDocsIndexPage?: boolean;
+        
+        /** @private */
+        __hideFooter?: boolean;
     }
 }

@@ -1,8 +1,9 @@
 <template>
     <div
         :class="[
-            'top-0 z-[9900] w-full transition',
-            fixed ? 'fixed' : 'sticky',
+            'w-full transition',
+            (fixed || sticky) && 'top-0 z-[9900]',
+            fixed ? 'fixed' : sticky ? 'sticky' : '',
             {
                 'shadow bg-opacity-90': (!disableShadow && scrollPos <= -40),
                 'bg-white dark:bg-gray-950': (disableShadow || scrollPos <= -40),
@@ -106,12 +107,14 @@ const props = withDefaults(defineProps<{
     hasBorder?: boolean;
     landing?: boolean;
     fixed?: boolean;
+    sticky?: boolean;
 }>(), {
     disableShadow: false,
     slim: false,
     hasBorder: false,
     landing: false,
     fixed: false,
+    sticky: true,
 });
 
 const navOpen = ref(false);

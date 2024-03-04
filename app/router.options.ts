@@ -2,6 +2,9 @@ import type { RouterConfig } from '@nuxt/schema'
 
 export default <RouterConfig> {
     scrollBehavior(to) {
+        if (to.path === '/api-doc' || to.path === '/api-doc/') {
+            return { top: 0 };
+        }
         if (to.meta.layout && to.hash) {
             const width = window ? window.innerWidth : 0;
 
