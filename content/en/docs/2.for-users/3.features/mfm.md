@@ -1,32 +1,32 @@
 ---
-description: MFMは、Misskeyの様々な場所で使用できる専用のマークアップ言語です。
+description: MFM is a proprietary markup language that can be used in various locations in Misskey.
 ---
 
 # MFM
 
-MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使用できる専用のマークアップ言語です。
+MFM, short for Markup language For Misskey, is a proprietary markup language that can be used in various locations in Misskey.
 
 :::tip
 
-一部の構文はMarkdownやHTMLと互換性があります。
+Some of its syntax is compatible with Markdown and HTML.
 
 :::
 
-## MFMが使用可能な場所の例
+## Examples of places where MFM can be used
 
-- ノート本文
-- CW注釈
-- ユーザーの名前
-- ユーザーの自己紹介
+- The text of a note
+- Content warning annotation
+- Names of users
+- User bios
 
-## 構文
+## Syntax
 
-### メンション
+### Mentions
 
-アットマーク + ユーザー名で、特定のユーザーを示すことができます。
+`@` + username can be used to display a specific user.
 :::tip
 
-メンションについての詳細は[こちら](./mention.md)を参照してください。
+For more information about mentions, see [here](./mention.md).
 
 :::
 
@@ -42,12 +42,12 @@ MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使�
 
 <MfmPreview text="@repo@p1.a9z.dev"></MfmPreview>
 
-### ハッシュタグ
+### Hashtags
 
-ナンバーサイン + タグで、ハッシュタグを示すことができます。
+`#` + tag can be used to display a hashtag.
 :::tip
 
-ハッシュタグについての詳細は[こちら](./hashtag.md)を参照してください。
+For more information about hashtags, see [here](./hashtag.md).
 
 :::
 
@@ -59,7 +59,7 @@ MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使�
 
 ### URL
 
-URLを示すことができます。
+URLs can be displayed.
 
 ```
 https://example.com
@@ -67,9 +67,9 @@ https://example.com
 
 <MfmPreview text="https://example.com"></MfmPreview>
 
-### リンク
+### Links
 
-文章の特定の範囲を、URLに紐づけることができます。
+Specific parts of text can be displayed as a URL.
 
 ```
 [example link](https://example.com)
@@ -77,7 +77,7 @@ https://example.com
 
 :::tip
 
-リンクテキストの前に`?`をつけると、リンクプレビューを非表示にすることができます。
+You can hide the link preview by prefixing the link text with `? `.
 
 ```
 ?[example link](https://example.com)
@@ -87,13 +87,13 @@ https://example.com
 
 <MfmPreview text="[example link](https://example.com)"></MfmPreview>
 
-### カスタム絵文字
+### Custom Emoji
 
-コロンでカスタム絵文字名を囲むと、カスタム絵文字を表示させることができます。
+Custom emoji can be displayed by surrounding the emoji name with colons.
 
 :::tip
 
-カスタム絵文字についての詳細は[こちら](./custom-emoji.md)を参照してください。
+For more information about custom emoji, see [here](./custom-emoji.md).
 
 :::
 
@@ -103,9 +103,9 @@ https://example.com
 
 <MfmPreview text=":misskey:"></MfmPreview>
 
-### 太字
+### Bold
 
-文字を太く表示して強調することができます。
+Text can be bolded for emphasis.
 
 ```
 **太字**
