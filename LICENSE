@@ -30,3 +30,6 @@ that license applies to that directory.
 - /content/blog         : それぞれのエントリの著者に全権が帰属。
 - /content              : LICENSE-ASSETSを参照のこと（上記を除く）
 - （その他のコード）    : LICENSE-CODEを参照のこと
+
+注：特定のディレクトリに別途LICENSEファイルがある場合、そのディレク
+トリ内はそのライセンスが適用されます。
