@@ -9,11 +9,16 @@
                 target="_blank"
                 class="block aspect-square bg-white overflow-clip"
                 :class="[
-                    { 'p-5': !sponsor.noMargin },
                     { 'rounded-full': !sponsor.noRounded }
                 ]"
             >
-                <img :src="sponsor.img" class="w-full h-full object-contain" />
+                <img    
+                    :src="sponsor.img"
+                    class="w-full h-full object-contain"
+                    :class="[
+                        { 'p-5': !sponsor.noMargin }
+                    ]"
+                />
             </GNuxtLink>
         </div>
     </div>
@@ -58,7 +63,3 @@ const sponsors: Sponsor[] = [
     }
 ];
 </script>
-
-<style scoped>
-
-</style>
