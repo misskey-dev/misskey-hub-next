@@ -6,7 +6,9 @@ Misskey Hub 是 Misskey 的官方網站，提供有關 Misskey 的知識和其�
 歡迎提供更多文件和翻譯。Misskey Hub 也是[開放原始碼](https://github.com/misskey-dev/misskey-hub)
 
 :::tip
+
 Misskey Hub 是使用 Nuxt 建置的靜態網站。
+
 :::
 
 ## 為 Misskey Hub 做出貢獻

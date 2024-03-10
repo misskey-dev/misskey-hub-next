@@ -3,7 +3,9 @@
 이 가이드에서는 Kubernetes와 HelmChart를 사용하여 Misskey를 설정하는 방법을 설명합니다.
 
 :::danger
+
 일단 작동하기 시작한 서버의 도메인 및 호스트 이름으로는 데이터베이스를 다시 만들지 마십시오!
+
 :::
 
 ## TrueCharts 및 TrueNAS Scale
@@ -16,7 +18,7 @@ Misskey의 HelmCharts는 TrueNAS Scale에서 사용할 수 있도록 TrueCharts�
 
 현재 Misskey는 _incubator_ train을 진행 중입니다.
 
-:::前提条件
+:::tip{label='前提条件'}
 
 - TrueNAS Scale
   또는

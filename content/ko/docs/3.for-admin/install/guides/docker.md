@@ -7,15 +7,18 @@ description: 이 가이드는 Docker를 사용하여 Misskey를 설정하는 방
 이 가이드는 Docker Compose를 사용하여 Misskey를 설정하는 방법을 설명합니다.
 
 :::danger
+
 일단 작동하기 시작한 서버의 도메인 및 호스트 이름으로는 데이터베이스를 다시 만들지 마십시오!
+
 :::
 
 :::tip{label='前提条件'}
 
 - Docker 및 Docker Compose가 설치되어 있어야 합니다.
-  :::.
 
-## 리포지토리 가져오기
+:::.
+
+## 설정
 
 ```sh
 git clone -b master https://github.com/misskey-dev/misskey.git
@@ -60,7 +63,9 @@ GLHF✨
 ## Misskey 업데이트 방법
 
 :::warning
+
 업데이트 시 반드시 [릴리스 노트](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)를 확인하여 변경 사항 및 추가 작업 여부(대부분 없음)를 미리 파악하시기 바랍니다.
+
 :::
 
 ```sh

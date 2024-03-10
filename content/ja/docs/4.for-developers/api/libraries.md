@@ -15,6 +15,8 @@ description: 'Misskey APIに関連するライブラリの一覧'
 ## Python
 
 - [Misskey.py](https://github.com/YuzuRyo61/Misskey.py)
+- [MiPA](https://github.com/yupix/MiPA)
+- [MiPAC](https://github.com/yupix/MiPAC)
 
 ## .Net
 
@@ -23,6 +25,7 @@ description: 'Misskey APIに関連するライブラリの一覧'
 ## Dart / Flutter
 
 - [misskey](https://github.com/misskey-dart/misskey)
+- [misskey_dart](https://github.com/shiosyakeyakini-info/misskey_dart)
 
 ## Go
 

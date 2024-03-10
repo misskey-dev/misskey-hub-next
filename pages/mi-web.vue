@@ -1,6 +1,6 @@
 <template>
     <GMisskeyGateway
-        :path="path"
+        :action="actionConfig"
         :branding="{
             heading: $t('_goToMisskey.heading'),
             icon: WindowIco,
@@ -24,15 +24,23 @@ useHead({
 const { meta, query } = useRoute();
 const { t } = useI18n();
 
-const path = computed<string>(() => {
-    if (!query.path || query.path.length == 0) return '/';
+// 遷移用パス
+const path = computed(() => {
+    if (!query.path || query.path.length == 0) return undefined;
 
     if (Array.isArray(query.path)) {
         return query.path[0] as string;
     } else {
         return query.path;
     }
-})
+});
+
+const actionConfig = computed(() => {
+    return {
+        type: 'link' as const,
+        path: path.value ?? '/',
+    };
+});
 
 meta.title = t('_goToMisskey.title');
 meta.scrollButton = false;

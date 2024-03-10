@@ -1,4 +1,4 @@
-import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
+import type { LocaleObject } from '@nuxtjs/i18n';
 
 export const localesConst = [
 	{ files: [ 'ja-JP.json' ], code: 'ja', iso: 'ja-JP', name: '日本語' },
@@ -10,6 +10,7 @@ export const localesConst = [
 	{ files: [ 'fr-FR.json' ], code: 'fr', iso: 'fr-FR', name: 'Français' },
 	{ files: [ 'zh-CN.json' ], code: 'cn', iso: 'zh-CN', name: '简体中文' },
 	{ files: [ 'zh-TW.json' ], code: 'tw', iso: 'zh-TW', name: '繁体中文' },
+	{ files: [ 'ja-KS.json' ], code: 'ja-ks', iso: 'ja-KS', name: '🐙' },
 ] as const;
 
 export type LocaleCodes = typeof localesConst[number]['code'];

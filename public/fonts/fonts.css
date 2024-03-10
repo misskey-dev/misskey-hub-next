@@ -15,8 +15,10 @@
 }
 
 html[lang='ja-JP'],
+html[lang='ja-KS'],
 ._i18n[lang='ja'],
-._i18n[lang='ja-JP'] {
+._i18n[lang='ja-JP'],
+._i18n[lang='ja-KS'] {
     --mi-localized-font: 'GenJyuuGothicX';
     --mi-localized-font-p: 'GenJyuuGothicXP';
 }

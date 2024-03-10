@@ -7,7 +7,9 @@ description: MFM 是一種專有的標記語言，可以在 Misskey 的各個地
 MFM 代表 Markup language For Misskey，是一種專有的標記語言，可以在 Misskey 的各個地方使用。
 
 :::tip
+
 某些語法與 Markdown 和 HTML 相容。
+
 :::
 
 ## 可使用 MFM 的地方
@@ -23,7 +25,9 @@ MFM 代表 Markup language For Misskey，是一種專有的標記語言，可以
 
 「@ + 使用者名稱」可用來表示特定使用者。
 :::tip
+
 有關提及的更多資訊，請參閱[此處](./mention.md)。
+
 :::
 
 ```
@@ -42,7 +46,9 @@ MFM 代表 Markup language For Misskey，是一種專有的標記語言，可以
 
 「# + 標籤」來表示主題標籤。
 :::tip
+
 有關主題標籤的更多資訊，請參閱[此處](./hashtag.md)。
+
 :::
 
 ```
@@ -70,6 +76,7 @@ https://example.com
 ```
 
 :::tip
+
 リンクテキストの前に`?`をつけると、リンクプレビューを非表示にすることができます。
 
 ```
@@ -84,7 +91,9 @@ https://example.com
 
 您可以透過用冒號包圍自訂表情符號名稱來顯示自訂表情符號。
 :::tip
+
 有關自訂表情符號的更多信息，請參閱[此處](./custom-emoji.md)。
+
 :::
 
 ```

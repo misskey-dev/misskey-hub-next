@@ -5,20 +5,16 @@
 
 // AID
 // 長さ8の[2000年1月1日からの経過ミリ秒をbase36でエンコードしたもの] + 長さ2の[ノイズ文字列]
-
-import * as crypto from 'crypto';
+import { customAlphabet } from 'nanoid';
 
 export const aidRegExp = /^[0-9a-z]{10}$/;
+
+const rand = customAlphabet('0123456789', 5);
 
 const TIME2000 = 946684800000;
 let counter: number;
 
-if (process.client) {
-	const arr = window.crypto.getRandomValues(new Uint16Array(2));
-	counter = parseInt(arr[0].toString());
-} else {
-	counter = crypto.randomBytes(2).readUInt16LE(0);
-}
+counter = parseInt(rand(), 10);
 
 function getTime(time: number): string {
 	time = time - TIME2000;
@@ -27,14 +23,16 @@ function getTime(time: number): string {
 	return time.toString(36).padStart(8, '0');
 }
 
-function getNoise(): string {
-	return counter.toString(36).padStart(2, '0').slice(-2);
+function getNoise(ctr: number): string {
+	return ctr.toString(36).padStart(2, '0').slice(-2);
 }
 
-export function genAid(t: number): string {
+export function genAid(t: number, ctr: number | null = null): string {
 	if (isNaN(t)) throw new Error('Failed to create AID: Invalid Date');
-	counter++;
-	return getTime(t) + getNoise();
+	if (!ctr) {
+		counter++;
+	}
+	return getTime(t) + getNoise(ctr ?? counter);
 }
 
 export function parseAid(id: string): { date: Date; } {

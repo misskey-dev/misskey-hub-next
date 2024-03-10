@@ -17,8 +17,10 @@
                             <NuxtLink :to="localePath('/docs/for-users/features/share-form/#hub-share-disclaimer')" target="_blank"><HelpIco class="ml-1" /></NuxtLink>
                         </div>
                         <div class="rounded-lg border border-gray-300 dark:border-gray-600 group">
-                            <GNuxtLink
-                                :to="joinURL(`https://${manualInstanceData.url}/`, path)"
+                            <component
+                                :is="action.type === 'link' ? GNuxtLink : 'button'"
+                                v-bind="action.type === 'link' && { to: joinURL(`https://${manualInstanceData.url}/`, action.path) }"
+                                @click="handleClick(manualInstanceData)"
                                 class="group-first:rounded-t-lg group-last:rounded-b-lg py-2 px-4 sm:p-4 w-full flex items-center hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-gray-700 dark:active:bg-gray-600"
                             >
                                 <div
@@ -26,19 +28,21 @@
                                 >
                                     <img v-if="manualInstanceData.icon && manualInstanceData.meta?.iconUrl" :src="manualInstanceData.meta?.iconUrl" class="w-full h-full" />
                                 </div>
-                                <div class="min-w-0 mr-3">
+                                <div class="min-w-0 mr-3 text-start">
                                     <h2 class="text-sm sm:text-base font-bold truncate">{{ manualInstanceData.name }}</h2>
                                     <p class="text-xs truncate">{{ manualInstanceData.url }}</p>
                                 </div>
                                 <ArrowRightIco class="block ml-auto flex-shrink-0 h-4 w-4" />
-                            </GNuxtLink>
+                            </component>
                         </div>
                     </div>
 
                     <ul class="rounded-lg border divide-y border-gray-300 dark:border-gray-600 divide-gray-300 dark:divide-gray-600">
                         <li v-for="instance in displayInstances" :key="instance.url" class="group">
-                            <GNuxtLink
-                                :to="joinURL(`https://${instance.url}/`, path)"
+                            <component
+                                :is="action.type === 'link' ? GNuxtLink : 'button'"
+                                v-bind="action.type === 'link' && { to: joinURL(`https://${instance.url}/`, action.path) }"
+                                @click="handleClick(instance)"
                                 class="group-first:rounded-t-lg group-last:rounded-b-lg py-2 px-4 sm:p-4 w-full flex items-center hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-gray-700 dark:active:bg-gray-600"
                             >
                                 <div
@@ -60,12 +64,12 @@
                                     </template>
                                     <img v-else-if="instance.icon && instance.meta?.iconUrl" :src="instance.meta?.iconUrl" class="w-full h-full" />
                                 </div>
-                                <div class="min-w-0 mr-3">
+                                <div class="min-w-0 mr-3 text-start">
                                     <h2 class="text-sm sm:text-base font-bold truncate">{{ instance.name }}</h2>
                                     <p class="text-xs truncate">{{ instance.url }}</p>
                                 </div>
                                 <ArrowRightIco class="block ml-auto flex-shrink-0 h-4 w-4" />
-                            </GNuxtLink>
+                            </component>
                         </li>
                         <li class="group">
                             <details class="group-first:rounded-t-lg group-last:rounded-b-lg group/details">
@@ -92,7 +96,7 @@
                         </li>
                     </ul>
                     <div class="text-sm text-center">
-                        &copy; 2024 Misskey, syuilo, and other contributors<br>
+                        &copy; 2024 syuilo and Misskey Project<br>
                         <GNuxtLink to="https://misskey-hub.net/" target="_blank" class="hover:underline underline-offset-1">Misskey Hub</GNuxtLink>
                     </div>
                 </div>
@@ -113,6 +117,7 @@ import { isLocalPath, resolveObjPath } from '@/assets/js/misc';
 import { parseURL, joinURL } from 'ufo';
 import { api as misskeyApi } from 'misskey-js';
 import { forkedSoftwares } from '~/assets/data/forks';
+import { GNuxtLink } from '#components';
 import type { InstanceInfo, InstanceItem } from '@/types/instances-info';
 import type { FunctionalComponent } from 'vue';
 
@@ -120,7 +125,13 @@ const { t } = useI18n();
 const localePath = useGLocalePath();
 
 const props = defineProps<{
-    path: string;
+    action: {
+        type: 'link';
+        path: string;
+    } | {
+        type: 'fn';
+        onClick: (instance: ExtendedInstanceItem) => Promise<void>;
+    };
     branding?: {
         heading?: string;
         icon?: FunctionalComponent | string;
@@ -213,6 +224,13 @@ function getPlaceholderImage(instance: ExtendedInstanceItem | InstanceItem) {
         }
     }
     return 'notDetermined';
+}
+
+async function handleClick(instance: ExtendedInstanceItem) {
+    if (props.action.type !== 'fn') return;
+    loading.value = true;
+    await props.action.onClick(instance);
+    loading.value = false;
 }
 
 onMounted(async () => {

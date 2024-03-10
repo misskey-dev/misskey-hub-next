@@ -1,8 +1,5 @@
-# カスタム絵文字
+# Emoji kustom
 
-カスタム絵文字は、サーバーで用意された画像を絵文字のように使える機能です。
-ノート、リアクション、チャット、自己紹介、名前などの場所で使うことができます。
-カスタム絵文字をそれらの場所で使うには、絵文字ピッカーボタン(ある場合)を押すか、`:`を入力して絵文字サジェストを表示します。
-テキスト内に`:foo:`のような形式の文字列が見つかると、`foo`の部分がカスタム絵文字名と解釈され、表示時には対応したカスタム絵文字に置き換わります。
+Emoji Kustom merupakan fitur yang dapat membolehkan kamu untuk menggunakan gambar apapun yang disediakan oleh instansimu sebagai emoji. Kamu dapat menggunakan emoji tersebut di tempat seperti catatan, reaksi, obrolan, profil kamu, nama kamu, dll. Untuk menggunakan emoji kustom di salah satu tempat tersebut, tekan tombol pemilih emoji (jika tersedia) atau ketik `:` untuk menampilkan saran emoji. Jika string dari bentuk `:foo:` ditemukan dalam teks, bagian `foo` akan diinterpretasikan sebagai nama emoji kustom dan akan digantikan dengan emoji kustom terkait ketika ditampilkan.
 
-サーバーにどのようなカスタム絵文字が用意されているかは、Misskey Webの **サーバー情報** にある [**カスタム絵文字**](x-mi-web://about#emojis) にアクセスすると見ることができます。
+Kamu dapat melihat emoji kustom mana yang tersedia pada instansimu dengan mengunjungi menu [**emoji kustom**](x-mi-web://about#emojis) pada **informasi instansi** dari web instansi peladen Misskey kamu.
