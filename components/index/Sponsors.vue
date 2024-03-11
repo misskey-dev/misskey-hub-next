@@ -42,8 +42,7 @@ const sponsors: Sponsor[] = [
         to: 'https://mask.io/',
     },
     {
-        img: '/img/sponsors/rss3.svg',
-        noMargin: true,
+        img: '/img/sponsors/rss3.png',
         to: 'https://rss3.io/',
     },
     {
