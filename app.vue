@@ -77,24 +77,25 @@ const head = useLocaleHead({
     addSeoAttributes: true,
 });
 
-const i18nLinks = computed(() => head.value.link?.map((e) => {
+const i18nLinks = computed(() => head.value.link?.map((e: any) => {
     if (e.rel === 'alternate') {
         let href = e.href;
+        const url = parseURL(href);
         if (typeof e.hreflang === 'string' && (e.hreflang.includes('ja') || e.hreflang === 'x-default') && e.hreflang !== 'ja-KS') {
-            const url = parseURL(href);
             url.pathname = joinURL('/ja/', url.pathname);
-            href = cleanDoubleSlashes(withTrailingSlash(stringifyParsedURL(url)));
-        } else {
-            href = cleanDoubleSlashes(withTrailingSlash(href));
         }
+        url.search = '';
+        href = cleanDoubleSlashes(withTrailingSlash(stringifyParsedURL(url)));
         return { ...e, rel: e.rel, href, hreflang: e.hreflang };
     } else if (e.rel === 'canonical' && locale.value === 'ja') {
         let href = e.href;
         const url = parseURL(href);
         url.pathname = joinURL('/ja/', url.pathname);
+        url.search = '';
         href = cleanDoubleSlashes(withTrailingSlash(stringifyParsedURL(url)));
         return { ...e, rel: e.rel, href, hreflang: e.hreflang };
     }
+
     return e;
 }));
 
