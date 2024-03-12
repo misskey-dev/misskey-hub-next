@@ -171,8 +171,8 @@ _other:
   description: "Introducing more enjoyable resources for Misskey!"
 _brandAssets:
   title: "Brand Assets"
-  description: "A collection of Misskey's logo, icons, and other assets. Feel free to use for literally anything under the CC BY-NC-SA License!"
-  license: "Assets are available under the CC BY-NC-SA license 🎉"
+  description: "A collection of Misskey's logo, icons, and other assets. Feel free to use for literally anything under the CC BY-SA License!"
+  license: "Assets are available under the CC BY-SA license 🎉"
   assetsDirectory: "All assets are managed on {0}."
   logo: "Logo"
   icon: "Icon"

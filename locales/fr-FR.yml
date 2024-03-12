@@ -172,7 +172,7 @@ _other:
 _brandAssets:
   title: "Collection de ressources"
   description: "Une collection de logos, d'icônes et d'autres actifs de Misskey. Vous êtes libre de les utiliser sous certaines licences."
-  license: "Les ressources sont libres d'être utilisées sous la licence CC BY-NC-SA 🎉"
+  license: "Les ressources sont libres d'être utilisées sous la licence CC BY-SA 🎉"
   assetsDirectory: "Toutes les ressources sont gérées sur {0}."
   logo: "Logo"
   icon: "Icône"

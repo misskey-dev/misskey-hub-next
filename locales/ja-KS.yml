@@ -182,7 +182,7 @@ _other:
 _brandAssets:
   title: "アセット集"
   description: "Misskeyのロゴ、アイコンとかのアセットっちゅうやつを置いてあるで。ライセンスさえ守ってくれたらなんにでも使ってええよ！"
-  license: "アセットは、CC BY-NC-SAのライセンスの下でなんにでも使ってええことになってるで🎉"
+  license: "アセットは、CC BY-SAのライセンスの下でなんにでも使ってええことになってるで🎉"
   assetsDirectory: "アセットは、ぜんぶ{0}で管理してあんで。"
   logo: "ロゴ"
   icon: "アイコン"

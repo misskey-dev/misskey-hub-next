@@ -172,7 +172,7 @@ _other:
 _brandAssets:
   title: "資源集"
   description: "Misskey 標誌、圖標和其他資產的集合。您可以在一定的許可下自由使用它。"
-  license: "資產可在 CC BY-NC-SA 授權下免費使用🎉"
+  license: "資產可在 CC BY-SA 授權下免費使用🎉"
   assetsDirectory: "所有資產均由 {0} 管理。"
   logo: "標誌"
   icon: "圖標"
