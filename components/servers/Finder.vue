@@ -99,19 +99,19 @@
                     v-else-if="data"
                     class="rounded-lg p-6 min-h-[40vh] flex items-center bg-slate-100 dark:bg-slate-800"
                     :class="[
-                        (v_view === 'grid') && 'sm:col-span-2 md:col-span-2 lg:col-span-2'
+                        (v_view === 'grid') && 'sm:col-span-2 xl:col-span-3 2xl:col-span-4 3xl:col-span-5'
                     ]"
                 >
                     <div class="mx-auto text-center">
                         <img src="https://xn--931a.moe/assets/info.jpg" class="rounded-lg mx-auto mb-4" />
-                        <p class="max-w-xs">{{ $t('_servers._list.notFound') }}</p>
+                        <p class="max-w-xs" style="word-break: auto-phrase;">{{ $t('_servers._list.notFound') }}</p>
                     </div>
                 </div>
                 <div
                     v-else
                     class="rounded-lg p-6 min-h-[40vh] flex items-center bg-slate-100 dark:bg-slate-800"
                     :class="[
-                        (v_view === 'grid') && 'sm:col-span-2 md:col-span-2 lg:col-span-2'
+                        (v_view === 'grid') && 'sm:col-span-2 xl:col-span-3 2xl:col-span-4 3xl:col-span-5'
                     ]"
                 >
                     <div class="mx-auto text-center">
