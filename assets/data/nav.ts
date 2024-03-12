@@ -1,4 +1,4 @@
-import type { FunctionalComponent } from "nuxt/dist/app/compat/capi";
+import type { Component } from "#app/compat/capi";
 import GHIcon from "bi/github.svg";
 
 export type NavSection = {
@@ -18,7 +18,7 @@ export type NavItem = {
     to: string;
 } | {
     /** アイコン（svgをインポートして貼り付け） */
-    icon: FunctionalComponent | string;
+    icon: Component | string;
     /** リンク先 */
     to: string;
 };
