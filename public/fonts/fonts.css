@@ -1,14 +1,23 @@
 /** Japanese (GenjyuuGothicX) */
-@import url('./GenJyuuGothicX-Bold/GenJyuuGothicX-Bold.css');
-@import url('./GenJyuuGothicX-P-Bold/GenJyuuGothicX-P-Bold.css');
-@import url('./GenJyuuGothicX-P-Regular/GenJyuuGothicX-P-Regular.css');
-@import url('./GenJyuuGothicX-Regular/GenJyuuGothicX-Regular.css');
+@import url('./GenJyuuGothicX/GenJyuuGothicX-Bold/GenJyuuGothicX-Bold.css');
+@import url('./GenJyuuGothicX/GenJyuuGothicX-P-Bold/GenJyuuGothicX-P-Bold.css');
+@import url('./GenJyuuGothicX/GenJyuuGothicX-P-Regular/GenJyuuGothicX-P-Regular.css');
+@import url('./GenJyuuGothicX/GenJyuuGothicX-Regular/GenJyuuGothicX-Regular.css');
 /** Korean (Gothic A1) */
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap');
 /** Simplified Chinese (Noto Sans SC) */
 @import url('https://fonts.googleapis.cn/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
 /** Traditional Chinese (Noto Sans TC) */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+
+/** English Heading (Jellee) */
+@font-face {
+    font-family: 'Jellee';
+    src: url('./Jellee/WEB/Jellee-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
 
 ._i18n {
     font-family: Nunito, var(--mi-localized-font, ''), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
