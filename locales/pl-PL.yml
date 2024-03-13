@@ -2,9 +2,9 @@ noScript: "現在Javascriptが無効になっています。サイトの表示�
 learnMore: "詳しく知る"
 loading: "読み込み中…"
 clickToExpand: "（クリックして展開）"
-copy: "コピー"
+copy: "Kopiuj"
 share: "共有する"
-note: "ノート"
+note: "Notka"
 other: "その他"
 add: "追加"
 browse: "参照"
@@ -23,18 +23,18 @@ _seo:
   defaultTitleTagline: "ノートでひろがるネットワーク"
   defaultDescription: "【ノートでひろがるネットワーク】分散型SNS Misskeyの公式サイト。Misskeyのはじめかたやサーバー一覧など、Misskeyに関する情報が満載！"
 _nav:
-  servers: "サーバー"
-  docs: "ドキュメント"
-  blog: "ブログ"
+  servers: "Serwery"
+  docs: "Dokumentacja"
+  blog: "Blog"
   other: "もっと！"
   switchLang: "言語の設定"
 _landing:
   _hero:
-    description: "Misskey（ミスキー）はオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
-    gettingStarted: "はじめる"
+    description: "Misskey jest otwarto-źródłową i zdecentralizowaną siecią społecznościową"
+    gettingStarted: "Zaczynamy"
   _keyFeatures:
     _open:
-      title: "オープン"
+      title: "Otwarte"
       description: "Misskeyはオープンソースのソフトウェアで、誰でも自由にMisskeyを利用できます。"
     _federated:
       title: "分散"
@@ -175,7 +175,7 @@ _other:
 _brandAssets:
   title: "アセット集"
   description: "Misskeyのロゴ、アイコンなどのアセットのコレクションです。一定のライセンスのもとでご自由にお使いいただけます。"
-  license: "アセットは、CC BY-NC-SAのライセンスの下で自由にお使いいただけます🎉"
+  license: "アセットは、CC BY-SAのライセンスの下で自由にお使いいただけます🎉"
   assetsDirectory: "全てのアセットは、{0}で管理されています。"
   logo: "ロゴ"
   icon: "アイコン"
