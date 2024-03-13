@@ -7,6 +7,7 @@
     ></MkAnimBg>
     <GMisskeyGateway
         class="relative"
+        v-if="filteredQuery"
         :action="{
             type: 'link',
             path: `/share?${stringifyQuery(filteredQuery)}`,
@@ -16,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { stringifyQuery } from 'ufo';
+import { stringifyQuery, parseQuery } from 'ufo';
 
 definePageMeta({
     layout: 'blank',
@@ -28,25 +29,35 @@ useHead({
     ],
 });
 
-const { meta, query } = useRoute();
+const { meta } = useRoute();
 
-const manualInstance = (Array.isArray(query.manualInstance) ? query.manualInstance[0] : query.manualInstance) ?? undefined;
+const manualInstance = ref<string | undefined>();
 
-const filteredQuery = computed(() => ({
-    ...query,
-    replyId: undefined,
-    renoteId: undefined,
-    visibleUserIds: undefined,
-    fileIds: undefined,
-    manualInstance: undefined,
-}));
+const filteredQuery = ref<Record<string, any>>({});
 
 const isCanvasLoaded = ref(false);
 const showAnimBg = ref(false);
 
-if (process.client && window.innerWidth >= 768) {
-    showAnimBg.value = true;
+if (process.client) {
+    const query = parseQuery(location.search.slice(1));
+
+    filteredQuery.value = {
+        ...query,
+        replyId: undefined,
+        renoteId: undefined,
+        visibleUserIds: undefined,
+        fileIds: undefined,
+        manualInstance: undefined,
+    };
+
+    manualInstance.value = Array.isArray(query.manualInstance) ? query.manualInstance[0] : query.manualInstance ?? undefined;
 }
+
+onMounted(() => {
+    if (window.innerWidth >= 768) {
+        showAnimBg.value = true;
+    }
+});
 
 const { t } = useI18n();
 
