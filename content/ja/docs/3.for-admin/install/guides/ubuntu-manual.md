@@ -412,7 +412,7 @@ redis:
   port: 6379
 
 # 　 IDタイプの設定。
-id: 'aid'
+id: 'aidx'
 
 # 　 syslog
 syslog:
