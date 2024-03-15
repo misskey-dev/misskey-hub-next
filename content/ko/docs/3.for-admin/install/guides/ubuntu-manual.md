@@ -52,7 +52,8 @@ OS의 차이, Misskey 본체나 의존하는 소프트웨어의 버전업으로 
 
 - OS는 **Ubuntu 22.04.1 LTS**를 사용합니다.
 - 클라우드의 경우에도 네트워크 설정에서 포트 개방이 필요한 경우가 많습니다.하드웨어 요구 사항으로 CPU는 최신 제품이라면 최소사양으로도 작동합니다.아키텍처는 amd64 및 arm64를 가정합니다.
-- 메모리는 1.5GB 정도면 충분합니다.(Vite 도입 등으로 1.5GB 정도도 빌드 가능해짐)/manual/)
+- メモリは4GB程度あると良い。
+  - （従来Viteの導入により1.5GB程度でもビルド可能と説明していたが、最近またフロントエンドのビルドで要件が厳しくなってきた。）
 - 자체 도메인을 구입하고 CloudFlare를 사용하세요.
 - 도메인은 [Google Domains](https://domains.google/intl/ja_jp/) 등에서 미리 준비해야 합니다.
 - 여기서는 도메인을 example.tld로 설명할 것이므로, 자신이 구입한 도메인으로 적절히 대체하여 읽도록 합니다.개발 환경의 경우 localhost로 대체합니다(설정 파일 항목에서 별도 설명).개발 환경의 경우 localhost로 대체합니다(설정 파일 항목에서 별도 설명).
@@ -161,16 +162,13 @@ CREATE DATABASE mk1 OWNER misskey;
 
 ### Redis
 
-Redis는 NoSQL의 인메모리 데이터베이스 소프트웨어로, 데이터베이스 및 연합과의 통신 관리 등을 위해 필요합니다. https\://redis.io/docs/getting-started/installation/install-redis-on-linux/
+Redis는 NoSQL의 인메모리 데이터베이스 소프트웨어로, 데이터베이스 및 연합과의 통신 관리 등을 위해 필요합니다.\
+redis.ioのドキュメントに従い、snapでインストールする。
+
+https\://redis.io/docs/getting-started/installation/install-redis-on-linux/
 
 ```sh
-echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" | sudo tee /etc/apt/sources.list.d/nginx.list
-
-echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" | sudo tee /etc/apt/preferences.d/99nginx
-
-sudo apt update
-
-sudo apt install -y nginx
+sudo snap install redis
 ```
 
 systemctl로 데몬 상태 확인.
@@ -195,7 +193,7 @@ curl에서 확인하는 것도 좋은 방법입니다.
 nginx.org의 문서 http\://nginx.org/en/linux_packages.html#Ubuntu 에 따라 설치합니다.
 
 ```sh
-sudo apt install ubuntu-keyring
+sudo apt install -y curl ca-certificates gnupg2 lsb-release ubuntu-keyring
 
 curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
 
@@ -393,26 +391,26 @@ nano .config/default.yml
 :::
 
 ```yml
-# ● Misskey를 공개할 URL
+# ● Misskeyを公開するURL
 url: https://example.tld/
-# 포트를 3000으로 설정한다.
+# ポートを3000とする。
 port: 3000
 
-# ● PostgreSQL 설정。
+# ● PostgreSQLの設定。
 db:
   host: localhost
   port: 5432
-  db  : mk1 # 〇 PostgreSQL의 데이터베이스 이름
-  user: misskey # 〇 PostgreSQL 사용자 이름
-  pass: hoge # ● PostgreSQL 패스워드
+  db  : mk1 # 〇 PostgreSQLのデータベース名
+  user: misskey # 〇 PostgreSQLのユーザー名
+  pass: hoge # ● PostgreSQLのパスワード
 
-# 　 Redis 설정.
+# 　 Redisの設定。
 redis:
   host: localhost
   port: 6379
 
-# 　 ID 유형 설정.
-id: 'aid'
+# 　 IDタイプの設定。
+id: 'aidx'
 
 # 　 syslog
 syslog:
