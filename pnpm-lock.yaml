@@ -20,7 +20,7 @@ devDependencies:
     specifier: ^3.3.2
     version: 3.3.2(rollup@4.13.0)
   '@nuxtjs/i18n':
-    specifier: ^8.1.1
+    specifier: ^8.2.0
     version: 8.2.0(rollup@4.13.0)(vue@3.4.21)
   '@rollup/plugin-yaml':
     specifier: ^4.1.2
@@ -29,7 +29,7 @@ devDependencies:
     specifier: ^4.0.9
     version: 4.0.9
   '@types/node':
-    specifier: ^20.11.25
+    specifier: ^20.11.28
     version: 20.11.28
   '@types/nprogress':
     specifier: ^0.2.3
@@ -68,10 +68,10 @@ devDependencies:
     specifier: ^3.11.0
     version: 3.11.0(@types/node@20.11.28)(rollup@4.13.0)(sass@1.72.0)(typescript@5.4.2)(vite@5.1.6)
   postcss:
-    specifier: ^8.4.35
+    specifier: ^8.4.36
     version: 8.4.36
   sass:
-    specifier: ^1.71.1
+    specifier: ^1.72.0
     version: 1.72.0
   schema-dts:
     specifier: ^1.1.2
@@ -86,7 +86,7 @@ devDependencies:
     specifier: ^1.0.37
     version: 1.0.37
   ufo:
-    specifier: ^1.4.0
+    specifier: ^1.5.1
     version: 1.5.1
   vite-svg-loader:
     specifier: ^5.1.0
