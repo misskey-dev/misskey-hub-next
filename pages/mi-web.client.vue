@@ -1,6 +1,5 @@
 <template>
     <GMisskeyGateway
-        v-if="path"
         :action="actionConfig"
         :branding="{
             heading: $t('_goToMisskey.heading'),
@@ -11,7 +10,6 @@
 
 <script setup lang="ts">
 import WindowIco from 'bi/window.svg';
-import { parseQuery } from 'ufo';
 
 definePageMeta({
     layout: 'blank',
@@ -23,11 +21,19 @@ useHead({
     ],
 });
 
-const { meta } = useRoute();
+const { meta, query } = useRoute();
 const { t } = useI18n();
 
 // 遷移用パス
-const path = ref<string | null>(null);
+const path = computed(() => {
+    if (!query.path || query.path.length == 0) return undefined;
+
+    if (Array.isArray(query.path)) {
+        return query.path[0] as string;
+    } else {
+        return query.path;
+    }
+});
 
 const actionConfig = computed(() => {
     return {
@@ -35,15 +41,6 @@ const actionConfig = computed(() => {
         path: path.value ?? '/',
     };
 });
-
-if (process.client) {
-    const query = parseQuery(location.search);
-    if (Array.isArray(query.path)) {
-        path.value = query.path[0] as string;
-    } else {
-        path.value = query.path;
-    }
-}
 
 meta.title = t('_goToMisskey.title');
 meta.scrollButton = false;

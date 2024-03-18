@@ -137,6 +137,7 @@ export default defineNuxtConfig({
 			autoprefixer: {},
 		},
 	},
+	devtools: { enabled: false },
 	alias: {
 		'bi': 'bootstrap-icons/icons',
 	},
