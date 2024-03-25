@@ -34,6 +34,9 @@ devDependencies:
   '@types/nprogress':
     specifier: ^0.2.3
     version: 0.2.3
+  '@types/random-seed':
+    specifier: ^0.3.5
+    version: 0.3.5
   '@types/ua-parser-js':
     specifier: ^0.7.39
     version: 0.7.39
@@ -70,6 +73,9 @@ devDependencies:
   postcss:
     specifier: ^8.4.36
     version: 8.4.36
+  random-seed:
+    specifier: ^0.3.0
+    version: 0.3.0
   sass:
     specifier: ^1.72.0
     version: 1.72.0
@@ -2292,6 +2298,10 @@ packages:
 
   /@types/nprogress@0.2.3:
     resolution: {integrity: sha512-k7kRA033QNtC+gLc4VPlfnue58CM1iQLgn1IMAU8VPHGOj7oIHPp9UlhedEnD/Gl8evoCjwkZjlBORtZ3JByUA==}
+    dev: true
+
+  /@types/random-seed@0.3.5:
+    resolution: {integrity: sha512-CftxcDPAHgs0SLHU2dt+ZlDPJfGqLW3sZlC/ATr5vJDSe5tRLeOne7HMvCOJnFyF8e1U41wqzs3h6AMC613xtA==}
     dev: true
 
   /@types/resolve@1.20.2:
@@ -4849,6 +4859,10 @@ packages:
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dev: true
 
+  /json-stringify-safe@5.0.1:
+    resolution: {integrity: sha512-ZClg6AaYvamvYEE82d3Iyd3vSSIjQ+odgjaTzRuO3s7toCdFKczob2i0zCh7JE8kWn17yvAWhUVxvqGwUalsRA==}
+    dev: true
+
   /json5@2.2.3:
     resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
     engines: {node: '>=6'}
@@ -6852,6 +6866,13 @@ packages:
 
   /radix3@1.1.1:
     resolution: {integrity: sha512-yUUd5VTiFtcMEx0qFUxGAv5gbMc1un4RvEO1JZdP7ZUl/RHygZK6PknIKntmQRZxnMY3ZXD2ISaw1ij8GYW1yg==}
+    dev: true
+
+  /random-seed@0.3.0:
+    resolution: {integrity: sha512-y13xtn3kcTlLub3HKWXxJNeC2qK4mB59evwZ5EkeRlolx+Bp2ztF7LbcZmyCnOqlHQrLnfuNbi1sVmm9lPDlDA==}
+    engines: {node: '>= 0.6.0'}
+    dependencies:
+      json-stringify-safe: 5.0.1
     dev: true
 
   /randombytes@2.1.0:
