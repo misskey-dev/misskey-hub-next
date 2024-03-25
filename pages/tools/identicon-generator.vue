@@ -37,7 +37,7 @@ const route = useRoute();
 const onceGenerated = ref(false);
 const acct = ref('@ai@misskey.example.com');
 const normalizedAcct = computed(() => {
-    const normalized = acct.value.replace(/^@/, '');
+    const normalized = acct.value.replace(/^@/, '').toLowerCase();
     if (normalized.includes('@')) {
         return normalized;
     } else {
