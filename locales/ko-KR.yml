@@ -7,6 +7,8 @@ share: "공유"
 note: "노트"
 other: "기타"
 add: "추가"
+generate: "生成"
+download: "ダウンロード"
 browse: "참고자료"
 settings: "설정"
 goToLegacyHub: "이전 Misskey Hub"
@@ -313,6 +315,11 @@ _customEmojiPreview:
     textDescription: "추가한 사용자 지정 이모티콘은 {emoji_id}로 참조할 수 있습니다."
   _placeholder:
     noteText: "커스텀 이모티콘은 다음과 같이 표시됩니다 → :emoji_preview_1:.\n문장을 다시 써서 사용성을 시험해 보세요✨."
+_identiconGenerator:
+  title: "初期アイコンジェネレーター"
+  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
+  userName: "ユーザー名"
+  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
 _api:
   _permissions:
     title: "권한"
