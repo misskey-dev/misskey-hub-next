@@ -70,8 +70,8 @@ function download() {
     a.remove();
 }
 
-route.meta.title = t('_aidConverter.title');
-route.meta.description = t('_aidConverter.description');
+route.meta.title = t('_identiconGenerator.title');
+route.meta.description = t('_identiconGenerator.description');
 </script>
 
 <style module>
