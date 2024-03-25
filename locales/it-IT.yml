@@ -7,6 +7,8 @@ share: "Condividi"
 note: "Nota"
 other: "その他"
 add: "Aggiungi"
+generate: "生成"
+download: "ダウンロード"
 browse: "Sfoglia"
 settings: "Impostazioni"
 goToLegacyHub: "Versione precedente"
@@ -313,6 +315,11 @@ _customEmojiPreview:
     textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
   _placeholder:
     noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
+_identiconGenerator:
+  title: "初期アイコンジェネレーター"
+  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
+  userName: "ユーザー名"
+  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
 _api:
   _permissions:
     title: "権限"
