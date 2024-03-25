@@ -7,6 +7,8 @@ share: "分享"
 note: "貼文"
 other: "其他"
 add: "新增"
+generate: "生成"
+download: "ダウンロード"
 browse: "瀏覽"
 settings: "設定"
 goToLegacyHub: "舊版的 Misskey Hub"
@@ -313,6 +315,11 @@ _customEmojiPreview:
     textDescription: "您可以透過 {emoji_id} 引用新增的自訂表情符號。"
   _placeholder:
     noteText: "自訂表情符號將顯示如下 → :emoji_preview_1:\n請重寫句子並嘗試可用性✨"
+_identiconGenerator:
+  title: "初期アイコンジェネレーター"
+  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
+  userName: "ユーザー名"
+  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
 _api:
   _permissions:
     title: "權限"
