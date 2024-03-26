@@ -1,0 +1,416 @@
+noScript: "JavaScript가 비활성화 상태입니다. 페이지를 표시하시려면 JavaScript를 활성화 해야합니다."
+learnMore: "자세히 보기"
+loading: "읽는 중…"
+clickToExpand: "(클릭하여 펼치기)"
+copy: "복사하기"
+share: "공유"
+note: "노트"
+other: "기타"
+add: "추가"
+generate: "生成"
+download: "ダウンロード"
+browse: "참고자료"
+settings: "설정"
+goToLegacyHub: "이전 Misskey Hub"
+contactUs: "お問い合わせ"
+_error:
+  notFound: "페이지를 찾을 수 없습니다"
+  notFoundDesc: "요청하신 페이지를 찾을 수 없습니다. URL을 확인하여 주십시오."
+  generalError: "오류가 발생했습니다"
+  generalErrorDesc: "의도하지 않은 동작이 아니라면 아래 버튼을 눌러 오류를 제보해주세요."
+  reportProblem: "오류 제보하기"
+  goToTop: "상위 페이지로 이동"
+_seo:
+  siteName: "Misskey Hub"
+  siteNameLong: "Misskey Hub – Misskey 프로젝트 공식 홈페이지"
+  defaultTitleTagline: "노트로 펼쳐지는 네트워크"
+  defaultDescription: "Misskey는 오픈 소스의 분산형 소셜 네트워크 플랫폼 입니다."
+_nav:
+  servers: "서버"
+  docs: "문서"
+  blog: "블로그"
+  other: "더 보기"
+  switchLang: "언어 설정"
+_landing:
+  _hero:
+    description: "Misskey는 오픈 소스의 분산형 소셜 네트워크 플랫폼 입니다."
+    gettingStarted: "시작하기"
+  _keyFeatures:
+    _open:
+      title: "열기"
+      description: "Misskey는 오픈소스 소프트웨어로, 누구나 자우롭게 Misskey를 사용할 수 있습니다."
+    _federated:
+      title: "분산"
+      description: "Misskey는 분산형 프로토콜을 채용하고 있으므로, 다른 서버의 커뮤니티에 연결할 수 있습니다."
+    _multifunction:
+      title: "고기능"
+      description: "Misskey는 다른 곳에는 없을만한 여러가지 기능이 있기 때문에 전문적으로 마이크로 블로깅을 할 수 있습니다."
+    _customizable:
+      title: "높은 커스터마이즈성"
+      description: "Misskey의 유연한 Web 인터페이스를 통해 자신이 원하는 Ui를 만들 수 있습니다."
+  _decenterized:
+    title: "Misskey는 {0}"
+    decenterizedPlatform: "분산형 플랫폼"
+    description: "Misskey는 자유롭고 열린 프로젝트로써, 누구나 자유롭게 Misskey를 사용한 서버를 만들 수 있으므로, 이미 많은 서버들을 통해 온라인에 공개되어져 있습니다. 또한 중요한 특징으로, Misskey는 {0}이라고 불리는 분산형 통신 프로토콜을 탑재하고 있으므로, 어떤 서버를 골라도 다른 서버에 있는 유저와 소통을 할 수 있습니다. 이 까닭에 한 운영자에 의해 하나의 URL로 공개되어져 있는 Twitter 등의 다른 서비스와는 근본적으로 다른 분산형 시스템이라고 불릴 수 있습니다. 서버에 따라 주제나 테마, 유저 층 및 언어 등이 다르므로, 본인한테 맞는 서버를 찾을 수 있는 것도 좋은 점입니다. (물론, 본인이 직접 서버를 만드는 것도 또 다른 좋은 점이라고 할 수 있습니다.)"
+    activityPub: "ActivityPub"
+  _features:
+    _root:
+      title: "주요 기능"
+      description: "Misskey는 일반적인 것들부터 특별한 것들까지 다양한 기능을 가지고 있습니다. 그 중 일부를 소개합니다."
+    _note:
+      title: "노트"
+      description: "Misskey에서는 유저의 글을 \"노트\"라고 부릅니다. 다른 노트를 인용하거나, 이미지, 비디오, 오디오, 그 외 임의적으로 파일을 첨부할 수도 있습니다."
+    _federation:
+      title: "연합"
+      description: "오픈형 분산 프로토콜인 ActivityPub을 탑재하고 있기 때문에, 다른 Misskey 서버 외에도 ActivityPub를 지원하는 다른 소프트웨어와도 소통이 가능합니다."
+    _reaction:
+      title: "리액션"
+      description: "노트에는 \"리액션\"을 추가하여 간단하게 본인의 느낌을 표현, 전달할 수 있습니다."
+    _drive:
+      title: "드라이브"
+      description: "업로드한 파일을 관리하는 인터페이스가 있습니다. 그렇기 때문에, 마음에 드는 이미지를 폴더로 구별하거나, 다시 공유하는 것도 간단하게 할 수 있습니다."
+    _theme:
+      title: "테마"
+      description: "본인의 좋아하는 디자인으로 Misskey를 쓸 수 있습니다. 물론 다크 모드도 확실하게 지원합니다. 본인이 직접 고급적인 테마를 만들 수도 있습니다."
+    _thread:
+      title: "스레드"
+      description: "물론 노트는 스레드 형식으로도 만들 수가 있기 때문에, 원하는대로 대화를 할 수 있습니다."
+    _charts:
+      title: "차트"
+      description: "Misskey는 임베디드 차트 엔진을 구비하고 있으므로 서버의 이용 상황을 간단하게 가시화 할 수 있습니다."
+    _widgets:
+      title: "위젯"
+      description: "여러 종류의 위젯을 배치하여 UI를 원하는대로 커스텀 할 수 있습니다."
+  _getStarted:
+    title: "Misskey 시작하기"
+    _find:
+      title: "서버 찾기"
+      list: "서버 목록"
+    _create:
+      title: "서버 만들기"
+      guide: "셋업 가이드"
+    _docs:
+      title: "자세히 보기"
+      docs: "문서 보기"
+  _donation:
+    title: "기부하기"
+    description: "Misskey는 비영리 입니다. 개발 자금은 여러분의 기부를 통해 모아지고 있습니다. Misskey가 마음에 드셨다면 계속해서 개발을 할 수 있도록 꼭 지원을 부탁드립니다."
+  _sponsors:
+    title: "후원자"
+_servers:
+  title: "서버 목록"
+  description: "Misskey는 하나의 서비스가 아닌, 각자가 서비스 제공을 하는 분산형 네트워크입니다. Misskey를 이용하시려면, 서비스를 제공하고 있는 서버에 계정을 만드실 필요가 있습니다."
+  addYourServer: "당신의 서버에는 표시되지 않나요? {0}을 통해 등록해주세요!"
+  addYourServerLink: "여기"
+  _system:
+    fetchError: "데이터 로딩을 실패했습니다. 시간을 두고 다시 시도해보세요."
+  _statistics:
+    title: "서버 통계"
+    description: "Misskey 서버의 통계 데이터를 그래프로 보여 드립니다."
+    viewFullStats: "자세한 통계 보러가기"
+    lang: "주요 언어"
+    registerAcceptance: "가입 개방 여부"
+    version: "버전"
+    notes: "노트 수"
+    users: "사용자 수"
+    servers: "서버 수"
+  _search:
+    title: "고급 검색"
+    all: "모두"
+    query: "검색어로 찾기"
+    lang: "언어"
+    orderBy: "정렬"
+    recomendded: "기본"
+    notesCount: "노트 수"
+    notesPer15Days: "일일 노트 수 (15일 평균)"
+    usersCount: "유저 수"
+  _registerAcceptance:
+    title: "회원 가입"
+    public: "개방"
+    inviteOnly: "초대만"
+  _list:
+    notFound: "지정하신 조건에 맞는 서버를 찾을 수 없습니다."
+    showMore: "더 보기"
+  _view:
+    title: "표시 방식"
+    list: "리스트"
+    grid: "격자"
+_docs:
+  title: "문서"
+  description: "Misskey의 고급적인 사용 방법부터, 서버의 운영자, 프로그래머를 위한 정보까지 망라하고 있습니다."
+  indexTitle: "목차"
+  _contribute:
+    editThis: "이 페이지를 편집"
+    translateThis: "이 페이지를 번역"
+  _aboutMisskey:
+    title: "Misskey에 대하여"
+    description: "Misskey를 처음 알게되신 분이나, 앞으로 쓰실 분을 위해 기본적인 기능을 확인 해봅시다."
+  _changelog:
+    title: "릴리즈 노트"
+    description: "Misskey의 업데이트 이력을 확인하실 수 있습니다. 최신 버전에서 무엇이 바뀌었는지 확인하세요."
+  _donate:
+    title: "프로젝트 기부"
+    description: "Misskey는 무료로 사용할 수 있는 오픈소스 소프트웨어입니다. 마음에 드신다면, 앞으로도 계속 개발할 수 있도록 기부를 고려해 주시기 바랍니다."
+  _forUsers:
+    title: "Misskey 유저용"
+  _forAdmin:
+    title: "서버 운영자용"
+  _forDevelopers:
+    title: "개발자용"
+  _prevNext:
+    prev: "앞으로"
+    next: "다음으로"
+  _toc:
+    title: "이 페이지의 내용"
+    toPageTop: "맨 위로"
+_blog:
+  title: "블로그"
+  description: "Misskey 개발 본부로부터 Misskey에 관한 최신 정보나 Tip 등을 전해드립니다. (일본어만)"
+  back: "뒤로 가기"
+_content:
+  tip: "도움말"
+  warning: "주의"
+  danger: "경고"
+  preview: "미리보기"
+_other:
+  title: "더 보기!"
+  description: "Misskey를 좀 더 즐기실 수 있는 다른 리소스도 소개합니다."
+_brandAssets:
+  title: "자료집"
+  description: "Misskey의 로고, 아이콘 등의 자료들입니다. 일정한 라이센스를 따르시면 자유롭게 이용하실 수 있습니다."
+  license: "자료는 CC BY-NC-SA 라이센스로 자유롭게 사용하실 수 있습니다🎉"
+  assetsDirectory: "모든 자료는 {0}를 통해 관리되고 있습니다."
+  logo: "로고"
+  icon: "아이콘"
+  banner: "배너"
+  avatarDecorationTemplate: "아바타 장식 도구"
+_contact:
+  title: "お問い合わせ"
+  description: "Misskey Projectへのお問い合わせはこちらから"
+_links:
+  title: "링크"
+  _github:
+    title: "Github"
+    description: "Misskey의 개발은 GitHub을 통해하고 있습니다. 신기능 요청이나 버그 리포트는 여기서 하실 수 있습니다."
+  _crowdin:
+    title: "Crowdin"
+    description: "Misskey의 본체 및 문서 번역은 여기서 관리되고 있습니다. 여러분의 협력을 부탁드립니다."
+  _discord:
+    title: "Discord 서버"
+    description: "Misskey에 관한 질문이나 대화 등을 즐기실 수 있습니다."
+  _aiChan:
+    title: "아이"
+    description: "Misskey의 마스코트, 아이의 웹 사이트입니다."
+_tools:
+  title: "도구집"
+  index: "도구집 홈 화면"
+  description: "Misskey용 편리 도구를 공개 중!"
+  menuToggle: "메뉴"
+  _forUsers:
+    title: "Misskey 유저용"
+  _forAdmin:
+    title: "서버 운영자용"
+_mfmPlayground:
+  title: "MFM 테스트 코너"
+  description: "MFM를 자유롭게 연습하실 수 있습니다! Misskey의 글쓰기 화면, 노트 화면을 재현!"
+  preview: "미리보기"
+  disclaimer: "여기에 표시되는대로 확실히 적혀진다고 할 순 없습니다. 코드의 구문 강조는 대응하지 않고 있습니다."
+  mfm: "MFM"
+  character: "{0} 문자"
+  domain: "표시를 재현하는 서버"
+  noteIt: "노트"
+  clearEmojiCacheDescription: "이모지가 표시되지 않는 경우"
+  clearEmojiCache: "이모지 캐시 삭제"
+_aidConverter:
+  title: "aid/aidx 도구"
+  description: "Misskey 내부에서 사용되는 랜덤 ID 생성 알고리즘 \"aid\"와 \"aidx\"의 변환, 생성이 가능합니다."
+  aidToDate: "aid/aidx → 날짜 및 시각"
+  dateToAid: "날짜 및 시각 → aid/aidx"
+  mode: "작성할 id"
+  date: "날짜 및 시각"
+_aboutUs:
+  title: "Misskey Development Division에 대해서"
+  description: "Misskey 개발 팀에 대한 정보를 포스트하고 있습니다."
+  _team:
+    title: "개발 멤버"
+    description: "Misskey의 개발을 도와주시는 분을 소개하고 있습니다."
+    _core:
+      title: "코어 팀 멤버"
+      description: "이 코어 팀 멤버는 Misskey 관련 프로젝트를 적극적으로 관리 및 점검하고 있습니다."
+    _coreEmeriti:
+      title: "명예 코어 팀 멤버"
+      description: "과거에 가치있는 공헌을 해주셨던, 전 코어 팀 멤버 여러분 입니다."
+    _contributors:
+      title: "기여자"
+      description: "여기에 계신 분은, 특히 Misskey에 많이 공헌해주시고 계신 분입니다."
+      seeMore: "모든 기여자"
+    _orgPartner:
+      title: "기업 및 단체 파트너"
+      description: "여기에 있는 기업 및 단체로부터 금전 및 기술에 관한 Misskey의 개발 협력을 받고 있습니다."
+    _hubTranslators:
+      title: "Misskey Hub 번역자"
+      description: "Misskey Hub의 번역을 도와주시는 분들입니다."
+    _coreTranslators:
+      title: "Misskey Hub 번역자"
+      description: "Misskey Hub의 번역을 도와주시는 분들입니다."
+_i18n:
+  _missing:
+    title: "번역을 도와주세요"
+    description: "이 문서는 커뮤니티에 의해 번역되었습니다. 번역 제출은 {link}에서 받고 있습니다. 여러분의 도움을 부탁드립니다 🙏"
+    linkLabel: "Crowdin"
+_share:
+  title: "Misskey에 노트하기"
+  chooseServer: "노트 할 서버를 선택하세요"
+  addServer: "서버 추가하기"
+  domain: "서버 도메인"
+  compatibleWith: "Misskey 및 일부 Misskey 포크를 지원합니다"
+  recommendedByWebsite: "공유 웹사이트 추천"
+_noteVisibility:
+  public: "공개"
+  home: "홈"
+  followers: "팔로워"
+  specified: "다이렉트"
+  localOnly: "연합에 보내지 않기"
+_shareLinkGenerator:
+  title: "공유 버튼 만들기"
+  description: "Misskey Hub의 공유 버튼 중계 서비스를 이용하여, Misskey를 위한 공유 버튼을 만들 수 있습니다."
+  body: "내용"
+  bodyWarning: "서버 간 호환성 문제로 인해 커스텀 이모지는 사용하실 수 없습니다."
+  url: "주소"
+  urlCaption: "옵션. 본문 뒤에 삽입됩니다."
+  settings: "고급 설정"
+  manualInstance: "추천 서버 도메인"
+  manualInstanceDescription: "여기에 지정한 서버(하나)를 공유 버튼의 중계 페이지 상단에 표시할 수 있습니다. 자신의 서버로 유도할 때 사용할 수 있습니다."
+  visibility: "공개 범위"
+  recipents: "다이렉트 노트를 받을 사람 (한 줄에 하나씩)"
+  resultLink: "링크 생성 결과"
+  resultButton: "공유 버튼 샘플"
+  testLink: "공유 링크 테스트"
+  typeSomethingToGetLink: "본문을 입력하면 링크가 생성됩니다."
+  typeSomethingToGetButton: "본문을 입력하면 버튼이 생성됩니다."
+_goToMisskey:
+  title: "Misskey Web으로"
+  heading: "이 페이지를 열 서버를 선택하여 주십시오"
+_avatarDecorationPreview:
+  title: "아바타 장식 미리보기"
+  description: "아바타 장식이 예쁘게 반영되는지 확인할 수 있습니다."
+  preview: "미리보기"
+  settings: "설정"
+  decoration: "데코레이션 #{number}"
+  placeholder: "'추가'에서 아바타 장식을 추가하고 미리 볼 수 있습니다."
+  _options:
+    offsetX: "수평 위치 조정"
+    offsetY: "세로 위치 조정"
+    angle: "각도"
+    flip: "좌우 반전"
+    overlayTemplate: "템플릿 중첩하기"
+  _placeholder:
+    username: "아이(Ai)"
+    noteText: "방금 초코도넛을 먹었어요 🍩😋"
+    profileDescription: "Misskey 상주 AI인 아이입니다! 잘 부탁드려요♪。"
+_customEmojiPreview:
+  title: "커스텀 이모티콘 미리보기"
+  description: "커스텀 이모티콘의 가시성을 확인할 수 있습니다."
+  preview: "미리보기"
+  emoji: "이모티콘 #{number}"
+  placeholder: "'추가'에서 사용자 지정 이모티콘을 추가하고 미리 볼 수 있습니다."
+  _options:
+    text: "노트 본문"
+    textDescription: "추가한 사용자 지정 이모티콘은 {emoji_id}로 참조할 수 있습니다."
+  _placeholder:
+    noteText: "커스텀 이모티콘은 다음과 같이 표시됩니다 → :emoji_preview_1:.\n문장을 다시 써서 사용성을 시험해 보세요✨."
+_identiconGenerator:
+  title: "初期アイコンジェネレーター"
+  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
+  userName: "ユーザー名"
+  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
+_api:
+  _permissions:
+    title: "권한"
+    description: "설명"
+    _types:
+      "read:account": "계정의 정보를 봅니다"
+      "write:account": "계정의 정보를 변경합니다"
+      "read:blocks": "차단 여부를 확인합니다"
+      "write:blocks": "차단을 하거나 해제합니다"
+      "read:drive": "드라이브를 조회합니다"
+      "write:drive": "드라이브에 파일을 올리거나, 이름을 변경하거나, 삭제합니다"
+      "read:favorites": "즐겨찾기를 조회합니다"
+      "write:favorites": "즐겨찾기에 추가하거나 삭제합니다"
+      "read:following": "팔로우 상태를 봅니다"
+      "write:following": "팔로우하거나 팔로우를 해제합니다"
+      "read:messaging": "대화를 읽습니다"
+      "write:messaging": "대화를 시작하거나 메시지를 보냅니다"
+      "read:mutes": "뮤트 여부를 확인합니다"
+      "write:mutes": "뮤트를 하거나 해제합니다"
+      "write:notes": "노트를 작성하거나 삭제합니다"
+      "read:notifications": "알림을 확인합니다"
+      "write:notifications": "알림을 읽거나 삭제합니다"
+      "read:reactions": "리액션을 확인합니다"
+      "write:reactions": "리액션을 추가하거나 취소합니다"
+      "write:votes": "투표를 합니다"
+      "read:pages": "페이지를 봅니다"
+      "write:pages": "페이지를 수정합니다"
+      "read:page-likes": "페이지의 좋아요를 확인합니다"
+      "write:page-likes": "페이지에 좋아요를 추가하거나 취소합니다"
+      "read:user-groups": "유저 그룹 보기"
+      "write:user-groups": "유저 그룹을 만들거나, 초대하거나, 이름을 변경하거나, 양도하거나, 삭제합니다"
+      "read:channels": "채널을 보기"
+      "write:channels": "채널을 추가하거나 삭제합니다"
+      "read:gallery": "갤러리를 봅니다"
+      "write:gallery": "갤러리를 추가하거나 삭제합니다"
+      "read:gallery-likes": "갤러리의 좋아요를 확인합니다"
+      "write:gallery-likes": "갤러리에 좋아요를 추가하거나 취소합니다"
+      "read:flash": "Play를 봅니다"
+      "write:flash": "Play를 조작합니다"
+      "read:flash-likes": "Play의 좋아요를 봅니다"
+      "write:flash-likes": "Play의 좋아요를 조작합니다"
+      "read:admin:abuse-user-reports": "사용자 신고 보기"
+      "write:admin:delete-account": "사용자 계정 삭제하기"
+      "write:admin:delete-all-files-of-a-user": "사용자의 모든 파일 삭제하기"
+      "read:admin:index-stats": "데이터베이스 인덱스 정보 보기"
+      "read:admin:table-stats": "데이터베이스 테이블 정보 보기"
+      "read:admin:user-ips": "사용자 IP 주소 보기"
+      "read:admin:meta": "인스턴스 메타데이터 보기"
+      "write:admin:reset-password": "사용자 비밀번호 재설정하기"
+      "write:admin:resolve-abuse-user-report": "사용자 신고 해결하기"
+      "write:admin:send-email": "이메일 보내기"
+      "read:admin:server-info": "서버 정보 보기"
+      "read:admin:show-moderation-log": "조정 기록 보기"
+      "read:admin:show-user": "사용자 개인정보 보기"
+      "read:admin:show-users": "사용자 개인정보 보기"
+      "write:admin:suspend-user": "사용자 정지하기"
+      "write:admin:unset-user-avatar": "사용자 아바타 삭제하기"
+      "write:admin:unset-user-banner": "사용자 배너 삭제하기"
+      "write:admin:unsuspend-user": "사용자 정지 해제하기"
+      "write:admin:meta": "인스턴스 메타데이터 수정하기"
+      "write:admin:user-note": "조정 기록 수정하기"
+      "write:admin:roles": "역할 수정하기"
+      "read:admin:roles": "역할 보기"
+      "write:admin:relays": "릴레이 수정하기"
+      "read:admin:relays": "릴레이 보기"
+      "write:admin:invite-codes": "초대 코드 수정하기"
+      "read:admin:invite-codes": "초대 코드 보기"
+      "write:admin:announcements": "공지사항 수정하기"
+      "read:admin:announcements": "공지사항 보기"
+      "write:admin:avatar-decorations": "아바타 꾸미기 수정하기"
+      "read:admin:avatar-decorations": "아바타 꾸미기 보기"
+      "write:admin:federation": "연합 정보 수정하기"
+      "write:admin:account": "사용자 계정 수정하기"
+      "read:admin:account": "사용자 정보 보기"
+      "write:admin:emoji": "이모지 수정하기"
+      "read:admin:emoji": "이모지 보기"
+      "write:admin:queue": "작업 대기열 수정하기"
+      "read:admin:queue": "작업 대기열 정보 보기"
+      "write:admin:promo": "프로모션 기록 수정하기"
+      "write:admin:drive": "사용자 드라이브 수정하기"
+      "read:admin:drive": "사용자 드라이브 정보 보기"
+      "read:admin:stream": "관리자용 Websocket API 사용하기"
+      "write:admin:ad": "광고 수정하기"
+      "read:admin:ad": "광고 보기"
+      "write:invite-codes": "초대 코드 만들기"
+      "read:invite-codes": "초대 코드 받기"
+      "write:clip-favorite": "클립의 좋아요 수정하기"
+      "read:clip-favorite": "클립의 좋아요 보기"
+      "read:federation": "연합 정보 불러오기"
+      "write:report-abuse": "위반 신고하기"
