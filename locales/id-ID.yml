@@ -1,0 +1,416 @@
+noScript: "JavaScript dinonaktifkan. Mohon aktifkan JavaScript karena dibutuhkan untuk situs agar dapat berjalan dengan normal."
+learnMore: "Pelajari lebih lanjut"
+loading: "Memuat..."
+clickToExpand: "(Klik untuk perluas)"
+copy: "Salin"
+share: "Bagikan"
+note: "Catatan"
+other: "Lainnya"
+add: "Tambahkan"
+generate: "生成"
+download: "ダウンロード"
+browse: "Jelajahi"
+settings: "Pengaturan"
+goToLegacyHub: "Misskey Hub Jadul"
+contactUs: "お問い合わせ"
+_error:
+  notFound: "Halaman Tidak Ditemukan"
+  notFoundDesc: "Halaman yang kamu cari tidak dapat ditemukan. Mohon cek kembali URL yang kamu tuju."
+  generalError: "Terjadi kesalahan"
+  generalErrorDesc: "Jika ini bukan yang kamu maksud, mohon klik tombol di bawah ini untuk melaporkan masalah."
+  reportProblem: "Laporkan Masalah"
+  goToTop: "Kembali ke halaman atas"
+_seo:
+  siteName: "Misskey Hub"
+  siteNameLong: "Misskey Hub – Situs web resmi Proyek Misskey"
+  defaultTitleTagline: "Jaringan membentang melalui catatan"
+  defaultDescription: "Situs web resmi Misskey, sebuah perangkat lunak jejaring sosial yang terdesentralisasi. Temukan cara untuk memulai, daftar peladen, dan informasi lebih lanjut tentang Misskey!"
+_nav:
+  servers: "Peladen"
+  docs: "Dokumen"
+  blog: "Blog"
+  other: "Lainnya"
+  switchLang: "Pengaturan Bahasa"
+_landing:
+  _hero:
+    description: "Misskey merupakan platform media sosial terdesentralisasi bersumber terbuka."
+    gettingStarted: "Memulai"
+  _keyFeatures:
+    _open:
+      title: "Terbuka"
+      description: "Misskey merupakan perangkat lunak bersumber terbuka dan semua orang dapat menggunakanya secara bebas."
+    _federated:
+      title: "Federasi"
+      description: "Misskey merupakan platform terdesentralisasi, sehingga komunitas dari peladen lain dapat terhubung dengan satu sama lain."
+    _multifunction:
+      title: "Modern"
+      description: "Misskey menawarkan banyak fitur unggul yang mudah dipahami untuk pemula maupun pengguna mikro blog mahir."
+    _customizable:
+      title: "Ubahsuai"
+      description: "Antarmuka web Misskey yang fleksibel memungkinkanmu untuk mengubahsuaikan antarmuka sesuai keinginanmu sendiri."
+  _decenterized:
+    title: "Misskey merupakan platform {0}."
+    decenterizedPlatform: "Terdesentralisasi"
+    description: "Misskey adalah proyek bebas dan terbuka. Semua orang dapat membuat instansi peladen Misskey secara bebas dan bermacam peladen Misskey di Internet telah tersedia. Salah satu fitur penting dari Misskey adalah implementasi protokol komunikasi terdesentralisasi bernama {0}. Dengan {0}, pengguna dapat berinteraksi dengan pengguna lain yang berbeda peladen dimana pun mereka terdaftar. Inilah kenapa disebut terdesentralisasi dan secara fundamental berbeda dengan layanan lain seperti Twitter yang mana disediakan dalam URL dan operator tunggal. Setiap peladen memiliki topik, grup pengguna, dan bahasa yang berbeda-beda dari satu peladen dengan peladen lain. Menemukan peladen yang tepat bagimu tersebut juga bagian dari hal yang menyenangkan (tidak lupa juga membuat peladenmu sendiri juga menyenangkan lho)."
+    activityPub: "ActivityPub"
+  _features:
+    _root:
+      title: "Fitur"
+      description: "Misskey memiliki banyak fitur yang diunggulkan. Temukan mulai dari yang umum hingga khusus."
+    _note:
+      title: "Catatan"
+      description: "Di Misskey, postingan dari pengguna disebut sebagai \"catatan\". Kamu juga memberi balasan, kutipan, menambahkan emoji kustom, teks beranimasi, gambar, video, klip audio, dan masih banyak lagi!"
+    _federation:
+      title: "Federasi"
+      description: "Misskey menggunakan protokol ActivityPub untuk berkomunikasi dengan peladen lain. Tidak hanya terbatas untuk peladen Misskey saja, Misskey juga dapat berkomunikasi dengan perangkat lunak yang mendukung protokol ActivityPub seperti Pleroma, Mastodon, dan Pixelfed."
+    _reaction:
+      title: "Reaksi"
+      description: "Kamu juga dapat menambahkan reaksi emoji ke postingan apapun! Dengan begitu kamu tidak terbatas hanya pada tombol suka dan sekarang kamu bisa menunjukkan perasaanmu kepada semua orang."
+    _drive:
+      title: "Drive"
+      description: "Kesulitan untuk menemukan hal yang sudah kamu unggah sebelumnya? Adanya Drive membantumu untuk menyelesaikan masalah tersebut. Kamu dapat mengelola gambar atau video favoritmu yang telah kamu unggah dan membagikannya kembali."
+    _theme:
+      title: "Tema"
+      description: "Kamu dapat menggunakan Misskey dengan desain favoritmu. Tidak lagi terbatas tema gelap ataupun terang. Kamupun juga dapat membuat tema sesuai dengan keinginanmu sendiri."
+    _thread:
+      title: "Utas"
+      description: "Punya banyak hal yang diutarakan? Catatan di Misskey bisa dibuat sebagai utas. Kamu juga bisa membuat utas hingga maksimal 3000 karakter dan menyambungnya hingga menjadi percakapan panjang."
+    _charts:
+      title: "Bagan"
+      description: "Bagi kalian yang ingin melihat segalanya, Misskey memiliki mesin penggambar Bagan bawaan yang dapat dilihat oleh admin maupun pengguna untuk memvisualisasikan beban penggunaan peladen dan lain-lain secara realtime"
+    _widgets:
+      title: "Gawit"
+      description: "Buat dirimu mudah dengan banyaknya jenis gawit yang disediakan oleh Misskey. Ubahsuaikan antarmuka berandamu sesuai keinginanmu."
+  _getStarted:
+    title: "Memulai dengan Misskey"
+    _find:
+      title: "Temukan Peladen"
+      list: "Daftar Peladen"
+    _create:
+      title: "Buat Peladen"
+      guide: "Panduan Pemasangan"
+    _docs:
+      title: "Pelajari Lebih Lanjut"
+      docs: "Lihat Dokumentasi"
+  _donation:
+    title: "Permohonan Donasi"
+    description: "Misskey merupakan produk nirlaba, kami bergantung pada donasi kamu untuk mendanai pengembangan perangkat lunak ini. Apabila kamu menyukai Misskey, mohon pertimbangkan untuk berdonasi agar kami dapat terus melanjutkan pengembangan Misskey dan membuatnya semakin menarik untuk kedepannya."
+  _sponsors:
+    title: "Sponsor"
+_servers:
+  title: "Daftar Peladen"
+  description: "Misskey bukanlah layanan satuan namun jejaring terdesentralisasi dimana para individu menyediakan banyak layanan. Untuk menggunakan Misskey, kamu perlu membuat akun di peladen yang menawarkan layanan tersebut."
+  addYourServer: "Apakah peladenmu tidak terdaftar? Daftarkan segera {0}!"
+  addYourServerLink: "di sini"
+  _system:
+    fetchError: "Gagal untuk mengambil data. Mohon coba lagi nanti."
+  _statistics:
+    title: "Statistik Peladen"
+    description: "Presentasikan statistik peladen Misskey ke dalam Bagan."
+    viewFullStats: "Lihat statistik lengkap"
+    lang: "Bahasa Utama"
+    registerAcceptance: "Kebijakan pendaftaran"
+    version: "Versi"
+    notes: "Jumlah catatan"
+    users: "Jumlah pengguna"
+    servers: "Jumlah peladen"
+  _search:
+    title: "Pencarian tingkat lanjut"
+    all: "Semua"
+    query: "Pencarian dengan kata kunci"
+    lang: "Bahasa"
+    orderBy: "Urutkan"
+    recomendded: "Bawaan"
+    notesCount: "Catatan"
+    notesPer15Days: "Catatan/hari (rata-rata 15 hari terakhir)"
+    usersCount: "Pengguna"
+  _registerAcceptance:
+    title: "Kebijakan Pendaftaran"
+    public: "Publik"
+    inviteOnly: "Undangan"
+  _list:
+    notFound: "Tidak ada peladen yang cocok ditemukan dengan kriteria yang dimaksud."
+    showMore: "Selebihnya"
+  _view:
+    title: "Gaya Tampilan"
+    list: "Daftar"
+    grid: "Kisi"
+_docs:
+  title: "Dokumen"
+  description: "Informasi komprehensif dimulai dari cara menggunakan Misskey hingga sumber daya untuk pengembang serta operator peladen."
+  indexTitle: "Daftar Isi"
+  _contribute:
+    editThis: "Sunting Halaman ini"
+    translateThis: "Terjemahkan Halaman Ini"
+  _aboutMisskey:
+    title: "Tentang Misskey"
+    description: "Panduan lengkap bagi para pengguna Misskey baru ataupun yang sedang mempertimbangkan untuk menggunakannya! Mari jelajahi dasar-dasar Misskey beserta fiturnya."
+  _changelog:
+    title: "Catatan Rilis"
+    description: "Lihat riwayat versi Misskey. Cari tahu apa yang terbaru di versi terakhir!"
+  _donate:
+    title: "Berdonasi ke proyek"
+    description: "Misskey merupakan perangkat lunak bebas dan bersumber terbuka. Apabila kamu menyukai Misskey, mohon pertimbangkan untuk berdonasi agak kami dapat terus lanjut mengembangkan perangkat lunak ini."
+  _forUsers:
+    title: "Untuk Pengguna Misskey"
+  _forAdmin:
+    title: "Untuk Operator Peladen"
+  _forDevelopers:
+    title: "Untuk Pengembang"
+  _prevNext:
+    prev: "Sebelumnya"
+    next: "Berikutnya"
+  _toc:
+    title: "Daftar Isi"
+    toPageTop: "Kembali ke Atas"
+_blog:
+  title: "Blog"
+  description: "Dapatkan informasi dan tips mengenai Misskey langsung dari Tim Pengembang Misskey! (hanya Bahasa Jepang)"
+  back: "Kembali"
+_content:
+  tip: "Tips"
+  warning: "Peringatan"
+  danger: "Bahaya"
+  preview: "Pratinjau"
+_other:
+  title: "Lainnya"
+  description: "Memperkenalkan sumber daya yang menyenangkan untuk Misskey!"
+_brandAssets:
+  title: "Aset Brand"
+  description: "Koleksi dari logo, ikon serta aset Misskey lainnya. Gunakan secara bebas untuk apapun selama dalam lisensi CC BY-NC-SA!"
+  license: "Aset tersedia dalam lisensi CC BY-NC-SA🎉."
+  assetsDirectory: "Semua aset dikelola di {0}."
+  logo: "Logo"
+  icon: "Ikon"
+  banner: "Banner"
+  avatarDecorationTemplate: "Templat Dekorasi Avatar"
+_contact:
+  title: "お問い合わせ"
+  description: "Misskey Projectへのお問い合わせはこちらから"
+_links:
+  title: "Tautan"
+  _github:
+    title: "Github"
+    description: "Pengembangan Misskey berada di Github. Kamu dapat memberikan permintaan fitur dan pelaporan bug di sini."
+  _crowdin:
+    title: "Crowdin"
+    description: "Penerjemahan untuk Misskey dan dokumentasinya dikelola di sini. Kami sangat mengapresiasi kontribusimu."
+  _discord:
+    title: "Peladen Discord"
+    description: "Berpartisipasi dalam diskusi dan mengajukan pertanyaan tentang Misskey ada di sini."
+  _aiChan:
+    title: "Ai-chan"
+    description: "Kunjungi situs web Ai-chan, maskot dari Misskey."
+_tools:
+  title: "Koleksi Alat"
+  index: "Beranda Koleksi Alat"
+  description: "Temukan alat yang berguna untuk Misskey!"
+  menuToggle: "Menu"
+  _forUsers:
+    title: "Untuk Pengguna Misskey"
+  _forAdmin:
+    title: "Untuk Pengelola Peladen"
+_mfmPlayground:
+  title: "Taman bermain MFM"
+  description: "Berlatih MFM sebebasnya!"
+  preview: "Pratinjau"
+  disclaimer: "Terdapat kemungkinan tidak dapat ditampilkan secara tepat di sini. Hal ini dikarenakan penyorotan sintaks untuk kode tidak didukung karena alasan performa."
+  mfm: "MFM"
+  character: "{0} karakter"
+  domain: "Peladen yang ingin ditiru penampilannya (contoh: emoji kustom)"
+  noteIt: "Catatan"
+  clearEmojiCacheDescription: "Ketika emoji tidak ditampilkan:"
+  clearEmojiCache: "Hapus Tembolok Emoji"
+_aidConverter:
+  title: "alat aid/aidx"
+  description: "Alat ini dapat mengubah dan membuat aid serta aidx, yang merupakan algoritma generator ID random digunakan dalam Misskey."
+  aidToDate: "aid/aidx ke Tanggal"
+  dateToAid: "Tanggal ke aid/aidx"
+  mode: "Tipe id"
+  date: "Tanggal/Waktu"
+_aboutUs:
+  title: "Tentang Divisi Pengembangan Misskey"
+  description: "Informasi mengenai tim pengembangan Misskey."
+  _team:
+    title: "Anggota Pengembang"
+    description: "Memperkenalkan orang-orang yang terlibat dalam pengembangan Misskey!"
+    _core:
+      title: "Anggota Tim Inti"
+      description: "Anggota tim inti berikut ini merupakan orang yang aktif dalam mengembangkan proyek terkait dengan Misskey."
+    _coreEmeriti:
+      title: "Anggota Tim Inti Purna"
+      description: "Berikut merupakan anggota tim inti sebelumnya yang telah membuat kontribusi yang bernilai di masa lalu."
+    _contributors:
+      title: "Kontributor"
+      description: "Berikut ini merupakan beberapa dari kontributor Misskey yang paling aktif."
+      seeMore: "Semua kontributor"
+    _orgPartner:
+      title: "Rekan Korporasi & Organisasi"
+      description: "Perusahaan serta organisasi berikut telah berkontribusi secara teknis dan finansial terhadap pengembangan Misskey."
+    _hubTranslators:
+      title: "Penerjemah Misskey Hub"
+      description: "Berikut orang-orang yang telah membantu menerjemahkan Misskey Hub."
+    _coreTranslators:
+      title: "Penerjemah Misskey"
+      description: "Berikut orang-orang yang telah membantu menerjemahkan Misskey."
+_i18n:
+  _missing:
+    title: "Bantu kami menerjemahkan"
+    description: "Dokumen ini diterjemahkan oleh komunitas. Kamu dapat ikut berkontribusi menyempurnakan terjemahan ini melalui {link}. Kami sangat mengapresiasi atas kerjasama yang telah kamu berikan dengan ikut berkontribusi dalam proyek ini 🙏."
+    linkLabel: "Crowdin"
+_share:
+  title: "Catat ke Misskey"
+  chooseServer: "Pilih peladen dimana kamu ingin mencatat"
+  addServer: "Tambahkan Peladen"
+  domain: "Domain Peladen"
+  compatibleWith: "Kompatibel dengan Misskey dan beberapa fork Misskey."
+  recommendedByWebsite: "Domain Peladen yang direkomendasikan"
+_noteVisibility:
+  public: "Publik"
+  home: "Beranda"
+  followers: "Pengikut"
+  specified: "Catatan langsung"
+  localOnly: "Matikan federasi"
+_shareLinkGenerator:
+  title: "Generator Tombol Bagikan"
+  description: "Buat tombol bagikan untuk Misskey menggunakan layanan relai tautan berbagi Misskey Hub."
+  body: "Badan Pesan"
+  bodyWarning: "Kamu tidak dapa menggunakan emoji kustom untuk membuatnya kompatibel dengan peladen apapun."
+  url: "URL"
+  urlCaption: "Opsional. Akan dimasukkan setelah badan teks."
+  settings: "Pengaturan Lanjutan"
+  manualInstance: "Domain Peladen yang direkomendasikan"
+  manualInstanceDescription: "Salah satu peladen yang disebutkan di sini dapat ditampilkan di atas tombol bagikan perantara. Hal ini membantu untuk mengarahkan pengguna ke peladen milikmu."
+  visibility: "Visibilitas"
+  recipents: "Acct dari orang yang menerima pesan langsung (masukkan pada baris baru sebagai pemisah)"
+  resultLink: "Hasil dari tautan yang dibagikan"
+  resultButton: "Contoh tombol bagikan"
+  testLink: "Tes tautan yang dibagikan"
+  typeSomethingToGetLink: "Masukkan teks untuk membuat tautan berbagi."
+  typeSomethingToGetButton: "Masukkan teks untuk membuat kode tombol berbagi."
+_goToMisskey:
+  title: "Pergi ke Situs Misskey"
+  heading: "Pilih peladen yang kamu ingin buka halamannya dan lanjutkan"
+_avatarDecorationPreview:
+  title: "Penampil Dekorasi Avatar"
+  description: "Kamu dapat mengecek apakah dekorasi avatar dapat ditampilkan dengan baik."
+  preview: "Pratinjau"
+  settings: "Pengaturan"
+  decoration: "Dekorasi #{number}"
+  placeholder: "Kamu dapat menambahkan serta mempratinjau dekorasi avatar dari menu \"Tambahkan\"."
+  _options:
+    offsetX: "Posisi x"
+    offsetY: "Posisi y"
+    angle: "Sudut"
+    flip: "Balikkan Horizontal"
+    overlayTemplate: "Templat lapisan"
+  _placeholder:
+    username: "Ai"
+    noteText: "Baru aja makan donat berlapis coklat 🍩😋"
+    profileDescription: "Aku Ai bertugas sebagai AI Misskey! Senang berkenalan denganmu♪"
+_customEmojiPreview:
+  title: "Pratinjau Emoji Kustom"
+  description: "Kamu dapat mengecek untuk melihat pratinjau kustom emoji."
+  preview: "Pratinjau"
+  emoji: "Emoji #{number}"
+  placeholder: "Kamu dapat menambahkan dan melihat emoji kustom melalui menu \"Tambahkan\"."
+  _options:
+    text: "Teks catatan"
+    textDescription: "Kustom emoji yang ditambahkan dapat direferensikan dengan {emoji_id}"
+  _placeholder:
+    noteText: "Emoji kustom akan muncul seperti ini → :emoji_preview_1:\nKamu dapat menulis ulang teks dan mencoba kegunaannya ✨."
+_identiconGenerator:
+  title: "初期アイコンジェネレーター"
+  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
+  userName: "ユーザー名"
+  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
+_api:
+  _permissions:
+    title: "Hak akses"
+    description: "Deskripsi"
+    _types:
+      "read:account": "Melihat informasi akun kamu"
+      "write:account": "Menyunting informasi akun kamu"
+      "read:blocks": "Melihat daftar pengguna yang kamu blokir"
+      "write:blocks": "Menyunting daftar pengguna yang kamu blokir"
+      "read:drive": "Mengakses berkas dan folder Drive kamu"
+      "write:drive": "Menyunting atau menghapus berkas dan folder Drive kamu"
+      "read:favorites": "Melihat daftar favorit kamu"
+      "write:favorites": "Menyunting daftar favorit kamu"
+      "read:following": "Melihat informasi orang yang kamu ikuti"
+      "write:following": "Mengikuti atau membatalkan ikuti akun pengguna lain"
+      "read:messaging": "Melihat pesan percakapan akun kamu"
+      "write:messaging": "Menulis atau menghapus pesan percakapan akun kamu"
+      "read:mutes": "Melihat daftar pengguna yang kamu bisukan"
+      "write:mutes": "Menyunting daftar pengguna yang kamu bisukan"
+      "write:notes": "Menulis atau menghapus catatan"
+      "read:notifications": "Lihat notifikasi"
+      "write:notifications": "Mengelola notifikasi akun kamu"
+      "read:reactions": "Melihat reaksi akun kamu"
+      "write:reactions": "Menyunting reaksi akun kamu"
+      "write:votes": "Memberikan suara dalam angket"
+      "read:pages": "Melihat Halaman akun kamu"
+      "write:pages": "Menyunting atau menghapus Halaman akun kamu"
+      "read:page-likes": "Melihat daftar Halaman yang kamu sukai"
+      "write:page-likes": "Menyunting daftar Halaman yang kamu sukai"
+      "read:user-groups": "Melihat grup pengguna akun kamu"
+      "write:user-groups": "Menyunting atau menghapus grup pengguna akun kamu"
+      "read:channels": "Melihat Kanal akun kamu"
+      "write:channels": "Menyunting Kanal akun kamu"
+      "read:gallery": "Melihat Galeri akun kamu"
+      "write:gallery": "Menyunting Galeri akun kamu"
+      "read:gallery-likes": "Melihat daftar postingan galeri yang disukai"
+      "write:gallery-likes": "Menyunting daftar postingan galeri yang disukai"
+      "read:flash": "Melihat Play"
+      "write:flash": "Menyunting Play"
+      "read:flash-likes": "Melihat daftar Play yang disukai"
+      "write:flash-likes": "Menyunting daftar Play yang disukai"
+      "read:admin:abuse-user-reports": "Lihat laporan pengguna"
+      "write:admin:delete-account": "Hapus akun pengguna"
+      "write:admin:delete-all-files-of-a-user": "Hapus semua berkas dari seorang pengguna"
+      "read:admin:index-stats": "Lihat statistik indeks basis data"
+      "read:admin:table-stats": "Lihat statistik tabel basis data"
+      "read:admin:user-ips": "Lihat alamat IP pengguna"
+      "read:admin:meta": "Lihat metadata instansi"
+      "write:admin:reset-password": "Atur ulang kata sandi pengguna"
+      "write:admin:resolve-abuse-user-report": "Selesaikan laporan pengguna"
+      "write:admin:send-email": "Mengirim surel"
+      "read:admin:server-info": "Lihat informasi peladen"
+      "read:admin:show-moderation-log": "Lihat log moderasi"
+      "read:admin:show-user": "Lihat informasi privat milik pengguna"
+      "read:admin:show-users": "Lihat informasi privat milik pengguna"
+      "write:admin:suspend-user": "Tangguhkan pengguna"
+      "write:admin:unset-user-avatar": "Hapus avatar pengguna"
+      "write:admin:unset-user-banner": "Hapus banner pengguna"
+      "write:admin:unsuspend-user": "Batalkan penangguhan pengguna"
+      "write:admin:meta": "Kelola metadata instansi"
+      "write:admin:user-note": "Kelola moderasi catatan"
+      "write:admin:roles": "Kelola peran"
+      "read:admin:roles": "Lihat peran"
+      "write:admin:relays": "Kelola relay"
+      "read:admin:relays": "Lihat relay"
+      "write:admin:invite-codes": "Kelola kode undangan"
+      "read:admin:invite-codes": "Lihat kode undangan"
+      "write:admin:announcements": "Kelola pengumuman"
+      "read:admin:announcements": "Lihat Pengumuman"
+      "write:admin:avatar-decorations": "Kelola dekorasi avatar"
+      "read:admin:avatar-decorations": "Lihat dekorasi avatar"
+      "write:admin:federation": "Kelola federasi"
+      "write:admin:account": "Kelola akun pengguna"
+      "read:admin:account": "Lihat akun pengguna"
+      "write:admin:emoji": "Kelola emoji"
+      "read:admin:emoji": "Lihat emoji"
+      "write:admin:queue": "Kelola antrian kerja"
+      "read:admin:queue": "Lihat informasi antrian kerja"
+      "write:admin:promo": "Kelola catatan yang dipromosikan"
+      "write:admin:drive": "Kelola drive pengguna"
+      "read:admin:drive": "Kelola informasi drive pengguna"
+      "read:admin:stream": "Gunakan API WebSocket untuk Admin"
+      "write:admin:ad": "Kelola iklan"
+      "read:admin:ad": "Lihat iklan"
+      "write:invite-codes": "Membuat kode undangan"
+      "read:invite-codes": "Mendapatkan kode undangan"
+      "write:clip-favorite": "Kelola klip yang difavoritkan"
+      "read:clip-favorite": "Lihat klip yang difavoritkan"
+      "read:federation": "Mendapatkan informasi federasi"
+      "write:report-abuse": "Melaporkan pelanggaran"

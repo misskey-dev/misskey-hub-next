@@ -1,0 +1,416 @@
+noScript: "JavaScript is currently disabled. Please enable it as JavaScript is required for site functionality."
+learnMore: "Learn More"
+loading: "Loading..."
+clickToExpand: "(Click to expand)"
+copy: "Copy"
+share: "Share"
+note: "Note"
+other: "Other"
+add: "Add"
+generate: "生成"
+download: "ダウンロード"
+browse: "Browse"
+settings: "Settings"
+goToLegacyHub: "Legacy Misskey Hub"
+contactUs: "お問い合わせ"
+_error:
+  notFound: "Page not found"
+  notFoundDesc: "The page you are looking for could not be found. Please check the URL."
+  generalError: "Something went wrong"
+  generalErrorDesc: "If this is not what you meant to do, please click on the button below to report the problem."
+  reportProblem: "Report a Problem"
+  goToTop: "Back to top page"
+_seo:
+  siteName: "Misskey Hub"
+  siteNameLong: "Misskey Hub – Official website of the Misskey Project"
+  defaultTitleTagline: "A Network Expanding with Notes"
+  defaultDescription: "This is the official site for Misskey, a decentralized social networking software. Find out how to get started, a list of servers, and lots more information about Misskey!"
+_nav:
+  servers: "Servers"
+  docs: "Docs"
+  blog: "Blog"
+  other: "More!"
+  switchLang: "Language Settings"
+_landing:
+  _hero:
+    description: "Misskey is an open source, decentralized social media platform that's free forever!"
+    gettingStarted: "Get Started"
+  _keyFeatures:
+    _open:
+      title: "Open"
+      description: "Misskey is open-source software, and anyone can use it freely."
+    _federated:
+      title: "Federated"
+      description: "Misskey is a decentralized platform, so communities on different servers can connect with each other."
+    _multifunction:
+      title: "Powerful"
+      description: "Misskey is both easy to understand for beginners and has powerful features for advanced users."
+    _customizable:
+      title: "Highly Customizable"
+      description: "Make Misskey yours! With themes, widgets, layouts and more, you make make Misskey just the way you like it."
+  _decenterized:
+    title: "Misskey is a {0} Platform."
+    decenterizedPlatform: "Decentralized"
+    description: "Misskey is just a platform for server owners to make their own instances of Misskey, and they can all talk to each other! There's large instances for the masses, smaller ones for groups, fandoms, and subcultures, and even instances just for individuals and their friends. Want to have even more control? You can make your own instance on your server with relative ease, cutting ties from any large company who wants to spy on you and sell your data. Misskey is about community and sharing, not corporations and big tech. Have friends not on Misskey? No problem! Because Misskey is on the Fediverse ({0}), you can interact with people on other platforms like Mastodon, PixelFed, PeerTube, and more!"
+    activityPub: "ActivityPub"
+  _features:
+    _root:
+      title: "Key Features"
+      description: "Misskey offers a wide variety of unique features! Here are some highlights."
+    _note:
+      title: "Notes"
+      description: "On Misskey, user posts are called 'Notes.' Reply, quote, add custom emojis, animated text, content warnings, attach multiple images, videos, GIFs, audio clips, or anything else!"
+    _federation:
+      title: "Federation"
+      description: "Not on Misskey? No problem! Not only can Misskey instances talk to each other, but you can make friends with people on other networks like Mastodon and Pixelfed!"
+    _reaction:
+      title: "Reactions"
+      description: "You can add emoji reactions to any post! No longer are you bound by a like button, show everyone exactly how you feel with the tap of a button."
+    _drive:
+      title: "Drive"
+      description: "Hate not being able to find something you uploaded? With Drive, you get managed and powerful cloud storage right in your social media!"
+    _theme:
+      title: "Themes"
+      description: "Why be limited by just a Light or Dark theme when you can change all the colors? Use Misskey's intuitive theming functions to make Misskey just how you like it."
+    _thread:
+      title: "Threads"
+      description: "Have a lot on your mind? Make a thread! Each post can have up to 3,000 characters by default, and you can keep the conversation going for hours."
+    _charts:
+      title: "Charts"
+      description: "For those who need to see everything, Misskey has powerful charts for both users and admins to see what exactly is going on in your instance in real time."
+    _widgets:
+      title: "Widgets"
+      description: "Have everything at your fingertips with over a dozen customizable widgets!"
+  _getStarted:
+    title: "Getting Started with Misskey"
+    _find:
+      title: "Find a Server"
+      list: "Server List"
+    _create:
+      title: "Create a Server"
+      guide: "Setup Guide"
+    _docs:
+      title: "Learn More"
+      docs: "See Documentation"
+  _donation:
+    title: "Donation"
+    description: "Misskey is a non-profit project, and development funding relies on donations from users like you. If you enjoy using Misskey, please consider supporting us so that we can continue to make Misskey awesome for years to come!"
+  _sponsors:
+    title: "Sponsors"
+_servers:
+  title: "Server List"
+  description: "Misskey is not a single service but a decentralized network where individuals provide services. To use Misskey, you need to create an account on a server that offers the service."
+  addYourServer: "Is your server not listed? Please register it {0}!"
+  addYourServerLink: "here"
+  _system:
+    fetchError: "Failed to fetch data. Please try again later."
+  _statistics:
+    title: "Server Statistics"
+    description: "A graphical presentation of the statistics of the Misskey servers."
+    viewFullStats: "See detailed statistics"
+    lang: "Primary Language"
+    registerAcceptance: "New registration acceptance"
+    version: "Version"
+    notes: "Notes"
+    users: "Users"
+    servers: "Servers"
+  _search:
+    title: "Advanced Search"
+    all: "All"
+    query: "Search by keyword"
+    lang: "Language"
+    orderBy: "Sort by"
+    recomendded: "Default"
+    notesCount: "Notes Count"
+    notesPer15Days: "Number of notes per day (average of last 15 days)"
+    usersCount: "Users Count"
+  _registerAcceptance:
+    title: "Sign-up Policy"
+    public: "Public"
+    inviteOnly: "Invite Only"
+  _list:
+    notFound: "No servers matching the specified criteria were found."
+    showMore: "Show More"
+  _view:
+    title: "Display format"
+    list: "List"
+    grid: "Grid"
+_docs:
+  title: "Documentation"
+  description: "Comprehensive information ranging from how to use Misskey to resources for server operators and developers."
+  indexTitle: "Table of Contents"
+  _contribute:
+    editThis: "Edit this page"
+    translateThis: "Translate this page"
+  _aboutMisskey:
+    title: "About Misskey"
+    description: "A complete guide for those new to Misskey or considering using it! Let's explore the basics and features."
+  _changelog:
+    title: "Release Notes"
+    description: "View the version history of Misskey. Find out what's new in the latest version!"
+  _donate:
+    title: "Donating to the project"
+    description: "Misskey is free and open source software. If you like it, please consider donating so that we can continue to develop it."
+  _forUsers:
+    title: "For Misskey Users"
+  _forAdmin:
+    title: "For Server Administrators"
+  _forDevelopers:
+    title: "For Developers"
+  _prevNext:
+    prev: "Previous"
+    next: "Next"
+  _toc:
+    title: "Table of Contents"
+    toPageTop: "Back to Top"
+_blog:
+  title: "Blog"
+  description: "Get the latest information and tips about Misskey straight from the Misskey Development Team! (Japanese only)"
+  back: "Back"
+_content:
+  tip: "Tips"
+  warning: "Warning"
+  danger: "Danger"
+  preview: "Preview"
+_other:
+  title: "More!"
+  description: "Introducing more enjoyable resources for Misskey!"
+_brandAssets:
+  title: "Brand Assets"
+  description: "A collection of Misskey's logo, icons, and other assets. Feel free to use for literally anything under the CC BY-NC-SA License!"
+  license: "Assets are available under the CC BY-NC-SA license 🎉"
+  assetsDirectory: "All assets are managed on {0}."
+  logo: "Logo"
+  icon: "Icon"
+  banner: "Banner"
+  avatarDecorationTemplate: "Avatar Decoration Template"
+_contact:
+  title: "お問い合わせ"
+  description: "Misskey Projectへのお問い合わせはこちらから"
+_links:
+  title: "Links"
+  _github:
+    title: "GitHub"
+    description: "Misskey development takes place on GitHub. You can submit feature requests and bug reports here."
+  _crowdin:
+    title: "Crowdin"
+    description: "Translations for Misskey core and documentation are managed here. We appreciate your contributions."
+  _discord:
+    title: "Discord Server"
+    description: "Engage in discussions and ask questions about Misskey here."
+  _aiChan:
+    title: "Ai-Chan"
+    description: "Visit the website of Ai-Chan, the mascot of Misskey."
+_tools:
+  title: "Tool Collection"
+  index: "Tool Collection Home"
+  description: "Discover handy tools for Misskey, crafted by the original developers!"
+  menuToggle: "Menu"
+  _forUsers:
+    title: "For Misskey Users"
+  _forAdmin:
+    title: "For Server Administrators"
+_mfmPlayground:
+  title: "MFM Playground"
+  description: "Practice MFM freely!"
+  preview: "Preview"
+  disclaimer: "It may not render exactly as shown here. Syntax highlighting for code is not supported for performance reason."
+  mfm: "MFM"
+  character: "{0} characters"
+  domain: "Server to replicate the appearance (e.g. custom emojis)"
+  noteIt: "Note It"
+  clearEmojiCacheDescription: "When emojis are not displayed:"
+  clearEmojiCache: "Clear Emoji Cache"
+_aidConverter:
+  title: "aid/aidx utilities"
+  description: "This tool can convert and generate aid and aidx, the random ID generation algorithms used inside Misskey."
+  aidToDate: "aid/aidx to Date"
+  dateToAid: "Date to aid/aidx"
+  mode: "Type of ID"
+  date: "Date/Time"
+_aboutUs:
+  title: "About Misskey Development Division"
+  description: "Information about the Misskey development team."
+  _team:
+    title: "Dev Members"
+    description: "Introducing the people involved in the development of Misskey!"
+    _core:
+      title: "Core Team Member"
+      description: "These core team members are actively maintaining Misskey-related projects."
+    _coreEmeriti:
+      title: "Core Team Member Emeriti"
+      description: "These are former core team members who have made valuable contributions in the past."
+    _contributors:
+      title: "Contributors"
+      description: "These are some of the most active Misskey contributors."
+      seeMore: "All contributors"
+    _orgPartner:
+      title: "Corporate & Organization Partners"
+      description: "These companies and organizations have contributed financially and technically to the development of Misskey."
+    _hubTranslators:
+      title: "Misskey Hub Translators"
+      description: "Those are the people who are helping with translating Misskey Hub."
+    _coreTranslators:
+      title: "Misskey Translators"
+      description: "Those are the people who are helping with translating Misskey."
+_i18n:
+  _missing:
+    title: "Help us translate"
+    description: "This document is translated by the community. You can contribute on {link}. We appreciate your cooperation 🙏."
+    linkLabel: "Crowdin"
+_share:
+  title: "Note to Misskey"
+  chooseServer: "Choose the server you want to note"
+  addServer: "Add Server"
+  domain: "Server domain"
+  compatibleWith: "Compatible with Misskey and certain Misskey forks."
+  recommendedByWebsite: "Recommended Server Domain"
+_noteVisibility:
+  public: "Public"
+  home: "Home"
+  followers: "Followers"
+  specified: "Direct"
+  localOnly: "Defederate"
+_shareLinkGenerator:
+  title: "Share Button Generator"
+  description: "Create share buttons for Misskey using the Misskey Hub's url share relay service."
+  body: "Body"
+  bodyWarning: "You can't use custom emojis in order to make them compatible with any server."
+  url: "URL"
+  urlCaption: "Optional. Inserted after the body."
+  settings: "Advanced Settings"
+  manualInstance: "Recommended Server"
+  manualInstanceDescription: "The server specified here can be displayed at the top of the Share button relay page. You can use this to direct people to your own server, for example."
+  visibility: "Visibility"
+  recipents: "Acct of the person receiving the direct (enter on a new line separator)"
+  resultLink: "Generated results of shared links"
+  resultButton: "Sample share button"
+  testLink: "Test the sharing link"
+  typeSomethingToGetLink: "Enter the body to generate sharing link."
+  typeSomethingToGetButton: "Enter the body to generate share button code."
+_goToMisskey:
+  title: "Go to your Misskey Web"
+  heading: "Select the server you want to open the page and continue"
+_avatarDecorationPreview:
+  title: "Avatar Decoration Previewer"
+  description: "You can check whether the avatar decoration fits properly."
+  preview: "Preview"
+  settings: "Settings"
+  decoration: "Decoration #{number}"
+  placeholder: "Through the 'Add' button you can add and preview the avatar decorations."
+  _options:
+    offsetX: "Horizontal Offset"
+    offsetY: "Vertical Offset"
+    angle: "Angle"
+    flip: "Flip Horizontally"
+    overlayTemplate: "Overlay template"
+  _placeholder:
+    username: "Ai"
+    noteText: "Just had a chocolate-glazed donut 🍩😋"
+    profileDescription: "I am AI, Misskey resident AI! Pleased to meet you... ♪"
+_customEmojiPreview:
+  title: "Custom Emoji Preview"
+  description: "The usability of custom emojis can be checked here."
+  preview: "Preview"
+  emoji: "Emoji #{number}"
+  placeholder: "Under 'Add', you can add and preview custom emojis."
+  _options:
+    text: "Note text"
+    textDescription: "The custom emoji you have added can be referenced by {emoji_id}"
+  _placeholder:
+    noteText: "Custom emoji will appear like this → :emoji_preview_1:\nYou can rewrite the text and test its usability✨."
+_identiconGenerator:
+  title: "初期アイコンジェネレーター"
+  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
+  userName: "ユーザー名"
+  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
+_api:
+  _permissions:
+    title: "Permissions"
+    description: "Description"
+    _types:
+      "read:account": "View your account information"
+      "write:account": "Edit your account information"
+      "read:blocks": "View your list of blocked users"
+      "write:blocks": "Edit your list of blocked users"
+      "read:drive": "Access your Drive files and folders"
+      "write:drive": "Edit or delete your Drive files and folders"
+      "read:favorites": "View your list of favorites"
+      "write:favorites": "Edit your list of favorites"
+      "read:following": "View information on who you follow"
+      "write:following": "Follow or unfollow other accounts"
+      "read:messaging": "View your chats"
+      "write:messaging": "Compose or delete chat messages"
+      "read:mutes": "View your list of muted users"
+      "write:mutes": "Edit your list of muted users"
+      "write:notes": "Compose or delete notes"
+      "read:notifications": "View your notifications"
+      "write:notifications": "Manage your notifications"
+      "read:reactions": "View your reactions"
+      "write:reactions": "Edit your reactions"
+      "write:votes": "Add Vote"
+      "read:pages": "View your Pages"
+      "write:pages": "Edit or delete your Pages"
+      "read:page-likes": "View list of liked Pages"
+      "write:page-likes": "Edit list of liked Pages"
+      "read:user-groups": "View your user groups"
+      "write:user-groups": "Edit or delete your user groups"
+      "read:channels": "View your channels"
+      "write:channels": "Edit your channels"
+      "read:gallery": "View your gallery"
+      "write:gallery": "Edit your gallery"
+      "read:gallery-likes": "View your list of liked gallery posts"
+      "write:gallery-likes": "Edit your list of liked gallery posts"
+      "read:flash": "View Play"
+      "write:flash": "Edit Plays"
+      "read:flash-likes": "View list of liked Plays"
+      "write:flash-likes": "Edit list of liked Plays"
+      "read:admin:abuse-user-reports": "View user reports"
+      "write:admin:delete-account": "Delete user account"
+      "write:admin:delete-all-files-of-a-user": "Delete all files of a user"
+      "read:admin:index-stats": "View database index stats"
+      "read:admin:table-stats": "View database table stats"
+      "read:admin:user-ips": "View user IP addresses"
+      "read:admin:meta": "View instance metadata"
+      "write:admin:reset-password": "Reset user password"
+      "write:admin:resolve-abuse-user-report": "Resolve user report"
+      "write:admin:send-email": "Send email"
+      "read:admin:server-info": "View server info"
+      "read:admin:show-moderation-log": "View moderation log"
+      "read:admin:show-user": "View private user info"
+      "read:admin:show-users": "View private user info"
+      "write:admin:suspend-user": "Suspend user"
+      "write:admin:unset-user-avatar": "Remove user avatar"
+      "write:admin:unset-user-banner": "Remove user banner"
+      "write:admin:unsuspend-user": "Unsuspend user"
+      "write:admin:meta": "Manage instance metadata"
+      "write:admin:user-note": "Manage moderation note"
+      "write:admin:roles": "Manage roles"
+      "read:admin:roles": "View roles"
+      "write:admin:relays": "Manage relays"
+      "read:admin:relays": "View relays"
+      "write:admin:invite-codes": "Manage invite codes"
+      "read:admin:invite-codes": "View invite codes"
+      "write:admin:announcements": "Manage announcements"
+      "read:admin:announcements": "View announcements"
+      "write:admin:avatar-decorations": "Manage avatar decorations"
+      "read:admin:avatar-decorations": "View avatar decorations"
+      "write:admin:federation": "Manage federation"
+      "write:admin:account": "Manage user account"
+      "read:admin:account": "View user account"
+      "write:admin:emoji": "Manage emoji"
+      "read:admin:emoji": "View emoji"
+      "write:admin:queue": "Manage job queue"
+      "read:admin:queue": "View job queue info"
+      "write:admin:promo": "Manage promoted notes"
+      "write:admin:drive": "Manage user drive"
+      "read:admin:drive": "View user drive info"
+      "read:admin:stream": "Use admin WebSocket API"
+      "write:admin:ad": "Manage ads"
+      "read:admin:ad": "View ads"
+      "write:invite-codes": "Create invite codes"
+      "read:invite-codes": "Get invite codes"
+      "write:clip-favorite": "Manage favorited clips"
+      "read:clip-favorite": "View favorited clips"
+      "read:federation": "Get federation info"
+      "write:report-abuse": "Report violation"
