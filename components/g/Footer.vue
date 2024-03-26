@@ -45,7 +45,7 @@
                                 <GNuxtLink :to="localePath('/learn-more/')" class="hover:underline">{{ $t('_links.title') }}</GNuxtLink>
                             </li>
                             <li>
-                                <GNuxtLink to="https://legacy.misskey-hub.net/" target="_blank" class="hover:underline">{{ $t('goToLegacyHub') }}<ExtIco class="ml-1" /></GNuxtLink>
+															<GNuxtLink :to="localePath('/contact/')" class="hover:underline">{{ $t('contactUs') }}</GNuxtLink>
                             </li>
                         </ul>
                     </div>

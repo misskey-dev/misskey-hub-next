@@ -62,6 +62,12 @@
                         description: $t('_aboutUs.description'),
                         img: '/img/misc/midev.png',
                     },
+										{
+                        to: localePath('/contact/'),
+                        title: $t('_contact.title'),
+                        description: $t('_contact.description'),
+                        img: '/img/emojis/envelope_3d.png',
+                    },
                 ]" />
             </div>
         </div>

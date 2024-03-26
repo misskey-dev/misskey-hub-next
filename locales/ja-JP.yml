@@ -12,6 +12,7 @@ download: "ダウンロード"
 browse: "参照"
 settings: "設定"
 goToLegacyHub: "従来のMisskey Hub"
+contactUs: "お問い合わせ"
 
 _error:
   notFound: "ページが見つかりませんでした"
@@ -193,6 +194,10 @@ _brandAssets:
   icon: "アイコン"
   banner: "バナー"
   avatarDecorationTemplate: "アバターデコレーション テンプレート"
+
+_contact:
+  title: "お問い合わせ"
+  description: "Misskey Projectへのお問い合わせはこちらから"
 
 _links:
   title: "リンク"
