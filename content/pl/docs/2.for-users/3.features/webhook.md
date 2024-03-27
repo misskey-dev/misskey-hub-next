@@ -25,28 +25,28 @@ Webhookが登録されると、指定したイベントが発生した際に、�
 type: 'object',
 properties: {
 hookId: {
- type: 'string',
- description: 'Webhook ID',
+type: 'string',
+description: 'Webhook ID',
 },
 userId: {
- type: 'string',
- description: 'Webhook作成者のユーザーID',
+type: 'string',
+description: 'Webhook作成者のユーザーID',
 },
 eventId: {
- type: 'string',
- description: 'イベントのID',
+type: 'string',
+description: 'イベントのID',
 },
 createdAt: {
- type: 'integer',
- description: 'イベントが発生した日時(UNIX time、ミリ秒)',
+type: 'integer',
+description: 'イベントが発生した日時(UNIX time、ミリ秒)',
 },
 type: {
- type: 'string',
- description: 'イベントの種類',
+type: 'string',
+description: 'イベントの種類',
 },
 body: {
- type: 'object',
- description: 'イベントのペイロード',
+type: 'object',
+description: 'イベントのペイロード',
 },
 }
 }"/>
@@ -75,8 +75,8 @@ properties: {
 type: 'object',
 properties: {
 user: {
- $ref: 'misskey://User',
- description: 'フォローしたユーザー',
+$ref: 'misskey://User',
+description: 'フォローしたユーザー',
 },
 }
 }"/>
@@ -119,8 +119,8 @@ properties: {
 type: 'object',
 properties: {
 user: {
- $ref: 'misskey://User',
- description: 'フォロー解除したユーザー',
+$ref: 'misskey://User',
+description: 'フォロー解除したユーザー',
 },
 }
 }"/>
@@ -141,8 +141,8 @@ properties: {
 type: 'object',
 properties: {
 note: {
- $ref: 'misskey://Note',
- description: '作成されたノート',
+$ref: 'misskey://Note',
+description: '作成されたノート',
 },
 }
 }"/>
@@ -185,8 +185,8 @@ properties: {
 type: 'object',
 properties: {
 note: {
- $ref: 'misskey://Note',
- description: 'Renote',
+$ref: 'misskey://Note',
+description: 'Renote',
 },
 }
 }"/>
