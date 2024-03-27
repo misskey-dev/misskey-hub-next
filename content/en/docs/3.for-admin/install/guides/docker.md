@@ -36,10 +36,9 @@ cp .config/docker_example.env .config/docker.env
 cp ./docker-compose_example.yml ./docker-compose.yml
 ```
 
-The next set of commands will build Misskey image and perform database initialization.\
 Please edit `default.yml` and `docker.env` file as per the description.\
 Also edit `docker-compose.yml` as needed.(If you want to change the port etc.)\
-Please make sure to check in advance for any changes that may be required.(ポートを変更したい場合など)(ポートを変更したい場合など)
+Please make sure to check in advance for any changes that may be required.(ポートを変更したい場合など)
 
 ## Build & Initialize
 
