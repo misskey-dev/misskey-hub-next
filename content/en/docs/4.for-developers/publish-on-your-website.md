@@ -1,6 +1,6 @@
 # Distributing Plugins and Themes
 
-Starting with Misskey v2023.11.0, you can now install various additional resources directly from your website.This feature is especially useful for those who produce a lot of plugins and themes, and for those who want to create a plugin distribution website.This feature is especially useful for those who produce a lot of plugins and themes, and for those who want to create a plugin distribution website.
+Starting with Misskey v2023.11.0, you can now install various additional resources directly from your website.This feature is especially useful for those who produce a lot of plugins and themes, and for those who want to create a plugin distribution website.This feature is especially useful for those who produce a lot of plugins and themes, and for those who want to create a plugin distribution website.This feature is especially useful for those who produce a lot of plugins and themes, and for those who want to create a plugin distribution website.
 
 ## Resources that support external installation
 
