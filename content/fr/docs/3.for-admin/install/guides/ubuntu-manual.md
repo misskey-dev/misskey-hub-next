@@ -161,6 +161,7 @@ CREATE DATABASE mk1 OWNER misskey;
 ### Redis
 
 Redisは、NoSQLのインメモリデータベースソフトであり、データベースや連合との通信を管理するなどのために必要だ。\
+\
 redis.ioのドキュメントに従い、snapでインストールする。
 
 https\://redis.io/docs/getting-started/installation/install-redis-on-linux/
