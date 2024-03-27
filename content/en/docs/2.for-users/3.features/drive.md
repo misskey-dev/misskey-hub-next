@@ -22,6 +22,6 @@ Currently, when you delete a file from Drive, **all the content (notes, pages, e
 
 ## Sensitive (NSFW)
 
-Sensitive or NSFW (Not safe for work) is a flag that can be set on files in Drive. Files that are flagged as sensitive will not be displayed without interaction from the viewer. This flag is used, for instance, to mark images that are considered inappropriate for viewing at work or in public places, and to prevent them from being displayed suddenly.
+Sensitive or NSFW (Not safe for work) is a flag that can be set on files in Drive.
 
 This flag can be manually turned on or off, as well as set at the discretion of moderators.
