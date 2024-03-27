@@ -31,7 +31,8 @@ description: 이 가이드는 Docker를 사용하여 Misskey를 설정하는 방
 ```
 
 `default.yml`과 `docker.env`를 파일 내 설명에 따라 편집합니다.\
-또한, 필요에 의해서 `docker-compose.yml`을 편집합니다.(포트를 변경하고 싶은 경우 등)
+또한, 필요에 의해서 `docker-compose.yml`을 편집합니다.(포트를 변경하고 싶은 경우 등)\
+리포지토리 가져오기(포트를 변경하고 싶은 경우 등)
 
 ## 빌드 및 초기화
 
