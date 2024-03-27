@@ -76,7 +76,7 @@ pnpm run init
 
 ## 실행
 
-수고하셨습니다.수고하셨습니다.아래 명령어로 Misskey를 실행할 수 있습니다.
+수고하셨습니다.수고하셨습니다.수고하셨습니다.아래 명령어로 Misskey를 실행할 수 있습니다.
 
 ```sh
 NODE_ENV=production pnpm run start
