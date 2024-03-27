@@ -12,11 +12,11 @@
 
 :::
 
-또한, 요청 헤더에는 `X-Misskey-Hook-Secret`이라는 이름으로 등록 시 설정한 시크릿이 포함됩니다.이 시크릿이 올바른지 확인하여 요청이 유효한지 판단할 수 있습니다.Misskey에는 Webhook이 준비되어 있습니다.Webhook을 이용하면 Misskey의 다양한 이벤트를 실시간으로 받아볼 수 있습니다.
+또한, 요청 헤더에는 `X-Misskey-Hook-Secret`이라는 이름으로 등록 시 설정한 시크릿이 포함됩니다.이 시크릿이 올바른지 확인하여 요청이 유효한지 판단할 수 있습니다.또한, 요청 헤더에는 `X-Misskey-Hook-Secret`이라는 이름으로 등록 시 설정한 시크릿이 포함됩니다.이 시크릿이 올바른지 확인하여 요청이 유효한지 판단할 수 있습니다.Misskey에는 Webhook이 준비되어 있습니다.Webhook을 이용하면 Misskey의 다양한 이벤트를 실시간으로 받아볼 수 있습니다.
 
 설정 > Webhook에서 Webhook을 관리할 수 있습니다.
 
-Webhook이 등록되면 지정한 이벤트가 발생하면 지정한 URL로 HTTP 요청이 전송됩니다.요청의 메서드는 POST이고, 본문은 JSON입니다.요청의 메서드는 POST이고, 본문은 JSON입니다.
+Webhook이 등록되면 지정한 이벤트가 발생하면 지정한 URL로 HTTP 요청이 전송됩니다.요청의 메서드는 POST이고, 본문은 JSON입니다.요청의 메서드는 POST이고, 본문은 JSON입니다.요청의 메서드는 POST이고, 본문은 JSON입니다.
 또한, 요청 헤더에는 `X-Misskey-Hook-Secret`이라는 이름으로 등록 시 설정한 시크릿이 포함됩니다.이 시크릿이 올바른지 확인하여 요청이 유효한지 판단할 수 있습니다.
 
 요청 페이로드에는 다음과 같은 속성이 들어갑니다.
@@ -24,30 +24,30 @@ Webhook이 등록되면 지정한 이벤트가 발생하면 지정한 URL로 HTT
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
 properties: {
- hookId: {
- 	type: 'string',
- 	description: 'Webhook ID',
- },
- userId: {
- 	type: 'string',
- 	description: 'Webhook作成者のユーザーID',
- },
- eventId: {
- 	type: 'string',
- 	description: 'イベントのID',
- },
- createdAt: {
- 	type: 'integer',
- 	description: 'イベントが発生した日時(UNIX time、ミリ秒)',
- },
- type: {
- 	type: 'string',
- 	description: 'イベントの種類',
- },
- body: {
- 	type: 'object',
- 	description: 'イベントのペイロード',
- },
+hookId: {
+ type: 'string',
+ description: 'Webhook ID',
+},
+userId: {
+ type: 'string',
+ description: 'Webhook作成者のユーザーID',
+},
+eventId: {
+ type: 'string',
+ description: 'イベントのID',
+},
+createdAt: {
+ type: 'integer',
+ description: 'イベントが発生した日時(UNIX time、ミリ秒)',
+},
+type: {
+ type: 'string',
+ description: 'イベントの種類',
+},
+body: {
+ type: 'object',
+ description: 'イベントのペイロード',
+},
 }
 }"/>
 
@@ -66,10 +66,10 @@ Webhook은 관리 화면에서 개별적으로 활성 상태를 설정할 수 �
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
 properties: {
- user: {
- 	$ref: 'misskey://User',
- 	description: 'フォローしたユーザー',
- },
+user: {
+ $ref: 'misskey://User',
+ description: 'フォローしたユーザー',
+},
 }
 }"/>
 
@@ -80,10 +80,10 @@ properties: {
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
 properties: {
- user: {
- 	$ref: 'misskey://User',
- 	description: 'フォローを行ったユーザー',
- },
+user: {
+ $ref: 'misskey://User',
+ description: 'フォローを行ったユーザー',
+},
 }
 }"/>
 
@@ -94,10 +94,10 @@ properties: {
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
 properties: {
- user: {
- 	$ref: 'misskey://User',
- 	description: 'フォロー解除したユーザー',
- },
+user: {
+ $ref: 'misskey://User',
+ description: 'フォロー解除したユーザー',
+},
 }
 }"/>
 
@@ -108,10 +108,10 @@ properties: {
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
 properties: {
- note: {
- 	$ref: 'misskey://Note',
- 	description: '作成されたノート',
- },
+note: {
+ $ref: 'misskey://Note',
+ description: '作成されたノート',
+},
 }
 }"/>
 
@@ -122,10 +122,10 @@ properties: {
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
 properties: {
- note: {
- 	$ref: 'misskey://Note',
- 	description: '返信',
- },
+note: {
+ $ref: 'misskey://Note',
+ description: '返信',
+},
 }
 }"/>
 
@@ -136,10 +136,10 @@ properties: {
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
 properties: {
- note: {
- 	$ref: 'misskey://Note',
- 	description: 'Renote',
- },
+note: {
+ $ref: 'misskey://Note',
+ description: 'Renote',
+},
 }
 }"/>
 
@@ -150,9 +150,9 @@ properties: {
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
 properties: {
- note: {
- 	$ref: 'misskey://Note',
- 	description: 'メンションを含むノート',
- },
+note: {
+ $ref: 'misskey://Note',
+ description: 'メンションを含むノート',
+},
 }
 }"/>
