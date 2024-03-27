@@ -24,30 +24,30 @@ Webhookが登録されると、指定したイベントが発生した際に、�
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
 properties: {
- hookId: {
- 	type: 'string',
- 	description: 'Webhook ID',
- },
- userId: {
- 	type: 'string',
- 	description: 'Webhook作成者のユーザーID',
- },
- eventId: {
- 	type: 'string',
- 	description: 'イベントのID',
- },
- createdAt: {
- 	type: 'integer',
- 	description: 'イベントが発生した日時(UNIX time、ミリ秒)',
- },
- type: {
- 	type: 'string',
- 	description: 'イベントの種類',
- },
- body: {
- 	type: 'object',
- 	description: 'イベントのペイロード',
- },
+hookId: {
+ type: 'string',
+ description: 'Webhook ID',
+},
+userId: {
+ type: 'string',
+ description: 'Webhook作成者のユーザーID',
+},
+eventId: {
+ type: 'string',
+ description: 'イベントのID',
+},
+createdAt: {
+ type: 'integer',
+ description: 'イベントが発生した日時(UNIX time、ミリ秒)',
+},
+type: {
+ type: 'string',
+ description: 'イベントの種類',
+},
+body: {
+ type: 'object',
+ description: 'イベントのペイロード',
+},
 }
 }"/>
 
@@ -66,10 +66,10 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
 properties: {
- user: {
- 	$ref: 'misskey://User',
- 	description: 'フォローしたユーザー',
- },
+user: {
+ $ref: 'misskey://User',
+ description: 'フォローしたユーザー',
+},
 }
 }"/>
 
@@ -80,10 +80,10 @@ properties: {
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
 properties: {
- user: {
- 	$ref: 'misskey://User',
- 	description: 'フォローを行ったユーザー',
- },
+user: {
+ $ref: 'misskey://User',
+ description: 'フォローを行ったユーザー',
+},
 }
 }"/>
 
@@ -94,10 +94,10 @@ properties: {
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
 properties: {
- user: {
- 	$ref: 'misskey://User',
- 	description: 'フォロー解除したユーザー',
- },
+user: {
+ $ref: 'misskey://User',
+ description: 'フォロー解除したユーザー',
+},
 }
 }"/>
 
@@ -108,10 +108,10 @@ properties: {
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
 properties: {
- note: {
- 	$ref: 'misskey://Note',
- 	description: '作成されたノート',
- },
+note: {
+ $ref: 'misskey://Note',
+ description: '作成されたノート',
+},
 }
 }"/>
 
@@ -122,10 +122,10 @@ properties: {
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
 properties: {
- note: {
- 	$ref: 'misskey://Note',
- 	description: '返信',
- },
+note: {
+ $ref: 'misskey://Note',
+ description: '返信',
+},
 }
 }"/>
 
@@ -136,10 +136,10 @@ properties: {
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
 properties: {
- note: {
- 	$ref: 'misskey://Note',
- 	description: 'Renote',
- },
+note: {
+ $ref: 'misskey://Note',
+ description: 'Renote',
+},
 }
 }"/>
 
@@ -150,9 +150,9 @@ properties: {
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
 properties: {
- note: {
- 	$ref: 'misskey://Note',
- 	description: 'メンションを含むノート',
- },
+note: {
+ $ref: 'misskey://Note',
+ description: 'メンションを含むノート',
+},
 }
 }"/>
