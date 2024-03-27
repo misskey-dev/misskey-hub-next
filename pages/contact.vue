@@ -17,8 +17,14 @@
         </GHero>
         <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
             <div class="container mx-auto max-w-screen-lg px-6 space-y-6 lg:space-y-8">
-                <div>
-									<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf9hV92NTcfzZnJg_mrB11MINpBFdTf8dzGKAmzX8dvwXwZfw/viewform?embedded=true" width="640" height="1058" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+                <div class="bg-gray-100 border-4 border-accent-600 p-4 lg:p-6 rounded-xl space-y-3">
+                    <h2 class="font-bold text-lg lg:text-xl text-center">{{ $t('_contact.form') }}</h2>
+                    <p class="text-center whitespace-pre-wrap">{{ $t('_contact.formGoogleAccountRequired') }}</p>
+                    <div class="text-center">
+                        <GNuxtLink to="https://docs.google.com/forms/d/e/1FAIpQLSf9hV92NTcfzZnJg_mrB11MINpBFdTf8dzGKAmzX8dvwXwZfw/viewform" target="_blank" class="btn btn-primary">
+                            {{ $t('_contact.formLink') }}<ExtIco class="ml-1" />
+                        </GNuxtLink>
+                    </div>
                 </div>
             </div>
         </div>
@@ -26,6 +32,8 @@
 </template>
 
 <script setup lang="ts">
+import ExtIco from 'bi/box-arrow-up-right.svg';
+
 const { t } = useI18n();
 const route = useRoute();
 
