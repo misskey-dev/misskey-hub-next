@@ -40,7 +40,7 @@
 
 이 글에서는 [Misskey 구축 가이드 (manual)](./manual/)을 바탕으로 일반적인 우분투 서버에 Misskey를 설치하고 공개하는 방법을 하나하나 설명합니다.
 
-Bash 명령어 입력과 몇 가지 설정 파일 편집, 그리고 브라우저 조작만으로 설정이 완료될 수 있도록 했습니다.설치해야 할 소프트웨어에 대해 간략하게 설명하고 있지만, 크게 신경 쓸 필요는 없습니다.설치해야 할 소프트웨어에 대해 간략하게 설명하고 있지만, 크게 신경 쓸 필요는 없습니다.설치해야 할 소프트웨어에 대해 간략하게 설명하고 있지만, 크게 신경 쓸 필요는 없습니다.
+Bash 명령어 입력과 몇 가지 설정 파일 편집, 그리고 브라우저 조작만으로 설정이 완료될 수 있도록 했습니다.설치해야 할 소프트웨어에 대해 간략하게 설명하고 있지만, 크게 신경 쓸 필요는 없습니다.설치해야 할 소프트웨어에 대해 간략하게 설명하고 있지만, 크게 신경 쓸 필요는 없습니다.
 
 이 글에서는 구체성을 중시하여 특정 환경에 특화된 설명을 하고 있습니다.
 
@@ -56,7 +56,7 @@ OS의 차이, Misskey 본체나 의존하는 소프트웨어의 버전업으로 
   - （従来Viteの導入により1.5GB程度でもビルド可能と説明していたが、最近またフロントエンドのビルドで要件が厳しくなってきた。）
 - 자체 도메인을 구입하고 CloudFlare를 사용하세요.
 - 도메인은 [Google Domains](https://domains.google/intl/ja_jp/) 등에서 미리 준비해야 합니다.
-- 여기서는 도메인을 example.tld로 설명할 것이므로, 자신이 구입한 도메인으로 적절히 대체하여 읽도록 합니다.개발 환경의 경우 localhost로 대체합니다(설정 파일 항목에서 별도 설명).개발 환경의 경우 localhost로 대체합니다(설정 파일 항목에서 별도 설명).개발 환경의 경우 localhost로 대체합니다(설정 파일 항목에서 별도 설명).
+- 여기서는 도메인을 example.tld로 설명할 것이므로, 자신이 구입한 도메인으로 적절히 대체하여 읽도록 합니다.개발 환경의 경우 localhost로 대체합니다(설정 파일 항목에서 별도 설명).개발 환경의 경우 localhost로 대체합니다(설정 파일 항목에서 별도 설명).
 
 :::danger
 
@@ -66,7 +66,7 @@ OS의 차이, Misskey 본체나 의존하는 소프트웨어의 버전업으로 
 
 ## nano 사용법
 
-이번에는 텍스트 편집기로 nano를 사용합니다.다음과 같이 실행합니다.다음과 같이 실행합니다.다음과 같이 실행합니다.
+이번에는 텍스트 편집기로 nano를 사용합니다.다음과 같이 실행합니다.다음과 같이 실행합니다.
 
 ```sh
 nano /path/to/file
@@ -114,7 +114,7 @@ node -v
 sudo corepack enable
 ```
 
-Misskey에서 사용할 사용자를 생성합니다.Misskey에서 사용할 사용자를 생성합니다.v20.x.x 등으로 표시되면 OK.v8.x.x와 같이 낮은 버전이 표시되면 제대로 설치가 되지 않은 것이므로 서버를 재부팅하고 다시 설치하는 등 다시 한 번 시도해 봅니다.
+Misskey에서 사용할 사용자를 생성합니다.v20.x.x 등으로 표시되면 OK.v8.x.x와 같이 낮은 버전이 표시되면 제대로 설치가 되지 않은 것이므로 서버를 재부팅하고 다시 설치하는 등 다시 한 번 시도해 봅니다.
 
 ### PostgreSQL
 
@@ -133,8 +133,7 @@ sudo sh /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -i -v 15;
 systemctl status postgresql
 ```
 
-active라면 OK.복사, 붙여넣기만 하면 쉘 스크립트로 하면 되지 않겠느냐는 생각으로 **쉘 스크립트로 거의 모든 것을 해주는 방법을 만들어 보았습니다!**\
-[**쉘 스크립트에 대한 자세한 내용과 사용법은 여기에서 확인하세요!**](./bash/)
+active라면 OK.그렇지 않은 경우 다음 명령을 실행합니다.
 
 #### 사용자 및 데이터베이스 생성
 
@@ -144,18 +143,17 @@ psql을 실행합니다.
 sudo -u postgres psql
 ```
 
-/manual/#misskey 업데이트 방법)\
-사용자 이름을 misskey, 비밀번호를 hoge로 설정하면 다음과 같습니다.Misskey에서 사용할 사용자를 생성합니다.\
+Misskey에서 사용할 사용자를 생성합니다.\
 사용자 이름을 misskey, 비밀번호를 hoge로 설정하면 다음과 같습니다.\
 (리눅스 사용자와 PostgreSQL 사용자는 별개이므로 혼동하지 않도록 주의.）\
 사용자 이름을 misskey, 비밀번호를 hoge로 설정하면 다음과 같습니다.\
-(리눅스 사용자와 PostgreSQL 사용자는 별개이므로 혼동하지 않도록 주의.））
+(리눅스 사용자와 PostgreSQL 사용자는 별개이므로 혼동하지 않도록 주의.）
 
 ```sql
 CREATE ROLE misskey LOGIN PASSWORD 'hoge';
 ```
 
-사용자 및 데이터베이스 생성소개데이터베이스를 생성합니다.데이터베이스 이름을 mk1이라고 합니다.
+소개데이터베이스를 생성합니다.데이터베이스 이름을 mk1이라고 합니다.
 
 ```sql
 CREATE DATABASE mk1 OWNER misskey;
@@ -165,9 +163,7 @@ CREATE DATABASE mk1 OWNER misskey;
 ### Redis
 
 Redis는 NoSQL의 인메모리 데이터베이스 소프트웨어로, 데이터베이스 및 연합과의 통신 관리 등을 위해 필요합니다.\
-redis.ioのドキュメントに従い、snapでインストールする。\
-복사, 붙여넣기만 하면 쉘 스크립트로 하면 되지 않겠느냐는 생각으로 **쉘 스크립트로 거의 모든 것을 해주는 방법을 만들어 보았습니다!**\
-[**쉘 스크립트에 대한 자세한 내용과 사용법은 여기에서 확인하세요!**](./bash/)
+redis.ioのドキュメントに従い、snapでインストールする。
 
 https\://redis.io/docs/getting-started/installation/install-redis-on-linux/
 
@@ -186,7 +182,6 @@ active이면 OK.
 ### nginx
 
 nginx는 주로 리버스 프록시에 사용되는 웹 서버 소프트웨어입니다.Misskey에 필수적인 것은 아니지만, 캐시 등을 하면 성능이 향상되고 http에서 https로 전송하는 등의 작업을 위해 설치해 둡니다.\
-curl에서 확인하는 것도 좋은 방법입니다.\
 curl에서 확인하는 것도 좋은 방법입니다.
 
 :::tip
@@ -223,25 +218,24 @@ systemctl로 데몬 상태를 확인합니다.실행에 시간이 조금 걸리�
 systemctl status nginx
 ```
 
-빌드합니다.네, 할 수 있습니다...네, 할 수 있습니다...active라면 OK.그렇지 않은 경우 다음 명령을 실행합니다.
+active라면 OK.복사, 붙여넣기만 하면 쉘 스크립트로 하면 되지 않겠느냐는 생각으로 **쉘 스크립트로 거의 모든 것을 해주는 방법을 만들어 보았습니다!**\
+[**쉘 스크립트에 대한 자세한 내용과 사용법은 여기에서 확인하세요!**](./bash/)
 
 ```sh
-sudo apt install -y curl
+sudo ufw enable
 
-curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo ufw default deny
 
-sudo apt install -y nodejs
+sudo ufw limit 22
 
-# Node.js가 설치되었으므로 버전을 확인합니다.
-node -v
+sudo ufw allow 80
 
-# corepack enable
-sudo corepack enable
+sudo ufw allow 443
 ```
 
 http\://localhost에 접속하여 \*Welcome to nginx!\*라고 표시되면 OK.\
 curl에서 확인하는 것도 좋은 방법입니다.\
-curl에서 확인하는 것도 좋은 방법입니다.\*Congratulations!\*라고 표시되면 OK.\*Congratulations!\*라고 표시되면 OK.생성된 .pem 파일의 경로는 나중에 사용할 것이므로 기록해 두어야 합니다.
+curl에서 확인하는 것도 좋은 방법입니다.
 
 ```sh
 sudo ufw status
@@ -292,13 +286,13 @@ nano /etc/cloudflare/cloudflare.ini
 
 :::tip
 
-이번에는 방화벽으로 ufw를 사용합니다.ufw는 넷필터(iptables)를 사람이 쉽게 조작할 수 있도록 하는 앱입니다.설치 스크립트는 OCI 환경에서는 netfilter를 직접 조작합니다.클라우드의 경우에도 네트워크 설정에서 포트 개방이 필요한 경우가 많습니다.하드웨어 요구 사항으로 CPU는 최신 제품이라면 최소사양으로도 작동합니다.아키텍처는 amd64 및 arm64를 가정합니다.
+이번에는 방화벽으로 ufw를 사용합니다.ufw는 넷필터(iptables)를 사람이 쉽게 조작할 수 있도록 하는 앱입니다.설치 스크립트는 OCI 환경에서는 netfilter를 직접 조작합니다.
 
 :::
 
 ### CloudFlare
 
-HTTPS･WSS 통신에 사용할 인증서를 CloudFlare를 사용하는 방식으로 Let's Encrypt에서 발급받습니다.CloudFlare는 자신의 도메인에 대해 DNS 서버, 리버스 프록시, CDN을 한 번에 제공해 주는 매우 편리한 서비스입니다.\
+CloudFlare는 자신의 도메인에 대해 DNS 서버, 리버스 프록시, CDN을 한 번에 제공해 주는 매우 편리한 서비스입니다.\
 CloudFlare를 경유하지 않고 서버를 공개하는 것도 가능하지만, 매우 편리하기 때문에 도입하는 것이 좋습니다.[**→ CDN 설정**](../resources/cdn/)
 
 [CloudFlare에 가입(https\://dash.cloudflare.com/sign-up)하고, 구매한 도메인을 안내에 따라 등록합니다.
@@ -317,7 +311,7 @@ certbot과 CloudFlare 플러그인 설치하기
 sudo su - misskey
 ```
 
-Cloudflare의 API 키를 얻습니다.아래 절차에 따라 취득합니다.아래 절차에 따라 취득합니다.아래 절차에 따라 취득합니다.
+Cloudflare의 API 키를 얻습니다.아래 절차에 따라 취득합니다.아래 절차에 따라 취득합니다.
 
 1. https\://dash.cloudflare.com/profile/api-tokens에 접속
 2. Global API Key의 View 선택
@@ -339,10 +333,10 @@ dns_cloudflare_api_key = xxxxxxxxxxxxxxxxxxxxxxxxxx
 이를 저장하고 권한을 600으로 설정합니다.
 
 ```sh
-다음 내용을 붙여넣고 적절하게 바꿉니다.다음 내용을 붙여넣고 적절하게 바꿉니다.설정값의 변경이 필요한 부분은 ●, 지금까지의 흐름에서 설정된 값을 사용하는 부분은 ○으로 표시하였습니다.
+nano .config/default.yml
 ```
 
-다음 내용을 붙여넣고 적절하게 바꿉니다.다음 내용을 붙여넣고 적절하게 바꿉니다.준비가 되었으니 명령을 실행합니다.**중간에 있는 2곳의 example.tld는 자신의 것으로 교체**.
+다음 내용을 붙여넣고 적절하게 바꿉니다.준비가 되었으니 명령을 실행합니다.**중간에 있는 2곳의 example.tld는 자신의 것으로 교체**.
 
 ```sh
 sudo certbot certonly --dns-cloudflare --dns-cloudflare-credentials /etc/cloudflare/cloudflare.ini --dns-cloudflare-propagation-seconds 60 --server https://acme-v02.api.letsencrypt.org/directory -d example.tld -d *.example.tld
@@ -487,7 +481,7 @@ NODE_ENV=production pnpm run build
 
 :::tip
 
-개발 환경의 경우 `NODE_ENV=production`은 필요하지 않습니다.이후 명령어에서도 마찬가지로 삭제해 주세요.이후 명령어에서도 마찬가지로 삭제해 주세요.이후 명령어에서도 마찬가지로 삭제해 주세요.
+개발 환경의 경우 `NODE_ENV=production`은 필요하지 않습니다.이후 명령어에서도 마찬가지로 삭제해 주세요.이후 명령어에서도 마찬가지로 삭제해 주세요.
 
 :::
 
@@ -496,7 +490,6 @@ NODE_ENV=production pnpm run build
 RAM 부족이 원인일 수 있습니다.
 
 미스키의 빌드 및 데이터베이스 마이그레이션(초기화 포함)을 위해서는 2GB 이상의 RAM이 필요합니다.\
-RAM이 부족한 경우 다음과 같은 해결책을 생각해 볼 수 있습니다.\
 RAM이 부족한 경우 다음과 같은 해결책을 생각해 볼 수 있습니다.\
 RAM이 부족한 경우 다음과 같은 해결책을 생각해 볼 수 있습니다.
 
@@ -607,7 +600,7 @@ sudo systemctl enable misskey
 sudo systemctl start misskey
 ```
 
-systemctl로 데몬의 상태를 확인합니다.실행에 시간이 조금 걸리므로 15초 정도 기다렸다가 시작하는 것이 좋습니다.실행에 시간이 조금 걸리므로 15초 정도 기다렸다가 시작하는 것이 좋습니다.
+systemctl로 데몬의 상태를 확인합니다.실행에 시간이 조금 걸리므로 15초 정도 기다렸다가 시작하는 것이 좋습니다.
 
 ```sh
 sudo systemctl status misskey
@@ -615,7 +608,7 @@ sudo systemctl status misskey
 
 active라면 OK.
 
-**이것으로 Misskey 설치가 거의 완료되었습니다.**\*\*\*\*
+**이것으로 Misskey 설치가 거의 완료되었습니다.**\*\*
 
 Misskey 서버에 자신의 계정을 등록하고 로그인하여 설정을 진행합니다.
 
