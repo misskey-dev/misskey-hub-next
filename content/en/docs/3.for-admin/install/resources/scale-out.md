@@ -4,7 +4,7 @@ As the number of your users increase, it becomes necessary to improve the specs 
 
 ## PostgreSQL Replication
 
-PostgreSQL replication allows you to distribute the database load across multiple servers, Please refer to the PostgreSQL documentation for details on replication.(excerpt)(excerpt)
+PostgreSQL replication allows you to distribute the database load across multiple servers, Please refer to the PostgreSQL documentation for details on replication.(excerpt)
 
 ```yml
 # Set to true if replication is used
@@ -38,7 +38,7 @@ Misskey uses Redis for a variety of purposes, including
 - Storing notifications and other information
 - Pub/Sub for global events
 
-Misskey can be configured to use a different Redis server for each of these uses, allowing the load to be distributed across multiple servers.(excerpt)(excerpt)
+Misskey can be configured to use a different Redis server for each of these uses, allowing the load to be distributed across multiple servers.(excerpt)
 
 ```yml
 redisForPubsub:
