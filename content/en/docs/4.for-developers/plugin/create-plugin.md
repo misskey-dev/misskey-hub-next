@@ -8,7 +8,7 @@ Plugins are scripts written using AiScript.
 
 ## Metadata
 
-Plugins must use AiScript's metadata feature to define the plugin's metadata as the default.Example of some metadata are:Example of some metadata are:Example of some metadata are:
+Plugins must use AiScript's metadata feature to define the plugin's metadata as the default.Example of some metadata are:Example of some metadata are:
 
 ```AiScript
 /// @ 0.12.4
@@ -32,7 +32,7 @@ Plugin author
 
 ### version
 
-Plugin version.A number must be specified.A number must be specified.A number must be specified.
+Plugin version.A number must be specified.A number must be specified.
 
 ### description
 
@@ -40,15 +40,15 @@ Plugin description
 
 ### permissions
 
-Permissions required by the plugin.Permissions required by the plugin.Permissions required by the plugin.Used when making requests to the Misskey API.
+Permissions required by the plugin.Permissions required by the plugin.Used when making requests to the Misskey API.
 
 ### config
 
-An object representing the plugin's settings. Keys are setting names and values are any of the below properties.
+An object representing the plugin's settings. Keys are setting names and values are any of the below properties. Please refer to the [Plugin API Reference](./plugin-api-reference/) for information on what APIs are available.
 
 #### type
 
-A string representing the setting's value type.Can be either a string, number, or boolean.Can be either a string, number, or boolean.Can be either a string, number, or boolean.
+A string representing the setting's value type.Can be either a string, number, or boolean.Can be either a string, number, or boolean.
 
 #### label
 
@@ -70,4 +70,4 @@ Misskey Web exposes APIs for Plugins, which can be used to extend client functio
 
 Starting with v2023.11.0, you can install plugins directly from your website with one click.
 
-Please refer to the [Plugin API Reference](./plugin-api-reference/) for information on what APIs are available.If you want to provide plugin installation functionality, you will need to implement an API on your site.For more information, please see [here](./publish-on-your-website.md).For more information, please see [here](./publish-on-your-website.md).
+If you want to provide plugin installation functionality, you will need to implement an API on your site.For more information, please see [here](./publish-on-your-website.md).For more information, please see [here](./publish-on-your-website.md).
