@@ -5,14 +5,14 @@
 <MkSchemaViewer :schema="{
 type: 'object',
 properties: {
-reaction: {
- type: 'string',
- description: 'リアクションの種類',
-},
-userId: {
- type: 'string',
- description: 'リアクションを行ったユーザーのID',
-},
+ reaction: {
+ 	type: 'string',
+ 	description: 'リアクションの種類',
+ },
+ userId: {
+ 	type: 'string',
+ 	description: 'リアクションを行ったユーザーのID',
+ },
 }
 }"/>
 
@@ -23,14 +23,14 @@ userId: {
 <MkSchemaViewer :schema="{
 type: 'object',
 properties: {
-choice: {
- type: 'number',
- description: '選択肢ID',
-},
-userId: {
- type: 'string',
- description: '投票を行ったユーザーのID',
-},
+ choice: {
+ 	type: 'number',
+ 	description: '選択肢ID',
+ },
+ userId: {
+ 	type: 'string',
+ 	description: '投票を行ったユーザーのID',
+ },
 }
 }"/>
 
@@ -41,10 +41,10 @@ userId: {
 <MkSchemaViewer :schema="{
 type: 'object',
 properties: {
-deletedAt: {
- type: 'string',
- description: '削除日時',
-},
+ deletedAt: {
+ 	type: 'string',
+ 	description: '削除日時',
+ },
 }
 }"/>
 
