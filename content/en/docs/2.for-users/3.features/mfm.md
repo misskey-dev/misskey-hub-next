@@ -24,7 +24,6 @@ Some of its syntax is compatible with Markdown and HTML.
 ### Mentions
 
 `@` + username can be used to display a specific user.
-:::tip
 
 For more information about mentions, see [here](./mention.md).
 
@@ -44,8 +43,7 @@ For more information about mentions, see [here](./mention.md).
 
 ### Hashtags
 
-`#` + tag can be used to display a hashtag.
-:::tip
+`#` + tag can be used to display a hashtag. :::tip
 
 For more information about hashtags, see [here](./hashtag.md).
 
@@ -69,7 +67,7 @@ https://example.com
 
 ### Links
 
-Specific parts of text can be displayed as a URL.
+Specific parts of text can be displayed as a URL. \`. Yomigana can be attached to text. Flip
 
 ```
 [example link](https://example.com)
@@ -77,7 +75,7 @@ Specific parts of text can be displayed as a URL.
 
 :::tip
 
-You can hide the link preview by prefixing the link text with `? `.
+You can hide the link preview by prefixing the link text with \`?
 
 ```
 ?[example link](https://example.com)
@@ -174,7 +172,7 @@ Displays multi-line syntax highlighting for code from programs in a block.
 }
 ```
 
-### Flip
+### Rotate
 
 Flips content horizontally or vertically.
 
@@ -204,7 +202,7 @@ $[font.monospace MisskeyでFediverseの世界が広がります]
 $[font.cursive MisskeyでFediverseの世界が広がります]
 $[font.fantasy MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
-### Blur
+### Shrink
 
 Content can be blurred.When hovering the mouse over the content, it will be displayed clearly.
 
@@ -240,7 +238,7 @@ $[bg.color=ff0 黄背景]"></MfmPreview>
 
 ### Border
 
-Content can be surrounded borders.The borders can have various styles.
+Content can be surrounded borders.The borders can have various styles.The borders can have various styles.
 
 ```
 $[border.style=solid,width=4 Default]
@@ -334,7 +332,7 @@ $[jelly 🍮] $[jelly.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[jelly 🍮] $[jelly.speed=5s 🍮]]"></MfmPreview>
 
-### Animation (Tada)
+### Animation (Twitch)
 
 ```
 $[tada 🍮] $[tada.speed=5s 🍮]
@@ -358,7 +356,7 @@ $[bounce 🍮] $[bounce.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[bounce 🍮] $[bounce.speed=5s 🍮]]"></MfmPreview>
 
-### Animation (Spin)
+### Animation (Shake)
 
 ```
 $[spin 🍮] $[spin.left 🍮] $[spin.alternate 🍮]
@@ -373,7 +371,7 @@ $[spin.x 🍮] $[spin.x,left 🍮] $[spin.x,alternate 🍮]
 $[spin.y 🍮] $[spin.y,left 🍮] $[spin.y,alternate 🍮]
 $[spin.speed=5s 🍮]]"></MfmPreview>
 
-### Animation (Shake)
+### Animation (Spin)
 
 ```
 $[shake 🍮] $[shake.speed=5s 🍮]
@@ -381,7 +379,7 @@ $[shake 🍮] $[shake.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[shake 🍮] $[shake.speed=5s 🍮]]"></MfmPreview>
 
-### Animation (Twitch)
+### Animation (Tada)
 
 ```
 $[twitch 🍮] $[twitch.speed=5s 🍮]
