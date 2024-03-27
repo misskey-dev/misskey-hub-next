@@ -8,9 +8,6 @@ In the original workflow when a new release happens, it will be pushed to Docker
 ※ Docker Hub may have a tag like `<branch name>`, but those tags are not automatically pushed.\
 \
 \
-※ Docker Hub may have a tag like `<branch name>`, but those tags are not automatically pushed.\
-\
-\
 ※ Docker Hub may have a tag like `<branch name>`, but those tags are not automatically pushed.
 
 Executing this workflow in a fork will fail.
@@ -24,16 +21,10 @@ In the following information, we describe how to make the Fork push to its own D
 3. Create two [encrypted secrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-encrypted-secrets-for-a-repository) on GitHub.\
    Create two [encrypted secrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-encrypted-secrets-for-a-repository) on GitHub.\
    \
-   You need to create `DOCKER_USERNAME` and `DOCKER_PASSWORD`, which are the Docker Hub username and password, respectively.\
-   Create two [encrypted secrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-encrypted-secrets-for-a-repository) on GitHub.\
-   \
    You need to create `DOCKER_USERNAME` and `DOCKER_PASSWORD`, which are the Docker Hub username and password, respectively.
 
 ## How to push
 
-The default settings in the workflow will automatically push to Docker Hub upon a new release.\
-\
-Specifically, when a release is made using GitHub's release function it is pushed to Docker Hub with the tags `latest` and `<release name>`\
 The default settings in the workflow will automatically push to Docker Hub upon a new release.\
 \
 Specifically, when a release is made using GitHub's release function it is pushed to Docker Hub with the tags `latest` and `<release name>`\
@@ -42,11 +33,8 @@ Specifically, when a release is made using GitHub's release function it is pushe
 
 You can also push manually from GitHub.\
 You can also push manually from GitHub.\
-You can also push manually from GitHub.\
 \
 To do so, go to Actions => Publish Docker image => Run workflow and then select a branch.\
-\
-However doing this will make it push with a tag labeled as `<branch name>`.\
 \
 However doing this will make it push with a tag labeled as `<branch name>`.\
 \
