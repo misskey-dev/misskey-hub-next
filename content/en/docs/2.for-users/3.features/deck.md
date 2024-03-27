@@ -17,7 +17,7 @@ Columns can be arranged not only horizontally but also vertically. Open the colu
 
 ## Column settings
 
-Column settings can be edited by selecting "Edit" from the column menu.Columns can be renamed and their widths can be changed.Columns can be renamed and their widths can be changed.
+Column settings can be edited by selecting "Edit" from the column menu.Columns can be renamed and their widths can be changed.
 
 ## Deck settings
 
