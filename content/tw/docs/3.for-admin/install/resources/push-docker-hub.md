@@ -5,7 +5,6 @@
 オリジナルリポジトリでは、リリースされたタイミングで `latest`, `<リリース名>` それぞれのタグでDocker Hubにpushされます。\
 \
 \
-\
 ※ Docker Hub に`<ブランチ名>`のようなタグがあるかもしれませんが、こちらは自動push対象ではありません。
 
 Fork先でこのワークフローを実行すると失敗します。
@@ -19,7 +18,6 @@ Fork先でこのワークフローを実行すると失敗します。
 3. GitHubにて [暗号化されたシークレット](https://docs.github.com/ja/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) を作成します。\
    \
    \
-   \
    作成が必要なのは `DOCKER_USERNAME` と `DOCKER_PASSWORD` で、それぞれDocker Hubのユーザーとパスワードになります。
 
 ## pushする方法
@@ -27,15 +25,12 @@ Fork先でこのワークフローを実行すると失敗します。
 上記設定によりリリース時に自動的にDocker Hubにpushされるようになります。\
 \
 \
-\
 具体的には、GitHubのリリース機能でリリースしたタイミングで `latest`, `<リリース名>` それぞれのタグでDocker Hubにpushされます。
 
 また、GitHub上から手動でpushすることも出来ます。\
 \
 \
-\
 それを行うには、Actions => Publish Docker image => Run workflow からbranchを選択してワークフローを実行します。\
-\
 \
 \
 ただし、この場合作成されるタグは`<ブランチ名>`になります。
