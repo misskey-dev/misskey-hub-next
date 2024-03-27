@@ -13,6 +13,7 @@ browse: "参照"
 settings: "設定"
 goToLegacyHub: "従来のMisskey Hub"
 contactUs: "お問い合わせ"
+reset: "やりなおす"
 
 _error:
   notFound: "ページが見つかりませんでした"
@@ -198,6 +199,38 @@ _brandAssets:
 _contact:
   title: "お問い合わせ"
   description: "Misskey Projectへのお問い合わせはこちらから"
+  _preFill:
+    q1:
+      question: "どちら様ですか？"
+      options:
+        user: "個人"
+        company: "法人・団体"
+        developer: "開発者・サーバー管理者"
+        apDeveloper: "他のActivityPub関連ソフトウェアの開発者"
+        other: "その他"
+    q2:
+      question: "お問い合わせの種類を選択してください。"
+      options:
+        report: "バグ報告"
+        request: "機能リクエスト"
+        contactToMember: "開発メンバーへの直接のお問い合わせ"
+        sponsor: "スポンサーについて"
+        press: "取材のお問い合わせ"
+        other: "その他"
+    q3a:
+      question: "このフォームに報告する前にサーバー管理者に問い合わせましたか？"
+      options:
+        yes: "はい"
+        no: "いいえ"
+        iAmAdmin: "私が管理者です"
+    result:
+      github: "バグ報告・機能リクエストはGitHubより受け付けております。"
+      goToGitHub: "GitHubへ"
+      reportToAdminFirst: "まずはサーバー管理者にお問い合わせください。"
+      thankYouForYourCooperation: "スムーズな対応のため、ご協力をお願いいたします。"
+      form: "こちらのフォームからご回答ください。"
+      formGoogleAccountRequired: "現在、スパム対策のため、回答にはGoogleアカウントが必要となっております。ご理解のほどよろしくお願い致します。"
+      formLink: "フォームへ進む"
 
 _links:
   title: "リンク"
