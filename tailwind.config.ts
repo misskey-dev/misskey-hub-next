@@ -43,7 +43,7 @@ export default <Config> {
     },
     fontFamily: {
       ...defaultTheme.fontFamily,
-      'title': ['Capriola', 'var(--mi-localized-font, \'\')', ...defaultTheme.fontFamily.sans],
+      'title': ['Jellee', 'var(--mi-localized-font, \'\')', ...defaultTheme.fontFamily.sans],
       'sans': ['Nunito', 'var(--mi-localized-font, \'\')', ...defaultTheme.fontFamily.sans],
       'content-sans': ['Nunito', 'var(--mi-localized-font-p, var(--mi-localized-font))', ...defaultTheme.fontFamily.sans],
     }
