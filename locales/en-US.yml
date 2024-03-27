@@ -7,12 +7,12 @@ share: "Share"
 note: "Note"
 other: "Other"
 add: "Add"
-generate: "生成"
-download: "ダウンロード"
+generate: "Generate"
+download: "Download"
 browse: "Browse"
 settings: "Settings"
 goToLegacyHub: "Legacy Misskey Hub"
-contactUs: "お問い合わせ"
+contactUs: "Contact"
 _error:
   notFound: "Page not found"
   notFoundDesc: "The page you are looking for could not be found. Please check the URL."
@@ -185,8 +185,11 @@ _brandAssets:
   banner: "Banner"
   avatarDecorationTemplate: "Avatar Decoration Template"
 _contact:
-  title: "お問い合わせ"
-  description: "Misskey Projectへのお問い合わせはこちらから"
+  title: "Contact"
+  description: "Get in touch with the Misskey Project"
+  form: "To send us an inquiry, please fill out this form."
+  formGoogleAccountRequired: "Currently, we ask you to have a Google Account to submit your inquiry in order to deal with serious spam.\nWe apologize for the inconvenience and thank you for your understanding."
+  formLink: "Go to the form"
 _links:
   title: "Links"
   _github:
@@ -320,10 +323,10 @@ _customEmojiPreview:
   _placeholder:
     noteText: "Custom emoji will appear like this → :emoji_preview_1:\nYou can rewrite the text and test its usability✨."
 _identiconGenerator:
-  title: "初期アイコンジェネレーター"
-  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
-  userName: "ユーザー名"
-  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
+  title: "Identicon Generator"
+  description: "You can generate an initial icon that will be specified by default when you register with Misskey."
+  userName: "Username"
+  includeDomain: "Specify the full user name, including the server's domain name."
 _api:
   _permissions:
     title: "Permissions"
