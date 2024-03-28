@@ -7,12 +7,12 @@ share: "Bagikan"
 note: "Catatan"
 other: "Lainnya"
 add: "Tambahkan"
-generate: "生成"
-download: "ダウンロード"
+generate: "Hasilkan"
+download: "Unduh"
 browse: "Jelajahi"
 settings: "Pengaturan"
 goToLegacyHub: "Misskey Hub Jadul"
-contactUs: "お問い合わせ"
+contactUs: "Hubungi kami"
 _error:
   notFound: "Halaman Tidak Ditemukan"
   notFoundDesc: "Halaman yang kamu cari tidak dapat ditemukan. Mohon cek kembali URL yang kamu tuju."
@@ -185,11 +185,11 @@ _brandAssets:
   banner: "Banner"
   avatarDecorationTemplate: "Templat Dekorasi Avatar"
 _contact:
-  title: "お問い合わせ"
-  description: "Misskey Projectへのお問い合わせはこちらから"
-  form: "こちらのフォームからご回答ください。"
-  formGoogleAccountRequired: "現在、スパム対策のため、お問い合わせの送信にはGoogleアカウントが必要となっております。\nお手数をおかけしますが、ご理解のほどよろしくお願い致します。"
-  formLink: "フォームへ進む"
+  title: "Hubungi kami"
+  description: "Berhubung dengan Proyek Misskey"
+  form: "Apabila kamu ingin mengirimkan kami sebuah pertanyaan, kamu dapat mengirimkannya dengan mengisi form ini."
+  formGoogleAccountRequired: "Untuk saat ini, kami meminta kamu untuk memiliki akun Google ketika mengirimkan pesan kepada kami. Hal ini dikarenakan untuk pencegahan spam yang serius. Kami mohon maaf atas ketidak nyamanan ini dan berterima kasih banyak atas pengertiannya."
+  formLink: "Pergi ke form"
 _links:
   title: "Tautan"
   _github:
@@ -323,10 +323,10 @@ _customEmojiPreview:
   _placeholder:
     noteText: "Emoji kustom akan muncul seperti ini → :emoji_preview_1:\nKamu dapat menulis ulang teks dan mencoba kegunaannya ✨."
 _identiconGenerator:
-  title: "初期アイコンジェネレーター"
-  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
-  userName: "ユーザー名"
-  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
+  title: "Penghasil Identicon"
+  description: "Kamu dapat menghasilkan ikon inisial yang dapat ditentukan secara bawaan ketika kamu mendaftar dengan Misskey."
+  userName: "Nama Pengguna"
+  includeDomain: "Tentukan nama lengkap pengguna, termasuk dengan nama domain peladen."
 _api:
   _permissions:
     title: "Hak akses"
