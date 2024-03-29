@@ -34,7 +34,6 @@ sudo corepack enable
 ## 사용자 생성
 
 Misskey는 루트 사용자로 실행하지 않는 것이 좋으므로, 대신 사용자를 생성합니다.
-데비안 예시:
 
 ```sh
 sudo -iu misskey
@@ -45,7 +44,7 @@ git submodule update --init
 NODE_ENV=production pnpm install --frozen-lockfile
 ```
 
-## 설정
+## misskey 서비스 시작
 
 ```sh
 sudo -iu misskey
@@ -64,13 +63,11 @@ NODE_ENV=production pnpm install --frozen-lockfile
 cp .config/example.yml .config/default.yml
 ```
 
-다음 명령어로 Misskey를 빌드하고 데이터베이스를 초기화합니다.
-이 작업은 시간이 좀 걸립니다.
+파일 내 지침에 따라 `default.yml`을 편집합니다.
 
 ## 빌드 및 초기화
 
 다음 명령어로 Misskey를 빌드하고 데이터베이스를 초기화합니다.
-이 작업은 시간이 좀 걸립니다.
 
 ```sh
 NODE_ENV=production pnpm run build
@@ -79,7 +76,7 @@ pnpm run init
 
 ## 실행
 
-수고하셨습니다.아래 명령어로 Misskey를 실행할 수 있습니다.
+수고하셨습니다.수고하셨습니다.아래 명령어로 Misskey를 실행할 수 있습니다.
 
 ```sh
 NODE_ENV=production pnpm run start
@@ -89,7 +86,7 @@ systemd 서비스 파일 생성하기
 
 `/etc/systemd/system/misskey.service`
 
-편집기에서 열어, 다음 코드를 붙여넣고 저장합니다.
+systemd 서비스 파일 생성하기
 
 `/etc/systemd/system/misskey.service`
 
@@ -175,5 +172,6 @@ sudo systemctl restart misskey
 
 - `pnpm run clean` 또는 `pnpm run clean-all`을 실행합니다.
 - `pnpm rebuild`
+  :::
 
 :::

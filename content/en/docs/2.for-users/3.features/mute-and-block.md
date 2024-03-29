@@ -1,66 +1,64 @@
-# ミュートとブロック
+# Mutes and Blocks
 
-好みではないユーザーがいる場合は、ミュートを行うことでそのユーザーが自分から見えないようにすることができます。
-また、より強力な措置として、ブロックを行うことでそのユーザーから自分のコンテンツが見えないようになるほか、自分に対して関わることができないようにすることができます。
-ミュートされていることは相手は分かりませんが、ブロックされていることは相手に分かります。どちらを選ぶかはご自身の判断で行ってください。
+If you don't like someone, you can mute them so they're no longer visible to you. Or, as a more powerful measure, you can block someone so they can't see your content or interact with you. The other person won't know that they are muted, but they will know that they are blocked.It is up to you to decide which one to use.
 
 :::tip
 
-ミュートとブロックは併用できます。
+Mutes and blocks can be used together.
 
 :::
 
 :::warning
 
-利用規約に違反するような、迷惑なユーザーがいる場合は運営者に報告することも検討してください。
+If there are any troublesome users who violate the terms of service, please consider reporting them to the administrator.
 
 :::
 
-Misskey Webでは、設定>ミュートとブロック から、自分がミュートまたはブロックしているユーザー一覧を確認することができます。
+On Misskey Web, you can view the users you have muted or blocked by going to Settings > Mutes and Blocks.
 
-## ミュート
+## Mute
 
-ユーザーをミュートすると、そのユーザーに関する次のコンテンツがMisskeyに表示されなくなります:
+When you mute a user, the following content about that user will no longer appear in Misskey:
 
-- タイムラインや投稿の検索結果内の、そのユーザーの投稿(およびそれらの投稿に対する返信やRenote)
-- そのユーザーからの通知
-- メッセージ履歴一覧内の、そのユーザーとのメッセージ履歴
-- など
+- Their notes on your timeline and search results (including replies and renotes from them)
+- Notifications from them
+- History of messages with them
+- etc.
 
-Misskey Webでユーザーをミュートするには、対象のユーザーのユーザーページのメニューを開き、「ミュート」ボタンを押します。
+To mute a user on Misskey Web, open the menu on the target user's page and press the "Mute" button.
 
 :::tip
 
-ミュートを行ったことは相手に通知されず、ミュートされていることを知ることもできません。
+The other person won't be notified that you've muted them, nor will they know that they've been muted.
 
 :::
 
-## ブロック
+## Block
 
-ユーザーをブロックすると、そのユーザーからあなたのコンテンツが見えないようになり、またあなたに対して以下のようなアクションをすることができなくなります。
+Blocking a user prevents them from seeing your content and from taking any of the following actions against you:
 
-- フォローする
-- ユーザーリストに追加する
-- 返信する、Renoteする
-- リアクションする、アンケートに投票する
-- メッセージを送信する
-- など
+- Following you
+- Adding you to their user list
+- Replying to you, renoting you
+- Reacting, voting in surveys
+- Sending messages to you
+- etc.
 
-また、
+In addition:
 
-- ブロックする際に既にそのユーザーからフォローされていた場合はフォローが解除されます。
-- ブロックする際に既にそのユーザーがあなたをユーザーリストに入れていた場合はそのリストからあなたが削除されます。
+- If the user is already following you when you block them, their follow will be removed.
+- If the user already has you on their user list when you block them, you will be removed from it.
 
-Misskey Webでユーザーをブロックするには、対象のユーザーのユーザーページのメニューを開き、「ブロック」ボタンを押します。
+To block a user on Misskey Web, open the menu on the target user's page and press the "Block" button.
 
 :::warning
 
-ブロックを行ったこと自体は相手に通知されませんが、フォローを行ったりなどの上記のアクションが行えなくなるので間接的にブロックされていることは分かります。
+The person will not be notified that you have blocked them, but they may be able to figure it out indirectly - as they will no longer be able to perform the actions listed above.
 
 :::
 
 :::warning
 
-相手から自分のコンテンツが見えなくなりますが、相手がアカウントを切り替えたりログアウト状態になれば見ることができます。あくまで簡易的、補助的なものとしてお考えください。
+Your content will not be visible to the other user, but they may be able to if they switch accounts or log out.Please think of this as a simple and supplementary tool.
 
 :::

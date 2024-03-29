@@ -14,15 +14,15 @@ Dengan menggunakan fitur pengumuman, kamu dapat memposting pengumuman kepada pen
 
 :::
 
-## Gaya Tampilan
+## 表示形式
 
-Kamu dapat memilih beberapa tipe gaya tampilan berikut.
+お知らせの表示形式を以下の種類から選択することができます。
 
-- **Normal** ... Pengumuman akan diposting ke halaman Pengumuman.
-- **Banner** ... Sebagai tambahan dari halaman pengumuman, banner akan ditampilkan pada posisi paling atas dari layar pengguna.
-- **Dialog** ... Sebagai tambahan dari halaman pengumuman, dialog modal akan ditampilkan ketika pengguna membuka situs peladen.
-  - Sangat direkomendasikan untuk berhati-hati ketika terdapat dua atau lebih pengumuman yang ditampilkan dengan tipe dialog secara bersamaan, dikarenakan nantinya akan berdampak pada pengalaman pengguna (UX).
+- **通常** ... お知らせ一覧ページにお知らせが掲載されます。
+- **バナー** ... お知らせ一覧ページへの掲載に加えて、クライアントの画面上部にバナーとして表示されます。
+- **ダイアログ** ... お知らせ一覧ページへの掲載に加えて、クライアント起動時にモーダル ダイアログとして表示されます。
+  - ダイアログ形式のお知らせが同時に2つ以上ある場合、UXに悪影響を及ぼす可能性が非常に高いため、使用は慎重に行うことを推奨します。
 
-## Membuat Pengumuman
+## お知らせの作成
 
 TODO

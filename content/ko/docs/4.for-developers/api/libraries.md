@@ -25,6 +25,7 @@ description: Misskey API 관련 라이브러리 목록
 ## Dart / Flutter
 
 - [misskey](https://github.com/misskey-dart/misskey)
+- [misskey_dart](https://github.com/shiosyakeyakini-info/misskey_dart)
 
 ## Go
 

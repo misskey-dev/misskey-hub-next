@@ -1,6 +1,6 @@
 # Charts
 
-Misskey has a feature that displays and generates charts from various server data sources. With charts, you can know server usage and federation status, each user's activities visually.
+Misskey has a feature that displays and generates charts from various server data sources.
 
 The server chart can be displayed on the Server Information page.
 
@@ -12,19 +12,19 @@ Charts about federated servers.
 
 ### Pub
 
-The number of servers providing activity. In other words, it displays the number of unique remote users that follow self-server users.
+Unique number of self-server that has sent activities to remote servers.
 
 ### Sub
 
-The number of users receiving activities. In other words, it displays the number of unique number of remote users belonging to the remote server being followed by self-server users.
+Unique number of remote servers that have sent activity to the self-server.
 
 ### Received
 
-Unique number of remote servers that have sent activity to the self-server.
+The number of users receiving activities.
 
 ### Delivered
 
-Unique number of self-server that has sent activities to remote servers.
+The number of servers providing activity.
 
 ### Stalled
 

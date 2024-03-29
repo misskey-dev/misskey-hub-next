@@ -167,5 +167,6 @@ Apabila kamu menemukan masalah pada saat memutakhirkan, coba jalankan perintah b
 
 - `pnpm run clean` atau `pnpm run clean-all`
 - `pnpm rebuild`
+  :::
 
 :::

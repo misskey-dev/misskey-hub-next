@@ -1,12 +1,13 @@
 # Nginx configuration
 
 1. Create `/etc/nginx/conf.d/misskey.conf` or `/etc/nginx/sites-available/misskey.conf` and copy the following example to the file.\
+   （The file name does not have to be "misskey".)\
    （The file name does not have to be "misskey".)
 2. Edit as follows:
-   1. Replace example.tld with the domain you have prepared.\
+   1. Replace example.tld with the domain you have prepared.Replace example.tld with the domain you have prepared.\
       `ssl_certificate` and `ssl_certificate_key` should be the path to the certificate obtained from Let's Encrypt.
    2. If using a CDN such as Cloudflare, remove 4 lines from "If it's behind another reverse proxy or CDN, remove the following."
-3. If you create `/etc/nginx/sites-available/misskey.conf`, create symlink as `/etc/nginx/sites-enabled/misskey.conf`.\
+3. If you create `/etc/nginx/sites-available/misskey.conf`, create symlink as `/etc/nginx/sites-enabled/misskey.conf`.If you create `/etc/nginx/sites-available/misskey.conf`, create symlink as `/etc/nginx/sites-enabled/misskey.conf`.\
    `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`
 4. Run `sudo nginx -t` to verify that the configuration file will be loaded successfully.
 5. Run `sudo systemctl restart nginx` to restart nginx.

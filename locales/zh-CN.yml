@@ -1,25 +1,28 @@
 noScript: "JavaScript 目前处于禁用状态。必须启用 JavaScript 才能浏览网站。"
-learnMore: "詳しく知る"
+learnMore: "了解更多"
 loading: "加载中…"
 clickToExpand: "（点击以展开）"
 copy: "复制"
 share: "分享"
-note: "ノート"
+note: "帖子"
 other: "其他"
-add: "追加"
-browse: "参照"
-settings: "設定"
-goToLegacyHub: "従来のMisskey Hub"
+add: "添加"
+generate: "生成"
+download: "ダウンロード"
+browse: "查看"
+settings: "设置"
+goToLegacyHub: "Misskey Hub的历史"
+contactUs: "お問い合わせ"
 _error:
   notFound: "找不到页面"
   notFoundDesc: "找不到您要查找的页面，请检查 URL。"
   generalError: "发生了错误"
-  generalErrorDesc: "これが意図した操作でない場合は、以下から不具合報告をお願いします。"
+  generalErrorDesc: "如果此操作并非出于您本意，请根据指引将问题报告给我们。"
   reportProblem: "报告问题"
-  goToTop: "トップページにもどる"
+  goToTop: "返回主页"
 _seo:
   siteName: "Misskey Hub"
-  siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
+  siteNameLong: "Misskey Hub – Misskey项目官方网站"
   defaultTitleTagline: "ノートでひろがるネットワーク"
   defaultDescription: "【ノートでひろがるネットワーク】分散型SNS Misskeyの公式サイト。Misskeyのはじめかたやサーバー一覧など、Misskeyに関する情報が満載！"
 _nav:
@@ -27,124 +30,127 @@ _nav:
   docs: "文档"
   blog: "博客"
   other: "更多！"
-  switchLang: "语音设定"
+  switchLang: "语言设定"
 _landing:
   _hero:
-    description: "Misskey（ミスキー）はオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
-    gettingStarted: "はじめる"
+    description: "Misskey是一个去中心化开源社交平台。"
+    gettingStarted: "开始"
   _keyFeatures:
     _open:
-      title: "オープン"
-      description: "Misskeyはオープンソースのソフトウェアで、誰でも自由にMisskeyを利用できます。"
+      title: "开放"
+      description: "Misskey是一款开源的软件，任何人都可以自由地使用Misskey。"
     _federated:
-      title: "分散"
-      description: "Misskeyは分散型のプロトコルを実装しているため、異なるサーバーのコミュニティ同士が繋がります。"
+      title: "去中心化"
+      description: "Misskey 采用去中心化协议，将不同服务器上的社区连接起来。"
     _multifunction:
-      title: "高機能"
-      description: "Misskeyは他にはない様々な機能を備えていて、プロのようにmicro-blogging可能です。"
+      title: "功能丰富"
+      description: "Misskey 拥有多种独特的功能，让您可更专业地发帖。"
     _customizable:
-      title: "高カスタマイズ性"
-      description: "Misskeyの柔軟なWebインターフェイスにより、自分好みのUIを作れます。"
+      title: "高度可定制"
+      description: "Misskey 有灵活的 Web 界面，你可以按喜好自己定制页面的样式。"
   _decenterized:
-    title: "Misskeyは{0}"
-    decenterizedPlatform: "分散型プラットフォーム"
-    description: "Misskeyはフリーかつオープンなプロジェクトで、誰でも自由にMisskeyを使ったサーバーを作成できるため、既に様々なサーバーがインターネット上に公開されています。また重要な特徴として、Misskeyは{0}と呼ばれる分散通信プロトコルを実装しているので、どのサーバーを選んでも他のサーバーのユーザーとやりとりすることができます。これが分散型と言われる所以で、単一の運営者によって単一のURLで公開されるような、Twitterなどの他サービスとは根本的に異なっています。サーバーによって主な話題のテーマやユーザー層、言語などは異なり、自分にあったサーバーを探すのも楽しみのひとつです(もちろん自分のサーバーを作るのも一興です)。"
+    title: "Misskey 是{0}"
+    decenterizedPlatform: "去中心化平台"
+    description: "Misskey 是一个自由开放的项目，任何人都可以自由地使用 Misskey 创建服务器，因此互联网上已经诞生了各种各样的服务器。 此外，Misskey 实现了一个名叫{0}的分布式通信协议。因此，无论您选择哪台服务器，都可以与其他服务器上的用户交互。 这就是它被称为去中心化的原因，也是它与 Twitter 等其他服务的根本不同之处。 不同服务器的主要话题、用户群和语言各不相同，找到适合自己的服务器也是乐趣之一（当然，创建自己的服务器也很有趣哦）。"
     activityPub: "ActivityPub"
   _features:
     _root:
-      title: "主な機能"
-      description: "Misskeyは一般的なものから特別なものまで、様々な機能を持っています。その一部を紹介します。"
+      title: "主要功能"
+      description: "Misskey 有丰富的功能，从各家都有的功能到 Misskey 独有的功能。这里来介绍一些。"
     _note:
-      title: "ノート"
-      description: "Misskeyでは、ユーザーの投稿は「ノート」と呼ばれます。他のノートを引用したり、画像、動画、オーディオ、その他の任意のファイルを添付することもできます。"
+      title: "帖子"
+      description: "在 Misskey 中，您可以引用其他帖子并附加图片、视频、音频或任何其他文件。"
     _federation:
-      title: "連合"
-      description: "オープンな分散プロトコルであるActivityPubを実装しているため、他のMisskeyサーバーだけでなく、ActivityPubをサポートする他のソフトウェアともやりとりできます。"
+      title: "联合"
+      description: "Misskey 实现了 ActivityPub 这一分布式协议，因此可以与其他支持 ActivityPub 的软件以及其他 Misskey 服务器交互。"
     _reaction:
-      title: "リアクション"
-      description: "ノートには「リアクション」を付けることができ、簡単・気軽に自分のフィーリングを表現して伝えることが出来ます。"
+      title: "回应"
+      description: "您可以在帖子中添加 \"回应\"，轻松传达和交流您的感受。"
     _drive:
-      title: "ドライブ"
-      description: "アップロードしたファイルを管理するインターフェイスがあります。そのため、お気に入りの画像をフォルダにまとめたり、再度共有することも簡単に行えます。"
+      title: "网盘"
+      description: "Misskey 的网盘功能可以让你轻松地将收藏收藏的图片上传到网盘、整理到文件夹中，以供分享。"
     _theme:
-      title: "テーマ"
-      description: "自分の好きなデザインでMisskeyを使えます。もちろんダークモードも完全サポート。自分で高度にテーマを作ることも可能です。"
+      title: "主题"
+      description: "您可以将 Misskey 定制为喜欢的主题。 Misskey 完全支持深色模式，此外，您还可以创建自己的高级主题。"
     _thread:
-      title: "スレッド"
-      description: "もちろんノートはスレッドにすることができ、気が済むまで会話を続けられます。"
+      title: "帖文串"
+      description: "您可以将帖子串起来，形成一个长长的串，持续交流，直到满意为止。"
     _charts:
-      title: "チャート"
-      description: "Misskeyは組み込みのチャートエンジンを備えていて、サーバーの利用状況などが簡単に可視化できます。"
+      title: "图标"
+      description: "Misskey 内置图表引擎，可轻松实现服务器的使用情况和其他信息的可视化。"
     _widgets:
-      title: "ウィジェット"
-      description: "様々な種類のウィジェットを配置し、UIを好みにカスタマイズできます。"
+      title: "小组件"
+      description: "你可以放置各种类型的小部件，根据喜好定制界面。"
   _getStarted:
-    title: "Misskeyをはじめよう"
+    title: "开始使用 Misskey"
     _find:
-      title: "サーバーを見つける"
-      list: "サーバーのリスト"
+      title: "寻找服务器"
+      list: "服务器列表"
     _create:
-      title: "サーバーを作成"
-      guide: "セットアップガイド"
+      title: "创建服务器"
+      guide: "配置指南"
     _docs:
-      title: "さらに詳しく知る"
-      docs: "ドキュメントを見る"
+      title: "了解更多信息"
+      docs: "阅读文档"
   _donation:
-    title: "寄付のお願い"
-    description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
+    title: "请捐赠"
+    description: "Misskey 是非营利的，我们依靠您的捐款来资助它的发展。所以如果您喜欢 Misskey，请支持我们，以便我们能够继续开发它。"
   _sponsors:
     title: "赞助者"
 _servers:
   title: "服务器列表"
-  description: "Misskeyは単一のサービスではなく、各々がサービスを提供する分散型ネットワークとなっています。Misskeyを利用するには、サービスを提供しているサーバーでアカウントを作成する必要があります。"
+  description: "Misskey 不是一个单一的服务，而是由一个个服务组成的分布式网络。欲使用 Misskey，您需要在提供服务的服务器上注册一个账户。"
   addYourServer: "あなたのサーバーが表示されませんか？{0}から登録してください！"
-  addYourServerLink: "こちら"
+  addYourServerLink: "这里"
   _system:
-    fetchError: "データの読み込みに失敗しました。後でもう一度お試しください。"
+    fetchError: "无法加载。请稍后重试。"
   _statistics:
     title: "服务器统计数据"
-    description: "Misskeyサーバーの統計データをグラフでご紹介。"
-    viewFullStats: "詳しい統計を見る"
-    lang: "プライマリ言語"
-    registerAcceptance: "新規登録受付方式"
+    description: "下面是 Misskey 服务器的统计数据图表。"
+    viewFullStats: "查看详细数据"
+    lang: "主要语言"
+    registerAcceptance: "注册模式"
     version: "版本"
-    notes: "ノート数"
+    notes: "帖子数量"
     users: "用户数量"
     servers: "服务器数量"
   _search:
-    title: "絞り込み検索"
-    all: "すべて"
+    title: "精确搜索"
+    all: "全部"
     query: "キーワードで検索"
-    lang: "言語"
-    orderBy: "並び替え"
-    recomendded: "デフォルト"
-    notesCount: "ノート数"
-    notesPer15Days: "1日あたりのノート数（15日平均）"
-    usersCount: "ユーザー数"
+    lang: "语言"
+    orderBy: "排序方式"
+    recomendded: "默认"
+    notesCount: "帖子数量"
+    notesPer15Days: "每日帖子数（15 天平均值）"
+    usersCount: "用户数"
   _registerAcceptance:
-    title: "新規登録"
-    public: "開放"
-    inviteOnly: "招待のみ"
+    title: "注册模式"
+    public: "开放注册"
+    inviteOnly: "邀请制"
   _list:
-    notFound: "指定された条件に合致するサーバーは見つかりませんでした。"
-    showMore: "もっと見る"
+    notFound: "未找到符合指定条件的服务器。"
+    showMore: "浏览更多"
   _view:
-    title: "表示形式"
-    list: "リスト"
-    grid: "グリッド"
+    title: "展示模式"
+    list: "列表"
+    grid: "网格"
 _docs:
-  title: "ドキュメント"
-  description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。Misskeyの上手な使い方から、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
-  indexTitle: "目次ページ"
+  title: "文档"
+  description: "Misskey 是一个开源的去中心化社交网络。本文档涵盖从如何很好地使用 Misskey 到面向服务器管理员和程序员的各种信息。"
+  indexTitle: "目录"
   _contribute:
     editThis: "编辑本页面"
     translateThis: "翻译本页面"
   _aboutMisskey:
-    title: "Misskeyについて"
-    description: "Misskeyをはじめて知ったかたや、これから使うかた向け！基本的なしくみや機能を見ていきましょう。"
+    title: "关于 Misskey"
+    description: "对于刚接触 Misskey 的人和将来要使用它的人，让我们来了解一下它的基本机制和功能。"
   _changelog:
     title: "发布日志"
-    description: "Misskeyのバージョンアップ履歴をご覧いただけます。最新のバージョンで何が変わったのかを確認しましょう！"
+    description: "查看 Misskey 的历史版本，了解最新版本有哪些变化！"
+  _donate:
+    title: "プロジェクトへの寄付"
+    description: "Misskeyは無料で使えるオープンソースのソフトウェアです。気に入っていただけたら、今後も開発を続けられるようにぜひ寄付をご検討ください。"
   _forUsers:
     title: "Misskeyユーザー向け"
   _forAdmin:
@@ -178,11 +184,17 @@ _brandAssets:
   icon: "アイコン"
   banner: "バナー"
   avatarDecorationTemplate: "アバターデコレーション テンプレート"
+_contact:
+  title: "お問い合わせ"
+  description: "Misskey Projectへのお問い合わせはこちらから"
+  form: "こちらのフォームからご回答ください。"
+  formGoogleAccountRequired: "現在、スパム対策のため、お問い合わせの送信にはGoogleアカウントが必要となっております。\nお手数をおかけしますが、ご理解のほどよろしくお願い致します。"
+  formLink: "フォームへ進む"
 _links:
   title: "リンク"
   _github:
     title: "GitHub"
-    description: "Misskeyの開発はGithub上で行われています。機能リクエストやバグ報告などはこちらから行えます。"
+    description: "Misskeyの開発はGitHub上で行われています。機能リクエストやバグ報告などはこちらから行えます。"
   _crowdin:
     title: "Crowdin"
     description: "Misskey本体、およびドキュメントの翻訳はこちらで管理されています。皆さんのご協力をお願いします。"
@@ -220,8 +232,8 @@ _aidConverter:
   mode: "作成するid"
   date: "日付時刻"
 _aboutUs:
-  title: "Misskey Development Divisionについて"
-  description: "Misskey開発チームについての情報を掲載しています。"
+  title: "Misskey Projectについて"
+  description: "Misskey Projectについての情報を掲載しています。"
   _team:
     title: "開発メンバー"
     description: "Misskeyの開発に関わっている方を紹介しています。"
@@ -310,6 +322,11 @@ _customEmojiPreview:
     textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
   _placeholder:
     noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
+_identiconGenerator:
+  title: "初期アイコンジェネレーター"
+  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
+  userName: "ユーザー名"
+  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
 _api:
   _permissions:
     title: "権限"

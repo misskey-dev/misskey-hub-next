@@ -7,9 +7,12 @@ share: "Partager"
 note: "Note"
 other: "Autres"
 add: "Ajouter"
+generate: "生成"
+download: "ダウンロード"
 browse: "参照"
 settings: "設定"
 goToLegacyHub: "L'ancien Misskey Hub"
+contactUs: "お問い合わせ"
 _error:
   notFound: "La page demandée est introuvable !"
   notFoundDesc: "La page que vous cherchiez n'a pas pu être trouvée. Veuillez vérifier l'URL."
@@ -145,6 +148,9 @@ _docs:
   _changelog:
     title: "Journal des modifications"
     description: "Voir l'historique des mises à jour de Misskey. Découvrez les nouveautés de la dernière version !"
+  _donate:
+    title: "Dons au projet"
+    description: "Misskey est un logiciel gratuit à code source ouvert. Si vous l'appréciez, veuillez faire un don pour que nous puissions continuer à le développer."
   _forUsers:
     title: "Pour les utilisateurs de Misskey"
   _forAdmin:
@@ -172,12 +178,18 @@ _other:
 _brandAssets:
   title: "Collection de ressources"
   description: "Une collection de logos, d'icônes et d'autres actifs de Misskey. Vous êtes libre de les utiliser sous certaines licences."
-  license: "Les ressources sont libres d'être utilisées sous la licence CC BY-SA 🎉"
+  license: "Les ressources sont libres d'être utilisées sous la licence CC BY-NC-SA 🎉"
   assetsDirectory: "Toutes les ressources sont gérées sur {0}."
   logo: "Logo"
   icon: "Icône"
   banner: "Bannière"
   avatarDecorationTemplate: "Modèle de décoration d'avatar"
+_contact:
+  title: "お問い合わせ"
+  description: "Misskey Projectへのお問い合わせはこちらから"
+  form: "こちらのフォームからご回答ください。"
+  formGoogleAccountRequired: "現在、スパム対策のため、お問い合わせの送信にはGoogleアカウントが必要となっております。\nお手数をおかけしますが、ご理解のほどよろしくお願い致します。"
+  formLink: "フォームへ進む"
 _links:
   title: "Liens"
   _github:
@@ -310,6 +322,11 @@ _customEmojiPreview:
     textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
   _placeholder:
     noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
+_identiconGenerator:
+  title: "初期アイコンジェネレーター"
+  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
+  userName: "ユーザー名"
+  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
 _api:
   _permissions:
     title: "Permissions"

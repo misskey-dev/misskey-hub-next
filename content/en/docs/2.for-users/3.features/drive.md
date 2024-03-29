@@ -1,29 +1,27 @@
-# ドライブ
+# Drive
 
-ドライブは、Misskey上でファイルを管理できる機能です。
+Drive is a feature to manage the files you have uploaded to Misskey.
 
 :::tip
 
-技術的に言うと、Misskeyのシステム上、すべてのファイルが一元管理されており、それをユーザーにも公開したインターフェイスがドライブと捉えることができます。
+Technically speaking, all files are centrally managed on Misskey's system, and the interface that exposes them to users can be thought of as a drive.
 
 :::
 
-Misskey Webのドライブページから任意のファイルをアップロードできるほか、アバターに設定した画像や、ノートに添付したファイルなどもすべてドライブにアップロードされます。
+In addition to being able to upload any file from Misskey Web's Drive page, images set as avatars and files attached to notes will all be uploaded to Drive.
 
-ドライブにアップロードされたファイルは、いつでもダウンロードすることができるほか、ノート作成時に「ドライブからファイルを添付」することでファイルを再利用することもできます。
+Not only can files uploaded to Drive be downloaded at any time, but they can also be reused by selecting "Attach Files from Drive" when creating notes.
 
-ドライブ内にフォルダを作り、複数のファイルをまとめて整理することもできます。
+In addition, folders can be created within Drive to organize multiple files together.
 
 :::warning
 
-現時点で、ドライブからファイルを削除すると、そのファイルが添付された **すべてのコンテンツ(ノート、ページなど)** も同時に消えます。
+Currently, when you delete a file from Drive, **all the content (notes, pages, etc.)** it was attached to also disappears.
 
 :::
 
-## センシティブ (NSFW)
+## Sensitive (NSFW)
 
-センシティブまたはNSFW (Not safe for work) は、ドライブのファイルに設定することができるフラグです。
-センシティブフラグを設定されたファイルは、表示される際に閲覧者の操作なしには表示されなくなります。
-このフラグは、例えば職場や公共の場で閲覧するのに適切でないと思われる画像などに設定し、そのような画像が突然表示されてしまうことを防ぐ目的で使われます。
+Sensitive or NSFW (Not safe for work) is a flag that can be set on files in Drive. Files that are flagged as sensitive will not be displayed without interaction from the viewer. This flag is used, for instance, to mark images that are considered inappropriate for viewing at work or in public places, and to prevent them from being displayed suddenly.
 
-このフラグは手動でオンオフを切り替えられるほか、モデレーターの判断で設定される場合もあります。
+This flag can be manually turned on or off, as well as set at the discretion of moderators.

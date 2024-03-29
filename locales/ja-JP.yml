@@ -12,6 +12,7 @@ download: "ダウンロード"
 browse: "参照"
 settings: "設定"
 goToLegacyHub: "従来のMisskey Hub"
+contactUs: "お問い合わせ"
 
 _error:
   notFound: "ページが見つかりませんでした"
@@ -194,6 +195,13 @@ _brandAssets:
   banner: "バナー"
   avatarDecorationTemplate: "アバターデコレーション テンプレート"
 
+_contact:
+  title: "お問い合わせ"
+  description: "Misskey Projectへのお問い合わせはこちらから"
+  form: "こちらのフォームからご回答ください。"
+  formGoogleAccountRequired: "現在、スパム対策のため、お問い合わせの送信にはGoogleアカウントが必要となっております。\nお手数をおかけしますが、ご理解のほどよろしくお願い致します。"
+  formLink: "フォームへ進む"
+
 _links:
   title: "リンク"
   _github:
@@ -240,8 +248,8 @@ _aidConverter:
   date: "日付時刻"
 
 _aboutUs:
-  title: "Misskey Development Divisionについて"
-  description: "Misskey開発チームについての情報を掲載しています。"
+  title: "Misskey Projectについて"
+  description: "Misskey Projectについての情報を掲載しています。"
   _team:
     title: "開発メンバー"
     description: "Misskeyの開発に関わっている方を紹介しています。"

@@ -28,7 +28,7 @@ git checkout master
 
 ## Configuration
 
-The following commands will copy the various config files from examples to their actual config location.
+下記コマンドで、各種設定ファイルのサンプルをコピーします。
 
 ```sh
 cp .config/docker_example.yml .config/default.yml
@@ -37,12 +37,12 @@ cp ./docker-compose_example.yml ./docker-compose.yml
 ```
 
 Please edit `default.yml` and `docker.env` file as per the description.\
-Also edit `docker-compose.yml` as needed.(If you want to change the port etc.)
+Also edit `docker-compose.yml` as needed.(If you want to change the port etc.)\
+Please make sure to check in advance for any changes that may be required.(ポートを変更したい場合など)
 
 ## Build & Initialize
 
-The next set of commands will build Misskey image and perform database initialization.
-This will take some time.
+The next set of commands will build Misskey image and perform database initialization. This will take some time.
 
 ```shell
 sudo docker compose build
@@ -63,7 +63,7 @@ GLHF✨
 
 :::warning
 
-Updates are always available in the [release notes](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md). Please make sure to check in advance for any changes that may be required.
+Updates are always available in the [release notes](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md).
 
 :::
 

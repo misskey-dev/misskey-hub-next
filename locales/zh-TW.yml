@@ -7,9 +7,12 @@ share: "分享"
 note: "貼文"
 other: "其他"
 add: "新增"
-browse: "参照"
+generate: "生成"
+download: "ダウンロード"
+browse: "瀏覽"
 settings: "設定"
 goToLegacyHub: "舊版的 Misskey Hub"
+contactUs: "お問い合わせ"
 _error:
   notFound: "找不到此頁面"
   notFoundDesc: "找不到此頁面，請確認網址是否正確。"
@@ -145,6 +148,9 @@ _docs:
   _changelog:
     title: "版本資訊"
     description: "您可以查看 Misskey 的版本更新歷史。看看最新版本有哪些變化！"
+  _donate:
+    title: "プロジェクトへの寄付"
+    description: "Misskeyは無料で使えるオープンソースのソフトウェアです。気に入っていただけたら、今後も開発を続けられるようにぜひ寄付をご検討ください。"
   _forUsers:
     title: "針對 Misskey 的使用者"
   _forAdmin:
@@ -172,12 +178,18 @@ _other:
 _brandAssets:
   title: "資源集"
   description: "Misskey 標誌、圖標和其他資產的集合。您可以在一定的許可下自由使用它。"
-  license: "資產可在 CC BY-SA 授權下免費使用🎉"
+  license: "資產可在 CC BY-NC-SA 授權下免費使用🎉"
   assetsDirectory: "所有資產均由 {0} 管理。"
   logo: "標誌"
   icon: "圖標"
   banner: "橫幅"
   avatarDecorationTemplate: "頭像裝飾模板"
+_contact:
+  title: "お問い合わせ"
+  description: "Misskey Projectへのお問い合わせはこちらから"
+  form: "こちらのフォームからご回答ください。"
+  formGoogleAccountRequired: "現在、スパム対策のため、お問い合わせの送信にはGoogleアカウントが必要となっております。\nお手数をおかけしますが、ご理解のほどよろしくお願い致します。"
+  formLink: "フォームへ進む"
 _links:
   title: "連結"
   _github:
@@ -200,7 +212,7 @@ _tools:
   _forUsers:
     title: "針對 Misskey 的使用者"
   _forAdmin:
-    title: "サーバー運営者向け"
+    title: "針對伺服器營運者"
 _mfmPlayground:
   title: "MFM 試用區"
   description: "您可以自由練習MFM！下面重現了 Misskey 的發文畫面/貼文畫面！"
@@ -300,16 +312,21 @@ _avatarDecorationPreview:
     noteText: "我吃了一個巧克力甜甜圈🍩😋"
     profileDescription: "我是 Misskey 的常駐人工智慧小藍！很高興見到你♪"
 _customEmojiPreview:
-  title: "カスタム絵文字 プレビュー"
-  description: "カスタム絵文字の視認性をチェックできます。"
-  preview: "プレビュー"
-  emoji: "絵文字 #{number}"
-  placeholder: "「追加」から、カスタム絵文字を追加してプレビューできます。"
+  title: "預覽自訂表情符號"
+  description: "可以檢查自訂表情符號的可見性。"
+  preview: "預覽"
+  emoji: "表情符號 #{number}"
+  placeholder: "從「新增」中，您可以新增和預覽自訂表情符號。"
   _options:
-    text: "ノート文面"
-    textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
+    text: "貼文內容"
+    textDescription: "您可以透過 {emoji_id} 引用新增的自訂表情符號。"
   _placeholder:
-    noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
+    noteText: "自訂表情符號將顯示如下 → :emoji_preview_1:\n請重寫句子並嘗試可用性✨"
+_identiconGenerator:
+  title: "初期アイコンジェネレーター"
+  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
+  userName: "ユーザー名"
+  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
 _api:
   _permissions:
     title: "權限"
