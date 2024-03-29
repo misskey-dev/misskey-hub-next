@@ -155,7 +155,7 @@ const displayInstances = computed(() => [
 const userDefinedInstanceInput = ref<string>('');
 
 async function getAndSetInstanceInfo() {
-    if (!process.client || !userDefinedInstanceInput.value || !userDefinedInstanceInput.value.includes('.')) return;
+    if (!import.meta.client || !userDefinedInstanceInput.value || !userDefinedInstanceInput.value.includes('.')) return;
     iFetching.value = true;
 
     nextTick(async () => {
@@ -234,7 +234,7 @@ async function handleClick(instance: ExtendedInstanceItem) {
 }
 
 onMounted(async () => {
-    if (process.client) {
+    if (import.meta.client) {
         const fetchedInfo = await window.fetch('https://instanceapp.misskey.page/instances.json');
         if (![200, 304].includes(fetchedInfo.status)) {
             alert(t('_servers._system.fetchError'));
@@ -293,7 +293,7 @@ onMounted(async () => {
 });
 
 watch(userDefinedInstances, (to) => {
-    if (process.client) {
+    if (import.meta.client) {
         localStorage.setItem('miHub_share_instances', JSON.stringify(to));
     }
 }, {

@@ -47,7 +47,7 @@ const normalizedAcct = computed(() => {
 const canvas = ref<HTMLCanvasElement | null>(null);
 
 function genIdenticon() {
-    if (!process.client || !canvas.value) return;
+    if (!import.meta.client || !canvas.value) return;
     if (!normalizedAcct.value) {
         onceGenerated.value = false;
         const ctx = canvas.value.getContext('2d');
@@ -61,7 +61,7 @@ function genIdenticon() {
 }
 
 function download() {
-    if (!process.client || !normalizedAcct.value || !canvas.value) return;
+    if (!import.meta.client || !normalizedAcct.value || !canvas.value) return;
     const url = canvas.value.toDataURL('image/png');
     const a = document.createElement('a');
     a.href = url;

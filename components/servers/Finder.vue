@@ -166,7 +166,7 @@ type MiHubSFStorage = {
 };
 
 let savedSettings: MiHubSFStorage | null = null;
-if (process.client) {
+if (import.meta.client) {
     savedSettings = JSON.parse(window.localStorage.getItem('miHub_server_finder') ?? 'null') as MiHubSFStorage | null;
 }
 
@@ -195,7 +195,7 @@ watch([f_langs, f_orderBy, f_order, f_registerAcceptance, v_view], (to, from) =>
         v_view: to[4],
     };
 
-    if (process.client) {
+    if (import.meta.client) {
         window.localStorage.setItem('miHub_server_finder', JSON.stringify(newSettings));
     }
 });

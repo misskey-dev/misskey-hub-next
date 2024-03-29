@@ -1,5 +1,5 @@
 export function scrollTo(qs: string) {
-    if (process.client) {
+    if (import.meta.client) {
         document.querySelector(qs)?.scrollIntoView({
             behavior: 'smooth',
         });

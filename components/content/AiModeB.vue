@@ -7,7 +7,7 @@
 <script setup lang="ts">
 const isEnabledAiChanMode = ref<boolean>(false);
 
-if (process.client) {
+if (import.meta.client) {
     isEnabledAiChanMode.value = ((localStorage.getItem('miHub_aichan_mode') ?? '') == 'true');
 
     // migration

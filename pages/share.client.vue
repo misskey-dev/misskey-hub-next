@@ -44,7 +44,7 @@ const filteredQuery = computed(() => ({
 const isCanvasLoaded = ref(false);
 const showAnimBg = ref(false);
 
-if (process.client && window.innerWidth >= 768) {
+if (import.meta.client && window.innerWidth >= 768) {
     showAnimBg.value = true;
 }
 
