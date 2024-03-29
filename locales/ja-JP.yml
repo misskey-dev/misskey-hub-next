@@ -13,6 +13,7 @@ browse: "参照"
 settings: "設定"
 goToLegacyHub: "従来のMisskey Hub"
 contactUs: "お問い合わせ"
+detail: "詳細"
 
 _error:
   notFound: "ページが見つかりませんでした"
@@ -101,6 +102,7 @@ _landing:
     description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
   _sponsors:
     title: "スポンサー"
+    yourLogo: "御社のロゴ"
 
 _servers:
   title: "サーバー一覧"
