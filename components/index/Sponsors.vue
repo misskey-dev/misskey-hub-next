@@ -16,8 +16,9 @@
                     :src="sponsor.img"
                     class="w-full h-full object-contain"
                     :class="[
-                        { 'p-5': !sponsor.noMargin }
+                        { 'p-5': sponsor.margin === undefined || sponsor.margin === true || sponsor.margin === 'true' },
                     ]"
+                    :style="(typeof sponsor.margin === 'string' && sponsor.margin !== 'true' ? sponsor.margin : undefined)"
                 />
             </GNuxtLink>
         </div>
@@ -29,7 +30,7 @@ type Sponsor = {
     /** 画像URL */
     img: string;
     /** イメージにマージンを設けない場合はこちら */
-    noMargin?: boolean;
+    margin?: boolean | string;
     /** イメージを角丸にしない場合はこちら */
     noRounded?: boolean;
     /** 外部ページURL */
@@ -51,14 +52,14 @@ const sponsors: Sponsor[] = [
     },
     {
         img: '/img/sponsors/dcadvirth.png',
-        noMargin: true,
+        margin: false,
         noRounded: true,
         to: 'https://www.dotchain.ltd/advirth',
     },
     {
         img: '/img/sponsors/xserver.png',
-        noMargin: true,
+        margin: false,
         to: 'https://www.xserver.ne.jp/',
-    }
+    },
 ];
 </script>
