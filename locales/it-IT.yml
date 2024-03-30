@@ -13,6 +13,7 @@ browse: "Sfoglia"
 settings: "Impostazioni"
 goToLegacyHub: "Versione precedente"
 contactUs: "お問い合わせ"
+detail: "詳細"
 _error:
   notFound: "Pagina non trovata"
   notFoundDesc: "お探しのページは見つかりませんでした。URLをお確かめください。"
@@ -97,6 +98,7 @@ _landing:
     description: "Misskey è un'organizzazione no-profit, contiamo sulle donazioni per finanziare lo sviluppo. Se ti piace Misskey, sostienici così potremo continuare a svilupparlo anche in futuro."
   _sponsors:
     title: "Sponsorizzato"
+    becomeASponsor: "スポンサーになる"
 _servers:
   title: "Elenco dei server"
   description: "Misskey non è un social network unico, ma una rete decentralizzata in cui ogni server fornisce servizi federati. Per utilizzare Misskey occorre creare un profilo su uno dei server federati."

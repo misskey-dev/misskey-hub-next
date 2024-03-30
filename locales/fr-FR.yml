@@ -13,6 +13,7 @@ browse: "参照"
 settings: "設定"
 goToLegacyHub: "L'ancien Misskey Hub"
 contactUs: "お問い合わせ"
+detail: "詳細"
 _error:
   notFound: "La page demandée est introuvable !"
   notFoundDesc: "La page que vous cherchiez n'a pas pu être trouvée. Veuillez vérifier l'URL."
@@ -97,6 +98,7 @@ _landing:
     description: "Misskey est une organisation à but non lucratif, nous dépendons de vos dons pour financer le développement. Si vous aimez Misskey, veuillez considérer de nous soutenir."
   _sponsors:
     title: "Parrains"
+    becomeASponsor: "スポンサーになる"
 _servers:
   title: "Liste d'instances"
   description: "Misskey n'est pas un seul service, mais un réseau décentralisé où le service est fourni par des individus. Pour utiliser Misskey, vous devez créer un compte sur une instance qui fournit le service."
@@ -178,7 +180,7 @@ _other:
 _brandAssets:
   title: "Collection de ressources"
   description: "Une collection de logos, d'icônes et d'autres actifs de Misskey. Vous êtes libre de les utiliser sous certaines licences."
-  license: "Les ressources sont libres d'être utilisées sous la licence CC BY-NC-SA 🎉"
+  license: "Les ressources sont libres d'être utilisées sous la licence CC BY-SA 🎉"
   assetsDirectory: "Toutes les ressources sont gérées sur {0}."
   logo: "Logo"
   icon: "Icône"

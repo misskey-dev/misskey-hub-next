@@ -13,6 +13,7 @@ browse: "查看"
 settings: "设置"
 goToLegacyHub: "Misskey Hub的历史"
 contactUs: "お問い合わせ"
+detail: "詳細"
 _error:
   notFound: "找不到页面"
   notFoundDesc: "找不到您要查找的页面，请检查 URL。"
@@ -97,6 +98,7 @@ _landing:
     description: "Misskey 是非营利的，我们依靠您的捐款来资助它的发展。所以如果您喜欢 Misskey，请支持我们，以便我们能够继续开发它。"
   _sponsors:
     title: "赞助者"
+    becomeASponsor: "スポンサーになる"
 _servers:
   title: "服务器列表"
   description: "Misskey 不是一个单一的服务，而是由一个个服务组成的分布式网络。欲使用 Misskey，您需要在提供服务的服务器上注册一个账户。"
