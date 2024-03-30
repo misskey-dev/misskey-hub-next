@@ -76,6 +76,10 @@ export default [
         "label": "中文"
     },
     {
+        "lang": "id",
+        "label": "Bahasa Indonesia",
+    },
+    {
         "lang": "ja",
         "label": "日本語"
     }
