@@ -9,10 +9,6 @@ Terdapat juga script untuk memutakhirkan.
 [Untuk v12](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)\
 [**Versi Bahasa Inggris**](./README.en.md)
 
-## Lisensi
-
-[Lisensi MIT](./LICENSE)
-
 ## Bahan Yang Perlu Disiapkan
 
 1. Domain
@@ -48,7 +44,7 @@ Menyambung ke peladen melalui SSH.\
 
 Pastikan semua paket telah termutakhirkan dan boot ulang.
 
-```
+```sh
 sudo apt update; sudo apt full-upgrade -y; sudo reboot
 ```
 
@@ -58,7 +54,7 @@ Hubungkan ulang SSH dan mulai pemasangan Misskey.
 
 Pastikan untuk membaca [Tips](#tips) sebelum memulai proses pemasangan.
 
-```
+```sh
 wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/ubuntu.sh -O ubuntu.sh; sudo bash ubuntu.sh
 ```
 
@@ -72,13 +68,13 @@ Script pemutakhiran tidak memutakhirkan lingkungan peladen.Mohon untuk merujuk k
 
 Pertama, unduh script.
 
-```
+```sh
 wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/update.ubuntu.sh -O update.sh
 ```
 
 Jalankan ini ketika kamu ingin memutakhirkan Misskey.
 
-```
+```sh
 sudo bash update.sh
 ```
 
@@ -179,14 +175,14 @@ Sumber kode akan diklon pada direktori `/home/pengguna/direktori`.\
 
 Kamu dapat menavigasi ke direktori Misskey dengan melakukan perintah berikut.
 
-```
+```sh
 sudo -iu pengguna
 cd direktori
 ```
 
 Untuk kembali ke pengguna sebelumnya, jalankan perintah `exit`.
 
-```
+```sh
 exit
 ```
 
@@ -195,13 +191,13 @@ exit
 Nama proses dalam systemd adalah `example.com`.\
 Sebagai contoh untuk memulai ulang proses, jalankan perintah berikut.
 
-```
+```sh
 sudo systemctl restart example.com
 ```
 
 Kamu dapat memeriksa logs dengan menggunakan `journalctl`.
 
-```
+```sh
 journalctl -t example.com
 ```
 
@@ -213,7 +209,7 @@ Docker menggunakan pengguna Misskey untuk dijalankan secara tanpa root.
 
 Saat masuk ke pengguna Misskey menggunakan `sudo`, kamu perlu mengubah `XDG_RUNTIME_DIR` dan `DOCKER_HOST` terlebih dahulu.
 
-```
+```sh
 sudo -iu pengguna
 export XDG_RUNTIME_DIR=/run/user/$UID
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
@@ -233,7 +229,7 @@ docker logs --tail 50 -f ID Kontainer
 
 Proses diatas dapat dilakukan dengan perintah satu baris berikut.
 
-```
+```sh
 sudo -u pengguna XDG_RUNTIME_DIR=/run/user/$(id -u pengguna) DOCKER_HOST=unix:///run/user/$(id -u pengguna)/docker.sock docker ps
 ```
 
@@ -254,7 +250,7 @@ Pada kasus menggunankan systemd, perintah `pnpm install` kemungkinan gagal.
 
 Coba jalankan perintah berikut ini di direktori Misskey lalu jalankan pemutakhiran kembali.
 
-```
+```sh
 pnpm run clean-all
 ```
 
