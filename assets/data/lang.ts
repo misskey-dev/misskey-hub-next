@@ -1,5 +1,9 @@
 export default [
     {
+        "lang": "id",
+        "label": "Bahasa Indonesia",
+    },
+    {
         "lang": "de",
         "label": "Deutsch"
     },
@@ -74,10 +78,6 @@ export default [
     {
         "lang": "zh",
         "label": "中文"
-    },
-    {
-        "lang": "id",
-        "label": "Bahasa Indonesia",
     },
     {
         "lang": "ja",
