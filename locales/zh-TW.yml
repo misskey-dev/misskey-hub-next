@@ -13,6 +13,7 @@ browse: "瀏覽"
 settings: "設定"
 goToLegacyHub: "舊版的 Misskey Hub"
 contactUs: "お問い合わせ"
+detail: "詳細"
 _error:
   notFound: "找不到此頁面"
   notFoundDesc: "找不到此頁面，請確認網址是否正確。"
@@ -97,6 +98,7 @@ _landing:
     description: "Misskey 是一家非營利組織，因此我們依靠您的捐款來資助我們的發展。如果你喜歡 Misskey，請支持我們，以便我們繼續開發它。"
   _sponsors:
     title: "贊助者"
+    becomeASponsor: "スポンサーになる"
 _servers:
   title: "伺服器一覽"
   description: "Misskey 不是單一的服務，而是由各服務提供者組成的分散式網路。要使用 Misskey，您需要在提供服務的伺服器上建立帳戶。"
@@ -178,7 +180,7 @@ _other:
 _brandAssets:
   title: "資源集"
   description: "Misskey 標誌、圖標和其他資產的集合。您可以在一定的許可下自由使用它。"
-  license: "資產可在 CC BY-NC-SA 授權下免費使用🎉"
+  license: "資產可在 CC BY-SA 授權下免費使用🎉"
   assetsDirectory: "所有資產均由 {0} 管理。"
   logo: "標誌"
   icon: "圖標"
