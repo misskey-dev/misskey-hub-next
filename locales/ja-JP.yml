@@ -102,7 +102,7 @@ _landing:
     description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
   _sponsors:
     title: "スポンサー"
-    yourLogo: "御社のロゴ"
+    becomeASponsor: "スポンサーになる"
 
 _servers:
   title: "サーバー一覧"

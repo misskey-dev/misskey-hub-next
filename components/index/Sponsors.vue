@@ -23,10 +23,9 @@
             </GNuxtLink>
             <GNuxtLink
                 :to="localePath('/docs/become-a-sponsor/')"
-                class="flex flex-col items-center justify-center aspect-square bg-white hover:bg-gray-50 rounded-full border-2 border-dashed hover:border-solid border-gray-300 text-gray-500"
+                class="flex flex-col p-5 items-center justify-center aspect-square bg-white hover:bg-gray-50 rounded-full border-2 border-dashed hover:border-solid border-gray-300 text-gray-500"
             >
-                <div class="text-center text-lg sm:text-xl mb-1">{{ $t('_landing._sponsors.yourLogo') }}</div>
-                <div class="text-center text-sm sm:text-base">{{ $t('detail') }}<ArrowRightIco class="ml-1" /></div>
+                <div class="text-center text-lg sm:text-xl">{{ $t('_landing._sponsors.becomeASponsor') }}<ArrowRightIco class="ml-1" /></div>
             </GNuxtLink>
         </div>
     </div>
