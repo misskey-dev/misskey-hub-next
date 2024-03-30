@@ -13,6 +13,7 @@ browse: "Jelajahi"
 settings: "Pengaturan"
 goToLegacyHub: "Misskey Hub Jadul"
 contactUs: "Hubungi kami"
+detail: "詳細"
 _error:
   notFound: "Halaman Tidak Ditemukan"
   notFoundDesc: "Halaman yang kamu cari tidak dapat ditemukan. Mohon cek kembali URL yang kamu tuju."
@@ -97,6 +98,7 @@ _landing:
     description: "Misskey merupakan produk nirlaba, kami bergantung pada donasi kamu untuk mendanai pengembangan perangkat lunak ini. Apabila kamu menyukai Misskey, mohon pertimbangkan untuk berdonasi agar kami dapat terus melanjutkan pengembangan Misskey dan membuatnya semakin menarik untuk kedepannya."
   _sponsors:
     title: "Sponsor"
+    becomeASponsor: "スポンサーになる"
 _servers:
   title: "Daftar Peladen"
   description: "Misskey bukanlah layanan satuan namun jejaring terdesentralisasi dimana para individu menyediakan banyak layanan. Untuk menggunakan Misskey, kamu perlu membuat akun di peladen yang menawarkan layanan tersebut."
@@ -177,8 +179,8 @@ _other:
   description: "Memperkenalkan sumber daya yang menyenangkan untuk Misskey!"
 _brandAssets:
   title: "Aset Brand"
-  description: "Koleksi dari logo, ikon serta aset Misskey lainnya. Gunakan secara bebas untuk apapun selama dalam lisensi CC BY-NC-SA!"
-  license: "Aset tersedia dalam lisensi CC BY-NC-SA🎉."
+  description: "Koleksi dari logo, ikon serta aset Misskey lainnya. Gunakan secara bebas untuk apapun selama dalam lisensi CC BY-SA!"
+  license: "Aset tersedia dalam lisensi CC BY-SA🎉."
   assetsDirectory: "Semua aset dikelola di {0}."
   logo: "Logo"
   icon: "Ikon"
