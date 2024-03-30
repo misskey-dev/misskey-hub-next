@@ -13,6 +13,7 @@ browse: "参照"
 settings: "設定"
 goToLegacyHub: "従来のMisskey Hub"
 contactUs: "お問い合わせ"
+detail: "詳細"
 _error:
   notFound: "ページが見つかりませんでした"
   notFoundDesc: "お探しのページは見つかりませんでした。URLをお確かめください。"
@@ -97,6 +98,7 @@ _landing:
     description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
   _sponsors:
     title: "スポンサー"
+    becomeASponsor: "スポンサーになる"
 _servers:
   title: "サーバー一覧"
   description: "Misskeyは単一のサービスではなく、各々がサービスを提供する分散型ネットワークとなっています。Misskeyを利用するには、サービスを提供しているサーバーでアカウントを作成する必要があります。"
