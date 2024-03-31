@@ -1,51 +1,51 @@
-# Angket
+# Kuesioner
 
-アンケートは、他の人からの意見を簡単に聞くことができる機能です。
+Kuesioner merupakan fitur yang dapat digunakan untuk mengetahui opini orang lain dengan mudah.
 
-## アンケートをノートに添付する
+## Melampirkan kuesioner dalam catatan
 
-アンケートは、[ノート](/docs/for-users/features/note)に添付する形で投稿することができます。ノートにアンケートを添付するには、投稿フォームの下部にある「アンケート」ボタンを選択します。
+Kuesioner dapat diposting sebagai sebuah lampiran pada sebuah [catatan](/docs/for-users/features/note).Untuk melampirkan kuesioner pada catatan, pilih tombol "Kuesioner" di bagian bawah form posting.
 
-## 選択肢を増やす
+## Menambahkan pilihan
 
-アンケートには、選択肢を10個まで作ることができます。選択肢の入力欄は、「追加」ボタンを押すことで追加することができます。
+Kuesioner dapat dibuat hingga memiliki 10 buah pilihan.Untuk menambahkan opsi pilihan dalam kolom kuesioner, tekan tombol "Tambahkan".
 
-追加しすぎてしまった入力欄は、入力欄の横の☓ボタンを押すことで削除することができます。
+Apabila kolom opsi pilihan yang dibuat berlebihan, kamu dapat menghapusnya dengan menekan tombol `X` di sebelah bagian kanan dari input teks pilihan.
 
 :::warning
 
-いずれかの入力欄が空白だった場合、そのアンケートが添付されたノートは投稿できません。
+Apabila terdapat kolom pilihan yang kosong di dalam kuesioner, catatan tidak akan dapat disubmit.
 
 :::
 
-## 複数回答を可能にする
+## Bolehkan memilih banyak
 
-「複数回答可」スイッチをオンにすると、アンケートに回答する人が複数の選択肢に投票できるようになります。
+Apabila opsi "Bolehkan memilih banyak" diaktifkan, responden dari kuesioner diperbolehkan untuk memilih opsi dalam kuesioner lebih dari satu pilihan.
 
-## アンケートの期限を設定する
+## Menetapkan batas waktu untuk kuesioner
 
-アンケートには、終了する期限を、日時指定か経過指定のいずれかで設定することができます。
+Kuesioner dapat diberi batas waktu dengan menentukan dengan tanggal dan waktu atau ditentukan dengan selang waktu.
 
-設定するには、「期限」の欄から「日時指定」もしくは「経過指定」をクリックします。
+Untuk mengatur batas waktu kuesioner, klik pilihan mode batasan waktu dalam bidang menu di bawah "Batas akhir" dan tentukan "Tanggal batas akhir" atau "Durasi".
 
-一度設定した期限を取り消す場合には、「期限」の欄から「無期限」を選択します。
+Untuk membatalkan batas waktu kuesioner, ubah mode batasan waktu ke "Selamanya" dari bidang menu "Batas akhir".
 
-## アンケートに投票する
+## Mengisi Kuesioner
 
-アンケートが添付されたノートがタイムラインに流れてきたときは、アンケートに投票してみましょう。
+Ketika kuesioner dalam catatan terlihat pada lini masa, kamu dapat mengisi kuesioner tersebut untuk memberikan suara pendapatmu.
 
-アンケートに投票するには、各選択肢をクリックします。アンケートを投稿したユーザーが複数回答可に設定していない場合は、その時点でのアンケートの結果が表示されます。
+Untuk mengisi kuesioner, klik pada salah satu pilihan yang tersedia di dalam kuesioner.Apabila pengguna yang membuat kuesioner belum mengatur untuk memperbolehkan memilih pilihan lebih dari satu, maka hasil dari kuesioner pada saat itu juga dapat langsung ditampilkan.
 
-アンケートを投稿したユーザーが複数回答可に設定していた場合、他の選択肢にも投票することができます。この場合、結果は自動では表示されません。
+Apabila pengguna yang membuat kuesioner mengaturnya untuk dapat dipilih lebih dari satu pilihan, maka hasil dari kuesioner secara tidak otomatis tidak akan ditampilkan langsung saat itu juga.Namun, kamu masih dapat memilih pilihan lainnya yang tersedia.
 
-複数回答の設定に関わらず、自動でアンケートの結果が表示されなかったり、投票前に結果を見たい時は、選択肢の下にある「結果を見る」をクリックしてアンケートの結果を表示することができます。
+Terlepas dari pengaturan pilihan lebih dari satu, apabila kamu tidak melihat hasil kuesioner secara otomatis dan hanya ingin melihat hasilnya tanpa memberikan suara pendapatmu. Kamu dapat mengklik opsi "Lihat hasil" di bawah kuesioner untuk melihat hasil dari kuesioner tersebut.
 
-未投票のアンケートの結果を見たあと、もう一度隠すときは「投票する」をクリックします。
+Setelah melihat hasil dari kuesioner yang belum dipilih, klik "Beri suara" untuk menyembunyikan hasilnya dan kembali ke pilihan yang tersedia.
 
 :::tip
 
-未投票アンケートには、結果を表示した状態でも投票できます。
+Kuesioner yang belum dipilih masih dapat dipilih dengan hasil yang telah ditampilkan.
 
 :::
 
-投票をすると、自分の投票した選択肢に✔がつきます。
+Ketika kamu memilih, pilihan yang kamu pilih nantinya akan diberi tanda centang ✔.
