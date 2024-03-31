@@ -13,7 +13,7 @@ browse: "Jelajahi"
 settings: "Pengaturan"
 goToLegacyHub: "Misskey Hub Jadul"
 contactUs: "Hubungi kami"
-detail: "詳細"
+detail: "Selengkapnya"
 _error:
   notFound: "Halaman Tidak Ditemukan"
   notFoundDesc: "Halaman yang kamu cari tidak dapat ditemukan. Mohon cek kembali URL yang kamu tuju."
@@ -98,7 +98,7 @@ _landing:
     description: "Misskey merupakan produk nirlaba, kami bergantung pada donasi kamu untuk mendanai pengembangan perangkat lunak ini. Apabila kamu menyukai Misskey, mohon pertimbangkan untuk berdonasi agar kami dapat terus melanjutkan pengembangan Misskey dan membuatnya semakin menarik untuk kedepannya."
   _sponsors:
     title: "Sponsor"
-    becomeASponsor: "スポンサーになる"
+    becomeASponsor: "Menjadi Sponsor"
 _servers:
   title: "Daftar Peladen"
   description: "Misskey bukanlah layanan satuan namun jejaring terdesentralisasi dimana para individu menyediakan banyak layanan. Untuk menggunakan Misskey, kamu perlu membuat akun di peladen yang menawarkan layanan tersebut."
