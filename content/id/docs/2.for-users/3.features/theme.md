@@ -1,15 +1,15 @@
-# テーマ
+# Tema
 
-テーマを設定して、Misskeyクライアントの見た目を変更できます。
+Kamu bisa mengubah tampilan klien Misskey dengan mengatur temanya.
 
-## テーマの設定
+## Pengaturan Tema
 
-設定 > テーマ
+Pengaturan > Tema
 
-## テーマを作成する
+## Membuat Tema
 
-テーマコードはJSON5で記述されたテーマオブジェクトです。
-テーマは以下のようなオブジェクトです。
+Kode objek tema ditulis menggunakan JSON5.
+Tema memiliki tibe objek seperti yang ditunjukkan di bawah.
 
 ```js
 {
@@ -46,19 +46,19 @@
   - テーマはここで設定されたベーステーマを継承します。
 - `props` ... テーマのスタイル定義。これから説明します。
 
-### テーマのスタイル定義
+### Definisi Gaya Tema
 
-`props`下にはテーマのスタイルを定義します。
-キーがCSSの変数名になり、バリューで中身を指定します。
-なお、この`props`オブジェクトはベーステーマから継承されます。
-ベーステーマは、このテーマの`base`が`light`なら[\_light.json5][_light.json5]で、`dark`なら[\_dark.json5][_dark.json5]です。
-つまり、このテーマ内の`props`に`panel`というキーが無くても、そこにはベーステーマの`panel`があると見なされます。
+Definisikan gaya tema di dalam `props`.
+Kunci merupakan nama dari variabel, dan nilai menentukan konten.
+Selanjutnya, objek `props` ini mewariskan dari tema dasar.
+Tema dasarnya adalah [\_light.json5][_light.json5] jika `base` dari tema ini adalah `light` dan [\_dark.json5][_dark.json5] jika `dark`.
+Artinya, jika tidak ada kunci `props` yang bernama `panel` dalam tema ini, maka nilai `panel` akan diatur menggunakan nilai dari tema dasar.
 
 [_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
 
 [_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
 
-#### バリューで使える構文
+#### Sintaks Nilai
 
 - 16進数で表された色
   - 例: `#00ff00`
@@ -75,10 +75,9 @@
 - 関数(後述)
   - `:{関数名}<{引数}<{色}`
 
-#### 定数
+#### Konstan
 
-「CSS変数として出力はしたくないが、他のCSS変数の値として使いまわしたい」値があるときは、定数を使うと便利です。
-キー名を`$`で始めると、そのキーはCSS変数として出力されません。
+Konstan berguna ketika kamu memiliki nilai yang tidak ingin kamu keluarkan sebagai variabel CSS namun ingin kamu gunakan sebagai nilai untuk variabel CSS yang lain. "Aku tidak ingin mengeluarkannya sebagai variabel CSS, tapi aku ingin menggunakannya sebagai nilai untuk variabel CSS".
 
 #### 関数
 

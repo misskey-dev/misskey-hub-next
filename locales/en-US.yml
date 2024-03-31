@@ -13,7 +13,7 @@ browse: "Browse"
 settings: "Settings"
 goToLegacyHub: "Legacy Misskey Hub"
 contactUs: "Contact"
-detail: "詳細"
+detail: "Details"
 _error:
   notFound: "Page not found"
   notFoundDesc: "The page you are looking for could not be found. Please check the URL."
@@ -98,7 +98,7 @@ _landing:
     description: "Misskey is a non-profit project, and development funding relies on donations from users like you. If you enjoy using Misskey, please consider supporting us so that we can continue to make Misskey awesome for years to come!"
   _sponsors:
     title: "Sponsors"
-    becomeASponsor: "スポンサーになる"
+    becomeASponsor: "Become a Sponsor"
 _servers:
   title: "Server List"
   description: "Misskey is not a single service but a decentralized network where individuals provide services. To use Misskey, you need to create an account on a server that offers the service."
