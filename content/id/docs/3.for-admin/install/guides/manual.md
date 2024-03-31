@@ -1,5 +1,5 @@
 ---
-description: このガイドではMisskeyのインストール・セットアップ方法について解説します。
+description: Panduan ini akan menjelaskan bagaimana cara memasang dan menyetel peladen Misskey.
 ---
 
 # Panduan Pemasangan dan Penyetelan Misskey
