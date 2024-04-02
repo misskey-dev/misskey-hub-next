@@ -57,6 +57,12 @@ Rewrite note information when posting notes.Adds an action in the note menu.Pass
 The target note object is passed to the callback function as the first argument.\
 The note will be rewritten with the return value of the callback function.
 
+## `Plugin:register_page_view_interruptor(fn)`
+
+Page閲覧時にPage情報を書き換えます。\
+コールバック関数には、第一引数に対象のPageオブジェクトが渡されます。\
+コールバック関数の返り値でPageが書き換えられます。
+
 ## `Plugin:open_url(url)`
 
 Opens the URL given as the first parameter in a new browser tab.
