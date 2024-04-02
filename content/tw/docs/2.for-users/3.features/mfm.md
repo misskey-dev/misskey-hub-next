@@ -40,7 +40,7 @@ MFM 代表 Markup language For Misskey，是一種專有的標記語言，可以
 @repo@p1.a9z.dev
 ```
 
-<MfmPreview text="@repo@p1.a9z.dev"></MfmPreview>
+</MfmPreview><MfmPreview text="@repo@p1.a9z.dev">
 
 ### 主題標籤
 
@@ -143,9 +143,9 @@ https://example.com
 
 <MfmPreview text="<center>MisskeyでFediverseの世界が広がります</center>"></MfmPreview>
 
-### よみがな（ルビ）
+### 旁註標記 (ruby)
 
-内容によみがなを付けることができます。
+旁註標記用於標示東亞文字的發音。
 
 ```
 $[ruby Misskey ミスキー] 
@@ -238,9 +238,9 @@ $[bg.color=ff0 黃色背景]
 <MfmPreview text="$[fg.color=f00 赤字]
 $[bg.color=ff0 黄背景]"></MfmPreview>
 
-### 枠線
+### 邊框
 
-内容を枠線で囲むことができます。様々なスタイルを指定することができます。
+您可以用邊框包圍內容。可以指定各種樣式。
 
 ```
 $[border.style=solid,width=4 Default]
@@ -424,7 +424,7 @@ $[sparkle 🍮]
 MFM 的解析器實作會作為函式庫發布，可以輕鬆地將 MFM 合併到客戶端。
 
 - [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - JavaScript 解析器實作
-- [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - Vue.js用コンポーネント
-- [mfm.kt](https://github.com/samunohito/mfm.kt) - Kotlinパーサー実装
-- [mfm_parser](https://pub.dev/packages/mfm_parser) - Dartパーサー実装
-- [mfm](https://pub.dev/packages/mfm) - Flutter用描画ウィジェット
+- [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - Vue.js 的元件
+- [mfm.kt](https://github.com/samunohito/mfm.kt) - Kotlin 解析器實作
+- [mfm_parser](https://pub.dev/packages/mfm_parser) - Dart 解析器實作
+- [mfm](https://pub.dev/packages/mfm) - Flutter 的繪圖小工具
