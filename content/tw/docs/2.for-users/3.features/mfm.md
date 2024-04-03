@@ -40,7 +40,7 @@ MFM 代表 Markup language For Misskey，是一種專有的標記語言，可以
 @repo@p1.a9z.dev
 ```
 
-</MfmPreview><MfmPreview text="@repo@p1.a9z.dev">
+<MfmPreview text="@repo@p1.a9z.dev"></MfmPreview>
 
 ### 主題標籤
 
