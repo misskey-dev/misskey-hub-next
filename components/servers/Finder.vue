@@ -149,7 +149,7 @@ import ListIco from 'bi/view-stacked.svg';
 const { t, locale } = useI18n();
 const route = useRoute();
 const emits = defineEmits<{
-    (e: 'load', value?: InstancesStatsObj): void;
+    (e: 'load', value?: InstancesStatsObj, updatedAt?: string): void;
 }>();
 
 // ▼スマホ用ソート▼
@@ -215,7 +215,7 @@ if (data.value?.stats.usersCount) {
         notesCount: data.value.stats.notesCount,
         usersCount: data.value.stats.usersCount,
         instancesCount: data.value.stats.instancesCount,
-    });
+    }, data.value.date);
 }
 
 watch(data, (to) => {
@@ -224,7 +224,7 @@ watch(data, (to) => {
             notesCount: to.stats.notesCount,
             usersCount: to.stats.usersCount,
             instancesCount: to.stats.instancesCount,
-        });
+        }, to.date);
     }
 }, {
     deep: true,

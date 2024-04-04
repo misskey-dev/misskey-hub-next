@@ -7,6 +7,9 @@
                 <I18nT scope="global" keypath="_servers.addYourServer" tag="span">
                     <GNuxtLink class="font-bold hover:underline underline-offset-4" to="https://github.com/joinmisskey/api">{{ $t('_servers.addYourServerLink') }}</GNuxtLink>
                 </I18nT>
+                <div class="!mt-2 text-sm p-3 rounded-lg bg-white dark:bg-slate-800 border border-gray-300 dark:border-gray-950">
+                    {{ $t('lastUpdate') }}: {{ updatedAt ? $d(updatedAt) : $t('loading') }}
+                </div>
             </template>
             <template #icon>
                 <div class="relative px-6 py-8">
@@ -63,9 +66,11 @@ const localePath = useGLocalePath();
 const route = useRoute();
 
 const instancesStats = ref<InstancesStatsObj>();
+const updatedAt = shallowRef<Date>();
 
-function setServerStats(val?: InstancesStatsObj) {
+function setServerStats(val?: InstancesStatsObj, updated?: string) {
     instancesStats.value = val;
+    if (updated) updatedAt.value = new Date(updated);
 }
 
 route.meta.title = t('_servers.title');
