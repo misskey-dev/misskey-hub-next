@@ -7,7 +7,7 @@
         ]"
     >
         <aside
-            class="fixed z-50 transition-transform -mx-6 w-full bg-slate-200 dark:bg-slate-800 bottom-0 rounded-t-xl lg:translate-y-0 lg:shadow-none lg:bg-transparent dark:lg:bg-transparent lg:mx-0 lg:relative"
+            class="fixed z-50 transition-transform -mx-6 w-full lg:w-[calc(100%+3rem)] bg-slate-200 dark:bg-slate-800 bottom-0 rounded-t-xl lg:translate-y-0 lg:shadow-none lg:bg-transparent dark:lg:bg-transparent lg:relative"
             :class="sortOpen ? 'translate-y-0' : 'translate-y-[calc(100%-3rem)]'"
         >
             <button
@@ -17,7 +17,7 @@
             >
                 {{ $t('_servers._search.title') }}
             </button>
-            <div class="lg:sticky lg:top-24 lg:overflow-y-auto lg:max-h-[calc(100vh-6rem)] p-6 lg:px-0 lg:py-2 space-y-4">
+            <div class="lg:sticky lg:top-24 lg:overflow-y-auto lg:max-h-[calc(100vh-6rem)] p-6 lg:py-2 space-y-4">
                 <div class="flex items-center">
                     <h3 class="text-xl font-bold">{{ $t('_servers._search.title') }}</h3>
                     <button @click="sortOpen = false" class="ml-auto w-8 h-8 p-0.5 rounded-full bg-slate-100 dark:bg-slate-900 lg:hidden">
