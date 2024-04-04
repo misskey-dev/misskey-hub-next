@@ -16,6 +16,5 @@ withDefaults(defineProps<{
     space: 15,
 });
 
-const idchars = 'abcdefghijklmnopqrstuvwxyz';
-const id = Array.from(Array(32)).map(() => idchars[Math.floor(Math.random() * idchars.length)]).join('');
+const id = useId();
 </script>
