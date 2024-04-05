@@ -14,6 +14,7 @@ settings: "Pengaturan"
 goToLegacyHub: "Misskey Hub Jadul"
 contactUs: "Hubungi kami"
 detail: "Selengkapnya"
+lastUpdate: "最終更新"
 _error:
   notFound: "Halaman Tidak Ditemukan"
   notFoundDesc: "Halaman yang kamu cari tidak dapat ditemukan. Mohon cek kembali URL yang kamu tuju."
