@@ -11,7 +11,7 @@ if (import.meta.client) {
     isEnabledAiChanMode.value = ((localStorage.getItem('miHub_aichan_mode') ?? '') == 'true');
 
     // migration
-    if (!isEnabledAiChanMode.value) {
+    if (!localStorage.getItem('miHub_aichan_mode')) {
         isEnabledAiChanMode.value = ((localStorage.getItem('aimode') ?? '') == 'true');
     }
 }
