@@ -14,6 +14,7 @@ settings: "設定"
 goToLegacyHub: "L'ancien Misskey Hub"
 contactUs: "お問い合わせ"
 detail: "詳細"
+lastUpdate: "最終更新"
 _error:
   notFound: "La page demandée est introuvable !"
   notFoundDesc: "La page que vous cherchiez n'a pas pu être trouvée. Veuillez vérifier l'URL."
