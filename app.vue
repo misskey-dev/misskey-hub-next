@@ -99,19 +99,34 @@ const i18nLinks = computed(() => head.value.link?.map((e: any) => {
     return e;
 }));
 
-/** 
- * 中国大陸で Google Fonts を使う裏技
- * fonts.googleapis.com → fonts.googleapis.cn
- **/
-const cnHead = (locale.value === 'cn') ? [
-    { rel: 'preconnect', href: 'https://fonts.googleapis.cn' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.cn' },
-    { rel: 'stylesheet', href: 'https://fonts.googleapis.cn/css2?family=Capriola&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap' }
-] : [
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Capriola&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap' },
-];
+const loadSettled = ref(false);
+const cssLinks = computed<{
+    rel: string;
+    href: string;
+    as?: string;
+}[]>(() => {
+    /** 
+     * 中国大陸で Google Fonts を使う裏技
+     * fonts.googleapis.com → fonts.googleapis.cn
+     **/
+    const cssLinksRaw = (locale.value === 'cn') ? [
+        { rel: 'preconnect', href: 'https://fonts.googleapis.cn' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.cn' },
+        { rel: 'stylesheet', href: '/fonts/fonts.css'},
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.cn/css2?family=Capriola&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap' }
+    ] : [
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+        { rel: 'stylesheet', href: '/fonts/fonts.css'},
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Capriola&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap' },
+    ];
+    
+    if (loadSettled.value) {
+        return cssLinksRaw;
+    } else {
+        return cssLinksRaw.map((e) => e.rel === 'stylesheet' ? ({ ...e, rel: 'preload', as: 'style' }) : e);
+    }
+});
 
 useHead((): Record<string, any> => ({
     htmlAttrs: {
@@ -141,15 +156,18 @@ useHead((): Record<string, any> => ({
             // TODO
             content: () => route.meta.thumbnail ? route.meta.thumbnail : `${baseUrl}/img/og/misskey-hub-screenshot-l.png`,
         },
-        ...(head.value.meta?.map((e) => ({ property: e.property, content: e.content, })) || []),
+        ...(head.value.meta?.map((e) => ({ property: e.property, content: e.content })) || []),
     ],
     link: [
         ...(i18nLinks.value || []),
-        ...cnHead,
+        ...cssLinks.value,
     ],
     script: [
         { type: "application/ld+json", children: getLdJson(route.meta.graph) }
     ],
+    noscript: [
+        { children: cssLinks.value.filter((e) => e.rel === 'stylesheet' || (e.rel === 'preload' && e.as === 'style')).map((e) => `<link rel="stylesheet" href="${e.href}">`).join('') },
+    ]
 }));
 
 /** サイト全体でひとつのScroll Posiitionを使う */
@@ -163,6 +181,12 @@ if (import.meta.client) {
     window.addEventListener('scroll', updatePos);
     window.addEventListener('resize', updatePos);
 }
+
+onMounted(() => {
+    nextTick(() => {
+        loadSettled.value = true;
+    });
+});
 
 onUnmounted(() => {
     if (import.meta.client) {
