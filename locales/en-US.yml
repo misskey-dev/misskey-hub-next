@@ -14,6 +14,7 @@ settings: "Settings"
 goToLegacyHub: "Legacy Misskey Hub"
 contactUs: "Contact"
 detail: "Details"
+lastUpdate: "Last Update"
 _error:
   notFound: "Page not found"
   notFoundDesc: "The page you are looking for could not be found. Please check the URL."
