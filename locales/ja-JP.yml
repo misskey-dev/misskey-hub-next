@@ -172,6 +172,8 @@ _docs:
   _toc:
     title: "このページの内容"
     toPageTop: "ページ上部に戻る"
+  _steppedGuide:
+    selectCourse: "ガイドを選ぶ"
 
 _blog:
   title: "ブログ"
