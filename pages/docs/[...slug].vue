@@ -44,11 +44,14 @@
                     <ol class="relative before:absolute before:left-[13px] before:top-3.5 before:w-0.5 before:h-[calc(100%-.875rem)] before:rounded-full before:bg-gray-300 space-y-8">
                         <li v-for="(step, i) in data.guides[guideIndex].steps" :key="i" :id="`steppedGuideSection_${guideIndex}_${i}`" class="ml-7 relative lg:min-h-[calc(100vh-4rem)] flex items-center steppedGuideSection">
                             <div>
-                                <div class="flex items-center space-x-4 mb-2">
+                                <div class="flex items-center space-x-4 mb-4">
                                     <div class="w-7 h-7 rounded-full flex-shrink-0 -ml-7 font-bold leading-7 text-center text-white bg-accent-600 ring-4 ring-white">{{ i + 1 }}</div>
                                     <h3 class="font-bold text-lg">{{ step.title }}</h3>
                                 </div>
-                                <MDC :value="step.description" class="ml-4 markdown-body" />
+                                <div class="ml-4">
+                                    <img v-if="step?.image" :src="`/img/docs/${slugs.join('/')}/${step.image}`" class="w-auto h-full mx-auto max-h-96 mb-4" />
+                                    <MDC :value="step.description" class="markdown-body" />
+                                </div>
                             </div>
                         </li>
                     </ol>
