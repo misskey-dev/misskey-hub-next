@@ -166,6 +166,8 @@ _docs:
   _toc:
     title: "このページの内容"
     toPageTop: "ページ上部に戻る"
+  _steppedGuide:
+    selectCourse: "ガイドを選ぶ"
 _blog:
   title: "ブログ"
   description: "Misskey開発本部から、Misskeyに関する最新情報やTips等をお届けします！（日本語のみ）"
