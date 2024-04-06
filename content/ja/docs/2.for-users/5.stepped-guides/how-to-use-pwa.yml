@@ -27,7 +27,7 @@ guides:
       - title: "PWAにしたいMisskeyサーバーを開く"
         image: "android/sp_0.png"
         description: |
-          PWAとしてインストールしたいMisskeyサーバーにアクセスし、ログインしてください。
+          PWAとして端末にインストールしたいMisskeyサーバーにアクセスし、ログインしてください。
       
       - title: "詳細設定メニューを開く"
         image: "android/sp_1.png"
@@ -58,7 +58,7 @@ guides:
       - title: "PWAにしたいMisskeyサーバーを開く"
         image: "ios/sp_0.png"
         description: |
-          PWAとしてインストールしたいMisskeyサーバーにアクセスし、ログインしてください。
+          PWAとして端末にインストールしたいMisskeyサーバーにアクセスし、ログインしてください。
 
       - title: "共有ボタンをタップして開く"
         image: "ios/sp_1.png"
