@@ -46,12 +46,12 @@
                             v-for="(step, i) in data.guides[guideIndex].steps"
                             :key="i"
                             :id="`steppedGuideSection_${guideIndex}_${i}`"
-                            class="ml-7 relative  flex items-center"
+                            class="ml-7 relative flex items-center"
                             :class="{
                                 'lg:min-h-[calc(100vh-4rem)] steppedGuideSection': (data.guides[guideIndex]._LAYOUT_TYPE_ === 'IMAGE_PORTRAIT_FIXED'),
                             }"
                         >
-                            <div>
+                            <div class="flex-grow">
                                 <div class="flex items-center space-x-4 mb-4">
                                     <div class="w-7 h-7 rounded-full flex-shrink-0 -ml-7 font-bold leading-7 text-center text-white bg-accent-600 ring-4 ring-white">{{ i + 1 }}</div>
                                     <h3 class="font-bold text-lg">{{ step.title }}</h3>
