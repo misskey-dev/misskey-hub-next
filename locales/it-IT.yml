@@ -166,6 +166,8 @@ _docs:
   _toc:
     title: "Sommario"
     toPageTop: "Torna su"
+  _steppedGuide:
+    selectCourse: "ガイドを選ぶ"
 _blog:
   title: "Blog"
   description: "Contiene informazioni e suggerimenti recenti su Misskey, direttamente dal quartier generale dello sviluppo di Misskey! (solo in Giapponese)"
