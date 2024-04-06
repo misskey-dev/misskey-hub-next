@@ -32,25 +32,40 @@
                     <MDC :value="data?.body" />
                     <div>
                         <label for="guideSelector" class="block">{{ $t('_docs._steppedGuide.selectCourse') }}</label>
-                        <select id="guideSelector" class="form-select" v-model="guideIndex">
+                        <select id="guideSelector" class="form-select" :disabled="data.guides.length <= 1" v-model="guideIndex">
                             <option v-for="guide, i in data.guides" :value="i">{{ guide.title }}</option>
                         </select>
                     </div>
                 </div>
-                <Tip class="mb-6 lg:col-span-2 markdown-body">
+                <Tip v-if="data.guides[guideIndex]?.description" class="mb-6 lg:col-span-2 markdown-body">
                     <MDC :value="data.guides[guideIndex].description" />
                 </Tip>
                 <div>
                     <ol class="relative before:absolute before:left-[13px] before:top-3.5 before:w-0.5 before:h-[calc(100%-.875rem)] before:rounded-full before:bg-gray-300 space-y-8">
-                        <li v-for="(step, i) in data.guides[guideIndex].steps" :key="i" :id="`steppedGuideSection_${guideIndex}_${i}`" class="ml-7 relative lg:min-h-[calc(100vh-4rem)] flex items-center steppedGuideSection">
+                        <li
+                            v-for="(step, i) in data.guides[guideIndex].steps"
+                            :key="i"
+                            :id="`steppedGuideSection_${guideIndex}_${i}`"
+                            class="ml-7 relative  flex items-center"
+                            :class="{
+                                'lg:min-h-[calc(100vh-4rem)] steppedGuideSection': (data.guides[guideIndex]._LAYOUT_TYPE_ === 'IMAGE_PORTRAIT_FIXED'),
+                            }"
+                        >
                             <div>
                                 <div class="flex items-center space-x-4 mb-4">
                                     <div class="w-7 h-7 rounded-full flex-shrink-0 -ml-7 font-bold leading-7 text-center text-white bg-accent-600 ring-4 ring-white">{{ i + 1 }}</div>
                                     <h3 class="font-bold text-lg">{{ step.title }}</h3>
                                 </div>
                                 <div class="ml-4">
-                                    <img v-if="step?.image" :src="`/img/docs/${slugs.join('/')}/${step.image}`" class="lg:hidden w-auto h-full mx-auto max-h-96 mb-4" />
-                                    <MDC :value="step.description" class="markdown-body" />
+                                    <img
+                                        v-if="step?.image"
+                                        :src="`/img/docs/${slugs.join('/')}/${step.image}`"
+                                        class="w-auto h-full mx-auto max-h-96 mb-4"
+                                        :class="{
+                                            'lg:hidden': (data.guides[guideIndex]._LAYOUT_TYPE_ === 'IMAGE_PORTRAIT_FIXED'),
+                                        }"
+                                    />
+                                    <MDC v-if="step.description" :value="step.description" class="markdown-body" />
                                 </div>
                             </div>
                         </li>
@@ -58,7 +73,7 @@
                 </div>
                 <div class="hidden lg:block">
                     <div class="sticky top-16 h-[calc(100vh-4rem)] p-6">
-                        <div class="relative h-full">
+                        <div v-if="data.guides[guideIndex]._LAYOUT_TYPE_ === 'IMAGE_PORTRAIT_FIXED'" class="relative h-full">
                             <Transition
                                 :enterActiveClass="$style.steppedGuideImage_enterActive"
                                 :leaveActiveClass="$style.steppedGuideImage_leaveActive"

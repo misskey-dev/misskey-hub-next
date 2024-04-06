@@ -26,7 +26,7 @@ interface MiDocsParsedContentSteppedGuide extends ParsedContent {
         _AUTOSELECT_TYPE_?: 'OS_ANDROID' | 'OS_IOS';
         _LAYOUT_TYPE_?: 'IMAGE_PORTRAIT_FIXED';
         title: string;
-        description: string | MarkdownRoot;
+        description?: string | MarkdownRoot;
         steps: {
             title: string;
             description: string | MarkdownRoot;
