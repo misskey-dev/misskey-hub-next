@@ -49,7 +49,7 @@
                                     <h3 class="font-bold text-lg">{{ step.title }}</h3>
                                 </div>
                                 <div class="ml-4">
-                                    <img v-if="step?.image" :src="`/img/docs/${slugs.join('/')}/${step.image}`" class="w-auto h-full mx-auto max-h-96 mb-4" />
+                                    <img v-if="step?.image" :src="`/img/docs/${slugs.join('/')}/${step.image}`" class="lg:hidden w-auto h-full mx-auto max-h-96 mb-4" />
                                     <MDC :value="step.description" class="markdown-body" />
                                 </div>
                             </div>
