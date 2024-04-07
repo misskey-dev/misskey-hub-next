@@ -163,7 +163,7 @@ CREATE DATABASE mk1 OWNER misskey;
 Redisは、NoSQLのインメモリデータベースソフトであり、データベースや連合との通信を管理するなどのために必要だ。\
 redis.ioのドキュメントに従い、snapでインストールする。
 
-https\://redis.io/docs/getting-started/installation/install-redis-on-linux/
+https://redis.io/docs/getting-started/installation/install-redis-on-linux/
 
 ```sh
 sudo snap install redis
@@ -187,7 +187,7 @@ nginxは、主としてリバースプロキシに用いられるWebサーバー
 
 :::
 
-nginx.orgのドキュメント http\://nginx.org/en/linux_packages.html#Ubuntu に従ってインストールする。
+nginx.orgのドキュメント http://nginx.org/en/linux_packages.html#Ubuntu に従ってインストールする。
 
 ```sh
 sudo apt install -y curl ca-certificates gnupg2 lsb-release ubuntu-keyring
@@ -223,7 +223,7 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
 
-http\://localhost にアクセスし、\*Welcome to nginx!\*と表示されればOK。\
+http://localhost にアクセスし、\*Welcome to nginx!\*と表示されればOK。\
 curlで確認するのもよいだろう。
 
 ```sh
@@ -310,7 +310,7 @@ sudo apt install -y certbot python3-certbot-dns-cloudflare
 
 CloudflareのAPIキーを取得する。以下の手順で取得されたい。
 
-1. https\://dash.cloudflare.com/profile/api-tokens にアクセス
+1. https://dash.cloudflare.com/profile/api-tokens にアクセス
 2. Global API KeyのViewを選択
 3. パスワードを入力しhCaptchaを解除、Viewを選択
 
@@ -321,7 +321,7 @@ mkdir /etc/cloudflare
 nano /etc/cloudflare/cloudflare.ini
 ```
 
-dns_cloudflare_email（下の例ではbar\@fuga.foo）にはCloudFlareで登録しているメールアドレスを設定する。
+dns_cloudflare_email（下の例ではbar@fuga.foo）にはCloudFlareで登録しているメールアドレスを設定する。
 
 ```sh
 dns_cloudflare_email = bar@fuga.foo
