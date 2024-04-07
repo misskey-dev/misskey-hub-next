@@ -47,10 +47,9 @@
 
 ### 테마 스타일 정의
 
-베이스 테마는 이 테마의 `base`가 `light`라면 [\_light.json5][_light.json5]이고, `dark`라면 [\_dark.json5][_dark.json5]입니다.
+베이스 테마는 이 테마의 `base`가 `light`라면 [\\_light.json5][_light.json5]이고, `dark`라면 [\\_dark.json5][_dark.json5]입니다.
 
 [_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
-
 [_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
 
 #### 값으로 사용할 수 있는 구문

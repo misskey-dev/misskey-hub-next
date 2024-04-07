@@ -310,7 +310,7 @@ sudo apt install -y certbot python3-certbot-dns-cloudflare
 
 CloudflareのAPIキーを取得する。以下の手順で取得されたい。
 
-1. https\://dash.cloudflare.com/profile/api-tokens にアクセス
+1. https://dash.cloudflare.com/profile/api-tokens にアクセス
 2. Global API KeyのViewを選択
 3. パスワードを入力しhCaptchaを解除、Viewを選択
 
@@ -321,7 +321,7 @@ mkdir /etc/cloudflare
 nano /etc/cloudflare/cloudflare.ini
 ```
 
-dns_cloudflare_email（下の例ではbar\@fuga.foo）にはCloudFlareで登録しているメールアドレスを設定する。
+dns_cloudflare_email（下の例ではbar@fuga.foo）にはCloudFlareで登録しているメールアドレスを設定する。
 
 ```sh
 dns_cloudflare_email = bar@fuga.foo

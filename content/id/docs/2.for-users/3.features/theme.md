@@ -55,7 +55,6 @@ Tema dasarnya adalah [\_light.json5][_light.json5] jika `base` dari tema ini ada
 Artinya, jika tidak ada kunci `props` yang bernama `panel` dalam tema ini, maka nilai `panel` akan diatur menggunakan nilai dari tema dasar.
 
 [_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
-
 [_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
 
 #### Sintaks Nilai
@@ -95,12 +94,12 @@ props: {
 
 ##### 使用できる関数
 
-- `lighten` ... 渡された色の輝度(0 \~ 100)に対して引数(0 \~ 100)を加算した色を返します。
-- `darken` ... 渡された色の輝度(0 \~ 100)に対して引数(0 \~ 100)を減算した色を返します。
-- `alpha` ... 渡された色の透明度を引数(0.0 \~ 1.0)に設定した色を返します。
+- `lighten` ... 渡された色の輝度(0 ~ 100)に対して引数(0 ~ 100)を加算した色を返します。
+- `darken` ... 渡された色の輝度(0 ~ 100)に対して引数(0 ~ 100)を減算した色を返します。
+- `alpha` ... 渡された色の透明度を引数(0.0 ~ 1.0)に設定した色を返します。
   - 0.0のとき完全に透明、1.0で完全に不透明になります。
-- `hue` ... 渡された色の色相(-360 \~ 360)に対して引数(-360 \~ 360)の値だけ回転させた色を返します。
-- `saturate` ... 渡された色の彩度(0 \~ 100)に対して引数(0 \~ 100)を加算した色を返します。
+- `hue` ... 渡された色の色相(-360 ~ 360)に対して引数(-360 ~ 360)の値だけ回転させた色を返します。
+- `saturate` ... 渡された色の彩度(0 ~ 100)に対して引数(0 ~ 100)を加算した色を返します。
 
 ## テーマを配布する
 

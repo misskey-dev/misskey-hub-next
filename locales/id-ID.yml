@@ -14,6 +14,7 @@ settings: "Pengaturan"
 goToLegacyHub: "Misskey Hub Jadul"
 contactUs: "Hubungi kami"
 detail: "Selengkapnya"
+lastUpdate: "最終更新"
 _error:
   notFound: "Halaman Tidak Ditemukan"
   notFoundDesc: "Halaman yang kamu cari tidak dapat ditemukan. Mohon cek kembali URL yang kamu tuju."
@@ -165,6 +166,8 @@ _docs:
   _toc:
     title: "Daftar Isi"
     toPageTop: "Kembali ke Atas"
+  _steppedGuide:
+    selectCourse: "ガイドを選ぶ"
 _blog:
   title: "Blog"
   description: "Dapatkan informasi dan tips mengenai Misskey langsung dari Tim Pengembang Misskey! (hanya Bahasa Jepang)"

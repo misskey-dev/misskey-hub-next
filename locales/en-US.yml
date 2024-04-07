@@ -14,6 +14,7 @@ settings: "Settings"
 goToLegacyHub: "Legacy Misskey Hub"
 contactUs: "Contact"
 detail: "Details"
+lastUpdate: "Last Update"
 _error:
   notFound: "Page not found"
   notFoundDesc: "The page you are looking for could not be found. Please check the URL."
@@ -165,6 +166,8 @@ _docs:
   _toc:
     title: "Table of Contents"
     toPageTop: "Back to Top"
+  _steppedGuide:
+    selectCourse: "ガイドを選ぶ"
 _blog:
   title: "Blog"
   description: "Get the latest information and tips about Misskey straight from the Misskey Development Team! (Japanese only)"
