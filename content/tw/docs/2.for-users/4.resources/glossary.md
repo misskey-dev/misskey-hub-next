@@ -16,7 +16,7 @@ description: 與 Misskey 相關的術語表。
 
 ## AiScript
 
-一種可在 Misskey 中使用並在 JavaScript 上運行的程式語言。詳情參考[這裡](../features/note/#cw)](https\://github.com/aiscript-dev/aiscript/blob/master/README.md)
+一種可在 Misskey 中使用並在 JavaScript 上運行的程式語言。詳情參考[這裡](../features/note/#cw)](https://github.com/aiscript-dev/aiscript/blob/master/README.md)
 
 ## API
 
@@ -68,7 +68,7 @@ Not Safe For Work（工作場所不宜）的縮寫。此功能可讓您將圖像
 
 ## 小藍
 
-Misskey的看板娘（官方代表人物）。詳情參考[這裡](../features/mfm)](https\://xn--931a.moe/)
+Misskey的看板娘（官方代表人物）。詳情參考[這裡](../features/mfm)](https://xn--931a.moe/)
 
 ## 伺服器
 
