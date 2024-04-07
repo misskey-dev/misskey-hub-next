@@ -12,11 +12,11 @@ Semua parameter merupakan **opsional** dan tidak wajib.
 
 :::
 
-| Nama    | Deskripsi                                                                                                                    |
-| ------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Nama    | Deskripsi                                                                                                                                    |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | `title` | Judul,[ … ] akan dimasukkan sebelum badan teks utama dalam tanda kurung. |
-| `text`  | badan teks utama                                                                                                             |
-| `url`   | URL.dimasukkan setelah badan teks utama.                                                                                     |
+| `text`  | badan teks utama                                                                                                                             |
+| `url`   | URL.dimasukkan setelah badan teks utama.                                                                     |
 
 ### Informasi Balasan
 
