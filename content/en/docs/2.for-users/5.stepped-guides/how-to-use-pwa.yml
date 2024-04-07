@@ -1,79 +1,79 @@
-title: "Misskey Webをアプリ化して使う方法"
-description: "Misskey WebをPWAアプリ化する方法をご紹介します。スマートフォンでMisskeyを利用する際のおすすめの方法です。"
+title: "How to use Misskey Web as a smartphone app"
+description: "Learn how to turn Misskey Web into a PWA app. This is the recommended way to use Misskey on your smartphone."
 #Do not translate any keys that includes underscore
 _TYPE_: "STEPPED_GUIDE"
 body: |
-  ここでは、Misskey WebをPWAアプリ化する方法をご紹介します。スマートフォンでMisskeyを利用する際のおすすめの方法です。
+  Here is how to convert Misskey Web into a PWA application. This is the recommended way to use Misskey on your smartphone.
 
-  ## PWAとは？
+  ## What is PWA?
 
-  PWAは、Progressive Web Appの略で、ウェブページをアプリのように扱うことができる技術です。Misskeyは、標準でPWAに対応しています。
+  PWA stands for Progressive Web App, a technology that allows web pages to be treated like normal apps.
 
-  ここでは、PWAの設定方法を端末のOS別に紹介しています。以下からお使いのOSを選んで進んでください！
+  In this page, we'll explain how to set up PWA for each device OS. Please select your OS below to proceed!
 guides:
   - 
     _AUTOSELECT_TYPE_: "OS_ANDROID"
     _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
     title: "Android (Google Chrome)"
     description: |
-      AndroidでPWAをお使いになる際は、Google Chromeがおすすめです。
+      We recommend using Google Chrome to use PWA on Android.
 
-      ここでは、Google Chromeを使用した設定方法について解説します。
+      Let's take a look at how to set it up using Google Chrome.
     steps:
       - 
-        title: "PWAにしたいMisskeyサーバーを開く"
+        title: "Open the Misskey server you want to make into a PWA"
         image: "android/sp_0.png"
         description: |
-          PWAとして端末にインストールしたいMisskeyサーバーにアクセスし、ログインしてください。
+          Access the Misskey server you want to install on your device, and log in.
       - 
-        title: "詳細設定メニューを開く"
+        title: "Open settings"
         image: "android/sp_1.png"
         description: |
-          Misskeyサーバーの任意のページを開いたまま、右上にある「︙」ボタンをタップします。
+          Tap the ︙ button in the upper right corner while any page on the Misskey server is open.
       - 
-        title: "「ホーム画面に追加」または「アプリをインストール」をタップ"
+        title: "Tap \"Add to Home Screen\" or \"Install App\""
         image: "android/sp_2.png"
         description: |
-          メニュー内にある「ホーム画面に追加」もしくは「アプリをインストール」の項目をタップし、出てきたダイアログの指示に従ってください。
+          Tap the "Add to Home Screen" or "Install App" item in the menu and follow the instructions in the dialog.
       - 
-        title: "ホーム画面を確認する"
+        title: "Check your home screen"
         image: "android/sp_3.png"
         description: |
-          しばらくすると、ホーム画面に、サーバーのアイコンもしくはMisskeyのアイコンが追加されます。
+          After a few moments, the server icon or a Misskey icon will be added to the home screen.
 
-          このアイコンをタップすることで、Misskeyはアプリモードで起動します。
+          When launched from this icon, Misskey will start in app mode.
   - 
     _AUTOSELECT_TYPE_: "OS_IOS"
     _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
     title: "iOS / iPadOS"
     description: |
-      iOS または iPadOS でPWAをお使いになる際は、Safariをご利用ください。
+      Use Safari when using PWA on iOS or iPadOS.
 
-      開始する前に、お使いの端末に搭載されているOSが最新のものかどうかを確認してください。最新ではない場合は、[こちら](https://support.apple.com/ja-jp/ios/update)を参考にしてアップデートしてください。
+      Before starting, please make sure that the OS on your device is up-to-date. If it is not, please update your system by following the instructions [here](https://support.apple.com/en-us/ios/update).
     steps:
       - 
-        title: "PWAにしたいMisskeyサーバーを開く"
+        title: "Open the Misskey server you want to make into a PWA"
         image: "ios/sp_0.png"
         description: |
-          PWAとして端末にインストールしたいMisskeyサーバーにアクセスし、ログインしてください。
+          Access the Misskey server you want to install on your device, and log in.
       - 
-        title: "共有ボタンをタップして開く"
+        title: "Tap \"Share\" button and open the menu"
         image: "ios/sp_1.png"
         description: |
-          Misskeyサーバーの任意のページを開いたまま、メニューバーの共有ボタンをタップします。
+          Tap "Share" button in the menu bar while any page on the Misskey server is open.
       - 
-        title: "「ホーム画面に追加」をタップ"
+        title: "Tap \"Add to Home Screen\""
         image: "ios/sp_2.png"
         description: |
-          オプションのリストを下にスクロールしてから、「ホーム画面に追加」をタップします。
+          Scroll down the list of options, then tap Add to Home Screen.
 
-          この後、通知の送信許可を求められることがありますので、画面の指示に従い、必要に応じて許可してください。
+          Misskey server may ask for permission to send you notifications at this point. If so, follow the on-screen instruction and decide accept or deny it.
 
-          「ホーム画面に追加」が表示されない場合は、設定項目が非表示になっている可能性があります。表示するには、リストの一番下までスクロールし、「アクションを編集」から「ホーム画面に追加」の項目を追加してください。詳しくは[Appleのサポートページ](https://support.apple.com/ja-jp/guide/iphone/iph42ab2f3a7/ios)をご覧ください。
+          If you don’t see Add to Home Screen, the setting item may be hidden. To add it, scroll down to the bottom of the list, tap Edit Actions, then tap Add to Home Screen. See [Apple Support page](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/17.0/ios/17.0) for more information.
       - 
-        title: "ホーム画面を確認する"
+        title: "Check your home screen"
         image: "ios/sp_3.png"
         description: |
-          しばらくすると、ホーム画面に、サーバーのアイコンもしくはMisskeyのアイコンが追加されます。
+          After a few moments, the server icon or a Misskey icon will be added to the home screen.
 
-          このアイコンをタップすることで、Misskeyはアプリモードで起動します。
+          When launched from this icon, Misskey will start in app mode.
