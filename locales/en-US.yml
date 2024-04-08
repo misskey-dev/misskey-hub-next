@@ -167,7 +167,7 @@ _docs:
     title: "Table of Contents"
     toPageTop: "Back to Top"
   _steppedGuide:
-    selectCourse: "ガイドを選ぶ"
+    selectCourse: "Select a Guide"
 _blog:
   title: "Blog"
   description: "Get the latest information and tips about Misskey straight from the Misskey Development Team! (Japanese only)"
