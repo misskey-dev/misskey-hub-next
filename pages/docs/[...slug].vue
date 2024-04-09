@@ -18,7 +18,7 @@
                 <AsideNavIco class="block w-5 h-5" />
             </button>
         </div>
-        <div class="pt-6 p-0 sm:p-12 lg:p-6 w-full">
+        <div class="pt-6 p-0 sm:p-12 lg:p-6 w-full min-w-0">
             <Tip v-if="locale !== 'ja'" class="mb-6" :label="$t('_i18n._missing.title')">
                 <I18nT scope="global" keypath="_i18n._missing.description" tag="p">
                     <template #link>
