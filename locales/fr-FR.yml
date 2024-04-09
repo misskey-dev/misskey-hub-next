@@ -168,6 +168,7 @@ _docs:
     toPageTop: "Retourner en haut de la page"
   _steppedGuide:
     selectCourse: "ガイドを選ぶ"
+    noImageInThisStep: "このステップには画像がありません"
 _blog:
   title: "Blogue"
   description: "Les dernières nouvelles, conseils et astuces sur Misskey de la part de l'équipe de développement ! (uniquement en japonais)"

@@ -168,6 +168,7 @@ _docs:
     toPageTop: "Kembali ke Atas"
   _steppedGuide:
     selectCourse: "ガイドを選ぶ"
+    noImageInThisStep: "このステップには画像がありません"
 _blog:
   title: "Blog"
   description: "Dapatkan informasi dan tips mengenai Misskey langsung dari Tim Pengembang Misskey! (hanya Bahasa Jepang)"
