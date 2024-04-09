@@ -72,6 +72,9 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="pl-7 pt-[18px] relative items-center before:absolute before:left-[13px] before:top-[calc(50%-30px)] before:w-0.5 before:h-[calc(50%+30px)] before:bg-white dark:before:bg-slate-950 after:absolute after:left-[13px] after:top-[calc(50%-30px)] after:h-[30px] after:w-[15px] after:rounded-bl-[15px] after:border-l-[0.125rem] after:border-b-[0.125rem] after:border-gray-300 dark:after:border-gray-700">
+                            <Fukidashi chara="smiling_ai" :charaName="$t('_links._aiChan.title')" class="!mb-0">{{ $t('_docs._steppedGuide.aiWellDone') }}</Fukidashi>
+                        </li>
                     </ol>
                 </div>
                 <div v-if="data.guides[guideIndex]?._LAYOUT_TYPE_ === 'IMAGE_PORTRAIT_FIXED'" class="hidden lg:block rounded-lg bg-gray-100 dark:bg-gray-800">
