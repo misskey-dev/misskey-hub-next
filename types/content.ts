@@ -23,7 +23,7 @@ interface MiDocsParsedContentSteppedGuide extends ParsedContent {
     _TYPE_: 'STEPPED_GUIDE';
 
     guides: {
-        _AUTOSELECT_TYPE_?: 'OS_ANDROID' | 'OS_IOS';
+        _AUTOSELECT_TYPE_?: 'OS_ANDROID' | 'OS_IOS' | 'OS_MAC' | 'OS_WINDOWS' | 'HARD_SMARTPHONE' | 'HARD_PC';
         _LAYOUT_TYPE_?: 'IMAGE_PORTRAIT_FIXED';
         title: string;
         description?: string | MarkdownRoot;
