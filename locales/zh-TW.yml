@@ -168,6 +168,7 @@ _docs:
     toPageTop: "回到頁首"
   _steppedGuide:
     selectCourse: "ガイドを選ぶ"
+    noImageInThisStep: "このステップには画像がありません"
 _blog:
   title: "網誌"
   description: "來自 Misskey 開發部的有關 Misskey 的最新消息、技巧和竅門！ (僅限日文）"
