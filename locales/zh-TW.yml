@@ -14,6 +14,7 @@ settings: "設定"
 goToLegacyHub: "舊版的 Misskey Hub"
 contactUs: "聯絡我們"
 detail: "詳細資訊"
+lastUpdate: "最終更新"
 _error:
   notFound: "找不到此頁面"
   notFoundDesc: "找不到此頁面，請確認網址是否正確。"
@@ -165,6 +166,8 @@ _docs:
   _toc:
     title: "本頁內容"
     toPageTop: "回到頁首"
+  _steppedGuide:
+    selectCourse: "ガイドを選ぶ"
 _blog:
   title: "網誌"
   description: "來自 Misskey 開發部的有關 Misskey 的最新消息、技巧和竅門！ (僅限日文）"

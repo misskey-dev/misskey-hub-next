@@ -94,7 +94,7 @@ sudo bash update.sh
 이 스크립트는, Oracle Cloud Infrastructure의 Always Free 서비스로 제공되어지는 2 종류의 구성 중 어느 곳에서도 동작합니다.
 
 - VM.Standard.E2.1.Micro (AMD)
-- VM.Standard.A1.Flex (ARM) [1OCPU RAM6GB or greater]
+- VM.Standard.A1.Flex (ARM) \[1OCPU RAM6GB or greater]
 
 iptables를 쓸 수 있게 설정하세요.
 
@@ -121,7 +121,7 @@ Docker인 경우에 만들어집니다.\
 \
 실행되고 있는 컨테이너와 이미지 번호를 저장하고 있습니다.\
 \
-컨테이너 번호는 업데이트 할 때 바뀌어집니다.오래된 이미지는 삭제됩니다.](https\://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0)
+컨테이너 번호는 업데이트 할 때 바뀌어집니다.오래된 이미지는 삭제됩니다.](https://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0)
 
 Docker Hub 이미지를 사용하는 설정이라면, Misskey를 빌드할 필요가 없으므로, **제일 추천하고 있습니다**.\
 \

@@ -14,6 +14,7 @@ settings: "Impostazioni"
 goToLegacyHub: "Versione precedente"
 contactUs: "お問い合わせ"
 detail: "詳細"
+lastUpdate: "最終更新"
 _error:
   notFound: "Pagina non trovata"
   notFoundDesc: "お探しのページは見つかりませんでした。URLをお確かめください。"
@@ -165,6 +166,8 @@ _docs:
   _toc:
     title: "Sommario"
     toPageTop: "Torna su"
+  _steppedGuide:
+    selectCourse: "ガイドを選ぶ"
 _blog:
   title: "Blog"
   description: "Contiene informazioni e suggerimenti recenti su Misskey, direttamente dal quartier generale dello sviluppo di Misskey! (solo in Giapponese)"

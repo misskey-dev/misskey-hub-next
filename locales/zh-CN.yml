@@ -14,6 +14,7 @@ settings: "设置"
 goToLegacyHub: "Misskey Hub的历史"
 contactUs: "お問い合わせ"
 detail: "詳細"
+lastUpdate: "最終更新"
 _error:
   notFound: "找不到页面"
   notFoundDesc: "找不到您要查找的页面，请检查 URL。"
@@ -165,6 +166,8 @@ _docs:
   _toc:
     title: "このページの内容"
     toPageTop: "回到顶部"
+  _steppedGuide:
+    selectCourse: "ガイドを選ぶ"
 _blog:
   title: "博客"
   description: "Misskey開発本部から、Misskeyに関する最新情報やTips等をお届けします！（日本語のみ）"

@@ -1,6 +1,6 @@
 # Nginx 설정
 
-1. `/etc/nginx/conf.d/misskey.conf` 또는 `/etc/nginx/sites-available/misskey.conf`를 생성하고 아래 설정 예시를 복사합니다...
+1. `/etc/nginx/conf.d/misskey.conf` 또는 `/etc/nginx/sites-available/misskey.conf`를 생성하고 아래 설정 예시를 복사합니다..\.
    (파일명은 misskey가 아니어도 상관없습니다.)）
 2. 다음과 같이 편집합니다.
    1. example.tld를 자신이 준비한 도메인으로 대체합니다.example.tld를 자신이 준비한 도메인으로 대체합니다.\
