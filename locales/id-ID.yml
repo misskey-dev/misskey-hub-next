@@ -169,6 +169,7 @@ _docs:
   _steppedGuide:
     selectCourse: "ガイドを選ぶ"
     noImageInThisStep: "このステップには画像がありません"
+    aiWellDone: "操作はこれで完了です。お疲れ様でした♪"
 _blog:
   title: "Blog"
   description: "Dapatkan informasi dan tips mengenai Misskey langsung dari Tim Pengembang Misskey! (hanya Bahasa Jepang)"
