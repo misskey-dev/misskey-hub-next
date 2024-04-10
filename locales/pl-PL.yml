@@ -169,6 +169,7 @@ _docs:
   _steppedGuide:
     selectCourse: "ガイドを選ぶ"
     noImageInThisStep: "このステップには画像がありません"
+    aiWellDone: "操作はこれで完了です。お疲れ様でした♪"
 _blog:
   title: "ブログ"
   description: "Misskey開発本部から、Misskeyに関する最新情報やTips等をお届けします！（日本語のみ）"
