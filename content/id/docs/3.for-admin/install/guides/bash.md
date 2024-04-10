@@ -129,7 +129,13 @@ Urutan rekomendasi yang disarankan adalah sebagai berikut:
 
 Apabila kamu ingin membuat peladen Misskey pada satu peladen, disarankan untuk menggunakan nginx.
 
-ロードバランサーを設置する場合にはnginxをインストールせず、[Misskeyのnginx設定](../resources/nginx/)を参考にロードバランサーを設定するのがよいと思います。
+- ユーザは自分のみ（いわゆるお一人様サーバー）or ごく少数
+- ロードバランサー等nginxのリバースプロキシ・キャッシュ機能を他の手段で賄う用意がある（上級者向け）
+
+nginxをリバースプロキシとして採用することにより、画像ファイルなどの静的コンテンツをキャッシュしサーバーリソースの浪費を抑えることが出来ます。
+また、nginxにはキャッシュが無い状態での大量アクセスを上手くコントロールする機能が搭載されていますので、Misskeyの負荷増大を抑える効果を期待できます。
+
+設定例は[nginxの設定](../resources/nginx/)ページにて記載しています。
 
 ## Tambahkan swap!
 
