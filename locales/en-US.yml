@@ -169,7 +169,7 @@ _docs:
   _steppedGuide:
     selectCourse: "Select a Guide"
     noImageInThisStep: "There is no image in this step"
-    aiWellDone: "操作はこれで完了です。お疲れ様でした♪"
+    aiWellDone: "That's all for the procedure. Well done!"
 _blog:
   title: "Blog"
   description: "Get the latest information and tips about Misskey straight from the Misskey Development Team! (Japanese only)"
