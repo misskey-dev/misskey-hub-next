@@ -30,10 +30,12 @@ useHead({
 
 const { meta, query } = useRoute();
 
-const manualInstance = (Array.isArray(query.manualInstance) ? query.manualInstance[0] : query.manualInstance) ?? undefined;
+const _query = structuredClone(query);
+
+const manualInstance = (Array.isArray(_query.manualInstance) ? _query.manualInstance[0] : _query.manualInstance) ?? undefined;
 
 const filteredQuery = computed(() => ({
-    ...query,
+    ..._query,
     replyId: undefined,
     renoteId: undefined,
     visibleUserIds: undefined,
