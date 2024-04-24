@@ -20,11 +20,11 @@
                     <div class="grid grid-cols-3 text-center">
                         <dl>
                             <dt class="text-xs opacity-90">{{ $t('_servers._statistics.notes') }}</dt>
-                            <dd class="font-bold text-accent-600">{{ instance.stats?.originalNotesCount.toLocaleString() }}</dd>
+                            <dd :title="$n(instance.stats?.originalNotesCount)" class="font-bold text-accent-600">{{ instance.stats?.originalNotesCount ? $n(instance.stats.originalNotesCount, instance.stats.originalNotesCount >= 100000 ? { notation: 'compact', maximumFractionDigits: 1 } : { notation: 'standard' }) : '' }}</dd>
                         </dl>
                         <dl>
                             <dt class="text-xs opacity-90">{{ $t('_servers._statistics.users') }}</dt>
-                            <dd class="font-bold text-accent-600">{{ instance.stats?.originalUsersCount.toLocaleString() }}</dd>
+                            <dd :title="$n(instance.stats?.originalUsersCount)" class="font-bold text-accent-600">{{ instance.stats?.originalUsersCount ? $n(instance.stats.originalUsersCount, instance.stats.originalUsersCount >= 100000 ? { notation: 'compact', maximumFractionDigits: 1 } : { notation: 'standard' }) : '' }}</dd>
                         </dl>
                         <dl>
                             <dt class="text-xs opacity-90">{{ $t('_servers._registerAcceptance.title') }}</dt>

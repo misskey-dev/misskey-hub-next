@@ -1,65 +1,65 @@
-# 共有フォーム
+# Form Bagikan
 
-Misskey Webの`/share`を開くと、共有用の投稿フォームを開くことができます。この共有フォームを利用すると、外部のWebページから、ページの内容をユーザーにMisskeyで共有してもらいたいときに便利です。
+Ketika kamu membuka `/share` di Misskey Web, kamu membuka form submisi bagikan.Form bagikan ini berguna jika kamu ingin pengguna membagikan konten dari halamanmu dengan Misskey dari halaman web eksternal.
 
-URLにクエリパラメータとして共有内容をはじめとするいくつかのオプションを指定できます。
+Kamu dapat menentukan berbagai opsi di dalam URL, termasuk konten yang dibagikan sebagai parameter kueri.
 
-## クエリパラメータ
+## Parameter Kueri
 
 :::tip
 
-すべてのパラメータは**オプション**であり、必須ではありません。
+Semua parameter merupakan **opsional** dan tidak wajib.
 
 :::
 
-| 名前      | 説明                                                                           |
-| ------- | ---------------------------------------------------------------------------- |
-| `title` | タイトル。本文の先頭に[ … ]と挿入されます。 |
-| `text`  | 本文。                                                                          |
-| `url`   | URL。本文の末尾に挿入されます。                                                            |
+| Nama    | Deskripsi                                                                                                                                    |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title` | Judul,[ … ] akan dimasukkan sebelum badan teks utama dalam tanda kurung. |
+| `text`  | badan teks utama                                                                                                                             |
+| `url`   | URL.dimasukkan setelah badan teks utama.                                                                     |
 
-### リプライ情報
+### Informasi Balasan
 
-以下のいずれかを指定すると、指定のノートに対するリプライにすることができます。
+Kamu dapat membuat catatan menjadi balasan ke catatan yang diberikan dengan menentukan salah satu dari berikut.
 
-| 名前         | 説明                            |
-| ---------- | ----------------------------- |
-| `replyId`  | リプライ先のノートID。                  |
-| `replyUri` | リプライ先のURL。（リモートのノートオブジェクトを指定） |
+| Nama       | Deskripsi                                                                          |
+| ---------- | ---------------------------------------------------------------------------------- |
+| `replyId`  | ID dari catatan yang kamu balas                                                    |
+| `replyUri` | URL untuk membalaske (tentukan objek catatan dari peladen luar) |
 
-### Renote情報
+### Informasi Renote
 
-以下のいずれかを指定すると、指定のノートに対するRenote(引用)にすることができます。
+Kamu dapat membuat catatan menjadi renote ke catatan yang diberikan dengan menentukan salah satu dari berikut.
 
-| 名前          | 説明                              |
-| ----------- | ------------------------------- |
-| `renoteId`  | Renote先のノートID。                  |
-| `renoteUri` | Renote先のURL。（リモートのノートオブジェクトを指定） |
+| Nama        | Deskripsi                                                                                         |
+| ----------- | ------------------------------------------------------------------------------------------------- |
+| `renoteId`  | ID dari catatan yang ingin direnote                                                               |
+| `renoteUri` | URL dari catatan yang ingin direnote(tentukan objek catatan dari peladen luar) |
 
-### 公開範囲
+### Lingkup Publikasi
 
-以下のオプションで公開範囲の指定を行えます。
+Opsi berikut memungkinkan kamu untuk memilih lingkup publikasi.
 
-| 名前               | 説明                                                                   |
-| ---------------- | -------------------------------------------------------------------- |
-| `visibility`     | `public`, `home`, `followers`, `specified` のいずれか                     |
-| `localOnly`      | 0(false) or 1(true)            |
-| `visibleUserIds` | 対象ユーザーID(カンマ区切り)                                  |
-| `visibleAccts`   | 対象ユーザー[acct](../resources/glossary/#acct)(カンマ区切り) |
+| Nama             | Deskripsi                                                                               |
+| ---------------- | --------------------------------------------------------------------------------------- |
+| `visibility`     | salah satu dari `public`, `home`, `followers`, `specified`                              |
+| `localOnly`      | 0(false) atau 1(true)                             |
+| `visibleUserIds` | ID pengguna target (dipisahkan dengan koma)                          |
+| `visibleAccts`   | [acct](../glossary.md#acct) pengguna target (dipisahkan dengan koma) |
 
 :::warning
 
-`visibility`に`specified`を指定した場合は、`visibleUserIds`または`visibleAccts`の指定も必要です。
+Jika `visibility` diatur ke `specified`, sebaiknya `visibleUserIds` atau `visibleAccts` harus diatur juga.
 
 :::
 
-### 添付ファイル
+### Lampiran Berkas
 
-以下のオプションで添付ファイルの指定を行えます。
+Kamu dapat menentukan lampiran berkas dengan opsi di bawah berikut.
 
-| 名前        | 説明                                     |
-| --------- | -------------------------------------- |
-| `fileIds` | 添付するファイルのID(カンマ区切り) |
+| Nama      | Deskripsi                                                                         |
+| --------- | --------------------------------------------------------------------------------- |
+| `fileIds` | ID dari berkas yang ingin dilampirkan (dipisahkan dengan koma) |
 
 ## Misskey Hubの共有フォーム中継サービスについて
 

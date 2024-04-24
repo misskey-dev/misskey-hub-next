@@ -16,20 +16,29 @@
                     :src="sponsor.img"
                     class="w-full h-full object-contain"
                     :class="[
-                        { 'p-5': !sponsor.noMargin }
+                        { 'p-5': sponsor.margin === undefined || sponsor.margin === true || sponsor.margin === 'true' },
                     ]"
+                    :style="(typeof sponsor.margin === 'string' && sponsor.margin !== 'true' ? sponsor.margin : undefined)"
                 />
+            </GNuxtLink>
+            <GNuxtLink
+                :to="localePath('/docs/become-a-sponsor/')"
+                class="flex flex-col p-5 items-center justify-center aspect-square bg-white hover:bg-gray-50 rounded-full border-2 border-dashed dark:border-0 hover:border-solid dark:hover:opacity-80 border-gray-300 text-gray-500"
+            >
+                <div class="text-center text-lg sm:text-xl">{{ $t('_landing._sponsors.becomeASponsor') }}<ArrowRightIco class="ml-1" /></div>
             </GNuxtLink>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
+import ArrowRightIco from 'bi/arrow-right.svg';
+
 type Sponsor = {
     /** 画像URL */
     img: string;
     /** イメージにマージンを設けない場合はこちら */
-    noMargin?: boolean;
+    margin?: boolean | string;
     /** イメージを角丸にしない場合はこちら */
     noRounded?: boolean;
     /** 外部ページURL */
@@ -51,14 +60,16 @@ const sponsors: Sponsor[] = [
     },
     {
         img: '/img/sponsors/dcadvirth.png',
-        noMargin: true,
+        margin: false,
         noRounded: true,
         to: 'https://www.dotchain.ltd/advirth',
     },
     {
         img: '/img/sponsors/xserver.png',
-        noMargin: true,
+        margin: false,
         to: 'https://www.xserver.ne.jp/',
-    }
+    },
 ];
+
+const localePath = useGLocalePath();
 </script>

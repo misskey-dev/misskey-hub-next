@@ -7,7 +7,7 @@
         ]"
     >
         <aside
-            class="fixed z-50 transition-transform -mx-6 w-full bg-slate-200 dark:bg-slate-800 bottom-0 rounded-t-xl lg:translate-y-0 lg:shadow-none lg:bg-transparent dark:lg:bg-transparent lg:mx-0 lg:relative"
+            class="fixed z-50 transition-transform -mx-6 w-full lg:w-[calc(100%+3rem)] bg-slate-200 dark:bg-slate-800 bottom-0 rounded-t-xl lg:translate-y-0 lg:shadow-none lg:bg-transparent dark:lg:bg-transparent lg:relative"
             :class="sortOpen ? 'translate-y-0' : 'translate-y-[calc(100%-3rem)]'"
         >
             <button
@@ -17,7 +17,7 @@
             >
                 {{ $t('_servers._search.title') }}
             </button>
-            <div class="lg:sticky lg:top-24 lg:overflow-y-auto lg:max-h-[calc(100vh-6rem)] p-6 lg:px-0 lg:py-2 space-y-4">
+            <div class="lg:sticky lg:top-24 lg:overflow-y-auto lg:max-h-[calc(100vh-6rem)] p-6 lg:py-2 space-y-4">
                 <div class="flex items-center">
                     <h3 class="text-xl font-bold">{{ $t('_servers._search.title') }}</h3>
                     <button @click="sortOpen = false" class="ml-auto w-8 h-8 p-0.5 rounded-full bg-slate-100 dark:bg-slate-900 lg:hidden">
@@ -149,7 +149,7 @@ import ListIco from 'bi/view-stacked.svg';
 const { t, locale } = useI18n();
 const route = useRoute();
 const emits = defineEmits<{
-    (e: 'load', value?: InstancesStatsObj): void;
+    (e: 'load', value?: InstancesStatsObj, updatedAt?: string): void;
 }>();
 
 // ▼スマホ用ソート▼
@@ -166,7 +166,7 @@ type MiHubSFStorage = {
 };
 
 let savedSettings: MiHubSFStorage | null = null;
-if (process.client) {
+if (import.meta.client) {
     savedSettings = JSON.parse(window.localStorage.getItem('miHub_server_finder') ?? 'null') as MiHubSFStorage | null;
 }
 
@@ -195,7 +195,7 @@ watch([f_langs, f_orderBy, f_order, f_registerAcceptance, v_view], (to, from) =>
         v_view: to[4],
     };
 
-    if (process.client) {
+    if (import.meta.client) {
         window.localStorage.setItem('miHub_server_finder', JSON.stringify(newSettings));
     }
 });
@@ -215,7 +215,7 @@ if (data.value?.stats.usersCount) {
         notesCount: data.value.stats.notesCount,
         usersCount: data.value.stats.usersCount,
         instancesCount: data.value.stats.instancesCount,
-    });
+    }, data.value.date);
 }
 
 watch(data, (to) => {
@@ -224,7 +224,7 @@ watch(data, (to) => {
             notesCount: to.stats.notesCount,
             usersCount: to.stats.usersCount,
             instancesCount: to.stats.instancesCount,
-        });
+        }, to.date);
     }
 }, {
     deep: true,

@@ -31,7 +31,7 @@ onMounted(() => {
 let loader: Loader;
 
 watch(container, (to) => {
-    if (isMounted.value && process.client && to) {
+    if (isMounted.value && import.meta.client && to) {
         loader = new Loader(to);
 
         window.addEventListener('scroll', () => {

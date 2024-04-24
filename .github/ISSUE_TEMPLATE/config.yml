@@ -2,3 +2,6 @@ contact_links:
   - name: 💬 Bug reports and feature requests for Misskey itself
     url: https://github.com/misskey-dev/misskey/issues
     about: Misskey本体に関するバグ報告・機能リクエストはこちらから
+  - name: 🖥 Bug reports and feature requests for Server List API
+    url: https://github.com/joinmisskey/api/issues
+    about: サーバー一覧ページで使用している「サーバー一覧API」に関するバグ報告・機能リクエストはこちらから

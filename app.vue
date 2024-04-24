@@ -159,13 +159,13 @@ async function updatePos() {
     scrollPos.value = document.body.getBoundingClientRect().y;
 }
 
-if (process.client) {
+if (import.meta.client) {
     window.addEventListener('scroll', updatePos);
     window.addEventListener('resize', updatePos);
 }
 
 onUnmounted(() => {
-    if (process.client) {
+    if (import.meta.client) {
         window.removeEventListener('scroll', updatePos);
         window.removeEventListener('resize', updatePos);
     }
@@ -175,7 +175,7 @@ const hideFrom = computed(() => route.meta.scrollButton ? route.meta.scrollButto
 const sbPosition = computed(() => route.meta.scrollButton ? { x: route.meta.scrollButton?.customPosition?.x ?? '2.5rem', y: route.meta.scrollButton?.customPosition?.y ?? '2.5rem' } ?? { x: '2.5rem', y: '2.5rem' } : { x: '2.5rem', y: '2.5rem' });
 
 function scrollToTop() {
-    if (!process.client) return;
+    if (!import.meta.client) return;
     window.scrollTo({
         top: 0,
         behavior: 'smooth',

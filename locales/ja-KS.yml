@@ -7,9 +7,13 @@ share: "共有する"
 note: "ノート"
 other: "ほか"
 add: "追加"
+generate: "つくる"
+download: "落とす"
 browse: "参照"
 settings: "設定"
 goToLegacyHub: "前のMisskey Hub"
+contactUs: "お問い合わせ"
+lastUpdate: "最終更新"
 
 _error:
   notFound: "ページ食べた"
@@ -189,6 +193,13 @@ _brandAssets:
   banner: "バナー"
   avatarDecorationTemplate: "アバターデコレーション テンプレート"
 
+_contact:
+  title: "お問い合わせ"
+  description: "Misskey Projectになんか言いたいときはここから"
+  form: "このフォームから回答してな"
+  formGoogleAccountRequired: "今、スパムっちゅう厄介なのがおって、問い合わせを送ってもらうためにGoogleアカウントが要ることになっとんねん。\nめんどくさいかもしれんけど、よろしゅうおねがいします～"
+  formLink: "フォームへ進む"
+
 _links:
   title: "リンク"
   _github:
@@ -332,6 +343,12 @@ _customEmojiPreview:
     textDescription: "追加したカスタム絵文字は{emoji_id}で使えるで。"
   _placeholder:
     noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
+
+_identiconGenerator:
+  title: "初期アイコンジェネレーター"
+  description: "Misskeyに登録したときにはじめっからついてある初期アイコンを作れるで。"
+  userName: "ユーザー名"
+  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を入れてな。"
 
 _api:
   _permissions:

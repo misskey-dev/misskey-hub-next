@@ -1,23 +1,23 @@
-# リアクション
+# Reaksi
 
-他の人のノートに、絵文字を付けて簡単にあなたの反応を伝えられる機能です。
-Misskey Webでリアクションするには、ノートの + アイコンをクリックしてピッカーを表示し、絵文字を選択します。
-リアクションには[カスタム絵文字](./custom-emoji.md)も使用できます。
+Fitur ini memungkinkan kamu untuk mengutarakan reaksimu kepada catatan orang lain dengan mudah melalui penambahan emoji.
+Untuk mereaksi di Misskey Web, klik ikon + pada catatan untuk menampilkan jendela pengambil emoji dan pilih emoji.
+Kamu juga dapat mereaksi menggunakan [emoji kustom](./custom-emoji.md).
 
-## リアクションピッカーのカスタマイズ
+## Mengubahsuaikan Pengambil Reaksi
 
-Misskey Webでは、ピッカーに表示される絵文字を自分好みにカスタマイズすることができます。
-設定の「リアクション」で設定します。
+Dalam Misskey Web kamu dapat memilih emoji mana yang seharusnya muncul di dalam pengambil dan mengubah urutan kemunculan mereka.
+Kamu dapat mengatur ini di bagian "Reaksi" dalam menu pengaturan.
 
-## リモート投稿へのリアクションについて
+## Reaksi ke Postingan Luar Peladen
 
-リアクションはMisskeyオリジナルの機能であるため、リモートサーバーがMisskeyでない限りは、ほとんどの場合「Like」としてアクティビティが送信されます。一般的にはLikeは「お気に入り」として実装されているようです。
+Karena reaksi merupakan fitur asli dari Misskey, sering kali aktivitas reaksi yang dikirimkan ke instansi peladen lain akan dikirimkan sebagai "Suka" kecuali instansi peladen luar mendukung fitur reaksi tersebut.Biasanya, "Suka" dari ActivityPub diimplementasikan sebagai favorit.
 
-## リモートからのリアクションについて
+## Reaksi dari Instansi Peladen Luar
 
-リモートから「Like」アクティビティを受信したとき、Misskeyでは「👍」のリアクションとして解釈されます。
+Karena Misskey tidak memiliki suka, "Suka" dari instansi remote akan ditampilkan sebagai reaksi '👍'.
 
-## 自分のリアクション一覧を見る
+## Lihat Semua Reaksimu
 
-Misskey Webでは、自分のプロフィールページの「リアクション」タブを開くことで、自分の行ったリアクション一覧を見ることができます。
-設定から、このリアクション一覧を公開するようにすることもできます。
+Dalam Misskey Web, kamu dapat melihat daftar dari semua reaksi yang telah kamu buat dengan membuka tab "Reaksi" di halaman profilmu.
+Kamu juga dapat memilih untuk membuat daftar ini menjadi publik di pengaturan.

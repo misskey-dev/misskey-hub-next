@@ -13,6 +13,8 @@ browse: "参照"
 settings: "設定"
 goToLegacyHub: "従来のMisskey Hub"
 contactUs: "お問い合わせ"
+detail: "詳細"
+lastUpdate: "最終更新"
 _error:
   notFound: "ページが見つかりませんでした"
   notFoundDesc: "お探しのページは見つかりませんでした。URLをお確かめください。"
@@ -97,6 +99,7 @@ _landing:
     description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
   _sponsors:
     title: "スポンサー"
+    becomeASponsor: "スポンサーになる"
 _servers:
   title: "サーバー一覧"
   description: "Misskeyは単一のサービスではなく、各々がサービスを提供する分散型ネットワークとなっています。Misskeyを利用するには、サービスを提供しているサーバーでアカウントを作成する必要があります。"
@@ -163,6 +166,10 @@ _docs:
   _toc:
     title: "このページの内容"
     toPageTop: "ページ上部に戻る"
+  _steppedGuide:
+    selectCourse: "ガイドを選ぶ"
+    noImageInThisStep: "このステップには画像がありません"
+    aiWellDone: "操作はこれで完了です。お疲れ様でした♪"
 _blog:
   title: "ブログ"
   description: "Misskey開発本部から、Misskeyに関する最新情報やTips等をお届けします！（日本語のみ）"
@@ -187,6 +194,9 @@ _brandAssets:
 _contact:
   title: "お問い合わせ"
   description: "Misskey Projectへのお問い合わせはこちらから"
+  form: "こちらのフォームからご回答ください。"
+  formGoogleAccountRequired: "現在、スパム対策のため、お問い合わせの送信にはGoogleアカウントが必要となっております。\nお手数をおかけしますが、ご理解のほどよろしくお願い致します。"
+  formLink: "フォームへ進む"
 _links:
   title: "リンク"
   _github:

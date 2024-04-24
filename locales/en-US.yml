@@ -7,12 +7,14 @@ share: "Share"
 note: "Note"
 other: "Other"
 add: "Add"
-generate: "生成"
-download: "ダウンロード"
+generate: "Generate"
+download: "Download"
 browse: "Browse"
 settings: "Settings"
 goToLegacyHub: "Legacy Misskey Hub"
-contactUs: "お問い合わせ"
+contactUs: "Contact"
+detail: "Details"
+lastUpdate: "Last Update"
 _error:
   notFound: "Page not found"
   notFoundDesc: "The page you are looking for could not be found. Please check the URL."
@@ -97,6 +99,7 @@ _landing:
     description: "Misskey is a non-profit project, and development funding relies on donations from users like you. If you enjoy using Misskey, please consider supporting us so that we can continue to make Misskey awesome for years to come!"
   _sponsors:
     title: "Sponsors"
+    becomeASponsor: "Become a Sponsor"
 _servers:
   title: "Server List"
   description: "Misskey is not a single service but a decentralized network where individuals provide services. To use Misskey, you need to create an account on a server that offers the service."
@@ -163,6 +166,10 @@ _docs:
   _toc:
     title: "Table of Contents"
     toPageTop: "Back to Top"
+  _steppedGuide:
+    selectCourse: "Select a Guide"
+    noImageInThisStep: "There is no image in this step"
+    aiWellDone: "操作はこれで完了です。お疲れ様でした♪"
 _blog:
   title: "Blog"
   description: "Get the latest information and tips about Misskey straight from the Misskey Development Team! (Japanese only)"
@@ -177,16 +184,19 @@ _other:
   description: "Introducing more enjoyable resources for Misskey!"
 _brandAssets:
   title: "Brand Assets"
-  description: "A collection of Misskey's logo, icons, and other assets. Feel free to use for literally anything under the CC BY-NC-SA License!"
-  license: "Assets are available under the CC BY-NC-SA license 🎉"
+  description: "A collection of Misskey's logo, icons, and other assets. Feel free to use for literally anything under the CC BY-SA License!"
+  license: "Assets are available under the CC BY-SA license 🎉"
   assetsDirectory: "All assets are managed on {0}."
   logo: "Logo"
   icon: "Icon"
   banner: "Banner"
   avatarDecorationTemplate: "Avatar Decoration Template"
 _contact:
-  title: "お問い合わせ"
-  description: "Misskey Projectへのお問い合わせはこちらから"
+  title: "Contact"
+  description: "Get in touch with the Misskey Project"
+  form: "To send us an inquiry, please fill out this form."
+  formGoogleAccountRequired: "Currently, we ask you to have a Google Account to submit your inquiry in order to deal with serious spam.\nWe apologize for the inconvenience and thank you for your understanding."
+  formLink: "Go to the form"
 _links:
   title: "Links"
   _github:
@@ -320,10 +330,10 @@ _customEmojiPreview:
   _placeholder:
     noteText: "Custom emoji will appear like this → :emoji_preview_1:\nYou can rewrite the text and test its usability✨."
 _identiconGenerator:
-  title: "初期アイコンジェネレーター"
-  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
-  userName: "ユーザー名"
-  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
+  title: "Identicon Generator"
+  description: "You can generate an initial icon that will be specified by default when you register with Misskey."
+  userName: "Username"
+  includeDomain: "Specify the full user name, including the server's domain name."
 _api:
   _permissions:
     title: "Permissions"

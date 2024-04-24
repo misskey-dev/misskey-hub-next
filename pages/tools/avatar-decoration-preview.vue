@@ -155,7 +155,7 @@ const realDecorations = computed(() => {
 });
 
 function addDecoration() {
-    if (!process.client) return;
+    if (!import.meta.client) return;
 
     function createImage(file: Blob, callback: () => void) {
         const reader = new FileReader();

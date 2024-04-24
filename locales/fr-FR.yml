@@ -13,6 +13,8 @@ browse: "参照"
 settings: "設定"
 goToLegacyHub: "L'ancien Misskey Hub"
 contactUs: "お問い合わせ"
+detail: "詳細"
+lastUpdate: "最終更新"
 _error:
   notFound: "La page demandée est introuvable !"
   notFoundDesc: "La page que vous cherchiez n'a pas pu être trouvée. Veuillez vérifier l'URL."
@@ -97,6 +99,7 @@ _landing:
     description: "Misskey est une organisation à but non lucratif, nous dépendons de vos dons pour financer le développement. Si vous aimez Misskey, veuillez considérer de nous soutenir."
   _sponsors:
     title: "Parrains"
+    becomeASponsor: "スポンサーになる"
 _servers:
   title: "Liste d'instances"
   description: "Misskey n'est pas un seul service, mais un réseau décentralisé où le service est fourni par des individus. Pour utiliser Misskey, vous devez créer un compte sur une instance qui fournit le service."
@@ -163,6 +166,10 @@ _docs:
   _toc:
     title: "Table des matières"
     toPageTop: "Retourner en haut de la page"
+  _steppedGuide:
+    selectCourse: "ガイドを選ぶ"
+    noImageInThisStep: "このステップには画像がありません"
+    aiWellDone: "操作はこれで完了です。お疲れ様でした♪"
 _blog:
   title: "Blogue"
   description: "Les dernières nouvelles, conseils et astuces sur Misskey de la part de l'équipe de développement ! (uniquement en japonais)"
@@ -178,7 +185,7 @@ _other:
 _brandAssets:
   title: "Collection de ressources"
   description: "Une collection de logos, d'icônes et d'autres actifs de Misskey. Vous êtes libre de les utiliser sous certaines licences."
-  license: "Les ressources sont libres d'être utilisées sous la licence CC BY-NC-SA 🎉"
+  license: "Les ressources sont libres d'être utilisées sous la licence CC BY-SA 🎉"
   assetsDirectory: "Toutes les ressources sont gérées sur {0}."
   logo: "Logo"
   icon: "Icône"
@@ -187,6 +194,9 @@ _brandAssets:
 _contact:
   title: "お問い合わせ"
   description: "Misskey Projectへのお問い合わせはこちらから"
+  form: "こちらのフォームからご回答ください。"
+  formGoogleAccountRequired: "現在、スパム対策のため、お問い合わせの送信にはGoogleアカウントが必要となっております。\nお手数をおかけしますが、ご理解のほどよろしくお願い致します。"
+  formLink: "フォームへ進む"
 _links:
   title: "Liens"
   _github:

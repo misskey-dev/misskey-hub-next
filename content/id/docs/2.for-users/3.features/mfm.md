@@ -23,10 +23,10 @@ Beberapa dari sintaks MFM memiliki kompatibilitas dengan Markdown.
 
 ### Sebutan
 
-アットマーク + ユーザー名で、特定のユーザーを示すことができます。
+`@` + nama pengguna dapat digunakan untuk menampilkan pengguna spesifik.
 :::tip
 
-メンションについての詳細は[こちら](./mention.md)を参照してください。
+Untuk informasi lebih lanjut mengenai sebutan, lihat di [sini](./mention.md).
 
 :::
 
@@ -44,10 +44,10 @@ Beberapa dari sintaks MFM memiliki kompatibilitas dengan Markdown.
 
 ### Tagar
 
-ナンバーサイン + タグで、ハッシュタグを示すことができます。
+`#` + penanda dapat digunakan untuk menampilkan tagar.
 :::tip
 
-ハッシュタグについての詳細は[こちら](./hashtag.md)を参照してください。
+Untuk informasi lebih lanjut mengenai tagar, lihat di [sini](./hashtag.md).
 
 :::
 
@@ -59,7 +59,7 @@ Beberapa dari sintaks MFM memiliki kompatibilitas dengan Markdown.
 
 ### URL
 
-URLを示すことができます。
+URL dapat ditampilkan.
 
 ```
 https://example.com
@@ -69,7 +69,7 @@ https://example.com
 
 ### Tautan
 
-文章の特定の範囲を、URLに紐づけることができます。
+Bagian tertentu dari teks dapat ditampilkan sebagai URL.
 
 ```
 [contoh tautan](https://example.com)
@@ -77,7 +77,7 @@ https://example.com
 
 :::tip
 
-リンクテキストの前に`?`をつけると、リンクプレビューを非表示にすることができます。
+Kamu dapat menyembunyikan pratinjau tautan dengan cara memprefiks teks tautan dengan `?`.
 
 ```
 ?[contoh tautan](https://example.com)
@@ -89,11 +89,11 @@ https://example.com
 
 ### Emoji kustom
 
-コロンでカスタム絵文字名を囲むと、カスタム絵文字を表示させることができます。
+Emoji kustom dapat ditampilkan dengan mengurung nama emoji kustom menggunakan tanda titik dua.
 
 :::tip
 
-カスタム絵文字についての詳細は[こちら](./custom-emoji.md)を参照してください。
+Untuk informasi lebih lanjut mengenai emoji, lihat di [sini](./custom-emoji.md).
 
 :::
 
@@ -105,7 +105,7 @@ https://example.com
 
 ### Huruf Tebal
 
-文字を太く表示して強調することができます。
+Sorot tulisan dengan membuatnya tebal.
 
 ```
 **Huruf Tebal**
@@ -115,7 +115,7 @@ https://example.com
 
 ### Huruf Kecil
 
-内容を小さく・薄く表示させることができます。
+Menampilkan konten menjadi kecil dan tipis.
 
 ```
 <small>Misskey membentangkan dunia Fediverse</small>
@@ -125,7 +125,7 @@ https://example.com
 
 ### Kutip
 
-内容が引用であることを示すことができます。
+Menampilkan konten sebagai kutipan.
 
 ```
 > Misskey membentangkan dunia Fediverse
@@ -135,7 +135,7 @@ https://example.com
 
 ### Tengah
 
-内容を中央寄せで表示させることができます。
+Menampilkan konten menjadi di tengah.
 
 ```
 <center>Misskey membentangkan dunia Fediverse</center>
@@ -143,9 +143,9 @@ https://example.com
 
 <MfmPreview text="<center>MisskeyでFediverseの世界が広がります</center>"></MfmPreview>
 
-### よみがな（ルビ）
+### Yomigana (karakter Ruby)
 
-内容によみがなを付けることができます。
+Yomigana dapat dilampirkan pada teks.
 
 ```
 $[ruby Misskey ミスキー] 
@@ -155,15 +155,15 @@ $[ruby Misskey ミスキー]
 
 ### Kode (Dalam baris)
 
-プログラムなどのコードをインラインでシンタックスハイライトします。
+Menampilkan sorotan sintaks untuk kode program secara dalam baris.
 
 ```
-`<: "Hello, world!"`
+`<: "Halo, dunia!"`
 ```
 
 ### Kode (Blok)
 
-複数行のプログラムなどのコードをブロックでシンタックスハイライトします。
+Menampilkan sorotan sintaks dari kode program dalam sebuah blok.
 
 ```
 ~ (#i, 100) {
@@ -176,7 +176,7 @@ $[ruby Misskey ミスキー]
 
 ### Putar Balik
 
-内容を上下または左右に反転させます。
+Balikkan konten secara horizontal atau vertikal.
 
 ```
 $[flip Misskey membentangkan dunia Fediverse]
@@ -190,7 +190,7 @@ $[flip.h,v MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
 ### Font
 
-内容のフォントを指定することができます。
+Setel font yang ditampilkan untuk konten.
 
 ```
 $[font.serif Misskey membentangkan dunia Fediverse]
@@ -206,7 +206,7 @@ $[font.fantasy MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
 ### Buram/Kabur
 
-内容をぼかすことができます。ポインターを上に乗せるとはっきり見えるようになります。
+Konten dapat diburamkan.Ketika mouse diarahkan ke konten dan berada di atasnya, konten tersebut akan ditampilkan dengan jelas.
 
 ```
 $[blur Misskey membentangkan dunia Fediverse]
@@ -214,9 +214,9 @@ $[blur Misskey membentangkan dunia Fediverse]
 
 <MfmPreview text="$[blur MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
-### Kontak Pencarian
+### Kotak Pencarian
 
-検索ボックスを表示できます。
+Sebuah kotak pencarian dapat ditampilkan.
 
 ```
 misskey cari
@@ -226,9 +226,9 @@ misskey cari
 
 ### Warna Latar/Karakter
 
-文字色と背景色を変更することができます。
+Warna dari latar depan dan latar belakang dapat diubah.
 
-3,4,6桁のカラーコードで色を表現します。
+Warna diekspresikan dengan menggunakan kode warna 3, 4, atau 6 digit.
 
 ```
 $[fg.color=f00 Huruf Merah]
@@ -238,35 +238,35 @@ $[bg.color=ff0 Latar Kuning]
 <MfmPreview text="$[fg.color=f00 赤字]
 $[bg.color=ff0 黄背景]"></MfmPreview>
 
-### 枠線
+### Tepian/Bingkai
 
-内容を枠線で囲むことができます。様々なスタイルを指定することができます。
+Konten dapat dikelilingi oleh tepian/bingkai.Gaya dari tepian/bingkai juga dapat ditampilkan bermacam-macam.
 
 ```
-$[border.style=solid,width=4 Default]
+$[border.style=solid,width=4 Bawaan]
 
-$[border.style=hidden No border]
+$[border.style=hidden Tanpa tepian]
 
-$[border.style=dotted,width=2 Dotted]
-$[border.style=dashed,width=2 Dashed]
-$[border.style=double,width=4 Double]
+$[border.style=dotted,width=2 Titik-titik]
+$[border.style=dashed,width=2 Garis putus]
+$[border.style=double,width=4 Ganda]
 
-$[border.style=groove,width=4 Embossed A]
-$[border.style=ridge,width=4 Embossed B]
+$[border.style=groove,width=4 Timbul A]
+$[border.style=ridge,width=4 Timbul B]
 
-$[border.style=inset,width=4 Inset A]
-$[border.style=outset,width=4 Inset B]
+$[border.style=inset,width=4 Set dalam A]
+$[border.style=outset,width=4 Set dalam B]
 
-$[border.color=d00 Border color]
-$[border.width=5 Border width]
+$[border.color=d00 Warna tepian]
+$[border.width=5 Lebar tepian]
 
-$[border.radius=6,width=2 Border radius]
+$[border.radius=6,width=2 Radius tepian]
 
 $[border.radius=5,width=2,color=888 $[position.x=1.5 ＣＳＳ]
-$[position.x=1.5 完全に理解した]]
+$[position.x=1.5 Cukup paham]]
 
 $[border.radius=5,width=2,color=888,noclip $[position.x=1.5 ＣＳＳ]
-$[position.x=1.5 完全に理解した]]
+$[position.x=1.5 Cukup paham]]
 ```
 
 <MfmPreview text="$[border.style=solid,width=4 Default]\
@@ -288,7 +288,7 @@ $[position.x=1.5 完全に理解した]]"></MfmPreview>
 
 ### Rotasi
 
-指定した角度で回転させます。
+Putar konten sesuai sudut yang ditentukan.
 
 ```
 $[rotate.deg=30 misskey]
@@ -298,7 +298,7 @@ $[rotate.deg=30 misskey]
 
 ### Posisi
 
-位置をずらすことができます。
+Konten tidak dapat digeser.
 
 ```
 😏$[position.x=0.8,y=0.5 🍮]😀
@@ -308,7 +308,7 @@ $[rotate.deg=30 misskey]
 
 ### Skala
 
-文字を引き延ばして表示します。
+Menampilkan teks yang dibesarkan.
 
 ```
 $[scale.x=4,y=2 🍮]
@@ -411,7 +411,7 @@ $[sparkle 🍮]
 
 ### Polos
 
-内側の構文を全て無効にします。
+Menonaktifkan pemformatan pada konten.
 
 ```
 <plain>**bold** @mention #hashtag `code` $[x2 🍮]</plain>
@@ -421,10 +421,10 @@ $[sparkle 🍮]
 
 ## Informasi untuk Pengembang
 
-MFMのパーサーや描画の実装はライブラリとして公開されており、簡単にクライアントにMFMを組み込むことが可能です。
+Implementasi penguraian dan perenderan MFM telah dipublikasikan sebagai _library_, yang mana memudahkan kamu untuk menggabungkan MFM ke dalam klien.
 
-- [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - JavaScriptパーサー実装
-- [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - Vue.js用コンポーネント
-- [mfm.kt](https://github.com/samunohito/mfm.kt) - Kotlinパーサー実装
-- [mfm_parser](https://pub.dev/packages/mfm_parser) - Dartパーサー実装
-- [mfm](https://pub.dev/packages/mfm) - Flutter用描画ウィジェット
+- [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js - Implementasi JavaScript dari MFM Parser
+- [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - komponen Vue.js
+- [mfm.kt](https://github.com/samunohito/mfm.kt) - Implementasi parser Kotlin
+- [mfm_parser](https://pub.dev/packages/mfm_parser) - Implementasi parser Dart
+- [mfm](https://pub.dev/packages/mfm) - Gawit perenderan Flutter

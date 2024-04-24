@@ -13,6 +13,8 @@ browse: "Sfoglia"
 settings: "Impostazioni"
 goToLegacyHub: "Versione precedente"
 contactUs: "お問い合わせ"
+detail: "詳細"
+lastUpdate: "最終更新"
 _error:
   notFound: "Pagina non trovata"
   notFoundDesc: "お探しのページは見つかりませんでした。URLをお確かめください。"
@@ -97,6 +99,7 @@ _landing:
     description: "Misskey è un'organizzazione no-profit, contiamo sulle donazioni per finanziare lo sviluppo. Se ti piace Misskey, sostienici così potremo continuare a svilupparlo anche in futuro."
   _sponsors:
     title: "Sponsorizzato"
+    becomeASponsor: "スポンサーになる"
 _servers:
   title: "Elenco dei server"
   description: "Misskey non è un social network unico, ma una rete decentralizzata in cui ogni server fornisce servizi federati. Per utilizzare Misskey occorre creare un profilo su uno dei server federati."
@@ -163,6 +166,10 @@ _docs:
   _toc:
     title: "Sommario"
     toPageTop: "Torna su"
+  _steppedGuide:
+    selectCourse: "ガイドを選ぶ"
+    noImageInThisStep: "このステップには画像がありません"
+    aiWellDone: "操作はこれで完了です。お疲れ様でした♪"
 _blog:
   title: "Blog"
   description: "Contiene informazioni e suggerimenti recenti su Misskey, direttamente dal quartier generale dello sviluppo di Misskey! (solo in Giapponese)"
@@ -187,6 +194,9 @@ _brandAssets:
 _contact:
   title: "お問い合わせ"
   description: "Misskey Projectへのお問い合わせはこちらから"
+  form: "こちらのフォームからご回答ください。"
+  formGoogleAccountRequired: "現在、スパム対策のため、お問い合わせの送信にはGoogleアカウントが必要となっております。\nお手数をおかけしますが、ご理解のほどよろしくお願い致します。"
+  formLink: "フォームへ進む"
 _links:
   title: "リンク"
   _github:

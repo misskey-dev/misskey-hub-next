@@ -7,12 +7,14 @@ share: "Bagikan"
 note: "Catatan"
 other: "Lainnya"
 add: "Tambahkan"
-generate: "生成"
-download: "ダウンロード"
+generate: "Hasilkan"
+download: "Unduh"
 browse: "Jelajahi"
 settings: "Pengaturan"
 goToLegacyHub: "Misskey Hub Jadul"
-contactUs: "お問い合わせ"
+contactUs: "Hubungi kami"
+detail: "Selengkapnya"
+lastUpdate: "最終更新"
 _error:
   notFound: "Halaman Tidak Ditemukan"
   notFoundDesc: "Halaman yang kamu cari tidak dapat ditemukan. Mohon cek kembali URL yang kamu tuju."
@@ -97,6 +99,7 @@ _landing:
     description: "Misskey merupakan produk nirlaba, kami bergantung pada donasi kamu untuk mendanai pengembangan perangkat lunak ini. Apabila kamu menyukai Misskey, mohon pertimbangkan untuk berdonasi agar kami dapat terus melanjutkan pengembangan Misskey dan membuatnya semakin menarik untuk kedepannya."
   _sponsors:
     title: "Sponsor"
+    becomeASponsor: "Menjadi Sponsor"
 _servers:
   title: "Daftar Peladen"
   description: "Misskey bukanlah layanan satuan namun jejaring terdesentralisasi dimana para individu menyediakan banyak layanan. Untuk menggunakan Misskey, kamu perlu membuat akun di peladen yang menawarkan layanan tersebut."
@@ -163,6 +166,10 @@ _docs:
   _toc:
     title: "Daftar Isi"
     toPageTop: "Kembali ke Atas"
+  _steppedGuide:
+    selectCourse: "ガイドを選ぶ"
+    noImageInThisStep: "このステップには画像がありません"
+    aiWellDone: "操作はこれで完了です。お疲れ様でした♪"
 _blog:
   title: "Blog"
   description: "Dapatkan informasi dan tips mengenai Misskey langsung dari Tim Pengembang Misskey! (hanya Bahasa Jepang)"
@@ -177,16 +184,19 @@ _other:
   description: "Memperkenalkan sumber daya yang menyenangkan untuk Misskey!"
 _brandAssets:
   title: "Aset Brand"
-  description: "Koleksi dari logo, ikon serta aset Misskey lainnya. Gunakan secara bebas untuk apapun selama dalam lisensi CC BY-NC-SA!"
-  license: "Aset tersedia dalam lisensi CC BY-NC-SA🎉."
+  description: "Koleksi dari logo, ikon serta aset Misskey lainnya. Gunakan secara bebas untuk apapun selama dalam lisensi CC BY-SA!"
+  license: "Aset tersedia dalam lisensi CC BY-SA🎉."
   assetsDirectory: "Semua aset dikelola di {0}."
   logo: "Logo"
   icon: "Ikon"
   banner: "Banner"
   avatarDecorationTemplate: "Templat Dekorasi Avatar"
 _contact:
-  title: "お問い合わせ"
-  description: "Misskey Projectへのお問い合わせはこちらから"
+  title: "Hubungi kami"
+  description: "Berhubung dengan Proyek Misskey"
+  form: "Apabila kamu ingin mengirimkan kami sebuah pertanyaan, kamu dapat mengirimkannya dengan mengisi form ini."
+  formGoogleAccountRequired: "Untuk saat ini, kami meminta kamu untuk memiliki akun Google ketika mengirimkan pesan kepada kami. Hal ini dikarenakan untuk pencegahan spam yang serius. Kami mohon maaf atas ketidak nyamanan ini dan berterima kasih banyak atas pengertiannya."
+  formLink: "Pergi ke form"
 _links:
   title: "Tautan"
   _github:
@@ -320,10 +330,10 @@ _customEmojiPreview:
   _placeholder:
     noteText: "Emoji kustom akan muncul seperti ini → :emoji_preview_1:\nKamu dapat menulis ulang teks dan mencoba kegunaannya ✨."
 _identiconGenerator:
-  title: "初期アイコンジェネレーター"
-  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
-  userName: "ユーザー名"
-  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
+  title: "Penghasil Identicon"
+  description: "Kamu dapat menghasilkan ikon inisial yang dapat ditentukan secara bawaan ketika kamu mendaftar dengan Misskey."
+  userName: "Nama Pengguna"
+  includeDomain: "Tentukan nama lengkap pengguna, termasuk dengan nama domain peladen."
 _api:
   _permissions:
     title: "Hak akses"

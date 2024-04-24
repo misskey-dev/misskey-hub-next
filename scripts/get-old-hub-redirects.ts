@@ -67,12 +67,14 @@ export function getOldHubRedirects(mode: 'nitro' | 'vercel' = 'nitro'): NuxtConf
 
         out.push({
             src: '/zh-CN/(.*)',
+            caseSensitive: false,
             headers: {
                 'Location': '/cn/$1',
             },
             status: 307,
         }, {
             src: '/zh-TW/(.*)',
+            caseSensitive: false,
             headers: {
                 'Location': '/tw/$1',
             },
@@ -104,10 +106,11 @@ export function getOldHubRedirects(mode: 'nitro' | 'vercel' = 'nitro'): NuxtConf
 
         return {
             ...out,
-            /* See: https://github.com/unjs/nitro/pull/1976
+            // See: https://github.com/unjs/nitro/pull/1976
             '/zh-CN/**': { redirect: '/cn/**' },
             '/zh-TW/**': { redirect: '/tw/**' },
-            */
+            '/zh-cn/**': { redirect: '/cn/**' },
+            '/zh-tw/**': { redirect: '/tw/**' },
         }
     }
 }

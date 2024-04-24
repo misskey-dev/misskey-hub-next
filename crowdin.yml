@@ -8,7 +8,7 @@ files:
     update_option: update_as_unapproved
     skip_untranslated_files: true
     ignore:
-      - "/content/ja/docs/**/_*.*"
+      - "/content/ja/docs/**/_*.md"
     languages_mapping:
       two_letters_code:
         zh-TW: tw
