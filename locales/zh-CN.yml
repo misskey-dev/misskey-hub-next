@@ -26,7 +26,7 @@ _seo:
   siteName: "Misskey Hub"
   siteNameLong: "Misskey Hub – Misskey项目官方网站"
   defaultTitleTagline: "ノートでひろがるネットワーク"
-  defaultDescription: "【ノートでひろがるネットワーク】分散型SNS Misskeyの公式サイト。Misskeyのはじめかたやサーバー一覧など、Misskeyに関する情報が満載！"
+  defaultDescription: "Misskey 是一个去中心化社交网络服务的官方网站，提供大量有关 Misskey 的信息，包括如何启动 Misskey 和服务器列表！"
 _nav:
   servers: "服务器"
   docs: "文档"
@@ -103,7 +103,7 @@ _landing:
 _servers:
   title: "服务器列表"
   description: "Misskey 不是一个单一的服务，而是由一个个服务组成的分布式网络。欲使用 Misskey，您需要在提供服务的服务器上注册一个账户。"
-  addYourServer: "あなたのサーバーが表示されませんか？{0}から登録してください！"
+  addYourServer: "看不到您的服务器？ 请从 {0} 注册！"
   addYourServerLink: "这里"
   _system:
     fetchError: "无法加载。请稍后重试。"
@@ -152,12 +152,12 @@ _docs:
     title: "发布日志"
     description: "查看 Misskey 的历史版本，了解最新版本有哪些变化！"
   _donate:
-    title: "プロジェクトへの寄付"
-    description: "Misskeyは無料で使えるオープンソースのソフトウェアです。気に入っていただけたら、今後も開発を続けられるようにぜひ寄付をご検討ください。"
+    title: "为项目捐款"
+    description: "Misskey 是一款免费开源软件。 如果您喜欢，请考虑捐赠，以便我们继续开发。"
   _forUsers:
-    title: "Misskeyユーザー向け"
+    title: "针对 Misskey 用户。"
   _forAdmin:
-    title: "サーバー運営者向け"
+    title: "针对服务器运营商"
   _forDevelopers:
     title: "開発者向け"
   _prevNext:
