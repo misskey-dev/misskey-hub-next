@@ -17,7 +17,7 @@
         </GHero>
         <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
             <div class="container mx-auto max-w-screen-lg px-6 space-y-6 lg:space-y-8">
-                <div ref="q1El" class="bg-gray-100 p-3 lg:p-6 rounded-xl">
+                <div ref="q1El" class="bg-gray-100 dark:bg-gray-800 p-3 lg:p-6 rounded-xl">
                     <div class="flex items-center mb-3 lg:mb-6">
                         <div class="bg-accent-600 text-white w-9 h-9 leading-9 text-center rounded-full font-bold flex-shrink-0">1</div>
                         <h2 class="font-bold text-lg lg:text-xl ml-3">{{ $t('_contact._preFill.q1.question') }}</h2>
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </div>
-                <div ref="q2El" v-if="q1" class="bg-gray-100 p-3 lg:p-6 rounded-xl">
+                <div ref="q2El" v-if="q1" class="bg-gray-100 dark:bg-gray-800 p-3 lg:p-6 rounded-xl">
                     <div class="flex items-center mb-3 lg:mb-6">
                         <div class="bg-accent-600 text-white w-9 h-9 leading-9 text-center rounded-full font-bold flex-shrink-0">2</div>
                         <h2 class="font-bold text-lg lg:text-xl ml-3">{{ $t('_contact._preFill.q2.question') }}</h2>
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                 </div>
-                <div ref="q3aEl" v-if="q1 !== 'company' && q2 && ['report', 'request'].includes(q2)" class="bg-gray-100 p-3 lg:p-6 rounded-xl">
+                <div ref="q3aEl" v-if="q1 !== 'company' && q2 && ['report', 'request'].includes(q2)" class="bg-gray-100 dark:bg-gray-800 p-3 lg:p-6 rounded-xl">
                     <div class="flex items-center mb-3 lg:mb-6">
                         <div class="bg-accent-600 text-white w-9 h-9 leading-9 text-center rounded-full font-bold flex-shrink-0">3a</div>
                         <h2 class="font-bold text-lg lg:text-xl ml-3">{{ $t('_contact._preFill.q3a.question') }}</h2>
@@ -59,12 +59,30 @@
                         </div>
                     </div>
                 </div>
+                <div ref="q3bEl" v-if="q1 === 'company' && q2 && ['report', 'request'].includes(q2)" class="bg-gray-100 dark:bg-gray-800 p-3 lg:p-6 rounded-xl">
+                    <div class="flex items-center mb-3 lg:mb-6">
+                        <div class="bg-accent-600 text-white w-9 h-9 leading-9 text-center rounded-full font-bold flex-shrink-0">3b</div>
+                        <h2 class="font-bold text-lg lg:text-xl ml-3">{{ $t('_contact._preFill.q3b.question') }}</h2>
+                    </div>
+                    <div class="text-lg space-y-3 ml-2.5">
+                        <div v-for="option, index in q3bOptions" class="form-check">
+                            <input class="form-check-input" type="radio" name="contactPrefillQ3a" :value="option" v-model="q3b" :id="`contactPrefillQ3b_${index}`">
+                            <label class="form-check-label cursor-pointer p-1.5" :for="`contactPrefillQ3b_${index}`">
+                                {{ $t(`_contact._preFill.q3b.options.${option}`) }}
+                            </label>
+                        </div>
+                    </div>
+                </div>
                 <div v-if="result" class="text-center">
                     <CaretDownFillIco class="block w-12 h-12 mx-auto" />
                 </div>
-                <div ref="resultEl" v-if="result" class="bg-gray-100 border-4 border-accent-600 p-3 lg:p-6 rounded-xl space-y-3">
+                <div ref="resultEl" v-if="result" class="bg-gray-100 dark:bg-gray-800 border-4 border-accent-600 p-3 lg:p-6 rounded-xl space-y-3">
                     <template v-if="result.type === 'reportToAdminFirst'">
                         <h2 class="font-bold text-lg lg:text-xl text-center">{{ $t('_contact._preFill.result.reportToAdminFirst') }}</h2>
+                        <p class="text-center">{{ $t('_contact._preFill.result.thankYouForYourCooperation') }}</p>
+                    </template>
+                    <template v-else-if="result.type === 'useSponsorExclusiveForm'">
+                        <h2 class="font-bold text-lg lg:text-xl text-center">{{ $t('_contact._preFill.result.useSponsorExclusiveForm') }}</h2>
                         <p class="text-center">{{ $t('_contact._preFill.result.thankYouForYourCooperation') }}</p>
                     </template>
                     <template v-else-if="result.type === 'github'">
@@ -110,6 +128,8 @@ type Result = {
     type: 'github';
 } | {
     type: 'reportToAdminFirst';
+} | {
+    type: 'useSponsorExclusiveForm';
 };
 
 const q1Options = [
@@ -125,6 +145,7 @@ const q2Options = [
     'request',
     'contactToMember',
     'sponsor',
+    'donation',
     'press',
     'other',
 ] as const;
@@ -135,9 +156,14 @@ const q3aOptions = [
     'iAmAdmin',
 ] as const;
 
+const q3bOptions = [
+    'yes',
+    'no',
+] as const;
+
 const filteredQ2Options = computed(() => {
-    if (q1.value === 'user') return q2Options.filter((option) => option !== 'press');
-    if (q1.value === 'company') return q2Options.filter((option) => option !== 'contactToMember');
+    if (q1.value === 'user') return q2Options.filter((option) => !['press', 'sponsor'].includes(option));
+    if (q1.value === 'company') return q2Options.filter((option) => !['contactToMember', 'donation'].includes(option));
     if (q1.value === 'developer') return q2Options.filter((option) => option !== 'sponsor' && option !== 'press');
     if (q1.value === 'apDeveloper') return q2Options.filter((option) => option !== 'sponsor' && option !== 'press');
     if (q1.value === 'other') return q2Options.filter((option) => option !== 'sponsor');
@@ -147,19 +173,27 @@ const filteredQ2Options = computed(() => {
 const q1 = ref<typeof q1Options[number] | null>(null);
 const q2 = ref<typeof q2Options[number] | null>(null);
 const q3a = ref<typeof q3aOptions[number] | null>(null);
+const q3b = ref<typeof q3bOptions[number] | null>(null);
 
 const q1El = ref<HTMLDivElement | null>(null);
 const q2El = ref<HTMLDivElement | null>(null);
 const q3aEl = ref<HTMLDivElement | null>(null);
+const q3bEl = ref<HTMLDivElement | null>(null);
 const resultEl = ref<HTMLDivElement | null>(null);
 
 const result = computed<Result | null>(() => {
     if (!q1.value || !q2.value) return null;
 
-    if (q1.value !== 'company' && ['report', 'request'].includes(q2.value)) {
-        if (!q3a.value) return null;
-        if (q3a.value === 'yes' || q3a.value === 'iAmAdmin') return { type: 'github' };
-        if (q3a.value === 'no') return { type: 'reportToAdminFirst' };
+    if (['report', 'request'].includes(q2.value)) {
+        if (q1.value === 'company') {
+            if (!q3b.value) return null;
+            if (q3b.value === 'yes') return { type: 'useSponsorExclusiveForm' };
+            if (q3b.value === 'no') return { type: 'github' };
+        } else {
+            if (!q3a.value) return null;
+            if (q3a.value === 'yes' || q3a.value === 'iAmAdmin') return { type: 'github' };
+            if (q3a.value === 'no') return { type: 'reportToAdminFirst' };
+        }
     } else {
         return { type: 'form', url: 'https://docs.google.com/forms/d/e/1FAIpQLSf9hV92NTcfzZnJg_mrB11MINpBFdTf8dzGKAmzX8dvwXwZfw/viewform' };
     }

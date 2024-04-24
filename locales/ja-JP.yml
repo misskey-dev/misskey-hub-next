@@ -222,6 +222,7 @@ _contact:
         request: "機能リクエスト"
         contactToMember: "開発メンバーへの直接のお問い合わせ"
         sponsor: "スポンサーについて"
+        donation: "寄付について"
         press: "取材のお問い合わせ"
         other: "その他"
     q3a:
@@ -230,10 +231,16 @@ _contact:
         yes: "はい"
         no: "いいえ"
         iAmAdmin: "私が管理者です"
+    q3b:
+      question: "貴社・貴団体はMisskeyのスポンサーですか？"
+      options:
+        yes: "はい"
+        no: "いいえ"
     result:
       github: "バグ報告・機能リクエストはGitHubより受け付けております。"
       goToGitHub: "GitHubへ"
       reportToAdminFirst: "まずはサーバー管理者にお問い合わせください。"
+      useSponsorExclusiveForm: "事前にお知らせしているスポンサー専用の連絡手段をご利用ください。"
       thankYouForYourCooperation: "スムーズな対応のため、ご協力をお願いいたします。"
       form: "こちらのフォームからご回答ください。"
       formGoogleAccountRequired: "現在、スパム対策のため、回答にはGoogleアカウントが必要となっております。ご理解のほどよろしくお願い致します。"
