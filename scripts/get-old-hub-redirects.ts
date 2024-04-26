@@ -91,7 +91,7 @@ export function getOldHubRedirects(mode: 'nitro' | 'vercel' = 'nitro'): NuxtConf
     
                 let destination = route[1];
     
-                if (route[0].endsWith('.html') && !new RegExp(`^/(${localesConst.map((e) => e.code).join('|')})/`, 'g').test(destination)) {
+                if (route[0].endsWith('.html') && route[0] !== '/index.html' && !new RegExp(`^/(${localesConst.map((e) => e.code).join('|')})/`, 'g').test(destination)) {
                     destination = joinURL(`/${locale.code}`, destination);
                 }
     
