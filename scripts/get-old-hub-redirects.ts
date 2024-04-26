@@ -1,10 +1,9 @@
-import { writeFileSync } from 'fs';
 import { redirects } from './../assets/data/old-hub-redirects';
 import { localesConst } from './../assets/data/locales';
 import type { LocaleCodes } from './../assets/data/locales';
 import type { PartialRecord } from './../types/others';
 import type { NuxtConfig } from 'nuxt/schema';
-import { joinURL, cleanDoubleSlashes } from 'ufo';
+import { joinURL } from 'ufo';
 
 type VercelRouteSource = {
     src: string;
@@ -85,7 +84,7 @@ export function getOldHubRedirects(mode: 'nitro' | 'vercel' = 'nitro'): NuxtConf
     } else {
         const out: NuxtConfig['routeRules'] = {};
 
-        localesConst.forEach((locale) => {
+        localesConst.filter((v) => hubLocales.hasOwnProperty(v.code)).forEach((locale) => {
             redirects.forEach((route) => {
                 if (route[0].startsWith('/ns') || ['/', '/index.html'].includes(route[0])) return;
     
