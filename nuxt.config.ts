@@ -162,6 +162,8 @@ export default defineNuxtConfig({
 		],
 	},
 	nitro: {
+		// リダイレクトが多すぎてCloudflare Pagesのネイティブリダイレクトが使えないので静的モードに強制
+		preset: (process.env.CF_PAGES ? 'static' : undefined),
 		vercel: {
 			config: {
 				routes: [
