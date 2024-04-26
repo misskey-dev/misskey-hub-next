@@ -87,11 +87,11 @@ export function getOldHubRedirects(mode: 'nitro' | 'vercel' = 'nitro'): NuxtConf
 
         localesConst.forEach((locale) => {
             redirects.forEach((route) => {
-                if (route[0].startsWith('/ns')) return;
+                if (route[0].startsWith('/ns') || ['/', '/index.html'].includes(route[0])) return;
     
                 let destination = route[1];
     
-                if (route[0].endsWith('.html') && route[0] !== '/index.html' && !new RegExp(`^/(${localesConst.map((e) => e.code).join('|')})/`, 'g').test(destination)) {
+                if (route[0].endsWith('.html')&& !new RegExp(`^/(${localesConst.map((e) => e.code).join('|')})/`, 'g').test(destination)) {
                     destination = joinURL(`/${locale.code}`, destination);
                 }
     
