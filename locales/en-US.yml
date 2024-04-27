@@ -105,6 +105,8 @@ _servers:
   description: "Misskey is not a single service but a decentralized network where individuals provide services. To use Misskey, you need to create an account on a server that offers the service."
   addYourServer: "Is your server not listed? Please register it {0}!"
   addYourServerLink: "here"
+  disclaimerTitle: "DISCLAIMER"
+  disclaimer: "This server list is an automated listing of Misskey servers found in the Fediverse and is generally not verified manually. The servers listed here have NOT been checked, verified, or approved by the Misskey Project. The Misskey Project is not responsible for any damages incurred by users at the locations accessed."
   _system:
     fetchError: "Failed to fetch data. Please try again later."
   _statistics:
