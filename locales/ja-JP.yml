@@ -110,6 +110,8 @@ _servers:
   description: "Misskeyは単一のサービスではなく、各々がサービスを提供する分散型ネットワークとなっています。Misskeyを利用するには、サービスを提供しているサーバーでアカウントを作成する必要があります。"
   addYourServer: "あなたのサーバーが表示されませんか？{0}から登録してください！"
   addYourServerLink: "こちら"
+  disclaimerTitle: "【重要】免責事項"
+  disclaimer: "このサーバー一覧は、Fediverse上で発見されたMisskeyサーバーを自動で掲載するものであり、原則として手動での確認は行っておりません。ここに掲載されているサーバーは、Misskey Projectが確認・検証・承認したものではありません。アクセス先でユーザーに生じたあらゆる損害について、Misskey Projectは一切責任を負いません。"
   _system:
     fetchError: "データの読み込みに失敗しました。後でもう一度お試しください。"
   _statistics:
