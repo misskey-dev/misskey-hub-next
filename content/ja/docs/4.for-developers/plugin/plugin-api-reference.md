@@ -44,12 +44,12 @@ type EmojiSimple = {
 
 ### `Mk:dialog(title, text, type)`
 ダイアログを表示します。typeには以下の値が設定できます。\
-`info` `success` `warn` `error` `question`\
+`info` `success` `warning` `error` `question`\
 省略すると `info` になります。
 
 ### `Mk:confirm(title, text, type)`
 確認ダイアログを表示します。typeには以下の値が設定できます。\
-`info` `success` `warn` `error` `question`\
+`info` `success` `warning` `error` `question`\
 省略すると `question` になります。\
 ユーザーが"OK"を選択した場合は `true` を、"キャンセル"を選択した場合は `false` が返ります。
 
@@ -57,7 +57,7 @@ type EmojiSimple = {
 let response = Mk:confirm(
   '操作を続行しますか？'
   'この操作は取り消せません。よく確認してください。'
-  'warn'
+  'warning'
 )
 
 if (response) {
