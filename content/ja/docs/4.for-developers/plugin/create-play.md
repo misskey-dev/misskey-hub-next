@@ -1,7 +1,7 @@
 # Playの作成
 
 Playは、AiScriptで独自のUIを組み立て、ユーザー側でミニアプリやゲームを作成できる機能です。
-作ったPlayはMisskeyサーバー上で公開することができ、誰でもあなたが作ったPlay遊ぶことができます。
+作ったPlayはMisskeyサーバー上で公開することができ、誰でもあなたが作ったPlayで遊ぶことができます。
 
 ## AiScript
 PlayはAiScriptを用いて作成できます。
