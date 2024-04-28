@@ -54,7 +54,7 @@ string number boolean
 
 ## API
 Misskey Webはプラグインに対してAPIを公開していて、それらを利用することでクライアントの機能を拡張できます。
-どのようなAPIがあるかは[プラグインAPIリファレンス](./plugin-api-reference/)を参照してください。
+どのようなAPIがあるかは[AiScript Misskey拡張API リファレンス](./plugin-api-reference/)を参照してください。
 
 ## プラグインを配布する
 v2023.11.0以降では、あなたのウェブサイトからワンクリックでプラグインを直接インストールできるようになっています。
