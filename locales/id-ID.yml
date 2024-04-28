@@ -105,6 +105,8 @@ _servers:
   description: "Misskey bukanlah layanan satuan namun jejaring terdesentralisasi dimana para individu menyediakan banyak layanan. Untuk menggunakan Misskey, kamu perlu membuat akun di peladen yang menawarkan layanan tersebut."
   addYourServer: "Apakah peladenmu tidak terdaftar? Daftarkan segera {0}!"
   addYourServerLink: "di sini"
+  disclaimerTitle: "【重要】免責事項"
+  disclaimer: "このサーバー一覧は、Fediverse上で発見されたMisskeyサーバーを自動で掲載するものであり、原則として手動での確認は行っておりません。ここに掲載されているサーバーは、Misskey Projectが確認・検証・承認したものではありません。アクセス先でユーザーに生じたあらゆる損害について、Misskey Projectは一切責任を負いません。"
   _system:
     fetchError: "Gagal untuk mengambil data. Mohon coba lagi nanti."
   _statistics:
