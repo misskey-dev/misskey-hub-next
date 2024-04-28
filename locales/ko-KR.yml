@@ -7,14 +7,14 @@ share: "공유"
 note: "노트"
 other: "기타"
 add: "추가"
-generate: "生成"
-download: "ダウンロード"
+generate: "생성"
+download: "다운로드"
 browse: "참고자료"
 settings: "설정"
 goToLegacyHub: "이전 Misskey Hub"
-contactUs: "お問い合わせ"
-detail: "詳細"
-lastUpdate: "最終更新"
+contactUs: "문의"
+detail: "자세히"
+lastUpdate: "마지막 수정"
 _error:
   notFound: "페이지를 찾을 수 없습니다"
   notFoundDesc: "요청하신 페이지를 찾을 수 없습니다. URL을 확인하여 주십시오."
@@ -99,12 +99,14 @@ _landing:
     description: "Misskey는 비영리 입니다. 개발 자금은 여러분의 기부를 통해 모아지고 있습니다. Misskey가 마음에 드셨다면 계속해서 개발을 할 수 있도록 꼭 지원을 부탁드립니다."
   _sponsors:
     title: "후원자"
-    becomeASponsor: "スポンサーになる"
+    becomeASponsor: "후원자 되기"
 _servers:
   title: "서버 목록"
   description: "Misskey는 하나의 서비스가 아닌, 각자가 서비스 제공을 하는 분산형 네트워크입니다. Misskey를 이용하시려면, 서비스를 제공하고 있는 서버에 계정을 만드실 필요가 있습니다."
   addYourServer: "당신의 서버에는 표시되지 않나요? {0}을 통해 등록해주세요!"
   addYourServerLink: "여기"
+  disclaimerTitle: "[중요] 면책 사항"
+  disclaimer: "이 서버 목록은 Fediverse 상에서 발견된 Misskey 서버를 자동으로 표시하는 것이며, 원칙상 직접 확인하고 있지 않아요. 여기에 표시되고 있는 서버는, Misskey Project가 확인, 검증 및 승인한 것이 아니예요. 이 목록에서 접속한 곳에서 사용자에게 발생한 온갖 손해에 대해 Misskey Project는 일체 책임지지 않아요."
   _system:
     fetchError: "데이터 로딩을 실패했습니다. 시간을 두고 다시 시도해보세요."
   _statistics:
@@ -168,8 +170,8 @@ _docs:
     toPageTop: "맨 위로"
   _steppedGuide:
     selectCourse: "ガイドを選ぶ"
-    noImageInThisStep: "このステップには画像がありません"
-    aiWellDone: "操作はこれで完了です。お疲れ様でした♪"
+    noImageInThisStep: "이 단계에는 이미지가 없습니다."
+    aiWellDone: "과정은 여기서 끝이에요. 수고하셨어요♪"
 _blog:
   title: "블로그"
   description: "Misskey 개발 본부로부터 Misskey에 관한 최신 정보나 Tip 등을 전해드립니다. (일본어만)"
@@ -192,8 +194,8 @@ _brandAssets:
   banner: "배너"
   avatarDecorationTemplate: "아바타 장식 도구"
 _contact:
-  title: "お問い合わせ"
-  description: "Misskey Projectへのお問い合わせはこちらから"
+  title: "문의"
+  description: "Misskey Project로의 문의는 여기로부터"
   form: "こちらのフォームからご回答ください。"
   formGoogleAccountRequired: "現在、スパム対策のため、お問い合わせの送信にはGoogleアカウントが必要となっております。\nお手数をおかけしますが、ご理解のほどよろしくお願い致します。"
   formLink: "フォームへ進む"
@@ -332,7 +334,7 @@ _customEmojiPreview:
 _identiconGenerator:
   title: "初期アイコンジェネレーター"
   description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
-  userName: "ユーザー名"
+  userName: "유저명"
   includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
 _api:
   _permissions:

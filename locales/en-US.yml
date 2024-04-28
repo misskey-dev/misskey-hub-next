@@ -106,7 +106,7 @@ _servers:
   addYourServer: "Is your server not listed? Please register it {0}!"
   addYourServerLink: "here"
   disclaimerTitle: "DISCLAIMER"
-  disclaimer: "This server list is an automated listing of Misskey servers found in the Fediverse and is generally not verified manually. The servers listed here have NOT been checked, verified, or approved by the Misskey Project. The Misskey Project is not responsible for any damages incurred by users at the locations accessed."
+  disclaimer: "This server list is an automated listing of Misskey servers found in the Fediverse and is generally not verified manually. The servers listed here have NOT been checked, verified, or approved by the Misskey Project. The Misskey Project is not responsible for any damages incurred by users at the server accessed."
   _system:
     fetchError: "Failed to fetch data. Please try again later."
   _statistics:
@@ -319,7 +319,7 @@ _avatarDecorationPreview:
   _placeholder:
     username: "Ai"
     noteText: "Just had a chocolate-glazed donut 🍩😋"
-    profileDescription: "I am AI, Misskey resident AI! Pleased to meet you... ♪"
+    profileDescription: "I am Ai, Misskey's AI! Nice to meet you ♪"
 _customEmojiPreview:
   title: "Custom Emoji Preview"
   description: "The usability of custom emojis can be checked here."

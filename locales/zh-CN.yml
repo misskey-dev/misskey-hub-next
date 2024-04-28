@@ -11,7 +11,7 @@ generate: "生成"
 download: "下载"
 browse: "查看"
 settings: "设置"
-goToLegacyHub: "Misskey Hub的历史"
+goToLegacyHub: "旧 Misskey Hub"
 contactUs: "咨询"
 detail: "详情"
 lastUpdate: "最新更新"
@@ -105,6 +105,8 @@ _servers:
   description: "Misskey 不是一个单一的服务，而是由一个个服务组成的分布式网络。欲使用 Misskey，您需要在提供服务的服务器上注册一个账户。"
   addYourServer: "看不到您的服务器？ 请从 {0} 注册！"
   addYourServerLink: "这里"
+  disclaimerTitle: "【重要】免責事項"
+  disclaimer: "このサーバー一覧は、Fediverse上で発見されたMisskeyサーバーを自動で掲載するものであり、原則として手動での確認は行っておりません。ここに掲載されているサーバーは、Misskey Projectが確認・検証・承認したものではありません。アクセス先でユーザーに生じたあらゆる損害について、Misskey Projectは一切責任を負いません。"
   _system:
     fetchError: "无法加载。请稍后重试。"
   _statistics:
