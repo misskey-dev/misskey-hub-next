@@ -14,7 +14,7 @@ settings: "設定"
 goToLegacyHub: "舊版的 Misskey Hub"
 contactUs: "聯絡我們"
 detail: "詳細資訊"
-lastUpdate: "最終更新"
+lastUpdate: "最近更新"
 _error:
   notFound: "找不到此頁面"
   notFoundDesc: "找不到此頁面，請確認網址是否正確。"
@@ -105,6 +105,8 @@ _servers:
   description: "Misskey 不是單一的服務，而是由各服務提供者組成的分散式網路。要使用 Misskey，您需要在提供服務的伺服器上建立帳戶。"
   addYourServer: "看不到您的伺服器？請 {0} 註冊！"
   addYourServerLink: "按這裡"
+  disclaimerTitle: "【重要】免責事項"
+  disclaimer: "這個伺服器清單會自動列出在聯邦宇宙上發現的 Misskey 伺服器，原則上不會手動確認。這裡列出的伺服器並非由 Misskey 專案審查、驗證或批准。 Misskey 專案對使用者存取這些伺服器所遭受的任何損失概不負責"
   _system:
     fetchError: "資料載入失敗。請稍後再試。"
   _statistics:
@@ -167,9 +169,9 @@ _docs:
     title: "本頁內容"
     toPageTop: "回到頁首"
   _steppedGuide:
-    selectCourse: "ガイドを選ぶ"
-    noImageInThisStep: "このステップには画像がありません"
-    aiWellDone: "操作はこれで完了です。お疲れ様でした♪"
+    selectCourse: "選擇課程"
+    noImageInThisStep: "這個步驟沒有圖片"
+    aiWellDone: "操作到此結束。辛苦了♪"
 _blog:
   title: "網誌"
   description: "來自 Misskey 開發部的有關 Misskey 的最新消息、技巧和竅門！ (僅限日文）"
