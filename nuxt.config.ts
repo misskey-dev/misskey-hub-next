@@ -9,6 +9,7 @@ import { getStaticEndpoints } from './scripts/get-static-endpoints';
 import { locales } from './assets/data/locales';
 import type { NuxtConfig } from 'nuxt/schema';
 import { fetchCrowdinMembers } from './scripts/fetch-crowdin';
+import { genSpaLoadingTemplate } from './scripts/gen-spa-loading-template';
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl =
@@ -182,7 +183,6 @@ export default defineNuxtConfig({
 	hooks: {
 		'build:before': async (...args) => {
 			genApiTranslationFiles(...args);
-			genLocalesJson(...args);
 			if (process.env.NODE_ENV === 'development') {
 				fsWatch('./locales/', (ev, filename) => {
 					if (filename && filename.endsWith('.yml')) {
@@ -190,7 +190,11 @@ export default defineNuxtConfig({
 					}
 				});
 			}
-			await fetchCrowdinMembers(...args);
+			await Promise.all([
+				genLocalesJson(...args),
+				genSpaLoadingTemplate(...args),
+				fetchCrowdinMembers(...args),
+			]);
 		},
 	},
 	features: {

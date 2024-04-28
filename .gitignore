@@ -28,3 +28,6 @@ locales_dist
 
 # Crowdin Members Result
 assets/data/i18n-members.ts
+
+# SPA Loading Template (Dynamically Generated)
+app/spa-loading-template.html
