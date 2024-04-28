@@ -105,6 +105,8 @@ _servers:
   description: "Misskey non è un social network unico, ma una rete decentralizzata in cui ogni server fornisce servizi federati. Per utilizzare Misskey occorre creare un profilo su uno dei server federati."
   addYourServer: "Il tuo server non compare? {0}!"
   addYourServerLink: "aggiungilo"
+  disclaimerTitle: "【重要】免責事項"
+  disclaimer: "このサーバー一覧は、Fediverse上で発見されたMisskeyサーバーを自動で掲載するものであり、原則として手動での確認は行っておりません。ここに掲載されているサーバーは、Misskey Projectが確認・検証・承認したものではありません。アクセス先でユーザーに生じたあらゆる損害について、Misskey Projectは一切責任を負いません。"
   _system:
     fetchError: "Impossibile caricare i dati. Per favore riprova più tardi."
   _statistics:
