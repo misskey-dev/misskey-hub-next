@@ -2,12 +2,12 @@
 
 AiScriptは、Misskeyの以下の箇所で使用できるスクリプト言語です。
 
-- [プラグイン](./plugin/)
+- [プラグイン](./plugin/create-plugin/)
 - [ウィジェット](/docs/for-users/features/widgets/)
   - ボタン
   - AiScriptコンソール
   - AiScript App
-- Misskey Play
+- [Misskey Play](./plugin/create-play/)
 - スクラッチパッド
 
 :::tip
@@ -33,19 +33,19 @@ Misskey本体のバージョンにより、使用できるAiScriptのバージ�
 
 接頭辞: `Mk:`\
 Misskey内の全てのAiScript環境で使用できる定関数群です。
-詳しくは[プラグインAPIリファレンス](./plugin/plugin-api-reference/)の`Mk:`とついた部分を参照して下さい。
+詳しくは[AiScript Misskey拡張API リファレンス](./plugin/plugin-api-reference/)の`Mk:`とついた部分を参照して下さい。
 
 ### プラグインAPI
 
 接頭辞: `Plugin:`\
 [プラグイン](./plugin/)でのみ使用できる定関数群です。
-詳しくは[プラグインAPIリファレンス](./plugin/plugin-api-reference/)の`Plugin:`とついた部分を参照して下さい。
+詳しくは[AiScript Misskey拡張API リファレンス](./plugin/plugin-api-reference/)の`Plugin:`とついた部分を参照して下さい。
 
 ### UI API
 
 接頭辞: `Ui:`\
-[ウィジェット](/docs/for-users/features/widgets/)（AiScript App）、Misskey Play、Scratchpadで使用できます。
-ドキュメントは未整備（TODO）ですが、インターネット上に有志の方が執筆された解説記事があります。
+[ウィジェット](/docs/for-users/features/widgets/)（AiScript App）、[Misskey Play](./plugin/create-play/)、Scratchpadで使用できます。
+詳しくは[AiScript Misskey拡張API リファレンス](./plugin/plugin-api-reference/)の`Ui:`とついた部分を参照して下さい。
 
 ### 標準入出力
 
