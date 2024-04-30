@@ -237,7 +237,7 @@ export const redirects = [
     ],
     [
         "/docs/api/index.html",
-        "/docs/api/"
+        "/docs/for-developers/api/"
     ],
     [
         "/docs/api/index.md",

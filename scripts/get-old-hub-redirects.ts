@@ -4,6 +4,7 @@ import type { LocaleCodes } from './../assets/data/locales';
 import type { PartialRecord } from './../types/others';
 import type { NuxtConfig } from 'nuxt/schema';
 import { joinURL } from 'ufo';
+import { writeFileSync } from 'fs';
 
 type VercelRouteSource = {
     src: string;
@@ -90,7 +91,7 @@ export function getOldHubRedirects(mode: 'nitro' | 'vercel' = 'nitro'): NuxtConf
     
                 let destination = route[1];
     
-                if (route[0].endsWith('.html')&& !new RegExp(`^/(${localesConst.map((e) => e.code).join('|')})/`, 'g').test(destination)) {
+                if (!new RegExp(`^/(${localesConst.map((e) => e.code).join('|')})/`, 'g').test(destination)) {
                     destination = joinURL(`/${locale.code}`, destination);
                 }
     
