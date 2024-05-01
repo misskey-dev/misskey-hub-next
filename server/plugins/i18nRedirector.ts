@@ -29,7 +29,7 @@ export default defineNitroPlugin((nitroApp) => {
 
       html.head = remainingList.map((v) => v + '\n');
       //@ts-ignore
-      html.head.push('<script type="text/javascript">const s = ' + JSON.stringify(locales.map((l) => l.code)) + '; const d = Object.fromEntries(document.cookie.split('; ').map(v=>v.split(/=(.*)/s).map(decodeURIComponent))); if (d.i18n_redirected) { location.replace(\'/\' + d.i18n_redirected + location.pathname + location.search); } else if (s.includes(navigator.language.split("-")[0])) { location.replace(\'/\' + navigator.language.split("-")[0] + location.pathname + location.search); } else { location.replace(\'/ja\' + location.pathname + location.search); }</script>\n');
+      html.head.push('<script type="text/javascript">const s = ' + JSON.stringify(locales.map((l) => l.code)) + '; const d = Object.fromEntries(document.cookie.split(\'; \').map(v=>v.split(/=(.*)/s).map(decodeURIComponent))); if (d.i18n_redirected) { location.replace(\'/\' + d.i18n_redirected + location.pathname + location.search); } else if (s.includes(navigator.language.split("-")[0])) { location.replace(\'/\' + navigator.language.split("-")[0] + location.pathname + location.search); } else { location.replace(\'/ja\' + location.pathname + location.search); }</script>\n');
       html.body = [
         '\n<noscript>Please enable Javascript to see this page properly.</noscript>\n',
         `<noscript>${links.join(', ')}</noscript>\n`,
