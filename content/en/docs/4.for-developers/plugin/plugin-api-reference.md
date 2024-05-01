@@ -1,30 +1,30 @@
-# Plugin API Reference
+# AiScript Misskey Extended API Reference
 
-ここでは、Misskeyで独自に拡張されたAiScript APIについて紹介しています。
+This section introduces the AiScript API extended for Misskey.
 
 :::tip
 
-標準装備のAiScript APIは[こちら](https://github.com/aiscript-dev/aiscript/blob/master/docs/get-started.md)からご覧いただけます。
+Documentation for the standard AiScript API can be found [here](https://github.com/aiscript-dev/aiscript/blob/master/docs/get-started.md).
 
 :::
 
-## `Mk:api(endpoint params)`
+## Common constants for all use cases
 
 ### `USER_ID`
 
-現在のユーザーのID
+ID of the current user
 
 ### `USER_NAME`
 
-現在のユーザーの名前
+Display name of the current user
 
 ### `USER_USERNAME`
 
-現在のユーザーのハンドル（`@`より後ろの部分。例: `@ai@example.com` → `ai`）
+Current user's handle (the part after `@`.  e.g. `@ai@example.com` → `ai`)
 
 ### `CUSTOM_EMOJIS`
 
-カスタム絵文字の一覧。以下のようなオブジェクトが配列で格納されています
+The array of custom emojis.An array of objects of the following types:
 
 ```ts
 type EmojiSimple = {
@@ -38,42 +38,40 @@ type EmojiSimple = {
 }
 ```
 
-### `Plugin:register_user_action(title fn)`
+### `LOCALE`
 
-現在のMisskey Webの設定言語。RFC4646互換の形式（`ja-JP`など）で表されます
+The current Misskey Web display language.RFC4646 compatible format (e.g. `ja-JP`)
 
 ### `SERVER_URL`
 
-現在のサーバーのURL。`https://www.example.com` のようにオリジンで表されます
+The URL of the current server.It is represented by an origin, such as `https://www.example.com`.
 
-## 全分野共通関数
+## Common functions for all use cases
 
 ### `Mk:dialog(title, text, type)`
 
 Display a dialog box.The following values ​​can be set for type.\
-`info` `success` `warn` `error` `question`\
+`info` `success` `warning` `error` `question`\
 If omitted, it will be `info`.
 
 ### `Mk:confirm(title, text, type)`
 
 Display a confirmation dialog.The following values ​​can be set for type.\
-`info` `success` `warn` `error` `question`\
-If omitted, it will be `question`.Display a confirmation dialog.The following values ​​can be set for type.\
-`info` `success` `warn` `error` `question`\
+`info` `success` `warning` `error` `question`\
 If omitted, it will be `question`.\
 Returns `true` if the user selects "OK" or `false` if the user selects "cancel".
 
 ```AiScript
 let response = Mk:confirm(
-  '操作を続行しますか？'
-  'この操作は取り消せません。よく確認してください。'
+  'Are you sure to continue?'
+  'Please be sure to check again as it is not possible to roll back.'
   'warning'
 )
 
 if (response) {
-  // OKした場合
+  // When user clicks "OK"
 } else {
-  // キャンセルした場合
+  // When user clicks "Cancel"
 }
 ```
 
@@ -81,7 +79,7 @@ if (response) {
 
 Make a request to the Misskey API.Make a request to the Misskey API.Passes the endpoint name as the first argument and the parameter object as the second argument.
 
-第三引数にtokenを入れることもできます。プラグインで動作する場合は、引数指定無しでログイン中のユーザーのtokenが使用されます。
+You can also include API token as the third argument.When called within a plugin, the token of the currently logged-in user is used if no argument is specified.
 
 ### `Mk:save(key, value)`
 
@@ -91,36 +89,33 @@ Persistently saves an arbitrary key with any given value.Persistently saves an a
 
 Reads the value of the specified name saved by Mk:save.
 
-## プラグイン専用
+## Functions/Constants only available for plugins
 
 ### `Plugin:register_post_form_action(title, fn)`
 
-Adds an action in the post form.Adds an action in the post form.Passes the name of the action as the first argument and the callback function when the action is selected as the second argument.The post form object is passed to the callback function as the first argument.Display a dialog box.The following values ​​can be set for type.\
-`info` `success` `warn` `error` `question`\
-If omitted, it will be `info`.
+Adds an action in the post form.Passes the name of the action as the first argument and the callback function when the action is selected as the second argument.The post form object is passed to the callback function as the first argument.
 
 ```AiScript
-Plugin:register_post_form_action('メニューに表示される項目名', @(note) {
+Plugin:register_post_form_action('Item name displayed on the menu', @(note) {
 
-  // ノートに何らかの変更を加える
-  note.text = `{note.text}{Str:lf}#ハッシュタグ`
+  // Make some change to the note...
+  note.text = `{note.text}{Str:lf}#examplehashtag`
 
-  return note // 変更後のノートを返す
+  return note // Return modified note
 })
 ```
 
 ### `Plugin:register_note_action(title, fn)`
 
-Adds an action in the note menu.Passes the name of the item as the first argument and the callback function when the action is selected as the second argument.Rewrite note information when posting notes.\
-The target note object is passed to the callback function as the first argument.\
-The note will be rewritten with the return value of the callback function.
+Adds an action in the note menu.Passes the name of the item as the first argument and the callback function when the action is selected as the second argument.\
+The target note object is passed to the callback function as the first argument.
 
 ```AiScript
-Plugin:register_note_action('メニューに表示される項目名', @(note) {
+Plugin:register_note_action('Item name displayed on the menu', @(note) {
 
-  // ノートを使って何かする
+  // Do something with the note...
   Mk:api('notes/create', {
-    text: '引用'
+    text: 'This is quote'
     renoteId: note.id
   })
 
@@ -129,15 +124,15 @@ Plugin:register_note_action('メニューに表示される項目名', @(note) {
 
 ### `Plugin:register_user_action(title, fn)`
 
-Adds an action in the user menu.Passes the name of the item as the first argument and the callback function when the action is selected as the second argument.Adds an action in the user menu.Passes the name of the item as the first argument and the callback function when the action is selected as the second argument.\
+Adds an action in the user menu.Passes the name of the item as the first argument and the callback function when the action is selected as the second argument.\
 The target user object is passed to the callback function as the first argument.
 
 ```AiScript
-Plugin:register_user_action('メニューに表示される項目名', @(user) {
+Plugin:register_note_action('Item name displayed on the menu', @(user) {
 
-  // ユーザー情報を使って何かする
+  // Do something with the user info...
   Mk:api('notes/create', {
-    text: `{user.name}さん、ようこそ！`
+    text: `{user.name}, welcome to our server!`
   })
 
 })
@@ -145,20 +140,19 @@ Plugin:register_user_action('メニューに表示される項目名', @(user) {
 
 ### `Plugin:register_note_view_interruptor(fn)`
 
-Rewrites the note information displayed on the UI.Rewrites the note information displayed on the UI.\
+Rewrites the note information displayed on the UI.\
 The target note object is passed to the callback function as the first argument.\
 The note will be rewritten with the return value of the callback function.\
-The note will be rewritten with the return value of the callback function.\
-`null` を返すとそのノートを非表示にします。
+Return `null` to make it hidden.
 
 ```AiScript
 Plugin:register_note_view_interruptor(@(note) {
   
-  // ノートの中身を書き換える
-  note.text = note.text.replace('リンゴ', 'バナナ')
+  // Make some change to the note...
+  note.text = note.text.replace('apple', 'banana')
 
-  // nullを返すと非表示
-  if (note.text.incl('納豆')) {
+  // Return null to make it hidden
+  if (note.text.incl('natto')) {
     return null
   }
 
@@ -168,15 +162,15 @@ Plugin:register_note_view_interruptor(@(note) {
 
 ### `Plugin:register_note_post_interruptor(fn)`
 
-Rewrite note information when posting notes.Adds an action in the note menu.Passes the name of the item as the first argument and the callback function when the action is selected as the second argument.\
+Rewrite note information when posting notes.\
 The target note object is passed to the callback function as the first argument.\
 The note will be rewritten with the return value of the callback function.
 
 ```AiScript
 Plugin:register_note_post_interruptor(@(note) {
   
-  // ノートの中身を書き換える
-  note.text = note.text.replace('リンゴ', 'バナナ')
+  // Make some change to the note...
+  note.text = note.text.replace('apple', 'banana')
 
   return note
 })
@@ -184,14 +178,14 @@ Plugin:register_note_post_interruptor(@(note) {
 
 ### `Plugin:register_page_view_interruptor(fn)`
 
-Page閲覧時にPage情報を書き換えます。\
-コールバック関数には、第一引数に対象のPageオブジェクトが渡されます。\
-コールバック関数の返り値でPageが書き換えられます。
+Rewrites the Page information displayed on the UI.\
+The target page object is passed to the callback function as the first argument.\
+The page will be rewritten with the return value of the callback function.
 
 ```AiScript
 Plugin:register_note_post_interruptor(@(page) {
   
-  // ページの中身を書き換える（省略）
+  // Make some change to the page...
 
   return page
 })
@@ -205,25 +199,25 @@ Opens the URL given as the first parameter in a new browser tab.
 
 An object containing the plugin settings.The values set in the plugin definition's config are saved in the object keys.The values set in the plugin definition's config are saved in the object keys.
 
-## Play専用 定数
+## Constants only available for Play
 
 ### `THIS_ID`
 
-PlayのID
+ID of the Play
 
 ### `THIS_URL`
 
-PlayのURL
+The URL of the Play
 
-## UI制御関数（Play・AiScript Appウィジェットで使用可能）
+## UI API functions (available for Play and AiScript App widgets)
 
 ### `Ui:root`
 
-UIのルート要素。
+The root component of the UI.
 
 ### `Ui:render([ ...components ])`
 
-`Ui:root.update({ children: [ ...components ] })` の糖衣構文。UIのルート要素を書き換えます。
+Syntax sugar for `Ui:root.update({ children: [ ...components ] })`.Rewrites the root of the UI.
 
 ```AiScript
 Ui:render([
@@ -234,22 +228,22 @@ Ui:render([
 
 ### `Ui:get(id)`
 
-IDを付与したコンポーネントを取得し、操作を行えます。
+Retrieve and manipulate the component associated with the ID.
 
 ```AiScript
 Ui:C:text({text: "A"}, "text1")
 Ui:get("text1").update({text: "B"})
 ```
 
-## コンポーネント関数（Play・AiScript Appウィジェットで使用可能）
+## Component functions (available for Play and AiScript App widgets)
 
-以下の要素では、初期化の際に `Ui:C:xxx(props id)` のように第2引数にコンポーネントのidを指定することができます（以下のリファレンスではすべて省略しています）。指定したidは `Ui:get(id)` 関数で取得でき、`update` 関数でコンポーネントの中身を直接変更することができます（詳しくは `Ui:get(id)` のリファレンスをご覧ください）。
+In all of the following functions, the component ID can be specified as the second argument during initialization, as in `Ui:C:xxx(props id)` (this statement is omitted in the following reference).The specified ID can be obtained with the `Ui:get(id)` function, and the content of the component can be directly modified with the `update` function (see the `Ui:get(id)` reference for details).
 
-### レイアウト
+### Layout
 
 #### `Ui:C:container`
 
-幅寄せ、色などの書式設定ができる外枠（コンテナ）
+Outer frame (container) with formatting for text alignment, color, etc.
 
 ```AiScript
 Ui:C:container({
@@ -284,11 +278,11 @@ Ui:C:folder({
 })
 ```
 
-### テキスト
+### Text
 
 #### `Ui:C:text`
 
-プレーンテキスト
+Plain text
 
 ```AiScript
 Ui:C:text({
@@ -302,7 +296,7 @@ Ui:C:text({
 
 #### `Ui:C:mfm`
 
-MFMテキスト
+MFM-enabled text
 
 ```AiScript
 Ui:C:mfm({
@@ -318,11 +312,11 @@ Ui:C:mfm({
 })
 ```
 
-### フォーム
+### Forms
 
 #### `Ui:C:button`
 
-ボタン
+Button
 
 ```AiScript
 Ui:C:button({
@@ -338,7 +332,7 @@ Ui:C:button({
 
 #### `Ui:C:buttons`
 
-ボタン（横並び）
+Horizontally stacked buttons
 
 ```AiScript
 Ui:C:buttons({
@@ -364,7 +358,7 @@ Ui:C:switch({
 
 #### `Ui:C:textInput`
 
-１行のテキスト入力
+Single line text input
 
 ```AiScript
 Ui:C:textInput({
@@ -379,7 +373,7 @@ Ui:C:textInput({
 
 #### `Ui:C:numberInput`
 
-１行のテキスト入力
+Single line number input
 
 ```AiScript
 Ui:C:numberInput({
@@ -394,7 +388,7 @@ Ui:C:numberInput({
 
 #### `Ui:C:textarea`
 
-複数行のテキスト入力
+Multiline text input
 
 ```AiScript
 Ui:C:textarea({
@@ -409,7 +403,7 @@ Ui:C:textarea({
 
 #### `Ui:C:select`
 
-複数の値から一つ選ぶ形式
+Select one of several values
 
 ```AiScript
 Ui:C:select({
@@ -426,11 +420,11 @@ Ui:C:select({
 })
 ```
 
-### ノート投稿関連
+### Post forms
 
 #### `Ui:C:postForm`
 
-投稿フォームをPlayに直接埋め込む
+Embed the post form directly into Play
 
 ```AiScript
 Ui:C:postForm({
@@ -443,7 +437,7 @@ Ui:C:postForm({
 
 #### `Ui:C:postFormButton`
 
-投稿フォームを呼び出せる特殊ボタン
+Special button to launch the post form modal
 
 ```AiScript
 Ui:C:postFormButton({
