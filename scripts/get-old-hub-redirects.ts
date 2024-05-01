@@ -4,6 +4,7 @@ import type { LocaleCodes } from './../assets/data/locales';
 import type { PartialRecord } from './../types/others';
 import type { NuxtConfig } from 'nuxt/schema';
 import { joinURL } from 'ufo';
+import { readFileSync, writeFileSync } from 'fs';
 
 type VercelRouteSource = {
     src: string;
@@ -90,10 +91,12 @@ export function getOldHubRedirects(mode: 'nitro' | 'vercel' = 'nitro'): NuxtConf
     
                 let destination = route[1];
     
-                if (route[0].endsWith('.html')&& !new RegExp(`^/(${localesConst.map((e) => e.code).join('|')})/`, 'g').test(destination)) {
+                if (!new RegExp(`^/(${localesConst.map((e) => e.code).join('|')})/`, 'g').test(destination)) {
                     destination = joinURL(`/${locale.code}`, destination);
                 }
     
+                if (process.env.CF_PAGES === '1' && route[0].endsWith('.md')) return;
+
                 out[joinURL(hubLocales[locale.code] ?? '/', route[0])] = {
                     redirect: {
                         to: destination,
@@ -102,6 +105,15 @@ export function getOldHubRedirects(mode: 'nitro' | 'vercel' = 'nitro'): NuxtConf
                 };
             });
         });
+
+        if (process.env.CF_PAGES === '1') {
+            const staticRedirects = readFileSync('./public/_redirects_template', 'utf-8');
+            const additionalRedirects = redirects.filter((route) => route[0].endsWith('.md')).map((route) => {
+                return `${route[0]} ${route[1]} 301`;
+            });
+
+            writeFileSync('./public/_redirects', staticRedirects + '\n' + additionalRedirects.join('\n'));
+        }
 
         return {
             ...out,
