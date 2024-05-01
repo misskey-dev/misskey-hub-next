@@ -1,13 +1,13 @@
-# Playの作成
+# Create Play
 
-Playは、AiScriptで独自のUIを組み立て、ユーザー側でミニアプリやゲームを作成できる機能です。
-作ったPlayはMisskeyサーバー上で公開することができ、誰でもあなたが作ったPlayで遊ぶことができます。
+Play is a function that allows users to create their own mini-applications and games by building their own UI in AiScript.
+The Play you create can be published on the server, and anyone can play with the Play you have created.
 
 ## AiScript
 
-PlayはAiScriptを用いて作成できます。
+Play can be created using AiScript.
 
 ## API
 
-Misskey Webはプラグインに対してAPIを公開していて、それらを利用することでクライアントの機能を拡張できます。
-どのようなAPIがあるかは[AiScript Misskey拡張API リファレンス](./plugin-api-reference/)を参照してください。
+Misskey Web exposes APIs for Plugins, which can be used to extend client functionality.
+Please refer to [AiScript Misskey Extension API Reference](./plugin-api-reference/) to see what APIs are available.
