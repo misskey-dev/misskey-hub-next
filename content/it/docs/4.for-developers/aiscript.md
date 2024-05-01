@@ -2,12 +2,12 @@
 
 AiScriptは、Misskeyの以下の箇所で使用できるスクリプト言語です。
 
-- [プラグイン](./plugin/)
+- [プラグイン](./plugin/create-plugin/)
 - [ウィジェット](/docs/for-users/features/widgets/)
   - ボタン
   - AiScriptコンソール
   - AiScript App
-- Misskey Play
+- [Misskey Play](./plugin/create-play/)
 - スクラッチパッド
 
 :::tip
