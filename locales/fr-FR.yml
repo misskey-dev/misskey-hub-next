@@ -333,7 +333,7 @@ _customEmojiPreview:
     noteText: "L'émoji personnalisé apparaîtra comme ceci → :emoji_preview_1:\nVous pouvez réécrire le texte et tester son affichage ✨"
 _identiconGenerator:
   title: "Générateur d'icône initiale"
-  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
+  description: "Vous pouvez générer l'icône utilisée par défaut lorsque vous vous inscrivez sur Misskey."
   userName: "Nom d'utilisateur·rice"
   includeDomain: "Veuillez spécifier le nom d'utilisateur·rice complet, incluant le domaine de l'instance."
 _api:
