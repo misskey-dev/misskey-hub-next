@@ -122,7 +122,7 @@ _servers:
   _search:
     title: "精确搜索"
     all: "全部"
-    query: "キーワードで検索"
+    query: "按关键词搜索"
     lang: "语言"
     orderBy: "排序方式"
     recomendded: "默认"
