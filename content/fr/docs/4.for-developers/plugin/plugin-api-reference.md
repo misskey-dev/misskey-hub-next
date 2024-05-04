@@ -432,6 +432,10 @@ Ui:C:postForm({
   form: {
     cw: "CW注釈" // CWを指定する場合の「要約」テキスト
     text: "投稿内容" // 投稿フォームのデフォルト文字列
+
+    // 以下はMisskey v2024.5.0以降で指定可能となります
+    visibility: "home" // デフォルトの投稿の公開範囲（未指定の場合はpublic）
+    localOnly: false // デフォルトで連合無しかどうか（未指定の場合はfalse）
   }
 })
 ```
@@ -448,6 +452,10 @@ Ui:C:postFormButton({
   form: {
     cw: "CW注釈" // CWを指定する場合の「要約」テキスト
     text: "投稿内容" // 投稿フォームのデフォルト文字列
+
+    // 以下はMisskey v2024.5.0以降で指定可能となります
+    visibility: "home" // デフォルトの投稿の公開範囲（未指定の場合はpublic）
+    localOnly: false // デフォルトで連合無しかどうか（未指定の場合はfalse）
   }
 })
 ```
