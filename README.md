@@ -62,6 +62,14 @@ yarn dev
 
 ## Production
 
+> [!NOTE]
+> 
+> <img src="./public/img/misc/works-on-my-machine.png" align="right" height="130px"/>
+> 
+> このプログラムはMisskey Projectの使用するインフラストラクチャで動作するように設計されており、その他の環境で使用することは想定されていません。
+> 
+> This program is designed to run on the infrastructure used by the Misskey Project and is not intended to be used in other environments.
+
 Build the application for production:
 
 ```bash
@@ -100,4 +108,4 @@ Google Apps Scriptで動作します。
 
 GNU Affero General Public License v3.0
 
-(c) 2023-2024 Misskey, syuilo, kakkokari-gtyih and other contributors
+(c) 2023-2024 syuilo, kakkokari-gtyih and Misskey Project

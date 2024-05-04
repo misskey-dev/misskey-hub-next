@@ -16,7 +16,7 @@ export async function getGhIssueUrl(options: {
         template = '01_visitor-bug-report-ja.yml';
     }
 
-    if (process.client) {
+    if (import.meta.client) {
         //@ts-ignore
         if ('userAgentData' in navigator && 'getHighEntropyValues' in navigator.userAgentData) {
             //@ts-ignore

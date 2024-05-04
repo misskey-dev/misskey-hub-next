@@ -1,17 +1,12 @@
-import {
-    getComposer,
-    useLocalePath as _useLocalePath,
-} from 'vue-i18n-routing';
+import type { LocaleCodes } from '@/assets/data/locales';
+import { locales } from "@/assets/data/locales";
 
 /** useLocalePathのラッパー関数。 */
-export function useGLocalePath(
-    options?: NonNullable<Parameters<typeof _useLocalePath>[0]>
-): ReturnType<typeof _useLocalePath> {
-    const { route, router, i18n, strategy } = options || {}
-    return _useLocalePath({
-        route: route || useRoute(),
-        router: router || useRouter(),
-        i18n: i18n || getComposer(useNuxtApp().$i18n),
-        strategy: strategy ?? 'prefix', // ←リンクではprefixつきにする
-    })
+export function useGLocalePath() {
+    const localePath = useLocalePath();
+
+    return (path: string, locale?: LocaleCodes) => {
+        const _path = localePath(path, locale);
+        return new RegExp(`^/(${locales.map((v) => v.code).join('|')})/`).test(_path) ? _path : `/${locales[0].code}${_path}`;
+    };
 }

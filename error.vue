@@ -36,8 +36,8 @@
 </template>
 
 <script setup lang="ts">
-import type { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables';
 import NProgress from 'nprogress';
+import { locales } from '@/assets/data/locales';
 import { getGhIssueUrl } from './assets/js/misc/get-issue-url';
 import ExtIco from 'bi/box-arrow-up-right.svg';
 
@@ -45,9 +45,9 @@ const error = useError();
 const colorMode = useColorMode();
 const runtimeConfig = useRuntimeConfig();
 
-const { locale, locales } = useI18n();
+const { locale } = useI18n();
 const localePath = useGLocalePath();
-const currentLocaleIso = computed(() => (locales.value as LocaleObject[]).find((e) => e?.code === locale.value)?.iso);
+const currentLocaleIso = computed(() => locales.find((e) => e?.code === locale.value)?.iso);
 
 const isNavOpen = ref<boolean>(false);
 const isCanvasLoaded = ref<boolean>(false);

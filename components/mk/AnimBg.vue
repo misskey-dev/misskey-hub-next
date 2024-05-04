@@ -68,7 +68,7 @@ function initShaderProgram(gl: WebGLRenderingContext, vsSource: string, fsSource
 let handle: ReturnType<typeof window['requestAnimationFrame']> | null = null;
 
 onMounted(() => {
-    if (!process.client) return;
+    if (!import.meta.client) return;
 
     const canvas = canvasEl.value!;
     let width = canvas.offsetWidth;

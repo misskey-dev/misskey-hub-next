@@ -51,11 +51,10 @@
 在 `props` 下定義佈景主題的風格。
 鍵為 CSS 的變數名稱，值指定內容。
 請注意，這個 `props` 物件是由基本佈景主題繼承而來的。
-如果佈景主題的 `base` 為 `light`，則基本佈景主題為 [\_light.json5][_light.json5]，若為 `dark` 則為 [\_dark.json5][_dark.json5]。
+如果佈景主題的 `base` 為 `light`，則基本佈景主題為 [\\_light.json5][_light.json5]，若為 `dark` 則為 [\\_dark.json5][_dark.json5]。
 換句話說，即使該主題中的 `props` 中沒有名為 `panel` 的鍵，也假定基本佈景主題中存在 `panel`。
 
 [_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
-
 [_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
 
 #### 可與值一起使用的語法

@@ -67,7 +67,7 @@ const shareURL = computed(() => {
 })
 
 function clearEmojiCache() {
-    if (process.client) {
+    if (import.meta.client) {
         localStorage.clear();
         location.reload();
     }

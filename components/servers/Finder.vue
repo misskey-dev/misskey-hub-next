@@ -1,7 +1,13 @@
 <template>
-    <div class="container mx-auto max-w-screen-xl px-6 grid server-list gap-8">
+    <div 
+        class="px-6 grid server-list gap-8"
+        :class="[
+            (v_view === 'list') && 'container mx-auto max-w-screen-xl',
+            (v_view === 'grid') && 'mx-auto max-w-[2560px]',
+        ]"
+    >
         <aside
-            class="fixed z-50 transition-transform -mx-6 w-full bg-slate-200 dark:bg-slate-800 bottom-0 rounded-t-xl lg:translate-y-0 lg:shadow-none lg:bg-transparent dark:lg:bg-transparent lg:mx-0 lg:relative"
+            class="fixed z-50 transition-transform -mx-6 w-full lg:w-[calc(100%+3rem)] bg-slate-200 dark:bg-slate-800 bottom-0 rounded-t-xl lg:translate-y-0 lg:shadow-none lg:bg-transparent dark:lg:bg-transparent lg:relative"
             :class="sortOpen ? 'translate-y-0' : 'translate-y-[calc(100%-3rem)]'"
         >
             <button
@@ -11,14 +17,14 @@
             >
                 {{ $t('_servers._search.title') }}
             </button>
-            <div class="lg:sticky lg:top-24 lg:overflow-y-auto lg:max-h-[calc(100vh-6rem)] p-6 lg:px-0 lg:py-2 space-y-4">
+            <div class="lg:sticky lg:top-24 lg:overflow-y-auto lg:max-h-[calc(100vh-6rem)] p-6 lg:py-2 space-y-4">
                 <div class="flex items-center">
                     <h3 class="text-xl font-bold">{{ $t('_servers._search.title') }}</h3>
                     <button @click="sortOpen = false" class="ml-auto w-8 h-8 p-0.5 rounded-full bg-slate-100 dark:bg-slate-900 lg:hidden">
                         <XIco class="w-7 h-7" />
                     </button>
                 </div>
-                <form @submit.prevent="() => { f_query = f_query_partial }">
+                <form @submit.prevent="applyQuery">
                     <label class="form-label" for="query">{{ $t('_servers._search.query') }}</label>
                     <div class="input-group">
                         <input class="form-control" type="search" autocomplete="off" id="query" v-model="f_query_partial" />
@@ -84,7 +90,7 @@
             <div
                 class="grid gap-4"
                 :class="[
-                    (v_view === 'grid') && 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2',
+                    (v_view === 'grid') && 'grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5',
                     (v_view === 'list') && 'grid-cols-1',
                 ]"
             >
@@ -93,19 +99,19 @@
                     v-else-if="data"
                     class="rounded-lg p-6 min-h-[40vh] flex items-center bg-slate-100 dark:bg-slate-800"
                     :class="[
-                        (v_view === 'grid') && 'sm:col-span-2 md:col-span-2 lg:col-span-2'
+                        (v_view === 'grid') && 'sm:col-span-2 xl:col-span-3 2xl:col-span-4 3xl:col-span-5'
                     ]"
                 >
                     <div class="mx-auto text-center">
                         <img src="https://xn--931a.moe/assets/info.jpg" class="rounded-lg mx-auto mb-4" />
-                        <p class="max-w-xs">{{ $t('_servers._list.notFound') }}</p>
+                        <p class="max-w-xs" style="word-break: auto-phrase;">{{ $t('_servers._list.notFound') }}</p>
                     </div>
                 </div>
                 <div
                     v-else
                     class="rounded-lg p-6 min-h-[40vh] flex items-center bg-slate-100 dark:bg-slate-800"
                     :class="[
-                        (v_view === 'grid') && 'sm:col-span-2 md:col-span-2 lg:col-span-2'
+                        (v_view === 'grid') && 'sm:col-span-2 xl:col-span-3 2xl:col-span-4 3xl:col-span-5'
                     ]"
                 >
                     <div class="mx-auto text-center">
@@ -114,10 +120,10 @@
                     </div>
                 </div>
                 <button
-                    v-if="f_limit < filteredInstances.length" @click="f_limit += 24"
+                    v-if="f_limit < filteredInstances.length" @click="f_limit += 60"
                     class="btn btn-outline-primary btn-lg block px-4"
                     :class="[
-                        (v_view === 'grid') && 'sm:col-span-2 md:col-span-2 lg:col-span-2'
+                        (v_view === 'grid') && 'sm:col-span-2 xl:col-span-3 2xl:col-span-4 3xl:col-span-5'
                     ]"
                 >
                     <ArrowIco class="mr-1" />{{ $t('_servers._list.showMore') }}
@@ -129,7 +135,7 @@
 
 <script setup lang="ts">
 import type { InstanceInfo, InstanceItem, InstancesStatsObj } from '@/types/instances-info';
-import { resolveObjPath } from '@/assets/js/misc';
+import { resolveObjPath, kanaHalfToFull } from '@/assets/js/misc';
 import langs from '@/assets/data/lang';
 
 import SearchIco from 'bi/search.svg';
@@ -143,7 +149,7 @@ import ListIco from 'bi/view-stacked.svg';
 const { t, locale } = useI18n();
 const route = useRoute();
 const emits = defineEmits<{
-    (e: 'load', value?: InstancesStatsObj): void;
+    (e: 'load', value?: InstancesStatsObj, updatedAt?: string): void;
 }>();
 
 // ▼スマホ用ソート▼
@@ -160,7 +166,7 @@ type MiHubSFStorage = {
 };
 
 let savedSettings: MiHubSFStorage | null = null;
-if (process.client) {
+if (import.meta.client) {
     savedSettings = JSON.parse(window.localStorage.getItem('miHub_server_finder') ?? 'null') as MiHubSFStorage | null;
 }
 
@@ -172,14 +178,14 @@ const f_orderBy = ref<MiHubSFStorage['f_orderBy']>(savedSettings?.f_orderBy ?? '
 const f_order = ref<MiHubSFStorage['f_order']>(savedSettings?.f_order ?? 'desc');
 const f_registerAcceptance = ref<MiHubSFStorage['f_registerAcceptance']>(savedSettings?.f_registerAcceptance || null);
 
-const f_limit = ref<number>(24);
+const f_limit = ref<number>(60);
 
 const v_view = ref<MiHubSFStorage['v_view']>(savedSettings?.v_view ?? 'grid');
 // ▲フォームデータ初期化▲
 
 // ▼フォームデータ保存処理▼
 watch([f_langs, f_orderBy, f_order, f_registerAcceptance, v_view], (to, from) => {
-    f_limit.value = 24;
+    f_limit.value = 60;
 
     const newSettings: MiHubSFStorage = {
         f_langs: to[0],
@@ -189,7 +195,7 @@ watch([f_langs, f_orderBy, f_order, f_registerAcceptance, v_view], (to, from) =>
         v_view: to[4],
     };
 
-    if (process.client) {
+    if (import.meta.client) {
         window.localStorage.setItem('miHub_server_finder', JSON.stringify(newSettings));
     }
 });
@@ -209,7 +215,7 @@ if (data.value?.stats.usersCount) {
         notesCount: data.value.stats.notesCount,
         usersCount: data.value.stats.usersCount,
         instancesCount: data.value.stats.instancesCount,
-    });
+    }, data.value.date);
 }
 
 watch(data, (to) => {
@@ -218,7 +224,7 @@ watch(data, (to) => {
             notesCount: to.stats.notesCount,
             usersCount: to.stats.usersCount,
             instancesCount: to.stats.instancesCount,
-        });
+        }, to.date);
     }
 }, {
     deep: true,
@@ -232,10 +238,10 @@ const filteredInstances = computed<InstanceItem[]>(() => {
     }
 
     if (f_query.value) {
-        instances = instances.filter((instance) => instance.name.includes(f_query.value) || instance.description?.includes(f_query.value));
+        instances = instances.filter((instance) => normalizeString(instance.name).includes(f_query.value) || normalizeString(instance?.description ?? '').includes(f_query.value));
     }
     if (f_langs.value) {
-        instances = instances.filter((instance) => instance.langs.includes(f_langs.value));
+        instances = instances.filter((instance) => instance.langs.includes(f_langs.value ?? ''));
     }
     if (f_registerAcceptance.value) {
         instances = instances.filter((instance) => {
@@ -278,6 +284,16 @@ const filteredInstances = computed<InstanceItem[]>(() => {
 
 function switchOrder() {
     f_order.value = f_order.value === 'asc' ? 'desc' : 'asc';
+}
+
+function normalizeString(str: string) {
+    // アルファベットは小文字に、半角カタカナは全角ひらがなに、全角カタカナは全角ひらがなに変換
+    const _res = kanaHalfToFull(str.toLowerCase()).replace(/[ァ-ン]/g, (s) => String.fromCharCode(s.charCodeAt(0) - 0x60));
+    return _res;
+}
+
+function applyQuery() {
+    f_query.value = normalizeString(f_query_partial.value);
 }
 </script>
 

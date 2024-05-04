@@ -15,7 +15,7 @@ description: グローバルタイムラインのノートが流れるチャン�
 ### `note`
 
 <MkSchemaViewer :schema="{
- $ref: 'misskey://Note'
+$ref: 'misskey://Note'
 }"/>
 
 グローバルタイムラインに新しいノートが追加されたときに発生します。

@@ -45,7 +45,7 @@
                                 <GNuxtLink :to="localePath('/learn-more/')" class="hover:underline">{{ $t('_links.title') }}</GNuxtLink>
                             </li>
                             <li>
-                                <GNuxtLink to="https://legacy.misskey-hub.net/" target="_blank" class="hover:underline">{{ $t('goToLegacyHub') }}<ExtIco class="ml-1" /></GNuxtLink>
+															<GNuxtLink :to="localePath('/contact/')" class="hover:underline">{{ $t('contactUs') }}</GNuxtLink>
                             </li>
                         </ul>
                     </div>
@@ -53,7 +53,7 @@
             </div>
             <hr class="my-6 border-slate-200 sm:mx-auto dark:border-slate-700" />
             <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-slate-500 sm:text-center dark:text-slate-400">&copy; 2024 Misskey, syuilo, and other contributors
+                <span class="text-sm text-slate-500 sm:text-center dark:text-slate-400">&copy; 2024 syuilo and Misskey Project
                 </span>
             </div>
         </div>

@@ -12,7 +12,11 @@ export function getStaticEndpoints(): string[] {
         .map((file) => file.split('pages')[1])
         .map((file) => file.replaceAll('\\', '/'))
         .map((file) => {
-            return (file.endsWith('index.vue') ? file.replace(/\/index.vue$/, '') : file.split('.vue')[0]) + '/';
+            if (/(index)?(\.(server|client))?\.vue$/.test(file)) {
+                const path = file.replace(/(index)?(\.(server|client))?\.vue$/, '');
+                return path.endsWith('/') ? path : path + '/';
+            }
+            return file.split('.vue')[0] + '/';
         });
     return filtered;
 }

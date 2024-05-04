@@ -3,7 +3,7 @@
         <h2 class="text-center text-xl lg:text-3xl font-bold font-title mb-6">{{ $t('_landing._donation.title') }}</h2>
         <p class="lg:text-lg leading-relaxed lg:leading-loose mb-6">{{ $t('_landing._donation.description') }}</p>
         <p class="text-center">
-            <GButton button-type="link" :to="localePath('/docs/for-users/resources/donate/')" color="accent">{{ $t('learnMore') }}</GButton>
+            <GButton button-type="link" :to="localePath('/docs/donate/')" color="accent">{{ $t('learnMore') }}</GButton>
         </p>
     </div>
 </template>

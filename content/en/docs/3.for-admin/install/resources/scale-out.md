@@ -4,7 +4,7 @@ As the number of your users increase, it becomes necessary to improve the specs 
 
 ## PostgreSQL Replication
 
-PostgreSQL replication allows you to distribute the database load across multiple servers, Please refer to the PostgreSQL documentation for details on replication. Misskey supports PostgreSQL replication which can be configured in the config file as follows(excerpt)
+PostgreSQL replication allows you to distribute the database load across multiple servers, Please refer to the PostgreSQL documentation for details on replication.(excerpt)
 
 ```yml
 # Set to true if replication is used
@@ -38,8 +38,7 @@ Misskey uses Redis for a variety of purposes, including
 - Storing notifications and other information
 - Pub/Sub for global events
 
-Misskey can be configured to use a different Redis server for each of these uses, allowing the load to be distributed across multiple servers.
-Simply configure the following in the config file(excerpt)
+Misskey can be configured to use a different Redis server for each of these uses, allowing the load to be distributed across multiple servers.(excerpt)
 
 ```yml
 redisForPubsub:
@@ -64,4 +63,3 @@ Currently, in addition to the main Redis configuration you can also configure Re
 ## Disable remote charts
 
 If you do not need charts such as activity for individual remote users or charts for individual remote servers, disabling their generation will improve performance.
-You can disable them by turning off "Generate remote user data charts" and "Generate remote instance data charts" from the control panel.

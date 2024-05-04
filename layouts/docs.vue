@@ -12,12 +12,12 @@ const route = useRoute();
 const { locale } = useI18n();
 const navigation = ref();
 const asideNavKey = ref(0);
-const { data } = await useGAsyncData(`navigation_${locale.value}`, () => fetchContentNavigation(queryContent(`/${locale.value}/docs/`)));
+const { data } = await useGAsyncData(`navigation_${locale.value}`, () => fetchContentNavigation(queryContent(`/${locale.value === 'ja-ks' ? 'ja' : locale.value}/docs/`)));
 navigation.value = data.value;
 
 watch(locale, async (to) => {
     console.log('locale changed');
-    const { data } = await useGAsyncData(`navigation_${to}`, () => fetchContentNavigation(queryContent(`/${to}/docs/`)));
+    const { data } = await useGAsyncData(`navigation_${to}`, () => fetchContentNavigation(queryContent(`/${to === 'ja-ks' ? 'ja' : to}/docs/`)));
     navigation.value = data.value;
     asideNavKey.value++;
 });

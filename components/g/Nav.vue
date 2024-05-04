@@ -40,7 +40,7 @@
                     <div class="input-group">
                         <span class="input-group-text !rounded-l-full"><I18nIcon class="h-5 w-5" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></span>
                         <select class="form-select !rounded-r-full" v-model="spLocaleOption" @change="changeLocale()">
-                            <option v-for="locale in locales" :value="locale.code">{{ locale.name }}</option>
+                            <option v-for="locale in localesConst" :value="locale.code">{{ locale.name }}</option>
                         </select>
                     </div>
                 </li>
@@ -64,9 +64,9 @@
                         <button class="hover:opacity-80"><I18nIcon :class="['h-5 w-5', { 'text-white 3xl:text-slate-800 3xl:dark:text-slate-200': (landing && scrollPos >= -40) }]" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></button>
                         <div class="absolute top-6 right-0 hidden group-hover:block z-[9955]">
                             <ul class="px-4 py-2 bg-slate-50 dark:bg-slate-800 rounded-lg shadow-lg space-y-1">
-                                <li v-for="locale in locales">
-                                    <GNuxtLink :to="switchLocalePath(locale.code)" :lang="locale.code" :class="['_i18n whitespace-nowrap hover:text-accent-600 py-1', {'text-accent-600 font-bold': currentLocale === locale.code}]">
-                                        {{ locale.name }}
+                                <li v-for="locale in localesConst">
+                                    <GNuxtLink :to="switchLocalePath(locale.code)" :lang="locale.code" :class="['block _i18n whitespace-nowrap hover:text-accent-600 py-0.5', {'text-accent-600 font-bold': currentLocale === locale.code}]">
+                                        <span v-if="currentLocale === locale.code"><DotIcon class="stroke-[3] stroke-current" /></span>{{ locale.name }}
                                     </GNuxtLink>
                                 </li>
                             </ul>
@@ -95,7 +95,10 @@ import MoonIcon from 'bi/moon-stars.svg';
 import DisplayIcon from 'bi/display.svg';
 import MenuIcon from 'bi/list.svg';
 import XIcon from 'bi/x.svg';
+import DotIcon from 'bi/dot.svg';
 import NavData from '@/assets/data/nav';
+import { localesConst } from '@/assets/data/locales';
+import type { LocaleCodes } from '@/assets/data/locales';
 
 const props = withDefaults(defineProps<{
     disableShadow?: boolean;
@@ -113,7 +116,7 @@ const props = withDefaults(defineProps<{
 
 const navOpen = ref(false);
 
-const { locales, locale: currentLocale } = useI18n();
+const { locale: currentLocale } = useI18n();
 const route = useRoute();
 const { push } = useRouter();
 const currentPath = ref(route.path);
@@ -126,7 +129,7 @@ watch(() => route.path,(to) => {
 
 const switchLocalePath = useGSwitchLocalePath();
 const localePath = useGLocalePath();
-const spLocaleOption = ref<string>(currentLocale.value);
+const spLocaleOption = ref(currentLocale.value as LocaleCodes);
 function changeLocale() {
     const path = switchLocalePath(spLocaleOption.value);
     push(path);

@@ -44,6 +44,12 @@
                         title: $t('_docs._changelog.title'),
                         description: $t('_docs._changelog.description'),
                         img: '/img/emojis/rocket_3d.png',
+                    },
+                    {
+                        to: localePath('/docs/donate'),
+                        title: $t('_docs._donate.title'),
+                        description: $t('_docs._donate.description'),
+                        img: '/img/emojis/yen_banknote_3d.png',
                     }
                 ]" />
                 <DocsReadersNav section-id="forUsers" id="forUsers" />

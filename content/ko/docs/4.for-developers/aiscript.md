@@ -23,7 +23,7 @@ AiScript 표준 구문과 내장 함수 등을 사용할 수 있습니다.
 :::tip
 
 문서는 [여기](https://github.com/aiscript-dev/aiscript/tree/master/docs)에서 확인할 수 있습니다.\
-Misskey 본체 버전에 따라 사용할 수 있는 AiScript 버전이 다를 수 있습니다.버전 확인은 `<: Core:v`를 Scratchpad 등에서 실행해 보세요.
+Misskey 본체 버전에 따라 사용할 수 있는 AiScript 버전이 다를 수 있습니다.버전 확인은 `<: Core:v`를 Scratchpad 등에서 실행해 보세요.버전 확인은 `<: Core:v`를 Scratchpad 등에서 실행해 보세요.
 
 :::
 
@@ -33,19 +33,16 @@ Misskey 본체 버전에 따라 사용할 수 있는 AiScript 버전이 다를 �
 
 접두사: `Mk:`\
 Misskey 내의 모든 AiScript 환경에서 사용할 수 있는 상수 함수군입니다.
-자세한 내용은 [플러그인 API 레퍼런스](./plugin/plugin/plugin-api-reference/)의 `Mk:` 부분을 참고해 주세요.
 
 ### Plugin API
 
 접두사: `Plugin:`\
 [플러그인](./plugin/)에서만 사용할 수 있는 상수 함수군입니다.
-자세한 내용은 [플러그인 API 레퍼런스](./plugin/plugin/plugin-api-reference/)의 `Plugin:` 부분을 참고합니다.
 
 ### UI API
 
 접두사: `Ui:`\
 [위젯](/docs/for-users/features/widgets/)(AiScript App), Misskey Play, Scratchpad에서 사용할 수 있습니다.
-문서는 미정비(TODO)이지만, 인터넷에 자원봉사자가 작성한 설명글이 있습니다.
 
 ### 표준입출력
 
@@ -56,6 +53,7 @@ AiScript 표준에서 정의된 `readline` 함수와 `print` 함수(및 `<:` 구
 `message`: `str`\
 반환값: `str`\
 Misskey 내 모든 AiScript 환경에서 사용할 수 있습니다.\
+문자열 입력을 요청하는 팝업을 표시합니다.\
 문자열 입력을 요청하는 팝업을 표시합니다.
 
 #### print(message)
@@ -63,5 +61,7 @@ Misskey 내 모든 AiScript 환경에서 사용할 수 있습니다.\
 `message`: `any`\
 반환값: `null`\
 [위젯](/docs/for-users/features/widgets/) (AiScript 콘솔), Scratchpad에서 사용할 수 있습니다.\
+콘솔에 문자열을 출력합니다.\
+`<:`구문도 비슷한 역할을 합니다.\
 콘솔에 문자열을 출력합니다.\
 `<:`구문도 비슷한 역할을 합니다.

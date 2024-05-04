@@ -1,5 +1,9 @@
 export default [
     {
+        "lang": "id",
+        "label": "Bahasa Indonesia",
+    },
+    {
         "lang": "de",
         "label": "Deutsch"
     },

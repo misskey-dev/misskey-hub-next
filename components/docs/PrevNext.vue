@@ -37,8 +37,8 @@ const props = withDefaults(defineProps<{
 	isDir: false
 });
 
-const currentPath = `/${locale.value}/docs/${slugs.join('/')}`;
-const currentDirectory = props.ignoreDirBasedNav ? `/${locale.value}/docs/` : props.isDir ? `/${locale.value}/docs/${slugs.join('/')}` : `/${locale.value}/docs/${slugs.slice(0, -1).join('/')}`;
+const currentPath = `/${locale.value === 'ja-ks' ? 'ja' : locale.value}/docs/${slugs.join('/')}`;
+const currentDirectory = props.ignoreDirBasedNav ? `/${locale.value === 'ja-ks' ? 'ja' : locale.value}/docs/` : props.isDir ? `/${locale.value === 'ja-ks' ? 'ja' : locale.value}/docs/${slugs.join('/')}` : `/${locale.value === 'ja-ks' ? 'ja' : locale.value}/docs/${slugs.slice(0, -1).join('/')}`;
 
 const [prev, next] = await queryContent().where({ _partial: { $eq: false } }).findSurround(currentPath);
 </script>

@@ -36,7 +36,7 @@ const realBasePath = computed<string>(() => {
     if (props.basePath) {
         return props.basePath;
     }
-    return route.path.replace(/^.*\/docs/, `/${locale.value}/docs`);
+    return route.path.replace(/^.*\/docs/, `/${locale.value === 'ja-ks' ? 'ja' : locale.value}/docs`);
 });
 
 const localePath = useGLocalePath();

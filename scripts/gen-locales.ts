@@ -1,21 +1,21 @@
-import * as fs from 'fs';
+import { promises as fsp, existsSync } from 'fs';
 import * as path from 'path';
 import * as yaml from 'js-yaml';
 
-export function genLocalesJson() {
+export async function genLocalesJson() {
     const sourceDirectory = path.resolve(__dirname, '../locales/');
     const destinationDirectory = path.resolve(__dirname, '../locales_dist/');
 
     // ディレクトリ内のすべてのファイルを取得
-    const files = fs.readdirSync(sourceDirectory);
+    const files = await fsp.readdir(sourceDirectory);
 
     // 出力ディレクトリが存在しない場合は作成
-    if (!fs.existsSync(destinationDirectory)) {
-        fs.mkdirSync(destinationDirectory);
+    if (!existsSync(destinationDirectory)) {
+        await fsp.mkdir(destinationDirectory);
     }
 
     // 各ファイルを処理
-    files.forEach((file) => {
+    files.forEach(async (file) => {
         const fileMeta = path.parse(file);
         if (!['.yml', '.yaml'].includes(fileMeta.ext)) return;
 
@@ -24,13 +24,13 @@ export function genLocalesJson() {
 
         try {
             // YAMLファイルを読み込み
-            const yamlContent = fs.readFileSync(sourceFilePath, 'utf-8');
+            const yamlContent = await fsp.readFile(sourceFilePath, 'utf-8');
 
             // YAMLをJSONに変換
             const jsonContent = yaml.load(yamlContent);
 
             // JSONをファイルに書き込み
-            fs.writeFileSync(destinationFilePath, jsonContent ? JSON.stringify(jsonContent) : '{}');
+            await fsp.writeFile(destinationFilePath, jsonContent ? JSON.stringify(jsonContent) : '{}');
 
             console.log(`Converted ${file} to ${fileMeta.name}.json`);
         } catch (error) {

@@ -1,12 +1,27 @@
 # Nginx 설정
 
-1. `/etc/nginx/conf.d/misskey.conf` 또는 `/etc/nginx/sites-available/misskey.conf`를 생성하고 아래 설정 예시를 복사합니다..
+[nginx](https://nginx.org/)をリバースプロキシとして活用し、Misskeyサーバーを直接インターネットに公開せず運用することをお勧めします。
+これにより、以下のようなメリットが得られます。
+
+- セキュリティ強化：リバースプロキシを通じてアクセスを制御することで、Misskeyサーバーに直接攻撃が及ぶリスクを軽減します。
+- 柔軟な設定：nginxは柔軟な設定オプションを提供しており、リバースプロキシとしての機能だけでなく、キャッシュ[^1]やセキュリティポリシーの設定も行えます。
+
+これらの利点を活かして、Misskeyサーバーをより安全かつ効率的に運用することが可能です。
+また、CloudflareなどのCDNと併せて設定することで、さらなる効果を見込めます。
+
+[^1]: nginxの機能である[proxy_cache_lock](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_lock)と[proxy_cache_use_stale](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_use_stale)を活用することで、キャッシュ未作成の状態で大量アクセスがあってもMisskeyサーバーの負荷増大を抑える効果が期待できます。
+
+## 設定方法の一例
+
+以下はサーバーマシン（VPSなど）に直接nginxをインストールし、認証局として[Let's Encrypt](https://letsencrypt.org/)を採用したケースでの設定例です。
+
+1. `/etc/nginx/conf.d/misskey.conf` 또는 `/etc/nginx/sites-available/misskey.conf`를 생성하고 아래 설정 예시를 복사합니다..\.
    (파일명은 misskey가 아니어도 상관없습니다.)）
 2. 다음과 같이 편집합니다.
-   1. example.tld를 자신이 준비한 도메인으로 대체합니다.\
+   1. example.tld를 자신이 준비한 도메인으로 대체합니다.example.tld를 자신이 준비한 도메인으로 대체합니다.\
       `ssl_certificate`와 `ssl_certificate_key`는 Let's Encrypt에서 발급받은 인증서의 경로가 되도록 합니다.
-   2. Cloudflare 등의 CDN을 사용하는 경우 'If it's behind another reverse proxy or CDN, remove the following.’ 부터 4행을 제거합니다.
-3. `/etc/nginx/sites-available/misskey.conf`를 만들었다면 `/etc/nginx/sites-enabled/misskey.conf`로 심볼릭 링크를 생성합니다.\
+   2. Cloudflare 등의 CDN을 사용하는 경우 'If it's behind another reverse proxy or CDN, remove the following.’
+3. (파일명은 misskey가 아니어도 상관없습니다.)）`/etc/nginx/sites-available/misskey.conf`를 만들었다면 `/etc/nginx/sites-enabled/misskey.conf`로 심볼릭 링크를 생성합니다.\
    `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`
 4. `sudo nginx -t`로 설정 파일이 정상적으로 로드되는지 확인합니다.
 5. `sudo systemctl restart nginx`로 nginx를 리로드 합니다.

@@ -1,9 +1,9 @@
 # Tagar
 
-ハッシュタグとは、投稿に検索可能なタグをつけることができる機能の一つです。
+Tagar merupakan fitur yang memperbolehkanmu untuk menambahkan penanda pada postingan yang kamu buat.
 
-世界ではじめてのハッシュタグ── #barcamp は、[2007年8月24日の午前4:25](https://twitter.com/chrismessina/status/223115412?lang=en)にクリス・メッシナ氏[@chrismessina@mastodon.xyz](https://mastodon.xyz/@chrismessina)によって考案されました。後にこの「ポンド記号`#`を用いて検索を容易にする」という案は、英語で「刻む、ハックする」を意味する「ハッシュ」と、「札」を意味する「タグ」を合わせた造語──「ハッシュタグ」として生まれ変わり、当時のTwitter社に公式採用されました。ちなみにクリス・メッシナ氏が`#`を選んだ理由は、IRCのチャンネル名が`#`で始まることからの連想だからだそうです。
+Tagar pertama di dunia #barcamp, dibuat oleh Chris Messina [@chrismessina@mastodon.xyz](https://mastodon.xyz/@chrismessina) pada [24 Agustus 2007 jam 4:25 AM](https://twitter.com/chrismessina/status/223115412?lang=en).Setelah itu, ide dari menggunakan huruf pagar `#` untuk mencari pencarian lebih mudah dilahirkan kembali sebagai "tagar", sebuah kata yang dicetuskan dengan menggabungkan kata "tanda" yang berarti "penanda" atau "label", dan "pagar" dari bentuk hurufnya yang terlihat membagi dan memisah beberapa bagian. Kata tagar ini akhirnya diadopsi oleh Twitter secara resmi pada waktu itu.Secara tidak sengaja, Chris Messina memilih huruf `#` karena teringan dengan nama kanal IRC yang biasanya dimulai dengan `#`.
 
-![Screenshot of Chris Messina's first hashtag tweet that says "how do you feel about using # (pound) for groups. As in #barcamp \[msg\]?"](/img/docs/for-users/features/hashtag/1.ja.png)
+![Tangkapan layar dari utas tagar pertama yang mengatakan "bagaimana perasaanmu dengan menggunakan # (pagar) untuk grup. Sebagaimana dalam \[psn\] #barcamp?"](/img/docs/for-users/features/hashtag/1.ja.png)
 
-FediverseでのハッシュタグはXやInstagramなどといった中央集権的なサービスとでのものと多少仕様が異なります。Fediverseでは全文検索が難しい場合などがあり、特定の投稿を探し出すのは困難ですが、投稿にハッシュタグがついていれば、その投稿をハッシュタグをたどって容易に見つけ出すことができます。また、投稿にハッシュタグをつけるだけで様々なサイトに自動で届けてくれるハッシュタグリレーと呼ばれるサービスなどが連合宇宙には存在し、ここではハッシュタグにそこそこの重みがあったりするのです。
+Cara menggunakan tagar dalam Fediverse sedikit berbeda dari bagaimana digunakan pada layanan tersentral seperti X dan Instagram.Dalam Fediverse, pencarian teks penuh terkadang susah, yang mana membuatnya sulit untuk menemukan postingan spesifik. Namun, apabila sebuah postingan memiliki sebuah tagar, kamu dapat menemukannya dengan mudah dengan cara mengikuti tagar tersebut.Sebagai tambahan, terdapat juga beberapa layanan di Fediverse yang disebut sebagai relay tagar. Relay tagar dapat mengirimkan postingan ke beberapa situs secara otomatis hanya dengan menambahkan tagar ke dalam relay tersebut. Oleh karena itu tagar merupakan fitur yang cukup penting.

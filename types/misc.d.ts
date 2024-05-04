@@ -1,10 +1,13 @@
 import type { LocaleCodes } from './../nuxt.config';
-import type { ComputedRef } from 'vue-demi'
+import type { ComputedRef } from 'vue-demi';
+import type { LocaleObject } from '@nuxtjs/i18n';
+import { FunctionalComponent, SVGAttributes } from '#app/compat/capi';
+
+export { };
 
 declare module '*.svg' {
-    import { FunctionalComponent, SVGAttributes } from 'vue'
-    const src: FunctionalComponent<SVGAttributes>
-    export default src
+    const src: FunctionalComponent<SVGAttributes>;
+    export default src;
 }
 
 declare module 'nuxt/schema' {
@@ -51,5 +54,3 @@ declare module 'vue-i18n' {
         locales: ComputedRef<LocaleObject[]>
     }
 }
-
-export { };

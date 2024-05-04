@@ -13,7 +13,7 @@
 					<div class="notice h-9 w-9 rounded-full mr-2 p-2">
 						<MegaphoneIco class="h-5 w-5 text-white -rotate-12" />
 					</div>
-					<div class="font-bold text-sm md:text-base mr-2">{{ notice.title[locale] ?? notice.title?.en ?? notice.title.ja }}<ArrowRightIco v-if="isLocalPath(notice.to)" class="ml-0.5" /><ArrowUpRightIco v-else class="ml-0.5" /></div>
+					<div class="font-bold text-sm md:text-base mr-2">{{ notice.title[locale === 'ja-ks' ? 'ja' : locale] ?? notice.title?.en ?? notice.title.ja }}<ArrowRightIco v-if="isLocalPath(notice.to)" class="ml-0.5" /><ArrowUpRightIco v-else class="ml-0.5" /></div>
 				</div>
 			</GNuxtLink>
 		</div>

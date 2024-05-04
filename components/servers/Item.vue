@@ -3,8 +3,8 @@
         <GNuxtLink :to="`https://${instance.url}`" target="_blank" class="relative">
             <template v-if="view === 'grid'">
                 <div class="relative aspect-video bg-gray-200 dark:bg-gray-600">
-                    <img v-if="instance.banner" loading="lazy" :src="`https://instanceapp.misskey.page/instance-banners/${instance.url}.webp`" class="w-full h-full object-cover" />
-                    <img v-else-if="instance.background" loading="lazy" :src="`https://instanceapp.misskey.page/instance-backgrounds/${instance.url}.webp`" class="w-full h-full object-cover" />
+                    <img v-if="instance.background" loading="lazy" :src="`https://instanceapp.misskey.page/instance-backgrounds/${instance.url}.webp`" class="w-full h-full object-cover" />
+                    <img v-else-if="instance.banner" loading="lazy" :src="`https://instanceapp.misskey.page/instance-banners/${instance.url}.webp`" class="w-full h-full object-cover" />
                     <div class="absolute h-1/2 bottom-0 left-0 w-full bg-gradient-to-b from-transparent to-black text-white p-4 flex items-end">
                         <div class="h-14 w-14 min-w-0 flex-shrink-0 mr-4">
                             <img v-if="instance.icon" :src="`https://instanceapp.misskey.page/instance-icons/${instance.url}.webp`" class="w-full h-full rounded" />
@@ -20,11 +20,11 @@
                     <div class="grid grid-cols-3 text-center">
                         <dl>
                             <dt class="text-xs opacity-90">{{ $t('_servers._statistics.notes') }}</dt>
-                            <dd class="font-bold text-accent-600">{{ instance.stats?.originalNotesCount.toLocaleString() }}</dd>
+                            <dd :title="$n(instance.stats?.originalNotesCount)" class="font-bold text-accent-600">{{ instance.stats?.originalNotesCount ? $n(instance.stats.originalNotesCount, instance.stats.originalNotesCount >= 100000 ? { notation: 'compact', maximumFractionDigits: 1 } : { notation: 'standard' }) : '' }}</dd>
                         </dl>
                         <dl>
                             <dt class="text-xs opacity-90">{{ $t('_servers._statistics.users') }}</dt>
-                            <dd class="font-bold text-accent-600">{{ instance.stats?.originalUsersCount.toLocaleString() }}</dd>
+                            <dd :title="$n(instance.stats?.originalUsersCount)" class="font-bold text-accent-600">{{ instance.stats?.originalUsersCount ? $n(instance.stats.originalUsersCount, instance.stats.originalUsersCount >= 100000 ? { notation: 'compact', maximumFractionDigits: 1 } : { notation: 'standard' }) : '' }}</dd>
                         </dl>
                         <dl>
                             <dt class="text-xs opacity-90">{{ $t('_servers._registerAcceptance.title') }}</dt>
@@ -35,8 +35,8 @@
             </template>
             <template v-else-if="view === 'list'">
                 <div class="absolute h-full w-4/5 top-0 left-0 overflow-hidden">
-                    <img v-if="instance.banner" loading="lazy" :src="`https://instanceapp.misskey.page/instance-banners/${instance.url}.webp`" class="h-full w-full object-cover object-center opacity-40 blur-md" />
-                    <img v-else-if="instance.background" loading="lazy" :src="`https://instanceapp.misskey.page/instance-backgrounds/${instance.url}.webp`" class="h-full w-full object-cover object-center opacity-40 blur-md" />
+                    <img v-if="instance.background" loading="lazy" :src="`https://instanceapp.misskey.page/instance-backgrounds/${instance.url}.webp`" class="h-full w-full object-cover object-center opacity-40 blur-md" />
+                    <img v-else-if="instance.banner" loading="lazy" :src="`https://instanceapp.misskey.page/instance-banners/${instance.url}.webp`" class="h-full w-full object-cover object-center opacity-40 blur-md" />
                     <div class="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-transparent to-white dark:to-slate-800"></div>
                 </div>
                 <div class="relative flex w-full items-center p-2">

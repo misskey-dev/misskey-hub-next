@@ -18,7 +18,7 @@ Misskey의 HelmCharts는 TrueNAS Scale에서 사용할 수 있도록 TrueCharts�
 
 현재 Misskey는 _incubator_ train을 진행 중입니다.
 
-:::tip{label='前提条件'}
+:::前提条件
 
 - TrueNAS Scale
   또는

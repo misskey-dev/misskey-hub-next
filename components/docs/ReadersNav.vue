@@ -27,7 +27,7 @@ const convertToKebabCase = (str: string): string => {
 	return str;
 };
 
-const basePath = `/${locale.value}/docs/${convertToKebabCase(props.sectionId)}/`;
+const basePath = `/${locale.value === 'ja-ks' ? 'ja' : locale.value}/docs/${convertToKebabCase(props.sectionId)}/`;
 </script>
 
 <style scoped></style>

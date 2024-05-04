@@ -175,3 +175,17 @@ html.light .markdown-body {
 .markdown-body :not(.ignore) ol {
     list-style: decimal;
 }
+
+.markdown-body u {
+	text-decoration: underline;
+	text-underline-offset: .2em;
+}
+
+.markdown-body .footnotes {
+	padding-top: 16px;
+}
+
+html[lang='ja-JP'] .markdown-body > p,
+html[lang='ja-JP'] .markdown-body :not(.ignore) p:not(.truncate-box) {
+	line-height: 1.8;
+}
