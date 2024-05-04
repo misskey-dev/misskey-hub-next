@@ -8,7 +8,7 @@
                         <span class="self-center text-2xl font-bold font-title whitespace-nowrap">{{ $t('_seo.siteName') }}</span>
                     </GNuxtLink>
                 </div>
-                <div class="grid grid-cols-2 gap-8 sm:gap-6">
+                <div class="grid grid-cols-3 gap-8 sm:gap-6">
                     <div>
                         <h2 class="mb-6 text-sm font-bold">{{ $t('_docs.title') }}</h2>
                         <ul class="text-slate-600 dark:text-slate-400 space-y-4">
@@ -45,7 +45,21 @@
                                 <GNuxtLink :to="localePath('/learn-more/')" class="hover:underline">{{ $t('_links.title') }}</GNuxtLink>
                             </li>
                             <li>
-															<GNuxtLink :to="localePath('/contact/')" class="hover:underline">{{ $t('contactUs') }}</GNuxtLink>
+                                <GNuxtLink :to="localePath('/contact/')" class="hover:underline">{{ $t('contactUs') }}</GNuxtLink>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-bold">{{ $t('_legal.title') }}</h2>
+                        <ul class="text-slate-600 dark:text-slate-400 space-y-4">
+                            <li>
+                                <GNuxtLink :to="localePath('/legal/')" class="hover:underline">{{ $t('index') }}</GNuxtLink>
+                            </li>
+                            <li>
+                                <GNuxtLink :to="localePath('/legal/hub-terms/')" class="hover:underline">{{ $t('_legal.tos') }}</GNuxtLink>
+                            </li>
+                            <li>
+                                <GNuxtLink :to="localePath('/legal/hub-privacy-policy/')" class="hover:underline">{{ $t('_legal.privacyPolicy') }}</GNuxtLink>
                             </li>
                         </ul>
                     </div>

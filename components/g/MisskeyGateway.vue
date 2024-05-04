@@ -96,8 +96,11 @@
                         </li>
                     </ul>
                     <div class="text-sm text-center">
-                        &copy; 2024 syuilo and Misskey Project<br>
-                        <GNuxtLink to="https://misskey-hub.net/" target="_blank" class="hover:underline underline-offset-1">Misskey Hub</GNuxtLink>
+                        &copy; 2024 syuilo and Misskey Project
+                        <div class="flex flex-wrap gap-x-4 justify-center">
+                            <GNuxtLink to="https://misskey-hub.net/" target="_blank" class="hover:underline underline-offset-1">Misskey Hub</GNuxtLink>
+                            <GNuxtLink :to="localePath('/legal/hub-privacy-policy/')" target="_blank" class="hover:underline underline-offset-1">{{ $t('_legal.privacyPolicy') }}</GNuxtLink>
+                        </div>
                     </div>
                 </div>
             </div>
