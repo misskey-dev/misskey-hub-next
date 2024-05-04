@@ -197,7 +197,7 @@ _contact:
   title: "Nous contacter"
   description: "Contactez le projet Misskey ici"
   form: "Veuillez remplir ce formulaire."
-  formGoogleAccountRequired: "現在、スパム対策のため、お問い合わせの送信にはGoogleアカウントが必要となっております。\nお手数をおかけしますが、ご理解のほどよろしくお願い致します。"
+  formGoogleAccountRequired: "Actuellement, en raison des mesures anti-spam, un compte Google est nécessaire pour soumettre une requête.\nNous nous excusons pour cet inconvénient et vous remercions de votre compréhension."
   formLink: "Passer au formulaire"
 _links:
   title: "Liens"
@@ -333,7 +333,7 @@ _customEmojiPreview:
     noteText: "L'émoji personnalisé apparaîtra comme ceci → :emoji_preview_1:\nVous pouvez réécrire le texte et tester son affichage ✨"
 _identiconGenerator:
   title: "Générateur d'icône initiale"
-  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
+  description: "Vous pouvez générer l'icône utilisée par défaut lorsque vous vous inscrivez sur Misskey."
   userName: "Nom d'utilisateur·rice"
   includeDomain: "Veuillez spécifier le nom d'utilisateur·rice complet, incluant le domaine de l'instance."
 _api:
