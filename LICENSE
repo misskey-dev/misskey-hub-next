@@ -9,7 +9,7 @@ file(s) as follows:
 - /public/img/uwu              : All rights are reserved by
                                  respective copyright owner.
 - /public/img                  : See LICENSE-ASSETS (except above).
-- /public/svg/taittsuu_bi.svg  : All rights are reserved by
+- /assets/svg/taittsuu_bi.svg  : All rights are reserved by
                                  respective copyright owner.
 - /assets/svg                  : See LICENSE-ASSETS (except above).
 - /content                     : See LICENSE-ASSETS.
@@ -30,7 +30,7 @@ that license applies to that directory.
 - /public/img/uwu              : 関連する著作権保有者に全権が帰属。
 - /public/img                  : LICENSE-ASSETSを参照のこと
                                  （上記を除く）
-- /public/svg/taittsuu_bi.svg  : 関連する著作権保有者に全権が帰属。
+- /assets/svg/taittsuu_bi.svg  : 関連する著作権保有者に全権が帰属。
 - /assets/svg                  : LICENSE-ASSETSを参照のこと
                                  （上記を除く）
 - /content                     : LICENSE-ASSETSを参照のこと
