@@ -15,6 +15,7 @@ goToLegacyHub: "L'ancien Misskey Hub"
 contactUs: "Nous contacter"
 detail: "Détails"
 lastUpdate: "Dernière mise à jour"
+empty: "内容がありません"
 _error:
   notFound: "La page demandée est introuvable !"
   notFoundDesc: "La page que vous cherchiez n'a pas pu être trouvée. Veuillez vérifier l'URL."
@@ -199,6 +200,9 @@ _contact:
   form: "Veuillez remplir ce formulaire."
   formGoogleAccountRequired: "Actuellement, en raison des mesures anti-spam, un compte Google est nécessaire pour soumettre une requête.\nNous nous excusons pour cet inconvénient et vous remercions de votre compréhension."
   formLink: "Passer au formulaire"
+  faqTitle: "よくあるお問い合わせ"
+  faqDescription: "お問い合わせを送信する前に、あなたの知りたいことがここにないか確認してください。"
+  ifNothingIsFound: "もしあてはまるものがなかったら…"
 _links:
   title: "Liens"
   _github:

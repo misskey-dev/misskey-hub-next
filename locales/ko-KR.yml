@@ -15,6 +15,7 @@ goToLegacyHub: "이전 Misskey Hub"
 contactUs: "문의"
 detail: "자세히"
 lastUpdate: "마지막 수정"
+empty: "内容がありません"
 _error:
   notFound: "페이지를 찾을 수 없습니다"
   notFoundDesc: "요청하신 페이지를 찾을 수 없습니다. URL을 확인하여 주십시오."
@@ -169,7 +170,7 @@ _docs:
     title: "이 페이지의 내용"
     toPageTop: "맨 위로"
   _steppedGuide:
-    selectCourse: "ガイドを選ぶ"
+    selectCourse: "가이드 선택"
     noImageInThisStep: "이 단계에는 이미지가 없습니다."
     aiWellDone: "과정은 여기서 끝이에요. 수고하셨어요♪"
 _blog:
@@ -196,9 +197,12 @@ _brandAssets:
 _contact:
   title: "문의"
   description: "Misskey Project로의 문의는 여기로부터"
-  form: "こちらのフォームからご回答ください。"
-  formGoogleAccountRequired: "現在、スパム対策のため、お問い合わせの送信にはGoogleアカウントが必要となっております。\nお手数をおかけしますが、ご理解のほどよろしくお願い致します。"
-  formLink: "フォームへ進む"
+  form: "이 양식으로 답변해주세요."
+  formGoogleAccountRequired: "현재 스팸에 대처하기 위해 문의 전송 시 Google 계정이 필요합니다.\n번거로우시겠지만 양해 부탁드립니다."
+  formLink: "폼 열기"
+  faqTitle: "よくあるお問い合わせ"
+  faqDescription: "お問い合わせを送信する前に、あなたの知りたいことがここにないか確認してください。"
+  ifNothingIsFound: "もしあてはまるものがなかったら…"
 _links:
   title: "링크"
   _github:
@@ -332,10 +336,10 @@ _customEmojiPreview:
   _placeholder:
     noteText: "커스텀 이모티콘은 다음과 같이 표시됩니다 → :emoji_preview_1:.\n문장을 다시 써서 사용성을 시험해 보세요✨."
 _identiconGenerator:
-  title: "初期アイコンジェネレーター"
-  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
+  title: "초기 아이콘 생성기"
+  description: "Misskey에 가입했을 때 기본적으로 지정되는 초기 아이콘을 생성할 수 있습니다."
   userName: "유저명"
-  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
+  includeDomain: "서버의 도메인 이름을 포함한 전체 사용자 이름을 입력해주세요."
 _api:
   _permissions:
     title: "권한"

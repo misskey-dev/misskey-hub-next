@@ -15,6 +15,7 @@ goToLegacyHub: "Versione precedente"
 contactUs: "お問い合わせ"
 detail: "詳細"
 lastUpdate: "最終更新"
+empty: "内容がありません"
 _error:
   notFound: "Pagina non trovata"
   notFoundDesc: "お探しのページは見つかりませんでした。URLをお確かめください。"
@@ -199,6 +200,9 @@ _contact:
   form: "こちらのフォームからご回答ください。"
   formGoogleAccountRequired: "現在、スパム対策のため、お問い合わせの送信にはGoogleアカウントが必要となっております。\nお手数をおかけしますが、ご理解のほどよろしくお願い致します。"
   formLink: "フォームへ進む"
+  faqTitle: "よくあるお問い合わせ"
+  faqDescription: "お問い合わせを送信する前に、あなたの知りたいことがここにないか確認してください。"
+  ifNothingIsFound: "もしあてはまるものがなかったら…"
 _links:
   title: "リンク"
   _github:

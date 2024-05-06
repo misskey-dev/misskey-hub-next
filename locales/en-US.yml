@@ -15,6 +15,7 @@ goToLegacyHub: "Legacy Misskey Hub"
 contactUs: "Contact"
 detail: "Details"
 lastUpdate: "Last Update"
+empty: "No content"
 _error:
   notFound: "Page not found"
   notFoundDesc: "The page you are looking for could not be found. Please check the URL."
@@ -199,6 +200,9 @@ _contact:
   form: "To send us an inquiry, please fill out this form."
   formGoogleAccountRequired: "Currently, we ask you to have a Google Account to submit your inquiry in order to deal with serious spam.\nWe apologize for the inconvenience and thank you for your understanding."
   formLink: "Go to the form"
+  faqTitle: "FAQs"
+  faqDescription: "Before submitting your inquiry, please make sure that what you want to know is not here."
+  ifNothingIsFound: "If none of the above fits you…"
 _links:
   title: "Links"
   _github:

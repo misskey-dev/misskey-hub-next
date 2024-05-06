@@ -15,6 +15,7 @@ goToLegacyHub: "旧 Misskey Hub"
 contactUs: "咨询"
 detail: "详情"
 lastUpdate: "最新更新"
+empty: "内容がありません"
 _error:
   notFound: "找不到页面"
   notFoundDesc: "找不到您要查找的页面，请检查 URL。"
@@ -199,6 +200,9 @@ _contact:
   form: "请用这个表格回答。"
   formGoogleAccountRequired: "现在，为了防止垃圾邮件，发送查询需要使用谷歌账户。\n虽然给您添麻烦了，但是请您理解。"
   formLink: "链接形式"
+  faqTitle: "よくあるお問い合わせ"
+  faqDescription: "お問い合わせを送信する前に、あなたの知りたいことがここにないか確認してください。"
+  ifNothingIsFound: "もしあてはまるものがなかったら…"
 _links:
   title: "链接"
   _github:
