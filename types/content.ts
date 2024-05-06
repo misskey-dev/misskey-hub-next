@@ -48,5 +48,12 @@ export interface MiBlogParsedContent extends MarkdownParsedContent {
 }
 
 /**
+ * お問い合わせ用ドキュメントの Frontmatter の型定義
+ */
+export interface MiContactFaqParsedContent extends MarkdownParsedContent {
+    question: string;
+};
+
+/**
  * Docs API の型定義
  */
