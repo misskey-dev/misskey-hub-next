@@ -4,14 +4,16 @@ Unless otherwise noted, the Misskey Project retains copyright.
 The license for this package varies depending on the directory or
 file(s) as follows:
 
-- /public/img/sponsors  : All rights are reserved by respective
-                          copyright owner(s).
-- /public/img/uwu       : All rights are reserved by respective
-                          copyright owner(s).
-- /public/img           : See LICENSE-ASSETS (except above).
-- /assets/svg           : See LICENSE-ASSETS.
-- /content              : See LICENSE-ASSETS.
-- (all other code)      : See LICENSE-CODE.
+- /public/img/sponsors         : All rights are reserved by
+                                 respective copyright owner(s).
+- /public/img/uwu              : All rights are reserved by
+                                 respective copyright owner.
+- /public/img                  : See LICENSE-ASSETS (except above).
+- /public/svg/taittsuu_bi.svg  : All rights are reserved by
+                                 respective copyright owner.
+- /assets/svg                  : See LICENSE-ASSETS (except above).
+- /content                     : See LICENSE-ASSETS.
+- (all other code)             : See LICENSE-CODE.
 
 NOTE: If a separate LICENSE file exists in a particular directory,
 that license applies to that directory.
@@ -24,12 +26,15 @@ that license applies to that directory.
 このパッケージのライセンスはディレクトリやファイルによって適用され
 るものが異なります。適用されるライセンスは以下の通りです：
 
-- /public/img/sponsors  : 関連する著作権保有者に全権が帰属。
-- /public/img/uwu       : 関連する著作権保有者に全権が帰属。
-- /public/img           : LICENSE-ASSETSを参照のこと（上記を除く）
-- /assets/svg           : LICENSE-ASSETSを参照のこと
-- /content              : LICENSE-ASSETSを参照のこと
-- （その他のコード）    : LICENSE-CODEを参照のこと
+- /public/img/sponsors         : 関連する著作権保有者に全権が帰属。
+- /public/img/uwu              : 関連する著作権保有者に全権が帰属。
+- /public/img                  : LICENSE-ASSETSを参照のこと
+                                 （上記を除く）
+- /public/svg/taittsuu_bi.svg  : 関連する著作権保有者に全権が帰属。
+- /assets/svg                  : LICENSE-ASSETSを参照のこと
+                                 （上記を除く）
+- /content                     : LICENSE-ASSETSを参照のこと
+- （その他のコード）           : LICENSE-CODEを参照のこと
 
 注：特定のディレクトリに別途LICENSEファイルがある場合、そのディレク
 トリ内はそのライセンスが適用されます。
