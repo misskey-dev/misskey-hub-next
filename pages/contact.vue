@@ -15,9 +15,28 @@
                 </div>
             </template>
         </GHero>
-        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
+				<div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
             <div class="container mx-auto max-w-screen-lg px-6 space-y-6 lg:space-y-8">
                 <div class="bg-gray-100 dark:bg-gray-800 border-4 border-accent-600 p-4 lg:p-6 rounded-xl space-y-3">
+                    <h2 class="font-bold text-lg lg:text-xl text-center">よくあるお問い合わせとその回答</h2>
+                    <details>
+											<summary>Q. アカウントが作成できません。</summary>
+											<p>A. Misskey ProjectはいかなるMisskeyサーバー・サービスの運用も行っていませんので、お問い合わせいただいても対応することができません。</p>
+										</details>
+										<details>
+											<summary>Q. アカウントにログインできません。</summary>
+											<p>A. Misskey ProjectはいかなるMisskeyサーバー・サービスの運用も行っていませんので、お問い合わせいただいても対応することができません。</p>
+										</details>
+                    <details>
+											<summary>Q. アカウントを削除したい。</summary>
+											<p>A. Misskey ProjectはいかなるMisskeyサーバー・サービスの運用も行っていませんので、お問い合わせいただいても対応することができません。</p>
+										</details>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white dark:bg-slate-950">
+            <div class="container mx-auto max-w-screen-lg px-6 space-y-6 lg:space-y-8">
+                <div class="bg-gray-100 dark:bg-gray-800 p-4 lg:p-6 rounded-xl space-y-3">
                     <h2 class="font-bold text-lg lg:text-xl text-center">{{ $t('_contact.form') }}</h2>
                     <p class="text-center whitespace-pre-wrap">{{ $t('_contact.formGoogleAccountRequired') }}</p>
                     <div class="text-center">
