@@ -40,7 +40,7 @@ Misskey内臓のソースコード提供機能を使用しない場合でも、�
 
 では、早速設定を行いましょう。
 
-1. Misskeyのコンフィグファイル（デフォルトは `config/default.yml` ）を開きます。
+1. Misskeyのコンフィグファイル（デフォルトは `.config/default.yml` ）を開きます。
 2. `publishTarballInsteadOfProvideRepositoryUrl` を `true` に設定します（コンフィグファイル内の指定のコメントアウト部分を外すだけでもOKです）。
 3. Misskeyをビルドします（この際ソースコードのtarballが生成されます）。
 4. 生成された書庫ファイルを開き、**トークンなどの機密情報が配布用のソースコードに含まれていないかを確認してください。**
