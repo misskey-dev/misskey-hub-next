@@ -15,6 +15,7 @@ goToLegacyHub: "Misskey Hub Jadul"
 contactUs: "Hubungi kami"
 detail: "Selengkapnya"
 lastUpdate: "最終更新"
+empty: "内容がありません"
 _error:
   notFound: "Halaman Tidak Ditemukan"
   notFoundDesc: "Halaman yang kamu cari tidak dapat ditemukan. Mohon cek kembali URL yang kamu tuju."
@@ -199,6 +200,9 @@ _contact:
   form: "Apabila kamu ingin mengirimkan kami sebuah pertanyaan, kamu dapat mengirimkannya dengan mengisi form ini."
   formGoogleAccountRequired: "Untuk saat ini, kami meminta kamu untuk memiliki akun Google ketika mengirimkan pesan kepada kami. Hal ini dikarenakan untuk pencegahan spam yang serius. Kami mohon maaf atas ketidak nyamanan ini dan berterima kasih banyak atas pengertiannya."
   formLink: "Pergi ke form"
+  faqTitle: "よくあるお問い合わせ"
+  faqDescription: "お問い合わせを送信する前に、あなたの知りたいことがここにないか確認してください。"
+  ifNothingIsFound: "もしあてはまるものがなかったら…"
 _links:
   title: "Tautan"
   _github:
