@@ -2,11 +2,17 @@
     <footer class="p-6 sm:pt-12">
         <div class="mx-auto container max-w-screen-xl">
             <div class="md:flex md:justify-between">
-                <div class="mb-6 md:mb-0">
+                <div class="mb-6 md:mb-0 space-y-6">
                     <GNuxtLink :to="localePath('/')" class="flex items-center">
                         <MiIcon class="h-8 w-8 mr-3" />
                         <span class="self-center text-2xl font-bold font-title whitespace-nowrap">{{ $t('_seo.siteName') }}</span>
                     </GNuxtLink>
+                    <div class="flex items-center space-x-4">
+                        <GNuxtLink v-if="isUwu === true" to="https://misskey.io/notes/9suz8ufdjuyd0hqs" target="_blank" class="block p-2 rounded-lg bg-white dark:bg-slate-950 hover:opacity-70 w-[138px]">
+                            <img src="/img/uwu/uwl.png" alt="UwU" class="w-[130px] h-[66px] object-contain" />
+                            <div class="text-center text-xs">Kawaii Logo by SAWARATSUKI</div>
+                        </GNuxtLink>
+                    </div>
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6">
                     <div>
@@ -45,7 +51,7 @@
                                 <GNuxtLink :to="localePath('/learn-more/')" class="hover:underline">{{ $t('_links.title') }}</GNuxtLink>
                             </li>
                             <li>
-															<GNuxtLink :to="localePath('/contact/')" class="hover:underline">{{ $t('contactUs') }}</GNuxtLink>
+                                <GNuxtLink :to="localePath('/contact/')" class="hover:underline">{{ $t('contactUs') }}</GNuxtLink>
                             </li>
                         </ul>
                     </div>
@@ -65,6 +71,8 @@ import MiIcon from '@/assets/svg/misskey_mi_bi.svg';
 import ExtIco from 'bi/box-arrow-up-right.svg';
 
 const localePath = useGLocalePath();
+
+const isUwu = useState('miHub_uwu');
 </script>
 
 <style scoped>

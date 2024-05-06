@@ -2,15 +2,59 @@
     <div class="absolute top-0 w-full hidden lg:block">
 		<GDots class="dots dots1" :space="30"/>
 		<GDots class="dots dots2" :space="30"/>
-		<img :src="screenshots.desktop" class="screenshot desktop" alt="screenshot of Misskey in a PC browser">
-		<img :src="screenshots.mobile" class="screenshot mobile" alt="screenshot of Misskey in a mobile browser">
+        <div class="screenshot desktop">
+            <Transition
+                v-if="isUwuTransitionEnabled"
+                name="uwu"
+                mode="out-in"
+                class="will-change-transform"
+            >
+                <img :src="screenshots.desktop" :key="`desktop:${screenshotIsUwu ? 'uwu' : 'notUwu'}`" class="w-full h-auto" alt="screenshot of Misskey in a PC browser">
+            </Transition>
+            <img v-else :src="screenshots.desktop" class="w-full h-auto" alt="screenshot of Misskey in a PC browser">
+        </div>
+        <div class="screenshot mobile">
+            <Transition
+                v-if="isUwuTransitionEnabled"
+                name="uwu"
+                mode="out-in"
+                class="will-change-transform"
+            >
+                <img :src="screenshots.mobile" :key="`mobile:${screenshotIsUwu ? 'uwu' : 'notUwu'}`" class="h-full w-auto" alt="screenshot of Misskey in a mobile browser">
+            </Transition>
+            <img v-else :src="screenshots.mobile" class="h-full w-auto" alt="screenshot of Misskey in a mobile browser">
+        </div>
 		<img src="/img/hero/ai.png" class="ai" alt="Ai-chan, Misskey's mascott">
     </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
+import { uwu } from '@/assets/js/misc/uwu';
+
+const mounted = ref(false);
+
 const colorMode = useColorMode();
 const screenshots = computed(() => {
+    if (!mounted.value) {
+        return {
+            desktop: '/img/hero/misskey-light.png',
+            mobile: '/img/hero/misskey-mobile-light.png',
+        };
+    }
+
+    if (screenshotIsUwu.value) {
+        if (colorMode.value === 'dark') {
+            return {
+                desktop: '/img/uwu/misskey-uwu-dark.png',
+                mobile: '/img/uwu/misskey-uwu-mobile-dark.png',
+            };
+        } else {
+            return {
+                desktop: '/img/uwu/misskey-uwu-light.png',
+                mobile: '/img/uwu/misskey-uwu-mobile-light.png',
+            };
+        }
+    }
     if (colorMode.value === 'dark') {
         return {
             desktop: '/img/hero/misskey-dark.png',
@@ -23,6 +67,39 @@ const screenshots = computed(() => {
         };
     }
 });
+
+const isUwu = useState<boolean>('miHub_uwu');
+const isUwuTransitionEnabled = ref(false);
+const screenshotIsUwu = ref(false);
+const hasTransitionDone = useState('miHub_hero_transition_done', () => false);
+
+onMounted(() => {
+    if (import.meta.client) {
+        mounted.value = true;
+
+        if (isUwu.value === null) {
+            isUwu.value = uwu();
+        }
+        if (isUwu.value) {
+            if (!hasTransitionDone.value) {
+                // Transitionを有効化
+                isUwuTransitionEnabled.value = true;
+
+                nextTick(() => {
+                    window.setTimeout(() => {
+                        // 本当に画像を変更
+                        screenshotIsUwu.value = true;
+                        hasTransitionDone.value = true;
+                    }, 2000);
+                });
+            } else {
+                // Transitionを動かさずに画像を変更
+                screenshotIsUwu.value = true;
+            }
+        }
+    }
+});
+
 </script>
 
 <style scoped>
@@ -49,7 +126,12 @@ const screenshots = computed(() => {
 }
 
 .screenshot {
-    @apply absolute rounded-lg shadow-lg select-none pointer-events-none;
+    @apply absolute select-none pointer-events-none;
+}
+
+img.screenshot,
+.screenshot img {
+    @apply rounded-lg drop-shadow-lg;
 }
 
 .screenshot.mobile {
@@ -81,6 +163,32 @@ const screenshots = computed(() => {
 	animation-timing-function: linear;
 	animation-timeline: scroll(root y);
 	--coefficient-parallax: 4;
+}
+
+.uwu-enter-active, .uwu-leave-active {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.uwu-enter-active {
+    transition: transform 1.5s cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 1.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.uwu-leave-active {
+    transition: transform 1s cubic-bezier(0.55, 0.06, 0.68, 0.19),
+    opacity 1s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+}
+
+.uwu-enter-from {
+    transform: rotateY(3turn);
+    opacity: 0;
+}
+
+.uwu-leave-to {
+    transform: rotateY(6turn);
+    opacity: 0;
 }
 
 @media (max-width: 1800px) {
