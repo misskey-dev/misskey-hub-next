@@ -6,11 +6,11 @@ file(s) as follows:
 
 - /public/img/sponsors  : All rights are reserved by respective
                           copyright owner(s).
+- /public/img/uwu       : All rights are reserved by respective
+                          copyright owner(s).
 - /public/img           : See LICENSE-ASSETS (except above).
 - /assets/svg           : See LICENSE-ASSETS.
-- /content/blog         : All rights are reserved by respective
-                          writer(s).
-- /content              : See LICENSE-ASSETS (except above).
+- /content              : See LICENSE-ASSETS.
 - (all other code)      : See LICENSE-CODE.
 
 NOTE: If a separate LICENSE file exists in a particular directory,
@@ -25,10 +25,10 @@ that license applies to that directory.
 るものが異なります。適用されるライセンスは以下の通りです：
 
 - /public/img/sponsors  : 関連する著作権保有者に全権が帰属。
+- /public/img/uwu       : 関連する著作権保有者に全権が帰属。
 - /public/img           : LICENSE-ASSETSを参照のこと（上記を除く）
 - /assets/svg           : LICENSE-ASSETSを参照のこと
-- /content/blog         : それぞれのエントリの著者に全権が帰属。
-- /content              : LICENSE-ASSETSを参照のこと（上記を除く）
+- /content              : LICENSE-ASSETSを参照のこと
 - （その他のコード）    : LICENSE-CODEを参照のこと
 
 注：特定のディレクトリに別途LICENSEファイルがある場合、そのディレク
