@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import TopIco from 'bi/chevron-up.svg';
 import { locales } from '@/assets/data/locales';
+import { uwu } from '@/assets/js/misc/uwu';
 import NProgress from 'nprogress';
 import type { Graph, Thing } from 'schema-dts';
 import { cleanDoubleSlashes, joinURL, parseURL, stringifyParsedURL, withTrailingSlash } from 'ufo';
@@ -13,6 +14,7 @@ const router = useRouter();
 const colorMode = useColorMode();
 const baseUrl = useRuntimeConfig().public.baseUrl as string;
 
+// #region NProgress
 router.beforeEach((to, from) => {
     if (to.path === from.path) return;
     if (!NProgress.isStarted()) {
@@ -27,7 +29,16 @@ nuxtApp.hook('page:loading:end', () => {
         }, 100);
     });    
 });
+// #endregion
 
+// #region uwu
+const isUwu = useState<boolean>('miHub_uwu');
+if (import.meta.client) {
+    isUwu.value = uwu();
+}
+// #endregion
+
+// #region SEO
 const getDescription = (): string => {
     if (route.meta.description != null && route.meta.description != "") {
         return route.meta.description;
@@ -151,6 +162,7 @@ useHead((): Record<string, any> => ({
         { type: "application/ld+json", children: getLdJson(route.meta.graph) }
     ],
 }));
+// #endregion
 
 /** サイト全体でひとつのScroll Posiitionを使う */
 const scrollPos = useState('miHub_global_scrollPos', () => 0);
