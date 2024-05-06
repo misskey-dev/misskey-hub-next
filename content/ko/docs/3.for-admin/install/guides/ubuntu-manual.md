@@ -52,8 +52,8 @@ OS의 차이, Misskey 본체나 의존하는 소프트웨어의 버전업으로 
 
 - OS는 **Ubuntu 22.04.1 LTS**를 사용합니다.
 - 클라우드의 경우에도 네트워크 설정에서 포트 개방이 필요한 경우가 많습니다.하드웨어 요구 사항으로 CPU는 최신 제품이라면 최소사양으로도 작동합니다.아키텍처는 amd64 및 arm64를 가정합니다.
-- メモリは4GB程度あると良い。
-  - （従来Viteの導入により1.5GB程度でもビルド可能と説明していたが、最近またフロントエンドのビルドで要件が厳しくなってきた。）
+- 램은 4GB 정도만 있어도 충분합니다.
+  - (기존에 Vite의 도입으로 1.5GB만 있어도 빌드가 가능하다고 설명했지만, 최근 들어 프론트엔드 빌드로 필요한 용량이 늘어났습니다.）
 - 자체 도메인을 구입하고 CloudFlare를 사용하세요.
 - 도메인은 [Google Domains](https://domains.google/intl/ja_jp/) 등에서 미리 준비해야 합니다.
 - 여기서는 도메인을 example.tld로 설명할 것이므로, 자신이 구입한 도메인으로 적절히 대체하여 읽도록 합니다.개발 환경의 경우 localhost로 대체합니다(설정 파일 항목에서 별도 설명).개발 환경의 경우 localhost로 대체합니다(설정 파일 항목에서 별도 설명).
@@ -114,7 +114,7 @@ node -v
 sudo corepack enable
 ```
 
-Misskey에서 사용할 사용자를 생성합니다.v20.x.x 등으로 표시되면 OK.v8.x.x와 같이 낮은 버전이 표시되면 제대로 설치가 되지 않은 것이므로 서버를 재부팅하고 다시 설치하는 등 다시 한 번 시도해 봅니다.
+v20.x.x 등으로 표시되면 OK.v8.x.x와 같이 낮은 버전이 표시되면 제대로 설치가 되지 않은 것이므로 서버를 재부팅하고 다시 설치하는 등 다시 한 번 시도해 봅니다.
 
 ### PostgreSQL
 
@@ -133,7 +133,7 @@ sudo sh /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -i -v 15;
 systemctl status postgresql
 ```
 
-active라면 OK.그렇지 않은 경우 다음 명령을 실행합니다.
+active라면 OK.
 
 #### 사용자 및 데이터베이스 생성
 
@@ -153,7 +153,7 @@ Misskey에서 사용할 사용자를 생성합니다.\
 CREATE ROLE misskey LOGIN PASSWORD 'hoge';
 ```
 
-소개데이터베이스를 생성합니다.데이터베이스 이름을 mk1이라고 합니다.
+데이터베이스를 생성합니다.데이터베이스를 생성합니다.데이터베이스 이름을 mk1이라고 합니다.
 
 ```sql
 CREATE DATABASE mk1 OWNER misskey;
@@ -163,9 +163,9 @@ CREATE DATABASE mk1 OWNER misskey;
 ### Redis
 
 Redis는 NoSQL의 인메모리 데이터베이스 소프트웨어로, 데이터베이스 및 연합과의 통신 관리 등을 위해 필요합니다.\
-redis.ioのドキュメントに従い、snapでインストールする。
+redis.io의 문서에 따라, snap을 이용해 설치합니다.
 
-https\://redis.io/docs/getting-started/installation/install-redis-on-linux/
+https://redis.io/docs/getting-started/installation/install-redis-on-linux/
 
 ```sh
 sudo snap install redis
@@ -181,8 +181,7 @@ active이면 OK.
 
 ### nginx
 
-nginx는 주로 리버스 프록시에 사용되는 웹 서버 소프트웨어입니다.Misskey에 필수적인 것은 아니지만, 캐시 등을 하면 성능이 향상되고 http에서 https로 전송하는 등의 작업을 위해 설치해 둡니다.\
-curl에서 확인하는 것도 좋은 방법입니다.
+nginx는 주로 리버스 프록시에 사용되는 웹 서버 소프트웨어입니다.Misskey에 필수적인 것은 아니지만, 캐시 등을 하면 성능이 향상되고 http에서 https로 전송하는 등의 작업을 위해 설치해 둡니다.
 
 :::tip
 
@@ -218,8 +217,7 @@ systemctl로 데몬 상태를 확인합니다.실행에 시간이 조금 걸리�
 systemctl status nginx
 ```
 
-active라면 OK.복사, 붙여넣기만 하면 쉘 스크립트로 하면 되지 않겠느냐는 생각으로 **쉘 스크립트로 거의 모든 것을 해주는 방법을 만들어 보았습니다!**\
-[**쉘 스크립트에 대한 자세한 내용과 사용법은 여기에서 확인하세요!**](./bash/)
+active라면 OK.그렇지 않은 경우 다음 명령을 실행합니다.
 
 ```sh
 sudo ufw enable
@@ -233,8 +231,7 @@ sudo ufw allow 80
 sudo ufw allow 443
 ```
 
-http\://localhost에 접속하여 \*Welcome to nginx!\*라고 표시되면 OK.\
-curl에서 확인하는 것도 좋은 방법입니다.\
+http://localhost에 접속하여 \*Welcome to nginx!\*라고 표시되면 OK.\
 curl에서 확인하는 것도 좋은 방법입니다.
 
 ```sh
@@ -293,9 +290,10 @@ nano /etc/cloudflare/cloudflare.ini
 ### CloudFlare
 
 CloudFlare는 자신의 도메인에 대해 DNS 서버, 리버스 프록시, CDN을 한 번에 제공해 주는 매우 편리한 서비스입니다.\
-CloudFlare를 경유하지 않고 서버를 공개하는 것도 가능하지만, 매우 편리하기 때문에 도입하는 것이 좋습니다.[**→ CDN 설정**](../resources/cdn/)
+CloudFlare를 경유하지 않고 서버를 공개하는 것도 가능하지만, 매우 편리하기 때문에 도입하는 것이 좋습니다.
+[**→ CDN 설정**](../resources/cdn/)
 
-[CloudFlare에 가입(https\://dash.cloudflare.com/sign-up)하고, 구매한 도메인을 안내에 따라 등록합니다.
+[CloudFlare에 가입(https://dash.cloudflare.com/sign-up)하고, 구매한 도메인을 안내에 따라 등록합니다.
 
 DNS 등록 화면에서 서버의 IP 주소를 입력하면 됩니다.
 
@@ -311,7 +309,7 @@ certbot과 CloudFlare 플러그인 설치하기
 sudo su - misskey
 ```
 
-Cloudflare의 API 키를 얻습니다.아래 절차에 따라 취득합니다.아래 절차에 따라 취득합니다.
+Cloudflare의 API 키를 얻습니다.아래 절차에 따라 취득합니다.
 
 1. https\://dash.cloudflare.com/profile/api-tokens에 접속
 2. Global API Key의 View 선택
@@ -336,13 +334,13 @@ dns_cloudflare_api_key = xxxxxxxxxxxxxxxxxxxxxxxxxx
 nano .config/default.yml
 ```
 
-다음 내용을 붙여넣고 적절하게 바꿉니다.준비가 되었으니 명령을 실행합니다.**중간에 있는 2곳의 example.tld는 자신의 것으로 교체**.
+다음 내용을 붙여넣고 적절하게 바꿉니다.**중간에 있는 2곳의 example.tld는 자신의 것으로 교체합니다**.
 
 ```sh
 sudo certbot certonly --dns-cloudflare --dns-cloudflare-credentials /etc/cloudflare/cloudflare.ini --dns-cloudflare-propagation-seconds 60 --server https://acme-v02.api.letsencrypt.org/directory -d example.tld -d *.example.tld
 ```
 
-\*Congratulations!\*라고 표시되면 OK.\*Congratulations!\*라고 표시되면 OK.생성된 .pem 파일의 경로는 나중에 사용할 것이므로 기록해 두어야 합니다.
+\*Congratulations!\*라고 표시되면 OK.생성된 .pem 파일의 경로는 나중에 사용할 것이므로 기록해 두어야 합니다.
 
 자동 업데이트 설정은 설치와 동시에 이루어지기 때문에 불필요합니다.
 
@@ -378,7 +376,7 @@ sudo nano /etc/nginx/conf.d/misskey.conf
 nano .config/default.yml
 ```
 
-다음 내용을 붙여넣고 적절하게 바꿉니다.다음 내용을 붙여넣고 적절하게 바꿉니다.설정값의 변경이 필요한 부분은 ●, 지금까지의 흐름에서 설정된 값을 사용하는 부분은 ○으로 표시하였습니다.
+다음 내용을 붙여넣고 적절하게 바꿉니다.설정값의 변경이 필요한 부분은 ●, 지금까지의 흐름에서 설정된 값을 사용하는 부분은 ○으로 표시하였습니다.
 
 이 설정 파일은 YAML 형식으로 작성되어 있으며, 줄의 시작 부분의 띄어쓰기 등을 잘못하면 Misskey가 동작하지 않으므로 특히 주의해야 합니다.
 
@@ -481,7 +479,7 @@ NODE_ENV=production pnpm run build
 
 :::tip
 
-개발 환경의 경우 `NODE_ENV=production`은 필요하지 않습니다.이후 명령어에서도 마찬가지로 삭제해 주세요.이후 명령어에서도 마찬가지로 삭제해 주세요.
+개발 환경의 경우 `NODE_ENV=production`은 필요하지 않습니다.이후 명령어에서도 마찬가지로 삭제해 주세요.
 
 :::
 
@@ -490,7 +488,6 @@ NODE_ENV=production pnpm run build
 RAM 부족이 원인일 수 있습니다.
 
 미스키의 빌드 및 데이터베이스 마이그레이션(초기화 포함)을 위해서는 2GB 이상의 RAM이 필요합니다.\
-RAM이 부족한 경우 다음과 같은 해결책을 생각해 볼 수 있습니다.\
 RAM이 부족한 경우 다음과 같은 해결책을 생각해 볼 수 있습니다.
 
 - 서버에 스왑 추가하기
@@ -554,7 +551,7 @@ CloudFlare의 DNS 설정이 올바른 IP 주소로 설정되어 있는지 다시
 
 :::
 
-일단 Ctrl+C로 프로세스를 죽이고, Misskey를 데몬으로 실행하도록 설정해 봅시다.
+일단 Ctrl+C로 프로세스를 종료하고, Misskey를 데몬으로 실행하도록 설정해 봅시다.
 
 루트 권한으로 변경합니다.
 
