@@ -4,25 +4,21 @@
 		<GDots class="dots dots2" :space="30"/>
         <div class="screenshot desktop">
             <Transition
-                v-if="isUwuTransitionEnabled"
-                name="uwu"
+                :name="isUwuTransitionEnabled ? 'uwu' : undefined"
                 mode="out-in"
                 class="will-change-transform"
             >
                 <img :src="screenshots.desktop" :key="`desktop:${screenshotIsUwu ? 'uwu' : 'notUwu'}`" class="w-full h-auto" alt="screenshot of Misskey in a PC browser">
             </Transition>
-            <img v-else :src="screenshots.desktop" class="w-full h-auto" alt="screenshot of Misskey in a PC browser">
         </div>
         <div class="screenshot mobile">
             <Transition
-                v-if="isUwuTransitionEnabled"
-                name="uwu"
+                :name="isUwuTransitionEnabled ? 'uwu' : undefined"
                 mode="out-in"
                 class="will-change-transform"
             >
                 <img :src="screenshots.mobile" :key="`mobile:${screenshotIsUwu ? 'uwu' : 'notUwu'}`" class="h-full w-auto" alt="screenshot of Misskey in a mobile browser">
             </Transition>
-            <img v-else :src="screenshots.mobile" class="h-full w-auto" alt="screenshot of Misskey in a mobile browser">
         </div>
 		<img src="/img/hero/ai.png" class="ai" alt="Ai-chan, Misskey's mascott">
     </div>
