@@ -13,3 +13,13 @@ files:
       two_letters_code:
         zh-TW: tw
         zh-CN: cn
+  - source: /content/ja/contact-faq/**/*.*
+    translation: /content/%two_letters_code%/contact-faq/**/%original_file_name%
+    update_option: update_as_unapproved
+    skip_untranslated_files: true
+    ignore:
+      - "/content/ja/contact-faq/**/_*.md"
+    languages_mapping:
+      two_letters_code:
+        zh-TW: tw
+        zh-CN: cn
