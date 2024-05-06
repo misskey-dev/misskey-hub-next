@@ -15,7 +15,7 @@ goToLegacyHub: "従来のMisskey Hub"
 contactUs: "お問い合わせ"
 detail: "詳細"
 lastUpdate: "最終更新"
-empty: "項目がありません"
+empty: "内容がありません"
 
 _error:
   notFound: "ページが見つかりませんでした"
