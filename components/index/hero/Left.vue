@@ -24,7 +24,13 @@
 		<div class="lg:hidden relative py-6">
 			<GDots class="dots w-40 h-40 top-0 left-6" />
 			<GDots class="dots w-40 h-40 bottom-0 right-6" />
-			<img class="relative mx-auto rounded-lg max-w-[240px]" :src="mobileScreenShot" />
+			<Transition
+                :name="isUwuTransitionEnabled ? 'uwu' : undefined"
+                mode="out-in"
+                class="will-change-transform"
+            >
+				<img class="relative mx-auto rounded-lg max-w-[240px]" :key="`mobileLeft:${screenshotIsUwu ? 'uwu' : 'notUwu'}`" :src="mobileScreenShot" />
+			</Transition>
 		</div>
 	</div>
 </template>
@@ -35,20 +41,67 @@ import MegaphoneIco from 'bi/megaphone.svg';
 import ArrowRightIco from 'bi/arrow-right.svg';
 import ArrowUpRightIco from 'bi/arrow-up-right.svg';
 import { scrollTo } from '@/assets/js/scroll-to';
-import { isLocalPath } from '~/assets/js/misc';
+import { isLocalPath } from '@/assets/js/misc';
+import { uwu } from '@/assets/js/misc/uwu';
 
 const { notice } = useAppConfig();
 const { locale, fallbackLocale } = useI18n();
 const localePath = useGLocalePath();
+const mounted = ref(false);
 const showTagline = ref(false);
 const colorMode = useColorMode();
-const mobileScreenShot = computed(() => (colorMode.value === 'dark') ? '/img/hero/misskey-mobile-dark.png' : '/img/hero/misskey-mobile-light.png');
+
+const isUwu = useState<boolean>('miHub_uwu');
+const isUwuTransitionEnabled = ref(false);
+const screenshotIsUwu = ref(false);
+const hasTransitionDone = useState('miHub_hero_transition_done', () => false);
+
+const mobileScreenShot = computed(() => {
+	if (!mounted.value) return '/img/hero/misskey-mobile-light.png';
+	if (screenshotIsUwu.value) {
+		if (colorMode.value === 'dark') {
+			return '/img/uwu/misskey-uwu-mobile-dark.png';
+		} else {
+			return '/img/uwu/misskey-uwu-mobile-light.png';
+		}
+	} else {
+		if (colorMode.value === 'dark') {
+			return '/img/hero/misskey-mobile-dark.png';
+		} else {
+			return '/img/hero/misskey-mobile-light.png';
+		}
+	}
+});
 
 // お知らせ欄にブログが来る可能性もあるので
 const localeState = useState('miHub_blog_originalLocale', () => locale.value);
 localeState.value = locale.value;
 
 onMounted(() => {
+	if (import.meta.client) {
+		mounted.value = true;
+
+		if (isUwu.value === null) {
+            isUwu.value = uwu();
+        }
+        if (isUwu.value) {
+            if (!hasTransitionDone.value) {
+                // Transitionを有効化
+                isUwuTransitionEnabled.value = true;
+
+                nextTick(() => {
+                    window.setTimeout(() => {
+                        // 本当に画像を変更
+                        screenshotIsUwu.value = true;
+                        hasTransitionDone.value = true;
+                    }, 1000);
+                });
+            } else {
+                // Transitionを動かさずに画像を変更
+                screenshotIsUwu.value = true;
+            }
+        }
+	}
 	setTimeout(() => {
 		showTagline.value = true;
 	}, 100);

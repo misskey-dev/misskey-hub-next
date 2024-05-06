@@ -161,32 +161,6 @@ img.screenshot,
 	--coefficient-parallax: 4;
 }
 
-.uwu-enter-active, .uwu-leave-active {
-    position: relative;
-    top: 0;
-    left: 0;
-}
-
-.uwu-enter-active {
-    transition: transform 1.5s cubic-bezier(0.22, 0.61, 0.36, 1),
-    opacity 1.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-.uwu-leave-active {
-    transition: transform 1s cubic-bezier(0.55, 0.06, 0.68, 0.19),
-    opacity 1s cubic-bezier(0.55, 0.06, 0.68, 0.19);
-}
-
-.uwu-enter-from {
-    transform: rotateY(3turn);
-    opacity: 0;
-}
-
-.uwu-leave-to {
-    transform: rotateY(6turn);
-    opacity: 0;
-}
-
 @media (max-width: 1800px) {
     .dots1 {
         right:800px
