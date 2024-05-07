@@ -21,6 +21,10 @@ export default <Config> {
     'lg:scroll-pt-24',
   ],
   theme: {
+    screens: {
+      'xs': '475px',
+      ...defaultTheme.screens,
+    },
     extend: {
       colors: {
         'accent': {
