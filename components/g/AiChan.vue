@@ -1,10 +1,19 @@
 <template>
-    <iframe v-if="isEnabledAiChanMode" @load="initAiChan()" ref="live2d" src="https://misskey-dev.github.io/mascot-web/?scale=2&y=1.4"></iframe>
+    <iframe
+		v-if="isEnabledAiChanMode"
+		@load="initAiChan()"
+		class="transition-opacity duration-1000"
+		:class="loaded ? 'opacity-100' : 'opacity-0'"
+		loading="lazy"
+		ref="live2d"
+		src="https://misskey-dev.github.io/mascot-web/?scale=2&y=1.4"
+	></iframe>
 </template>
 
 <script setup lang="ts">
-const live2d = ref<HTMLIFrameElement>();
+const live2d = shallowRef<HTMLIFrameElement>();
 const isEnabledAiChanMode = ref<boolean>(false);
+const loaded = ref(false);
 
 if (import.meta.client) {
     isEnabledAiChanMode.value = ((localStorage.getItem('miHub_aichan_mode') ?? '') == 'true');
@@ -12,7 +21,17 @@ if (import.meta.client) {
     // migration
     if (!localStorage.getItem('miHub_aichan_mode')) {
         isEnabledAiChanMode.value = ((localStorage.getItem('aimode') ?? '') == 'true');
-    }
+	}
+
+	function messageEventHandler(ev: MessageEvent) {
+		console.log(ev);
+		if (ev.origin === 'https://misskey-dev.github.io' && ev.data.type === 'loaded') {
+			loaded.value = true;
+			window.removeEventListener('message', messageEventHandler);
+		}
+	}
+
+	window.addEventListener('message', messageEventHandler);
 }
 
 function initAiChan() {
