@@ -14,9 +14,10 @@
 const live2d = shallowRef<HTMLIFrameElement>();
 const isEnabledAiChanMode = ref<boolean>(false);
 const loaded = ref(false);
+const isUwu = useState<boolean>('miHub_uwu');
 
 if (import.meta.client) {
-    isEnabledAiChanMode.value = ((localStorage.getItem('miHub_aichan_mode') ?? '') == 'true');
+    isEnabledAiChanMode.value = ((localStorage.getItem('miHub_aichan_mode') ?? '') == 'true' || (isUwu.value && window.innerWidth >= 1440));
 
     // migration
     if (!localStorage.getItem('miHub_aichan_mode')) {
