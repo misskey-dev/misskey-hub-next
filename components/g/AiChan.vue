@@ -1,13 +1,13 @@
 <template>
     <iframe
-		v-if="isEnabledAiChanMode"
-		@load="initAiChan()"
-		class="transition-opacity duration-1000"
-		:class="loaded ? 'opacity-100' : 'opacity-0'"
-		loading="lazy"
-		ref="live2d"
-		src="https://misskey-dev.github.io/mascot-web/?scale=2&y=1.4"
-	></iframe>
+        v-if="isEnabledAiChanMode"
+        @load="initAiChan()"
+        class="transition-opacity duration-1000"
+        :class="loaded ? 'opacity-100' : 'opacity-0'"
+        loading="lazy"
+        ref="live2d"
+        src="https://misskey-dev.github.io/mascot-web/?scale=2&y=1.4"
+    ></iframe>
 </template>
 
 <script setup lang="ts">
@@ -22,58 +22,57 @@ if (import.meta.client) {
     // migration
     if (!localStorage.getItem('miHub_aichan_mode')) {
         isEnabledAiChanMode.value = ((localStorage.getItem('aimode') ?? '') == 'true');
-	}
+    }
 
-	function messageEventHandler(ev: MessageEvent) {
-		console.log(ev);
-		if (ev.origin === 'https://misskey-dev.github.io' && ev.data.type === 'loaded') {
-			loaded.value = true;
-			window.removeEventListener('message', messageEventHandler);
-		}
-	}
+    function messageEventHandler(ev: MessageEvent) {
+        if (ev.origin === 'https://misskey-dev.github.io' && ev.data.type === 'loaded') {
+            loaded.value = true;
+            window.removeEventListener('message', messageEventHandler);
+        }
+    }
 
-	window.addEventListener('message', messageEventHandler);
+    window.addEventListener('message', messageEventHandler);
 }
 
 function initAiChan() {
-	if (!live2d.value) return;
+    if (!live2d.value) return;
 
     const iframeRect = live2d.value.getBoundingClientRect();
-	window.addEventListener('mousemove', ev => {
-		if (!live2d.value) return;
+    window.addEventListener('mousemove', ev => {
+        if (!live2d.value) return;
 
-		live2d.value.contentWindow?.postMessage({
-			type: 'moveCursor',
-			body: {
-				x: ev.clientX - iframeRect.left,
-				y: ev.clientY - iframeRect.top,
-			},
-		}, '*');
-	}, { passive: true });
-	window.addEventListener('touchmove', ev => {
-		if (!live2d.value) return;
-		
-		live2d.value.contentWindow?.postMessage({
-			type: 'moveCursor',
-			body: {
-				x: ev.touches[0].clientX - iframeRect.left,
-				y: ev.touches[0].clientY - iframeRect.top,
-			},
-		}, '*');
-	}, { passive: true });
+        live2d.value.contentWindow?.postMessage({
+            type: 'moveCursor',
+            body: {
+                x: ev.clientX - iframeRect.left,
+                y: ev.clientY - iframeRect.top,
+            },
+        }, '*');
+    }, { passive: true });
+    window.addEventListener('touchmove', ev => {
+        if (!live2d.value) return;
+        
+        live2d.value.contentWindow?.postMessage({
+            type: 'moveCursor',
+            body: {
+                x: ev.touches[0].clientX - iframeRect.left,
+                y: ev.touches[0].clientY - iframeRect.top,
+            },
+        }, '*');
+    }, { passive: true });
 }
 </script>
 
 <style scoped>
 iframe {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	width: 300px;
-	height: 600px;
-	border: none;
-	pointer-events: none;
-	background: transparent;
-	color-scheme: light dark;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 600px;
+    border: none;
+    pointer-events: none;
+    background: transparent;
+    color-scheme: light dark;
 }
 </style>
