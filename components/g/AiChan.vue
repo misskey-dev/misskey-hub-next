@@ -20,7 +20,7 @@ if (import.meta.client) {
     isEnabledAiChanMode.value = ((localStorage.getItem('miHub_aichan_mode') ?? '') == 'true' || (isUwu.value && window.innerWidth >= 1440));
 
     // migration
-    if (!localStorage.getItem('miHub_aichan_mode') && localStorage.getItem('aimode')) {
+    if (!localStorage.getItem('miHub_aichan_mode') && localStorage.getItem('aimode') && !isUwu.value) {
         isEnabledAiChanMode.value = ((localStorage.getItem('aimode') ?? '') == 'true');
     }
 
