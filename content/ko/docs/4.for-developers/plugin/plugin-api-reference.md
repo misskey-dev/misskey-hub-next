@@ -101,12 +101,10 @@ Mk:save에서 영속화한 지정된 이름의 값을 읽습니다.
 생략하면 `info`가 됩니다.
 
 ```AiScript
-Plugin:register_post_form_action('メニューに表示される項目名', @(note) {
+Plugin:register_post_form_action('メニューに表示される項目名', @(note, rewrite) {
 
   // ノートに何らかの変更を加える
-  note.text = `{note.text}{Str:lf}#ハッシュタグ`
-
-  return note // 変更後のノートを返す
+  rewrite('text', `{note.text}{Str:lf}#ハッシュタグ`)
 })
 ```
 
