@@ -8,7 +8,11 @@
                         <span class="self-center text-2xl font-bold font-title whitespace-nowrap">{{ $t('_seo.siteName') }}</span>
                     </GNuxtLink>
                     <div class="w-fit max-w-full grid auto-cols-fr auto-rows-auto xs:grid-flow-col gap-4 mx-auto xs:mx-0">
-                        <GNuxtLink v-if="isUwu === true" to="https://misskey.io/notes/9suz8ufdjuyd0hqs" target="_blank" class="block p-2 rounded-lg bg-white dark:bg-slate-950 border border-dashed border-gray-300 dark:border-gray-600 hover:opacity-70 w-[138px]">
+                        <GNuxtLink v-if="isAiChanMode === true" to="https://misskey.io/@shinamu476" target="_blank" class="block p-2 rounded-lg bg-white dark:bg-slate-950 border border-dashed border-gray-300 dark:border-gray-600 hover:opacity-70 w-[140px]">
+                            <img src="/img/misc/ai_l2d.png" alt="UwU" class="w-[130px] h-[66px] object-contain" />
+                            <div class="text-center text-xs">Ai-Chan Live2D&reg; Model by Shinamu</div>
+                        </GNuxtLink>
+                        <GNuxtLink v-if="isUwu === true" to="https://misskey.io/notes/9suz8ufdjuyd0hqs" target="_blank" class="block p-2 rounded-lg bg-white dark:bg-slate-950 border border-dashed border-gray-300 dark:border-gray-600 hover:opacity-70 w-[140px]">
                             <img src="/img/uwu/uwl.png" alt="UwU" class="w-[130px] h-[66px] object-contain" />
                             <div class="text-center text-xs">Kawaii Logo by SAWARATSUKI</div>
                         </GNuxtLink>
@@ -73,6 +77,7 @@ import ExtIco from 'bi/box-arrow-up-right.svg';
 const localePath = useGLocalePath();
 
 const isUwu = useState('miHub_uwu');
+const isAiChanMode = useState('miHub_aichan_mode');
 </script>
 
 <style scoped>
