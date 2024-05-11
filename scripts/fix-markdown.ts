@@ -14,9 +14,10 @@ export async function fixMarkdown() {
     ];
 
     // globs files
-    const filesToCheck = await glob(`../../content/(${localesConst.map((v) => v.code).filter((v) => !ignoreLocales.includes(v)).join('|')})/**/*.md`, {
+    const filesToCheck = await glob(`content/(${localesConst.map((v) => v.code).filter((v) => !ignoreLocales.includes(v)).join('|')})/**/*.md`, {
         ignore: [ '**/5.releases.md' ],
     });
+    console.log(filesToCheck);
 
     const jobs = filesToCheck.map(async (file) => {
         const content = await fsp.readFile(file, 'utf-8');

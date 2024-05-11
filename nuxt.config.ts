@@ -183,6 +183,8 @@ export default defineNuxtConfig({
 	},
 	hooks: {
 		'build:before': async (...args) => {
+			const isActualBuild = process.argv.includes('generate') || process.argv.includes('build');
+			
 			genApiTranslationFiles(...args);
 			if (process.env.NODE_ENV === 'development') {
 				fsWatch('./locales/', (ev, filename) => {
@@ -191,11 +193,14 @@ export default defineNuxtConfig({
 					}
 				});
 			}
+
 			await Promise.all([
-				genLocalesJson(...args),
-				fixMarkdown(),
-				genSpaLoadingTemplate(...args),
-				fetchCrowdinMembers(...args),
+				genLocalesJson(),
+				genSpaLoadingTemplate(),
+				fetchCrowdinMembers(),
+				...(isActualBuild ? [
+					fixMarkdown(),
+				] : []),
 			]);
 		},
 	},

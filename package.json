@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@babel/parser": "^7.24.4",
-    "@misskey-dev/markdown-space-autofixer": "github:misskey-dev/markdown-space-autofixer#v0.0.1",
+    "@misskey-dev/markdown-space-autofixer": "github:misskey-dev/markdown-space-autofixer#v0.0.3",
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxtjs/color-mode": "^3.3.3",
     "@nuxtjs/i18n": "^8.3.0",

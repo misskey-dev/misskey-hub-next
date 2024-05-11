@@ -14,8 +14,8 @@ devDependencies:
     specifier: ^7.24.4
     version: 7.24.4
   '@misskey-dev/markdown-space-autofixer':
-    specifier: github:misskey-dev/markdown-space-autofixer#v0.0.1
-    version: github.com/misskey-dev/markdown-space-autofixer/8dd0695ed0364b59b8f60d6def707fedff5303e1
+    specifier: github:misskey-dev/markdown-space-autofixer#v0.0.3
+    version: github.com/misskey-dev/markdown-space-autofixer/77f03db752fd58558f6edacd18ffa868611903b6
   '@nuxt/content':
     specifier: npm:@nuxt/content-edge@latest
     version: /@nuxt/content-edge@2.12.1-28535769.f753723(nuxt@3.11.1)(rollup@4.14.0)(vue@3.4.21)
@@ -4274,6 +4274,12 @@ packages:
       reusify: 1.0.4
     dev: true
 
+  /fault@2.0.1:
+    resolution: {integrity: sha512-WtySTkS4OKev5JtpHXnib4Gxiurzh5NCGvWrFaZ34m6JehfTUhKZvn9njTfw48t6JumVQOmrKqpmGcdwxnhqBQ==}
+    dependencies:
+      format: 0.2.2
+    dev: true
+
   /file-type@17.1.6:
     resolution: {integrity: sha512-hlDw5Ev+9e883s0pwUsuuYNu4tD7GgpUnOvykjv1Gya0ZIjuKumthDRua90VUn6/nlRKAjcxLUnHNTIUWwWIiw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -4364,6 +4370,11 @@ packages:
     dependencies:
       cross-spawn: 7.0.3
       signal-exit: 4.1.0
+    dev: true
+
+  /format@0.2.2:
+    resolution: {integrity: sha512-wzsgA6WOq+09wrU1tsJ09udeR/YZRaeArL9e1wPbFg3GG2yDnC2ldKpxs4xunpFF9DgqCqOIra3bc1HWrJ37Ww==}
+    engines: {node: '>=0.4.x'}
     dev: true
 
   /fraction.js@4.3.7:
@@ -5425,6 +5436,19 @@ packages:
       - supports-color
     dev: true
 
+  /mdast-util-frontmatter@2.0.1:
+    resolution: {integrity: sha512-LRqI9+wdgC25P0URIJY9vwocIzCcksduHQ9OF2joxQoyTNVduwLAFUzjoopuRJbJAReaKrNQKAZKL3uCMugWJA==}
+    dependencies:
+      '@types/mdast': 4.0.3
+      devlop: 1.1.0
+      escape-string-regexp: 5.0.0
+      mdast-util-from-markdown: 2.0.0
+      mdast-util-to-markdown: 2.1.0
+      micromark-extension-frontmatter: 2.0.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /mdast-util-gfm-autolink-literal@2.0.0:
     resolution: {integrity: sha512-FyzMsduZZHSc3i0Px3PQcBT4WJY/X/RCtEJKuybiC6sjPqLv7h1yqAkmILZtuxMSsUyaLUWNp71+vQH2zqp5cg==}
     dependencies:
@@ -5578,6 +5602,15 @@ packages:
       micromark-util-normalize-identifier: 2.0.0
       micromark-util-resolve-all: 2.0.0
       micromark-util-subtokenize: 2.0.0
+      micromark-util-symbol: 2.0.0
+      micromark-util-types: 2.0.0
+    dev: true
+
+  /micromark-extension-frontmatter@2.0.0:
+    resolution: {integrity: sha512-C4AkuM3dA58cgZha7zVnuVxBhDsbttIMiytjgsM2XbHAB2faRVaHRle40558FBN+DJcrLNCoqG5mlrpdU4cRtg==}
+    dependencies:
+      fault: 2.0.1
+      micromark-util-character: 2.1.0
       micromark-util-symbol: 2.0.0
       micromark-util-types: 2.0.0
     dev: true
@@ -7370,6 +7403,17 @@ packages:
       unified: 11.0.4
     dev: true
 
+  /remark-frontmatter@5.0.0:
+    resolution: {integrity: sha512-XTFYvNASMe5iPN0719nPrdItC9aU0ssC4v14mH1BCi1u0n1gAocqcujWUrByftZTbLhRtiKRyjYTSIOcr69UVQ==}
+    dependencies:
+      '@types/mdast': 4.0.3
+      mdast-util-frontmatter: 2.0.1
+      micromark-extension-frontmatter: 2.0.0
+      unified: 11.0.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /remark-gfm@4.0.0:
     resolution: {integrity: sha512-U92vJgBPkbw4Zfu/IiW2oTZLSL3Zpv+uI7My2eq8JxKgqraFdU8YUGicEJCEgSbeaG+QDFqIcwwfMTOEelPxuA==}
     dependencies:
@@ -9153,11 +9197,12 @@ packages:
     engines: {vscode: ^1.83.0}
     dev: true
 
-  github.com/misskey-dev/markdown-space-autofixer/8dd0695ed0364b59b8f60d6def707fedff5303e1:
-    resolution: {tarball: https://codeload.github.com/misskey-dev/markdown-space-autofixer/tar.gz/8dd0695ed0364b59b8f60d6def707fedff5303e1}
+  github.com/misskey-dev/markdown-space-autofixer/77f03db752fd58558f6edacd18ffa868611903b6:
+    resolution: {tarball: https://codeload.github.com/misskey-dev/markdown-space-autofixer/tar.gz/77f03db752fd58558f6edacd18ffa868611903b6}
     name: '@misskey-dev/markdown-space-autofixer'
-    version: 0.0.1
+    version: 0.0.3
     dependencies:
+      remark-frontmatter: 5.0.0
       remark-mdc: 3.2.0
       remark-parse: 11.0.0
       remark-stringify: 11.0.0
