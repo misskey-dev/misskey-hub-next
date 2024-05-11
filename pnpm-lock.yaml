@@ -52,9 +52,6 @@ devDependencies:
   bootstrap-icons:
     specifier: ^1.11.3
     version: 1.11.3
-  fast-glob:
-    specifier: ^3.3.2
-    version: 3.3.2
   github-markdown-css:
     specifier: ^5.5.1
     version: 5.5.1

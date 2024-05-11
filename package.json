@@ -23,7 +23,6 @@
     "autoprefixer": "^10.4.19",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "fast-glob": "^3.3.2",
     "github-markdown-css": "^5.5.1",
     "js-yaml": "^4.1.0",
     "mfm-js": "^0.24.0",
