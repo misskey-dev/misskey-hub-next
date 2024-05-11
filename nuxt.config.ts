@@ -98,6 +98,9 @@ export default defineNuxtConfig({
 		},
 	},
 	content: {
+		markdown: {
+			remarkPlugins: [ 'misskey-hub-markdown-fixer' ],	
+		},
 		navigation: {
 			fields: [
 				'date',
@@ -181,19 +184,20 @@ export default defineNuxtConfig({
 		}
 	},
 	hooks: {
-		'build:before': async (...args) => {
-			genApiTranslationFiles(...args);
+		'build:before': async () => {			
+			genApiTranslationFiles();
 			if (process.env.NODE_ENV === 'development') {
 				fsWatch('./locales/', (ev, filename) => {
 					if (filename && filename.endsWith('.yml')) {
-						genLocalesJson(...args);
+						genLocalesJson();
 					}
 				});
 			}
+
 			await Promise.all([
-				genLocalesJson(...args),
-				genSpaLoadingTemplate(...args),
-				fetchCrowdinMembers(...args),
+				genLocalesJson(),
+				genSpaLoadingTemplate(),
+				fetchCrowdinMembers(),
 			]);
 		},
 	},
