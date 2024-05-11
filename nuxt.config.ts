@@ -10,7 +10,7 @@ import { locales } from './assets/data/locales';
 import type { NuxtConfig } from 'nuxt/schema';
 import { fetchCrowdinMembers } from './scripts/fetch-crowdin';
 import { genSpaLoadingTemplate } from './scripts/gen-spa-loading-template';
-import { fixMarkdown } from './scripts/markdown-lint';
+import { fixMarkdown } from './scripts/fix-markdown';
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl =
