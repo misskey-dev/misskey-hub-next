@@ -184,14 +184,12 @@ export default defineNuxtConfig({
 		}
 	},
 	hooks: {
-		'build:before': async (...args) => {
-			const isActualBuild = process.argv.includes('generate') || process.argv.includes('build');
-			
-			genApiTranslationFiles(...args);
+		'build:before': async () => {			
+			genApiTranslationFiles();
 			if (process.env.NODE_ENV === 'development') {
 				fsWatch('./locales/', (ev, filename) => {
 					if (filename && filename.endsWith('.yml')) {
-						genLocalesJson(...args);
+						genLocalesJson();
 					}
 				});
 			}
