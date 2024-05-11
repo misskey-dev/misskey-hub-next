@@ -1,53 +1,53 @@
-# Misskeyをフォーク・カスタマイズする際の注意点
+# Notes on Forking and Customizing Misskey
 
-Misskeyが採用するGNU Affero General Public License v3.0（AGPL-3.0）は、Misskeyのソースコードを変更した場合、その変更点を公開することを義務付けています。
+The GNU Affero General Public License v3.0 (AGPL-3.0), adopted by Misskey, mandates the disclosure of any modifications made to the Misskey source code.
 
-Misskey v2024.2.0以降では、このライセンスへの適合をかんたんにできるようにする機能を実装しています。ここではその設定方法をご紹介します。
+Starting from Misskey v2024.2.0, a feature has been implemented to facilitate compliance with this license.Here, we introduce how to configure this feature.
 
 :::warning
 
-もちろん、それ以前のバージョンをベースにする場合でも、ライセンスに適合するための措置を講じる必要があります。
+Of course, even if you base your work on versions before this, you still need to take measures to comply with the license.
 
 :::
 
-## Misskeyをそのまま使う場合
+## Using Misskey Without Modifications
 
-Misskeyのコードベースに一切変更を加えることなく、内蔵の機能だけを使用する場合は、特に何もする必要はありません。
+If you intend to use only the built-in features of Misskey without making any changes to the codebase, there's no specific action required.
 
-## Misskeyのコードに何らかの変更を加え、その変更したバージョンをGitHubなどで公開する場合
+## Making Changes to Misskey's Code and Publishing the Modified Version on Platforms like GitHub
 
-Misskeyのコードに何らかの変更を加え、その変更したバージョンをGitHubなどで公開する場合は、以下の点を確認してください。
+If you modify the Misskey code and intend to publish the modified version on platforms like GitHub, please ensure the following:
 
-- リポジトリを公開しておくこと（アクセス制限などを行わず、誰でもアクセスできるようにすること）
+- Keep your repository public (without access restrictions, allowing anyone to access it)
 
-では、早速設定を行いましょう。
+Let's proceed with the setup.
 
-1. 変更したバージョンのMisskeyをビルドし、本番環境で稼働させます。
-2. Adminアカウントでログインした状態で [管理画面](x-mi-web://admin/settings) を開きます。
-3. 「リポジトリURL」の欄に、あなたのMisskeyのリポジトリへのURLを入力します。
+1. Build the modified version of Misskey and deploy it in your production environment.
+2. While logged in as an Admin account, open the [admin settings](x-mi-web://admin/settings) page.
+3. Enter the URL of your Misskey repository in the "Repository URL" field.
 
-## Misskeyのコードに何らかの変更を加えるが、その変更したバージョンをGitHubなどで公開しない（できない）場合
+## Making Changes to Misskey's Code but Not Publishing the Modified Version (or Unable to)
 
-この場合でも、ソースコードをMisskeyのインターフェイス上から直接アクセスできるようにする必要があります。Misskey v2024.2.0以降では、ビルド時に自動的にソースコードを書庫ファイルにまとめる機能が実装されています。
+Even in this case, you need to provide direct access to the source code from the Misskey interface.Starting from Misskey v2024.2.0, a feature has been implemented to automatically package the source code into a tarball during the build process.
 
 :::tip
 
-なお、**ソースコードを要求されたときにだけ開示するという処置はライセンスの履行には不十分だとされています。**
+Note that **disclosing the source code only when requested is deemed insufficient for license compliance.**
 
-Misskey内蔵のソースコード提供機能を使用しない場合でも、何らかの方法で、動作中のバージョンのMisskeyのソースコードへのリンクをMisskey Webのインターフェイス上から直接アクセスできるようにしてください。
+Even if you don't utilize Misskey's built-in source code disclosing feature, ensure that there is some way to directly access the source code of the running version of Misskey from the Misskey Web interface.
 
 :::
 
-では、早速設定を行いましょう。
+Let's proceed with the setup.
 
-1. Misskeyのコンフィグファイル（デフォルトは `.config/default.yml` ）を開きます。
-2. `publishTarballInsteadOfProvideRepositoryUrl` を `true` に設定します（コンフィグファイル内の指定のコメントアウト部分を外すだけでもOKです）。
-3. Misskeyをビルドします（この際ソースコードのtarballが生成されます）。
-4. 生成された書庫ファイルを開き、**トークンなどの機密情報が配布用のソースコードに含まれていないかを確認してください。**
-5. 機密情報が含まれていた場合は、`scripts/tarball.mjs` を編集して、それらの情報を除外するようにしてください。
+1. Open the Misskey configuration file (default is `.config/default.yml`).
+2. Set `publishTarballInsteadOfProvideRepositoryUrl` to `true` (you can simply uncomment the specified part in the config file).
+3. Build Misskey (this will generate a tarball of the source code).
+4. Open the generated tarball and ensure that **no confidential information such as tokens is included in the distributed source code.**
+5. If any confidential information is included, edit `scripts/tarball.mjs` to exclude such information.
 
 :::warning
 
-ソースコードの書庫ファイル生成はビルド時に行われます。`scripts/tarball.mjs` に変更を加えた際には必ず再度ビルドを行ってください。
+The generation of the source code tarball occurs during the build process.Be sure to rebuild whenever changes are made to `scripts/tarball.mjs`.
 
 :::
