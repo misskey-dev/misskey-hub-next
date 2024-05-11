@@ -10,6 +10,7 @@ import { locales } from './assets/data/locales';
 import type { NuxtConfig } from 'nuxt/schema';
 import { fetchCrowdinMembers } from './scripts/fetch-crowdin';
 import { genSpaLoadingTemplate } from './scripts/gen-spa-loading-template';
+import { fixMarkdown } from './scripts/markdown-lint';
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl =
@@ -192,6 +193,7 @@ export default defineNuxtConfig({
 			}
 			await Promise.all([
 				genLocalesJson(...args),
+				fixMarkdown(),
 				genSpaLoadingTemplate(...args),
 				fetchCrowdinMembers(...args),
 			]);
