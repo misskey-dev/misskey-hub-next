@@ -36,12 +36,7 @@ sudo corepack enable
 Misskey는 루트 사용자로 실행하지 않는 것이 좋으므로, 대신 사용자를 생성합니다.
 
 ```sh
-sudo -iu misskey
-git clone --recursive https://github.com/misskey-dev/misskey.git
-cd misskey
-git checkout master
-git submodule update --init
-NODE_ENV=production pnpm install --frozen-lockfile
+adduser --disabled-password --disabled-login misskey
 ```
 
 ## misskey 서비스 시작
@@ -68,6 +63,7 @@ cp .config/example.yml .config/default.yml
 ## 빌드 및 초기화
 
 다음 명령어로 Misskey를 빌드하고 데이터베이스를 초기화합니다.
+이 작업은 시간이 좀 걸립니다.
 
 ```sh
 NODE_ENV=production pnpm run build
@@ -76,7 +72,7 @@ pnpm run init
 
 ## 실행
 
-수고하셨습니다.수고하셨습니다.아래 명령어로 Misskey를 실행할 수 있습니다.
+수고하셨습니다.아래 명령어로 Misskey를 실행할 수 있습니다.
 
 ```sh
 NODE_ENV=production pnpm run start
@@ -84,7 +80,7 @@ NODE_ENV=production pnpm run start
 
 systemd 서비스 파일 생성하기
 
-`/etc/systemd/system/misskey.service`
+::::g-details{summary="systemd를 이용한 관리"}
 
 systemd 서비스 파일 생성하기
 
@@ -114,7 +110,7 @@ WantedBy=multi-user.target
 
 :::warning
 
-misskey 서비스 시작
+CentOS에서 1024 이하의 포트를 사용하여 Misskey를 사용하려면 `ExecStart=/usr/bin/sudo /usr/bin/npm start`로 변경해야 합니다.
 
 :::
 
@@ -172,6 +168,5 @@ sudo systemctl restart misskey
 
 - `pnpm run clean` 또는 `pnpm run clean-all`을 실행합니다.
 - `pnpm rebuild`
-  :::
 
 :::

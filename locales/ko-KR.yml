@@ -15,7 +15,7 @@ goToLegacyHub: "이전 Misskey Hub"
 contactUs: "문의"
 detail: "자세히"
 lastUpdate: "마지막 수정"
-empty: "内容がありません"
+empty: "내용이 없습니다"
 _error:
   notFound: "페이지를 찾을 수 없습니다"
   notFoundDesc: "요청하신 페이지를 찾을 수 없습니다. URL을 확인하여 주십시오."

@@ -94,15 +94,13 @@ Mk:saveで永続化した指定の名前の値を読み取ります。
 ### `Plugin:register_post_form_action(title, fn)`
 
 投稿フォームにアクションを追加します。第一引数にアクション名、第二引数にアクションが選択された際のコールバック関数を渡します。\
-コールバック関数には、第一引数に投稿フォームオブジェクトが渡されます。
+コールバック関数には、第一引数に投稿フォームオブジェクトのうち`text`と`cw`が、第二引数にそれらを書き換えるための関数が渡されます。
 
 ```AiScript
-Plugin:register_post_form_action('メニューに表示される項目名', @(note) {
+Plugin:register_post_form_action('メニューに表示される項目名', @(note, rewrite) {
 
   // ノートに何らかの変更を加える
-  note.text = `{note.text}{Str:lf}#ハッシュタグ`
-
-  return note // 変更後のノートを返す
+  rewrite('text', `{note.text}{Str:lf}#ハッシュタグ`)
 })
 ```
 

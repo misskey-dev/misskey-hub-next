@@ -21,6 +21,9 @@ description: 이 가이드는 Docker를 사용하여 Misskey를 설정하는 방
 ## 리포지토리 가져오기
 
 ```sh
+git clone -b master https://github.com/misskey-dev/misskey.git
+cd misskey
+git checkout master
 ```
 
 ## 설정
@@ -28,6 +31,9 @@ description: 이 가이드는 Docker를 사용하여 Misskey를 설정하는 방
 아래 명령어로 각종 설정 파일 샘플을 복사합니다.
 
 ```sh
+cp .config/docker_example.yml .config/default.yml
+cp .config/docker_example.env .config/docker.env
+cp ./docker-compose_example.yml ./docker-compose.yml
 ```
 
 `default.yml`과 `docker.env`를 파일 내 설명에 따라 편집합니다.\
@@ -36,8 +42,11 @@ description: 이 가이드는 Docker를 사용하여 Misskey를 설정하는 방
 ## 빌드 및 초기화
 
 다음 명령어로 Misskey를 빌드하고 데이터베이스를 초기화합니다.
+이 작업은 시간이 좀 걸립니다.
 
 ```shell
+sudo docker compose build
+sudo docker compose run --rm web pnpm run init
 ```
 
 ## 실행
@@ -45,9 +54,10 @@ description: 이 가이드는 Docker를 사용하여 Misskey를 설정하는 방
 수고하셨습니다.아래 명령어로 Misskey를 실행할 수 있습니다.
 
 ```sh
+sudo docker compose up -d
 ```
 
-
+GLHF✨
 
 ## Misskey 업데이트 방법
 
@@ -58,6 +68,13 @@ description: 이 가이드는 Docker를 사용하여 Misskey를 설정하는 방
 :::
 
 ```sh
+git stash
+git checkout master
+git pull
+git submodule update --init
+git stash pop
+sudo docker compose build
+sudo docker compose stop && sudo docker compose up -d
 ```
 
 업데이트 내용 및 데이터베이스 규모에 따라 시간이 걸릴 수 있습니다.
@@ -65,4 +82,5 @@ description: 이 가이드는 Docker를 사용하여 Misskey를 설정하는 방
 ## cli 명령을 실행하는 방법
 
 ```sh
+sudo docker compose run --rm web node packages/backend/built/tools/foo bar
 ```
