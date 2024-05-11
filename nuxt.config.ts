@@ -10,7 +10,6 @@ import { locales } from './assets/data/locales';
 import type { NuxtConfig } from 'nuxt/schema';
 import { fetchCrowdinMembers } from './scripts/fetch-crowdin';
 import { genSpaLoadingTemplate } from './scripts/gen-spa-loading-template';
-import { fixMarkdown } from './scripts/fix-markdown';
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl =
@@ -99,6 +98,9 @@ export default defineNuxtConfig({
 		},
 	},
 	content: {
+		markdown: {
+			remarkPlugins: [ 'misskey-hub-markdown-fixer' ],	
+		},
 		navigation: {
 			fields: [
 				'date',
@@ -198,9 +200,6 @@ export default defineNuxtConfig({
 				genLocalesJson(),
 				genSpaLoadingTemplate(),
 				fetchCrowdinMembers(),
-				...(isActualBuild ? [
-					fixMarkdown(),
-				] : []),
 			]);
 		},
 	},

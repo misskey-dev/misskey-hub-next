@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "@babel/parser": "^7.24.4",
-    "@misskey-dev/markdown-space-autofixer": "github:misskey-dev/markdown-space-autofixer#v0.0.3",
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxtjs/color-mode": "^3.3.3",
     "@nuxtjs/i18n": "^8.3.0",
@@ -29,6 +28,7 @@
     "js-yaml": "^4.1.0",
     "mfm-js": "^0.24.0",
     "misskey-js": "2024.3.1",
+    "misskey-hub-markdown-fixer": "file:./scripts/markdown-fixer",
     "nprogress": "^0.2.0",
     "nuxt": "^3.11.1",
     "postcss": "^8.4.38",
