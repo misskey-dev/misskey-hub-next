@@ -67,7 +67,7 @@ const getLdJson = (additionalGraphes: Thing[] = []): string => {
             {
                 "@type": "WebSite",
                 "@id": `${baseUrl}/#WebPage`,
-                "name": t('_seo.siteName'),
+                "name": locale.value.includes('ja') ? '【Misskeyプロジェクト公式】Misskey Hub' : t('_seo.siteName'),
                 "inLanguage": locale.value,
                 "url": `${baseUrl}${route.path}`,
                 "publisher": {
