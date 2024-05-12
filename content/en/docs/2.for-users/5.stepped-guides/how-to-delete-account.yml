@@ -1,99 +1,97 @@
-title: "アカウントを削除する方法"
-description: "Misskeyのアカウントを削除する方法をご紹介します。"
+title: "How to delete your account"
+description: "This page explains how to delete your account on Misskey server."
 #Do not translate any keys that includes underscore
 _TYPE_: "STEPPED_GUIDE"
 body: |
-  Misskeyのアカウントが必要なくなったなどで、アカウントを削除したい方もおられると思います。このページでは、
+  Some users may find that they no longer need their Misskey accounts and may wish to delete them. On this page, we will provide information about:
 
-  - アカウント削除に際しての注意点
-  - アカウント削除の方法
-
-  についてご紹介します。
+  - Points to consider when deleting an account
+  - How to delete an account
 
   :::danger
 
-  後ほど詳しくご紹介しますが、**アカウントを削除すると、Misskeyの利用を再開する（再度登録し直す）際にまで影響がおよびます。**
-  アカウントの削除はくれぐれも慎重に行ってください。
+  As we will explain in more detail later, **deleting an account will affect even when you resume using Misskey (i.e., re-register).**
+  Please be very careful when deleting your account.
 
   :::
 
-  ## アカウント削除に際しての注意点
-  アカウントを削除すると、次のことが起こります：
+  ## Points to Consider When Deleting an Account
+  When you delete your account, the following will occur:
 
-  - アカウントにログインできなくなります
-  - データの削除は時間をかけて行われます
-  - 同じIDは二度と使えなくなります
+  - You will no longer be able to log in to your account.
+  - Data deletion will take some time.
+  - The same ID cannot be used again.
 
-  一つずつ説明します。
+  Let's explain each point.
 
-  ### アカウントにログインできなくなります
-  アカウント削除を実施すると、そのアカウントに再度ログインすることはできなくなります。 **間違えて削除した際の復旧機能などはありません。** ご注意ください。
+  ### You will no longer be able to log in to your account
+  Once you delete your account, you will no longer be able to log in to it. **There is no recovery function in case of accidental deletion.** Please take note of this.
 
-  ### データの削除は時間をかけて行われます
-  データの削除は非常に負荷のかかる操作です。そのため、他のユーザーの利用に支障をきたさないように、データの削除は時間をかけて行われます。
+  ### Data deletion will take some time
+  Data deletion is a resource-intensive operation. Therefore, to avoid disrupting other users' usage, data deletion will take some time.
 
-  アカウント削除と同時にすべてのデータが削除されるわけではありませんのでご注意ください。
+  Please note that not all data will be deleted immediately upon account deletion.
 
-  ### 同じIDは二度と使えなくなります
-  連合処理との兼ね合い上、現時点では、一度取得したID（`@someone@misskey.example.com` の `@someone` の部分）は**二度と使えなくなります。**
+  ### The same ID cannot be used again
+  Due to the technical limitation on federation, at present, once an ID (the part before `@` in `@someone@misskey.example.com`) is obtained, **it cannot be used again.**
 
-  同じサーバー上において再度同じIDでアカウントを取得することは出来なくなりますので、**十分ご注意ください。**
+  **You will not be able to obtain the same ID again on the same server,** so please be cautious.
 
   ---------------
 
-  以上すべてをご理解の上で、それでもアカウントを削除する必要がある方は、以下からお使いの機器タイプを選択し、アカウント削除を行ってください。
+  After understanding all of the above, and if you still need to delete your account, please select your device type below and proceed with the account deletion.
 guides:
   - 
     _AUTOSELECT_TYPE_: "HARD_SMARTPHONE"
     _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
-    title: "スマートフォン"
+    title: "Smartphone"
     steps:
       - 
-        title: "設定を開く"
+        title: "Open Settings"
         image: "sp/1.png"
         description: |
-          Misskeyを開き、画面右下の「≡」ボタンをタップ、でてきたメニューの「設定」をタップします。
+          Open Misskey, tap the "≡" button at the bottom right of the screen, then tap "Settings" from the menu that appears.
       - 
-        title: "「その他」をタップ"
+        title: "Tap \"Other\""
         image: "sp/2.png"
         description: |
-          設定カテゴリの中から「その他」を見つけてタップします。
+          Find and tap on "Other" within the settings category.
       - 
-        title: "「アカウント削除をリクエスト」をタップ"
+        title: "Tap \"Request account deletion\""
         image: "sp/3.png"
         description: |
-          「アカウントを閉鎖する」をタップして開き、注意事項を確認の上「アカウント削除をリクエスト」をタップします。
+          Tap "Close Account" to open it, then tap "Request account deletion" button after reviewing the instructions.
       - 
-        title: "パスワードを入力"
+        title: "Enter password"
         image: "sp/4.png"
         description: |
-          重要な操作のため、確認のために、お使いのアカウントにログインする際に使用しているパスワードを入力します。
+          Enter the password for confirmation as it initiates the dangerous operation.
       - 
-        title: "アカウント削除の申請完了"
+        title: "Request for account deletion is complete"
         image: "sp/5.png"
         description: |
-          この画面が表示されたらアカウント削除の申請は完了です。「わかった」をタップすると、Misskeyサーバーからログアウトします。
+          When this screen appears, your request to delete your account is complete. Tap "OK" to log out of the Misskey server.
   - 
     _AUTOSELECT_TYPE_: "HARD_PC"
     title: "PC"
     steps:
       - 
-        title: "設定を開く"
+        title: "Open Settings"
         image: "pc/2.png"
         description: |
-          「設定」を開き、少しスクロールすると見える「その他」をクリックします。
+          Open "Settings" and click on "Other," which can be found by scrolling down a bit.
       - 
-        title: "「アカウント削除をリクエスト」をクリック"
+        title: "Click \"Request account deletion\""
         image: "pc/3.png"
         description: |
-          「アカウントを閉鎖する」をタップして開き、注意事項を確認の上「アカウント削除をリクエスト」をタップします。
+          Click "Close Account" to open it, then click "Request account deletion" button after reviewing the instructions.
       - 
-        title: "パスワードを入力"
+        title: "Enter password"
         image: "pc/4.png"
         description: |
-          重要な操作のため、確認のために、お使いのアカウントにログインする際に使用しているパスワードを入力します。
+          Enter the password for confirmation as it initiates the dangerous operation.
       - 
-        title: "アカウント削除の申請完了"
+        title: "Request for account deletion is complete"
         image: "pc/5.png"
         description: |
-          この画面が表示されたらアカウント削除の申請は完了です。「わかった」をタップすると、Misskeyサーバーからログアウトします。
+          When this screen appears, your request to delete your account is complete. Tap "OK" to log out of the Misskey server.
