@@ -304,6 +304,8 @@ _shareLinkGenerator:
   testLink: "공유 링크 테스트"
   typeSomethingToGetLink: "본문을 입력하면 링크가 생성됩니다."
   typeSomethingToGetButton: "본문을 입력하면 버튼이 생성됩니다."
+  documentationIs: "パラメータの詳細情報など、技術仕様は{here}"
+  here: "こちら"
 _goToMisskey:
   title: "Misskey Web으로"
   heading: "이 페이지를 열 서버를 선택하여 주십시오"
