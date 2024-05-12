@@ -304,6 +304,8 @@ _shareLinkGenerator:
   testLink: "Test the sharing link"
   typeSomethingToGetLink: "Enter the body to generate sharing link."
   typeSomethingToGetButton: "Enter the body to generate share button code."
+  documentationIs: "パラメータの詳細情報など、技術仕様は{here}"
+  here: "こちら"
 _goToMisskey:
   title: "Go to your Misskey Web"
   heading: "Select the server you want to open the page and continue"
