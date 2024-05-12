@@ -3,6 +3,16 @@
         <h1 class='text-2xl lg:text-3xl font-bold mb-4'>
             {{ $t('_shareLinkGenerator.title') }}
         </h1>
+        <Tip>
+            <I18nT scope="global" keypath="_shareLinkGenerator.documentationIs" tag="span">
+                <template #here>
+                    <GNuxtLink
+                        :to="localePath('/docs/for-users/features/share-form/#hub-share-disclaimer')"
+                        class="text-blue-600 hover:underline underline-offset-4"
+                    >{{ $t('_shareLinkGenerator.here') }}</GNuxtLink>
+                </template>
+            </I18nT>
+        </Tip>
         <div class='rounded-lg grid md:grid-cols-2 gap-8'>
             <div class="space-y-4">
                 <div class="p-6 space-y-4 rounded-lg bg-white dark:bg-slate-950">
@@ -146,6 +156,7 @@ const generatedUrl = computed(() => {
 const generatedHtml = computed(() => '');
 
 const { t } = useI18n();
+const localePath = useGLocalePath();
 const route = useRoute();
 
 route.meta.title = t('_shareLinkGenerator.title');
