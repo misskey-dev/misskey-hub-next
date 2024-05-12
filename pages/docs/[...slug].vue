@@ -99,7 +99,7 @@
                 <ContentRenderer v-if="data.body.children.length > 0" :value="data" class="markdown-body w-full mb-6">
                 </ContentRenderer>
                 <div class="mt-8 mb-4 flex flex-wrap justify-end gap-3">
-                    <div><GNuxtLink class="hover:underline underline-offset-4" target="_blank" :to="`${runtimeConfig.public.repositoryUrl}/tree/master/content/${data._file}`">{{ $t('_docs._contribute.editThis') }}<ExtIco class="ml-1" /></GNuxtLink></div>
+                    <div v-if="data._file"><GNuxtLink class="hover:underline underline-offset-4" target="_blank" :to="`${runtimeConfig.public.repositoryUrl}/tree/master/content/${data._file.replace(/^\/?[a-z-]+\//, 'ja/')}`">{{ $t('_docs._contribute.editThis') }}<ExtIco class="ml-1" /></GNuxtLink></div>
                     <div><GNuxtLink class="hover:underline underline-offset-4" target="_blank" to="https://crowdin.com/project/misskey-hub">{{ $t('_docs._contribute.translateThis') }}<ExtIco class="ml-1" /></GNuxtLink></div>
                 </div>
                 <DocsPrevNext :ignore-dir-based-nav="data?.ignoreDirBasedNav ?? false" />
@@ -124,7 +124,7 @@
 import AsideNavIco from 'bi/text-indent-left.svg';
 import ArrowLRIco from 'bi/arrow-left-right.svg';
 import ExtIco from 'bi/box-arrow-up-right.svg';
-import type { MiDocsParsedContent } from '~/types/content';
+import type { MiDocsParsedContent } from '@/types/content';
 
 const isAsideNavOpen = useState<boolean>('miHub_docs_asideNav_openState', () => false);
 
