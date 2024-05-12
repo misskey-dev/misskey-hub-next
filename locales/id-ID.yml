@@ -304,6 +304,8 @@ _shareLinkGenerator:
   testLink: "Tes tautan yang dibagikan"
   typeSomethingToGetLink: "Masukkan teks untuk membuat tautan berbagi."
   typeSomethingToGetButton: "Masukkan teks untuk membuat kode tombol berbagi."
+  documentationIs: "パラメータの詳細情報など、技術仕様は{here}"
+  here: "こちら"
 _goToMisskey:
   title: "Pergi ke Situs Misskey"
   heading: "Pilih peladen yang kamu ingin buka halamannya dan lanjutkan"
