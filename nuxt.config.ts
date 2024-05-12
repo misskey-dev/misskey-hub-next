@@ -186,16 +186,17 @@ export default defineNuxtConfig({
 	hooks: {
 		'build:before': async () => {			
 			genApiTranslationFiles();
-			if (process.env.NODE_ENV === 'development') {
-				fsWatch('./locales/', (ev, filename) => {
-					if (filename && filename.endsWith('.yml')) {
-						genLocalesJson();
-					}
-				});
-			}
 
 			await Promise.all([
-				genLocalesJson(),
+				genLocalesJson().then(() => {
+					if (process.env.NODE_ENV === 'development') {
+						fsWatch('./locales/', (ev, filename) => {
+							if (filename && filename.endsWith('.yml')) {
+								genLocalesJson();
+							}
+						});
+					}		
+				}),
 				genSpaLoadingTemplate(),
 				fetchCrowdinMembers(),
 			]);
