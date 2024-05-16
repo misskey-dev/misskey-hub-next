@@ -20,7 +20,7 @@ Starting with Misskey v2023.11.0, you can now install various additional resourc
 「インストール」ボタンに、以下のようなURLを持つリンクを作成する
 
 ```
-https://{HOST}/install-extentions?url={API_URL}&hash={HASH}
+https://{HOST}/install-extensions?url={API_URL}&hash={HASH}
 ```
 
 - `{HOST}`: ユーザーのサーバーのホストに置き換えます。ホストはユーザーが入力できるようにすることが一般的です。
