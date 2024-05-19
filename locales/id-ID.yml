@@ -14,8 +14,8 @@ settings: "Pengaturan"
 goToLegacyHub: "Misskey Hub Jadul"
 contactUs: "Hubungi kami"
 detail: "Selengkapnya"
-lastUpdate: "最終更新"
-empty: "内容がありません"
+lastUpdate: "Pembaruan terakhir"
+empty: "Tidak ada konten"
 _error:
   notFound: "Halaman Tidak Ditemukan"
   notFoundDesc: "Halaman yang kamu cari tidak dapat ditemukan. Mohon cek kembali URL yang kamu tuju."
@@ -106,8 +106,8 @@ _servers:
   description: "Misskey bukanlah layanan satuan namun jejaring terdesentralisasi dimana para individu menyediakan banyak layanan. Untuk menggunakan Misskey, kamu perlu membuat akun di peladen yang menawarkan layanan tersebut."
   addYourServer: "Apakah peladenmu tidak terdaftar? Daftarkan segera {0}!"
   addYourServerLink: "di sini"
-  disclaimerTitle: "【重要】免責事項"
-  disclaimer: "このサーバー一覧は、Fediverse上で発見されたMisskeyサーバーを自動で掲載するものであり、原則として手動での確認は行っておりません。ここに掲載されているサーバーは、Misskey Projectが確認・検証・承認したものではありません。アクセス先でユーザーに生じたあらゆる損害について、Misskey Projectは一切責任を負いません。"
+  disclaimerTitle: "[PENTING] Penafian"
+  disclaimer: "Daftar peladen ini adalah daftar otomatis dari peladen Misskey yang ditemukan pada Fediverse dan umumnya tidak diverifikasi secara manual. Peladen yang didaftarkan di sini BELUM dicek, diverifikasi, ataupun diterima oleh Proyek Misskey. Proyek Misskey tidak bertanggung jawab untuk kerusakan apapun yang disebabkan oleh pengguna pada peladen yang diakses."
   _system:
     fetchError: "Gagal untuk mengambil data. Mohon coba lagi nanti."
   _statistics:
@@ -170,9 +170,9 @@ _docs:
     title: "Daftar Isi"
     toPageTop: "Kembali ke Atas"
   _steppedGuide:
-    selectCourse: "ガイドを選ぶ"
-    noImageInThisStep: "このステップには画像がありません"
-    aiWellDone: "操作はこれで完了です。お疲れ様でした♪"
+    selectCourse: "Pilih panduan"
+    noImageInThisStep: "Tidak ada gambar pada langkah ini"
+    aiWellDone: "Semua prosedur telah dilakukan. Selamat!"
 _blog:
   title: "Blog"
   description: "Dapatkan informasi dan tips mengenai Misskey langsung dari Tim Pengembang Misskey! (hanya Bahasa Jepang)"
@@ -200,9 +200,9 @@ _contact:
   form: "Apabila kamu ingin mengirimkan kami sebuah pertanyaan, kamu dapat mengirimkannya dengan mengisi form ini."
   formGoogleAccountRequired: "Untuk saat ini, kami meminta kamu untuk memiliki akun Google ketika mengirimkan pesan kepada kami. Hal ini dikarenakan untuk pencegahan spam yang serius. Kami mohon maaf atas ketidak nyamanan ini dan berterima kasih banyak atas pengertiannya."
   formLink: "Pergi ke form"
-  faqTitle: "よくあるお問い合わせ"
-  faqDescription: "お問い合わせを送信する前に、あなたの知りたいことがここにないか確認してください。"
-  ifNothingIsFound: "もしあてはまるものがなかったら…"
+  faqTitle: "FAQ"
+  faqDescription: "Sebelum mengisi pertanyaan, mohon pastikan bahwa apa yang kamu ingin tanyakan tidak ada di sini."
+  ifNothingIsFound: "Apabila poin di atas tidak ada yang cocok denganmu..."
 _links:
   title: "Tautan"
   _github:
@@ -304,8 +304,8 @@ _shareLinkGenerator:
   testLink: "Tes tautan yang dibagikan"
   typeSomethingToGetLink: "Masukkan teks untuk membuat tautan berbagi."
   typeSomethingToGetButton: "Masukkan teks untuk membuat kode tombol berbagi."
-  documentationIs: "パラメータの詳細情報など、技術仕様は{here}"
-  here: "こちら"
+  documentationIs: "Spesifikasi teknis yang detil seperti referensi parameter dapat ditemukan {here}"
+  here: "di sini"
 _goToMisskey:
   title: "Pergi ke Situs Misskey"
   heading: "Pilih peladen yang kamu ingin buka halamannya dan lanjutkan"
