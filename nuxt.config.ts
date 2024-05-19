@@ -91,6 +91,7 @@ export default defineNuxtConfig({
 				{ rel: 'shortcut icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
 				{ rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
 				{ rel: 'me', href: 'https://misskey.io/@misskey_hub_deploy' },
+				{ rel: 'me', href: 'https://mastodon.social/@misskey' },
 			],
 			meta: [
 				{ name: 'twitter:card', content: 'summary_large_image' },
