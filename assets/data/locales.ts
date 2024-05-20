@@ -15,4 +15,6 @@ export const localesConst = [
 
 export type LocaleCodes = typeof localesConst[number]['code'];
 
+export const localePathRegex = new RegExp(`^/(${localesConst.map((v) => v.code).join('|')})/`);
+
 export const locales = localesConst as unknown as LocaleObject[];

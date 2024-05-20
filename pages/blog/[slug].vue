@@ -31,8 +31,10 @@
 
 <script setup lang="ts">
 import LeftIco from 'bi/arrow-left.svg';
-import { joinURL, parseURL, withQuery } from 'ufo';
+import { joinURL, parseURL, withQuery, cleanDoubleSlashes } from 'ufo';
 import { isLocalPath } from '@/assets/js/misc';
+import { localePathRegex } from '@/assets/data/locales';
+import type { LocaleCodes } from '@/assets/data/locales';
 import type { MiBlogParsedContent } from '~/types/content';
 
 import MiIco from '@/assets/svg/misskey_mi_bi.svg';
@@ -48,9 +50,8 @@ defineI18nRoute({
 const route = useRoute();
 
 // ▼他言語からやってきたときに正しいパスに戻す▼
-const originalLocale = useState('miHub_blog_originalLocale', () => 'ja');
+const originalLocale = useState<LocaleCodes>('miHub_blog_originalLocale', () => 'ja');
 const localePath = useGLocalePath();
-const getRouteBaseName = useRouteBaseName();
 let isTransformed = false;
 
 onBeforeRouteLeave((to) => {
@@ -58,12 +59,11 @@ onBeforeRouteLeave((to) => {
         return;
     }
 
-    const brn = getRouteBaseName(to);
-    if (!brn) {
-        return to;
-    }
+    if (isTransformed) return to;
+
     isTransformed = true;
-    return localePath({ name: brn }, originalLocale.value);
+    const nonLocalePath = (to.fullPath ?? to).replace(localePathRegex, '/');
+    return cleanDoubleSlashes(localePath(nonLocalePath, originalLocale.value));
 });
 // ▲他言語からやってきたときに正しいパスに戻す▲
 
