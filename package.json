@@ -27,6 +27,7 @@
     "js-yaml": "^4.1.0",
     "mfm-js": "^0.24.0",
     "misskey-js": "2024.3.1",
+    "misskey-hub-markdown-fixer": "file:./scripts/markdown-fixer",
     "nprogress": "^0.2.0",
     "nuxt": "^3.11.1",
     "postcss": "^8.4.38",

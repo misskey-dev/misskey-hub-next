@@ -212,7 +212,8 @@ html.light .markdown-body {
 	padding-top: 16px;
 }
 
-html[lang='ja-JP'] .markdown-body > p,
-html[lang='ja-JP'] .markdown-body :not(.ignore) p:not(.truncate-box) {
-	line-height: 1.8;
+.markdown-body > p,
+.markdown-body :not(.ignore) p:not(.truncate-box),
+.markdown-body li {
+	line-height: 1.75;
 }

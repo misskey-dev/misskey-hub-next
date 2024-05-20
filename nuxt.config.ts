@@ -91,6 +91,7 @@ export default defineNuxtConfig({
 				{ rel: 'shortcut icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
 				{ rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
 				{ rel: 'me', href: 'https://misskey.io/@misskey_hub_deploy' },
+				{ rel: 'me', href: 'https://mastodon.social/@misskey' },
 			],
 			meta: [
 				{ name: 'twitter:card', content: 'summary_large_image' },
@@ -98,6 +99,9 @@ export default defineNuxtConfig({
 		},
 	},
 	content: {
+		markdown: {
+			remarkPlugins: [ 'misskey-hub-markdown-fixer' ],	
+		},
 		navigation: {
 			fields: [
 				'date',
@@ -181,19 +185,21 @@ export default defineNuxtConfig({
 		}
 	},
 	hooks: {
-		'build:before': async (...args) => {
-			genApiTranslationFiles(...args);
-			if (process.env.NODE_ENV === 'development') {
-				fsWatch('./locales/', (ev, filename) => {
-					if (filename && filename.endsWith('.yml')) {
-						genLocalesJson(...args);
-					}
-				});
-			}
+		'build:before': async () => {			
+			genApiTranslationFiles();
+
 			await Promise.all([
-				genLocalesJson(...args),
-				genSpaLoadingTemplate(...args),
-				fetchCrowdinMembers(...args),
+				genLocalesJson().then(() => {
+					if (process.env.NODE_ENV === 'development') {
+						fsWatch('./locales/', (ev, filename) => {
+							if (filename && filename.endsWith('.yml')) {
+								genLocalesJson();
+							}
+						});
+					}		
+				}),
+				genSpaLoadingTemplate(),
+				fetchCrowdinMembers(),
 			]);
 		},
 	},

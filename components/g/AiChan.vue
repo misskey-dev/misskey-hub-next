@@ -12,18 +12,22 @@
 
 <script setup lang="ts">
 const live2d = shallowRef<HTMLIFrameElement>();
-const isEnabledAiChanMode = ref<boolean>(false);
 const loaded = ref(false);
 const isUwu = useState<boolean>('miHub_uwu');
 
-if (import.meta.client) {
-    isEnabledAiChanMode.value = ((localStorage.getItem('miHub_aichan_mode') ?? '') == 'true' || (isUwu.value && window.innerWidth >= 1440));
+const isEnabledAiChanMode = useState('miHub_aichan_mode', () => {
+    if (!import.meta.client) return false;
+    let value = ((localStorage.getItem('miHub_aichan_mode') ?? '') == 'true' || (isUwu.value && window.innerWidth >= 1440));
 
     // migration
     if (!localStorage.getItem('miHub_aichan_mode') && localStorage.getItem('aimode') && !isUwu.value) {
-        isEnabledAiChanMode.value = ((localStorage.getItem('aimode') ?? '') == 'true');
+        value = ((localStorage.getItem('aimode') ?? '') == 'true');
     }
 
+    return value;
+});
+
+if (import.meta.client) {
     function messageEventHandler(ev: MessageEvent) {
         if (ev.origin === 'https://misskey-dev.github.io' && ev.data.type === 'loaded') {
             loaded.value = true;
