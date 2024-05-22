@@ -108,6 +108,8 @@ _servers:
   description: "Misskeyは単一のサービスじゃなくて、みんながそれぞれサービスを提供する分散型ネットワークになってるから、Misskeyを使いたかったら、サービスを提供してるサーバーでアカウントを作らなあかんねん。"
   addYourServer: "あんたのサーバーがここに出てこんなら、{0}から登録してな。"
   addYourServerLink: "ここ"
+  disclaimerTitle: "免責事項"
+  disclaimer: "このサーバー一覧は、Fediverseで見つけたMisskeyサーバーを自動で乗っけてるだけで、普段からどんなサーバーがあるかとかの確認はやってないねん。ここに載ってるサーバーは、Misskey Projectがたしかめたり、承認したりしたものじゃないから気ぃつけてな。アクセス先であんたになんかあっても、責任は取らへんで。"
   _system:
     fetchError: "ごめん、今データほかしてもうたからちょっと後でもっかい見に来て。"
   _statistics:
@@ -155,6 +157,9 @@ _docs:
   _changelog:
     title: "リリースノート"
     description: "Misskeyのバージョンアップ履歴を見れるようになってるから、アプデ入ったら確認しに来てな！"
+  _donate:
+    title: "プロジェクトへの寄付"
+    description: "Misskeyは無料で使えるオープンソースソフトやから、開発資金はみんなからの寄付で成り立っとんねん。Misskeyええやんってなったら、今後も開発を続けられるように支援してな。"
   _forUsers:
     title: "Misskeyユーザー向け"
   _forAdmin:
@@ -167,6 +172,10 @@ _docs:
   _toc:
     title: "このページの中身"
     toPageTop: "ページの上まで戻る"
+  _steppedGuide:
+    selectCourse: "ガイドを選ぶ"
+    noImageInThisStep: "このステップに画像はないで"
+    aiWellDone: "操作はこれで完了です。お疲れ様でした♪お好み焼きでも食べて休憩しましょう😋"
 
 _blog:
   title: "ブログ"
@@ -199,6 +208,9 @@ _contact:
   form: "このフォームから回答してな"
   formGoogleAccountRequired: "今、スパムっちゅう厄介なのがおって、問い合わせを送ってもらうためにGoogleアカウントが要ることになっとんねん。\nめんどくさいかもしれんけど、よろしゅうおねがいします～"
   formLink: "フォームへ進む"
+  faqTitle: "よくあるお問い合わせ"
+  faqDescription: "なんか送る前に、ここに知りたいことがないか確認してみてな。"
+  ifNothingIsFound: "見つからんかったら…"
 
 _links:
   title: "リンク"
@@ -246,8 +258,8 @@ _aidConverter:
   date: "日付時刻"
 
 _aboutUs:
-  title: "Misskey Development Divisionについて"
-  description: "Misskey開発チームについての色々書いてあるで。"
+  title: "Misskey Projectについて"
+  description: "Misskey Projectについての色々書いてあるで。"
   _team:
     title: "開発メンバー"
     description: "Misskeyの開発に関わっている人を紹介してるで。"
@@ -309,6 +321,8 @@ _shareLinkGenerator:
   testLink: "共有リンクを試す"
   typeSomethingToGetLink: "本文を打ったらリンクが出てくんで。"
   typeSomethingToGetButton: "本文を入力するとボタンが生成されます。"
+  documentationIs: "パラメータとか、詳しい技術的な話は{here}"
+  here: "ここ"
 
 _goToMisskey:
   title: "Misskey Webに移動"
