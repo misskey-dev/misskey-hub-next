@@ -174,6 +174,7 @@ async function updatePos() {
 if (import.meta.client) {
     window.addEventListener('scroll', updatePos);
     window.addEventListener('resize', updatePos);
+    updatePos();
 }
 
 onUnmounted(() => {

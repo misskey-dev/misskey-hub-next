@@ -96,6 +96,10 @@ import DisplayIcon from 'bi/display.svg';
 import MenuIcon from 'bi/list.svg';
 import XIcon from 'bi/x.svg';
 import DotIcon from 'bi/dot.svg';
+
+import { sanitizeInternalPath } from '@/assets/js/misc';
+import { withTrailingSlash, cleanDoubleSlashes } from 'ufo';
+
 import NavData from '@/assets/data/nav';
 import { localesConst } from '@/assets/data/locales';
 import type { LocaleCodes } from '@/assets/data/locales';
@@ -132,7 +136,7 @@ const localePath = useGLocalePath();
 const spLocaleOption = ref(currentLocale.value as LocaleCodes);
 function changeLocale() {
     const path = switchLocalePath(spLocaleOption.value);
-    push(path);
+    push(withTrailingSlash(cleanDoubleSlashes(sanitizeInternalPath(path)), true));
 }
 
 const colorMode = useColorMode();
