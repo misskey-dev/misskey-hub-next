@@ -79,7 +79,7 @@ _landing:
       title: "帖文串"
       description: "您可以将帖子串起来，形成一个长长的串，持续交流，直到满意为止。"
     _charts:
-      title: "图标"
+      title: "图表"
       description: "Misskey 内置图表引擎，可轻松实现服务器的使用情况和其他信息的可视化。"
     _widgets:
       title: "小组件"
