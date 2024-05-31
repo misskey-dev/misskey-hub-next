@@ -3,7 +3,7 @@
         <div class="mx-auto container max-w-screen-xl">
             <div class="md:flex">
                 <div class="flex-grow mb-6 md:mb-0 space-y-6">
-                    <GNuxtLink :to="localePath('/')" class="flex items-center">
+                    <GNuxtLink :to="localePath('/')" class="flex w-fit items-center hover:opacity-70">
                         <MiIcon class="h-8 w-8 mr-3" />
                         <span class="self-center text-2xl font-bold font-title whitespace-nowrap">{{ $t('_seo.siteName') }}</span>
                     </GNuxtLink>

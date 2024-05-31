@@ -321,7 +321,7 @@ _shareLinkGenerator:
   testLink: "共有リンクを試す"
   typeSomethingToGetLink: "本文を打ったらリンクが出てくんで。"
   typeSomethingToGetButton: "本文を入力するとボタンが生成されます。"
-  documentationIs: "パラメータとか、詳しい技術的な話は{here}"
+  documentationIs: "パラメータとか、詳しい技術的な話は{here}見てな！"
   here: "ここ"
 
 _goToMisskey:
