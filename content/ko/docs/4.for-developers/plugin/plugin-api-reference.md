@@ -1,10 +1,10 @@
 # 플러그인 API 레퍼런스
 
-ここでは、Misskeyで独自に拡張されたAiScript APIについて紹介しています。
+여기서는 Misskey에서 독자적으로 확장한 AiScript API에 대해 소개합니다.
 
 :::tip
 
-標準装備のAiScript APIは[こちら](https://github.com/aiscript-dev/aiscript/blob/master/docs/get-started.md)からご覧いただけます。
+표준으로 제공되는 AiScript API는 [여기](https://github.com/aiscript-dev/aiscript/blob/master/docs/get-started.md)에서 확인할 수 있습니다.
 
 :::
 
@@ -12,19 +12,19 @@
 
 ### `USER_ID`
 
-現在のユーザーのID
+현재 사용자 ID
 
 ### `USER_NAME`
 
-現在のユーザーの名前
+현재 사용자 이름
 
 ### `USER_USERNAME`
 
-現在のユーザーのハンドル（`@`より後ろの部分。例: `@ai@example.com` → `ai`）
+현재 사용자의 핸들(`@`보다 뒤쪽 부분.예: `@ai@example.com` → `ai`)
 
 ### `CUSTOM_EMOJIS`
 
-カスタム絵文字の一覧。以下のようなオブジェクトが配列で格納されています
+커스텀 이모티콘 목록.다음과 같은 객체가 배열로 저장되어 있습니다.
 
 ```ts
 type EmojiSimple = {
@@ -38,15 +38,15 @@ type EmojiSimple = {
 }
 ```
 
-### `Plugin:register_user_action(title fn)`
+### `LOCALE`
 
-現在のMisskey Webの設定言語。RFC4646互換の形式（`ja-JP`など）で表されます
+현재 Misskey Web의 설정 언어.RFC4646 호환 형식(예: `ja-JP`)으로 표현됩니다.
 
 ### `SERVER_URL`
 
-現在のサーバーのURL。`https://www.example.com` のようにオリジンで表されます
+현재 서버의 URL.`https://www.example.com`과 같이 오리진으로 표현됩니다.
 
-## 全分野共通関数
+## 전 분야 공통 함수
 
 ### `Mk:dialog(title, text, type)`
 
@@ -81,7 +81,7 @@ if (response) {
 
 Misskey API에 요청합니다.Misskey API에 요청합니다.첫 번째 인수로 엔드포인트 이름, 두 번째 인수로 매개변수 객체를 전달합니다.
 
-第三引数にtokenを入れることもできます。プラグインで動作する場合は、引数指定無しでログイン中のユーザーのtokenが使用されます。
+세 번째 인수에 token을 넣을 수도 있습니다.플러그인에서 동작하는 경우, 인수 지정 없이 로그인 중인 사용자의 token이 사용됩니다.
 
 ### `Mk:save(key, value)`
 
@@ -91,7 +91,7 @@ Misskey API에 요청합니다.Misskey API에 요청합니다.첫 번째 인수�
 
 Mk:save에서 영속화한 지정된 이름의 값을 읽습니다.
 
-## プラグイン専用
+## 플러그인 전용
 
 ### `Plugin:register_post_form_action(title, fn)`
 
@@ -101,10 +101,10 @@ Mk:save에서 영속화한 지정된 이름의 값을 읽습니다.
 생략하면 `info`가 됩니다.
 
 ```AiScript
-Plugin:register_post_form_action('メニューに表示される項目名', @(note, rewrite) {
+Plugin:register_post_form_action('메뉴에 표시될 항목명', @(note, rewrite) {
 
-  // ノートに何らかの変更を加える
-  rewrite('text', `{note.text}{Str:lf}#ハッシュタグ`)
+  // 노트에 변경을 가한다.
+  rewrite('text', `{{note.text}{Str:lf}#해시태그`)
 })
 ```
 
@@ -114,11 +114,11 @@ Plugin:register_post_form_action('メニューに表示される項目名', @(no
 콜백 함수에는 첫 번째 인수로 대상 노트 객체가 전달됩니다.
 
 ```AiScript
-Plugin:register_note_action('メニューに表示される項目名', @(note) {
+Plugin:register_note_action('메뉴에 표시할 항목 이름', @(note) {
 
-  // ノートを使って何かする
+  // 노트를 사용하여 무언가 하기
   Mk:api('notes/create', {
-    text: '引用'
+    text: '인용'
     renoteId: note.id
   })
 
@@ -131,11 +131,11 @@ Plugin:register_note_action('メニューに表示される項目名', @(note) {
 콜백 함수에는 첫 번째 인수로 대상 사용자 객체가 전달됩니다.
 
 ```AiScript
-Plugin:register_user_action('メニューに表示される項目名', @(user) {
+Plugin:register_user_action('메뉴에 표시할 항목명', @(user) {
 
-  // ユーザー情報を使って何かする
+  // 사용자 정보를 이용하여 무언가 하기.
   Mk:api('notes/create', {
-    text: `{user.name}さん、ようこそ！`
+    text: `{user.name}님, 환영합니다! `{{user.name}님, 환영합니다!
   })
 
 })
@@ -147,16 +147,16 @@ UI에 표시되는 노트 정보를 다시 작성합니다.노트 게시시 노�
 콜백 함수에는 첫 번째 인수로 대상 노트 객체가 전달됩니다.\
 콜백 함수의 반환값으로 노트를 다시 작성합니다.\
 콜백 함수의 반환값으로 노트를 다시 작성합니다.\
-`null` を返すとそのノートを非表示にします。
+null\`을 반환하면 해당 노트를 숨깁니다.
 
 ```AiScript
 Plugin:register_note_view_interruptor(@(note) {
   
-  // ノートの中身を書き換える
-  note.text = note.text.replace('リンゴ', 'バナナ')
+  // 노트 내용 바꾸기
+  note.text = note.text.replace('apple', 'banana')
 
-  // nullを返すと非表示
-  if (note.text.incl('納豆')) {
+  // null을 반환하면 숨기기
+  if (note.text.include('낫토')) { { return null
     return null
   }
 
@@ -174,8 +174,8 @@ Plugin:register_note_view_interruptor(@(note) {
 ```AiScript
 Plugin:register_note_post_interruptor(@(note) {
   
-  // ノートの中身を書き換える
-  note.text = note.text.replace('リンゴ', 'バナナ')
+  // 노트 내용 바꾸기
+  note.text = note.text.replace('사과', '바나나')
 
   return note
 })
@@ -183,14 +183,14 @@ Plugin:register_note_post_interruptor(@(note) {
 
 ### `Plugin:register_page_view_interruptor(fn)`
 
-Page閲覧時にPage情報を書き換えます。\
-コールバック関数には、第一引数に対象のPageオブジェクトが渡されます。\
-コールバック関数の返り値でPageが書き換えられます。
+페이지 열람 시 페이지 정보를 다시 작성합니다.\
+콜백 함수에는 첫 번째 인수로 대상 Page 객체가 전달됩니다.\
+콜백 함수의 반환값으로 Page가 다시 작성됩니다.
 
 ```AiScript
 Plugin:register_note_post_interruptor(@(page) {
   
-  // ページの中身を書き換える（省略）
+  // 페이지 내용 재작성(생략)
 
   return page
 })
@@ -204,25 +204,25 @@ Plugin:register_note_post_interruptor(@(page) {
 
 플러그인 설정이 저장되는 오브젝트입니다.플러그인 정의의 config에서 설정한 키로 값이 들어갑니다.플러그인 정의의 config에서 설정한 키로 값이 들어갑니다.
 
-## Play専用 定数
+## Play 전용 상수
 
 ### `THIS_ID`
 
-PlayのID
+Play의 ID
 
 ### `THIS_URL`
 
-PlayのURL
+Play의 URL
 
-## UI制御関数（Play・AiScript Appウィジェットで使用可能）
+## UI 제어 함수 (Play, AiScript App 위젯에서 사용 가능)
 
 ### `Ui:root`
 
-UIのルート要素。
+UI의 루트 요소.
 
 ### `Ui:render([ ...components ])`
 
-`Ui:root.update({ children: [ ...components ] })` の糖衣構文。UIのルート要素を書き換えます。
+`Ui:root.update({ children: [ ...components ] })` 의 당의구문.UI의 루트 요소를 다시 작성합니다.
 
 ```AiScript
 Ui:render([
@@ -233,14 +233,14 @@ Ui:render([
 
 ### `Ui:get(id)`
 
-IDを付与したコンポーネントを取得し、操作を行えます。
+ID를 부여한 컴포넌트를 가져와서 조작할 수 있습니다.
 
 ```AiScript
 Ui:C:text({text: "A"}, "text1")
 Ui:get("text1").update({text: "B"})
 ```
 
-## コンポーネント関数（Play・AiScript Appウィジェットで使用可能）
+## 컴포넌트 함수(Play, AiScript App 위젯에서 사용 가능)
 
 以下の要素では、初期化の際に `Ui:C:xxx(props id)` のように第2引数にコンポーネントのidを指定することができます（以下のリファレンスではすべて省略しています）。指定したidは `Ui:get(id)` 関数で取得でき、`update` 関数でコンポーネントの中身を直接変更することができます（詳しくは `Ui:get(id)` のリファレンスをご覧ください）。
 
