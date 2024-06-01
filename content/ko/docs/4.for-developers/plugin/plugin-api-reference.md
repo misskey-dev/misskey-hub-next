@@ -135,7 +135,7 @@ Plugin:register_user_action('메뉴에 표시할 항목명', @(user) {
 
   // 사용자 정보를 이용하여 무언가 하기.
   Mk:api('notes/create', {
-    text: `{user.name}님, 환영합니다! `{{user.name}님, 환영합니다!
+    text: `{user.name}님, 환영합니다! `
   })
 
 })
@@ -156,7 +156,7 @@ Plugin:register_note_view_interruptor(@(note) {
   note.text = note.text.replace('apple', 'banana')
 
   // null을 반환하면 숨기기
-  if (note.text.include('낫토')) { { return null
+  if (note.text.include('낫토')) {
     return null
   }
 
