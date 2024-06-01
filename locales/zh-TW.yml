@@ -304,8 +304,8 @@ _shareLinkGenerator:
   testLink: "測試分享連結"
   typeSomethingToGetLink: "輸入本文後將生成連結。"
   typeSomethingToGetButton: "輸入本文後將生成按鈕。"
-  documentationIs: "パラメータの詳細情報など、技術仕様は{here}"
-  here: "こちら"
+  documentationIs: "技術規格，包括參數的詳細資訊，可以在 {here} 找到"
+  here: "這裡"
 _goToMisskey:
   title: "前往 Misskey Web"
   heading: "請選擇要開啟此頁面的伺服器"

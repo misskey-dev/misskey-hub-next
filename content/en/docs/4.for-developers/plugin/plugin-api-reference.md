@@ -93,15 +93,13 @@ Reads the value of the specified name saved by Mk:save.
 
 ### `Plugin:register_post_form_action(title, fn)`
 
-Adds an action in the post form.Passes the name of the action as the first argument and the callback function when the action is selected as the second argument.The post form object is passed to the callback function as the first argument.
+Adds an action in the post form.Passes the name of the action as the first argument and the callback function when the action is selected as the second argument.The callback function is passed the `text` and `cw` of the submitted form object as its first argument, and the function to rewrite them as its second argument.
 
 ```AiScript
-Plugin:register_post_form_action('Item name displayed on the menu', @(note) {
+Plugin:register_post_form_action('Item name displayed on the menu', @(note, rewrite) {
 
   // Make some change to the note...
-  note.text = `{note.text}{Str:lf}#examplehashtag`
-
-  return note // Return modified note
+  rewrite('text', `{note.text}{Str:lf}#examplehashtag`)
 })
 ```
 
@@ -265,7 +263,7 @@ Ui:C:container({
 
 #### `Ui:C:folder`
 
-アコーディオン要素（ユーザーが開けたり閉めたりできるコンテナ）
+Accordion components (containers that users can open and close)
 
 ```AiScript
 Ui:C:folder({
