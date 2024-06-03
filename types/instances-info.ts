@@ -26,7 +26,7 @@ export type InstanceItem = {
     meta: MisskeyEntities.MetaLite | null,
     /** Number of Notes per Day (15-day average) */
     npd15: number, 
-    stats?: Record<string, any>,   //  deprecated (result of api/stats)
+    stats?: MisskeyEntities.StatsResponse,   //  deprecated (result of api/stats)
 };
 
 /** JSON Object Returned from `joinmisskey/api`. */

@@ -14,6 +14,10 @@
                 anchor: '#notes',
             },
             {
+                name: $t('_servers._statistics.users'),
+                anchor: '#users',
+            },
+            {
                 name: $t('_servers._statistics.version'),
                 anchor: '#version'
             }
@@ -54,6 +58,21 @@
                 <div>
                     <ul class="space-y-1">
                         <li v-for="value, key, index in trunc(notesCountStats)" class="grid py-1 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" :class="$style.kvRoot" @mouseenter.passive="notesCountFocus = index" @mouseleave.passive="notesCountFocus = undefined">
+                            <div v-if="key === '__others'">{{ $t('other') }}</div>
+                            <div v-else>{{ key }}</div>
+                            <div class="font-bold font-mono text-accent-600">{{ $n(value) }}</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="users">
+            <h2 class="text-2xl lg:text-3xl font-title font-bold mb-4">{{ $t(`_servers._statistics.users`) }}</h2>
+            <div class="grid gap-4 md:grid-cols-2">
+                <div><ChartsCircGraph class="max-w-xs mx-auto" :data="usersCountStats" :truncMinor="0.008" :focusedIndex="usersCountFocus" /></div>
+                <div>
+                    <ul class="space-y-1">
+                        <li v-for="value, key, index in trunc(usersCountStats, 0.008)" class="grid py-1 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" :class="$style.kvRoot" @mouseenter.passive="usersCountFocus = index" @mouseleave.passive="usersCountFocus = undefined">
                             <div v-if="key === '__others'">{{ $t('other') }}</div>
                             <div v-else>{{ key }}</div>
                             <div class="font-bold font-mono text-accent-600">{{ $n(value) }}</div>
@@ -169,6 +188,29 @@ const notesCountStats = computed(() => {
         );
 });
 const notesCountFocus = ref<number | undefined>();
+
+const usersCountStats = computed(() => {
+    const d = data.value?.instancesInfos;
+    if (!d || d.length === 0) {
+        return [];
+    }
+    const out: Record<string, number> = {};
+
+    d.forEach((v) => {
+        out[v.name] = v.stats?.originalUsersCount ?? 0;
+    });
+
+    return Object.entries(out)
+        .sort(([, a], [, b]) => b - a)
+        .reduce(
+            (r, [k, v]) => ({
+            ...r,
+            [k]: v
+            }),
+            {}
+        );
+});
+const usersCountFocus = ref<number | undefined>();
 
 const avgVersionStats = computed(() => {
     const d = data.value?.instancesInfos;
