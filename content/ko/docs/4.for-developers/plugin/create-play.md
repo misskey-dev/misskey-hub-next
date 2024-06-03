@@ -1,13 +1,13 @@
-# Playの作成
+# Play 만들기
 
-Playは、AiScriptで独自のUIを組み立て、ユーザー側でミニアプリやゲームを作成できる機能です。
-作ったPlayはMisskeyサーバー上で公開することができ、誰でもあなたが作ったPlayで遊ぶことができます。
+Play는 AiScript로 자신만의 UI를 조립하여 사용자 측에서 미니 앱이나 게임을 만들 수 있는 기능입니다.
+만든 Play는 Misskey 서버에 공개할 수 있으며, 누구나 당신이 만든 Play를 플레이할 수 있습니다.
 
 ## AiScript
 
-PlayはAiScriptを用いて作成できます。
+Play는 AiScript를 사용하여 만들 수 있습니다.
 
 ## API
 
-Misskey Webはプラグインに対してAPIを公開していて、それらを利用することでクライアントの機能を拡張できます。
-どのようなAPIがあるかは[AiScript Misskey拡張API リファレンス](./plugin-api-reference/)を参照してください。
+Misskey Web은 플러그인에 대한 API를 공개하고 있으며, 이를 이용하여 클라이언트의 기능을 확장할 수 있습니다.
+어떤 API가 있는지 [AiScript Misskey 확장 API 레퍼런스](./plugin-api-reference/)를 참고하시기 바랍니다.

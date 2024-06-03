@@ -1,19 +1,19 @@
 # Nginx 설정
 
-[nginx](https://nginx.org/)をリバースプロキシとして活用し、Misskeyサーバーを直接インターネットに公開せず運用することをお勧めします。
-これにより、以下のようなメリットが得られます。
+[nginx](https://nginx.org/)를 리버스 프록시로 활용하여 Misskey 서버를 직접 인터넷에 공개하지 않고 운영할 것을 권장합니다.
+이를 통해 다음과 같은 이점을 얻을 수 있습니다.
 
-- セキュリティ強化：リバースプロキシを通じてアクセスを制御することで、Misskeyサーバーに直接攻撃が及ぶリスクを軽減します。
-- 柔軟な設定：nginxは柔軟な設定オプションを提供しており、リバースプロキシとしての機能だけでなく、キャッシュ[^1]やセキュリティポリシーの設定も行えます。
+- 보안 강화: 리버스 프록시를 통해 접근을 제어함으로써 Misskey 서버에 대한 직접적인 공격의 위험을 줄일 수 있습니다.
+- 유연한 설정: nginx는 리버스 프록시 기능뿐만 아니라 캐시[^1] 및 보안 정책 설정, 리버스 프록시 기능 등 유연한 설정 옵션을 제공합니다.
 
-これらの利点を活かして、Misskeyサーバーをより安全かつ効率的に運用することが可能です。
-また、CloudflareなどのCDNと併せて設定することで、さらなる効果を見込めます。
+이러한 장점을 활용하여 Misskey 서버를 보다 안전하고 효율적으로 운영할 수 있습니다.
+또한, Cloudflare와 같은 CDN과 함께 구성하면 더 큰 효과를 기대할 수 있습니다.
 
-[^1]: nginxの機能である[proxy_cache_lock](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_lock)と[proxy_cache_use_stale](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_use_stale)を活用することで、キャッシュ未作成の状態で大量アクセスがあってもMisskeyサーバーの負荷増大を抑える効果が期待できます。
+[^1]: nginx의 기능인 [proxy_cache_lock](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_lock)과 [proxy_cache_use_stale](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_use_stale)를 활용하면 캐시 미작성 상태에서 대량 접속이 발생하더라도 Misskey 서버의 부하 증가를 줄일 수 있는 효과를 기대할 수 있습니다.
 
-## 設定方法の一例
+## 설정 방법의 예시
 
-以下はサーバーマシン（VPSなど）に直接nginxをインストールし、認証局として[Let's Encrypt](https://letsencrypt.org/)を採用したケースでの設定例です。
+다음은 서버 머신(VPS 등)에 직접 nginx를 설치하고 인증기관으로 [Let's Encrypt](https://letsencrypt.org/)를 채택한 경우의 설정 예시입니다.
 
 1. `/etc/nginx/conf.d/misskey.conf` 또는 `/etc/nginx/sites-available/misskey.conf`를 생성하고 아래 설정 예시를 복사합니다..\.
    (파일명은 misskey가 아니어도 상관없습니다.)）
