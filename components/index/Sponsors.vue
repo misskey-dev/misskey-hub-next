@@ -59,12 +59,6 @@ const sponsors: Sponsor[] = [
         to: 'https://skeb.jp/',
     },
     {
-        img: '/img/sponsors/dcadvirth.png',
-        margin: false,
-        noRounded: true,
-        to: 'https://www.dotchain.ltd/advirth',
-    },
-    {
         img: '/img/sponsors/xserver.png',
         margin: false,
         to: 'https://www.xserver.ne.jp/',
