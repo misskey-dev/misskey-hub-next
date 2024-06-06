@@ -396,7 +396,6 @@ _api:
       "read:admin:server-info": "Lihat informasi peladen"
       "read:admin:show-moderation-log": "Lihat log moderasi"
       "read:admin:show-user": "Lihat informasi privat milik pengguna"
-      "read:admin:show-users": "Lihat informasi privat milik pengguna"
       "write:admin:suspend-user": "Tangguhkan pengguna"
       "write:admin:unset-user-avatar": "Hapus avatar pengguna"
       "write:admin:unset-user-banner": "Hapus banner pengguna"
