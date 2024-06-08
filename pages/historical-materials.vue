@@ -153,6 +153,13 @@
 														<p class="text-sm text-gray-600 dark:text-gray-400">この頃になるとUIも洗練され、現代のMisskeyとあまり変わらない。分散型になり、リアクション機能もある</p>
 													</div>
 											</div>
+											<div>
+													<img src="/img/historical-materials/2018/propaganda.jpg" class="rounded-lg" />
+													<div class="text-center mt-2">
+														<p class="text-sm text-gray-600 dark:text-gray-400">2018年9月ごろ</p>
+														<p class="text-sm text-gray-600 dark:text-gray-400">当時のプロパガンダ画像</p>
+													</div>
+											</div>
 										</div>
 									</div>
 							</div>
