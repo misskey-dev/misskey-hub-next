@@ -31,10 +31,6 @@
 											anchor: '#2016',
 									},
 									{
-											name: '2017',
-											anchor: '#2017',
-									},
-									{
 											name: '2018',
 											anchor: '#2018',
 									},
@@ -47,10 +43,11 @@
 											anchor: '#2020',
 									},
 									{
-											name: '2021',
-											anchor: '#2021',
+											name: '2024',
+											anchor: '#2024',
 									},
 							]" />
+							<div>昔の資料をお持ちの方はぜひ当館まで寄贈ください。</div>
 							<div class="grid gap-x-12 gap-y-4 w-full" :class="$style.yearRoot" id="2014">
 									<div>
 											<div class="lg:sticky lg:top-32">
@@ -105,8 +102,20 @@
 									</div>
 									<div>
 											<div class="grid md:grid-cols-2 gap-4">
-													
+												<div>
+													<img src="/img/historical-materials/2015/20150201.png" class="rounded-lg" />
+													<div class="text-center mt-2">
+														<p class="text-sm text-gray-600 dark:text-gray-400">2015年2月ごろ</p>
+													</div>
+												</div>
 											</div>
+											<div>
+													<img src="/img/historical-materials/2015/20151025.png" class="rounded-lg" />
+													<div class="text-center mt-2">
+														<p class="text-sm text-gray-600 dark:text-gray-400">2015年10月ごろ</p>
+														<p class="text-sm text-gray-600 dark:text-gray-400">UIが現代のものに近づく</p>
+													</div>
+												</div>
 									</div>
 							</div>
 							<div class="grid gap-x-12 gap-y-4 w-full" :class="$style.yearRoot" id="2016">
@@ -117,19 +126,15 @@
 									</div>
 									<div>
 											<div class="grid md:grid-cols-2 gap-4">
-													
+												<div class="grid md:grid-cols-2 gap-4">
+												<div>
+													<img src="/img/historical-materials/2016/20160501.png" class="rounded-lg" />
+													<div class="text-center mt-2">
+														<p class="text-sm text-gray-600 dark:text-gray-400">2016年5月ごろ</p>
+														<p class="text-sm text-gray-600 dark:text-gray-400">まだ分散型ではないものの、この頃から既にいくつかサーバーがあった</p>
+													</div>
+												</div>
 											</div>
-									</div>
-							</div>
-							<div class="grid gap-x-12 gap-y-4 w-full" :class="$style.yearRoot" id="2017">
-									<div>
-											<div class="lg:sticky lg:top-32">
-													<h3 class="font-title font-bold text-2xl lg:text-2xl mb-2 lg:mb-4">2017</h3>
-											</div>
-									</div>
-									<div>
-											<div class="grid md:grid-cols-2 gap-4">
-													
 											</div>
 									</div>
 							</div>
@@ -141,8 +146,14 @@
 									</div>
 									<div>
 											<div class="grid md:grid-cols-2 gap-4">
-													
+												<div>
+													<img src="/img/historical-materials/2018/20180930.png" class="rounded-lg" />
+													<div class="text-center mt-2">
+														<p class="text-sm text-gray-600 dark:text-gray-400">2018年9月ごろ</p>
+														<p class="text-sm text-gray-600 dark:text-gray-400">この頃になると、もう現代のMisskeyとあまり変わらない。分散型になり、リアクション機能もある</p>
+													</div>
 											</div>
+										</div>
 									</div>
 							</div>
 							<div class="grid gap-x-12 gap-y-4 w-full" :class="$style.yearRoot" id="2019">
@@ -153,7 +164,13 @@
 									</div>
 									<div>
 											<div class="grid md:grid-cols-2 gap-4">
-													
+												<div>
+													<img src="/img/historical-materials/2019/20190414.png" class="rounded-lg" />
+													<div class="text-center mt-2">
+														<p class="text-sm text-gray-600 dark:text-gray-400">2019年4月ごろ</p>
+														<p class="text-sm text-gray-600 dark:text-gray-400">時代は平成から令和に</p>
+													</div>
+											</div>
 											</div>
 									</div>
 							</div>
@@ -165,19 +182,31 @@
 									</div>
 									<div>
 											<div class="grid md:grid-cols-2 gap-4">
-													
+												<div>
+													<img src="/img/historical-materials/2020/20200215.png" class="rounded-lg" />
+													<div class="text-center mt-2">
+														<p class="text-sm text-gray-600 dark:text-gray-400">2020年2月ごろ</p>
+														<p class="text-sm text-gray-600 dark:text-gray-400">UIが少し変わる</p>
+													</div>
+											</div>
 											</div>
 									</div>
 							</div>
-							<div class="grid gap-x-12 gap-y-4 w-full" :class="$style.yearRoot" id="2021">
+							<div class="grid gap-x-12 gap-y-4 w-full" :class="$style.yearRoot" id="2024">
 									<div>
 											<div class="lg:sticky lg:top-32">
-													<h3 class="font-title font-bold text-2xl lg:text-2xl mb-2 lg:mb-4">2021</h3>
+													<h3 class="font-title font-bold text-2xl lg:text-2xl mb-2 lg:mb-4">2024</h3>
 											</div>
 									</div>
 									<div>
 											<div class="grid md:grid-cols-2 gap-4">
-													
+												<div>
+													<img src="/img/historical-materials/2024/acbedd05d6ef418498c6b9467dd0fe6c.webp" class="rounded-lg" />
+													<div class="text-center mt-2">
+														<p class="text-sm text-gray-600 dark:text-gray-400">2024年6月</p>
+														<p class="text-sm text-gray-600 dark:text-gray-400">現代のMisskey</p>
+													</div>
+											</div>
 											</div>
 									</div>
 							</div>
