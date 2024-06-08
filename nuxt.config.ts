@@ -115,7 +115,8 @@ export default defineNuxtConfig({
 				// Theme used if `html.dark`
 				dark: 'github-dark',
 			},
-			preload: [
+			langs: [
+				'json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'mdc', 'md', 'yaml',
 				'ini', 'sql', 'yml', 'nginx', 'bash',
 				JSON.parse(readFileSync('./node_modules/aiscript-vscode/aiscript/syntaxes/aiscript.tmLanguage.json', { encoding: 'utf-8' })),
 			],

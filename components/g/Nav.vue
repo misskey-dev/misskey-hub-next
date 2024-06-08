@@ -148,5 +148,5 @@ function rotateColorMode() {
     colorMode.preference = values[next];
 }
 
-const scrollPos = useState('miHub_global_scrollPos');
+const scrollPos = useState<number>('miHub_global_scrollPos');
 </script>
