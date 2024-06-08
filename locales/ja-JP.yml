@@ -367,6 +367,10 @@ _identiconGenerator:
   userName: "ユーザー名"
   includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
 
+_historicalMaterials:
+  title: "歴史資料館"
+  description: "Misskeyに関する歴史的資料を一挙公開"
+
 _api:
   _permissions:
     title: "権限"

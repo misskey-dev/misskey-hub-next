@@ -57,6 +57,12 @@
                         cutLeft: true,
                     },
 										{
+                        to: localePath('/historical-materials/'),
+                        title: $t('_historicalMaterials.title'),
+                        description: $t('_historicalMaterials.description'),
+                        img: '/img/emojis/classical_building_3d.png',
+										},
+										{
                         to: localePath('/contact/'),
                         title: $t('_contact.title'),
                         description: $t('_contact.description'),
