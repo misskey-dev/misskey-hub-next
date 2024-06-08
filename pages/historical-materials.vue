@@ -59,7 +59,41 @@
 									</div>
 									<div>
 											<div class="grid md:grid-cols-2 gap-4">
+												<div>
 													<img src="/img/historical-materials/2014/e32efd98b06f42efb19504574ce31e42.png" class="rounded-lg" />
+													<div class="text-center mt-2">
+														<p class="text-sm text-gray-600 dark:text-gray-400">2014年7月ごろ</p>
+														<p class="text-sm text-gray-600 dark:text-gray-400">Misskey公開。ウィンドウが並ぶ特徴的なUI</p>
+													</div>
+												</div>
+												<div>
+													<img src="/img/historical-materials/2014/20141100.jpg" class="rounded-lg" />
+													<div class="text-center mt-2">
+														<p class="text-sm text-gray-600 dark:text-gray-400">2014年11月ごろ</p>
+														<p class="text-sm text-gray-600 dark:text-gray-400">記事を公開できる「ノート機能」(※現在の「ノート」とは別)</p>
+													</div>
+												</div>
+												<div>
+													<img src="/img/historical-materials/2014/20141203.jpg" class="rounded-lg" />
+													<div class="text-center mt-2">
+														<p class="text-sm text-gray-600 dark:text-gray-400">2014年12月ごろ</p>
+														<p class="text-sm text-gray-600 dark:text-gray-400">タイムライン機能がメインになる</p>
+													</div>
+												</div>
+												<div>
+													<img src="/img/historical-materials/2014/56002e01550f83a515819092-1.jpg" class="rounded-lg" />
+													<div class="text-center mt-2">
+														<p class="text-sm text-gray-600 dark:text-gray-400">時期不明</p>
+														<p class="text-sm text-gray-600 dark:text-gray-400">しゅいろの操作ミスでデータ全消滅事件</p>
+													</div>
+												</div>
+												<div>
+													<img src="/img/historical-materials/2014/56031e4a20b3edf83c3dd100-1.jpg" class="rounded-lg" />
+													<div class="text-center mt-2">
+														<p class="text-sm text-gray-600 dark:text-gray-400">時期不明</p>
+														<p class="text-sm text-gray-600 dark:text-gray-400">この頃配布された壁紙</p>
+													</div>
+												</div>
 											</div>
 									</div>
 							</div>
