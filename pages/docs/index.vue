@@ -44,8 +44,8 @@
                         title: $t('_docs._changelog.title'),
                         description: $t('_docs._changelog.description'),
                         img: '/img/emojis/rocket_3d.png',
-											},
-										{
+                    },
+                    {
                         to: localePath('/about-us/'),
                         title: $t('_aboutUs.title'),
                         description: $t('_aboutUs.description'),
