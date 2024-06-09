@@ -40,7 +40,7 @@
 				</div>
 			</div>
 			<div class="pb-12 bg-black text-slate-200">
-				<div class="container mx-auto max-w-screen-xl px-6 pt-4 space-y-8">
+				<div class="container mx-auto max-w-screen-xl px-6 pt-4 space-y-12">
 					<GLocalNav :items="[
 						{
 							name: '2014',
