@@ -17,7 +17,7 @@
 					<div class="w-full">
 						<MisskeyLogo class="w-[70%] mx-auto mb-2" />
 						<h1 class="font-kaisei font-bold text-3xl lg:text-5xl mb-6">{{ $t('_historicalMaterials.title') }}</h1>
-						<p class="whitespace-pre-wrap">{{ $t('_historicalMaterials.heroDescription') }}</p>
+						<p class="whitespace-pre-wrap leading-relaxed">{{ $t('_historicalMaterials.heroDescription') }}</p>
 					</div>
 				</div>
 				<div class="absolute top-20 left-1/2 -translate-x-1/2 hidden xl:block w-full h-[calc(100vh-5rem)] max-w-screen-2xl pointer-events-none">
@@ -33,7 +33,7 @@
 				<div class="container mx-auto max-w-screen-md p-6 border-2 border-white rounded-xl">
 					<h2 class="font-bold text-lg lg:text-xl mb-3">{{ $t('_historicalMaterials.submissionTitle') }}</h2>
 					<I18nT tag="p" scope="global" keypath="_historicalMaterials.submissionDescription" class="whitespace-pre-wrap">
-						<template #gh_issue><GNuxtLink to="https://github.com/misskey-dev/misskey-hub-next/issues" class="underline-offset-4 hover:underline">GitHub Issue</GNuxtLink></template>
+						<template #gh_issue><GNuxtLink to="https://github.com/misskey-dev/misskey-hub-next/issues" target="_blank" class="underline-offset-4 hover:underline">GitHub Issue<ExtIco class="mx-1"/></GNuxtLink></template>
 					</I18nT>
 				</div>
 			</div>
@@ -242,20 +242,22 @@
 				</div>
 			</div>
 		</div>
+		<GFooter />
 	</div>
 </template>
 
 <script setup lang="ts">
 import MisskeyLogo from '@/assets/svg/misskey-logotype.svg';
+import ExtIco from 'bi/box-arrow-up-right.svg';
 
 const { t, locale } = useI18n();
 const route = useRoute();
 
 useHead(() => ({
 	link: (locale.value === 'cn') ? [
-		{ rel: 'stylesheet', href: 'https://fonts.googleapis.cn/css2?family=Kaisei+Decol&display=swap' },
+		{ rel: 'stylesheet', href: 'https://fonts.googleapis.cn/css2?family=Kaisei+Decol:wght@400;700&display=swap' },
 	] : [
-		{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap' },
+		{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;700&display=swap' },
 	],
 }));
 
@@ -265,8 +267,8 @@ definePageMeta({
 	layout: 'landing',
 });
 
-route.meta.title = t('_aboutUs._team.title');
-route.meta.description = t('_aboutUs._team.description');
+route.meta.title = t('_historicalMaterials.title');
+route.meta.description = t('_historicalMaterials.description');
 route.meta.gNavColorMode = 'dark';
 </script>
 
@@ -288,25 +290,48 @@ html:not([lang="zh-CN"]):not([lang="zh-TW"]):not([lang="ko-KR"]) .font-kaisei {
 
 .heroImagesLeft {
 	left: 3rem;
-	transform: perspective(1000px) rotateY(30deg) translateY(var(--additionalTranslateY, 0));
 }
 
 .heroImagesRight {
 	right: 3rem;
-	transform: perspective(1000px) rotateY(-30deg) translateY(var(--additionalTranslateY, 0));
 }
 
 .heroImages1 {
-	top: 1.5rem;
+	top: 3rem;
 }
 
 .heroImages2 {
-	--additionalTranslateY: -50%;
 	top: 50%;
 }
 
 .heroImages3 {
-	bottom: 1.5rem;
+	bottom: 3rem;
+}
+
+.heroImages1.heroImagesLeft {
+	transform: perspective(1000px) rotateY(30deg) skew(-10deg, 5deg) scale(0.95);
+}
+
+.heroImages2.heroImagesLeft {
+	left: 1.5rem;
+	transform: perspective(1000px) rotateY(30deg) translateY(-50%);
+}
+
+.heroImages3.heroImagesLeft {
+	transform: perspective(1000px) rotateY(30deg) skew(10deg, -5deg) scale(0.95);
+}
+
+.heroImages1.heroImagesRight {
+	transform: perspective(1000px) rotateY(-30deg) skew(10deg, -5deg) scale(0.95);
+}
+
+.heroImages2.heroImagesRight {
+	right: 1.5rem;
+	transform: perspective(1000px) rotateY(-30deg) translateY(-50%);
+}
+
+.heroImages3.heroImagesRight {
+	transform: perspective(1000px) rotateY(-30deg) skew(-10deg, 5deg) scale(0.95);
 }
 
 .yearRoot {

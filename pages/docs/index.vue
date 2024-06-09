@@ -29,7 +29,11 @@
                     {
                         name: $t('_docs._forDevelopers.title'),
                         anchor: '#forDevelopers',
-                    }
+                    },
+                    {
+                        name: $t('other'),
+                        anchor: '#other',
+                    },
                 ]" />
                 <GLargeLinks :items="[
                     {
@@ -55,7 +59,7 @@
                 <DocsReadersNav section-id="forUsers" id="forUsers" />
                 <DocsReadersNav section-id="forAdmin" id="forAdmin" />
                 <DocsReadersNav section-id="forDevelopers" id="forDevelopers" />
-                <section>
+                <section id="other">
                     <h2 class="text-2xl lg:text-3xl font-title font-bold mb-4">
                         {{ $t('other') }}
                     </h2>
