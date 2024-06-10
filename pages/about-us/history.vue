@@ -11,15 +11,19 @@
 				<img src="/img/historical-materials/lp/curtain.jpg" class="absolute top-0 left-0 object-cover w-full h-full pointer-events-none"/>
 				<div class="w-full h-screen relative">
 					<div class="absolute top-0 left-0 w-full h-full pointer-events-none" :class="$style.heroSpotLightRoot"></div>
-					<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] text-center">
+					<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] text-center px-6">
 						<div class="mb-6">
 							<span class="inline-block px-2 py-0.5 border-[6px] border-white border-double">{{ $t('_historicalMaterials.heroSubtitle') }}</span>
 						</div>
 						<div class="w-full">
-							<MisskeyLogo class="w-[70%] mx-auto mb-2" />
+							<MisskeyLogo class="w-[75%] mx-auto mb-2" />
 							<h1 class="font-kaisei font-bold text-3xl lg:text-5xl mb-6">{{ $t('_historicalMaterials.title') }}</h1>
 							<p class="whitespace-pre-wrap leading-relaxed">{{ $t('_historicalMaterials.heroDescription') }}</p>
 						</div>
+					</div>
+					<div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-full text-center">
+						<div class="text-center text-lg w-full mb-3">Scroll</div>
+						<ChevronDownIco class="w-8 h-8 animate-bounce" />
 					</div>
 					<div class="absolute top-20 left-1/2 -translate-x-1/2 hidden xl:block w-full h-[calc(100vh-5rem)] max-w-screen-2xl pointer-events-none">
 						<img :class="[$style.heroImages, $style.heroImagesLeft, $style.heroImages1]" src="/img/historical-materials/2014/56031e4a20b3edf83c3dd100-1.jpg" />
@@ -31,11 +35,13 @@
 					</div>
 				</div>
 				<div class="w-full relative py-12 bg-gradient-to-t from-black to-black/50">
-					<div class="container mx-auto max-w-screen-md p-6 border-2 border-white rounded-xl">
-						<h2 class="font-bold text-lg lg:text-xl mb-3">{{ $t('_historicalMaterials.submissionTitle') }}</h2>
-						<I18nT tag="p" scope="global" keypath="_historicalMaterials.submissionDescription" class="whitespace-pre-wrap">
-							<template #gh_issue><GNuxtLink to="https://github.com/misskey-dev/misskey-hub-next/issues" target="_blank" class="underline-offset-4 hover:underline">GitHub Issue<ExtIco class="mx-1"/></GNuxtLink></template>
-						</I18nT>
+					<div class="container mx-auto max-w-screen-md px-6">
+						<div class="p-6 border-2 border-white rounded-xl">
+							<h2 class="font-bold text-lg lg:text-xl mb-3">{{ $t('_historicalMaterials.submissionTitle') }}</h2>
+							<I18nT tag="p" scope="global" keypath="_historicalMaterials.submissionDescription" class="whitespace-pre-wrap">
+								<template #gh_issue><GNuxtLink to="https://github.com/misskey-dev/misskey-hub-next/issues" target="_blank" class="underline-offset-4 hover:underline">GitHub Issue<ExtIco class="mx-1"/></GNuxtLink></template>
+							</I18nT>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -252,6 +258,7 @@
 <script setup lang="ts">
 import MisskeyLogo from '@/assets/svg/misskey-logotype.svg';
 import ExtIco from 'bi/box-arrow-up-right.svg';
+import ChevronDownIco from 'bi/chevron-down.svg';
 
 const { t, locale } = useI18n();
 const route = useRoute();
