@@ -12,12 +12,14 @@
 				<div class="w-full h-screen relative">
 					<div class="absolute top-0 left-0 w-full h-full pointer-events-none" :class="$style.heroSpotLightRoot"></div>
 					<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] text-center px-6">
+						<!--
 						<div class="mb-6">
 							<span class="inline-block px-2 py-0.5 border-[6px] border-white border-double">{{ $t('_historicalMaterials.heroSubtitle') }}</span>
 						</div>
+					-->
 						<div class="w-full">
 							<MisskeyLogo class="w-[75%] mx-auto mb-2" />
-							<h1 class="font-kaisei font-bold text-3xl lg:text-5xl mb-6">{{ $t('_historicalMaterials.title') }}</h1>
+							<h1 class="font-bold text-3xl lg:text-5xl mb-6">{{ $t('_historicalMaterials.title') }}</h1>
 							<p class="whitespace-pre-wrap leading-relaxed">{{ $t('_historicalMaterials.heroDescription') }}</p>
 						</div>
 					</div>
