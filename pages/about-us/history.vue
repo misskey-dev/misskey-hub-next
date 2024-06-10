@@ -16,7 +16,7 @@
 						<div class="mb-6">
 							<span class="inline-block px-2 py-0.5 border-[6px] border-white border-double">{{ $t('_historicalMaterials.heroSubtitle') }}</span>
 						</div>
-					-->
+						-->
 						<div class="w-full">
 							<MisskeyLogo class="w-[75%] mx-auto mb-2" />
 							<h1 class="font-bold text-3xl lg:text-5xl mb-6">{{ $t('_historicalMaterials.title') }}</h1>
@@ -262,16 +262,8 @@ import MisskeyLogo from '@/assets/svg/misskey-logotype.svg';
 import ExtIco from 'bi/box-arrow-up-right.svg';
 import ChevronDownIco from 'bi/chevron-down.svg';
 
-const { t, locale } = useI18n();
+const { t } = useI18n();
 const route = useRoute();
-
-useHead(() => ({
-	link: (locale.value === 'cn') ? [
-		{ rel: 'stylesheet', href: 'https://fonts.googleapis.cn/css2?family=Kaisei+Decol:wght@400;700&display=swap' },
-	] : [
-		{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;700&display=swap' },
-	],
-}));
 
 const scrollPos = useState<number>('miHub_global_scrollPos');
 
@@ -283,12 +275,6 @@ route.meta.title = t('_historicalMaterials.title');
 route.meta.description = t('_historicalMaterials.description');
 route.meta.gNavColorMode = 'dark';
 </script>
-
-<style>
-html:not([lang="zh-CN"]):not([lang="zh-TW"]):not([lang="ko-KR"]) .font-kaisei {
-    font-family: 'Kaisei Decol', serif;
-}
-</style>
 
 <style module>
 .heroSpotLightRoot {
