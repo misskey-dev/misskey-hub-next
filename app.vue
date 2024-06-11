@@ -159,7 +159,8 @@ useHead((): Record<string, any> => ({
         ...cnHead,
     ],
     script: [
-        { type: "application/ld+json", children: getLdJson(route.meta.graph) }
+        { type: "application/ld+json", children: getLdJson(route.meta.graph) },
+				{ type: "module", src: "https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js" },
     ],
 }));
 // #endregion
