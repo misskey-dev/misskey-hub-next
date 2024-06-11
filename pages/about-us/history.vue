@@ -16,7 +16,7 @@
 					</div>
 					<div class="w-full">
 						<MisskeyLogo class="w-[75%] mx-auto mb-2" />
-						<h1 class="font-bold text-3xl lg:text-5xl mb-6">{{ $t('_historicalMaterials.title') }}</h1>
+						<h1 class="font-bold text-3xl lg:text-5xl mb-6"><span class="sr-only">Misskey </span>{{ $t('_historicalMaterials.title') }}</h1>
 						<p class="whitespace-pre-wrap leading-relaxed">{{ $t('_historicalMaterials.heroDescription') }}</p>
 					</div>
 				</div>
