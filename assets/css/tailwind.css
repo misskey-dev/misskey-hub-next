@@ -217,3 +217,7 @@ html.light .markdown-body {
 .markdown-body li {
 	line-height: 1.75;
 }
+
+.markdown-body video {
+	@apply rounded-lg;
+}
