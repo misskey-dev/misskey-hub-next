@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@babel/parser": "^7.24.4",
+    "@google/model-viewer": "^3.5.0",
     "@nuxt/content": "^2.12.1",
     "@nuxtjs/color-mode": "^3.3.3",
     "@nuxtjs/i18n": "^8.3.0",
@@ -26,8 +27,8 @@
     "github-markdown-css": "^5.5.1",
     "js-yaml": "^4.1.0",
     "mfm-js": "^0.24.0",
-    "misskey-js": "2024.5.0",
     "misskey-hub-markdown-fixer": "file:./scripts/markdown-fixer",
+    "misskey-js": "2024.5.0",
     "nprogress": "^0.2.0",
     "nuxt": "^3.11.1",
     "postcss": "^8.4.38",
@@ -36,6 +37,7 @@
     "schema-dts": "^1.1.2",
     "sitemap": "^7.1.1",
     "tailwindcss": "^3.4.3",
+    "three": "0.163.0",
     "ua-parser-js": "^1.0.37",
     "ufo": "^1.5.3",
     "vite-svg-loader": "^5.1.0"
