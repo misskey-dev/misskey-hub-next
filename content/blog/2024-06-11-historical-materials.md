@@ -1,9 +1,9 @@
 ---
 description: 'Misskey歴史資料館を公開'
-date: 2024-06-08
+date: 2024-06-11
 ---
 
-# NEWS: Misskey歴史資料館を公開
+# NEWS: Misskey歴史資料館を公開！
 
 皆様のご愛顧のおかげで、今年でMisskeyは10周年になります。
 
