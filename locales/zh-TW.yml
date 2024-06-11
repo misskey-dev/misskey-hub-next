@@ -16,6 +16,8 @@ contactUs: "聯絡我們"
 detail: "詳細資訊"
 lastUpdate: "最近更新"
 empty: "沒有內容。"
+threeDimensionModel: "3Dモデル"
+clickToShow: "クリックして表示"
 _error:
   notFound: "找不到此頁面"
   notFoundDesc: "找不到此頁面，請確認網址是否正確。"
