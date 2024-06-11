@@ -16,6 +16,8 @@ contactUs: "咨询"
 detail: "详情"
 lastUpdate: "最新更新"
 empty: "内容がありません"
+threeDimensionModel: "3Dモデル"
+clickToShow: "クリックして表示"
 _error:
   notFound: "找不到页面"
   notFoundDesc: "找不到您要查找的页面，请检查 URL。"
