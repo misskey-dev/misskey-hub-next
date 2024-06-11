@@ -16,6 +16,8 @@ contactUs: "Hubungi kami"
 detail: "Selengkapnya"
 lastUpdate: "Pembaruan terakhir"
 empty: "Tidak ada konten"
+threeDimensionModel: "3Dモデル"
+clickToShow: "クリックして表示"
 _error:
   notFound: "Halaman Tidak Ditemukan"
   notFoundDesc: "Halaman yang kamu cari tidak dapat ditemukan. Mohon cek kembali URL yang kamu tuju."
