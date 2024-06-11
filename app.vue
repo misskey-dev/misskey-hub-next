@@ -159,7 +159,7 @@ useHead((): Record<string, any> => ({
         ...cnHead,
     ],
     script: [
-        { type: "application/ld+json", children: getLdJson(route.meta.graph) }
+        { type: "application/ld+json", children: getLdJson(route.meta.graph) },
     ],
 }));
 // #endregion

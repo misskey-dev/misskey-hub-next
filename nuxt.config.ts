@@ -167,6 +167,11 @@ export default defineNuxtConfig({
 			}),
 		],
 	},
+	vue: {
+		compilerOptions: {
+			isCustomElement: (tag) => tag.startsWith('model-viewer'),
+		},
+	},
 	nitro: {
 		// リダイレクトが多すぎてCloudflare Pagesのネイティブリダイレクトが使えないので静的モードに強制
 		preset: (process.env.CF_PAGES ? 'static' : undefined),
