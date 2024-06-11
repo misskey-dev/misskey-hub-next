@@ -24,6 +24,12 @@
                         description: $t('_aboutUs._team.description'),
                         img: '/img/emojis/technologist_3d.png',
                     },
+                    {
+                        to: localePath('/about-us/history/'),
+                        title: $t('_historicalMaterials.title'),
+                        description: $t('_historicalMaterials.description'),
+                        img: '/img/emojis/classical_building_3d.png',
+                    },
                 ]" />
             </div>
         </div>

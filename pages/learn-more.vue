@@ -56,7 +56,7 @@
                         cutBottom: true,
                         cutLeft: true,
                     },
-										{
+                    {
                         to: localePath('/contact/'),
                         title: $t('_contact.title'),
                         description: $t('_contact.description'),
