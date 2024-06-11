@@ -16,6 +16,8 @@ contactUs: "Nous contacter"
 detail: "Détails"
 lastUpdate: "Dernière mise à jour"
 empty: "Pas de contenu"
+threeDimensionModel: "3Dモデル"
+clickToShow: "クリックして表示"
 _error:
   notFound: "La page demandée est introuvable !"
   notFoundDesc: "La page que vous cherchiez n'a pas pu être trouvée. Veuillez vérifier l'URL."
