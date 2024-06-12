@@ -30,10 +30,15 @@
                     </GNuxtLink>
                 </li>
                 <li class="lg:hidden px-4 py-2 flex justify-end items-center space-x-4">
-                    <button class="hover:opacity-80 relative before:absolute before:-z-10 before:-top-2 before:-left-2 before:w-9 before:h-9 before:rounded-full hover:before:bg-slate-300 dark:hover:before:bg-slate-600 h-5 w-5" @click="rotateColorMode()" aria-label="Change Color Mode">
+                    <button 
+                        class="hover:opacity-80 disabled:opacity-70 relative before:absolute before:-z-10 before:-top-2 before:-left-2 before:w-9 before:h-9 before:rounded-full hover:before:bg-slate-300 dark:hover:before:bg-slate-600 h-5 w-5"
+                        @click="rotateColorMode()"
+                        :disabled="colorMode.forced"
+                        aria-label="Change Color Mode"
+                    >
                         <ClientOnly>
-                            <SunIcon class="h-5 w-5" v-if="colorMode.preference === 'light'" />
-                            <MoonIcon class="h-5 w-5" v-else-if="colorMode.preference === 'dark'" />
+                            <SunIcon class="h-5 w-5" v-if="colorMode.preference === 'light' || (colorMode.forced && colorMode.value === 'light')" />
+                            <MoonIcon class="h-5 w-5" v-else-if="colorMode.preference === 'dark' || (colorMode.forced && colorMode.value === 'dark')" />
                             <DisplayIcon class="h-5 w-5" v-else />
                         </ClientOnly>
                     </button>
@@ -52,10 +57,15 @@
                 </button>
                 <ul class="hidden lg:col-span-4 lg:space-x-4 lg:flex justify-center">
                     <li>
-                        <button :class="['hover:opacity-80', { 'text-white 3xl:text-slate-800 3xl:dark:text-slate-200': (landing && scrollPos >= -40) }]" @click="rotateColorMode()" aria-label="Change Color Mode">
+                        <button 
+                            :class="['hover:opacity-80 disabled:opacity-70 disabled:cursor-not-allowed', { 'text-white 3xl:text-slate-800 3xl:dark:text-slate-200': (landing && scrollPos >= -40) }]"
+                            @click="rotateColorMode()"
+                            :disabled="colorMode.forced"
+                            aria-label="Change Color Mode"
+                        >
                             <ClientOnly>
-                                <SunIcon class="h-5 w-5" v-if="colorMode.preference === 'light'" />
-                                <MoonIcon class="h-5 w-5" v-else-if="colorMode.preference === 'dark'" />
+                                <SunIcon class="h-5 w-5" v-if="colorMode.preference === 'light' || (colorMode.forced && colorMode.value === 'light')" />
+                                <MoonIcon class="h-5 w-5" v-else-if="colorMode.preference === 'dark' || (colorMode.forced && colorMode.value === 'dark')" />
                                 <DisplayIcon class="h-5 w-5" v-else />
                             </ClientOnly>
                         </button>
@@ -148,5 +158,5 @@ function rotateColorMode() {
     colorMode.preference = values[next];
 }
 
-const scrollPos = useState('miHub_global_scrollPos');
+const scrollPos = useState<number>('miHub_global_scrollPos');
 </script>

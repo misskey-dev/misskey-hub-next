@@ -29,7 +29,11 @@
                     {
                         name: $t('_docs._forDevelopers.title'),
                         anchor: '#forDevelopers',
-                    }
+                    },
+                    {
+                        name: $t('other'),
+                        anchor: '#other',
+                    },
                 ]" />
                 <GLargeLinks :items="[
                     {
@@ -46,12 +50,6 @@
                         img: '/img/emojis/rocket_3d.png',
                     },
                     {
-                        to: localePath('/about-us/'),
-                        title: $t('_aboutUs.title'),
-                        description: $t('_aboutUs.description'),
-                        img: '/img/misc/midev.png',
-                    },
-                    {
                         to: localePath('/docs/donate'),
                         title: $t('_docs._donate.title'),
                         description: $t('_docs._donate.description'),
@@ -61,6 +59,18 @@
                 <DocsReadersNav section-id="forUsers" id="forUsers" />
                 <DocsReadersNav section-id="forAdmin" id="forAdmin" />
                 <DocsReadersNav section-id="forDevelopers" id="forDevelopers" />
+                <section id="other">
+                    <h2 class="text-2xl lg:text-3xl font-title font-bold mb-4">
+                        {{ $t('other') }}
+                    </h2>
+                    <GLinks :wide="true" :items="[
+                        {
+                            to: localePath('/about-us/'),
+                            title: $t('_aboutUs.title'),
+                            description: $t('_aboutUs.description'),
+                        },
+                    ]" />
+                </section>
             </div>
         </div>
     </div>
