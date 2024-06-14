@@ -248,6 +248,9 @@
 					</div>
 				</div>
 			</div>
+			<div class="mt-12 text-center">
+				<GSocialShare />
+			</div>
 		</div>
 		<GFooter />
 	</div>
