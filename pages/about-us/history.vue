@@ -273,6 +273,7 @@ definePageMeta({
 
 route.meta.title = t('_historicalMaterials.title');
 route.meta.description = t('_historicalMaterials.description');
+route.meta.thumbnail = '/img/historical-materials/lp/curtain.jpg';
 route.meta.gNavColorMode = 'dark';
 </script>
 
