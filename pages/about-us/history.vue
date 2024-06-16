@@ -271,9 +271,11 @@ definePageMeta({
 	colorMode: 'dark',
 });
 
+const runtimeConfig = useRuntimeConfig();
+
 route.meta.title = t('_historicalMaterials.title');
 route.meta.description = t('_historicalMaterials.description');
-route.meta.thumbnail = '/img/historical-materials/lp/og.png';
+route.meta.thumbnail = `${runtimeConfig.public.baseUrl}/img/historical-materials/lp/og.png`;
 route.meta.gNavColorMode = 'dark';
 </script>
 
