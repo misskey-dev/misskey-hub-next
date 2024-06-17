@@ -16,8 +16,8 @@ contactUs: "문의"
 detail: "자세히"
 lastUpdate: "마지막 수정"
 empty: "내용이 없습니다"
-threeDimensionModel: "3Dモデル"
-clickToShow: "クリックして表示"
+threeDimensionModel: "3D 모델"
+clickToShow: "클릭하여 표시"
 _error:
   notFound: "페이지를 찾을 수 없습니다"
   notFoundDesc: "요청하신 페이지를 찾을 수 없습니다. URL을 확인하여 주십시오."
@@ -344,6 +344,13 @@ _identiconGenerator:
   description: "Misskey에 가입했을 때 기본적으로 지정되는 초기 아이콘을 생성할 수 있습니다."
   userName: "유저명"
   includeDomain: "서버의 도메인 이름을 포함한 전체 사용자 이름을 입력해주세요."
+_historicalMaterials:
+  title: "역사관"
+  description: "Misskey의 역사적 자료를 여기에 공개"
+  heroSubtitle: "Misskey 10주년 기념 기획"
+  heroDescription: "Misskey는 2014년에 게시판 서비스로 태어났습니다. 그로부터 10년이 지났고, 지금은 많은 분들이 이용할 수 있는 플랫폼이 되었습니다.\n여기서는 Misskey에 대한 역사적 자료를 한 번에 공개합니다!"
+  submissionTitle: "오래된 Misskey의 스크린샷을 보유하고 계신가요?"
+  submissionDescription: "옛 Misskey에 대한 자료를 가지고 계신 분이 있다면, 꼭 저희에게 보내주세요.\nGitHub를 이용할 수 있는 분은 {gh_issue}로, 이용할 수 없는 분은 {'@'}syuilo{'@'}misskey.io 쪽으로 보내주시기 바랍니다."
 _api:
   _permissions:
     title: "권한"
