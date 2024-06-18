@@ -9,7 +9,7 @@
                 </I18nT>
                 <div class="!mt-2 space-y-2">
                     <div class="text-sm p-3 rounded-lg bg-white dark:bg-slate-800 border border-gray-300 dark:border-gray-950">
-                        {{ $t('lastUpdate') }}: {{ updatedAt ? $d(updatedAt) : $t('loading') }}
+                        {{ $t('lastUpdate') }}: {{ updatedAt ? $d(updatedAt, i18nDateFormatConfig) : $t('loading') }}
                     </div>
                     <details class="group overflow-hidden text-sm rounded-lg bg-white dark:bg-slate-800 border border-gray-300 dark:border-gray-950">
                         <summary class="p-3 cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-700 font-bold">{{ $t('_servers.disclaimerTitle') }}</summary>
@@ -73,6 +73,14 @@ const route = useRoute();
 
 const instancesStats = ref<InstancesStatsObj>();
 const updatedAt = shallowRef<Date>();
+
+const i18nDateFormatConfig: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+};
 
 function setServerStats(val?: InstancesStatsObj, updated?: string) {
     instancesStats.value = val;

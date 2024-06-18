@@ -37,7 +37,7 @@ async function toggleShow() {
 
 <style module>
 .modelViewer {
-    @apply rounded-lg;
+    @apply rounded-lg border border-slate-200 dark:border-slate-700;
 
     display: block;
     width: 100%;

@@ -172,8 +172,8 @@ async function updatePos() {
 }
 
 if (import.meta.client) {
-    window.addEventListener('scroll', updatePos);
-    window.addEventListener('resize', updatePos);
+    window.addEventListener('scroll', updatePos, { passive: true });
+    window.addEventListener('resize', updatePos, { passive: true });
     updatePos();
 }
 
@@ -185,7 +185,8 @@ onUnmounted(() => {
 });
 
 const hideFrom = computed(() => route.meta.scrollButton ? route.meta.scrollButton?.hideFrom ?? -45 : -45);
-const sbPosition = computed(() => route.meta.scrollButton ? { x: route.meta.scrollButton?.customPosition?.x ?? '2.5rem', y: route.meta.scrollButton?.customPosition?.y ?? '2.5rem' } ?? { x: '2.5rem', y: '2.5rem' } : { x: '2.5rem', y: '2.5rem' });
+const sbPositionX = computed(() => route.meta.scrollButton ? route.meta.scrollButton?.customPosition?.x ?? '2.5rem' : '2.5rem');
+const sbPositionY = computed(() => route.meta.scrollButton ? route.meta.scrollButton?.customPosition?.y ?? '2.5rem' : '2.5rem');
 
 function scrollToTop() {
     if (!import.meta.client) return;
@@ -219,7 +220,7 @@ function scrollToTop() {
 
 <style module>
 .scrollToTopButton {
-    bottom: v-bind(sbPosition.y);
-    right: v-bind(sbPosition.x);
+    bottom: v-bind(sbPositionY);
+    right: v-bind(sbPositionX);
 }
 </style>
