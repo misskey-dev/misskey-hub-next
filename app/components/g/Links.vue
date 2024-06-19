@@ -21,7 +21,7 @@
 <script setup lang="ts">
 import ArrowRightIco from 'bi/arrow-right.svg';
 import ArrowUpRightIco from 'bi/arrow-up-right.svg';
-import { isLocalPath } from 'assets/js/misc';
+import { isLocalPath } from '@/assets/js/misc';
 
 withDefaults(defineProps<{
     items: {

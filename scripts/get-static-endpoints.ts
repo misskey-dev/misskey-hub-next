@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 
 export function getStaticEndpoints(): string[] {
     const __dirname = dirname(fileURLToPath(import.meta.url))
-    const dir = resolve(`${__dirname}/../pages`);
+    const dir = resolve(`${__dirname}/../app/pages`);
     const files = getFiles(dir);
     const filtered = files
         .filter((file) => !file.includes('slug')) // exclude dynamic content

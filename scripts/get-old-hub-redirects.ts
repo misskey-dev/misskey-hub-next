@@ -1,6 +1,6 @@
-import { redirects } from './../assets/data/old-hub-redirects';
-import { localesConst, localePathRegex } from './../assets/data/locales';
-import type { LocaleCodes } from './../assets/data/locales';
+import { redirects } from './../app/assets/data/old-hub-redirects';
+import { localesConst, localePathRegex } from './../app/assets/data/locales';
+import type { LocaleCodes } from './../app/assets/data/locales';
 import type { PartialRecord } from './../types/others';
 import type { NuxtConfig } from 'nuxt/schema';
 import { joinURL } from 'ufo';
