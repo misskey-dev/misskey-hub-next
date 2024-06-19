@@ -94,7 +94,7 @@ onMounted(() => {
                         // 本当に画像を変更
                         screenshotIsUwu.value = true;
                         hasTransitionDone.value = true;
-                    }, 1000);
+                    }, (window.innerWidth < 1024 ? 0 : 1000));
                 });
             } else {
                 // Transitionを動かさずに画像を変更
