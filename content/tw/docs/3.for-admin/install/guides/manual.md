@@ -37,15 +37,10 @@ Misskey 不應以 root 使用者身分執行，因此應建立使用者。
 Debian 範例：
 
 ```sh
-sudo -iu misskey
-git clone --recursive https://github.com/misskey-dev/misskey.git
-cd misskey
-git checkout master
-git submodule update --init
-NODE_ENV=production pnpm install --frozen-lockfile
+adduser --disabled-password --disabled-login misskey
 ```
 
-## 更新完成後，請重新啟動 Misskey 服務。
+## 安裝 Misskey
 
 ```sh
 sudo -iu misskey
