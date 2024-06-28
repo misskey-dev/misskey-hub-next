@@ -1,5 +1,5 @@
 // API用翻訳ファイル自動生成
-import { locales } from "@/nuxt.config";
+import { locales } from "../app/assets/data/locales";
 import * as misskey from "misskey-js";
 import yaml from "js-yaml";
 import fs from "fs";

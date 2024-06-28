@@ -1,5 +1,5 @@
 import { promises as fsp } from 'fs';
-import { localesConst } from './../assets/data/locales';
+import { localesConst } from '../app/assets/data/locales';
 
 export async function genSpaLoadingTemplate() {
     const base = await fsp.readFile('app/spa-loading-template-base.html', 'utf-8');

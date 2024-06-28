@@ -100,8 +100,8 @@
 </template>
 
 <script setup lang="ts">
-import type { InstanceInfo } from '@/types/instances-info';
-import lang from '~/assets/data/lang';
+import type { InstanceInfo } from '@@/types/instances-info';
+import lang from '@/assets/data/lang';
 
 const { t } = useI18n();
 

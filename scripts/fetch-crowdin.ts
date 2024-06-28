@@ -1,5 +1,5 @@
 import { withQuery } from "ufo";
-import { localesConst, type LocaleCodes } from "../assets/data/locales";
+import { localesConst, type LocaleCodes } from "../app/assets/data/locales";
 import type { PartialRecord } from "../types/others";
 import { writeFileSync } from "fs";
 import path from "path";
@@ -40,11 +40,11 @@ function fallback(sourceFilePath: string, tsOut: string[]) {
 
 //@ts-ignore
 export async function fetchCrowdinMembers() {
-    const sourceFilePath = path.resolve(__dirname, '../assets/data/i18n-members.ts');
+    const sourceFilePath = path.resolve(__dirname, '../app/assets/data/i18n-members.ts');
     const tsOut = [
         '/** This file is auto-generated */',
         'import type { LocaleCodes } from \'@/assets/data/locales\';',
-        'import type { PartialRecord } from \'@/types/others\';',
+        'import type { PartialRecord } from \'@@/types/others\';',
         'import type { MiHubMember } from \'./team-members\';',
     ];
 

@@ -131,7 +131,7 @@
 import AsideNavIco from 'bi/text-indent-left.svg';
 import ArrowLRIco from 'bi/arrow-left-right.svg';
 import ExtIco from 'bi/box-arrow-up-right.svg';
-import type { MiDocsParsedContent } from '@/types/content';
+import type { MiDocsParsedContent } from '@@/types/content';
 
 const isAsideNavOpen = useState<boolean>('miHub_docs_asideNav_openState', () => false);
 

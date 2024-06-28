@@ -78,7 +78,7 @@
 </template>
 
 <script setup lang="ts">
-import type { InstanceItem } from '@/types/instances-info';
+import type { InstanceItem } from '@@/types/instances-info';
 
 withDefaults(defineProps<{
     instance: InstanceItem;
