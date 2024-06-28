@@ -26,12 +26,12 @@ Copy example configuration files with following:
 ```sh
 cp .config/docker_example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
-cp ./docker-compose.yml.example ./docker-compose.yml
+cp ./compose.yml ./compose.yml
 ```
 
 Edit `default.yml` and `docker.env` according to the instructions in the files.
 
-Edit `docker-compose.yml` if necessary. (e.g. if you want to change the port).
+Edit `compose.yml` if necessary. (e.g. if you want to change the port).
 
 Build and initialize
 ----------------------------------------------------------------
