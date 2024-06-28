@@ -1,22 +1,22 @@
 # AiScript
 
-AiScriptは、Misskeyの以下の箇所で使用できるスクリプト言語です。
+AiScript is a scripting language for Misskey that can be used in following features:
 
-- [プラグイン](./plugin/create-plugin/)
-- [ウィジェット](/docs/for-users/features/widgets/)
-  - ボタン
-  - AiScriptコンソール
+- [Plugins](./plugin/create-plugin/)
+- [Widgets](/docs/for-users/features/widgets/)
+  - Button
+  - AiScript console
   - AiScript App
 - [Misskey Play](./plugin/create-play/)
-- スクラッチパッド
+- Scratchpad
 
 :::tip
 
-AiScriptの実装はMisskeyとは別リポジトリで、[オープンソースで公開されています](https://github.com/aiscript-dev/aiscript)。
+The implementation of AiScript is in a separate repository from Misskey and is [open source and available here](https://github.com/aiscript-dev/aiscript).
 
 :::
 
-## 使い方
+## Usage
 
 AiScript標準の構文や組み込み関数などが使用できます。
 
