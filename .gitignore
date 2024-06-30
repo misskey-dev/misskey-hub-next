@@ -34,3 +34,4 @@ app/spa-loading-template.html
 
 # CF Pages Redirect
 public/_redirects
+.favorites.json

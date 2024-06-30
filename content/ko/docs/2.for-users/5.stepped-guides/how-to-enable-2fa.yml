@@ -1,45 +1,45 @@
-title: "2段階認証を設定する方法（ワンタイムパスワード）"
-description: "Misskeyのアカウントにワンタイムパスワードを設定してセキュリティを強化する方法を説明します。"
+title: "2단계 인증 (2FA, 일회용 비밀번호) 을 설정하는 방법"
+description: "Misskey 계정에 일회용 비밀번호를 설정해 보안을 강화하는 방법을 설명합니다."
 #Do not translate any keys that includes underscore
 _TYPE_: "STEPPED_GUIDE"
 body: |
-  2段階認証を設定すると、アカウントへの侵入リスクを軽減し、セキュリティを強化できます。ここでは、ワンタイムパスワードの設定方法をご紹介します。
+  2차 인증을 설정하면 계정 도난 위험을 줄이고 보안을 강화할 수 있습니다. 여기서는 일회용 비밀번호 설정 방법을 소개합니다.
 guides:
   - 
     _AUTOSELECT_TYPE_: "HARD_SMARTPHONE"
     _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
-    title: "スマートフォン"
+    title: "스마트폰"
     steps:
       - 
-        title: "2段階認証用アプリをダウンロード"
+        title: "2차 인증용 앱 다운로드"
         description: |
-          操作を始める前に、2段階認証用のワンタイムパスワードを生成するためのアプリをインストールしてください。以下にその例を示します：
+          작업을 시작하기 전에 2차 인증용 일회용 비밀번호를 생성하기 위한 앱을 설치해야 합니다. 아래에 몇 가지를 소개합니다.
 
           - Google Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) [App Store](https://apps.apple.com/app/google-authenticator/id388497605)
           - Twilio Authy Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.authy.authy) [App Store](https://itunes.apple.com/app/authy/id494168017)
           - FreeOTP: [Google Play](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp) [App Store](https://apps.apple.com/app/freeotp-authenticator/id872559395)
       - 
-        title: "設定を開く"
+        title: "설정 열기"
         image: "sp/1.png"
         description: |
-          Misskeyを開き、画面右下の「≡」ボタンをタップ、でてきたメニューの「設定」をタップします。
+          Misskey 를 열고, 화면 우측 하단의 「≡」버튼을 선택, 나온 메뉴의 「설정」을 선택합니다.
       - 
-        title: "「セキュリティ」をタップ"
+        title: "\"보안\" 탭"
         image: "sp/2.png"
         description: |
-          設定カテゴリの中から「セキュリティ」を見つけてタップします。
+          설정 카테고리 안에서 "보안" 탭을 찾아 선택합니다.
       - 
-        title: "「認証アプリの設定を開始」をタップ"
+        title: "이어 \"인증 앱 설정 시작하기\"를 선택합니다."
         image: "sp/3.png"
         description: |
-          「二要素認証」の中にある「認証アプリ」から、「認証アプリの設定を開始」をタップします。
+          "2단계 인증" 안에 있는 "인증 앱"에서 "인증 앱 설정 시작"을 누릅니다.
       - 
-        title: "パスワードを入力"
+        title: "비밀번호를 입력하세요"
         image: "sp/4.png"
         description: |
-          セキュリティに関わる設定のため、確認のために、お使いのアカウントにログインする際に使用しているパスワードを入力します。
+          보안 관련 설정을 위한 확인 절차로, 사용 중인 계정에 로그인할 때 사용하고 있는 비밀번호를 입력합니다.
       - 
-        title: "認証アプリの設定を開始する"
+        title: "인증 앱 설정 시작"
         image: "sp/8.png"
         description: |
           2段階認証アプリを設定するためのコードが生成されます。以下のいずれかの方法で設定してください。

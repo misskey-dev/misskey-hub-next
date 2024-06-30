@@ -25,7 +25,7 @@
                 :to="localePath('/docs/become-a-sponsor/')"
                 class="flex flex-col p-5 items-center justify-center aspect-square bg-white hover:bg-gray-50 rounded-full border-2 border-dashed dark:border-0 hover:border-solid dark:hover:opacity-80 border-gray-300 text-gray-500"
             >
-                <div class="text-center text-lg sm:text-xl">{{ $t('_landing._sponsors.becomeASponsor') }}<ArrowRightIco class="ml-1" /></div>
+                <div class="text-center text-lg sm:text-xl" style="word-break: auto-phrase;">{{ $t('_landing._sponsors.becomeASponsor') }}<ArrowRightIco class="ml-1" /></div>
             </GNuxtLink>
         </div>
     </div>
@@ -59,16 +59,15 @@ const sponsors: Sponsor[] = [
         to: 'https://skeb.jp/',
     },
     {
-        img: '/img/sponsors/dcadvirth.png',
-        margin: false,
-        noRounded: true,
-        to: 'https://www.dotchain.ltd/advirth',
-    },
-    {
         img: '/img/sponsors/xserver.png',
         margin: false,
         to: 'https://www.xserver.ne.jp/',
     },
+    {
+        img: '/img/sponsors/gmo_pepabo.svg',
+        margin: 'padding: 0.625rem',
+        to: 'https://pepabo.com/',
+    }
 ];
 
 const localePath = useGLocalePath();

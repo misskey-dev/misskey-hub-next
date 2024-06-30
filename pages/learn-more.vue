@@ -57,12 +57,6 @@
                         cutLeft: true,
                     },
                     {
-                        to: localePath('/about-us/'),
-                        title: $t('_aboutUs.title'),
-                        description: $t('_aboutUs.description'),
-                        img: '/img/misc/midev.png',
-                    },
-										{
                         to: localePath('/contact/'),
                         title: $t('_contact.title'),
                         description: $t('_contact.description'),

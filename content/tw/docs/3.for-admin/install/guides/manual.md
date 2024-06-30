@@ -37,15 +37,10 @@ Misskey 不應以 root 使用者身分執行，因此應建立使用者。
 Debian 範例：
 
 ```sh
-sudo -iu misskey
-git clone --recursive https://github.com/misskey-dev/misskey.git
-cd misskey
-git checkout master
-git submodule update --init
-NODE_ENV=production pnpm install --frozen-lockfile
+adduser --disabled-password --disabled-login misskey
 ```
 
-## 更新完成後，請重新啟動 Misskey 服務。
+## 安裝 Misskey
 
 ```sh
 sudo -iu misskey
@@ -58,13 +53,13 @@ NODE_ENV=production pnpm install --frozen-lockfile
 
 ## 設定
 
-根據檔案中的說明編輯 `default.yml`。
+請複製範例中的 `.config/example.yml`，並且重新命名為 `default.yml`。
 
 ```sh
 cp .config/example.yml .config/default.yml
 ```
 
-根據檔案中的說明編輯 `default.yml`。
+請根據檔案中的指示編輯 `default.yml`。
 
 ## 建構和初始化
 
@@ -84,15 +79,15 @@ pnpm run init
 NODE_ENV=production pnpm run start
 ```
 
-建立 systemd 服務檔案
+GLHF✨
+
+::::g-details{summary="透過 systemd 進行管理"}
+
+建立 systemd 設定檔
 
 `/etc/systemd/system/misskey.service`
 
-建立 systemd 服務檔案
-
-`/etc/systemd/system/misskey.service`
-
-在編輯器中打開它，貼上下面的代碼並儲存：
+在編輯器中打開它，貼上下面的程式碼並儲存：
 
 ```ini
 [Unit]
@@ -116,7 +111,8 @@ WantedBy=multi-user.target
 
 :::warning
 
-啟動misskey服務
+在 CentOS 中使用小於 1024 的 port 號使用 Misskey 的話
+必須修改為 `ExecStart=/usr/bin/sudo /usr/bin/npm start`
 
 :::
 
@@ -127,7 +123,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable misskey
 ```
 
-啟動misskey服務
+啟動 misskey 服務
 
 ```sh
 sudo systemctl start misskey
@@ -135,11 +131,11 @@ sudo systemctl start misskey
 
 :::tip
 
-鍵入 `systemctl status misskey` 查看服務狀態。
+輸入 `systemctl status misskey` 查看服務狀態。
 
 :::
 
-更新完成後，請重新啟動 Misskey 服務。
+::::
 
 ## 如何更新Miskey
 

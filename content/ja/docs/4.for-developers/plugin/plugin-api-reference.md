@@ -82,15 +82,13 @@ Mk:saveで永続化した指定の名前の値を読み取ります。
 
 ### `Plugin:register_post_form_action(title, fn)`
 投稿フォームにアクションを追加します。第一引数にアクション名、第二引数にアクションが選択された際のコールバック関数を渡します。\
-コールバック関数には、第一引数に投稿フォームオブジェクトが渡されます。
+コールバック関数には、第一引数に投稿フォームオブジェクトのうち`text`と`cw`が、第二引数にそれらを書き換えるための関数が渡されます。
 
 ```AiScript
-Plugin:register_post_form_action('メニューに表示される項目名', @(note) {
+Plugin:register_post_form_action('メニューに表示される項目名', @(note, rewrite) {
 
   // ノートに何らかの変更を加える
-  note.text = `{note.text}{Str:lf}#ハッシュタグ`
-
-  return note // 変更後のノートを返す
+  rewrite('text', `{note.text}{Str:lf}#ハッシュタグ`)
 })
 ```
 
@@ -397,6 +395,10 @@ Ui:C:postForm({
   form: {
     cw: "CW注釈" // CWを指定する場合の「要約」テキスト
     text: "投稿内容" // 投稿フォームのデフォルト文字列
+
+    // 以下はMisskey v2024.5.0以降で指定可能となります
+    visibility: "home" // デフォルトの投稿の公開範囲（未指定の場合はpublic）
+    localOnly: false // デフォルトで連合無しかどうか（未指定の場合はfalse）
   }
 })
 ```
@@ -412,6 +414,10 @@ Ui:C:postFormButton({
   form: {
     cw: "CW注釈" // CWを指定する場合の「要約」テキスト
     text: "投稿内容" // 投稿フォームのデフォルト文字列
+
+    // 以下はMisskey v2024.5.0以降で指定可能となります
+    visibility: "home" // デフォルトの投稿の公開範囲（未指定の場合はpublic）
+    localOnly: false // デフォルトで連合無しかどうか（未指定の場合はfalse）
   }
 })
 ```

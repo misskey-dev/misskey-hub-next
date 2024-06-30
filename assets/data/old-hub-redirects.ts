@@ -512,10 +512,6 @@ export const redirects = [
         "/docs/for-users/resources/glossary/"
     ],
     [
-        "/docs/index.html",
-        "/docs/"
-    ],
-    [
         "/docs/index.md",
         "/docs/"
     ],

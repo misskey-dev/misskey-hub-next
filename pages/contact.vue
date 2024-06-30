@@ -18,6 +18,28 @@
         <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
             <div class="container mx-auto max-w-screen-lg px-6 space-y-6 lg:space-y-8">
                 <div class="bg-gray-100 dark:bg-gray-800 border-4 border-accent-600 p-4 lg:p-6 rounded-xl space-y-3">
+                    <h2 class="font-bold text-lg lg:text-xl text-center">{{ $t('_contact.faqTitle') }}</h2>
+                    <p class="text-center whitespace-pre-wrap">{{ $t('_contact.faqDescription') }}</p>
+                    <div class="space-y-3">
+                        <details v-for="faq in faqs" class="bg-gray-200 dark:bg-gray-700 rounded-xl overflow-clip group">
+                            <summary class="font-bold p-4 cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600 group-open:border-b border-dashed border-gray-400 dark:border-gray-950">{{ faq.question }}</summary>
+                            <div class="p-2">
+                                <div class="rounded-lg bg-white dark:bg-slate-950">
+                                    <ContentRenderer class="p-4 markdown-body" :value="faq">
+                                        <template #empty>
+                                            <div class="p-4 text-center">{{ $t('empty') }}</div>
+                                        </template>
+                                    </ContentRenderer>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="text-center pt-3">
+                    <div class="text-sm">{{ $t('_contact.ifNothingIsFound') }}</div>
+                    <CaretDownFillIco class="w-12 h-12 mx-auto" />
+                </div>
+                <div class="bg-gray-100 dark:bg-gray-800 p-4 lg:p-6 rounded-xl space-y-3">
                     <h2 class="font-bold text-lg lg:text-xl text-center">{{ $t('_contact.form') }}</h2>
                     <p class="text-center whitespace-pre-wrap">{{ $t('_contact.formGoogleAccountRequired') }}</p>
                     <div class="text-center">
@@ -33,14 +55,15 @@
 
 <script setup lang="ts">
 import ExtIco from 'bi/box-arrow-up-right.svg';
+import CaretDownFillIco from 'bi/caret-down-fill.svg';
+import type { MiContactFaqParsedContent } from '~/types/content';
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const route = useRoute();
+const { data: faqs } = await useGAsyncData(`contactFaqs-${locale.value}`, () => queryContent<MiContactFaqParsedContent>(`/${locale.value === 'ja-ks' ? 'ja' : locale.value}/contact-faq`).find());
 
 route.meta.title = t('_contact.title');
 route.meta.description = t('_contact.description');
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

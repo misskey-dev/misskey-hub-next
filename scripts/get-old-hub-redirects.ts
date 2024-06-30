@@ -1,5 +1,5 @@
 import { redirects } from './../assets/data/old-hub-redirects';
-import { localesConst } from './../assets/data/locales';
+import { localesConst, localePathRegex } from './../assets/data/locales';
 import type { LocaleCodes } from './../assets/data/locales';
 import type { PartialRecord } from './../types/others';
 import type { NuxtConfig } from 'nuxt/schema';
@@ -52,7 +52,7 @@ export function getOldHubRedirects(mode: 'nitro' | 'vercel' = 'nitro'): NuxtConf
 
             let destination = route[1];
 
-            if (!new RegExp(`^/(${localesConst.map((e) => e.code).join('|')})/`, 'g').test(destination)) {
+            if (!localePathRegex.test(destination)) {
                 destination = joinURL(`$1/`, destination);
             }
 
@@ -91,7 +91,7 @@ export function getOldHubRedirects(mode: 'nitro' | 'vercel' = 'nitro'): NuxtConf
     
                 let destination = route[1];
     
-                if (!new RegExp(`^/(${localesConst.map((e) => e.code).join('|')})/`, 'g').test(destination)) {
+                if (!localePathRegex.test(destination)) {
                     destination = joinURL(`/${locale.code}`, destination);
                 }
     

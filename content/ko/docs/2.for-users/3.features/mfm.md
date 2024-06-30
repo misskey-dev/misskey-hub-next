@@ -141,12 +141,12 @@ https://example.com
 
 <MfmPreview text="<center>Misskey로 연합 우주의 세계가 펼쳐집니다.</center>"></MfmPreview>
 
-### よみがな（ルビ）
+### 요미가나 (루비)
 
-内容によみがなを付けることができます。
+내용에 요미가나를 첨부할 수 있습니다.
 
 ```
-$[ruby Misskey ミスキー] 
+$[ruby Misskey 미스키] 
 ```
 
 <MfmPreview text="$[ruby Misskey ミスキー]"></MfmPreview>
@@ -236,9 +236,9 @@ $[bg.color=ff0 노란색 배경]
 <MfmPreview text="$[fg.color=f00 赤字]
 $[bg.color=ff0 黄背景]"></MfmPreview>
 
-### 枠線
+### 테두리
 
-内容を枠線で囲むことができます。様々なスタイルを指定することができます。
+내용에 테두리를 씌울 수 있습니다.스타일을 다양하게 지정하는 것도 가능합니다.
 
 ```
 $[border.style=solid,width=4 Default]
@@ -261,10 +261,10 @@ $[border.width=5 Border width]
 $[border.radius=6,width=2 Border radius]
 
 $[border.radius=5,width=2,color=888 $[position.x=1.5 ＣＳＳ]
-$[position.x=1.5 完全に理解した]]
+$[position.x=1.5 완전히 이해했어!]]
 
 $[border.radius=5,width=2,color=888,noclip $[position.x=1.5 ＣＳＳ]
-$[position.x=1.5 完全に理解した]]
+$[position.x=1.5 완전히 이해했어!]]
 ```
 
 <MfmPreview text="$[border.style=solid,width=4 Default]\
@@ -422,7 +422,7 @@ $[sparkle 🍮]
 MFM 기능은 라이브러리를 통해 공개하고 있으니, 간단하게 클라이언트에 MFM 기능을 추가하실 수 있습니다.
 
 - [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - JavaScript 기반 MFM 기능 구현
-- [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - Vue.js用コンポーネント
-- [mfm.kt](https://github.com/samunohito/mfm.kt) - Kotlinパーサー実装
-- [mfm_parser](https://pub.dev/packages/mfm_parser) - Dartパーサー実装
-- [mfm](https://pub.dev/packages/mfm) - Flutter用描画ウィジェット
+- [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - Vue.js용 컴포넌트
+- [mfm.kt](https://github.com/samunohito/mfm.kt) - Kotlin에의 파서 구현
+- [mfm_parser](https://pub.dev/packages/mfm_parser) - Dart에의 파서 구현
+- [mfm](https://pub.dev/packages/mfm) - Flutter용 드로잉 위젯

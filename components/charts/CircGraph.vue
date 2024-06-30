@@ -20,6 +20,9 @@
  * 軽量円グラフ描画コンポーネント（すごい）
  */
 
+/** RGB */
+type RGBArray = [number, number, number];
+
 const props = withDefaults(defineProps<{
     /** グラフにしたいデータ（数字の配列 or kv形式のオブジェクト） */
     data: number[] | Record<string | number | symbol, number>;
@@ -28,16 +31,16 @@ const props = withDefaults(defineProps<{
     /** 小さな値を「その他」としてまとめるか？（デフォルトON、数値指定でその割合以下の項目をまとめる） */
     truncMinor?: boolean | number;
     /** グラデーション開始色（[r, g, b]の配列で指定） */
-    startColor?: [number, number, number];
+    startColor?: RGBArray;
     /** グラデーション終了色（[r, g, b]の配列で指定） */
-    endColor?: [number, number, number];
+    endColor?: RGBArray;
     /** 強調するindex番号を指定 */
     focusedIndex?: number;
 }>(), {
     sort: true,
     truncMinor: true,
-    startColor: [74, 179, 0],
-    endColor: [230, 255, 148],
+    startColor: [74, 179, 0] as RGBArray,
+    endColor: [230, 255, 148] as RGBArray,
 });
 
 const isReady = ref(false);
@@ -60,7 +63,7 @@ const sortedData = computed(() => {
     return out;
 });
 
-const steppedColors = computed(() => {
+const steppedColors = computed<RGBArray[]>(() => {
     const r = sortedData.value.map((_, i, a) => props.startColor[0] - (props.startColor[0] - props.endColor[0]) / a.length * i);
     const g = sortedData.value.map((_, i, a) => props.startColor[1] - (props.startColor[1] - props.endColor[1]) / a.length * i);
     const b = sortedData.value.map((_, i, a) => props.startColor[2] - (props.startColor[2] - props.endColor[2]) / a.length * i);

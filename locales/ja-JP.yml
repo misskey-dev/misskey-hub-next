@@ -15,6 +15,9 @@ goToLegacyHub: "従来のMisskey Hub"
 contactUs: "お問い合わせ"
 detail: "詳細"
 lastUpdate: "最終更新"
+empty: "内容がありません"
+threeDimensionModel: "3Dモデル"
+clickToShow: "クリックして表示"
 index: "トップ"
 
 _error:
@@ -211,6 +214,9 @@ _contact:
   form: "こちらのフォームからご回答ください。"
   formGoogleAccountRequired: "現在、スパム対策のため、お問い合わせの送信にはGoogleアカウントが必要となっております。\nお手数をおかけしますが、ご理解のほどよろしくお願い致します。"
   formLink: "フォームへ進む"
+  faqTitle: "よくあるお問い合わせ"
+  faqDescription: "お問い合わせを送信する前に、あなたの知りたいことがここにないか確認してください。"
+  ifNothingIsFound: "もしあてはまるものがなかったら…"
 
 _links:
   title: "リンク"
@@ -321,6 +327,8 @@ _shareLinkGenerator:
   testLink: "共有リンクを試す"
   typeSomethingToGetLink: "本文を入力するとリンクが生成されます。"
   typeSomethingToGetButton: "本文を入力するとボタンが生成されます。"
+  documentationIs: "パラメータの詳細情報など、技術仕様は{here}"
+  here: "こちら"
 
 _goToMisskey:
   title: "Misskey Webに移動"
@@ -361,6 +369,14 @@ _identiconGenerator:
   description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
   userName: "ユーザー名"
   includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
+
+_historicalMaterials:
+  title: "歴史資料館"
+  description: "Misskeyに関する歴史的資料を一挙公開"
+  heroSubtitle: "Misskey 10周年記念企画"
+  heroDescription: "Misskeyは2014年に掲示板サービスとして生まれました。それから10年経ち、今ではたくさんの方々に利用していただけるプラットフォームになりました。\nここではMisskeyに関する歴史的資料を一挙公開します！"
+  submissionTitle: "古いMisskeyの写真をお持ちですか？"
+  submissionDescription: "昔のMisskeyにまつわる資料をお持ちの方は、ぜひ当館にお寄せください。\nGitHubを利用できる方は{gh_issue}に、利用できない方は {'@'}syuilo{'@'}misskey.io にお送りください。"
 
 _legal:
   title: "規約・ガイドライン"
@@ -423,7 +439,6 @@ _api:
       "read:admin:server-info": "サーバーの情報を見る"
       "read:admin:show-moderation-log": "モデレーションログを見る"
       "read:admin:show-user": "ユーザーのプライベートな情報を見る"
-      "read:admin:show-users": "ユーザーのプライベートな情報を見る"
       "write:admin:suspend-user": "ユーザーを凍結する"
       "write:admin:unset-user-avatar": "ユーザーのアバターを削除する"
       "write:admin:unset-user-banner": "ユーザーのバーナーを削除する"

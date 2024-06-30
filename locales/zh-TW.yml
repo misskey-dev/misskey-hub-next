@@ -15,6 +15,9 @@ goToLegacyHub: "舊版的 Misskey Hub"
 contactUs: "聯絡我們"
 detail: "詳細資訊"
 lastUpdate: "最近更新"
+empty: "沒有內容。"
+threeDimensionModel: "3D 模型"
+clickToShow: "點擊以顯示"
 _error:
   notFound: "找不到此頁面"
   notFoundDesc: "找不到此頁面，請確認網址是否正確。"
@@ -199,6 +202,9 @@ _contact:
   form: "請從這個表格回覆。"
   formGoogleAccountRequired: "目前，為了防止垃圾郵件，需要 Google 帳戶才能發送聯繫。\n對於造成您的不便，我們深表歉意，並感謝您的理解。"
   formLink: "前往表單"
+  faqTitle: "常見問題"
+  faqDescription: "在發送您的詢問之前，請檢查此處是否列出了您想了解的內容。"
+  ifNothingIsFound: "如果沒有符合的內容的話…"
 _links:
   title: "連結"
   _github:
@@ -300,6 +306,8 @@ _shareLinkGenerator:
   testLink: "測試分享連結"
   typeSomethingToGetLink: "輸入本文後將生成連結。"
   typeSomethingToGetButton: "輸入本文後將生成按鈕。"
+  documentationIs: "技術規格，包括參數的詳細資訊，可以在 {here} 找到"
+  here: "這裡"
 _goToMisskey:
   title: "前往 Misskey Web"
   heading: "請選擇要開啟此頁面的伺服器"
@@ -336,6 +344,13 @@ _identiconGenerator:
   description: "您可以產生註冊Miskey時預設指定的初始圖示。"
   userName: "使用者名稱"
   includeDomain: "請指定完整的使用者名，包括伺服器的網域名稱。"
+_historicalMaterials:
+  title: "歷史資料館"
+  description: "Misskey 相關歷史一次公開"
+  heroSubtitle: "Misskey 10周年企劃"
+  heroDescription: "Misskey 誕生於 2014 年，最早是一項留言板服務。在這之後過了十年，現在他已經變成了可以被許多人利用的平台了。\n這邊將 Misskey 有關的歷史資料一次公開！"
+  submissionTitle: "有以前的 Misskey 照片嗎？"
+  submissionDescription: "如果你有以前的 Misskey 相關的資料，請務必與我們聯繫。\n如果您可以使用 GitHub 的話請將他送到 {gh_issue}，如果無法使用的話請送到 {'@'}syuilo{'@'}misskey.io 。"
 _api:
   _permissions:
     title: "權限"
@@ -390,7 +405,6 @@ _api:
       "read:admin:server-info": "查看伺服器的資訊"
       "read:admin:show-moderation-log": "查看審查紀錄"
       "read:admin:show-user": "查看使用者的私人資訊"
-      "read:admin:show-users": "查看使用者的私人資訊"
       "write:admin:suspend-user": "凍結使用者"
       "write:admin:unset-user-avatar": "刪除使用者的頭像"
       "write:admin:unset-user-banner": "刪除使用者的橫幅"
