@@ -33,11 +33,11 @@ git checkout master
 ```sh
 cp .config/docker_example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
-cp ./compose_example.yml ./compose.yml
+cp ./docker-compose_example.yml ./docker-compose.yml
 ```
 
 Please edit `default.yml` and `docker.env` file as per the description.\
-Also edit `compose.yml` as needed.(If you want to change the port etc.)\
+Also edit `docker-compose.yml` as needed.(If you want to change the port etc.)\
 Please make sure to check in advance for any changes that may be required.(ポートを変更したい場合など)
 
 ## Build & Initialize

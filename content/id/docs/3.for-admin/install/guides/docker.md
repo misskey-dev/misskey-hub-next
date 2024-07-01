@@ -33,11 +33,11 @@ Salin berkas konfigurasi dengan menjalankan perintah berikut:
 ```sh
 cp .config/docker_example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
-cp ./compose_example.yml ./compose.yml
+cp ./docker-compose_example.yml ./docker-compose.yml
 ```
 
 Sunting `default.yml` dan `docker.env` sesuai dengan instruksi yang terdapat di dalam berkas.\
-Pastikan kembali penyetelan telah benar dan sunting `compose.yml` bila perlu.(Misal: Apabila kamu ingin mengganti port peladen dengan nomor port yang berbeda).
+Pastikan kembali penyetelan telah benar dan sunting `docker-compose.yml` bila perlu.(Misal: Apabila kamu ingin mengganti port peladen dengan nomor port yang berbeda).
 
 ## Bangun dan inisialisasi
 

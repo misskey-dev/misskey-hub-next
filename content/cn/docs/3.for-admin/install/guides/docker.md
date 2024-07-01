@@ -33,11 +33,11 @@ git checkout master
 ```sh
 cp .config/docker_example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
-cp ./compose_example.yml ./compose.yml
+cp ./docker-compose_example.yml ./docker-compose.yml
 ```
 
-请按照文件中的说明根据自身情况编辑 `default.yml` 和 `docker.env` 文件内容。\
-同时再次根据需要编辑 `compose.yml` 。(ポートを変更したい場合など)
+请按照文件中的说明根据自身情况编辑 default.yml 和 docker.env 文件内容。\
+同时再次根据需要编辑 docker-compose.yml 。(ポートを変更したい場合など)
 
 ## 构建镜像与初始化数据库
 

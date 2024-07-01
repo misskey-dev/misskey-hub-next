@@ -29,12 +29,12 @@ Copia la configurazione d'esempio, su quella di default.
 ```sh
 cp .config/example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
-cp ./compose_example.yml ./compose.yml
+cp ./docker-compose.yml.example ./docker-compose.yml
 ```
 
 Modificare sia `default.yml` che `docker.env` come indicato nei file.
 
-Modificare `compose.yml` secondo le necessità (ad esempio se intendi cambiare porta)
+Modificare `docker-compose.yml` secondo le necessità (ad esempio se intendi cambiare porta)
 
 ## Costruzione e inizializzazione
 

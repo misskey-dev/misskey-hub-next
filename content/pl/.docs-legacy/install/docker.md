@@ -30,12 +30,12 @@ Skopiuj pliki przykładowe:
 ```sh
 cp .config/docker_example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
-cp ./compose_example.yml ./compose.yml
+cp ./docker-compose.yml.example ./docker-compose.yml
 ```
 
 Edytuj `default.yml` i `docker.env` do instrkcji w pliku.
 
-Edytuj `compose.yml` jeśli wymagane. (kiedy na przykład: chcesz zmienić port).
+Edytuj `docker-compose.yml` jeśli wymagane. (kiedy na przykład: chcesz zmienić port).
 
 Zbuduj i zinicjuj
 ----------------------------------------------------------------
