@@ -33,7 +33,7 @@ git checkout master
 ```sh
 cp .config/docker_example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
-cp ./docker-compose_example.yml ./docker-compose.yml
+cp ./compose_example.yml ./compose.yml
 ```
 
 请按照文件中的说明根据自身情况编辑 default.yml 和 docker.env 文件内容。\
