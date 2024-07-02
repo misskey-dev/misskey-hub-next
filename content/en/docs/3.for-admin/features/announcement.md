@@ -20,7 +20,7 @@ You can select from the following types of display formats.
 
 - **Normal** ... Announcements will be posted on the Announcements page.
 - **Banner** ... In addition to appearing on the announcements page a banner will appear at the top of the user's screen.
-- **Dialog** ... お知らせ一覧ページへの掲載に加えて、クライアント起動時にモーダル ダイアログとして表示されます。
+- **Dialog** ... In addition to being posted on the announcements page it will also appear as a modal dialog when the user opens the site.
   - It is recommended that you proceed with caution when there are two or more dialog-type announcements at the same time, as they are very likely to adversely affect the UX.
 
 ## Creating Announcements
