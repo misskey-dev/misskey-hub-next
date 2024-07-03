@@ -25,7 +25,7 @@
                             <summary class="font-bold p-4 cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600 group-open:border-b border-dashed border-gray-400 dark:border-gray-950">{{ faq.question }}</summary>
                             <div class="p-2">
                                 <div class="rounded-lg bg-white dark:bg-slate-950">
-                                    <ContentRenderer class="p-4 markdown-body" :value="faq">
+                                    <ContentRenderer class="p-4 rounded-b-lg markdown-body" :value="faq">
                                         <template #empty>
                                             <div class="p-4 text-center">{{ $t('empty') }}</div>
                                         </template>
