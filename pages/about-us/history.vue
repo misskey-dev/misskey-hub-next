@@ -189,6 +189,14 @@
 							</div>
 							<div :class="$style.yearContentItem">
 								<div :class="$style.yearImage">
+									<img src="/img/historical-materials/2018/20181003.webp" />
+								</div>
+								<div class="text-center mt-2">
+									<p class="text-sm text-slate-300">2018年10月ごろ</p>
+								</div>
+							</div>
+							<div :class="$style.yearContentItem">
+								<div :class="$style.yearImage">
 									<img src="/img/historical-materials/2018/propaganda.jpg" />
 								</div>
 								<div class="text-center mt-2">
@@ -213,6 +221,26 @@
 								<p class="text-sm text-slate-300">時代は平成から令和に</p>
 							</div>
 						</div>
+						<div class="grid md:grid-cols-2 gap-4">
+							<div :class="$style.yearContentItem">
+								<div :class="$style.yearImage">
+									<img src="/img/historical-materials/2019/2019d.webp" />
+								</div>
+								<div class="text-center mt-2">
+									<p class="text-sm text-slate-300">時期不明</p>
+									<p class="text-sm text-slate-300">Misskeyから機能を大幅にそぎ落とした分散型ソフト「Dolphin」</p>
+								</div>
+							</div>
+							<div :class="$style.yearContentItem">
+								<div :class="$style.yearImage">
+									<img src="/img/historical-materials/2019/20190307.webp" />
+								</div>
+								<div class="text-center mt-2">
+									<p class="text-sm text-slate-300">2019年3月ごろ</p>
+									<p class="text-sm text-slate-300">このころまでにはデッキUIが使用できるように</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="grid gap-x-12 gap-y-4 w-full" :class="$style.yearRoot" id="y2020">
@@ -222,11 +250,24 @@
 						</div>
 					</div>
 					<div class="space-y-4">
-						<div>
-							<img src="/img/historical-materials/2020/20200215.png" class="rounded-lg" />
-							<div class="text-center mt-2">
-								<p class="text-sm text-slate-300">2020年2月ごろ</p>
-								<p class="text-sm text-slate-300">UIが少し変わる</p>
+						<div class="grid md:grid-cols-2 gap-4">
+							<div :class="$style.yearContentItem">
+								<div :class="$style.yearImage">
+									<img src="/img/historical-materials/2020/20200215.png" />
+								</div>
+								<div class="text-center mt-2">
+									<p class="text-sm text-slate-300">2020年2月ごろ</p>
+									<p class="text-sm text-slate-300">UIが少し変わる</p>
+								</div>
+							</div>
+							<div :class="$style.yearContentItem">
+								<div :class="$style.yearImage">
+									<img src="/img/historical-materials/2020/20200409.png" />
+								</div>
+								<div class="text-center mt-2">
+									<p class="text-sm text-slate-300">2020年4月ごろ</p>
+									<p class="text-sm text-slate-300">このころのデッキUI</p>
+								</div>
 							</div>
 						</div>
 					</div>
