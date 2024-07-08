@@ -102,7 +102,6 @@ guides:
           操作を始める前に、2段階認証用のワンタイムパスワードを生成するためのアプリをお使いのスマートフォンなどにインストールしてください。以下にその例を示します：
 
           - Google Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) [App Store](https://apps.apple.com/app/google-authenticator/id388497605)
-          - Twilio Authy Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.authy.authy) [App Store](https://itunes.apple.com/app/authy/id494168017)
           - FreeOTP: [Google Play](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp) [App Store](https://apps.apple.com/app/freeotp-authenticator/id872559395)
 
           :::tip
