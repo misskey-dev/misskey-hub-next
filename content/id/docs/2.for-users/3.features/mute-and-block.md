@@ -33,6 +33,10 @@ Pengguna yang dibisukan tidak akan diberi tahu bahwa kamu telah membisukan merek
 
 :::
 
+## リノートをミュート
+
+ユーザーがノートのリノートを大量に行う場合などに、そのユーザーのリノートのみをタイムラインから除くことができます。ユーザーの通常のノートには影響はありません。
+
 ## Blokir
 
 Jika kamu memblokir pengguna, mereka tidak akan dapat melihat konten kamu dan mereka tidak akan dapat melakukan aksi berikut:
