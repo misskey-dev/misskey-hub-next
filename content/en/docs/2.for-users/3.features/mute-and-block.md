@@ -33,6 +33,10 @@ The other person won't be notified that you've muted them, nor will they know th
 
 :::
 
+## リノートをミュート
+
+ユーザーがノートのリノートを大量に行う場合などに、そのユーザーのリノートのみをタイムラインから除くことができます。ユーザーの通常のノートには影響はありません。
+
 ## Block
 
 Blocking a user prevents them from seeing your content and from taking any of the following actions against you:
