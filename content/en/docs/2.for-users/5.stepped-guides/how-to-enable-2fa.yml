@@ -16,7 +16,6 @@ guides:
           Before starting, install an app for generating one-time passwords for two-factor authentication. Here are some examples:
 
           - Google Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) [App Store](https://apps.apple.com/app/google-authenticator/id388497605)
-          - Twilio Authy Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.authy.authy) [App Store](https://itunes.apple.com/app/authy/id494168017)
           - FreeOTP: [Google Play](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp) [App Store](https://apps.apple.com/app/freeotp-authenticator/id872559395)
       - 
         title: "Open Settings"
@@ -102,7 +101,6 @@ guides:
           Before starting, install an app for generating one-time passwords for two-factor authentication on your smartphone. Here are some examples:
 
           - Google Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) [App Store](https://apps.apple.com/app/google-authenticator/id388497605)
-          - Twilio Authy Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.authy.authy) [App Store](https://itunes.apple.com/app/authy/id494168017)
           - FreeOTP: [Google Play](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp) [App Store](https://apps.apple.com/app/freeotp-authenticator/id872559395)
 
           :::tip
