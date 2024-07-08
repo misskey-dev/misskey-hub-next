@@ -2,8 +2,7 @@
 
 This function allows you to save [notes](./note) as bookmarks.
 
-<!--TODO:「お気に入りページ」をMisskey Webに飛ばすリンクで置き換え-->
+お気に入り登録したノートは、[お気に入りページ](x-mi-web://my/favorites)で一覧することができます。
+お気に入りに登録したことは相手に通知されず、お気に入りは自分しか見ることができません。
 
-You can view your saved notes on the Bookmarks page. The note's author is not notified when you bookmark a note, and only you can see your bookmarks.
-
-To bookmark a note, select "Bookmark" in the Notes menu.To remove a bookmark, select "Remove bookmark."
+ノートをお気に入り登録するには、ノートメニューの「お気に入り」を押します。お気に入り解除するには、ノートメニューの「お気に入り解除」を押します。
