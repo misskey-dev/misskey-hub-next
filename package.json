@@ -30,7 +30,7 @@
     "misskey-hub-markdown-fixer": "file:./scripts/markdown-fixer",
     "misskey-js": "2024.5.0",
     "nprogress": "^0.2.0",
-    "nuxt": "^3.12.1",
+    "nuxt": "^3.12.3",
     "postcss": "^8.4.38",
     "random-seed": "^0.3.0",
     "sass": "^1.77.4",
