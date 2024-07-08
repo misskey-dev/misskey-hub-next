@@ -1,33 +1,33 @@
-# オンラインステータス
+# Status Online
 
-ユーザーの**オンラインステータス**は、そのユーザーのMisskey利用の状態を表すものです。
-オンラインステータスは、ユーザーページなどでユーザーアイコンの隅にインジケーターとして表示されます。
+**Status Online** adalah indikasi status penggunaan Misskey pengguna.
+Status online ditampilkan sebagai indikator di sudut ikon pengguna, Misalnya pada halaman pengguna
 
 <table>
 	<tbody><tr>
-		<th>色</th>
-		<th>状態</th>
-		<th>説明</th>
+		<th>Warna</th>
+		<th>Status</th>
+		<th>Deskripsi</th>
 	</tr>
 	<tr>
-		<td>🟢緑</td>
-		<td>オンライン</td>
-		<td>今まさにMisskeyを使用していると考えられる状態</td>
+		<td>Hijau</td>
+		<td>Online</td>
+		<td>Pengguna Misskey dianggap sedang digunakan saat ini.</td>
 	</tr>
 	<tr>
-		<td>🟡黄</td>
-		<td>アクティブ</td>
+		<td>Kuning</td>
+		<td>Aktif</td>
 		<td>今は退席しているものの、Misskeyの利用自体は行われている状態</td>
 	</tr>
 	<tr>
-		<td>🔴赤</td>
-		<td>オフライン</td>
+		<td>Merah</td>
+		<td>Offline</td>
 		<td>Misskeyを利用していないと考えられる状態</td>
 	</tr>
 	<tr>
-		<td>⚫灰</td>
-		<td>不明</td>
-		<td>ステータスを非公開にしている、もしくはリモートユーザー等でステータスが不明の状態</td>
+		<td>Abu</td>
+		<td>Tidak diketahui</td>
+		<td>Status diatur menjadi privat atau status tidak diketahui</td>
 	</tr>
 </tbody></table>
 

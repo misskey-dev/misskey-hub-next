@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
-import { readFileSync, watch as fsWatch } from 'fs';
+import { watch as fsWatch } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
@@ -118,14 +118,13 @@ export default defineNuxtConfig({
 		highlight: {
 			theme: {
 				// Default theme (same as single string)
-				default: 'github-light',
+				default: 'catppuccin-latte',
 				// Theme used if `html.dark`
-				dark: 'github-dark',
+				dark: 'one-dark-pro',
 			},
 			langs: [
-				'json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'mdc', 'md', 'yaml',
+				'json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'mdc', 'md', 'yaml', 'jsx',
 				'ini', 'sql', 'yml', 'nginx', 'bash',
-				JSON.parse(readFileSync('./node_modules/aiscript-vscode/aiscript/syntaxes/aiscript.tmLanguage.json', { encoding: 'utf-8' })),
 			],
 		},
 		sources: {
@@ -133,7 +132,7 @@ export default defineNuxtConfig({
 				driver: 'fs',
 				base: resolve(__dirname, 'content'),
 			},
-		}
+		},
 	},
 	i18n: {
 		baseUrl,
