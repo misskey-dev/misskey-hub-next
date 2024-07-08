@@ -22,18 +22,94 @@
 
 ## 比較
 
-| 來源                          |      |    | 時間軸 |    |    |
-| --------------------------- | ---- | -- | --- | -- | -- |
-| 使用者                         | 公開範圍 | 首頁 | 本地  | 社交 | 公開 |
-| 本地 (已追隨) | 公開   | ✔  | ✔   | ✔  | ✔  |
-|                             | 首頁   | ✔  |     | ✔  |    |
-|                             | 追隨者  | ✔  |     | ✔  |    |
-| 遠端 (已追隨) | 公開   | ✔  |     | ✔  | ✔  |
-|                             | 首頁   | ✔  |     | ✔  |    |
-|                             | 追隨者  | ✔  |     | ✔  |    |
-| 本地 (未追隨) | 公開   |    | ✔   | ✔  | ✔  |
-|                             | 首頁   |    |     |    |    |
-|                             | 追隨者  |    |     |    |    |
-| 遠端 (未追隨) | 公開   |    |     |    | ✔  |
-|                             | 首頁   |    |     |    |    |
-|                             | 追隨者  |    |     |    |    |
+<table>
+    <thead>
+        <tr>
+            <th scope="col" rowspan="2">ソース</th>
+            <th scope="col" rowspan="2">公開範圍</th>
+            <th scope="col" colspan="4">時間軸</th>
+        </tr>
+        <tr>
+            <th scope="col">首頁</th>
+            <th scope="col">本地</th>
+            <th scope="col">社交</th>
+            <th scope="col">公開</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" rowspan="3">ローカル（フォロー）</th>
+            <th scope="row">公開</th>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+        </tr>
+        <tr>
+            <th scope="row">首頁</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">追隨者</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row" rowspan="3">リモート（フォロー）</th>
+            <th scope="row">公開</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td>✔</td>
+        </tr>
+        <tr>
+            <th scope="row">首頁</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">追隨者</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row" rowspan="3">ローカル（未フォロー）</th>
+            <th scope="row">公開</th>
+            <td></td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+        </tr>
+        <tr>
+            <th scope="row">首頁</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">追隨者</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">リモート（未フォロー）</th>
+            <th scope="row">公開</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>✔</td>
+        </tr>
+    </tbody>
+</table>
