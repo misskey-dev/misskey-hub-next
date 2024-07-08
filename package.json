@@ -15,6 +15,7 @@
     "@nuxtjs/color-mode": "^3.4.1",
     "@nuxtjs/i18n": "^8.3.1",
     "@rollup/plugin-yaml": "^4.1.2",
+    "@types/bun": "^1.1.6",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^20.14.2",
     "@types/nprogress": "^0.2.3",
