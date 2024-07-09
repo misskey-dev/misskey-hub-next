@@ -33,9 +33,9 @@ The other person won't be notified that you've muted them, nor will they know th
 
 :::
 
-## リノートをミュート
+## Mute Renotes
 
-ユーザーがノートのリノートを大量に行う場合などに、そのユーザーのリノートのみをタイムラインから除くことができます。ユーザーの通常のノートには影響はありません。
+You can mute only the user's renotes, in case the user is renoting many notes.The user's regular notes are not affected.
 
 ## Block
 
