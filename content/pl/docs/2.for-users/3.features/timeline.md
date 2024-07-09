@@ -1,6 +1,6 @@
 # タイムライン
 
-タイムラインは、[ノート](./note)が時系列で表示される機能です。
+タイムラインは、[ノート](/docs/for-users/features/note/)が時系列で表示される機能です。
 タイムラインには以下で示す種類があり、種類によって表示されるノートも異なります。
 なお、タイムラインの種類によってはサーバーにより無効になっている場合があります。
 
@@ -22,18 +22,94 @@
 
 ## 比較
 
-| ソース                             |       |     | タイムライン |       |       |
-| ------------------------------- | ----- | --- | ------ | ----- | ----- |
-| ユーザー                            | 公開範囲  | ホーム | ローカル   | ソーシャル | グローバル |
-| ローカル (フォロー)  | 公開    | ✔   | ✔      | ✔     | ✔     |
-|                                 | ホーム   | ✔   |        | ✔     |       |
-|                                 | フォロワー | ✔   |        | ✔     |       |
-| リモート (フォロー)  | 公開    | ✔   |        | ✔     | ✔     |
-|                                 | ホーム   | ✔   |        | ✔     |       |
-|                                 | フォロワー | ✔   |        | ✔     |       |
-| ローカル (未フォロー) | 公開    |     | ✔      | ✔     | ✔     |
-|                                 | ホーム   |     |        |       |       |
-|                                 | フォロワー |     |        |       |       |
-| リモート (未フォロー) | 公開    |     |        |       | ✔     |
-|                                 | ホーム   |     |        |       |       |
-|                                 | フォロワー |     |        |       |       |
+<table>
+    <thead>
+        <tr>
+            <th scope="col" rowspan="2">ソース</th>
+            <th scope="col" rowspan="2">公開範囲</th>
+            <th scope="col" colspan="4">タイムライン</th>
+        </tr>
+        <tr>
+            <th scope="col">ホーム</th>
+            <th scope="col">ローカル</th>
+            <th scope="col">ソーシャル</th>
+            <th scope="col">グローバル</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" rowspan="3">ローカル（フォロー）</th>
+            <th scope="row">公開</th>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+        </tr>
+        <tr>
+            <th scope="row">ホーム</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">フォロワー</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row" rowspan="3">リモート（フォロー）</th>
+            <th scope="row">公開</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td>✔</td>
+        </tr>
+        <tr>
+            <th scope="row">ホーム</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">フォロワー</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row" rowspan="3">ローカル（未フォロー）</th>
+            <th scope="row">公開</th>
+            <td></td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+        </tr>
+        <tr>
+            <th scope="row">ホーム</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">フォロワー</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">リモート（未フォロー）</th>
+            <th scope="row">公開</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>✔</td>
+        </tr>
+    </tbody>
+</table>

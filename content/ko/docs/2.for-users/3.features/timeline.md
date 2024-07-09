@@ -20,18 +20,94 @@
 
 ## 비교
 
-| 소스                            |       |   | 타임라인 |    |     |
-| ----------------------------- | ----- | - | ---- | -- | --- |
-| 사용자                           | 공개 범위 | 홈 | 로컬   | 소셜 | 글로벌 |
-| 로컬 (미 팔로우) | 공개    | ✔ | ✔    | ✔  | ✔   |
-|                               | 홈     | ✔ |      | ✔  |     |
-|                               | 팔로워   | ✔ |      | ✔  |     |
-| 리모트 (팔로우)  | 공개    | ✔ |      | ✔  | ✔   |
-|                               | 홈     | ✔ |      | ✔  |     |
-|                               | 팔로워   | ✔ |      | ✔  |     |
-| 로컬 (팔로우)   | 공개    |   | ✔    | ✔  | ✔   |
-|                               | 홈     |   |      |    |     |
-|                               | 팔로워   |   |      |    |     |
-| 원격 (미 팔로우) | 공개    |   |      |    | ✔   |
-|                               | 홈     |   |      |    |     |
-|                               | 팔로워   |   |      |    |     |
+<table>
+    <thead>
+        <tr>
+            <th scope="col" rowspan="2">ソース</th>
+            <th scope="col" rowspan="2">공개 범위</th>
+            <th scope="col" colspan="4">타임라인</th>
+        </tr>
+        <tr>
+            <th scope="col">홈</th>
+            <th scope="col">로컬</th>
+            <th scope="col">소셜</th>
+            <th scope="col">글로벌</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" rowspan="3">ローカル（フォロー）</th>
+            <th scope="row">공개</th>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+        </tr>
+        <tr>
+            <th scope="row">홈</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">팔로워</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row" rowspan="3">リモート（フォロー）</th>
+            <th scope="row">공개</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td>✔</td>
+        </tr>
+        <tr>
+            <th scope="row">홈</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">팔로워</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row" rowspan="3">ローカル（未フォロー）</th>
+            <th scope="row">공개</th>
+            <td></td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+        </tr>
+        <tr>
+            <th scope="row">홈</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">팔로워</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">リモート（未フォロー）</th>
+            <th scope="row">공개</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>✔</td>
+        </tr>
+    </tbody>
+</table>

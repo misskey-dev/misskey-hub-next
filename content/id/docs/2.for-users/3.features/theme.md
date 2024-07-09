@@ -54,10 +54,10 @@ Selanjutnya, objek `props` ini mewariskan dari tema dasar.
 Tema dasarnya adalah [\_light.json5][_light.json5] jika `base` dari tema ini adalah `light` dan [\_dark.json5][_dark.json5] jika `dark`.
 Artinya, jika tidak ada kunci `props` yang bernama `panel` dalam tema ini, maka nilai `panel` akan diatur menggunakan nilai dari tema dasar.
 
-[_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
-[_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
+- [_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
+- [_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
 
-#### Sintaks Nilai
+#### バリューで使える構文
 
 - 16進数で表された色
   - 例: `#00ff00`
@@ -74,9 +74,10 @@ Artinya, jika tidak ada kunci `props` yang bernama `panel` dalam tema ini, maka 
 - 関数(後述)
   - `:{関数名}<{引数}<{色}`
 
-#### Konstan
+#### 定数
 
-Konstan berguna ketika kamu memiliki nilai yang tidak ingin kamu keluarkan sebagai variabel CSS namun ingin kamu gunakan sebagai nilai untuk variabel CSS yang lain. "Aku tidak ingin mengeluarkannya sebagai variabel CSS, tapi aku ingin menggunakannya sebagai nilai untuk variabel CSS".
+「CSS変数として出力はしたくないが、他のCSS変数の値として使いまわしたい」値があるときは、定数を使うと便利です。
+キー名を`$`で始めると、そのキーはCSS変数として出力されません。
 
 #### 関数
 
