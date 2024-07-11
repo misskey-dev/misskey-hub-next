@@ -4,7 +4,7 @@ description: MFM, yang merupakan singkatan dari Misskey Flavoured Markdown, adal
 
 # MFM
 
-MFM, yang merupakan singkatan dari Misskey Flavoured Markdown, adalah bahasa markup yang dapat digunakan pada berbagai tempat di dalam Misskey.
+MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使用できる専用のマークアップ言語です。一部の構文はMarkdownやHTMLと互換性があります。
 
 :::tip
 
