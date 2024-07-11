@@ -116,9 +116,9 @@ import ForkedIco from '@/assets/svg/repo-forked.svg';
 import { isLocalPath, resolveObjPath } from '@/assets/js/misc';
 import { parseURL, joinURL } from 'ufo';
 import { api as misskeyApi } from 'misskey-js';
-import { forkedSoftwares } from '~/assets/data/forks';
+import { forkedSoftwares } from '@/assets/data/forks';
 import { GNuxtLink } from '#components';
-import type { InstanceInfo, InstanceItem } from '@/types/instances-info';
+import type { InstanceInfo, InstanceItem } from '@@/types/instances-info';
 import type { FunctionalComponent } from 'vue';
 
 const { t } = useI18n();
@@ -183,7 +183,7 @@ async function getAndSetInstanceInfo() {
                 name: res.name ?? '',
                 nodeinfo: null,
                 npd15: 0,
-                stats: {},
+                stats: undefined,
                 url: realHost.host ?? '',
                 value: 0,
 
@@ -216,7 +216,7 @@ function getInstanceImage(instance: ExtendedInstanceItem | InstanceItem) {
 
 function getPlaceholderImage(instance: ExtendedInstanceItem | InstanceItem) {
     if (instance.meta?.repositoryUrl) {
-        if (forkedSoftwares.some((v) => instance.meta?.repositoryUrl.toLowerCase().includes(v))) {
+        if (forkedSoftwares.some((v) => instance.meta?.repositoryUrl ? instance.meta.repositoryUrl.toLowerCase().includes(v) : false)) {
             return 'forked';
         }
         if (instance.meta.repositoryUrl.includes('misskey')) {
@@ -276,7 +276,7 @@ onMounted(async () => {
                     name: res.name ?? '',
                     nodeinfo: null,
                     npd15: 0,
-                    stats: {},
+                    stats: undefined,
                     url: realHost.host ?? '',
                     value: 0,
 

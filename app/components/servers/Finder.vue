@@ -134,7 +134,7 @@
 </template>
 
 <script setup lang="ts">
-import type { InstanceInfo, InstanceItem, InstancesStatsObj } from '@/types/instances-info';
+import type { InstanceInfo, InstanceItem, InstancesStatsObj } from '@@/types/instances-info';
 import { resolveObjPath, kanaHalfToFull } from '@/assets/js/misc';
 import langs from '@/assets/data/lang';
 

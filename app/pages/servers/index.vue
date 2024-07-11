@@ -64,7 +64,7 @@
 </template>
 
 <script setup lang="ts">
-import type { InstancesStatsObj } from '@/types/instances-info';
+import type { InstancesStatsObj } from '@@/types/instances-info';
 import ArrowRightIco from "bi/arrow-right.svg";
 
 const { t, locale } = useI18n();

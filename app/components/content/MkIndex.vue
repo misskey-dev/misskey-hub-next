@@ -20,7 +20,7 @@
 
 <script setup lang="ts">
 import ArrowRightIco from "bi/arrow-right.svg";
-import { findDeepObject } from "assets/js/misc";
+import { findDeepObject } from "@/assets/js/misc";
 
 const route = useRoute();
 const { locale } = useI18n();

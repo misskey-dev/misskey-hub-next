@@ -2,14 +2,18 @@
 import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
 import { watch as fsWatch } from 'fs';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
 import { getOldHubRedirects } from './scripts/get-old-hub-redirects';
 import { genLocalesJson } from './scripts/gen-locales';
 import { getStaticEndpoints } from './scripts/get-static-endpoints';
-import { locales } from './assets/data/locales';
+import { locales } from './app/assets/data/locales';
 import type { NuxtConfig } from 'nuxt/schema';
 import { fetchCrowdinMembers } from './scripts/fetch-crowdin';
 import { genSpaLoadingTemplate } from './scripts/gen-spa-loading-template';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl =
@@ -63,6 +67,10 @@ function getRouteRules(): NuxtConfig['routeRules'] | undefined {
 }
 
 export default defineNuxtConfig({
+	future: {
+		compatibilityVersion: 4,
+	},
+	compatibilityDate: '2024-07-08',
 	runtimeConfig: {
 		public: {
 			baseUrl,
@@ -120,13 +128,19 @@ export default defineNuxtConfig({
 				'ini', 'sql', 'yml', 'nginx', 'bash',
 			],
 		},
+		sources: {
+			content: {
+				driver: 'fs',
+				base: resolve(__dirname, 'content'),
+			},
+		},
 	},
 	i18n: {
 		baseUrl,
 		vueI18n: './i18n.config.ts',
 		locales,
 		lazy: true,
-		langDir: 'locales_dist',
+		langDir: '../locales_dist',
 		defaultLocale: 'ja',
 		// ▼ Defaultルートは、nitroプラグインでオーバーライドする
 		// 　 リンクはuseGLocalePath（ラッパー）を使う
@@ -181,10 +195,6 @@ export default defineNuxtConfig({
 				],
 			}
 		},
-		plugins: [
-			'@/server/plugins/appendComment.ts',
-			'@/server/plugins/i18nRedirector.ts',
-		],
 		prerender: {
 			failOnError: false,
 		}
