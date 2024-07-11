@@ -4,11 +4,11 @@ description: MFM is a proprietary markup language that can be used in various lo
 
 # MFM
 
-MFM, short for Markup language For Misskey, is a proprietary markup language that can be used in various locations in Misskey.
+MFM, short for Markup language For Misskey, is a proprietary markup language that can be used in various locations in Misskey.Some of its syntax is compatible with Markdown and HTML.
 
 :::tip
 
-Some of its syntax is compatible with Markdown and HTML.
+Visit [MFM Playground](/tools/mfm-playground/) to try MFM for yourself!
 
 :::
 
