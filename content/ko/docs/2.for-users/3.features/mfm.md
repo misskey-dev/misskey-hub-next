@@ -4,7 +4,7 @@ description: MFM은 미스키에서 사용할 수 있는 전용 마크업 언어
 
 # MFM
 
-MFM은 Markup langauge For Misskey의 약자로 Misskey의 여러 곳에서 사용할 수 있는 전용 마크업 언어입니다.
+MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使用できる専用のマークアップ言語です。一部の構文はMarkdownやHTMLと互換性があります。
 
 :::tip
 
