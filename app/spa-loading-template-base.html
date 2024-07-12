@@ -1,0 +1,86 @@
+<!-- script -->
+
+<div id="splash">
+    <img id="splashIcon" src="/img/icons/icon-128x128.png">
+    <div id="splashSpinner"><svg class="spinner bg" viewBox="0 0 152 152" xmlns="http://www.w3.org/2000/svg">
+            <g transform="matrix(1,0,0,1,12,12)">
+                <circle cx="64" cy="64" r="64" style="fill:none;stroke:currentColor;stroke-width:24px;" />
+            </g>
+        </svg>
+        <svg class="spinner fg" viewBox="0 0 152 152" xmlns="http://www.w3.org/2000/svg">
+            <g transform="matrix(1,0,0,1,12,12)">
+                <path d="M128,64C128,28.654 99.346,0 64,0C99.346,0 128,28.654 128,64Z" style="fill:none;stroke:currentColor;stroke-width:24px;" />
+            </g>
+        </svg>
+    </div>
+</div>
+
+<style>
+    #splash {
+        background-color: #f9f9f9;
+        cursor: wait;
+        height: 100vh;
+        left: 0;
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        transition: opacity .5s ease;
+        width: 100vw;
+        z-index: 10000
+    }
+
+    #splashIcon {
+        height: 64px;
+        pointer-events: none;
+        width: 64px
+    }
+
+    #splashIcon,
+    #splashSpinner {
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0
+    }
+
+    #splashSpinner {
+        color: #86b300;
+        display: inline-block;
+        height: 28px;
+        transform: translateY(70px);
+        width: 28px
+    }
+
+    #splashSpinner>.spinner {
+        height: 28px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 28px;
+        fill-rule: evenodd;
+        clip-rule: evenodd;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 1.5
+    }
+
+    #splashSpinner>.spinner.bg {
+        opacity: .275
+    }
+
+    #splashSpinner>.spinner.fg {
+        animation: splashSpinner .5s linear infinite
+    }
+
+    @keyframes splashSpinner {
+        0% {
+            transform: rotate(0deg)
+        }
+
+        to {
+            transform: rotate(1turn)
+        }
+    }
+</style>

@@ -29,6 +29,33 @@ body {
 @tailwind utilities;
 
 /*  */
+.uwu-enter-active, .uwu-leave-active {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.uwu-enter-active {
+    transition: transform 1.5s cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 1.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.uwu-leave-active {
+    transition: transform 1s cubic-bezier(0.55, 0.06, 0.68, 0.19),
+    opacity 1s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+}
+
+.uwu-enter-from {
+    transform: rotateY(3turn);
+    opacity: 0;
+}
+
+.uwu-leave-to {
+    transform: rotateY(6turn);
+    opacity: 0;
+}
+
+/*  */
 .hoverRubber:hover {
     animation: .75s linear 0s 1 normal both running mfm-rubberBand;
 }
@@ -181,7 +208,16 @@ html.light .markdown-body {
 	text-underline-offset: .2em;
 }
 
-html[lang='ja-JP'] .markdown-body > p,
-html[lang='ja-JP'] .markdown-body :not(.ignore) p:not(.truncate-box) {
-	line-height: 1.8;
+.markdown-body .footnotes {
+	padding-top: 16px;
+}
+
+.markdown-body > p,
+.markdown-body :not(.ignore) p:not(.truncate-box),
+.markdown-body li {
+	line-height: 1.75;
+}
+
+.markdown-body video {
+	@apply rounded-lg;
 }

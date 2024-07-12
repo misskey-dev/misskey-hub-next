@@ -22,53 +22,53 @@ Mulai dari versi 13, Misskey Play dapat digunakan untuk menggantikan halaman din
 
 ### Judul
 
-このページのタイトルを入力します。一覧に表示されます。
+Masukkan judul dari halaman.Akan tampil dalam daftar.
 
 ### Ringkasan Halaman
 
-簡単な説明を入力します。一覧に表示されます。
+Masukkan deskripsi singkat.Akan tampil dalam daftar.
 
 ### URL Halaman
 
-`https://サーバー名/@ユーザー/pages/●●●` の `●●●` を任意に設定できます。
+Secara opsional atur `●●●` dalam `https://nama-peladen/@namapengguna/pages/●●●`.
 
-### 中央寄せ
+### Rata tengah
 
-有効にすると、中央に寄せて表示します。
+Ketika diaktifkan, konten akan diratakan pada posisi tengah.
 
 ### Font
 
-**セリフ** と **サンセリフ** を選択します。
+Pilih dari **serif** atau **sans-serif**.
 
-### ピン留めされているときにタイトルを非表示
+### Sembunyikan judul halaman saat disematkan
 
-ピン留めされているときにタイトルを非表示にします。
+Menyembunyikan judul halaman saat disematkan.
 
 ### Gambar yang menarik
 
-**アイキャッチ画像を設定** より画像を設定できます。一覧表示などで表示する事が可能です。
+Kamu dapat mengatur sebuah gambar dari **Pengaturan Gambar Unggulan**.Dapat ditampilkan dalam tampilan daftar, dll.
 
 ## Konten
 
-ページ本体を編集します。次のブロックを一つまたは複数組み合わせてページを生成できます。
+Sunting badan halaman.Halaman dapat dihasilkan dengan menggabungkan salah satu blok berikut atau lebih.
 
-- セクション
-- テキスト
-- 画像
-- ノート埋め込み
+- Bagian
+- Teks
+- Gambar
+- Catatan yang ditanam
 
 ### Bagian
 
-タイトルを設定する事で見出しとして表示します。更に中のブロックを設定できます。
+Ketika mengatur judul, akan ditampilkan sebagai heading.Selanjutnya, blok dapat diatur di dalam.
 
 ### Teks
 
-テキスト本文を入力します。MFMやカスタム絵文字を使用できます。
+Masukkan badan teks.MFM serta emoji kustom dapat digunakan.
 
 ### Gambar
 
-画像を表示します。ドライブより画像を設定します。
+Menampilkan gambarMenampilkan gambar dari Drive
 
 ### Catatan yang ditanam
 
-ノート ID を入れる事で、そのノートを表示します。他のサーバーを埋め込みたい場合は検索でそのURLを入れ、表示させた時のIDを貼り付けて下さい。
+Dengan memasukkan ID catatan, konten dari catatan dapat ditampilkan.Apabila kamu ingin menanamkan catatan dari peladen lain, masukkan URL-nya ke dalam pencarian dan tempelkan ID catatan yang ditampilkan.

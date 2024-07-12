@@ -14,7 +14,7 @@
 
 MisskeyにはWebhookが用意されています。Webhookを利用すると、Misskey上の様々なイベントをリアルタイムに受け取ることが可能です。
 
-設定>Webhook でWebhookの管理を行えます。
+[設定 > Webhook](mi-web://settings/webhook)でWebhookの管理を行えます。
 
 Webhookが登録されると、指定したイベントが発生した際に、指定したURLにHTTPリクエストが送信されます。リクエストのメソッドはPOSTで、ボディはJSONです。
 さらに、リクエストヘッダーには`X-Misskey-Hook-Secret`という名前で、登録時に設定したシークレットが含まれます。このシークレットが正しいか検証することで、リクエストが正規のものか判定することができます。
@@ -22,33 +22,33 @@ Webhookが登録されると、指定したイベントが発生した際に、�
 リクエストペイロードは以下のプロパティが入ります。
 
 <MkSchemaViewerItemObject :schema="{
- type: 'object',
- properties: {
- 	hookId: {
- 		type: 'string',
- 		description: 'Webhook ID',
- 	},
- 	userId: {
- 		type: 'string',
- 		description: 'Webhook作成者のユーザーID',
- 	},
- 	eventId: {
- 		type: 'string',
- 		description: 'イベントのID',
- 	},
- 	createdAt: {
- 		type: 'integer',
- 		description: 'イベントが発生した日時(UNIX time、ミリ秒)',
- 	},
- 	type: {
- 		type: 'string',
- 		description: 'イベントの種類',
- 	},
- 	body: {
- 		type: 'object',
- 		description: 'イベントのペイロード',
- 	},
- }
+type: 'object',
+properties: {
+ hookId: {
+ 	type: 'string',
+ 	description: 'Webhook ID',
+ },
+ userId: {
+ 	type: 'string',
+ 	description: 'Webhook作成者のユーザーID',
+ },
+ eventId: {
+ 	type: 'string',
+ 	description: 'イベントのID',
+ },
+ createdAt: {
+ 	type: 'integer',
+ 	description: 'イベントが発生した日時(UNIX time、ミリ秒)',
+ },
+ type: {
+ 	type: 'string',
+ 	description: 'イベントの種類',
+ },
+ body: {
+ 	type: 'object',
+ 	description: 'イベントのペイロード',
+ },
+}
 }"/>
 
 送信先サーバーが5xxエラーを返すか、応答しなかった場合は時間を開けてリクエストが再送されます。
@@ -72,13 +72,13 @@ properties: {
 }"/>
 
 <MkSchemaViewerItemObject :schema="{
- type: 'object',
- properties: {
- 	user: {
- 		$ref: 'misskey://User',
- 		description: 'フォローしたユーザー',
- 	},
- }
+type: 'object',
+properties: {
+ user: {
+ 	$ref: 'misskey://User',
+ 	description: 'フォローしたユーザー',
+ },
+}
 }"/>
 
 ### followed
@@ -94,13 +94,13 @@ properties: {
 }"/>
 
 <MkSchemaViewerItemObject :schema="{
- type: 'object',
- properties: {
- 	user: {
- 		$ref: 'misskey://User',
- 		description: 'フォローを行ったユーザー',
- 	},
- }
+type: 'object',
+properties: {
+ user: {
+ 	$ref: 'misskey://User',
+ 	description: 'フォローを行ったユーザー',
+ },
+}
 }"/>
 
 ### unfollow
@@ -116,13 +116,13 @@ properties: {
 }"/>
 
 <MkSchemaViewerItemObject :schema="{
- type: 'object',
- properties: {
- 	user: {
- 		$ref: 'misskey://User',
- 		description: 'フォロー解除したユーザー',
- 	},
- }
+type: 'object',
+properties: {
+ user: {
+ 	$ref: 'misskey://User',
+ 	description: 'フォロー解除したユーザー',
+ },
+}
 }"/>
 
 ### note
@@ -138,13 +138,13 @@ properties: {
 }"/>
 
 <MkSchemaViewerItemObject :schema="{
- type: 'object',
- properties: {
- 	note: {
- 		$ref: 'misskey://Note',
- 		description: '作成されたノート',
- 	},
- }
+type: 'object',
+properties: {
+ note: {
+ 	$ref: 'misskey://Note',
+ 	description: '作成されたノート',
+ },
+}
 }"/>
 
 ### reply
@@ -160,13 +160,13 @@ properties: {
 }"/>
 
 <MkSchemaViewerItemObject :schema="{
- type: 'object',
- properties: {
- 	note: {
- 		$ref: 'misskey://Note',
- 		description: '返信',
- 	},
- }
+type: 'object',
+properties: {
+ note: {
+ 	$ref: 'misskey://Note',
+ 	description: '返信',
+ },
+}
 }"/>
 
 ### renote
@@ -182,13 +182,13 @@ properties: {
 }"/>
 
 <MkSchemaViewerItemObject :schema="{
- type: 'object',
- properties: {
- 	note: {
- 		$ref: 'misskey://Note',
- 		description: 'Renote',
- 	},
- }
+type: 'object',
+properties: {
+ note: {
+ 	$ref: 'misskey://Note',
+ 	description: 'Renote',
+ },
+}
 }"/>
 
 ### mention
@@ -196,11 +196,11 @@ properties: {
 自分にメンションされた際に発生します。
 
 <MkSchemaViewerItemObject :schema="{
- type: 'object',
- properties: {
- 	note: {
- 		$ref: 'misskey://Note',
- 		description: 'メンションを含むノート',
- 	},
- }
+type: 'object',
+properties: {
+note: {
+ $ref: 'misskey://Note',
+ description: 'メンションを含むノート',
+},
+}
 }"/>

@@ -2,14 +2,22 @@ noScript: "現在Javascriptが無効になっています。サイトの表示�
 learnMore: "詳しく知る"
 loading: "読み込み中…"
 clickToExpand: "（クリックして展開）"
-copy: "コピー"
+copy: "Kopiuj"
 share: "共有する"
-note: "ノート"
+note: "Notka"
 other: "その他"
 add: "追加"
+generate: "生成"
+download: "ダウンロード"
 browse: "参照"
 settings: "設定"
 goToLegacyHub: "従来のMisskey Hub"
+contactUs: "お問い合わせ"
+detail: "詳細"
+lastUpdate: "最終更新"
+empty: "内容がありません"
+threeDimensionModel: "3Dモデル"
+clickToShow: "クリックして表示"
 _error:
   notFound: "ページが見つかりませんでした"
   notFoundDesc: "お探しのページは見つかりませんでした。URLをお確かめください。"
@@ -23,18 +31,18 @@ _seo:
   defaultTitleTagline: "ノートでひろがるネットワーク"
   defaultDescription: "【ノートでひろがるネットワーク】分散型SNS Misskeyの公式サイト。Misskeyのはじめかたやサーバー一覧など、Misskeyに関する情報が満載！"
 _nav:
-  servers: "サーバー"
-  docs: "ドキュメント"
-  blog: "ブログ"
+  servers: "Serwery"
+  docs: "Dokumentacja"
+  blog: "Blog"
   other: "もっと！"
   switchLang: "言語の設定"
 _landing:
   _hero:
-    description: "Misskey（ミスキー）はオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
-    gettingStarted: "はじめる"
+    description: "Misskey jest otwarto-źródłową i zdecentralizowaną siecią społecznościową"
+    gettingStarted: "Zaczynamy"
   _keyFeatures:
     _open:
-      title: "オープン"
+      title: "Otwarte"
       description: "Misskeyはオープンソースのソフトウェアで、誰でも自由にMisskeyを利用できます。"
     _federated:
       title: "分散"
@@ -94,11 +102,14 @@ _landing:
     description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
   _sponsors:
     title: "スポンサー"
+    becomeASponsor: "スポンサーになる"
 _servers:
   title: "サーバー一覧"
   description: "Misskeyは単一のサービスではなく、各々がサービスを提供する分散型ネットワークとなっています。Misskeyを利用するには、サービスを提供しているサーバーでアカウントを作成する必要があります。"
   addYourServer: "あなたのサーバーが表示されませんか？{0}から登録してください！"
   addYourServerLink: "こちら"
+  disclaimerTitle: "【重要】免責事項"
+  disclaimer: "このサーバー一覧は、Fediverse上で発見されたMisskeyサーバーを自動で掲載するものであり、原則として手動での確認は行っておりません。ここに掲載されているサーバーは、Misskey Projectが確認・検証・承認したものではありません。アクセス先でユーザーに生じたあらゆる損害について、Misskey Projectは一切責任を負いません。"
   _system:
     fetchError: "データの読み込みに失敗しました。後でもう一度お試しください。"
   _statistics:
@@ -145,6 +156,9 @@ _docs:
   _changelog:
     title: "リリースノート"
     description: "Misskeyのバージョンアップ履歴をご覧いただけます。最新のバージョンで何が変わったのかを確認しましょう！"
+  _donate:
+    title: "プロジェクトへの寄付"
+    description: "Misskeyは無料で使えるオープンソースのソフトウェアです。気に入っていただけたら、今後も開発を続けられるようにぜひ寄付をご検討ください。"
   _forUsers:
     title: "Misskeyユーザー向け"
   _forAdmin:
@@ -157,6 +171,10 @@ _docs:
   _toc:
     title: "このページの内容"
     toPageTop: "ページ上部に戻る"
+  _steppedGuide:
+    selectCourse: "ガイドを選ぶ"
+    noImageInThisStep: "このステップには画像がありません"
+    aiWellDone: "操作はこれで完了です。お疲れ様でした♪"
 _blog:
   title: "ブログ"
   description: "Misskey開発本部から、Misskeyに関する最新情報やTips等をお届けします！（日本語のみ）"
@@ -172,17 +190,26 @@ _other:
 _brandAssets:
   title: "アセット集"
   description: "Misskeyのロゴ、アイコンなどのアセットのコレクションです。一定のライセンスのもとでご自由にお使いいただけます。"
-  license: "アセットは、CC BY-NC-SAのライセンスの下で自由にお使いいただけます🎉"
+  license: "アセットは、CC BY-SAのライセンスの下で自由にお使いいただけます🎉"
   assetsDirectory: "全てのアセットは、{0}で管理されています。"
   logo: "ロゴ"
   icon: "アイコン"
   banner: "バナー"
   avatarDecorationTemplate: "アバターデコレーション テンプレート"
+_contact:
+  title: "お問い合わせ"
+  description: "Misskey Projectへのお問い合わせはこちらから"
+  form: "こちらのフォームからご回答ください。"
+  formGoogleAccountRequired: "現在、スパム対策のため、お問い合わせの送信にはGoogleアカウントが必要となっております。\nお手数をおかけしますが、ご理解のほどよろしくお願い致します。"
+  formLink: "フォームへ進む"
+  faqTitle: "よくあるお問い合わせ"
+  faqDescription: "お問い合わせを送信する前に、あなたの知りたいことがここにないか確認してください。"
+  ifNothingIsFound: "もしあてはまるものがなかったら…"
 _links:
   title: "リンク"
   _github:
-    title: "Github"
-    description: "Misskeyの開発はGithub上で行われています。機能リクエストやバグ報告などはこちらから行えます。"
+    title: "GitHub"
+    description: "Misskeyの開発はGitHub上で行われています。機能リクエストやバグ報告などはこちらから行えます。"
   _crowdin:
     title: "Crowdin"
     description: "Misskey本体、およびドキュメントの翻訳はこちらで管理されています。皆さんのご協力をお願いします。"
@@ -220,8 +247,8 @@ _aidConverter:
   mode: "作成するid"
   date: "日付時刻"
 _aboutUs:
-  title: "Misskey Development Divisionについて"
-  description: "Misskey開発チームについての情報を掲載しています。"
+  title: "Misskey Projectについて"
+  description: "Misskey Projectについての情報を掲載しています。"
   _team:
     title: "開発メンバー"
     description: "Misskeyの開発に関わっている方を紹介しています。"
@@ -279,6 +306,8 @@ _shareLinkGenerator:
   testLink: "共有リンクを試す"
   typeSomethingToGetLink: "本文を入力するとリンクが生成されます。"
   typeSomethingToGetButton: "本文を入力するとボタンが生成されます。"
+  documentationIs: "パラメータの詳細情報など、技術仕様は{here}"
+  here: "こちら"
 _goToMisskey:
   title: "Misskey Webに移動"
   heading: "このページを開きたいサーバーを選択してください"
@@ -310,6 +339,18 @@ _customEmojiPreview:
     textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
   _placeholder:
     noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
+_identiconGenerator:
+  title: "初期アイコンジェネレーター"
+  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
+  userName: "ユーザー名"
+  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
+_historicalMaterials:
+  title: "歴史資料館"
+  description: "Misskeyに関する歴史的資料を一挙公開"
+  heroSubtitle: "Misskey 10周年記念企画"
+  heroDescription: "Misskeyは2014年に掲示板サービスとして生まれました。それから10年経ち、今ではたくさんの方々に利用していただけるプラットフォームになりました。\nここではMisskeyに関する歴史的資料を一挙公開します！"
+  submissionTitle: "古いMisskeyの写真をお持ちですか？"
+  submissionDescription: "昔のMisskeyにまつわる資料をお持ちの方は、ぜひ当館にお寄せください。\nGitHubを利用できる方は{gh_issue}に、利用できない方は {'@'}syuilo{'@'}misskey.io にお送りください。"
 _api:
   _permissions:
     title: "権限"
@@ -364,7 +405,6 @@ _api:
       "read:admin:server-info": "サーバーの情報を見る"
       "read:admin:show-moderation-log": "モデレーションログを見る"
       "read:admin:show-user": "ユーザーのプライベートな情報を見る"
-      "read:admin:show-users": "ユーザーのプライベートな情報を見る"
       "write:admin:suspend-user": "ユーザーを凍結する"
       "write:admin:unset-user-avatar": "ユーザーのアバターを削除する"
       "write:admin:unset-user-banner": "ユーザーのバーナーを削除する"

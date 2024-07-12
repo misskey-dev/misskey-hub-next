@@ -1,24 +1,24 @@
 ---
-description: このガイドはDockerを使ったMisskeyセットアップ方法を説明します。
+description: 本教程说明了使用Docker安装Misskey的方法。
 ---
 
-# Docker Composeを使ったMisskey構築
+# 使用 Docker Compose 构建 Misskey
 
-このガイドはDocker Composeを使ったMisskeyセットアップ方法を説明します。
+这份指南将介绍如何使用 Docker Compose 设置 Misskey。
 
 :::danger
 
-一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
+一旦完成设置请勿更改使用的服务器域名和主机名，不要重新创建数据库！
 
 :::
 
 :::tip{label='前提条件'}
 
-- DockerおよびDocker Composeがインストールされていること。
+- 已安装了 Docker 和 Docker Compose。
 
 :::
 
-## リポジトリの取得
+## 拉取docker库
 
 ```sh
 git clone -b master https://github.com/misskey-dev/misskey.git
@@ -26,32 +26,31 @@ cd misskey
 git checkout master
 ```
 
-## 設定
+## 设置
 
-下記コマンドで、各種設定ファイルのサンプルをコピーします。
+使用以下命令，拉取各种配置文件的示例文件。
 
 ```sh
 cp .config/docker_example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
-cp ./docker-compose_example.yml ./docker-compose.yml
+cp ./compose_example.yml ./compose.yml
 ```
 
-`default.yml`と`docker.env`をファイル内の説明に従って編集してください。\
-また、必要に応じて、`docker-compose.yml`を編集します。(ポートを変更したい場合など)
+请按照文件中的说明根据自身情况编辑 default.yml 和 docker.env 文件内容。\
+同时再次根据需要编辑 docker-compose.yml 。(ポートを変更したい場合など)
 
-## ビルドと初期化
+## 构建镜像与初始化数据库
 
-次のコマンドでMisskeyのビルドとデータベースの初期化を行います。
-これにはしばらく時間がかかります。
+使用以下命令进行 Misskey 的构建和数据库初始化。这可能需要一些时间。
 
 ```shell
 sudo docker compose build
 sudo docker compose run --rm web pnpm run init
 ```
 
-## 起動
+## 运行Misskey
 
-お疲れ様でした。以下のコマンドでMisskeyを起動できます。
+辛苦了。您可以使用以下命令启动 Misskey。
 
 ```sh
 sudo docker compose up -d
@@ -59,11 +58,11 @@ sudo docker compose up -d
 
 GLHF✨
 
-## Misskeyのアップデート方法
+## 更新Misskey的方法
 
 :::warning
 
-アップデートの際は必ず[リリースノート](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)を確認し、変更点や追加で必要になる作業の有無(ほとんどの場合ありません)を予め把握するようにしてください。
+在更新时，请务必确认Misskey更新通知，以提前了解变更内容以及可能需要进行的额外工作（通常情况下并不需要）。
 
 :::
 
@@ -77,9 +76,9 @@ sudo docker compose build
 sudo docker compose stop && sudo docker compose up -d
 ```
 
-アップデート内容、およびデータベースの規模によっては時間がかかることがあります。
+由于更新内容和数据库规模的不同，处理时间可能会有所不同。
 
-## cliコマンドを実行する方法
+## 如何执行cli命令
 
 ```sh
 sudo docker compose run --rm web node packages/backend/built/tools/foo bar

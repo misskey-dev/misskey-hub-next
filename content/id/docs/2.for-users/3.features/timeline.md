@@ -1,39 +1,115 @@
-# タイムライン
+# Lini masa
 
-タイムラインは、[ノート](./note)が時系列で表示される機能です。
+タイムラインは、[ノート](/docs/for-users/features/note/)が時系列で表示される機能です。
 タイムラインには以下で示す種類があり、種類によって表示されるノートも異なります。
 なお、タイムラインの種類によってはサーバーにより無効になっている場合があります。
 
-## ホーム
+## Beranda
 
 自分のフォローしているユーザーの投稿が流れます。HTLと略されます。
 
-## ローカル
+## Lokal
 
 全てのローカルユーザーの「ホーム」指定されていない投稿が流れます。LTLと略されます。
 
-## ソーシャル
+## Sosial
 
 自分のフォローしているユーザーの投稿と、全てのローカルユーザーの「ホーム」指定されていない投稿が流れます。STLと略されます。
 
-## グローバル
+## Global
 
 全てのローカルユーザーの「ホーム」指定されていない投稿と、サーバーに届いた全てのリモートユーザーの「ホーム」指定されていない投稿が流れます。GTLと略されます。
 
-## 比較
+## Perbandingan
 
-| ソース                             |       |     | タイムライン |       |       |
-| ------------------------------- | ----- | --- | ------ | ----- | ----- |
-| ユーザー                            | 公開範囲  | ホーム | ローカル   | ソーシャル | グローバル |
-| ローカル (フォロー)  | 公開    | ✔   | ✔      | ✔     | ✔     |
-|                                 | ホーム   | ✔   |        | ✔     |       |
-|                                 | フォロワー | ✔   |        | ✔     |       |
-| リモート (フォロー)  | 公開    | ✔   |        | ✔     | ✔     |
-|                                 | ホーム   | ✔   |        | ✔     |       |
-|                                 | フォロワー | ✔   |        | ✔     |       |
-| ローカル (未フォロー) | 公開    |     | ✔      | ✔     | ✔     |
-|                                 | ホーム   |     |        |       |       |
-|                                 | フォロワー |     |        |       |       |
-| リモート (未フォロー) | 公開    |     |        |       | ✔     |
-|                                 | ホーム   |     |        |       |       |
-|                                 | フォロワー |     |        |       |       |
+<table>
+    <thead>
+        <tr>
+            <th scope="col" rowspan="2">ソース</th>
+            <th scope="col" rowspan="2">Visibilitas</th>
+            <th scope="col" colspan="4">Lini masa</th>
+        </tr>
+        <tr>
+            <th scope="col">Beranda</th>
+            <th scope="col">Lokal</th>
+            <th scope="col">Sosial</th>
+            <th scope="col">Global</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" rowspan="3">ローカル（フォロー）</th>
+            <th scope="row">Publik</th>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+        </tr>
+        <tr>
+            <th scope="row">Beranda</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Pengikut</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row" rowspan="3">リモート（フォロー）</th>
+            <th scope="row">Publik</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td>✔</td>
+        </tr>
+        <tr>
+            <th scope="row">Beranda</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Pengikut</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row" rowspan="3">ローカル（未フォロー）</th>
+            <th scope="row">Publik</th>
+            <td></td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+        </tr>
+        <tr>
+            <th scope="row">Beranda</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Pengikut</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">リモート（未フォロー）</th>
+            <th scope="row">Publik</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>✔</td>
+        </tr>
+    </tbody>
+</table>

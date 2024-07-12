@@ -1,9 +1,9 @@
-# ハッシュタグ
+# Hashtags
 
-ハッシュタグとは、投稿に検索可能なタグをつけることができる機能の一つです。
+Hashtag is a feature that allows you to add searchable tags to your posts.
 
-世界ではじめてのハッシュタグ── #barcamp は、[2007年8月24日の午前4:25](https://twitter.com/chrismessina/status/223115412?lang=en)にクリス・メッシナ氏[@chrismessina@mastodon.xyz](https://mastodon.xyz/@chrismessina)によって考案されました。後にこの「ポンド記号`#`を用いて検索を容易にする」という案は、英語で「刻む、ハックする」を意味する「ハッシュ」と、「札」を意味する「タグ」を合わせた造語──「ハッシュタグ」として生まれ変わり、当時のTwitter社に公式採用されました。ちなみにクリス・メッシナ氏が`#`を選んだ理由は、IRCのチャンネル名が`#`で始まることからの連想だからだそうです。
+The world's first hashtag, #barcamp, was created by Chris Messina [@chrismessina@mastodon.xyz](https://mastodon.xyz/@chrismessina) on [August 24, 2007 at 4:25 AM](https://twitter.com/chrismessina/status/223115412?lang=en).Later, this idea of using the pound sign `#` to make searches easier was reborn as "hashtag," a word coined by combining the English word "hash," meaning "to chop up or shred," and "tag," meaning "label," and was officially adopted by Twitter at the time.Incidentally, Chris Messina chose `#` because it was reminiscent of IRC channel names starting with `#`.
 
 ![Screenshot of Chris Messina's first hashtag tweet that says "how do you feel about using # (pound) for groups. As in #barcamp \[msg\]?"](/img/docs/for-users/features/hashtag/1.ja.png)
 
-FediverseでのハッシュタグはXやInstagramなどといった中央集権的なサービスとでのものと多少仕様が異なります。Fediverseでは全文検索が難しい場合などがあり、特定の投稿を探し出すのは困難ですが、投稿にハッシュタグがついていれば、その投稿をハッシュタグをたどって容易に見つけ出すことができます。また、投稿にハッシュタグをつけるだけで様々なサイトに自動で届けてくれるハッシュタグリレーと呼ばれるサービスなどが連合宇宙には存在し、ここではハッシュタグにそこそこの重みがあったりするのです。
+The way to use hashtags in the Fediverse is slightly different from how it is used in centralized services such as X and Instagram.In the Fediverse, full-text search is sometimes difficult, making it hard to find a specific post, but if a post contains a hashtag, you can easily locate it by following the hashtag.Additionally, there are services on the Fediverse called hashtag relays that automatically send posts to various sites just by adding hashtags to them, so hashtags are quite important.

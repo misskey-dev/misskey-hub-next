@@ -78,7 +78,7 @@ export const findDeepObject = (obj: NavItem, condition: (v: NavItem) => boolean)
  * Clipboardに値をコピー(TODO: 文字列以外も対応)
  */
 export function copyText(val: string) {
-    if (!process.client) return;
+    if (!import.meta.client) return;
 
 	// 空div 生成
 	const tmp = document.createElement('div');

@@ -44,7 +44,7 @@ MFM 代表 Markup language For Misskey，是一種專有的標記語言，可以
 
 ### 主題標籤
 
-「# + 標籤」來表示主題標籤。
+可以使用"#"符號後加文字表示主題標籤。
 :::tip
 
 有關主題標籤的更多資訊，請參閱[此處](./hashtag.md)。
@@ -77,7 +77,7 @@ https://example.com
 
 :::tip
 
-リンクテキストの前に`?`をつけると、リンクプレビューを非表示にすることができます。
+您可以透過在連結文字前面加上 `?` 來隱藏連結預覽。
 
 ```
 ?[example link](https://example.com)
@@ -90,9 +90,10 @@ https://example.com
 ### 自訂表情符號
 
 您可以透過用冒號包圍自訂表情符號名稱來顯示自訂表情符號。
+
 :::tip
 
-有關自訂表情符號的更多信息，請參閱[此處](./custom-emoji.md)。
+有關自訂表情符號的更多資訊，請參閱[此處](./custom-emoji.md)。
 
 :::
 
@@ -104,7 +105,7 @@ https://example.com
 
 ### 粗體
 
-可以將文字顯示为粗體来強調。
+您可以將文字加粗以強調它。
 
 ```
 **粗體**
@@ -141,6 +142,16 @@ https://example.com
 ```
 
 <MfmPreview text="<center>MisskeyでFediverseの世界が広がります</center>"></MfmPreview>
+
+### 旁註標記 (ruby)
+
+旁註標記用於標示東亞文字的發音。
+
+```
+$[ruby Misskey ミスキー] 
+```
+
+<MfmPreview text="$[ruby Misskey ミスキー]"></MfmPreview>
 
 ### 程式碼(内嵌)
 
@@ -227,6 +238,54 @@ $[bg.color=ff0 黃色背景]
 <MfmPreview text="$[fg.color=f00 赤字]
 $[bg.color=ff0 黄背景]"></MfmPreview>
 
+### 邊框
+
+您可以用邊框包圍內容。可以指定各種樣式。
+
+```
+$[border.style=solid,width=4 Default]
+
+$[border.style=hidden No border]
+
+$[border.style=dotted,width=2 Dotted]
+$[border.style=dashed,width=2 Dashed]
+$[border.style=double,width=4 Double]
+
+$[border.style=groove,width=4 Embossed A]
+$[border.style=ridge,width=4 Embossed B]
+
+$[border.style=inset,width=4 Inset A]
+$[border.style=outset,width=4 Inset B]
+
+$[border.color=d00 Border color]
+$[border.width=5 Border width]
+
+$[border.radius=6,width=2 Border radius]
+
+$[border.radius=5,width=2,color=888 $[position.x=1.5 ＣＳＳ]
+$[position.x=1.5 完全に理解した]]
+
+$[border.radius=5,width=2,color=888,noclip $[position.x=1.5 ＣＳＳ]
+$[position.x=1.5 完全に理解した]]
+```
+
+<MfmPreview text="$[border.style=solid,width=4 Default]\
+$[border.style=hidden No border]\
+$[border.style=dotted,width=2 Dotted]\
+$[border.style=dashed,width=2 Dashed]\
+$[border.style=double,width=4 Double]\
+$[border.style=groove,width=4 Embossed A]\
+$[border.style=ridge,width=4 Embossed B]\
+$[border.style=inset,width=4 Inset A]\
+$[border.style=outset,width=4 Inset B]\
+$[border.color=d00 Border color]\
+$[border.width=5 Border width]\
+$[border.radius=6,width=2 Border radius]\
+$[border.radius=5,width=2,color=888 $[position.x=1.5 ＣＳＳ]
+$[position.x=1.5 完全に理解した]]\
+$[border.radius=5,width=2,color=888,noclip $[position.x=1.5 ＣＳＳ]
+$[position.x=1.5 完全に理解した]]"></MfmPreview>
+
 ### 角度變化
 
 以指定的角度旋轉。
@@ -275,7 +334,7 @@ $[jelly 🍮] $[jelly.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[jelly 🍮] $[jelly.speed=5s 🍮]]"></MfmPreview>
 
-### 動畫（鏘～）
+### 動畫(鏘～)
 
 ```
 $[tada 🍮] $[tada.speed=5s 🍮]
@@ -365,3 +424,7 @@ $[sparkle 🍮]
 MFM 的解析器實作會作為函式庫發布，可以輕鬆地將 MFM 合併到客戶端。
 
 - [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - JavaScript 解析器實作
+- [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - Vue.js 的元件
+- [mfm.kt](https://github.com/samunohito/mfm.kt) - Kotlin 解析器實作
+- [mfm_parser](https://pub.dev/packages/mfm_parser) - Dart 解析器實作
+- [mfm](https://pub.dev/packages/mfm) - Flutter 的繪圖小工具

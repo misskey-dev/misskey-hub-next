@@ -20,36 +20,24 @@ export const redirects = [
         "/docs/for-developers/api/streaming/channel/global-timeline/"
     ],
     [
-        "/docs/api/streaming/channel/global-timeline",
-        "/docs/api/streaming/channel/global-timeline.html"
-    ],
-    [
         "/docs/api/streaming/channel/global-timeline.md",
-        "/docs/api/streaming/channel/global-timeline.html"
+        "/docs/for-developers/api/streaming/channel/global-timeline/"
     ],
     [
         "/docs/api/streaming/channel/home-timeline.html",
         "/docs/for-developers/api/streaming/channel/home-timeline/"
     ],
     [
-        "/docs/api/streaming/channel/home-timeline",
-        "/docs/api/streaming/channel/home-timeline.html"
-    ],
-    [
         "/docs/api/streaming/channel/home-timeline.md",
-        "/docs/api/streaming/channel/home-timeline.html"
+        "/docs/for-developers/api/streaming/channel/home-timeline/"
     ],
     [
         "/docs/api/streaming/channel/hybrid-timeline.html",
         "/docs/for-developers/api/streaming/channel/hybrid-timeline/"
     ],
     [
-        "/docs/api/streaming/channel/hybrid-timeline",
-        "/docs/api/streaming/channel/hybrid-timeline.html"
-    ],
-    [
         "/docs/api/streaming/channel/hybrid-timeline.md",
-        "/docs/api/streaming/channel/hybrid-timeline.html"
+        "/docs/for-developers/api/streaming/channel/hybrid-timeline/"
     ],
     [
         "/docs/api/streaming/channel/index.html",
@@ -64,24 +52,16 @@ export const redirects = [
         "/docs/for-developers/api/streaming/channel/local-timeline/"
     ],
     [
-        "/docs/api/streaming/channel/local-timeline",
-        "/docs/api/streaming/channel/local-timeline.html"
-    ],
-    [
         "/docs/api/streaming/channel/local-timeline.md",
-        "/docs/api/streaming/channel/local-timeline.html"
+        "/docs/for-developers/api/streaming/channel/local-timeline/"
     ],
     [
         "/docs/api/streaming/channel/main.html",
         "/docs/for-developers/api/streaming/channel/main/"
     ],
     [
-        "/docs/api/streaming/channel/main",
-        "/docs/api/streaming/channel/main.html"
-    ],
-    [
         "/docs/api/streaming/channel/main.md",
-        "/docs/api/streaming/channel/main.html"
+        "/docs/for-developers/api/streaming/channel/main/"
     ],
     [
         "/docs/api/streaming/index.html",
@@ -89,303 +69,207 @@ export const redirects = [
     ],
     [
         "/docs/api/streaming/index.md",
-        "/docs/api/streaming/"
+        "/docs/for-developers/api/streaming/"
     ],
     [
         "/docs/api/streaming/note-capture-events.html",
         "/docs/for-developers/api/streaming/note-capture-events/"
     ],
     [
-        "/docs/api/streaming/note-capture-events",
-        "/docs/api/streaming/note-capture-events.html"
-    ],
-    [
         "/docs/api/streaming/note-capture-events.md",
-        "/docs/api/streaming/note-capture-events.html"
+        "/docs/for-developers/api/streaming/note-capture-events/"
     ],
     [
         "/docs/api/endpoints.html",
         "/docs/for-developers/api/endpoints/"
     ],
     [
-        "/docs/api/endpoints",
-        "/docs/api/endpoints.html"
-    ],
-    [
         "/docs/api/endpoints.md",
-        "/docs/api/endpoints.html"
+        "/docs/for-developers/api/endpoints/"
     ],
     [
         "/docs/admin/cdn.html",
         "/docs/for-admin/install/resources/cdn/"
     ],
     [
-        "/docs/admin/cdn",
-        "/docs/admin/cdn.html"
-    ],
-    [
         "/docs/admin/cdn.md",
-        "/docs/admin/cdn.html"
+        "/docs/for-admin/install/resources/cdn/"
     ],
     [
         "/docs/admin/nginx.html",
         "/docs/for-admin/install/resources/nginx/"
     ],
     [
-        "/docs/admin/nginx",
-        "/docs/admin/nginx.html"
-    ],
-    [
         "/docs/admin/nginx.md",
-        "/docs/admin/nginx.html"
+        "/docs/for-admin/install/resources/nginx/"
     ],
     [
         "/docs/admin/push-docker-hub.html",
         "/docs/for-admin/install/resources/push-docker-hub/"
     ],
     [
-        "/docs/admin/push-docker-hub",
-        "/docs/admin/push-docker-hub.html"
-    ],
-    [
         "/docs/admin/push-docker-hub.md",
-        "/docs/admin/push-docker-hub.html"
+        "/docs/for-admin/install/resources/push-docker-hub/"
     ],
     [
         "/docs/admin/troubleshooting.html",
         "/docs/for-admin/install/resources/troubleshooting/"
     ],
     [
-        "/docs/admin/troubleshooting",
-        "/docs/admin/troubleshooting.html"
-    ],
-    [
         "/docs/admin/troubleshooting.md",
-        "/docs/admin/troubleshooting.html"
+        "/docs/for-admin/install/resources/troubleshooting/"
     ],
     [
         "/docs/advanced/aiscript.html",
         "/docs/for-developers/aiscript/"
     ],
     [
-        "/docs/advanced/aiscript",
-        "/docs/advanced/aiscript.html"
-    ],
-    [
         "/docs/advanced/aiscript.md",
-        "/docs/advanced/aiscript.html"
+        "/docs/for-developers/aiscript/"
     ],
     [
         "/docs/advanced/create-plugin.html",
         "/docs/for-developers/plugin/create-plugin/"
     ],
     [
-        "/docs/advanced/create-plugin",
-        "/docs/advanced/create-plugin.html"
-    ],
-    [
         "/docs/advanced/create-plugin.md",
-        "/docs/advanced/create-plugin.html"
+        "/docs/for-developers/plugin/create-plugin/"
     ],
     [
         "/docs/advanced/develop-bot.html",
         "/docs/for-developers/bot/"
     ],
     [
-        "/docs/advanced/develop-bot",
-        "/docs/advanced/develop-bot.html"
-    ],
-    [
         "/docs/advanced/develop-bot.md",
-        "/docs/advanced/develop-bot.html"
+        "/docs/for-developers/bot/"
     ],
     [
         "/docs/advanced/plugin-api-reference.html",
         "/docs/for-developers/plugin/plugin-api-reference/"
     ],
     [
-        "/docs/advanced/plugin-api-reference",
-        "/docs/advanced/plugin-api-reference.html"
-    ],
-    [
         "/docs/advanced/plugin-api-reference.md",
-        "/docs/advanced/plugin-api-reference.html"
+        "/docs/for-developers/plugin/plugin-api-reference/"
     ],
     [
         "/docs/advanced/publish-on-your-website.html",
         "/docs/for-developers/publish-on-your-website/"
     ],
     [
-        "/docs/advanced/publish-on-your-website",
-        "/docs/advanced/publish-on-your-website.html"
-    ],
-    [
         "/docs/advanced/publish-on-your-website.md",
-        "/docs/advanced/publish-on-your-website.html"
+        "/docs/for-developers/publish-on-your-website/"
     ],
     [
         "/docs/api/app.html",
         "/docs/for-developers/api/app/"
     ],
     [
-        "/docs/api/app",
-        "/docs/api/app.html"
-    ],
-    [
         "/docs/api/app.md",
-        "/docs/api/app.html"
+        "/docs/for-developers/api/app/"
     ],
     [
         "/docs/api/index.html",
-        "/docs/api/"
+        "/docs/for-developers/api/"
     ],
     [
         "/docs/api/index.md",
-        "/docs/api/"
+        "/docs/for-developers/api/"
     ],
     [
         "/docs/api/libraries.html",
         "/docs/for-developers/api/libraries/"
     ],
     [
-        "/docs/api/libraries",
-        "/docs/api/libraries.html"
-    ],
-    [
         "/docs/api/libraries.md",
-        "/docs/api/libraries.html"
+        "/docs/for-developers/api/libraries/"
     ],
     [
         "/docs/api/permission.html",
         "/docs/for-developers/api/permission/"
     ],
     [
-        "/docs/api/permission",
-        "/docs/api/permission.html"
-    ],
-    [
         "/docs/api/permission.md",
-        "/docs/api/permission.html"
+        "/docs/for-developers/api/permission/"
     ],
     [
         "/docs/features/ads.html",
         "/docs/for-users/features/ads/"
     ],
     [
-        "/docs/features/ads",
-        "/docs/features/ads.html"
-    ],
-    [
         "/docs/features/ads.md",
-        "/docs/features/ads.html"
+        "/docs/for-users/features/ads/"
     ],
     [
         "/docs/features/antenna.html",
         "/docs/for-users/features/antenna/"
     ],
     [
-        "/docs/features/antenna",
-        "/docs/features/antenna.html"
-    ],
-    [
         "/docs/features/antenna.md",
-        "/docs/features/antenna.html"
+        "/docs/for-users/features/antenna/"
     ],
     [
         "/docs/features/charts.html",
         "/docs/for-users/features/charts/"
     ],
     [
-        "/docs/features/charts",
-        "/docs/features/charts.html"
-    ],
-    [
         "/docs/features/charts.md",
-        "/docs/features/charts.html"
+        "/docs/for-users/features/charts/"
     ],
     [
         "/docs/features/clip.html",
         "/docs/for-users/features/clip/"
     ],
     [
-        "/docs/features/clip",
-        "/docs/features/clip.html"
-    ],
-    [
         "/docs/features/clip.md",
-        "/docs/features/clip.html"
+        "/docs/for-users/features/clip/"
     ],
     [
         "/docs/features/custom-emoji.html",
         "/docs/for-users/features/custom-emoji/"
     ],
     [
-        "/docs/features/custom-emoji",
-        "/docs/features/custom-emoji.html"
-    ],
-    [
         "/docs/features/custom-emoji.md",
-        "/docs/features/custom-emoji.html"
+        "/docs/for-users/features/custom-emoji/"
     ],
     [
         "/docs/features/deck.html",
         "/docs/for-users/features/deck/"
     ],
     [
-        "/docs/features/deck",
-        "/docs/features/deck.html"
-    ],
-    [
         "/docs/features/deck.md",
-        "/docs/features/deck.html"
+        "/docs/for-users/features/deck/"
     ],
     [
         "/docs/features/drive.html",
         "/docs/for-users/features/drive/"
     ],
     [
-        "/docs/features/drive",
-        "/docs/features/drive.html"
-    ],
-    [
         "/docs/features/drive.md",
-        "/docs/features/drive.html"
+        "/docs/for-users/features/drive/"
     ],
     [
         "/docs/features/favorite.html",
         "/docs/for-users/features/favorite/"
     ],
     [
-        "/docs/features/favorite",
-        "/docs/features/favorite.html"
-    ],
-    [
         "/docs/features/favorite.md",
-        "/docs/features/favorite.html"
+        "/docs/for-users/features/favorite/"
     ],
     [
         "/docs/features/follow.html",
         "/docs/for-users/features/follow/"
     ],
     [
-        "/docs/features/follow",
-        "/docs/features/follow.html"
-    ],
-    [
         "/docs/features/follow.md",
-        "/docs/features/follow.html"
+        "/docs/for-users/features/follow/"
     ],
     [
         "/docs/features/hashtag.html",
         "/docs/for-users/features/hashtag/"
     ],
     [
-        "/docs/features/hashtag",
-        "/docs/features/hashtag.html"
-    ],
-    [
         "/docs/features/hashtag.md",
-        "/docs/features/hashtag.html"
+        "/docs/for-users/features/hashtag/"
     ],
     [
         "/docs/features/index.html",
@@ -400,352 +284,232 @@ export const redirects = [
         "/docs/for-users/features/mention/"
     ],
     [
-        "/docs/features/mention",
-        "/docs/features/mention.html"
-    ],
-    [
         "/docs/features/mention.md",
-        "/docs/features/mention.html"
+        "/docs/for-users/features/mention/"
     ],
     [
         "/docs/features/mfm.html",
         "/docs/for-users/features/mfm/"
     ],
     [
-        "/docs/features/mfm",
-        "/docs/features/mfm.html"
-    ],
-    [
         "/docs/features/mfm.md",
-        "/docs/features/mfm.html"
+        "/docs/for-users/features/mfm/"
     ],
     [
         "/docs/features/mute-and-block.html",
         "/docs/for-users/features/mute-and-block/"
     ],
     [
-        "/docs/features/mute-and-block",
-        "/docs/features/mute-and-block.html"
-    ],
-    [
         "/docs/features/mute-and-block.md",
-        "/docs/features/mute-and-block.html"
+        "/docs/for-users/features/mute-and-block/"
     ],
     [
         "/docs/features/note.html",
         "/docs/for-users/features/note/"
     ],
     [
-        "/docs/features/note",
-        "/docs/features/note.html"
-    ],
-    [
         "/docs/features/note.md",
-        "/docs/features/note.html"
+        "/docs/for-users/features/note/"
     ],
     [
         "/docs/features/online-status.html",
         "/docs/for-users/features/online-status/"
     ],
     [
-        "/docs/features/online-status",
-        "/docs/features/online-status.html"
-    ],
-    [
         "/docs/features/online-status.md",
-        "/docs/features/online-status.html"
+        "/docs/for-users/features/online-status/"
     ],
     [
         "/docs/features/pages.html",
         "/docs/for-users/features/pages/"
     ],
     [
-        "/docs/features/pages",
-        "/docs/features/pages.html"
-    ],
-    [
         "/docs/features/pages.md",
-        "/docs/features/pages.html"
+        "/docs/for-users/features/pages/"
     ],
     [
         "/docs/features/plugin.html",
         "/docs/for-users/features/plugin/"
     ],
     [
-        "/docs/features/plugin",
-        "/docs/features/plugin.html"
-    ],
-    [
         "/docs/features/plugin.md",
-        "/docs/features/plugin.html"
+        "/docs/for-users/features/plugin/"
     ],
     [
         "/docs/features/reaction.html",
         "/docs/for-users/features/reaction/"
     ],
     [
-        "/docs/features/reaction",
-        "/docs/features/reaction.html"
-    ],
-    [
         "/docs/features/reaction.md",
-        "/docs/features/reaction.html"
+        "/docs/for-users/features/reaction/"
     ],
     [
         "/docs/features/share-form.html",
         "/docs/for-users/features/share-form/"
     ],
     [
-        "/docs/features/share-form",
-        "/docs/features/share-form.html"
-    ],
-    [
         "/docs/features/share-form.md",
-        "/docs/features/share-form.html"
+        "/docs/for-users/features/share-form/"
     ],
     [
         "/docs/features/silence.html",
         "/docs/for-users/features/silence/"
     ],
     [
-        "/docs/features/silence",
-        "/docs/features/silence.html"
-    ],
-    [
         "/docs/features/silence.md",
-        "/docs/features/silence.html"
+        "/docs/for-users/features/silence/"
     ],
     [
         "/docs/features/theme.html",
         "/docs/for-users/features/theme/"
     ],
     [
-        "/docs/features/theme",
-        "/docs/features/theme.html"
-    ],
-    [
         "/docs/features/theme.md",
-        "/docs/features/theme.html"
+        "/docs/for-users/features/theme/"
     ],
     [
         "/docs/features/thread-mute.html",
         "/docs/for-users/features/thread-mute/"
     ],
     [
-        "/docs/features/thread-mute",
-        "/docs/features/thread-mute.html"
-    ],
-    [
         "/docs/features/thread-mute.md",
-        "/docs/features/thread-mute.html"
+        "/docs/for-users/features/thread-mute/"
     ],
     [
         "/docs/features/timeline.html",
         "/docs/for-users/features/timeline/"
     ],
     [
-        "/docs/features/timeline",
-        "/docs/features/timeline.html"
-    ],
-    [
         "/docs/features/timeline.md",
-        "/docs/features/timeline.html"
+        "/docs/for-users/features/timeline/"
     ],
     [
         "/docs/features/webhook.html",
         "/docs/for-users/features/webhook/"
     ],
     [
-        "/docs/features/webhook",
-        "/docs/features/webhook.html"
-    ],
-    [
         "/docs/features/webhook.md",
-        "/docs/features/webhook.html"
+        "/docs/for-users/features/webhook/"
     ],
     [
         "/docs/features/widgets.html",
         "/docs/for-users/features/widgets/"
     ],
     [
-        "/docs/features/widgets",
-        "/docs/features/widgets.html"
-    ],
-    [
         "/docs/features/widgets.md",
-        "/docs/features/widgets.html"
+        "/docs/for-users/features/widgets/"
     ],
     [
         "/docs/features/word-mute.html",
         "/docs/for-users/features/word-mute/"
     ],
     [
-        "/docs/features/word-mute",
-        "/docs/features/word-mute.html"
-    ],
-    [
         "/docs/features/word-mute.md",
-        "/docs/features/word-mute.html"
+        "/docs/for-users/features/word-mute/"
     ],
     [
         "/docs/install/bash.html",
         "/docs/for-admin/install/guides/bash/"
     ],
     [
-        "/docs/install/bash",
-        "/docs/install/bash.html"
-    ],
-    [
         "/docs/install/bash.md",
-        "/docs/install/bash.html"
+        "/docs/for-admin/install/guides/bash/"
     ],
     [
         "/docs/install/docker.html",
         "/docs/for-admin/install/guides/docker/"
     ],
     [
-        "/docs/install/docker",
-        "/docs/install/docker.html"
-    ],
-    [
         "/docs/install/docker.md",
-        "/docs/install/docker.html"
+        "/docs/for-admin/install/guides/docker/"
     ],
     [
         "/docs/install/kubernetes.html",
         "/docs/for-admin/install/guides/kubernetes/"
     ],
     [
-        "/docs/install/kubernetes",
-        "/docs/install/kubernetes.html"
-    ],
-    [
         "/docs/install/kubernetes.md",
-        "/docs/install/kubernetes.html"
+        "/docs/for-admin/install/guides/kubernetes/"
     ],
     [
         "/docs/install/manual.html",
         "/docs/for-admin/install/guides/manual/"
     ],
     [
-        "/docs/install/manual",
-        "/docs/install/manual.html"
-    ],
-    [
         "/docs/install/manual.md",
-        "/docs/install/manual.html"
+        "/docs/for-admin/install/guides/manual/"
     ],
     [
         "/docs/install/ubuntu-manual.html",
         "/docs/for-admin/install/guides/ubuntu-manual/"
     ],
     [
-        "/docs/install/ubuntu-manual",
-        "/docs/install/ubuntu-manual.html"
-    ],
-    [
         "/docs/install/ubuntu-manual.md",
-        "/docs/install/ubuntu-manual.html"
+        "/docs/for-admin/install/guides/ubuntu-manual/"
     ],
     [
         "/docs/tips/disable-timelines.html",
         "/docs/for-admin/moderation-tips/disable-timelines/"
     ],
     [
-        "/docs/tips/disable-timelines",
-        "/docs/tips/disable-timelines.html"
-    ],
-    [
         "/docs/tips/disable-timelines.md",
-        "/docs/tips/disable-timelines.html"
+        "/docs/for-admin/moderation-tips/disable-timelines/"
     ],
     [
         "/docs/tips/scale-out.html",
         "/docs/for-admin/install/resources/scale-out/"
     ],
     [
-        "/docs/tips/scale-out",
-        "/docs/tips/scale-out.html"
-    ],
-    [
         "/docs/tips/scale-out.md",
-        "/docs/tips/scale-out.html"
+        "/docs/for-admin/install/resources/scale-out/"
     ],
     [
         "/appendix/assets.html",
         "/brand-assets/"
     ],
     [
-        "/appendix/assets",
-        "/appendix/assets.html"
-    ],
-    [
         "/appendix/assets.md",
-        "/appendix/assets.html"
+        "/brand-assets/"
     ],
     [
         "/docs/apps.html",
         "/docs/for-users/resources/apps/"
     ],
     [
-        "/docs/apps",
-        "/docs/apps.html"
-    ],
-    [
         "/docs/apps.md",
-        "/docs/apps.html"
+        "/docs/for-users/resources/apps/"
     ],
     [
         "/docs/donate.html",
         "/docs/donate/"
     ],
     [
-        "/docs/donate",
-        "/docs/donate.html"
-    ],
-    [
         "/docs/donate.md",
-        "/docs/donate.html"
+        "/docs/donate/"
     ],
     [
         "/docs/faq.html",
         "/docs/for-users/resources/faq/"
     ],
     [
-        "/docs/faq",
-        "/docs/faq.html"
-    ],
-    [
         "/docs/faq.md",
-        "/docs/faq.html"
+        "/docs/for-users/resources/faq/"
     ],
     [
         "/docs/getting-started.html",
         "/docs/for-users/onboarding/"
     ],
     [
-        "/docs/getting-started",
-        "/docs/getting-started.html"
-    ],
-    [
         "/docs/getting-started.md",
-        "/docs/getting-started.html"
+        "/docs/for-users/onboarding/"
     ],
     [
         "/docs/glossary.html",
         "/docs/for-users/resources/glossary/"
     ],
     [
-        "/docs/glossary",
-        "/docs/glossary.html"
-    ],
-    [
         "/docs/glossary.md",
-        "/docs/glossary.html"
-    ],
-    [
-        "/docs/index.html",
-        "/docs/"
+        "/docs/for-users/resources/glossary/"
     ],
     [
         "/docs/index.md",
@@ -756,528 +520,352 @@ export const redirects = [
         "/docs/for-admin/install/guides/"
     ],
     [
-        "/docs/install",
-        "/docs/install.html"
-    ],
-    [
         "/docs/install.md",
-        "/docs/install.html"
+        "/docs/for-admin/install/guides/"
     ],
     [
         "/docs/misskey-hub.html",
         "/docs/for-users/resources/misskey-hub/"
     ],
     [
-        "/docs/misskey-hub",
-        "/docs/misskey-hub.html"
-    ],
-    [
         "/docs/misskey-hub.md",
-        "/docs/misskey-hub.html"
+        "/docs/for-users/resources/misskey-hub/"
     ],
     [
         "/docs/misskey.html",
         "/docs/about-misskey/"
     ],
     [
-        "/docs/misskey",
-        "/docs/misskey.html"
-    ],
-    [
         "/docs/misskey.md",
-        "/docs/misskey.html"
+        "/docs/about-misskey/"
     ],
     [
         "/docs/notes.html",
         "/docs/for-users/onboarding/warning/"
     ],
     [
-        "/docs/notes",
-        "/docs/notes.html"
-    ],
-    [
         "/docs/notes.md",
-        "/docs/notes.html"
+        "/docs/for-users/onboarding/warning/"
     ],
     [
         "/docs/releases.html",
         "/docs/releases/"
     ],
     [
-        "/docs/releases",
-        "/docs/releases.html"
-    ],
-    [
         "/docs/releases.md",
-        "/docs/releases.html"
+        "/docs/releases/"
     ],
     [
         "/docs/troubleshooting.html",
         "/docs/for-users/resources/troubleshooting/"
     ],
     [
-        "/docs/troubleshooting",
-        "/docs/troubleshooting.html"
-    ],
-    [
         "/docs/troubleshooting.md",
-        "/docs/troubleshooting.html"
+        "/docs/for-users/resources/troubleshooting/"
     ],
     [
         "/blog/2021-09-11-hello-to-misskey-hub.html",
         "/ja/blog/2021-09-11-hello-to-misskey-hub/"
     ],
     [
-        "/blog/2021-09-11-hello-to-misskey-hub",
-        "/blog/2021-09-11-hello-to-misskey-hub.html"
-    ],
-    [
         "/blog/2021-09-11-hello-to-misskey-hub.md",
-        "/blog/2021-09-11-hello-to-misskey-hub.html"
+        "/ja/blog/2021-09-11-hello-to-misskey-hub/"
     ],
     [
         "/blog/2021-11-05-mac2021.html",
         "/ja/blog/2021-11-05-mac2021/"
     ],
     [
-        "/blog/2021-11-05-mac2021",
-        "/blog/2021-11-05-mac2021.html"
-    ],
-    [
         "/blog/2021-11-05-mac2021.md",
-        "/blog/2021-11-05-mac2021.html"
+        "/ja/blog/2021-11-05-mac2021/"
     ],
     [
         "/blog/2021-12-01-inside-misskey-hub.html",
         "/ja/blog/2021-12-01-inside-misskey-hub/"
     ],
     [
-        "/blog/2021-12-01-inside-misskey-hub",
-        "/blog/2021-12-01-inside-misskey-hub.html"
-    ],
-    [
         "/blog/2021-12-01-inside-misskey-hub.md",
-        "/blog/2021-12-01-inside-misskey-hub.html"
+        "/ja/blog/2021-12-01-inside-misskey-hub/"
     ],
     [
         "/blog/2022-02-11-inside-mfm.html",
         "/ja/blog/2022-02-11-inside-mfm/"
     ],
     [
-        "/blog/2022-02-11-inside-mfm",
-        "/blog/2022-02-11-inside-mfm.html"
-    ],
-    [
         "/blog/2022-02-11-inside-mfm.md",
-        "/blog/2022-02-11-inside-mfm.html"
+        "/ja/blog/2022-02-11-inside-mfm/"
     ],
     [
         "/blog/2022-11-28-media-k-tai.html",
         "/ja/blog/2022-11-28-media-k-tai/"
     ],
     [
-        "/blog/2022-11-28-media-k-tai",
-        "/blog/2022-11-28-media-k-tai.html"
-    ],
-    [
         "/blog/2022-11-28-media-k-tai.md",
-        "/blog/2022-11-28-media-k-tai.html"
+        "/ja/blog/2022-11-28-media-k-tai/"
     ],
     [
         "/blog/2023-02-08-contribute-to-earn.html",
         "/ja/blog/2023-02-08-contribute-to-earn/"
     ],
     [
-        "/blog/2023-02-08-contribute-to-earn",
-        "/blog/2023-02-08-contribute-to-earn.html"
-    ],
-    [
         "/blog/2023-02-08-contribute-to-earn.md",
-        "/blog/2023-02-08-contribute-to-earn.html"
+        "/ja/blog/2023-02-08-contribute-to-earn/"
     ],
     [
         "/blog/2023-02-13-gihyo.html",
         "/ja/blog/2023-02-13-gihyo/"
     ],
     [
-        "/blog/2023-02-13-gihyo",
-        "/blog/2023-02-13-gihyo.html"
-    ],
-    [
         "/blog/2023-02-13-gihyo.md",
-        "/blog/2023-02-13-gihyo.html"
+        "/ja/blog/2023-02-13-gihyo/"
     ],
     [
         "/blog/2023-02-13-media-k-tai.html",
         "/ja/blog/2023-02-13-media-k-tai/"
     ],
     [
-        "/blog/2023-02-13-media-k-tai",
-        "/blog/2023-02-13-media-k-tai.html"
-    ],
-    [
         "/blog/2023-02-13-media-k-tai.md",
-        "/blog/2023-02-13-media-k-tai.html"
+        "/ja/blog/2023-02-13-media-k-tai/"
     ],
     [
         "/blog/2023-03-04-media-itmedia.html",
         "/ja/blog/2023-03-04-media-itmedia/"
     ],
     [
-        "/blog/2023-03-04-media-itmedia",
-        "/blog/2023-03-04-media-itmedia.html"
-    ],
-    [
         "/blog/2023-03-04-media-itmedia.md",
-        "/blog/2023-03-04-media-itmedia.html"
+        "/ja/blog/2023-03-04-media-itmedia/"
     ],
     [
         "/blog/2023-03-22-gihyo.html",
         "/ja/blog/2023-03-22-gihyo/"
     ],
     [
-        "/blog/2023-03-22-gihyo",
-        "/blog/2023-03-22-gihyo.html"
-    ],
-    [
         "/blog/2023-03-22-gihyo.md",
-        "/blog/2023-03-22-gihyo.html"
+        "/ja/blog/2023-03-22-gihyo/"
     ],
     [
         "/blog/2023-04-08-media-nikkei-linux.html",
         "/ja/blog/2023-04-08-media-nikkei-linux/"
     ],
     [
-        "/blog/2023-04-08-media-nikkei-linux",
-        "/blog/2023-04-08-media-nikkei-linux.html"
-    ],
-    [
         "/blog/2023-04-08-media-nikkei-linux.md",
-        "/blog/2023-04-08-media-nikkei-linux.html"
+        "/ja/blog/2023-04-08-media-nikkei-linux/"
     ],
     [
         "/blog/2023-05-15-gihyo.html",
         "/ja/blog/2023-05-15-gihyo/"
     ],
     [
-        "/blog/2023-05-15-gihyo",
-        "/blog/2023-05-15-gihyo.html"
-    ],
-    [
         "/blog/2023-05-15-gihyo.md",
-        "/blog/2023-05-15-gihyo.html"
+        "/ja/blog/2023-05-15-gihyo/"
     ],
     [
         "/blog/2023-06-14-gihyo.html",
         "/ja/blog/2023-06-14-gihyo/"
     ],
     [
-        "/blog/2023-06-14-gihyo",
-        "/blog/2023-06-14-gihyo.html"
-    ],
-    [
         "/blog/2023-06-14-gihyo.md",
-        "/blog/2023-06-14-gihyo.html"
+        "/ja/blog/2023-06-14-gihyo/"
     ],
     [
         "/blog/2023-07-01-interview.html",
         "/ja/blog/2023-07-01-interview/"
     ],
     [
-        "/blog/2023-07-01-interview",
-        "/blog/2023-07-01-interview.html"
-    ],
-    [
         "/blog/2023-07-01-interview.md",
-        "/blog/2023-07-01-interview.html"
+        "/ja/blog/2023-07-01-interview/"
     ],
     [
         "/blog/2023-07-10-interview.html",
         "/ja/blog/2023-07-10-interview/"
     ],
     [
-        "/blog/2023-07-10-interview",
-        "/blog/2023-07-10-interview.html"
-    ],
-    [
         "/blog/2023-07-10-interview.md",
-        "/blog/2023-07-10-interview.html"
+        "/ja/blog/2023-07-10-interview/"
     ],
     [
         "/blog/2023-07-12-trademark.html",
         "/ja/blog/2023-07-12-trademark/"
     ],
     [
-        "/blog/2023-07-12-trademark",
-        "/blog/2023-07-12-trademark.html"
-    ],
-    [
         "/blog/2023-07-12-trademark.md",
-        "/blog/2023-07-12-trademark.html"
+        "/ja/blog/2023-07-12-trademark/"
     ],
     [
         "/blog/2023-07-14-skeb.html",
         "/ja/2023-07-14-skeb/"
     ],
     [
-        "/blog/2023-07-14-skeb",
-        "/blog/2023-07-14-skeb.html"
-    ],
-    [
         "/blog/2023-07-14-skeb.md",
-        "/blog/2023-07-14-skeb.html"
+        "/ja/2023-07-14-skeb/"
     ],
     [
         "/blog/2023-07-14-xserver.html",
         "/ja/blog/2023-07-14-xserver/"
     ],
     [
-        "/blog/2023-07-14-xserver",
-        "/blog/2023-07-14-xserver.html"
-    ],
-    [
         "/blog/2023-07-14-xserver.md",
-        "/blog/2023-07-14-xserver.html"
+        "/ja/blog/2023-07-14-xserver/"
     ],
     [
         "/blog/2023-07-16-media-nikkei.html",
         "/ja/blog/2023-07-16-media-nikkei/"
     ],
     [
-        "/blog/2023-07-16-media-nikkei",
-        "/blog/2023-07-16-media-nikkei.html"
-    ],
-    [
         "/blog/2023-07-16-media-nikkei.md",
-        "/blog/2023-07-16-media-nikkei.html"
+        "/ja/blog/2023-07-16-media-nikkei/"
     ],
     [
         "/blog/2023-07-18-shindanmaker.html",
         "/ja/blog/2023-07-18-shindanmaker/"
     ],
     [
-        "/blog/2023-07-18-shindanmaker",
-        "/blog/2023-07-18-shindanmaker.html"
-    ],
-    [
         "/blog/2023-07-18-shindanmaker.md",
-        "/blog/2023-07-18-shindanmaker.html"
+        "/ja/blog/2023-07-18-shindanmaker/"
     ],
     [
         "/blog/2023-07-19-gihyo.html",
         "/ja/blog/2023-07-19-gihyo/"
     ],
     [
-        "/blog/2023-07-19-gihyo",
-        "/blog/2023-07-19-gihyo.html"
-    ],
-    [
         "/blog/2023-07-19-gihyo.md",
-        "/blog/2023-07-19-gihyo.html"
+        "/ja/blog/2023-07-19-gihyo/"
     ],
     [
         "/blog/2023-08-08-misskeyhq.html",
         "/ja/blog/2023-08-08-misskeyhq/"
     ],
     [
-        "/blog/2023-08-08-misskeyhq",
-        "/blog/2023-08-08-misskeyhq.html"
-    ],
-    [
         "/blog/2023-08-08-misskeyhq.md",
-        "/blog/2023-08-08-misskeyhq.html"
+        "/ja/blog/2023-08-08-misskeyhq/"
     ],
     [
         "/blog/2023-08-30-conoha.html",
         "/ja/blog/2023-08-30-conoha/"
     ],
     [
-        "/blog/2023-08-30-conoha",
-        "/blog/2023-08-30-conoha.html"
-    ],
-    [
         "/blog/2023-08-30-conoha.md",
-        "/blog/2023-08-30-conoha.html"
+        "/ja/blog/2023-08-30-conoha/"
     ],
     [
         "/blog/2023-09-04-media-nlab.html",
         "/ja/blog/2023-09-04-media-nlab/"
     ],
     [
-        "/blog/2023-09-04-media-nlab",
-        "/blog/2023-09-04-media-nlab.html"
-    ],
-    [
         "/blog/2023-09-04-media-nlab.md",
-        "/blog/2023-09-04-media-nlab.html"
+        "/ja/blog/2023-09-04-media-nlab/"
     ],
     [
         "/blog/2023-09-07-hatenablog.html",
         "/ja/blog/2023-09-07-hatenablog/"
     ],
     [
-        "/blog/2023-09-07-hatenablog",
-        "/blog/2023-09-07-hatenablog.html"
-    ],
-    [
         "/blog/2023-09-07-hatenablog.md",
-        "/blog/2023-09-07-hatenablog.html"
+        "/ja/blog/2023-09-07-hatenablog/"
     ],
     [
         "/blog/2023-09-09-interview.html",
         "/ja/blog/2023-09-09-interview/"
     ],
     [
-        "/blog/2023-09-09-interview",
-        "/blog/2023-09-09-interview.html"
-    ],
-    [
         "/blog/2023-09-09-interview.md",
-        "/blog/2023-09-09-interview.html"
+        "/ja/blog/2023-09-09-interview/"
     ],
     [
         "/blog/2023-09-11-gihyo.html",
         "/ja/blog/2023-09-11-gihyo/"
     ],
     [
-        "/blog/2023-09-11-gihyo",
-        "/blog/2023-09-11-gihyo.html"
-    ],
-    [
         "/blog/2023-09-11-gihyo.md",
-        "/blog/2023-09-11-gihyo.html"
+        "/ja/blog/2023-09-11-gihyo/"
     ],
     [
         "/blog/2023-09-12-sakuravps.html",
         "/ja/blog/2023-09-12-sakuravps/"
     ],
     [
-        "/blog/2023-09-12-sakuravps",
-        "/blog/2023-09-12-sakuravps.html"
-    ],
-    [
         "/blog/2023-09-12-sakuravps.md",
-        "/blog/2023-09-12-sakuravps.html"
+        "/ja/blog/2023-09-12-sakuravps/"
     ],
     [
         "/blog/2023-09-24-release.html",
         "/ja/blog/2023-09-24-release/"
     ],
     [
-        "/blog/2023-09-24-release",
-        "/blog/2023-09-24-release.html"
-    ],
-    [
         "/blog/2023-09-24-release.md",
-        "/blog/2023-09-24-release.html"
+        "/ja/blog/2023-09-24-release/"
     ],
     [
         "/blog/2023-10-10-release.html",
         "/ja/blog/2023-10-10-release/"
     ],
     [
-        "/blog/2023-10-10-release",
-        "/blog/2023-10-10-release.html"
-    ],
-    [
         "/blog/2023-10-10-release.md",
-        "/blog/2023-10-10-release.html"
+        "/ja/blog/2023-10-10-release/"
     ],
     [
         "/blog/2023-10-24-gihyo.html",
         "/ja/blog/2023-10-24-gihyo/"
     ],
     [
-        "/blog/2023-10-24-gihyo",
-        "/blog/2023-10-24-gihyo.html"
-    ],
-    [
         "/blog/2023-10-24-gihyo.md",
-        "/blog/2023-10-24-gihyo.html"
+        "/ja/blog/2023-10-24-gihyo/"
     ],
     [
         "/blog/2023-10-27-xserver.html",
         "/ja/blog/2023-10-27-xserver/"
     ],
     [
-        "/blog/2023-10-27-xserver",
-        "/blog/2023-10-27-xserver.html"
-    ],
-    [
         "/blog/2023-10-27-xserver.md",
-        "/blog/2023-10-27-xserver.html"
+        "/ja/blog/2023-10-27-xserver/"
     ],
     [
         "/blog/2023-11-05-mac2023.html",
         "/ja/blog/2023-11-05-mac2023/"
     ],
     [
-        "/blog/2023-11-05-mac2023",
-        "/blog/2023-11-05-mac2023.html"
-    ],
-    [
         "/blog/2023-11-05-mac2023.md",
-        "/blog/2023-11-05-mac2023.html"
+        "/ja/blog/2023-11-05-mac2023/"
     ],
     [
         "/blog/2023-11-05-release.html",
         "/ja/blog/2023-11-05-release/"
     ],
     [
-        "/blog/2023-11-05-release",
-        "/blog/2023-11-05-release.html"
-    ],
-    [
         "/blog/2023-11-05-release.md",
-        "/blog/2023-11-05-release.html"
+        "/ja/blog/2023-11-05-release/"
     ],
     [
         "/blog/2023-11-14-gihyo.html",
         "/ja/blog/2023-11-14-gihyo/"
     ],
     [
-        "/blog/2023-11-14-gihyo",
-        "/blog/2023-11-14-gihyo.html"
-    ],
-    [
         "/blog/2023-11-14-gihyo.md",
-        "/blog/2023-11-14-gihyo.html"
+        "/ja/blog/2023-11-14-gihyo/"
     ],
     [
         "/blog/2023-11-17-release.html",
         "/ja/blog/2023-11-17-release/"
     ],
     [
-        "/blog/2023-11-17-release",
-        "/blog/2023-11-17-release.html"
-    ],
-    [
         "/blog/2023-11-17-release.md",
-        "/blog/2023-11-17-release.html"
+        "/ja/blog/2023-11-17-release/"
     ],
     [
         "/blog/2023-12-01-2023recap.html",
         "/ja/blog/2023-12-01-2023recap/"
     ],
     [
-        "/blog/2023-12-01-2023recap",
-        "/blog/2023-12-01-2023recap.html"
-    ],
-    [
         "/blog/2023-12-01-2023recap.md",
-        "/blog/2023-12-01-2023recap.html"
+        "/ja/blog/2023-12-01-2023recap/"
     ],
     [
         "/blog/2023-12-12-gihyo.html",
         "/ja/blog/2023-12-12-gihyo/"
     ],
     [
-        "/blog/2023-12-12-gihyo",
-        "/blog/2023-12-12-gihyo.html"
-    ],
-    [
         "/blog/2023-12-12-gihyo.md",
-        "/blog/2023-12-12-gihyo.html"
+        "/ja/blog/2023-12-12-gihyo/"
     ],
     [
         "/blog/index.html",
@@ -1292,67 +880,47 @@ export const redirects = [
         "/docs/for-users/"
     ],
     [
-        "/help",
-        "/help.html"
-    ],
-    [
         "/help.md",
-        "/help.html"
+        "/docs/for-users/"
     ],
     [
         "/home.html",
         "/"
     ],
     [
-        "/home",
-        "/home.html"
-    ],
-    [
         "/home.md",
-        "/home.html"
+        "/"
     ],
     [
         "/instances.html",
         "/servers/"
     ],
     [
-        "/instances",
-        "/instances.html"
-    ],
-    [
         "/instances.md",
-        "/instances.html"
+        "/servers/"
     ],
     [
         "/ns.html",
         "/ns/"
     ],
     [
-        "/ns",
-        "/ns.html"
-    ],
-    [
         "/ns.md",
-        "/ns.html"
+        "/ns/"
     ],
     [
         "/plugins.html",
         "/learn-more/"
     ],
     [
-        "/plugins",
-        "/plugins.html"
-    ],
-    [
         "/plugins.md",
-        "/plugins.html"
+        "/learn-more/"
     ],
     [
         "/index.html",
         "/"
     ],
     [
-		"/docs/for-users/resources/donate/",
+        "/docs/for-users/resources/donate/",
         "/docs/donate/"
     ],
 ];

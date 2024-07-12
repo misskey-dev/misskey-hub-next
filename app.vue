@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import TopIco from 'bi/chevron-up.svg';
 import { locales } from '@/assets/data/locales';
+import { uwu } from '@/assets/js/misc/uwu';
 import NProgress from 'nprogress';
 import type { Graph, Thing } from 'schema-dts';
 import { cleanDoubleSlashes, joinURL, parseURL, stringifyParsedURL, withTrailingSlash } from 'ufo';
@@ -13,6 +14,7 @@ const router = useRouter();
 const colorMode = useColorMode();
 const baseUrl = useRuntimeConfig().public.baseUrl as string;
 
+// #region NProgress
 router.beforeEach((to, from) => {
     if (to.path === from.path) return;
     if (!NProgress.isStarted()) {
@@ -27,7 +29,16 @@ nuxtApp.hook('page:loading:end', () => {
         }, 100);
     });    
 });
+// #endregion
 
+// #region uwu
+const isUwu = useState<boolean>('miHub_uwu');
+if (import.meta.client) {
+    isUwu.value = uwu();
+}
+// #endregion
+
+// #region SEO
 const getDescription = (): string => {
     if (route.meta.description != null && route.meta.description != "") {
         return route.meta.description;
@@ -56,7 +67,7 @@ const getLdJson = (additionalGraphes: Thing[] = []): string => {
             {
                 "@type": "WebSite",
                 "@id": `${baseUrl}/#WebPage`,
-                "name": t('_seo.siteName'),
+                "name": locale.value.includes('ja') ? '【Misskeyプロジェクト公式】Misskey Hub' : t('_seo.siteName'),
                 "inLanguage": locale.value,
                 "url": `${baseUrl}${route.path}`,
                 "publisher": {
@@ -77,24 +88,25 @@ const head = useLocaleHead({
     addSeoAttributes: true,
 });
 
-const i18nLinks = computed(() => head.value.link?.map((e) => {
+const i18nLinks = computed(() => head.value.link?.map((e: any) => {
     if (e.rel === 'alternate') {
         let href = e.href;
+        const url = parseURL(href);
         if (typeof e.hreflang === 'string' && (e.hreflang.includes('ja') || e.hreflang === 'x-default') && e.hreflang !== 'ja-KS') {
-            const url = parseURL(href);
             url.pathname = joinURL('/ja/', url.pathname);
-            href = cleanDoubleSlashes(withTrailingSlash(stringifyParsedURL(url)));
-        } else {
-            href = cleanDoubleSlashes(withTrailingSlash(href));
         }
+        url.search = '';
+        href = cleanDoubleSlashes(withTrailingSlash(stringifyParsedURL(url)));
         return { ...e, rel: e.rel, href, hreflang: e.hreflang };
     } else if (e.rel === 'canonical' && locale.value === 'ja') {
         let href = e.href;
         const url = parseURL(href);
         url.pathname = joinURL('/ja/', url.pathname);
+        url.search = '';
         href = cleanDoubleSlashes(withTrailingSlash(stringifyParsedURL(url)));
         return { ...e, rel: e.rel, href, hreflang: e.hreflang };
     }
+
     return e;
 }));
 
@@ -147,9 +159,10 @@ useHead((): Record<string, any> => ({
         ...cnHead,
     ],
     script: [
-        { type: "application/ld+json", children: getLdJson(route.meta.graph) }
+        { type: "application/ld+json", children: getLdJson(route.meta.graph) },
     ],
 }));
+// #endregion
 
 /** サイト全体でひとつのScroll Posiitionを使う */
 const scrollPos = useState('miHub_global_scrollPos', () => 0);
@@ -158,23 +171,25 @@ async function updatePos() {
     scrollPos.value = document.body.getBoundingClientRect().y;
 }
 
-if (process.client) {
-    window.addEventListener('scroll', updatePos);
-    window.addEventListener('resize', updatePos);
+if (import.meta.client) {
+    window.addEventListener('scroll', updatePos, { passive: true });
+    window.addEventListener('resize', updatePos, { passive: true });
+    updatePos();
 }
 
 onUnmounted(() => {
-    if (process.client) {
+    if (import.meta.client) {
         window.removeEventListener('scroll', updatePos);
         window.removeEventListener('resize', updatePos);
     }
 });
 
 const hideFrom = computed(() => route.meta.scrollButton ? route.meta.scrollButton?.hideFrom ?? -45 : -45);
-const sbPosition = computed(() => route.meta.scrollButton ? { x: route.meta.scrollButton?.customPosition?.x ?? '2.5rem', y: route.meta.scrollButton?.customPosition?.y ?? '2.5rem' } ?? { x: '2.5rem', y: '2.5rem' } : { x: '2.5rem', y: '2.5rem' });
+const sbPositionX = computed(() => route.meta.scrollButton ? route.meta.scrollButton?.customPosition?.x ?? '2.5rem' : '2.5rem');
+const sbPositionY = computed(() => route.meta.scrollButton ? route.meta.scrollButton?.customPosition?.y ?? '2.5rem' : '2.5rem');
 
 function scrollToTop() {
-    if (!process.client) return;
+    if (!import.meta.client) return;
     window.scrollTo({
         top: 0,
         behavior: 'smooth',
@@ -205,7 +220,7 @@ function scrollToTop() {
 
 <style module>
 .scrollToTopButton {
-    bottom: v-bind(sbPosition.y);
-    right: v-bind(sbPosition.x);
+    bottom: v-bind(sbPositionY);
+    right: v-bind(sbPositionX);
 }
 </style>

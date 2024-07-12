@@ -1,10 +1,10 @@
 ---
-description: 與 Misskey 相關的術語表。
+description: 與 Misskey 相關的用語表。
 ---
 
-# 術語表
+# 用語表
 
-與 Misskey 相關的術語表。
+與 Misskey 相關的用語表。
 
 ## Acct
 
@@ -16,7 +16,7 @@ description: 與 Misskey 相關的術語表。
 
 ## AiScript
 
-一種可在 Misskey 中使用並在 JavaScript 上運行的程式語言。詳情參考[這裡。](https://github.com/aiscript-dev/aiscript/blob/master/README.md)
+一種可在 Misskey 中使用並在 JavaScript 上運行的程式語言。詳情參考[這裡](../features/note/#cw)](https://github.com/aiscript-dev/aiscript/blob/master/README.md)
 
 ## API
 
@@ -28,7 +28,7 @@ Misskey 伺服器提供的界面，用於從您的程式中處理 Misskey 的相
 
 ## CW
 
-Contents Warning（內容警告）的縮寫。允許您防止在沒有互動的情況下顯示貼文內容的功能。主要用於隱藏冗長的內容或防止劇透。詳情參考[這裡](../features/note/#cw)
+Contents Warning（內容警告）的縮寫。允許您防止在沒有互動的情況下顯示貼文內容的功能。主要用於隱藏冗長的內容或防止劇透。詳情參考[這裡。](../features/note/#cw)
 
 ## Fediverse
 
@@ -60,7 +60,7 @@ Not Safe For Work（工作場所不宜）的縮寫。此功能可讓您將圖像
 
 ## 轉發
 
-引用已有貼文或將該貼文作為新貼文共享的行為，以及由此創建的貼文。詳情參考[這裡](../features/note/#renote)
+引用已有貼文或將該貼文作為新貼文共享的行為，以及由此創建的貼文。詳情參考[這裡。](../features/note/#renote)
 
 ## STL
 
@@ -68,7 +68,8 @@ Not Safe For Work（工作場所不宜）的縮寫。此功能可讓您將圖像
 
 ## 小藍
 
-Misskey的看板娘（官方代表人物）。詳情參考[這裡](https://xn--931a.moe/)
+(讀音: ㄚㄧˇ)<br>
+Misskey的看板娘（官方代表人物）。詳情參考[這裡](../features/mfm)](https://xn--931a.moe/)
 
 ## 伺服器
 

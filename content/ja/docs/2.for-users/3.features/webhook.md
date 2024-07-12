@@ -13,7 +13,7 @@
 
 MisskeyにはWebhookが用意されています。Webhookを利用すると、Misskey上の様々なイベントをリアルタイムに受け取ることが可能です。
 
-設定>Webhook でWebhookの管理を行えます。
+[設定 > Webhook](x-mi-web://settings/webhook)でWebhookの管理を行えます。
 
 Webhookが登録されると、指定したイベントが発生した際に、指定したURLにHTTPリクエストが送信されます。リクエストのメソッドはPOSTで、ボディはJSONです。
 さらに、リクエストヘッダーには`X-Misskey-Hook-Secret`という名前で、登録時に設定したシークレットが含まれます。このシークレットが正しいか検証することで、リクエストが正規のものか判定することができます。

@@ -18,7 +18,7 @@ description: 本指南介紹如何使用 Docker 安裝設置 Misskey。
 
 :::
 
-## 設定
+## リポジトリの取得
 
 ```sh
 git clone -b master https://github.com/misskey-dev/misskey.git
@@ -33,10 +33,11 @@ git checkout master
 ```sh
 cp .config/docker_example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
-cp ./docker-compose_example.yml ./docker-compose.yml
+cp ./compose_example.yml ./compose.yml
 ```
 
 `default.yml`と`docker.env`をファイル内の説明に従って編集してください。\
+\
 また、必要に応じて、`docker-compose.yml`を編集します。(ポートを変更したい場合など)
 
 ## ビルドと初期化

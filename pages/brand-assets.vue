@@ -37,7 +37,7 @@
                 ]" />
                 <Tip>
                     <p class="mb-2">{{ $t('_brandAssets.license') }}</p>
-                    <GNuxtLink class="inline-block" to="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" /></GNuxtLink>
+                    <GNuxtLink class="inline-block" to="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="https://licensebuttons.net/l/by-sa/4.0/88x31.png" /></GNuxtLink>
                 </Tip>
                 <div id="logo">
                     <h2 class="text-2xl lg:text-3xl font-title font-bold mb-4">{{ $t(`_brandAssets.logo`) }}</h2>

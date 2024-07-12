@@ -7,9 +7,17 @@ share: "Partager"
 note: "Note"
 other: "Autres"
 add: "Ajouter"
-browse: "参照"
-settings: "設定"
+generate: "Générer"
+download: "Télécharger"
+browse: "Naviguer"
+settings: "Paramètres"
 goToLegacyHub: "L'ancien Misskey Hub"
+contactUs: "Nous contacter"
+detail: "Détails"
+lastUpdate: "Dernière mise à jour"
+empty: "Pas de contenu"
+threeDimensionModel: "3Dモデル"
+clickToShow: "クリックして表示"
 _error:
   notFound: "La page demandée est introuvable !"
   notFoundDesc: "La page que vous cherchiez n'a pas pu être trouvée. Veuillez vérifier l'URL."
@@ -94,11 +102,14 @@ _landing:
     description: "Misskey est une organisation à but non lucratif, nous dépendons de vos dons pour financer le développement. Si vous aimez Misskey, veuillez considérer de nous soutenir."
   _sponsors:
     title: "Parrains"
+    becomeASponsor: "Devenir paraîneur·euse"
 _servers:
   title: "Liste d'instances"
   description: "Misskey n'est pas un seul service, mais un réseau décentralisé où le service est fourni par des individus. Pour utiliser Misskey, vous devez créer un compte sur une instance qui fournit le service."
   addYourServer: "Votre instance n'apparaît pas dans la liste ? Veuillez l'enregistrer {0} !"
   addYourServerLink: "ici"
+  disclaimerTitle: "[Important] Clause de non-responsabilité"
+  disclaimer: "Cette liste d'instances est une liste automatique des instances Misskey trouvées sur Fediverse et n'est généralement pas vérifiée manuellement. Les instances énumérées ici n'ont pas été contrôlées, vérifiées ou approuvées par le projet Misskey. Le projet Misskey décline toute responsabilité pour les dommages causés aux utilisateurs sur ces instances."
   _system:
     fetchError: "Le chargement de données a échoué. Veuillez réessayer plus tard."
   _statistics:
@@ -145,6 +156,9 @@ _docs:
   _changelog:
     title: "Journal des modifications"
     description: "Voir l'historique des mises à jour de Misskey. Découvrez les nouveautés de la dernière version !"
+  _donate:
+    title: "Dons au projet"
+    description: "Misskey est un logiciel gratuit à code source ouvert. Si vous l'appréciez, veuillez faire un don pour que nous puissions continuer à le développer."
   _forUsers:
     title: "Pour les utilisateurs de Misskey"
   _forAdmin:
@@ -157,6 +171,10 @@ _docs:
   _toc:
     title: "Table des matières"
     toPageTop: "Retourner en haut de la page"
+  _steppedGuide:
+    selectCourse: "Choisir un guide"
+    noImageInThisStep: "Il n'y a pas d'image pour cette étape"
+    aiWellDone: "La procédure est maintenant terminée. Bravo ♪"
 _blog:
   title: "Blogue"
   description: "Les dernières nouvelles, conseils et astuces sur Misskey de la part de l'équipe de développement ! (uniquement en japonais)"
@@ -172,12 +190,21 @@ _other:
 _brandAssets:
   title: "Collection de ressources"
   description: "Une collection de logos, d'icônes et d'autres actifs de Misskey. Vous êtes libre de les utiliser sous certaines licences."
-  license: "Les ressources sont libres d'être utilisées sous la licence CC BY-NC-SA 🎉"
+  license: "Les ressources sont libres d'être utilisées sous la licence CC BY-SA 🎉"
   assetsDirectory: "Toutes les ressources sont gérées sur {0}."
   logo: "Logo"
   icon: "Icône"
   banner: "Bannière"
   avatarDecorationTemplate: "Modèle de décoration d'avatar"
+_contact:
+  title: "Nous contacter"
+  description: "Contactez le projet Misskey ici"
+  form: "Veuillez remplir ce formulaire."
+  formGoogleAccountRequired: "Actuellement, en raison des mesures anti-spam, un compte Google est nécessaire pour soumettre une requête.\nNous nous excusons pour cet inconvénient et vous remercions de votre compréhension."
+  formLink: "Passer au formulaire"
+  faqTitle: "FAQ"
+  faqDescription: "Avant de soumettre votre demande, assurez-vous que ce que vous voulez savoir ne se trouve pas ici."
+  ifNothingIsFound: "Si aucun d'en haut ne s'applique à vous…"
 _links:
   title: "Liens"
   _github:
@@ -279,6 +306,8 @@ _shareLinkGenerator:
   testLink: "Tester le lien de partage"
   typeSomethingToGetLink: "Entrez le corps pour générer le lien."
   typeSomethingToGetButton: "Entrez le corps pour générer le bouton."
+  documentationIs: "パラメータの詳細情報など、技術仕様は{here}"
+  here: "こちら"
 _goToMisskey:
   title: "Aller à Misskey Web"
   heading: "Sélectionnez l'instance sur laquelle vous souhaitez ouvrir cette page"
@@ -300,16 +329,28 @@ _avatarDecorationPreview:
     noteText: "J'ai mangé un beignet enrobé de chocolat 🍩😋"
     profileDescription: "Je suis Ai-Chan, l'IA qui réside sur Misskey ! Enchantée de vous rencontrer ♪"
 _customEmojiPreview:
-  title: "カスタム絵文字 プレビュー"
-  description: "カスタム絵文字の視認性をチェックできます。"
-  preview: "プレビュー"
-  emoji: "絵文字 #{number}"
-  placeholder: "「追加」から、カスタム絵文字を追加してプレビューできます。"
+  title: "Prévisualisation d'émojis personnalisés"
+  description: "Vous pouvez vérifier l'affichage des émojis personnalisés."
+  preview: "Prévisualisation"
+  emoji: "Émoji #{number}"
+  placeholder: "Sous « Ajouter », vous pouvez ajouter et prévisualiser des émojis personnalisés."
   _options:
-    text: "ノート文面"
-    textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
+    text: "Texte de la note"
+    textDescription: "L'émoji personnalisé ajouté peut être référé par {emoji_id}."
   _placeholder:
-    noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
+    noteText: "L'émoji personnalisé apparaîtra comme ceci → :emoji_preview_1:\nVous pouvez réécrire le texte et tester son affichage ✨"
+_identiconGenerator:
+  title: "Générateur d'icône initiale"
+  description: "Vous pouvez générer l'icône utilisée par défaut lorsque vous vous inscrivez sur Misskey."
+  userName: "Nom d'utilisateur·rice"
+  includeDomain: "Veuillez spécifier le nom d'utilisateur·rice complet, incluant le domaine de l'instance."
+_historicalMaterials:
+  title: "歴史資料館"
+  description: "Misskeyに関する歴史的資料を一挙公開"
+  heroSubtitle: "Misskey 10周年記念企画"
+  heroDescription: "Misskeyは2014年に掲示板サービスとして生まれました。それから10年経ち、今ではたくさんの方々に利用していただけるプラットフォームになりました。\nここではMisskeyに関する歴史的資料を一挙公開します！"
+  submissionTitle: "古いMisskeyの写真をお持ちですか？"
+  submissionDescription: "昔のMisskeyにまつわる資料をお持ちの方は、ぜひ当館にお寄せください。\nGitHubを利用できる方は{gh_issue}に、利用できない方は {'@'}syuilo{'@'}misskey.io にお送りください。"
 _api:
   _permissions:
     title: "Permissions"
@@ -351,20 +392,19 @@ _api:
       "write:flash": "Modifier vos Play"
       "read:flash-likes": "Lire vos mentions j'aime des Play"
       "write:flash-likes": "Modifier vos mentions j'aime des Play"
-      "read:admin:abuse-user-reports": "ユーザーからの通報を見る"
-      "write:admin:delete-account": "ユーザーアカウントを削除する"
-      "write:admin:delete-all-files-of-a-user": "ユーザーのすべてのファイルを削除する"
-      "read:admin:index-stats": "データベースインデックスに関する情報を見る"
+      "read:admin:abuse-user-reports": "Voir les rapports des utilisateurs"
+      "write:admin:delete-account": "Supprimer des comptes d'utilisateur·rice"
+      "write:admin:delete-all-files-of-a-user": "Supprimer tous les fichiers d'un·e utilisateur·rice"
+      "read:admin:index-stats": "Voir les statistiques sur les index de base de données"
       "read:admin:table-stats": "データベーステーブルに関する情報を見る"
-      "read:admin:user-ips": "ユーザーのIPアドレスを見る"
-      "read:admin:meta": "インスタンスのメタデータを見る"
+      "read:admin:user-ips": "Voir l'adresse IP des utilisateurs"
+      "read:admin:meta": "Voir les métadonnées de l'instance"
       "write:admin:reset-password": "ユーザーのパスワードをリセットする"
       "write:admin:resolve-abuse-user-report": "ユーザーからの通報を解決する"
       "write:admin:send-email": "メールを送る"
       "read:admin:server-info": "サーバーの情報を見る"
       "read:admin:show-moderation-log": "モデレーションログを見る"
       "read:admin:show-user": "ユーザーのプライベートな情報を見る"
-      "read:admin:show-users": "ユーザーのプライベートな情報を見る"
       "write:admin:suspend-user": "ユーザーを凍結する"
       "write:admin:unset-user-avatar": "ユーザーのアバターを削除する"
       "write:admin:unset-user-banner": "ユーザーのバーナーを削除する"

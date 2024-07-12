@@ -2,17 +2,17 @@
 
 ## 기타 Misskey 설치 방법
 
-- [기본 버전 Misskey 구축 가이드 (manual)](. /manual/)
-- [기타 설치 방법 목록](/docs/for-admin/install/guides/#설치 방법 목록)
+- [기본 버전 Misskey 구축 가이드 (manual)](./manual)
+- [기타 설치 방법 목록](/docs/for-admin/install/guides/#설치%20방법%20목록)
 
 ## 쉘 스크립트 안내
 
-복사, 붙여넣기만 하면 쉘 스크립트로 하면 되지 않겠느냐는 생각으로 **쉘 스크립트로 거의 모든 것을 해주는 방법을 만들어 보았습니다!**\
+복사, 붙여넣기만 하는 것보단 쉘 스크립트로 하면 되지 않겠느냐는 생각으로 **쉘 스크립트로 거의 모든 것을 해주는 방법을 만들어 보았습니다!**\
 [**쉘 스크립트에 대한 자세한 내용과 사용법은 여기에서 확인하세요!**](./bash/)
 
 :::tip
 
-쉘 스크립트를 통한 개발 환경에서의 설치는 예상하지 않았습니다.
+쉘 스크립트를 통한 개발 환경에서의 설치는 상정하지 않았습니다.
 
 :::
 
@@ -24,9 +24,9 @@
 
 문제가 있으면 [@aqz@p1.a9z.dev 에 멘션](https://p1.a9z.dev/@aqz)으로 알려주시면 감사하겠습니다.
 
-## 이 글에 대하여
+## 소개
 
-이 글에서는 [Misskey 구축 가이드 (manual)](./manual/)에 소개된 대로 systemd에서 Misskey를 동작시키고 있습니다.
+이 글에서는 [Misskey 구축 가이드 (manual)](./manual/)에 소개된 대로 systemd에서 Misskey를 설치 및 실행합니다.
 
 [docker-compose](./docker/)를 사용하면 수작업으로 조금 더 쉽게 실행할 수 있을 것입니다.
 
@@ -36,7 +36,7 @@
 
 :::
 
-## 소개
+## 환경 및 조건
 
 이 글에서는 [Misskey 구축 가이드 (manual)](./manual/)을 바탕으로 일반적인 우분투 서버에 Misskey를 설치하고 공개하는 방법을 하나하나 설명합니다.
 
@@ -52,7 +52,8 @@ OS의 차이, Misskey 본체나 의존하는 소프트웨어의 버전업으로 
 
 - OS는 **Ubuntu 22.04.1 LTS**를 사용합니다.
 - 하드웨어 요구 사항으로 CPU는 최신 제품이라면 최소사양으로도 작동합니다.아키텍처는 amd64 및 arm64를 가정합니다.
-- 메모리는 1.5GB 정도면 충분합니다.(Vite 도입 등으로 1.5GB 정도도 빌드 가능해짐)
+- 램은 4GB 정도 있으면 충분합니다.
+  - (기존에 Vite의 도입으로 1.5GB만 있어도 빌드가 가능하다고 설명했지만, 최근 들어 프론트엔드 빌드 문제로 필요한 용량이 늘어났습니다.）
 - 자체 도메인을 구입하고 CloudFlare를 사용하세요.
 - 도메인은 [Google Domains](https://domains.google/intl/ja_jp/) 등에서 미리 준비해야 합니다.
 - 여기서는 도메인을 example.tld로 설명할 것이므로, 자신이 구입한 도메인으로 적절히 대체하여 읽도록 합니다.개발 환경의 경우 localhost로 대체합니다(설정 파일 항목에서 별도 설명).
@@ -95,18 +96,18 @@ sudo adduser --disabled-password --disabled-login misskey
 
 기본적인 소프트웨어를 설치합니다.
 
-### Node.js
+### 사용자 및 데이터베이스 생성
 
 Node.js는 서버사이드 자바스크립트 환경으로 Misskey의 기본 실행 환경입니다.
 
 ```sh
-sudo apt install -y curl
+sudo rm /usr/share/keyrings/nodesource.gpg;
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/nodesource.gpg;
+NODE_MAJOR=20; echo "deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list;
+sudo apt update;
+sudo apt install -y nodejs;
 
-curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-
-sudo apt install -y nodejs
-
-# Node.js가 설치되었으므로 버전을 확인합니다.
+# Node.js가 설치되었으므로 버전 확인을 진행합니다
 node -v
 
 # corepack enable
@@ -154,33 +155,27 @@ CREATE ROLE misskey LOGIN PASSWORD 'hoge';
 
 ```sql
 CREATE DATABASE mk1 OWNER misskey;
-¥q
+\q
 ```
 
 ### Redis
 
-Redis는 NoSQL의 인메모리 데이터베이스 소프트웨어로, 데이터베이스 및 연합과의 통신 관리 등을 위해 필요합니다.
-redis.io의 문서에 따라 설치합니다. https\://redis.io/docs/getting-started/installation/install-redis-on-linux/
+Redis는 NoSQL의 인메모리 데이터베이스 소프트웨어로, 데이터베이스 및 연합과의 통신 관리 등을 위해 필요합니다.\
+redis.io의 문서에 따라, snap을 이용해 설치합니다.
+
+https://redis.io/docs/getting-started/installation/install-redis-on-linux/
 
 ```sh
-sudo apt install -y curl ca-certificates gnupg2 lsb-release
-
-curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
-
-echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
-
-sudo apt update
-
-sudo apt install -y redis
+sudo snap install redis
 ```
 
-systemctl로 데몬의 상태를 확인합니다.
+systemctl로 데몬 상태 확인.
 
 ```sh
-systemctl status redis-server
+systemctl status nginx
 ```
 
-active라면 OK.
+active이면 OK.
 
 ### nginx
 
@@ -192,10 +187,10 @@ nginx는 주로 리버스 프록시에 사용되는 웹 서버 소프트웨어�
 
 :::
 
-nginx.org의 문서 http\://nginx.org/en/linux_packages.html#Ubuntu 에 따라 설치합니다.
+nginx.org의 문서 http://nginx.org/en/linux_packages.html#Ubuntu 에 따라 설치합니다.
 
 ```sh
-sudo apt install ubuntu-keyring
+sudo apt install -y curl ca-certificates gnupg2 lsb-release ubuntu-keyring
 
 curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
 
@@ -214,7 +209,7 @@ sudo apt update
 sudo apt install -y nginx
 ```
 
-systemctl로 데몬 상태 확인.
+systemctl로 데몬 상태를 확인합니다.
 
 ```sh
 systemctl status nginx
@@ -228,7 +223,7 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
 
-http\://localhost에 접속하여 \*Welcome to nginx!\*라고 표시되면 OK.\
+http://localhost에 접속하여 \*Welcome to nginx!\*라고 표시되면 OK.\
 curl에서 확인하는 것도 좋은 방법입니다.
 
 ```sh
@@ -257,9 +252,9 @@ sudo apt install -y git build-essential
 
 ### 방화벽
 
-이번에는 방화벽으로 ufw를 사용합니다.
+HTTPS･WSS 통신에 사용할 인증서를 CloudFlare를 사용하는 방식으로 Let's Encrypt에서 발급받습니다.
 
-다음은 접속 허용을 화이트리스트 형식으로 하여 22번 SSH 포트를 접속 횟수 제한을 두어 개방하고, 80번 HTTP 포트와 443번 HTTPS 포트를 개방했습니다.
+다음은 접속 허용을 화이트리스트 형식으로 하여 22번 SSH 포트를 접속 횟수 제한을 두어 개방하고, 80번 HTTP 포트와 443번 HTTPS 포트를 개방하는 예입니다.
 
 ```sh
 sudo ufw enable
@@ -297,11 +292,11 @@ CloudFlare는 자신의 도메인에 대해 DNS 서버, 리버스 프록시, CDN
 CloudFlare를 경유하지 않고 서버를 공개하는 것도 가능하지만, 매우 편리하기 때문에 도입하는 것이 좋습니다.
 [**→ CDN 설정**](../resources/cdn/)
 
-[CloudFlare에 가입(https\://dash.cloudflare.com/sign-up)하고, 구매한 도메인을 안내에 따라 등록합니다.
+[CloudFlare에 가입(https://dash.cloudflare.com/sign-up)하고, 구매한 도메인을 안내에 따라 등록합니다.
 
 DNS 등록 화면에서 서버의 IP 주소를 입력하면 됩니다.
 
-도메인 구입처에 따라 적용에 3일 정도 소요될 수 있습니다.
+도메인 구입처에 따라 적용에 최대 3일 정도 소요될 수 있습니다.
 
 ### Certbot (Let's Encrypt) 설정
 
@@ -315,7 +310,7 @@ sudo apt install -y certbot python3-certbot-dns-cloudflare
 
 Cloudflare의 API 키를 얻습니다.아래 절차에 따라 취득합니다.
 
-1. https\://dash.cloudflare.com/profile/api-tokens에 접속
+1. https://dash.cloudflare.com/profile/api-tokens에 접속
 2. Global API Key의 View 선택
 3. 비밀번호 입력 및 hCaptcha 해제, View 선택
 
@@ -339,7 +334,7 @@ dns_cloudflare_api_key = xxxxxxxxxxxxxxxxxxxxxxxxxx
 sudo chmod 600 /etc/cloudflare/cloudflare.ini
 ```
 
-준비가 되었으니 명령을 실행합니다.**중간에 있는 2곳의 example.tld는 자신의 것으로 교체**.
+다음 내용을 붙여넣고 적절하게 바꿉니다.**중간에 있는 2곳의 example.tld는 자신의 것으로 교체합니다**.
 
 ```sh
 sudo certbot certonly --dns-cloudflare --dns-cloudflare-credentials /etc/cloudflare/cloudflare.ini --dns-cloudflare-propagation-seconds 60 --server https://acme-v02.api.letsencrypt.org/directory -d example.tld -d *.example.tld
@@ -351,7 +346,7 @@ sudo certbot certonly --dns-cloudflare --dns-cloudflare-credentials /etc/cloudfl
 
 ## Misskey 설치하기
 
-이제 사전 준비는 어느 정도 끝났으니 미스키를 준비할 차례입니다.
+지정이 완료되면 저장합니다.
 
 misskey 사용자로 변경.
 
@@ -372,7 +367,7 @@ git checkout master
 필요한 npm 패키지를 설치합니다.
 
 ```sh
-NODE_ENV=production pnpm install --frozen-lockfile
+sudo nano /etc/nginx/conf.d/misskey.conf
 ```
 
 ## Misskey 구성하기
@@ -398,26 +393,26 @@ nano .config/default.yml
 :::
 
 ```yml
-# ● Misskey를 공개할 URL
+# ● Misskeyを公開するURL
 url: https://example.tld/
-# 포트를 3000으로 설정한다.
+# ポートを3000とする。
 port: 3000
 
-# ● PostgreSQL 설정。
+# ● PostgreSQLの設定。
 db:
   host: localhost
   port: 5432
-  db  : mk1 # 〇 PostgreSQL의 데이터베이스 이름
-  user: misskey # 〇 PostgreSQL 사용자 이름
-  pass: hoge # ● PostgreSQL 패스워드
+  db  : mk1 # 〇 PostgreSQLのデータベース名
+  user: misskey # 〇 PostgreSQLのユーザー名
+  pass: hoge # ● PostgreSQLのパスワード
 
-# 　 Redis 설정.
+# 　 Redisの設定。
 redis:
   host: localhost
   port: 6379
 
-# 　 ID 유형 설정.
-id: 'aid'
+# 　 IDタイプの設定。
+id: 'aidx'
 
 # 　 syslog
 syslog:
@@ -469,7 +464,7 @@ sudo systemctl restart nginx
 sudo systemctl status nginx
 ```
 
-active이면 OK.
+active라면 OK.
 
 ## Misskey 빌드
 
@@ -479,7 +474,7 @@ misskey 사용자로 다시 로그인합니다.
 sudo su - misskey
 ```
 
-빌드합니다.네, 할 수 있습니다...
+빌드합니다.네, 이제 할 수 있습니다...
 
 ```sh
 cd misskey
@@ -496,7 +491,7 @@ NODE_ENV=production pnpm run build
 
 RAM 부족이 원인일 수 있습니다.
 
-미스키의 빌드 및 데이터베이스 마이그레이션(초기화 포함)을 위해서는 2GB 이상의 RAM이 필요합니다.\
+미스키의 빌드 및 데이터베이스 마이그레이션(초기화 포함)을 위해서는 4GB 이상의 RAM이 필요합니다.\
 RAM이 부족한 경우 다음과 같은 해결책을 생각해 볼 수 있습니다.
 
 - 서버에 스왑 추가하기
@@ -530,7 +525,7 @@ CloudFlare의 DNS 설정이 올바른 IP 주소로 설정되어 있는지 다시
 
 홈 서버의 경우, 라우터가 서버와 외부와의 80포트, 443포트 통신을 허용하도록 설정되어 있는지 확인합니다.
 
-클라우드의 경우에도 네트워크 설정에서 포트 개방이 필요한 경우가 많습니다.
+클라우드의 경우에도, 네트워크 설정에서 포트를 개방해줘야 하는 일이 많습니다.
 
 ## Misskey의 데몬 생성
 
@@ -540,7 +535,7 @@ CloudFlare의 DNS 설정이 올바른 IP 주소로 설정되어 있는지 다시
 
 :::
 
-일단 Ctrl+C로 프로세스를 죽이고, Misskey를 데몬으로 실행하도록 설정해 봅시다.
+일단 Ctrl+C로 프로세스를 종료하고, Misskey를 데몬으로 실행하도록 설정해 봅시다.
 
 루트 권한으로 변경합니다.
 
@@ -586,7 +581,7 @@ sudo systemctl enable misskey
 sudo systemctl start misskey
 ```
 
-systemctl로 데몬 상태를 확인합니다.실행에 시간이 조금 걸리므로 15초 정도 기다렸다가 시작하는 것이 좋습니다.
+systemctl로 데몬의 상태를 확인합니다.데몬 시작에 시간이 조금 걸리므로 15초 정도 기다렸다가 실행하는 것이 좋습니다.
 
 ```sh
 sudo systemctl status misskey
@@ -600,13 +595,13 @@ Misskey 서버에 자신의 계정을 등록하고 로그인하여 설정을 진
 
 ## Misskey 설정 계속하기
 
-- [Misskey 서버에서 가장 먼저 설정해야 할 서버 설정 및 기타 설정에 대한 설명\*\*](https://hide.ac/articles/Y504SIabp)
+- [**Misskey 서버에서 가장 먼저 설정해야 할 서버 설정 및 기타 설정에 대한 설명**](https://hide.ac/articles/Y504SIabp)
 - [**Squid 프록시를 설정하여 Misskey를 보호하세요**](https://hide.ac/articles/MC7WsPDqw)
 - [**Misskey의 데이터베이스를 백업하자【OCI 오브젝트 스토리지 편】**](https://hide.ac/articles/E2Ea3cauk)
 
 ## Misskey 업데이트
 
-[Misskey 업데이트 방법](. /manual/#misskey 업데이트 방법)
+[Misskey 업데이트 방법](./manual/#misskey%20업데이트%20방법)
 
 작업 중에는 Misskey를 사용할 수 없습니다.
 

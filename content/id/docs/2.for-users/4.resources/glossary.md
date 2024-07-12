@@ -1,10 +1,10 @@
 ---
-description: Misskeyに関する用語集です。
+description: Kosakata yang terkait dengan Misskey.
 ---
 
-# 用語集
+# Kosakata
 
-Misskeyに関する用語集です。
+Kosakata yang terkait dengan Misskey.
 
 ## Acct
 

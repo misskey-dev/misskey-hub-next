@@ -24,7 +24,6 @@ MFM은 Markup langauge For Misskey의 약자로 Misskey의 여러 곳에서 사�
 ### 멘션
 
 @ + 사용자 이름으로 특정 사용자를 나타낼 수 있습니다.
-:::tip
 
 멘션에 대한 자세한 내용은 [여기](./mention.md)에서 확인할 수 있습니다.
 
@@ -45,7 +44,6 @@ MFM은 Markup langauge For Misskey의 약자로 Misskey의 여러 곳에서 사�
 ### 해시태그
 
 숫자 기호 + 태그를 통해 해시태그를 표시할 수 있습니다.
-:::tip
 
 해시태그에 대한 자세한 내용은 [여기](./hashtag.md)에서 확인할 수 있습니다.
 
@@ -77,7 +75,7 @@ https://example.com
 
 :::tip
 
-링크 텍스트 앞에 \`? '를 붙이면 링크 미리보기를 숨길 수 있습니다.
+'를 붙이면 링크 미리보기를 숨길 수 있습니다.
 
 ```
 ?[example link](https://example.com)
@@ -89,7 +87,7 @@ https://example.com
 
 ### 커스텀 이모지
 
-콜론(:)으로 사용자 지정 이모티콘 이름을 묶으면 사용자 지정 이모티콘을 표시할 수 있습니다.
+콜론(:)으로 사용자 지정 이모티콘 이름을 묶으면 사용자 지정 이모티콘을 표시할 수 있습니다. 프로그래밍 코드 등을 인라인으로 구문 강조를 할 수 있습니다. 흐림 효과 문자 크기를 조절할 수 있습니다. 반짝반짝 평문
 
 :::tip
 
@@ -103,7 +101,7 @@ https://example.com
 
 <MfmPreview text=":misskey:"></MfmPreview>
 
-### 굵은 문자
+### 구문
 
 문자를 굵게 표시하여 강조할 수 있습니다.
 
@@ -115,7 +113,7 @@ https://example.com
 
 ### 눈에 띄지 않게 하기
 
-내용을 흐리게 표시할 수 있습니다.커서를 위에 올려서 제대로 보이게 할 수도 있습니다.
+내용을 작게, 연하게 할 수 있습니다.커서를 위에 올려서 제대로 보이게 할 수도 있습니다.
 
 ```
 <small>Misskey로 연합 우주의 세계가 펼쳐집니다.</small>
@@ -142,6 +140,16 @@ https://example.com
 ```
 
 <MfmPreview text="<center>Misskey로 연합 우주의 세계가 펼쳐집니다.</center>"></MfmPreview>
+
+### 요미가나 (루비)
+
+내용에 요미가나를 첨부할 수 있습니다.
+
+```
+$[ruby Misskey 미스키] 
+```
+
+<MfmPreview text="$[ruby Misskey ミスキー]"></MfmPreview>
 
 ### 코드 (인라인)
 
@@ -196,7 +204,7 @@ $[font.fantasy MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
 ### 흐림 효과
 
-내용을 작게, 연하게 할 수 있습니다.커서를 위에 올려서 제대로 보이게 할 수도 있습니다.
+내용을 흐리게 표시할 수 있습니다.커서를 위에 올려서 제대로 보이게 할 수도 있습니다.커서를 위에 올려서 제대로 보이게 할 수도 있습니다.
 
 ```
 $[blur Misskey로 연합 우주의 세계가 펼쳐집니다.]
@@ -228,6 +236,54 @@ $[bg.color=ff0 노란색 배경]
 <MfmPreview text="$[fg.color=f00 赤字]
 $[bg.color=ff0 黄背景]"></MfmPreview>
 
+### 테두리
+
+내용에 테두리를 씌울 수 있습니다.스타일을 다양하게 지정하는 것도 가능합니다.
+
+```
+$[border.style=solid,width=4 Default]
+
+$[border.style=hidden No border]
+
+$[border.style=dotted,width=2 Dotted]
+$[border.style=dashed,width=2 Dashed]
+$[border.style=double,width=4 Double]
+
+$[border.style=groove,width=4 Embossed A]
+$[border.style=ridge,width=4 Embossed B]
+
+$[border.style=inset,width=4 Inset A]
+$[border.style=outset,width=4 Inset B]
+
+$[border.color=d00 Border color]
+$[border.width=5 Border width]
+
+$[border.radius=6,width=2 Border radius]
+
+$[border.radius=5,width=2,color=888 $[position.x=1.5 ＣＳＳ]
+$[position.x=1.5 완전히 이해했어!]]
+
+$[border.radius=5,width=2,color=888,noclip $[position.x=1.5 ＣＳＳ]
+$[position.x=1.5 완전히 이해했어!]]
+```
+
+<MfmPreview text="$[border.style=solid,width=4 Default]\
+$[border.style=hidden No border]\
+$[border.style=dotted,width=2 Dotted]\
+$[border.style=dashed,width=2 Dashed]\
+$[border.style=double,width=4 Double]\
+$[border.style=groove,width=4 Embossed A]\
+$[border.style=ridge,width=4 Embossed B]\
+$[border.style=inset,width=4 Inset A]\
+$[border.style=outset,width=4 Inset B]\
+$[border.color=d00 Border color]\
+$[border.width=5 Border width]\
+$[border.radius=6,width=2 Border radius]\
+$[border.radius=5,width=2,color=888 $[position.x=1.5 ＣＳＳ]
+$[position.x=1.5 完全に理解した]]\
+$[border.radius=5,width=2,color=888,noclip $[position.x=1.5 ＣＳＳ]
+$[position.x=1.5 完全に理解した]]"></MfmPreview>
+
 ### 각도 변경
 
 지정한 각도로 회전시킵니다.
@@ -250,7 +306,7 @@ $[rotate.deg=30 misskey]
 
 ### 확대
 
-문자 크기를 조절할 수 있습니다.
+굵은 문자
 
 ```
 $[scale.x=4,y=2 🍮]
@@ -366,3 +422,7 @@ $[sparkle 🍮]
 MFM 기능은 라이브러리를 통해 공개하고 있으니, 간단하게 클라이언트에 MFM 기능을 추가하실 수 있습니다.
 
 - [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - JavaScript 기반 MFM 기능 구현
+- [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - Vue.js용 컴포넌트
+- [mfm.kt](https://github.com/samunohito/mfm.kt) - Kotlin에의 파서 구현
+- [mfm_parser](https://pub.dev/packages/mfm_parser) - Dart에의 파서 구현
+- [mfm](https://pub.dev/packages/mfm) - Flutter용 드로잉 위젯

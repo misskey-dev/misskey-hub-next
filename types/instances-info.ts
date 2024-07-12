@@ -1,4 +1,4 @@
-import type * as Misskey from 'misskey-js';
+import type { entities as MisskeyEntities } from 'misskey-js';
 
 /** 各インスタンスの情報 */
 export type InstanceItem = {
@@ -23,10 +23,10 @@ export type InstanceItem = {
     /** nodeinfo */
     nodeinfo: Record<string, any> | null,
     /** result of api/meta */
-    meta: Misskey.entities.InstanceMetadata | null,
+    meta: MisskeyEntities.MetaLite | null,
     /** Number of Notes per Day (15-day average) */
     npd15: number, 
-    stats?: Record<string, any>,   //  deprecated (result of api/stats)
+    stats?: MisskeyEntities.StatsResponse,   //  deprecated (result of api/stats)
 };
 
 /** JSON Object Returned from `joinmisskey/api`. */

@@ -9,10 +9,6 @@ Misskey를 간단하게 설치하기 위한 쉘 스크립트가 만들어졌습�
 [v12은 여기로 (일본어)](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)\
 [**English version**](./README.en.md)
 
-## 라이선스
-
-[MIT 라이선스](./LICENSE)
-
 ## 준비할 것
 
 1. 도메인
@@ -44,13 +40,13 @@ Cloudflare를 사용하는 경우, Cloudflare에서 도메인 설정을 끝낸 �
 
 서버에 SSH로 연결합니다.\
 \
-(서버 화면을 직접 보고 계신 분은 터미널을 열어주세요.)
+(서버 화면을 직접 보고 계신 분은 터미널을 열어주세요.）
 
-### 2. 최신 환경으로 하기
+### 2. 최신 환경으로 업데이트하기
 
 모든 패키지를 업데이트하고, 다시 시작합니다.
 
-```
+```sh
 sudo apt update; sudo apt full-upgrade -y; sudo reboot
 ```
 
@@ -60,7 +56,7 @@ SSH를 다시 연결하고, Misskey를 설치 해봅시다.
 
 다만, 설치 전에 [Tips](#tips)를 읽고 시작하는 것을 매우 권장합니다.
 
-```
+```sh
 wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/ubuntu.sh -O ubuntu.sh; sudo bash ubuntu.sh
 ```
 
@@ -74,13 +70,13 @@ example.com은 자신의 도메인으로 바꿔주세요.
 
 모든 다운로드부터 시작합니다.
 
-```
+```sh
 wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/update.ubuntu.sh -O update.sh
 ```
 
 업데이트를 하고 싶을 땐, 아래의 스크립트를 실행해주세요.
 
-```
+```sh
 sudo bash update.sh
 ```
 
@@ -94,13 +90,13 @@ sudo bash update.sh
 이 스크립트는, Oracle Cloud Infrastructure의 Always Free 서비스로 제공되어지는 2 종류의 구성 중 어느 곳에서도 동작합니다.
 
 - VM.Standard.E2.1.Micro (AMD)
-- VM.Standard.A1.Flex (ARM) [1OCPU RAM6GB or greater]
+- VM.Standard.A1.Flex (ARM) \[1OCPU RAM6GB or greater]
 
 iptables를 쓸 수 있게 설정하세요.
 
 ## Issues & PRs Welcome
 
-위의 환경에서 정상적으로 움직이지 않는 경우, 버그인 경우가 있습니다.설치 했을 때 사용했던 조건들을 적고, GitHub의 Issue에서 알려주시길 바랍니다.
+위의 환경에서 정상적으로 작동하지 않는 경우, 버그인 경우가 있습니다.설치 했을 때 사용했던 조건들을 적고, GitHub의 Issue에서 알려주시길 바랍니다.
 
 위에 적은 환경이 아닌 경우 서포트는 어려우나, 상황을 자세하게 알려주신다면 문제가 해결될 수도 있습니다.
 
@@ -116,7 +112,7 @@ v1부터 설치 메소드에 systemd와 Docker 등을 고를 수 있게 되었�
 
 Docker라고 했지만, **Misskey만 Docker에서 실행**하고, Redis나 Postgres 등은 호스트에서 직접 실행합니다.\
 \
-[docker-compose에서 모든 기능을 움직이는 방법에 대해선, mamemononga님이 작성하긴 이 포스트를 추천합니다.](https://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0)
+[docker-compose에서 모든 기능을 움직이는 방법에 대해선, mamemononga님이 작성하신 이 포스트를 추천합니다.](https://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0)
 
 Docker Hub 이미지를 사용하는 설정이라면, Misskey를 빌드할 필요가 없으므로, **제일 추천하고 있습니다**.\
 \
@@ -126,7 +122,7 @@ Docker Hub 이미지를 사용하는 설정이라면, Misskey를 빌드할 필�
 
 로컬에서 Docker를 빌드하는 방식은, 퍼포먼스적으로는 권장하지 않고 있습니다.
 
-systemd는, Docker Hub에 이미지를 올리지는 않지만, 포크를 사용하고 싶을 땐 추천합니다.
+systemd는, Docker Hub에 이미지를 올리지는 않지만 포크를 사용하고 싶을 때 추천합니다.
 
 추천하는 순위는 아래와 같습니다.
 
@@ -138,11 +134,17 @@ systemd는, Docker Hub에 이미지를 올리지는 않지만, 포크를 사용�
 
 서버 1대 위에 Misskey를 구축하는 경우, nginxfmf 사용하는 것을 추천합니다.
 
-로드 밸런서를 설치한 경우엔 nginx를 설치하지 말고, [Misskey의 nginx 설정](../resources/nginx/)을 참고하여 로드 밸런서를 설정하는 편이 나을거라고 생각합니다.
+- 사용자는 자신만 (1인 서버) 또는 극소수
+- 로드 밸런서 등 nginx의 리버스 프록시 캐시 기능을 다른 수단으로 제공할 용의가 있다 (상급자용)
 
-## Add more swaps!
+nginx를 리버스 프록시로 채택함으로써 이미지 파일 등 정적 콘텐츠를 캐시하고 서버 리소스 낭비를 줄일 수 있습니다.\
+또, nginx에는 캐시가 없는 상태에서의 대량 액세스를 컨트롤하는 기능이 탑재되어 있기 때문에, Misskey의 부하 증가를 억제하는 효과를 기대할 수 있습니다.
 
-스왑을 설정하고 있는 경우, 메모리가 합쳐서 3GB 이상이지 않으면 스크립트가 움직이지 않게 되어져 있습니다.
+설정 예시는 [nginx 설정](../resources/nginx/)에 기재되어 있습니다.
+
+## 스왑을 더 추가하세요!
+
+스왑을 설정하고 있는 경우, 메모리가 합쳐서 3GB 이상이지 않으면 스크립트가 작동하지 않게 되어 있습니다.
 
 ## 한 번 실패한 뒤에 다시 스크립트를 실행하는 경우
 
@@ -156,8 +158,7 @@ systemd는, Docker Hub에 이미지를 올리지는 않지만, 포크를 사용�
 ## .env 파일에 대해서
 
 인스톨 스크립트는, 2개의 .env 파일을 만듭니다.\
-\
-업데이트 할 때 사용합니다.
+이들은 업데이트 할 때 사용합니다.
 
 ### /root/.misskey.env
 
@@ -175,7 +176,7 @@ Docker인 경우에 만들어집니다.\
 \
 실행되고 있는 컨테이너와 이미지 번호를 저장하고 있습니다.\
 \
-컨테이너 번호는 업데이트 할 때 바뀌어집니다.오래된 이미지는 삭제됩니다.
+컨테이너 번호는 업데이트 할 때 갱신됩니다.오래된 이미지는 삭제됩니다.
 
 ## 자신이 직접 관리하기
 
@@ -187,18 +188,18 @@ Docker인 경우에 만들어집니다.\
 
 Misskey 소스는 `/home/유저명/디렉토리`로 clone 되어집니다.\
 \
-(유저, 디렉토리의 초기 값은 둘 다 misskey 입니다.)
+(유저, 디렉토리의 초기 값은 둘 다 misskey 입니다.）
 
 Misskey 디렉토리는, 아래와 같이 이동하는 것을 추천합니다.
 
-```
+```sh
 sudo -iu 유저명
 cd 디렉토리
 ```
 
 앞에서 사용 중이던 유저에 돌아가기 위해선 exit를 실행합니다.
 
-```
+```sh
 exit
 ```
 
@@ -208,13 +209,13 @@ systemd의 프로세스명은 example.com 입니다.\
 \
 예를 들어서 다시 시작하려면 다음과 같이하면 됩니다.
 
-```
+```sh
 sudo systemctl restart example.com
 ```
 
 journalctl에서 로그를 확인할 수 있습니다.
 
-```
+```sh
 journalctl -t example.com
 ```
 
@@ -226,7 +227,7 @@ Docker는 Misskey 유저에서 rootless로 실행되어져 있습니다.
 
 sudo에서 Misskey 유저에 로그인 할 때, `XDG_RUNTIME_DIR`과 `DOCKER_HOST`를 변경할 필요가 있습니다.
 
-```
+```sh
 sudo -iu 유저명
 export XDG_RUNTIME_DIR=/run/user/$UID
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
@@ -246,7 +247,7 @@ docker logs --tail 50 -f 컨테이너ID
 
 한 줄로 하고 싶을 땐 아래와 같이 하시면 됩니다.
 
-```
+```sh
 sudo -u 유저명 XDG_RUNTIME_DIR=/run/user/$(id -u 유저명) DOCKER_HOST=unix:///run/user/$(id -u 유저명)/docker.sock docker ps
 ```
 
@@ -268,7 +269,7 @@ systemd인 경우, pnpm install에서 실패되어져 있는 경우가 있습니
 
 Misskey 디렉토리에서 다음의 내용을 실행해서, 한 번 더 업데이트를 해보시길 바랍니다.
 
-```
+```sh
 pnpm run clean-all
 ```
 

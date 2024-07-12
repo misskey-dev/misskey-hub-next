@@ -1,8 +1,9 @@
-# サイレンス
+# Senyapkan
 
-サイレンスは、アカウントに設定される状態のひとつです。
+Senyapkan adalah salah satu kondisi dimana sebuah akun dapat diatur menjadi senyap.
 
-アカウントがサイレンス状態になると、ノートの公開範囲をパブリックにできなくなります。
-ホーム、フォロワー、ダイレクトは選択可能なため、サイレンスを受けた場合でもフォロワーやあなたのユーザーページを直接訪れた場合は投稿を閲覧できますが、GTL(連合タイムライン)やLTL(ローカルタイムライン)には投稿が流れません。
+Ketika akun kamu disenyapkan, kamu tidak dapat mengatur visibilitas dari catatanmu ke Publik.
+Beranda, Pengikut, dan Pesan Langsung masih tetap dapat dipilih. Jadi meskipun jika akun kamu disenyapkan, pengikut serta pengunjung langsung dari halaman profil kamu masih dapat melihat postingan kamu.
+Mereka hanya tidak dapat melihat catatan kamu tersebut di lini masa global (LMG) atau lini masa lokal (LML).
 
-アカウントのサイレンス状態は、サーバーのモデレーターによって有効化/無効化されます。
+Status Disenyapkan dari sebuah akun dapat diatur oleh moderator instansi.
