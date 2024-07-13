@@ -19,7 +19,7 @@
             </button>
         </div>
         <div class="pt-6 p-0 sm:p-12 lg:p-6 w-full min-w-0">
-            <ApiRenderer v-if="slugs[0] === 'for-developers' && slugs[1] === 'api' && slugs[2] === 'endpoints' && slugs[3]" :apiData="data" />
+            <ApiRenderer v-if="data?._TYPE_ === 'API_DOCUMENT' && slugs[0] === 'for-developers' && slugs[1] === 'api' && slugs[2] === 'endpoints' && slugs[3]" :apiData="data" />
             <template v-else>
                 <Tip v-if="locale !== 'ja'" class="mb-6" :label="$t('_i18n._missing.title')">
                     <I18nT scope="global" keypath="_i18n._missing.description" tag="p">

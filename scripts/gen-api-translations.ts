@@ -3,6 +3,7 @@ import * as misskey from "misskey-js";
 import yaml from "js-yaml";
 import fs from "fs";
 import path from "path";
+import type { OpenAPIV3_1 } from "openapi-types";
 
 // オブジェクト obj1 にないキーだけを、元オブジェクトにマージする関数
 function mergeObjects(obj1: Record<string, any>, obj2: Record<string, any>): Record<string, any> {
@@ -61,11 +62,15 @@ export async function genApiFiles() {
 
     // エンドポイント
     const ep = await fetch('https://misskey.noellabo.jp/api.json');
-    const epj = await ep.json();
+    const epj = await ep.json() as OpenAPIV3_1.Document;
     const endpointsTLs: Record<string, any> = {};
-    Object.keys(epj.paths).forEach((path) => {
+    Object.keys(epj.paths!).forEach((path) => {
 
-        Object.keys(epj.paths[path]).forEach((method) => {
+        (Object.keys(epj.paths![path]!) as (keyof OpenAPIV3_1.PathItemObject)[]).forEach((method) => {
+            const epjMethod = epj.paths![path]![method]!;
+
+            if (typeof epjMethod !== 'object') return;
+
             endpointsTLs[path] = {};
 
             // 各エンドポイントのページ要素に合わせる
@@ -73,15 +78,17 @@ export async function genApiFiles() {
                 description: '（説明がありません）',
             };
 
-            if (getSchemaKeys(epj.paths[path][method].requestBody?.content ?? {}) !== null) {
-                endpointsTLs[path][method].requestBody = Object.fromEntries(getSchemaKeys(epj.paths[path][method].requestBody.content)!.map((v) => [v, '（説明がありません）']));
+            if ('requestBody' in epjMethod && 'content' in epjMethod.requestBody! && getSchemaKeys(epjMethod.requestBody?.content ?? {}) !== null) {
+                endpointsTLs[path][method].requestBody = Object.fromEntries(getSchemaKeys(epjMethod.requestBody.content)!.map((v) => [v, '（説明がありません）']));
             }
 
-            Object.keys(epj.paths[path][method].responses).forEach((responseCode) => {
-                const responseBody = epj.paths[path][method].responses[responseCode].content ? epj.paths[path][method].responses[responseCode].content : null;
+            if (!('responses' in epjMethod)) return;
+
+            Object.keys(epjMethod.responses).forEach((responseCode) => {
+                const responseBody = epjMethod.responses[responseCode].content ? epjMethod.responses[responseCode].content : null;
 
                 if (!out._api._responseCodes[responseCode]) {
-                    out._api._responseCodes[responseCode] = epj.paths[path][method].responses[responseCode].description;
+                    out._api._responseCodes[responseCode] = epjMethod.responses[responseCode].description;
                 }
 
                 if (!responseBody) {
@@ -119,6 +126,8 @@ export async function genApiFiles() {
         const sanitizedPathName = eppath.replace(/^\//, '');
 
         const targetObj: Record<string, any> = {
+            _TYPE_: 'API_DOCUMENT',
+
             data: epj.paths[eppath],
         };
         targetObj.title = sanitizedPathName;

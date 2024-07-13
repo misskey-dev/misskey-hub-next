@@ -14,7 +14,13 @@
             </div>
             <div class="markdown-body">
                 <h3>{{ $t('_api._apiRenderer.requestBody') }}</h3>
-                <MkSchemaViewer :type="'ref'" :refPath="'any'" />
+                <template v-for="res, contentType in detail.requestBody.content">
+                    <MkSchemaViewer :type="'openapi'" :openapiSchema="res.schema" />
+                    <GDetails summary="Raw JSON Schema">
+                        <MDC :value="`\`\`\`json\n${JSON.stringify(res.schema, null, 2)}\n\`\`\``" />
+                    </GDetails>
+                </template>
+                <MkSchemaViewer :type="'openapi'" :openApiSchema="detail.requestBody.content[0].schema" />
             </div>
             <details class="group my-4" v-for="response, code in detail.responses" :open="code <= 399">
                 <summary class="cursor-pointer outline-none p-2 border dark:border-slate-800 rounded-lg bg-white dark:bg-slate-700 shadow-md group-open:rounded-b-none group-open:bg-slate-200 dark:group-open:bg-slate-800 group-open:shadow-none group-open:border-b-0">
@@ -54,11 +60,10 @@
 
 <script setup lang="ts">
 import ExtIco from 'bi/box-arrow-up-right.svg';
+import type { MiDocsParsedContentApi } from '@/types/content';
 
 defineProps<{
-    apiData: Record<string, any> & {
-        data: Record<string, any>
-    };
+    apiData: MiDocsParsedContentApi;
 }>();
 
 const localePath = useLocalePath();

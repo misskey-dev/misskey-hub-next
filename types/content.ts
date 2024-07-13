@@ -1,5 +1,6 @@
 // Misskey Docs Frontmatter Types
 import type { ParsedContent, MarkdownParsedContent, MarkdownRoot } from '@nuxt/content/dist/runtime/types';
+import type { OpenAPIV3_1 } from 'openapi-types';
 
 /**
  * Docs Frontmatter の型定義
@@ -35,7 +36,13 @@ interface MiDocsParsedContentSteppedGuide extends ParsedContent {
     }[];
 };
 
-export type MiDocsParsedContent = MiDocsParsedContentMd | MiDocsParsedContentSteppedGuide;
+export interface MiDocsParsedContentApi extends ParsedContent {
+    _TYPE_: 'API_DOCUMENT';
+
+    data: OpenAPIV3_1.PathItemObject;
+};
+
+export type MiDocsParsedContent = MiDocsParsedContentMd | MiDocsParsedContentSteppedGuide | MiDocsParsedContentApi;
 
 /**
  * Blog Frontmatter の型定義

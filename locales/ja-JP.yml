@@ -18,7 +18,6 @@ lastUpdate: "最終更新"
 empty: "内容がありません"
 threeDimensionModel: "3Dモデル"
 clickToShow: "クリックして表示"
-
 _error:
   notFound: "ページが見つかりませんでした"
   notFoundDesc: "お探しのページは見つかりませんでした。URLをお確かめください。"
@@ -104,7 +103,6 @@ _landing:
   _sponsors:
     title: "スポンサー"
     becomeASponsor: "スポンサーになる"
-
 _servers:
   title: "サーバー一覧"
   description: "Misskeyは単一のサービスではなく、各々がサービスを提供する分散型ネットワークとなっています。Misskeyを利用するには、サービスを提供しているサーバーでアカウントを作成する必要があります。"
@@ -178,7 +176,6 @@ _docs:
     selectCourse: "ガイドを選ぶ"
     noImageInThisStep: "このステップには画像がありません"
     aiWellDone: "操作はこれで完了です。お疲れ様でした♪"
-
 _blog:
   title: "ブログ"
   description: "Misskey開発本部から、Misskeyに関する最新情報やTips等をお届けします！（日本語のみ）"
@@ -200,7 +197,6 @@ _brandAssets:
   icon: "アイコン"
   banner: "バナー"
   avatarDecorationTemplate: "アバターデコレーション テンプレート"
-
 _contact:
   title: "お問い合わせ"
   description: "Misskey Projectへのお問い合わせはこちらから"
@@ -210,7 +206,6 @@ _contact:
   faqTitle: "よくあるお問い合わせ"
   faqDescription: "お問い合わせを送信する前に、あなたの知りたいことがここにないか確認してください。"
   ifNothingIsFound: "もしあてはまるものがなかったら…"
-
 _links:
   title: "リンク"
   _github:
@@ -314,7 +309,6 @@ _shareLinkGenerator:
   typeSomethingToGetButton: "本文を入力するとボタンが生成されます。"
   documentationIs: "パラメータの詳細情報など、技術仕様は{here}"
   here: "こちら"
-
 _goToMisskey:
   title: "Misskey Webに移動"
   heading: "このページを開きたいサーバーを選択してください"
@@ -346,13 +340,11 @@ _customEmojiPreview:
     textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
   _placeholder:
     noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
-
 _identiconGenerator:
   title: "初期アイコンジェネレーター"
   description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
   userName: "ユーザー名"
   includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
-
 _historicalMaterials:
   title: "歴史資料館"
   description: "Misskeyに関する歴史的資料を一挙公開"
@@ -360,7 +352,6 @@ _historicalMaterials:
   heroDescription: "Misskeyは2014年に掲示板サービスとして生まれました。それから10年経ち、今ではたくさんの方々に利用していただけるプラットフォームになりました。\nここではMisskeyに関する歴史的資料を一挙公開します！"
   submissionTitle: "古いMisskeyの写真をお持ちですか？"
   submissionDescription: "昔のMisskeyにまつわる資料をお持ちの方は、ぜひ当館にお寄せください。\nGitHubを利用できる方は{gh_issue}に、利用できない方は {'@'}syuilo{'@'}misskey.io にお送りください。"
-
 _api:
   _endpoints:
     title: "エンドポイント一覧"

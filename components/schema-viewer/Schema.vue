@@ -1,12 +1,13 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
+import type { OpenAPIV3_1 } from 'openapi-types';
 
 import SchemaHeading from './SchemaHeading.vue'
 import SchemaProperty from './SchemaProperty.vue'
 
 const props = withDefaults(
     defineProps<{
-        value?: Record<string, any> | string
+        value?: OpenAPIV3_1.SchemaObject | string
         /** Track how deep we’ve gone */
         level?: number
         /* Show as a heading */
@@ -28,7 +29,7 @@ const shouldShowToggle = computed(() => {
 })
 
 // Merge the (optional) `additionalProperties` into the schema
-const mergedSchema = computed(() => {
+const mergedSchema = computed<OpenAPIV3_1.SchemaObject>(() => {
     return {
         ...(typeof props.value === 'object' ? props.value : {}),
         ...(typeof props.value === 'object' &&
@@ -47,7 +48,7 @@ const open = ref(props.noncollapsible);
 </script>
 <template>
     <div
-        v-if="typeof value === 'object' && Object.keys(value).length"
+        v-if="typeof value === 'object' && Object.keys(value).length && (level == null || level < 4)"
         class="schema-card"
         :class="[
             `schema-card--level-${level}`,
@@ -105,7 +106,7 @@ const open = ref(props.noncollapsible);
                         :level="level"
                         :name="property"
                         :required="mergedSchema.required &&
-                            mergedSchema.required.length &&
+                            mergedSchema.required.length > 0 &&
                             mergedSchema.required.includes(property)
                             "
                         :value="mergedSchema.properties?.[property]" />
