@@ -20,7 +20,7 @@
     "@types/nprogress": "^0.2.3",
     "@types/random-seed": "^0.3.5",
     "@types/ua-parser-js": "^0.7.39",
-    "aiscript-vscode": "github:aiscript-dev/aiscript-vscode#v0.1.10",
+    "aiscript-vscode": "github:aiscript-dev/aiscript-vscode#v0.1.11",
     "autoprefixer": "^10.4.19",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
