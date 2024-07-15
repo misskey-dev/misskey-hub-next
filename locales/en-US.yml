@@ -246,6 +246,7 @@ _aidConverter:
   dateToAid: "Date to aid/aidx"
   mode: "Type of ID"
   date: "Date/Time"
+  inputByLine: "You can convert multiple aids/aidx separated by newlines."
 _aboutUs:
   title: "About Misskey Development Division"
   description: "Information about the Misskey development team."
