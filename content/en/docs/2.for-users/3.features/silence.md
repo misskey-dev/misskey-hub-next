@@ -1,8 +1,7 @@
-# サイレンス
+# Silence
 
-サイレンスは、アカウントに設定される状態のひとつです。
+An account can be in a silenced state.
 
-アカウントがサイレンス状態になると、ノートの公開範囲をパブリックにできなくなります。
-ホーム、フォロワー、ダイレクトは選択可能なため、サイレンスを受けた場合でもフォロワーやあなたのユーザーページを直接訪れた場合は投稿を閲覧できますが、GTL(連合タイムライン)やLTL(ローカルタイムライン)には投稿が流れません。
+When an account is silenced, the user will no longer be able to set their note visibility to "Public".A silenced user can still set note visibility to "Home", "Followers", and "Direct", which shows the note to their followers and on their profile page, but their posts will not be visible on the GTL (federated timeline) or LTL (local timeline).
 
-アカウントのサイレンス状態は、サーバーのモデレーターによって有効化/無効化されます。
+Only instance admins/moderators can silence accounts.
