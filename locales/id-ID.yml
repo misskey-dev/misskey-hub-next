@@ -246,6 +246,7 @@ _aidConverter:
   dateToAid: "Tanggal ke aid/aidx"
   mode: "Tipe id"
   date: "Tanggal/Waktu"
+  inputByLine: "改行区切りで複数のaid/aidxを変換できます。"
 _aboutUs:
   title: "Tentang Divisi Pengembangan Misskey"
   description: "Informasi mengenai tim pengembangan Misskey."

@@ -246,6 +246,7 @@ _aidConverter:
   dateToAid: "日付時刻→aid/aidx"
   mode: "作成するid"
   date: "日付時刻"
+  inputByLine: "改行区切りで複数のaid/aidxを変換できます。"
 _aboutUs:
   title: "Misskey Projectについて"
   description: "Misskey Projectについての情報を掲載しています。"

@@ -246,6 +246,7 @@ _aidConverter:
   dateToAid: "日期/时间→援助"
   mode: "要创建的 id"
   date: "日期和时间"
+  inputByLine: "改行区切りで複数のaid/aidxを変換できます。"
 _aboutUs:
   title: "关于 Misskey 项目"
   description: "关于Misskey 的项目信息。"
