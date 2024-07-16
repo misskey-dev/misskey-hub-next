@@ -16,7 +16,7 @@ You can find a note later by adding it to your [Favorites](./favorite)
 
 ## Composing a Note
 
-To compose a note, click the Note button (denoted by the pencil icon) to open the compose form.Enter your content, then click the Note button (denoted by the paper airplane icon) to submit the note. Notes can contain text, images, videos, and [polls](./poll).You can format your note using [Misskey-Flavored Markdown (MFM)](./mfm), [mention](./mention) other users, or include [hashtags](./hashtag). You can also add content warnings (CW) and change the visibility of the note (more on this below).
+To compose a note, click the Note button (denoted by the pencil icon) to open the compose form.Enter your content, then click the Note button (denoted by the paper airplane icon) to submit the note. Notes can contain text, images, videos, and [polls](./poll).You can format your note using [Markup language For Misskey (MFM)](./mfm), [mention](./mention) other users, or include [hashtags](./hashtag). You can also add content warnings (CW) and change the visibility of the note (more on this below).
 
 :::tip
 
