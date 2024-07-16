@@ -1,128 +1,115 @@
 ---
-description: Misskeyに関する用語集です。
+description: A glossary of terms related to Misskey.
 ---
 
-# 用語集
+# Glossary
 
-Misskeyに関する用語集です。
+A glossary of terms related to Misskey.
 
 ## Acct
 
-特定のユーザーを示す`@username@host`形式の文字列。メンションをする際などに使われます。
+The fully-qualified ActivityPub username of a user, in the format `@username@host`.Used when mentioning a user.
 
 ## ActivityPub
 
-(読み: あくてぃびてぃぱぶ)<br>
-Fediverseと呼ばれる、非中央集権型で連合したソーシャルネットワークを形成するために用いられる、オープン標準のプロトコル(仕様)。このプロトコルに則ってサーバー同士が接続され、コンテンツや通知などの情報を相互のサーバーでやり取りします。Fediverseのネットワークを形成するために欠かせません。
+An open, standardized protocol used to create a decentralized federated social network known as the Fediverse.Instances connect to each other using this protocol and exchange data such as content and notifications.It is the core protocol of the Fediverse.
 
 ## AiScript
 
-(読み: あいすくりぷと)<br>
-Misskeyで使用できる、JavaScript上で動作するプログラミング言語です。詳しくは[こちら。](https://github.com/aiscript-dev/aiscript/blob/master/README.md)
+A scripting language running on top of Javascript that can be used with Misskey.[Documentation](https://github.com/aiscript-dev/aiscript/blob/master/README.md) available on Github.
 
 ## API
 
-(読み: えーぴーあい)<br>
-Misskeyのサーバーが公開している、プログラムからMisskeyを扱うためのインターフェース。詳しくは[こちら。](../../for-developers/api)
+An interface for computer programs to interact with Misskey.[Documentation is available](../../for-developers/api)
 
 ## Bot
 
-(読み: ぼっと)<br>
-プログラムによって動作しているアカウントです。
+An account operated by a program.
 
 ## CW
 
-(読み: こんてんつわーにんぐ)<br>
-Contents Warningの略。ノートの内容を、操作なしには表示しないようにできる機能。主に長大な内容を隠すためや、ネタバレ防止などに使われます。詳しくは[こちら。](../features/note/#cw)
+Abbreviation of Content Warning.A feature to hide the content of a note unless explicitly requested to be shown by a user.Mainly used to hide the content of long notes or to prevent posting spoilers publicly.[Documentation is available](../features/note/#cw)
 
 ## Fediverse
 
-(読み: ふぇでぃばーす)<br>
-「Federated(Federation)」と「Universe」を組み合わせた造語。Misskeyを含む、様々な分散型ソフトウェアを実装したサーバーで構成された、非中央集権的で連合したソーシャルネットワーク。Misskey以外の分散型ソフトウェアとしては、MastodonやPleromaやPixelfedなどがあります。
+A portmanteau of "federated" and "universe."A decentralized, federated social network made up of servers running various decentralized software, including Misskey.Besides Misskey, other examples of federated software include Mastodon, Pleroma, and Pixelfed.
 
 ## GTL
 
-グローバルタイムライン(Global TimeLine)の略。タイムラインについて、詳しくは[こちら。](../features/timeline)
+An abbreviation for "Global TimeLine".See the documentation on the [timelines.](../features/timeline)
 
 ## HTL
 
-ホームタイムライン(Home TimeLine)の略。タイムラインについて、詳しくは[こちら。](../features/timeline)
+An abbreviation for "Home TimeLine".See the documentation on the [timelines.](../features/timeline)
 
 ## LTL
 
-ローカルタイムライン(Local TimeLine)の略。タイムラインについて、詳しくは[こちら。](../features/timeline)
+An abbreviation for "Local TimeLine".See the documentation on the [timelines.](../features/timeline)
 
 ## MFM
 
-(読み: えむえふえむ)<br>
-Markup language For Misskeyの略で、Misskey上で使用できるマークアップ言語です。詳しくは[こちら。](../features/mfm)
+Abbreviation for Markup language for Misskey. The markup language used on Misskey.[Documentation is available](../features/mfm)
 
 ## Misskey Web
 
-(読み: みすきーうぇぶ)<br>
-Misskey公式のWebクライアント(インターフェイス)。MisskeyサーバーにPC・スマートフォンなどのWebブラウザからアクセスすると、自動的に表示されます。
+Misskey's official web client (interface).This is the application seen when viewing Misskey from a web browser on your PC or smartphone.
 
 ## NSFW
 
-(読み: のっとせーふふぉーわーく)<br>
-Not Safe For Workの略。画像を「センシティブ」扱いにし、操作なしには表示しないようにすることができる機能です。
+Abbreviation of Not Safe for Work.A feature to tag an image as "sensitive" (NSFW) and hide it unless explicitly requested to be shown by a user.
 
 ## Renote
 
-(読み: りのーと)<br>
-既にあるノートを引用、もしくはそのノートを新しいノートとして共有する行為、またそれによって作成されたノート。詳しくは[こちら。](../features/note/#renote)
+The act of quoting an existing note, sharing an existing note, or the note created as a result of these acts.[Documentation is available](../features/note/#renote)
 
 ## STL
 
-ソーシャルタイムライン(Social TimeLine)の略。タイムラインについて、詳しくは[こちら。](../features/timeline)
+An abbreviation for "Social TimeLine".See the documentation on the [timelines.](../features/timeline)
 
-## 藍
+## Ai
 
-(読み: あい)<br>
-Misskeyの看板娘(公式キャラクター)です。詳しくは[こちら。](https://xn--931a.moe/)
+Ai is Misskey's official mascot.[More information is available](https://xn--931a.moe/)
 
-## サーバー
+## Server
 
-todo
+(Server, Instance)An entity that provides the Misskey service to users.
 
-## カスタム絵文字
+## Custom Emoji
 
-各Misskeyサーバーの管理者やユーザーによって独自に作られる絵文字。カスタム絵文字ではない通常の絵文字は「Unicode絵文字」と区別して呼ばれます。詳しくは[こちら。](../features/custom-emoji)
+Emoji created by administrators and users unique to each instance.Emoji that are not specifically provided by your server but are available by default are called "Unicode Emoji".[Documentation is available](../features/custom-emoji)
 
-## コントロールパネル
+## Control Panel
 
-Misskeyサーバーの設定画面のことを指します。
+The configuration page of a Misskey instance.
 
-## 凍結
+## Suspension
 
-(読み: とうけつ)<br>
-アカウントが使用不可に設定されている状態を指します。
+The state of an account when it is disabled.
 
-## ドライブ
+## Drive
 
-Misskeyのサーバーでユーザーがアップロードした画像や音楽などのファイルを管理する機能です。詳しくは[こちら。](../features/drive)
+The file manager for user-uploaded files on Misskey, such as images and music.[Documentation is available](../features/drive)
 
-## ノート
+## Note
 
-Misskeyのサーバー上でユーザーが投稿する文章のこと。画像や音楽などのファイル、アンケートなど、Misskey独自の様々なコンテンツを含めることができます。詳しくは[こちら。](../features/note)
+Messages posted by Misskey users.Notes can contain a variety of original content including images, music, and polls.[Documentation is available](../features/note)
 
-## ミスキスト
+## Misskist
 
-Misskeyのサーバーにアカウントを持つユーザー。またはその中でもヘビーユーザーを指す言葉です。
+(Misskeyist, Misskist)Someone who has an account on Misskey.Especially power users.
 
-## モデレーター
+## Moderator
 
-スパムの凍結およびサイレンスや不適切な投稿の削除など、サーバーの運営に関する権限を持つユーザー。多くの場合、サーバー管理者がサーバー内でモデレーターを募集して採用します。
+Users with the authority to manage the community of a server by deactivating spam accounts, silencing users, deleting inappropriate posts, etc.In most cases, moderators are recruited from users of the instance.
 
-## リモート
+## Remote
 
-他サーバーやサーバーのことを指します。リモートユーザーといったように接頭辞としても使われます。ローカルの逆です。
+Instances other than your own.Also used as an adjective in terms such as "remote user."The opposite of local.
 
-## 連合
+## Federation
 
-(読み: れんごう)<br>
-複数のサーバーやサーバー同士が相互に接続され、コンテンツや通知などの情報を相互のサーバーやサーバーでやり取りする集合体を意味します。
+A collection of instances that exchange data such as content and notifications with each other, or a member thereof.
 
-## ローカル
+## Local
 
-自サーバーのことを指します。ローカルユーザー、ローカルタイムラインといったように接頭辞としても使われます。リモートの逆です。
+Your own instance.Also used as an adjective in terms such as "local users" or "local timeline."The opposite of "Remote".
