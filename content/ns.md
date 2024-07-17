@@ -112,7 +112,7 @@ This value may not exist because either:
 
 This value has following known properties:
 
-- `freeText`: describes how usage is permitted from its author in free text. This is not machine-friendly. The language of content is not specified, so Receivers SHOULD NOT assume it's written in some specific language.
+- `freeText`: The value is either string or null. Describes how usage is permitted from its author in non-machine-friendly free text. Implies Sender did not set explicit license if the value is null. The language of content is not specified, so Receivers SHOULD NOT assume it's written in some specific language.
 
 Senders SHOULD NOT set properties in other way that differs in above description except in the case of keeping backwards compatibility.
 
