@@ -98,3 +98,24 @@ This field can only take the value of `true` (or be absent).
 
 Used on actors to indicate that they in some way identify as a cat, expressed as a boolean value.
 If this property is set to `true`, displaying the actor or their notes will have some special effects attached in some clients.
+
+## `_misskey_license`
+
+- compact IRI: `misskey:_misskey_license`
+- canonical IRI: `https://misskey-hub.net/ns#_misskey_license`
+
+This value is used to express licenses for `Emoji` objects.
+This value may not exist because either:
+
+- The source server do not follow this extension, or
+- The source server uses old Misskey version
+
+This value has following known properties:
+
+- `freeText`: describes how usage is permitted from its author in free text. This is not machine-friendly. The language of content is not specified, so Receivers SHOULD NOT assume it's written in some specific language.
+
+Senders SHOULD NOT set properties in other way that differs in above description except in the case of keeping backwards compatibility.
+
+Senders SHOULD NOT set unknown properties except in the case of keeping backwards compatibility, because more property may be added in the future.
+
+Receivers SHOULD ignore unknown properties.
