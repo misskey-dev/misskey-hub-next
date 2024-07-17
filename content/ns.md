@@ -154,3 +154,24 @@ This property is not guaranteed to work on older Misskey or non-Misskey implemen
 This property is used for `Actor` type object. This property has same semantics and value range as `_misskey_makeNotesFollowersOnlyBefore` but affected viewer: the value affects everyone but author themselves.
 
 This property is not guaranteed to work on older Misskey or non-Misskey implementation.
+
+## `_misskey_license`
+
+- compact IRI: `misskey:_misskey_license`
+- canonical IRI: `https://misskey-hub.net/ns#_misskey_license`
+
+This value is used to express licenses for `Emoji` objects.
+This value may not exist because either:
+
+- The source server do not follow this extension, or
+- The source server uses old Misskey version
+
+This value has following known properties:
+
+- `freeText`: describes how usage is permitted from its author in free text. This is not machine-friendly. The language of content is not specified, so Receivers SHOULD NOT assume it's written in some specific language.
+
+Senders SHOULD NOT set properties in other way that differs in above description except in the case of keeping backwards compatibility.
+
+Senders SHOULD NOT set unknown properties except in the case of keeping backwards compatibility, because more property may be added in the future.
+
+Receivers SHOULD ignore unknown properties.
