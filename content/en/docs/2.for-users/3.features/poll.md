@@ -32,20 +32,20 @@ To remove a deadline, select "Never" in the "End poll" dropdown.
 
 ## Voting in a Poll
 
-アンケートが添付されたノートがタイムラインに流れてきたときは、アンケートに投票してみましょう。
+When you see a note with a poll fly by in the timeline, vote!
 
-アンケートに投票するには、各選択肢をクリックします。アンケートを投稿したユーザーが複数回答可に設定していない場合は、その時点でのアンケートの結果が表示されます。
+To vote in a poll, click on your desired option.If the user who created the poll did not allow multiple choices, the current results of the poll will be immediately displayed.
 
-アンケートを投稿したユーザーが複数回答可に設定していた場合、他の選択肢にも投票することができます。この場合、結果は自動では表示されません。
+If the user who created the poll allowed multiple choices, you will be allowed to vote for another option.In this case, the results will not be displayed immediately.
 
-複数回答の設定に関わらず、自動でアンケートの結果が表示されなかったり、投票前に結果を見たい時は、選択肢の下にある「結果を見る」をクリックしてアンケートの結果を表示することができます。
+To see the results of the poll before or after voting, click the "View results" button below the options.
 
-未投票のアンケートの結果を見たあと、もう一度隠すときは「投票する」をクリックします。
+If you viewed the results without voting, you can return to voting by clicking the "Vote" button.
 
 :::tip
 
-未投票アンケートには、結果を表示した状態でも投票できます。
+If you haven't voted already, you can vote after viewing the current results.
 
 :::
 
-投票をすると、自分の投票した選択肢に✔がつきます。
+When voting, a ✔ will appear beside your selections.
