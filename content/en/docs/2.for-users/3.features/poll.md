@@ -1,51 +1,51 @@
-# アンケート
+# Polls
 
-アンケートは、他の人からの意見を簡単に聞くことができる機能です。
+Polls are a feature that allow you to solicit opinions from others.
 
-## アンケートをノートに添付する
+## Attach a Poll to a Note
 
-アンケートは、[ノート](/docs/for-users/features/note)に添付する形で投稿することができます。ノートにアンケートを添付するには、投稿フォームの下部にある「アンケート」ボタンを選択します。
+Polls can be published by attaching them to a [note](/docs/for-users/features/note).To attach a poll to your note, select the "Poll" icon at the bottom of the posting form.
 
-## 選択肢を増やす
+## Adding Options
 
-アンケートには、選択肢を10個まで作ることができます。選択肢の入力欄は、「追加」ボタンを押すことで追加することができます。
+A poll can have up to 10 options.To add an option, click the "Add" button.
 
-追加しすぎてしまった入力欄は、入力欄の横の☓ボタンを押すことで削除することができます。
+If you have too many options, you can delete one using the "X" button next to the option.
 
 :::warning
 
-いずれかの入力欄が空白だった場合、そのアンケートが添付されたノートは投稿できません。
+If an option is blank, you will not be able to submit the note.
 
 :::
 
-## 複数回答を可能にする
+## Allow Multiple Choices
 
-「複数回答可」スイッチをオンにすると、アンケートに回答する人が複数の選択肢に投票できるようになります。
+If "Allow selecting multiple choices" is selected, voters will be able to vote for more than one option.
 
-## アンケートの期限を設定する
+## Set a Deadline for Responses
 
-アンケートには、終了する期限を、日時指定か経過指定のいずれかで設定することができます。
+You can set a deadline for the poll as either an end date or a period of time.
 
-設定するには、「期限」の欄から「日時指定」もしくは「経過指定」をクリックします。
+To set a deadline, select "End at..." or "End after..." in the "End poll" dropdown menu.
 
-一度設定した期限を取り消す場合には、「期限」の欄から「無期限」を選択します。
+To remove a deadline, select "Never" in the "End poll" dropdown.
 
-## アンケートに投票する
+## Voting in a Poll
 
-アンケートが添付されたノートがタイムラインに流れてきたときは、アンケートに投票してみましょう。
+When you see a note with a poll fly by in the timeline, vote!
 
-アンケートに投票するには、各選択肢をクリックします。アンケートを投稿したユーザーが複数回答可に設定していない場合は、その時点でのアンケートの結果が表示されます。
+To vote in a poll, click on your desired option.If the user who created the poll did not allow multiple choices, the current results of the poll will be immediately displayed.
 
-アンケートを投稿したユーザーが複数回答可に設定していた場合、他の選択肢にも投票することができます。この場合、結果は自動では表示されません。
+If the user who created the poll allowed multiple choices, you will be allowed to vote for another option.In this case, the results will not be displayed immediately.
 
-複数回答の設定に関わらず、自動でアンケートの結果が表示されなかったり、投票前に結果を見たい時は、選択肢の下にある「結果を見る」をクリックしてアンケートの結果を表示することができます。
+To see the results of the poll before or after voting, click the "View results" button below the options.
 
-未投票のアンケートの結果を見たあと、もう一度隠すときは「投票する」をクリックします。
+If you viewed the results without voting, you can return to voting by clicking the "Vote" button.
 
 :::tip
 
-未投票アンケートには、結果を表示した状態でも投票できます。
+If you haven't voted already, you can vote after viewing the current results.
 
 :::
 
-投票をすると、自分の投票した選択肢に✔がつきます。
+When voting, a ✔ will appear beside your selections.

@@ -1,23 +1,7 @@
-# ワードミュート
+# Word Mute
 
-ワードミュートの設定をすると、条件に合致したノートが表示されなくなります。
+When a note is filtered using word mute, the note will be collapsed and the text "[Username] said something" will be displayed in its place.
 
-ワードミュートには、ソフトワードミュートとハードワードミュートの2種類があります。それぞれについて設定の方法と挙動を説明します。
+The word mute filter can be configured in [Settings > Mutes and Blocks](x-mi-web://settings/mute-block).
 
-## ソフトワードミュート
-
-ソフトワードミュートは、クライアント（アプリ）側でミュートを判断するワードミュートです。
-
-ノートが設定した条件に合致すると、「（ユーザー名）が何かを言いました」という表示で隠れます。\
-クリックすると元の通りに表示されます。
-
-## ハードワードミュート
-
-ハードワードミュートは、アンテナのようにサーバーが新しいノートの本文に対して条件に合致するかどうか判断し、タイムラインから対象となったノートを除外します。
-
-つまり、ハードワードミュートには、以下のような特徴があります。
-
-- 条件設定後、新しい投稿のみがミュートの対象になります。
-- 条件を変更しても、過去にハードミュートされたノートはミュートされたままになります。
-- 「○○が何かを言いました」でタイムラインが埋まることがありません。
-- ソフトミュートに非対応のアプリでも、ハードミュートは適用されます。
+It is also possible to hide notes filtered by word mute completely.In [Settings > General](x-mi-web://settings/general), in the "Note display" section, select "Hide notes containing muted words".

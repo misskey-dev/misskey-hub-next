@@ -1,6 +1,6 @@
 # Lini masa
 
-タイムラインは、[ノート](./note)が時系列で表示される機能です。
+タイムラインは、[ノート](/docs/for-users/features/note/)が時系列で表示される機能です。
 タイムラインには以下で示す種類があり、種類によって表示されるノートも異なります。
 なお、タイムラインの種類によってはサーバーにより無効になっている場合があります。
 
@@ -22,18 +22,94 @@
 
 ## Perbandingan
 
-| Sumber                                            |             |         | Lini masa |        |        |
-| ------------------------------------------------- | ----------- | ------- | --------- | ------ | ------ |
-| Pengguna                                          | Visibilitas | Beranda | Lokal     | Sosial | Global |
-| Lokal (Mengikuti)              | Publik      | ✔       | ✔         | ✔      | ✔      |
-|                                                   | Beranda     | ✔       |           | ✔      |        |
-|                                                   | Pengikut    | ✔       |           | ✔      |        |
-| Peladen luar (Mengikuti)       | Publik      | ✔       |           | ✔      | ✔      |
-|                                                   | Beranda     | ✔       |           | ✔      |        |
-|                                                   | Pengikut    | ✔       |           | ✔      |        |
-| Lokal (Tidak mengikuti)        | Publik      |         | ✔         | ✔      | ✔      |
-|                                                   | Beranda     |         |           |        |        |
-|                                                   | Pengikut    |         |           |        |        |
-| Peladen luar (Tidak mengikuti) | Publik      |         |           |        | ✔      |
-|                                                   | Beranda     |         |           |        |        |
-|                                                   | Pengikut    |         |           |        |        |
+<table>
+    <thead>
+        <tr>
+            <th scope="col" rowspan="2">ソース</th>
+            <th scope="col" rowspan="2">Visibilitas</th>
+            <th scope="col" colspan="4">Lini masa</th>
+        </tr>
+        <tr>
+            <th scope="col">Beranda</th>
+            <th scope="col">Lokal</th>
+            <th scope="col">Sosial</th>
+            <th scope="col">Global</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" rowspan="3">ローカル（フォロー）</th>
+            <th scope="row">Publik</th>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+        </tr>
+        <tr>
+            <th scope="row">Beranda</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Pengikut</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row" rowspan="3">リモート（フォロー）</th>
+            <th scope="row">Publik</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td>✔</td>
+        </tr>
+        <tr>
+            <th scope="row">Beranda</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Pengikut</th>
+            <td>✔</td>
+            <td></td>
+            <td>✔</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row" rowspan="3">ローカル（未フォロー）</th>
+            <th scope="row">Publik</th>
+            <td></td>
+            <td>✔</td>
+            <td>✔</td>
+            <td>✔</td>
+        </tr>
+        <tr>
+            <th scope="row">Beranda</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Pengikut</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">リモート（未フォロー）</th>
+            <th scope="row">Publik</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>✔</td>
+        </tr>
+    </tbody>
+</table>

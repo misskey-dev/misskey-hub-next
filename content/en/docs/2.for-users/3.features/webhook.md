@@ -2,24 +2,23 @@
 
 :::tip
 
-バージョン 12.109.0 以降の機能です。
+This feature is available in version 12.109.0 and later.
 
 :::
 
 :::warning
 
-実験的な機能であるため、動作が不安定だったり今後仕様が変更される可能性があります。
+This feature is experimental. It may be unstable and its specifications may be subject to change.
 
 :::
 
-MisskeyにはWebhookが用意されています。Webhookを利用すると、Misskey上の様々なイベントをリアルタイムに受け取ることが可能です。
+Misskey provides webhooks.Using webhooks, you can receive events from Misskey in realtime.
 
-設定>Webhook でWebhookの管理を行えます。
+You can manage your webhooks in [Settings > Webhook](x-mi-web://settings/webhook)
 
-Webhookが登録されると、指定したイベントが発生した際に、指定したURLにHTTPリクエストが送信されます。リクエストのメソッドはPOSTで、ボディはJSONです。
-さらに、リクエストヘッダーには`X-Misskey-Hook-Secret`という名前で、登録時に設定したシークレットが含まれます。このシークレットが正しいか検証することで、リクエストが正規のものか判定することができます。
+Once a webhook is registered, Misskey will send an HTTP request to the specified URL when the specified event occurs.These requests are POST requests with a JSON body. The header field `X-Misskey-Hook-Secret` will contain the secret specified on creation.For security, you should verify the content of this field matches the secret provided during creation.
 
-リクエストペイロードは以下のプロパティが入ります。
+The request payload contains the following properties: [TBA]
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -51,13 +50,13 @@ body: {
 }
 }"/>
 
-送信先サーバーが5xxエラーを返すか、応答しなかった場合は時間を開けてリクエストが再送されます。
+If the destination server returns a `500` error or does not respond, Misskey will try again later.
 
-Webhookは管理画面から個別にアクティブ状態を設定でき、一時的にリクエストの送信を停止させることができます。
+Webhooks can be temporarily enabled or disabled from their settings page.
 
-## イベント
+## Events
 
-イベントごとに説明とペイロードを示します。
+The following are the available events and their payloads.
 
 ### follow
 
@@ -193,7 +192,7 @@ note: {
 
 ### mention
 
-自分にメンションされた際に発生します。
+Occurs when you are mentioned.
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',

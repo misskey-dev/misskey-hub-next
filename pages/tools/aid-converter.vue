@@ -9,11 +9,17 @@
         </div>
         <div v-if="tab === 'aidToDate'" class="mx-auto max-w-lg">
             <label class="mb-1" for="aidToDateAid">aid / aidx</label>
-            <input class="form-control" id="aidToDateAid" v-model="aidToDateAid" />
+            <textarea
+                :rows="Math.max((aidToDateAid || '').split('\n').length, 10)"
+                class="form-control mb-1"
+                id="aidToDateAid"
+                v-model="aidToDateAid"
+            ></textarea>
+            <div class="mb-2 text-xs text-gray-500">{{ $t('_aidConverter.inputByLine') }}</div>
             <div class="my-2">
                 <button class="btn btn-primary" @click="doAidToDate()">{{ $t('_aidConverter.aidToDate') }}</button>
             </div>
-            <div class="mb-2 p-4 rounded-lg border bg-white dark:bg-[#212529] border-gray-200 dark:border-gray-600">
+            <div class="mb-2 p-4 rounded-lg border bg-white dark:bg-[#212529] border-gray-200 dark:border-gray-600 whitespace-pre-wrap">
                 {{ aidToDateResult }}
             </div>
         </div>
@@ -49,9 +55,16 @@ const tab = ref<'aidToDate' | 'dateToAid'>('aidToDate');
 const aidToDateAid = ref<string>('');
 const aidToDateResult = ref<string>('');
 function doAidToDate() {
-    const time = parseInt(aidToDateAid.value.slice(0, 8), 36) + TIME2000;
-    const d = new Date(time);
-    aidToDateResult.value = `${d.getFullYear().toString().padStart(4, '0')}-${(d.getMonth() + 1).toString().padStart(2, '0')}-${d.getDate().toString().padStart(2, '0')} ${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')}:${d.getSeconds().toString().padStart(2, '0')}.${d.getMilliseconds().toString().padStart(3, '0')}`;
+    aidToDateResult.value = aidToDateAid.value.split('\n').filter((v) => v.trim() !== '').map((line) => {
+        if (line.length < 8) {
+            return 'ERROR: Invalid Length at ' + line;
+        } else if (line.slice(0, 8).match(/[^0-9a-z]/)) {
+            return 'ERROR: Invalid Character at ' + line;
+        }
+        const time = parseInt(line.slice(0, 8), 36) + TIME2000;
+        const d = new Date(time);
+        return `${d.getFullYear().toString().padStart(4, '0')}-${(d.getMonth() + 1).toString().padStart(2, '0')}-${d.getDate().toString().padStart(2, '0')} ${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')}:${d.getSeconds().toString().padStart(2, '0')}.${d.getMilliseconds().toString().padStart(3, '0')}`;
+    }).join('\n');
 }
 
 const dateToAidDate = ref<string>('');

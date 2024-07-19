@@ -1,41 +1,41 @@
-# オンラインステータス
+# Online Status
 
-ユーザーの**オンラインステータス**は、そのユーザーのMisskey利用の状態を表すものです。
-オンラインステータスは、ユーザーページなどでユーザーアイコンの隅にインジケーターとして表示されます。
+A user's **Online Status** is an indication of the user's Misskey usage status.
+The online status is displayed as an indicator in the corner of the user's icon on the user page, for example.
 
 <table>
 	<tbody><tr>
-		<th>色</th>
-		<th>状態</th>
-		<th>説明</th>
+		<th>Color</th>
+		<th>State</th>
+		<th>Description</th>
 	</tr>
 	<tr>
-		<td>🟢緑</td>
-		<td>オンライン</td>
-		<td>今まさにMisskeyを使用していると考えられる状態</td>
+		<td>🟢Green</td>
+		<td>Online</td>
+		<td>The user seems to be using Misskey right now</td>
 	</tr>
 	<tr>
-		<td>🟡黄</td>
-		<td>アクティブ</td>
-		<td>今は退席しているものの、Misskeyの利用自体は行われている状態</td>
+		<td>🟡Yellow</td>
+		<td>Active</td>
+		<td>This user seems seems not to be online right now, but has used Misskey recently</td>
 	</tr>
 	<tr>
-		<td>🔴赤</td>
-		<td>オフライン</td>
-		<td>Misskeyを利用していないと考えられる状態</td>
+		<td>🔴Red</td>
+		<td>Offline</td>
+		<td>This user seems to have not used Misskey recently</td>
 	</tr>
 	<tr>
-		<td>⚫灰</td>
-		<td>不明</td>
-		<td>ステータスを非公開にしている、もしくはリモートユーザー等でステータスが不明の状態</td>
+		<td>⚫Gray</td>
+		<td>Unknown</td>
+		<td>This user has a status that is private, or the status is unknown for some reasons such as being remote user, etc.</td>
 	</tr>
 </tbody></table>
 
-オンラインステータスは自動的に変わり、手動で設定することは出来ません。
-設定により、オンラインステータスを非公開にすることができます。
+Online status changes automatically and cannot be set manually.
+However, you can set your online status to private.
 
 :::warning
 
-ユーザーのサジェストなど、一部の機能においてはオンラインステータスを元に処理される場合があるため、ステータスを非公開にすると他のユーザーから見つけにくくなることがあります。
+Some features, such as user recommendations, may be processed based on online status, so making your status private may make it harder for other users to find you.
 
 :::
