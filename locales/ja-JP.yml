@@ -18,6 +18,7 @@ lastUpdate: "最終更新"
 empty: "内容がありません"
 threeDimensionModel: "3Dモデル"
 clickToShow: "クリックして表示"
+index: "トップ"
 
 _error:
   notFound: "ページが見つかりませんでした"
@@ -377,6 +378,13 @@ _historicalMaterials:
   heroDescription: "Misskeyは2014年に掲示板サービスとして生まれました。それから10年経ち、今ではたくさんの方々に利用していただけるプラットフォームになりました。\nここではMisskeyに関する歴史的資料を一挙公開します！"
   submissionTitle: "古いMisskeyの写真をお持ちですか？"
   submissionDescription: "昔のMisskeyにまつわる資料をお持ちの方は、ぜひ当館にお寄せください。\nGitHubを利用できる方は{gh_issue}に、利用できない方は {'@'}syuilo{'@'}misskey.io にお送りください。"
+
+_legal:
+  title: "規約・ガイドライン"
+  description: "Misskey Hubの利用規約や、Misskeyを利用したコンテンツについての配信ガイドラインなどを公開しています。"
+  disclaimer: "これらの規約は、Misskeyやその関連のオープンソースソフトウェア（ソースコード）に関する規約ではありません。オープンソースソフトウェア（ソースコード）の利用に関する規約は、各ソフトウェアのリポジトリをご覧ください。"
+  tos: "利用規約"
+  privacyPolicy: "プライバシーポリシー"
 
 _api:
   _permissions:
