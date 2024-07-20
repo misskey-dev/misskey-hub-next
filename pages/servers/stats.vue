@@ -15,16 +15,9 @@
                 </div>
             </template>
         </GHero>
-        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950 min-h-screen">
-            <ClientOnly>
-                <ServersStatsViewer />
-                <template #fallback>
-                    <div class="container mx-auto max-w-screen-xl p-6">
-                        <MkLoading class="mx-auto text-accent-600"></MkLoading>
-                        <p class="text-center">{{ $t('loading') }}</p>
-                    </div>
-                </template>
-            </ClientOnly>
+        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950 min-h-screen text-center">
+            現在サーバー統計情報は準備中です。<br>
+            Please bear with us as we are working on this page.
         </div>
     </div>
 </template>

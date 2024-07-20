@@ -235,6 +235,7 @@ async function handleClick(instance: ExtendedInstanceItem) {
 
 onMounted(async () => {
     if (import.meta.client) {
+        /*
         const fetchedInfo = await window.fetch('https://instanceapp.misskey.page/instances.json');
         if (![200, 304].includes(fetchedInfo.status)) {
             alert(t('_servers._system.fetchError'));
@@ -244,6 +245,7 @@ onMounted(async () => {
         featuredInstances.value = fetchedInfoJson.instancesInfos.sort((a, b) => {
             return resolveObjPath(a, 'stats.originalUsersCount') > resolveObjPath(b, 'stats.originalUsersCount') ? -1 : 1;
         }).slice(0, 5);
+        */
 
         const ls = localStorage.getItem('miHub_share_instances');
         if (ls) {
