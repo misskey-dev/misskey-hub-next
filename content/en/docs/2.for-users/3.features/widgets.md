@@ -131,7 +131,7 @@ Shows Ai.Follows your cursor with her gaze.
 
 ### User list
 
-Shows a list of users.More! - リスト で設定できます。
+Shows a list of users.More! - You can set it in the list.
 
 ### Clicker
 
