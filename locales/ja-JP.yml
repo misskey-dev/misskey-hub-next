@@ -184,7 +184,7 @@ _docs:
 
 _blog:
   title: "ブログ"
-  description: "Misskey開発本部から、Misskeyに関する最新情報やTips等をお届けします！（日本語のみ）"
+  description: "Misskeyの最新情報を発信しています！（日本語のみ）"
   back: "戻る"
 
 _content:
