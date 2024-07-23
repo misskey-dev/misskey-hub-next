@@ -1,5 +1,5 @@
 <template>
-    <div class="flex gap-4 mb-4" :class="direction">
+    <div class="flex gap-4 mb-4" :class="$style[direction]">
         <div class="flex-shrink-0" :class="direction === 'right' && 'order-2'">
             <div class="w-14 h-14 rounded-full bg-slate-100 dark:bg-slate-800 border-[3px] border-slate-300 dark:border-slate-500">
                 <img :src="`/img/docs/fukidashi/${chara}.webp`" :class="direction === 'left' && '-scale-x-100'" class="w-full h-full rounded-full object-cover" />
@@ -8,8 +8,8 @@
         </div>
         <div class="flex-grow">
             <div
-                :class="direction === 'right' && 'order-1'"
-                class="relative rounded-lg border-[3px] p-4 bg-white dark:bg-slate-950 border-slate-300 dark:border-slate-500 fukidashiContent"
+                :class="[$style.fukidashiContent, direction === 'right' && 'order-1']"
+                class="relative rounded-lg border-[3px] p-4 bg-white dark:bg-slate-950 border-slate-300 dark:border-slate-500"
             >
                 <slot></slot>
             </div>
@@ -27,8 +27,8 @@ withDefaults(defineProps<{
 });
 </script>
 
-<style scoped>
-.fukidashiContent > ::v-deep(*:last-child)  {
+<style module>
+.fukidashiContent > :global(:last-child)  {
     margin-bottom: 0;
 }
 

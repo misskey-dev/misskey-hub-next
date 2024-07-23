@@ -3,7 +3,7 @@
         v-if="isEnabledAiChanMode"
         @load="initAiChan()"
         class="transition-opacity duration-1000"
-        :class="loaded ? 'opacity-100' : 'opacity-0'"
+        :class="[$style.aiFrame, loaded ? 'opacity-100' : 'opacity-0']"
         loading="lazy"
         ref="live2d"
         src="https://misskey-dev.github.io/mascot-web/?scale=2&y=1.4"
@@ -67,8 +67,8 @@ function initAiChan() {
 }
 </script>
 
-<style scoped>
-iframe {
+<style module>
+.aiFrame {
     position: fixed;
     bottom: 0;
     right: 0;

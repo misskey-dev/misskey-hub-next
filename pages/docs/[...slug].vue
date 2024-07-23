@@ -5,16 +5,20 @@
             [$style.docsLayoutWithAsideToc]: shouldShowToc,
         }"
     >
-        <div class="lg:hidden sticky top-16 -mx-6 -mt-6 overflow-y-auto bg-slate-50 dark:bg-slate-900 z-[9890] border-b dark:border-slate-700 text-sm flex items-start">
-            <details v-if="shouldShowToc && data?.body && (data.body.toc?.links ?? []).length > 0" class="peer order-2 flex-grow flex-shrink-0" :open="openState">
-                <summary class="py-4 cursor-pointer">
+        <div class="lg:hidden sticky top-16 -mx-6 -mt-6 w-[calc(100%+3rem)] bg-slate-50 dark:bg-slate-900 z-[9890] border-b dark:border-slate-700 text-sm flex items-start">
+            <details v-if="shouldShowToc && data?.body && (data.body.toc?.links ?? []).length > 0" class="peer order-2 flex-grow dark:border-slate-800 border-l" :open="openState">
+                <summary class="px-3 py-4 cursor-pointer">
                     {{ $t('_docs._toc.title') }}
                 </summary>
-                <div class="pb-4 px-6 max-h-[65vh] overflow-y-auto">
+                <div class="px-3 pt-4 max-h-[65vh] overflow-y-auto">
                     <DocsTocLinks :links="data?.body.toc?.links" :max-depth="data?.maxTocDepth ?? undefined" @child-click="openState = false" />
                 </div>
             </details>
-            <button @click="isAsideNavOpen = !isAsideNavOpen" class="p-4 order-1 dark:border-slate-800 border-r peer-open:border-b mr-2">
+            <button
+                @click="isAsideNavOpen = !isAsideNavOpen"
+                class="p-4 order-1 dark:border-slate-800 peer-open:border-b flex-shrink-0"
+                :class="(!shouldShowToc || !data?.body || (data.body.toc?.links ?? []).length <= 0) && 'border-r'"
+            >
                 <AsideNavIco class="block w-5 h-5" />
             </button>
         </div>
