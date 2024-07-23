@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="p-4">
-                    <p class="description h-12 mb-2">{{ instance.description }}</p>
+                    <p class="h-12 line-clamp-2 mb-2">{{ instance.description }}</p>
                     <div class="grid grid-cols-3 text-center">
                         <dl>
                             <dt class="text-xs opacity-90">{{ $t('_servers._statistics.notes') }}</dt>
@@ -87,14 +87,3 @@ withDefaults(defineProps<{
     view: 'grid',
 });
 </script>
-
-<style scoped>
-.description {
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    word-break: break-all;
-    display: -webkit-box;
-}
-</style>
