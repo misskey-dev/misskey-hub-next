@@ -58,8 +58,8 @@ importers:
         specifier: ^1.11.3
         version: 1.11.3
       github-markdown-css:
-        specifier: ^5.5.1
-        version: 5.5.1
+        specifier: ^5.6.1
+        version: 5.6.1
       js-yaml:
         specifier: ^4.1.0
         version: 4.1.0
@@ -2372,8 +2372,8 @@ packages:
   git-url-parse@14.0.0:
     resolution: {integrity: sha512-NnLweV+2A4nCvn4U/m2AoYu0pPKlsmhK9cknG7IMwsjFY1S2jxM+mAhsDxyxfCIGfGaD+dozsyX4b6vkYc83yQ==}
 
-  github-markdown-css@5.5.1:
-    resolution: {integrity: sha512-2osyhNgFt7DEHnGHbgIifWawAqlc68gjJiGwO1xNw/S48jivj8kVaocsVkyJqUi3fm7fdYIDi4C6yOtcqR/aEQ==}
+  github-markdown-css@5.6.1:
+    resolution: {integrity: sha512-DItLFgHd+s7HQmk63YN4/TdvLeRqk1QP7pPKTTPrDTYoI5x7f/luJWSOZxesmuxBI2srHp8RDyoZd+9WF+WK8Q==}
     engines: {node: '>=10'}
 
   github-slugger@2.0.0:
@@ -7337,7 +7337,7 @@ snapshots:
     dependencies:
       git-up: 7.0.0
 
-  github-markdown-css@5.5.1: {}
+  github-markdown-css@5.6.1: {}
 
   github-slugger@2.0.0: {}
 
