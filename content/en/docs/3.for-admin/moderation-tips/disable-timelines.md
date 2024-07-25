@@ -6,7 +6,7 @@ As all posts across your instance can be seen in both the LTL and STL, they have
 
 :::warning
 
-無効化を行うと、ユーザーが困惑し、短期的に見て利用者が減る可能性があります。そのため、無効化の際は影響を慎重に検討し、事前に説明してフォローを整える期間を一定程度設けることを推奨します。
+Disabling timelines can lead to confusion and possibly to a short-time drop in users.Therefore, please carefully consider the effects of disabling a timeline, and explain the reasoning for doing so in advance, so that your users can prepare by e.g. following users they often talk with on the LTL/STL.
 
 :::
 

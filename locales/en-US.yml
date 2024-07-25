@@ -177,7 +177,7 @@ _docs:
     aiWellDone: "That's all for the procedure. Well done!"
 _blog:
   title: "Blog"
-  description: "Get the latest information and tips about Misskey straight from the Misskey Development Team! (Japanese only)"
+  description: "Get the latest information about Misskey straight from the Misskey Project! (Japanese only)"
   back: "Back"
 _content:
   tip: "Tips"

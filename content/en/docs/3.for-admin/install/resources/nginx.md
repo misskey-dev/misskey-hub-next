@@ -1,19 +1,19 @@
 # Nginx configuration
 
-[nginx](https://nginx.org/)をリバースプロキシとして活用し、Misskeyサーバーを直接インターネットに公開せず運用することをお勧めします。
-これにより、以下のようなメリットが得られます。
+We recommend using [nginx](https://nginx.org/) as a reverse proxy and operating the Misskey server without exposing it directly to the Internet.
+This provides the following benefits:
 
-- セキュリティ強化：リバースプロキシを通じてアクセスを制御することで、Misskeyサーバーに直接攻撃が及ぶリスクを軽減します。
-- 柔軟な設定：nginxは柔軟な設定オプションを提供しており、リバースプロキシとしての機能だけでなく、キャッシュ[^1]やセキュリティポリシーの設定も行えます。
+- Enhanced security: By controlling access through a reverse proxy, you can reduce the risk of direct attacks on the Misskey server.
+- Flexible configuration: nginx offers flexible configuration options, allowing you to configure not only the reverse proxy function but also caching[^1] and security policies.
 
-これらの利点を活かして、Misskeyサーバーをより安全かつ効率的に運用することが可能です。
-また、CloudflareなどのCDNと併せて設定することで、さらなる効果を見込めます。
+By taking advantage of these points, you can operate your Misskey server more safely and efficiently.
+You can also set up your infrastructure with a CDN such as Cloudflare for even greater benefits.
 
-[^1]: nginxの機能である[proxy_cache_lock](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_lock)と[proxy_cache_use_stale](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_use_stale)を活用することで、キャッシュ未作成の状態で大量アクセスがあってもMisskeyサーバーの負荷増大を抑える効果が期待できます。
+[^1]: By utilizing the nginx functions [proxy_cache_lock](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_lock) and [proxy_cache_use_stale](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_use_stale), you can expect to reduce the load on the Misskey server even if there is a large amount of access when the cache has not been created.
 
-## 設定方法の一例
+## Example of how to set it up
 
-以下はサーバーマシン（VPSなど）に直接nginxをインストールし、認証局として[Let's Encrypt](https://letsencrypt.org/)を採用したケースでの設定例です。
+The following is a configuration example for when nginx is installed directly on a server machine (such as a VPS) and [Let's Encrypt](https://letsencrypt.org/) is used as the certificate authority.
 
 1. Create `/etc/nginx/conf.d/misskey.conf` or `/etc/nginx/sites-available/misskey.conf` and copy the following example to the file.\
    （The file name does not have to be "misskey".)\
@@ -22,7 +22,7 @@
    1. Replace example.tld with the domain you have prepared.Replace example.tld with the domain you have prepared.\
       `ssl_certificate` and `ssl_certificate_key` should be the path to the certificate obtained from Let's Encrypt.
    2. If using a CDN such as Cloudflare, remove 4 lines from "If it's behind another reverse proxy or CDN, remove the following."
-3. If you create `/etc/nginx/sites-available/misskey.conf`, create symlink as `/etc/nginx/sites-enabled/misskey.conf`.If you create `/etc/nginx/sites-available/misskey.conf`, create symlink as `/etc/nginx/sites-enabled/misskey.conf`.\
+3. If you create `/etc/nginx/sites-available/misskey.conf`, create symlink as `/etc/nginx/sites-enabled/misskey.conf`.\
    `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`
 4. Run `sudo nginx -t` to verify that the configuration file will be loaded successfully.
 5. Run `sudo systemctl restart nginx` to restart nginx.
@@ -51,8 +51,9 @@ server {
 }
 
 server {
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    http2 on;
     server_name example.tld;
 
     ssl_session_timeout 1d;

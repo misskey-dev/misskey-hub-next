@@ -246,7 +246,7 @@ _aidConverter:
   dateToAid: "日期時間→aid/aidx"
   mode: "要建立的 id"
   date: "日期時間"
-  inputByLine: "改行区切りで複数のaid/aidxを変換できます。"
+  inputByLine: "可以用換行符號分隔多個 aid/aidx 來轉換它們。"
 _aboutUs:
   title: "關於 Misskey 開發部"
   description: "有關 Misskey 開發團隊的資訊。"
