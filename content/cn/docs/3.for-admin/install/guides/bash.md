@@ -1,87 +1,88 @@
-# Misskey install shell script v3.0.0
+# Misskey 安装 shell 脚本 v3.0.0
 
-Misskeyを簡単にインストールするためのシェルスクリプトができました！
+我们现在有一个 shell 脚本来轻松安装 Misskey！
 
-いくつかの質問に答えるだけで、UbuntuサーバーへMisskey(v12)を簡単にインストールできます！
+只需几个步骤，您就可以轻松地在您的 Ubuntu 服务器上安装 Misskey （v12）！
 
-また、アップデートスクリプトもあります。
+还有一个更新脚本
 
-[v12の場合はこちら](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)\
-[**English version**](./README.en.md)
+[单击此处查看 v12](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)\
+[**英文版**](./README.en.md)
 
-## 準備するもの
+## 准备工作
 
-1. ドメイン
-2. Ubuntuがインストールされたサーバー
-3. Cloudflareアカウント（推奨）
+1. 域名
+2. Ubuntu系统服务器
+3. Cloudflare 帐户（推荐）
 
 :::danger
 
-一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
+请勿使用已启动的服务器的域主机名重新创建数据库！
 
 :::
 
-Let's Encryptの認証を試行できる回数が少ないので、サーバーのネットワークやDNSの設定を十分確認してからインストールを開始してください。
+您可以尝试使用Let's Encrypt进行身份验证的次数很少，因此在开始安装之前，请仔细检查服务器的网络和DNS设置
 
-## Cloudflareの設定
+## Cloudflare 配置
 
-Cloudflareを使う場合、Cloudflareのドメインの設定を完了してからインストールを開始するようにしてください。\
+如果您使用的是 Cloudflare，请确保在开始安装之前设置您的 Cloudflare 域名\
 \
-ネームサーバーの適用には最大で3日程度かかる場合があります。
+应用名称服务器最多可能需要72个小时
 
-また、nginxとCloudflareを設定する場合、Cloudflareの設定画面にて、
+另外，在配置 nginx 和 Cloudflare 时，在 Cloudflare 设置页面上
 
-- DNSを設定してください。
-- SSL/TLS設定にて、暗号化モードを「フル」に設定してください。
+- 设置 DNS
+- 在 SSL/TLS 设置中，将加密模式设置为“完全”
 
 ## 操作
 
-### 1. SSH
+### 1. 链接SSH服务器终端
 
-サーバーにSSH接続します。\
+通过 SSH 连接到服务器\
 \
-（サーバーのデスクトップを開いている方はシェルを開きましょう。）
+（如果您是通过桌面端服务器，请打开 shell进行链接）
 
-### 2. 環境を最新にする
+### 2. 构建所需环境
 
-すべてのパッケージを最新にし、再起動します。
+将所有软件包更新并重新启动
 
 ```sh
 sudo apt update; sudo apt full-upgrade -y; sudo reboot
 ```
 
-### 3. インストールをはじめる
+### 3. 开始安装
 
-SSHを接続しなおして、Misskeyのインストールを始めましょう。
+重新连接您的 SSH 并开始安装 Misskey
 
-ただ、インストール前に[Tips](#tips)を読むことを強くお勧めします。
+在安装之前强烈建议阅读[Tips](#tips)
 
 ```sh
 wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/ubuntu.sh -O ubuntu.sh; sudo bash ubuntu.sh
 ```
 
-example.comは自分のドメインに置き換えてください。
+将 example.com 替换为您自己的域名
 
-### 4. アップデートする
+### 4. 更新服务
 
-アップデートのためのスクリプトもあります。
+官方提供了一个用于更新的脚本
 
-アップデートスクリプトは、環境のアップデートは行いません。CHANGELOG（日本語）および[GitHubのリリース一覧（英語）](https://github.com/joinmisskey/bash-install/releases)を参考に、適宜マイグレーション操作を行なってください。
+アップデートスクリプトは、環境のアップデートは行いません。\
+CHANGELOG（日语）以及[GitHub 上的发布列表（英语）](https://github.com/joinmisskey/bash-install/releases)请参阅以执行适当的迁移操作
 
-まずはダウンロードします。
+首先，下载更新脚本
 
 ```sh
 wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/update.ubuntu.sh -O update.sh
 ```
 
-アップデートしたいときにスクリプトを実行してください。
+当您需要进行更新更新时，请执行该脚本
 
 ```sh
 sudo bash update.sh
 ```
 
-- systemd環境では、`-r`オプションでシステムのアップデートと再起動を行うことができます。
-- docker環境では、引数に更新後のリポジトリ名:タグ名を指定することができます。
+- 在 systemd 环境内，您可以选择性地更新和重新启动系统`-r`
+- 在 Docker 环境中，您可以在参数中指定更新的仓库名称：标签名称
 
 ## 動作を確認した環境
 
