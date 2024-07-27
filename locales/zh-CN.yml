@@ -297,10 +297,10 @@ _shareLinkGenerator:
   bodyWarning: "どのサーバーでも共有できるようにするため、カスタム絵文字は使用できません。"
   url: "URL"
   urlCaption: "任意。本文の後ろに挿入されます。"
-  settings: "詳細設定"
+  settings: "更多设置"
   manualInstance: "おすすめサーバー ドメイン"
   manualInstanceDescription: "ここに指定したサーバー（ひとつ）をシェアボタン中継ページのトップに表示できます。ご自身のサーバーに誘導する際などにお使いいただけます。"
-  visibility: "公開範囲"
+  visibility: "可见性"
   recipents: "ダイレクトを受け取る人のacct（改行区切り）"
   resultLink: "リンク生成結果"
   resultButton: "共有ボタンのサンプル"
@@ -354,10 +354,10 @@ _historicalMaterials:
   submissionDescription: "昔のMisskeyにまつわる資料をお持ちの方は、ぜひ当館にお寄せください。\nGitHubを利用できる方は{gh_issue}に、利用できない方は {'@'}syuilo{'@'}misskey.io にお送りください。"
 _api:
   _permissions:
-    title: "権限"
-    description: "説明"
+    title: "权限"
+    description: "描述"
     _types:
-      "read:account": "アカウントの情報を見る"
+      "read:account": "查看账户信息"
       "write:account": "アカウントの情報を変更する"
       "read:blocks": "ブロックを見る"
       "write:blocks": "ブロックを操作する"
