@@ -17,6 +17,6 @@ Please configure your CDN in the following way:
 
 :::tip
 
-Misskeyをアップデートした際にキャッシュのクリアは不要です。
+You don't have to purge cache when updating Misskey.
 
 :::
