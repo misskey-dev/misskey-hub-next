@@ -8,6 +8,7 @@ export const localesConst = [
 	{ files: [ 'it-IT.json' ], code: 'it', iso: 'it-IT', name: 'Italiano' },
 	{ files: [ 'pl-PL.json' ], code: 'pl', iso: 'pl-PL', name: 'Polski' },
 	{ files: [ 'fr-FR.json' ], code: 'fr', iso: 'fr-FR', name: 'Français' },
+	{ files: [ 'th-TH.json' ], code: 'th', iso: 'th-TH', name: 'ภาษาไทย' },
 	{ files: [ 'zh-CN.json' ], code: 'cn', iso: 'zh-CN', name: '简体中文' },
 	{ files: [ 'zh-TW.json' ], code: 'tw', iso: 'zh-TW', name: '繁体中文' },
 	{ files: [ 'ja-KS.json' ], code: 'ja-ks', iso: 'ja-KS', name: '🐙' },
