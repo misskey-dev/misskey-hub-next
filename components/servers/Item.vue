@@ -79,7 +79,6 @@
 
 <script setup lang="ts">
 import type { InstanceItem } from '@/types/instances-info';
-import { on } from 'events';
 
 const props = withDefaults(defineProps<{
     instance: InstanceItem;
@@ -87,6 +86,8 @@ const props = withDefaults(defineProps<{
 }>(), {
     view: 'grid',
 });
+
+const { instance } = toRefs(props);
 
 function stripTags(str: string) {
     return new Promise<string>((resolve) => {
@@ -105,6 +106,5 @@ async function updateDescription() {
 
 const description = ref<string>('');
 
-onMounted(updateDescription);
-onUpdated(updateDescription);
+watch(instance, updateDescription, { immediate: true });
 </script>
