@@ -39,6 +39,11 @@ export default <NavSection[]>[
                 description: "_aidConverter.description",
                 to: "/tools/aid-converter/",
             },
+            {
+                i18n: "_miHubServerListPreview.title",
+                description: "_miHubServerListPreview.description",
+                to: "/tools/hub-servers-preview/",
+            },
         ],
     }
 ];
