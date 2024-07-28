@@ -16,15 +16,15 @@
                     </div>
                 </div>
                 <div class="p-4">
-                    <p class="h-12 line-clamp-2 mb-2">{{ instance.description }}</p>
+                    <p :title="description" class="h-12 line-clamp-2 mb-2">{{ description }}</p>
                     <div class="grid grid-cols-3 text-center">
                         <dl>
                             <dt class="text-xs opacity-90">{{ $t('_servers._statistics.notes') }}</dt>
-                            <dd :title="$n(instance.stats?.originalNotesCount)" class="font-bold text-accent-600">{{ instance.stats?.originalNotesCount ? $n(instance.stats.originalNotesCount, instance.stats.originalNotesCount >= 100000 ? { notation: 'compact', maximumFractionDigits: 1 } : { notation: 'standard' }) : '' }}</dd>
+                            <dd :title="instance.stats?.originalNotesCount ? $n(instance.stats.originalNotesCount) : undefined" class="font-bold text-accent-600">{{ instance.stats?.originalNotesCount ? $n(instance.stats.originalNotesCount, instance.stats.originalNotesCount >= 100000 ? { notation: 'compact', maximumFractionDigits: 1 } : { notation: 'standard' }) : '' }}</dd>
                         </dl>
                         <dl>
                             <dt class="text-xs opacity-90">{{ $t('_servers._statistics.users') }}</dt>
-                            <dd :title="$n(instance.stats?.originalUsersCount)" class="font-bold text-accent-600">{{ instance.stats?.originalUsersCount ? $n(instance.stats.originalUsersCount, instance.stats.originalUsersCount >= 100000 ? { notation: 'compact', maximumFractionDigits: 1 } : { notation: 'standard' }) : '' }}</dd>
+                            <dd :title="instance.stats?.originalUsersCount ? $n(instance.stats.originalUsersCount) : undefined" class="font-bold text-accent-600">{{ instance.stats?.originalUsersCount ? $n(instance.stats.originalUsersCount, instance.stats.originalUsersCount >= 100000 ? { notation: 'compact', maximumFractionDigits: 1 } : { notation: 'standard' }) : '' }}</dd>
                         </dl>
                         <dl>
                             <dt class="text-xs opacity-90">{{ $t('_servers._registerAcceptance.title') }}</dt>
@@ -79,11 +79,32 @@
 
 <script setup lang="ts">
 import type { InstanceItem } from '@/types/instances-info';
+import { on } from 'events';
 
-withDefaults(defineProps<{
+const props = withDefaults(defineProps<{
     instance: InstanceItem;
     view?: 'grid' | 'list';
 }>(), {
     view: 'grid',
 });
+
+function stripTags(str: string) {
+    return new Promise<string>((resolve) => {
+        const doc = new DOMParser().parseFromString(str, 'text/html');
+        resolve(doc.body.textContent || "");
+    });
+}
+
+async function updateDescription() {
+    if (!props.instance.description) {
+        description.value = '';
+    } else {
+        description.value = await stripTags(props.instance.description);
+    }
+}
+
+const description = ref<string>('');
+
+onMounted(updateDescription);
+onUpdated(updateDescription);
 </script>
