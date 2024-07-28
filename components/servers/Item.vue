@@ -91,6 +91,10 @@ const { instance } = toRefs(props);
 
 function stripTags(str: string) {
     return new Promise<string>((resolve) => {
+        if (!import.meta.client) {
+            resolve(str);
+            return;
+        }
         const doc = new DOMParser().parseFromString(str, 'text/html');
         resolve(doc.body.textContent || "");
     });
