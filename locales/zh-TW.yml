@@ -18,6 +18,7 @@ lastUpdate: "最近更新"
 empty: "沒有內容。"
 threeDimensionModel: "3D 模型"
 clickToShow: "點擊以顯示"
+preview: "プレビュー"
 _error:
   notFound: "找不到此頁面"
   notFoundDesc: "找不到此頁面，請確認網址是否正確。"
@@ -352,6 +353,14 @@ _historicalMaterials:
   heroDescription: "Misskey 誕生於 2014 年，最早是一項留言板服務。在這之後過了十年，現在他已經變成了可以被許多人利用的平台了。\n這邊將 Misskey 有關的歷史資料一次公開！"
   submissionTitle: "有以前的 Misskey 照片嗎？"
   submissionDescription: "如果你有以前的 Misskey 相關的資料，請務必與我們聯繫。\n如果您可以使用 GitHub 的話請將他送到 {gh_issue}，如果無法使用的話請送到 {'@'}syuilo{'@'}misskey.io 。"
+_miHubServerListPreview:
+  title: "Misskey Hub サーバー一覧 プレビュー"
+  description: "Misskey Hubのサーバー一覧にお手持ちの画像を当てはめて見栄えをチェックできます。"
+  name: "サーバー名"
+  serverDescription: "説明文"
+  icon: "アイコン画像"
+  bannerOrBg: "バナー画像 or 背景画像"
+  bannerOrBgDescription: "バナー画像と背景画像が両方指定されている場合は、背景画像の方を優先して表示します。画像は中心基準で16:9に収まる最大領域のみが表示されます。"
 _api:
   _permissions:
     title: "權限"

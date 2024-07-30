@@ -18,6 +18,7 @@ lastUpdate: "마지막 수정"
 empty: "내용이 없습니다"
 threeDimensionModel: "3D 모델"
 clickToShow: "클릭하여 표시"
+preview: "プレビュー"
 _error:
   notFound: "페이지를 찾을 수 없습니다"
   notFoundDesc: "요청하신 페이지를 찾을 수 없습니다. URL을 확인하여 주십시오."
@@ -352,6 +353,14 @@ _historicalMaterials:
   heroDescription: "Misskey는 2014년에 게시판 서비스로 태어났습니다. 그로부터 10년이 지났고, 지금은 많은 분들이 이용할 수 있는 플랫폼이 되었습니다.\n여기서는 Misskey에 대한 역사적 자료를 한 번에 공개합니다!"
   submissionTitle: "오래된 Misskey의 스크린샷을 보유하고 계신가요?"
   submissionDescription: "옛 Misskey에 대한 자료를 가지고 계신 분이 있다면, 꼭 저희에게 보내주세요.\nGitHub를 이용할 수 있는 분은 {gh_issue}로, 이용할 수 없는 분은 {'@'}syuilo{'@'}misskey.io 쪽으로 보내주시기 바랍니다."
+_miHubServerListPreview:
+  title: "Misskey Hub サーバー一覧 プレビュー"
+  description: "Misskey Hubのサーバー一覧にお手持ちの画像を当てはめて見栄えをチェックできます。"
+  name: "サーバー名"
+  serverDescription: "説明文"
+  icon: "アイコン画像"
+  bannerOrBg: "バナー画像 or 背景画像"
+  bannerOrBgDescription: "バナー画像と背景画像が両方指定されている場合は、背景画像の方を優先して表示します。画像は中心基準で16:9に収まる最大領域のみが表示されます。"
 _api:
   _permissions:
     title: "권한"
