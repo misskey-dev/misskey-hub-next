@@ -59,7 +59,7 @@ body: {
 
 提供每個事件的描述和負載。
 
-### follow
+### 追隨
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -81,7 +81,7 @@ user: {
 }
 }"/>
 
-### followed
+### 已追隨
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -103,7 +103,7 @@ user: {
 }
 }"/>
 
-### unfollow
+### 解除追隨
 
 當您取消追隨某人時會發生。 當您發布貼文時發生。
 
@@ -117,7 +117,7 @@ user: {
 }
 }"/>
 
-### note
+### 貼文
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -139,7 +139,7 @@ note: {
 }
 }"/>
 
-### reply
+### 回覆
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -161,7 +161,7 @@ note: {
 }
 }"/>
 
-### renote
+### 轉發
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -183,7 +183,7 @@ note: {
 }
 }"/>
 
-### mention
+### 提及
 
 當有人提到你時發生。
 
