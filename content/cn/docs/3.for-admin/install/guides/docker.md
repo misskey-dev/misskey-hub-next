@@ -37,7 +37,7 @@ cp ./compose_example.yml ./compose.yml
 ```
 
 请按照文件中的说明根据自身情况编辑 default.yml 和 docker.env 文件内容。\
-同时再次根据需要编辑 docker-compose.yml 。(ポートを変更したい場合など)
+同时再次根据需要编辑 docker-compose.yml 。(比如你要更换端口)
 
 ## 构建镜像与初始化数据库
 
@@ -56,6 +56,7 @@ sudo docker compose run --rm web pnpm run init
 sudo docker compose up -d
 ```
 
+大功告成，祝武运昌盛！
 GLHF✨
 
 ## 更新Misskey的方法
