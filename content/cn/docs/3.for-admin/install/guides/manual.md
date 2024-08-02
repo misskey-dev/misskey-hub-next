@@ -1,29 +1,29 @@
 ---
-description: このガイドではMisskeyのインストール・セットアップ方法について解説します。
+description: 本指南介绍如何安裝和配置 Misskey。
 ---
 
-# Misskeyを手動で構築する
+# 手动搭建 Misskey
 
-このガイドではMisskeyのインストール・セットアップ方法について解説します。
+本指南介绍如何安裝和配置 Misskey。
 
 :::danger
 
-一度使用を始めたサーバーのドメイン・ホスト名は、決して変更しないでください！
+请勿使用已启动的服务器的域主机名重新创建数据库！
 
 :::
 
 :::tip{label='前提条件'}
 
-#### 以下のソフトウェアがインストール・設定されていること
+#### 必须安装并配置以下软件：
 
 - **[Node.js](https://nodejs.org/en/)** (20.4.x以上)
 - **[PostgreSQL](https://www.postgresql.org/)** (15以上)
 - **[Redis](https://redis.io/)**
 - **[FFmpeg](https://www.ffmpeg.org/)**
 
-Debian/Ubuntuをお使いであれば、`build-essential`パッケージをインストールしておくと良いです。
+如果您使用 Debian/Ubuntu，最好安装 `build-essential` 软件包。
 
-#### corepackが有効化されていること
+#### 必须启用 corepack
 
 ```sh
 sudo corepack enable
@@ -31,16 +31,16 @@ sudo corepack enable
 
 :::
 
-## ユーザーの作成
+## 创建用户
 
-Misskeyはrootユーザーで実行しない方がよいため、代わりにユーザーを作成します。
-Debianの例:
+Misskey 不能以 root 身份执行，因此建议创建一个用户。
+Debian：
 
 ```sh
 adduser --disabled-password --disabled-login misskey
 ```
 
-## Misskeyのインストール
+## 安装 Misskey
 
 ```sh
 sudo -iu misskey
@@ -51,43 +51,43 @@ git submodule update --init
 NODE_ENV=production pnpm install --frozen-lockfile
 ```
 
-## 設定
+## 设置
 
-設定サンプルの`.config/example.yml`をコピーし、`default.yml`にリネームします。
+请复制范例中的 `.config/example.yml`，并重命名为 `default.yml`。
 
 ```sh
 cp .config/example.yml .config/default.yml
 ```
 
-`default.yml` をファイル内の指示に従って編集します。
+请根据文件中的提示编辑 `default.yml`。
 
-## ビルドと初期化
+## 构建镜像与初始化数据库
 
-次のコマンドでMisskeyのビルドとデータベースの初期化を行います。
-これにはしばらく時間がかかります。
+使用以下命令进行 Misskey 的构建和数据库初始化。这可能需要一些时间。
 
 ```sh
 NODE_ENV=production pnpm run build
 pnpm run init
 ```
 
-## 起動
+## 运行
 
-お疲れ様でした。以下のコマンドでMisskeyを起動できます。
+您做到了！您可以使用以下命令启动 Misskey。
 
 ```sh
 NODE_ENV=production pnpm run start
 ```
 
+大功告成，祝武运昌盛！
 GLHF✨
 
-::::g-details{summary="systemdを用いた管理"}
+::::g-details{summary="使用 systemd 进行管理"}
 
-systemdサービスのファイルを作成
+创建 systemd 配置文件
 
 `/etc/systemd/system/misskey.service`
 
-エディタで開き、以下のコードを貼り付けて保存:
+在编辑器中打开它，粘贴以下代码并保存：
 
 ```ini
 [Unit]
@@ -111,7 +111,8 @@ WantedBy=multi-user.target
 
 :::warning
 
-CentOSで1024以下のポートを使用してMisskeyを使用する場合は`ExecStart=/usr/bin/sudo /usr/bin/npm start`に変更する必要があります。
+如果需要在 CentOS 中使用低于 1024 的端口号使用 Misskey，
+必须修改成 `ExecStart=/usr/bin/sudo /usr/bin/npm start`
 
 :::
 
@@ -122,7 +123,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable misskey
 ```
 
-misskeyサービスの起動
+搭建 Misskey 服务器
 
 ```sh
 sudo systemctl start misskey
@@ -136,15 +137,15 @@ sudo systemctl start misskey
 
 ::::
 
-## Misskeyのアップデート方法
+## 更新Misskey的方法
 
 :::warning
 
-アップデートの際は必ず[リリースノート](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)を確認し、変更点や追加で必要になる作業の有無(ほとんどの場合ありません)を予め把握するようにしてください。
+在更新时，请务必确认Misskey更新通知，以提前了解变更内容以及可能需要进行的额外工作（通常情况下并不需要）。
 
 :::
 
-masterをpullし直し、インストール、ビルド、データベースのマイグレーションを行います:
+拉取 master，安裝、构建和迁移数据库：
 
 ```sh
 git checkout master
@@ -155,9 +156,9 @@ NODE_ENV=production pnpm run build
 pnpm run migrate
 ```
 
-アップデート内容、およびデータベースの規模によっては時間がかかることがあります。
+由于更新内容和数据库规模的不同，处理时间可能会有所不同。
 
-アップデートが終わり次第、Misskeyプロセスを再起動してください。
+更新完成后，請重启 Misskey 服务。
 
 ```sh
 sudo systemctl restart misskey
@@ -165,9 +166,9 @@ sudo systemctl restart misskey
 
 :::tip
 
-ビルドや起動時にエラーが発生した場合は、以下のコマンドをお試しください:
+如果您子啊构建或启动过程中遇到错误，请尝试以下命令：
 
-- `pnpm run clean`または`pnpm run clean-all`
+- `pnpm run clean` 或 `pnpm run clean-all`
 - `pnpm rebuild`
 
 :::
