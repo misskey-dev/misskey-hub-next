@@ -4,7 +4,7 @@ description: MFM 是一種專有的標記語言，可以在 Misskey 的各個地
 
 # MFM
 
-MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使用できる専用のマークアップ言語です。一部の構文はMarkdownやHTMLと互換性があります。
+MFM 代表 Markup language For Misskey，是一種專有的標記語言，可以在 Misskey 的各個地方使用。某些語法與 Markdown 和 HTML 相容。
 
 :::tip
 
@@ -121,7 +121,7 @@ https://example.com
 <small>Misskey 擴展了聯邦宇宙的世界</small>
 ```
 
-<MfmPreview text="<small>MisskeyでFediverseの世界が広がります</small>"></MfmPreview>
+<MfmPreview text="<small>Misskey 擴展了聯邦宇宙的世界</small>"></MfmPreview>
 
 ### 引用
 
@@ -131,7 +131,7 @@ https://example.com
 > Misskey 擴展了聯邦宇宙的世界
 ```
 
-<MfmPreview text="> MisskeyでFediverseの世界が広がります"></MfmPreview>
+<MfmPreview text="> Misskey 擴展了聯邦宇宙的世界"></MfmPreview>
 
 ### 置中
 
@@ -141,7 +141,7 @@ https://example.com
 <center>Misskey 擴展了聯邦宇宙的世界</center>
 ```
 
-<MfmPreview text="<center>MisskeyでFediverseの世界が広がります</center>"></MfmPreview>
+<MfmPreview text="<center>Misskey 擴展了聯邦宇宙的世界</center>"></MfmPreview>
 
 ### 旁註標記 (ruby)
 

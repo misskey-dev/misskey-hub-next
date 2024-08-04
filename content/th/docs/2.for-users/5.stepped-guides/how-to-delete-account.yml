@@ -1,5 +1,5 @@
-title: "アカウントを削除する方法"
-description: "Misskeyのアカウントを削除する方法をご紹介します。"
+title: "วิธีลบบัญชี"
+description: "ต่อไปนี้จะเป็นการอธิบายวิธีการลบบัญชี Misskey"
 #Do not translate any keys that includes underscore
 _TYPE_: "STEPPED_GUIDE"
 body: |
@@ -46,10 +46,10 @@ guides:
   - 
     _AUTOSELECT_TYPE_: "HARD_SMARTPHONE"
     _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
-    title: "スマートフォン"
+    title: "สมาร์ทโฟน"
     steps:
       - 
-        title: "設定を開く"
+        title: "เปิดตั้งค่า"
         image: "sp/1.png"
         description: |
           Misskeyを開き、画面右下の「≡」ボタンをタップ、でてきたメニューの「設定」をタップします。
@@ -64,7 +64,7 @@ guides:
         description: |
           「アカウントを閉鎖する」をタップして開き、注意事項を確認の上「アカウント削除をリクエスト」をタップします。
       - 
-        title: "パスワードを入力"
+        title: "กรอกรหัสผ่าน"
         image: "sp/4.png"
         description: |
           重要な操作のため、確認のために、お使いのアカウントにログインする際に使用しているパスワードを入力します。
@@ -78,7 +78,7 @@ guides:
     title: "PC"
     steps:
       - 
-        title: "設定を開く"
+        title: "เปิดตั้งค่า"
         image: "pc/2.png"
         description: |
           「設定」を開き、少しスクロールすると見える「その他」をクリックします。
@@ -88,7 +88,7 @@ guides:
         description: |
           「アカウントを閉鎖する」をタップして開き、注意事項を確認の上「アカウント削除をリクエスト」をタップします。
       - 
-        title: "パスワードを入力"
+        title: "กรอกรหัสผ่าน"
         image: "pc/4.png"
         description: |
           重要な操作のため、確認のために、お使いのアカウントにログインする際に使用しているパスワードを入力します。
