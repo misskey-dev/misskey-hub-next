@@ -4,7 +4,7 @@ description: グローバルタイムラインのノートが流れるチャン�
 
 # `globalTimeline`
 
-グローバルタイムラインのノートが流れるチャンネルです。
+漂流 global timeline 的貼文的頻道。
 
 ## 參數
 

@@ -18,6 +18,7 @@ lastUpdate: "Last Update"
 empty: "No content"
 threeDimensionModel: "3D Model"
 clickToShow: "Click to show"
+preview: "Preview"
 _error:
   notFound: "Page not found"
   notFoundDesc: "The page you are looking for could not be found. Please check the URL."
@@ -177,7 +178,7 @@ _docs:
     aiWellDone: "That's all for the procedure. Well done!"
 _blog:
   title: "Blog"
-  description: "Get the latest information and tips about Misskey straight from the Misskey Development Team! (Japanese only)"
+  description: "Get the latest information about Misskey straight from the Misskey Project! (Japanese only)"
   back: "Back"
 _content:
   tip: "Tips"
@@ -352,6 +353,14 @@ _historicalMaterials:
   heroDescription: "Misskey was launched in 2014 as a bulletin board service. Ten years have passed since then, and it has now become a platform used by many people.\nLet's discover the historical screenshots of Misskey!"
   submissionTitle: "Have some classic screenshots of Misskey?"
   submissionDescription: "If you have any materials related to the old Misskey, please send them to us.\nGitHub users can submit them to {gh_issue}, and those who cannot use GitHub can send them to {'@'}syuilo{'@'}misskey.io."
+_miHubServerListPreview:
+  title: "Misskey Hub Server List Preview"
+  description: "You can check how your server looks by applying your images to the list of servers in Misskey Hub."
+  name: "Server Name"
+  serverDescription: "Description"
+  icon: "Server icon"
+  bannerOrBg: "Banner image or background image"
+  bannerOrBgDescription: "If both a banner image and a background image are specified, the background image will be displayed. Only the largest area of the image that fits into the 16:9 center-based frame will be displayed."
 _api:
   _permissions:
     title: "Permissions"

@@ -3,11 +3,13 @@
         <GNuxtLink :to="`https://${instance.url}`" target="_blank" class="relative">
             <template v-if="view === 'grid'">
                 <div class="relative aspect-video bg-gray-200 dark:bg-gray-600">
-                    <img v-if="instance.background" loading="lazy" :src="`https://instanceapp.misskey.page/instance-backgrounds/${instance.url}.webp`" class="w-full h-full object-cover" />
+                    <img v-if="manualBackground" :src="manualBackground" class="w-full h-full object-cover" />
+                    <img v-else-if="instance.background" loading="lazy" :src="`https://instanceapp.misskey.page/instance-backgrounds/${instance.url}.webp`" class="w-full h-full object-cover" />
                     <img v-else-if="instance.banner" loading="lazy" :src="`https://instanceapp.misskey.page/instance-banners/${instance.url}.webp`" class="w-full h-full object-cover" />
                     <div class="absolute h-1/2 bottom-0 left-0 w-full bg-gradient-to-b from-transparent to-black text-white p-4 flex items-end">
                         <div class="h-14 w-14 min-w-0 flex-shrink-0 mr-4">
-                            <img v-if="instance.icon" :src="`https://instanceapp.misskey.page/instance-icons/${instance.url}.webp`" class="w-full h-full rounded" />
+                            <img v-if="manualIcon" :src="manualIcon" class="w-full h-full rounded" />
+                            <img v-else-if="instance.icon" :src="`https://instanceapp.misskey.page/instance-icons/${instance.url}.webp`" class="w-full h-full rounded" />
                         </div>
                         <div class="min-w-0 flex flex-col justify-end">
                             <h2 class="font-bold text-2xl whitespace-nowrap truncate">{{ instance.name }}</h2>
@@ -16,15 +18,15 @@
                     </div>
                 </div>
                 <div class="p-4">
-                    <p class="h-12 line-clamp-2 mb-2">{{ instance.description }}</p>
+                    <p :title="description" class="h-12 line-clamp-2 mb-2">{{ description }}</p>
                     <div class="grid grid-cols-3 text-center">
                         <dl>
                             <dt class="text-xs opacity-90">{{ $t('_servers._statistics.notes') }}</dt>
-                            <dd :title="$n(instance.stats?.originalNotesCount)" class="font-bold text-accent-600">{{ instance.stats?.originalNotesCount ? $n(instance.stats.originalNotesCount, instance.stats.originalNotesCount >= 100000 ? { notation: 'compact', maximumFractionDigits: 1 } : { notation: 'standard' }) : '' }}</dd>
+                            <dd :title="instance.stats?.originalNotesCount ? $n(instance.stats.originalNotesCount) : undefined" class="font-bold text-accent-600">{{ instance.stats?.originalNotesCount ? $n(instance.stats.originalNotesCount, instance.stats.originalNotesCount >= 100000 ? { notation: 'compact', maximumFractionDigits: 1 } : { notation: 'standard' }) : '' }}</dd>
                         </dl>
                         <dl>
                             <dt class="text-xs opacity-90">{{ $t('_servers._statistics.users') }}</dt>
-                            <dd :title="$n(instance.stats?.originalUsersCount)" class="font-bold text-accent-600">{{ instance.stats?.originalUsersCount ? $n(instance.stats.originalUsersCount, instance.stats.originalUsersCount >= 100000 ? { notation: 'compact', maximumFractionDigits: 1 } : { notation: 'standard' }) : '' }}</dd>
+                            <dd :title="instance.stats?.originalUsersCount ? $n(instance.stats.originalUsersCount) : undefined" class="font-bold text-accent-600">{{ instance.stats?.originalUsersCount ? $n(instance.stats.originalUsersCount, instance.stats.originalUsersCount >= 100000 ? { notation: 'compact', maximumFractionDigits: 1 } : { notation: 'standard' }) : '' }}</dd>
                         </dl>
                         <dl>
                             <dt class="text-xs opacity-90">{{ $t('_servers._registerAcceptance.title') }}</dt>
@@ -80,10 +82,43 @@
 <script setup lang="ts">
 import type { InstanceItem } from '@/types/instances-info';
 
-withDefaults(defineProps<{
+const props = withDefaults(defineProps<{
     instance: InstanceItem;
     view?: 'grid' | 'list';
+    disableDomParser?: boolean;
+    manualIcon?: string | null;
+    manualBackground?: string | null;
 }>(), {
     view: 'grid',
+
+    /** ▼ぜんぶプレビュー用 */
+    disableDomParser: false,
+    manualIcon: null,
+    manualBackground: null,
 });
+
+const { instance } = toRefs(props);
+
+function stripTags(str: string) {
+    return new Promise<string>((resolve) => {
+        if (!import.meta.client || props.disableDomParser) {
+            resolve(str);
+            return;
+        }
+        const doc = new DOMParser().parseFromString(str, 'text/html');
+        resolve(doc.body.textContent || "");
+    });
+}
+
+async function updateDescription() {
+    if (!props.instance.description) {
+        description.value = '';
+    } else {
+        description.value = await stripTags(props.instance.description);
+    }
+}
+
+const description = ref<string>('');
+
+watch(instance, updateDescription, { immediate: true });
 </script>

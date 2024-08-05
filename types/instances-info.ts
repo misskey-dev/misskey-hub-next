@@ -23,7 +23,7 @@ export type InstanceItem = {
     /** nodeinfo */
     nodeinfo: Record<string, any> | null,
     /** result of api/meta */
-    meta: MisskeyEntities.MetaLite | null,
+    meta: Partial<MisskeyEntities.MetaLite> | null,
     /** Number of Notes per Day (15-day average) */
     npd15: number, 
     stats?: MisskeyEntities.StatsResponse,   //  deprecated (result of api/stats)
