@@ -18,7 +18,7 @@ lastUpdate: "最新更新"
 empty: "暂无内容"
 threeDimensionModel: "3D模型"
 clickToShow: "点击以显示"
-preview: "プレビュー"
+preview: "预览"
 _error:
   notFound: "找不到页面"
   notFoundDesc: "找不到您要查找的页面，请检查 URL。"
@@ -327,7 +327,7 @@ _avatarDecorationPreview:
     flip: "左右反転"
     overlayTemplate: "テンプレートを重ねる"
   _placeholder:
-    username: "藍"
+    username: "小蓝"
     noteText: "チョコのかかったドーナツを食べました🍩😋"
     profileDescription: "Misskey常駐AIの藍です！よろしくお願いします♪"
 _customEmojiPreview:
