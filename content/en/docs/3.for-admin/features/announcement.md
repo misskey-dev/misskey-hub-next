@@ -6,7 +6,7 @@ Using the announcement feature, you can post server-wide announcements to users,
 
 :::warning
 
-アクティブなお知らせの数が多いと、特に新規ユーザーの確認作業が増え、UXが低下する可能性があります。その場合、以下のオプションを検討できます。
+A large number of active announcements can cause a poor user experience, due to excessive confirmation prompts, especially for new users.The following options should be considered:
 
 - Create an announcement with the "Existing Users Only" option enabled
 - Create an announcement with the "do not notify" option enabled
