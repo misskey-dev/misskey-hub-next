@@ -1,55 +1,51 @@
-# カスタム絵文字の管理
+# Managing Custom Emojis
 
 :::warning
 
-現在、このドキュメントは更新作業中です。過去の情報が含まれていることがありますのでご注意ください。
+This documentation is currently under confirmation.Some information might be out of date, so please be careful when you refer to.
 
 :::
 
-カスタム絵文字は、管理者・モデレーターと、カスタム絵文字の管理のロールポリシーを持つユーザーが設定からカスタム絵文字ページにあるサブメニューにアクセスして管理できます。
-デフォルトでは、現在ローカルにインストールされている絵文字の一覧が表示されます。
-最初はこのリストは空ですが、さまざまな方法でカスタム絵文字を追加できます。
+Custom emoji can be managed by administrators or moderators by going to the instance settings and then the custom emoji submenu.
+By default you will see a list of the current locally installed emoji. At the start this list will be empty, but you can add custom emoji in different ways.
 
-## 他のインスタンスから絵文字をコピーする
+## Copying Emoji from another Instance
 
-絵文字は他のインスタンスから簡単にコピーできます。
+Emoji can be easily copied from another instance.
 
-まず、カスタム絵文字設定の「リモート」タブに切り替えます。絵文字は名前やホストで検索することができます。
+To do this, switch to the "remote" tab in the custom emoji settings.You can search emoji by name and/or host they are from.
 
-欲しい絵文字が見つかったら、それをクリックしてメニューを開き、絵文字をインポートすることができます。
+When you have found an emoji you want, click it to open a small menu which will allow you to import the emoji.
 
-絵文字は著作権保護の対象となる場合がありますので、絵文字が利用できるかどうか、権利面の確認を忘れないようにしましょう。
+Please note that Emoji may be subject to copyright and you are responsible for checking whether you may legally use another emoji.
 
-## 個別の絵文字のインポート
+## Individual Emoji Import
 
-カスタム絵文字にしたい画像ファイルがある場合、その画像を絵文字としてインポートできます。
+If you have an image file that you would like to turn into a custom emoji you can import the image as an emoji.
 
 :::danger
 
-ドライブから絵文字をインポートする場合、ファイルはドライブ内に残ります。
-Misskeyはこのファイルのコピーを作成しないため、ファイルを削除すると、絵文字が表示されなくなります。
+When you import emoji from your drive, the file will remain inside your drive. Misskey does not make a copy of this file so if you delete it, the emoji will be broken.
 
 :::
 
-絵文字がサーバーに追加され、通常通り編集や削除ができるようになります。
+The emoji will be added to the instance and you will then be able to edit or delete it as usual.
 
-## 一括インポート
+## Bulk Import
 
-絵文字は、特別な形式でパッケージ化されたZIPファイルとして一括でインポートできます。
-この機能は、カスタム絵文字メニューの右上隅にあるメニューボタンから利用できます。
+Emojis can be imported in bulk as packed ZIP files with a special format. This ability can be found in the three dots menu in the top right corner of the custom emoji menu.
 
 :::warning
 
-一括インポートは、既存の絵文字を上書きしたり、サーバーに問題を引き起こす可能性があります。
-可能な限りご自身でエクスポートした絵文字のみをインポートするようにし、外部から一括インポートを行う場合は、信頼できるソースかどうかを確認してください。
+Bulk emoji import may overwrite existing emoji or otherwise mess up your instance. Be sure to only import emoji from trusted sources, ideally only ones you exported yourself.
 
 :::
 
-### パッケージ化された絵文字の形式
+### Packed emoji format
 
-トップレベルには `meta.json` というファイルがあり、このファイルにはパッケージ化された絵文字に関する情報が含まれています。
+At the top level is a file called `meta.json` which contains information about the emoji contained in the packed file.
 
-このファイルの型定義は以下のようになり、`Meta` はファイル全体の構造です。
+A type definition for this file would look like this, where `Meta` is the structure of the whole file.
 
 ```typescript
 class Meta {
@@ -80,43 +76,42 @@ class Emoji {
 }
 ```
 
-`Meta` のフィールドは現在、絵文字のインポート時に使用またはチェックされていませんが、`emojis` フィールドは使用されます。
+The fields of `Meta` are currently not used or checked when importing emoji, except for the `emojis` field.
 
-各 `Emoji` に対して:
+For each `Emoji`:
 
-- `downloaded`: 常に true に設定します。このフィールドがないか、true でない場合、その絵文字はインポートされません。
-- `fileName`: パッケージ化されたファイル内の画像ファイルの名前。
-- `emoji`: データベースに保存されていた絵文字に関連するデータ。以下の項目が現在使用されています:
-  - `name`: ユーザーが入力する絵文字の名前、例: `blobfox`（ユーザーが `:blobfox:` と入力するとその絵文字が表示されます）。\
-    同じ名前の絵文字が既に存在する場合、**上書きされます**
-  - `category`: 絵文字のカテゴリ
-  - `aliases`: 別名として追加される文字列のリスト。管理者UIではこれを「タグ」と呼びます。
+- `downloaded`: should always be true.If the field is missing or not truthy, the emoji will not be imported.
+- `fileName`: name of the image file inside the packed file.
+- `emoji`: data associated with the emoji as it was stored in the database.The following are currently used:
+  - `name`: name of the emoji for the user, e.g. `blobfox` if a user should type in `:blobfox:` to get the emoji.\
+    If a previous emoji with the same name exists, **it will be overwritten!**
+  - `category`: category of the emoji
+  - `aliases`: list of strings that should be added as aliases.The admin UI calls these "tags".
 
-## 絵文字の編集と削除
+## Editing and Deleting Emoji
 
-絵文字のプロパティは、ローカル絵文字のリストでクリックすることで編集できます。
-カスタム絵文字をクリックすると、そのプロパティを編集するためのダイアログが開きます。
-このダイアログでは、絵文字を削除することもできます。
+The properties of an emoji can be edited by clicking it in the list of local emoji.
+When you click on a custom emoji, a dialog for editing the properties will open.
+This dialog will also allow you to delete an emoji.
 
 :::danger
 
-カスタム絵文字を削除すると、それを含む古いノートには絵文字の名前がテキストとして残ります。
-その絵文字は正しく表示されなくなります。
+When you delete a custom emoji, old notes that contain it will still have the text name of the emoji in it. The emoji will no longer be rendered correctly.
 
 :::
 
-リモート絵文字は編集や削除ができないことに注意してください。
+Note that remote emoji can not be edited or deleted.
 
-各絵文字には名前とカテゴリ、いくつかのタグを設定できます。
-カテゴリは絵文字ピッカーの構造化に使用されます。
-タグは絵文字ピッカーで検索する際に絵文字を見つけるための別名として使用されます。
+Each emoji can have a name and a category and several tags.
+The category is used for structuring the emoji picker.
+Meanwhile the tags can be used as alternate names by which the emoji can be found when searching in the emoji picker.
 
-編集が終わったら、ダイアログの右上隅にあるチェックマークをクリックして変更を保存します。
+When you are done editing, save your changes by clicking the check mark in the top right corner of the dialog.
 
-### 一括編集
+### Bulk Editing
 
-絵文字は、検索フィールドの下にあるボックスをチェックすることで一括編集できます。
-これを有効にすると、絵文字をクリックしても編集ダイアログが開くのではなく、絵文字が選択されます。
+Emoji can be edited in bulk by checking the box below the search field.
+With this enabled, clicking on an emoji will select it instead of opening the editing dialog.
 
-編集オプションは、チェックボックスの下にボタンとして表示されます。
-通常の動作に戻るには、もう一度ボックスのチェックを外します。
+The Editing options will be displayed as buttons below the checkbox.
+To return to the normal behavior just uncheck the box again.
