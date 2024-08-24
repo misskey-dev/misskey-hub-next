@@ -1,70 +1,70 @@
-# AiScript
+#
 
-AiScriptは、Misskeyの以下の箇所で使用できるスクリプト言語です。
+AiScript是Misskey所使用的脚本语言。
 
-- [プラグイン](./plugin/create-plugin/)
-- [ウィジェット](/docs/for-users/features/widgets/)
-  - ボタン
-  - AiScriptコンソール
+- [插件](./plugin/create-plugin/)
+- [小工具](/docs/for-users/features/widgets/)
+  - 按钮
+  - AiScript 控制台
   - AiScript App
-- [Misskey Play](./plugin/create-play/)
-- スクラッチパッド
+-
+- AiScript 控制台
 
 :::tip
 
-AiScriptの実装はMisskeyとは別リポジトリで、[オープンソースで公開されています](https://github.com/aiscript-dev/aiscript)。
+AiScript的实现是一个独立于Misskey的存储库，并且[以开源形式发布](https://github.com/aiscript-dev/aiscript)。
 
 :::
 
-## 使い方
+## 用法
 
-AiScript標準の構文や組み込み関数などが使用できます。
+可以使用标准AiScript语法和内置函数。
 
 :::tip
 
-ドキュメントは[こちら](https://github.com/aiscript-dev/aiscript/tree/master/docs)\
-Misskey本体のバージョンにより、使用できるAiScriptのバージョンが異なる場合があります。バージョンの確認には`<: Core:v`をScratchpadなどで実行してください。
+文件可在此处查阅：https://github.com/aiscript-dev/aiscript/tree/master/docs\
+可用的AiScript版本可能会因Misskey体版本而异。要检查版本，请在Scratchpad上运行`<: Core:v`。
 
 :::
 
-これらに加え、Misskey専用の組み込み定数・関数が３グループに分けて提供されています。
+除此之外，还提供了三组专用于Misskey的内置常量和函数。
 
-### Misskey AiScript API
+###
 
-接頭辞: `Mk:`\
-Misskey内の全てのAiScript環境で使用できる定関数群です。
-詳しくは[プラグインAPIリファレンス](./plugin/plugin-api-reference/)の`Mk:`とついた部分を参照して下さい。
+前缀： `Mk:`\
+它是一组恒函数，可以在Misskey中的所有AiScript环境中使用。
+有关更多信息，请参见[AiScript Misskey扩展API参考](./请参照plugin/plugin-api-reference/)中标有`Mk:`的部分。
 
-### プラグインAPI
+### 插件 API
 
-接頭辞: `Plugin:`\
-[プラグイン](./plugin/)でのみ使用できる定関数群です。
-詳しくは[プラグインAPIリファレンス](./plugin/plugin-api-reference/)の`Plugin:`とついた部分を参照して下さい。
+前缀： `Plugin:`\
+[Plugin](./plugin/)一起使用的固定函数组。
+有关更多信息，请参见[AiScript Misskey扩展API参考](./plugin/plugin-api-reference/)中带有`Plugin:`的部分。
 
-### UI API
+###
 
 接頭辞: `Ui:`\
 [ウィジェット](/docs/for-users/features/widgets/)（AiScript App）、Misskey Play、Scratchpadで使用できます。
 ドキュメントは未整備（TODO）ですが、インターネット上に有志の方が執筆された解説記事があります。
 
-### 標準入出力
+### 标准 O/I
 
-AiScript標準で定義されている`readline`関数と`print`関数（および`<:`構文）の内部実装は、Misskey側で独自に提供されています。
+在AiScript标准中定义的“readline”和“print”函数（以及“<:”语法）的内部实现是由Misskey提供的。
 
 #### readline(message)
 
 `message`: `str`\
-返り値: `str`\
-Misskey内の全てのAiScript環境で使用できます。\
+返回值: `str`\
+它可以在Misskey中的所有AiScript环境中使用。\
 \
-文字列の入力を求めるポップアップを表示します。
+显示弹出窗口，提示您输入字符串。
 
 #### print(message)
 
 `message`: `any`\
-返り値: `null`\
-[ウィジェット](/docs/for-users/features/widgets/)（AiScriptコンソール）、Scratchpadで使用できます。\
+返回值: `null`\
+[ウィジェット](/docs/for-users/features/widgets/)（AiScript控制台），可与Scratchpad一起使用。\
 \
-コンソールに文字列を出力します。\
+将字符串打印到控制台。\
 \
-`<:`構文も同様の働きをします。
+`<:`也做同样的工作。
