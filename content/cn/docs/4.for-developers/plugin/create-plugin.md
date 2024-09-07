@@ -43,6 +43,14 @@ Misskey Web 客户端的插件功能将允许您扩展客户端并添加各种�
 
 插件要求的权限。需要在发送Misskey API请求时使用。
 
+APIのリクエスト方法については、[AiScript Misskey拡張API リファレンス](/docs/for-developers/plugin/plugin-api-reference/)をご覧ください。
+
+:::tip
+
+permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+
+:::
+
 ###
 
 插件配置文件。键值Key支持下列属性：
