@@ -81,6 +81,28 @@ Make a request to the Misskey API.Make a request to the Misskey API.Passes the e
 
 You can also include API token as the third argument.When called within a plugin, the token of the currently logged-in user is used if no argument is specified.
 
+:::tip
+
+permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+
+:::
+
+```AiScript
+### {
+  name: "プラグイン名",
+  version: "4.2.1",
+  author: "作者名",
+  description: "説明文",
+  permissions: ['write:notes'],
+}
+
+@onClick() {
+  let res = Mk:api('notes/create', {
+    text: 'Hello from plugin!'
+  })
+}
+```
+
 ### `Mk:save(key, value)`
 
 Persistently saves an arbitrary key with any given value.Persistently saves an arbitrary key with any given value.The saved value will remain after the AiScript context ends and can be loaded with Mk:load.
