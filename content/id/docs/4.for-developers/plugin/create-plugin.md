@@ -43,6 +43,14 @@ Deskripsi Plugin
 
 Izin yang dibutuhkan oleh plugin.Digunakan ketika membuat permintaan ke Misskey API.
 
+APIのリクエスト方法については、[AiScript Misskey拡張API リファレンス](/docs/for-developers/plugin/plugin-api-reference/)をご覧ください。
+
+:::tip
+
+permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+
+:::
+
 ### config
 
 Objek merepresentasikan informasi konfigurasi plugin.
