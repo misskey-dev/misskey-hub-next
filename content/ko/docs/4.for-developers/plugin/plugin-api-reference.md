@@ -83,6 +83,28 @@ Misskey API에 요청합니다.Misskey API에 요청합니다.첫 번째 인수�
 
 세 번째 인수에 token을 넣을 수도 있습니다.플러그인에서 동작하는 경우, 인수 지정 없이 로그인 중인 사용자의 token이 사용됩니다.
 
+:::tip
+
+permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+
+:::
+
+```AiScript
+### {
+  name: "プラグイン名",
+  version: "4.2.1",
+  author: "作者名",
+  description: "説明文",
+  permissions: ['write:notes'],
+}
+
+@onClick() {
+  let res = Mk:api('notes/create', {
+    text: 'Hello from plugin!'
+  })
+}
+```
+
 ### `Mk:save(key, value)`
 
 임의의 값에 임의의 이름을 붙여서 영속화합니다.임의의 값에 임의의 이름을 붙여서 영속화합니다.영속화된 값은 AiScript 컨텍스트가 종료된 후에도 남아서 Mk:load에서 읽을 수 있습니다.
