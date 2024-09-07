@@ -1,6 +1,7 @@
 import type { Nitro } from "nitropack";
 //import { useRuntimeConfig } from "nuxt/app";
-import { SitemapStream, streamToPromise, SitemapItem } from 'sitemap';
+import { SitemapStream, streamToPromise } from 'sitemap';
+import type { SitemapItem } from 'sitemap';
 import { Readable } from 'stream';
 import { writeFileSync } from 'fs';
 import path from 'path';

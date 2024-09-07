@@ -40,7 +40,7 @@ import ReplyIco from 'bi/arrow-return-left.svg';
 import RenoteIco from 'bi/repeat.svg';
 import ReactionIco from 'bi/plus-lg.svg';
 import MoreIco from 'bi/three-dots.svg';
-import type { HTMLAttributes } from 'nuxt/dist/app/compat/capi';
+import type { StyleValue } from 'vue';
 
 withDefaults(defineProps<{
     avatar?: string;
@@ -54,7 +54,7 @@ withDefaults(defineProps<{
     avatar: '/img/docs/fukidashi/doya_ai.webp',
 });
 
-function getStyle(decoration: Omit<Misskey.entities.User['avatarDecorations'][number], 'id'>): HTMLAttributes['style'] {
+function getStyle(decoration: Omit<Misskey.entities.User['avatarDecorations'][number], 'id'>): StyleValue {
     const angle = decoration.angle ?? 0;
     const rotate = angle === 0 ? undefined : `${angle * 360}deg`;
     const scaleX = decoration.flipH ? -1 : 1;

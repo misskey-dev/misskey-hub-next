@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
-import { watch as fsWatch } from 'fs';
+import { readFileSync, watch as fsWatch } from 'fs';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
 import { getOldHubRedirects } from './scripts/get-old-hub-redirects';
 import { genLocalesJson } from './scripts/gen-locales';
@@ -62,12 +62,16 @@ function getRouteRules(): NuxtConfig['routeRules'] | undefined {
 	};
 }
 
+const packageJson = JSON.parse(readFileSync('./package.json', 'utf-8'));
+
 export default defineNuxtConfig({
+	compatibilityDate: '2024-09-07',
 	runtimeConfig: {
 		public: {
 			baseUrl,
 			repositoryUrl,
 			locales,
+			misskeyJsVersion: packageJson.devDependencies['misskey-js'] as string,
 		},
 		CROWDIN_INTG_API: process.env.CROWDIN_INTG_API,
 	},

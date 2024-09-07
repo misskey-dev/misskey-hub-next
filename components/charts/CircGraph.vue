@@ -39,8 +39,8 @@ const props = withDefaults(defineProps<{
 }>(), {
     sort: true,
     truncMinor: true,
-    startColor: [74, 179, 0] as RGBArray,
-    endColor: [230, 255, 148] as RGBArray,
+    startColor: [74, 179, 0],
+    endColor: [230, 255, 148],
 });
 
 const isReady = ref(false);

@@ -51,7 +51,7 @@
 </template>
 
 <script setup lang="ts">
-import type { NavItem } from '@nuxt/content/dist/runtime/types'
+import type { NavItem } from '@nuxt/content';
 import { findDeepObject } from '@/assets/js/misc';
 import { isSamePath } from 'ufo';
 import ArrowIco from "bi/chevron-right.svg";
@@ -88,7 +88,7 @@ const realLinks = findDeepObject(props.links[0], (v) => {
     } else {
         return v._path.includes(props.links[0]._path);
     }
-})?.children?.filter((v) => !isSamePath(v._path, props.links[0]._path));
+})?.children?.filter((cv: NavItem) => !isSamePath(cv._path, props.links[0]._path));
 
 const emit = defineEmits(['move', 'child-click']);
 

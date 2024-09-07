@@ -1,5 +1,5 @@
 // Misskey Docs Frontmatter Types
-import type { ParsedContent, MarkdownParsedContent, MarkdownRoot } from '@nuxt/content/dist/runtime/types';
+import type { ParsedContent, MarkdownParsedContent, MarkdownRoot } from '@nuxt/content';
 
 /**
  * Docs Frontmatter の型定義

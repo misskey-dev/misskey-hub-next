@@ -47,7 +47,7 @@ const runtimeConfig = useRuntimeConfig();
 
 const { locale } = useI18n();
 const localePath = useGLocalePath();
-const currentLocaleIso = computed(() => locales.find((e) => e?.code === locale.value)?.iso);
+const currentLocaleIso = computed(() => locales.find((e) => e?.code === locale.value)?.language);
 
 const isNavOpen = ref<boolean>(false);
 const isCanvasLoaded = ref<boolean>(false);

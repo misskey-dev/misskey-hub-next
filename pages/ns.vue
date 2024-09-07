@@ -19,7 +19,7 @@
         <div class="hidden lg:block text-sm">
             <div class="sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto py-6 pl-6">
                 <h3 class="font-bold mb-6">{{ $t('_docs._toc.title') }}</h3>
-                <DocsTocLinks v-if="data?.body" :links="data?.body.toc.links" class="break-words" />
+                <DocsTocLinks v-if="data?.body && data.body.toc" :links="data?.body.toc.links" class="break-words" />
             </div>
         </div>
     </div>

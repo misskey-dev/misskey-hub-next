@@ -48,7 +48,7 @@
                     <div class="truncate">
                         <h2 class="font-bold text-xl whitespace-nowrap truncate">{{ instance.name }}</h2>
                         <p class="opacity-90 hidden sm:block text-sm truncate">{{ instance.url }} / v.{{ instance.nodeinfo?.software.version }}</p>
-                        <p class="text-sm flex sm:hidden space-x-2">
+                        <div class="text-sm flex sm:hidden space-x-2">
                             <dl class="flex space-x-1">
                                 <dt class="opacity-90">{{ $t('_servers._statistics.users') }}</dt>
                                 <dd class="font-bold text-accent-600">{{ instance.stats?.originalUsersCount.toLocaleString() }}</dd>
@@ -57,7 +57,7 @@
                                 <dt class="opacity-90">{{ $t('_servers._registerAcceptance.title') }}</dt>
                                 <dd class="font-bold text-accent-600">{{ instance.meta?.disableRegistration ? $t('_servers._registerAcceptance.inviteOnly') : $t('_servers._registerAcceptance.public')}}</dd>
                             </dl>
-                        </p>
+                        </div>
                     </div>
                     <div class="ml-auto flex-shrink-0 hidden min-w-[17rem] sm:grid grid-cols-3 text-center">
                         <dl>

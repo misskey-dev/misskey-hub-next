@@ -8,7 +8,6 @@ useHead({
     },
 });
 
-const route = useRoute();
 const { locale } = useI18n();
 const navigation = ref();
 const asideNavKey = ref(0);
