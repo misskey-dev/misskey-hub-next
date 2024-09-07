@@ -35,6 +35,14 @@ Misskey Webクライアントのプラグイン機能を使うと、クライア
 ### permissions
 プラグインが要求する権限。MisskeyAPIにリクエストする際に用いられます。
 
+APIのリクエスト方法については、[AiScript Misskey拡張API リファレンス](/docs/for-developers/plugin/plugin-api-reference/)をご覧ください。
+
+:::tip
+
+permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+
+:::
+
 ### config
 プラグインの設定情報を表すオブジェクト。
 キーに設定名、値に以下のプロパティを含めます。
