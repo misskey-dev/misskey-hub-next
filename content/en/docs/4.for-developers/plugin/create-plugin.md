@@ -42,11 +42,11 @@ Plugin description
 
 Permissions required by the plugin.Permissions required by the plugin.Used when making requests to the Misskey API.
 
-APIのリクエスト方法については、[AiScript Misskey拡張API リファレンス](/docs/for-developers/plugin/plugin-api-reference/)をご覧ください。
+Please refer to [AiScript Misskey Extension API Reference](/docs/for-developers/plugin/plugin-api-reference/) for how to make a request to the API.
 
 :::tip
 
-permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+Refer to [this document](/docs/for-developers/api/permission/) for a list of permissions.
 
 :::
 
