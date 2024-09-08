@@ -9,11 +9,11 @@ Starting with Misskey v2023.11.0, you can now install various additional resourc
 
 ## How it works
 
-インストール時に、Misskey Webで受け取るリソースに予期せぬ改ざんが起こらないようにするため、配布サイト側とMisskey双方でハッシュ値を計算し、Misskeyで照合を行います。
+To ensure that resources received by Misskey Web are not tampered with unexpectedly, hash values are calculated on both the distribution site and Misskey at the time of installation, and then verified within your Misskey server.
 
-ハッシュ値が照合できない場合はリソースをインストールすることができないようになっています。
+If the hash value cannot be matched, the resource cannot be installed.
 
-## 実装方法
+## How to Implement
 
 ### 配布ページ側
 
