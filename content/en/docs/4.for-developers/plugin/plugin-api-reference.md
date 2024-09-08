@@ -79,11 +79,11 @@ if (response) {
 
 Make a request to the Misskey API.Make a request to the Misskey API.Passes the endpoint name as the first argument and the parameter object as the second argument.
 
-You can also include API token as the third argument.When called within a plugin, the token of the currently logged-in user is used if no argument is specified.
+You can also include API token as the third argument.When called within a plugin, if `permissions` are specified in the metadata block, the token with the specified permission(s) will be used if the third argument is not specified.
 
 :::tip
 
-permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+Refer to [this document](/docs/for-developers/api/permission/) for a list of permissions.
 
 :::
 
