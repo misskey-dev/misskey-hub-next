@@ -67,7 +67,7 @@ importers:
         specifier: ^0.24.0
         version: 0.24.0
       misskey-hub-markdown-fixer:
-        specifier: file:scripts\markdown-fixer
+        specifier: file:scripts/markdown-fixer
         version: file:scripts/markdown-fixer
       misskey-js:
         specifier: 2024.8.0
