@@ -79,7 +79,29 @@ if (response) {
 
 Make a request to the Misskey API.Make a request to the Misskey API.Passes the endpoint name as the first argument and the parameter object as the second argument.
 
-You can also include API token as the third argument.When called within a plugin, the token of the currently logged-in user is used if no argument is specified.
+You can also include API token as the third argument.When called within a plugin, if `permissions` are specified in the metadata block, the token with the specified permission(s) will be used if the third argument is not specified.
+
+:::tip
+
+Refer to [this document](/docs/for-developers/api/permission/) for a list of permissions.
+
+:::
+
+```AiScript
+### {
+  name: "プラグイン名",
+  version: "4.2.1",
+  author: "作者名",
+  description: "説明文",
+  permissions: ['write:notes'],
+}
+
+@onClick() {
+  let res = Mk:api('notes/create', {
+    text: 'Hello from plugin!'
+  })
+}
+```
 
 ### `Mk:save(key, value)`
 

@@ -42,6 +42,14 @@ Plugin description
 
 Permissions required by the plugin.Permissions required by the plugin.Used when making requests to the Misskey API.
 
+Please refer to [AiScript Misskey Extension API Reference](/docs/for-developers/plugin/plugin-api-reference/) for how to make a request to the API.
+
+:::tip
+
+Refer to [this document](/docs/for-developers/api/permission/) for a list of permissions.
+
+:::
+
 ### config
 
 An object representing the plugin's settings. Keys are setting names and values are any of the below properties. Please refer to the [Plugin API Reference](./plugin-api-reference/) for information on what APIs are available.

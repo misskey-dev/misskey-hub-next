@@ -42,6 +42,14 @@ Misskey 웹 클라이언트의 플러그인 기능을 사용하면 클라이언�
 
 플러그인이 요구하는 권한.플러그인이 요구하는 권한.MisskeyAPI에 요청할 때 사용됩니다.
 
+APIのリクエスト方法については、[AiScript Misskey拡張API リファレンス](/docs/for-developers/plugin/plugin-api-reference/)をご覧ください。
+
+:::tip
+
+permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+
+:::
+
 ### config
 
 플러그인의 설정 정보를 나타내는 객체. 키에 설정명, 값에 다음 속성을 포함합니다. 어떤 API가 있는지 [플러그인 API 레퍼런스](./plugin-api-reference/)를 참고하시기 바랍니다.

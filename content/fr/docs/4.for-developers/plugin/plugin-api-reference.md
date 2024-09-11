@@ -79,7 +79,29 @@ if (response) {
 
 Misskey APIにリクエストします。第一引数にエンドポイント名、第二引数にパラメータオブジェクトを渡します。
 
-第三引数にtokenを入れることもできます。プラグインで動作する場合は、引数指定無しでログイン中のユーザーのtokenが使用されます。
+第三引数にtokenを入れることもできます。プラグインで動作するとき、メタデータブロックにて`permissions`が指定されている場合、第三引数を指定しないことでそのpermissionが付与されたtokenが使用されます。
+
+:::tip
+
+permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+
+:::
+
+```AiScript
+### {
+  name: "プラグイン名",
+  version: "4.2.1",
+  author: "作者名",
+  description: "説明文",
+  permissions: ['write:notes'],
+}
+
+@onClick() {
+  let res = Mk:api('notes/create', {
+    text: 'Hello from plugin!'
+  })
+}
+```
 
 ### `Mk:save(key, value)`
 

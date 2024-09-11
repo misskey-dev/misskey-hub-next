@@ -84,6 +84,28 @@ if (response) {
 
 您也可以在第三个参数中添加token。如果与插件（Plugin）一起工作，则使用登录用户的令牌，不需要带参数。
 
+:::tip
+
+permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+
+:::
+
+```AiScript
+### {
+  name: "プラグイン名",
+  version: "4.2.1",
+  author: "作者名",
+  description: "説明文",
+  permissions: ['write:notes'],
+}
+
+@onClick() {
+  let res = Mk:api('notes/create', {
+    text: 'Hello from plugin!'
+  })
+}
+```
+
 ### `Mk:save(key, value)`
 
 给任意对象名 持久化 赋值所谓的持久化的值，指的是该值即使在AiScript上下文结束后仍然保留，并且可以通过Mk:load读取。
