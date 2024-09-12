@@ -197,6 +197,8 @@ _brandAssets:
   icon: "图标"
   banner: "横幅"
   avatarDecorationTemplate: "头像挂件模板"
+  fullColorPng: "フルカラー (PNG)"
+  monoChromeSvg: "単色 (SVG)"
 _contact:
   title: "联系我们"
   description: "想要了解Misskey Project，请点击这里"
