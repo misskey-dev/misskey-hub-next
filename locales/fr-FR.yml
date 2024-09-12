@@ -197,6 +197,8 @@ _brandAssets:
   icon: "Icône"
   banner: "Bannière"
   avatarDecorationTemplate: "Modèle de décoration d'avatar"
+  fullColorPng: "フルカラー (PNG)"
+  monoChromeSvg: "単色 (SVG)"
 _contact:
   title: "Nous contacter"
   description: "Contactez le projet Misskey ici"
