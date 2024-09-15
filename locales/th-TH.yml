@@ -19,6 +19,7 @@ empty: "ไม่มีเนื้อหา"
 threeDimensionModel: "โมเดล 3 มิติ"
 clickToShow: "คลิกเพื่อแสดง"
 preview: "แสดงตัวอย่าง"
+scrollable: "スクロールできます"
 _error:
   notFound: "ไม่พบหน้า"
   notFoundDesc: "ไม่พบหน้าที่ค้นหา กรุณาตรวจสอบ URL อีกครั้ง"
