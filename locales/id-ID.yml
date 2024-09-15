@@ -19,6 +19,7 @@ empty: "Tidak ada konten"
 threeDimensionModel: "Model 3D"
 clickToShow: "Klik untuk melihat"
 preview: "プレビュー"
+scrollable: "スクロールできます"
 _error:
   notFound: "Halaman Tidak Ditemukan"
   notFoundDesc: "Halaman yang kamu cari tidak dapat ditemukan. Mohon cek kembali URL yang kamu tuju."
