@@ -23,7 +23,7 @@
 <table>
     <thead>
         <tr>
-            <th scope="col" rowspan="2">ソース</th>
+            <th scope="col" rowspan="2">소스</th>
             <th scope="col" rowspan="2">공개 범위</th>
             <th scope="col" colspan="4">타임라인</th>
         </tr>
@@ -36,7 +36,7 @@
     </thead>
     <tbody>
         <tr>
-            <th scope="row" rowspan="3">ローカル（フォロー）</th>
+            <th scope="row" rowspan="3">로컬 (팔로우)</th>
             <th scope="row">공개</th>
             <td>✔</td>
             <td>✔</td>
@@ -58,7 +58,7 @@
             <td></td>
         </tr>
         <tr>
-            <th scope="row" rowspan="3">リモート（フォロー）</th>
+            <th scope="row" rowspan="3">리모트 (팔로우)</th>
             <th scope="row">공개</th>
             <td>✔</td>
             <td></td>
@@ -80,7 +80,7 @@
             <td></td>
         </tr>
         <tr>
-            <th scope="row" rowspan="3">ローカル（未フォロー）</th>
+            <th scope="row" rowspan="3">로컬 (팔로우 안함)</th>
             <th scope="row">공개</th>
             <td></td>
             <td>✔</td>
@@ -102,7 +102,7 @@
             <td></td>
         </tr>
         <tr>
-            <th scope="row">リモート（未フォロー）</th>
+            <th scope="row">리모트 (팔로우 안함)</th>
             <th scope="row">공개</th>
             <td></td>
             <td></td>

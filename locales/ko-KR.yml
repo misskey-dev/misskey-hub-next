@@ -19,6 +19,7 @@ empty: "내용이 없습니다"
 threeDimensionModel: "3D 모델"
 clickToShow: "클릭하여 표시"
 preview: "미리보기"
+scrollable: "스크롤 할 수 있습니다."
 _error:
   notFound: "페이지를 찾을 수 없습니다"
   notFoundDesc: "요청하신 페이지를 찾을 수 없습니다. URL을 확인하여 주십시오."
@@ -197,6 +198,8 @@ _brandAssets:
   icon: "아이콘"
   banner: "배너"
   avatarDecorationTemplate: "아바타 장식 도구"
+  fullColorPng: "풀 컬러 (PNG)"
+  monoChromeSvg: "단색 (SVG)"
 _contact:
   title: "문의"
   description: "Misskey Project로의 문의는 여기로부터"

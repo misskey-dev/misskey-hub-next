@@ -19,6 +19,7 @@ empty: "内容がありません"
 threeDimensionModel: "3Dモデル"
 clickToShow: "クリックして表示"
 preview: "プレビュー"
+scrollable: "スクロールできます"
 _error:
   notFound: "ページが見つかりませんでした"
   notFoundDesc: "お探しのページは見つかりませんでした。URLをお確かめください。"
@@ -197,6 +198,8 @@ _brandAssets:
   icon: "アイコン"
   banner: "バナー"
   avatarDecorationTemplate: "アバターデコレーション テンプレート"
+  fullColorPng: "フルカラー (PNG)"
+  monoChromeSvg: "単色 (SVG)"
 _contact:
   title: "お問い合わせ"
   description: "Misskey Projectへのお問い合わせはこちらから"

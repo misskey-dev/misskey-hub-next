@@ -19,6 +19,7 @@ empty: "No content"
 threeDimensionModel: "3D Model"
 clickToShow: "Click to show"
 preview: "Preview"
+scrollable: "This can be scrolled"
 _error:
   notFound: "Page not found"
   notFoundDesc: "The page you are looking for could not be found. Please check the URL."
@@ -197,6 +198,8 @@ _brandAssets:
   icon: "Icon"
   banner: "Banner"
   avatarDecorationTemplate: "Avatar Decoration Template"
+  fullColorPng: "Full color PNG"
+  monoChromeSvg: "Monochrome SVG"
 _contact:
   title: "Contact"
   description: "Get in touch with the Misskey Project"

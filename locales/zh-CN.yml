@@ -19,6 +19,7 @@ empty: "暂无内容"
 threeDimensionModel: "3D模型"
 clickToShow: "点击以显示"
 preview: "预览"
+scrollable: "スクロールできます"
 _error:
   notFound: "找不到页面"
   notFoundDesc: "找不到您要查找的页面，请检查 URL。"
@@ -197,6 +198,8 @@ _brandAssets:
   icon: "图标"
   banner: "横幅"
   avatarDecorationTemplate: "头像挂件模板"
+  fullColorPng: "フルカラー (PNG)"
+  monoChromeSvg: "単色 (SVG)"
 _contact:
   title: "联系我们"
   description: "想要了解Misskey Project，请点击这里"
