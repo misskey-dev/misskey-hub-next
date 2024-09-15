@@ -8,7 +8,6 @@
                 referrerpolicy="strict-origin-when-cross-origin"
                 :class="$style.iframe"
                 :style="{ height: `${iframeHeight}px` }"
-                @load="onIframeLoad"
             ></iframe>
             <template #fallback>
                 <div class="border border-gray-200 dark:border-gray-700 mx-auto w-full max-w-[500px] p-4 rounded-lg">
@@ -50,12 +49,6 @@ const actualUrl = computed(() => {
 const iframe = useTemplateRef('iframe');
 const iframeId = useId();
 const iframeHeight = ref(0);
-
-function onIframeLoad() {
-    iframe.value?.contentWindow?.addEventListener('beforeunload', () => {
-        iframeHeight.value = 0;
-    });
-}
 
 function windowEventHandler(event: MessageEvent) {
     if (!import.meta.client) return;
