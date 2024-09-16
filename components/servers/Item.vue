@@ -4,12 +4,12 @@
             <template v-if="view === 'grid'">
                 <div class="relative aspect-video bg-gray-200 dark:bg-gray-600">
                     <img v-if="manualBackground" :src="manualBackground" class="w-full h-full object-cover" />
-                    <img v-else-if="instance.background" loading="lazy" :src="`https://instanceapp.misskey.page/instance-backgrounds/${instance.url}.webp`" class="w-full h-full object-cover" />
-                    <img v-else-if="instance.banner" loading="lazy" :src="`https://instanceapp.misskey.page/instance-banners/${instance.url}.webp`" class="w-full h-full object-cover" />
+                    <img v-else-if="instance.background" loading="lazy" :src="`${runtimeConfig.public.serverListApiBaseUrl}/instance-backgrounds/${instance.url}.webp`" class="w-full h-full object-cover" />
+                    <img v-else-if="instance.banner" loading="lazy" :src="`${runtimeConfig.public.serverListApiBaseUrl}/instance-banners/${instance.url}.webp`" class="w-full h-full object-cover" />
                     <div class="absolute h-1/2 bottom-0 left-0 w-full bg-gradient-to-b from-transparent to-black text-white p-4 flex items-end">
                         <div class="h-14 w-14 min-w-0 flex-shrink-0 mr-4">
                             <img v-if="manualIcon" :src="manualIcon" class="w-full h-full rounded" />
-                            <img v-else-if="instance.icon" :src="`https://instanceapp.misskey.page/instance-icons/${instance.url}.webp`" class="w-full h-full rounded" />
+                            <img v-else-if="instance.icon" :src="`${runtimeConfig.public.serverListApiBaseUrl}/instance-icons/${instance.url}.webp`" class="w-full h-full rounded" />
                         </div>
                         <div class="min-w-0 flex flex-col justify-end">
                             <h2 class="font-bold text-2xl whitespace-nowrap truncate">{{ instance.name }}</h2>
@@ -37,13 +37,13 @@
             </template>
             <template v-else-if="view === 'list'">
                 <div class="absolute h-full w-4/5 top-0 left-0 overflow-hidden">
-                    <img v-if="instance.background" loading="lazy" :src="`https://instanceapp.misskey.page/instance-backgrounds/${instance.url}.webp`" class="h-full w-full object-cover object-center opacity-40 blur-md" />
-                    <img v-else-if="instance.banner" loading="lazy" :src="`https://instanceapp.misskey.page/instance-banners/${instance.url}.webp`" class="h-full w-full object-cover object-center opacity-40 blur-md" />
+                    <img v-if="instance.background" loading="lazy" :src="`${runtimeConfig.public.serverListApiBaseUrl}/instance-backgrounds/${instance.url}.webp`" class="h-full w-full object-cover object-center opacity-40 blur-md" />
+                    <img v-else-if="instance.banner" loading="lazy" :src="`${runtimeConfig.public.serverListApiBaseUrl}/instance-banners/${instance.url}.webp`" class="h-full w-full object-cover object-center opacity-40 blur-md" />
                     <div class="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-transparent to-white dark:to-slate-800"></div>
                 </div>
                 <div class="relative flex w-full items-center p-2">
                     <div class="h-14 w-14 min-w-0 flex-shrink-0 mr-4">
-                        <img v-if="instance.icon" :src="`https://instanceapp.misskey.page/instance-icons/${instance.url}.webp`" class="w-full h-full rounded" />
+                        <img v-if="instance.icon" :src="`${runtimeConfig.public.serverListApiBaseUrl}/instance-icons/${instance.url}.webp`" class="w-full h-full rounded" />
                     </div>
                     <div class="truncate">
                         <h2 class="font-bold text-xl whitespace-nowrap truncate">{{ instance.name }}</h2>
@@ -81,6 +81,8 @@
 
 <script setup lang="ts">
 import type { InstanceItem } from '@/types/instances-info';
+
+const runtimeConfig = useRuntimeConfig();
 
 const props = withDefaults(defineProps<{
     instance: InstanceItem;

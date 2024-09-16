@@ -105,7 +105,9 @@ import lang from '~/assets/data/lang';
 
 const { t } = useI18n();
 
-const { data } = await useFetch<InstanceInfo>('https://instanceapp.misskey.page/instances.json', {
+const runtimeConfig = useRuntimeConfig();
+
+const { data } = await useFetch<InstanceInfo>(`${runtimeConfig.public.serverListApiBaseUrl}/instances.json`, {
     onRequestError: () => {
         alert(t('_servers._system.fetchError'));
     }

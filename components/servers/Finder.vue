@@ -146,8 +146,10 @@ import XIco from 'bi/x.svg';
 import GridIco from 'bi/grid-3x2-gap.svg';
 import ListIco from 'bi/view-stacked.svg';
 
-const { t, locale } = useI18n();
+const { t } = useI18n();
 const route = useRoute();
+const runtimeConfig = useRuntimeConfig();
+
 const emits = defineEmits<{
     (e: 'load', value?: InstancesStatsObj, updatedAt?: string): void;
 }>();
@@ -204,7 +206,7 @@ watch([f_langs, f_orderBy, f_order, f_registerAcceptance, v_view], (to, from) =>
 route.meta.title = t('_servers.title');
 route.meta.description = t('_servers.description');
 
-const { data } = await useFetch<InstanceInfo>('https://instanceapp.misskey.page/instances.json', {
+const { data } = await useFetch<InstanceInfo>(`${runtimeConfig.public.serverListApiBaseUrl}/instances.json`, {
     onRequestError: () => {
         alert(t('_servers._system.fetchError'));
     }

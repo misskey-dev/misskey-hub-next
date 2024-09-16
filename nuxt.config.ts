@@ -20,6 +20,9 @@ const baseUrl =
 // リポジトリURL（末尾スラッシュなし）
 const repositoryUrl = 'https://github.com/misskey-dev/misskey-hub-next';
 
+// サーバーリストAPIのベースURL
+const serverListApiBaseUrl = process.env.SERVER_LIST_API_BASE_URL ?? 'https://instanceapp.misskey.page';
+
 // 言語定義は /assets/data/locales.ts に移動しました
 
 function getRouteRules(): NuxtConfig['routeRules'] | undefined {
@@ -69,6 +72,7 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
 			baseUrl,
+			serverListApiBaseUrl,
 			repositoryUrl,
 			locales,
 			misskeyJsVersion: packageJson.devDependencies['misskey-js'] as string,

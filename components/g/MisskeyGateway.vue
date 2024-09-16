@@ -118,11 +118,12 @@ import { parseURL, joinURL } from 'ufo';
 import { api as misskeyApi } from 'misskey-js';
 import { forkedSoftwares } from '~/assets/data/forks';
 import { GNuxtLink } from '#components';
-import type { InstanceInfo, InstanceItem } from '@/types/instances-info';
+import type { InstanceItem } from '@/types/instances-info';
 import type { FunctionalComponent } from 'vue';
 
 const { t } = useI18n();
 const localePath = useGLocalePath();
+const runtimeConfig = useRuntimeConfig();
 
 const props = defineProps<{
     action: {
@@ -183,7 +184,6 @@ async function getAndSetInstanceInfo() {
                 name: res.name ?? '',
                 nodeinfo: null,
                 npd15: 0,
-                stats: {},
                 url: realHost.host ?? '',
                 value: 0,
 
@@ -216,7 +216,7 @@ function getInstanceImage(instance: ExtendedInstanceItem | InstanceItem) {
 
 function getPlaceholderImage(instance: ExtendedInstanceItem | InstanceItem) {
     if (instance.meta?.repositoryUrl) {
-        if (forkedSoftwares.some((v) => instance.meta?.repositoryUrl.toLowerCase().includes(v))) {
+        if (forkedSoftwares.some((v) => instance.meta?.repositoryUrl?.toLowerCase().includes(v))) {
             return 'forked';
         }
         if (instance.meta.repositoryUrl.includes('misskey')) {
@@ -235,13 +235,13 @@ async function handleClick(instance: ExtendedInstanceItem) {
 
 onMounted(async () => {
     if (import.meta.client) {
-        const fetchedInfo = await window.fetch('https://instanceapp.misskey.page/instances.json');
+        const fetchedInfo = await window.fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances5.json`);
         if (![200, 304].includes(fetchedInfo.status)) {
             alert(t('_servers._system.fetchError'));
             return;
         }
-        const fetchedInfoJson = await fetchedInfo.json() as InstanceInfo;
-        featuredInstances.value = fetchedInfoJson.instancesInfos.sort((a, b) => {
+        const fetchedInfoJson = await fetchedInfo.json() as InstanceItem[];
+        featuredInstances.value = fetchedInfoJson.sort((a, b) => {
             return resolveObjPath(a, 'stats.originalUsersCount') > resolveObjPath(b, 'stats.originalUsersCount') ? -1 : 1;
         }).slice(0, 5);
 
@@ -276,7 +276,6 @@ onMounted(async () => {
                     name: res.name ?? '',
                     nodeinfo: null,
                     npd15: 0,
-                    stats: {},
                     url: realHost.host ?? '',
                     value: 0,
 
