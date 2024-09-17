@@ -19,7 +19,7 @@ empty: "沒有內容。"
 threeDimensionModel: "3D 模型"
 clickToShow: "點擊以顯示"
 preview: "預覽"
-scrollable: "スクロールできます"
+scrollable: "可以滾動"
 _error:
   notFound: "找不到此頁面"
   notFoundDesc: "找不到此頁面，請確認網址是否正確。"
