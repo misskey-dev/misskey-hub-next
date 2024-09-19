@@ -6,7 +6,7 @@ import type { ParsedContent, MarkdownParsedContent, MarkdownRoot } from '@nuxt/c
  * 
  * `/content/<lang>/docs/` のフロントマターはこの形式で入力してください 
  */
-interface MiDocsParsedContentMd extends MarkdownParsedContent {
+export interface MiDocsParsedContentMd extends MarkdownParsedContent {
     _TYPE_: undefined;
 
     /** もくじの見出しをさかのぼる限度 */
@@ -19,7 +19,7 @@ interface MiDocsParsedContentMd extends MarkdownParsedContent {
 /**
  * ステップバイステップガイドの型定義
  */
-interface MiDocsParsedContentSteppedGuide extends ParsedContent {
+export interface MiDocsParsedContentSteppedGuide extends ParsedContent {
     _TYPE_: 'STEPPED_GUIDE';
 
     guides: {
