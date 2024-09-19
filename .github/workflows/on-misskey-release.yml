@@ -26,18 +26,25 @@ jobs:
       - run: pnpm start
         working-directory: scripts/changelog-auto-updater
 
-      - name: Commit changes
+      - name: Check diff
+        id: diff
         run: |
-          git checkout -b update-release-notes
           git add -N .
-          if ! git diff --exit-code --quiet; then
-            git config user.name github-actions
-            git config user.email github-actions@github.com
-            git add .
-            git commit -m "docs: Update release notes"
-            git push
-          fi
+          git diff --name-only --exit-code
+        continue-on-error: true
+
+      - name: Commit changes
+        if: steps.diff.outcome == 'failure'
+        run: |
+          set -x
+          git checkout -b update-release-notes
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add .
+          git commit -m "docs: Update release notes"
+          git push
 
       - name: Create Pull Request
+        if: steps.diff.outcome == 'failure'
         run: |
           gh pr create --draft --title "Update release notes (auto)" --base master --head update-release-notes
