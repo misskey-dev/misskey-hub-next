@@ -54,14 +54,6 @@ async function getGhChangelog() {
     return parseChangelog(text);
 }
 
-async function getReleaseNotes() {
-    const docsPath = path.resolve(import.meta.dirname, '../../../content/ja/docs/5.releases.md');
-
-    const text = await fsp.readFile(docsPath, 'utf-8');
-
-    return parseChangelog(text);
-}
-
 async function main() {
     const ghChangelog = await getGhChangelog();
 
@@ -89,7 +81,6 @@ async function main() {
     const releaseDateForBlogPath = `${now.getFullYear()}-${(now.getMonth() + 1).toString().padStart(2, '0')}-${(now.getDate()).toString().padStart(2, '0')}`;
     const releaseDateForBlogEntry = `${now.getFullYear()}年${(now.getMonth() + 1)}月${now.getDate()}日`;
     const postsPath = path.resolve(import.meta.dirname, `../../../content/blog/${releaseDateForBlogPath}-release.md`);
-
     const postTemplate = `---
 description: Misskey v${ghChangelog.latestVersion} がリリースされました！
 date: ${releaseDateForBlogPath}
