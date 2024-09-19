@@ -1,0 +1,43 @@
+name: On Misskey Release (Update Release Notes)
+
+on:
+  repository_dispatch:
+    types: [misskey_release]
+
+jobs:
+  update-release-notes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+  
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+
+      - run: corepack enable
+
+      - run: pnpm install
+        working-directory: scripts/changelog-auto-updater
+      
+      - run: pnpm start
+        working-directory: scripts/changelog-auto-updater
+
+      - name: Commit changes
+        run: |
+          git checkout -b update-release-notes
+          git add -N .
+          if ! git diff --exit-code --quiet; then
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add .
+            git commit -m "docs: Update release notes"
+            git push
+          fi
+
+      - name: Create Pull Request
+        run: |
+          gh pr create --draft --title "Update release notes (auto)" --base master --head update-release-notes
