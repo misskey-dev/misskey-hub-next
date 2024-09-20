@@ -166,7 +166,7 @@ sudo systemctl restart misskey
 
 :::tip
 
-如果您子啊构建或启动过程中遇到错误，请尝试以下命令：
+如果您在构建或启动过程中遇到错误，请尝试以下命令：
 
 - `pnpm run clean` 或 `pnpm run clean-all`
 - `pnpm rebuild`
