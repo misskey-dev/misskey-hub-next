@@ -165,6 +165,11 @@ Menampilkan sorotan sintaks untuk kode program secara dalam baris.
 
 Menampilkan sorotan sintaks dari kode program dalam sebuah blok.
 
+プログラミング言語をIDで指定すると、その言語でシンタックスハイライトが適用されます。指定できる言語は次のとおりです：
+
+- [Shikiが対応している言語（200以上）](https://shiki.style/languages)
+- AiScript: `aiscript`, `ais`, `is` のいずれかを指定すると使用できます。
+
 ```
 ~ (#i, 100) {
 	<: ? ((i % 15) = 0) "FizzBuzz"
