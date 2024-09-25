@@ -106,4 +106,4 @@ props: {
 
 從 v2023.11.0 開始，您可以從您的網站，直接一鍵安裝佈景主題。
 
-テーマのインストール機能を提供する場合は、あなたのサイト上にAPIを実装する必要があります。詳情請參考[此處](../../for-developers/publish-on-your-website/)。
+如果想提供安裝佈景主題的功能的話，則需要在您的網站上實作 API 。詳情請參考[此處](../../for-developers/publish-on-your-website/)。
