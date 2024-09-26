@@ -3,6 +3,18 @@ name: On Misskey Release (Update Release Notes)
 on:
   repository_dispatch:
     types: [misskey_release]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Latest version of Misskey'
+        required: false
+      releaseDate:
+        description: 'Release date (YYYY-MM-DD)'
+        required: false
+
+env:
+  VERSION: ${{ github.event.client_payload.version || github.event.inputs.version }}
+  RELEASE_DATE: ${{ github.event.client_payload.releaseDate || github.event.inputs.releaseDate }}
 
 jobs:
   update-release-notes:
@@ -23,7 +35,7 @@ jobs:
       - run: pnpm install
         working-directory: scripts/changelog-auto-updater
       
-      - run: pnpm start
+      - run: pnpm start ${{ env.VERSION != null && format('-v {0}', env.VERSION) || '' }} ${{ env.RELEASE_DATE != null && format('-d {0}', env.RELEASE_DATE) || '' }}
         working-directory: scripts/changelog-auto-updater
 
       - name: Check diff
@@ -47,4 +59,4 @@ jobs:
       - name: Create Pull Request
         if: steps.diff.outcome == 'failure'
         run: |
-          gh pr create --draft --title "Update release notes (auto)" --base master --head update-release-notes
+          gh pr create --draft --title "Update release notes (${{ env.VERSION != null && env.VERSION || 'latest' }})" --base master --head update-release-notes
