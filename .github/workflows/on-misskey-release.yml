@@ -58,5 +58,7 @@ jobs:
 
       - name: Create Pull Request
         if: steps.diff.outcome == 'failure'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           gh pr create --draft --title "Update release notes (${{ env.VERSION != null && env.VERSION || 'latest' }})" --base master --head update-release-notes-${{ env.VERSION != null && env.VERSION || 'latest' }}
