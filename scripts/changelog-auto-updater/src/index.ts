@@ -94,7 +94,6 @@ async function main() {
 
     console.log('Updating release notes...');
 
-    // TODO: リリース当日に回すことしか想定していない
     const now = values.releaseDate ? new Date(`${values.releaseDate}T00:00:00`) : new Date();
 
     // リリースノート更新
