@@ -49,7 +49,7 @@ jobs:
         if: steps.diff.outcome == 'failure'
         run: |
           set -x
-          git checkout -b update-release-notes
+          git checkout -b update-release-notes-${{ env.VERSION != null && env.VERSION || 'latest' }}
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add .
@@ -59,4 +59,4 @@ jobs:
       - name: Create Pull Request
         if: steps.diff.outcome == 'failure'
         run: |
-          gh pr create --draft --title "Update release notes (${{ env.VERSION != null && env.VERSION || 'latest' }})" --base master --head update-release-notes
+          gh pr create --draft --title "Update release notes (${{ env.VERSION != null && env.VERSION || 'latest' }})" --base master --head update-release-notes-${{ env.VERSION != null && env.VERSION || 'latest' }}
