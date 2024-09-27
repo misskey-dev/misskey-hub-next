@@ -51,7 +51,7 @@
                                 >
                                     <template v-if="instance.isUserDefined">
                                         <button class="relative w-full h-full group/delete" @click.stop.prevent="deleteInstance(instance.url)">
-                                            <img v-if="instance.icon && instance.meta?.iconUrl" :src="getInstanceImage(instance)" class="w-full h-full" />
+                                            <img v-if="instance.icon && instance.meta?.iconUrl" :src="getInstanceImage(instance) ?? '/img/icons/f/mi.png'" class="w-full h-full" />
                                             <div v-else-if="['forked', 'notDetermined'].includes(getPlaceholderImage(instance))" class="w-full h-full bg-accent-600/20 p-1 sm:p-2 text-accent-600">
                                                 <ForkedIco v-if="getPlaceholderImage(instance) === 'forked'" class="block h-4 w-4 sm:h-5 sm:w-5 stroke-1 stroke-current" />
                                                 <QuestionIco v-else class="block h-4 w-4 sm:h-5 sm:w-5" />
@@ -62,7 +62,7 @@
                                             </div>
                                         </button>
                                     </template>
-                                    <img v-else-if="instance.icon && instance.meta?.iconUrl" :src="instance.meta?.iconUrl" class="w-full h-full" />
+                                    <img v-else-if="instance.icon" :src="getInstanceImage(instance) ?? '/img/icons/f/mi.png'" class="w-full h-full" />
                                 </div>
                                 <div class="min-w-0 mr-3 text-start">
                                     <h2 class="text-sm sm:text-base font-bold truncate">{{ instance.name }}</h2>
@@ -206,6 +206,10 @@ function deleteInstance(host: string) {
 }
 
 function getInstanceImage(instance: ExtendedInstanceItem | InstanceItem) {
+    if (instance.icon === true && (!('isUserDefined' in instance) || instance.isUserDefined === false)) {
+        return `${runtimeConfig.public.serverListApiBaseUrl}/instance-icons/${instance.url}.webp`;
+    }
+
     if (!instance.meta?.iconUrl) return;
 
     if (isLocalPath(instance.meta.iconUrl)) {
