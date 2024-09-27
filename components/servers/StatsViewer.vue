@@ -222,7 +222,7 @@ const avgVersionStats = computed(() => {
     const out: Record<string, number> = {};
 
     d.forEach((v) => {
-        const ver = v.meta?.version.replace(/[-\+].+$/g, '');
+        const ver = v.meta?.version ? v.meta.version.replace(/[-\+].+$/g, '') ?? null : null;
         if (ver) {
             if (!out[ver]) {
                 out[ver] = 1;

@@ -1,9 +1,11 @@
+import type { Directive } from 'vue';
+
 export const vFadeIn = {
 	mounted: (src, binding, vn) => {
 		src.classList.add('__v_fadeIn_out');
 		src.children[0].style.transition = `all 0.5s ease`;
 
-		function onIntersect(entries) {
+		function onIntersect(entries: IntersectionObserverEntry[]) {
 			for (const entry of entries) {
 				if (entry.isIntersecting) {
 					entry.target.classList.add('__v_fadeIn_in');
@@ -21,4 +23,4 @@ export const vFadeIn = {
 
 		observer.observe(src);
 	}
-};
+} satisfies Directive;

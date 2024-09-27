@@ -38,7 +38,7 @@ function toggleCollapse() {
     <button @click="toggleCollapse()" class="hover:text-accent-600 hover:bg-accent-50 dark:hover:text-accent-100 dark:hover:bg-accent-800 px-4 py-2 rounded-r-full flex items-center text-start"><CaretRightFillIco :class="[{ 'rotate-90': (isShown) }, 'mr-1 h-3 w-3 transition-transform']" />{{ $t(navData.title) }}</button>
     <div v-show="isShown">
         <GNuxtLink v-for="item in navData.items" @click.native="emit('toggleNav')" :class="[isSamePath(route.path, localePath(item.to)) ? 'bg-accent-100 text-accent-600 dark:text-accent-100 dark:bg-accent-800 font-bold' : 'hover:text-accent-600 hover:bg-accent-50 dark:hover:text-accent-100 dark:hover:bg-accent-800', 'block pl-6 pr-4 py-2 rounded-r-full']" :to="localePath(item.to)">
-            {{ $t(item.i18n) }}
+            {{ 'i18n' in item ? $t(item.i18n) : '' }}
         </GNuxtLink>
     </div>
     <hr class="mb-1 mt-2" />

@@ -28,8 +28,8 @@
                         {{ $t(section.title) }}
                     </h2>
                     <GLinks :wide="true" :gray="true" :items="section.items.map((e) => ({
-                        title: $t(e.i18n),
-                        description: $t(e.description),
+                        title: 'i18n' in e ? $t(e.i18n) : '',
+                        description: 'description' in e && e.description != null ? $t(e.description) : '',
                         to: localePath(e.to),
                     }))" />
                 </section>

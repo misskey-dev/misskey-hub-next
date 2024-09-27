@@ -1,8 +1,8 @@
 import * as Misskey from 'misskey-js';
 
-export const getIOMeta = async (): Promise<Misskey.entities.LiteInstanceMetadata> => {
+export const getIOMeta = async (): Promise<Misskey.entities.MetaDetailed> => {
     if (!import.meta.client) {
-        return {};
+        return {} as Misskey.entities.MetaDetailed;
     }
     if (!sessionStorage.getItem('miHub_io_meta')) {
         const meta = await fetch('https://misskey.io/api/meta');
@@ -16,7 +16,7 @@ export const getIOMeta = async (): Promise<Misskey.entities.LiteInstanceMetadata
     }
 }
 
-export const getIOEmoji = async (): Promise<{ emojis: Misskey.entities.CustomEmoji[] }> => {
+export const getIOEmoji = async (): Promise<{ emojis: Misskey.entities.EmojiSimple[] }> => {
     if (!import.meta.client) {
         return { emojis: [] };
     }

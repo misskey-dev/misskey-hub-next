@@ -1,6 +1,6 @@
 import { getIOEmoji } from './io-meta';
 import * as Misskey from 'misskey-js';
-export const customEmojisMap = new Map<string, Misskey.entities.CustomEmoji>();
+export const customEmojisMap = new Map<string, Misskey.entities.EmojiSimple>();
 
 async function init() {
     const emojis = await getIOEmoji();
