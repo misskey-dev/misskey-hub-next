@@ -165,19 +165,21 @@ Displays syntax highlighting for code from programs inline.
 
 Displays multi-line syntax highlighting for code from programs in a block.
 
-プログラミング言語をIDで指定すると、その言語でシンタックスハイライトが適用されます。指定できる言語は次のとおりです：
+By specifying the programming language by ID, you can apply syntax highlighting in that language.Available languages are:
 
-- [Shikiが対応している言語（200以上）](https://shiki.style/languages)
-- AiScript: `aiscript`, `ais`, `is` のいずれかを指定すると使用できます。
+- [Languages supported by Shiki (200+)](https://shiki.style/languages)
+- AiScript: Specify one of `aiscript`, `ais`, or `is` to use.
 
-```
-~ (#i, 100) {
-	<: ? ((i % 15) = 0) "FizzBuzz"
-		.? ((i % 3) = 0) "Fizz"
-		.? ((i % 5) = 0) "Buzz"
-		. i
+````
+```ais
+for (let i, 100) {
+	<: if ((i % 15) == 0) "FizzBuzz"
+		elif ((i % 3) == 0) "Fizz"
+		elif ((i % 5) == 0) "Buzz"
+		else i
 }
 ```
+````
 
 ### Flip
 
