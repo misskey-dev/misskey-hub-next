@@ -108,7 +108,7 @@ export default defineNuxtConfig({
 	},
 	content: {
 		markdown: {
-			remarkPlugins: [ 'misskey-hub-markdown-fixer' ],	
+			remarkPlugins: ['misskey-hub-markdown-fixer'],
 		},
 		navigation: {
 			fields: [
@@ -197,8 +197,15 @@ export default defineNuxtConfig({
 			failOnError: false,
 		}
 	},
+	typescript: {
+		tsConfig: {
+			compilerOptions: {
+				baseUrl: './',
+			},
+		},
+	},
 	hooks: {
-		'build:before': async () => {			
+		'build:before': async () => {
 			genApiTranslationFiles();
 
 			await Promise.all([
@@ -209,7 +216,7 @@ export default defineNuxtConfig({
 								genLocalesJson();
 							}
 						});
-					}		
+					}
 				}),
 				genSpaLoadingTemplate(),
 				fetchCrowdinMembers(),
