@@ -98,3 +98,18 @@ This field can only take the value of `true` (or be absent).
 
 Used on actors to indicate that they in some way identify as a cat, expressed as a boolean value.
 If this property is set to `true`, displaying the actor or their notes will have some special effects attached in some clients.
+
+## `_misskey_followedMessage`
+- compact IRI: `misskey:_misskey_followedMessage`
+- canonical IRI: `https://misskey-hub.net/ns#_misskey_followedMessage`
+
+This value is used for `Actor` type objects to show message on followed.
+
+This property must be either `null` or a string if existent.
+The value is customized message. In other word, it can be set arbitrary by an account.
+
+Misskey shows the value on notification to new followee when:
+- The property is set,
+- value is a string,
+- the followee's Misskey is 2024.9.0-alpha.11 or later,
+- and one who has set this property gets followed by the followee
