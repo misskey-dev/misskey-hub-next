@@ -253,8 +253,10 @@ Ui:C:container({
   font: 'serif' // フォント serif,sans-serif,monospace
   borderWidth: 1 // 枠幅
   borderColor: '#f00' // 枠の色
+  borderStyle: 'solid' // 枠の柄
   padding: 1 // 余白幅
   rounded: false // 角を丸く
+  borderRadius: 1 // roundedの角の丸みを指定できる版
   hidden: false // 隠す
 })
 ```
