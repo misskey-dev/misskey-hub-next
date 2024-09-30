@@ -19,7 +19,7 @@ empty: "暂无内容"
 threeDimensionModel: "3D模型"
 clickToShow: "点击以显示"
 preview: "预览"
-scrollable: "スクロールできます"
+scrollable: "可以滚动"
 _error:
   notFound: "找不到页面"
   notFoundDesc: "找不到您要查找的页面，请检查 URL。"
@@ -100,7 +100,7 @@ _landing:
       title: "了解更多信息"
       docs: "阅读文档"
   _donation:
-    title: "请捐赠"
+    title: "请求捐助"
     description: "Misskey 是非营利的，我们依靠您的捐款来资助它的发展。所以如果您喜欢 Misskey，请支持我们，以便我们能够继续开发它。"
   _sponsors:
     title: "赞助者"
@@ -162,9 +162,9 @@ _docs:
     title: "为项目捐款"
     description: "Misskey 是一款免费开源软件。 如果您喜欢，请考虑捐赠，以便我们继续开发。"
   _forUsers:
-    title: "针对 Misskey 用户。"
+    title: "面向 Misskey 用户"
   _forAdmin:
-    title: "针对服务器运营商"
+    title: "面向服务器运营者"
   _forDevelopers:
     title: "面向开发者"
   _prevNext:
@@ -174,7 +174,7 @@ _docs:
     title: "这页的内容"
     toPageTop: "回到顶部"
   _steppedGuide:
-    selectCourse: "选择指针"
+    selectCourse: "选择指南"
     noImageInThisStep: "在此步骤中没有图像"
     aiWellDone: "操作就完成了。大家辛苦了♪"
 _blog:
@@ -192,22 +192,22 @@ _other:
 _brandAssets:
   title: "资产集"
   description: "Misskey的logo，图标等资产的集合。在一定的许可下可以自由使用。"
-  license: "资产在 cc by-sa 的授权下您自由使用🎉"
+  license: "资产在 cc by-sa 的授权下自由使用🎉"
   assetsDirectory: "所有资产都用{0}来管理。"
   logo: "Logo"
   icon: "图标"
   banner: "横幅"
   avatarDecorationTemplate: "头像挂件模板"
-  fullColorPng: "フルカラー (PNG)"
-  monoChromeSvg: "単色 (SVG)"
+  fullColorPng: "全彩（PNG）"
+  monoChromeSvg: "单色（SVG）"
 _contact:
   title: "联系我们"
-  description: "想要了解Misskey Project，请点击这里"
-  form: "请用这个表格回答。"
-  formGoogleAccountRequired: "现在，为了防止垃圾邮件，发送查询需要使用谷歌账户。\n虽然给您添麻烦了，但是请您理解。"
-  formLink: "链接形式"
+  description: "在这里联系 Misskey Project"
+  form: "请用这个表单咨询。"
+  formGoogleAccountRequired: "现在为防止垃圾信息，发送询问需要 Google 账户。带来不便十分抱歉。"
+  formLink: "访问表单"
   faqTitle: "常见问题"
-  faqDescription: "在提交问题前，请确保您提出的问题未在此处列出，以免引起不必要的浪费。"
+  faqDescription: "在提交问题前，请确保您提出的问题未在此处列出。"
   ifNothingIsFound: "如果这些都不适用您..."
 _links:
   title: "链接"
@@ -216,13 +216,13 @@ _links:
     description: "Misskey的开发在GitHub上进行。功能请求和bug报告等都可以在这里进行。"
   _crowdin:
     title: "Crowdin"
-    description: "Misskey主体和文档的翻译在这里被管理。请大家协助。"
+    description: "Misskey 本体和文档的翻译都在此处管理。请大家一起协助翻译。"
   _discord:
     title: "Discord 服务器"
-    description: "可以享受关于Misskey的提问和对话等。"
+    description: "可以讨论和 Misskey 相关的话题。"
   _aiChan:
     title: "小蓝"
-    description: "Misskey的看板娘，蓝的网站。"
+    description: "Misskey 的看板娘，小蓝的网站。"
 _tools:
   title: "工具集"
   index: "工具集主页"
@@ -233,30 +233,30 @@ _tools:
   _forAdmin:
     title: "面向服务器管理员"
 _mfmPlayground:
-  title: "MFM试用栏目"
-  description: "可以自由练习MFM! 再现Misskey的投稿画面·笔记的画面!"
+  title: "MFM 试用角"
+  description: "可以自由练习MFM。再现 Misskey 的投稿画面·帖子画面!"
   preview: "预览"
   disclaimer: "并非总是如图所示。 不支持代码语法高亮显示。"
   mfm: "MFM"
   character: "{0} 个字符"
-  domain: "复制服务器上的外观风格 （例如：当前的emoji表情包）"
+  domain: "再现的服务器"
   noteIt: "帖子"
   clearEmojiCacheDescription: "不显示Emoji时"
   clearEmojiCache: "删除Emoji缓存"
 _aidConverter:
-  title: "援助工具"
-  description: "Misskey内部使用的随机ID生成算法“aid”和“aidx”的转换和生成"
-  aidToDate: "援助 → 日期/时间"
-  dateToAid: "日期/时间→援助"
+  title: "aid / aidx 工具"
+  description: "可以转换和生成 Misskey 内部使用的随机 ID 生成算法「aid」和「aidx」"
+  aidToDate: "aid / aidx → 日期时间"
+  dateToAid: "日期时间 → aid / aidx"
   mode: "要创建的 id"
   date: "日期和时间"
-  inputByLine: "可以使用换行符来分隔多个aid/aidx。"
+  inputByLine: "可以使用换行来转换多个aid / aidx。"
 _aboutUs:
-  title: "关于 Misskey 项目"
-  description: "关于Misskey 的项目信息。"
+  title: "关于 Misskey Project"
+  description: "记载了关于 Misskey Project 的情报。"
   _team:
     title: "开发成员"
-    description: "了解参与开发 Misskey 的人员。"
+    description: "介绍和 Misskey 开发有关的人员。"
     _core:
       title: "核心小组成员"
       description: "这里的核心团队成员积极维护与 Misskey 有关的项目。"
