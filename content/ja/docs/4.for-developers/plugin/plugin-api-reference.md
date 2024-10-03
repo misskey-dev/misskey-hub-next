@@ -256,7 +256,7 @@ Ui:C:container({
   borderStyle: 'solid' // 枠の柄
   padding: 1 // 余白幅
   rounded: false // 角を丸く
-  borderRadius: 1 // roundedの角の丸みを指定できる版
+  borderRadius: 1 // 角を丸く（丸みの度合いを数値指定）
   hidden: false // 隠す
 })
 ```
