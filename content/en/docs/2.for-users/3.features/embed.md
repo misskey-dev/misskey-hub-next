@@ -7,7 +7,7 @@ Here, we describe the content that can be embedded and how to embed it.
 
 :::warning
 
-この機能は、Misskey v2024.9.0以降で利用可能になる機能です。
+This feature will be available in Misskey v2024.9.0 or later.
 
 :::
 

@@ -204,7 +204,7 @@ _contact:
   title: "联系我们"
   description: "在这里联系 Misskey Project"
   form: "请用这个表单咨询。"
-  formGoogleAccountRequired: "现在为防止垃圾信息，发送询问需要 Google 账户。带来不便十分抱歉。"
+  formGoogleAccountRequired: "现在为防止垃圾信息，发送询问需要 Google 账户。带来不便敬请谅解。"
   formLink: "访问表单"
   faqTitle: "常见问题"
   faqDescription: "在提交问题前，请确保您提出的问题未在此处列出。"

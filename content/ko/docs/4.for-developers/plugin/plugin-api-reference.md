@@ -85,16 +85,16 @@ Misskey API에 요청합니다.Misskey API에 요청합니다.첫 번째 인수�
 
 :::tip
 
-permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+permission 목록은 [여기](/docs/for-developers/api/permission/)에서 확인할 수 있습니다.
 
 :::
 
 ```AiScript
 ### {
-  name: "プラグイン名",
+  name: "플러그인 이름",
   version: "4.2.1",
-  author: "作者名",
-  description: "説明文",
+  author: "작성자",
+  description: "설명문",
   permissions: ['write:notes'],
 }
 
@@ -264,66 +264,66 @@ Ui:get("text1").update({text: "B"})
 
 ## 컴포넌트 함수(Play, AiScript App 위젯에서 사용 가능)
 
-以下の要素では、初期化の際に `Ui:C:xxx(props id)` のように第2引数にコンポーネントのidを指定することができます（以下のリファレンスではすべて省略しています）。指定したidは `Ui:get(id)` 関数で取得でき、`update` 関数でコンポーネントの中身を直接変更することができます（詳しくは `Ui:get(id)` のリファレンスをご覧ください）。
+아래 요소에서는 초기화 시 `Ui:C:xxx(props id)`와 같이 두 번째 인수에 컴포넌트 id를 지정할 수 있습니다(아래 레퍼런스에서는 모두 생략했습니다).지정한 id는 `Ui:get(id)` 함수로 얻을 수 있으며, `update` 함수로 컴포넌트의 내용을 직접 변경할 수 있습니다(자세한 내용은 `Ui:get(id)` 레퍼런스를 참고하세요).
 
-### レイアウト
+### 레이아웃
 
 #### `Ui:C:container`
 
-幅寄せ、色などの書式設定ができる外枠（コンテナ）
+너비, 색상 등 서식 설정이 가능한 외곽 틀(컨테이너)
 
 ```AiScript
 Ui:C:container({
   children: [
-    // コンテナの中に入れたいコンポーネントの配列
+    // 컨테이너 안에 넣고 싶은 컴포넌트 배열
     Ui:C:text({text: "A"})
   ]
-  align: 'center' // 幅寄せ left,center,right
-  bgColor: '#000' // 背景色
-  fgColor: '#00f' // 文字色
+  align: 'center' // 정렬 left,center,right
+  bgColor: '#000' // 배경색
+  fgColor: '#00f' // 글자색
   font: 'serif' // フォント serif,sans-serif,monospace
-  borderWidth: 1 // 枠幅
-  borderColor: '#f00' // 枠の色
-  padding: 1 // 余白幅
-  rounded: false // 角を丸く
-  hidden: false // 隠す
+  borderWidth: 1 // 테두리 폭
+  borderColor: '#f00' // 테두리 색
+  padding: 1 // 여백 폭
+  rounded: false // 모서리 둥글게 하기
+  hidden: false // 감추기
 })
 ```
 
 #### `Ui:C:folder`
 
-アコーディオン要素（ユーザーが開けたり閉めたりできるコンテナ）
+아코디언 요소(사용자가 열고 닫을 수 있는 컨테이너)
 
 ```AiScript
 Ui:C:folder({
   children: [
-    // コンテナの中に入れたいコンポーネントの配列
+    // 컨테이너 안에 넣고 싶은 컴포넌트 배열
     Ui:C:text({text: "A"})
   ]
-  title: "タイトル" // フォルダの開閉部分に記載するタイトル
-  opened: true // はじめから開いているか
+  title: "타이틀" // 폴더의 개폐 부분에 기재할 제목
+  opened: true // 처음부터 열려있는가
 })
 ```
 
-### テキスト
+### 텍스트
 
 #### `Ui:C:text`
 
-プレーンテキスト
+일반 텍스트
 
 ```AiScript
 Ui:C:text({
-  text: "内容" // 表示するテキスト
-  size: 1 // 文字サイズ
-  bold: false // ボールド
-  color: '#000' // 色
-  font: 'monospace' // フォント serif,sans-serif,monospace
+  text: "내용" // 표시할 텍스트
+  size: 1 // 글자크기
+  bold: false // 굵게(볼드)
+  color: '#000' // 글자색
+  font: 'monospace' // 폰트 serif,sans-serif,monospace
 })
 ```
 
 #### `Ui:C:mfm`
 
-MFMテキスト
+MFM 텍스트
 
 ```AiScript
 Ui:C:mfm({
