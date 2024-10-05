@@ -42,7 +42,7 @@ const { locale, fallbackLocale } = useI18n();
 const localePath = useGLocalePath();
 const showTagline = ref(false);
 const colorMode = useColorMode();
-const mobileScreenShot = computed(() => (colorMode.value === 'dark') ? '/img/hero/misskey-mobile-dark.png' : '/img/hero/misskey-mobile-light.png');
+const mobileScreenShot = computed(() => (colorMode.value === 'dark') ? '/img/hero/' + locale.value + '/misskey-mobile-dark.png' : '/img/hero/' + locale.value + '/misskey-mobile-light.png');
 
 // お知らせ欄にブログが来る可能性もあるので
 const localeState = useState('miHub_blog_originalLocale', () => locale.value);

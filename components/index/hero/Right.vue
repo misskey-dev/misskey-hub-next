@@ -10,16 +10,18 @@
 
 <script setup>
 const colorMode = useColorMode();
+const { locale, fallbackLocale } = useI18n();
 const screenshots = computed(() => {
+	let heroLocale = (locale) ? locale.value : fallbackLocale.value;
     if (colorMode.value === 'dark') {
         return {
-            desktop: '/img/hero/misskey-dark.png',
-            mobile: '/img/hero/misskey-mobile-dark.png',
+            desktop: '/img/hero/' + heroLocale + '/misskey-dark.png',
+            mobile: '/img/hero/' + heroLocale + '/misskey-mobile-dark.png',
         };
     } else {
         return {
-            desktop: '/img/hero/misskey-light.png',
-            mobile: '/img/hero/misskey-mobile-light.png',
+            desktop: '/img/hero/' + heroLocale + '/misskey-light.png',
+            mobile: '/img/hero/' + heroLocale + '/misskey-mobile-light.png',
         };
     }
 });
