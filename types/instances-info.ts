@@ -44,6 +44,8 @@ export type InstanceInfo = {
         /** Servers counter */
         instancesCount: number;
     },
+    /** Language List */
+    langs: string[],
     /** Instance List */
     instancesInfos: InstanceItem[];
 

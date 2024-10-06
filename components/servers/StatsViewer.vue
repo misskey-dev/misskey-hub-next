@@ -30,7 +30,7 @@
                     <ul class="space-y-1">
                         <li v-for="value, key, index in trunc(langStats)" class="grid py-1 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" :class="$style.kvRoot" @mouseenter.passive="langFocus = index" @mouseleave.passive="langFocus = undefined">
                             <div v-if="key === '__others'">{{ $t('other') }}</div>
-                            <div v-else>{{ key }} {{ lang.find((v) => v.lang === key)?.label ? `(${lang.find((v) => v.lang === key)?.label})` : '' }}</div>
+                            <div v-else>{{ key }} {{ langs[key] ? `(${langs[key]})` : '' }}</div>
                             <div class="font-bold font-mono text-accent-600">{{ $n(value) }}</div>
                         </li>
                     </ul>
@@ -101,20 +101,35 @@
 
 <script setup lang="ts">
 import type { InstanceInfo } from '@/types/instances-info';
-import lang from '~/assets/data/lang';
 
 const { t } = useI18n();
 
 const runtimeConfig = useRuntimeConfig();
 
-const { data } = await useFetch<InstanceInfo>(`${runtimeConfig.public.serverListApiBaseUrl}/instances.json`, {
-    onRequestError: () => {
-        alert(t('_servers._system.fetchError'));
+function onRequestError() {
+    alert(t('_servers._system.fetchError'));
+}
+
+const { data } = await useGAsyncData<[InstanceInfo | null, Record<string, string> | null]>('serverInfo', () => Promise.allSettled([
+    $fetch<InstanceInfo>(`${runtimeConfig.public.serverListApiBaseUrl}/instances.json`),
+    $fetch<Record<string, string>>(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/langs.json`),
+]).then(([instances, langs]) => {
+    if (instances.status !== 'fulfilled') {
+        onRequestError();
+        return [null, langs.status === 'fulfilled' ? langs.value : null];
     }
-});
+
+    return [
+        instances.status === 'fulfilled' ? instances.value : null,
+        langs.status === 'fulfilled' ? langs.value : null,
+    ];
+}));
+
+const instanceInfo = computed(() => data.value?.[0]);
+const langs = computed(() => data.value?.[1] ?? {});
 
 const langStats = computed(() => {
-    const d = data.value?.instancesInfos;
+    const d = instanceInfo.value?.instancesInfos;
     if (!d || d.length === 0) {
         return [];
     }
@@ -140,7 +155,7 @@ const langStats = computed(() => {
 const langFocus = ref<number | undefined>();
 
 const regAcceptanceStats = computed(() => {
-    const d = data.value?.instancesInfos;
+    const d = instanceInfo.value?.instancesInfos;
     if (!d || d.length === 0) {
         return [];
     }
@@ -169,7 +184,7 @@ const regAcceptanceStats = computed(() => {
 const regAcceptanceFocus = ref<number | undefined>();
 
 const notesCountStats = computed(() => {
-    const d = data.value?.instancesInfos;
+    const d = instanceInfo.value?.instancesInfos;
     if (!d || d.length === 0) {
         return [];
     }
@@ -192,7 +207,7 @@ const notesCountStats = computed(() => {
 const notesCountFocus = ref<number | undefined>();
 
 const usersCountStats = computed(() => {
-    const d = data.value?.instancesInfos;
+    const d = instanceInfo.value?.instancesInfos;
     if (!d || d.length === 0) {
         return [];
     }
@@ -215,7 +230,7 @@ const usersCountStats = computed(() => {
 const usersCountFocus = ref<number | undefined>();
 
 const avgVersionStats = computed(() => {
-    const d = data.value?.instancesInfos;
+    const d = instanceInfo.value?.instancesInfos;
     if (!d || d.length === 0) {
         return [];
     }
