@@ -52,16 +52,15 @@ const screenshots = computed(() => {
             };
         }
     }
-	let heroLocale = (locale) ? locale.value : fallbackLocale.value;
     if (colorMode.value === 'dark') {
         return {
-            desktop: '/img/hero/' + heroLocale + '/misskey-dark.png',
-            mobile: '/img/hero/' + heroLocale + '/misskey-mobile-dark.png',
+            desktop: '/img/hero/'+locale.value+'/misskey-dark.png',
+            mobile: '/img/hero/'+locale.value+'/misskey-mobile-dark.png',
         };
     } else {
         return {
-            desktop: '/img/hero/' + heroLocale + '/misskey-light.png',
-            mobile: '/img/hero/' + heroLocale + '/misskey-mobile-light.png',
+            desktop: '/img/hero/'+locale.value+'/misskey-light.png',
+            mobile: '/img/hero/'+locale.value+'/misskey-mobile-light.png',
         };
     }
 });
