@@ -16,7 +16,9 @@ Jangan pernah mengubah nama domain (hostname) instansi peladen ketika kamu sudah
 
 - `docker` dan `dockercompose` terpasang
 
-## Dapatkan repositorinya
+:::
+
+## Mengunduh repositori Misskey
 
 ```sh
 git clone -b master https://github.com/misskey-dev/misskey.git
@@ -24,7 +26,7 @@ cd misskey
 git checkout master
 ```
 
-## Atur
+## Mengatur penyetelan Misskey
 
 Salin berkas konfigurasi dengan menjalankan perintah berikut:
 
@@ -35,7 +37,7 @@ cp ./docker-compose_example.yml ./docker-compose.yml
 ```
 
 Sunting `default.yml` dan `docker.env` sesuai dengan instruksi yang terdapat di dalam berkas.\
-Sunting `docker-compose.yml` bila perlu.(Contoh: Apabila kamu ingin mengganti port peladen).
+Pastikan kembali penyetelan telah benar dan sunting `docker-compose.yml` bila perlu.(Misal: Apabila kamu ingin mengganti port peladen dengan nomor port yang berbeda).
 
 ## Bangun dan inisialisasi
 
@@ -48,7 +50,7 @@ sudo docker compose run --rm web pnpm run init
 
 ## Jalankan
 
-Selamat!Kamu sudah dapat memulai peladen Misskey dengan perintah berikut.
+Selamat!Kamu sudah dapat memulai peladen Misskey dengan menjalankan perintah berikut.
 
 ```sh
 sudo docker compose up -d
@@ -56,11 +58,11 @@ sudo docker compose up -d
 
 GLHF✨
 
-## Bagaimana memutakhirkan peladen Misskey kamu?
+## Panduan memutakhirkan peladen Misskey ke versi terbaru
 
 :::warning
 
-Ketika memutakhirkan, pastikan mengecek [catatan rilisan](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md) untuk mengetahui lebih awal akan perubahan ataupun tambahan pekerjaan yang nantinya dibutuhkan (biasanya tidak perlu).
+Ketika memutakhirkan, pastikan untuk mengecek [catatan rilisan](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md) agar dapat mengetahui lebih awal akan perubahan ataupun tambahan pekerjaan yang nantinya dibutuhkan (biasanya tidak perlu).
 
 :::
 
@@ -74,9 +76,9 @@ sudo docker compose build
 sudo docker compose stop && sudo docker compose up -d
 ```
 
-Perintah tersebut akan memakan waktu sesaat bergantung dengan konten dari pemutakhiran dan ukuran basis data.
+Perintah tersebut di atas akan memakan waktu sesaat bergantung dengan konten dari pemutakhiran dan ukuran basis data.
 
-## Bagaimana cara mengeksekusi perintah CLI?
+## Bagaimana cara mengeksekusi perintah CLI di dalam docker?
 
 ```sh
 sudo docker compose run --rm web node packages/backend/built/tools/foo bar

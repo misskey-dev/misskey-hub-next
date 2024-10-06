@@ -1,5 +1,20 @@
 # Nginxの設定
 
+[nginx](https://nginx.org/)をリバースプロキシとして活用し、Misskeyサーバーを直接インターネットに公開せず運用することをお勧めします。
+これにより、以下のようなメリットが得られます。
+
+- セキュリティ強化：リバースプロキシを通じてアクセスを制御することで、Misskeyサーバーに直接攻撃が及ぶリスクを軽減します。
+- 柔軟な設定：nginxは柔軟な設定オプションを提供しており、リバースプロキシとしての機能だけでなく、キャッシュ[^1]やセキュリティポリシーの設定も行えます。
+
+これらの利点を活かして、Misskeyサーバーをより安全かつ効率的に運用することが可能です。
+また、CloudflareなどのCDNと併せて設定することで、さらなる効果を見込めます。
+
+[^1]: nginxの機能である[proxy_cache_lock](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_lock)と[proxy_cache_use_stale](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_use_stale)を活用することで、キャッシュ未作成の状態で大量アクセスがあってもMisskeyサーバーの負荷増大を抑える効果が期待できます。
+
+## 設定方法の一例
+
+以下はサーバーマシン（VPSなど）に直接nginxをインストールし、認証局として[Let's Encrypt](https://letsencrypt.org/)を採用したケースでの設定例です。
+
 1. `/etc/nginx/conf.d/misskey.conf`もしくは`/etc/nginx/sites-available/misskey.conf`を作成し、下の設定例をコピーします。\
    （ファイル名はmisskeyでなくても構いません。）
 2. 次のように編集します。
@@ -35,8 +50,9 @@ server {
 }
 
 server {
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    http2 on;
     server_name example.tld;
 
     ssl_session_timeout 1d;

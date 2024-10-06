@@ -2,16 +2,56 @@
     <div class="absolute top-0 w-full hidden lg:block">
 		<GDots class="dots dots1" :space="30"/>
 		<GDots class="dots dots2" :space="30"/>
-		<img :src="screenshots.desktop" class="screenshot desktop" alt="screenshot of Misskey in a PC browser">
-		<img :src="screenshots.mobile" class="screenshot mobile" alt="screenshot of Misskey in a mobile browser">
+        <div class="screenshot desktop">
+            <Transition
+                :name="isUwuTransitionEnabled ? 'uwu' : undefined"
+                mode="out-in"
+                class="will-change-transform"
+            >
+                <img :src="screenshots.desktop" :key="`desktop:${screenshotIsUwu ? 'uwu' : 'notUwu'}`" class="w-full h-auto" alt="screenshot of Misskey in a PC browser">
+            </Transition>
+        </div>
+        <div class="screenshot mobile">
+            <Transition
+                :name="isUwuTransitionEnabled ? 'uwu' : undefined"
+                mode="out-in"
+                class="will-change-transform"
+            >
+                <img :src="screenshots.mobile" :key="`mobile:${screenshotIsUwu ? 'uwu' : 'notUwu'}`" class="h-full w-auto" alt="screenshot of Misskey in a mobile browser">
+            </Transition>
+        </div>
 		<img src="/img/hero/ai.png" class="ai" alt="Ai-chan, Misskey's mascott">
     </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
+import { uwu } from '@/assets/js/misc/uwu';
+
+const mounted = ref(false);
+
 const colorMode = useColorMode();
 const { locale, fallbackLocale } = useI18n();
 const screenshots = computed(() => {
+    if (!mounted.value) {
+        return {
+            desktop: '/img/hero/misskey-light.png',
+            mobile: '/img/hero/misskey-mobile-light.png',
+        };
+    }
+
+    if (screenshotIsUwu.value) {
+        if (colorMode.value === 'dark') {
+            return {
+                desktop: '/img/uwu/misskey-uwu-dark.png',
+                mobile: '/img/uwu/misskey-uwu-mobile-dark.png',
+            };
+        } else {
+            return {
+                desktop: '/img/uwu/misskey-uwu-light.png',
+                mobile: '/img/uwu/misskey-uwu-mobile-light.png',
+            };
+        }
+    }
 	let heroLocale = (locale) ? locale.value : fallbackLocale.value;
     if (colorMode.value === 'dark') {
         return {
@@ -25,6 +65,39 @@ const screenshots = computed(() => {
         };
     }
 });
+
+const isUwu = useState<boolean>('miHub_uwu');
+const isUwuTransitionEnabled = ref(false);
+const screenshotIsUwu = ref(false);
+const hasTransitionDone = useState('miHub_hero_transition_done', () => false);
+
+onMounted(() => {
+    if (import.meta.client) {
+        mounted.value = true;
+
+        if (isUwu.value === null) {
+            isUwu.value = uwu();
+        }
+        if (isUwu.value) {
+            if (!hasTransitionDone.value) {
+                // Transitionを有効化
+                isUwuTransitionEnabled.value = true;
+
+                nextTick(() => {
+                    window.setTimeout(() => {
+                        // 本当に画像を変更
+                        screenshotIsUwu.value = true;
+                        hasTransitionDone.value = true;
+                    }, 2000);
+                });
+            } else {
+                // Transitionを動かさずに画像を変更
+                screenshotIsUwu.value = true;
+            }
+        }
+    }
+});
+
 </script>
 
 <style scoped>
@@ -51,7 +124,12 @@ const screenshots = computed(() => {
 }
 
 .screenshot {
-    @apply absolute rounded-lg shadow-lg select-none pointer-events-none;
+    @apply absolute select-none pointer-events-none;
+}
+
+img.screenshot,
+.screenshot img {
+    @apply rounded-lg drop-shadow-lg;
 }
 
 .screenshot.mobile {

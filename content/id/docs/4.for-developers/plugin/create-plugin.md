@@ -1,74 +1,82 @@
-# プラグインの作成
+# Pembuatan Plugin
 
-Misskey Webクライアントのプラグイン機能を使うと、クライアントを拡張し、様々な機能を追加できます。
-このドキュメントではプラグインの作成方法について説明します。
+Fitur plugin dalam klien Misskey Web memperbolehkan kamu untuk memperluas fungsionalitas klien dan menambah fitur lain.
+Dokumen ini akan menjelaskan bagaimana cara membuat plugin Misskey.
 
 ## AiScript
 
-プラグインはAiScriptを使って記述されるスクリプトです。
+Plugin merupakan script yang dituliskan menggunakan bahasa pemrograman AiScript.
 
-## メタデータ
+## Metadata
 
-プラグインは、AiScriptのメタデータ埋め込み機能を使って、デフォルトとしてプラグインのメタデータを定義する必要があります。メタデータの例は以下の通りです。
+Plugin harus mendefinisikan metadata plugin dengan menggunakan bawaan fitur sematan metadata AiScript.Contoh Metadata dapat dilihat pada kode di bawah ini.
 
 ```AiScript
 /// @ 0.12.4
 ### {
   name: "プラグイン名"
   version: "4.2.1"
-  author: "作者名"
-  description: "説明文"
+  author: "Penulis"
+  description: "Deskripsi"
 }
 ```
 
-メタデータは次のプロパティを含むオブジェクトです。
+Metadata merupakan objek yang berisi properti di bawah ini.
 
 ### name
 
-プラグイン名
+Nama Plugin
 
 ### author
 
-プラグイン作者
+Pembuat Plugin
 
 ### version
 
-プラグインバージョン。数値を指定してください。
+Versi Plugin.Mohon tentukan nilai numerik.
 
 ### description
 
-プラグインの説明
+Deskripsi Plugin
 
 ### permissions
 
-プラグインが要求する権限。MisskeyAPIにリクエストする際に用いられます。
+Izin yang dibutuhkan oleh plugin.Digunakan ketika membuat permintaan ke Misskey API.
+
+APIのリクエスト方法については、[AiScript Misskey拡張API リファレンス](/docs/for-developers/plugin/plugin-api-reference/)をご覧ください。
+
+:::tip
+
+permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+
+:::
 
 ### config
 
-プラグインの設定情報を表すオブジェクト。
-キーに設定名、値に以下のプロパティを含めます。
+Objek merepresentasikan informasi konfigurasi plugin.
+`key` merupakan nama konfigurasi dan `value` berisi properti di bawah ini.
 
 #### type
 
-設定値の種類を表す文字列。以下から選択します。
+String yang merepresentasikan tipe dari nilai konfigurasi.Pilih salah satu dari berikut.
 string number boolean
 
 #### label
 
-ユーザーに表示する設定名
+Nama dari konfigurasi yang ditampilkan ke pengguna
 
 #### description
 
-設定の説明
+Deskripsi konfigurasi
 
 #### default
 
-設定のデフォルト値
+Nilai bawaan dari konfigurasi
 
 ## API
 
-Misskey Webはプラグインに対してAPIを公開していて、それらを利用することでクライアントの機能を拡張できます。
-どのようなAPIがあるかは[プラグインAPIリファレンス](./plugin-api-reference/)を参照してください。
+Misskey Web menyediakan API untuk plugin yang mana dapat digunakan dan dimanfaatkan untuk memperluas fungsionalitas dari klien.
+Untuk melihat API yang tersedia, mohon merujuk pada [Referensi API Plugin](./plugin-api-reference/)
 
 ## プラグインを配布する
 

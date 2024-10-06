@@ -4,22 +4,22 @@ description: グローバルタイムラインのノートが流れるチャン�
 
 # `globalTimeline`
 
-グローバルタイムラインのノートが流れるチャンネルです。
+漂流 global timeline 的貼文的頻道。
 
-## パラメータ
+## 參數
 
-なし
+無
 
-## イベント
+## 事件
 
 ### `note`
 
 <MkSchemaViewer :schema="{
- $ref: 'misskey://Note'
+$ref: 'misskey://Note'
 }"/>
 
 グローバルタイムラインに新しいノートが追加されたときに発生します。
 
 ## 操作
 
-なし
+無

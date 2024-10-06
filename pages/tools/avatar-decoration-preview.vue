@@ -104,11 +104,11 @@
 
 <script setup lang='ts'>
 import type * as Misskey from 'misskey-js';
+import type { StyleValue } from 'vue';
 import PlusIco from 'bi/plus-lg.svg';
 import ChevronUpIco from 'bi/chevron-up.svg';
 import ChevronDownIco from 'bi/chevron-down.svg';
 import XIco from 'bi/x-lg.svg';
-import type { HTMLAttributes } from 'nuxt/dist/app/compat/capi';
 
 definePageMeta({
     layout: 'tools',
@@ -121,7 +121,7 @@ const avatar = ref('/img/docs/fukidashi/doya_ai.webp');
 const decorations = ref<(Misskey.entities.User['avatarDecorations'][number] & { overlayTemplate?: boolean; })[]>([
 ]);
 
-function getStyle(decoration: Omit<Misskey.entities.User['avatarDecorations'][number], 'id'>): HTMLAttributes['style'] {
+function getStyle(decoration: Omit<Misskey.entities.User['avatarDecorations'][number], 'id'>): StyleValue {
     const angle = decoration.angle ?? 0;
     const rotate = angle === 0 ? undefined : `${angle * 360}deg`;
     const scaleX = decoration.flipH ? -1 : 1;
@@ -155,7 +155,7 @@ const realDecorations = computed(() => {
 });
 
 function addDecoration() {
-    if (!process.client) return;
+    if (!import.meta.client) return;
 
     function createImage(file: Blob, callback: () => void) {
         const reader = new FileReader();

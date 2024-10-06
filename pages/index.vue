@@ -22,6 +22,17 @@
 </template>
 
 <script setup lang="ts">
+const isUwu = useState<boolean>('isUwu');
+
+useHead(() => ({
+    link: isUwu ? [
+        { rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-light.png' },
+        { rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-dark.png' },
+        { rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-mobile-light.png' },
+        { rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-mobile-dark.png' },
+    ] : [],
+}));
+
 definePageMeta({
     layout: 'landing',
 });

@@ -50,11 +50,12 @@ OSの違い、Misskey本体や依存するソフトウェアのバージョン�
 
 ## 環境と条件
 
-- OSは**Ubuntu 22.04.1 LTS**を利用する。
+- OSは**Ubuntu 22.04 LTS**を利用する。
 - ハードウェア要件としては、CPUは最近のものなら最小限で動く。アーキテクチャはamd64及びarm64を想定している。
-- メモリは1.5GB程度あればよい。（Viteの導入等により、1.5GB程度でもビルド可能になった）
+- メモリは4GB程度あると良い。
+  - （従来Viteの導入により1.5GB程度でもビルド可能と説明していたが、最近またフロントエンドのビルドで要件が厳しくなってきた。）
 - 独自のドメインを購入し、CloudFlareを使用する。
-- ドメインは[Google Domains](https://domains.google/intl/ja_jp/)などで予め用意しておくこと。
+- ドメインは[Cloudflare Registrar](https://www.cloudflare.com/ja-jp/products/registrar/)などで予め用意しておくこと。
 - ここではドメインをexample.tldとして解説を進めるので、自分が買ったドメインに適宜置き換えて読むこと。開発環境の場合はlocalhostと読み替えます（設定ファイルの項で別途説明）
 
 :::danger
@@ -100,11 +101,11 @@ sudo adduser --disabled-password --disabled-login misskey
 Node.jsは、サーバーサイドJavaScript環境であり、Misskeyの基本的な実行環境である。
 
 ```sh
-sudo apt install -y curl
-
-curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-
-sudo apt install -y nodejs
+sudo rm /usr/share/keyrings/nodesource.gpg;
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/nodesource.gpg;
+NODE_MAJOR=20; echo "deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list;
+sudo apt update;
+sudo apt install -y nodejs;
 
 # Node.jsがインストールされたので、バージョンを確認する。
 node -v
@@ -159,19 +160,13 @@ CREATE DATABASE mk1 OWNER misskey;
 
 ### Redis
 
-Redisは、NoSQLのインメモリデータベースソフトであり、データベースや連合との通信を管理するなどのために必要だ。
-redis.ioのドキュメントに従いインストールする。 https\://redis.io/docs/getting-started/installation/install-redis-on-linux/
+Redisは、NoSQLのインメモリデータベースソフトであり、データベースや連合との通信を管理するなどのために必要だ。\
+redis.ioのドキュメントに従い、snapでインストールする。
+
+https\://redis.io/docs/getting-started/installation/install-redis-on-linux/
 
 ```sh
-sudo apt install -y curl ca-certificates gnupg2 lsb-release
-
-curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
-
-echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
-
-sudo apt update
-
-sudo apt install -y redis
+sudo snap install redis
 ```
 
 systemctlでデーモンの状態を確認。
@@ -195,7 +190,7 @@ nginxは、主としてリバースプロキシに用いられるWebサーバー
 nginx.orgのドキュメント http\://nginx.org/en/linux_packages.html#Ubuntu に従ってインストールする。
 
 ```sh
-sudo apt install ubuntu-keyring
+sudo apt install -y curl ca-certificates gnupg2 lsb-release ubuntu-keyring
 
 curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg >/dev/null
 
@@ -417,7 +412,7 @@ redis:
   port: 6379
 
 # 　 IDタイプの設定。
-id: 'aid'
+id: 'aidx'
 
 # 　 syslog
 syslog:
@@ -443,7 +438,7 @@ exit
 sudo nano /etc/nginx/conf.d/misskey.conf
 ```
 
-[Misskey Hub](https://misskey-hub.net/docs/admin/nginx/)の設定例をnanoへコピー＆ペーストし、次の部分を自分のものに書き換える。
+[Misskey Hub](/docs/for-admin/install/resources/nginx/)の設定例をnanoへコピー＆ペーストし、次の部分を自分のものに書き換える。
 
 - 18行目と30行目のドメイン名
 - 34-35行目の証明書へのパスをCertbotで取得したものに (基本的にexample.tldを置き換えるだけでOK)

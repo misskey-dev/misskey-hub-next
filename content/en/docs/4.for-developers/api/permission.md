@@ -1,12 +1,12 @@
 ---
-description: アプリケーションが要求する権限の一覧
+description: Permissions required by the application
 ---
 
-# 権限の一覧
+# List of permissions
 
 :::tip
 
-このページは[misskey-js](https://github.com/misskey-dev/misskey/tree/develop/packages/misskey-js)から自動生成しているため、ドキュメントや翻訳が不完全な場合があります。
+This page is automatically generated from [misskey-js](https://github.com/misskey-dev/misskey/tree/develop/packages/misskey-js), so the documentation and translations may be incomplete.
 
 :::
 

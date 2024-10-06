@@ -1,22 +1,22 @@
 # AiScript
 
-AiScriptは、Misskeyの以下の箇所で使用できるスクリプト言語です。
+AiScript is a scripting language for Misskey that can be used in following features:
 
-- [プラグイン](./plugin/)
-- [ウィジェット](/docs/for-users/features/widgets/)
-  - ボタン
-  - AiScriptコンソール
+- [Plugins](./plugin/create-plugin/)
+- [Widgets](/docs/for-users/features/widgets/)
+  - Button
+  - AiScript console
   - AiScript App
-- Misskey Play
-- スクラッチパッド
+- [Misskey Play](./plugin/create-play/)
+- Scratchpad
 
 :::tip
 
-AiScriptの実装はMisskeyとは別リポジトリで、[オープンソースで公開されています](https://github.com/aiscript-dev/aiscript)。
+The implementation of AiScript is in a separate repository from Misskey and is [open source and available here](https://github.com/aiscript-dev/aiscript).
 
 :::
 
-## 使い方
+## Usage
 
 AiScript標準の構文や組み込み関数などが使用できます。
 
@@ -33,19 +33,19 @@ Misskey本体のバージョンにより、使用できるAiScriptのバージ�
 
 接頭辞: `Mk:`\
 Misskey内の全てのAiScript環境で使用できる定関数群です。
-詳しくは[プラグインAPIリファレンス](./plugin/plugin-api-reference/)の`Mk:`とついた部分を参照して下さい。
+詳しくは[AiScript Misskey拡張API リファレンス](./plugin/plugin-api-reference/)の`Mk:`とついた部分を参照して下さい。
 
 ### プラグインAPI
 
 接頭辞: `Plugin:`\
 [プラグイン](./plugin/)でのみ使用できる定関数群です。
-詳しくは[プラグインAPIリファレンス](./plugin/plugin-api-reference/)の`Plugin:`とついた部分を参照して下さい。
+詳しくは[AiScript Misskey拡張API リファレンス](./plugin/plugin-api-reference/)の`Plugin:`とついた部分を参照して下さい。
 
 ### UI API
 
 接頭辞: `Ui:`\
-[ウィジェット](/docs/for-users/features/widgets/)（AiScript App）、Misskey Play、Scratchpadで使用できます。
-ドキュメントは未整備（TODO）ですが、インターネット上に有志の方が執筆された解説記事があります。
+[ウィジェット](/docs/for-users/features/widgets/)（AiScript App）、[Misskey Play](./plugin/create-play/)、Scratchpadで使用できます。
+詳しくは[AiScript Misskey拡張API リファレンス](./plugin/plugin-api-reference/)の`Ui:`とついた部分を参照して下さい。
 
 ### 標準入出力
 

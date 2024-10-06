@@ -1,139 +1,138 @@
-# ウィジェット
+# Widgets
 
-ウィジェットは、MisskeyのUI上に設置できる小型の情報表示、操作が行えるパーツです。
+Widgets are small displays that can be added to the Misskey UI to show and interact with information.
 
-ウィジェットを編集するには、ウィジェット編集モードに切り替えます。切り替え方法はUIによって異なります。
-ウィジェット編集モードでは、ウィジェットの追加、削除、並び替え、およびそれぞれのウィジェットの設定を行えます。
+To change which widgets are displayed, enter widget editing mode.The way widgets are edited depends on which UI is being used.In widget editing mode, you can add, remove, rearrange, and configure widgets.
 
-## 利用可能なウィジェット一覧
+## List of Widgets
 
-- プロフィール
-- サーバー情報
-- 付箋
-- タイムライン
-- カレンダー
-- RSSリーダー
-- RSSティッカー
-- トレンド
-- 時計
-- アクティビティ
-- フォト
-- デジタル時計
-- UNIX時計
-- 連合
-- サーバークラウド
-- 投稿フォーム
-- スライドショー
-- サーバーメトリクス
-- オンラインユーザー
-- ジョブキュー
-- ボタン
-- AiScriptコンソール
+- Profile
+- Instance Information
+- Sticky notes
+- Timeline
+- Calendar
+- RSS reader
+- RSS-Ticker
+- Trending
+- Clock
+- Activity
+- Photos
+- Digital clock
+- UNIX clock
+- Federation
+- Instance cloud
+- Posting form
+- Slideshow
+- Server metrics
+- Online users
+- Job Queue
+- Button
+- AiScript console
 - AiScript App
-- 藍
-- ユーザーリスト
-- クリッカー
+- Ai
+- User list
+- Clicker
 
-### プロフィール
+### Profile
 
-名前・ユーザー名・アバター画像・バナー画像を表示します。複数アカウントを使用している時に使用しているユーザー名が見やすくなります。
+Displays your username, avatar, and banner.This widget can help you keep track of which account you are using if you have multiple accounts.
 
-### サーバー情報
+### Instance Information
 
-サーバー名・ドメイン・アイコン画像・バナー画像を表示します。
+Displays the instance name, domain, icon, and banner.
 
-### 付箋
+### Sticky notes
 
-テキストを保存しておけます。
+A notepad for saving text.
 
-### タイムライン
+### Timeline
 
-ライムラインを表示します。ホーム・ローカル・ソーシャル・グローバルを切り替え表示できます。
+Shows a timeline.You can switch between the Home, Local, Social, and Global timelines.
 
-### カレンダー
+### Calendar
 
-今日の年月日・曜日、今日・今月・今年をパーセント表示します。デフォルトUIでは最初から表示されています。
+Shows today's date, day of the week, and percentages for the passage of the day, month, and year.In the Default UI, this widget is displayed by default.
 
-### RSSリーダー
+### RSS reader
 
-RSS フィードタイトルを一覧表示します。
+Lists titles from an RSS feed.
 
-### RSSティッカー
+### RSS-Ticker
 
-RSS フィードを順次スクロール表示します。
+Lists titles from an RSS feed in a scrolling ticker format.
 
-### トレンド
+### Trending
 
-最近よく使用されているハッシュタグを表示します。
+Shows the most frequent hashtags.
 
-### 時計
+### Clock
 
-アナログ時計で現在時間を表示します。
+Shows the current time on an analogue clock.
 
-### アクティビティ
+### Activity
 
-稼働状況をドット表示します。
+Shows a dot-style activity graph for the current user.
 
-### フォト
+### Photos
 
-最近のドライブ中身を表示します。
+Shows recent files from the Drive.
 
-### デジタル時計
+### Digital clock
 
-デジタル時計で現在時刻を表示します。
+Shows the current time on a digital clock.
 
-### UNIX時計
+### UNIX clock
 
-UNIX時間で現在時刻を表示します。
+Shows the current time in UNIX format.
 
-### 連合
+### Federation
 
-主に通信している他のサーバーを表示します。
+Shows the most popular remote instances.
 
-### サーバークラウド
+### Instance cloud
 
-他のサーバーを球状に表示します。
+Shows remote instances as a sphere.
 
-### 投稿フォーム
+### Posting form
 
-ノートを投稿するッフォーム を固定表示します。
+Contains the form used to compose notes.
 
-### スライドショー
+### Slideshow
 
-ドライブ内の特定フォルダ内を順次表示します。
+Displays the contents of a Drive folder in sequence.
 
-### サーバーメトリクス
+### Server metrics
 
-サーバのCPU・メモリ・ネット送受・ストレージ容量を表示します。サーバ環境によっては表示できない場合があります。
+Displays the instance's CPU, memory, network traffic, and storage capacity.This may be disabled depending on instance configuration.
 
-### オンラインユーザー
+### Online users
 
-現在オンタイン状態になっているユーザー数表示します。
+Displays the number of users who are online.
 
-### ジョブキュー
+### Job Queue
 
-他サーバーとの送受しているノートなどのキュー状態を表示します。
+Displays the status of the federation job queue.
 
-### ボタン
+### Button
 
-ボタンを表示します。動作は AIScript で記載していきます。
+A button. Executes AiScript.
 
-### AiScriptコンソール
+### AiScript console
 
-AiScript を実行できるコンソールを表示します。
+A console for running AiScript.
 
 ### AiScript App
 
-AIScript ソースを用いてアプリを表示します。Misskey Play と同じ UI を使用できます。v13 より追加されています。
+Displays an app written in AiScript.Uses the same UI as Misskey Play.Added in v13.
 
-### 藍
+### Ai
 
-藍を表示します。カーソルに合わせて視線を変えたりします。
+Shows Ai.Follows your cursor with her gaze.
 
-### ユーザーリスト
+### User list
 
-リストを表示します。もっと！ - リスト で設定できます。
+Shows a list of users.Head to "More!" > "Lists" to set the list.
 
-### クリッカー
+### Clicker
 
-クッキーを表示します。表示されたクッキーをクリック・タップして下さい。
+Shows a cookie.Click/tap the cookie.

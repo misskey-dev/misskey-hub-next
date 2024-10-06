@@ -3,11 +3,11 @@ description: 'MFMは、Misskeyの様々な場所で使用できる専用のマ�
 ---
 
 # MFM
-MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使用できる専用のマークアップ言語です。
+MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使用できる専用のマークアップ言語です。一部の構文はMarkdownやHTMLと互換性があります。
 
 :::tip
 
-一部の構文はMarkdownやHTMLと互換性があります。
+実際にMFMをお試しいただける[MFMお試しコーナー](/tools/mfm-playground/)ができました！
 
 :::
 
@@ -143,14 +143,22 @@ $[ruby Misskey ミスキー]
 
 ### コード(ブロック)
 複数行のプログラムなどのコードをブロックでシンタックスハイライトします。
-```
-~ (#i, 100) {
-	<: ? ((i % 15) = 0) "FizzBuzz"
-		.? ((i % 3) = 0) "Fizz"
-		.? ((i % 5) = 0) "Buzz"
-		. i
+
+プログラミング言語をIDで指定すると、その言語でシンタックスハイライトが適用されます。指定できる言語は次のとおりです：
+
+- [Shikiが対応している言語（200以上）](https://shiki.style/languages)
+- AiScript: `aiscript`, `ais`, `is` のいずれかを指定すると使用できます。
+
+~~~
+```ais
+for (let i, 100) {
+	<: if ((i % 15) == 0) "FizzBuzz"
+		elif ((i % 3) == 0) "Fizz"
+		elif ((i % 5) == 0) "Buzz"
+		else i
 }
 ```
+~~~
 
 ### 反転
 内容を上下または左右に反転させます。

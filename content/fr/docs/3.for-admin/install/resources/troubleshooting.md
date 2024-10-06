@@ -52,7 +52,7 @@ Misskeyのビルドには、経験則上、最低でも2GBのメモリが必要�
 - Misskeyのバージョンアップ時にはしっかり`pnpm install`や`pnpm run migrate`してください。それでも直らない場合、`pnpm run clean-all && pnpm install`を試し、`pnpm run build && pnpm run migrate && pnpm start`してみてください。
 - これでもだめそうだったら、最初から[構築の手引き](../guides/manual/)の手順に従ってやり直してみてください。
 
-***
+---
 
 # 設定
 
@@ -155,7 +155,7 @@ https:
 TLS証明書を別途取得し、取得した証明書のディレクトリを`https:`で設定します。
 ここ書かれているのは、Let's Encryptで`example.tld`に対する証明書を発行したときの例です。
 
-***
+---
 
 ### URL, ポートとTLS証明書の設定（Port and TLS settings）part B: 全体像
 
@@ -183,7 +183,7 @@ https:
   cert: /etc/letsencrypt/live/example.tld/fullchain.pem
 ```
 
-***
+----
 
 # `npm start`やアクセス時によく遭遇するエラー
 
@@ -252,7 +252,7 @@ Amazon S3に互換性のあるオブジェクトストレージであれば利�
 
 Cloudflare を使用している場合は、Rocket LoaderやAuto Minifyが有効になっていないか確認してください。有効になっている場合は無効にすることで解決する場合があります。
 
-***
+---
 
 # まったく解決しなかった場合
 
@@ -261,7 +261,6 @@ Cloudflare を使用している場合は、Rocket LoaderやAuto Minifyが有効
 1. Misskeyのドキュメントをよく読む。
 2. Googleで検索してみる。
 3. [MisskeyリポジトリのIssues](https://github.com/misskey-dev/misskey/issues)を検索してみる（同じエラーに遭遇している場合や、Misskeyのバグの可能性もあります）。
-4. [Misskey Forum](https://forum.misskey.io/)を検索してみる。
-5. 検索してどうしても見つからなかったら、専門家に質問してみてください。
-   1. Forumや[MisskeyのDiscordサーバー](https://discord.gg/P4yYqYBjEp)もしくは[「鯖缶工場」](https://discord.gg/mJJGAHv)で聞いてみる
+4. 検索してどうしても見つからなかったら、専門家に質問してみてください。
+   1. [MisskeyのDiscordサーバー](https://discord.gg/P4yYqYBjEp)などで聞いてみる
    2. 開発者（[aqz](https://p1.a9z.dev/@aqz)やしゅいろ）にリプライやダイレクト投稿を送信して聞いてみる

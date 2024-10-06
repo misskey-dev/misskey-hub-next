@@ -1,6 +1,6 @@
 <template>
     <a :href="src" target="_blank">
-        <div class="p-6 prevroot">
+        <div class="p-6" :class="$style.previewRoot">
             <img :src="src" class="mx-auto w-full max-w-sm" />
         </div>
     </a>
@@ -12,8 +12,8 @@ defineProps<{
 }>();
 </script>
 
-<style scoped>
-.prevroot {
+<style module>
+.previewRoot {
     @apply rounded-lg;
     background: linear-gradient(45deg, #aaa 25%, transparent 25%, transparent 75%, #aaa 75%),
               linear-gradient(45deg, #aaa 25%, transparent 25%, transparent 75%, #aaa 75%);

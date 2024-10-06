@@ -9,6 +9,9 @@ body:
         Thank you for your report! 
         First, in order to avoid duplicate Issues, please search to see if the problem you found has already been reported.
 
+        **IMPORTANT NOTE**: This program is designed to run on the infrastructure used by the Misskey Project and is not intended to be used in other environments. 
+        Failure to work in other environments (e.g., your server or hosting service) is not likely to be addressed.
+
   - type: textarea
     attributes:
       label: 💡 Summary

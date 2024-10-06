@@ -3,11 +3,12 @@
 テーマを設定して、Misskeyクライアントの見た目を変更できます。
 
 ## テーマの設定
-設定 > テーマ
+[設定 > テーマ](x-mi-web://settings/theme)
 
 ## テーマを作成する
 テーマコードはJSON5で記述されたテーマオブジェクトです。
 テーマは以下のようなオブジェクトです。
+
 ```js
 {
 	id: '17587283-dd92-4a2c-a22c-be0637c9e22a',
@@ -50,15 +51,15 @@
 ベーステーマは、このテーマの`base`が`light`なら[_light.json5]で、`dark`なら[_dark.json5]です。
 つまり、このテーマ内の`props`に`panel`というキーが無くても、そこにはベーステーマの`panel`があると見なされます。
 
-[_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
-[_dark.json5]:  https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
+- [_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
+- [_dark.json5]:  https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
 
 #### バリューで使える構文
 * 16進数で表された色
 	* 例: `#00ff00`
 * `rgb(r, g, b)`形式で表された色
 	* 例: `rgb(0, 255, 0)`
-* `rgb(r, g, b, a)`形式で表された透明度を含む色
+* `rgba(r, g, b, a)`形式で表された透明度を含む色
 	* 例: `rgba(0, 255, 0, 0.5)`
 * 他のキーの値の参照
 	* `@{キー名}`と書くと他のキーの値の参照になります。`{キー名}`は参照したいキーの名前に置き換えます。

@@ -13,8 +13,8 @@ export function shouldCollapsed(note: Misskey.entities.Note): boolean {
 		(note.text.includes('$[scale')) ||
 		(note.text.split('\n').length > 9) ||
 		(note.text.length > 500) ||
-		(note.files.length >= 5)
+		(note.files && note.files.length >= 5)
 	);
 
-	return collapsed;
+	return collapsed ?? false;
 }

@@ -1,0 +1,169 @@
+title: "2단계 인증 (2FA, 일회용 비밀번호) 을 설정하는 방법"
+description: "Misskey 계정에 일회용 비밀번호를 설정해 보안을 강화하는 방법을 설명합니다."
+#Do not translate any keys that includes underscore
+_TYPE_: "STEPPED_GUIDE"
+body: |
+  2차 인증을 설정하면 계정 도난 위험을 줄이고 보안을 강화할 수 있습니다. 여기서는 일회용 비밀번호 설정 방법을 소개합니다.
+guides:
+  - 
+    _AUTOSELECT_TYPE_: "HARD_SMARTPHONE"
+    _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
+    title: "스마트폰"
+    steps:
+      - 
+        title: "2차 인증용 앱 다운로드"
+        description: |
+          작업을 시작하기 전에 2차 인증용 일회용 비밀번호를 생성하기 위한 앱을 설치해야 합니다. 아래에 몇 가지를 소개합니다.
+
+          - Google Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) [App Store](https://apps.apple.com/app/google-authenticator/id388497605)
+          - Twilio Authy Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.authy.authy) [App Store](https://itunes.apple.com/app/authy/id494168017)
+          - FreeOTP: [Google Play](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp) [App Store](https://apps.apple.com/app/freeotp-authenticator/id872559395)
+      - 
+        title: "설정 열기"
+        image: "sp/1.png"
+        description: |
+          Misskey 를 열고, 화면 우측 하단의 「≡」버튼을 선택, 나온 메뉴의 「설정」을 선택합니다.
+      - 
+        title: "\"보안\" 탭"
+        image: "sp/2.png"
+        description: |
+          설정 카테고리 안에서 "보안" 탭을 찾아 선택합니다.
+      - 
+        title: "이어 \"인증 앱 설정 시작하기\"를 선택합니다."
+        image: "sp/3.png"
+        description: |
+          "2단계 인증" 안에 있는 "인증 앱"에서 "인증 앱 설정 시작"을 누릅니다.
+      - 
+        title: "비밀번호를 입력하세요"
+        image: "sp/4.png"
+        description: |
+          보안 관련 설정을 위한 확인 절차로, 사용 중인 계정에 로그인할 때 사용하고 있는 비밀번호를 입력합니다.
+      - 
+        title: "인증 앱 설정 시작"
+        image: "sp/8.png"
+        description: |
+          2단계 인증 앱을 설정하기 위한 코드가 생성됩니다. 다음 중 한 가지 방법으로 설정해 주세요.
+
+          ### 지금 사용 중인 단말기에서 2단계 인증 앱을 설정하는 경우
+
+          '앱 실행' 버튼을 누릅니다. 이 버튼이 없는 경우 **QR코드를 누르면 앱이 실행됩니다. **
+
+          :::tip
+
+          앱이 실행되지 않는 경우, 2단계 인증용 앱이 제대로 설치되었는지 확인해주세요.
+
+          :::
+
+          ### 다른 단말기에 설치된 2단계 인증 앱을 설정하는 경우
+
+          2단계 인증 앱을 열고, 앱의 안내에 따라 일회용 비밀번호를 새로 등록합니다. 이때 화면에 표시되는 QR코드를 스캔해 주세요.
+      - 
+        title: "인증 앱에서 생성된 코드 복사하기"
+        image: "sp/9.png"
+        description: |
+          이후 Misskey 측 설정에서 인증 앱이 올바르게 설정되었는지 확인하기 위해 앱에서 생성된 일회용 비밀번호를 입력하는 절차가 있습니다.
+
+          앱의 안내에 따라 일회용 비밀번호를 기억하거나 복사해 두어야 합니다.
+
+          :::warning
+
+          일회용 비밀번호는 즉시(약 30초) 만료됩니다. 주의하시기 바랍니다.
+
+          :::
+      - 
+        title: "일회용 비밀번호 입력하기"
+        image: "sp/6.png"
+        description: |
+          앞서 입력한 일회용 비밀번호를 입력하고 '계속'을 누릅니다.
+      - 
+        title: "백업 코드 다운로드하기"
+        image: "sp/7.png"
+        description: |
+          **2단계 인증 설정이 완료되었습니다. **
+
+          마지막으로 2단계 인증을 사용할 수 없게 되었을 때 사용할 수 있는 '백업 코드'도 생성되므로 반드시 다운로드 후 종료하시기 바랍니다.
+
+          :::warning
+
+          백업 코드는 일회용 비밀번호를 사용할 수 없게 되었을 때 계정에 로그인할 수 있는 복구 기능입니다.
+
+          이 코드가 없으면 계정에 로그인할 수 없으므로 반드시 다운로드하여 안전한 곳에 보관하시기 바랍니다.
+
+          이 코드는 이후 다시는 나타나지 않습니다.
+
+          :::
+  - 
+    _AUTOSELECT_TYPE_: "HARD_PC"
+    title: "PC"
+    steps:
+      - 
+        title: "2차 인증용 앱 다운로드"
+        description: |
+          작업을 시작하기 전에 2단계 인증을 위한 일회용 비밀번호를 생성할 수 있는 앱을 스마트폰 등에 설치해야 한다. 다음은 그 예시입니다:
+
+          - Google Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) [App Store]( https://apps.apple.com/app/google-authenticator/id388497605)
+          - FreeOTP: [Google Play](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp) [App Store](https://apps.apple.com/app /freeotp-authenticator/id872559395)
+
+          :::tip
+
+          PC용 일회용 비밀번호 생성 프로그램도 있지만, 휴대성 측면에서 스마트폰용 앱을 추천합니다.
+
+          :::
+      - 
+        title: "설정 열기"
+        image: "pc/8.png"
+        description: |
+          '설정' → '보안'으로 이동하여 '2단계 인증' 중 '인증 앱'에서 '인증 앱 설정 시작'을 누릅니다.
+      - 
+        title: "비밀번호 입력"
+        image: "pc/3.png"
+        description: |
+          보안과 관련된 설정이므로 확인을 위해 계정에 로그인할 때 사용하는 비밀번호를 입력합니다.
+      - 
+        title: "인증 앱 설정 시작하기"
+        image: "pc/7.png"
+        description: |
+          2단계 인증 앱을 설정하기 위한 코드가 생성됩니다. 다음 중 한 가지 방법으로 설정해 주세요.
+
+          ### 스마트폰 2단계 인증 앱으로 설정하는 경우 (권장)
+
+          스마트폰에서 2단계 인증 앱을 열고 앱의 안내에 따라 일회용 비밀번호를 새로 등록합니다. 이때 화면에 표시되는 QR코드를 스캔해 주세요.
+
+          ### PC에서 2단계 인증 앱을 사용하는 경우
+
+          '앱 실행' 버튼을 누릅니다. 이 버튼이 없는 경우, QR코드를 누르면 앱이 실행됩니다.
+      - 
+        title: "인증 앱에서 생성된 코드 복사하기"
+        image: "sp/9.png"
+        description: |
+          이후 Misskey 측 설정에서 인증 앱이 올바르게 설정되었는지 확인하기 위해 앱에서 생성된 일회용 비밀번호를 입력하는 절차가 있습니다.
+
+          앱의 안내에 따라 일회용 비밀번호를 기억하거나 복사해 두어야 합니다.
+
+          :::warning
+
+          일회용 비밀번호는 즉시(약 30초) 만료됩니다. 주의하시기 바랍니다.
+
+          :::
+      - 
+        title: "일회용 비밀번호 입력하기"
+        image: "pc/5.png"
+        description: |
+          앞서 입력한 일회용 비밀번호를 입력하고 '계속'을 누릅니다.
+      - 
+        title: "백업 코드 다운로드하기"
+        image: "pc/6.png"
+        description: |
+          **2단계 인증 설정이 완료되었습니다. **
+
+          마지막으로 2단계 인증을 사용할 수 없게 되었을 때 사용할 수 있는 '백업 코드'도 생성되므로 반드시 다운로드 후 종료하시기 바랍니다.
+
+          :::warning
+
+          백업 코드는 일회용 비밀번호를 사용할 수 없게 되었을 때 계정에 로그인할 수 있는 복구 기능입니다.
+
+          이 코드가 없으면 계정에 로그인할 수 없으므로 반드시 다운로드하여 안전한 곳에 보관하시기 바랍니다.
+
+          이 코드는 이후 다시는 나타나지 않습니다.
+
+          ::::: :::

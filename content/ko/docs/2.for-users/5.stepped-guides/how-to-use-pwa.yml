@@ -1,0 +1,79 @@
+title: "Misskey Web을 앱으로 활용하는 방법"
+description: "Misskey Web을 PWA 앱으로 만드는 방법을 소개합니다. 스마트폰에서 Misskey를 이용할 때 추천하는 방법입니다."
+#Do not translate any keys that includes underscore
+_TYPE_: "STEPPED_GUIDE"
+body: |
+  여기서는 Misskey Web을 PWA 앱으로 만드는 방법을 소개합니다. 스마트폰에서 Misskey를 이용할 때 추천하는 방법입니다.
+
+  ## PWA란?
+
+  PWA는 Progressive Web App의 약자로, 웹 페이지를 앱처럼 취급할 수 있는 기술로 Misskey는 표준으로 PWA를 지원합니다.
+
+  여기서는 PWA 설정 방법을 단말기 OS별로 소개하고 있습니다. 아래에서 사용 중인 OS를 선택해 진행해주세요!
+guides:
+  - 
+    _AUTOSELECT_TYPE_: "OS_ANDROID"
+    _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
+    title: "안드로이드 (구글 크롬)"
+    description: |
+      안드로이드에서 PWA를 사용하려면 구글 크롬을 추천합니다.
+
+      여기서는 구글 크롬을 이용한 설정 방법에 대해 설명합니다.
+    steps:
+      - 
+        title: "PWA로 만들고 싶은 Misskey 서버를 엽니다."
+        image: "android/sp_0.png"
+        description: |
+          PWA로 단말기에 설치하고자 하는 Misskey 서버에 접속하여 로그인합니다.
+      - 
+        title: "상세 설정 메뉴 열기"
+        image: "android/sp_1.png"
+        description: |
+          Misskey 서버의 아무 페이지나 열어둔 상태에서 오른쪽 상단에 있는 '︙' 버튼을 누릅니다.
+      - 
+        title: "'홈 화면에 추가' 또는 '앱 설치'를 누릅니다."
+        image: "android/sp_2.png"
+        description: |
+          메뉴 내 '홈 화면에 추가' 또는 '앱 설치' 항목을 누르고 나오는 대화창의 지시를 따릅니다.
+      - 
+        title: "홈 화면 확인하기"
+        image: "android/sp_3.png"
+        description: |
+          잠시 후 홈 화면에 서버 아이콘 또는 Misskey 아이콘이 추가됩니다.
+
+          이 아이콘을 누르면 Misskey가 앱 모드로 실행됩니다.
+  - 
+    _AUTOSELECT_TYPE_: "OS_IOS"
+    _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
+    title: "iOS / iPadOS"
+    description: |
+      iOS 또는 iPadOS에서 PWA를 사용하려면 Safari를 사용하십시오.
+
+      시작하기 전, 사용 중인 단말기의 OS가 최신 버전인지 확인하시기 바랍니다. 최신 버전이 아닌 경우 [여기](https://support.apple.com/ja-jp/ios/update)를 참고하여 업데이트하시기 바랍니다.
+    steps:
+      - 
+        title: "PWA로 만들고 싶은 Misskey 서버 열기"
+        image: "ios/sp_0.png"
+        description: |
+          PWA로 단말기에 설치하고자 하는 Misskey 서버에 접속하여 로그인합니다.
+      - 
+        title: "공유 버튼을 눌러 열기"
+        image: "ios/sp_1.png"
+        description: |
+          Misskey 서버의 아무 페이지나 열어둔 상태에서 메뉴바의 공유 버튼을 누릅니다.
+      - 
+        title: "'홈 화면에 추가'를 누릅니다."
+        image: "ios/sp_2.png"
+        description: |
+          옵션 목록을 아래로 스크롤하여 '홈 화면에 추가'를 탭합니다.
+
+          이후 알림 전송 권한을 요청할 수 있으므로 화면의 지시에 따라 필요에 따라 허용해 주세요.
+
+          '홈 화면에 추가'가 표시되지 않으면 설정 항목이 숨겨져 있을 수 있습니다. 표시하려면 목록의 맨 아래로 스크롤하여 '동작 편집'에서 '홈 화면에 추가' 항목을 추가하십시오. 자세한 내용은 [Apple 지원 페이지](https://support.apple.com/ja-jp/guide/iphone/iph42ab2f3a7/ios)를 참고하세요.
+      - 
+        title: "홈 화면 확인하기"
+        image: "ios/sp_3.png"
+        description: |
+          잠시 후 홈 화면에 서버 아이콘 또는 Misskey 아이콘이 추가됩니다.
+
+          이 아이콘을 누르면 Misskey가 앱 모드로 실행됩니다.

@@ -4,42 +4,42 @@ description: 基本的な情報が流れるチャンネルです。
 
 # `main`
 
-基本的な情報が流れるチャンネルです。
+这是一个提供基本信息的频道。
 
-## パラメータ
+## 参数
 
-なし
+无
 
-## イベント
+## 事件
 
 ### `notification`
 
 <MkSchemaViewer :schema="{
- $ref: 'misskey://Notification'
+$ref: 'misskey://Notification'
 }"/>
 
-通知を受け取ったときに発生します。
+收到通知时触发。
 
 ### `mention`
 
 <MkSchemaViewer :schema="{
- $ref: 'misskey://Note'
+$ref: 'misskey://Note'
 }"/>
 
-メンションされたときに発生します。
+当有人提到你时触发。
 
 ### `reply`
 
 <MkSchemaViewer :schema="{
- $ref: 'misskey://Note'
+$ref: 'misskey://Note'
 }"/>
 
-返信されたときに発生します。
+收到回复时触发。
 
 ### `renote`
 
 <MkSchemaViewer :schema="{
- $ref: 'misskey://Note'
+$ref: 'misskey://Note'
 }"/>
 
 Renoteされたときに発生します。
@@ -47,7 +47,7 @@ Renoteされたときに発生します。
 ### `follow`
 
 <MkSchemaViewer :schema="{
- $ref: 'misskey://User'
+$ref: 'misskey://User'
 }"/>
 
 自分が他のユーザーをフォローしたときに発生します。
@@ -55,7 +55,7 @@ Renoteされたときに発生します。
 ### `followed`
 
 <MkSchemaViewer :schema="{
- $ref: 'misskey://User'
+$ref: 'misskey://User'
 }"/>
 
 他のユーザーが自分をフォローしたときに発生します。
@@ -63,7 +63,7 @@ Renoteされたときに発生します。
 ### `unfollow`
 
 <MkSchemaViewer :schema="{
- $ref: 'misskey://User'
+$ref: 'misskey://User'
 }"/>
 
 自分が他のユーザーをフォロー解除したときに発生します。
@@ -71,7 +71,7 @@ Renoteされたときに発生します。
 ### `messagingMessage`
 
 <MkSchemaViewer :schema="{
- $ref: 'misskey://MessagingMessage'
+$ref: 'misskey://MessagingMessage'
 }"/>
 
 メッセージを受け取ったときに発生します。

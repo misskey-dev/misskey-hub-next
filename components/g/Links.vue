@@ -11,7 +11,7 @@
 	    	<h3 class="font-bold !text-lg !mt-0 !mb-2">
 	    		{{ item.title }}<ArrowRightIco v-if="isLocalPath(item.to)" class="ml-1.5" /><ArrowUpRightIco v-else class="ml-1.5" />
 	    	</h3>
-	    	<p class="text-sm text-slate-500 dark:text-slate-400 !mb-0 truncate-box">
+	    	<p class="text-sm text-slate-500 dark:text-slate-400 !mb-0 line-clamp-2">
 	    		{{ item.description ?? "" }}
 	    	</p>
 	    </GNuxtLink>
@@ -38,14 +38,3 @@ withDefaults(defineProps<{
 });
 
 </script>
-
-<style scoped>
-.truncate-box {
-	-webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    word-break: break-all;
-    display: -webkit-box;
-}
-</style>

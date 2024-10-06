@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import type { TocLink } from '@nuxt/content/dist/runtime/types';
+import type { TocLink } from '@nuxt/content';
 
 const props = withDefaults(defineProps<{
     links?: TocLink[];
@@ -36,7 +36,7 @@ const emit = defineEmits(['move', 'child-click']);
 
 const { activeHeadings, updateHeadings } = useScrollspy();
 
-if (process.client) {
+if (import.meta.client) {
     setTimeout(() => {
         updateHeadings([
             ...document.querySelectorAll('.markdown-body h1'),
@@ -48,7 +48,7 @@ if (process.client) {
 }
 
 function scrollToHeading (id: string) {
-    if (process.client) {
+    if (import.meta.client) {
         if (!decodeURIComponent(location.href).includes(`#${id}`)) {
             // ページ遷移させずにハッシュだけ置き換えるために、history APIに直接書き込み
             history.pushState({}, '', `#${id}`);

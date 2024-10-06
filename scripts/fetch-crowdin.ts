@@ -33,6 +33,11 @@ type CrowdinProjectMember = {
     timezone: string;
 };
 
+function fallback(sourceFilePath: string, tsOut: string[]) {
+    tsOut.push('export const hubI18nMembers: PartialRecord<LocaleCodes, MiHubMember[]> = {};');
+    writeFileSync(sourceFilePath, tsOut.join('\n'));
+}
+
 //@ts-ignore
 export async function fetchCrowdinMembers() {
     const sourceFilePath = path.resolve(__dirname, '../assets/data/i18n-members.ts');
@@ -44,45 +49,52 @@ export async function fetchCrowdinMembers() {
     ];
 
     if (!process.env.CROWDIN_INTG_API) {
-        tsOut.push('export const hubI18nMembers: PartialRecord<LocaleCodes, MiHubMember[]> = {};');
-        writeFileSync(sourceFilePath, tsOut.join('\n'));    
+        fallback(sourceFilePath, tsOut);
         return;
     }
+    try {
+        const res = await fetch('https://api.crowdin.com/api/v2/projects/628502', {
+            headers: {
+                'Authorization': `Bearer ${process.env.CROWDIN_INTG_API}`,
+            },
+        });
+        const projectRes = await res.json();
+        const out: PartialRecord<LocaleCodes, any[]> = {};
 
-    const res = await fetch('https://api.crowdin.com/api/v2/projects/628502', {
-        headers: {
-            'Authorization': `Bearer ${process.env.CROWDIN_INTG_API}`,
-        },
-    });
-    const projectRes = await res.json();
-    const out: PartialRecord<LocaleCodes, any[]> = {};
-
-    for (let i = 0; i < projectRes.data.targetLanguages.length; i++) {
-        const lang = projectRes.data.targetLanguages[i] as CrowdinTargetLanguages;
-        const correspondLocaleObject = localesConst.find((v) => v.iso === lang.locale);
-        if (correspondLocaleObject !== undefined) {
-            const res = await fetch(withQuery('https://api.crowdin.com/api/v2/projects/628502/members', {
-                role: 'translator',
-                languageId: lang.id,
-                limit: 24,
-            }), {
-                headers: {
-                    'Authorization': `Bearer ${process.env.CROWDIN_INTG_API}`,
-                },
-            });
-            const membersRes = await res.json();
-            out[correspondLocaleObject.code] = (membersRes.data as { data: CrowdinProjectMember }[]).map((v) => ({
-                id: 'crowdin',
-                username: v.data.username,
-                name: v.data.fullName ? v.data.fullName : undefined,
-                avatar: v.data.avatarUrl ? v.data.avatarUrl : undefined, 
-            }));  
+        for (let i = 0; i < projectRes.data.targetLanguages.length; i++) {
+            const lang = projectRes.data.targetLanguages[i] as CrowdinTargetLanguages;
+            const correspondLocaleObject = localesConst.find((v) => v.language === lang.locale);
+            if (correspondLocaleObject !== undefined) {
+                try {
+                    const res = await fetch(withQuery('https://api.crowdin.com/api/v2/projects/628502/members', {
+                        role: 'translator',
+                        languageId: lang.id,
+                        limit: 24,
+                    }), {
+                        headers: {
+                            'Authorization': `Bearer ${process.env.CROWDIN_INTG_API}`,
+                        },
+                    });
+                    const membersRes = await res.json();
+                    out[correspondLocaleObject.code] = (membersRes.data as { data: CrowdinProjectMember }[]).map((v) => ({
+                        id: 'crowdin',
+                        username: v.data.username,
+                        name: v.data.fullName ? v.data.fullName : undefined,
+                        avatar: v.data.avatarUrl ? v.data.avatarUrl : undefined,
+                    }));
+                } catch (error) {
+                    fallback(sourceFilePath, tsOut);
+                    return;
+                }
+            }
         }
 
+        tsOut.push(`export const hubI18nMembers: PartialRecord<LocaleCodes, MiHubMember[]> = ${JSON.stringify(out)};`);
+        writeFileSync(sourceFilePath, tsOut.join('\n'));
+
+        console.log('Crowdin (Misskey Hub) 貢献者の取得完了');
+    } catch (error) {
+        fallback(sourceFilePath, tsOut);
+        return;
     }
-
-    tsOut.push(`export const hubI18nMembers: PartialRecord<LocaleCodes, MiHubMember[]> = ${JSON.stringify(out)};`);
-    writeFileSync(sourceFilePath, tsOut.join('\n'));
-
-    console.log('Crowdin (Misskey Hub) 貢献者の取得完了');
 }

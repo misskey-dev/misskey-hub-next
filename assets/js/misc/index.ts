@@ -1,4 +1,4 @@
-import type { NavItem } from '@nuxt/content/dist/runtime/types';
+import type { NavItem } from '@nuxt/content';
 import type { LocaleObject } from '@nuxtjs/i18n';
 import { parseURL } from 'ufo';
 
@@ -78,7 +78,7 @@ export const findDeepObject = (obj: NavItem, condition: (v: NavItem) => boolean)
  * Clipboardに値をコピー(TODO: 文字列以外も対応)
  */
 export function copyText(val: string) {
-    if (!process.client) return;
+    if (!import.meta.client) return;
 
 	// 空div 生成
 	const tmp = document.createElement('div');

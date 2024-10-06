@@ -7,7 +7,7 @@
         ]"
     >
         <aside
-            class="fixed z-50 transition-transform -mx-6 w-full bg-slate-200 dark:bg-slate-800 bottom-0 rounded-t-xl lg:translate-y-0 lg:shadow-none lg:bg-transparent dark:lg:bg-transparent lg:mx-0 lg:relative"
+            class="fixed z-50 transition-transform -mx-6 w-full lg:w-[calc(100%+3rem)] bg-slate-200 dark:bg-slate-800 bottom-0 rounded-t-xl lg:translate-y-0 lg:shadow-none lg:bg-transparent dark:lg:bg-transparent lg:relative"
             :class="sortOpen ? 'translate-y-0' : 'translate-y-[calc(100%-3rem)]'"
         >
             <button
@@ -17,7 +17,7 @@
             >
                 {{ $t('_servers._search.title') }}
             </button>
-            <div class="lg:sticky lg:top-24 lg:overflow-y-auto lg:max-h-[calc(100vh-6rem)] p-6 lg:px-0 lg:py-2 space-y-4">
+            <div class="lg:sticky lg:top-24 lg:overflow-y-auto lg:max-h-[calc(100vh-6rem)] p-6 lg:py-2 space-y-4">
                 <div class="flex items-center">
                     <h3 class="text-xl font-bold">{{ $t('_servers._search.title') }}</h3>
                     <button @click="sortOpen = false" class="ml-auto w-8 h-8 p-0.5 rounded-full bg-slate-100 dark:bg-slate-900 lg:hidden">
@@ -37,7 +37,7 @@
                     <label class="form-label" for="languages">{{ $t('_servers._search.lang') }}</label>
                     <select id="languages" v-model="f_langs" class="form-select">
                         <option :value="null">{{ $t('_servers._search.all') }}</option>
-                        <option v-for="lang in langs" :value="lang.lang">{{ lang.label }}</option>
+                        <option v-for="langName, langCode in langs" :value="langCode">{{ langCode }} {{ langName != '' ? `(${langName})` : '' }}</option>
                     </select>
                 </div>
                 <div>
@@ -99,19 +99,19 @@
                     v-else-if="data"
                     class="rounded-lg p-6 min-h-[40vh] flex items-center bg-slate-100 dark:bg-slate-800"
                     :class="[
-                        (v_view === 'grid') && 'sm:col-span-2 md:col-span-2 lg:col-span-2'
+                        (v_view === 'grid') && 'sm:col-span-2 xl:col-span-3 2xl:col-span-4 3xl:col-span-5'
                     ]"
                 >
                     <div class="mx-auto text-center">
                         <img src="https://xn--931a.moe/assets/info.jpg" class="rounded-lg mx-auto mb-4" />
-                        <p class="max-w-xs">{{ $t('_servers._list.notFound') }}</p>
+                        <p class="max-w-xs" style="word-break: auto-phrase;">{{ $t('_servers._list.notFound') }}</p>
                     </div>
                 </div>
                 <div
                     v-else
                     class="rounded-lg p-6 min-h-[40vh] flex items-center bg-slate-100 dark:bg-slate-800"
                     :class="[
-                        (v_view === 'grid') && 'sm:col-span-2 md:col-span-2 lg:col-span-2'
+                        (v_view === 'grid') && 'sm:col-span-2 xl:col-span-3 2xl:col-span-4 3xl:col-span-5'
                     ]"
                 >
                     <div class="mx-auto text-center">
@@ -136,7 +136,6 @@
 <script setup lang="ts">
 import type { InstanceInfo, InstanceItem, InstancesStatsObj } from '@/types/instances-info';
 import { resolveObjPath, kanaHalfToFull } from '@/assets/js/misc';
-import langs from '@/assets/data/lang';
 
 import SearchIco from 'bi/search.svg';
 import SortUpIco from 'bi/sort-down-alt.svg';
@@ -148,8 +147,10 @@ import ListIco from 'bi/view-stacked.svg';
 
 const { t, locale } = useI18n();
 const route = useRoute();
+const runtimeConfig = useRuntimeConfig();
+
 const emits = defineEmits<{
-    (e: 'load', value?: InstancesStatsObj): void;
+    (e: 'load', value?: InstancesStatsObj, updatedAt?: string): void;
 }>();
 
 // ▼スマホ用ソート▼
@@ -166,9 +167,12 @@ type MiHubSFStorage = {
 };
 
 let savedSettings: MiHubSFStorage | null = null;
-if (process.client) {
+if (import.meta.client) {
     savedSettings = JSON.parse(window.localStorage.getItem('miHub_server_finder') ?? 'null') as MiHubSFStorage | null;
 }
+
+// 言語フィルタはAPIの取得後に初期化するため、watcherがそれまでは動かないようにする
+let f_langs_initialized = (savedSettings?.f_langs !== null);
 
 const f_query_partial = ref<string>("");
 
@@ -188,14 +192,14 @@ watch([f_langs, f_orderBy, f_order, f_registerAcceptance, v_view], (to, from) =>
     f_limit.value = 60;
 
     const newSettings: MiHubSFStorage = {
-        f_langs: to[0],
+        f_langs: f_langs_initialized ? to[0] : from[0],
         f_orderBy: to[1],
         f_order: to[2],
         f_registerAcceptance: to[3],
         v_view: to[4],
     };
 
-    if (process.client) {
+    if (import.meta.client) {
         window.localStorage.setItem('miHub_server_finder', JSON.stringify(newSettings));
     }
 });
@@ -204,34 +208,61 @@ watch([f_langs, f_orderBy, f_order, f_registerAcceptance, v_view], (to, from) =>
 route.meta.title = t('_servers.title');
 route.meta.description = t('_servers.description');
 
-const { data } = await useFetch<InstanceInfo>('https://instanceapp.misskey.page/instances.json', {
-    onRequestError: () => {
-        alert(t('_servers._system.fetchError'));
-    }
-});
-
-if (data.value?.stats.usersCount) {
-    emits('load', {
-        notesCount: data.value.stats.notesCount,
-        usersCount: data.value.stats.usersCount,
-        instancesCount: data.value.stats.instancesCount,
-    });
+// ▼API取得処理▼
+function onRequestError() {
+    alert(t('_servers._system.fetchError'));
 }
 
-watch(data, (to) => {
+const { data } = await useGAsyncData<[InstanceInfo | null, Record<string, string> | null]>('serverInfo', () => Promise.allSettled([
+    $fetch<InstanceInfo>(`${runtimeConfig.public.serverListApiBaseUrl}/instances.json`),
+    $fetch<Record<string, string>>(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/langs.json`),
+]).then(([instances, langs]) => {
+    if (instances.status !== 'fulfilled') {
+        onRequestError();
+        return [null, langs.status === 'fulfilled' ? langs.value : null];
+    }
+
+    return [
+        instances.status === 'fulfilled' ? instances.value : null,
+        langs.status === 'fulfilled' ? langs.value : null,
+    ];
+}));
+
+const instanceInfo = computed(() => data.value?.[0]);
+const langs = computed(() => data.value?.[1] ?? {});
+// ▲API取得処理▲
+
+// ▼言語フィルタ初期化処理▼
+if (f_langs.value === null && instanceInfo.value && instanceInfo.value.langs.includes(locale.value)) {
+    f_langs.value = locale.value;
+}
+f_langs_initialized = true;
+// ▲言語フィルタ初期化処理▲
+
+// ▼ページ側統計データ伝達▼
+if (instanceInfo.value?.stats.usersCount) {
+    emits('load', {
+        notesCount: instanceInfo.value.stats.notesCount,
+        usersCount: instanceInfo.value.stats.usersCount,
+        instancesCount: instanceInfo.value.stats.instancesCount,
+    }, instanceInfo.value.date);
+}
+
+watch(instanceInfo, (to) => {
     if (to?.stats.usersCount) {
         emits('load', {
             notesCount: to.stats.notesCount,
             usersCount: to.stats.usersCount,
             instancesCount: to.stats.instancesCount,
-        });
+        }, to.date);
     }
 }, {
     deep: true,
 });
+// ▲ページ側統計データ伝達▲
 
 const filteredInstances = computed<InstanceItem[]>(() => {
-    let instances = data.value?.instancesInfos ?? [];
+    let instances = instanceInfo.value?.instancesInfos ?? [];
 
     if (instances.length === 0) {
         return [];

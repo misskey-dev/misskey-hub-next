@@ -24,6 +24,11 @@ export default <NavSection[]>[
                 description: "_shareLinkGenerator.description",
                 to: "/tools/share-link-generator/",
             },
+            {
+                i18n: '_identiconGenerator.title',
+                description: '_identiconGenerator.description',
+                to: '/tools/identicon-generator/',
+            },
         ],
     },
     {
@@ -33,6 +38,11 @@ export default <NavSection[]>[
                 i18n: "_aidConverter.title",
                 description: "_aidConverter.description",
                 to: "/tools/aid-converter/",
+            },
+            {
+                i18n: "_miHubServerListPreview.title",
+                description: "_miHubServerListPreview.description",
+                to: "/tools/hub-servers-preview/",
             },
         ],
     }

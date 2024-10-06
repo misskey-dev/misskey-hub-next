@@ -2,21 +2,31 @@ noScript: "Javascript sembra essere disabilitato. Per visualizzare il sito è ne
 learnMore: "Per saperne di più"
 loading: "Caricamento"
 clickToExpand: "Clicca per espandere"
-copy: "コピー"
-share: "共有する"
-note: "ノート"
-other: "その他"
-add: "追加"
-browse: "参照"
-settings: "設定"
-goToLegacyHub: "従来のMisskey Hub"
+copy: "Copia"
+share: "Condividi"
+note: "Nota"
+other: "Altri"
+add: "Aggiungi"
+generate: "Genera"
+download: "Scarica"
+browse: "Sfoglia"
+settings: "Impostazioni"
+goToLegacyHub: "Versione precedente"
+contactUs: "Contattaci"
+detail: "Dettagli"
+lastUpdate: "Ultimo aggiornamento"
+empty: "Vuoto"
+threeDimensionModel: "Modello 3D"
+clickToShow: "Clicca per vedere"
+preview: "Anteprima"
+scrollable: "Puoi scorrere"
 _error:
-  notFound: "ページが見つかりませんでした"
-  notFoundDesc: "お探しのページは見つかりませんでした。URLをお確かめください。"
-  generalError: "エラーが発生しました"
-  generalErrorDesc: "これが意図した操作でない場合は、以下から不具合報告をお願いします。"
-  reportProblem: "問題を報告する"
-  goToTop: "トップページにもどる"
+  notFound: "Pagina non trovata"
+  notFoundDesc: "La pagina che hai richiesto non è stata trovata. Per favore controlla l'indirizzo URL."
+  generalError: "Si è verificato un errore"
+  generalErrorDesc: "Se questo non è ciò che volevi, segnala un bug di seguito."
+  reportProblem: "Segnala un problema"
+  goToTop: "Torna in cima alla pagina"
 _seo:
   siteName: "Misskey Hub"
   siteNameLong: "Misskey Hub – Sito ufficiale del progetto Misskey"
@@ -48,33 +58,33 @@ _landing:
   _decenterized:
     title: "Misskey è {0}"
     decenterizedPlatform: "una piattaforma decentralizzata"
-    description: "Misskeyはフリーかつオープンなプロジェクトで、誰でも自由にMisskeyを使ったサーバーを作成できるため、既に様々なサーバーがインターネット上に公開されています。また重要な特徴として、Misskeyは{0}と呼ばれる分散通信プロトコルを実装しているので、どのサーバーを選んでも他のサーバーのユーザーとやりとりすることができます。これが分散型と言われる所以で、単一の運営者によって単一のURLで公開されるような、Twitterなどの他サービスとは根本的に異なっています。サーバーによって主な話題のテーマやユーザー層、言語などは異なり、自分にあったサーバーを探すのも楽しみのひとつです(もちろん自分のサーバーを作るのも一興です)。"
+    description: "Misskey è un progetto opensource di software libero, chiunque può creare un social network utilizzando Misskey, per questo motivo se ne trovano già altri pubblicati su Internet. Tra le caratteristiche più importanti c'è che Misskey implementa un protocollo di comunicazione decentralizzato chiamato {0}, quindi, indipendentemente dal server che scegli, puoi interagire con altre persone iscritte su altri server. Per questo motivo è decentralizzato ed è completamente diverso da altri servizi come Twitter, che appartengono ad un unica azienda commerciale. Gli argomenti, le comunità, il linguaggio, ecc. cambiano a seconda del server e trovare un server adatto a te fa parte del divertimento (ovviamente, anche creare il proprio server è divertente)."
     activityPub: "ActivityPub"
   _features:
     _root:
       title: "Caratteristiche principali"
-      description: "Misskeyは一般的なものから特別なものまで、様々な機能を持っています。その一部を紹介します。"
+      description: "Misskey ha una grande varietà di funzioni, alcune simili ad altri software, altre esclusive. Te ne presentiamo qualcuna..."
     _note:
       title: "Note"
-      description: "Misskeyでは、ユーザーの投稿は「ノート」と呼ばれます。他のノートを引用したり、画像、動画、オーディオ、その他の任意のファイルを添付することもできます。"
+      description: "Su Misskey, i contributi delle persone sono chiamati “Note”. Puoi citare altre Note e allegare files o multimedia."
     _federation:
       title: "Federazione"
       description: "Il protocollo di comunicazione ActivityPub, è distribuito e aperto, quindi ogni profilo su un server Misskey può interagire con gli altri del Fediverso."
     _reaction:
       title: "Reazioni"
-      description: "ノートには「リアクション」を付けることができ、簡単・気軽に自分のフィーリングを表現して伝えることが出来ます。"
+      description: "Puoi aggiungere “reazioni” alle Note, ti consente di esprimere i tuoi sentimenti in modo semplice e immediato."
     _drive:
       title: "Drive"
-      description: "アップロードしたファイルを管理するインターフェイスがあります。そのため、お気に入りの画像をフォルダにまとめたり、再度共有することも簡単に行えます。"
+      description: "Puoi gestire i file caricati tramite una comoda interfaccia. In questo modo è facile organizzare le immagini preferite in cartelle e ricondividerle senza sprecare spazio."
     _theme:
       title: "Colorazioni"
-      description: "自分の好きなデザインでMisskeyを使えます。もちろんダークモードも完全サポート。自分で高度にテーマを作ることも可能です。"
+      description: "Puoi utilizzare Misskey personalizzando il design come preferisci. Naturalmente, è anche disponibile la modalità scura/buio. Puoi anche creare temi più avanzati."
     _thread:
       title: "Conversazioni"
-      description: "もちろんノートはスレッドにすることができ、気が済むまで会話を続けられます。"
+      description: "Le Note vengono organizzate in thread e la conversazione può continuare a proprio agio."
     _charts:
       title: "Statistiche"
-      description: "Misskeyは組み込みのチャートエンジンを備えていて、サーバーの利用状況などが簡単に可視化できます。"
+      description: "Misskey ti consente di visualizzare facilmente le statistiche sull'uso del server, sullo stato della federazione e sulle attività pubbliche dei profili."
     _widgets:
       title: "Riquadri"
       description: "Per scoprire cos'è cambiato dall'ultima versione di Misskey, è possibile leggere il registro dei cambiamenti."
@@ -94,20 +104,23 @@ _landing:
     description: "Misskey è un'organizzazione no-profit, contiamo sulle donazioni per finanziare lo sviluppo. Se ti piace Misskey, sostienici così potremo continuare a svilupparlo anche in futuro."
   _sponsors:
     title: "Sponsorizzato"
+    becomeASponsor: "Sponsorizzaci"
 _servers:
   title: "Elenco dei server"
   description: "Misskey non è un social network unico, ma una rete decentralizzata in cui ogni server fornisce servizi federati. Per utilizzare Misskey occorre creare un profilo su uno dei server federati."
   addYourServer: "Il tuo server non compare? {0}!"
   addYourServerLink: "aggiungilo"
+  disclaimerTitle: "(Importante) Responsabilità limitata"
+  disclaimer: "Questo è un elenco automatico di server Misskey scoperti sul Fediverso. Non sono stati verificati o approvati manualmente dagli sviluppatori del Misskey Project. I membri del Misskey Project non sono responsabile per eventuali danni causati durante l'accesso ai siti elencati."
   _system:
     fetchError: "Impossibile caricare i dati. Per favore riprova più tardi."
   _statistics:
-    title: "サーバー統計"
-    description: "Misskeyサーバーの統計データをグラフでご紹介。"
-    viewFullStats: "詳しい統計を見る"
-    lang: "プライマリ言語"
-    registerAcceptance: "新規登録受付方式"
-    version: "バージョン"
+    title: "Statistiche server"
+    description: "Presentazione grafica delle statistiche del server Misskey."
+    viewFullStats: "Vedi statistiche dettagliate"
+    lang: "Lingua principale"
+    registerAcceptance: "Modalità di iscrizione"
+    version: "Versione"
     notes: "Note"
     users: "Profili"
     servers: "Server"
@@ -119,7 +132,7 @@ _servers:
     orderBy: "Ordina per"
     recomendded: "Predefinito"
     notesCount: "Conteggio Note pubblicate"
-    notesPer15Days: "1日あたりのノート数（15日平均）"
+    notesPer15Days: "Note giornaliere (ultimi 15gg)"
     usersCount: "Conteggio iscrizioni"
   _registerAcceptance:
     title: "Modalità di iscrizione"
@@ -129,22 +142,25 @@ _servers:
     notFound: "Non ci sono server corrispondenti ai criteri specificati."
     showMore: "Espandi"
   _view:
-    title: "表示形式"
-    list: "リスト"
-    grid: "グリッド"
+    title: "Visualizza"
+    list: "Lista"
+    grid: "Griglia"
 _docs:
-  title: "ドキュメント"
-  description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。Misskeyの上手な使い方から、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
-  indexTitle: "目次ページ"
+  title: "Documentazione"
+  description: "Misskey è una piattaforma social network, decentralizzata e open source. La documentazione copre tutto: da aiuti su come utilizzare Misskey, alle informazioni per amministrare il server e sviluppare la programmazione."
+  indexTitle: "Indice dei contenuti"
   _contribute:
-    editThis: "このページを編集"
-    translateThis: "このページを翻訳"
+    editThis: "Modifica questa pagina"
+    translateThis: "Traduci"
   _aboutMisskey:
-    title: "Misskeyについて"
-    description: "Misskeyをはじめて知ったかたや、これから使うかた向け！基本的なしくみや機能を見ていきましょう。"
+    title: "Altro su Misskey"
+    description: "Per chi ha appena iniziato con Misskey e per chi sta già utilizzando. Diamo un'occhiata al funzionamento di base."
   _changelog:
-    title: "リリースノート"
-    description: "Misskeyのバージョンアップ履歴をご覧いただけます。最新のバージョンで何が変わったのかを確認しましょう！"
+    title: "Informazioni sugli aggiornamenti"
+    description: "Leggi la cronologia degli aggiornamenti di versione Misskey. Scopri cosa è cambiato dall'ultima versione!"
+  _donate:
+    title: "Donazioni al progetto"
+    description: "Misskey è un progetto di software libero, open source e gratuito. Se ti piace quello che facciamo, considera la possibilità di fare una donazione. In questo modo gli sviluppatori potranno continuare a svilupparlo."
   _forUsers:
     title: "Per utilizzare"
   _forAdmin:
@@ -157,6 +173,10 @@ _docs:
   _toc:
     title: "Sommario"
     toPageTop: "Torna su"
+  _steppedGuide:
+    selectCourse: "Scegli una guida"
+    noImageInThisStep: "Questo passaggio non ha immagini"
+    aiWellDone: "Attività completata con successo. Grazie per il tuo impegno! ♪"
 _blog:
   title: "Blog"
   description: "Contiene informazioni e suggerimenti recenti su Misskey, direttamente dal quartier generale dello sviluppo di Misskey! (solo in Giapponese)"
@@ -168,21 +188,32 @@ _content:
   preview: "Anteprima"
 _other:
   title: "Di più!"
-  description: "Misskeyをもっと楽しめるその他のリソースをご紹介しています。"
+  description: "Ecco altre risorse informative che aiutano a goderti Misskey sempre di più."
 _brandAssets:
   title: "アセット集"
   description: "Misskeyのロゴ、アイコンなどのアセットのコレクションです。一定のライセンスのもとでご自由にお使いいただけます。"
-  license: "アセットは、CC BY-NC-SAのライセンスの下で自由にお使いいただけます🎉"
+  license: "アセットは、CC BY-SAのライセンスの下で自由にお使いいただけます🎉"
   assetsDirectory: "全てのアセットは、{0}で管理されています。"
   logo: "ロゴ"
   icon: "アイコン"
   banner: "バナー"
   avatarDecorationTemplate: "アバターデコレーション テンプレート"
+  fullColorPng: "フルカラー (PNG)"
+  monoChromeSvg: "単色 (SVG)"
+_contact:
+  title: "お問い合わせ"
+  description: "Misskey Projectへのお問い合わせはこちらから"
+  form: "こちらのフォームからご回答ください。"
+  formGoogleAccountRequired: "現在、スパム対策のため、お問い合わせの送信にはGoogleアカウントが必要となっております。\nお手数をおかけしますが、ご理解のほどよろしくお願い致します。"
+  formLink: "フォームへ進む"
+  faqTitle: "よくあるお問い合わせ"
+  faqDescription: "お問い合わせを送信する前に、あなたの知りたいことがここにないか確認してください。"
+  ifNothingIsFound: "もしあてはまるものがなかったら…"
 _links:
   title: "リンク"
   _github:
-    title: "Github"
-    description: "Misskeyの開発はGithub上で行われています。機能リクエストやバグ報告などはこちらから行えます。"
+    title: "GitHub"
+    description: "Misskeyの開発はGitHub上で行われています。機能リクエストやバグ報告などはこちらから行えます。"
   _crowdin:
     title: "Crowdin"
     description: "Misskey本体、およびドキュメントの翻訳はこちらで管理されています。皆さんのご協力をお願いします。"
@@ -219,9 +250,10 @@ _aidConverter:
   dateToAid: "日付時刻→aid/aidx"
   mode: "作成するid"
   date: "日付時刻"
+  inputByLine: "改行区切りで複数のaid/aidxを変換できます。"
 _aboutUs:
-  title: "Misskey Development Divisionについて"
-  description: "Misskey開発チームについての情報を掲載しています。"
+  title: "Misskey Projectについて"
+  description: "Misskey Projectについての情報を掲載しています。"
   _team:
     title: "開発メンバー"
     description: "Misskeyの開発に関わっている方を紹介しています。"
@@ -279,6 +311,8 @@ _shareLinkGenerator:
   testLink: "共有リンクを試す"
   typeSomethingToGetLink: "本文を入力するとリンクが生成されます。"
   typeSomethingToGetButton: "本文を入力するとボタンが生成されます。"
+  documentationIs: "パラメータの詳細情報など、技術仕様は{here}"
+  here: "こちら"
 _goToMisskey:
   title: "Misskey Webに移動"
   heading: "このページを開きたいサーバーを選択してください"
@@ -310,6 +344,26 @@ _customEmojiPreview:
     textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
   _placeholder:
     noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
+_identiconGenerator:
+  title: "初期アイコンジェネレーター"
+  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
+  userName: "ユーザー名"
+  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
+_historicalMaterials:
+  title: "歴史資料館"
+  description: "Misskeyに関する歴史的資料を一挙公開"
+  heroSubtitle: "Misskey 10周年記念企画"
+  heroDescription: "Misskeyは2014年に掲示板サービスとして生まれました。それから10年経ち、今ではたくさんの方々に利用していただけるプラットフォームになりました。\nここではMisskeyに関する歴史的資料を一挙公開します！"
+  submissionTitle: "古いMisskeyの写真をお持ちですか？"
+  submissionDescription: "昔のMisskeyにまつわる資料をお持ちの方は、ぜひ当館にお寄せください。\nGitHubを利用できる方は{gh_issue}に、利用できない方は {'@'}syuilo{'@'}misskey.io にお送りください。"
+_miHubServerListPreview:
+  title: "Misskey Hub サーバー一覧 プレビュー"
+  description: "Misskey Hubのサーバー一覧にお手持ちの画像を当てはめて見栄えをチェックできます。"
+  name: "サーバー名"
+  serverDescription: "説明文"
+  icon: "アイコン画像"
+  bannerOrBg: "バナー画像 or 背景画像"
+  bannerOrBgDescription: "バナー画像と背景画像が両方指定されている場合は、背景画像の方を優先して表示します。画像は中心基準で16:9に収まる最大領域のみが表示されます。"
 _api:
   _permissions:
     title: "権限"
@@ -364,7 +418,6 @@ _api:
       "read:admin:server-info": "サーバーの情報を見る"
       "read:admin:show-moderation-log": "モデレーションログを見る"
       "read:admin:show-user": "ユーザーのプライベートな情報を見る"
-      "read:admin:show-users": "ユーザーのプライベートな情報を見る"
       "write:admin:suspend-user": "ユーザーを凍結する"
       "write:admin:unset-user-avatar": "ユーザーのアバターを削除する"
       "write:admin:unset-user-banner": "ユーザーのバーナーを削除する"

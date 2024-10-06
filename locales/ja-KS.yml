@@ -7,9 +7,19 @@ share: "共有する"
 note: "ノート"
 other: "ほか"
 add: "追加"
+generate: "つくる"
+download: "落とす"
 browse: "参照"
 settings: "設定"
 goToLegacyHub: "前のMisskey Hub"
+contactUs: "お問い合わせ"
+detail: "よう見せて"
+lastUpdate: "最終更新"
+empty: "中身がなんも無いわ"
+threeDimensionModel: "3Dモデル"
+clickToShow: "クリックして表示"
+preview: "プレビュー"
+scrollable: "スクロールできるで"
 
 _error:
   notFound: "ページ食べた"
@@ -52,7 +62,7 @@ _landing:
   _decenterized:
     title: "Misskeyは{0}やで"
     decenterizedPlatform: "分散型プラットフォーム"
-    description: "Misskeyはタダやしオープンソースやから、誰でも好きにMisskey使ってサーバー作れるんやけど、現にもういっぱいサーバーがあるんやで。それにええところは、Misskeyは{0}っていう分散通信プロトコルを使ってるから、どのサーバー選んでも他のサーバーの人と話せるねん。これが分散型って言われるわけや。ひとりのおっさんがひとつのサイトでやってるような、Twitterみたいな他のサービスとは全然ちゃうねんで。サーバーによって話すことや人の種類や言葉が違うから、自分に合うサーバー探すのも楽しいかもしれんね（もちろん自分でサーバー作るのもおもろいで）。"
+    description: "Misskeyはタダやしオープンソースやから、誰でも好きにMisskey使ってサーバー作れるんやけど、現にもういっぱいサーバーがあるんやで。それにええところは、Misskeyは{0}っていう分散通信プロトコルを使ってるから、どのサーバー選んでも他のサーバーの人と話せるねん。これが分散型って言われるわけや。ひとつのサイトでぜんぶ完結するような、Twitterみたいな他のサービスとは全然ちゃうねんで。サーバーによって話すことや人の種類や言葉が違うから、自分に合うサーバー探すのも楽しいかもしれんね（もちろん自分でサーバー作るのもおもろいで）。"
     activityPub: "ActivityPub"
   _features:
     _root:
@@ -98,12 +108,15 @@ _landing:
     description: "Misskeyは非営利やから、開発資金はみんなからの寄付で成り立っとんねん。もしMisskeyええやんってなったら、今後も開発を続けられるように支援してくれると嬉しいなあ。"
   _sponsors:
     title: "スポンサー"
+    becomeASponsor: "スポンサーになる"
 
 _servers:
   title: "サーバー一覧"
   description: "Misskeyは単一のサービスじゃなくて、みんながそれぞれサービスを提供する分散型ネットワークになってるから、Misskeyを使いたかったら、サービスを提供してるサーバーでアカウントを作らなあかんねん。"
   addYourServer: "あんたのサーバーがここに出てこんなら、{0}から登録してな。"
   addYourServerLink: "ここ"
+  disclaimerTitle: "免責事項"
+  disclaimer: "このサーバー一覧は、Fediverseで見つけたMisskeyサーバーを自動で乗っけてるだけで、普段からどんなサーバーがあるかとかの確認はやってないねん。ここに載ってるサーバーは、Misskey Projectがたしかめたり、承認したりしたものじゃないから気ぃつけてな。アクセス先であんたになんかあっても、責任は取らへんで。"
   _system:
     fetchError: "ごめん、今データほかしてもうたからちょっと後でもっかい見に来て。"
   _statistics:
@@ -151,6 +164,9 @@ _docs:
   _changelog:
     title: "リリースノート"
     description: "Misskeyのバージョンアップ履歴を見れるようになってるから、アプデ入ったら確認しに来てな！"
+  _donate:
+    title: "プロジェクトへの寄付"
+    description: "Misskeyは無料で使えるオープンソースソフトやから、開発資金はみんなからの寄付で成り立っとんねん。Misskeyええやんってなったら、今後も開発を続けられるように支援してな。"
   _forUsers:
     title: "Misskeyユーザー向け"
   _forAdmin:
@@ -163,6 +179,10 @@ _docs:
   _toc:
     title: "このページの中身"
     toPageTop: "ページの上まで戻る"
+  _steppedGuide:
+    selectCourse: "ガイドを選ぶ"
+    noImageInThisStep: "このステップに画像はないで"
+    aiWellDone: "操作はこれで完了です。お疲れ様でした♪お好み焼きでも食べて休憩しましょう😋"
 
 _blog:
   title: "ブログ"
@@ -182,12 +202,24 @@ _other:
 _brandAssets:
   title: "アセット集"
   description: "Misskeyのロゴ、アイコンとかのアセットっちゅうやつを置いてあるで。ライセンスさえ守ってくれたらなんにでも使ってええよ！"
-  license: "アセットは、CC BY-NC-SAのライセンスの下でなんにでも使ってええことになってるで🎉"
+  license: "アセットは、CC BY-SAのライセンスの下でなんにでも使ってええことになってるで🎉"
   assetsDirectory: "アセットは、ぜんぶ{0}で管理してあんで。"
   logo: "ロゴ"
   icon: "アイコン"
   banner: "バナー"
   avatarDecorationTemplate: "アバターデコレーション テンプレート"
+  fullColorPng: "フルカラー (PNG)"
+  monoChromeSvg: "単色 (SVG)"
+
+_contact:
+  title: "お問い合わせ"
+  description: "Misskey Projectになんか言いたいときはここから"
+  form: "このフォームから回答してな"
+  formGoogleAccountRequired: "今、スパムっちゅう厄介なのがおって、問い合わせを送ってもらうためにGoogleアカウントが要ることになっとんねん。\nめんどくさいかもしれんけど、よろしゅうおねがいします～"
+  formLink: "フォームへ進む"
+  faqTitle: "よくあるお問い合わせ"
+  faqDescription: "なんか送る前に、ここに知りたいことがないか確認してみてな。"
+  ifNothingIsFound: "見つからんかったら…"
 
 _links:
   title: "リンク"
@@ -233,10 +265,11 @@ _aidConverter:
   dateToAid: "日付時刻→aid/aidx"
   mode: "作成するid"
   date: "日付時刻"
+  inputByLine: "改行区切りでaid/aidxをたくさん変換できるで。"
 
 _aboutUs:
-  title: "Misskey Development Divisionについて"
-  description: "Misskey開発チームについての色々書いてあるで。"
+  title: "Misskey Projectについて"
+  description: "Misskey Projectについての色々書いてあるで。"
   _team:
     title: "開発メンバー"
     description: "Misskeyの開発に関わっている人を紹介してるで。"
@@ -298,6 +331,8 @@ _shareLinkGenerator:
   testLink: "共有リンクを試す"
   typeSomethingToGetLink: "本文を打ったらリンクが出てくんで。"
   typeSomethingToGetButton: "本文を入力するとボタンが生成されます。"
+  documentationIs: "パラメータとか、詳しい技術的な話は{here}見てな！"
+  here: "ここ"
 
 _goToMisskey:
   title: "Misskey Webに移動"
@@ -332,6 +367,29 @@ _customEmojiPreview:
     textDescription: "追加したカスタム絵文字は{emoji_id}で使えるで。"
   _placeholder:
     noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
+
+_identiconGenerator:
+  title: "初期アイコンジェネレーター"
+  description: "Misskeyに登録したときにはじめっからついてある初期アイコンを作れるで。"
+  userName: "ユーザー名"
+  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を入れてな。"
+
+_historicalMaterials:
+  title: "歴史資料館"
+  description: "Misskeyの昔の写真を見せたるわ"
+  heroSubtitle: "Misskey 10周年記念企画"
+  heroDescription: "Misskeyってな、実は2014年に掲示板サービスとして生まれたんや。それから10年経って、今ではめっちゃ色んな人がMisskeyを使ってくれてるんやで。\n今日は特別にMisskeyに関する歴史的資料を見せたげるわ！"
+  submissionTitle: "あんた、古いMisskeyの写真持ってんの？"
+  submissionDescription: "昔のMisskeyの資料を持ってるんやったら、ぜひうちに寄贈してな。\nGitHubあるなら{gh_issue}に、ないなら {'@'}syuilo{'@'}misskey.io に送ってな。"
+
+_miHubServerListPreview:
+  title: "Misskey Hub サーバー一覧 プレビュー"
+  description: "Misskey Hubのサーバー一覧にあんたの持ってる画像を当てはめて見栄えをチェックできるで。"
+  name: "サーバー名"
+  serverDescription: "説明文"
+  icon: "アイコン画像"
+  bannerOrBg: "バナー画像 or 背景画像"
+  bannerOrBgDescription: "バナー画像と背景画像が両方指定されているときは、背景画像の方を優先して表示するようになってるで。画像は真ん中が基準で16:9に収まる最大領域のみが見えるようになってるで。"
 
 _api:
   _permissions:

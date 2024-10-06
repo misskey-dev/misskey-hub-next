@@ -1,5 +1,5 @@
 ---
-description: このガイドではMisskeyのインストール・セットアップ方法について解説します。
+description: Panduan ini akan menjelaskan bagaimana cara memasang dan menyetel peladen Misskey.
 ---
 
 # Panduan Pemasangan dan Penyetelan Misskey
@@ -167,5 +167,6 @@ Apabila kamu menemukan masalah pada saat memutakhirkan, coba jalankan perintah b
 
 - `pnpm run clean` atau `pnpm run clean-all`
 - `pnpm rebuild`
+  :::
 
 :::

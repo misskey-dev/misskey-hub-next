@@ -124,7 +124,7 @@ function getEmojiUrl(emoji: { id: number; file: string | Blob; }) {
 }
 
 function addEmoji() {
-    if (!process.client) return;
+    if (!import.meta.client) return;
 
     const input = document.createElement('input');
     input.type = 'file';

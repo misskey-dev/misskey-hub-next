@@ -1,8 +1,8 @@
 ---
-description: Misskey APIに関連するライブラリの一覧
+description: List of Misskey API libraries
 ---
 
-# ライブラリの一覧
+# List of Libraries
 
 ## JavaScript
 
@@ -25,6 +25,7 @@ description: Misskey APIに関連するライブラリの一覧
 ## Dart / Flutter
 
 - [misskey](https://github.com/misskey-dart/misskey)
+- [misskey_dart](https://github.com/shiosyakeyakini-info/misskey_dart)
 
 ## Go
 

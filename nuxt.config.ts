@@ -9,6 +9,7 @@ import { getStaticEndpoints } from './scripts/get-static-endpoints';
 import { locales } from './assets/data/locales';
 import type { NuxtConfig } from 'nuxt/schema';
 import { fetchCrowdinMembers } from './scripts/fetch-crowdin';
+import { genSpaLoadingTemplate } from './scripts/gen-spa-loading-template';
 
 // 公開時のドメイン（末尾スラッシュなし）
 const baseUrl =
@@ -18,6 +19,9 @@ const baseUrl =
 
 // リポジトリURL（末尾スラッシュなし）
 const repositoryUrl = 'https://github.com/misskey-dev/misskey-hub-next';
+
+// サーバーリストAPIのベースURL
+const serverListApiBaseUrl = process.env.SERVER_LIST_API_BASE_URL ?? 'https://instanceapp.misskey.page';
 
 // 言語定義は /assets/data/locales.ts に移動しました
 
@@ -61,12 +65,17 @@ function getRouteRules(): NuxtConfig['routeRules'] | undefined {
 	};
 }
 
+const packageJson = JSON.parse(readFileSync('./package.json', 'utf-8'));
+
 export default defineNuxtConfig({
+	compatibilityDate: '2024-09-07',
 	runtimeConfig: {
 		public: {
 			baseUrl,
+			serverListApiBaseUrl,
 			repositoryUrl,
 			locales,
+			misskeyJsVersion: packageJson.devDependencies['misskey-js'] as string,
 		},
 		CROWDIN_INTG_API: process.env.CROWDIN_INTG_API,
 	},
@@ -90,6 +99,7 @@ export default defineNuxtConfig({
 				{ rel: 'shortcut icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
 				{ rel: 'icon', type: 'image/vnd.microsoft.icon', href: '/favicon.ico' },
 				{ rel: 'me', href: 'https://misskey.io/@misskey_hub_deploy' },
+				{ rel: 'me', href: 'https://mastodon.social/@misskey' },
 			],
 			meta: [
 				{ name: 'twitter:card', content: 'summary_large_image' },
@@ -97,6 +107,9 @@ export default defineNuxtConfig({
 		},
 	},
 	content: {
+		markdown: {
+			remarkPlugins: ['misskey-hub-markdown-fixer'],
+		},
 		navigation: {
 			fields: [
 				'date',
@@ -106,13 +119,13 @@ export default defineNuxtConfig({
 		highlight: {
 			theme: {
 				// Default theme (same as single string)
-				default: 'github-light',
+				default: 'catppuccin-latte',
 				// Theme used if `html.dark`
-				dark: 'github-dark',
+				dark: 'one-dark-pro',
 			},
-			preload: [
+			langs: [
+				'json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'mdc', 'md', 'yaml', 'jsx',
 				'ini', 'sql', 'yml', 'nginx', 'bash',
-				JSON.parse(readFileSync('./node_modules/aiscript-vscode/aiscript/syntaxes/aiscript.tmLanguage.json', { encoding: 'utf-8' })),
 			],
 		},
 	},
@@ -137,6 +150,7 @@ export default defineNuxtConfig({
 			autoprefixer: {},
 		},
 	},
+	devtools: { enabled: false },
 	alias: {
 		'bi': 'bootstrap-icons/icons',
 	},
@@ -160,7 +174,14 @@ export default defineNuxtConfig({
 			}),
 		],
 	},
+	vue: {
+		compilerOptions: {
+			isCustomElement: (tag) => tag.startsWith('model-viewer'),
+		},
+	},
 	nitro: {
+		// リダイレクトが多すぎてCloudflare Pagesのネイティブリダイレクトが使えないので静的モードに強制
+		preset: (process.env.CF_PAGES ? 'static' : undefined),
 		vercel: {
 			config: {
 				routes: [
@@ -176,18 +197,30 @@ export default defineNuxtConfig({
 			failOnError: false,
 		}
 	},
+	typescript: {
+		tsConfig: {
+			compilerOptions: {
+				baseUrl: './',
+			},
+		},
+	},
 	hooks: {
-		'build:before': async (...args) => {
-			genApiTranslationFiles(...args);
-			genLocalesJson(...args);
-			if (process.env.NODE_ENV === 'development') {
-				fsWatch('./locales/', (ev, filename) => {
-					if (filename && filename.endsWith('.yml')) {
-						genLocalesJson(...args);
+		'build:before': async () => {
+			genApiTranslationFiles();
+
+			await Promise.all([
+				genLocalesJson().then(() => {
+					if (process.env.NODE_ENV === 'development') {
+						fsWatch('./locales/', (ev, filename) => {
+							if (filename && filename.endsWith('.yml')) {
+								genLocalesJson();
+							}
+						});
 					}
-				});
-			}
-			await fetchCrowdinMembers(...args);
+				}),
+				genSpaLoadingTemplate(),
+				fetchCrowdinMembers(),
+			]);
 		},
 	},
 	features: {

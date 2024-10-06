@@ -33,16 +33,16 @@ The following commands will copy the various config files from examples to their
 ```sh
 cp .config/docker_example.yml .config/default.yml
 cp .config/docker_example.env .config/docker.env
-cp ./docker-compose_example.yml ./docker-compose.yml
+cp ./compose_example.yml ./compose.yml
 ```
 
 Please edit `default.yml` and `docker.env` file as per the description.\
-Also edit `docker-compose.yml` as needed.(If you want to change the port etc.)
+Also edit `docker-compose.yml` as needed.(If you want to change the port etc.)\
+Please make sure to check in advance for any changes that may be required.(If you want to change the port etc.)
 
 ## Build & Initialize
 
-The next set of commands will build Misskey image and perform database initialization.
-This will take some time.
+The next set of commands will build Misskey image and perform database initialization. This will take some time.
 
 ```shell
 sudo docker compose build
@@ -51,7 +51,7 @@ sudo docker compose run --rm web pnpm run init
 
 ## Startup
 
-お疲れ様でした。You can launch Misskey with the following command.
+Congraturations!You can launch Misskey with the following command.
 
 ```sh
 sudo docker compose up -d
@@ -63,7 +63,7 @@ GLHF✨
 
 :::warning
 
-Updates are always available in the [release notes](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md). Please make sure to check in advance for any changes that may be required.
+Updates are always available in the [release notes](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md).
 
 :::
 

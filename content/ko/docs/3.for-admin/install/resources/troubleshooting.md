@@ -16,7 +16,7 @@ MisskeyInstallBattle 참가자가 늘어났지만, 그에 따라 시간이 지�
 ……어라, 복사-붙여넣기만으로 할 수 있다면 완전 자동화가 가능하지 않을까?
 
 그래서 **쉘 스크립트로 거의 모든 것을 해주는 것을 만들어 보았습니다!**\
-[\*\*자세한 내용 및 사용법은 여기에서 확인하세요!]\*\*https\://github.com/joinmisskey/bash-install#readme](https\://github.com/joinmisskey/bash-install#readme)
+[\*\*자세한 내용 및 사용법은 여기에서 확인하세요!]\*\*https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
 
 도메인 구매 및 Cloudflare 설정, 서버 확보는 여러분이 직접 준비해 주시기 바랍니다.
 
@@ -52,7 +52,7 @@ Misskey를 빌드하기 위해서는 최소 2GB의 메모리가 필요하다는 
 - Misskey 버전업 시에는 반드시 `pnpm install`이나 `pnpm run migrate`를 해주시기 바랍니다.그래도 해결되지 않으면 `pnpm run clean-all && pnpm install`을 시도하고, `pnpm run build && pnpm run migrate && pnpm start`를 시도해 보십시오.
 - 그래도 안 되면 처음부터 다시 [구축 가이드](../guides/manual/)의 절차에 따라 다시 시도해 보세요.
 
-***
+---
 
 # 설정
 
@@ -155,7 +155,7 @@ https:
 TLS 인증서를 별도로 발급받고, 발급받은 인증서의 디렉토리를 `https:`로 설정합니다.
 여기서는 Let's Encrypt에서 `example.tld`에 대한 인증서를 발급한 예시입니다.
 
-***
+---
 
 ### URL, 포트 및 TLS 인증서 설정(Port and TLS settings) part B: 전체 개요
 
@@ -183,7 +183,7 @@ https:
   cert: /etc/letsencrypt/live/example.tld/fullchain.pem
 ```
 
-***
+----
 
 # `npm start` 및 접속 시 자주 발생하는 오류
 
@@ -252,7 +252,7 @@ Misskey에서는 오브젝트 스토리지 연결에 [aws-sdk](https://www.npmjs
 
 Cloudflare를 사용하는 경우, Rocket Loader 또는 Auto Minify가 활성화되어 있는지 확인하십시오.활성화된 경우 비활성화하면 해결될 수 있습니다.
 
-***
+---
 
 # 전혀 해결되지 않은 경우
 
@@ -261,7 +261,6 @@ Cloudflare를 사용하는 경우, Rocket Loader 또는 Auto Minify가 활성화
 1. Misskey의 문서를 잘 읽는다.
 2. 구글에서 검색해 본다.
 3. [Misskey 저장소의 Issues](https://github.com/misskey-dev/misskey/issues)를 검색해 본다(동일한 오류가 발생하거나, Misskey의 버그일 가능성도 있습니다).
-4. [미스키 포럼](https://forum.misskey.io/)을 검색해 본다.
-5. 검색을 해도 잘 안 나오면 전문가에게 물어보세요.
-   1. 포럼이나 [Misskey의 Discord 서버](https://discord.gg/P4yYqYBjEp) 또는 [고등어 통조림 공장(서버 관리자 공장)](https://discord.gg/mJJGAHv)에서 물어보세요.
+4. 검색을 해도 잘 안 나오면 전문가에게 물어보세요.
+   1. [Misskey Discord 서버（영어/일본어）](https://discord.gg/P4yYqYBjEp)등에 물어보기
    2. 개발자([aqz](https://p1.a9z.dev/@aqz)나 shuiro)에게 리플이나 직접 글을 보내 물어보기

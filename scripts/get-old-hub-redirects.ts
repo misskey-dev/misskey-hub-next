@@ -1,10 +1,10 @@
-import { writeFileSync } from 'fs';
 import { redirects } from './../assets/data/old-hub-redirects';
-import { localesConst } from './../assets/data/locales';
+import { localesConst, localePathRegex } from './../assets/data/locales';
 import type { LocaleCodes } from './../assets/data/locales';
 import type { PartialRecord } from './../types/others';
 import type { NuxtConfig } from 'nuxt/schema';
-import { joinURL, cleanDoubleSlashes } from 'ufo';
+import { joinURL } from 'ufo';
+import { readFileSync, writeFileSync } from 'fs';
 
 type VercelRouteSource = {
     src: string;
@@ -52,7 +52,7 @@ export function getOldHubRedirects(mode: 'nitro' | 'vercel' = 'nitro'): NuxtConf
 
             let destination = route[1];
 
-            if (!new RegExp(`^/(${localesConst.map((e) => e.code).join('|')})/`, 'g').test(destination)) {
+            if (!localePathRegex.test(destination)) {
                 destination = joinURL(`$1/`, destination);
             }
 
@@ -67,12 +67,14 @@ export function getOldHubRedirects(mode: 'nitro' | 'vercel' = 'nitro'): NuxtConf
 
         out.push({
             src: '/zh-CN/(.*)',
+            caseSensitive: false,
             headers: {
                 'Location': '/cn/$1',
             },
             status: 307,
         }, {
             src: '/zh-TW/(.*)',
+            caseSensitive: false,
             headers: {
                 'Location': '/tw/$1',
             },
@@ -83,16 +85,18 @@ export function getOldHubRedirects(mode: 'nitro' | 'vercel' = 'nitro'): NuxtConf
     } else {
         const out: NuxtConfig['routeRules'] = {};
 
-        localesConst.forEach((locale) => {
+        localesConst.filter((v) => hubLocales.hasOwnProperty(v.code)).forEach((locale) => {
             redirects.forEach((route) => {
-                if (route[0].startsWith('/ns')) return;
+                if (route[0].startsWith('/ns') || ['/', '/index.html'].includes(route[0])) return;
     
                 let destination = route[1];
     
-                if (route[0].endsWith('.html') && !new RegExp(`^/(${localesConst.map((e) => e.code).join('|')})/`, 'g').test(destination)) {
+                if (!localePathRegex.test(destination)) {
                     destination = joinURL(`/${locale.code}`, destination);
                 }
     
+                if (process.env.CF_PAGES === '1' && route[0].endsWith('.md')) return;
+
                 out[joinURL(hubLocales[locale.code] ?? '/', route[0])] = {
                     redirect: {
                         to: destination,
@@ -102,12 +106,22 @@ export function getOldHubRedirects(mode: 'nitro' | 'vercel' = 'nitro'): NuxtConf
             });
         });
 
+        if (process.env.CF_PAGES === '1') {
+            const staticRedirects = readFileSync('./public/_redirects_template', 'utf-8');
+            const additionalRedirects = redirects.filter((route) => route[0].endsWith('.md')).map((route) => {
+                return `${route[0]} ${route[1]} 301`;
+            });
+
+            writeFileSync('./public/_redirects', staticRedirects + '\n' + additionalRedirects.join('\n'));
+        }
+
         return {
             ...out,
-            /* See: https://github.com/unjs/nitro/pull/1976
+            // See: https://github.com/unjs/nitro/pull/1976
             '/zh-CN/**': { redirect: '/cn/**' },
             '/zh-TW/**': { redirect: '/tw/**' },
-            */
+            '/zh-cn/**': { redirect: '/cn/**' },
+            '/zh-tw/**': { redirect: '/tw/**' },
         }
     }
 }

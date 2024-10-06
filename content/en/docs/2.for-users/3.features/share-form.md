@@ -1,101 +1,101 @@
-# 共有フォーム
+# Share Form
 
-Misskey Webの`/share`を開くと、共有用の投稿フォームを開くことができます。この共有フォームを利用すると、外部のWebページから、ページの内容をユーザーにMisskeyで共有してもらいたいときに便利です。
+On Misskey Web, the path `/share` leads to a social sharing form.This page is useful for external site owners who want users to share their pages on Misskey.
 
-URLにクエリパラメータとして共有内容をはじめとするいくつかのオプションを指定できます。
+You can specify options such as the content to share as URL query parameters.
 
-## クエリパラメータ
+## Query Parameters
 
 :::tip
 
-すべてのパラメータは**オプション**であり、必須ではありません。
+All parameters are **optional** and not required.
 
 :::
 
-| 名前      | 説明                                                                           |
-| ------- | ---------------------------------------------------------------------------- |
-| `title` | タイトル。本文の先頭に[ … ]と挿入されます。 |
-| `text`  | 本文。                                                                          |
-| `url`   | URL。本文の末尾に挿入されます。                                                            |
+| Name    | Description                                                                                                                                                                                           |
+| ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title` | Title.Appended to the beginning of the note and enclosed in square brackets in the form "\[ Title contents \]". |
+| `text`  | Body text.                                                                                                                                                                            |
+| `url`   | URL.Appended to the end of the note.                                                                                                                                  |
 
-### リプライ情報
+### Reply Information
 
-以下のいずれかを指定すると、指定のノートに対するリプライにすることができます。
+A note can be replied to using the following parameters:
 
-| 名前         | 説明                            |
-| ---------- | ----------------------------- |
-| `replyId`  | リプライ先のノートID。                  |
-| `replyUri` | リプライ先のURL。（リモートのノートオブジェクトを指定） |
+| Name       | Description                                                                                  |
+| ---------- | -------------------------------------------------------------------------------------------- |
+| `replyId`  | The ID of the note to reply to.                                              |
+| `replyUri` | The URL of the note to reply to(for remote note objects). |
 
-### Renote情報
+### Renote Information
 
-以下のいずれかを指定すると、指定のノートに対するRenote(引用)にすることができます。
+You can specify one of the following to make the post a Renote (quote) of a specific note.
 
-| 名前          | 説明                              |
-| ----------- | ------------------------------- |
-| `renoteId`  | Renote先のノートID。                  |
-| `renoteUri` | Renote先のURL。（リモートのノートオブジェクトを指定） |
+| Name        | Description                                                                                |
+| ----------- | ------------------------------------------------------------------------------------------ |
+| `renoteId`  | The ID of the note to Renote.                                              |
+| `renoteUri` | The URL of the note to Renote(for remote note objects). |
 
-### 公開範囲
+### Visibility Options
 
-以下のオプションで公開範囲の指定を行えます。
+You can specify the visibility of the note with the following options.
 
-| 名前               | 説明                                                                   |
-| ---------------- | -------------------------------------------------------------------- |
-| `visibility`     | `public`, `home`, `followers`, `specified` のいずれか                     |
-| `localOnly`      | 0(false) or 1(true)            |
-| `visibleUserIds` | 対象ユーザーID(カンマ区切り)                                  |
-| `visibleAccts`   | 対象ユーザー[acct](../resources/glossary/#acct)(カンマ区切り) |
+| Name             | Description                                                                                           |
+| ---------------- | ----------------------------------------------------------------------------------------------------- |
+| `visibility`     | One of `public`, `home`, `followers`, or `specified`.                                 |
+| `localOnly`      | 0 (false) or 1 (true).                          |
+| `visibleUserIds` | Target user IDs (comma-separated).                                 |
+| `visibleAccts`   | Target user [acct](../resources/glossary/#acct) (comma-separated). |
 
 :::warning
 
-`visibility`に`specified`を指定した場合は、`visibleUserIds`または`visibleAccts`の指定も必要です。
+If you specify `visibility` as `specified`, you must also specify either `visibleUserIds` or `visibleAccts`.
 
 :::
 
-### 添付ファイル
+### Attachments
 
-以下のオプションで添付ファイルの指定を行えます。
+You can specify attachments with the following option.
 
-| 名前        | 説明                                     |
-| --------- | -------------------------------------- |
-| `fileIds` | 添付するファイルのID(カンマ区切り) |
+| Name      | Description                                                                          |
+| --------- | ------------------------------------------------------------------------------------ |
+| `fileIds` | The IDs of the files to attach (comma-separated). |
 
-## Misskey Hubの共有フォーム中継サービスについて
+## Misskey Hub Share Form Relay Service
 
 <a name="hub-share-disclaimer" id="hub-share-disclaimer"></a>
 
-新Misskey Hubでは、Misskeyのシェアボタンの設置にかかる煩雑な手間を減らすために、共有フォームの中継サービスを提供しています。\
-こちらのサービスは、無料でどなたでもお使いいただけます。
+To reduce the hassle of setting up the Misskey share button that's compatible with multiple servers, the new Misskey Hub provides a share form relay service.\
+This service is free for anyone to use.
 
-今までの共有フォームのリンクの各サーバーのドメイン部分を `misskey-hub.net` に変更するだけで、様々なMisskeyサーバーへの共有リンクへと進化させることができます！
+You can evolve your share form links to share links to various Misskey servers by simply changing the domain part of the previous share form links to `misskey-hub.net`!
 
 :::tip
 
-[共有ボタンジェネレーター](/tools/share-link-generator/) も併せてお使いください。
+See also the [Share Button Generator](/tools/share-link-generator/).
 
 :::
 
 :::warning
 
-共有フォーム中継サービス（以下、「本サービス」という）はWebサイト管理者の便宜のためにMisskey Development Division（以下、「当方」という）が無償・無保証で提供する機能です。本サービスを利用したこと、または何らかの原因によりこれをご利用できなかったことにより生じたいかなる損害について、当方は一切の責任を負いません。
+The share form relay service (hereinafter referred to as "this service") is a feature provided by the Misskey Project (hereinafter referred to as "we") free of charge and without warranty for the convenience of webmasters.We are not responsible for any damages incurred as a result of using or being unable to use this service for any reason.
 
 :::
 
-### 基本のパラメータ
+### Basic Parameters
 
-基本的に上記で紹介されているパラメーターをそのままお使いいただけますが、ユーザーIDやファイルIDなど、 **各サーバーに依存するパラメーターは使用できません。** それらが指定されていた場合、Misskey Hub上で削除されます。
+Generally, you can use the parameters introduced above, but \*\*parameters that depend on each server, such as user IDs and file IDs, cannot be used.\*\*If specified, they will be removed on Misskey Hub and will not be passed to the destination servers.
 
-### 独自機能
+### Unique Features available on Misskey Hub Share Relay Service
 
-#### おすすめサーバー機能
+#### Featured Server
 
-URLパラメータ `manualInstance` にMisskeyサーバーのドメインを入力することで、「シェア元Webサイトからのおすすめ」として、別枠でそのサーバーへのリンクを設置することができます。ご自身のサーバーに誘導する際などにお使いいただけます。
+By entering the domain of a Misskey server in the URL parameter `manualInstance`, you can add a separate link to that server as a "Recommended by the Share Source Website."Use this when you want to guide users to your server.
 
 :::warning
 
-「おすすめサーバー機能」はWebサイト管理者の便宜のために設置してある機能であり、当方が「シェア元Webサイトからのおすすめ」欄にあるサーバーをおすすめしているものではございません。
+The "Recommended Server Feature" is a feature provided for the convenience of webmasters. Therefore, it does not mean that we recommend the servers listed in the "Recommended by the Share Source Website" section.
 
-「シェア元Webサイトからのおすすめ」から遷移したサーバーを利用・登録したことに起因するいかなる損害・不利益について、当方では責任を負いかねます。
+We are not responsible for any damages or disadvantages that arise from using or registering on the servers transitioned from the "Recommended by the Share Source Website."
 
 :::
