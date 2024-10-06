@@ -1,31 +1,30 @@
-# AiScript Misskey 拓展 API 参考
+# AiScript Misskey 扩展 API 参考
 
-这里是 Misskey 专用的 AiScript 拓展 API
+在这里将介绍有关 Misskey 独自扩展的 AiScript API。
 
 :::tip
 
-标准的AiScript API可以在 [开始 AiScript](https://github.com/aiscript-dev/aiscript/blob/master/docs/get-started.md) 找到
+标准的AiScript API可以在 [这里](https://github.com/aiscript-dev/aiscript/blob/master/docs/get-started.md) 找到
 
 :::
 
-## 所有用户的 通用 常量
+## 全局常量
 
 ### `USER_ID`
 
-当前用户ID
+当前用户的 ID
 
 ### `USER_NAME`
 
-用户姓名
+当前用户的姓名
 
 ### `USER_USERNAME`
 
-当前用户的句柄（`@`符号后面的部分。例如： `@ai@example.com` → `ai`）\
-它指的是从电子邮件或社交媒体用户名中提取`@`符号之后的部分。
+当前用户的用户名（`@`之后的部分。例如： `@ai@example.com` → `ai`）
 
 ### `CUSTOM_EMOJIS`
 
-自定义emoji的数组数组里面允许以下类型：
+自定义表情符号的数组。数组内容为如下对象
 
 ```ts
 type EmojiSimple = {
@@ -41,19 +40,17 @@ type EmojiSimple = {
 
 ### `LOCALE`
 
-Misskey Web 当前设置的显示语言\
-详细请看：RFC4646 （例如：zh-hant、zh-hans、zh-cn、zh-tw）\
-https://datatracker.ietf.org/doc/html/rfc4646
+Misskey Web 当前设置的显示语言以 RFC4646 兼容的格式（如`zh-CN`）表示
 
 ### `SERVER_URL`
 
-当前服务器的 URL例如：`https://www.example.com`
+当前服务器的 URL。例如：`https://www.example.com`
 
-## 所有用户的 通用 方法
+## 全局函数
 
 ### `Mk:dialog(title, text, type)`
 
-显示一个普通对话框。type可以为以下类型：\
+显示一个普通对话框。type 可以设置为以下类型。\
 `info` `success` `warning` `error` `question`\
 默认为 `info` 。
 
@@ -80,22 +77,22 @@ if (response) {
 
 ### `Mk:api(endpoint, params, token?)`
 
-通过Misskey API发送请求。参数一：终端名称（终结点），参数二：参数对象。
+通过Misskey API发送请求。在第一个参数中传入终端名称，在第二个参数中传入参数对象。
 
-您也可以在第三个参数中添加token。如果与插件（Plugin）一起工作，则使用登录用户的令牌，不需要带参数。
+也可以在第三个参数中添加 token。使用插件时，当元数据块内指定了 `permissions` 时，如果未指定第三个参数，则使用此 `permissions` 所带的 token。
 
 :::tip
 
-permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+permission 一览请看[这里](/docs/for-developers/api/permission/)
 
 :::
 
 ```AiScript
 ### {
-  name: "プラグイン名",
+  name: "插件名",
   version: "4.2.1",
   author: "作者名",
-  description: "説明文",
+  description: "说明信息",
   permissions: ['write:notes'],
 }
 
@@ -108,13 +105,13 @@ permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧
 
 ### `Mk:save(key, value)`
 
-给任意对象名 持久化 赋值所谓的持久化的值，指的是该值即使在AiScript上下文结束后仍然保留，并且可以通过Mk:load读取。
+使用任何名称保留任何值。被保存的值在 AiScript 上下文结束后仍会保留，且可以通过 Mk:load 读取。
 
 ### `Mk:load(key)`
 
-读取由Mk:save生成的持久化的值。
+读取使用 Mk:save 保存的指定名称的值。
 
-## Plugins 插件 专用的 方法/常量
+## 插件专用
 
 ### `Plugin:register_post_form_action(title, fn)`
 
@@ -222,17 +219,17 @@ Plugin:register_note_post_interruptor(@(page) {
 
 存储插件设置的对象。该值是通过插件定义的配置中设置的键值来传入的。
 
-## Play 专用的 常量
+## Play 专用常量
 
 ### `THIS_ID`
 
-
+Play 的 ID
 
 ### `THIS_URL`
 
+Play 的 URL
 
-
-## UI控制函数（可在 Play 和 AiScript App小部件中使用）
+## UI 控制函数（可在 Play 和 AiScript App小部件中使用）
 
 ### `Ui:root`
 

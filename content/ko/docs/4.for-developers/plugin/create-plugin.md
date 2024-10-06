@@ -42,11 +42,11 @@ Misskey 웹 클라이언트의 플러그인 기능을 사용하면 클라이언�
 
 플러그인이 요구하는 권한.플러그인이 요구하는 권한.MisskeyAPI에 요청할 때 사용됩니다.
 
-APIのリクエスト方法については、[AiScript Misskey拡張API リファレンス](/docs/for-developers/plugin/plugin-api-reference/)をご覧ください。
+API 요청 방법은 [AiScript Misskey 확장 API 레퍼런스](/docs/for-developers/plugin/plugin-api-reference/)에서 확인할 수 있습니다.
 
 :::tip
 
-permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+permission 목록은 [여기](/docs/for-developers/api/permission/)에서 확인할 수 있습니다.
 
 :::
 
