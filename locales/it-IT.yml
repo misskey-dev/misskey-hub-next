@@ -53,12 +53,12 @@ _landing:
       title: "Multifunzionalità"
       description: "Misskey ha tante funzionalità esclusive, che ti permettono di fare microblogging al top."
     _customizable:
-      title: "Altamente personalizzabile"
-      description: "La grafica web di Misskey è altamente flessibile, ti consente di creare la tua interfaccia personalizzata."
+      title: "Personalizzabile"
+      description: "La grafica è altamente flessibile, puoi personalizzare l'interfaccia come preferisci."
   _decenterized:
     title: "Misskey è {0}"
     decenterizedPlatform: "una piattaforma decentralizzata"
-    description: "Misskey è un progetto opensource di software libero, chiunque può creare un social network utilizzando Misskey, per questo motivo se ne trovano già altri pubblicati su Internet. Tra le caratteristiche più importanti c'è che Misskey implementa un protocollo di comunicazione decentralizzato chiamato {0}, quindi, indipendentemente dal server che scegli, puoi interagire con altre persone iscritte su altri server. Per questo motivo è decentralizzato ed è completamente diverso da altri servizi come Twitter, che appartengono ad un unica azienda commerciale. Gli argomenti, le comunità, il linguaggio, ecc. cambiano a seconda del server e trovare un server adatto a te fa parte del divertimento (ovviamente, anche creare il proprio server è divertente)."
+    description: "Misskey è un progetto opensource di software libero, chiunque può creare un social network utilizzando Misskey. \nPer questo motivo se ne trovano tanti, già pubblicati su Internet. \nTra le caratteristiche più importanti, Misskey implementa un protocollo di comunicazione decentralizzato chiamato {0}. \nQuindi, indipendentemente dal server che scegli, puoi interagire con altre persone iscritte su altri server che sfruttano lo stesso protocollo. \nQuesto lo rende completamente diverso da altri servizi come Twitter, che appartengono ad un unica azienda commerciale. \nGli argomenti, le comunità, il linguaggio, ecc. cambiano a seconda del server. \nTrovarne uno adatto a sé, fa parte del divertimento! (Ovviamente, anche creare il proprio server è divertente)."
     activityPub: "ActivityPub"
   _features:
     _root:
@@ -87,7 +87,7 @@ _landing:
       description: "Misskey ti consente di visualizzare facilmente le statistiche sull'uso del server, sullo stato della federazione e sulle attività pubbliche dei profili."
     _widgets:
       title: "Riquadri"
-      description: "Per scoprire cos'è cambiato dall'ultima versione di Misskey, è possibile leggere il registro dei cambiamenti."
+      description: "Hai a disposizione decine di riquadri per avere sotto controllo informazioni aggiuntive, come statistiche, federazione, orologi, bottoni funzione e tanto altro."
   _getStarted:
     title: "Iniziamo con Misskey"
     _find:
@@ -95,15 +95,15 @@ _landing:
       list: "Elenco dei server"
     _create:
       title: "Crea un server"
-      guide: "Guida per l'ìnstallazione"
+      guide: "Guida per l'installazione"
     _docs:
       title: "Per saperne di più"
       docs: "Sfoglia la documentazione"
   _donation:
     title: "Donazioni"
-    description: "Misskey è un'organizzazione no-profit, contiamo sulle donazioni per finanziare lo sviluppo. Se ti piace Misskey, sostienici così potremo continuare a svilupparlo anche in futuro."
+    description: "Misskey è un'organizzazione no-profit, il progetto conta sulle donazioni per finanziare lo sviluppo. \nSe ti piace Misskey, sostienici, così potremo continuare a svilupparlo anche in futuro."
   _sponsors:
-    title: "Sponsorizzato"
+    title: "Sponsor principali"
     becomeASponsor: "Sponsorizzaci"
 _servers:
   title: "Elenco dei server"
@@ -190,16 +190,16 @@ _other:
   title: "Di più!"
   description: "Ecco altre risorse informative che aiutano a goderti Misskey sempre di più."
 _brandAssets:
-  title: "アセット集"
-  description: "Misskeyのロゴ、アイコンなどのアセットのコレクションです。一定のライセンスのもとでご自由にお使いいただけます。"
+  title: "Il marchio"
+  description: "Una raccolta di loghi, icone e altre risorse grafiche Misskey. Puoi usare tutto liberamente rispettando i termini di licenza."
   license: "アセットは、CC BY-SAのライセンスの下で自由にお使いいただけます🎉"
-  assetsDirectory: "全てのアセットは、{0}で管理されています。"
-  logo: "ロゴ"
-  icon: "アイコン"
-  banner: "バナー"
-  avatarDecorationTemplate: "アバターデコレーション テンプレート"
-  fullColorPng: "フルカラー (PNG)"
-  monoChromeSvg: "単色 (SVG)"
+  assetsDirectory: "Tutte le risorse sono gestite da {0}."
+  logo: "Logo"
+  icon: "Icona"
+  banner: "Banner"
+  avatarDecorationTemplate: "Maschera per decorazioni avatar"
+  fullColorPng: "A colori (PNG)"
+  monoChromeSvg: "Monocromatico (SVG)"
 _contact:
   title: "お問い合わせ"
   description: "Misskey Projectへのお問い合わせはこちらから"
@@ -224,25 +224,25 @@ _links:
     title: "藍"
     description: "Misskeyの看板娘、藍のウェブサイトです。"
 _tools:
-  title: "ツール集"
-  index: "ツール集 ホーム画面"
-  description: "Misskey向けの便利ツールを公開中！"
-  menuToggle: "メニュー"
+  title: "Raccolta di strumenti"
+  index: "Schermata iniziale della raccolta strumenti"
+  description: "Uno strumento utile per Misskey, ora disponibile!"
+  menuToggle: "Menu"
   _forUsers:
-    title: "Misskeyユーザー向け"
+    title: "Per chi utilizza Misskey"
   _forAdmin:
-    title: "サーバー運営者向け"
+    title: "Per chi amministra i server"
 _mfmPlayground:
-  title: "MFMお試しコーナー"
-  description: "MFMを自由に練習できます！Misskeyの投稿画面・ノートの画面を再現！"
-  preview: "プレビュー"
-  disclaimer: "ここに表示される通りに描画されるとは限りません。コードのシンタックスハイライトには対応していません。"
+  title: "Angolo prove MFM"
+  description: "Puoi provare MFM liberamente! Funziona esattamente come la schermata di pubblicazione delle Note. Misskey Format Markup ti permette di alterare e animare il testo nelle tue Note."
+  preview: "Anteprima"
+  disclaimer: "Attenzione, il risultato finale potrebbe non essere disegnato esattamente come lo vedi qui. L'evidenziazione della sintassi del codice non è supportata."
   mfm: "MFM"
-  character: "{0} 文字"
-  domain: "表示を再現するサーバー"
-  noteIt: "ノート"
-  clearEmojiCacheDescription: "絵文字が表示されないとき"
-  clearEmojiCache: "絵文字のキャッシュを削除"
+  character: "{0} caratteri"
+  domain: "Server in cui riprodurre il risultato"
+  noteIt: "Pubblica la Nota"
+  clearEmojiCacheDescription: "Se le emoji non vengono visualizzate correttamente"
+  clearEmojiCache: "Svuota la cache emoji"
 _aidConverter:
   title: "aid/aidxツール"
   description: "Misskeyの内部で使用されているランダムID生成アルゴリズム「aid」と「aidx」の変換・生成ができます。"
@@ -317,22 +317,22 @@ _goToMisskey:
   title: "Misskey Webに移動"
   heading: "このページを開きたいサーバーを選択してください"
 _avatarDecorationPreview:
-  title: "アバターデコレーション プレビュー"
-  description: "アバターデコレーションがきれいに反映できるかをチェックできます。"
-  preview: "プレビュー"
-  settings: "設定"
-  decoration: "デコ #{number}"
-  placeholder: "「追加」から、アバターデコレーションを追加してプレビューできます。"
+  title: "Anteprima per decorazioni degli avatar"
+  description: "Puoi verificare se le decorazioni dell'avatar combaciano correttamente."
+  preview: "Anteprima"
+  settings: "Impostazioni"
+  decoration: "Decorazione N° {number}"
+  placeholder: "Puoi aggiungere e visualizzare in anteprima le decorazioni dell'avatar da \"Aggiungi\"."
   _options:
-    offsetX: "横位置調整"
-    offsetY: "縦位置調整"
-    angle: "角度"
-    flip: "左右反転"
-    overlayTemplate: "テンプレートを重ねる"
+    offsetX: "Spostamento orizzontale"
+    offsetY: "Spostamento verticale"
+    angle: "Angolo di rotazione"
+    flip: "Rifletti"
+    overlayTemplate: "Modello di sovrapposizione"
   _placeholder:
-    username: "藍"
-    noteText: "チョコのかかったドーナツを食べました🍩😋"
-    profileDescription: "Misskey常駐AIの藍です！よろしくお願いします♪"
+    username: "Ai"
+    noteText: "Ho mangiato una ciambella ricoperta di cioccolato 🍩😋"
+    profileDescription: "Sono Ai, la IA di Misskey! Piacere di conoscerti ♪"
 _customEmojiPreview:
   title: "カスタム絵文字 プレビュー"
   description: "カスタム絵文字の視認性をチェックできます。"
