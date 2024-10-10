@@ -192,7 +192,7 @@ _other:
 _brandAssets:
   title: "Il marchio"
   description: "Una raccolta di loghi, icone e altre risorse grafiche Misskey. Puoi usare tutto liberamente rispettando i termini di licenza."
-  license: "アセットは、CC BY-SAのライセンスの下で自由にお使いいただけます🎉"
+  license: "La grafica è liberamente disponibile per l'uso nei termini della licenza Creative Commons, Attribuzione, Condividi allo stesso modo (CC BY-SA) 🎉"
   assetsDirectory: "Tutte le risorse sono gestite da {0}."
   logo: "Logo"
   icon: "Icona"
@@ -224,9 +224,9 @@ _links:
     title: "藍"
     description: "Misskeyの看板娘、藍のウェブサイトです。"
 _tools:
-  title: "Raccolta di strumenti"
+  title: "Strumenti utili"
   index: "Schermata iniziale della raccolta strumenti"
-  description: "Uno strumento utile per Misskey, ora disponibile!"
+  description: "Abbiamo a disposizione vari strumenti utili per interagire con Misskey!"
   menuToggle: "Menu"
   _forUsers:
     title: "Per chi utilizza Misskey"
@@ -322,7 +322,7 @@ _avatarDecorationPreview:
   preview: "Anteprima"
   settings: "Impostazioni"
   decoration: "Decorazione N° {number}"
-  placeholder: "Puoi aggiungere e visualizzare in anteprima le decorazioni dell'avatar da \"Aggiungi\"."
+  placeholder: "Premere il bottone \"Aggiungi\" per caricare e visualizzare in anteprima la decorazione"
   _options:
     offsetX: "Spostamento orizzontale"
     offsetY: "Spostamento verticale"
