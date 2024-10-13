@@ -281,7 +281,7 @@ Ui:C:container({
   align: 'center' // 정렬 left,center,right
   bgColor: '#000' // 배경색
   fgColor: '#00f' // 글자색
-  font: 'serif' // フォント serif,sans-serif,monospace
+  font: 'serif' // 폰트 serif,sans-serif,monospace
   borderWidth: 1 // 테두리 폭
   borderColor: '#f00' // 테두리 색
   padding: 1 // 여백 폭
@@ -375,11 +375,11 @@ Ui:C:buttons({
 ```AiScript
 Ui:C:switch({
   onChange: @(enabled) { 
-    // 변경되었을 때의 이벤트. 첫 번째 인수로 변경 후 상태( boolean)
+    // 변경되었을 때의 이벤트. 첫 번째 인수로 변경 후 상태 (boolean)
   }
   default: false // 기본값
   label: "라벨" // 스위치 옆의 텍스트
-  caption: “캡션” // 스위치 아래에 표시되는 보조 텍스트
+  caption: "캡션" // 스위치 아래에 표시되는 보조 텍스트
 })
 ```
 
@@ -392,9 +392,9 @@ Ui:C:textInput({
   onInput: @(text) {
     // 입력되었을 때의 이벤트. 첫 번째 인수로 변경 후의 값
   }
-  default: “default” // 기본값
-  label: “라벨” // 입력란 위의 텍스트
-  caption: “캡션” // 입력란 하단에 표시하는 보조 텍스트
+  default: "default" // 기본값
+  label: "라벨" // 입력란 위의 텍스트
+  caption: "캡션" // 입력란 하단에 표시하는 보조 텍스트
 })
 ```
 
@@ -407,9 +407,9 @@ Ui:C:numberInput({
   onInput: @(number) {
     // 입력되었을 때의 이벤트. 첫 번째 인수로 변경 후의 값
   }
-  default: “default” // 기본값
-  label: “라벨” // 입력란 위의 텍스트
-  caption: “캡션” // 입력란 하단에 표시하는 보조 텍스트
+  default: "default" // 기본값
+  label: "라벨" // 입력란 위의 텍스트
+  caption: "캡션" // 입력란 하단에 표시하는 보조 텍스트
 })
 ```
 
@@ -422,9 +422,9 @@ Ui:C:textarea({
   onInput: @(text) {
     // 입력되었을 때의 이벤트. 첫 번째 인수로 변경 후의 값
   }
-  default: “default” // 기본값
-  label: “라벨” // 입력란 위의 텍스트
-  caption: “캡션” // 입력란 하단에 표시하는 보조 텍스트
+  default: "default" // 기본값
+  label: "라벨" // 입력란 위의 텍스트
+  caption: "캡션" // 입력란 하단에 표시하는 보조 텍스트
 })
 ```
 
@@ -442,8 +442,8 @@ Ui:C:select({
     // 변경되었을 때의 이벤트. 첫 번째 인수로 변경 후 value
   }
   default: "v1" // 기본값 value
-  label: “라벨” // 입력란 위의 텍스트
-  caption: “캡션” // 입력란 하단에 표시하는 보조 텍스트
+  label: "라벨" // 입력란 위의 텍스트
+  caption: "캡션" // 입력란 하단에 표시하는 보조 텍스트
 })
 ```
 
@@ -457,10 +457,10 @@ Play에 직접 게시 양식 삽입하기
 Ui:C:postForm({
   form: {
     cw: "CW 주석" // CW를 지정할 경우 '요약' 텍스트
-    text: “게시글 내용” // 게시글 양식의 기본 문자열
+    text: "게시글 내용" // 게시글 양식의 기본 문자열
 
     // 다음은 Misskey v2024.5.0 이상에서 지정할 수 있습니다.
-    visibility: "home" // 기본 게시물의 공개 범위(지정하지 않은 경우 public)
+    visibility: "home" // 기본 게시물의 공개 범위 (지정하지 않은 경우 public)
     localOnly: false // 기본적으로 연합 없음 여부 (미지정인 경우 false)
   }
 })
@@ -472,15 +472,15 @@ Ui:C:postForm({
 
 ```AiScript
 Ui:C:postFormButton({
-  text: “게시!” // 버튼에 표시할 텍스트
+  text: "게시!" // 버튼에 표시할 텍스트
   primary: false // 색을 입힐까?
   rounded: false // 모서리를 둥글게 할까?
   form: {
-    cw: “CW 주석” // CW를 지정할 경우 ‘요약’ 텍스트
-    text: “게시글 내용” // 게시글 양식의 기본 문자열
+    cw: "CW 주석" // CW를 지정할 경우 ‘요약’ 텍스트
+    text: "게시글 내용" // 게시글 양식의 기본 문자열
 
     // 다음은 Misskey v2024.5.0 이상에서 지정할 수 있습니다.
-    visibility: "home" // 기본 게시물의 공개 범위(지정하지 않은 경우 public)
+    visibility: "home" // 기본 게시물의 공개 범위 (지정하지 않은 경우 public)
     localOnly: false // 기본적으로 연합 없음 여부 (미지정인 경우 false)
   }
 })
