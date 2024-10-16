@@ -78,4 +78,4 @@ Misskey Web exposes APIs for Plugins, which can be used to extend client functio
 
 Starting with v2023.11.0, you can install plugins directly from your website with one click.
 
-If you want to provide plugin installation functionality, you will need to implement an API on your site.For more information, please see [here](./publish-on-your-website.md).For more information, please see [here](./publish-on-your-website.md).
+If you want to provide plugin installation functionality, you will need to implement an API on your site.For more information, please see [here](../publish-on-your-website.md).
