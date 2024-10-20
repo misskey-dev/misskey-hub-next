@@ -114,11 +114,11 @@ Misskey shows the value on notification to new followee when:
 - the followee's Misskey is 2024.9.0-alpha.11 or later,
 - and one who has set this property gets followed by the followee
 
-## `signinRequiredForShowContents`
+## `_misskey_signinRequiredForShowContents`
 (draft: https://github.com/misskey-dev/misskey/pull/14799)
 
-- compact IRI: `misskey:signinRequiredForShowContents`
-- canonical IRI: `https://misskey-hub.net/ns#signinRequiredForShowContents`
+- compact IRI: `misskey:_misskey_signinRequiredForShowContents`
+- canonical IRI: `https://misskey-hub.net/ns#_misskey_signinRequiredForShowContents`
 
 This value is used for `Actor` type object to forbid show one's content when viewer is not signed-in.
 This property must be either `true` or `false` if existent.
