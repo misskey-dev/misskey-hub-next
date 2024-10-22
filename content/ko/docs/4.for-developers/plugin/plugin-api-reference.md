@@ -281,7 +281,7 @@ Ui:C:container({
   align: 'center' // 정렬 left,center,right
   bgColor: '#000' // 배경색
   fgColor: '#00f' // 글자색
-  font: 'serif' // フォント serif,sans-serif,monospace
+  font: 'serif' // 폰트 serif,sans-serif,monospace
   borderWidth: 1 // 테두리 폭
   borderColor: '#f00' // 테두리 색
   padding: 1 // 여백 폭
@@ -327,43 +327,43 @@ MFM 텍스트
 
 ```AiScript
 Ui:C:mfm({
-  text: "内容" // 表示するテキスト
-  size: 1 // 文字サイズ
-  bold: false // ボールド
-  color: '#000' // 色
-  font: 'monospace' // フォント serif,sans-serif,monospace
+  text: "내용" // 표시할 텍스트
+  size: 1 // 글자크기
+  bold: false // 굵게(볼드)
+  color: '#000' // 글자색
+  font: 'monospace' // 폰트 serif,sans-serif,monospace
   onClickEv: @(id) {
-    // $[clickable.ev=eventId TEXT] のMFM構文のハンドラ
+    // $[clickable.ev=eventId TEXT] 의 MFM 구문 핸들러
     <: `{id} clicked`
   }
 })
 ```
 
-### フォーム
+### Forms
 
 #### `Ui:C:button`
 
-ボタン
+버튼
 
 ```AiScript
 Ui:C:button({
-  text: "ボタン" // ボタンに表示するテキスト
+  text: "버튼" // 버튼에 표시할 텍스트
   onClick: @() {
-    // 押したときのイベント
+    // 누를 때의 이벤트
   }
-  primary: false // 色を付けるか？
-  rounded: false // 角を丸くするか？
-  disabled: false // 無効化するか？
+  primary: false // 색을 입힐까?
+  rounded: false // 모서리를 둥글게 할까?
+  disabled: false // 비활성화할 것인가?
 })
 ```
 
 #### `Ui:C:buttons`
 
-ボタン（横並び）
+버튼 (가로로 나란히)
 
 ```AiScript
 Ui:C:buttons({
-  buttons: [ // ボタン定義の配列。propsの指定形式は Ui:C:button と同じ
+  buttons: [ // 버튼 정의 배열.  props의 지정 형식은 Ui:C:button과 동일.
     {text: "a", onClick: @(){...}}
     {text: "b", onClick: @(){...}}
   ]
@@ -375,113 +375,113 @@ Ui:C:buttons({
 ```AiScript
 Ui:C:switch({
   onChange: @(enabled) { 
-    // 変更された時のイベント。第1引数に変更後の状態（boolean）
+    // 변경되었을 때의 이벤트. 첫 번째 인수로 변경 후 상태 (boolean)
   }
-  default: false // デフォルト値
-  label: "ラベル" // スイッチ横のテキスト
-  caption: "キャプション" // スイッチ下に表示する補助テキスト
+  default: false // 기본값
+  label: "라벨" // 스위치 옆의 텍스트
+  caption: "캡션" // 스위치 아래에 표시되는 보조 텍스트
 })
 ```
 
 #### `Ui:C:textInput`
 
-１行のテキスト入力
+1줄의 텍스트 입력
 
 ```AiScript
 Ui:C:textInput({
   onInput: @(text) {
-    // 入力された時のイベント。第1引数に変更後の値
+    // 입력되었을 때의 이벤트. 첫 번째 인수로 변경 후의 값
   }
-  default: "デフォルト" // デフォルト値
-  label: "ラベル" // 入力欄上のテキスト
-  caption: "キャプション" // 入力欄下に表示する補助テキスト
+  default: "default" // 기본값
+  label: "라벨" // 입력란 위의 텍스트
+  caption: "캡션" // 입력란 하단에 표시하는 보조 텍스트
 })
 ```
 
 #### `Ui:C:numberInput`
 
-１行のテキスト入力
+1줄의 텍스트 입력
 
 ```AiScript
 Ui:C:numberInput({
   onInput: @(number) {
-    // 入力された時のイベント。第1引数に変更後の値
+    // 입력되었을 때의 이벤트. 첫 번째 인수로 변경 후의 값
   }
-  default: "デフォルト" // デフォルト値
-  label: "ラベル" // 入力欄上のテキスト
-  caption: "キャプション" // 入力欄下に表示する補助テキスト
+  default: "default" // 기본값
+  label: "라벨" // 입력란 위의 텍스트
+  caption: "캡션" // 입력란 하단에 표시하는 보조 텍스트
 })
 ```
 
 #### `Ui:C:textarea`
 
-複数行のテキスト入力
+여러 줄의 텍스트 입력
 
 ```AiScript
 Ui:C:textarea({
   onInput: @(text) {
-    // 入力された時のイベント。第1引数に変更後の値
+    // 입력되었을 때의 이벤트. 첫 번째 인수로 변경 후의 값
   }
-  default: "デフォルト" // デフォルト値
-  label: "ラベル" // 入力欄上のテキスト
-  caption: "キャプション" // 入力欄下に表示する補助テキスト
+  default: "default" // 기본값
+  label: "라벨" // 입력란 위의 텍스트
+  caption: "캡션" // 입력란 하단에 표시하는 보조 텍스트
 })
 ```
 
 #### `Ui:C:select`
 
-複数の値から一つ選ぶ形式
+여러 값 중 하나를 선택하는 형식
 
 ```AiScript
 Ui:C:select({
-  items: [ // 選択肢の配列。textには表示するテキストを、valueには変更時のイベントで渡す値を入力
+  items: [ // text에는 표시할 텍스트를, value에는 변경 시 이벤트에서 전달할 값을 입력합니다.
     {text: "A", value: "v1"}
     {text: "B", value: "v2"}
   ]
   onChange: @(value){
-    // 変更された時のイベント。第1引数に変更後のvalue
+    // 변경되었을 때의 이벤트. 첫 번째 인수로 변경 후 value
   }
-  default: "v1" // デフォルトのvalue
-  label: "ラベル" // 入力欄上のテキスト
-  caption: "キャプション" // 入力欄下に表示する補助テキスト
+  default: "v1" // 기본값 value
+  label: "라벨" // 입력란 위의 텍스트
+  caption: "캡션" // 입력란 하단에 표시하는 보조 텍스트
 })
 ```
 
-### ノート投稿関連
+### 노트 게시 관련
 
 #### `Ui:C:postForm`
 
-投稿フォームをPlayに直接埋め込む
+Play에 직접 게시 양식 삽입하기
 
 ```AiScript
 Ui:C:postForm({
   form: {
-    cw: "CW注釈" // CWを指定する場合の「要約」テキスト
-    text: "投稿内容" // 投稿フォームのデフォルト文字列
+    cw: "CW 주석" // CW를 지정할 경우 '요약' 텍스트
+    text: "게시글 내용" // 게시글 양식의 기본 문자열
 
-    // 以下はMisskey v2024.5.0以降で指定可能となります
-    visibility: "home" // デフォルトの投稿の公開範囲（未指定の場合はpublic）
-    localOnly: false // デフォルトで連合無しかどうか（未指定の場合はfalse）
+    // 다음은 Misskey v2024.5.0 이상에서 지정할 수 있습니다.
+    visibility: "home" // 기본 게시물의 공개 범위 (지정하지 않은 경우 public)
+    localOnly: false // 기본적으로 연합 없음 여부 (미지정인 경우 false)
   }
 })
 ```
 
 #### `Ui:C:postFormButton`
 
-投稿フォームを呼び出せる特殊ボタン
+투고 양식을 호출할 수 있는 특수 버튼
 
 ```AiScript
 Ui:C:postFormButton({
-  text: "投稿！" // ボタンに表示するテキスト
-  primary: false // 色を付けるか？
-  rounded: false // 角を丸くするか？
+  text: "게시!" // 버튼에 표시할 텍스트
+  primary: false // 색을 입힐까?
+  rounded: false // 모서리를 둥글게 할까?
   form: {
-    cw: "CW注釈" // CWを指定する場合の「要約」テキスト
-    text: "投稿内容" // 投稿フォームのデフォルト文字列
+    cw: "CW 주석" // CW를 지정할 경우 ‘요약’ 텍스트
+    text: "게시글 내용" // 게시글 양식의 기본 문자열
 
-    // 以下はMisskey v2024.5.0以降で指定可能となります
-    visibility: "home" // デフォルトの投稿の公開範囲（未指定の場合はpublic）
-    localOnly: false // デフォルトで連合無しかどうか（未指定の場合はfalse）
+    // 다음은 Misskey v2024.5.0 이상에서 지정할 수 있습니다.
+    visibility: "home" // 기본 게시물의 공개 범위 (지정하지 않은 경우 public)
+    localOnly: false // 기본적으로 연합 없음 여부 (미지정인 경우 false)
   }
 })
 ```
