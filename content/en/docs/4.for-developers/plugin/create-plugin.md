@@ -2,28 +2,28 @@
 
 The plugin feature of the Misskey Web Client allows you to extend the client and add various features to it.
 
-## プラグインの例
+## Example
 
-以下に完全なプラグインの例を示します。このプラグインは、[`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn)を使用して、投稿フォームに「フグパンチボタン」を追加するものです。
+This is a complete example of plugin.This plugin adds a "Fugu Punch Button" to the post form by utilizing [`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn).
 
-このプラグインをインストールすると、投稿フォーム上のプラグインメニューに「フグパンチ」の項目が追加されます。クリックすると、投稿フォーム上のテキストに `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )` が追加されます。
+By installing this plugin, you will find additional item named "Fugu Punch" in plugin section of the post form.And if you click the button, `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )` will be appended in the body text.
 
 ```ais
 /// @ 0.12.4
 ### {
-  name: "フグパンチボタン"
+  name: "Fugu Punch Button"
   version: "0.0.1"
   author: "Misskey Project"
 }
 
-Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
+Plugin:register_post_form_action('Fugu Punch', @(note, rewrite) {
   let fugu = "ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )"
 
   if (note.text.trim() == '') {
-    // ノートの中身がない場合はフグパンチに置き換え
+    // Replace with Fugu Punch when no body text is present
     rewrite('text', fugu)
   } else {
-    // ノートの中身がある場合は冒頭にフグパンチを追加して改行
+    // If body has some content, append Fugu Punch and line break
     rewrite('text', `{fugu}{Str:lf}{note.text}`)
   }
 })
