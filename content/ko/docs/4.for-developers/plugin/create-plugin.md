@@ -2,6 +2,33 @@
 
 Misskey 웹 클라이언트의 플러그인 기능을 사용하면 클라이언트를 확장하고 다양한 기능을 추가할 수 있습니다.
 
+## プラグインの例
+
+以下に完全なプラグインの例を示します。このプラグインは、[`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn)を使用して、投稿フォームに「フグパンチボタン」を追加するものです。
+
+このプラグインをインストールすると、投稿フォーム上のプラグインメニューに「フグパンチ」の項目が追加されます。クリックすると、投稿フォーム上のテキストに `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )` が追加されます。
+
+```ais
+/// @ 0.12.4
+### {
+  name: "フグパンチボタン"
+  version: "0.0.1"
+  author: "Misskey Project"
+}
+
+Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
+  let fugu = "ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )"
+
+  if (note.text.trim() == '') {
+    // ノートの中身がない場合はフグパンチに置き換え
+    rewrite('text', fugu)
+  } else {
+    // ノートの中身がある場合は冒頭にフグパンチを追加して改行
+    rewrite('text', `{fugu}{Str:lf}{note.text}`)
+  }
+})
+```
+
 ## AiScript
 
 플러그인은 AiScript로 작성되는 스크립트입니다.

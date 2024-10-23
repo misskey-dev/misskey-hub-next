@@ -2,6 +2,33 @@
 
 The plugin feature of the Misskey Web Client allows you to extend the client and add various features to it.
 
+## Example
+
+This is a complete example of plugin.This plugin adds a "Fugu Punch Button" to the post form by utilizing [`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn).
+
+By installing this plugin, you will find additional item named "Fugu Punch" in plugin section of the post form.And if you click the button, `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )` will be appended in the body text.
+
+```ais
+/// @ 0.12.4
+### {
+  name: "Fugu Punch Button"
+  version: "0.0.1"
+  author: "Misskey Project"
+}
+
+Plugin:register_post_form_action('Fugu Punch', @(note, rewrite) {
+  let fugu = "ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )"
+
+  if (note.text.trim() == '') {
+    // Replace with Fugu Punch when no body text is present
+    rewrite('text', fugu)
+  } else {
+    // If body has some content, append Fugu Punch and line break
+    rewrite('text', `{fugu}{Str:lf}{note.text}`)
+  }
+})
+```
+
 ## AiScript
 
 Plugins are scripts written using AiScript.

@@ -3,6 +3,33 @@
 Misskey Web 客户端的插件功能将允许您扩展客户端并添加各种功能。\
 本文档介绍如何创建插件
 
+## プラグインの例
+
+以下に完全なプラグインの例を示します。このプラグインは、[`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn)を使用して、投稿フォームに「フグパンチボタン」を追加するものです。
+
+このプラグインをインストールすると、投稿フォーム上のプラグインメニューに「フグパンチ」の項目が追加されます。クリックすると、投稿フォーム上のテキストに `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )` が追加されます。
+
+```ais
+/// @ 0.12.4
+### {
+  name: "フグパンチボタン"
+  version: "0.0.1"
+  author: "Misskey Project"
+}
+
+Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
+  let fugu = "ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )"
+
+  if (note.text.trim() == '') {
+    // ノートの中身がない場合はフグパンチに置き換え
+    rewrite('text', fugu)
+  } else {
+    // ノートの中身がある場合は冒頭にフグパンチを追加して改行
+    rewrite('text', `{fugu}{Str:lf}{note.text}`)
+  }
+})
+```
+
 ##
 
 插件是指使用 AiScript 编写的脚本。
