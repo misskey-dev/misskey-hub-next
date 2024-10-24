@@ -120,9 +120,37 @@ Misskey shows the value on notification to new followee when:
 - compact IRI: `misskey:_misskey_requireSigninToViewContents`
 - canonical IRI: `https://misskey-hub.net/ns#_misskey_requireSigninToViewContents`
 
-This value is used for `Actor` type object to forbid show one's content when viewer is not signed-in.
-This property must be either `true` or `false` if existent.
+This property is used for `Actor` type object to forbid show one's content when viewer is not signed-in.
+This value must be either `true` or `false` if existent.
 
 An implementation should refuse to show their content to align to Misskey's implementation if the value is `true` and the viewer is not signed-in.
+
+This property is not guaranteed to work on older Misskey or non-Misskey implementation.
+
+## `_misskey_makeNotesFollowersOnlyBefore`
+(introduced in: https://github.com/misskey-dev/misskey/pull/14814)
+
+- compact IRI: `misskey:_misskey_makeNotesFollowersOnlyBefore`
+- canonical IRI: `https://misskey-hub.net/ns#_misskey_makeNotesFollowersOnlyBefore`
+
+This property is used for `Actor` type object to forbid show one's *past* content when viewer is not a follower of author.
+This value must be a integer if existent.
+
+Misskey computes that the threshold of the Unix epoch second in the either way:
+- If the value is positive, then the value is absolute.
+- If the value is negative, then the value is relative millisecond from the Epoch correspoinding to posted date.
+
+If posted date is considered as older than the threshold, then it is considered as a past content. 
+If the viewer is not a follower of the author, then past content shall not be shown.
+
+This property is not guaranteed to work on older Misskey or non-Misskey implementation.
+
+## `_misskey_makeNotesHiddenBefore`
+(introduced in: https://github.com/misskey-dev/misskey/pull/14814)
+
+- compact IRI: `misskey:_misskey_makeNotesHiddenBefore`
+- canonical IRI: `https://misskey-hub.net/ns#_misskey_makeNotesHiddenBefore`
+
+This property is used for `Actor` type object. This property has same semantics and value range as `_misskey_makeNotesFollowersOnlyBefore` but affected viewer: the value affects everyone but author themselves.
 
 This property is not guaranteed to work on older Misskey or non-Misskey implementation.
