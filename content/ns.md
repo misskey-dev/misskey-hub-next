@@ -136,9 +136,9 @@ This property is not guaranteed to work on older Misskey or non-Misskey implemen
 This property is used for `Actor` type object to forbid show one's *past* content when viewer is not a follower of author.
 This value must be a integer if existent.
 
-Misskey computes that the threshold of the Unix epoch second in the either way:
-- If the value is positive, then the value is absolute.
-- If the value is negative, then the value is relative millisecond from the Epoch correspoinding to posted date.
+Misskey computes that the threshold of the Unix epoch millisecond in the either way:
+- If the value is positive, then the value is interpreted as an absolute Unix epoch millisecond.
+- If the value is negative, then the value is relative millisecond compared to posted date. For example, `-86400000` implies targeting a note that has posted before yesterday because a day contains 86400 seconds.
 
 If posted date is considered as older than the threshold, then it is considered as a past content. 
 If the viewer is not a follower of the author, then past content shall not be shown.
