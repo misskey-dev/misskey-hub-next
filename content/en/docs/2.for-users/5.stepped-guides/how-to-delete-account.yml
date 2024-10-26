@@ -1,5 +1,7 @@
 title: "How to delete your account"
 description: "This page explains how to delete your account on Misskey server."
+#Do not translate any keys that includes underscore
+_TYPE_: "STEPPED_GUIDE"
 body: |
   Some users may find that they no longer need their Misskey accounts and may wish to delete them. On this page, we will provide information about:
 
@@ -40,44 +42,56 @@ body: |
   After understanding all of the above, and if you still need to delete your account, please select your device type below and proceed with the account deletion.
 guides:
   - 
+    _AUTOSELECT_TYPE_: "HARD_SMARTPHONE"
+    _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
     title: "Smartphone"
     steps:
       - 
         title: "Open Settings"
+        image: "sp/1.png"
         description: |
           Open Misskey, tap the "≡" button at the bottom right of the screen, then tap "Settings" from the menu that appears.
       - 
         title: "Tap \"Other\""
+        image: "sp/2.png"
         description: |
           Find and tap on "Other" within the settings category.
       - 
         title: "Tap \"Request account deletion\""
+        image: "sp/3.png"
         description: |
           Tap "Close Account" to open it, then tap "Request account deletion" button after reviewing the instructions.
       - 
         title: "Enter password"
+        image: "sp/4.png"
         description: |
           Enter the password for confirmation as it initiates the dangerous operation.
       - 
         title: "Request for account deletion is complete"
+        image: "sp/5.png"
         description: |
           When this screen appears, your request to delete your account is complete. Tap "OK" to log out of the Misskey server.
   - 
+    _AUTOSELECT_TYPE_: "HARD_PC"
     title: "PC"
     steps:
       - 
         title: "Open Settings"
+        image: "pc/2.png"
         description: |
           Open "Settings" and click on "Other," which can be found by scrolling down a bit.
       - 
         title: "Click \"Request account deletion\""
+        image: "pc/3.png"
         description: |
           Click "Close Account" to open it, then click "Request account deletion" button after reviewing the instructions.
       - 
         title: "Enter password"
+        image: "pc/4.png"
         description: |
           Enter the password for confirmation as it initiates the dangerous operation.
       - 
         title: "Request for account deletion is complete"
+        image: "pc/5.png"
         description: |
           When this screen appears, your request to delete your account is complete. Tap "OK" to log out of the Misskey server.
