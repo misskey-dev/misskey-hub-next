@@ -18,6 +18,8 @@ lastUpdate: "Pembaruan terakhir"
 empty: "Tidak ada konten"
 threeDimensionModel: "Model 3D"
 clickToShow: "Klik untuk melihat"
+preview: "プレビュー"
+scrollable: "スクロールできます"
 _error:
   notFound: "Halaman Tidak Ditemukan"
   notFoundDesc: "Halaman yang kamu cari tidak dapat ditemukan. Mohon cek kembali URL yang kamu tuju."
@@ -196,6 +198,8 @@ _brandAssets:
   icon: "Ikon"
   banner: "Banner"
   avatarDecorationTemplate: "Templat Dekorasi Avatar"
+  fullColorPng: "フルカラー (PNG)"
+  monoChromeSvg: "単色 (SVG)"
 _contact:
   title: "Hubungi kami"
   description: "Berhubung dengan Proyek Misskey"
@@ -352,6 +356,14 @@ _historicalMaterials:
   heroDescription: "Misskey diluncurkan pada tahun 2014 sebagai layanan papan buletin. Sepuluh tahun telah berlalu dan sekarang telah menjadi platform yang digunakan oelh banyak orang.\nMari kita jelajahi tangkapan layar bersejarah yang ada di Misskey!"
   submissionTitle: "Punya tangkapan layar klasik dari Misskey?"
   submissionDescription: "Apabila kamu memiliki materi yang terkait dengan Misskey versi lama, mohon kirimkan materi tersebut kepada kami.\nPengguna GitHub dapat mengumpulkannya ke {gh_issue}, dan bagi yang tidak dapat menggunakan GitHub dapat mengirimkannya ke {'@'}syuilo{'@'}misskey.io."
+_miHubServerListPreview:
+  title: "Misskey Hub サーバー一覧 プレビュー"
+  description: "Misskey Hubのサーバー一覧にお手持ちの画像を当てはめて見栄えをチェックできます。"
+  name: "サーバー名"
+  serverDescription: "説明文"
+  icon: "アイコン画像"
+  bannerOrBg: "バナー画像 or 背景画像"
+  bannerOrBgDescription: "バナー画像と背景画像が両方指定されている場合は、背景画像の方を優先して表示します。画像は中心基準で16:9に収まる最大領域のみが表示されます。"
 _api:
   _permissions:
     title: "Hak akses"
