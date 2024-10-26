@@ -1,5 +1,7 @@
 title: "How to use Misskey Web as a smartphone app"
 description: "Learn how to turn Misskey Web into a PWA app. This is the recommended way to use Misskey on your smartphone."
+#Do not translate any keys that includes underscore
+_TYPE_: "STEPPED_GUIDE"
 body: |
   Here is how to convert Misskey Web into a PWA application. This is the recommended way to use Misskey on your smartphone.
 
@@ -10,6 +12,8 @@ body: |
   In this page, we'll explain how to set up PWA for each device OS. Please select your OS below to proceed!
 guides:
   - 
+    _AUTOSELECT_TYPE_: "OS_ANDROID"
+    _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
     title: "Android (Google Chrome)"
     description: |
       We recommend using Google Chrome to use PWA on Android.
@@ -18,23 +22,29 @@ guides:
     steps:
       - 
         title: "Open the Misskey server you want to make into a PWA"
+        image: "android/sp_0.png"
         description: |
           Access the Misskey server you want to install on your device, and log in.
       - 
         title: "Open settings"
+        image: "android/sp_1.png"
         description: |
           Tap the ︙ button in the upper right corner while any page on the Misskey server is open.
       - 
         title: "Tap \"Add to Home Screen\" or \"Install App\""
+        image: "android/sp_2.png"
         description: |
           Tap the "Add to Home Screen" or "Install App" item in the menu and follow the instructions in the dialog.
       - 
         title: "Check your home screen"
+        image: "android/sp_3.png"
         description: |
           After a few moments, the server icon or a Misskey icon will be added to the home screen.
 
           When launched from this icon, Misskey will start in app mode.
   - 
+    _AUTOSELECT_TYPE_: "OS_IOS"
+    _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
     title: "iOS / iPadOS"
     description: |
       Use Safari when using PWA on iOS or iPadOS.
@@ -43,14 +53,17 @@ guides:
     steps:
       - 
         title: "Open the Misskey server you want to make into a PWA"
+        image: "ios/sp_0.png"
         description: |
           Access the Misskey server you want to install on your device, and log in.
       - 
         title: "Tap \"Share\" button and open the menu"
+        image: "ios/sp_1.png"
         description: |
           Tap "Share" button in the menu bar while any page on the Misskey server is open.
       - 
         title: "Tap \"Add to Home Screen\""
+        image: "ios/sp_2.png"
         description: |
           Scroll down the list of options, then tap Add to Home Screen.
 
@@ -59,6 +72,7 @@ guides:
           If you don’t see Add to Home Screen, the setting item may be hidden. To add it, scroll down to the bottom of the list, tap Edit Actions, then tap Add to Home Screen. See [Apple Support page](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/17.0/ios/17.0) for more information.
       - 
         title: "Check your home screen"
+        image: "ios/sp_3.png"
         description: |
           After a few moments, the server icon or a Misskey icon will be added to the home screen.
 
