@@ -223,7 +223,7 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
 
-http://localhost にアクセスし、\*Welcome to nginx!\*と表示されればOK。\
+<http://localhost> にアクセスし、\*Welcome to nginx!\*と表示されればOK。\
 curlで確認するのもよいだろう。
 
 ```sh
@@ -310,7 +310,7 @@ sudo apt install -y certbot python3-certbot-dns-cloudflare
 
 CloudflareのAPIキーを取得する。以下の手順で取得されたい。
 
-1. https://dash.cloudflare.com/profile/api-tokens にアクセス
+1. <https://dash.cloudflare.com/profile/api-tokens> にアクセス
 2. Global API KeyのViewを選択
 3. パスワードを入力しhCaptchaを解除、Viewを選択
 
