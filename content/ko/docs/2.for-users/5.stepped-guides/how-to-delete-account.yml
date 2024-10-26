@@ -1,5 +1,7 @@
 title: "계정을 삭제하는 방법"
 description: "Misskey의 계정을 삭제하는 방법을 소개합니다."
+#Do not translate any keys that includes underscore
+_TYPE_: "STEPPED_GUIDE"
 body: |
   Misskey 계정이 필요하지 않아, 계정을 삭제하고 싶은 분도 계실 거라 생각합니다. 이 페이지에서는,
 
@@ -40,44 +42,56 @@ body: |
   이상 모든 것을 이해하시고, 그래도 계정을 삭제할 필요가 있는 분은, 아래에서 사용의 기기 타입을 선택해, 계정 삭제를 실시해 주세요.
 guides:
   - 
+    _AUTOSELECT_TYPE_: "HARD_SMARTPHONE"
+    _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
     title: "스마트폰"
     steps:
       - 
         title: "설정 열기"
+        image: "sp/1.png"
         description: |
           Misskey 를 열고, 화면 우측 하단의 「≡」버튼을 선택, 나온 메뉴의 「설정」을 선택합니다.
       - 
         title: "\"기타\"를 탭"
+        image: "sp/2.png"
         description: |
           설정 카테고리 안에서 "기타" 탭을 찾아 선택합니다.
       - 
         title: "\"계정 삭제 요청\"을 탭"
+        image: "sp/3.png"
         description: |
           "계정 삭제 요청"을 탭해 열고 주의사항을 확인한 후 "계정 삭제 요청"을 탭합니다.
       - 
         title: "비밀번호 입력"
+        image: "sp/4.png"
         description: |
           중요한 조작에 대한 확인 절차로, 사용 중인 계정에 로그인할 때 사용하고 있는 비밀번호를 입력합니다.
       - 
         title: "계정 삭제 요청 완료"
+        image: "sp/5.png"
         description: |
           이 화면이 뜨면 계정 삭제 요청이 완료됩니다. "확인"을 탭하면 Misskey에서 로그아웃됩니다.
   - 
+    _AUTOSELECT_TYPE_: "HARD_PC"
     title: "PC"
     steps:
       - 
         title: "설정 열기"
+        image: "pc/2.png"
         description: |
           "설정"을 열고 조금 내리면 보이는 "기타"를 클릭합니다.
       - 
         title: "\"계정 삭제 요청\"을 선택"
+        image: "pc/3.png"
         description: |
           "계정 삭제 요청"을 선택해 열고 주의사항을 확인한 후 "계정 삭제 요청"을 선택합니다.
       - 
         title: "비밀번호 입력"
+        image: "pc/4.png"
         description: |
           중요한 조작에 대한 확인 절차로, 사용 중인 계정에 로그인할 때 사용하고 있는 비밀번호를 입력합니다.
       - 
         title: "계정 삭제 요청 완료"
+        image: "pc/5.png"
         description: |
           이 화면이 뜨면 계정 삭제 요청이 완료됩니다. "확인"을 선택하면 Misskey에서 로그아웃됩니다.
