@@ -223,7 +223,7 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
 
-http://localhost에 접속하여 \*Welcome to nginx!\*라고 표시되면 OK.\
+<http://localhost>에 접속하여 \*Welcome to nginx!\*라고 표시되면 OK.\
 curl에서 확인하는 것도 좋은 방법입니다.
 
 ```sh
@@ -310,7 +310,7 @@ sudo apt install -y certbot python3-certbot-dns-cloudflare
 
 Cloudflare의 API 키를 얻습니다.아래 절차에 따라 취득합니다.
 
-1. https://dash.cloudflare.com/profile/api-tokens에 접속
+1. <https://dash.cloudflare.com/profile/api-tokens>에 접속
 2. Global API Key의 View 선택
 3. 비밀번호 입력 및 hCaptcha 해제, View 선택
 
