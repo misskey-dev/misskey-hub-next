@@ -16,10 +16,6 @@ contactUs: "Nous contacter"
 detail: "Détails"
 lastUpdate: "Dernière mise à jour"
 empty: "Pas de contenu"
-threeDimensionModel: "3Dモデル"
-clickToShow: "クリックして表示"
-preview: "プレビュー"
-scrollable: "スクロールできます"
 _error:
   notFound: "La page demandée est introuvable !"
   notFoundDesc: "La page que vous cherchiez n'a pas pu être trouvée. Veuillez vérifier l'URL."
@@ -198,8 +194,6 @@ _brandAssets:
   icon: "Icône"
   banner: "Bannière"
   avatarDecorationTemplate: "Modèle de décoration d'avatar"
-  fullColorPng: "フルカラー (PNG)"
-  monoChromeSvg: "単色 (SVG)"
 _contact:
   title: "Nous contacter"
   description: "Contactez le projet Misskey ici"
@@ -250,7 +244,6 @@ _aidConverter:
   dateToAid: "Date et heure → aid/aidx"
   mode: "Identifiant à créer"
   date: "Date et heure"
-  inputByLine: "改行区切りで複数のaid/aidxを変換できます。"
 _aboutUs:
   title: "À propos de la division du Développement de Misskey"
   description: "Information sur l'équipe de développement de Misskey."
@@ -311,8 +304,6 @@ _shareLinkGenerator:
   testLink: "Tester le lien de partage"
   typeSomethingToGetLink: "Entrez le corps pour générer le lien."
   typeSomethingToGetButton: "Entrez le corps pour générer le bouton."
-  documentationIs: "パラメータの詳細情報など、技術仕様は{here}"
-  here: "こちら"
 _goToMisskey:
   title: "Aller à Misskey Web"
   heading: "Sélectionnez l'instance sur laquelle vous souhaitez ouvrir cette page"
@@ -349,21 +340,6 @@ _identiconGenerator:
   description: "Vous pouvez générer l'icône utilisée par défaut lorsque vous vous inscrivez sur Misskey."
   userName: "Nom d'utilisateur·rice"
   includeDomain: "Veuillez spécifier le nom d'utilisateur·rice complet, incluant le domaine de l'instance."
-_historicalMaterials:
-  title: "歴史資料館"
-  description: "Misskeyに関する歴史的資料を一挙公開"
-  heroSubtitle: "Misskey 10周年記念企画"
-  heroDescription: "Misskeyは2014年に掲示板サービスとして生まれました。それから10年経ち、今ではたくさんの方々に利用していただけるプラットフォームになりました。\nここではMisskeyに関する歴史的資料を一挙公開します！"
-  submissionTitle: "古いMisskeyの写真をお持ちですか？"
-  submissionDescription: "昔のMisskeyにまつわる資料をお持ちの方は、ぜひ当館にお寄せください。\nGitHubを利用できる方は{gh_issue}に、利用できない方は {'@'}syuilo{'@'}misskey.io にお送りください。"
-_miHubServerListPreview:
-  title: "Misskey Hub サーバー一覧 プレビュー"
-  description: "Misskey Hubのサーバー一覧にお手持ちの画像を当てはめて見栄えをチェックできます。"
-  name: "サーバー名"
-  serverDescription: "説明文"
-  icon: "アイコン画像"
-  bannerOrBg: "バナー画像 or 背景画像"
-  bannerOrBgDescription: "バナー画像と背景画像が両方指定されている場合は、背景画像の方を優先して表示します。画像は中心基準で16:9に収まる最大領域のみが表示されます。"
 _api:
   _permissions:
     title: "Permissions"
