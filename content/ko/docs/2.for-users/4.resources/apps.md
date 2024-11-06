@@ -10,7 +10,6 @@ Misskey를 사용하기 위한 앱(클라이언트)을 소개합니다.
 
 미스키 웹에 익숙해지면, 자원봉사자들이 개발하는 비공식 앱을 사용해보는 것도 좋습니다.다음은 널리 사용되는 앱을 소개합니다(가나다 순).
 
-- **Kaiteki** (Web, Android, Windows, Linux): 다양한 플랫폼에서 동작합니다.Mastodon, Pleroma, Twitter도 지원합니다.[공식 사이트](https://kaiteki.app)。Mastodon, Pleroma, Twitter도 지원합니다.[공식 사이트](https://kaiteki.app)。[소스 코드](https://github.com/Kaiteki-Fedi/Kaiteki)。
 - **Milktea** (Android): 타임라인과 특정 검색 결과에 대한 탭을 통해 빠르게 접근할 수 있습니다.다른 사용자에게 닉네임을 부여할 수 있습니다.[Google Play](https://play.google.com/store/apps/details?id=jp.panta.misskeyandroidclient)。다른 사용자에게 닉네임을 부여할 수 있습니다.[Google Play](https://play.google.com/store/apps/details?id=jp.panta.misskeyandroidclient)。[소스 코드](https://github.com/pantasystem/Milktea)。
 - **Miria** (iOS, Mac, Android): 탭에 사용자 지정 이모티콘을 설정할 수 있는 기능, MFM의 입력 보완 등 미스키에 특화된 독자적인 기능을 가지고 있습니다.[공식 사이트](https://shiosyakeyakini.info/miria_web/index.html)。[공식 사이트](https://shiosyakeyakini.info/miria_web/index.html)。[App Store](https://apps.apple.com/jp/app/miria/id6449201469)。[Google Play](https://play.google.com/store/apps/details?id=info.shiosyakeyakini.miria)。[소스 코드](https://github.com/shiosyakeyakini-info/miria)
 - **MissRirica** (iOS, Android): Misskey용 iOS/Android 클라이언트.거의 Misskey Web(v13)의 UI, Push 알림이 도착합니다.[App Store](https://apps.apple.com/app/missririca/id1659214999)。거의 Misskey Web(v13)의 UI, Push 알림이 도착합니다.[App Store](https://apps.apple.com/app/missririca/id1659214999)。[Google Play](https://play.google.com/store/apps/details?id=space.riinswork.missririca)。[소스 코드](https://github.com/fruitriin/missRirica-client)
