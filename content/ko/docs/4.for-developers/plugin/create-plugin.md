@@ -2,11 +2,11 @@
 
 Misskey 웹 클라이언트의 플러그인 기능을 사용하면 클라이언트를 확장하고 다양한 기능을 추가할 수 있습니다.
 
-## プラグインの例
+## 플러그인 예시
 
-以下に完全なプラグインの例を示します。このプラグインは、[`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn)を使用して、投稿フォームに「フグパンチボタン」を追加するものです。
+다음은 완전한 플러그인의 예시입니다.이 플러그인은 [`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn)를 사용하여, 게시 폼에 "복어 펀치 버튼"(フグパンチボタン)을 추가하는 내용입니다.
 
-このプラグインをインストールすると、投稿フォーム上のプラグインメニューに「フグパンチ」の項目が追加されます。クリックすると、投稿フォーム上のテキストに `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )` が追加されます。
+이 플러그인을 설치하면, 게시 폼에 있는 플러그인 메뉴에 "복어 펀지" 항목이 추가됩니다.클릭 후, 게시 폼에 있는 텍스트에 `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )`(복어펀치!!!!)가 추가됩니다.
 
 ```ais
 /// @ 0.12.4
@@ -20,10 +20,10 @@ Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
   let fugu = "ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )"
 
   if (note.text.trim() == '') {
-    // ノートの中身がない場合はフグパンチに置き換え
+    // 노트에 아무것도 적지 않은 경우 フグパンチ 를 대신 올리기
     rewrite('text', fugu)
   } else {
-    // ノートの中身がある場合は冒頭にフグパンチを追加して改行
+    // 내용이 있는 노트의 경우 제일 앞에 フグパンチ 를 추가 후 다음 줄로
     rewrite('text', `{fugu}{Str:lf}{note.text}`)
   }
 })
