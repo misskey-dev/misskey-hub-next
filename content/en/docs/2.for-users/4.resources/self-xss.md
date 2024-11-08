@@ -1,21 +1,21 @@
-# Self-XSS攻撃について
+# Self-XSS Attack
 
 ![](/img/docs/for-users/resources/self-xss/console_warn.png)
 
-誰かに指示されてMisskeyを操作していたら、上図のような画面に遭遇してこのページに辿り着きましたか？ <u>**おそらくあなたは悪意ある攻撃者に騙されています。**</u>
+Did you land on this page after following someone's instructions while using Misskey and seeing a screen like the one above? <u>**You may have been tricked by a malicious attacker.**</u>
 
-入力しろと指示された内容（おそらくプログラムです）を入力しない限り、指示していた攻撃者に情報が送信されることはありません。**すぐに作業を中止してください。**
+Unless you type in the content you were instructed to (most likely a program), no information will be sent to the attacker.**Please stop what you're doing immediately.**
 
-この画面は開発者がコードの確認やバグ修正に使うための「コンソール」と呼ばれるツールで、**通常の利用でこの画面を必要とすることはありません。**
+The screen you're seeing is called the "console," a tool developers use to check code and fix bugs. **This screen is not needed for regular use.**
 
-## もう少し詳しく
+## More Details
 
-Self-XSS攻撃では、攻撃者がユーザーをだまして、ブラウザの開発者ツールに悪意のあるプログラムコードを貼り付けさせます。この際、ユーザーには以下のような文句で誘導させます：
+In a Self-XSS attack, an attacker tricks a user into pasting malicious code into the browser’s developer tools.They often do this by making enticing claims like:
 
-- 隠し機能や特典を開放できる
-- セキュリティテストのためにこのコードを実行してみてほしい
-- ウェブサイトをハッキングして不正にポイントを入手できる
+- Unlock hidden features or perks
+- Test this code for security purposes
+- Hack the website to get extra points
 
-このような文句に騙されてコードを実行してしまうと、攻撃者が意図した通りの操作を行うことになります。
+If you’re convinced to run this code, you’ll perform actions that the attacker intended.
 
-一般的にイメージされる「サイバー攻撃」とは違い、Self-XSS攻撃はユーザーが使用する正規のアプリを通して機密データを取得するため、システム側での対策だけでなく、ユーザーが普段から注意することが重要です。
+Unlike what you might image as a typical "cyberattack," Self-XSS attacks get sensitive data by tricking users into using legitimate apps. This means that, in addition to system security measures, it's crucial for users to stay vigilant against these tricks.
