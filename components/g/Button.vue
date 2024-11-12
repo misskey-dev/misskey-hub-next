@@ -8,15 +8,11 @@
 </template>
 
 <script setup lang="ts">
-const props = withDefaults(defineProps<({
+const props = withDefaults(defineProps<{
     /** ボタンのタイプ */
-    buttonType: 'button';
-} | {
-    /** ボタンのタイプ */
-    buttonType: 'link';
+    buttonType: 'button' | 'link';
     /** 移動先 */
-    to: string;
-}) & {
+    to?: string;
     /** 色設定 */
     color?: 'accent' | 'plain';
 }>(), {
