@@ -305,7 +305,7 @@ _shareLinkGenerator:
   manualInstance: "Domini di server consigliati"
   manualInstanceDescription: "Il server specificato qui, può essere visualizzato nella parte superiore della pagina di inoltro pulsante di condivisione. Potresti usarlo per indirizzare le persone al tuo server."
   visibility: "Visibilità"
-  recipents: "ダイレクトを受け取る人のacct（改行区切り）"
+  recipents: "Destinatari (uno per linea)"
   resultLink: "Collegamento risultante"
   resultButton: "Esempio del bottone di condivisione"
   testLink: "Prova il link di condivisione"
