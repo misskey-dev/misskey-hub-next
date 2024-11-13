@@ -50,7 +50,7 @@ OSの違い、Misskey本体や依存するソフトウェアのバージョン�
 *   OSは**Ubuntu 22.04.1 LTS**を利用する。
 *   ハードウェア要件としては、CPUは最近のものなら最小限で動く。アーキテクチャはamd64及びarm64を想定している。
 *   メモリは1.5GB程度あればよい。（Viteの導入等により、1.5GB程度でもビルド可能になった）
-*   独自のドメインを購入し、CloudFlareを使用する。
+*   独自のドメインを購入し、Cloudflareを使用する。
 *   ドメインは[Google Domains](https://domains.google/intl/ja_jp/)などで予め用意しておくこと。
 *   ここではドメインをexample.tldとして解説を進めるので、自分が買ったドメインに適宜置き換えて読むこと。開発環境の場合はlocalhostと読み替えます（設定ファイルの項で別途説明）
 
@@ -241,7 +241,7 @@ sudo apt install -y git build-essential
 サーバーをインターネットに公開する準備をする。
 
 :::tip
-開発環境の場合はファイヤーウォールやCloudFlare、Certbotの設定は不要です
+開発環境の場合はファイヤーウォールやCloudflare、Certbotの設定は不要です
 :::
 
 ### ファイヤーウォール
@@ -278,13 +278,13 @@ sudo systemctl enable ufw
 ufwは、netfilter(iptables)を人間が操作しやすいようにするアプリだ。インストールスクリプトは、OCI環境ではnetfilterを直接操作する。
 :::
 
-### CloudFlare
+### Cloudflare
 
-CloudFlareは、自分のドメインに対してDNSサーバー・リバースプロキシ・CDNをいっぺんに提供してくれるたいへん便利なサービスである。\
-CloudFlareを経由せずにサーバーを公開することも可能だが、たいへん便利なので導入することをお勧めする。
+Cloudflareは、自分のドメインに対してDNSサーバー・リバースプロキシ・CDNをいっぺんに提供してくれるたいへん便利なサービスである。\
+Cloudflareを経由せずにサーバーを公開することも可能だが、たいへん便利なので導入することをお勧めする。
 [**→ CDNの設定**](/docs/admin/cdn.html)
 
-[CloudFlareにサインアップ](https://dash.cloudflare.com/sign-up) し、購入したドメインを案内に従って登録する。
+[Cloudflareにサインアップ](https://dash.cloudflare.com/sign-up) し、購入したドメインを案内に従って登録する。
 
 DNSの登録画面でサーバーのIPアドレスを入力しておくとよい。
 
@@ -292,9 +292,9 @@ DNSの登録画面でサーバーのIPアドレスを入力しておくとよい
 
 ### Certbot (Let’s Encrypt) の設定
 
-HTTPS･WSS通信に使用する証明書をCloudFlareを使う方式でLet’s Encryptから取得する。
+HTTPS･WSS通信に使用する証明書をCloudflareを使う方式でLet’s Encryptから取得する。
 
-certbotとCloudFlareプラグインをインストール
+certbotとCloudflareプラグインをインストール
 
 ```sh
 sudo apt install -y certbot python3-certbot-dns-cloudflare
@@ -306,14 +306,14 @@ CloudflareのAPIキーを取得する。以下の手順で取得されたい。
 2.  Global API KeyのViewを選択
 3.  パスワードを入力しhCaptchaを解除、Viewを選択
 
-CloudFlareの情報を記載した設定ファイル/etc/cloudflare/cloudflare.iniを作成する。
+Cloudflareの情報を記載した設定ファイル/etc/cloudflare/cloudflare.iniを作成する。
 
 ```sh
 mkdir /etc/cloudflare
 nano /etc/cloudflare/cloudflare.ini
 ```
 
-dns_cloudflare_email（下の例ではbar@fuga.foo）にはCloudFlareで登録しているメールアドレスを設定する。
+dns_cloudflare_email（下の例ではbar@fuga.foo）にはCloudflareで登録しているメールアドレスを設定する。
 
 ```sh
 dns_cloudflare_email = bar@fuga.foo
@@ -505,9 +505,9 @@ Misskeyのウェルカムページが表示されるはずだ。
 
 ### アクセスできない場合
 
-#### CloudFlareのDNSを確認する
+#### CloudflareのDNSを確認する
 
-CloudFlareのDNS設定が正しいIPアドレスになっているかもう一度確認しよう。
+CloudflareのDNS設定が正しいIPアドレスになっているかもう一度確認しよう。
 
 #### ルーターの設定を確認する
 

@@ -223,11 +223,11 @@ Attiva la partenza automatica al riavvio: `sudo systemctl enable ufw`
 ufw semplifica l'uso di Netfilter (IPTABLES)
 :::
 
-### CloudFlare
+### Cloudflare
 
 Si tratta di un servizio utile per gestire DNS, Reverse Proxy e CDN sul tuo dominio. Si può anche evitare ma è consigliato, oltre che comodo. [Configurazione CDN](../admin/cdn)
 
-[Iscrizione a CloudFlare](https://dash.cloudflare.com/sign-up) segui le indicazioni per configurare il dominio prescelto.
+[Iscrizione a Cloudflare](https://dash.cloudflare.com/sign-up) segui le indicazioni per configurare il dominio prescelto.
 
 Digita l'indirizzo IP del server nella schermata DNS. A seconda del servizio, potrebbero essere necessarie fino a 48 ore prima della ricezione delle configurazioni.
 
@@ -390,7 +390,7 @@ Dovresti vedere la pagina iniziale di Misskey. Inizia a verificare se funziona.
 
 ### Se non riesci ad accedere
 
-#### Controlla il DNS di CloudFlare
+#### Controlla il DNS di Cloudflare
 
 Visita il sito Cloudflare e verifica che la configurazione DNS punti verso l'indirizzo IP che hai indicato.
 
