@@ -5,7 +5,7 @@
 2. Zmień go w taki sposób:
    1. Zamień example.tld z domeną którą przygotowałeś.\
      `ssl_certificate` i `ssl_certificate_key` powinny być lokalizacjami certyfikatu od Let's Encrypt.
-   2. Jeżeli używasz CDNa jak na przykład Cloudflare, usuń 4 linijki  "If it's behind another reverse proxy or CDN, remove the following."
+   2. Jeżeli używasz CDNa jak na przykład CloudFlare, usuń 4 linijki  "If it's behind another reverse proxy or CDN, remove the following."
 3. Jeżeli stworzysz `/etc/nginx/sites-available/misskey.conf`, stwórz symlink jako `/etc/nginx/sites-enabled/misskey.conf`.\
    `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`
 4. Wykonaj `sudo nginx -t` aby zweryfikować działanie konfiguracji.

@@ -14,13 +14,13 @@ Poza jest też skrypt do aktualizacji Misskey.
 ## Składniki
 1. Domena
 2. Serwer (najlepiej się sprawdzi Ubuntu)
-3. Konto Cloudflare (zalecane)
+3. Konto CloudFlare (zalecane)
 
 :::danger
 Nigdy nie zmieniaj nazwy domeny (hostname) instancji kiedy zaczniesz z niej korzystać!!
 :::
 
-## Skonfiguruj Cloudflare
+## Skonfiguruj CloudFlare
 Jeśli korzystasz z nginx i Cloudflare, musisz skonfigurować Cloudflare:
 
 - Ustaw DNS.

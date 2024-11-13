@@ -54,7 +54,7 @@ OS의 차이, Misskey 본체나 의존하는 소프트웨어의 버전업으로 
 - 하드웨어 요구 사항으로 CPU는 최신 제품이라면 최소사양으로도 작동합니다.아키텍처는 amd64 및 arm64를 가정합니다.
 - 램은 4GB 정도 있으면 충분합니다.
   - (기존에 Vite의 도입으로 1.5GB만 있어도 빌드가 가능하다고 설명했지만, 최근 들어 프론트엔드 빌드 문제로 필요한 용량이 늘어났습니다.）
-- 자체 도메인을 구입하고 Cloudflare를 사용하세요.
+- 자체 도메인을 구입하고 CloudFlare를 사용하세요.
 - 도메인은 [Google Domains](https://domains.google/intl/ja_jp/) 등에서 미리 준비해야 합니다.
 - 여기서는 도메인을 example.tld로 설명할 것이므로, 자신이 구입한 도메인으로 적절히 대체하여 읽도록 합니다.개발 환경의 경우 localhost로 대체합니다(설정 파일 항목에서 별도 설명).
 
@@ -246,13 +246,13 @@ sudo apt install -y git build-essential
 
 :::tip
 
-개발 환경의 경우 방화벽, Cloudflare, Certbot 설정이 필요하지 않습니다.
+개발 환경의 경우 방화벽, CloudFlare, Certbot 설정이 필요하지 않습니다.
 
 :::
 
 ### 방화벽
 
-HTTPS･WSS 통신에 사용할 인증서를 Cloudflare를 사용하는 방식으로 Let's Encrypt에서 발급받습니다.
+HTTPS･WSS 통신에 사용할 인증서를 CloudFlare를 사용하는 방식으로 Let's Encrypt에서 발급받습니다.
 
 다음은 접속 허용을 화이트리스트 형식으로 하여 22번 SSH 포트를 접속 횟수 제한을 두어 개방하고, 80번 HTTP 포트와 443번 HTTPS 포트를 개방하는 예입니다.
 
@@ -286,13 +286,13 @@ ufw는 넷필터(iptables)를 사람이 쉽게 조작할 수 있도록 하는 �
 
 :::
 
-### Cloudflare
+### CloudFlare
 
-Cloudflare는 자신의 도메인에 대해 DNS 서버, 리버스 프록시, CDN을 한 번에 제공해 주는 매우 편리한 서비스입니다.\
-Cloudflare를 경유하지 않고 서버를 공개하는 것도 가능하지만, 매우 편리하기 때문에 도입하는 것이 좋습니다.
+CloudFlare는 자신의 도메인에 대해 DNS 서버, 리버스 프록시, CDN을 한 번에 제공해 주는 매우 편리한 서비스입니다.\
+CloudFlare를 경유하지 않고 서버를 공개하는 것도 가능하지만, 매우 편리하기 때문에 도입하는 것이 좋습니다.
 [**→ CDN 설정**](../resources/cdn/)
 
-[Cloudflare에 가입(https://dash.cloudflare.com/sign-up)하고, 구매한 도메인을 안내에 따라 등록합니다.
+[CloudFlare에 가입(https://dash.cloudflare.com/sign-up)하고, 구매한 도메인을 안내에 따라 등록합니다.
 
 DNS 등록 화면에서 서버의 IP 주소를 입력하면 됩니다.
 
@@ -300,9 +300,9 @@ DNS 등록 화면에서 서버의 IP 주소를 입력하면 됩니다.
 
 ### Certbot (Let's Encrypt) 설정
 
-HTTPS･WSS 통신에 사용할 인증서를 Cloudflare를 사용하는 방식으로 Let's Encrypt에서 발급받습니다.
+HTTPS･WSS 통신에 사용할 인증서를 CloudFlare를 사용하는 방식으로 Let's Encrypt에서 발급받습니다.
 
-certbot과 Cloudflare 플러그인 설치하기
+certbot과 CloudFlare 플러그인 설치하기
 
 ```sh
 sudo apt install -y certbot python3-certbot-dns-cloudflare
@@ -314,14 +314,14 @@ Cloudflare의 API 키를 얻습니다.아래 절차에 따라 취득합니다.
 2. Global API Key의 View 선택
 3. 비밀번호 입력 및 hCaptcha 해제, View 선택
 
-Cloudflare의 정보를 담은 설정 파일 /etc/cloudflare/cloudflare.ini를 생성합니다.
+CloudFlare의 정보를 담은 설정 파일 /etc/cloudflare/cloudflare.ini를 생성합니다.
 
 ```sh
 mkdir /etc/cloudflare
 nano /etc/cloudflare/cloudflare.ini
 ```
 
-dns_cloudflare_email(아래 예에서는 bar\@fuga.foo)에는 Cloudflare에 등록한 이메일 주소를 설정합니다.
+dns_cloudflare_email(아래 예에서는 bar\@fuga.foo)에는 CloudFlare에 등록한 이메일 주소를 설정합니다.
 
 ```sh
 dns_cloudflare_email = bar@fuga.foo
@@ -517,9 +517,9 @@ Misskey의 웰컴 페이지가 표시되어야 합니다.
 
 ### 액세스 할 수 없는 경우
 
-#### Cloudflare의 DNS 확인하기
+#### CloudFlare의 DNS 확인하기
 
-Cloudflare의 DNS 설정이 올바른 IP 주소로 설정되어 있는지 다시 한 번 확인해봅니다.
+CloudFlare의 DNS 설정이 올바른 IP 주소로 설정되어 있는지 다시 한 번 확인해봅니다.
 
 #### 라우터 설정 확인하기
 
