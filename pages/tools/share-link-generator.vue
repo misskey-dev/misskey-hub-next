@@ -155,11 +155,11 @@ const generatedUrl = computed(() => {
 
 const generatedHtml = computed(() => '');
 
-const { t } = useI18n();
+const { t, locale } = useI18n();
 const localePath = useGLocalePath();
 const route = useRoute();
 
-route.meta.title = t('_shareLinkGenerator.title');
+route.meta.title = (locale.value === 'ja' ? '【公式】' : '') + t('_shareLinkGenerator.title');
 route.meta.description = t('_shareLinkGenerator.description');
 </script>
 
