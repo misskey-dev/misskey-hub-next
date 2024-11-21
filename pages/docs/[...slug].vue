@@ -31,6 +31,9 @@
                     </template>
                 </I18nT>
             </Tip>
+            <Tip v-if="locale === 'th'" class="mb-6">
+                <p>เนื่องจากปัญหาทางเทคนิค การแปลภาษาไทยอาจแสดงไม่ถูกต้องในขณะนี้ Misskey-dev กำลังทำงานเกี่ยวกับปัญหานี้ สำหรับรายละเอียด โปรดตรวจสอบ <a href="https://github.com/misskey-dev/misskey-hub-next/issues/221" target="_blank" rel="noopener" class="font-bold hover:underline underline-offset-2">ที่นี่</a></p>
+            </Tip>
 
             <!-- ステップバイステップガイド -->
             <DocsSteppedGuide

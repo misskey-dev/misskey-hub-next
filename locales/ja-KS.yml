@@ -13,7 +13,13 @@ browse: "参照"
 settings: "設定"
 goToLegacyHub: "前のMisskey Hub"
 contactUs: "お問い合わせ"
+detail: "よう見せて"
 lastUpdate: "最終更新"
+empty: "中身がなんも無いわ"
+threeDimensionModel: "3Dモデル"
+clickToShow: "クリックして表示"
+preview: "プレビュー"
+scrollable: "スクロールできるで"
 
 _error:
   notFound: "ページ食べた"
@@ -102,6 +108,7 @@ _landing:
     description: "Misskeyは非営利やから、開発資金はみんなからの寄付で成り立っとんねん。もしMisskeyええやんってなったら、今後も開発を続けられるように支援してくれると嬉しいなあ。"
   _sponsors:
     title: "スポンサー"
+    becomeASponsor: "スポンサーになる"
 
 _servers:
   title: "サーバー一覧"
@@ -201,6 +208,8 @@ _brandAssets:
   icon: "アイコン"
   banner: "バナー"
   avatarDecorationTemplate: "アバターデコレーション テンプレート"
+  fullColorPng: "フルカラー (PNG)"
+  monoChromeSvg: "単色 (SVG)"
 
 _contact:
   title: "お問い合わせ"
@@ -256,6 +265,7 @@ _aidConverter:
   dateToAid: "日付時刻→aid/aidx"
   mode: "作成するid"
   date: "日付時刻"
+  inputByLine: "改行区切りでaid/aidxをたくさん変換できるで。"
 
 _aboutUs:
   title: "Misskey Projectについて"
@@ -363,6 +373,23 @@ _identiconGenerator:
   description: "Misskeyに登録したときにはじめっからついてある初期アイコンを作れるで。"
   userName: "ユーザー名"
   includeDomain: "サーバーのドメイン名を含む完全なユーザー名を入れてな。"
+
+_historicalMaterials:
+  title: "歴史資料館"
+  description: "Misskeyの昔の写真を見せたるわ"
+  heroSubtitle: "Misskey 10周年記念企画"
+  heroDescription: "Misskeyってな、実は2014年に掲示板サービスとして生まれたんや。それから10年経って、今ではめっちゃ色んな人がMisskeyを使ってくれてるんやで。\n今日は特別にMisskeyに関する歴史的資料を見せたげるわ！"
+  submissionTitle: "あんた、古いMisskeyの写真持ってんの？"
+  submissionDescription: "昔のMisskeyの資料を持ってるんやったら、ぜひうちに寄贈してな。\nGitHubあるなら{gh_issue}に、ないなら {'@'}syuilo{'@'}misskey.io に送ってな。"
+
+_miHubServerListPreview:
+  title: "Misskey Hub サーバー一覧 プレビュー"
+  description: "Misskey Hubのサーバー一覧にあんたの持ってる画像を当てはめて見栄えをチェックできるで。"
+  name: "サーバー名"
+  serverDescription: "説明文"
+  icon: "アイコン画像"
+  bannerOrBg: "バナー画像 or 背景画像"
+  bannerOrBgDescription: "バナー画像と背景画像が両方指定されているときは、背景画像の方を優先して表示するようになってるで。画像は真ん中が基準で16:9に収まる最大領域のみが見えるようになってるで。"
 
 _api:
   _permissions:

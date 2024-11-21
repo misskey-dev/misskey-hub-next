@@ -25,6 +25,7 @@ logs
 
 # Locale build outputs
 locales_dist
+i18n/locales_dist
 
 # Crowdin Members Result
 assets/data/i18n-members.ts

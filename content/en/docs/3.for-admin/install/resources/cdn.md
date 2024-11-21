@@ -9,7 +9,7 @@ Using a CDN provides the following benefits
 
 ## Cache
 
-The Misskey Client is completely static and does not require a server to operate.The Misskey Client is completely static and does not require a server to operate.Thus, the entire Misskey Client can be cached by the CDN with the exception of the Misskey API which cannot be cached.
+The Misskey Client is completely static and does not require a server to operate.Thus, the entire Misskey Client can be cached by the CDN with the exception of the Misskey API which cannot be cached.
 
 Please configure your CDN in the following way:
 

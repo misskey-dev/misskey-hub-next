@@ -2,6 +2,33 @@
 
 Misskey 웹 클라이언트의 플러그인 기능을 사용하면 클라이언트를 확장하고 다양한 기능을 추가할 수 있습니다.
 
+## 플러그인 예시
+
+다음은 완전한 플러그인의 예시입니다.이 플러그인은 [`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn)를 사용하여, 게시 폼에 "복어 펀치 버튼"(フグパンチボタン)을 추가하는 내용입니다.
+
+이 플러그인을 설치하면, 게시 폼에 있는 플러그인 메뉴에 "복어 펀지" 항목이 추가됩니다.클릭 후, 게시 폼에 있는 텍스트에 `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )`(복어펀치!!!!)가 추가됩니다.
+
+```ais
+/// @ 0.12.4
+### {
+  name: "フグパンチボタン"
+  version: "0.0.1"
+  author: "Misskey Project"
+}
+
+Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
+  let fugu = "ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )"
+
+  if (note.text.trim() == '') {
+    // 노트에 아무것도 적지 않은 경우 フグパンチ 를 대신 올리기
+    rewrite('text', fugu)
+  } else {
+    // 내용이 있는 노트의 경우 제일 앞에 フグパンチ 를 추가 후 다음 줄로
+    rewrite('text', `{fugu}{Str:lf}{note.text}`)
+  }
+})
+```
+
 ## AiScript
 
 플러그인은 AiScript로 작성되는 스크립트입니다.
@@ -42,11 +69,11 @@ Misskey 웹 클라이언트의 플러그인 기능을 사용하면 클라이언�
 
 플러그인이 요구하는 권한.플러그인이 요구하는 권한.MisskeyAPI에 요청할 때 사용됩니다.
 
-APIのリクエスト方法については、[AiScript Misskey拡張API リファレンス](/docs/for-developers/plugin/plugin-api-reference/)をご覧ください。
+API 요청 방법은 [AiScript Misskey 확장 API 레퍼런스](/docs/for-developers/plugin/plugin-api-reference/)에서 확인할 수 있습니다.
 
 :::tip
 
-permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+permission 목록은 [여기](/docs/for-developers/api/permission/)에서 확인할 수 있습니다.
 
 :::
 

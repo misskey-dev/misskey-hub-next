@@ -175,8 +175,9 @@ html.light .markdown-body {
 }
 
 .markdown-body {
-	--bgColor-default: transparent!important;
 	@apply font-content-sans;
+	--bgColor-default: transparent!important;
+	min-height: 0!important;
 }
 
 .markdown-body > h1 > a[href^='#'],
