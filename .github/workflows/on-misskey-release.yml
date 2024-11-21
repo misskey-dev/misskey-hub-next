@@ -13,6 +13,7 @@ on:
         required: false
 
 env:
+  TZ: Asia/Tokyo
   VERSION: ${{ github.event.client_payload.version || github.event.inputs.version }}
   RELEASE_DATE: ${{ github.event.client_payload.releaseDate || github.event.inputs.releaseDate }}
 
@@ -35,7 +36,7 @@ jobs:
       - run: pnpm install
         working-directory: scripts/changelog-auto-updater
       
-      - run: pnpm start ${{ env.VERSION != null && format('-v {0}', env.VERSION) || '' }} ${{ env.RELEASE_DATE != null && format('-d {0}', env.RELEASE_DATE) || '' }}
+      - run: pnpm start
         working-directory: scripts/changelog-auto-updater
 
       - name: Check diff

@@ -1,5 +1,4 @@
 import { promises as fsp } from 'node:fs';
-import { parseArgs } from 'node:util';
 import path from 'path';
 
 function parseChangelog(text: string) {
@@ -56,24 +55,10 @@ async function getGhChangelog() {
 }
 
 async function main() {
-    const { values } = parseArgs({
-        args: process.argv,
-        options: {
-            version: {
-                type: 'string',
-                short: 'v',
-                multiple: false,
-            },
-            releaseDate: {
-                type: 'string',
-                short: 'd',
-                multiple: false,
-            },
-        },
-        allowPositionals: true,
-    });
+    const releaseDate = process.env.RELEASE_DATE;
+    const version = process.env.VERSION;
 
-    if (values.releaseDate && !values.releaseDate.match(/^\d{4}-\d{2}-\d{2}$/)) {
+    if (releaseDate && !releaseDate.match(/^\d{4}-\d{2}-\d{2}$/)) {
         throw new Error('Invalid date format. Specify the date in the format of "YYYY-MM-DD"');
     }
 
@@ -83,8 +68,8 @@ async function main() {
     const localText = await fsp.readFile(docsPath, 'utf-8');
     const localChangelog = parseChangelog(localText);
 
-    if (values.version && ghChangelog.latestVersion !== values.version) {
-        throw new Error(`Latest version is ${ghChangelog.latestVersion}, but specified version is ${values.version}`);
+    if (version && ghChangelog.latestVersion !== version) {
+        throw new Error(`Latest version is ${ghChangelog.latestVersion}, but specified version is ${version}`);
     }
     
     if (ghChangelog.latestVersion === localChangelog.latestVersion) {
@@ -94,7 +79,7 @@ async function main() {
 
     console.log('Updating release notes...');
 
-    const now = values.releaseDate ? new Date(`${values.releaseDate}T00:00:00`) : new Date();
+    const now = releaseDate ? new Date(`${releaseDate}T00:00:00`) : new Date();
 
     // リリースノート更新
     const releaseDateForReleaseNotes = `${now.getFullYear()}/${(now.getMonth() + 1).toString().padStart(2, '0')}/${(now.getDate()).toString().padStart(2, '0')}`;
