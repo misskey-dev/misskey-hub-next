@@ -33,9 +33,9 @@ jobs:
 
       - run: corepack enable
 
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
 
-      - run: pnpm install
+      - run: pnpm install --frozen-lockfile
         working-directory: scripts/changelog-auto-updater
       
       - run: pnpm start
