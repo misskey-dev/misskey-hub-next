@@ -33,9 +33,9 @@ jobs:
 
       - run: corepack enable
 
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install
 
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install
         working-directory: scripts/changelog-auto-updater
       
       - run: pnpm start
@@ -45,6 +45,7 @@ jobs:
         id: diff
         run: |
           git add -N .
+          git reset HEAD pnpm-lock.yaml scripts/changelog-auto-updater/pnpm-lock.yaml
           git diff --name-only --exit-code
         continue-on-error: true
 
