@@ -47,7 +47,7 @@ jobs:
       - name: Check diff
         id: diff
         run: |
-          git add -N .
+          git add .
           git reset HEAD pnpm-lock.yaml scripts/changelog-auto-updater/pnpm-lock.yaml
           git diff --staged --name-only --exit-code
         continue-on-error: true
