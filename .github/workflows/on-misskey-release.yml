@@ -20,6 +20,9 @@ env:
 jobs:
   update-release-notes:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
       
@@ -63,6 +66,6 @@ jobs:
       - name: Create Pull Request
         if: steps.diff.outcome == 'failure'
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh pr create --draft --title "Update release notes (${{ env.VERSION != null && env.VERSION || 'latest' }})" --base master --head update-release-notes-${{ env.VERSION != null && env.VERSION || 'latest' }}
