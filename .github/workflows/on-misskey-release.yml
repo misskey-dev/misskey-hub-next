@@ -69,4 +69,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh pr create --draft --title "Update release notes (${{ env.VERSION != null && env.VERSION || 'latest' }})" --base master --head update-release-notes-${{ env.VERSION != null && env.VERSION || 'latest' }}
+          gh pr create --draft --title "Update release notes (${{ env.VERSION != null && env.VERSION || 'latest' }})" --body "" --base master --head update-release-notes-${{ env.VERSION != null && env.VERSION || 'latest' }}
