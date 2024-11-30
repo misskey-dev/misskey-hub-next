@@ -155,7 +155,7 @@ CREATE ROLE misskey LOGIN PASSWORD 'hoge';
 
 ```sql
 CREATE DATABASE mk1 OWNER misskey;
-¥q
+\q
 ```
 
 ### Redis

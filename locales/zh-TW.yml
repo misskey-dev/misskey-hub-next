@@ -198,8 +198,8 @@ _brandAssets:
   icon: "圖標"
   banner: "橫幅"
   avatarDecorationTemplate: "頭像裝飾模板"
-  fullColorPng: "フルカラー (PNG)"
-  monoChromeSvg: "単色 (SVG)"
+  fullColorPng: "全彩 (PNG)"
+  monoChromeSvg: "單色 (SVG)"
 _contact:
   title: "聯絡我們"
   description: "點擊此處聯絡 Misskey 專案"

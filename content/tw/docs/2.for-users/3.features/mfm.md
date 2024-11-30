@@ -165,10 +165,10 @@ $[ruby Misskey ミスキー]
 
 在區塊中用突出顯示，例如複數行的程式碼語法。
 
-プログラミング言語をIDで指定すると、その言語でシンタックスハイライトが適用されます。指定できる言語は次のとおりです：
+通過使用 ID 指定程式語言，可以對應的語言套用語法突顯功能。可指定的語言如下：
 
-- [Shikiが対応している言語（200以上）](https://shiki.style/languages)
-- AiScript: `aiscript`, `ais`, `is` のいずれかを指定すると使用できます。
+- [Shiki 支援的語言（超過 200 種）](https://shiki.style/languages)
+- AiScript: 只需指定 `aiscript`、`ais` 或 `is` 其中之一即可使用。
 
 ```
 ~ (#i, 100) {
