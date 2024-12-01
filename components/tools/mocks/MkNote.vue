@@ -19,7 +19,7 @@
             <div><slot>{{ $t('_avatarDecorationPreview._placeholder.noteText') }}</slot></div>
             <div class="mt-1 flex flex-wrap gap-2">
                 <span v-for="reaction in reactions" class="inline-flex items-center space-x-1 px-1.5 py-1 rounded bg-gray-100 dark:bg-gray-800">
-                    <MkCustomEmoji class="hover:!transform-none" v-if="reaction.name.startsWith(':')" :name="reaction.name" :url="reaction.url" :useOriginalSize="true" />
+                    <MkCustomEmoji class="hover:!transform-none" v-if="reaction.name.startsWith(':')" :name="reaction.name" :url="reaction.url" :useOriginalSize="true" :limitLength="limitReactionLength" />
                     <div v-else class="text-xl leading-[1.35] select-none">{{ reaction.name }}</div>
                     <span class="text-sm">{{ reaction.count }}</span>
                 </span>
@@ -50,8 +50,10 @@ withDefaults(defineProps<{
         url?: string;
         count: number;
     }[];
+    limitReactionLength?: boolean;
 }>(), {
     avatar: '/img/docs/fukidashi/doya_ai.webp',
+    limitReactionLength: false,
 });
 
 function getStyle(decoration: Omit<Misskey.entities.User['avatarDecorations'][number], 'id'>): StyleValue {
