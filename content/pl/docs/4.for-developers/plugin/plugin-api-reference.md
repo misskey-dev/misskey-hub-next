@@ -4,7 +4,7 @@
 
 :::tip
 
-標準装備のAiScript APIは[こちら](https://github.com/aiscript-dev/aiscript/blob/master/docs/get-started.md)からご覧いただけます。
+標準装備のAiScript APIは[こちら](https://aiscript-dev.github.io/guides/get-started.html)からご覧いただけます。
 
 :::
 
