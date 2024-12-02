@@ -339,6 +339,7 @@ _customEmojiPreview:
   preview: "プレビュー"
   emoji: "絵文字 #{number}"
   placeholder: "「追加」から、カスタム絵文字を追加してプレビューできます。"
+  limitReactionLength: "リアクションの最大横幅を制限し、縮小して表示する"
   _options:
     text: "ノート文面"
     textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
