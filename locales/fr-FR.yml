@@ -339,6 +339,7 @@ _customEmojiPreview:
   preview: "Prévisualisation"
   emoji: "Émoji #{number}"
   placeholder: "Sous « Ajouter », vous pouvez ajouter et prévisualiser des émojis personnalisés."
+  limitReactionLength: "リアクションの最大横幅を制限し、縮小して表示する"
   _options:
     text: "Texte de la note"
     textDescription: "L'émoji personnalisé ajouté peut être référé par {emoji_id}."
