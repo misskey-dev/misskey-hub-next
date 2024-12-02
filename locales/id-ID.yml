@@ -339,6 +339,7 @@ _customEmojiPreview:
   preview: "Pratinjau"
   emoji: "Emoji #{number}"
   placeholder: "Kamu dapat menambahkan dan melihat emoji kustom melalui menu \"Tambahkan\"."
+  limitReactionLength: "リアクションの最大横幅を制限し、縮小して表示する"
   _options:
     text: "Teks catatan"
     textDescription: "Kustom emoji yang ditambahkan dapat direferensikan dengan {emoji_id}"
