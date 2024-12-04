@@ -339,6 +339,7 @@ _customEmojiPreview:
   preview: "預覽"
   emoji: "表情符號 #{number}"
   placeholder: "從「新增」中，您可以新增和預覽自訂表情符號。"
+  limitReactionLength: "限制反應的最大寬度，並縮小顯示尺寸。"
   _options:
     text: "貼文內容"
     textDescription: "您可以透過 {emoji_id} 引用新增的自訂表情符號。"
