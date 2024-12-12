@@ -40,36 +40,36 @@ _nav:
   switchLang: "Configuración de idioma"
 _landing:
   _hero:
-    description: "Misskey（ミスキー）はオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
-    gettingStarted: "はじめる"
+    description: "Misskey es una plataforma de redes sociales código abierto y descentralizada que es libre para siempre!"
+    gettingStarted: "Empezar"
   _keyFeatures:
     _open:
-      title: "オープン"
-      description: "Misskeyはオープンソースのソフトウェアで、誰でも自由にMisskeyを利用できます。"
+      title: "Abierto"
+      description: "Misskey es software de código abierto, y cualquier persona puede usarlo de forma libre."
     _federated:
-      title: "分散"
-      description: "Misskeyは分散型のプロトコルを実装しているため、異なるサーバーのコミュニティ同士が繋がります。"
+      title: "Federado"
+      description: "Misskey es una plataforma descentralizada, por lo que las comunidades en diferentes servidores pueden conectar entre sí."
     _multifunction:
-      title: "高機能"
-      description: "Misskeyは他にはない様々な機能を備えていて、プロのようにmicro-blogging可能です。"
+      title: "Poderoso"
+      description: "Misskey es fácil de entender para principiantes y tiene características poderosas para usuarios avanzados."
     _customizable:
-      title: "高カスタマイズ性"
-      description: "Misskeyの柔軟なWebインターフェイスにより、自分好みのUIを作れます。"
+      title: "Altamente personalizable"
+      description: "Haz que Misskey sea tuyo! Con temas, widgets, diseños y más, puedes personalizar Misskey a tu gusto."
   _decenterized:
-    title: "Misskeyは{0}"
-    decenterizedPlatform: "分散型プラットフォーム"
-    description: "Misskeyはフリーかつオープンなプロジェクトで、誰でも自由にMisskeyを使ったサーバーを作成できるため、既に様々なサーバーがインターネット上に公開されています。また重要な特徴として、Misskeyは{0}と呼ばれる分散通信プロトコルを実装しているので、どのサーバーを選んでも他のサーバーのユーザーとやりとりすることができます。これが分散型と言われる所以で、単一の運営者によって単一のURLで公開されるような、Twitterなどの他サービスとは根本的に異なっています。サーバーによって主な話題のテーマやユーザー層、言語などは異なり、自分にあったサーバーを探すのも楽しみのひとつです(もちろん自分のサーバーを作るのも一興です)。"
+    title: "Misskey es una plataforma {0}."
+    decenterizedPlatform: "Descentralizada"
+    description: "Misskey es solo una plataforma para que los propietarios de servidores creen sus propias instancias de Misskey, y todas pueden comunicarse entre sí! Hay instancias grandes para las masas, instancias más pequeñas para grupos, fandoms y subculturas, e incluso instancias solo para individuos y sus amigos. ¿Quieres tener aún más control? Puedes crear tu propia instancia en tu servidor con facilidad, cortando los lazos con cualquier gran empresa que quiera espiarte y vender tus datos. Misskey se trata de comunidad y compartir, no de corporaciones y alta tecnología. ¿Tienes amigos que no están en Misskey? No hay problema. Debido a que Misskey está en el Fediverse ({0}), puedes interactuar con personas en otras plataformas como Mastodon, PixelFed, PeerTube y más."
     activityPub: "ActivityPub"
   _features:
     _root:
-      title: "主な機能"
-      description: "Misskeyは一般的なものから特別なものまで、様々な機能を持っています。その一部を紹介します。"
+      title: "Características clave"
+      description: "Misskey ofrece una amplia variedad de características únicas! Aquí hay algunas destacadas."
     _note:
-      title: "ノート"
-      description: "Misskeyでは、ユーザーの投稿は「ノート」と呼ばれます。他のノートを引用したり、画像、動画、オーディオ、その他の任意のファイルを添付することもできます。"
+      title: "Notas"
+      description: "En Misskey, los posts de los usuarios se llaman 'Notas'. Responde, cita, añade emojis personalizados, texto animado, advertencias de contenido, adjunta múltiples imágenes, videos, GIFs, clips de audio o cualquier otra cosa!"
     _federation:
-      title: "連合"
-      description: "オープンな分散プロトコルであるActivityPubを実装しているため、他のMisskeyサーバーだけでなく、ActivityPubをサポートする他のソフトウェアともやりとりできます。"
+      title: "Federación"
+      description: "¿No estás en Misskey? No hay problema. No solo pueden las instancias de Misskey comunicarse entre sí, sino que también puedes hacer amigos con personas en otras redes como Mastodon y Pixelfed!"
     _reaction:
       title: "リアクション"
       description: "ノートには「リアクション」を付けることができ、簡単・気軽に自分のフィーリングを表現して伝えることが出来ます。"
@@ -106,12 +106,12 @@ _landing:
     title: "スポンサー"
     becomeASponsor: "スポンサーになる"
 _servers:
-  title: "サーバー一覧"
-  description: "Misskeyは単一のサービスではなく、各々がサービスを提供する分散型ネットワークとなっています。Misskeyを利用するには、サービスを提供しているサーバーでアカウントを作成する必要があります。"
-  addYourServer: "あなたのサーバーが表示されませんか？{0}から登録してください！"
-  addYourServerLink: "こちら"
-  disclaimerTitle: "【重要】免責事項"
-  disclaimer: "このサーバー一覧は、Fediverse上で発見されたMisskeyサーバーを自動で掲載するものであり、原則として手動での確認は行っておりません。ここに掲載されているサーバーは、Misskey Projectが確認・検証・承認したものではありません。アクセス先でユーザーに生じたあらゆる損害について、Misskey Projectは一切責任を負いません。"
+  title: "Lista de servidores"
+  description: "Misskey no es un solo servicio, sino una red descentralizada donde las personas proporcionan servicios. Para utilizar Misskey, debes crear una cuenta en un servidor que ofrezca el servicio."
+  addYourServer: "¿No está tu servidor en la lista?. Registralo {0}!"
+  addYourServerLink: "aquí"
+  disclaimerTitle: "AVISO"
+  disclaimer: "Esta lista de servidores es una lista automática de servidores de Misskey encontrados en el Fediverso y no se verifica manualmente. Los servidores enumerados aquí no han sido verificados, o aprobados por el Proyecto Misskey. El Proyecto Misskey no se hace responsable de cualquier daño incurrido por los usuarios en el servidor al que se accede."
   _system:
     fetchError: "データの読み込みに失敗しました。後でもう一度お試しください。"
   _statistics:
