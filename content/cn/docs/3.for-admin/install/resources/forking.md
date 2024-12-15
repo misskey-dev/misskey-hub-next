@@ -1,4 +1,4 @@
-# Misskeyをフォーク・カスタマイズする際の注意点
+# 关于分支和定制 Misskey 的说明
 
 Misskeyが採用するGNU Affero General Public License v3.0（AGPL-3.0）は、Misskeyのソースコードを変更した場合、その変更点を公開することを義務付けています。
 
@@ -48,6 +48,6 @@ Misskey内蔵のソースコード提供機能を使用しない場合でも、�
 
 :::warning
 
-ソースコードの書庫ファイル生成はビルド時に行われます。`scripts/tarball.mjs` に変更を加えた際には必ず再度ビルドを行ってください。
+ソースコードの書庫ファイル生成はビルド時に行われます。如果您对`scripts/tarball.mjs`进行了更改，请确保再次构建
 
 :::
