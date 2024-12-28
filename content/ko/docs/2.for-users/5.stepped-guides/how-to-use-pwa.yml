@@ -1,79 +1,79 @@
-title: "Misskey Webをアプリ化して使う方法"
-description: "Misskey WebをPWAアプリ化する方法をご紹介します。スマートフォンでMisskeyを利用する際のおすすめの方法です。"
+title: "Misskey Web을 앱으로 활용하는 방법"
+description: "Misskey Web을 PWA 앱으로 만드는 방법을 소개합니다. 스마트폰에서 Misskey를 이용할 때 추천하는 방법입니다."
 #Do not translate any keys that includes underscore
 _TYPE_: "STEPPED_GUIDE"
 body: |
-  ここでは、Misskey WebをPWAアプリ化する方法をご紹介します。スマートフォンでMisskeyを利用する際のおすすめの方法です。
+  여기서는 Misskey Web을 PWA 앱으로 만드는 방법을 소개합니다. 스마트폰에서 Misskey를 이용할 때 추천하는 방법입니다.
 
-  ## PWAとは？
+  ## PWA란?
 
-  PWAは、Progressive Web Appの略で、ウェブページをアプリのように扱うことができる技術です。Misskeyは、標準でPWAに対応しています。
+  PWA는 Progressive Web App의 약자로, 웹 페이지를 앱처럼 취급할 수 있는 기술로 Misskey는 표준으로 PWA를 지원합니다.
 
-  ここでは、PWAの設定方法を端末のOS別に紹介しています。以下からお使いのOSを選んで進んでください！
+  여기서는 PWA 설정 방법을 단말기 OS별로 소개하고 있습니다. 아래에서 사용 중인 OS를 선택해 진행해주세요!
 guides:
   - 
     _AUTOSELECT_TYPE_: "OS_ANDROID"
     _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
-    title: "Android (Google Chrome)"
+    title: "안드로이드 (구글 크롬)"
     description: |
-      AndroidでPWAをお使いになる際は、Google Chromeがおすすめです。
+      안드로이드에서 PWA를 사용하려면 구글 크롬을 추천합니다.
 
-      ここでは、Google Chromeを使用した設定方法について解説します。
+      여기서는 구글 크롬을 이용한 설정 방법에 대해 설명합니다.
     steps:
       - 
-        title: "PWAにしたいMisskeyサーバーを開く"
+        title: "PWA로 만들고 싶은 Misskey 서버를 엽니다."
         image: "android/sp_0.png"
         description: |
-          PWAとして端末にインストールしたいMisskeyサーバーにアクセスし、ログインしてください。
+          PWA로 단말기에 설치하고자 하는 Misskey 서버에 접속하여 로그인합니다.
       - 
-        title: "詳細設定メニューを開く"
+        title: "상세 설정 메뉴 열기"
         image: "android/sp_1.png"
         description: |
-          Misskeyサーバーの任意のページを開いたまま、右上にある「︙」ボタンをタップします。
+          Misskey 서버의 아무 페이지나 열어둔 상태에서 오른쪽 상단에 있는 '︙' 버튼을 누릅니다.
       - 
-        title: "「ホーム画面に追加」または「アプリをインストール」をタップ"
+        title: "'홈 화면에 추가' 또는 '앱 설치'를 누릅니다."
         image: "android/sp_2.png"
         description: |
-          メニュー内にある「ホーム画面に追加」もしくは「アプリをインストール」の項目をタップし、出てきたダイアログの指示に従ってください。
+          메뉴 내 '홈 화면에 추가' 또는 '앱 설치' 항목을 누르고 나오는 대화창의 지시를 따릅니다.
       - 
-        title: "ホーム画面を確認する"
+        title: "홈 화면 확인하기"
         image: "android/sp_3.png"
         description: |
-          しばらくすると、ホーム画面に、サーバーのアイコンもしくはMisskeyのアイコンが追加されます。
+          잠시 후 홈 화면에 서버 아이콘 또는 Misskey 아이콘이 추가됩니다.
 
-          このアイコンをタップすることで、Misskeyはアプリモードで起動します。
+          이 아이콘을 누르면 Misskey가 앱 모드로 실행됩니다.
   - 
     _AUTOSELECT_TYPE_: "OS_IOS"
     _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
     title: "iOS / iPadOS"
     description: |
-      iOS または iPadOS でPWAをお使いになる際は、Safariをご利用ください。
+      iOS 또는 iPadOS에서 PWA를 사용하려면 Safari를 사용하십시오.
 
-      開始する前に、お使いの端末に搭載されているOSが最新のものかどうかを確認してください。最新ではない場合は、[こちら](https://support.apple.com/ja-jp/ios/update)を参考にしてアップデートしてください。
+      시작하기 전, 사용 중인 단말기의 OS가 최신 버전인지 확인하시기 바랍니다. 최신 버전이 아닌 경우 [여기](https://support.apple.com/ja-jp/ios/update)를 참고하여 업데이트하시기 바랍니다.
     steps:
       - 
-        title: "PWAにしたいMisskeyサーバーを開く"
+        title: "PWA로 만들고 싶은 Misskey 서버 열기"
         image: "ios/sp_0.png"
         description: |
-          PWAとして端末にインストールしたいMisskeyサーバーにアクセスし、ログインしてください。
+          PWA로 단말기에 설치하고자 하는 Misskey 서버에 접속하여 로그인합니다.
       - 
-        title: "共有ボタンをタップして開く"
+        title: "공유 버튼을 눌러 열기"
         image: "ios/sp_1.png"
         description: |
-          Misskeyサーバーの任意のページを開いたまま、メニューバーの共有ボタンをタップします。
+          Misskey 서버의 아무 페이지나 열어둔 상태에서 메뉴바의 공유 버튼을 누릅니다.
       - 
-        title: "「ホーム画面に追加」をタップ"
+        title: "'홈 화면에 추가'를 누릅니다."
         image: "ios/sp_2.png"
         description: |
-          オプションのリストを下にスクロールしてから、「ホーム画面に追加」をタップします。
+          옵션 목록을 아래로 스크롤하여 '홈 화면에 추가'를 탭합니다.
 
-          この後、通知の送信許可を求められることがありますので、画面の指示に従い、必要に応じて許可してください。
+          이후 알림 전송 권한을 요청할 수 있으므로 화면의 지시에 따라 필요에 따라 허용해 주세요.
 
-          「ホーム画面に追加」が表示されない場合は、設定項目が非表示になっている可能性があります。表示するには、リストの一番下までスクロールし、「アクションを編集」から「ホーム画面に追加」の項目を追加してください。詳しくは[Appleのサポートページ](https://support.apple.com/ja-jp/guide/iphone/iph42ab2f3a7/ios)をご覧ください。
+          '홈 화면에 추가'가 표시되지 않으면 설정 항목이 숨겨져 있을 수 있습니다. 표시하려면 목록의 맨 아래로 스크롤하여 '동작 편집'에서 '홈 화면에 추가' 항목을 추가하십시오. 자세한 내용은 [Apple 지원 페이지](https://support.apple.com/ja-jp/guide/iphone/iph42ab2f3a7/ios)를 참고하세요.
       - 
-        title: "ホーム画面を確認する"
+        title: "홈 화면 확인하기"
         image: "ios/sp_3.png"
         description: |
-          しばらくすると、ホーム画面に、サーバーのアイコンもしくはMisskeyのアイコンが追加されます。
+          잠시 후 홈 화면에 서버 아이콘 또는 Misskey 아이콘이 추가됩니다.
 
-          このアイコンをタップすることで、Misskeyはアプリモードで起動します。
+          이 아이콘을 누르면 Misskey가 앱 모드로 실행됩니다.

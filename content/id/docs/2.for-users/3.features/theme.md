@@ -63,7 +63,7 @@ Artinya, jika tidak ada kunci `props` yang bernama `panel` dalam tema ini, maka 
   - 例: `#00ff00`
 - `rgb(r, g, b)`形式で表された色
   - 例: `rgb(0, 255, 0)`
-- `rgb(r, g, b, a)`形式で表された透明度を含む色
+- `rgba(r, g, b, a)`形式で表された透明度を含む色
   - 例: `rgba(0, 255, 0, 0.5)`
 - 他のキーの値の参照
   - `@{キー名}`と書くと他のキーの値の参照になります。`{キー名}`は参照したいキーの名前に置き換えます。

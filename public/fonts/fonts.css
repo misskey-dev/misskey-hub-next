@@ -9,6 +9,8 @@
 @import url('https://fonts.googleapis.cn/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
 /** Traditional Chinese (Noto Sans TC) */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+/** Thai (Kodchasan) */
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 ._i18n {
     font-family: Nunito, var(--mi-localized-font, ''), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -39,4 +41,10 @@ html[lang='zh-TW'],
 ._i18n[lang='tw'],
 ._i18n[lang='zh-TW'] {
     --mi-localized-font: 'Noto Sans TC';
+}
+
+html[lang='th-TH'],
+._i18n[lang='th'],
+._i18n[lang='th-TH'] {
+    --mi-localized-font: 'Kodchasan';
 }

@@ -22,6 +22,13 @@ border-left: solid 3px currentColor;
 opacity: 0.7;
 `.split('\n').join(' ');
 
+function safeParseFloat(str: unknown): number | null {
+	if (typeof str !== 'string' || str === '') return null;
+	const num = parseFloat(str);
+	if (isNaN(num)) return null;
+	return num;
+}
+
 export default function(props: {
 	text: string;
 	plain?: boolean;
@@ -40,13 +47,13 @@ export default function(props: {
 
 	const ast = (props.plain ? mfm.parseSimple : mfm.parse)(props.text);
 
-	const validTime = (t: string | null | undefined) => {
-		if (t == null) return null;
+	const validTime = (t: string | boolean | null | undefined) => {
+		if (t == null || typeof t !== 'string') return null;
 		return t.match(/^[0-9.]+s$/) ? t : null;
 	};
 
-	const validColor = (c: string | null | undefined): string | null => {
-		if (c == null) return null;
+	const validColor = (c: string | boolean | null | undefined): string | null => {
+		if (c == null || typeof c !== 'string') return null;
 		return c.match(/^[0-9a-f]{3,6}$/i) ? c : null;
 	};
 
@@ -188,32 +195,32 @@ export default function(props: {
 						return h(MkSparkle, {}, genEl(token.children, scale));
 					}
 					case 'rotate': {
-						const degrees = parseFloat(token.props.args.deg ?? '90');
+						const degrees = safeParseFloat(token.props.args.deg ?? '90');
 						style = `transform: rotate(${degrees}deg); transform-origin: center center;`;
 						break;
 					}
 					case 'position': {
-						const x = parseFloat(token.props.args.x ?? '0');
-						const y = parseFloat(token.props.args.y ?? '0');
+						const x = safeParseFloat(token.props.args.x ?? '0');
+						const y = safeParseFloat(token.props.args.y ?? '0');
 						style = `transform: translateX(${x}em) translateY(${y}em);`;
 						break;
 					}
 					case 'scale': {
-						const x = Math.min(parseFloat(token.props.args.x ?? '1'), 5);
-						const y = Math.min(parseFloat(token.props.args.y ?? '1'), 5);
+						const x = Math.min(safeParseFloat(token.props.args.x ?? '1') ?? 1, 5);
+						const y = Math.min(safeParseFloat(token.props.args.y ?? '1') ?? 1, 5);
 						style = `transform: scale(${x}, ${y});`;
 						scale = scale * Math.max(x, y);
 						break;
 					}
 					case 'fg': {
 						let color = validColor(token.props.args.color);
-						if (!/^[0-9a-f]{3,6}$/i.test(color)) color = 'f00';
+						if (color == null || !/^[0-9a-f]{3,6}$/i.test(color)) color = 'f00';
 						style = `color: #${color};`;
 						break;
 					}
 					case 'bg': {
 						let color = validColor(token.props.args.color);
-						if (!/^[0-9a-f]{3,6}$/i.test(color)) color = 'f00';
+						if (color == null || !/^[0-9a-f]{3,6}$/i.test(color)) color = 'f00';
 						style = `background-color: #${color};`;
 						break;
 					}
@@ -225,8 +232,8 @@ export default function(props: {
 							!['hidden', 'dotted', 'dashed', 'solid', 'double', 'groove', 'ridge', 'inset', 'outset']
 								.includes(b_style)
 						) b_style = 'solid';
-						const width = parseFloat(token.props.args.width ?? '1');
-						const radius = parseFloat(token.props.args.radius ?? '0');
+						const width = safeParseFloat(token.props.args.width ?? '1');
+						const radius = safeParseFloat(token.props.args.radius ?? '0');
 						style = `border: ${width}px ${b_style} ${color}; border-radius: ${radius}px;${token.props.args.noclip ? '' : ' overflow: clip;'}`;
 						break;
 					}

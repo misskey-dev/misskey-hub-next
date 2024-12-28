@@ -1,4 +1,4 @@
-export const redirects = [
+export const redirects: [string, string][] = [
     [
         "/docs/api/",
         "/docs/for-developers/api/"

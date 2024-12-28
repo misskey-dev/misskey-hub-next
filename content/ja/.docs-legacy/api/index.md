@@ -82,7 +82,7 @@ https://{host}/miauth/{session}
 
 :::tip 例
 ```
-https://misskey.io/miauth/c1f6d42b-468b-4fd2-8274-e58abdedef6f?name=MyApp&callback=https%3A%2F%2Fmyapp.example.com%2Fcallback&permission=write:notes,write:following,read:drive
+https://misskey.example/miauth/c1f6d42b-468b-4fd2-8274-e58abdedef6f?name=MyApp&callback=https%3A%2F%2Fmyapp.example.com%2Fcallback&permission=write:notes,write:following,read:drive
 ```
 
 :::

@@ -45,6 +45,10 @@
                 </div>
                 <div id="icon">
                     <h2 class="text-2xl lg:text-3xl font-title font-bold mb-4">{{ $t(`_brandAssets.icon`) }}</h2>
+                    <div class="mb-4 flex">
+                        <GNuxtLink class="hover:underline underline-offset-2" :class="$style.subAssetLink" target="_blank" to="https://assets.misskey-hub.net/public/icon.png">{{ $t('_brandAssets.fullColorPng') }}</GNuxtLink>
+                        <a class="hover:underline underline-offset-2" :class="$style.subAssetLink" target="_blank" :href="logoSvgUrl">{{ $t('_brandAssets.monoChromeSvg') }}</a>
+                    </div>
                     <BrandAssetsImgPreview src="https://assets.misskey-hub.net/public/icon.png" />
                 </div>
                 <div id="banner">
@@ -66,6 +70,8 @@
 </template>
 
 <script setup lang="ts">
+import logoSvgUrl from '@/assets/svg/misskey_mi_bi.svg?url';
+
 const { t } = useI18n();
 const route = useRoute();
 
@@ -73,6 +79,8 @@ route.meta.title = t('_brandAssets.title');
 route.meta.description = t('_brandAssets.description');
 </script>
 
-<style scoped>
-
+<style module>
+.subAssetLink ~ .subAssetLink {
+    @apply ml-2 before:inline-block before:content-['/'] before:pr-2 hover:before:no-underline;
+}
 </style>

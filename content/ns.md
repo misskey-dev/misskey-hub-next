@@ -99,6 +99,62 @@ This field can only take the value of `true` (or be absent).
 Used on actors to indicate that they in some way identify as a cat, expressed as a boolean value.
 If this property is set to `true`, displaying the actor or their notes will have some special effects attached in some clients.
 
+## `_misskey_followedMessage`
+- compact IRI: `misskey:_misskey_followedMessage`
+- canonical IRI: `https://misskey-hub.net/ns#_misskey_followedMessage`
+
+This value is used for `Actor` type objects to show message on followed.
+
+This property must be either `null` or a string if existent.
+The value is customized message. In other word, it can be set arbitrary by an account.
+
+Misskey shows the value on notification to new followee when:
+- The property is set,
+- value is a string,
+- the followee's Misskey is 2024.9.0-alpha.11 or later,
+- and one who has set this property gets followed by the followee
+
+## `_misskey_requireSigninToViewContents`
+(introduced in: https://github.com/misskey-dev/misskey/pull/14799)
+
+- compact IRI: `misskey:_misskey_requireSigninToViewContents`
+- canonical IRI: `https://misskey-hub.net/ns#_misskey_requireSigninToViewContents`
+
+This property is used for `Actor` type object to forbid show one's content when viewer is not signed-in.
+This value must be either `true` or `false` if existent.
+
+An implementation should refuse to show their content to align to Misskey's implementation if the value is `true` and the viewer is not signed-in.
+
+This property is not guaranteed to work on older Misskey or non-Misskey implementation.
+
+## `_misskey_makeNotesFollowersOnlyBefore`
+(introduced in: https://github.com/misskey-dev/misskey/pull/14814)
+
+- compact IRI: `misskey:_misskey_makeNotesFollowersOnlyBefore`
+- canonical IRI: `https://misskey-hub.net/ns#_misskey_makeNotesFollowersOnlyBefore`
+
+This property is used for `Actor` type object to forbid show one's *past* content when viewer is not a follower of author.
+This value must be a integer if existent.
+
+Misskey computes that the threshold of the Unix epoch millisecond in the either way:
+- If the value is positive, then the value is interpreted as an absolute Unix epoch millisecond.
+- If the value is negative, then the value is relative millisecond compared to posted date. For example, `-86400000` implies targeting a note that has posted before yesterday because a day contains 86400 seconds.
+
+If posted date is considered as older than the threshold, then it is considered as a past content. 
+If the viewer is not a follower of the author, then past content shall not be shown.
+
+This property is not guaranteed to work on older Misskey or non-Misskey implementation.
+
+## `_misskey_makeNotesHiddenBefore`
+(introduced in: https://github.com/misskey-dev/misskey/pull/14814)
+
+- compact IRI: `misskey:_misskey_makeNotesHiddenBefore`
+- canonical IRI: `https://misskey-hub.net/ns#_misskey_makeNotesHiddenBefore`
+
+This property is used for `Actor` type object. This property has same semantics and value range as `_misskey_makeNotesFollowersOnlyBefore` but affected viewer: the value affects everyone but author themselves.
+
+This property is not guaranteed to work on older Misskey or non-Misskey implementation.
+
 ## `_misskey_license`
 
 - compact IRI: `misskey:_misskey_license`

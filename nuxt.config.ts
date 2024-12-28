@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
-import { watch as fsWatch } from 'fs';
+import { readFileSync, watch as fsWatch } from 'fs';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
 import { getOldHubRedirects } from './scripts/get-old-hub-redirects';
 import { genLocalesJson } from './scripts/gen-locales';
@@ -19,6 +19,9 @@ const baseUrl =
 
 // リポジトリURL（末尾スラッシュなし）
 const repositoryUrl = 'https://github.com/misskey-dev/misskey-hub-next';
+
+// サーバーリストAPIのベースURL
+const serverListApiBaseUrl = process.env.SERVER_LIST_API_BASE_URL ?? 'https://instanceapp.misskey.page';
 
 // 言語定義は /assets/data/locales.ts に移動しました
 
@@ -62,12 +65,17 @@ function getRouteRules(): NuxtConfig['routeRules'] | undefined {
 	};
 }
 
+const packageJson = JSON.parse(readFileSync('./package.json', 'utf-8'));
+
 export default defineNuxtConfig({
+	compatibilityDate: '2024-09-07',
 	runtimeConfig: {
 		public: {
 			baseUrl,
+			serverListApiBaseUrl,
 			repositoryUrl,
 			locales,
+			misskeyJsVersion: packageJson.devDependencies['misskey-js'] as string,
 		},
 		CROWDIN_INTG_API: process.env.CROWDIN_INTG_API,
 	},
@@ -100,7 +108,7 @@ export default defineNuxtConfig({
 	},
 	content: {
 		markdown: {
-			remarkPlugins: [ 'misskey-hub-markdown-fixer' ],	
+			remarkPlugins: ['misskey-hub-markdown-fixer'],
 		},
 		navigation: {
 			fields: [
@@ -189,8 +197,15 @@ export default defineNuxtConfig({
 			failOnError: false,
 		}
 	},
+	typescript: {
+		tsConfig: {
+			compilerOptions: {
+				baseUrl: './',
+			},
+		},
+	},
 	hooks: {
-		'build:before': async () => {			
+		'build:before': async () => {
 			genApiTranslationFiles();
 
 			await Promise.all([
@@ -201,7 +216,7 @@ export default defineNuxtConfig({
 								genLocalesJson();
 							}
 						});
-					}		
+					}
 				}),
 				genSpaLoadingTemplate(),
 				fetchCrowdinMembers(),

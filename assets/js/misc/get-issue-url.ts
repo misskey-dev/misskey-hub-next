@@ -49,7 +49,7 @@ export async function getGhIssueUrl(options: {
                 `* (UA Detected Using getHighEntropyValues)`,
             ];
         } else {
-            const UAParser = (await import('ua-parser-js')).default;
+            const { UAParser } = await import('ua-parser-js');
             const ua = new UAParser();
             const uaRes = ua.getResult();
             

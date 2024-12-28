@@ -1,4 +1,4 @@
-import type { NavItem } from '@nuxt/content/dist/runtime/types';
+import type { NavItem } from '@nuxt/content';
 import type { LocaleObject } from '@nuxtjs/i18n';
 import { parseURL } from 'ufo';
 

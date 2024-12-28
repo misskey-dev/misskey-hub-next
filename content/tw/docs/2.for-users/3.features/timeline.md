@@ -25,7 +25,7 @@
 <table>
     <thead>
         <tr>
-            <th scope="col" rowspan="2">ソース</th>
+            <th scope="col" rowspan="2">來源</th>
             <th scope="col" rowspan="2">公開範圍</th>
             <th scope="col" colspan="4">時間軸</th>
         </tr>
@@ -38,7 +38,7 @@
     </thead>
     <tbody>
         <tr>
-            <th scope="row" rowspan="3">ローカル（フォロー）</th>
+            <th scope="row" rowspan="3">本地（已追隨）</th>
             <th scope="row">公開</th>
             <td>✔</td>
             <td>✔</td>
@@ -60,7 +60,7 @@
             <td></td>
         </tr>
         <tr>
-            <th scope="row" rowspan="3">リモート（フォロー）</th>
+            <th scope="row" rowspan="3">遠端（已追隨）</th>
             <th scope="row">公開</th>
             <td>✔</td>
             <td></td>
@@ -82,7 +82,7 @@
             <td></td>
         </tr>
         <tr>
-            <th scope="row" rowspan="3">ローカル（未フォロー）</th>
+            <th scope="row" rowspan="3">本地（未追隨）</th>
             <th scope="row">公開</th>
             <td></td>
             <td>✔</td>
@@ -104,7 +104,7 @@
             <td></td>
         </tr>
         <tr>
-            <th scope="row">リモート（未フォロー）</th>
+            <th scope="row">遠端（未追隨）</th>
             <th scope="row">公開</th>
             <td></td>
             <td></td>

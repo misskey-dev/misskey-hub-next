@@ -8,12 +8,12 @@
 		</h2>
 		<div class="max-w-lg mx-auto lg:mx-0 text-lg text-center lg:text-start">{{ $t('_landing._hero.description') }}</div>
 		<div v-if="notice" class="notice w-fit mx-auto lg:mx-0 rounded-full p-0.5">
-			<GNuxtLink :to="isLocalPath(notice.to) ? localePath(notice.to) : notice.to" :target="!isLocalPath(notice.to) && '_blank'">
+			<GNuxtLink :to="isLocalPath(notice.to) ? localePath(notice.to) : notice.to" :target="!isLocalPath(notice.to) ? '_blank' : undefined">
 				<div class="h-10 bg-white hover:bg-slate-50 dark:bg-slate-950 hover:dark:bg-slate-800 rounded-full flex items-center p-0.5">
 					<div class="notice h-9 w-9 rounded-full mr-2 p-2">
 						<MegaphoneIco class="h-5 w-5 text-white -rotate-12" />
 					</div>
-					<div class="font-bold text-sm md:text-base mr-2">{{ notice.title[locale === 'ja-ks' ? 'ja' : locale] ?? notice.title?.en ?? notice.title.ja }}<ArrowRightIco v-if="isLocalPath(notice.to)" class="ml-0.5" /><ArrowUpRightIco v-else class="ml-0.5" /></div>
+					<div class="font-bold text-sm md:text-base mr-2">{{ localizedNotice }}<ArrowRightIco v-if="isLocalPath(notice.to)" class="ml-0.5" /><ArrowUpRightIco v-else class="ml-0.5" /></div>
 				</div>
 			</GNuxtLink>
 		</div>
@@ -76,6 +76,16 @@ const mobileScreenShot = computed(() => {
 // お知らせ欄にブログが来る可能性もあるので
 const localeState = useState('miHub_blog_originalLocale', () => locale.value);
 localeState.value = locale.value;
+
+const localizedNotice = computed(() => {
+	if (locale.value === 'ja-ks') {
+		return notice.title.ja;
+	} else if (locale.value === 'ja') {
+		return notice.title.ja;
+	} else {
+		return notice.title?.en ?? notice.title.ja;
+	}
+});
 
 onMounted(() => {
 	if (import.meta.client) {

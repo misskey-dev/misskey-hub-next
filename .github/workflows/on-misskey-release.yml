@@ -1,0 +1,72 @@
+name: On Misskey Release (Update Release Notes)
+
+on:
+  repository_dispatch:
+    types: [misskey_release]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Latest version of Misskey'
+        required: false
+      releaseDate:
+        description: 'Release date (YYYY-MM-DD)'
+        required: false
+
+env:
+  TZ: Asia/Tokyo
+  VERSION: ${{ github.event.client_payload.version || github.event.inputs.version }}
+  RELEASE_DATE: ${{ github.event.client_payload.releaseDate || github.event.inputs.releaseDate }}
+
+jobs:
+  update-release-notes:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+  
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+
+      - run: corepack enable
+
+      - run: pnpm install
+
+      - run: pnpm install
+        working-directory: scripts/changelog-auto-updater
+      
+      - run: pnpm start
+        working-directory: scripts/changelog-auto-updater
+
+      - name: Check diff
+        id: diff
+        run: |
+          git add .
+          git reset HEAD pnpm-lock.yaml scripts/changelog-auto-updater/pnpm-lock.yaml
+          git diff --staged --name-only --exit-code
+        continue-on-error: true
+
+      - name: Commit changes
+        if: steps.diff.outcome == 'failure'
+        run: |
+          set -x
+          git checkout -b update-release-notes-${{ env.VERSION || 'latest' }}
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add .
+          git reset HEAD pnpm-lock.yaml scripts/changelog-auto-updater/pnpm-lock.yaml
+          git commit -m "docs: Update release notes for ${{ env.VERSION || 'latest' }} release"
+          git push -u origin HEAD
+
+      - name: Create Pull Request
+        if: steps.diff.outcome == 'failure'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr create --draft --title "Update release notes (${{ env.VERSION != null && env.VERSION || 'latest' }})" --body "【自動生成】マージ後は必ずブランチを削除してください。" --base master --head update-release-notes-${{ env.VERSION != null && env.VERSION || 'latest' }}

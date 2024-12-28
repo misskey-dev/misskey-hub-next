@@ -4,7 +4,7 @@
 
 :::tip
 
-標準装備のAiScript APIは[こちら](https://github.com/aiscript-dev/aiscript/blob/master/docs/get-started.md)からご覧いただけます。
+標準装備のAiScript APIは[こちら](https://aiscript-dev.github.io/guides/get-started.html)からご覧いただけます。
 
 :::
 
@@ -70,7 +70,29 @@ if (response) {
 ### `Mk:api(endpoint, params, token?)`
 Misskey APIにリクエストします。第一引数にエンドポイント名、第二引数にパラメータオブジェクトを渡します。
 
-第三引数にtokenを入れることもできます。プラグインで動作する場合は、引数指定無しでログイン中のユーザーのtokenが使用されます。
+第三引数にtokenを入れることもできます。プラグインで動作するとき、メタデータブロックにて`permissions`が指定されている場合、第三引数を指定しないことでそのpermissionが付与されたtokenが使用されます。
+
+:::tip
+
+permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+
+:::
+
+```AiScript
+### {
+  name: "プラグイン名",
+  version: "4.2.1",
+  author: "作者名",
+  description: "説明文",
+  permissions: ['write:notes'],
+}
+
+@onClick() {
+  let res = Mk:api('notes/create', {
+    text: 'Hello from plugin!'
+  })
+}
+```
 
 ### `Mk:save(key, value)`
 任意の値に任意の名前を付けて永続化します。永続化した値は、AiScriptコンテキストが終了しても残り、Mk:loadで読み取ることができます。
@@ -231,8 +253,10 @@ Ui:C:container({
   font: 'serif' // フォント serif,sans-serif,monospace
   borderWidth: 1 // 枠幅
   borderColor: '#f00' // 枠の色
+  borderStyle: 'solid' // 枠の柄
   padding: 1 // 余白幅
   rounded: false // 角を丸く
+  borderRadius: 1 // 角を丸く（丸みの度合いを数値指定）
   hidden: false // 隠す
 })
 ```

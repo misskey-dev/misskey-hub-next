@@ -1,6 +1,6 @@
 noScript: "JavaScript가 비활성화 상태입니다. 페이지를 표시하시려면 JavaScript를 활성화해야 합니다."
 learnMore: "자세히 보기"
-loading: "읽는 중…"
+loading: "불러오는 중..."
 clickToExpand: "(클릭하여 펼치기)"
 copy: "복사하기"
 share: "공유"
@@ -18,6 +18,8 @@ lastUpdate: "마지막 수정"
 empty: "내용이 없습니다"
 threeDimensionModel: "3D 모델"
 clickToShow: "클릭하여 표시"
+preview: "미리보기"
+scrollable: "스크롤 할 수 있습니다."
 _error:
   notFound: "페이지를 찾을 수 없습니다"
   notFoundDesc: "요청하신 페이지를 찾을 수 없습니다. URL을 확인하여 주십시오."
@@ -196,6 +198,8 @@ _brandAssets:
   icon: "아이콘"
   banner: "배너"
   avatarDecorationTemplate: "아바타 장식 도구"
+  fullColorPng: "풀 컬러 (PNG)"
+  monoChromeSvg: "단색 (SVG)"
 _contact:
   title: "문의"
   description: "Misskey Project로의 문의는 여기로부터"
@@ -246,7 +250,7 @@ _aidConverter:
   dateToAid: "날짜 및 시각 → aid/aidx"
   mode: "작성할 id"
   date: "날짜 및 시각"
-  inputByLine: "改行区切りで複数のaid/aidxを変換できます。"
+  inputByLine: "줄바꿈을 통해 여러 개의 aid 또는 aidx를 변환할 수 있습니다."
 _aboutUs:
   title: "Misskey Development Division에 대해서"
   description: "Misskey 개발 팀에 대한 정보를 포스트하고 있습니다."
@@ -335,6 +339,7 @@ _customEmojiPreview:
   preview: "미리보기"
   emoji: "이모티콘 #{number}"
   placeholder: "'추가'에서 사용자 지정 이모티콘을 추가하고 미리 볼 수 있습니다."
+  limitReactionLength: "リアクションの最大横幅を制限し、縮小して表示する"
   _options:
     text: "노트 본문"
     textDescription: "추가한 사용자 지정 이모티콘은 {emoji_id}로 참조할 수 있습니다."
@@ -352,6 +357,14 @@ _historicalMaterials:
   heroDescription: "Misskey는 2014년에 게시판 서비스로 태어났습니다. 그로부터 10년이 지났고, 지금은 많은 분들이 이용할 수 있는 플랫폼이 되었습니다.\n여기서는 Misskey에 대한 역사적 자료를 한 번에 공개합니다!"
   submissionTitle: "오래된 Misskey의 스크린샷을 보유하고 계신가요?"
   submissionDescription: "옛 Misskey에 대한 자료를 가지고 계신 분이 있다면, 꼭 저희에게 보내주세요.\nGitHub를 이용할 수 있는 분은 {gh_issue}로, 이용할 수 없는 분은 {'@'}syuilo{'@'}misskey.io 쪽으로 보내주시기 바랍니다."
+_miHubServerListPreview:
+  title: "Misskey Hub 서버 목록 미리보기"
+  description: "Misskey Hub의 서버 목록에서 표시되는 사진을 확인해보고 알맞게 조절되어 있는지 확인할 수 있습니다."
+  name: "서버 이름"
+  serverDescription: "서버 설명"
+  icon: "서버 아이콘"
+  bannerOrBg: "서버 배너 또는 배경 이미지"
+  bannerOrBgDescription: "배너 및 배경 이미지가 모두 설정된 경우, 배경 이미지를 우선적으로 표시합니다. 이미지는 가운데를 기준으로 16:9 비율의 최대 사이즈로 표시됩니다."
 _api:
   _permissions:
     title: "권한"

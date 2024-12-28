@@ -1,77 +1,110 @@
-# プラグインの作成
+# 插件开发
 
-Misskey Webクライアントのプラグイン機能を使うと、クライアントを拡張し、様々な機能を追加できます。
-このドキュメントではプラグインの作成方法について説明します。
+Misskey Web 客户端的插件功能将允许您扩展客户端并添加各种功能。\
+本文档介绍如何创建插件
 
-## AiScript
+## プラグインの例
 
-プラグインはAiScriptを使って記述されるスクリプトです。
+以下に完全なプラグインの例を示します。このプラグインは、[`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn)を使用して、投稿フォームに「フグパンチボタン」を追加するものです。
 
-## メタデータ
+このプラグインをインストールすると、投稿フォーム上のプラグインメニューに「フグパンチ」の項目が追加されます。クリックすると、投稿フォーム上のテキストに `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )` が追加されます。
 
-プラグインは、AiScriptのメタデータ埋め込み機能を使って、デフォルトとしてプラグインのメタデータを定義する必要があります。メタデータの例は以下の通りです。
+```ais
+/// @ 0.12.4
+### {
+  name: "フグパンチボタン"
+  version: "0.0.1"
+  author: "Misskey Project"
+}
+
+Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
+  let fugu = "ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )"
+
+  if (note.text.trim() == '') {
+    // ノートの中身がない場合はフグパンチに置き換え
+    rewrite('text', fugu)
+  } else {
+    // ノートの中身がある場合は冒頭にフグパンチを追加して改行
+    rewrite('text', `{fugu}{Str:lf}{note.text}`)
+  }
+})
+```
+
+##
+
+插件是指使用 AiScript 编写的脚本。
+
+## 元数据
+
+插件必须使用AiScript的元数据嵌入功能将插件的元数据定义为默认值。示例：
 
 ```AiScript
 /// @ 0.12.4
 ### {
-  name: "プラグイン名"
+  name: "插件名"
   version: "4.2.1"
-  author: "作者名"
-  description: "説明文"
+  author: "作者"
+  description: "描述"
 }
 ```
 
-メタデータは次のプロパティを含むオブジェクトです。
+元数据属性（metadata property）：
 
-### name
+###
 
-プラグイン名
+插件名称
 
-### author
+###
 
-プラグイン作者
+插件作者
 
-### version
+###
 
-プラグインバージョン。数値を指定してください。
+插件版本具体规范详见：https://semver.org/lang/zh-CN/
 
-### description
+###
 
-プラグインの説明
+插件说明
 
-### permissions
+###
 
-プラグインが要求する権限。MisskeyAPIにリクエストする際に用いられます。
+插件要求的权限。需要在发送Misskey API请求时使用。
 
-### config
+APIのリクエスト方法については、[AiScript Misskey拡張API リファレンス](/docs/for-developers/plugin/plugin-api-reference/)をご覧ください。
 
-プラグインの設定情報を表すオブジェクト。
-キーに設定名、値に以下のプロパティを含めます。
+:::tip
 
-#### type
+permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
 
-設定値の種類を表す文字列。以下から選択します。
-string number boolean
+:::
 
-#### label
+###
 
-ユーザーに表示する設定名
+插件配置文件。键值Key支持下列属性：
 
-#### description
+####
 
-設定の説明
+设置值类型选择一项：string number boolean
 
-#### default
+####
 
-設定のデフォルト値
+设置 向用户显示的名称
 
-## API
+####
 
-Misskey Webはプラグインに対してAPIを公開していて、それらを利用することでクライアントの機能を拡張できます。
-どのようなAPIがあるかは[AiScript Misskey拡張API リファレンス](./plugin-api-reference/)を参照してください。
+设置描述
 
-## プラグインを配布する
+####
 
-v2023.11.0以降では、あなたのウェブサイトからワンクリックでプラグインを直接インストールできるようになっています。
+默认值
 
-プラグインのインストール機能を提供する場合は、あなたのサイト上にAPIを実装する必要があります。詳しくは[こちら](../publish-on-your-website.md)をご覧ください。
+##
+
+Misskey Web 为插件公开了API，您可以通过使用这些 API 来扩展客户端的功能。
+您可以在 [AiScript Misskey扩展API](./plugin-api-reference/) 参考。
+
+## 发布插件
+
+在v2023.11.0或更高版本中，只需单击一下即可直接从您的网站安装插件。
+
+如果您提供插件安装功能，则需要在您的网站上实现此 API。详细见 [发布你的网站](../publish-on-your-website.md) 。

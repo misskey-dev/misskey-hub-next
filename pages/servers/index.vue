@@ -67,7 +67,7 @@
 import type { InstancesStatsObj } from '@/types/instances-info';
 import ArrowRightIco from "bi/arrow-right.svg";
 
-const { t, locale } = useI18n();
+const { t } = useI18n();
 const localePath = useGLocalePath();
 const route = useRoute();
 

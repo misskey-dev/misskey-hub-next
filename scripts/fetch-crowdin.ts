@@ -63,7 +63,7 @@ export async function fetchCrowdinMembers() {
 
         for (let i = 0; i < projectRes.data.targetLanguages.length; i++) {
             const lang = projectRes.data.targetLanguages[i] as CrowdinTargetLanguages;
-            const correspondLocaleObject = localesConst.find((v) => v.iso === lang.locale);
+            const correspondLocaleObject = localesConst.find((v) => v.language === lang.locale);
             if (correspondLocaleObject !== undefined) {
                 try {
                     const res = await fetch(withQuery('https://api.crowdin.com/api/v2/projects/628502/members', {

@@ -23,7 +23,7 @@
             >
                 <li v-for="item in NavData.center">
                     <GNuxtLink :to="localePath(item.to)" @click.native="navOpen = !navOpen" :class="['block rounded-full px-4 py-2 lg:px-4 lg:py-1.5 hover:bg-slate-300 dark:hover:bg-slate-800', { 'bg-slate-300 dark:bg-slate-800 font-bold': currentPath.includes(item.to) }]">
-                        <component v-if="item.icon" :is="item.icon" class="h-5 w-5" />
+                        <component v-if="'icon' in item" :is="item.icon" class="h-5 w-5" />
                         <template v-else>
                             {{ $t(item.i18n) }}
                         </template>
@@ -85,7 +85,7 @@
                     <li class="border-l"></li>
                     <li v-for="item in NavData.right" :class="['transition-colors', { 'text-white 3xl:text-slate-800 3xl:dark:text-slate-200': (landing && scrollPos >= -40) }]">
                         <GNuxtLink :to="item.to" class="hover:opacity-80">
-                            <component v-if="item.icon" :is="item.icon" class="h-5 w-5" />
+                            <component v-if="'icon' in item" :is="item.icon" class="h-5 w-5" />
                             <template v-else>
                                 {{ $t(item.i18n) }}
                             </template>

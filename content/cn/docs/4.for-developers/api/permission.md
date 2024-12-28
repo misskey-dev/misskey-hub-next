@@ -1,12 +1,12 @@
 ---
-description: アプリケーションが要求する権限の一覧
+description: 应用程序需要的权限
 ---
 
-# 権限の一覧
+# 权限列表
 
 :::tip
 
-このページは[misskey-js](https://github.com/misskey-dev/misskey/tree/develop/packages/misskey-js)から自動生成しているため、ドキュメントや翻訳が不完全な場合があります。
+此页面是从[misskey-js](https：//github.com/misskey-dev/misskey/tree/develop/packages/misskey-js)自动生成的，因此文档或翻译可能不完整。
 
 :::
 

@@ -1,3 +1,4 @@
 pages/**/*-ignore.vue
 locales
 __misc
+scripts/changelog-auto-updater

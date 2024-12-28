@@ -90,7 +90,7 @@
                     <div>
                         <div class="grid md:grid-cols-2 gap-4">
                             <template v-for="members, lang in hubI18nMembers">
-                                <h4 class="font-bold text-xl _i18n pt-4 first:pt-0 md:col-span-2" :lang="locales.find((v) => v.code === lang)?.iso">{{ locales.find((v) => v.code === lang)?.name ?? lang }}</h4>
+                                <h4 class="font-bold text-xl _i18n pt-4 first:pt-0 md:col-span-2" :lang="locales.find((v) => v.code === lang)?.language">{{ locales.find((v) => v.code === lang)?.name ?? lang }}</h4>
                                 <AboutUsTeamMember v-for="member in members" :member="member" />
                             </template>
                         </div>

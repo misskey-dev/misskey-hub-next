@@ -1,44 +1,44 @@
-title: "2段階認証を設定する方法（ワンタイムパスワード）"
-description: "Misskeyのアカウントにワンタイムパスワードを設定してセキュリティを強化する方法を説明します。"
+title: "設置兩步驟驗證的方法（一次性密碼）"
+description: "本節說明如何為 Misskey 帳戶設定一次性密碼，以提高安全性。"
 #Do not translate any keys that includes underscore
 _TYPE_: "STEPPED_GUIDE"
 body: |
-  2段階認証を設定すると、アカウントへの侵入リスクを軽減し、セキュリティを強化できます。ここでは、ワンタイムパスワードの設定方法をご紹介します。
+  設定兩步驗證可降低帳戶被入侵的風險，並加強安全性。 您可以在此瞭解如何設定一次性密碼。
 guides:
   - 
     _AUTOSELECT_TYPE_: "HARD_SMARTPHONE"
     _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
-    title: "スマートフォン"
+    title: "智慧型手機"
     steps:
       - 
-        title: "2段階認証用アプリをダウンロード"
+        title: "下載兩步驗證應用程式"
         description: |
-          操作を始める前に、2段階認証用のワンタイムパスワードを生成するためのアプリをインストールしてください。以下にその例を示します：
+          在開始操作之前，請安裝用於生成兩步驟驗證一次性密碼的應用程序。以下是一些例子：
 
           - Google Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) [App Store](https://apps.apple.com/app/google-authenticator/id388497605)
           - FreeOTP: [Google Play](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp) [App Store](https://apps.apple.com/app/freeotp-authenticator/id872559395)
       - 
-        title: "設定を開く"
+        title: "開啟設定"
         image: "sp/1.png"
         description: |
-          Misskeyを開き、画面右下の「≡」ボタンをタップ、でてきたメニューの「設定」をタップします。
+          開啟 Misskey，點選螢幕左下方的「≡」按鈕，然後在出現的功能表中點選「設定」。
       - 
-        title: "「セキュリティ」をタップ"
+        title: "點選安全性"
         image: "sp/2.png"
         description: |
-          設定カテゴリの中から「セキュリティ」を見つけてタップします。
+          在「設定」類別中找到「安全性」，然後點選它
       - 
-        title: "「認証アプリの設定を開始」をタップ"
+        title: "點選「開始設定驗證應用程式」"
         image: "sp/3.png"
         description: |
-          「二要素認証」の中にある「認証アプリ」から、「認証アプリの設定を開始」をタップします。
+          在「雙因素驗證」的「驗證應用程式」下，點選「開始設定驗證應用程式」。
       - 
-        title: "パスワードを入力"
+        title: "輸入密碼"
         image: "sp/4.png"
         description: |
-          セキュリティに関わる設定のため、確認のために、お使いのアカウントにログインする際に使用しているパスワードを入力します。
+          對於安全相關的設定，請輸入您登入帳號時使用的密碼以進行確認。
       - 
-        title: "認証アプリの設定を開始する"
+        title: "開始設定認證應用程式"
         image: "sp/8.png"
         description: |
           2段階認証アプリを設定するためのコードが生成されます。以下のいずれかの方法で設定してください。

@@ -4,6 +4,7 @@ import { locales } from '@/assets/data/locales';
 import { uwu } from '@/assets/js/misc/uwu';
 import NProgress from 'nprogress';
 import type { Graph, Thing } from 'schema-dts';
+import type { Meta } from '@unhead/schema';
 import { cleanDoubleSlashes, joinURL, parseURL, stringifyParsedURL, withTrailingSlash } from 'ufo';
 
 const nuxtApp = useNuxtApp();
@@ -82,7 +83,7 @@ const getLdJson = (additionalGraphes: Thing[] = []): string => {
     ldJson['@graph'] = ldJson['@graph'].concat(additionalGraphes);
     return JSON.stringify(ldJson);
 };
-const currentLocaleIso = computed(() => locales.find((e) => e?.code === locale.value)?.iso);
+const currentLocaleIso = computed(() => locales.find((e) => e?.code === locale.value)?.language);
 
 const head = useLocaleHead({
     addSeoAttributes: true,
@@ -124,7 +125,7 @@ const cnHead = (locale.value === 'cn') ? [
     { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Capriola&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap' },
 ];
 
-useHead((): Record<string, any> => ({
+useHead(() => ({
     htmlAttrs: {
         lang: currentLocaleIso.value,
         'data-bs-theme': colorMode.value,
@@ -152,7 +153,7 @@ useHead((): Record<string, any> => ({
             // TODO
             content: () => route.meta.thumbnail ? route.meta.thumbnail : `${baseUrl}/img/og/misskey-hub-screenshot-l.png`,
         },
-        ...(head.value.meta?.map((e) => ({ property: e.property, content: e.content, })) || []),
+        ...(head.value.meta?.map((e: Meta) => ({ property: e.property, content: e.content, })) || []),
     ],
     link: [
         ...(i18nLinks.value || []),
