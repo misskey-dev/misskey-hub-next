@@ -252,8 +252,8 @@ _aidConverter:
   date: "Date/Time"
   inputByLine: "You can convert multiple aids/aidx separated by newlines."
 _aboutUs:
-  title: "About Misskey Development Division"
-  description: "Information about the Misskey development team."
+  title: "About Misskey Project"
+  description: "Information about the Misskey Project."
   _team:
     title: "Dev Members"
     description: "Introducing the people involved in the development of Misskey!"
