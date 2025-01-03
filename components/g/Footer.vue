@@ -63,7 +63,7 @@
             </div>
             <hr class="my-6 border-slate-200 sm:mx-auto dark:border-slate-700" />
             <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-slate-500 sm:text-center dark:text-slate-400">&copy; 2024 syuilo and Misskey Project
+                <span class="text-sm text-slate-500 sm:text-center dark:text-slate-400">&copy; 2025 syuilo and Misskey Project
                 </span>
             </div>
         </div>

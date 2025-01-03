@@ -124,7 +124,7 @@ const instance = computed<InstanceItem>(() => ({
     },
     nodeinfo: {
         software: {
-            version: "2024.0.0",
+            version: "2025.0.0",
         },
     },
     stats: {
