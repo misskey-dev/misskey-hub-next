@@ -154,3 +154,27 @@ This property is not guaranteed to work on older Misskey or non-Misskey implemen
 This property is used for `Actor` type object. This property has same semantics and value range as `_misskey_makeNotesFollowersOnlyBefore` but affected viewer: the value affects everyone but author themselves.
 
 This property is not guaranteed to work on older Misskey or non-Misskey implementation.
+
+## `_misskey_license`
+
+- compact IRI: `misskey:_misskey_license`
+- canonical IRI: `https://misskey-hub.net/ns#_misskey_license`
+
+This property is used to express licenses about each `Emoji` objects.
+This property may not exist due to following reasons:
+
+- The source server do not follow this extension, or
+- The source server uses old Misskey version
+
+This property has the following known properties:
+
+- `freeText`: The value is either string or null. This field MUST present. Implies Sender did not set explicit license if the value is null.
+  This SHOULD NOT be empty string because it is nonsense; Proper way to declare that the Emoji object has not set explicit license is setting null on this property.
+  Describes how usage is permitted from its author in non-machine-friendly free-form text.
+  The language, format, wording, or containing information in the value is not specified; Receivers SHOULD NOT assume it's written in some specific manner.
+
+Source servers SHOULD NOT set properties in other way that differs in above description except in the case of keeping backwards compatibility.
+
+Source servers SHOULD NOT set unknown properties except in the case of keeping backwards compatibility, because more property may be added in the future.
+
+Recipient servers SHOULD ignore unknown properties.
