@@ -111,6 +111,12 @@ Persistently saves an arbitrary key with any given value.Persistently saves an a
 
 Reads the value of the specified name saved by Mk:save.
 
+### `Mk:delete(key)`
+
+※v2025.1.0（仮称）以降で使用可能
+
+Mk:saveで永続化した指定の名前の値を削除します。指定の名前の値が存在しない場合は何もしません。
+
 ## Functions/Constants only available for plugins
 
 ### `Plugin:register_post_form_action(title, fn)`
