@@ -113,6 +113,12 @@ permission 목록은 [여기](/docs/for-developers/api/permission/)에서 확인
 
 Mk:save에서 영속화한 지정된 이름의 값을 읽습니다.
 
+### `Mk:delete(key)`
+
+※v2025.1.0（仮称）以降で使用可能
+
+Mk:saveで永続化した指定の名前の値を削除します。指定の名前の値が存在しない場合は何もしません。
+
 ## 플러그인 전용
 
 ### `Plugin:register_post_form_action(title, fn)`
