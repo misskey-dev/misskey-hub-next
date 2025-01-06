@@ -117,6 +117,14 @@ Reads the value of the specified name saved by Mk:save.
 
 Mk:saveで永続化した指定の名前の値を削除します。指定の名前の値が存在しない場合は何もしません。
 
+### `Mk:url()`
+
+現在開いているページのURL（現在ブラウザのアドレスバーに表示されているURL）を取得します。
+
+### `Mk:nyaize(text)`
+
+指定されたテキストをNyaizeします。MFMの構文などは考慮されません。
+
 ## Functions/Constants only available for plugins
 
 ### `Plugin:register_post_form_action(title, fn)`
@@ -133,7 +141,7 @@ Plugin:register_post_form_action('Item name displayed on the menu', @(note, rewr
 
 ### `Plugin:register_note_action(title, fn)`
 
-Adds an action in the note menu.Passes the name of the item as the first argument and the callback function when the action is selected as the second argument.\
+Adds an action in the note menu.第一引数に項目名、第二引数に項目が選択された際のコールバック関数を渡します。\
 The target note object is passed to the callback function as the first argument.
 
 ```AiScript
