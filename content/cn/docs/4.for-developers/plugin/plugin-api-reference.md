@@ -117,6 +117,14 @@ permission 一览请看[这里](/docs/for-developers/api/permission/)
 
 Mk:saveで永続化した指定の名前の値を削除します。指定の名前の値が存在しない場合は何もしません。
 
+### `Mk:url()`
+
+現在開いているページのURL（現在ブラウザのアドレスバーに表示されているURL）を取得します。
+
+### `Mk:nyaize(text)`
+
+指定されたテキストをNyaizeします。MFMの構文などは考慮されません。
+
 ## 插件专用
 
 ### `Plugin:register_post_form_action(title, fn)`
@@ -134,7 +142,7 @@ Plugin:register_post_form_action('菜单中显示的项目名称', @(note, rewri
 
 ### `Plugin:register_note_action(title, fn)`
 
-将项目添加到帖子菜单。在第一个参数中传递字段名称，在第二个参数中传递字段被选中时的回调函数。\
+将项目添加到帖子菜单。第一引数に項目名、第二引数に項目が選択された際のコールバック関数を渡します。\
 回调函数将目标注释对象传递给第一个参数。
 
 ```AiScript
