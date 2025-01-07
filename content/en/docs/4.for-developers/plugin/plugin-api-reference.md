@@ -113,17 +113,17 @@ Reads the value of the specified name saved by Mk:save.
 
 ### `Mk:delete(key)`
 
-※v2025.1.0（仮称）以降で使用可能
+NOTE: This feature will be available in Misskey v2025.1.0 (tentative name) or later.
 
-Mk:saveで永続化した指定の名前の値を削除します。指定の名前の値が存在しない場合は何もしません。
+Deletes the value of the specified name saved by Mk:save.If the value of the specified name does not exist, then does nothing.
 
 ### `Mk:url()`
 
-現在開いているページのURL（現在ブラウザのアドレスバーに表示されているURL）を取得します。
+Get the URL of the page that is currently open (the URL currently displayed in the browser address bar).
 
 ### `Mk:nyaize(text)`
 
-指定されたテキストをNyaizeします。MFMの構文などは考慮されません。
+Nyaizes the specified text.The MFM syntax, etc. are not taken into account.
 
 ## Functions/Constants only available for plugins
 
@@ -141,7 +141,7 @@ Plugin:register_post_form_action('Item name displayed on the menu', @(note, rewr
 
 ### `Plugin:register_note_action(title, fn)`
 
-Adds an action in the note menu.第一引数に項目名、第二引数に項目が選択された際のコールバック関数を渡します。\
+Adds an action in the note menu.Passes the name of the action as the first argument and the callback function when the action is selected as the second argument.\
 The target note object is passed to the callback function as the first argument.
 
 ```AiScript
