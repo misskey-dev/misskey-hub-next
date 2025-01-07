@@ -111,6 +111,20 @@ permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧
 
 Mk:saveで永続化した指定の名前の値を読み取ります。
 
+### `Mk:delete(key)`
+
+※v2025.1.0（仮称）以降で使用可能
+
+Mk:saveで永続化した指定の名前の値を削除します。指定の名前の値が存在しない場合は何もしません。
+
+### `Mk:url()`
+
+現在開いているページのURL（現在ブラウザのアドレスバーに表示されているURL）を取得します。
+
+### `Mk:nyaize(text)`
+
+指定されたテキストをNyaizeします。MFMの構文などは考慮されません。
+
 ## プラグイン専用
 
 ### `Plugin:register_post_form_action(title, fn)`
