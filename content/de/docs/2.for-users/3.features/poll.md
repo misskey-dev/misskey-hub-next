@@ -1,51 +1,51 @@
-# アンケート
+# Umfrage
 
-アンケートは、他の人からの意見を簡単に聞くことができる機能です。
+Umfragen sind ein einfacher Weg, um Feedback von anderen zu erhalten.
 
-## アンケートをノートに添付する
+## Umfragen in Notizen einbinden
 
-アンケートは、[ノート](/docs/for-users/features/note)に添付する形で投稿することができます。ノートにアンケートを添付するには、投稿フォームの下部にある「アンケート」ボタンを選択します。
+Umfragen können als Anhänge zu [Notizen](/docs/for-users/features/note) eingereicht werden.Um eine Umfrage an die Notiz anzuhängen, wähle die Schaltfläche „Umfrage“ am Ende des Formulars.
 
-## 選択肢を増やす
+## Erhöhen Sie die Anzahl der Optionen
 
-アンケートには、選択肢を10個まで作ることができます。選択肢の入力欄は、「追加」ボタンを押すことで追加することができます。
+Es können bis zu 10 Optionen in eine Umfrage eingetragen werden.Eingabefelder für Optionen können durch Drücken der Schaltfläche „Hinzufügen“ hinzugefügt werden.
 
-追加しすぎてしまった入力欄は、入力欄の横の☓ボタンを押すことで削除することができます。
+Eingabefelder, die zu viel wurden, können durch Drücken der Dis-Taste neben dem Eingabefeld gelöscht werden.
 
 :::warning
 
-いずれかの入力欄が空白だった場合、そのアンケートが添付されたノートは投稿できません。
+Wenn eines der Eingabefelder leer ist, kann die Notiz, an die der Fragebogen angehängt ist, nicht übermittelt werden.
 
 :::
 
-## 複数回答を可能にする
+## Mehrere Antworten erlauben
 
-「複数回答可」スイッチをオンにすると、アンケートに回答する人が複数の選択肢に投票できるようになります。
+Durch Aktivieren des Schalters „Mehrfachantworten erlaubt“ können die Umfrageteilnehmer für mehr als eine Option stimmen.
 
-## アンケートの期限を設定する
+## Frist für die Umfrage festlegen
 
-アンケートには、終了する期限を、日時指定か経過指定のいずれかで設定することができます。
+Umfragen können mit einer Frist versehen werden, entweder durch Angabe eines Datums und einer Uhrzeit oder durch Angabe eines Zeitraums.
 
-設定するには、「期限」の欄から「日時指定」もしくは「経過指定」をクリックします。
+Klicke dazu im Feld „Fälligkeitsdatum“ auf „Datum und Uhrzeit angeben“ oder „Verstrichene Zeit angeben“.
 
-一度設定した期限を取り消す場合には、「期限」の欄から「無期限」を選択します。
+Um eine gesetzte Frist aufzuheben, wähle im Feld „Frist“ die Option „Unbefristet“.
 
-## アンケートに投票する
+## Antworten auf Umfragen
 
-アンケートが添付されたノートがタイムラインに流れてきたときは、アンケートに投票してみましょう。
+Wenn eine Notiz mit einer angehängten Umfrage durch die Timeline fließt, können alle für die Umfrage stimmen.
 
-アンケートに投票するには、各選択肢をクリックします。アンケートを投稿したユーザーが複数回答可に設定していない場合は、その時点でのアンケートの結果が表示されます。
+Um an der Umfrage teilzunehmen, klicke auf eine oder mehrere Option/en.Wenn der Nutzer, der die Umfrage absendet, die Umfrage nicht so eingestellt hat, dass mehrere Beantwortungen möglich sind, werden die Ergebnisse der Umfrage zu diesem Zeitpunkt angezeigt.
 
-アンケートを投稿したユーザーが複数回答可に設定していた場合、他の選択肢にも投票することができます。この場合、結果は自動では表示されません。
+Wenn der Nutzer, der die Umfrage einreicht, die Umfrage so eingestellt hat, dass er mehrere Antworten zulässt, kann er auch für andere Optionen stimmen,in diesem Fall werden die Ergebnisse nicht automatisch angezeigt.
 
-複数回答の設定に関わらず、自動でアンケートの結果が表示されなかったり、投票前に結果を見たい時は、選択肢の下にある「結果を見る」をクリックしてアンケートの結果を表示することができます。
+Unabhängig von den Einstellungen für die Mehrfachbeantwortung können, die Ergebnisse der Umfrage nicht automatisch ansehen, bzw. wenn die Ergebnisse vor der Abstimmung angesehen werden sollen, auf „Ergebnisse anzeigen“ unterhalb der Optionen klicken, um die Ergebnisse der Umfrage anzuzeigen.
 
-未投票のアンケートの結果を見たあと、もう一度隠すときは「投票する」をクリックします。
+Unabhängig von den Einstellungen für die Mehrfachbeantwortung kann, wenn die Ergebnisse der Umfrage nicht automatisch angezeigt werden oder die Ergebnisse vor der Abstimmung angezeigt werden soll, auf „Ergebnisse anzeigen“ unterhalb der Optionen klicken, um die Ergebnisse der Umfrage anzuzeigen.
 
 :::tip
 
-未投票アンケートには、結果を表示した状態でも投票できます。
+Unabgestimmte Umfragen können weiterhin abgestimmt werden, wobei die Ergebnisse angezeigt werden.
 
 :::
 
-投票をすると、自分の投票した選択肢に✔がつきます。
+Wenn abstimmt wurde, wird die Option, für die du gestimmt hast, angekreuzt.
