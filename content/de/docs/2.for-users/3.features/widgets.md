@@ -1,139 +1,139 @@
-# ウィジェット
+# Widgets
 
-ウィジェットは、MisskeyのUI上に設置できる小型の情報表示、操作が行えるパーツです。
+Widgets sind kleine Informations- und Bedienelemente, die auf der Misskey-Benutzeroberfläche platziert werden können.
 
-ウィジェットを編集するには、ウィジェット編集モードに切り替えます。切り替え方法はUIによって異なります。
-ウィジェット編集モードでは、ウィジェットの追加、削除、並び替え、およびそれぞれのウィジェットの設定を行えます。
+Um ein Widget zu bearbeiten, wechsel in den Widget-Bearbeitungsmodus.Die Art und Weise, wie zwischen ihn gewechselt werden kann, hängt von der Benutzeroberfläche ab.
+Im Widget-Bearbeitungsmodus können Widgets hinzugefügt, gelöscht und neu angeordnet werden, sowie die Einstellungen für jedes Widget konfigurieren.
 
-## 利用可能なウィジェット一覧
+## Liste der verfügbaren Widgets
 
-- プロフィール
-- サーバー情報
-- 付箋
-- タイムライン
-- カレンダー
-- RSSリーダー
-- RSSティッカー
-- トレンド
-- 時計
-- アクティビティ
-- フォト
-- デジタル時計
-- UNIX時計
-- 連合
-- サーバークラウド
-- 投稿フォーム
-- スライドショー
-- サーバーメトリクス
-- オンラインユーザー
-- ジョブキュー
-- ボタン
-- AiScriptコンソール
-- AiScript App
-- 藍
-- ユーザーリスト
-- クリッカー
+- Profil
+- Serverinformationen
+- Notizen
+- Timeline
+- Kalender
+- RSS-Reader
+- RSS-Ticker
+- Trends
+- Uhr
+- Aktivität
+- Fotos
+- Benutzerdefinierte Uhr
+- UNIX-Uhr
+- Fediversum
+- Instanzwolke
+- Notizfenster
+- Diashow
+- Servermetriken
+- Online-Benutzer
+- Auftragswarteschlange
+- Schaltfläche
+- AiScript-Konsole
+- AiScript-Anwendung
+- Ai
+- Benutzerliste
+- Klickzähler
 
-### プロフィール
+### Profil
 
-名前・ユーザー名・アバター画像・バナー画像を表示します。複数アカウントを使用している時に使用しているユーザー名が見やすくなります。
+Anzeigename, Benutzername, Avatarbild und Bannerbild,wenn du mehrere Konten verwendest, ist es einfacher, die verwendeten Benutzernamen zu sehen.
 
-### サーバー情報
+### Serverinformationen
 
-サーバー名・ドメイン・アイコン画像・バナー画像を表示します。
+Servername, Domain, Symbolbild und Banner
 
-### 付箋
+### Notizen
 
-テキストを保存しておけます。
+Inhalt, welcher in die Notize geschrieben worden ist
 
-### タイムライン
+### Timeline
 
-ライムラインを表示します。ホーム・ローカル・ソーシャル・グローバルを切り替え表示できます。
+Zeigt die Timeline.Zwischen den Ansichten: Home, Local, Social und Global wechseln.
 
-### カレンダー
+### Kalender
 
-今日の年月日・曜日、今日・今月・今年をパーセント表示します。デフォルトUIでは最初から表示されています。
+Zeigt das heutige Datum, den Wochentag, den heutigen Tag, diesen Monat und dieses Jahr in Prozent an.In der Standard-Benutzeroberfläche wird sie von Anfang an angezeigt.
 
-### RSSリーダー
+### RSS-Reader
 
-RSS フィードタイトルを一覧表示します。
+Listet die Titel der RSS-Feeds auf.
 
-### RSSティッカー
+### RSS-Ticker
 
-RSS フィードを順次スクロール表示します。
+Zeigt RSS-Feeds an.
 
-### トレンド
+### Trends
 
-最近よく使用されているハッシュタグを表示します。
+Zeigt die zuletzt verwendeten Hashtags an.
 
-### 時計
+### Uhr
 
-アナログ時計で現在時間を表示します。
+Zeigt die aktuelle Uhrzeit an.
 
-### アクティビティ
+### Aktivität
 
-稼働状況をドット表示します。
+Zeigt die letzte Aktivitäten deines Profils an.
 
-### フォト
+### Fotos
 
-最近のドライブ中身を表示します。
+Zeigt die aktuellen Inhalte im "Drive" an
 
-### デジタル時計
+### Digitaluhr
 
-デジタル時計で現在時刻を表示します。
+Zeigt die aktuelle Uhrzeit an.
 
-### UNIX時計
+### UNIX-Uhr
 
-UNIX時間で現在時刻を表示します。
+Zeigt die aktuelle Uhrzeit vom Server an.
 
-### 連合
+### Fediversum
 
-主に通信している他のサーバーを表示します。
+Zeigt die Förderierten Server an
 
-### サーバークラウド
+###
 
-他のサーバーを球状に表示します。
+Hemisphärische Anzeige des Server.
 
-### 投稿フォーム
+### Notizfenster
 
-ノートを投稿するッフォーム を固定表示します。
+Feste Anzeige des Formulars, in dem die Notiz eingereicht wird.
 
-### スライドショー
+### Diashow
 
-ドライブ内の特定フォルダ内を順次表示します。
+Zeigt den Inhalt eines bestimmten Ordners im Drive an.
 
-### サーバーメトリクス
+### Servermetriken
 
-サーバのCPU・メモリ・ネット送受・ストレージ容量を表示します。サーバ環境によっては表示できない場合があります。
+Zeigt die CPU, den Arbeitsspeicher, den Netzwerkverkehr und die Speicherkapazität des Servers an.Abhängig von der Serverumgebung ist eine Anzeige möglicherweise nicht möglich.
 
-### オンラインユーザー
+### Benutzer Online
 
-現在オンタイン状態になっているユーザー数表示します。
+Zeigt die Anzahl der Benutzer an, die derzeit online sind.
 
-### ジョブキュー
+### Auftragswarteschlange
 
-他サーバーとの送受しているノートなどのキュー状態を表示します。
+Zeigt die aktuelle Auftragswarteschlange an.
 
-### ボタン
+### Schaltfläche
 
-ボタンを表示します。動作は AIScript で記載していきます。
+Zeigt ein Bild an.Der Vorgang wird in AIScript geschrieben.
 
-### AiScriptコンソール
+### AiScript-Konsole
 
-AiScript を実行できるコンソールを表示します。
+Zeigt eine Konsole an, auf der AiScripts ausgeführt werden.
 
-### AiScript App
+### AiScript-Anwendung
 
-AIScript ソースを用いてアプリを表示します。Misskey Play と同じ UI を使用できます。v13 より追加されています。
+Zeigt aktuelle AiScript-Anwendungen an.Misskey Play verwendet dieselbe Oberfläche.(Ab Version13)
 
-### 藍
+### Ai
 
-藍を表示します。カーソルに合わせて視線を変えたりします。
+Zeigt Ai, der Blick richtet sich nach dem Courser aus.
 
-### ユーザーリスト
+### Benutzerliste
 
-リストを表示します。もっと！ - リスト で設定できます。
+Liste anzeigenMehr! Lege es in der Liste fest.
 
-### クリッカー
+### Cookies
 
-クッキーを表示します。表示されたクッキーをクリック・タップして下さい。
+Cookies anzeigenKlicken/tippen Sie auf die Cookies
