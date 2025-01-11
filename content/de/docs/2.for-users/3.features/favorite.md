@@ -1,8 +1,8 @@
-# お気に入り
+# Favoriten
 
-[ノート](./note)をお気に入りとして登録できる機能です。
+Notizen können durch die Favoriten-Funktion gesichert werden, um sie zum Beispiel später nochmal anzusehen bzw. finden zu können
 
-お気に入り登録したノートは、[お気に入りページ](x-mi-web://my/favorites)で一覧することができます。
-お気に入りに登録したことは相手に通知されず、お気に入りは自分しか見ることができません。
+Sie können Ihre favorisierten Notizen auf Ihrer [Favoritenseite](x-mi-web://my/favourites) einsehen.
+Notizersteller erhalten keine Benachrichtigung, sollte der Beitrag favorisiert werden.
 
-ノートをお気に入り登録するには、ノートメニューの「お気に入り」を押します。お気に入り解除するには、ノートメニューの「お気に入り解除」を押します。
+Um eine Notiz als Favorit zu speichern, drücke im Notizen-Menü auf „Favoriten“.Zum aufheben, drücke im Notizen-Menü auf "Aufhebung der Favorisierung" (dieser befindet sich auf der gleichen Höhe, nach Favorisierung).
