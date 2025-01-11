@@ -1,8 +1,8 @@
-# サイレンス
+# Instanzweit stummschalten
 
-サイレンスは、アカウントに設定される状態のひとつです。
+Stummschaltung ist einer der Zustände, die für ein Konto festgelegt werden.
 
-アカウントがサイレンス状態になると、ノートの公開範囲をパブリックにできなくなります。
-ホーム、フォロワー、ダイレクトは選択可能なため、サイレンスを受けた場合でもフォロワーやあなたのユーザーページを直接訪れた場合は投稿を閲覧できますが、GTL(連合タイムライン)やLTL(ローカルタイムライン)には投稿が流れません。
+Wenn das Konto stummgeschaltet wird, kann der öffentliche Bereich deiner Notizen nicht mehr auf "öffentlich" gesetzt werden.
+Home, Follower und Direct sind auswählbar, d. h. auch wenn du stummgeschaltet bist, können Follower und direkte Besucher die Benutzerseite deiner Beiträge weiterhin sichtbar sein. Allerdings nicht in der GTL (Förderierten-Timeline) oder LTL (Lokale-Timeline).
 
-アカウントのサイレンス状態は、サーバーのモデレーターによって有効化/無効化されます。
+Der Status der Kontostille wird vom Server-Moderator aktiviert/deaktiviert.
