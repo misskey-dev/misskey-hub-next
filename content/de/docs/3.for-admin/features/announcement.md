@@ -1,28 +1,28 @@
-# お知らせ
+# Neuigkeiten
 
-お知らせ(announcement)はMisskeyで利用可能なサーバー機能のひとつです。
+Announcements sind nun eine der in Misskey verfügbaren Serverfunktionen.
 
-お知らせ機能を使用すると、ユーザーにサーバー全体のお知らせを掲示することができるほか、ユーザー個別にサーバーからのメッセージを送ることができます。
+Die Ankündigungsfunktion ermöglicht es den Benutzern, serverweite Ankündigungen zu veröffentlichen und Nachrichten vom Server an einzelne Benutzer zu senden.
 
 :::warning
 
-アクティブなお知らせの数が多いと、特に新規ユーザーの確認作業が増え、UXが低下する可能性があります。その場合、以下のオプションを検討できます。
+Eine große Anzahl aktiver Benachrichtigungen kann den Bestätigungsprozess verlängern, insbesondere für neue Benutzer, und die Benutzerfreundlichkeit beeinträchtigen.In solchen Fällen können die folgenden Optionen in Betracht gezogen werden:
 
-- 「既存ユーザーのみ」オプションを有効にしてお知らせを作成する
-- 「非通知」オプションを有効にしてお知らせを作成する
-- 終了したお知らせはアーカイブする
+- Erstelle eine Mitteilung mit der Option „nur für bestehende Benutzer“.
+- Erstelle eine Mitteilung mit der Option „Nicht benachrichtigen“.
+- Archiv für bisherige Bekanntmachungen.
 
 :::
 
-## 表示形式
+## Stil anzeigen
 
-お知らせの表示形式を以下の種類から選択することができます。
+Wähle zwischen den folgenden Anzeigeformaten für Benachrichtigungen:
 
-- **通常** ... お知らせ一覧ページにお知らせが掲載されます。
-- **バナー** ... お知らせ一覧ページへの掲載に加えて、クライアントの画面上部にバナーとして表示されます。
-- **ダイアログ** ... お知らせ一覧ページへの掲載に加えて、クライアント起動時にモーダル ダイアログとして表示されます。
-  - ダイアログ形式のお知らせが同時に2つ以上ある場合、UXに悪影響を及ぼす可能性が非常に高いため、使用は慎重に行うことを推奨します。
+- **Normal** ... "Announcements" werden ebenfalls auf der Seite mit den Bekanntmachungen veröffentlicht.
+- **Banner** ... erscheint auf der Seite mit der Bekanntmachungsliste und wird auch als Banner am oberen Rand des Bildschirms zu sehen sein.
+- **Dialog** ...  Wird auf der Seite mit der Ankündigungsliste angezeigt und als modaler Dialog beim Starten des Clients.
+  - Bei der Verwendung von mehr als zwei Meldungen im Dialog-Format wird um Vorsicht geboten, da dies negative Auswirkungen auf die UX haben kann.
 
-## お知らせの作成
+## Erstellung von Bekanntmachunge
 
-TODO
+To-Do
