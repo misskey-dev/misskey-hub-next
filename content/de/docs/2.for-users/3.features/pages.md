@@ -1,74 +1,74 @@
-# ページ
+# Seiten
 
-Misskey上でノートとは別にページを作成できます。v13では静的ページに特化しています。
+Abseits von Notizen, können Seiten erstellt werden.V13 sind für statische Seiten bestimmt.
 
 :::warning
 
-v13よりページによる動的ページ作成の代わりにMisskey Playが使用できます。
+Ab v13 kann Misskey Play anstelle der dynamischen Seitenerstellung durch Seiten verwendet werden.
 
 :::
 
-## ページ設定
+## Seiteneinstellungen
 
-ページに関する項目を設定します。次の項目を入力できます。
+Mit der Seite verknüpfte Inhalte einstellen.Die folgenden Felder können eingegeben werden:
 
-- タイトル
-- ページの要約
-- ページURL
-- 中央寄せ
-- フォント
-- ピン留めされているときにタイトルを非表示
-- アイキャッチ画像
+- Titel
+- Zusammenfassung
+- Seiten-URL
+- Zentrieren
+- Schriftart
+- Seitentitel, wenn angeheftet ausblenden
+- Vorschaubild entfernen
 
-### タイトル
+### Titel
 
-このページのタイトルを入力します。一覧に表示されます。
+Gebe den Titel dieser Seite ein.Der Titel wird in einer Liste angezeigt.
 
-### ページの要約
+### Zusammenfassung
 
-簡単な説明を入力します。一覧に表示されます。
+Geben Sie eine kurze Beschreibung an.Die Zusammenfassung wird in einer Liste angezeigt.
 
-### ページURL
+### Seiten-URL
 
 `https://サーバー名/@ユーザー/pages/●●●` の `●●●` を任意に設定できます。
 
-### 中央寄せ
+### Zentrieren
 
-有効にすると、中央に寄せて表示します。
+Wenn diese Option aktiviert ist, wird die Anzeige zentriert.
 
-### フォント
+### Schriftart
 
-**セリフ** と **サンセリフ** を選択します。
+Wähle  **serif** und/oder **sans serif**.
 
-### ピン留めされているときにタイトルを非表示
+### Seitentitel wenn angeheftet ausblenden
 
-ピン留めされているときにタイトルを非表示にします。
+Blendet den Titel aus, wenn er gepinnt ist.
 
-### アイキャッチ画像
+### Vorschaubild festlegen
 
-**アイキャッチ画像を設定** より画像を設定できます。一覧表示などで表示する事が可能です。
+**Aufsehenerregendes Bild einstellen** Es ist möglich, die Vorschau, z. B. in einer Listenansicht anzuzeigen.
 
-## コンテンツ
+## Inhalte
 
-ページ本体を編集します。次のブロックを一つまたは複数組み合わせてページを生成できます。
+Der Seiteninhalt kann bearbeitet werden.Seiten können durch Kombination eines oder mehrerer der folgenden Blöcke erstellt werden.
 
-- セクション
-- テキスト
-- 画像
-- ノート埋め込み
+- Abschnitt
+- Text
+- Bild
+- Eingebettete Notiz
 
-### セクション
+### Abschnitt
 
-タイトルを設定する事で見出しとして表示します。更に中のブロックを設定できます。
+Wird ein Titel festgelegt, so wird dieser als Überschrift behandelt.Es können ebenfalls zusätzlich Blöcke plaziert werden.
 
-### テキスト
+### Text
 
-テキスト本文を入力します。MFMやカスタム絵文字を使用できます。
+Gebe hier Text ein.MFM und benutzerdefinierte Emojis können verwendet werden.
 
-### 画像
+### Bild
 
-画像を表示します。ドライブより画像を設定します。
+Zeigt ein Bild an.Lade die Daten via "Drive" hoch um diese in Misskey verwenden zu können.
 
-### ノート埋め込み
+### Eingebettete Notiz
 
-ノート ID を入れる事で、そのノートを表示します。他のサーバーを埋め込みたい場合は検索でそのURLを入れ、表示させた時のIDを貼り付けて下さい。
+Eingebettete Notizen sind mit einer Notiz-ID gekennzeichnet, diese kann gesucht werden.Sollte ein anderer Server eingebettet werden, so ist dessen URL einzutragen.
