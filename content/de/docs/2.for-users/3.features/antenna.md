@@ -1,5 +1,5 @@
-# アンテナ
+# Antennen
 
-アンテナは、自由に条件を設定して、合致するノートを自動で収集することができる機能です。
+Antenna ist eine Funktion, mit der Bedingungen frei festlegt werden können und automatisch Notizen sammeln, die diesen Bedingungen entsprechen.
 
-条件を設定したアンテナが作成された状態で、条件に合致するノートが投稿されると、リアルタイムでそのアンテナのタイムラインにノートが追加されます。
+Sobald eine Antenne mit festgelegten Bedingungen erstellt wurde und eine Notiz gepostet wird, die den Bedingungen entspricht, wird die Notiz in Echtzeit zur Timeline der Antenne hinzugefügt.
