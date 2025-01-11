@@ -1,29 +1,29 @@
-# ドライブ
+# Drive
 
-ドライブは、Misskey上でファイルを管理できる機能です。
+Drive ist eine Funktion, mit der Dateien auf Misskey verwaltet werden können.
 
 :::tip
 
-技術的に言うと、Misskeyのシステム上、すべてのファイルが一元管理されており、それをユーザーにも公開したインターフェイスがドライブと捉えることができます。
+Technisch gesehen werden alle Dateien zentral auf dem Misskey-System verwaltet, das man sich wie ein Laufwerk mit einer Schnittstelle vorstellen kann, die auch für die Nutzer offen ist.
 
 :::
 
-Misskey Webの[ドライブページ](x-mi-web://my/drive)から任意のファイルをアップロードできるほか、アバターに設定した画像や、ノートに添付したファイルなどもすべてドライブにアップロードされます。
+Es kann jede Datei von der [Laufwerksseite] (x-mi-web://my/drive) auf Misskey Web sowie alle Bilder, die als Avatar eingestellt wurde, und Dateien, die an Ihre Notizen angehängt sind, auf das Laufwerk hochladen.
 
-ドライブにアップロードされたファイルは、いつでもダウンロードすることができるほか、ノート作成時に「ドライブからファイルを添付」することでファイルを再利用することもできます。
+Auf das Laufwerk hochgeladene Dateien können jederzeit heruntergeladen werden, oder die Dateien können beim Erstellen von Notizen durch „Anhängen von Dateien vom Laufwerk“ wiederverwendet werden.
 
-ドライブ内にフォルダを作り、複数のファイルをまとめて整理することもできます。
+Ebenfalls können Ordner erstellt werden, um die Bilder im Dive zu sortieren.
 
 :::warning
 
-現時点で、ドライブからファイルを削除すると、そのファイルが添付された **すべてのコンテンツ(ノート、ページなど)** も同時に消えます。
+ACHTUNG: Sollte eine Datei im Dive gelöscht werden, so werden auch die Notizen verschwinden, die mit der Datei verlinkt worden sind.
 
 :::
 
-## センシティブ (NSFW)
+## Sensible-Inhalte (NSFW)
 
-センシティブまたはNSFW (Not safe for work) は、ドライブのファイルに設定することができるフラグです。
-センシティブフラグを設定されたファイルは、表示される際に閲覧者の操作なしには表示されなくなります。
-このフラグは、例えば職場や公共の場で閲覧するのに適切でないと思われる画像などに設定し、そのような画像が突然表示されてしまうことを防ぐ目的で使われます。
+Sensible oder NSFW (Not safe for work) ist ein Kennzeichen, das für Dateien auf dem Laufwerk gesetzt werden kann.
+Dateien mit der Kennzeichnung „sensibel“ sind ohne Zutun des Users nicht sichtbar, wenn sie angezeigt werden.
+Diese Markierung kann z. B. für Bilder gesetzt werden, die am Arbeitsplatz oder an öffentlichen Orten nicht als geeignet angesehen werden, um zu verhindern, dass solche Bilder plötzlich angezeigt werden und der Chef nachfrägt, was man sich denn da gerade anschaut...
 
-このフラグは手動でオンオフを切り替えられるほか、モデレーターの判断で設定される場合もあります。
+Diese Kennzeichnung kann selbst oder durch einen Moderator gesetzt werden.
