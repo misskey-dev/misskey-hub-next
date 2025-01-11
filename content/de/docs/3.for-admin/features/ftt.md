@@ -1,19 +1,19 @@
 # Fan-out Timeline Technology (FTT)
 
-FTTはMisskeyで利用可能なサーバー機能のひとつです。
+FTT ist eine der auf Misskey verfügbaren Serverfunktionen.
 
-有効にすると、各種タイムラインを取得する際のパフォーマンスが大幅に向上し、データベースへの負荷を軽減することが可能です。ただし、Redisのメモリ使用量は増加します。サーバーのメモリ容量が少ない場合、または動作が不安定な場合は無効にすることができます。
+Wenn diese Funktion aktiviert ist, kann die Leistung beim Abrufen verschiedener Zeitleisten erheblich verbessert und die Belastung der Datenbank verringert werden,die Speichernutzung in Redis wird jedoch zunehmen.FTT kann deaktiviert werden, wenn der Server eine geringe Speicherkapazität hat oder instabil ist.
 
-コントロールパネル → 全般 から設定を行えます。
+Die Einstellungen können über Systemsteuerung → Allgemein vorgenommen werden.
 
-## データベースへのフォールバック
+## Auf die Datenbank zurückfallen
 
-- 有効にすると、タイムラインがキャッシュされていない場合にDBへ追加で問い合わせを行うフォールバック処理を行います。
-- 無効にすると、フォールバック処理を行わないことでさらにサーバーの負荷を軽減することができますが、タイムラインが取得できる範囲に制限が生じます。
+- Wenn diese Option aktiviert ist, wird ein Fallback-Prozess durchgeführt, der zusätzlich die DB abfragt, wenn die Zeitleiste nicht zwischengespeichert ist.
+- Die Deaktivierung reduziert die Serverlast weiter, da der Fallback-Prozess nicht durchgeführt wird, schränkt aber den Umfang der abrufbaren Zeitleisten ein.
 
-## FTTが適用可能なタイムライン
+## Zeiträume, in denen FTT angewendet werden kann.
 
-- ホームライムライン
-- ローカルタイムライン
-- ソーシャルタイムライン
-- ユーザーリストタイムライン
+- Startseite
+- Lokale Timeline
+- Soziale Timeline
+- Benutzerdefinierte Timeline
