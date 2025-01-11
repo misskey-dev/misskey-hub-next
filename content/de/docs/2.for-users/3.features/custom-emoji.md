@@ -1,8 +1,8 @@
-# カスタム絵文字
+# Benutzerdefinierte Emojis
 
-カスタム絵文字は、サーバーで用意された画像を絵文字のように使える機能です。
-ノート、リアクション、チャット、自己紹介、名前などの場所で使うことができます。
-カスタム絵文字をそれらの場所で使うには、絵文字ピッカーボタン(ある場合)を押すか、`:`を入力して絵文字サジェストを表示します。
-テキスト内に`:foo:`のような形式の文字列が見つかると、`foo`の部分がカスタム絵文字名と解釈され、表示時には対応したカスタム絵文字に置き換わります。
+Benutzerdefinierte Emojis sind instanzenspezifische Bilder, die dort wie Emojis verwendet werden können.
+Sie können in Notizen, Reaktionen, Chats, Profilbeschreibungen, Benutzernamen und an anderen Orten verwendet werden.
+Um ein benutzerdefiniertes Emoji an einem solchen Ort zu verwenden, drücke den Knopf, um die Emoji-Auswahl zu öffnen (falls vorhanden), oder gib ein `:` ein, um Emoji-Vorschläge anzeigen zu lassen.
+Wird eine Zeichenkette des Formats :foo: innerhalb eines Textes gefunden, so wird foo als Name eines benutzerdefinierten Emojis interpretiert und mit dem dazugehörigen Bild ersetzt.
 
-サーバーにどのようなカスタム絵文字が用意されているかは、Misskey Webの **サーバー情報** にある [**カスタム絵文字**](x-mi-web://about#emojis) にアクセスすると見ることができます。
+Welche benutzerdefinierten Emojis auf dem Server verfügbar sind, kann unter [**Benutzerdefinierte Emojis**](x-mi-web://about#emojis) unter **Serverinformationen** auf Misskey Web angesehen werden.
