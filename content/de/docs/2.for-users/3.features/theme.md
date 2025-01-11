@@ -1,15 +1,15 @@
-# テーマ
+# Farbschema
 
-テーマを設定して、Misskeyクライアントの見た目を変更できます。
+Durch die Verwendung von Farbthemen kann das Aussehen des Misskey-Clients verändert werden.
 
-## テーマの設定
+## Designeinstellungen
 
-[設定 > テーマ](x-mi-web://settings/theme)
+[Einstellungen > Darstellung](x-mi-web://settings/theme)
 
-## テーマを作成する
+## Erstellung eines Themas
 
-テーマコードはJSON5で記述されたテーマオブジェクトです。
-テーマは以下のようなオブジェクトです。
+Themencodes werden im Format eines JSON5-Objekts gespeichert.
+Themen werden wie das folgende Objekt dargestellt:
 
 ```js
 {
@@ -37,53 +37,53 @@
 
 ```
 
-- `id` ... テーマの一意なID。UUIDをおすすめします。
-- `name` ... テーマ名
-- `author` ... テーマの作者
-- `desc` ... テーマの説明(オプション)
-- `base` ... 明るいテーマか、暗いテーマか
-  - `light`にすると明るいテーマになり、`dark`にすると暗いテーマになります。
-  - テーマはここで設定されたベーステーマを継承します。
-- `props` ... テーマのスタイル定義。これから説明します。
+- `id` ... Die einzigartige Identifikation des Themas.Verwendung von UUIDs ist empfohlen.
+- `name` ... Themen-Name
+- `author` ... Ersteller des Themas
+- `desc` ... Beschreibung des Themas (optional)
+- `base` ... Ob dies ein Thema für den Hell- oder Dunkelmodus ist
+  - Wird light angegeben, so wird es als Thema des Hellmodus angezeigt, wird dark angegeben, so wird es als Thema des Dunkelmodus angezeigt.
+  - Das Thema erbt die Eigenschaften der hier eingestellten Vorlage.
+- `props` ... Definitionen der Themenoptionen.Diese werden im folgenden erläutert.
 
-### テーマのスタイル定義
+### Definition von Themenoptionen
 
-`props`下にはテーマのスタイルを定義します。
-キーがCSSの変数名になり、バリューで中身を指定します。
-なお、この`props`オブジェクトはベーステーマから継承されます。
-ベーステーマは、このテーマの`base`が`light`なら[\_light.json5][_light.json5]で、`dark`なら[\_dark.json5][_dark.json5]です。
-つまり、このテーマ内の`props`に`panel`というキーが無くても、そこにはベーステーマの`panel`があると見なされます。
+Unter `props` wird der Stil des Themas definiert.
+Der Schlüssel ist der Name der CSS-Variable und der Wert gibt den Inhalt an.
+Beachte, dass dieses „props“-Objekt vom Basisthema erbt.
+Das Basisthema ist [\_light.json5][_light.json5], wenn die `Basis` dieses Themas `light` ist und [\_dark.json5][_dark.json5], wenn es `dark` ist.
+Das bedeutet, dass, auch wenn es in diesem Thema keinen Schlüssel `props` mit `panel` gibt, angenommen wird, dass es ein `panel` des Basisthemas gibt.
 
 - [_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
 - [_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
 
-#### バリューで使える構文
+#### Syntax für Wertangaben
 
-- 16進数で表された色
-  - 例: `#00ff00`
-- `rgb(r, g, b)`形式で表された色
-  - 例: `rgb(0, 255, 0)`
-- `rgba(r, g, b, a)`形式で表された透明度を含む色
-  - 例: `rgba(0, 255, 0, 0.5)`
-- 他のキーの値の参照
-  - `@{キー名}`と書くと他のキーの値の参照になります。`{キー名}`は参照したいキーの名前に置き換えます。
-  - 例: `@panel`
-- 定数(後述)の参照
-  - `${定数名}`と書くと定数の参照になります。`{定数名}`は参照したい定数の名前に置き換えます。
-  - 例: `$main`
-- 関数(後述)
-  - `:{関数名}<{引数}<{色}`
+- Hexadezimalfarben
+  - Beispiel: „#00ff00“
+- \`RGB-Farben mit rgb(r, g, b)-Syntax
+  - z.B.: rgb(0, 255, 0)\`
+- \`RGBA-Farben mit rgb(r, g, b, a)-Syntax
+  - z.B.: rgba(0, 255, 0, 0.5)\`
+- Werte anderer Schlüssel referenzieren
+  - Durch das angeben von @{Schlüsselname} wird dies durch eine Referenz auf den Wert des gegebenen Schlüssels ersetzt.Ersetze {Schlüsselname} mit dem Namen des Schlüssels, der referenziert werden soll.
+  - Beispiel: `@panel`
+- Konstantenreferenz (später erläutert)
+  - Durch das angeben von ${Konstantenname} wird dies durch eine Referenz auf den Wert der angegebenen Konstante ersetzt.Ersetze {Konstantenname} durch den Namen der Konstanten, die referenziert werden soll.
+  - Beispiel: `$main`
+- Funktionen (später erläutert)
+  - `:{Funktionsname}{Parameter}{Farbe}`
 
-#### 定数
+#### Konstante
 
-「CSS変数として出力はしたくないが、他のCSS変数の値として使いまわしたい」値があるときは、定数を使うと便利です。
-キー名を`$`で始めると、そのキーはCSS変数として出力されません。
+In Fällen, in denen ein Wert nicht als CSS-Variable angesehen werden soll, sondern als Wert für eine andere CSS-Variable verwendet werden soll, eignet sich die Verwendung einer Konstante.
+Wird ein Wert mit einem <code>$</code>-Präfix versehen, so wird er nicht als CSS-Variable, sondern als Referenz angesehen.
 
-#### 関数
+#### Funktionen
 
-「ボタンの上にカーソルを合わせたときだけ色を明るくしたい」のように、既存の色から少し変更した色を使いたい場合に、関数を使うと便利です。
+Funktionen sind nützlich, wenn du eine Farbe verwenden möchtest, die leicht von einer bestehenden Farbe abweicht, z. B. „Ich möchte die Farbe nur aufhellen, wenn ich den Mauszeiger über eine Schaltfläche bewege“.
 
-`:{関数名}<{引数}<{色や他のキーの参照}`の形で使うことができます。
+Sie kann in der Form `:{Funktionsname}<{Argumente}<{Verweis auf Farbe oder anderen Schlüssel}` verwendet werden.
 
 ```js
 props: {
@@ -93,17 +93,17 @@ props: {
 }
 ```
 
-##### 使用できる関数
+##### Vorhandene Funktionen
 
-- `lighten` ... 渡された色の輝度(0 ~ 100)に対して引数(0 ~ 100)を加算した色を返します。
-- `darken` ... 渡された色の輝度(0 ~ 100)に対して引数(0 ~ 100)を減算した色を返します。
-- `alpha` ... 渡された色の透明度を引数(0.0 ~ 1.0)に設定した色を返します。
-  - 0.0のとき完全に透明、1.0で完全に不透明になります。
-- `hue` ... 渡された色の色相(-360 ~ 360)に対して引数(-360 ~ 360)の値だけ回転させた色を返します。
-- `saturate` ... 渡された色の彩度(0 ~ 100)に対して引数(0 ~ 100)を加算した色を返します。
+- `lighten` ... Gibt die Farbe der übergebenen Farbe zurück, wobei das Argument (0 ~ 100) zur Leuchtdichte (0 ~ 100) der übergebenen Farbe addiert wird.
+- `darken` ... Gibt die von dem Argument (0 ~ 100) subtrahierte Farbe für die übergebene Farbhelligkeit (0 ~ 100) zurück
+- `alpha` ... Gibt eine Farbe zurück, bei der die Transparenz der übergebenen Farbe auf das Argument (0.0 ~ 1.0) eingestellt ist
+  - Vollständig transparent bei 0,0, vollständig undurchsichtig bei 1,0
+- `hue` ... Gibt die um den Wert des Arguments (-360 ~ 360) gedrehte Farbe für den übergebenen Farbton (-360 ~ 360) zurück
+- `saturate` ... Gibt die Farbe des Arguments (0 ~ 100) addiert mit der Sättigung (0 ~ 100) der übergebenen Farbe zurück
 
-## テーマを配布する
+## Erstellung eines Themas
 
-v2023.11.0以降では、あなたのウェブサイトから、ワンクリックでテーマを直接インストールできるようになっています。
+Ab v2023.11.0 können Sie Themes mit einem einzigen Klick direkt von Ihrer Website aus installieren.
 
-テーマのインストール機能を提供する場合は、あなたのサイト上にAPIを実装する必要があります。詳しくは[こちら](../../for-developers/publish-on-your-website/)をご覧ください。
+Falls Funktionen zur Installation von Themen angeboten werden, muss eine API auf Ihrer Website implementiert werden.Für weitere Informationen [hier klicken](../../for-developers/publish-on-your-website/)
