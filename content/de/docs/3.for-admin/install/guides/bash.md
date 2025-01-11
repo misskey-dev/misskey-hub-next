@@ -1,192 +1,191 @@
 # Misskey install shell script v3.0.0
 
-Misskeyを簡単にインストールするためのシェルスクリプトができました！
+Shell-Skript, um Misskey einfach zu installieren!
 
-いくつかの質問に答えるだけで、UbuntuサーバーへMisskeyを簡単にインストールできます！
+Misskey ganz einfach auf dem Ubuntu-Server installieren, indem du ein paar Fragen beantwortest!
 
-また、アップデートスクリプトもあります。
+Ein "Update-Script" steht ebenfalls zur Verfügung.
 
-[v12の場合はこちら](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)
+[Mit Version12 durchstarten!](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)
 
-## 準備するもの
+## Vorbereitung
 
-1. ドメイン
-2. Ubuntuがインストールされたサーバー
-3. Cloudflareアカウント（推奨）
+1. Domain
+2. Ubuntu Server
+3. Ein Cloudflare-Konto (empfohlen)
 
 :::danger
 
-一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
+Erstellen die Datenbank nicht unter einer Serverdomäne/einem Hostnamen neu, der bereits genutzt wird!
 
 :::
 
-Let's Encryptの認証を試行できる回数が少ないので、サーバーのネットワークやDNSの設定を十分確認してからインストールを開始してください。
+Die Anzahl der Authentifizierungsversuche von Let’s Encrypt sind begrenzt. Überprüfe bitte sorgfältig die Netzwerk- und DNS-Einstellungen deines Servers, wir mit der Instalation fortfahren...
 
-## Cloudflareの設定
+## Cloudflare-Einstellungen
 
-Cloudflareを使う場合、Cloudflareのドメインの設定を完了してからインストールを開始するようにしてください。\
-ネームサーバーの適用には最大で3日程度かかる場合があります。
+Um Cloudflare zu verwenden, stelle sicher, dass die Cloudflare-Domäne eingerichtet ist, bevor es weitergeht!\
+Der Nameserver(DNS) kann bis zu 3 Tage brauchen, bis die Änderung in Kraft tritt.
 
-また、nginxとCloudflareを設定する場合、Cloudflareの設定画面にて、
+Gehe zum Einrichten von **nginx** und **Cloudflare** zu den **Cloudflare-Einstellungen**.
 
-- DNSを設定してください。
-- SSL/TLS設定にて、暗号化モードを「フル」に設定してください。
+- DNS konfigurieren
+- SSL/TLS-Einstellungen den Verschlüsselungsmodus auf „Vollständig“
 
-## 操作
+## Aktionen
 
 ### 1. SSH
 
-サーバーにSSH接続します。\
-（サーバーのデスクトップを開いている方はシェルを開きましょう。）
+Melde dich über SSH in deinem Server an.\
+(Sollte es sich um einen Server-Desktop handeln, öffne eine Shell.).
 
-### 2. 環境を最新にする
+### 2. Einrichten einer Umgebung
 
-すべてのパッケージを最新にし、再起動します。
+Aktualisiere alle Pakete und starte neu.
 
 ```sh
 sudo apt update; sudo apt full-upgrade -y; sudo reboot
 ```
 
-### 3. インストールをはじめる
+### 3. Mit der Installation beginnen
 
-SSHを接続しなおして、Misskeyのインストールを始めましょう。
+Stelle eine Verbindung via SSH her und beginne Misskey zu installieren
 
-ただ、インストール前に[Tips](#tips)を読むことを強くお勧めします。
+Wir empfehlen, vor der Installation die [Tipps](#tips) zu lesen.
 
 ```sh
 wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/ubuntu.sh -O ubuntu.sh; sudo bash ubuntu.sh
 ```
 
-example.comは自分のドメインに置き換えてください。
+Ersetze example.com durch deine eigene Domain
 
-### 4. アップデートする
+### 4. Update
 
-アップデートのためのスクリプトもあります。
+Wir haben ein Update-Skript implementiert.
 
-アップデートスクリプトは、環境のアップデートは行いません。CHANGELOG（日本語）および[GitHubのリリース一覧（英語）](https://github.com/joinmisskey/bash-install/releases)を参考に、適宜マイグレーション操作を行なってください。
+Das Update-Skript aktualisiert **nicht** deine Linux-Umgebung.Beachte die CHANGELOG (Japanisch) und das [GitHub-Release (Englisch)](https://github.com/joinmisskey/bash-install/releases) und führe die entsprechenden Migrationsvorgänge durch.
 
-まずはダウンロードします。
+Lade die Repository herunter
 
 ```sh
 wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/update.ubuntu.sh -O update.sh
 ```
 
-アップデートしたいときにスクリプトを実行してください。
+Führe das Script dann aus, wenn du ein Update installieren möchtest.
 
 ```sh
 sudo bash update.sh
 ```
 
-- systemd環境では、`-r`オプションでシステムのアップデートと再起動を行うことができます。
-- docker環境では、引数に更新後のリポジトリ名:タグ名を指定することができます。
+- In der systemd-Umgebung kann das System mit der Option „-r“ aktualisiert und neu gestartet werden.
+- In einer Docker-Umgebung kannst du den aktualisierten Repository-Namen:Tag-Namen als Variabel angeben.
 
-## 動作を確認した環境
+## Das Script läuft auf folgenden verifizierten Umgebungen
 
 ### Oracle Cloud Infrastructure
 
-このスクリプトは、Oracle Cloud InfrastructureのAlways Freeサービスで提供されている2種類のシェイプのいずれにおいても動作します。
+Dieses Skript funktioniert für beide Formen, die im Always Free-Dienst von Oracle Cloud Infrastructure angeboten werden.
 
 - VM.Standard.E2.1.Micro (AMD)
-- VM.Standard.A1.Flex (ARM) [1OCPU RAM6GB or greater]
+- VM.Standard.A1.Flex (ARM) [1OCPU RAM6GB oder besser]
 
-iptablesを使うようにしてください。
+Stelle sicher, das iptables verwendet wird.
 
-## Issues & PRs Welcome
+## Fehlermeldungen und PR's sind hier Willkommen
 
-上記の環境で動作しない場合、バグの可能性があります。インストールの際に指定された条件を記載の上、GitHubのIssue機能にてご報告いただければ幸いです。
+Wenn es in der oben genannten Umgebung nicht funktioniert, liegt möglicherweise ein Fehler vor.Wir wären dankbar, wenn das Problem mithilfe der Issue-Funktion von GitHub gemeldet wird und dabei die bei der Installation angegebenen Bedingungen angeben werden können.
 
-上記以外の環境についてのサポートは難しいですが、状況を詳しくお教えいただければ解決できる可能性があります。
+Dezeit ist es schwierig, Support für andere als die oben aufgeführten Umgebungen bereitzustellen. Wenn wir jedoch weitere Informationen zur Situation haben, können wir das Problem möglicherweise lösen.
 
-機能の提案についても歓迎いたします。
+Funktionsvorschläge nehmen wir ebenfalls gerne an.
 
-# Tips
+# Tipps
 
-選択肢の選び方や仕様についてなど。
+So wählst du die richtigen Optionen & Spezifikationen aus.
 
-## Systemd or Docker?
+## Systemd oder Docker?
 
-v1から、インストールメソッドにsystemdとDockerとを選べるようにしました。
+Seit Version1 kann zwischen Docker und Systemd gewählt werden.
 
-Dockerと言っても、**MisskeyだけをDockerで実行**し、RedisやPostgresなどはホストで直接実行します。\
-[docker-composeですべての機能を動かす方法については、mamemonongaさんが作成したこちらの記事がおすすめです。](https://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0)
+Obwohl es Docker heißt, wird nur **Misskey auf Docker ausgeführt**. Redis, Postgres usw. werden direkt auf dem Host ausgeführt.\
+[Für Informationen, wie man mit Docker-Compose alles zum Laufen bekommt, empfehle ich diesen Artikel von [mamemononga](https://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0).
 
-Docker Hubイメージを使う設定であれば、Misskeyのビルドが不要になるため、**一番お勧めです**。\
-ただし、マイグレーションは必要なので、アップデート時にMisskeyを使えない時間がゼロになるわけではありません。\
-また、Misskeyのビルド環境を準備しない(git pullしない)ので、フォークを動かしたくなった時に設定が面倒になります。
+Solltest du das Docker Hub-Image verwenden, ist dies die am meisten empfohlene Option, da dadurch die Erstellung von Misskey entfällt.\
+Da jedoch eine Migration erforderlich ist, kann es während der Aktualisierung dennoch vorkommen, dass Misskey nicht verwendet werden kann.\
+Da außerdem die Misskey-Build-Umgebung nicht vorbereitet ist (Git Pull wird nicht ausgeführt), wird die Einrichtung mühsam, falls du einen Fork verwenden möchtest.
 
-ローカルでDockerをビルドする方式は、パフォーマンス面で非推奨です。
+Aufgrund von Leistungsproblemen wird das lokale Erstellen von Docker nicht empfohlen.
 
-systemdは、Docker Hubにイメージを上げるまでもないものの、フォークを使いたい場合にお勧めです。
+systemd wird empfohlen, wenn du einen Fork verwenden willst, das Image aber nicht im Docker Hub veröffentlichen möchtest.
 
-お勧めする順番は次の通りです。
+Die empfohlene Reihenfolge wie folgt:
 
 1. Docker Hub
 2. systemd
-3. Dockerビルド
+3. Docker-Build
 
-## nginxを使うかどうか
+## Verwenden von nginx
 
-以下のケースに該当する場合を除き、インターネットとMisskeyの仲立ちをするリバースプロキシとしてnginxの採用をおすすめしています。
+Außer in den folgenden Fällen empfehlen wir, nginx als Reverse-Proxy zu verwenden, um als Vermittler zwischen dem Internet und Misskey zu fungieren.
 
-- ユーザは自分のみ（いわゆるお一人様サーバー）or ごく少数
-- ロードバランサー等nginxのリバースプロキシ・キャッシュ機能を他の手段で賄う用意がある（上級者向け）
+- Es sind wenige Personen auf der Instanz angemeldet oder besteht aus nur einem (1-User-Server)
+- Sie sind bereit, die Reverse-Proxy- und Cache-Funktionen von nginx auch mit anderen Mitteln zu schützen, beispielsweise mit einem Load Balancer (für fortgeschrittene Benutzer)
 
-nginxをリバースプロキシとして採用することにより、画像ファイルなどの静的コンテンツをキャッシュしサーバーリソースの浪費を抑えることが出来ます。
-また、nginxにはキャッシュが無い状態での大量アクセスを上手くコントロールする機能が搭載されていますので、Misskeyの負荷増大を抑える効果を期待できます。
+Durch die Verwendung von nginx als Reverse-Proxy können statische Inhalte wie Bilddateien zwischengespeichert werden und die Systemlast reduzieren.
+Darüber hinaus verfügt nginx über eine Funktion, die große Zugriffsmengen effektiv steuern kann, wenn kein Cache vorhanden ist. Dies trägt zur Reduzierung der Belastung von Misskey bei.
 
-設定例は[nginxの設定](../resources/nginx/)ページにて記載しています。
+Konfigurationsbeispiele findest du auf der Seite [nginx-Einstellungen](../resources/nginx/).
 
-## Add more swaps!
+## Hol' mehr Swaps!
 
-スワップを設定している場合、メモリが合計で3GB以上でなければスクリプトが動作しないようになっています。
+Swap muss so konfiguriert werden, das **mindestens 3GB oder mehr** zur Verfügung stehen, sonst kann das Skript nicht ausgeführt werden.
 
-## 途中で失敗してまたスクリプトを実行する場合
+## Wenn das Skript fehlschlägt
 
-万が一途中で失敗してもう一度スクリプトを動作させる場合、次のことに注意してください。
+Sollte das Skript zwischendurch abrechen, versuche folgendes:
 
-- RedisやPostgresのインストールが終わっている場合、「install locally」はNoにしてください。\
-  host・port設定はそのままEnterを押します。
-  ユーザー名やパスワードは、前回実行した際に指定したものを入力します。
+- Sollte Redis oder Postgres bereits installiert sein, wähle „Nein“ bei „lokal installieren“.\
+  Lasse die Host und Porteinstellung und drücke die "Enter"-Taste. Versuche dich mit den letzen Zugangsdaten anzumelden, die du bei der Installation angegeben hattest.
 
-## .envファイルについて
+## .env-Datei
 
-インストールスクリプトは、2つの.envファイルを作成します。\
-アップデートの際に使用します。
+Das Installationsskript erstellt zwei .env-Dateien:\
+Wird beim Aktualisieren verwendet.
 
 ### /root/.misskey.env
 
-misskeyを実行するユーザーを覚えておくために必要です。
+Dies ist erforderlich, um sich den User zu merken, der misskey ausführt.
 
 ### /home/(misskeyユーザー)/.misskey.env
 
-systemdの場合に生成されます。\
-主にディレクトリを覚えておくのに使用します。
+Wird generiert, wenn systemd verwendet wird.\
+Hauptsächlich zum Speichern von Verzeichnissen.
 
 ### /home/(misskeyユーザー)/.misskey-docker.env
 
-Dockerの場合に生成されます。\
-実行されているコンテナとイメージの番号を保存しています。\
-コンテナの番号はアップデートの際に更新されます。古いイメージは削除されます。
+Wird erstellt, wenn die Docker Version verwendet wird.\
+Es speichert den Container und die Imagenummer, die ausgeführt wird.\
+Die Containernummer wird beim Update aktualisiert.Der alte Build wird hierbei gelöscht.
 
-## 自分で管理する
+## Übernehme die Kontrolle
 
-インストール後、構成を変更する際に役立つかもしれないメモです。
+Diese Hinweise können hilfreich sein, wenn nach der Installation Konfigurationsänderungen vorgenommen werden.
 
-"example.com"を自分のドメインに置き換えて読んでください。
+Ersetze example.com durch deine eigene Domain
 
-### Misskeyディレクトリ
+### Misskey-Verzeichnis
 
-Misskeyのソースは`/home/ユーザー/ディレクトリ`としてcloneされます。\
-（ユーザー、ディレクトリの初期値はともにmisskeyです。）
+Die Quelle von Misskey wird als „/home/user/directory“ geklont.\
+(Der Standardwert für **Benutzer** und **Verzeichnis** ist „misskey“.)
 
-Misskeyディレクトリへは、以下のように移動するとよいでしょう。
+Um zum Misskey-Verzeichnis zu gelangen, gebe folgendes in die Kommandozeile ein:
 
 ```sh
-sudo -iu ユーザー
-cd ディレクトリ
+sudo -iu User
+cd Datei
 ```
 
-もとのユーザーに戻るにはexitを実行します。
+Um zum Ursprünglichen Benutzer zu wechseln, gebe "exit" ein.
 
 ```sh
 exit
@@ -194,75 +193,75 @@ exit
 
 ### systemd
 
-systemdのプロセス名はexample.comです。\
-たとえば再起動するには次のようにします。
+Der Systemd-Prozessname ist example.com.\
+Beispiel für einen Neustart:
 
 ```sh
 sudo systemctl restart example.com
 ```
 
-journalctlでログを確認できます。
+Mit "jounalctrl" kannst du herrausfinden, ob der Neustart funktioniert hat.
 
 ```sh
 journalctl -t example.com
 ```
 
-設定ファイルは`/etc/systemd/system/example.com.service`として保存されています。
+Die Konfigurationsdatei wird als „/etc/systemd/system/example.com.service“ gespeichert.
 
 ### Docker
 
-DockerはMisskeyユーザーでrootless実行されています。
+Docker wird ohne Rootberechtigung als Misskey-Benutzer ausgeführt.
 
-sudo でMisskeyユーザーに入るときは、`XDG_RUNTIME_DIR`と`DOCKER_HOST`を変更する必要があります。
+Bei Misskey-Benutzer, die mit sudo laufen sollen, muss  „XDG_RUNTIME_DIR“ und „DOCKER_HOST“ geändert werden.
 
 ```sh
-sudo -iu ユーザー
+sudo -iu user
 export XDG_RUNTIME_DIR=/run/user/$UID
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 
-# プロセス一覧を表示
+# Prozessliste anzeigen
 docker ps
 
-# ビルド (リポジトリ: local/misskey:latest)
+# Erstellen (Repository: lokal/misskey:latest)
 docker build -t local/misskey:latest ./misskey
 
-# docker run
-docker run -d -p 3000:3000 --add-host=docker_host:10.0.0.1 -v /home/misskey/misskey/files:/misskey/files -v "/home/misskey/misskey/.config/default.yml":/misskey/.config/default.yml:ro --restart unless-stopped -t "local/misskey:latest"
+# Docker-Ausführung
+docker run -d -p 3000:3000 --add-host=docker_host:10.0.0.1 -v /home/misskey/misskey/files:/misskey/files -v "/home/misskey/misskey/.config/default. yml“:/misskey/.config/default.yml:ro --restart unless-stopped -t „local/misskey:latest“
 
-# ログを表示
-docker logs --tail 50 -f コンテナID
+# Protokolle anzeigen
+Docker log --tail 50 -f Container-ID
 ```
 
-ワンライナーなら次のようにします。
+Als Einzeiler, sähe das so aus:
 
 ```sh
-sudo -u ユーザー XDG_RUNTIME_DIR=/run/user/$(id -u ユーザー) DOCKER_HOST=unix:///run/user/$(id -u ユーザー)/docker.sock docker ps
+sudo -u user XDG_RUNTIME_DIR=/run/user/$(id -u user) DOCKER_HOST=unix:///run/user/$(id -u user)/docker.sock docker ps
 ```
 
 ### nginx
 
-nginxの設定は`/etc/nginx/conf.d/example.com.conf`として保存されています。
+Die Nginx-Konfiguration wird als „/etc/nginx/conf.d/example.com.conf“ gespeichert.
 
 ### Redis
 
-requirepassとbindを`/etc/redis/misskey.conf`で設定しています。
+**requirepass** und **bind** werden in `/etc/redis/misskey.conf` festgelegt.
 
-## Q. アップデート後に502でアクセスできない
+## Q. Zugriff nach Update mit 502-Fehler nicht möglich
 
-Dockerでは、起動後にマイグレーションをするため、すぐにアクセスできません。\
-マイグレーションが終わっているかどうか確認してみてください。
+In Docker erfolgt die Migration nach dem Start, der Zugriff geht nich sofort.\
+Überprüfe, ob die Migration abgeschlossen ist.
 
-systemdの場合では、pnpm installに失敗している可能性があります。
+Im Fall von systemd ist die pnpm-Installation möglicherweise fehlgeschlagen.
 
-Misskeyディレクトリで次の内容を実行し、もう一度アップデートを実行してみてください。
+Gehe in das Misskey-Verzeichnis und versuche folgendes:
 
 ```sh
 pnpm run clean-all
 ```
 
-journalctlでログを確認すると、たいていre2が云々という記述が見当たります。
+Beim ausführen von jounalctl sollte "re2" irgendwo stehen.
 
-## Q. 同じサーバーにもう1つMisskeyを建てたい
+## Q. Ich möchte auf demselbsen Server eine weitere Misskey-Instanz erstellen
 
-スクリプトは同じサーバーに追加でMisskeyをインストールすることは想定していません。\
-幾つかの設定が上書きされるか、途中でエラーになってしまうでしょう。
+Das Skript geht nicht davon aus, dass zusätzliche Misskeys auf demselben Server installiert werden.\
+Einige Einstellungen werden überschrieben oder es treten unterwegs Fehlermeldungen auf.
