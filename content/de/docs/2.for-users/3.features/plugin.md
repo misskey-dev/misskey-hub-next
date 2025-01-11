@@ -1,5 +1,5 @@
-# プラグイン
+# Plugins
 
-Misskey Webにはプラグイン機能があり、ユーザーがMisskey Webの機能を拡張することができます。
+Misskey Web verfügt über eine Plug-in-Funktion, mit der Nutzer die Funktionalität von Misskey Web erweitern können.
 
-プラグインの作成方法については[こちらのドキュメント](../../for-developers/plugin/create-plugin)を参照してください。
+Informationen über die Erstellung eines Plugins findest du [hier](./.../for-developers/plugin/create-plugin).
