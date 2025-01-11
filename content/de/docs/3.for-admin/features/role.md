@@ -1,105 +1,105 @@
-# ロール
+# Rollen
 
-ロールはユーザーに割り当てることのできる属性で、ロールごとにバッジを表示させたりポリシー設定でユーザーの権限を調整したりできます。
+Rollen sind Attribute, die Benutzern zugewiesen werden können, so dass Abzeichen für jede Rolle angezeigt werden können und die Benutzerberechtigungen in den Richtlinieneinstellungen angepasst werden können.
 
-ユーザーのロール割り当て(アサイン)は手動で行うことも、条件を指定して自動で行うようにすることもできます。
+Die Zuweisung von Benutzerrollen (Zuweisung) kann manuell oder automatisch durch Angabe von Bedingungen erfolgen.
 
-ロールは一人のユーザーに対して複数アサインすることができます。
+Rollen können mehr als einem Benutzer zugewiesen werden.
 
-## ベースロール
+## Rollenvorlage
 
-全てのユーザーにデフォルトで適用されるポリシーの設定はベースロールの設定で行うことができます。
+Festlegung von Richtlinien, die standardmäßig für alle Benutzer gelten, kann als Basisrolleneinstellungen erfolgen.
 
-ベースロールの設定はコントロールパネルの「ロール→ベースロール」で行えます。
+Basisrollen können in der Systemsteuerung unter Rollen → Basisrollen eingestellt werden.
 
-## アサインの種類
+## Art der Zuweisung
 
-アサイン方法はマニュアルまたはコンディショナルから選択できます。
+Die Zuweisungsmethode kann zwischen Manuell und automatisch gewählt werden.
 
-- **マニュアル** ... 手動でユーザーをアサインしたりアサイン解除します。(マニュアル ロール)
-  - アサインする期間を設定することも可能です。
-- **コンディショナル** ... 条件を設定し、それに合致するユーザーが自動で含まれるようになります。(コンディショナル ロール)
-
-:::warning
-
-コンディショナル ロールは、マニュアル ロールと比較して以下の制限があります。
-
-- 手動でのアサイン/アサイン解除は行えません。
-- 指定したコンディショナル ロールに含まれるユーザー一覧を取得することはできません。
-
-:::
-
-## 権限
-
-ロールの基本的な権限は以下から選択できます。
-
-- **一般ユーザー** ... 特別な権限はありません。
-- **モデレーター** ... 基本的なモデレーションに関する操作を行えます。
-- **管理者** ... サーバーの全ての設定を変更できます。
-
-より詳細な権限はポリシーの設定で行います。
-
-## ポリシー
-
-ロールのポリシーを調整して、権限や機能の制限を変更できます。
-
-ポリシーはベースロールに設定された値を継承するように設定することもできます。
-
-### 優先度
-
-複数のロールが割り当てられていて、同じポリシーがそれぞれ異なる値で定義されている場合に、他の定義よりどれくらい優先するかを設定できます。
-優先度を高く設定するほど他の定義より優先されます。
-
-優先度はポリシーごとの設定であり、ロールごとの設定ではありません。また、ベースロールでは設定できません。
-
-**優先度が同じ場合、デフォルトで最も大きい、または最も権限が広い値が選択されます。**
-
-:::tip
-
-例えば、ユーザーにロールAとロールBがアサインされていて、ロールAのドライブ容量ポリシーが 500MB、ロールBのドライブ容量ポリシーが 300MB に定義されている場合、
-
-- 優先度が同じ、もしくはロールAのドライブ容量ポリシーの優先度の方が高い場合 500MB の値が採用されます。
-- ロールBのドライブ容量ポリシーの優先度の方が高い場合 300MB の値が採用されます。
-
-また、ユーザーにロールCとロールDがアサインされていて、ロールCのパブリック投稿可否ポリシーが「いいえ」、ロールDのパブリック投稿可否ポリシーが「はい」に定義されている場合、
-
-- 優先度が同じ、もしくはロールDのパブリック投稿可否ポリシーの優先度の方が高い場合「はい」の値が採用されます。
-- ロールCのパブリック投稿可否ポリシーの優先度の方が高い場合「いいえ」の値が採用されます。
-
-:::
-
-### ベースロールの値を使用
-
-この設定をオンにすると、ポリシーの値をベースロールから継承します。
-
-## ロールの作成
-
-コントロールパネルの「ロール」から新しいロールを作成することができます。
-
-## ロール情報の確認、編集、および削除
-
-コントロールパネルの「ロール」で行うことができます。
-
-## ユーザーへのロールのアサイン、アサイン解除
-
-ユーザーの「モデレーション→ロール」で行うことができます。
-
-また、ユーザーのメニューから直接アサインすることもできます。
-
-アサインする際にアサインされる期間を設定することが可能です。
-
-:::tip
-
-ロールのアサイン/アサイン解除が反映されるまで時間がかかることがあります。
-
-:::
+- **Manuell** ... Manuelle Zuweisung und Aufhebung der Zuweisung von Benutzern.(Manuelle Rollen)
+  - Es ist auch möglich, die Dauer der Rolle festzulegen.
+- **Automatisch** ... Bedingungen festlegen, und Benutzer, die diese Bedingungen erfüllen, werden automatisch berücksichtigt.(Automatische Rolle)
 
 :::warning
 
-コンディショナル ロールには手動でのアサインはできません。
+Automatische Rollen haben im Vergleich zu manuellen Rollen die folgenden Einschränkungen
+
+- Eine manuelle Zuweisung/Aufhebung der Zuweisung ist nicht möglich.
+- Es ist nicht möglich, die Liste der Benutzer in den angegebenen Rollen abzurufen.
 
 :::
 
-## ユーザーのポリシーの確認
+## Berechtigungen
 
-ユーザーの「モデレーション→概要→ポリシー」で行うことができます。
+Die grundlegenden Berechtigungen der Rolle können aus den folgenden ausgewählt werden:
+
+- **Allgemeiner Benutzer** ... Hat keine besonderen Befugnisse. Standardrolle
+- **Moderator** ... Kann Beiträge, je nach freigabe, löschen und Nutzer melden.
+- **Manager** ... Kann alle Servereinstellungen ändern und anpassen.
+
+Detailliertere Berechtigungen sind in den Richtlinieneinstellungen verfügbar.
+
+## Richtlinien
+
+Sie können die Richtlinie der Regel anpassen, um die Einschränkungen der Berechtigungen und Funktionen zu ändern.
+
+Richtlinien können auch so eingestellt werden, dass sie die für die Basisrolle eingestellten Werte erben.
+
+### Priorität
+
+Wenn mehrere Rollen zugewiesen sind und dieselbe Richtlinie mit unterschiedlichen Werten für jede definiert ist, können Sie festlegen, wie viel Priorität sie gegenüber anderen Definitionen haben.
+Je höher Sie die Priorität einstellen, desto mehr Vorrang hat sie vor anderen Definitionen.
+
+Die Vorrangstellung ist eine Einstellung pro Richtlinie, nicht pro Rolle.Sie kann auch nicht in der Basisrolle eingestellt werden.
+
+**Wenn die Prioritäten gleich sind, wird standardmäßig der größte oder maßgebliche Wert ausgewählt.**
+
+:::tip
+
+Beispiel: Den Nutzern sind die Rollen A und B zugewiesen, und die Laufwerkskapazitätsrichtlinie für Rolle A ist auf 500 MB und die Laufwerkskapazitätsrichtlinie für Rolle B auf 300 MB festgelegt,
+
+- Wenn die Prioritäten gleich sind oder die Priorität der Laufwerkskapazitätspolitik in Rolle A höher ist, wird der Wert von 500 MB angenommen.
+- Wenn die Priorität der Laufwerkskapazitätsrichtlinie für Rolle B höher ist, wird ein Wert von 300 MB angenommen.
+
+Wenn einem Nutzer die Rollen C und D zugewiesen sind und die Verfügbarkeitsrichtlinie für öffentliche Bekanntmachungen für die Rolle C als „Nein“ und die Verfügbarkeitsrichtlinie für öffentliche Bekanntmachungen für die Rolle D als „Ja“ definiert ist,
+
+- Wenn die Prioritäten gleich sind oder die Priorität der Verfügbarkeitsrichtlinie für öffentliche Buchungen in Rolle D höher ist, wird der Wert „Ja“ angenommen.
+- Wenn die Priorität der Verfügbarkeitsrichtlinie für die Rolle C höher ist, wird der Wert „Nein“ angenommen.
+
+:::
+
+### Wert der Rollenvorlage verwenden
+
+Wenn diese Einstellung eingeschaltet ist, werden die Richtlinienwerte von der Basisrolle geerbt.
+
+## Rolle erstellen
+
+Neue Rollen können über „Rollen“ im Kontrollpanel erstellt werden.
+
+## Anzeigen, Bearbeiten und Löschen von Rolleninformationen
+
+Dies ist im Control Panel unter „Rollen“ möglich.
+
+## Zuweisen und Aufheben von Rollen an Nutzer
+
+Dies kann im Benutzermenü unter „Moderation → Rollen“ erfolgen.
+
+Ebenfalls ist dies direkt aus dem Benutzermenü möglich.
+
+Bei der Zuweisung können Sie die Dauer festlegen.
+
+:::tip
+
+Es kann eine Weile dauern, bis die Rollenzuweisung/-aufhebung wirksam sind.
+
+:::
+
+:::warning
+
+Bedingte Rollen können nicht manuell zugewiesen werden
+
+:::
+
+## Überprüfen der Benutzerrichtlinien
+
+Dies kann beim Benutzer unter „Moderation → Übersicht → Richtlinien“ erfolgen.
