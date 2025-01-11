@@ -1,7 +1,7 @@
-# ワードミュート
+# Wortstummschaltung
 
-ワードミュートの設定をすると、条件に合致したノートが最小化され、ノートの代わりに「○○（ユーザー名）が何か言いました」という文言が表示されるようになります。
+Wenn du die Wortstummschaltung einrichtest, werden Notizen, die die Bedingungen erfüllen, minimiert und der Text „XX (Benutzername) hat etwas gesagt“ wird anstelle der Notiz angezeigt.
 
-ワードミュートは、[設定 > ミュートとブロック](x-mi-web://settings/mute-block)から設定できます。
+Word Mute unter „Einstellungen“ > „Stumm und Blockieren“ einrichten (x-mi-web://settings/mute-block).
 
-ノートを完全に非表示にする（ハードミュートと同等の機能を実現する）こともできます。[設定 > 全般](x-mi-web://settings/general)の「ノートの表示」セクションにある「ミュートされた単語を含むノートを非表示にする」をオンにしてください。
+Es ist auch möglich, Notizen vollständig unsichtbar zu machen (was das Äquivalent einer harten Stummschaltung erreicht).Aktiviere die Option unter „Notizen mit stummen Wörtern ausblenden“ im Abschnitt „Notizen anzeigen“ unter [Einstellungen > Allgemein](x-mi-web://Einstellungen/Allgemein).
