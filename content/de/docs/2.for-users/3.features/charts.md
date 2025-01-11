@@ -1,74 +1,74 @@
-# チャート
+# Diagramme
 
-Misskeyはサーバーの様々なデータソースに対するチャートを生成し表示する機能を備えています。
-チャートを利用することで、サーバーの利用状況や連合の状況、各ユーザーのアクティビティなどを視覚的に把握することができます。
+Misskey kann Diagramme für verschiedene Datenquellen auf dem Server erstellen und anzeigen.
+Mithilfe von Diagrammen kann die Serverauslastung, den Föderationsstatus und die Aktivität jedes Benutzers visuell erfasst werden.
 
-サーバーのチャートはサーバー情報ページから表示することができます。
+Serverdiagramme können auf der Serverinformationsseite eingesehen werden.
 
-以下は各チャートとその各項目の説明です。
+Nachfolgend eine Beschreibung jeder Tabelle und ihrer einzelnen Elemente.
 
-## 連合チャート
+## Förderationskarte
 
-連合しているサーバーについてのチャートです。
+Tabelle über die förderierten Server.
 
 ### Pub
 
-アクティビティを配送しているサーバーの数。
-言い換えると、自サーバーのユーザーをフォローしているリモートユーザーの所属サーバーのユニークなカウントを表します。
+Anzahl der Server, die die Aktivität liefern.
+Es handelt sich hierbei um die eindeutige Anzahl von Servern, die zu Förderierten-Nutzern gehören, die Nutzern auf dem eigenen Server folgen.
 
 ### Sub
 
-アクティビティを受信しているサーバーの数。
-言い換えると、自サーバーのユーザーがフォローしているリモートユーザーの所属サーバーのユニークなカウントを表します。
+Anzahl der Server, die Aktivität erhalten.
+Sie stellt die eindeutige Anzahl von Servern dar, die Förderierten-Nutzern gehören, gefolgt von Nutzer auf dem eigenen Server.
 
-### Received
+### Empfangen
 
-アクティビティを送ってきたサーバーの数。
+Anzahl der Server, die Aktivität gesendet haben.
 
-### Delivered
+### Zugestellt
 
-アクティビティを配送したサーバーの数。
+Anzahl der Server, die die Aktivität geliefert haben.
 
-### Stalled
+### Geschlossen
 
-アクティビティを配送する際、エラーになったサーバーの数。
+Anzahl der Server, die bei der Zustellung einer Aktivität gescheitert sind.
 
-## アクティブユーザー数チャート
+## Aktive Benutzer
 
-自サーバーのユーザーの利用状況についてのチャートです。
+Anzahl der eigenen Nutzer im Server
 
-### Read & Write
+### Lesen & Schreiben
 
-閲覧と書き込みを行ったユーザーの数。
+Anzahl der Nutzer, die im Server anschauen und schreiben.
 
-### Read
+### Lesen
 
-閲覧を行ったユーザーの数。
+Anzahl der Nutzer, die einen Beitrag angesehen haben.
 
-### Write
+### Schreiben
 
-書き込みを行ったユーザーの数。
+Anzahl der Nutzer, die einen Beitrag erstellt haben.
 
-### < Week
+### < Woche
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1週間未満であるユーザーの数。
+Anzahl der Nutzer, die ein Konto erstellt haben, dessen Erstellungsdatum und -zeit weniger als eine Woche beträgt.
 
-### < Month
+### < Monat
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1ヶ月未満であるユーザーの数。
+Anzahl der Nutzer, die ein Konto erstellt haben, dessen Erstellungsdatum und -zeit weniger als einen Monat beträgt.
 
-### < Year
+### < Jahr
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1年未満であるユーザーの数。
+Anzahl der Nutzer, die ein Konto erstellt haben, dessen Erstellungsdatum und -zeit weniger als eine Jahr beträgt.
 
-### > Week
+### > Woche
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1週間以上前であるユーザーの数。
+Anzahl der Nutzer, die ein Konto erstellt haben, dessen Erstellungsdatum und -zeit mehr als eine Woche beträgt.
 
-### > Month
+### > Monat
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1ヶ月以上前であるユーザーの数。
+Anzahl der Nutzer, die ein Konto erstellt haben, dessen Erstellungsdatum und -zeit mehr als einen Monat beträgt.
 
-### > Year
+### > Jahr
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1年以上前であるユーザーの数。
+Anzahl der Nutzer, die ein Konto erstellt haben, dessen Erstellungsdatum und -zeit mehr als ein Jahr beträgt.
