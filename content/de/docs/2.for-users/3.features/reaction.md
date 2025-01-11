@@ -1,23 +1,23 @@
-# リアクション
+# Eine Reaktion hinzufügen
 
-他の人のノートに、絵文字を付けて簡単にあなたの反応を伝えられる機能です。
-Misskey Webでリアクションするには、ノートの + アイコンをクリックしてピッカーを表示し、絵文字を選択します。
-リアクションには[カスタム絵文字](./custom-emoji.md)も使用できます。
+Verleih deinen Gedanken über die Beiträge anderer durch Reaktionen einfach Ausdruck.
+Um auf einen Beitrag zu reagieren, drücke das "+"-Symbol, das mit dem Beitrag angezeigt wird, und wähle ein Emoji.
+Es ist ebenso möglich, mit <a href="./custom-emoji">Benutzerdefinierten Emojis</a> zu reagieren.
 
-## リアクションピッカーのカスタマイズ
+## Anpassung der Reaktionsauswahl
 
-Misskey Webでは、ピッカーに表示される絵文字を自分好みにカスタマイズすることができます。
-設定の「リアクション」で設定します。
+Die in der Reaktionsauswahl angezeigten Emojis können angepasst werden.
+Dies ist in den Einstellungen im Unterpunkt "Reaktionen" möglich.
 
-## リモート投稿へのリアクションについて
+## Reaktionen auf Beiträge von anderen Servern
 
-リアクションはMisskeyオリジナルの機能であるため、リモートサーバーがMisskeyでない限りは、ほとんどの場合「Like」としてアクティビティが送信されます。一般的にはLikeは「お気に入り」として実装されているようです。
+Da Reaktionen eine Misskey-spezifische Funktionalität sind, werden diese von nicht-Misskey Instanzen meist als "Like"-Aktivität interpretiert.Im Allgemeinen sind Likes als „Favoriten“ implementiert.
 
-## リモートからのリアクションについて
+## Reaktionen von Benutzern anderer Server
 
-リモートから「Like」アクティビティを受信したとき、Misskeyでは「❤」のリアクションとして解釈されます。
+Werden von entfernten Servern "Like"-Aktivitäten gesendet, so werden diese von Misskey als "👍"-Reaktion interpretiert.
 
-## 自分のリアクション一覧を見る
+## Liste einiger individueller Reaktionen
 
-Misskey Webでは、自分のプロフィールページの「リアクション」タブを開くことで、自分の行ったリアクション一覧を見ることができます。
-設定から、このリアクション一覧を公開するようにすることもできます。
+Auf Misskey Web kann eine Liste der vom Nutzer abgegebenen Reaktionen eingesehen werden, indem auf die Profilseite die Registerkarte „Reaktionen“ geöffnet wird.
+Diese Liste der Reaktionen kann auch in den Einstellungen öffentlich gemacht werden.
