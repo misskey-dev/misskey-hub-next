@@ -1,19 +1,19 @@
-# スレッドミュート
+# Thread stummschalten
 
 :::tip
 
-バージョン 12.95.0 以降の機能です。
+Dies ist eine Funktion ab Version 12.95.0.
 
 :::
 
-スレッドミュートは、指定したノートのスレッドをミュートします。スレッドとは、起点のノートから繋がった全てのリプライのことです。
+Thread Mute schaltet den Thread der angegebenen Notiz stumm.Ein Thread besteht aus allen Antworten, die ausgehend von einer Startnotiz miteinander verbunden sind.
 
-スレッドをミュートすると、そのスレッドへの新たなリプライおよびリプライに含まれるあなた宛てのメンションが、通知されなくなるほか「あなた宛て」にも載らなくなります。
+Wenn ein Thema stummgeschalten wird, wird nicht mehr über neue Antworten auf das Thema und an dich gerichtete Erwähnungen in den Antworten benachrichtigt, und sie erscheinen auch nicht mehr im Abschnitt „an dich gerichtet“.
 
-Misskey Webでスレッドをミュートするには、対象のスレッドに属する任意のノートもしくは起点のノートのメニューを開き、「スレッドをミュート」を選択します。
+Um einen Thread in Misskey Web stumm zu schalten, öffne  das Menü einer beliebigen Notiz oder Startnotiz, die zu dem betreffenden Thread gehört, und wählen Sie „Thread stummschalten“.
 
 :::warning
 
-スレッド内のどのノートからミュート操作を行ったかに関わらず、そのスレッド全体がミュートされます。
+Der gesamte Thread wird stummgeschaltet, unabhängig davon, von welcher Notiz im Thread aus die Stummschaltung durchgeführt wird.
 
 :::
