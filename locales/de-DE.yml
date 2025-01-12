@@ -11,7 +11,7 @@ generate: "Erstellen"
 download: "Herunterladen"
 browse: "anzeigen"
 settings: "Einstellungen"
-goToLegacyHub: "Weiter zum Legacy-Hub"
+goToLegacyHub: "Vorherige Version von Misskey Hub"
 contactUs: "Kontakt"
 detail: "Details"
 lastUpdate: "Letztes Update"
@@ -59,7 +59,7 @@ _landing:
     title: "Misskey ist eine{0}"
     decenterizedPlatform: "dezentralisierte Plattform"
     description: "Misskey ist ein freies und offenes Projekt, was bedeutet, dass es jedem freisteht, einen Server mit Misskey zu erstellen, so das bereits eine Menge von Servern im Internet verfügbar sind. Ein weiteres Merkmal ist, dass Misskey ein verteiltes Kommunikationsprotokoll namens {0} implementiert. Das bedeutet, egal welcher Server gewählt wird, alle mit allen Benutzern auf anderen Servern interagieren können. Deshalb wird es dezentralisiert genannt und unterscheidet sich grundlegend von anderen Diensten wie zum Beispiel Twitter, die unter einer einzigen Website von einem einzigen Ceo veröffentlicht werden. Die Themen, Gruppen und Sprachen unterscheiden sich von Server zu Server. Den Server zu finden, der zu dir passt, ist Teil des Spaßes (und natürlich macht es auch Spaß, einen eigenen Server zu haben)."
-    activityPub: "Aktivität"
+    activityPub: "ActivityPub"
   _features:
     _root:
       title: "Basis-Features"
@@ -147,7 +147,7 @@ _servers:
     grid: "Gitter"
 _docs:
   title: "Dokumentation"
-  description: "Misskey ist eine dezentrale, open-Sorce Social-Networking-Plattform. Es deckt alles ab von der effektiven Verwendung von Misskey, bis zu Informationen für Serverbetreiber und Programmierer."
+  description: "Misskey ist eine dezentrale, quelloffene & Soziale Netzwerk-Plattform. Es deckt alles von der effektiven Verwendung von Misskey, bis zu Informationen für Serverbetreiber und Programmierer ab."
   indexTitle: "Inhaltsverzeichnis"
   _contribute:
     editThis: "Seite bearbeiten"
