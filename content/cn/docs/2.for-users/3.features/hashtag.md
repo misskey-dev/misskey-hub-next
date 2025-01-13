@@ -1,8 +1,8 @@
 # ハッシュタグ
 
-ハッシュタグとは、投稿に検索可能なタグをつけることができる機能の一つです。
+主题标签是允许您为帖子添加可搜索标签的功能之一。
 
-世界ではじめてのハッシュタグ── #barcamp は、[2007年8月24日の午前4:25](https://twitter.com/chrismessina/status/223115412?lang=en)にクリス・メッシナ氏[@chrismessina@mastodon.xyz](https://mastodon.xyz/@chrismessina)によって考案されました。後にこの「ポンド記号`#`を用いて検索を容易にする」という案は、英語で「刻む、ハックする」を意味する「ハッシュ」と、「札」を意味する「タグ」を合わせた造語──「ハッシュタグ」として生まれ変わり、当時のTwitter社に公式採用されました。ちなみにクリス・メッシナ氏が`#`を選んだ理由は、IRCのチャンネル名が`#`で始まることからの連想だからだそうです。
+後にこの「ポンド記号`#`を用いて検索を容易にする」という案は、英語で「刻む、ハックする」を意味する「ハッシュ」と、「札」を意味する「タグ」を合わせた造語──「ハッシュタグ」として生まれ変わり、当時のTwitter社に公式採用されました。ちなみにクリス・メッシナ氏が`#`を選んだ理由は、IRCのチャンネル名が`#`で始まることからの連想だからだそうです。
 
 ![Screenshot of Chris Messina's first hashtag tweet that says "how do you feel about using # (pound) for groups. As in #barcamp \\[msg\\]?"](/img/docs/for-users/features/hashtag/1.ja.png)
 
