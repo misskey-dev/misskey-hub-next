@@ -1,6 +1,6 @@
 <template>
     <div class="pt-12">
-        <div class="mx-auto max-w-screen-xl">
+        <div class="mx-auto max-w-(--breakpoint-xl)">
             <GHero class="bg-white dark:bg-slate-950 mx-6 px-3 py-5 rounded-2xl">
                 <template #title>{{ $t('_tools.title') }}</template>
                 <template #description>
@@ -18,7 +18,7 @@
             </GHero>
         </div>
         <div class="pb-12 pt-6">
-            <div class="container mx-auto max-w-screen-xl px-6 space-y-6">
+            <div class="container mx-auto max-w-(--breakpoint-xl) px-6 space-y-6">
                 <GLocalNav :items="sections.map((v) => ({
                     name: $t(v.title),
                     anchor: '#' + v.title.replaceAll('.', '_'),

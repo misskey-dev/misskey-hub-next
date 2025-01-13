@@ -1,7 +1,7 @@
 <template>
-    <div class="relative container mx-auto max-w-screen-xl p-6 lg:py-0 grid docs-main">
-        <div class="lg:hidden sticky top-16 -mx-6 -mt-6 w-[calc(100%+3rem)] bg-slate-50 dark:bg-slate-900 z-[9890] border-b dark:border-slate-700 text-sm flex items-start">
-            <details v-if="data?.body && (data.body.toc?.links ?? []).length > 0" class="flex-grow" :open="openState">
+    <div class="relative container mx-auto max-w-(--breakpoint-xl) p-6 lg:py-0 grid docs-main">
+        <div class="lg:hidden sticky top-16 -mx-6 -mt-6 w-[calc(100%+3rem)] bg-slate-50 dark:bg-slate-900 z-9890 border-b dark:border-slate-700 text-sm flex items-start">
+            <details v-if="data?.body && (data.body.toc?.links ?? []).length > 0" class="grow" :open="openState">
                 <summary class="p-4 cursor-pointer">
                     {{ $t('_docs._toc.title') }}
                 </summary>

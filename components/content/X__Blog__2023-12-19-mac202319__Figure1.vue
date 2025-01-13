@@ -21,11 +21,11 @@
 				<div class="bg-indigo-300 dark:bg-indigo-700 grid p-4 place-items-center rounded-lg text-black dark:text-white">Vue.js</div>
 			</div>
 			<div class="flex gap-4 items-center">
-				<div class="border-t border-slate-300 dark:border-slate-700 flex-grow"></div>
+				<div class="border-t border-slate-300 dark:border-slate-700 grow"></div>
 				<div class="text-center text-slate-500 dark:text-slate-400 uppercase"><ArrowUpIco class="mr-3" />frontend</div>
-				<div class="border-t border-slate-300 dark:border-slate-700 flex-grow"></div>
+				<div class="border-t border-slate-300 dark:border-slate-700 grow"></div>
 				<div class="text-center text-slate-500 dark:text-slate-400 uppercase">backend<ArrowDownIco class="ml-3" /></div>
-				<div class="border-t border-slate-300 dark:border-slate-700 flex-grow"></div>
+				<div class="border-t border-slate-300 dark:border-slate-700 grow"></div>
 			</div>
 			<div class="gap-4 grid grid-cols-3">
 				<div class="bg-indigo-300 dark:bg-indigo-700 grid p-4 place-items-center rounded-lg text-black dark:text-white">Fastify</div>

@@ -1,5 +1,5 @@
 <template>
-    <div class='container mx-auto max-w-screen-xl px-6 py-6'>
+    <div class='container mx-auto max-w-(--breakpoint-xl) px-6 py-6'>
         <h1 class='text-2xl lg:text-3xl font-bold mb-4'>
             {{ $t('_customEmojiPreview.title') }}
         </h1>
@@ -11,7 +11,7 @@
                 </header>
                 <div class="flex gap-8 items-center justify-center flex-wrap">
                     <ToolsMocksMkNote
-                        class="!max-w-xl"
+                        class="max-w-xl!"
                         :reactions="[{
                             name: '👍',
                             count: 1,
@@ -52,7 +52,7 @@
                             <div>{{ $t('_customEmojiPreview.emoji', { number: emoji.id }) }}</div>
                         </h3>
                         <div class="lg:flex items-center space-y-4 lg:space-y-0 lg:space-x-4">
-                            <div class="mx-auto lg:mx-0 w-fit space-y-2 flex-shrink-0">
+                            <div class="mx-auto lg:mx-0 w-fit space-y-2 shrink-0">
                                 <div
                                     class="h-16 p-2 rounded-lg max-w-[200px] transition-colors"
                                     :class="emoji.invertColorScheme ? 'bg-slate-800 dark:bg-slate-200' : 'bg-slate-200 dark:bg-slate-800'"
@@ -67,7 +67,7 @@
                             </div>
                             <I18nT scope="global" keypath="_customEmojiPreview._options.textDescription" tag="div">
                                 <template #emoji_id>
-                                    <code class="inline-block text-sm bg-slate-200 dark:bg-slate-800 mx-0.5 p-0.5 rounded">{{ noteReactions[index].name }}</code>
+                                    <code class="inline-block text-sm bg-slate-200 dark:bg-slate-800 mx-0.5 p-0.5 rounded-sm">{{ noteReactions[index].name }}</code>
                                 </template>
                             </I18nT>
                         </div>

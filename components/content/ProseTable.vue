@@ -1,6 +1,6 @@
 <template>
-	<div ref="tableContainer" class="w-full overflow-x-auto !overflow-y-hidden whitespace-nowrap mb-4">
-		<table class="!max-w-none !mb-0 !overflow-visible">
+	<div ref="tableContainer" class="w-full overflow-x-auto overflow-y-hidden! whitespace-nowrap mb-4">
+		<table class="max-w-none! mb-0! overflow-visible!">
 			<slot />
 		</table>
 	</div>

@@ -24,7 +24,7 @@
                 <div class="flex">
                     <button
                         v-if="link.children && link.children.filter((v) => !isSamePath(v._path, link._path)).length > 0"
-                        class="block px-1 mr-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
+                        class="block px-1 mr-1 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-700"
                         @click.prevent.stop="() => {
                             console.log('State:', path.includes(link._path));
                             manualOpen[link._path] = !(manualOpen[link._path] ?? path.includes(link._path));

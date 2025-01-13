@@ -1,5 +1,5 @@
 <template>
-    <div class='container mx-auto max-w-screen-xl px-6 py-6'>
+    <div class='container mx-auto max-w-(--breakpoint-xl) px-6 py-6'>
         <h1 class='text-2xl lg:text-3xl font-bold mb-4'>
             {{ $t('_shareLinkGenerator.title') }}
         </h1>

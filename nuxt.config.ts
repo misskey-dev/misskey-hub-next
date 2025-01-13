@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
+import tailwindcss from '@tailwindcss/vite';
 import { readFileSync, watch as fsWatch } from 'fs';
 import { genApiTranslationFiles } from './scripts/gen-api-translations';
 import { getOldHubRedirects } from './scripts/get-old-hub-redirects';
@@ -144,18 +145,13 @@ export default defineNuxtConfig({
 	colorMode: {
 		classSuffix: '',
 	},
-	postcss: {
-		plugins: {
-			tailwindcss: {},
-			autoprefixer: {},
-		},
-	},
 	devtools: { enabled: false },
 	alias: {
 		'bi': 'bootstrap-icons/icons',
 	},
 	vite: {
 		plugins: [
+			tailwindcss(),
 			yaml(),
 			svgLoader({
 				defaultImport: 'component',

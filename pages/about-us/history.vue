@@ -24,7 +24,7 @@
 					<div class="text-center text-lg w-full mb-3">Scroll</div>
 					<ChevronDownIco class="w-8 h-8 animate-bounce" />
 				</div>
-				<div class="absolute top-20 left-1/2 -translate-x-1/2 hidden xl:block w-full h-[calc(100vh-5rem)] max-w-screen-2xl pointer-events-none">
+				<div class="absolute top-20 left-1/2 -translate-x-1/2 hidden xl:block w-full h-[calc(100vh-5rem)] max-w-(--breakpoint-2xl) pointer-events-none">
 					<img :class="[$style.heroImages, $style.heroImagesLeft, $style.heroImages1]" src="/img/historical-materials/2014/56031e4a20b3edf83c3dd100-1.jpg" />
 					<img :class="[$style.heroImages, $style.heroImagesLeft, $style.heroImages2]" src="/img/historical-materials/2015/20150201.png" />
 					<img :class="[$style.heroImages, $style.heroImagesLeft, $style.heroImages3]" src="/img/historical-materials/2019/20190414.png" />
@@ -33,8 +33,8 @@
 					<img :class="[$style.heroImages, $style.heroImagesRight, $style.heroImages3]" src="/img/historical-materials/2020/20200215.png" />
 				</div>
 			</div>
-			<div class="w-full relative py-12 bg-gradient-to-t from-black to-black/50">
-				<div class="container mx-auto max-w-screen-md px-6">
+			<div class="w-full relative py-12 bg-linear-to-t from-black to-black/50">
+				<div class="container mx-auto max-w-(--breakpoint-md) px-6">
 					<div class="p-6 border-2 border-white rounded-xl">
 						<h2 class="font-bold text-lg lg:text-xl mb-3">{{ $t('_historicalMaterials.submissionTitle') }}</h2>
 						<I18nT tag="p" scope="global" keypath="_historicalMaterials.submissionDescription" class="whitespace-pre-wrap">
@@ -45,7 +45,7 @@
 			</div>
 		</div>
 		<div class="pb-12 bg-black text-slate-200">
-			<div class="container mx-auto max-w-screen-xl px-6 pt-4 space-y-12">
+			<div class="container mx-auto max-w-(--breakpoint-xl) px-6 pt-4 space-y-12">
 				<GLocalNav :items="[
 					{
 						name: '2014',

@@ -26,7 +26,7 @@ watch(locale, async (to) => {
     <div class="bg-white dark:bg-slate-950">
         <GNav @toggleNav="isNavOpen = !isNavOpen" :isOpen="isNavOpen" :slim="true" :disableShadow="true" :hasBorder="true" />
         <div class="main-content">
-            <div class="relative container mx-auto max-w-screen-xl p-6 lg:py-0 grid docs-root pb-12">
+            <div class="relative container mx-auto max-w-(--breakpoint-xl) p-6 lg:py-0 grid docs-root pb-12">
                 <div
                     class="fixed top-[7.25rem] left-0 z-20 w-64 pl-6 transition-transform bg-slate-50 dark:bg-slate-900 lg:top-auto lg:bg-transparent dark:lg:bg-transparent lg:pl-0 lg:transform-none lg:relative"
                     :class="isAsideNavOpen ? 'translate-x-0' : '-translate-x-64'"

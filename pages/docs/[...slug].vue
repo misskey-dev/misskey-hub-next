@@ -5,8 +5,8 @@
             [$style.docsLayoutWithAsideToc]: shouldShowToc,
         }"
     >
-        <div class="lg:hidden sticky top-16 -mx-6 -mt-6 w-[calc(100%+3rem)] bg-slate-50 dark:bg-slate-900 z-[9890] border-b dark:border-slate-700 text-sm flex items-start">
-            <details v-if="shouldShowToc && data?.body && (data.body.toc?.links ?? []).length > 0" class="peer order-2 flex-grow dark:border-slate-800 border-l" :open="openState">
+        <div class="lg:hidden sticky top-16 -mx-6 -mt-6 w-[calc(100%+3rem)] bg-slate-50 dark:bg-slate-900 z-9890 border-b dark:border-slate-700 text-sm flex items-start">
+            <details v-if="shouldShowToc && data?.body && (data.body.toc?.links ?? []).length > 0" class="peer order-2 grow dark:border-slate-800 border-l" :open="openState">
                 <summary class="px-3 py-4 cursor-pointer">
                     {{ $t('_docs._toc.title') }}
                 </summary>
@@ -16,7 +16,7 @@
             </details>
             <button
                 @click="isAsideNavOpen = !isAsideNavOpen"
-                class="p-4 order-1 dark:border-slate-800 peer-open:border-b flex-shrink-0"
+                class="p-4 order-1 dark:border-slate-800 peer-open:border-b shrink-0"
                 :class="(!shouldShowToc || !data?.body || (data.body.toc?.links ?? []).length <= 0) && 'border-r'"
             >
                 <AsideNavIco class="block w-5 h-5" />

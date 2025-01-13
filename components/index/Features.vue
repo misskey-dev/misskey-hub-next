@@ -73,7 +73,7 @@ import { vFadeIn } from '@/assets/js/fadein';
 }
 
 .item .img {
-    @apply w-full aspect-[2/1] object-cover rounded-lg mb-4;
+    @apply w-full aspect-2/1 object-cover rounded-lg mb-4;
 }
 
 .item .title {

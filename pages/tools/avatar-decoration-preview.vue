@@ -1,5 +1,5 @@
 <template>
-    <div class='container mx-auto max-w-screen-xl px-6 py-6'>
+    <div class='container mx-auto max-w-(--breakpoint-xl) px-6 py-6'>
         <h1 class='text-2xl lg:text-3xl font-bold mb-4'>
             {{ $t('_avatarDecorationPreview.title') }}
         </h1>
@@ -57,29 +57,29 @@
                             </div>
                             <div class="md:order-1 w-full mx-auto md:mx-0 max-w-md space-y-4">
                                 <div class="md:flex items-center md:space-x-4 space-y-2 md:space-y-0">
-                                    <div class="flex-shrink-0 text-sm w-20">{{ $t('_avatarDecorationPreview._options.offsetY') }}</div>
-                                    <div class="flex-grow flex items-center space-x-2 md:space-x-4">
-                                        <input class="flex-grow form-range" type="range"  min="-0.25" max="0.25" step="0.025" v-model="decoration.offsetY" />
-                                        <div class="flex-shrink-0 text-sm text-end -ml-4 w-14">{{ Math.floor((decoration.offsetY ?? 0) * 100) }} %</div>
+                                    <div class="shrink-0 text-sm w-20">{{ $t('_avatarDecorationPreview._options.offsetY') }}</div>
+                                    <div class="grow flex items-center space-x-2 md:space-x-4">
+                                        <input class="grow form-range" type="range"  min="-0.25" max="0.25" step="0.025" v-model="decoration.offsetY" />
+                                        <div class="shrink-0 text-sm text-end -ml-4 w-14">{{ Math.floor((decoration.offsetY ?? 0) * 100) }} %</div>
                                     </div>
                                 </div>
                                 <div class="md:flex items-center md:space-x-4 space-y-2 md:space-y-0">
-                                    <div class="flex-shrink-0 text-sm w-20">{{ $t('_avatarDecorationPreview._options.offsetX') }}</div>
-                                    <div class="flex-grow flex items-center space-x-2 md:space-x-4">
-                                        <input class="flex-grow form-range" type="range" min="-0.25" max="0.25" step="0.025" v-model="decoration.offsetX" />
-                                        <div class="flex-shrink-0 text-sm text-end -ml-4 w-14">{{ Math.floor((decoration.offsetX ?? 0) * 100) }} %</div>
+                                    <div class="shrink-0 text-sm w-20">{{ $t('_avatarDecorationPreview._options.offsetX') }}</div>
+                                    <div class="grow flex items-center space-x-2 md:space-x-4">
+                                        <input class="grow form-range" type="range" min="-0.25" max="0.25" step="0.025" v-model="decoration.offsetX" />
+                                        <div class="shrink-0 text-sm text-end -ml-4 w-14">{{ Math.floor((decoration.offsetX ?? 0) * 100) }} %</div>
                                     </div>
                                 </div>
                                 <div class="md:flex items-center md:space-x-4 space-y-2 md:space-y-0">
-                                    <div class="flex-shrink-0 text-sm w-20">{{ $t('_avatarDecorationPreview._options.angle') }}</div>
-                                    <div class="flex-grow flex items-center space-x-2 md:space-x-4">
-                                        <input class="flex-grow form-range" type="range" min="-0.5" max="0.5" step="0.025" v-model="decoration.angle" />
-                                        <div class="flex-shrink-0 text-sm text-end -ml-4 w-14">{{ Math.floor((decoration.angle ?? 0) * 360) }} °</div>
+                                    <div class="shrink-0 text-sm w-20">{{ $t('_avatarDecorationPreview._options.angle') }}</div>
+                                    <div class="grow flex items-center space-x-2 md:space-x-4">
+                                        <input class="grow form-range" type="range" min="-0.5" max="0.5" step="0.025" v-model="decoration.angle" />
+                                        <div class="shrink-0 text-sm text-end -ml-4 w-14">{{ Math.floor((decoration.angle ?? 0) * 360) }} °</div>
                                     </div>
                                 </div>
                                 <div class="flex items-center space-x-4">
-                                    <div class="flex-shrink-0 text-sm w-20 hidden md:block"></div>
-                                    <div class="flex-grow">
+                                    <div class="shrink-0 text-sm w-20 hidden md:block"></div>
+                                    <div class="grow">
                                         <div class="pb-1.5 w-full form-check form-switch">
                                             <input class="form-check-input" type="checkbox" role="switch" :id="`flipHSwitch_${index}`" v-model="decoration.flipH">
                                             <label class="form-check-label" :for="`flipHSwitch_${index}`">{{ $t('_avatarDecorationPreview._options.flip') }}</label>

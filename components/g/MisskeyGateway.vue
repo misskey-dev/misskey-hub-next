@@ -24,7 +24,7 @@
                                 class="group-first:rounded-t-lg group-last:rounded-b-lg py-2 px-4 sm:p-4 w-full flex items-center hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-gray-700 dark:active:bg-gray-600"
                             >
                                 <div
-                                    class="h-6 w-6 sm:h-9 sm:w-9 flex-shrink-0 overflow-hidden rounded bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 mr-3"
+                                    class="h-6 w-6 sm:h-9 sm:w-9 shrink-0 overflow-hidden rounded-sm bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 mr-3"
                                 >
                                     <img v-if="manualInstanceData.icon && manualInstanceData.meta?.iconUrl" :src="manualInstanceData.meta?.iconUrl" class="w-full h-full" />
                                 </div>
@@ -32,7 +32,7 @@
                                     <h2 class="text-sm sm:text-base font-bold truncate">{{ manualInstanceData.name }}</h2>
                                     <p class="text-xs truncate">{{ manualInstanceData.url }}</p>
                                 </div>
-                                <ArrowRightIco class="block ml-auto flex-shrink-0 h-4 w-4" />
+                                <ArrowRightIco class="block ml-auto shrink-0 h-4 w-4" />
                             </component>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                                 class="group-first:rounded-t-lg group-last:rounded-b-lg py-2 px-4 sm:p-4 w-full flex items-center hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-gray-700 dark:active:bg-gray-600"
                             >
                                 <div
-                                    class="h-6 w-6 sm:h-9 sm:w-9 flex-shrink-0 overflow-hidden rounded bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 mr-3"
+                                    class="h-6 w-6 sm:h-9 sm:w-9 shrink-0 overflow-hidden rounded-sm bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 mr-3"
                                     :class="instance.isUserDefined && 'transition-[border-color] hover:border-red-600 dark:hover:border-red-600'"
                                 >
                                     <template v-if="instance.isUserDefined">
@@ -68,19 +68,19 @@
                                     <h2 class="text-sm sm:text-base font-bold truncate">{{ instance.name }}</h2>
                                     <p class="text-xs truncate">{{ instance.url }}</p>
                                 </div>
-                                <ArrowRightIco class="block ml-auto flex-shrink-0 h-4 w-4" />
+                                <ArrowRightIco class="block ml-auto shrink-0 h-4 w-4" />
                             </component>
                         </li>
                         <li class="group">
                             <details class="group-first:rounded-t-lg group-last:rounded-b-lg group/details">
-                                <summary class="p-4 w-full flex items-center hover:bg-gray-100 dark:hover:bg-gray-700 group-first:rounded-t-lg group-last:rounded-b-lg group-last:group-open/details:rounded-b-none group-open/details:border-b cursor-pointer border-gray-300 dark:border-gray-600">
+                                <summary class="p-4 w-full flex items-center hover:bg-gray-100 dark:hover:bg-gray-700 group-first:rounded-t-lg group-last:rounded-b-lg group-open/details:group-last:rounded-b-none group-open/details:border-b cursor-pointer border-gray-300 dark:border-gray-600">
                                     <div class="h-6 w-6 sm:h-9 sm:w-9 mr-2">
-                                        <div class="w-full h-full rounded bg-accent-600/20 p-1 sm:p-2 text-accent-600">
+                                        <div class="w-full h-full rounded-sm bg-accent-600/20 p-1 sm:p-2 text-accent-600">
                                             <PlusIco class="block h-4 w-4 sm:h-5 sm:w-5 stroke-1 stroke-current" />
                                         </div>
                                     </div>
                                     <h2 class="font-bold">{{ $t('_share.addServer') }}</h2>
-                                    <ArrowRightIco class="block ml-auto flex-shrink-0 h-4 w-4 transition-transform group-open/details:rotate-90" />
+                                    <ArrowRightIco class="block ml-auto shrink-0 h-4 w-4 transition-transform group-open/details:rotate-90" />
                                 </summary>
                                 <div class="p-4">
                                     <form @submit.prevent="getAndSetInstanceInfo">

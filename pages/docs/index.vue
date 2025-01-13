@@ -16,7 +16,7 @@
             </template>
         </GHero>
         <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
-            <div class="container mx-auto max-w-screen-xl px-6 space-y-6 lg:space-y-12">
+            <div class="container mx-auto max-w-(--breakpoint-xl) px-6 space-y-6 lg:space-y-12">
                 <GLocalNav :items="[
                     {
                         name: $t('_docs._forUsers.title'),

@@ -178,7 +178,7 @@ export default function(props: {
 						if (family) style = `font-family: ${family};`;
 						break;
 					}
-					case 'blur': {
+					case 'blur-sm': {
 						return h('span', {
 							class: '_mfm_blur_',
 						}, genEl(token.children, scale));
@@ -358,7 +358,7 @@ export default function(props: {
 
 			case 'blockCode': {
 				return [h('pre', {
-					class: 'p-4 bg-gray-200/50 rounded',
+					class: 'p-4 bg-gray-200/50 rounded-sm',
 				}, h('code', token.props.code))];
 			}
 

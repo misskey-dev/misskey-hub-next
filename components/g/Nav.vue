@@ -1,16 +1,16 @@
 <template>
     <div
         :class="[
-            'top-0 z-[9900] w-full transition',
+            'top-0 z-9900 w-full transition',
             fixed ? 'fixed' : 'sticky',
             {
-                'shadow bg-opacity-90': (!disableShadow && scrollPos <= -40),
+                'shadow-sm bg-opacity-90': (!disableShadow && scrollPos <= -40),
                 'bg-white dark:bg-gray-950': (disableShadow || scrollPos <= -40),
                 'border-b border-slate-300 dark:border-slate-800': hasBorder,
             },
             (slim ? 'h-16' : 'h-16 lg:h-20'),
         ]">
-        <nav class="container mx-auto max-w-screen-xl grid items-center grid-cols-2 lg:grid-cols-6 p-4 h-full transition-[height]">
+        <nav class="container mx-auto max-w-(--breakpoint-xl) grid items-center grid-cols-2 lg:grid-cols-6 p-4 h-full transition-[height]">
             <div class="">
                 <GNuxtLink :to="localePath('/')" class="flex items-center space-x-2 hover:opacity-80">
                     <MiIcon class="h-8 w-8" />
@@ -18,7 +18,7 @@
                 </GNuxtLink>
             </div>
             <ul
-                class="fixed z-[9902] top-16 right-0 text-right p-4 w-[80vw] sm:w-[50vw] bg-slate-100/90 dark:bg-slate-950/90 space-y-2 transition-[transform,border-radius,box-shadow] lg:transition-none lg:translate-x-0 lg:backdrop-blur-none lg:w-auto lg:rounded-none lg:shadow-none lg:space-y-0 lg:p-0 lg:relative lg:top-0 lg:right-auto lg:bg-transparent dark:lg:bg-transparent lg:col-span-4 lg:space-x-8 xl:space-x-10 lg:flex lg:justify-center"
+                class="fixed z-9902 top-16 right-0 text-right p-4 w-[80vw] sm:w-[50vw] bg-slate-100/90 dark:bg-slate-950/90 space-y-2 transition-[transform,border-radius,box-shadow] lg:transition-none lg:translate-x-0 lg:backdrop-blur-none lg:w-auto lg:rounded-none lg:shadow-none lg:space-y-0 lg:p-0 lg:relative lg:top-0 lg:right-auto lg:bg-transparent dark:lg:bg-transparent lg:col-span-4 lg:space-x-8 xl:space-x-10 lg:flex lg:justify-center"
                 :class="[(scrollPos <= -40) ? 'rounded-bl-lg' : 'rounded-l-lg', navOpen ? 'translate-x-0 shadow-lg' : 'translate-x-full']"
             >
                 <li v-for="item in NavData.center">
@@ -43,8 +43,8 @@
                         </ClientOnly>
                     </button>
                     <div class="input-group">
-                        <span class="input-group-text !rounded-l-full"><I18nIcon class="h-5 w-5" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></span>
-                        <select class="form-select !rounded-r-full" v-model="spLocaleOption" @change="changeLocale()">
+                        <span class="input-group-text rounded-l-full!"><I18nIcon class="h-5 w-5" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></span>
+                        <select class="form-select rounded-r-full!" v-model="spLocaleOption" @change="changeLocale()">
                             <option v-for="locale in localesConst" :value="locale.code">{{ locale.name }}</option>
                         </select>
                     </div>
@@ -72,11 +72,11 @@
                     </li>
                     <li class="relative group">
                         <button class="hover:opacity-80"><I18nIcon :class="['h-5 w-5', { 'text-white 3xl:text-slate-800 3xl:dark:text-slate-200': (landing && scrollPos >= -40) }]" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></button>
-                        <div class="absolute top-6 right-0 hidden group-hover:block group-focus-within:block z-[9955]">
+                        <div class="absolute top-6 right-0 hidden group-hover:block group-focus-within:block z-9955">
                             <ul class="px-4 py-2 bg-slate-50 dark:bg-slate-800 rounded-lg shadow-lg space-y-1">
                                 <li v-for="locale in localesConst">
                                     <GNuxtLink :to="switchLocalePath(locale.code)" :lang="locale.code" :class="['block _i18n whitespace-nowrap hover:text-accent-600 py-0.5', {'text-accent-600 font-bold': currentLocale === locale.code}]">
-                                        <span v-if="currentLocale === locale.code"><DotIcon class="stroke-[3] stroke-current" /></span>{{ locale.name }}
+                                        <span v-if="currentLocale === locale.code"><DotIcon class="stroke-3 stroke-current" /></span>{{ locale.name }}
                                     </GNuxtLink>
                                 </li>
                             </ul>
