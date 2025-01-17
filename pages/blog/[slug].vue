@@ -59,7 +59,8 @@ onBeforeRouteLeave((to) => {
 
 const runtimeConfig = useRuntimeConfig();
 const slugString = Array.isArray(route.params.slug) ? route.params.slug.join('/') : route.params.slug;
-const { data } = await useGAsyncData(`blog-${slugString}`, () => queryCollection('blog').path(slugString).first());
+console.log(slugString);
+const { data } = await useGAsyncData(`blog-${slugString}`, () => queryCollection('blog').path('/blog/' + slugString).first());
 
 if (!data.value) {
     throw createError({ statusCode: 404, statusMessage: 'page not found', fatal: true });

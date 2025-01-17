@@ -52,7 +52,7 @@ export default defineContentConfig({
         ...Object.fromEntries(localesConst.map((locale) => [
             `docs__${locale.contentIdentifier}`,
             defineCollection({
-                source: `${locale.code}/**/*.{md,yml}`,
+                source: `${locale.code}/docs/**/*.{md,yml}`,
                 type: 'page',
                 // @ts-ignore
                 schema: z.union([markdownSharedSchema, steppedGuideSchema]),
