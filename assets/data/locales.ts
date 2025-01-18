@@ -12,6 +12,7 @@ export const localesConst = [
 	{ files: [ 'fr-FR.json' ], code: 'fr', contentIdentifier: 'fr', language: 'fr-FR', name: 'Français' },
 	{ files: [ 'th-TH.json' ], code: 'th', contentIdentifier: 'th', language: 'th-TH', name: 'ภาษาไทย' },
 	{ files: [ 'es-ES.json' ], code: 'es', contentIdentifier: 'es', language: 'es-ES', name: 'Español' },
+	{ files: [ 'de-DE.json' ], code: 'de', contentIdentifier: 'de', language: 'de-DE', name: 'Deutsch' },
 	{ files: [ 'zh-CN.json' ], code: 'cn', contentIdentifier: 'cn', language: 'zh-CN', name: '简体中文' },
 	{ files: [ 'zh-TW.json' ], code: 'tw', contentIdentifier: 'tw', language: 'zh-TW', name: '繁体中文' },
 	{ files: [ 'ja-KS.json' ], code: 'ja-ks', contentIdentifier: 'ja_ks', language: 'ja-KS', name: '🐙' },
@@ -27,6 +28,7 @@ export const localesContentIdentifiers = {
 	fr: 'fr',
 	th: 'th',
 	es: 'es',
+  de: 'de',
 	cn: 'cn',
 	tw: 'tw',
 } as const satisfies Record<Exclude<LocaleCodes, 'ja-ks'>, string>;
