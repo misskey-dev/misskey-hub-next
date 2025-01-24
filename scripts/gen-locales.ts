@@ -4,7 +4,7 @@ import * as yaml from 'js-yaml';
 
 export async function genLocalesJson() {
     const sourceDirectory = path.resolve(__dirname, '../locales/');
-    const destinationDirectory = path.resolve(__dirname, '../i18n/locales_dist/');
+    const destinationDirectory = path.resolve(__dirname, '../locales_dist/');
 
     // ディレクトリ内のすべてのファイルを取得
     const files = await fsp.readdir(sourceDirectory);

@@ -134,7 +134,7 @@ export default defineNuxtConfig({
 		vueI18n: './i18n.config.ts',
 		locales,
 		lazy: true,
-		langDir: '../locales_dist',
+		langDir: 'locales_dist',
 		defaultLocale: 'ja',
 		// ▼ Defaultルートは、nitroプラグインでオーバーライドする
 		// 　 リンクはuseGLocalePath（ラッパー）を使う
