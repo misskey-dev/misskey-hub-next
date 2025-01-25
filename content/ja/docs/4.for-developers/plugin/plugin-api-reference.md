@@ -100,7 +100,7 @@ permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧
 ### `Mk:load(key)`
 Mk:saveで永続化した指定の名前の値を読み取ります。
 
-### `Mk:delete(key)`
+### `Mk:remove(key)`
 
 ※v2025.1.0（仮称）以降で使用可能
 
