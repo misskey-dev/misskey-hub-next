@@ -113,7 +113,7 @@ permission 목록은 [여기](/docs/for-developers/api/permission/)에서 확인
 
 Mk:save에서 영속화한 지정된 이름의 값을 읽습니다.
 
-### `Mk:delete(key)`
+### `Mk:remove(key)`
 
 ※v2025.1.0（仮称）以降で使用可能
 
