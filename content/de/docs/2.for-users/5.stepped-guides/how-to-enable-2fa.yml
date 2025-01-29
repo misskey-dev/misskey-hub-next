@@ -1,99 +1,99 @@
-title: "2段階認証を設定する方法（ワンタイムパスワード）"
-description: "Misskeyのアカウントにワンタイムパスワードを設定してセキュリティを強化する方法を説明します。"
+title: "Aktivierung der MFA (TOTP)"
+description: "In diesem Abschnitt wird erklärt, wie ein Einmalpasswort für das Misskey-Konto einrichtet werden kann, um die Sicherheit zu erhöhen."
 #Do not translate any keys that includes underscore
 _TYPE_: "STEPPED_GUIDE"
 body: |
-  2段階認証を設定すると、アカウントへの侵入リスクを軽減し、セキュリティを強化できます。ここでは、ワンタイムパスワードの設定方法をご紹介します。
+  Die Einrichtung der Zwei-Schritt-Verifizierung verringert das Risiko des Eindringens in das Konto und erhöht die Sicherheit. Erfahre hier, wie ein Einmal-Passwort(TOTP) eingerichtet werden kann.
 guides:
   - 
     _AUTOSELECT_TYPE_: "HARD_SMARTPHONE"
     _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
-    title: "スマートフォン"
+    title: "Smartphone"
     steps:
       - 
-        title: "2段階認証用アプリをダウンロード"
+        title: "Herunterladen der App auf dem Smartphone"
         description: |
-          操作を始める前に、2段階認証用のワンタイムパスワードを生成するためのアプリをインストールしてください。以下にその例を示します：
+          Installiere vor Beginn des Vorgangs eine App, die ein Einmalpasswort für die zweistufige Verifizierung generiert. Beispiele sind unten aufgeführt:
 
-          - Google Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) [App Store](https://apps.apple.com/app/google-authenticator/id388497605)
-          - FreeOTP: [Google Play](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp) [App Store](https://apps.apple.com/app/freeotp-authenticator/id872559395)
+          - Google Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) [App Store]( https://apps.apple.com/app/google-authenticator/id388497605)
+          - FreeOTP: [Google Play](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp) [App Store](https://apps.apple.com/app) /freeotp-authenticator/id872559395)
       - 
-        title: "設定を開く"
+        title: "Einstellungen öffnen"
         image: "sp/1.png"
         description: |
-          Misskeyを開き、画面右下の「≡」ボタンをタップ、でてきたメニューの「設定」をタップします。
+          Öffne Misskey, tippe auf die Schaltfläche „≡“ unten rechts auf dem Bildschirm und dann auf „Einstellungen“ im angezeigten Menü.
       - 
-        title: "「セキュリティ」をタップ"
+        title: "Tippen auf \"Sicherheit\"."
         image: "sp/2.png"
         description: |
-          設定カテゴリの中から「セキュリティ」を見つけてタップします。
+          Suche in der Kategorie Einstellungen die Option "Sicherheit" und tippe darauf.
       - 
-        title: "「認証アプリの設定を開始」をタップ"
+        title: "Tippe auf „Einrichtung von Authentifizierungsanwendungen beginnen“."
         image: "sp/3.png"
         description: |
-          「二要素認証」の中にある「認証アプリ」から、「認証アプリの設定を開始」をタップします。
+          Tippe unter „Authentifizierungs-Apps“ in „Zwei-Faktor-Authentifizierung“ auf „Einrichtung von Authentifizierungs-Apps starten“.
       - 
-        title: "パスワードを入力"
+        title: "Passwort eingeben"
         image: "sp/4.png"
         description: |
-          セキュリティに関わる設定のため、確認のために、お使いのアカウントにログインする際に使用しているパスワードを入力します。
+          Gebe bei sicherheitsrelevanten Einstellungen das Passwort ein, mit dem du dich zur Bestätigung bei deinem Konto anmeldest.
       - 
-        title: "認証アプリの設定を開始する"
+        title: "Authentifizierungs-App registrieren"
         image: "sp/8.png"
         description: |
-          2段階認証アプリを設定するためのコードが生成されます。以下のいずれかの方法で設定してください。
+          Zur Einrichtung der zweistufigen Verifizierungsanwendung wird ein Code generiert. Bitte verwende eine der folgenden Methoden, um sie einzurichten.
 
-          ### 今お使いの端末で二段階認証アプリを設定する場合
+          ### So richtest du die App für die Zwei-Schritt-Verifizierung auf deinem aktuellen Gerät ein.
 
-          「アプリを起動」ボタンをタップします。このボタンがない場合は、**QRコードをタップするとアプリが起動します。**
+          Tippe auf die Schaltfläche „App starten“. Wenn diese Schaltfläche nicht verfügbar ist, tippen auf **QR-Code, um die App zu starten. **
 
           :::tip
 
-          起動しない場合は、2段階認証用アプリが正しくインストールされているか確認してください。
+          Wenn es nicht startet, überprüfe, ob die App für die Zwei-Schritt-Verifizierung korrekt installiert ist.
 
-          :::
+          ::::
 
-          ### 別の端末にインストールされた2段階認証アプリを設定する場合
+          ### So richten Sie eine App zur 2-Schritt-Verifizierung ein, die auf einem anderen Gerät installiert ist
 
-          2段階認証アプリを開き、アプリの指示に従って、ワンタイムパスワードの新規登録を行います。この際に、画面に表示されているQRコードをスキャンしてください。
+          Öffne die 2-Schritt-Verifizierungs-App und folge den Anweisungen der App, um ein neues Einmalpasswort zu registrieren. Scanne dann den auf dem Bildschirm angezeigten QR-Code.
       - 
         title: "認証アプリで生成されたコードをコピーする"
         image: "sp/9.png"
         description: |
-          このあとのMisskey側でのセットアップで、認証アプリが正しく設定されていたかの確認のために、アプリで生成されたワンタイムパスワードを入力する手順があります。
+          Bei der anschließenden Einrichtung auf der Misskey-Seite gibt es einen Schritt, bei dem das von der App generierte Einmalpasswort eingegeben werden muss, um zu überprüfen, ob die Authentifizierungs-App korrekt eingerichtet wurde.
 
-          アプリの指示に従い、ワンタイムパスワードを覚えておくか、コピーしておいてください。
+          Bitte folge den Anweisungen der App und merke oder kopiere das Einmalpasswort.
 
           :::warning
 
-          ワンタイムパスワードはすぐ（約30秒）失効します。ご注意ください。
+          Das Einmalpasswort läuft sofort ab (ca. 30 Sekunden), diese werden hierbei alle 30Sek. neue Generiert.
 
-          :::
+          ::::.
       - 
-        title: "ワンタイムパスワードを入力する"
+        title: "Gib das Einmalpasswort ein"
         image: "sp/6.png"
         description: |
-          さきほどのワンタイムパスワードを入力し、「続ける」をタップします。
+          Gebe das soeben verwendete Einmalpasswort ein und tippe auf Weiter.
       - 
-        title: "バックアップコードをダウンロードする"
+        title: "Lade die Backup-Code herunter!"
         image: "sp/7.png"
         description: |
-          **２段階認証の設定が完了しました。**
+          **Eine zweistufige Überprüfung wurde eingerichtet.**
 
-          最後に、２段階認証が使えなくなった際に使用できる「バックアップコード」も生成されますので、必ずダウンロードしてから終了してください。
+          Schließlich wird auch ein „Back-up Code“ generiert, der verwendet werden kann, falls die Zwei-Schritt-Verifizierung nicht mehr verfügbar ist.
 
           :::warning
 
-          バックアップコードは、ワンタイムパスワードが使用できなくなったときにアカウントにログインできる救済機能です。
+          Der Backup-Code ist eine Rettungsfunktion, mit dieser man sich in das Konto anmelden kann, wenn das Einmal-Passwort nicht mehr verfügbar ist.
 
-          このコードが無いとアカウントにログインすることができなくなるので、必ずダウンロードして安全な場所に保管しておいてください。
+          Ohne dieses Back-up, kann im Verlustfall, nie wieder auf das Konto zugegriffen werden. Bewahre dein Backup-Code daher sicher und lasse dich von diesem Fakt nicht ableiten, keine 2-FA einzurichten.
 
-          このコードは、これ以降 二度と表示されません。
+          Dieser Backup Code wird in Misskey nie wieder auftauchen!
 
           :::
   - 
     _AUTOSELECT_TYPE_: "HARD_PC"
-    title: "PC"
+    title: "Desktop"
     steps:
       - 
         title: "2段階認証用アプリをダウンロード"
