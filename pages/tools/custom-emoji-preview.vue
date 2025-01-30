@@ -16,6 +16,7 @@
                             name: '👍',
                             count: 1,
                         }, ...noteReactions]"
+                        :limitReactionLength="limitEmojiWidth"
                     >
                         <MkMfm :text="text" :customEmojis="customEmojisDefinition" />
                     </ToolsMocksMkNote>
@@ -43,6 +44,12 @@
                             <button class="btn btn-primary" @click="addEmoji()"><PlusIco class="mr-1" />{{ $t('add') }}</button>
                         </div>
                     </header>
+                    <div class="-mx-6 px-6 py-3 border-b border-slate-300 dark:border-slate-800">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="limitEmojiWidth" v-model="limitEmojiWidth">
+                            <label class="form-check-label" for="limitEmojiWidth">{{ $t('_customEmojiPreview.limitReactionLength') }}</label>
+                        </div>
+                    </div>
                     <div v-if="emojis.length === 0" class="p-8 text-center font-bold text-lg">
                         {{ $t('_customEmojiPreview.placeholder') }}
                     </div>
@@ -93,6 +100,8 @@ const route = useRoute();
 const colorMode = useColorMode();
 
 const text = ref(t('_customEmojiPreview._placeholder.noteText'));
+
+const limitEmojiWidth = ref(false);
 
 const emojis = ref<{
     id: number;

@@ -96,7 +96,7 @@
                         </li>
                     </ul>
                     <div class="text-sm text-center">
-                        &copy; 2024 syuilo and Misskey Project<br>
+                        &copy; 2025 syuilo and Misskey Project<br>
                         <GNuxtLink to="https://misskey-hub.net/" target="_blank" class="hover:underline underline-offset-1">Misskey Hub</GNuxtLink>
                     </div>
                 </div>

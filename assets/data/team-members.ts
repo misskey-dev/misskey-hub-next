@@ -35,11 +35,6 @@ export const coreTeamMember: MiHubMember[] = [
         name: 'しゅいろ',
     },
     {
-        id: 7973572,
-        username: 'tamaina',
-        name: 'tamaina (aqz)',
-    },
-    {
         id: 20679825,
         username: 'acid-chicken',
         name: 'Acid Chicken (硫酸鶏)',

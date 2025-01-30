@@ -339,6 +339,7 @@ _customEmojiPreview:
   preview: "แสดงตัวอย่าง"
   emoji: "เอโมจิที่ #{number}"
   placeholder: "โดยปุ่ม “เพิ่ม” สามารถเพิ่มเอโมจิแบบกำหนดเองและดูตัวอย่างได้"
+  limitReactionLength: "จำกัดความกว้างสูงสุดของปฏิกิริยาและแสดงให้เล็กลง"
   _options:
     text: "เนื้อความโน้ต"
     textDescription: "อ้างเอโมจิฯ ที่เพิ่มเข้ามาด้วย {emoji_id}"

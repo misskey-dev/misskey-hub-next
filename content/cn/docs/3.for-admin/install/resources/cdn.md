@@ -1,4 +1,4 @@
-# CDNの設定
+# CDN设定
 
 Misskeyサーバーを公開するときは、[Cloudflare](https://www.cloudflare.com/)などのCDNを使用することを強くおすすめします。
 
@@ -18,6 +18,6 @@ CDNで以下の設定を行なってください。
 
 :::tip
 
-Misskeyをアップデートした際にキャッシュのクリアは不要です。
+更新Misskey时不需要清理缓存
 
 :::

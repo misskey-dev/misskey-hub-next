@@ -339,6 +339,7 @@ _customEmojiPreview:
   preview: "预览"
   emoji: "Emoji #{number}"
   placeholder: "你可以通过“添加”按钮来进行添加和预览自定义emoji表情。"
+  limitReactionLength: "リアクションの最大横幅を制限し、縮小して表示する"
   _options:
     text: "帖子内容"
     textDescription: "你可以使用 {emoji_id} 来添加自定义emoji表情"

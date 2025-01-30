@@ -5,7 +5,20 @@ SPDX-License-Identifier: AGPL-3.0-only
 
 <template>
 <span v-if="errored">:{{ customEmojiName }}:</span>
-<img v-else :class="[$style.root, { [$style.normal]: normal, [$style.noStyle]: noStyle }]" :src="url ?? undefined" :alt="alt" :title="alt" decoding="async" @error="errored = true" @load="errored = false"/>
+<img
+    v-else
+    :class="[$style.root, {
+        [$style.normal]: normal,
+        [$style.noStyle]: noStyle,
+        'max-w-[70px] object-contain': limitLength,
+    }]"
+    :src="url ?? undefined"
+    :alt="alt"
+    :title="alt"
+    decoding="async"
+    @error="errored = true"
+    @load="errored = false"
+/>
 </template>
 
 <script lang="ts" setup>
@@ -20,6 +33,7 @@ const props = defineProps<{
     host?: string | null;
     url?: string;
     useOriginalSize?: boolean;
+    limitLength?: boolean;
 }>();
 
 const customEmojiName = computed(() => (props.name[0] === ':' ? props.name.substring(1, props.name.length - 1) : props.name).replace('@.', ''));

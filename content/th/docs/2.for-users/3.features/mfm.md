@@ -1,32 +1,32 @@
 ---
-description: MFMは、Misskeyの様々な場所で使用できる専用のマークアップ言語です。
+description: MFM เป็นภาษามาร์กอัปที่เป็นกรรมสิทธิ์ซึ่งสามารถใช้ได้ในหลายที่ใน Misskey
 ---
 
 # MFM
 
-MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使用できる専用のマークアップ言語です。一部の構文はMarkdownやHTMLと互換性があります。
+MFM ย่อมาจากภาษามาร์กอัปสำหรับ Misskey และเป็นภาษามาร์กอัปที่เป็นกรรมสิทธิ์ซึ่งสามารถนำไปใช้ในที่ต่างๆ ใน ​​Misskeyบางอย่างเข้ากันได้กับ Markdown และ HTML
 
 :::tip
 
-実際にMFMをお試しいただける[MFMお試しコーナー](/tools/mfm-playground/)ができました！
+[มุมทดลอง MFM] (/tools/mfm-playground/) ที่คุณสามารถลองใช้ MFM ได้จริง พร้อมให้บริการแล้ว!
 
 :::
 
-## MFMが使用可能な場所の例
+## ตัวอย่างการใช้งาน MFM
 
-- ノート本文
-- CW注釈
-- ユーザーの名前
-- ユーザーの自己紹介
+- โน้ตข้อความ
+- หมายเหตุ CW
+- ชื่อผู้ใช้
+- ข้อความแนะนำตัวของผู้ใช้
 
-## 構文
+## ไวยากรณ์
 
-### メンション
+### กล่าวถึง
 
-アットマーク + ユーザー名で、特定のユーザーを示すことができます。
+คุณสามารถระบุผู้ใช้โดยใช้ At-Symbol และชื่อผู้ใช้ได้นะ
 :::tip
 
-メンションについての詳細は[こちら](./mention.md)を参照してください。
+หากต้องการข้อมูลเพิ่มเติมเกี่ยวกับการกล่าวถึง โปรดดู [ที่นี่](./mention.md)
 
 :::
 
@@ -42,12 +42,12 @@ MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使�
 
 <MfmPreview text="@repo@p1.a9z.dev"></MfmPreview>
 
-### ハッシュタグ
+### แฮชแท็ก
 
-ナンバーサイン + タグで、ハッシュタグを示すことができます。
+คุณสามารถระบุแฮชแท็กด้วยเครื่องหมายตัวเลข + แท็ก
 :::tip
 
-ハッシュタグについての詳細は[こちら](./hashtag.md)を参照してください。
+สำหรับข้อมูลเพิ่มเติมเกี่ยวกับแฮชแท็ก โปรดดู[ที่นี่](./hashtag.md)
 
 :::
 
@@ -59,7 +59,7 @@ MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使�
 
 ### URL
 
-URLを示すことができます。
+สามารถแสดง URL ได้นะ
 
 ```
 https://example.com
@@ -67,9 +67,9 @@ https://example.com
 
 <MfmPreview text="https://example.com"></MfmPreview>
 
-### リンク
+### ลิงก์
 
-文章の特定の範囲を、URLに紐づけることができます。
+คุณสามารถเชื่อมโยงช่วงข้อความที่ต้องการกับ URL ได้
 
 ```
 [example link](https://example.com)
@@ -77,7 +77,7 @@ https://example.com
 
 :::tip
 
-リンクテキストの前に`?`をつけると、リンクプレビューを非表示にすることができます。
+คุณสามารถซ่อนตัวอย่างลิงก์ได้โดยใส่ `?` ไว้หน้าข้อความลิงก์
 
 ```
 ?[example link](https://example.com)
@@ -87,13 +87,13 @@ https://example.com
 
 <MfmPreview text="[example link](https://example.com)"></MfmPreview>
 
-### カスタム絵文字
+### อีโมจิที่กำหนดเอง
 
-コロンでカスタム絵文字名を囲むと、カスタム絵文字を表示させることができます。
+คุณสามารถแสดงอิโมจิแบบกำหนดเองได้โดยใส่เครื่องหมายโคลอนล้อมรอบชื่ออิโมจิแบบกำหนดเอง
 
 :::tip
 
-カスタム絵文字についての詳細は[こちら](./custom-emoji.md)を参照してください。
+สำหรับข้อมูลเพิ่มเติมเกี่ยวกับอีโมจิที่กำหนดเอง โปรดดู[ที่นี่](./custom-emoji.md)
 
 :::
 
@@ -103,27 +103,27 @@ https://example.com
 
 <MfmPreview text=":misskey:"></MfmPreview>
 
-### 太字
+### ตัวหนา
 
-文字を太く表示して強調することができます。
+คุณสามารถแสดงข้อความตัวหนาเพื่อเน้นได้
 
 ```
-**太字**
+**ตัวหนา**
 ```
 
 <MfmPreview text="**太字**"></MfmPreview>
 
-### 目立たなくする
+### ขนาดเล็ก
 
-内容を小さく・薄く表示させることができます。
+คุณสามารถทำให้เนื้อหาถูกแสดงให้เล็กลงและบางลงได้
 
 ```
-<small>MisskeyでFediverseの世界が広がります</small>
+<small>โลกของ Fediverse กำลังขยายออกไปด้วย Misskey</small>
 ```
 
-<MfmPreview text="<small>MisskeyでFediverseの世界が広がります</small>"></MfmPreview>
+<MfmPreview text="<small>โลกของ Fediverse กำลังขยายออกไปด้วย Misskey</small>"></MfmPreview>
 
-### 引用
+### อ้างอิง
 
 内容が引用であることを示すことができます。
 
@@ -303,9 +303,9 @@ $[rotate.deg=30 misskey]
 
 <MfmPreview text="$[rotate.deg=30 misskey]"></MfmPreview>
 
-### 位置変更
+### การเปลี่ยนตำแหน่ง
 
-位置をずらすことができます。
+คุณสามารถย้ายตำแหน่งได้
 
 ```
 😏$[position.x=0.8,y=0.5 🍮]😀
@@ -313,9 +313,9 @@ $[rotate.deg=30 misskey]
 
 <MfmPreview text="😏$[position.x=0.8,y=0.5 🍮]😀"></MfmPreview>
 
-### 拡大
+### การขยาย
 
-文字を引き延ばして表示します。
+แสดงข้อความโดยการขยายขนาดออก
 
 ```
 $[scale.x=4,y=2 🍮]
@@ -333,7 +333,7 @@ $[x4 x4]
 $[x3 x3]
 $[x4 x4]"></MfmPreview>
 
-### アニメーション(びよんびよん)
+### แอนิเมชั่น (เยลลี่)
 
 ```
 $[jelly 🍮] $[jelly.speed=5s 🍮]
@@ -341,7 +341,7 @@ $[jelly 🍮] $[jelly.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[jelly 🍮] $[jelly.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(じゃーん)
+### แอนิเมชั่น (ธาดา)
 
 ```
 $[tada 🍮] $[tada.speed=5s 🍮]
@@ -349,7 +349,7 @@ $[tada 🍮] $[tada.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[tada 🍮] $[tada.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(ジャンプ)
+### อนิเมชั่น (กระโดด)
 
 ```
 $[jump 🍮] $[jump.speed=5s 🍮]
@@ -357,7 +357,7 @@ $[jump 🍮] $[jump.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[jump 🍮] $[jump.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(バウンド)
+### อนิเมชั่น (เด้ง)
 
 ```
 $[bounce 🍮] $[bounce.speed=5s 🍮]
@@ -365,7 +365,7 @@ $[bounce 🍮] $[bounce.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[bounce 🍮] $[bounce.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(回転)
+### แอนิเมชั่น (สปิน)
 
 ```
 $[spin 🍮] $[spin.left 🍮] $[spin.alternate 🍮]
@@ -380,7 +380,7 @@ $[spin.x 🍮] $[spin.x,left 🍮] $[spin.x,alternate 🍮]
 $[spin.y 🍮] $[spin.y,left 🍮] $[spin.y,alternate 🍮]
 $[spin.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(ぶるぶる)
+### อนิเมชั่น (เขย่า)
 
 ```
 $[shake 🍮] $[shake.speed=5s 🍮]
@@ -388,7 +388,7 @@ $[shake 🍮] $[shake.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[shake 🍮] $[shake.speed=5s 🍮]]"></MfmPreview>
 
-### アニメーション(ブレ)
+### แอนิเมชั่น (หยิก)
 
 ```
 $[twitch 🍮] $[twitch.speed=5s 🍮]
@@ -396,7 +396,7 @@ $[twitch 🍮] $[twitch.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[twitch 🍮] $[twitch.speed=5s 🍮]]"></MfmPreview>
 
-### レインボー
+### รุ้ง
 
 ```
 $[rainbow 🍮] $[rainbow.speed=5s 🍮]
@@ -408,7 +408,7 @@ $[rainbow $[fg.color=f0f 色付き文字]]
 $[rainbow 色なし文字]
 $[rainbow $[fg.color=f0f 色付き文字]]"></MfmPreview>
 
-### キラキラ
+### แวววาว
 
 ```
 $[sparkle 🍮]
@@ -416,9 +416,9 @@ $[sparkle 🍮]
 
 <MfmPreview text="$[x2 $[sparkle 🍮]]"></MfmPreview>
 
-### プレーン
+### ข้อความธรรมดา
 
-内側の構文を全て無効にします。
+ปิดการใช้งานการจัดรูปแบบเนื้อหา
 
 ```
 <plain>**bold** @mention #hashtag `code` $[x2 🍮]</plain>
@@ -426,12 +426,12 @@ $[sparkle 🍮]
 
 <MfmPreview text="<plain>**bold** @mention #hashtag `code` $[x2 🍮]</plain>"></MfmPreview>
 
-## 開発者向け情報
+## ข้อมูลสำหรับนักพัฒนาข้อมูลสำหรับนักพัฒนา
 
-MFMのパーサーや描画の実装はライブラリとして公開されており、簡単にクライアントにMFMを組み込むことが可能です。
+การวิเคราะห์และการเรนเดอร์ MFM ได้รับการเผยแพร่เป็นไลบรารี ทำให้สามารถรวม MFM เข้ากับไคลเอนต์ได้ง่าย
 
-- [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - JavaScriptパーサー実装
-- [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - Vue.js用コンポーネント
-- [mfm.kt](https://github.com/samunohito/mfm.kt) - Kotlinパーサー実装
-- [mfm_parser](https://pub.dev/packages/mfm_parser) - Dartパーサー実装
-- [mfm](https://pub.dev/packages/mfm) - Flutter用描画ウィジェット
+- [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - การนำตัววิเคราะห์ JavaScript ไปใช้งาน
+- [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - Vue.js component
+- [mfm.kt](https://github.com/samunohito/mfm.kt) - การนำตัววิเคราะห์ Kotlin ไปใช้
+- [mfm_parser](https://pub.dev/packages/mfm_parser) - การใช้งาน Dart parser
+- [mfm](https://pub.dev/packages/mfm) - วิดเจ็ตการเรนเดอร์ Flutter

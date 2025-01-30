@@ -18,7 +18,7 @@ Fediverseと呼ばれる、非中央集権型で連合したソーシャルネ�
 ## AiScript
 
 (読み: あいすくりぷと)<br>
-Misskeyで使用できる、JavaScript上で動作するプログラミング言語です。詳しくは[こちら。](https://github.com/aiscript-dev/aiscript/blob/master/README.md)
+Misskeyで使用できる、JavaScript上で動作するプログラミング言語です。詳しくは[こちら。](https://aiscript-dev.github.io/)
 
 ## API
 

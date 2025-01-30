@@ -102,4 +102,4 @@ Google Apps Scriptで動作します。
 
 GNU Affero General Public License v3.0
 
-(c) 2023-2024 syuilo, kakkokari-gtyih and Misskey Project
+(c) 2023-2025 syuilo, kakkokari-gtyih and Misskey Project
