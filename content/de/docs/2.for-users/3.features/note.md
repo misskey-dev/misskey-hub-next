@@ -1,107 +1,107 @@
-# ノート
+# Notiz
 
-ノートは、Misskeyに投稿される、文章、ファイル、アンケートなどを含むコンテンツで、Misskeyの中心的概念です。また、そのノートを作成する行為自体もノートと呼ばれます。
-
-:::tip
-
-ノートという名称は、英語で「短い記録」を意味する Note が由来になっています。
-
-:::
-
-ノートが作成されると、[タイムライン](./timeline)に追加され、自分の[フォロワー](./follow)やサーバーのユーザーが見れるようになります。
-
-ノートには、[リアクション](./reaction)を行うことができます。また、返信や引用もできます。
-
-ノートを[お気に入り](./favorite)登録することで、後で簡単に見返すことができます。
-
-## ノートを作成する
-
-Misskey Webでノートを作成するには、画面上にある鉛筆マークのボタンを押して、作成フォームを開きます。作成フォームに内容を入力し、「ノート」ボタンを押すことでノートが作成されます。
-ノートには、画像、動画など任意のファイルや、[アンケート](./poll)を添付することができます。また、本文中には[MFM](./mfm)が使用でき、[メンション](./mention)や[ハッシュタグ](./hashtag)を含めることもできます。
-他にも、CWや公開範囲といった設定も行えます(詳細は後述)。
+Das Zentrale Konzept hinter Misskey, sind die Notizen. Hierbei werden wie z.B. Texte, Dateien, Umfragen, usw. veröffentlicht.Das Erstellen einer Notiz wird ebenfalls als Notiz benannt.
 
 :::tip
 
-Misskey Webでは、コンピューターのクリップボードに画像データがある状態で、フォーム内のテキストボックスにペーストするとその画像を添付することができます。
+Der Name Notiz leitet sich von dem englischen Wort Note ab, was so viel wie „kurze Aufzeichnung“ bedeutet.
+
+:::
+
+Wenn eine Notiz erstellt wird, wird sie zur [Timeline](./timeline) hinzugefügt und ist für [Follower](./follow) und User auf dem Server sichtbar.
+
+Die Notiz kann mit [Reaktionen](./reaction) versehen werden.Hierbei sind auch das Antworten oder das Zitieren der Notiz möglich.
+
+Notizen können auch als [favorit](./favorite) hinterlegt werden, um sie so später wiederfinden zu können, um z.B. vor deinen Freunden angeben zu können.
+
+## Notizen schreiben oder löschen
+
+Um eine Notiz in Misskey Web zu erstellen, drücke auf die Schaltfläche mit dem Bleistiftsymbol auf dem Bildschirm, um das Erstellungsfenster zu öffnen.Eine Notiz wird erstellt, indem der Inhalt in das Erstellungsfenster eingegeben und die Schaltfläche [Notiz] gedrückt wird.
+Die Notiz kann eine beliebige Datei enthalten, z. B. ein Bild oder ein Video, oder eine [Umfrage](./poll) kann an die Notiz angehängt werden.Darüber hinaus können [MFM](./mfm) im Text verwendet werden, [Erwähnungen](./mention], sowie [hashtags](./hashtag) eingefügt werden.
+Es können auch andere Einstellungen wie Inhaltswarnungen und Publikationsbereich festgelegt werden (Mehr dazu weiter unten).
+
+:::tip
+
+Misskey Web ermöglicht, Bilddaten aus der Zwischenablage hochzuladen und in die Drive zu speichern. Damit können jederzeit Bilder für eine Notiz hochgeladen werden.
 
 :::
 
 :::tip
 
-Misskey Webでは、テキストボックス内で<kbd class="key">Ctrl + Enter</kbd>を押すことでも投稿できます。
+Auf Misskey Web kann man über die Tastatur auch posten. Einfach <0>Strg + Enter</0> in der Notizerstellung drücken.
 
 :::
 
-## リノート
+## Erneutes Zitieren
 
-既にあるノートを引用、もしくはそのノートを新しいノートとして共有する行為、またそれによって作成されたノートを「リノート」と呼びます。
-自分がフォローしているユーザーの、気に入ったノートを自分のフォロワーに共有したい場合や、過去の自分のノートを再度共有したい場合に使います。
-同じノートに対して無制限にリノートを行うことができますが、あまり連続して使用すると迷惑になる場合もあるので、注意しましょう。
+Das Zitieren oder Teilen einer bestehenden Notiz als neue Notiz oder einer auf diese Weise erstellten Notiz wird als „erneutes Zitieren“ bezeichnet.
+Dies wird verwendet, wenn Sie eine Lieblingsnotiz eines Nutzers, dem du folgst, mit deinen Followern teilen möchtes, oder wenn du eine Notiz aus der Vergangenheit neue Aufmerksamkeit geben möchtest.
+Es kann jederzeit und beliebig viel erneut Zitiert werden, beachte hierbei aber auch das es als unangemessen empfunden werden kann, eine Nachricht zu oft hervorzustellen.
 
 :::warning
 
-公開範囲がフォロワーやダイレクトのノートはリノートできません。
+Notizen, die nur lokal oder nur in der Heim-Instanz veröffentlicht worden sind. Können nicht rezitiert werden.
 
 :::
 
-Misskey Webでリノートを削除するには、リノートの時刻表示の隣にある「...」を押し、「リノート解除」を選択します。
+Um in Misskey Web ein erneutes Zitat zu enfernen, klicke auf den Beitrag die drei Punkte „...“ neben der Zeitanzeige und wähle „Renote entfernen“.
 
-## CW
+## Inhaltswarnung oder auch CW
 
-Contents Warningの略で、ノートの内容を、閲覧者の操作なしには表示しないようにできる機能です。主に長大な内容を隠すためや、ネタバレ防止などに使うことができます。
-Misskey WebでCWを設定するには、フォームの「内容を隠す」ボタン(目のアイコン)を押します。すると新しい入力エリアが表れるので、そこに内容の要約を記入します。
+Eine Funktion, mit der der Inhalt einer Notiz für alle ausgeblendet werden kann.Sie kann vor allem verwendet werden, um längere Inhalte auszublenden oder um Spoiler zu verhindern.
+Um eine CW auf Misskey Web einzurichten, klicke auf die Schaltfläche „Inhalt ausblenden“ (Augensymbol).Daraufhin wird ein neuer Eingabebereich angezeigt, in der eine Zusammenfassung des Inhalts eingegeben werden kann.
 
-## 公開範囲
+## Sichtbarkeit
 
-ノートごとに、そのノートが公開される範囲を設定することができます。
-Misskey Webで公開範囲を設定するには、フォームの「ノート」ボタンの左にあるアイコンを押します。
-公開範囲には、以下の種類があります。
+Für jede Notiz kann festgelegt werden, in welchem Umfang die Notiz veröffentlicht werden soll.
+Um den Veröffentlichungsbereich in Misskey Web einzustellen, klicke auf das Symbol links neben der Schaltfläche „Notizen“ im Eingabebereich.
+Es gibt die folgenden Arten von Veröffentlichungsbereichen.
 
-### パブリック
+### Öffentlich
 
-全ての人に対してノートが公開されるほか、サーバーの全てのタイムライン(ホームタイムライン、ローカルタイムライン、ソーシャルタイムライン、グローバルタイムライン)にノートが流れます。
+Die Notiz ist nicht nur für alle öffentlich, sondern durchläuft auch alle Zeitleisten auf dem Server (Home-Zeitleiste, lokale Zeitleiste, soziale Zeitleiste und globale Zeitleiste).
 
 :::warning
 
-アカウントが[サイレンス](./silence)状態の時は、この公開範囲は使用できません。
+Dieser öffentliche Bereich ist nicht verfügbar, wenn sich das Konto im Status [stumm] (./silence) befindet.
 
 :::
 
-### ホーム
+### Home
 
-全ての人に対してノートが公開されますが、フォロワー以外のローカルタイムライン、ソーシャルタイムライン、グローバルタイムラインにはノートは流れません。
+Die Notiz ist für alle öffentlich, wird aber nicht in lokale, soziale oder globale Timelines übertragen, mit Ausnahme für Follower.
 
-### フォロワー
+### Follower
 
-自分のフォロワーに対してのみノートを公開します。フォロワーの全てのタイムラインに流れます。
+Macht Notizen nur für eigene Follower zugänglich.Es wird an alle Timelines der Follower weitergeleitet.
 
-### ダイレクト
+### Direktnachrichten
 
-指定したユーザーに対してのみノートを公開します。指定したユーザーの全てのタイムラインに流れます。
+Die Notiz ist nur für den/die angegebenen Benutzer zugänglich.Sie fließt in die Timeline des angegebenen Benutzers.
 
-### 「ローカルのみ」オプション
+### Option - „nur lokal“
 
-このオプションを有効にすると、リモートにノートを連合しなくなります。
+Wenn diese Option aktiviert ist, wird die Notiz nicht an das Fediverse übertragen und bleibt in der Heiminstanz.
 
-### 公開範囲の比較
+### Vergleich des Veröffentlichungsumfangs
 
 <table>
-	<tbody><tr><th></th><th>パブリック</th><th>ホーム</th><th>フォロワー</th><th>ダイレクト</th></tr>
-	<tr><th>フォロワーのLTL/STL/GTL</th><td>✔</td><td>✔</td><td>✔</td><td></td></tr>
-	<tr><th>非フォロワーのLTL/STL/GTL</th><td>✔</td><td></td><td></td><td></td></tr>
+	<tbody><tr><th></th><th>Öffentlich</th><th>Home</th><th>Follower</th><th>Direktnachrichten</th></tr>
+	<tr><th>Follower LTL/STL/GTL</th><td>✔</td><td>✔</td><td>✔</td><td></td></tr>
+	<tr><th>Nicht-Follower LTL/STL/GTL</th><td>✔</td><td></td><td></td><td></td></tr>
 </tbody></table>
 
-## ピン留め
+## An die Profilseite pinnen
 
-ノートをピン留めすると、ユーザーページに常にそのノートを表示しておくことができます。
-Misskey Webでピン留めを行うには、ノートのメニューを開き、「ピン留め」を選択します。
+Das Anheften einer Notiz ermöglicht es, diese jederzeit auf im Account sichtbar zu halten.
+Um eine Notiz in Misskey Web anzuheften, öffne das Menü der Notiz und wähle „Anheften“.
 
 :::tip
 
-複数のノートを同時にピン留めすることも可能です。
+Es ist auch möglich, mehrere Noten gleichzeitig zu pinnen.
 
 :::
 
-## 新規投稿の通知
+## Benachrichtigung über neue Beiträge
 
-ユーザーが新しいノートを投稿した際に通知を出すことができます。ユーザーページを開き、フォローボタン横の詳細ボタンを選択した後、「投稿を通知」をクリックして有効化してください。
+Es können Benachrichtigungen verschickt werden, wenn ein Benutzer eine neue Notiz einstellt.Öffne die Benutzerseite, wähle die Schaltfläche „Details“ neben der Schaltfläche ‚Folgen‘ aus und klicke auf „Über Beiträge benachrichtigen“, um sie zu aktivieren.
