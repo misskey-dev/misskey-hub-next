@@ -1,13 +1,13 @@
-# プラグインの作成
+# Erstellen von Plugins
 
-Misskey Webクライアントのプラグイン機能を使うと、クライアントを拡張し、様々な機能を追加できます。
-このドキュメントではプラグインの作成方法について説明します。
+Die Plugin-Funktionalität des Misskey Webclients ermöglicht es, den Client zu erweitern und verschiedene Funktionen hinzuzufügen.
+Hier erklären wir, wie man Plugins erstellt.
 
-## プラグインの例
+## Plug-in Beispiele
 
-以下に完全なプラグインの例を示します。このプラグインは、[`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn)を使用して、投稿フォームに「フグパンチボタン」を追加するものです。
+Ein Beispiel für ein vollständiges Plugin ist unten abgebildet.Dieses Plugin [`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn), um dem Beitragsformular eine "Fugu Punch"-Schaltfläche hinzuzufügen.
 
-このプラグインをインストールすると、投稿フォーム上のプラグインメニューに「フグパンチ」の項目が追加されます。クリックすると、投稿フォーム上のテキストに `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )` が追加されます。
+Durch die Installation dieses Plugins wird dem Plugin-Menü auf dem Anmeldeformular ein Eintrag „Fugu Punch“ hinzugefügt.Klicke, um „Fugu Punch“ hinzuzufügen !!!! 🐡( ‚-‘ 🐡 )\` wird hinzugefügt.
 
 ```ais
 /// @ 0.12.4
@@ -32,11 +32,12 @@ Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
 
 ## AiScript
 
-プラグインはAiScriptを使って記述されるスクリプトです。
+Plug-ins sind mit AiScript geschriebene Skripte.
 
-## メタデータ
+## Metadaten
 
-プラグインは、AiScriptのメタデータ埋め込み機能を使って、デフォルトとしてプラグインのメタデータを定義する必要があります。メタデータの例は以下の通りです。
+Plugins müssen benötigte Metadaten im AiScript Metadata-Format angeben.
+Bei diesen Metadaten handelt es sich um ein Objekt mit folgenden Attributen:Beispiele für Metadaten sind.
 
 ```AiScript
 /// @ 0.12.4
@@ -48,65 +49,65 @@ Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
 }
 ```
 
-メタデータは次のプロパティを含むオブジェクトです。
+Metadaten sind ein Objekt, das die folgenden Eigenschaften enthält
 
 ### name
 
-プラグイン名
+Name des Plugins
 
 ### author
 
-プラグイン作者
+Name des Plugin-Erstellers
 
 ### version
 
-プラグインバージョン。数値を指定してください。
+Version des Plugins.Muss eine Zahl sein.
 
 ### description
 
-プラグインの説明
+Beschreibung des Plugins
 
-### permissions
+### Berechtigungen
 
-プラグインが要求する権限。MisskeyAPIにリクエストする際に用いられます。
+Die vom Plugin geforderten Berechtigungen.Werden bei Anfragen der Misskey API verwendet.
 
-APIのリクエスト方法については、[AiScript Misskey拡張API リファレンス](/docs/for-developers/plugin/plugin-api-reference/)をご覧ください。
+Informationen zur Anforderung der API gibt es unter [AiScript Misskey Extension API Reference](/docs/for-developers/plugin/plugin-api-reference/).
 
 :::tip
 
-permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+Eine Liste der Berechtigungen gibt es [hier](/docs/for-developers/api/permission/).
 
 :::
 
 ### config
 
-プラグインの設定情報を表すオブジェクト。
-キーに設定名、値に以下のプロパティを含めます。
+Ein Objekt, dass die Einstellungen des Plugins enthält.
+Schlüssel representieren Namen von Einstellungen, und Werte sind einer der unten genannten Attribute.
 
 #### type
 
-設定値の種類を表す文字列。以下から選択します。
+Der Typ eines Einstellungswertes.Muss aus einem dieser Typen gewählt sein:
 string number boolean
 
 #### label
 
-ユーザーに表示する設定名
+Dem Benutzer angezeigter Einstellungsname
 
 #### description
 
-設定の説明
+Beschreibung der Einstellung
 
 #### default
 
-設定のデフォルト値
+Standardwert der Einstellung
 
 ## API
 
-Misskey Webはプラグインに対してAPIを公開していて、それらを利用することでクライアントの機能を拡張できます。
-どのようなAPIがあるかは[AiScript Misskey拡張API リファレンス](./plugin-api-reference/)を参照してください。
+Misskey Web stellt APIs für Plugins zur Verfügung, die zur Erweiterung der Funktionalität des Clients verwendet werden können.
+Um herauszufinden, welche APIs verfügbar sind, lese die [AiScript Misskey Erweiterung und API-Plugins](. /plugin-api-reference/).
 
-## プラグインを配布する
+## Veröffentlichen des Plug-in's
 
-v2023.11.0以降では、あなたのウェブサイトからワンクリックでプラグインを直接インストールできるようになっています。
+Ab v2023.11.0 können Themes mit einem einzigen Klick direkt von Ihrer Website aus installieren.
 
-プラグインのインストール機能を提供する場合は、あなたのサイト上にAPIを実装する必要があります。詳しくは[こちら](../publish-on-your-website.md)をご覧ください。
+Falls Funktionen zur Installation von Themen angeboten werden, muss eine API auf Ihrer Website implementiert werden.Informationen über die Einrichtung einer PWA gibt es [hier](../publish-on-your-website.md).
