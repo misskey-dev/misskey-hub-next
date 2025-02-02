@@ -1,21 +1,23 @@
-# Self-XSS攻撃について
+# Über Self-XSS-Angriffe
 
 ![](/img/docs/for-users/resources/self-xss/console_warn.png)
 
-誰かに指示されてMisskeyを操作していたら、上図のような画面に遭遇してこのページに辿り着きましたか？ <u>**おそらくあなたは悪意ある攻撃者に騙されています。**</u>
+Haben Sie diese Seite erreicht, nachdem Sie Misskey unter Anleitung durch jemand anderen verwendet haben und auf einen Bildschirm wie den oben gezeigten gestoßen sind? <u>**Wahrscheinlich wurdest du von einem böswilligen Angreifer getäuscht.**</u>
 
-入力しろと指示された内容（おそらくプログラムです）を入力しない限り、指示していた攻撃者に情報が送信されることはありません。**すぐに作業を中止してください。**
+Es werden keine Informationen an den Angreifer gesendet, solange du die angegebenen Inhalte (wahrscheinlich ein Programm) nicht eingibst.**Bitte unterbeche und stelle die Arbeit sofort ein!**
 
-この画面は開発者がコードの確認やバグ修正に使うための「コンソール」と呼ばれるツールで、**通常の利用でこの画面を必要とすることはありません。**
+Dieser Bildschirm ist ein Werkzeug namens "Konsole", das von Entwicklern zum Überprüfen von Code und Beheben von Fehlern verwendet wird.
+Im normalen Gebrauch ist dieser Bildschirm nicht erforderlich.\*\*
 
-## もう少し詳しく
+## Noch ein paar Informationen
 
-Self-XSS攻撃では、攻撃者がユーザーをだまして、ブラウザの開発者ツールに悪意のあるプログラムコードを貼り付けさせます。この際、ユーザーには以下のような文句で誘導させます：
+Bei einem Self-XSS-Angriff täuscht der Angreifer den Benutzer dazu, bösartigen Programmcode in die Entwicklertools des Browsers einzufügen.In diesem Fall wirst du mit folgenden Aussagen gelockt:
 
-- 隠し機能や特典を開放できる
-- セキュリティテストのためにこのコードを実行してみてほしい
-- ウェブサイトをハッキングして不正にポイントを入手できる
+- Es können versteckte Funktionen und Belohnungen freigeschaltet werden.
+- Man möchte, dass du diesen Code zur vermeindlichen Sicherheitstestung ausführst.
+- Du kannst eine Website hacken und unrechtmäßig Punkte erhalten.
 
-このような文句に騙されてコードを実行してしまうと、攻撃者が意図した通りの操作を行うことになります。
+Wenn du durch solche Aussagen getäuscht wirst und den Code ausführst, führst du die vom Angreifer beabsichtigten Aktionen aus.
 
-一般的にイメージされる「サイバー攻撃」とは違い、Self-XSS攻撃はユーザーが使用する正規のアプリを通して機密データを取得するため、システム側での対策だけでなく、ユーザーが普段から注意することが重要です。
+Im Gegensatz zu den typischen "Cyberangriffen", die man sich vorstellt, erlangt ein Self-XSS-Angriff über reguläre, vom Benutzer genutzte Anwendungen Zugriff auf sensible Daten.
+Daher ist es wichtig, dass nicht nur das System selbst Schutzmaßnahmen ergreift, sondern auch wir als Gemeinschaft stets wachsam sind.
