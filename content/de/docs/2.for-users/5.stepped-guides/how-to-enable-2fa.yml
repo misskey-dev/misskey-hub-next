@@ -57,7 +57,7 @@ guides:
 
           Öffne die 2-Schritt-Verifizierungs-App und folge den Anweisungen der App, um ein neues Einmalpasswort zu registrieren. Scanne dann den auf dem Bildschirm angezeigten QR-Code.
       - 
-        title: "認証アプリで生成されたコードをコピーする"
+        title: "Kopiere den von der Authentifizierungs-App generierten Code."
         image: "sp/9.png"
         description: |
           Bei der anschließenden Einrichtung auf der Misskey-Seite gibt es einen Schritt, bei dem das von der App generierte Einmalpasswort eingegeben werden muss, um zu überprüfen, ob die Authentifizierungs-App korrekt eingerichtet wurde.
@@ -96,73 +96,74 @@ guides:
     title: "Desktop"
     steps:
       - 
-        title: "2段階認証用アプリをダウンロード"
+        title: "Herunterladen der App auf dem Smartphone"
         description: |
-          操作を始める前に、2段階認証用のワンタイムパスワードを生成するためのアプリをお使いのスマートフォンなどにインストールしてください。以下にその例を示します：
+          Bevor du loslegst, installiere eine App auf deinem Smartphone, um Einmalkennwörter für die Zwei-Faktor-Authentifizierung zu erstellen. Beispiele dafür sind:
 
-          - Google Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) [App Store](https://apps.apple.com/app/google-authenticator/id388497605)
-          - FreeOTP: [Google Play](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp) [App Store](https://apps.apple.com/app/freeotp-authenticator/id872559395)
+          Google Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) | [App Store](https://apps.apple.com/app/google-authenticator/id388497605)
+
+          FreeOTP:  [Google Play](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp) | [App Store](https://apps.apple.com/app/freeotp-authenticator/id872559395) 
 
           :::tip
 
-          PC用のワンタイムパスワード生成ソフトもありますが、ポータビリティの観点からスマホ用のアプリをおすすめします。
+          Es gibt auch Software für den PC zur Erstellung von Einmalkennwörtern, aber wegen der Portabilität empfehlen wir eine Smartphone-App.
 
           :::
       - 
-        title: "設定を開く"
+        title: "Einstellungen öffnen"
         image: "pc/8.png"
         description: |
-          「設定」→「セキュリティ」と進み、「二要素認証」の中にある「認証アプリ」から、「認証アプリの設定を開始」をタップします。
+          „Gehe zu „Einstellungen” → „Sicherheit” und tippe auf „Authentifizierungs-App” in „Zwei-Faktor-Authentifizierung”. Wähle dann „Einrichtung der Authentifizierungs-App starten”.
       - 
-        title: "パスワードを入力"
+        title: "Passwort eingeben"
         image: "pc/3.png"
         description: |
-          セキュリティに関わる設定のため、確認のために、お使いのアカウントにログインする際に使用しているパスワードを入力します。
+          Gebe bei sicherheitsrelevanten Einstellungen das Passwort ein, mit dem du dich zur Bestätigung bei deinem Konto anmeldest.
       - 
-        title: "認証アプリの設定を開始する"
+        title: "Authentifizierungs-App registrieren"
         image: "pc/7.png"
         description: |
-          2段階認証アプリを設定するためのコードが生成されます。以下のいずれかの方法で設定してください。
+          Ein Code wird generiert, um die Zwei-Faktor-Authentifizierungs-App einzurichten. Verwende eine der folgenden Methoden, um die Einrichtung abzuschließen:
 
-          ### スマホの2段階認証アプリを設定する場合（推奨）
+          ### Einrichtung der Zwei-Faktor-Authentifizierungs-App auf dem Smartphone (empfohlen)
 
-          お使いのスマートフォンで2段階認証アプリを開き、アプリの指示に従って、ワンタイムパスワードの新規登録を行います。この際に、画面に表示されているQRコードをスキャンしてください。
+          Öffne die Zwei-Faktor-Authentifizierungs-App auf deinem Smartphone und folge den Anweisungen in der App, um ein neues Einmalkennwort zu erstellen. Scanne den auf dem Bildschirm angezeigten QR-Code.
 
-          ### PC上の2段階認証アプリを使用する場合
+          ### Verwendung der Zwei-Faktor-Authentifizierungs-App auf dem PC
 
-          「アプリを起動」ボタンをタップします。このボタンがない場合は、QRコードをタップするとアプリが起動します。
+          Tippe auf die Schaltfläche „App starten”. Falls diese Schaltfläche nicht vorhanden ist, tippe auf den QR-Code, um die App zu starten.
       - 
-        title: "認証アプリで生成されたコードをコピーする"
+        title: "Den von der Authentifizierungs-App generierten Code kopieren."
         image: "sp/9.png"
         description: |
-          このあとのMisskey側でのセットアップで、認証アプリが正しく設定されていたかの確認のために、アプリで生成されたワンタイムパスワードを入力する手順があります。
+          Bei der anschließenden Einrichtung auf der Misskey-Seite gibt es einen Schritt, bei dem das von der App generierte Einmalpasswort eingegeben werden muss, um zu überprüfen, ob die Authentifizierungs-App korrekt eingerichtet wurde.
 
-          アプリの指示に従い、ワンタイムパスワードを覚えておくか、コピーしておいてください。
+          Bitte folge den Anweisungen der App und merke oder kopiere das Einmalpasswort.
 
           :::warning
 
-          ワンタイムパスワードはすぐ（約30秒）失効します。ご注意ください。
+          Das Einmalpasswort läuft sofort ab (ca. 30 Sekunden), diese werden hierbei alle 30Sek. neue Generiert.
 
-          :::
+          ::::.
       - 
-        title: "ワンタイムパスワードを入力する"
+        title: "Gib das Einmalpasswort ein"
         image: "pc/5.png"
         description: |
-          さきほどのワンタイムパスワードを入力し、「続ける」をタップします。
+          Gebe das soeben verwendete Einmalpasswort ein und tippe auf Weiter.
       - 
-        title: "バックアップコードをダウンロードする"
+        title: "Lade die Backup-Code herunter!"
         image: "pc/6.png"
         description: |
-          **２段階認証の設定が完了しました。**
+          **Eine zweistufige Überprüfung wurde eingerichtet.**
 
-          最後に、２段階認証が使えなくなった際に使用できる「バックアップコード」も生成されますので、必ずダウンロードしてから終了してください。
+          Schließlich wird auch ein „Back-up Code“ generiert, der verwendet werden kann, falls die Zwei-Schritt-Verifizierung nicht mehr verfügbar ist.
 
           :::warning
 
-          バックアップコードは、ワンタイムパスワードが使用できなくなったときにアカウントにログインできる救済機能です。
+          Der Backup-Code ist eine Rettungsfunktion, mit dieser man sich in das Konto anmelden kann, wenn das Einmal-Passwort nicht mehr verfügbar ist.
 
-          このコードが無いとアカウントにログインすることができなくなるので、必ずダウンロードして安全な場所に保管しておいてください。
+          Ohne dieses Back-up, kann im Verlustfall, nie wieder auf das Konto zugegriffen werden. Bewahre dein Backup-Code daher sicher und lasse dich von diesem Fakt nicht ableiten, keine 2-FA einzurichten.
 
-          このコードは、これ以降 二度と表示されません。
+          Dieser Backup Code wird in Misskey nie wieder auftauchen!
 
           :::
