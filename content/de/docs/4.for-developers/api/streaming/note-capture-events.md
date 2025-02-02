@@ -1,22 +1,10 @@
-# 投稿キャプチャイベント
+# Post-Capture-Event
 
 ## `reacted`
 
-<MkSchemaViewer :schema="{
- type: 'object',
- properties: {
- 	reaction: {
- 		type: 'string',
- 		description: 'リアクションの種類',
- 	},
- 	userId: {
- 		type: 'string',
- 		description: 'リアクションを行ったユーザーのID',
- 	},
- }
-}"/>
+<0/>
 
-対象のノートにリアクションがされた場合に発生します。
+Es tritt auf, wenn auf die betreffende Notiz reagiert wird.
 
 ## `pollVoted`
 
@@ -34,7 +22,7 @@
  }
 }"/>
 
-対象のノートに添付されたアンケートに投票がされた場合に発生します。
+Es tritt auf, wenn bei der betreffenden Notiz angehängten Umfrage eine Stimme abgegeben wird.
 
 ## `deleted`
 
@@ -48,4 +36,4 @@
  }
 }"/>
 
-対象のノートが削除された場合に発生します。
+Es tritt auf, wenn bei der betreffenden Notiz angehängten Umfrage eine Stimme gelöscht wird.
