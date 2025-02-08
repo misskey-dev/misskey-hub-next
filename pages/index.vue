@@ -3,10 +3,10 @@
         <IndexHeroBg />
         <GNav :landing="true" />
         <IndexHeroRight />
-        <div class="relative container mx-auto p-6 md:p-8 max-w-screen-sm lg:max-w-screen-xl">
+        <div class="relative container mx-auto p-6 md:p-8 max-w-(--breakpoint-sm) lg:max-w-(--breakpoint-xl)">
             <IndexHeroLeft />
         </div>
-        <main class="relative container mx-auto max-w-screen-xl px-6 mt-32 mb-24 space-y-16">
+        <main class="relative container mx-auto max-w-(--breakpoint-xl) px-6 mt-32 mb-24 space-y-16">
             <IndexKeyFeatures id="learnMore" />
             <IndexDecenterized />
             <GDots class="w-[95%] mx-auto text-accent-600" :space="30" />
@@ -17,7 +17,7 @@
             <IndexDonation />
             <IndexSponsors />
         </main>
-        <GFooter class="relative !bg-transparent dark:!bg-transparent" />
+        <GFooter class="relative bg-transparent! dark:bg-transparent!" />
     </div>
 </template>
 

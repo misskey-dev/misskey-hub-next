@@ -2,8 +2,8 @@
 	<div class="block mx-auto max-w-lg p-4 rounded-lg border border-slate-200 dark:border-slate-700">
 		<label for="miCardCalculatorAmount" class="inline-block form-label">合計の支援額</label>
         <div class="input-group">
-            <input v-model="paidAmount" id="miCardCalculatorAmount" type="number" class="form-control !flex-grow">
-            <select v-model="currency" class="form-select !w-auto !flex-grow-0 !flex-shrink-0">
+            <input v-model="paidAmount" id="miCardCalculatorAmount" type="number" class="form-control grow!">
+            <select v-model="currency" class="form-select w-auto! grow-0! shrink-0!">
                 <option value="JPY">JPY</option>
                 <option value="USD">USD</option>
             </select>

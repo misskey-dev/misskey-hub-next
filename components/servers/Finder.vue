@@ -2,7 +2,7 @@
     <div 
         class="px-6 grid server-list gap-8"
         :class="[
-            (v_view === 'list') && 'container mx-auto max-w-screen-xl',
+            (v_view === 'list') && 'container mx-auto max-w-(--breakpoint-xl)',
             (v_view === 'grid') && 'mx-auto max-w-[2560px]',
         ]"
     >

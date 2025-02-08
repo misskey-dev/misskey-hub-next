@@ -7,7 +7,7 @@
                 <I18nT scope="global" keypath="_servers.addYourServer" tag="span">
                     <GNuxtLink class="font-bold hover:underline underline-offset-4" to="https://github.com/joinmisskey/api">{{ $t('_servers.addYourServerLink') }}</GNuxtLink>
                 </I18nT>
-                <div class="!mt-2 space-y-2">
+                <div class="mt-2! space-y-2">
                     <div class="text-sm p-3 rounded-lg bg-white dark:bg-slate-800 border border-gray-300 dark:border-gray-950">
                         {{ $t('lastUpdate') }}: {{ updatedAt ? $d(updatedAt, i18nDateFormatConfig) : $t('loading') }}
                     </div>
@@ -34,7 +34,7 @@
                             <dt>{{ $t('_servers._statistics.servers') }}</dt>
                             <dd class="font-bold text-accent-600 text-2xl">{{ instancesStats?.instancesCount ? $n(instancesStats.instancesCount) : $t('loading') }}</dd>
                         </dl>
-                        <div class="!mt-2">
+                        <div class="mt-2!">
                             <GNuxtLink class="hover:underline underline-offset-2" :to="localePath('/servers/stats/')">{{ $t('_servers._statistics.viewFullStats') }}<ArrowRightIco class="ml-1" /></GNuxtLink>
                         </div>
                     </div>
@@ -46,14 +46,14 @@
                 <Suspense>
                     <ServersFinder @load="setServerStats" />
                     <template #fallback>
-                        <div class="container mx-auto max-w-screen-xl p-6">
+                        <div class="container mx-auto max-w-(--breakpoint-xl) p-6">
                             <MkLoading class="mx-auto text-accent-600"></MkLoading>
                             <p class="text-center">{{ $t('loading') }}</p>
                         </div>
                     </template>
                 </Suspense>
                 <template #fallback>
-                    <div class="container mx-auto max-w-screen-xl p-6">
+                    <div class="container mx-auto max-w-(--breakpoint-xl) p-6">
                         <MkLoading class="mx-auto text-accent-600"></MkLoading>
                         <p class="text-center">{{ $t('loading') }}</p>
                     </div>

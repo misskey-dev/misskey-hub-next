@@ -5,7 +5,7 @@
                 <h2 class="text-xl sm:text-2xl font-bold mb-2">{{ item.title }}<ArrowRightIco v-if="isLocalPath(item.to)" class="ml-2" /><ArrowUpRightIco v-else class="ml-2" /></h2>
                 <p class="text-slate-500 dark:text-slate-300">{{ item.description }}</p>
             </div>
-            <div :class="['hidden sm:block ml-auto flex-shrink-0 relative h-40 w-auto', (item.cutBottom ? 'pt-4' : 'py-4'), (!item.cutLeft && 'pr-4')]">
+            <div :class="['hidden sm:block ml-auto shrink-0 relative h-40 w-auto', (item.cutBottom ? 'pt-4' : 'py-4'), (!item.cutLeft && 'pr-4')]">
                 <GDots class="absolute top-0 right-0 h-16 w-16 text-accent-600" />
                 <GDots class="absolute bottom-0 -left-2 h-12 w-16 text-accent-600" />
                 <img class="relative h-full rounded-lg" :src="item.img" />

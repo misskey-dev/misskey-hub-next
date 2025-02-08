@@ -19,7 +19,7 @@
             <ClientOnly>
                 <ServersStatsViewer />
                 <template #fallback>
-                    <div class="container mx-auto max-w-screen-xl p-6">
+                    <div class="container mx-auto max-w-(--breakpoint-xl) p-6">
                         <MkLoading class="mx-auto text-accent-600"></MkLoading>
                         <p class="text-center">{{ $t('loading') }}</p>
                     </div>
