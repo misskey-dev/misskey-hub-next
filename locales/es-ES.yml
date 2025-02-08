@@ -303,7 +303,7 @@ _shareLinkGenerator:
   urlCaption: "Opcional. (Insertado después del cuerpo)\""
   settings: "Configuraciones avanzadas"
   manualInstance: "Servidor recomendado"
-  manualInstanceDescription: "ここに指定したサーバー（ひとつ）をシェアボタン中継ページのトップに表示できます。ご自身のサーバーに誘導する際などにお使いいただけます。"
+  manualInstanceDescription: "El servidor especificado aquí puede mostrarse en la parte superior de la página de retransmisión del botón Compartir. Puede utilizarlo para dirigir a los usuarios a su propio servidor, por ejemplo."
   visibility: "Visibilidad"
   recipents: "Cuenta de la persona que recibe el mensaje directo (separado por reglones"
   resultLink: "リンク生成結果"
