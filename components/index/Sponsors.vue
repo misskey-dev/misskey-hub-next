@@ -67,6 +67,11 @@ const sponsors: Sponsor[] = [
         img: '/img/sponsors/gmo_pepabo.svg',
         margin: 'padding: 0.625rem',
         to: 'https://pepabo.com/',
+    },
+    {
+        img: '/img/sponsors/purple-dot-digital.jpg',
+        margin: false,
+        to: 'https://purpledotdigital.com/',
     }
 ];
 
