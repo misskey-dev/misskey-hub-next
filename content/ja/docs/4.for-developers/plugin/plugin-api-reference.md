@@ -199,7 +199,7 @@ Page閲覧時にPage情報を書き換えます。\
 コールバック関数の返り値でPageが書き換えられます。
 
 ```AiScript
-Plugin:register_note_post_interruptor(@(page) {
+Plugin:register_page_view_interruptor(@(page) {
   
   // ページの中身を書き換える（省略）
 
