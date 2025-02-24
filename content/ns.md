@@ -4,7 +4,7 @@ This page documents the extensions to ActivityPub that Misskey uses. This page l
 
 This document uses [compact IRIs](https://www.w3.org/TR/json-ld/#dfn-compact-iri).
 The prefix `ap` is used to refer to `https://www.w3.org/ns/activitystreams#`.
-The prefix `misskey` is used to refer to `https://misskey-hub-net/ns#`.
+The prefix `misskey` is used to refer to `https://misskey-hub.net/ns#`.
 
 ## `_misskey_content`
 
