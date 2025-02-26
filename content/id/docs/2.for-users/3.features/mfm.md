@@ -428,7 +428,7 @@ Menonaktifkan pemformatan pada konten.
 
 Implementasi penguraian dan perenderan MFM telah dipublikasikan sebagai _library_, yang mana memudahkan kamu untuk menggabungkan MFM ke dalam klien.
 
-- [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js - Implementasi JavaScript dari MFM Parser
+- [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - Implementasi JavaScript dari MFM Parser
 - [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - komponen Vue.js
 - [mfm.kt](https://github.com/samunohito/mfm.kt) - Implementasi parser Kotlin
 - [mfm_parser](https://pub.dev/packages/mfm_parser) - Implementasi parser Dart
