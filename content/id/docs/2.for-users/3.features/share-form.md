@@ -40,12 +40,12 @@ Kamu dapat membuat catatan menjadi renote ke catatan yang diberikan dengan menen
 
 Opsi berikut memungkinkan kamu untuk memilih lingkup publikasi.
 
-| Nama             | Deskripsi                                                                               |
-| ---------------- | --------------------------------------------------------------------------------------- |
-| `visibility`     | salah satu dari `public`, `home`, `followers`, `specified`                              |
-| `localOnly`      | 0(false) atau 1(true)                             |
-| `visibleUserIds` | ID pengguna target (dipisahkan dengan koma)                          |
-| `visibleAccts`   | [acct](../glossary.md#acct) pengguna target (dipisahkan dengan koma) |
+| Nama             | Deskripsi                                                                                       |
+| ---------------- | ----------------------------------------------------------------------------------------------- |
+| `visibility`     | salah satu dari `public`, `home`, `followers`, `specified`                                      |
+| `localOnly`      | 0(false) atau 1(true)                                     |
+| `visibleUserIds` | ID pengguna target (dipisahkan dengan koma)                                  |
+| `visibleAccts`   | [acct](../resources/glossary/#acct) pengguna target (dipisahkan dengan koma) |
 
 :::warning
 
