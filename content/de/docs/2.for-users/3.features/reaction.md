@@ -2,7 +2,7 @@
 
 Verleih deinen Gedanken über die Beiträge anderer durch Reaktionen einfach Ausdruck.
 Um auf einen Beitrag zu reagieren, drücke das "+"-Symbol, das mit dem Beitrag angezeigt wird, und wähle ein Emoji.
-Es ist ebenso möglich, mit <a href="./custom-emoji">Benutzerdefinierten Emojis</a> zu reagieren.
+Es ist ebenso möglich, mit [Benutzerdefinierten Emojis](./custom-emoji.md) zu reagieren.
 
 ## Anpassung der Reaktionsauswahl
 
