@@ -8,7 +8,7 @@ Technisch gesehen werden alle Dateien zentral auf dem Misskey-System verwaltet, 
 
 :::
 
-Es kann jede Datei von der [Laufwerksseite] (x-mi-web://my/drive) auf Misskey Web sowie alle Bilder, die als Avatar eingestellt wurde, und Dateien, die an Ihre Notizen angehängt sind, auf das Laufwerk hochladen.
+Es kann jede Datei von der [Laufwerksseite](x-mi-web://my/drive) auf Misskey Web sowie alle Bilder, die als Avatar eingestellt wurde, und Dateien, die an Ihre Notizen angehängt sind, auf das Laufwerk hochladen.
 
 Auf das Laufwerk hochgeladene Dateien können jederzeit heruntergeladen werden, oder die Dateien können beim Erstellen von Notizen durch „Anhängen von Dateien vom Laufwerk“ wiederverwendet werden.
 
