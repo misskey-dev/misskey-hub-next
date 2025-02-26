@@ -4,7 +4,7 @@ This section introduces the AiScript API extended for Misskey.
 
 :::tip
 
-Documentation for the standard AiScript API can be found [here](https://github.com/aiscript-dev/aiscript/blob/master/docs/get-started.md).
+Documentation for the standard AiScript API can be found [here](https://aiscript-dev.github.io/guides/get-started.html).
 
 :::
 
