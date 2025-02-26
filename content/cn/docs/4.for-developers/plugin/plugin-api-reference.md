@@ -4,7 +4,7 @@
 
 :::tip
 
-标准的AiScript API可以在 [这里](https://github.com/aiscript-dev/aiscript/blob/master/docs/get-started.md) 找到
+标准的AiScript API可以在 [这里](https://aiscript-dev.github.io/guides/get-started.html) 找到
 
 :::
 
