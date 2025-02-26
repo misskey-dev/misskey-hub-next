@@ -16,7 +16,7 @@ An open, standardized protocol used to create a decentralized federated social n
 
 ## AiScript
 
-A scripting language running on top of Javascript that can be used with Misskey.[Documentation](https://github.com/aiscript-dev/aiscript/blob/master/README.md) available on Github.
+A scripting language running on top of Javascript that can be used with Misskey.For more details, see [here.](https://aiscript-dev.github.io/)
 
 ## API
 
