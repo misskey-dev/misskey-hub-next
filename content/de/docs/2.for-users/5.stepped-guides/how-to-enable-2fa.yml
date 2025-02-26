@@ -15,8 +15,8 @@ guides:
         description: |
           Installiere vor Beginn des Vorgangs eine App, die ein Einmalpasswort für die zweistufige Verifizierung generiert. Beispiele sind unten aufgeführt:
 
-          - Google Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) [App Store]( https://apps.apple.com/app/google-authenticator/id388497605)
-          - FreeOTP: [Google Play](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp) [App Store](https://apps.apple.com/app) /freeotp-authenticator/id872559395)
+          - Google Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) [App Store](https://apps.apple.com/app/google-authenticator/id388497605)
+          - FreeOTP: [Google Play](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp) [App Store](https://apps.apple.com/app/freeotp-authenticator/id872559395)
       - 
         title: "Einstellungen öffnen"
         image: "sp/1.png"
