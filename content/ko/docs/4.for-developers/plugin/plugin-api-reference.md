@@ -4,7 +4,7 @@
 
 :::tip
 
-표준으로 제공되는 AiScript API는 [여기](https://github.com/aiscript-dev/aiscript/blob/master/docs/get-started.md)에서 확인할 수 있습니다.
+표준으로 제공되는 AiScript API는 [여기](https://aiscript-dev.github.io/guides/get-started.html)에서 확인할 수 있습니다.
 
 :::
 
