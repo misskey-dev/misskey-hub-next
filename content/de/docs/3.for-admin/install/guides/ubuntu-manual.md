@@ -3,7 +3,7 @@
 ## Weitere Methoden zur Installation von Misskey
 
 - [Grundlegender Leitfaden zum Einrichten von Misskey (manuell)](./manual/)
-- [Liste weiterer Installationsmethoden](/docs/for-admin/install/guides/#インストール方法一覧)
+- [Liste weiterer Installationsmethoden](/docs/for-admin/install/guides/#installationsmethoden)
 
 ## Ankündigung für Shell-Skripte
 
