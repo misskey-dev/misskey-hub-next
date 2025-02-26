@@ -23,4 +23,4 @@
 
 ## 多欄模式的設定
 
-與多欄模式相關的設置可在 [settings/deck](/settings/deck) 中進行。
+與多欄模式相關的設置可在 [settings/deck](x-mi-web://settings/deck) 中進行。
