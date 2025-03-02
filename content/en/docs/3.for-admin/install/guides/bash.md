@@ -1,6 +1,6 @@
 # Misskey install shell script v3.0.0
 
-Misskeyを簡単にインストールするためのシェルスクリプトができました！
+This shell script was made to make the installation of Misskey easy!
 
 いくつかの質問に答えるだけで、UbuntuサーバーへMisskeyを簡単にインストールできます！
 
@@ -8,15 +8,15 @@ Misskeyを簡単にインストールするためのシェルスクリプトが�
 
 [v12の場合はこちら](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)
 
-## 準備するもの
+## Requirements
 
-1. ドメイン
+1. Domain
 2. Ubuntuがインストールされたサーバー
-3. Cloudflareアカウント（推奨）
+3. Cloudflare account (recommended)
 
 :::danger
 
-一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
+Do not recreate the database with the domain/hostname of the server once you have started using it!
 
 :::
 
