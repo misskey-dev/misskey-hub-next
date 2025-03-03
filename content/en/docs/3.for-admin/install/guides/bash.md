@@ -11,7 +11,7 @@ This shell script was made to make the installation of Misskey easy!
 ## Requirements
 
 1. Domain
-2. Ubuntuがインストールされたサーバー
+2. Ubuntu server
 3. Cloudflare account (recommended)
 
 :::danger
@@ -47,7 +47,7 @@ Cloudflareを使う場合、Cloudflareのドメインの設定を完了してか
 sudo apt update; sudo apt full-upgrade -y; sudo reboot
 ```
 
-### 3. インストールをはじめる
+### 3. Installation
 
 SSHを接続しなおして、Misskeyのインストールを始めましょう。
 
@@ -59,7 +59,7 @@ wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/ubuntu.sh -
 
 example.comは自分のドメインに置き換えてください。
 
-### 4. アップデートする
+### 4. Update
 
 アップデートのためのスクリプトもあります。
 
