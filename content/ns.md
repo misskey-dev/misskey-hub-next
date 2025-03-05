@@ -206,14 +206,20 @@ Note: it does not contain a definition of `follower` because who followed the ch
 - `url`: An URL that refers original channel's top page. This MAY be different from `Application.url` because Application property wants to point the subject as "System User". Example value: `https://misskey.example/channel/abcdefghijklmnopq`
 - `isSensitive`: Indicates whether channel is marked as "sensitive". Value MUST be either `true` or `false`. Example value: `false`.
   - If this property is true, Misskey treats effective "Visibility" of every notes from this channel as "Home", like "Silence" operation. This means every Viewer cannot chain (including Renote, Reply, and Quote) other Act as "Public" Visibility.
+- `allowRenoteToExternal`: Indicates whether note can be renoted outside of "channel context". The value MUST be either `true` or `false`.
+  - If this property is false, the Recipient server MUST NOT allow that the contained note to be renoted or quoted outside of "channel context".
 
 #### Happened effect on suspend
+
+*This section is non-normative.*
 
 When a Recipient server suspends "System User" that has some `_misskey_channel` definition, it makes the Recipient server to reject every Notes from the channel.
 
 #### Happened effect on silence
 
-When a Recipient server silences "System User" that has some `_misskey_channel` definition, it makes the Recipient server to set effective "Visibility" to "Home" instead of "Public" until the REcipient server do un-silence.
+*This section is non-normative.*
+
+When a Recipient server silences "System User" that has some `_misskey_channel` definition, it makes the Recipient server to set effective "Visibility" to "Home" instead of "Public" until the Recipient server do un-silence.
 
 ### Any other object
 No specified behavior is defined.
