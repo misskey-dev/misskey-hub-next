@@ -16,7 +16,7 @@ description: 與 Misskey 相關的用語表。
 
 ## AiScript
 
-一種可在 Misskey 中使用並在 JavaScript 上運行的程式語言。詳情參考[這裡](../features/note/#cw)](https://github.com/aiscript-dev/aiscript/blob/master/README.md)
+一種可在 Misskey 中使用並在 JavaScript 上運行的程式語言。詳情參考[這裡。](https://aiscript-dev.github.io/)
 
 ## API
 
@@ -69,7 +69,7 @@ Not Safe For Work（工作場所不宜）的縮寫。此功能可讓您將圖像
 ## 小藍
 
 (讀音: ㄚㄧˇ)<br>
-Misskey的看板娘（官方代表人物）。詳情參考[這裡](../features/mfm)](https://xn--931a.moe/)
+Misskey的看板娘（官方代表人物）。詳情參考[這裡](https://xn--931a.moe/)
 
 ## 伺服器
 
@@ -78,7 +78,7 @@ todo
 ## 自訂表情符號
 
 由每個 Misskey 伺服器的管理員或使用者獨立建立的表情符號。
-非自訂表情符號的普通表情符號被稱為「Unicode表情符號」。非自訂表情符號的普通表情符號被稱為「Unicode表情符號」。詳情參考[這裡。](../features/custom-emoji)
+非自訂表情符號的普通表情符號被稱為「Unicode表情符號」。詳情參考[這裡。](../features/custom-emoji)
 
 ## 控制臺
 

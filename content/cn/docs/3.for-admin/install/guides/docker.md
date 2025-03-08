@@ -63,7 +63,7 @@ GLHF✨
 
 :::warning
 
-在更新时，请务必确认Misskey更新通知，以提前了解变更内容以及可能需要进行的额外工作（通常情况下并不需要）。
+在更新时，请务必确认Misskey[更新通知](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)，以提前了解变更内容以及可能需要进行的额外工作（通常情况下并不需要）。
 
 :::
 

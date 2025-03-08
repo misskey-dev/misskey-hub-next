@@ -4,7 +4,7 @@ This section introduces the AiScript API extended for Misskey.
 
 :::tip
 
-Documentation for the standard AiScript API can be found [here](https://github.com/aiscript-dev/aiscript/blob/master/docs/get-started.md).
+Documentation for the standard AiScript API can be found [here](https://aiscript-dev.github.io/guides/get-started.html).
 
 :::
 
@@ -111,7 +111,7 @@ Persistently saves an arbitrary key with any given value.Persistently saves an a
 
 Reads the value of the specified name saved by Mk:save.
 
-### `Mk:delete(key)`
+### `Mk:remove(key)`
 
 NOTE: This feature will be available in Misskey v2025.1.0 (tentative name) or later.
 

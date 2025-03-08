@@ -10,7 +10,7 @@ The name "note" comes from the ActivityPub object type `Note`, which in this con
 
 Once a note is created, it will be added to your [timeline](./timeline) and visible to your [followers](./follow) and other users on your instance.
 
-You can [react](./reactions),reply, or quote notes.
+You can [react](./reaction),reply, or quote notes.
 
 You can find a note later by adding it to your [Favorites](./favorite)
 

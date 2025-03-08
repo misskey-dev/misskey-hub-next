@@ -1,99 +1,94 @@
-title: "アカウントを削除する方法"
-description: "Misskeyのアカウントを削除する方法をご紹介します。"
+title: "Mein Konto löschen"
+description: "Erfahre, wie du dein Konto löschen kannst."
 #Do not translate any keys that includes underscore
 _TYPE_: "STEPPED_GUIDE"
 body: |
-  Misskeyのアカウントが必要なくなったなどで、アカウントを削除したい方もおられると思います。このページでは、
+  Manche Menschen möchten ihr Misskey-Konto löschen, weil sie es z. B. nicht mehr benötigen. Auf dieser Seite erklären wir,
 
-  - アカウント削除に際しての注意点
-  - アカウント削除の方法
+  - Informationen über das Löschen
+  - Was du beim Löschen beachten solltest
+  - Wie du dein Konto löschen kannst
 
-  についてご紹介します。
+  ::danger
 
-  :::danger
-
-  後ほど詳しくご紹介しますが、**アカウントを削除すると、Misskeyの利用を再開する（再度登録し直す）際にまで影響がおよびます。**
-  アカウントの削除はくれぐれも慎重に行ってください。
+  Wir werden später noch genauer erläutern, wie die **Löschung deines Kontos** sich bei einer Neuanmeldung auswirken kann. Bitte sei sehr vorsichtig, wenn du den **Account endgültig löschen.** willst.
 
   :::
 
-  ## アカウント削除に際しての注意点
-  アカウントを削除すると、次のことが起こります：
+   ## Das Löschen eines Kontos hat folgende Auswirkungen:
 
-  - アカウントにログインできなくなります
-  - データの削除は時間をかけて行われます
-  - 同じIDは二度と使えなくなります
+   - Es kann sich nicht mehr in das Konto angemeldet werden.
+   - Die Daten werden im Laufe der Zeit gelöscht
+   - Es kann, nie wieder, die gleiche ID ausgewählt werden.
 
-  一つずつ説明します。
+  Nach dem Eingang der Löschung, kann keine Änderung mehr am Account durchgeführt werden.
 
-  ### アカウントにログインできなくなります
-  アカウント削除を実施すると、そのアカウントに再度ログインすることはできなくなります。 **間違えて削除した際の復旧機能などはありません。** ご注意ください。
+  ### **Es gibt keine Wiederherstellungsfunktion im Falle einer versehentlichen Löschung.** 
 
-  ### データの削除は時間をかけて行われます
-  データの削除は非常に負荷のかかる操作です。そのため、他のユーザーの利用に支障をきたさないように、データの削除は時間をかけて行われます。
+  ### Das Löschen von Daten ist ein sehr  zeitaufwändiger
+   Vorgang, daher wird die Datenlöschung zeitnah durchgeführt, um die Systemlast schnell wieder freigeben zu können.
 
-  アカウント削除と同時にすべてのデータが削除されるわけではありませんのでご注意ください。
+  Bitte beachte, dass nicht alle Daten gleichzeitig mit der Löschung des Kontos gelöscht werden.
 
-  ### 同じIDは二度と使えなくなります
-  連合処理との兼ね合い上、現時点では、一度取得したID（`@someone@misskey.example.com` の `@someone` の部分）は**二度と使えなくなります。**
+  ### Dieselbe ID kann nicht mehr verwendet werden
+   Aufgrund des Fediversums kann eine einmal erhaltene ID (der `@someone`-Teil von `@someone@misskey.example.com`) derzeit **nicht mehr verwendet werden**.
 
-  同じサーバー上において再度同じIDでアカウントを取得することは出来なくなりますので、**十分ご注意ください。**
+  Bitte beachte, dass die gleiche ID nicht noch einmal auf dem gleichen Server verwenden werden kann.
 
   ---------------
-
-  以上すべてをご理解の上で、それでもアカウントを削除する必要がある方は、以下からお使いの機器タイプを選択し、アカウント削除を行ってください。
+  Wenn du mit diesen Bedinungen Einverstanden bist und das Konto trotzdem löschen möchtest, wähle bitte unten den Gerätetyp aus und lösche das Konto.
 guides:
   - 
     _AUTOSELECT_TYPE_: "HARD_SMARTPHONE"
     _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
-    title: "スマートフォン"
+    title: "Smartphone"
     steps:
       - 
-        title: "設定を開く"
+        title: "Einstellungen"
         image: "sp/1.png"
         description: |
-          Misskeyを開き、画面右下の「≡」ボタンをタップ、でてきたメニューの「設定」をタップします。
+          Öffne Misskey, tippe auf die Schaltfläche „≡“ unten rechts auf dem Bildschirm und dann auf „Einstellungen“ im angezeigten Menü.
       - 
-        title: "「その他」をタップ"
+        title: "Tippe auf „Sonstiges“"
         image: "sp/2.png"
         description: |
-          設定カテゴリの中から「その他」を見つけてタップします。
+          Suche in der Kategorie Einstellungen die Option "Sicherheit" und tippe darauf.
       - 
-        title: "「アカウント削除をリクエスト」をタップ"
+        title: "Tippe auf „Kontolöschung anfordern“"
         image: "sp/3.png"
         description: |
-          「アカウントを閉鎖する」をタップして開き、注意事項を確認の上「アカウント削除をリクエスト」をタップします。
+          Tippe auf „Konto schließen“, prüfe die Hinweise und tippe auf „Kontolöschung beantragen“.
       - 
-        title: "パスワードを入力"
+        title: "Passwort eingeben"
         image: "sp/4.png"
         description: |
-          重要な操作のため、確認のために、お使いのアカウントにログインする際に使用しているパスワードを入力します。
+          Gebe bei sicherheitsrelevanten Einstellungen das Passwort ein, mit dem du dich zur Bestätigung bei deinem Konto anmeldest.
       - 
-        title: "アカウント削除の申請完了"
+        title: "Antrag auf Kontolöschung abgeschlossen"
         image: "sp/5.png"
         description: |
-          この画面が表示されたらアカウント削除の申請は完了です。「わかった」をタップすると、Misskeyサーバーからログアウトします。
+          Wenn dieser Bildschirm erscheint, ist die Anfrage zum Löschen des Kontos abgeschlossen. Tippe „Okay“, um dich vom Misskey-Server abzumelden.
   - 
     _AUTOSELECT_TYPE_: "HARD_PC"
-    title: "PC"
+    title: "Desktop"
     steps:
       - 
-        title: "設定を開く"
+        title: "Einstellungen öffnen"
         image: "pc/2.png"
         description: |
-          「設定」を開き、少しスクロールすると見える「その他」をクリックします。
+          Öffne die „Einstellungen“ und klicken auf „Sonstiges“, möglicherweise muss dafür runtergescrollt werden.
       - 
-        title: "「アカウント削除をリクエスト」をクリック"
+        title: "Tippe auf „Kontolöschung anfordern“"
         image: "pc/3.png"
         description: |
-          「アカウントを閉鎖する」をタップして開き、注意事項を確認の上「アカウント削除をリクエスト」をタップします。
+          Tippe auf „Konto schließen“, prüfe die Hinweise und tippe auf „Kontolöschung beantragen“.
       - 
-        title: "パスワードを入力"
+        title: "Passwort eingeben"
         image: "pc/4.png"
         description: |
-          重要な操作のため、確認のために、お使いのアカウントにログインする際に使用しているパスワードを入力します。
+          Gebe bei sicherheitsrelevanten Einstellungen das Passwort ein, mit dem du dich zur Bestätigung bei deinem Konto anmeldest.
       - 
-        title: "アカウント削除の申請完了"
+        title: "Antrag auf Kontolöschung abgeschlossen"
         image: "pc/5.png"
         description: |
-          この画面が表示されたらアカウント削除の申請は完了です。「わかった」をタップすると、Misskeyサーバーからログアウトします。
+          Wenn dieser Bildschirm erscheint, ist die Anfrage zum Löschen des Kontos abgeschlossen. Tippe „Okay“, um dich vom Misskey-Server abzumelden.

@@ -6,7 +6,7 @@ description: 与 Misskey API 相关的 仓库列表
 
 ##
 
--
+- [misskey.js](https://github.com/misskey-dev/misskey/tree/develop/packages/misskey-js)
 
 ##
 

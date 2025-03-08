@@ -1,86 +1,86 @@
-# Ubuntu版Misskeyインストール方法詳説
+# Detaillierte Anleitung zur Installation von Misskey auf Ubuntu
 
-## その他のMisskeyインストール方法
+## Weitere Methoden zur Installation von Misskey
 
-- [基本版 Misskey構築の手引き (manual)](./manual/)
-- [その他のインストール方法一覧](/docs/for-admin/install/guides/#インストール方法一覧)
+- [Grundlegender Leitfaden zum Einrichten von Misskey (manuell)](./manual/)
+- [Liste weiterer Installationsmethoden](/docs/for-admin/install/guides/#installationsmethoden)
 
-## シェルスクリプトのお知らせ
+## Ankündigung für Shell-Skripte
 
-コピペばかりならシェルスクリプトでいいじゃん、と言うことで**シェルスクリプトでほぼ全部やってくれるやつを作ってみました！**\
-[**シェルスクリプトの詳細と使用方法はこちらから！**](./bash/)
-
-:::tip
-
-シェルスクリプトでの開発環境へのインストールは想定されていません。
-
-:::
+Wenn es nur ums Copy-Paste geht, dann kann man das doch genauso gut mit einem Shell-Skript erledigen. Also habe ich ein Shell-Skript entwickelt, **das fast alles für dich macht!**\
+[**Details und Anweisungen zur Verwendung des Shell-Skripts findest du hier!**](./bash/)
 
 :::tip
 
-ドメインの購入とCloudflareのセットアップ、サーバーの確保についてはご自身でご準備ください。
+Die Installation in einer Entwicklungsumgebung mithilfe des Shell-Skripts ist nicht vorgesehen.
 
 :::
 
-不具合があれば[ @aqz@p1.a9z.dev へのメンション](https://p1.a9z.dev/@aqz)にてお知らせいただければと思います。
+:::tip
 
-## この記事について
+Bitte kümmer dich selbst um den Kauf der Domain, die Einrichtung von Cloudflare und die Beschaffung des Servers.
 
-この記事では、[Misskey構築の手引き (manual)](./manual/)で紹介されている通り、systemdでMisskeyを動作させています。
+:::
 
-[docker-compose](./docker/)なら、手作業でももうちょっと簡単に実行できるはずです。
+Bitte melde eventuelle Probleme, indem du Erwähnung an [@aqz@p1.a9z.dev ](https://p1.a9z.dev/@aqz) sendest.
+
+## Über diesen Artikel
+
+In diesem Artikel erkläre ich, dass ich Misskey gemäß dem [Misskey-Einrichtungsleitfaden (Handbuch)](./manual/) mit systemd betreibe. Außerdem möchte ich darauf hinweisen, dass es mit [docker-compose](./docker/) manuell etwas einfacher sein sollte, Misskey auszuführen.
+
+Mit [docker-compose](./docker/) sollte es manuell etwas einfacher sein, Misskey auszuführen.
 
 :::danger
 
-一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
+Ändere nicht die Datenbank für einen Domain- oder Hostnamen eines Servers, den du bereits verwendest!
 
 :::
 
-## はじめに
+## Einführung
 
-この記事では、[Misskey構築の手引き (manual)](./manual/)を基に、一般的なUbuntuサーバーへMisskeyをインストールし公開する方法の一挙手一投足を解説する。
+Dieser Artikel erklärt Schritt für Schritt, wie Misskey auf einem allgemeinen Ubuntu-Server installiert und öffentlich zugänglich gemacht wird, basierend auf dem [Misskey-Einrichtungsleitfaden (Handbuch)](./manual/).
 
-Bashのコマンド入力、いくつかの設定ファイルの編集、そしてブラウザの操作だけで設定が完了するようにしている。インストールするソフトウェアについて簡単に説明しているが、気にする必要はない。
+Die Einrichtung ist so konzipiert, dass sie nur Eingaben von Bash-Befehlen, das Bearbeiten einiger Konfigurationsdateien und die Bedienung des Browsers erfordert, um abgeschlossen zu werden.Es wird eine kurze Erklärung zur zu installierenden Software gegeben, aber dies ist nicht weiter von Bedeutung.
 
-この記事では、具体性を重視し、特定の環境に特化した記述をしている。
+In diesem Artikel wird besonderer Wert auf Konkretheit gelegt und spezifische Umgebungen detailliert beschrieben.
 
-OSの違い、Misskey本体や依存するソフトウェアのバージョンアップで変わってしまった部分等があるかもしれないが、ご容赦いただきたく思う。
+Es könnten Unterschiede im Betriebssystem, in Misskey selbst oder in den Versionen der abhängigen Software auftreten, weshalb einige Teile sich verändert haben könnten. Wir bitten um Verständnis.
 
-わからない単語については、[『「分かりそう」で「分からない」でも「分かった」気になれるIT用語辞典』](https://wa3.i-3-i.info/) で調べて分かった気になってほしい。
+Bei unklaren Begriffen wird empfohlen, im [IT-Wörterbuch](https://wa3.i-3-i.info/) nachzuschlagen, um sich ein besseres Verständnis zu verschaffen.
 
-## 環境と条件
+## Umgebung und Bedingungen
 
-- OSは**Ubuntu 22.04 LTS**を利用する。
-- ハードウェア要件としては、CPUは最近のものなら最小限で動く。アーキテクチャはamd64及びarm64を想定している。
-- メモリは4GB程度あると良い。
-  - （従来Viteの導入により1.5GB程度でもビルド可能と説明していたが、最近またフロントエンドのビルドで要件が厳しくなってきた。）
-- 独自のドメインを購入し、Cloudflareを使用する。
-- ドメインは[Cloudflare Registrar](https://www.cloudflare.com/ja-jp/products/registrar/)などで予め用意しておくこと。
-- ここではドメインをexample.tldとして解説を進めるので、自分が買ったドメインに適宜置き換えて読むこと。開発環境の場合はlocalhostと読み替えます（設定ファイルの項で別途説明）
+- Als Betriebssystem wird **Ubuntu 22.04 LTS** verwendet.
+- Bezüglich der Hardwareanforderungen reicht eine aktuelle CPU für den minimalen Betrieb aus.Die Architektur ist auf amd64 und arm64 ausgelegt.
+- Ein Arbeitsspeicher von etwa 4 GB ist empfehlenswert.
+  - Zuvor wurde erklärt, dass durch die Einführung von Vite der Build mit etwa 1,5 GB möglich war. (aber in letzter Zeit sind die Anforderungen für den Frontend-Build wieder gestiegen.)
+- Eine eigene Domain wird erworben und Cloudflare wird verwendet.
+- Die Domain sollte im Voraus bei [Cloudflare Registrar](https://www.cloudflare.com/ja-jp/products/registrar/) oder einem ähnlichen Dienst registriert werden.
+- Hier wird die Domain example.tld verwendet, daher sollte diese entsprechend durch die gekaufte Domain ersetzt werden.Im Falle einer Entwicklungsumgebung ist localhost zu verwenden (weitere Erläuterungen im Abschnitt zu den Konfigurationsdateien).
 
 :::danger
 
-一度使用を始めたサーバーのドメイン・ホスト名は、決して変更しないでください！
+Ändere niemals die Domain oder den Hostnamen eines Servers, sobald er in Gebrauch genommen wurde!
 
 :::
 
-## nanoの使い方
+## Verwendung von Nano
 
-今回はテキストエディターにnanoを使う。次のように起動する。
+Dieses Mal werden wir den Texteditor nano verwenden.Starten wie folgt:
 
 ```sh
 nano /path/to/file
 ```
 
-一般的な矢印ボタンやHome/Endなどを利用してカーソルを移動できる。
+Sie können die Pfeiltasten sowie die Home/End-Tasten verwenden, um den Cursor zu bewegen.
 
-終了はCtrl+Xで、変更を保存するか聞かれた場合Y(Yes)を入力しEnterすると保存できる。
+Beenden Sie das Programm mit `Ctrl+X`. Wenn Sie gefragt werden, ob Sie Änderungen speichern möchten, geben Sie `Y` (Yes) ein und drücken Sie `Enter`, um die Änderungen zu speichern.
 
-下部にコマンド一覧が表示されるので、^をCtrl、M-をAltと読み替えて参考にしよう。
+Eine Liste der Befehle wird unten angezeigt. Ersetzen Sie `^` durch `Ctrl` und `M-` durch `Alt`, um sie zu verwenden.
 
-## ユーザーの作成
+## Erstellung eines Benutzers
 
-Misskeyはrootで実行しない方がよいため、専用のユーザーを作成する。
+Da Misskey nicht als root ausgeführt werden sollte, wird ein dedizierter Benutzer erstellt.
 
 ```sh
 sudo adduser --disabled-password --disabled-login misskey
@@ -88,17 +88,17 @@ sudo adduser --disabled-password --disabled-login misskey
 
 :::tip
 
-開発環境の場合はユーザーを分ける必要はありません
+Im Entwicklungsumfeld ist es nicht notwendig, Benutzer zu trennen.
 
 :::
 
-## 基本的なソフトウェアのインストールと設定
+## Installation und Konfiguration grundlegender Software
 
-基本的なソフトウェアのインストールを行う。
+Grundlegende Software installieren.
 
 ### Node.js
 
-Node.jsは、サーバーサイドJavaScript環境であり、Misskeyの基本的な実行環境である。
+Node.js ist eine serverseitige JavaScript-Laufzeitumgebung und die grundlegende Ausführungsumgebung für Misskey.
 
 ```sh
 sudo rm /usr/share/keyrings/nodesource.gpg;
@@ -114,13 +114,13 @@ node -v
 sudo corepack enable
 ```
 
-v20.x.xなどと表示されればOK。v8.x.xのように低いバージョンが表示された場合は、正しくインストールが行えていないため、サーバーを再起動してもう一度インストールし直すなどしてみよう。
+Wenn `v20.x.x` oder ähnlich angezeigt wird, ist alles in Ordnung.Wenn eine niedrigere Version wie `v8.x.x` angezeigt wird, ist die Installation nicht korrekt durchgeführt worden. Starten den Server neu und versuche, die Installation erneut durchzuführen.
 
 ### PostgreSQL
 
-PostgreSQLは、オブジェクト関係データベース管理システムであり、Misskeyの種々のデータを保存するために必要不可欠なソフトだ。
+PostgreSQL ist ein objektrelationales Datenbankmanagementsystem und eine unverzichtbare Software zur Speicherung der verschiedenen Daten von Misskey.
 
-#### インストール
+#### Installieren
 
 シェルスクリプトを実行し、最新バージョン（v15）をインストールしよう。
 

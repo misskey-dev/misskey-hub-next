@@ -1,25 +1,23 @@
 ---
-description: ソーシャルタイムラインのノートが流れるチャンネルです。
+description: Dies ist ein Kanal, in dem die Notizen der sozialen Timeline durchlaufen.
 ---
 
 # `hybridTimeline`
 
-ソーシャルタイムラインのノートが流れるチャンネルです。
+Dies ist ein Kanal, in dem die Notizen der sozialen Timeline durchlaufen.
 
-## パラメータ
+## Parameter
 
-なし
+Keine
 
-## イベント
+## Event
 
 ### `note`
 
-<MkSchemaViewer :schema="{
- $ref: 'misskey://Note'
-}"/>
+<0/>
 
-ソーシャルタイムラインに新しいノートが追加されたときに発生します。
+Es tritt auf, wenn eine neue Notiz zur sozialen Timeline hinzugefügt wird.
 
-## 操作
+## Aktionen
 
-なし
+Keine

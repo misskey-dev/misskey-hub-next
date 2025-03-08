@@ -7,7 +7,7 @@ AiScript是Misskey所使用的脚本语言。
   - 按钮
   - AiScript 控制台
   - AiScript App
--
+- [Misskey Play](./plugin/create-play/)
 - AiScript 控制台
 
 :::tip
@@ -22,7 +22,7 @@ AiScript的实现是一个独立于Misskey的存储库，并且[以开源形式�
 
 :::tip
 
-文件可在[此处查阅](https://github.com/aiscript-dev/aiscript/tree/master/docs)
+文件可在[此处查阅](https://aiscript-dev.github.io/)
 可用的AiScript版本可能会因Misskey体版本而异。要检查版本，请在Scratchpad上运行`<: Core:v`。
 
 :::

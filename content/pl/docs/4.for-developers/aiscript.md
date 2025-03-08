@@ -22,7 +22,7 @@ AiScript標準の構文や組み込み関数などが使用できます。
 
 :::tip
 
-ドキュメントは[こちら](https://github.com/aiscript-dev/aiscript/tree/master/docs)\
+ドキュメントは[こちら](https://aiscript-dev.github.io/)\
 Misskey本体のバージョンにより、使用できるAiScriptのバージョンが異なる場合があります。バージョンの確認には`<: Core:v`をScratchpadなどで実行してください。
 
 :::

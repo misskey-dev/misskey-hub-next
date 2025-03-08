@@ -2,12 +2,12 @@
 
 AiScript는 Misskey의 다음 부분에서 사용할 수 있는 스크립트 언어입니다.
 
-- [플러그인](./plugin/)
+- [플러그인](./plugin/create-plugin/)
 - [위젯](/docs/for-users/features/widgets/)
   - 버튼
   - AiScript 콘솔
   - AiScript App
-- Misskey Play
+- [Misskey Play](./plugin/create-play/)
 - 스크래치 패드
 
 :::tip
@@ -22,7 +22,7 @@ AiScript 표준 구문과 내장 함수 등을 사용할 수 있습니다.
 
 :::tip
 
-문서는 [여기](https://github.com/aiscript-dev/aiscript/tree/master/docs)에서 확인할 수 있습니다.\
+문서는 [여기](https://aiscript-dev.github.io/)에서 확인할 수 있습니다.\
 Misskey 본체 버전에 따라 사용할 수 있는 AiScript 버전이 다를 수 있습니다.버전 확인은 `<: Core:v`를 Scratchpad 등에서 실행해 보세요.버전 확인은 `<: Core:v`를 Scratchpad 등에서 실행해 보세요.
 
 :::

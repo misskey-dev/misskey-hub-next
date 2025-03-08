@@ -54,6 +54,6 @@ helm install misskey TrueCharts/misskey
 
 ## Misskey 업그레이드
 
-Misskey를 업그레이드하려면 TrueNAS Scale에 내장된 업그레이드 기능을 사용하거나, kubernetes를 수동으로 실행하는 경우 [helm repo update](https\://helm.sh/docs/helm/helm_ repo_update/) 또는 [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/)를 사용할 수 있습니다.
+Misskey를 업그레이드하려면 TrueNAS Scale에 내장된 업그레이드 기능을 사용하거나, kubernetes를 수동으로 실행하는 경우 [helm repo update](https://helm.sh/docs/helm/helm_repo_update/) 또는 [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/)를 사용할 수 있습니다.
 
 문제가 발생할 가능성도 있으므로, 업그레이드 전에 데이터를 백업하는 것이 좋습니다.

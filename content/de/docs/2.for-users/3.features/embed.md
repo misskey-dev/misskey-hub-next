@@ -1,35 +1,34 @@
-# ウェブサイトへの埋め込み
+# Einbetten von Inhalten
 
-Misskeyサーバー上のノートやタイムラインをお持ちのウェブサイトに埋め込むことができます。
-また、埋め込み先のウェブサイトの見た目に合わせて柔軟にカスタマイズすることもできます。
+Du kannst Notizen und Zeitleisten vom Misskey-Server in deine Website einbinden, sowie flexibel an das Design deiner Website anpassen.
 
-ここでは、埋め込めるコンテンツと埋め込み方法について説明します。
+In diesem Abschnitt wird erläutert welche Inhalte eingebettet werden kann und wie das funktioniert.
 
 :::warning
 
-この機能は、Misskey v2024.9.0以降で利用可能になる機能です。
+Diese Funktion ist ab Misskey v2024.9.0 verfügbar.
 
 :::
 
 :::tip
 
-MFMやカスタム絵文字などにも対応していますが、埋め込み先ページでの表示方法によってはレイアウトが崩れる可能性があります。
+Es unterstützt auch MFM und benutzerdefinierte Emojis, aber das Layout kann je nach Darstellung, die Einbettungsseite im Design verändern.
 
 :::
 
-## ジェネレーターを使用して埋め込みコードを生成する
+## Codes Generieren
 
-以下で紹介する埋め込みコードおよびそのカスタマイズは、すべてMisskey Webに内蔵されている埋め込みコードジェネレーターを使用して簡単に行うことができます。
-基本的にはそちらを利用することをおすすめします。
+Alle im Folgenden beschriebenen Einbettungscodes und ihre Anpassung können leicht mit dem integrierten Einbettungscode-Generator von Misskey Web erstellt werden.
+Wir empfehlen grundsätzlich, diesen zu verwenden.
 
-![埋め込みコードジェネレーター](/img/docs/for-users/features/embed/generator.png)
+![Generator für eingebetteten Code](/img/docs/for-users/features/embed/generator.png)
 
-## 単一のノートの埋め込み
+## Einbetten einer einzelnen Notiz
 
 ::MiWebEmbed{src="https://0key.dev/embed/notes/9tht7ungi81f0005"}
 ::
 
-埋め込み元サーバー上の、単一のノートを埋め込むことができます（リモートサーバーのノートを他のサーバーを利用して埋め込むことはできません）。コードは以下のようになります：
+Eine einzelne Notiz kann auf dem Heimserver eingebettet werden (Notizen auf einem förderierten Server können nicht über einen anderen Server eingebettet werden).Dein Code sollte jetzt so aussehen:
 
 ```html
 <iframe
@@ -42,18 +41,18 @@ MFMやカスタム絵文字などにも対応していますが、埋め込み�
 <script defer src="https://<HOST>/embed.js"></script>
 ```
 
-それぞれ、以下のように置き換えられます：
+Jede dieser Angaben wird durch folgende ersetzt:
 
-- `<HOST>`: Misskeyサーバーのホスト名
-- `<NOTE_ID>`: 埋め込むノートのID
-- `<RANDOM>`: ランダムな文字列（embed.jsを使用する場合は必須。埋め込みコードが同じページに複数ある場合は被らないようにしてください）
+- `<HOST>`: Hostname des Misskey Servers
+- `<NOTE_ID>`: ID der Notiz
+- `<RANDOM>`: Zufällige Zeichenfolge (erforderlich, wenn embed.js verwendet wird.Bitte stelle sicher, dass sich die Einbettungscodes auf derselben Seite nicht überschneiden, wenn es mehrere gibt
 
-## ユーザーのノート一覧の埋め込み
+## Einfügen einer Liste an User-Notizen
 
 ::MiWebEmbed{src="https://0key.dev/embed/user-timeline/9tht7g9ki81f0002?maxHeight=500"}
 ::
 
-ユーザーの公開ノート（パブリック・ホーム）の一覧を埋め込むことができます。コードは以下のようになります：
+Eine Liste der öffentlichen Notizen der Benutzer (öffentliches Zuhause) kann eingebettet werden.Dein Code sollte jetzt so aussehen:
 
 ```html
 <iframe
@@ -66,18 +65,18 @@ MFMやカスタム絵文字などにも対応していますが、埋め込み�
 <script defer src="https://<HOST>/embed.js"></script>
 ```
 
-それぞれ、以下のように置き換えられます：
+Jede dieser Angaben wird durch folgende ersetzt:
 
-- `<HOST>`: Misskeyサーバーのホスト名
-- `<USER_ID>`: 埋め込むユーザーのID（`@`から始まるユーザー名ではありません）
-- `<RANDOM>`: ランダムな文字列（embed.jsを使用する場合は必須。埋め込みコードが同じページに複数ある場合は被らないようにしてください）
+- `<HOST>`: Hostname des Misskey Servers
+- `<USER_ID>`: ID des einzubettenden Benutzers (nicht der mit „@“ beginnende Benutzername)
+- `<RANDOM>`: Zufällige Zeichenfolge (erforderlich, wenn embed.js verwendet wird.Bitte stelle sicher, dass sich die Einbettungscodes auf derselben Seite nicht überschneiden, wenn es mehrere gibt)
 
-## クリップのノート一覧の埋め込み
+## Liste der Notizen in einen Clip einbetten
 
 ::MiWebEmbed{src="https://0key.dev/embed/clips/9y5mpno6871g00gv?maxHeight=500"}
 ::
 
-公開範囲がパブリックなクリップのノート一覧を埋め込むことができます。コードは以下のようになります：
+Du kannst eine Liste von Notizen für Clips einbinden, deren Veröffentlichungsbereich öffentlich istDein Code sollte jetzt so aussehen:
 
 ```html
 <iframe
@@ -90,18 +89,18 @@ MFMやカスタム絵文字などにも対応していますが、埋め込み�
 <script defer src="https://<HOST>/embed.js"></script>
 ```
 
-それぞれ、以下のように置き換えられます：
+Jede dieser Angaben wird durch folgende ersetzt:
 
-- `<HOST>`: Misskeyサーバーのホスト名
-- `<CLIP_ID>`: 埋め込むクリップのID
-- `<RANDOM>`: ランダムな文字列（embed.jsを使用する場合は必須。埋め込みコードが同じページに複数ある場合は被らないようにしてください）
+- `<HOST>`: Hostname des Misskey Servers
+- `<CLIP_ID>`: ID des Clips, der eingebettet werden soll
+- `<RANDOM>`: Zufällige Zeichenfolge (erforderlich, wenn embed.js verwendet wird.Bitte stelle sicher, dass sich die Einbettungscodes auf derselben Seite nicht überschneiden, wenn es mehrere gibt)
 
-## ハッシュタグのノート一覧の埋め込み
+## Einbettung von Hashtags in die Notizliste
 
 ::MiWebEmbed{src="https://0key.dev/embed/tags/misskey?maxHeight=500"}
 ::
 
-特定のハッシュタグが付いたノートの一覧を埋め込むことができます。コードは以下のようになります：
+Du kannst eine Liste von Notizen mit einem bestimmten Hashtag einbindenDein Code sollte jetzt so aussehen:
 
 ```html
 <iframe
@@ -114,30 +113,30 @@ MFMやカスタム絵文字などにも対応していますが、埋め込み�
 <script defer src="https://<HOST>/embed.js"></script>
 ```
 
-それぞれ、以下のように置き換えられます：
+Jede dieser Angaben wird durch folgende ersetzt:
 
-- `<HOST>`: Misskeyサーバーのホスト名
-- `<TAG>`: ハッシュタグ名（`#`を含まない）
-- `<RANDOM>`: ランダムな文字列（embed.jsを使用する場合は必須。埋め込みコードが同じページに複数ある場合は被らないようにしてください）
+- `<HOST>`: Hostname des Misskey Servers
+- `<TAG>`: Hashtag-Name (ohne `#`)
+- `<RANDOM>`: Zufällige Zeichenfolge (erforderlich, wenn embed.js verwendet wird.Bitte stelle sicher, dass sich die Einbettungscodes auf derselben Seite nicht überschneiden, wenn es mehrere gibt)
 
-## カスタマイズ用のパラメータ
+## Parameter für die individuelle Anpassung
 
-URLパラメータに特定の値を指定することで、埋め込みの見た目をカスタマイズすることができます。
+Das Aussehen der Einbettung kann durch die Angabe bestimmter Werte für den URL-Parameter angepasst werden.
 
 <table>
 	<tbody><tr>
-		<th>パラメータ名</th>
-		<th>指定できる値</th>
-		<th>説明</th>
+		<th>Name des Parameters</th>
+		<th>Werte, die festgelegt werden können</th>
+		<th>Beschreibung</th>
 	</tr>
     <tr>
 		<td><code>maxHeight</code></td>
-		<td>0以上の数値</td>
+		<td>Wert ≥ 0</td>
 		<td>
-            埋め込みの最大高さ（px）を指定します。それ以上縦に伸びる場合は内部でスクロールできるようになります。<br>
-            <code>0</code> を指定すると、埋め込み要素の高さは内部の高さに合わせて自動で伸びていきます<b>（非推奨）</b>。<br>
-            未指定の場合は <code>700</code> です。<br>
-            単一のノートの埋め込みでは機能しません。        
+            Gibt die maximale Höhe (px) der Einbettung an.Falls sie länger wird, kannst du innerhalb des Bereichs scrollen.<br>
+Wenn <code>0</code> angegeben wird, wird die Höhe des eingebetteten Elements automatisch erweitert, um der internen Höhe zu entsprechen <b> (nicht empfohlen) </b>.<br>
+Wenn nicht anders angegeben, beträgt der Wert <code>700</code>.<br>
+Funktioniert nicht bei der Einbettung einer einzelnen Notiz.        
 </td>
 	</tr>
 	<tr>
@@ -148,7 +147,7 @@ URLパラメータに特定の値を指定することで、埋め込みの見�
                 <li><code>dark</code></li>
             </ul>
         </td>
-		<td>カラーモードをライトまたはダークに強制。<br>無指定でデバイスのダークモードと同期します。</td>
+		<td>Den Farbmodus auf Hell oder Dunkel erzwingen.<br>Synchronisiert sich mit dem Dunkelmodus des Geräts, wenn nicht anders angegeben.</td>
 	</tr>
 	<tr>
 		<td><code>border</code></td>
@@ -158,7 +157,7 @@ URLパラメータに特定の値を指定することで、埋め込みの見�
                 <li><code>false</code></li>
             </ul>
         </td>
-		<td>外枠に枠線をつけるかどうか。無指定で <code>true</code></td>
+		<td>Fragt, ob ein Rahmen um den äußeren Rand hinzugefügt wird.Standardmäßig auf <code>true</code></td>
 	</tr>
 	<tr>
 		<td><code>rounded</code></td>
@@ -168,7 +167,7 @@ URLパラメータに特定の値を指定することで、埋め込みの見�
                 <li><code>false</code></li>
             </ul>
         </td>
-		<td>角丸にするかどうか。無指定で <code>true</code></td>
+		<td>Fragt, ob die Ecken abgerundet werden sollen.Standardmäßig auf <code>true</code></td>
 	</tr>
 	<tr>
 		<td><code>showHeader</code></td>
@@ -179,15 +178,14 @@ URLパラメータに特定の値を指定することで、埋め込みの見�
             </ul>
         </td>
 		<td>
-            上部のヘッダーを表示するかどうか。無指定で <code>true</code><br>
-            単一のノートの埋め込みでは機能しません。    
+            Fragt, ob der obere Header angezeigt wird.Standardmäßig <code>true</code>. <br>Funktioniert nicht bei der Einbettung einer einzelnen Notiz.    
         </td>
 	</tr>
 </tbody></table>
 
 :::g-details{summary="maxHeight=0 の使い道"}
 
-`maxHeight` を `0` にするのは基本的におすすめしていませんが、スクロールコンテナをiframe内部ではなく埋め込むサイト側で用意しておきたい場合など、特殊な用途では有用です。以下に例を示します：
+Es wird grundsätzlich nicht empfohlen, `maxHeight` auf `0` zu setzen. Für spezielle Anwendungen, wie z.B. wenn der Scroll-Container nicht im iframe, sondern auf der eingebetteten Website bereitgestellt werden soll, kann dies jedoch nützlich sein.Nachfolgend sind Beispiele aufgeführt:
 
 ```html
 <div class="misskey-embed">

@@ -4,7 +4,7 @@
 
 :::tip
 
-标准的AiScript API可以在 [这里](https://github.com/aiscript-dev/aiscript/blob/master/docs/get-started.md) 找到
+标准的AiScript API可以在 [这里](https://aiscript-dev.github.io/guides/get-started.html) 找到
 
 :::
 
@@ -111,7 +111,7 @@ permission 一览请看[这里](/docs/for-developers/api/permission/)
 
 读取使用 Mk:save 保存的指定名称的值。
 
-### `Mk:delete(key)`
+### `Mk:remove(key)`
 
 ※v2025.1.0（仮称）以降で使用可能
 

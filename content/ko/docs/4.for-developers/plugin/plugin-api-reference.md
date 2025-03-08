@@ -4,7 +4,7 @@
 
 :::tip
 
-표준으로 제공되는 AiScript API는 [여기](https://github.com/aiscript-dev/aiscript/blob/master/docs/get-started.md)에서 확인할 수 있습니다.
+표준으로 제공되는 AiScript API는 [여기](https://aiscript-dev.github.io/guides/get-started.html)에서 확인할 수 있습니다.
 
 :::
 
@@ -113,7 +113,7 @@ permission 목록은 [여기](/docs/for-developers/api/permission/)에서 확인
 
 Mk:save에서 영속화한 지정된 이름의 값을 읽습니다.
 
-### `Mk:delete(key)`
+### `Mk:remove(key)`
 
 ※v2025.1.0（仮称）以降で使用可能
 

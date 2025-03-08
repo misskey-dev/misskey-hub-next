@@ -4,7 +4,7 @@ Kamu bisa mengubah tampilan klien Misskey dengan mengatur temanya.
 
 ## Pengaturan Tema
 
-Pengaturan > Tema
+[Pengaturan > Tema](x-mi-web://settings/theme)
 
 ## Membuat Tema
 

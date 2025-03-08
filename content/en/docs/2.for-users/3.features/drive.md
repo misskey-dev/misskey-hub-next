@@ -8,7 +8,7 @@ Technically speaking, all files are centrally managed on Misskey's system, and t
 
 :::
 
-In addition to being able to upload any file from Misskey Web's Drive page, images set as avatars and files attached to notes will all be uploaded to Drive.
+In addition to being able to upload any file from Misskey Web's [Drive page](x-mi-web://my/drive), images set as avatars and files attached to notes will all be uploaded to Drive.
 
 Not only can files uploaded to Drive be downloaded at any time, but they can also be reused by selecting "Attach Files from Drive" when creating notes.
 
