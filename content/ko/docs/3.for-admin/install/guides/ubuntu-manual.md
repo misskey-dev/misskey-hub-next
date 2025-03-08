@@ -2,8 +2,8 @@
 
 ## 기타 Misskey 설치 방법
 
-- [기본 버전 Misskey 구축 가이드 (manual)](./manual)
-- [기타 설치 방법 목록](/docs/for-admin/install/guides/#설치%20방법%20목록)
+- [기본 버전 Misskey 구축 가이드 (manual)](./manual/)
+- [기타 설치 방법 목록](/docs/for-admin/install/guides/#설치-방법-목록)
 
 ## 쉘 스크립트 안내
 
@@ -438,7 +438,7 @@ exit
 sudo nano /etc/nginx/conf.d/misskey.conf
 ```
 
-[Misskey Hub](https://misskey-hub.net/docs/admin/nginx/)의 설정 예시를 nano에 복사하여 붙여넣고, 다음 부분을 자신의 것으로 바꿔서 작성합니다.
+[Misskey Hub](/docs/for-admin/install/resources/nginx/)의 설정 예시를 nano에 복사하여 붙여넣고, 다음 부분을 자신의 것으로 바꿔서 작성합니다.
 
 - 18행과 30행의 도메인 이름
 - 34-35번째 행의 인증서 경로를 Certbot으로 취득한 인증서로 바꾸면 됩니다(기본적으로 example.tld를 대체하면 됩니다).
@@ -601,7 +601,7 @@ Misskey 서버에 자신의 계정을 등록하고 로그인하여 설정을 진
 
 ## Misskey 업데이트
 
-[Misskey 업데이트 방법](./manual/#misskey%20업데이트%20방법)
+[Misskey 업데이트 방법](./manual/#misskey-업데이트-방법)
 
 작업 중에는 Misskey를 사용할 수 없습니다.
 

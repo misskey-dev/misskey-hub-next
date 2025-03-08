@@ -107,7 +107,7 @@ NODE_MAJOR=20; echo "deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://
 sudo apt update;
 sudo apt install -y nodejs;
 
-# Node.jsがインストールされたので、バージョンを確認する。
+# Now that node.js is installed, check the version
 node -v
 
 # corepack enable
@@ -129,7 +129,7 @@ sudo apt install -y postgresql-common
 
 sudo sh /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -i -v 15;
 
-# systemctlでデーモンの状態を確認。
+# check the status of the service with systemctl.
 systemctl status postgresql
 ```
 
@@ -197,7 +197,7 @@ curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor | sudo tee /usr/sh
 gpg --dry-run --quiet --no-keyring --import --import-options import-show /usr/share/keyrings/nginx-archive-keyring.gpg
 ```
 
-このとき出力に 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 とあるか確認する。
+Check that the output is `573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62`.
 
 ```sh
 echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" | sudo tee /etc/apt/sources.list.d/nginx.list
@@ -268,7 +268,7 @@ sudo ufw allow 80
 sudo ufw allow 443
 ```
 
-ufwのステータスを確認しておく。
+Check the status of ufw.
 
 ```sh
 sudo ufw status
@@ -422,7 +422,7 @@ syslog:
 
 指定できたら保存する。
 
-### nginxの設定
+### nginx configuration
 
 nginxの設定を行う。
 
@@ -432,7 +432,7 @@ nginxの設定を行う。
 exit
 ```
 
-/etc/nginx/conf.d/misskey.confを作成する。
+Create `/etc/nginx/conf.d/misskey.conf`.
 
 ```sh
 sudo nano /etc/nginx/conf.d/misskey.conf

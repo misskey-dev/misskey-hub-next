@@ -101,4 +101,4 @@ props: {
 
 Since v2023.11.0, you can install themes directly from a website with one click.
 
-Refer to the [Plugin API Reference](./plugin-api-reference/) for information on what APIs are available.See also the documentation on [distributing plugins and themes](../../for-developers/publish-on-your-website/).
+If you want to provide theme installation functionality, you will need to implement an API on your site.See also the documentation on [distributing plugins and themes](../../for-developers/publish-on-your-website/).

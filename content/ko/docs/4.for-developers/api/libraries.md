@@ -6,7 +6,7 @@ description: Misskey API 관련 라이브러리 목록
 
 ## JavaScript
 
-- [misskey.js](https://github.com/misskey-dev/misskey.js)
+- [misskey.js](https://github.com/misskey-dev/misskey/tree/develop/packages/misskey-js)
 
 ## Java
 

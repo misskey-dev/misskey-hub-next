@@ -11,7 +11,7 @@ For frequently asked questions about the Misskey project itself, please refer to
 
 The Misskey project does not develop native apps for such mobile operating systems, but there are several third-party apps available.For more information, please refer to [this link](./apps).<br>
 
-However, since third-party apps may lag behind in supporting the latest Misskey features, we recommend using the official web-based client called Misskey Web unless you have specific preferences.Additionally, Misskey Web supports Progressive Web App (PWA), allowing it to behave like a native app.For more details, see [here](todo).
+However, since third-party apps may lag behind in supporting the latest Misskey features, we recommend using the official web-based client called Misskey Web unless you have specific preferences.Additionally, Misskey Web supports Progressive Web App (PWA), allowing it to behave like a native app.For more details, see [here](/docs/for-users/stepped-guides/how-to-use-pwa/).
 
 ## Can I use Misskey with Mastodon-compatible apps?
 

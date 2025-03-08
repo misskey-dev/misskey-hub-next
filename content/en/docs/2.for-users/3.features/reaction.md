@@ -1,6 +1,6 @@
 # Reactions
 
-The reaction feature allows you to easily show your reactions to other people's notes using emoji.To react, click the + icon on the note and select an emoji from the picker. You can also react with [custom emojis](./custom-emoji).
+The reaction feature allows you to easily show your reactions to other people's notes using emoji.To react, click the + icon on the note and select an emoji from the picker. You can also react with [custom emojis](./custom-emoji.md).
 
 ## Customizing the Emoji Picker
 

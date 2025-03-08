@@ -5,7 +5,7 @@ description: Dieser Abschnitt enthält häufig gestellte Fragen zur Verwendung v
 # FAQ - Häufig gestellte Fragen
 
 Dieser Abschnitt enthält häufig gestellte Fragen zur Verwendung von Misskey.<br>
-Häufig gestellte Fragen zum Misskey-Projekt selbst findest du [hier](./.../about-misskey#Frequently asked question
+Häufig gestellte Fragen zum Misskey-Projekt selbst findest du [hier](../../about-misskey#faq-häufig-gestellte-fragen)
 
 ## Gibt es eine Android/iOS-App?
 
@@ -55,11 +55,11 @@ Nur der Administrator des Servers, zu dem du gehörst, kann benutzerdefinierte E
 
 ## Ich möchte einen Bot entwickeln.
 
-Es kann ein Bot mit der Misskey-API entwickelt werden.Für weitere Informationen [hier klicken](./.../für-entwickler/api/).
+Es kann ein Bot mit der Misskey-API entwickelt werden.Für weitere Informationen [hier klicken](../../for-developers/api/).
 
 ## Welcher Dienst wird für die Übersetzungsfunktion der Notizen verwendet?
 
-Für die Übersetzung verwenden wir [DeepL](https://deepl.com).
+Für die Übersetzung verwenden wir [DeepL](https://www.deepl.com/).
 
 ## Ich habe einen Server eingerichtet, muss ich meinem Internetanbieter (ISP) informieren?
 

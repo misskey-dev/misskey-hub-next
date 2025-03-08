@@ -1,30 +1,30 @@
-# AiScript Misskey拡張API リファレンス
+# AiScript Misskey-Erweiterung API Referenz
 
-ここでは、Misskeyで独自に拡張されたAiScript APIについて紹介しています。
+In diesem Abschnitt wird die erweiterte AiScript-API in Misskey vorgestellt.
 
 :::tip
 
-標準装備のAiScript APIは[こちら](https://aiscript-dev.github.io/guides/get-started.html)からご覧いただけます。
+Die Standard-AiScript-API finden gibt es [hier] (https://aiscript-dev.github.io/guides/get-started.html).
 
 :::
 
-## 全分野共通定数
+## Gemeinsame Konstanten für alle Felder
 
 ### `USER_ID`
 
-現在のユーザーのID
+ID des aktuellen Benutzers
 
 ### `USER_NAME`
 
-現在のユーザーの名前
+Name des aktuellen Benutzers.
 
 ### `USER_USERNAME`
 
-現在のユーザーのハンドル（`@`より後ろの部分。例: `@ai@example.com` → `ai`）
+Das Handle des aktuellen Benutzers (der Teil nach dem `@`.(z. B. `@ai@example.com` → `ai`)
 
 ### `CUSTOM_EMOJIS`
 
-カスタム絵文字の一覧。以下のようなオブジェクトが配列で格納されています
+Liste der benutzerdefinierten EmojiDie folgenden Objekte werden in Arrays gespeichert
 
 ```ts
 type EmojiSimple = {
@@ -40,50 +40,50 @@ type EmojiSimple = {
 
 ### `LOCALE`
 
-現在のMisskey Webの設定言語。RFC4646互換の形式（`ja-JP`など）で表されます
+Aktuelle Misskey Web Einrichtungssprache.Darstellung in einem RFC4646-kompatiblen Format (z.B. `ja-JP`)
 
 ### `SERVER_URL`
 
-現在のサーバーのURL。`https://www.example.com` のようにオリジンで表されます
+Aktuelle Server-URLRepräsentiert durch z. B. `https://www.example.com`.
 
-## 全分野共通関数
+## Gemeinsame Funktionen in allen Bereichen
 
 ### `Mk:dialog(title, text, type)`
 
-ダイアログを表示します。typeには以下の値が設定できます。\
+Zeigt ein Dialogfenster an.Die folgenden Werte können für ype eingestellt werden.\
 `info` `success` `warning` `error` `question`\
-省略すると `info` になります。
+Standard ist `info`¸ wenn kein anderes Attribut erstellt wurde.
 
 ### `Mk:confirm(title, text, type)`
 
-確認ダイアログを表示します。typeには以下の値が設定できます。\
+Zeigt ein Dialogfenster an.Für type können die folgenden Werte eingestellt werden.\
 `info` `success` `warning` `error` `question`\
-省略すると `question` になります。\
-ユーザーが"OK"を選択した場合は `true` を、"キャンセル"を選択した場合は `false` が返ります。
+Standard ist `question`¸ wenn kein anderes Attribut erstellt wurde.\
+Gibt `true` zurück, wenn der Benutzer „OK“ wählt oder `false`, wenn der Benutzer „Cancel“ wählt.
 
 ```AiScript
 let response = Mk:confirm(
-  '操作を続行しますか？'
-  'この操作は取り消せません。よく確認してください。'
+  'Bist du sicher？'
+  'Dieser Vorgang kann nicht rückgängig gemacht werden.'
   'warning'
 )
 
 if (response) {
-  // OKした場合
+  // OK, bestätigen
 } else {
-  // キャンセルした場合
+  // Abbruch
 }
 ```
 
 ### `Mk:api(endpoint, params, token?)`
 
-Misskey APIにリクエストします。第一引数にエンドポイント名、第二引数にパラメータオブジェクトを渡します。
+Sendet eine Misskey API-Anfrage.Der erste Parameter gibt den API-Endpunkt an, der zweite die Anfrageparameter als Objekt.
 
-第三引数にtokenを入れることもできます。プラグインで動作するとき、メタデータブロックにて`permissions`が指定されている場合、第三引数を指定しないことでそのpermissionが付与されたtokenが使用されます。
+Als drittes Argument kann auch ein token angegeben werden.Bei der Arbeit mit Plugins wird, wenn im Metadatenblock „Berechtigungen“ angegeben sind, das Token mit der Berechtigung verwendet, wenn das dritte Argument nicht angegeben ist.
 
 :::tip
 
-permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+Eine Liste der Berechtigungen gibt es [hier](/docs/for-developers/api/permission/).
 
 :::
 
@@ -105,32 +105,32 @@ permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧
 
 ### `Mk:save(key, value)`
 
-任意の値に任意の名前を付けて永続化します。永続化した値は、AiScriptコンテキストが終了しても残り、Mk:loadで読み取ることができます。
+Speichert einen beliebigen Wert dauerhaft unter einem beliebigen Namen.Der gespeicherte Wert bleibt auch nach Verlassen des AiScript-Kontexts erhalten und kann mit Mk:load ausgelesen werden.
 
 ### `Mk:load(key)`
 
-Mk:saveで永続化した指定の名前の値を読み取ります。
+Läd den Wert des gegebenen Schlüssels, der zuvor mit Mk:save gespeichert wurde
 
-### `Mk:delete(key)`
+### `Mk:remove(key)`
 
-※v2025.1.0（仮称）以降で使用可能
+\*Verfügbar ab v2025.1.0 (vorläufig).
 
-Mk:saveで永続化した指定の名前の値を削除します。指定の名前の値が存在しない場合は何もしません。
+Läd den Wert des gegebenen Schlüssels, der zuvor mit Mk:save gespeichert wurdeWenn der Wert mit dem angegebenen Namen nicht existiert, wird nichts unternommen.
 
 ### `Mk:url()`
 
-現在開いているページのURL（現在ブラウザのアドレスバーに表示されているURL）を取得します。
+Ermittelt die URL der aktuell geöffneten Seite (die URL, die in der Adressleiste des Browsers angezeigt wird).
 
 ### `Mk:nyaize(text)`
 
-指定されたテキストをNyaizeします。MFMの構文などは考慮されません。
+Verkleinert den angegebenen Text.MFM-Syntax etc. werden nicht berücksichtigt.
 
-## プラグイン専用
+## Plug-in Beispiele
 
 ### `Plugin:register_post_form_action(title, fn)`
 
-投稿フォームにアクションを追加します。第一引数にアクション名、第二引数にアクションが選択された際のコールバック関数を渡します。\
-コールバック関数には、第一引数に投稿フォームオブジェクトのうち`text`と`cw`が、第二引数にそれらを書き換えるための関数が渡されます。
+Fügt dem Beitragsfenster eine Aktion hinzu.Das erste Argument ist der Name der Aktion und das zweite Argument ist die Callback-Funktion, wenn die Aktion ausgewählt wird.\
+Die Callback-Funktion erhält als erstes Argument den `Text` und `cw` der übermittelten Formularobjekte und als zweites Argument die Funktion, die sie umschreiben soll.
 
 ```AiScript
 Plugin:register_post_form_action('メニューに表示される項目名', @(note, rewrite) {
@@ -142,8 +142,8 @@ Plugin:register_post_form_action('メニューに表示される項目名', @(no
 
 ### `Plugin:register_note_action(title, fn)`
 
-ノートメニューに項目を追加します。第一引数に項目名、第二引数に項目が選択された際のコールバック関数を渡します。\
-コールバック関数には、第一引数に対象のノートオブジェクトが渡されます。
+Fügt dem Notiz-Menü ein Listenelement hinzu.Das erste Argument ist der Name des Elements und das zweite Argument ist die Callback-Funktion, wenn das Element ausgewählt ist.\
+Der Callback-Funktion wird als erstes Argument ein Ziel-notizen-Objekt übergeben.
 
 ```AiScript
 Plugin:register_note_action('メニューに表示される項目名', @(note) {
@@ -154,31 +154,30 @@ Plugin:register_note_action('メニューに表示される項目名', @(note) {
     renoteId: note.id
   })
 
-})
 ```
 
 ### `Plugin:register_user_action(title, fn)`
 
-ユーザーメニューに項目を追加します。第一引数に項目名、第二引数に項目が選択された際のコールバック関数を渡します。\
-コールバック関数には、第一引数に対象のユーザーオブジェクトが渡されます。
+Fügt dem Benutzer-Menü ein Listenelement hinzu.Das erste Argument ist der Name des Elements und das zweite Argument ist die Callback-Funktion, wenn das Element ausgewählt ist.\
+Der Callback-Funktion wird ein Zielbenutzerobjekt als erstes Argument übergeben.
 
 ```AiScript
-Plugin:register_user_action('メニューに表示される項目名', @(user) {
+Plugin:register_note_action('メニューに表示される項目名', @(note) {
 
-  // ユーザー情報を使って何かする
+  // ノートを使って何かする
   Mk:api('notes/create', {
-    text: `{user.name}さん、ようこそ！`
+    text: '引用'
+    renoteId: note.id
   })
 
-})
 ```
 
 ### `Plugin:register_note_view_interruptor(fn)`
 
-UIに表示されるノート情報を書き換えます。\
-コールバック関数には、第一引数に対象のノートオブジェクトが渡されます。\
-コールバック関数の返り値でノートが書き換えられます。\
-`null` を返すとそのノートを非表示にします。
+Schreibt die in der Benutzeroberfläche angezeigten Notizinformationen um.\
+Der Callback-Funktion wird als erstes Argument ein Ziel-notizen-Objekt übergeben.\
+Die Notiz wird in den Rückgabewert der Callback-Funktion umgeschrieben.\
+Die Rückgabe von `null` blendet die Notiz aus.
 
 ```AiScript
 Plugin:register_note_view_interruptor(@(note) {
@@ -197,9 +196,9 @@ Plugin:register_note_view_interruptor(@(note) {
 
 ### `Plugin:register_note_post_interruptor(fn)`
 
-ノート投稿時にノート情報を書き換えます。\
-コールバック関数には、第一引数に対象のノートオブジェクトが渡されます。\
-コールバック関数の返り値でノートが書き換えられます。
+Die Informationen zur Notiz werden beim Einreichen der Notiz neu geschrieben.\
+Der Callback-Funktion wird als erstes Argument ein Ziel-notizen-Objekt übergeben.\
+Die Notiz wird in den Rückgabewert der Callback-Funktion umgeschrieben.
 
 ```AiScript
 Plugin:register_note_post_interruptor(@(note) {
@@ -213,9 +212,9 @@ Plugin:register_note_post_interruptor(@(note) {
 
 ### `Plugin:register_page_view_interruptor(fn)`
 
-Page閲覧時にPage情報を書き換えます。\
-コールバック関数には、第一引数に対象のPageオブジェクトが渡されます。\
-コールバック関数の返り値でPageが書き換えられます。
+Die Seiteninformationen werden neu geschrieben, wenn die Seite angezeigt wird.\
+Der Callback-Funktion wird ein Ziel-Seitenobjekt als erstes Argument übergeben.\
+Die Seite wird mit dem Rückgabewert der Callback-Funktion neu geschrieben.
 
 ```AiScript
 Plugin:register_note_post_interruptor(@(page) {
@@ -228,31 +227,31 @@ Plugin:register_note_post_interruptor(@(page) {
 
 ### `Plugin:open_url(url)`
 
-第一引数に渡されたURLをブラウザの新しいタブで開きます。
+Die als erstes Argument übergebene URL wird in einer neuen Registerkarte des Browsers geöffnet.
 
 ### `Plugin:config`
 
-プラグインの設定が格納されるオブジェクト。プラグイン定義のconfigで設定したキーで値が入ります。
+Ein Objekt, dass die Plugin-Einstellungen enthält.Die in den Plugin-Einstellung eingetragenen Werte sind hier unter den Einstellungsnamen gespeichert.
 
-## Play専用 定数
+## Play Attribute
 
 ### `THIS_ID`
 
-PlayのID
+Play erstellen
 
 ### `THIS_URL`
 
-PlayのURL
+Play URL
 
-## UI制御関数（Play・AiScript Appウィジェットで使用可能）
+## UI-Steuerungsfunktionen (verfügbar für Play- und AiScript-App-Widgets)
 
 ### `Ui:root`
 
-UIのルート要素。
+Stammelement der Benutzeroberfläche.
 
 ### `Ui:render([ ...components ])`
 
-`Ui:root.update({ children: [ ...components ] })` の糖衣構文。UIのルート要素を書き換えます。
+Syntaktischer Zucker für `Ui:root.update({ children: [ ...components ] })`.Das UI-Root-Element wird überschrieben.
 
 ```AiScript
 Ui:render([
@@ -263,22 +262,22 @@ Ui:render([
 
 ### `Ui:get(id)`
 
-IDを付与したコンポーネントを取得し、操作を行えます。
+ID-zugewiesene Komponenten abrufen und Aktionen durchführen.
 
 ```AiScript
 Ui:C:text({text: "A"}, "text1")
 Ui:get("text1").update({text: "B"})
 ```
 
-## コンポーネント関数（Play・AiScript Appウィジェットで使用可能）
+## Komponentenfunktionen (verwendbar mit Play und AiScript App-Widgets)
 
-以下の要素では、初期化の際に `Ui:C:xxx(props id)` のように第2引数にコンポーネントのidを指定することができます（以下のリファレンスではすべて省略しています）。指定したidは `Ui:get(id)` 関数で取得でき、`update` 関数でコンポーネントの中身を直接変更することができます（詳しくは `Ui:get(id)` のリファレンスをご覧ください）。
+In den folgenden Elementen kann beim Initialisieren die ID der Komponente als zweites Argument wie `Ui:C:xxx(props id)` angegeben werden (in den folgenden Referenzen wird dies überall weggelassen).Die angegebene ID kann mit der Funktion `Ui:get(id)` abgerufen und mit der `update`-Funktion direkt geändert werden (weitere Informationen findest du in der Referenz zu `Ui:get(id)`).
 
-### レイアウト
+### Listenmodus
 
 #### `Ui:C:container`
 
-幅寄せ、色などの書式設定ができる外枠（コンテナ）
+Ein Rahmen (Container), der Formatierungen wie Einrücken und Farbgebung ermöglicht.
 
 ```AiScript
 Ui:C:container({
@@ -302,7 +301,7 @@ Ui:C:container({
 
 #### `Ui:C:folder`
 
-アコーディオン要素（ユーザーが開けたり閉めたりできるコンテナ）
+Ein Akkordeon-Element (ein Container, den Benutzer öffnen und schließen können)
 
 ```AiScript
 Ui:C:folder({
@@ -315,69 +314,72 @@ Ui:C:folder({
 })
 ```
 
-### テキスト
+### Text
 
 #### `Ui:C:text`
 
-プレーンテキスト
+Unformatierter Text
 
 ```AiScript
 Ui:C:text({
-  text: "内容" // 表示するテキスト
-  size: 1 // 文字サイズ
-  bold: false // ボールド
-  color: '#000' // 色
-  font: 'monospace' // フォント serif,sans-serif,monospace
+  text: "Inhalt" // Anzuzeigender Text
+  size: 1 // Schriftgröße
+  bold: false // Fettgedruckt
+  color: '#000' // Farbe
+  font: 'monospace' // Schriftart serif, sans-serif, monospace
 })
 ```
 
 #### `Ui:C:mfm`
 
-MFMテキスト
+MFM-Text
 
 ```AiScript
 Ui:C:mfm({
-  text: "内容" // 表示するテキスト
-  size: 1 // 文字サイズ
-  bold: false // ボールド
-  color: '#000' // 色
-  font: 'monospace' // フォント serif,sans-serif,monospace
+  text: "Inhalt" // Anzuzeigender Text
+  size: 1 // Schriftgröße
+  bold: false // Fettgedruckt
+  color: '#000' // Farbe
+  font: 'monospace' // Schriftart serif, sans-serif, monospace
   onClickEv: @(id) {
-    // $[clickable.ev=eventId TEXT] のMFM構文のハンドラ
-    <: `{id} clicked`
+    // MFM-Syntax-Handler für $[clickable.ev=eventId TEXT]
+    <: `{id} angeklickt`
   }
 })
+
 ```
 
-### フォーム
+### Formulare
 
 #### `Ui:C:button`
 
-ボタン
+Schaltflächen
 
 ```AiScript
 Ui:C:button({
-  text: "ボタン" // ボタンに表示するテキスト
+  text: "Button" // Anzuzeigender Text auf dem Button
   onClick: @() {
-    // 押したときのイベント
+    // Event beim Drücken des Buttons
   }
-  primary: false // 色を付けるか？
-  rounded: false // 角を丸くするか？
-  disabled: false // 無効化するか？
+  primary: false // Soll eine Farbe hinzugefügt werden?
+  rounded: false // Sollen die Ecken abgerundet sein?
+  disabled: false // Soll der Button deaktiviert sein?
 })
+
 ```
 
 #### `Ui:C:buttons`
 
-ボタン（横並び）
+Schaltflächen (nebeneinander)
 
 ```AiScript
 Ui:C:buttons({
-  buttons: [ // ボタン定義の配列。propsの指定形式は Ui:C:button と同じ
+  buttons: [ // Array von Button-Definitionen. Die Angabe der Props erfolgt wie bei Ui:C:button
     {text: "a", onClick: @(){...}}
     {text: "b", onClick: @(){...}}
   ]
 })
+
 ```
 
 #### `Ui:C:switch`
@@ -385,113 +387,118 @@ Ui:C:buttons({
 ```AiScript
 Ui:C:switch({
   onChange: @(enabled) { 
-    // 変更された時のイベント。第1引数に変更後の状態（boolean）
+    // Event, wenn der Zustand geändert wird. Das erste Argument ist der neue Zustand (Boolean)
   }
-  default: false // デフォルト値
-  label: "ラベル" // スイッチ横のテキスト
-  caption: "キャプション" // スイッチ下に表示する補助テキスト
+  default: false // Standardwert
+  label: "Label" // Text neben dem Schalter
+  caption: "Caption" // Hilfetext, der unter dem Schalter angezeigt wird
 })
+
 ```
 
 #### `Ui:C:textInput`
 
-１行のテキスト入力
+Einzeilige Texteingabe
 
 ```AiScript
 Ui:C:textInput({
   onInput: @(text) {
-    // 入力された時のイベント。第1引数に変更後の値
+    // Event, wenn Text eingegeben wird. Das erste Argument ist der neue Wert
   }
-  default: "デフォルト" // デフォルト値
-  label: "ラベル" // 入力欄上のテキスト
-  caption: "キャプション" // 入力欄下に表示する補助テキスト
+  default: "Standard" // Standardwert
+  label: "Label" // Text über dem Eingabefeld
+  caption: "Caption" // Hilfetext, der unter dem Eingabefeld angezeigt wird
 })
+
 ```
 
 #### `Ui:C:numberInput`
 
-１行のテキスト入力
+Einzeilige Texteingabe
 
 ```AiScript
 Ui:C:numberInput({
   onInput: @(number) {
-    // 入力された時のイベント。第1引数に変更後の値
+    // Event, wenn eine Zahl eingegeben wird. Das erste Argument ist der neue Wert
   }
-  default: "デフォルト" // デフォルト値
-  label: "ラベル" // 入力欄上のテキスト
-  caption: "キャプション" // 入力欄下に表示する補助テキスト
+  default: "Standard" // Standardwert
+  label: "Label" // Text über dem Eingabefeld
+  caption: "Caption" // Hilfetext, der unter dem Eingabefeld angezeigt wird
 })
+
 ```
 
 #### `Ui:C:textarea`
 
-複数行のテキスト入力
+Mehrzeiliges Texteingabefeld
 
 ```AiScript
 Ui:C:textarea({
   onInput: @(text) {
-    // 入力された時のイベント。第1引数に変更後の値
+    // Event, wenn Text eingegeben wird. Das erste Argument ist der neue Wert
   }
-  default: "デフォルト" // デフォルト値
-  label: "ラベル" // 入力欄上のテキスト
-  caption: "キャプション" // 入力欄下に表示する補助テキスト
+  default: "Standard" // Standardwert
+  label: "Label" // Text über dem Eingabefeld
+  caption: "Caption" // Hilfetext, der unter dem Eingabefeld angezeigt wird
 })
+
 ```
 
 #### `Ui:C:select`
 
-複数の値から一つ選ぶ形式
+Ein Format, bei dem aus mehreren Werten einer ausgewählt wird.
 
 ```AiScript
 Ui:C:select({
-  items: [ // 選択肢の配列。textには表示するテキストを、valueには変更時のイベントで渡す値を入力
+  items: [ // Array von Auswahlmöglichkeiten. Für text den anzuzeigenden Text und für value den Wert, der beim Ereignis übergeben wird
     {text: "A", value: "v1"}
     {text: "B", value: "v2"}
   ]
   onChange: @(value){
-    // 変更された時のイベント。第1引数に変更後のvalue
+    // Event bei Änderung. Das erste Argument ist der neue value
   }
-  default: "v1" // デフォルトのvalue
-  label: "ラベル" // 入力欄上のテキスト
-  caption: "キャプション" // 入力欄下に表示する補助テキスト
+  default: "v1" // Standardwert für value
+  label: "Label" // Text über dem Eingabefeld
+  caption: "Caption" // Hilfetext unter dem Eingabefeld
 })
+
 ```
 
-### ノート投稿関連
+### Verwandt mit dem Veröffentlichen von Notizen
 
 #### `Ui:C:postForm`
 
-投稿フォームをPlayに直接埋め込む
+Ein Einreichungsformular direkt in Play einbetten.
 
 ```AiScript
 Ui:C:postForm({
   form: {
-    cw: "CW注釈" // CWを指定する場合の「要約」テキスト
-    text: "投稿内容" // 投稿フォームのデフォルト文字列
+    cw: "CW-Anmerkung" // Text für die "Zusammenfassung", wenn CW angegeben wird
+    text: "Inhalt des Beitrags" // Standardtext des Eingabeformulars
 
-    // 以下はMisskey v2024.5.0以降で指定可能となります
-    visibility: "home" // デフォルトの投稿の公開範囲（未指定の場合はpublic）
-    localOnly: false // デフォルトで連合無しかどうか（未指定の場合はfalse）
+    // Folgendes kann ab Misskey v2024.5.0 angegeben werden
+    visibility: "home" // Standard-Sichtbarkeit des Beitrags (wenn nicht angegeben, öffentlich)
+    localOnly: false // Standardmäßig keine Föderation (wenn nicht angegeben, false)
   }
 })
 ```
 
 #### `Ui:C:postFormButton`
 
-投稿フォームを呼び出せる特殊ボタン
+Ein spezieller Button, der ein Einreichungsformular aufruft.
 
 ```AiScript
 Ui:C:postFormButton({
-  text: "投稿！" // ボタンに表示するテキスト
-  primary: false // 色を付けるか？
-  rounded: false // 角を丸くするか？
+  text: "Post!" // Anzuzeigender Text auf dem Button
+  primary: false // Soll eine Farbe hinzugefügt werden?
+  rounded: false // Sollen die Ecken abgerundet sein?
   form: {
-    cw: "CW注釈" // CWを指定する場合の「要約」テキスト
-    text: "投稿内容" // 投稿フォームのデフォルト文字列
+    cw: "CW-Anmerkung" // Text für die "Zusammenfassung", wenn CW angegeben wird
+    text: "Inhalt des Beitrags" // Standardtext des Eingabeformulars
 
-    // 以下はMisskey v2024.5.0以降で指定可能となります
-    visibility: "home" // デフォルトの投稿の公開範囲（未指定の場合はpublic）
-    localOnly: false // デフォルトで連合無しかどうか（未指定の場合はfalse）
+    // Folgendes kann ab Misskey v2024.5.0 angegeben werden
+    visibility: "home" // Standard-Sichtbarkeit des Beitrags (wenn nicht angegeben, öffentlich)
+    localOnly: false // Standardmäßig keine Föderation (wenn nicht angegeben, false)
   }
 })
 ```

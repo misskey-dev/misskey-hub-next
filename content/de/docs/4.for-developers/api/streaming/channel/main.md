@@ -1,16 +1,16 @@
 ---
-description: 基本的な情報が流れるチャンネルです。
+description: Dies ist ein Kanal, in dem grundlegende Informationen durchlaufen.
 ---
 
 # `main`
 
-基本的な情報が流れるチャンネルです。
+Dies ist ein Kanal, in dem grundlegende Informationen durchlaufen.
 
-## パラメータ
+## Parameter
 
-なし
+Keine
 
-## イベント
+## Event
 
 ### `notification`
 
@@ -18,15 +18,13 @@ description: 基本的な情報が流れるチャンネルです。
  $ref: 'misskey://Notification'
 }"/>
 
-通知を受け取ったときに発生します。
+Es tritt auf, wenn eine Benachrichtigung empfangen wird.
 
 ### `mention`
 
-<MkSchemaViewer :schema="{
- $ref: 'misskey://Note'
-}"/>
+<0/>
 
-メンションされたときに発生します。
+Tritt auf, wenn dich jemand erwähnt
 
 ### `reply`
 
@@ -34,7 +32,7 @@ description: 基本的な情報が流れるチャンネルです。
  $ref: 'misskey://Note'
 }"/>
 
-返信されたときに発生します。
+Es tritt auf, wenn eine Antwort empfangen wird.
 
 ### `renote`
 
@@ -42,15 +40,13 @@ description: 基本的な情報が流れるチャンネルです。
  $ref: 'misskey://Note'
 }"/>
 
-Renoteされたときに発生します。
+Es tritt auf, wenn ein Beitrag neu geteilt (Rezitiert) wird.
 
 ### `follow`
 
-<MkSchemaViewer :schema="{
- $ref: 'misskey://User'
-}"/>
+<0/>
 
-自分が他のユーザーをフォローしたときに発生します。
+Es tritt auf, wenn du einem anderen Benutzer folgst.
 
 ### `followed`
 
@@ -58,7 +54,7 @@ Renoteされたときに発生します。
  $ref: 'misskey://User'
 }"/>
 
-他のユーザーが自分をフォローしたときに発生します。
+Es tritt auf, wenn ein anderer Benutzer dir folgt.
 
 ### `unfollow`
 
@@ -66,7 +62,7 @@ Renoteされたときに発生します。
  $ref: 'misskey://User'
 }"/>
 
-自分が他のユーザーをフォロー解除したときに発生します。
+Tritt auf, wenn du jemanden entfolgst.
 
 ### `messagingMessage`
 
@@ -74,40 +70,40 @@ Renoteされたときに発生します。
  $ref: 'misskey://MessagingMessage'
 }"/>
 
-メッセージを受け取ったときに発生します。
+Es tritt auf, wenn du eine Nachricht empfängst.
 
 ### `readAllNotifications`
 
-全ての通知が既読になったときに発生します。
+Es tritt auf, wenn alle Benachrichtigungen als gelesen markiert sind.
 
 ### `unreadNotification`
 
-新しい通知があるときに発生します。
+Es tritt auf, wenn eine neue Benachrichtigung empfangen wird.
 
 ### `unreadMention`
 
-新しいメンションがあるときに発生します。
+Es tritt auf, wenn eine neue Erwähnung empfangen wird.
 
 ### `readAllUnreadMentions`
 
-全てのメンションが既読になったときに発生します。
+Es tritt auf, wenn alle Erwähnungen als gelesen markiert sind.
 
 ### `unreadSpecifiedNote`
 
-新しいダイレクト投稿があるときに発生します。
+Es tritt auf, wenn ein neuer Direktbeitrag empfangen wird.
 
 ### `readAllUnreadSpecifiedNotes`
 
-全てのダイレクト投稿が既読になったときに発生します。
+Es tritt auf, wenn alle Direktbeiträge als gelesen markiert sind.
 
 ### `unreadMessagingMessage`
 
-新しいメッセージがあるときに発生します。
+Es tritt auf, wenn eine neue Nachricht empfangen wird.
 
 ### `readAllMessagingMessages`
 
-全てのメッセージが既読になったときに発生します。
+Es tritt auf, wenn alle Nachrichten als gelesen markiert sind.
 
-## 操作
+## Aktionen
 
-なし
+Keine

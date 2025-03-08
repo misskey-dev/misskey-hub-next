@@ -22,4 +22,4 @@
 
 ## 덱 설정
 
-덱 설정은, [settings/deck](/settings/deck)에서 할 수 있어요.
+덱 설정은, [settings/deck](x-mi-web://settings/deck)에서 할 수 있어요.

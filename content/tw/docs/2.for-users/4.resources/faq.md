@@ -5,13 +5,13 @@ description: 此頁面包含使用 Misskey 時的常見問題。
 # 常見問題
 
 這裡我們列出了使用 Misskey 時的常見問題。<br>
-有關 Misskey 專案的常見問題，請點擊[此處](../../about-misskey#よくある質問)。
+有關 Misskey 專案的常見問題，請點擊[此處](../../about-misskey#常見問題)。
 
 ## 有 Android/iOS 應用程式嗎？
 
 Misskey 專案並未為此類行動作業系統開發原生應用程序，但有幾款第三方應用程式可供使用。欲了解更多資訊，請參閱[這裡](./apps)。<br>
 
-不過，第三方應用程式在支援最新的Misskey功能方面難免會落後，因此如果您沒有特別的偏好，我們建議您使用Misskey的官方網頁用戶端Misskey Web。此外，由於Misskey Web支援PWA，因此它也可以像原生應用程式一樣運作。欲了解更多資訊，請參閱[這裡](todo)。
+不過，第三方應用程式在支援最新的Misskey功能方面難免會落後，因此如果您沒有特別的偏好，我們建議您使用Misskey的官方網頁用戶端Misskey Web。此外，由於Misskey Web支援PWA，因此它也可以像原生應用程式一樣運作。欲了解更多資訊，請參閱[這裡](/docs/for-users/stepped-guides/how-to-use-pwa/)。
 
 ## 我可以用 Mastodon 的應用程式登入嗎？
 

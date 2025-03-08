@@ -8,7 +8,7 @@ Secara teknis, drive dapat dilihat sebagai antarmuka dimana semua berkas secara 
 
 :::
 
-Kamu dapat mengunggah berkas apapun secara langsung ke halaman Drive pada Misskey Web, dan gambar apapun yang kamu atur sebagai avatarmu atau berkas yang kamu lampirkan pada catatanmu juga akan diunggahkan ke Drive.
+Kamu dapat mengunggah berkas apapun secara langsung ke [halaman Drive](x-mi-web://my/drive) pada Misskey Web, dan gambar apapun yang kamu atur sebagai avatarmu atau berkas yang kamu lampirkan pada catatanmu juga akan diunggahkan ke Drive.
 
 Berkas yang diunggah ke drive dapat diunduh kapan saja, atau berkas dapat digunakan kembali dengan menggunakan 'lampirkan berkas dari drive' ketika membuat catatan.
 

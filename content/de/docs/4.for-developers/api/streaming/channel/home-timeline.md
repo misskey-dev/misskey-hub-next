@@ -1,16 +1,16 @@
 ---
-description: ホームタイムラインのノートが流れるチャンネルです。
+description: Dies ist ein Kanal, in dem die Notizen der Home-Timeline durchlaufen.
 ---
 
 # `homeTimeline`
 
-ホームタイムラインのノートが流れるチャンネルです。
+Dies ist ein Kanal, in dem die Notizen der Home-Timeline durchlaufen.
 
-## パラメータ
+## Parameter
 
-なし
+Keine
 
-## イベント
+## Event
 
 ### `note`
 
@@ -18,8 +18,8 @@ description: ホームタイムラインのノートが流れるチャンネル�
  $ref: 'misskey://Note'
 }"/>
 
-ホームタイムラインに新しいノートが追加されたときに発生します。
+Es tritt auf, wenn eine neue Notiz zur Home-Timeline hinzugefügt wird.
 
-## 操作
+## Aktionen
 
-なし
+Keine

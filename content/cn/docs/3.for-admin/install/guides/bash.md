@@ -84,44 +84,44 @@ sudo bash update.sh
 - 在 systemd 环境内，您可以选择性地更新和重新启动系统`-r`
 - 在 Docker 环境中，您可以在参数中指定更新的仓库名称：标签名称
 
-## 動作を確認した環境
+## 已验证可部署的环境
 
 ### Oracle Cloud Infrastructure
 
-このスクリプトは、Oracle Cloud InfrastructureのAlways Freeサービスで提供されている2種類のシェイプのいずれにおいても動作します。
+本程序在Oracle Cloud Infrastructure的Always Free服务提供的以下两种计算规格中均可正常运行：
 
 - VM.Standard.E2.1.Micro (AMD)
 - VM.Standard.A1.Flex (ARM) [1OCPU RAM6GB or greater]
 
-iptablesを使うようにしてください。
+请确保使用iptables进行配置。
 
-## Issues & PRs Welcome
+## 欢迎提交问题&拉取请求
 
-上記の環境で動作しない場合、バグの可能性があります。インストールの際に指定された条件を記載の上、GitHubのIssue機能にてご報告いただければ幸いです。
+如果在上述环境中无法运行，可能存在错误。请在记录安装时指定的条件后，通过 GitHub 的 Issue 功能告知我们。
 
-上記以外の環境についてのサポートは難しいですが、状況を詳しくお教えいただければ解決できる可能性があります。
+虽然我们可能难以提供上述环境以外的支持，但如果您详细说明情况，我们将尽力协助解决。
 
-機能の提案についても歓迎いたします。
+欢迎提出功能提案。
 
-# Tips
+# 小贴士
 
-選択肢の選び方や仕様についてなど。
+关于安装方式的选择方法和规格等。
 
-## Systemd or Docker?
+## Systemd 还是 Docker？
 
-v1から、インストールメソッドにsystemdとDockerとを選べるようにしました。
+从 v1 开始，安装方法支持选择 systemd 和 Docker。
 
-Dockerと言っても、**MisskeyだけをDockerで実行**し、RedisやPostgresなどはホストで直接実行します。\
+即使使用 Docker，也仅通过 Docker 运行 Misskey，而 Redis 和 Postgres 等会直接在主机上运行。\
 \
 [docker-composeですべての機能を動かす方法については、mamemonongaさんが作成したこちらの記事がおすすめです。](https://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0)
 
-Docker Hubイメージを使う設定であれば、Misskeyのビルドが不要になるため、**一番お勧めです**。\
+如果使用 Docker Hub 镜像的配置，由于无需构建 Misskey，因此最为推荐。\
 \
 ただし、マイグレーションは必要なので、アップデート時にMisskeyを使えない時間がゼロになるわけではありません。\
 \
 また、Misskeyのビルド環境を準備しない(git pullしない)ので、フォークを動かしたくなった時に設定が面倒になります。
 
-ローカルでDockerをビルドする方式は、パフォーマンス面で非推奨です。
+因为性能不好，不推荐在本地构建Docker。
 
 systemdは、Docker Hubにイメージを上げるまでもないものの、フォークを使いたい場合にお勧めです。
 

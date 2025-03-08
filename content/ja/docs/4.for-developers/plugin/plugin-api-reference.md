@@ -100,7 +100,7 @@ permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧
 ### `Mk:load(key)`
 Mk:saveで永続化した指定の名前の値を読み取ります。
 
-### `Mk:delete(key)`
+### `Mk:remove(key)`
 
 ※v2025.1.0（仮称）以降で使用可能
 
@@ -199,7 +199,7 @@ Page閲覧時にPage情報を書き換えます。\
 コールバック関数の返り値でPageが書き換えられます。
 
 ```AiScript
-Plugin:register_note_post_interruptor(@(page) {
+Plugin:register_page_view_interruptor(@(page) {
   
   // ページの中身を書き換える（省略）
 

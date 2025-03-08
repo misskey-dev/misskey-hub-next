@@ -1,12 +1,12 @@
 ---
-description: Misskey APIに関連するライブラリの一覧
+description: Liste der Misskey-API-bezogenen Bibliotheken
 ---
 
-# ライブラリの一覧
+# Liste der Bibliotheken
 
 ## JavaScript
 
-- [misskey.js](https://github.com/misskey-dev/misskey.js)
+- [misskey.js](https://github.com/misskey-dev/misskey/tree/develop/packages/misskey-js)
 
 ## Java
 

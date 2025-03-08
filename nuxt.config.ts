@@ -2,7 +2,6 @@
 import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
 import { readFileSync, watch as fsWatch } from 'fs';
-import { genApiTranslationFiles } from './scripts/gen-api-translations';
 import { getOldHubRedirects } from './scripts/get-old-hub-redirects';
 import { genLocalesJson } from './scripts/gen-locales';
 import { getStaticEndpoints } from './scripts/get-static-endpoints';
@@ -129,15 +128,18 @@ export default defineNuxtConfig({
 	},
 	i18n: {
 		baseUrl,
-		vueI18n: './i18n.config.ts',
+		vueI18n: 'i18n.config.ts',
 		locales,
 		lazy: true,
-		langDir: 'locales_dist',
+		langDir: '../locales_dist',
 		defaultLocale: 'ja',
 		// ▼ Defaultルートは、nitroプラグインでオーバーライドする
 		// 　 リンクはuseGLocalePath（ラッパー）を使う
 		strategy: 'prefix_and_default',
 		trailingSlash: true,
+		experimental: {
+			generatedLocaleFilePathFormat: 'relative',
+		},
 	},
 	colorMode: {
 		classSuffix: '',
@@ -204,8 +206,6 @@ export default defineNuxtConfig({
 	},
 	hooks: {
 		'build:before': async () => {
-			genApiTranslationFiles();
-
 			await Promise.all([
 				genLocalesJson().then(() => {
 					if (process.env.NODE_ENV === 'development') {

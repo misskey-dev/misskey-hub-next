@@ -6,7 +6,7 @@ description: 與 Misskey API 相關的函式庫列表
 
 ## JavaScript
 
-- [misskey.js](https://github.com/misskey-dev/misskey.js)
+- [misskey.js](https://github.com/misskey-dev/misskey/tree/develop/packages/misskey-js)
 
 ## Java
 
