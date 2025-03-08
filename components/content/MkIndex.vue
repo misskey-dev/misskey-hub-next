@@ -33,10 +33,10 @@ const props = withDefaults(defineProps<{
 
 const realBasePath = computed<string>(() => {
     if (props.basePath) {
-        return props.basePath;
+        return `/docs/${locale.value === 'ja-ks' ? 'ja' : localesContentIdentifiers[locale.value]}` + props.basePath;
     }
-    return route.path.replace(/^.*\/docs/, '');
+    return route.path;
 });
 
-const { data } = await useAsyncData(`indexNav_${locale.value}`, () => queryCollectionNavigation(`docs__${localesContentIdentifiers[locale.value === 'ja-ks' ? 'ja' : locale.value]}`).where('path', 'LIKE', `^${realBasePath.value}`));
+const { data } = await useAsyncData(`indexNav_${locale.value}`, () => queryCollectionNavigation(`docs__${localesContentIdentifiers[locale.value === 'ja-ks' ? 'ja' : locale.value]}`, ['description']).where('path', 'LIKE', `${realBasePath.value}%`));
 </script>
