@@ -2,7 +2,7 @@
     <div class="grid" :class="$style.root">
         <div class="markdown-body w-full lg:col-span-2 mb-6">
             <h1>{{ data.title }}</h1>
-            <MDC :value="data?.body" />
+            <!-- <MDC :value="data?.body" /> -->
             <Warning v-show="guideIndexAutoDetected" :label="null" class="py-4">
                 <label for="guideSelector" class="block mb-1 text-orange-600 dark:text-yellow-300 font-bold"><ArrowLRIco class="mr-1" />{{ $t('_docs._steppedGuide.selectCourse') }}</label>
                 <select id="guideSelector" class="form-select" :disabled="data.guides.length <= 1" v-model="guideIndex">
@@ -78,11 +78,12 @@
 </template>
 
 <script setup lang="ts">
-import type { MiDocsParsedContentSteppedGuide } from '@/types/content';
+import type { SteppedGuide } from '../../content.config';
+import type { PageCollectionItemBase } from '@nuxt/content';
 import ArrowLRIco from 'bi/arrow-left-right.svg';
 
 const props = defineProps<{
-    data: MiDocsParsedContentSteppedGuide;
+    data: PageCollectionItemBase & SteppedGuide;
 }>();
 
 const route = useRoute();
