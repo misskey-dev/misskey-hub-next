@@ -116,6 +116,16 @@ sudo corepack enable
 
 Wenn `v20.x.x` oder ähnlich angezeigt wird, ist alles in Ordnung.Wenn eine niedrigere Version wie `v8.x.x` angezeigt wird, ist die Installation nicht korrekt durchgeführt worden. Starten den Server neu und versuche, die Installation erneut durchzuführen.
 
+### pnpm
+
+pnpmは、Misskeyで使用しているパッケージ管理ツールであり、外部ライブラリを参照したり、その依存関係を管理したりするのに使用されている。
+
+ここでは、Node.jsに付属しているパッケージ管理ツール「npm」を使用してpnpmをインストールする方法を紹介しているが、[pnpmのウェブサイト](https://pnpm.io/installation)では他にも様々な方法でのインストール方法が紹介されているので、一度目を通したうえで、お使いの環境に最適な方法でインストールすることをお勧めする。
+
+```sh
+npm i -g pnpm
+```
+
 ### PostgreSQL
 
 PostgreSQL ist ein objektrelationales Datenbankmanagementsystem und eine unverzichtbare Software zur Speicherung der verschiedenen Daten von Misskey.
