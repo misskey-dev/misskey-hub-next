@@ -18,16 +18,11 @@ Jangan pernah mengubah nama domain (hostname) peladen ketika kamu sudah mulai me
 
 - **[Node.js](https://nodejs.org/en/)** (versi 20.4.x atau di atasnya)
 - **[PostgreSQL](https://www.postgresql.org/)** (versi 15 atau di atasnya)
+- **[PostgreSQL](https://www.postgresql.org/)** (v15以上)
 - **[Redis](https://redis.io/)**
 - **[FFmpeg](https://www.ffmpeg.org/)**
 
 Jika kamu menggunakan Debian/Ubuntu, kamu harus memasang paket `build-essential`.
-
-#### `corepack` harus dinyalakan
-
-```sh
-sudo corepack enable
-```
 
 :::
 
