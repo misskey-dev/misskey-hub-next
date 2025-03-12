@@ -17,17 +17,12 @@ description: 本指南介紹如何安裝和設定 Misskey。
 #### 必須安裝並設定以下軟體
 
 - **[Node.js](https://nodejs.org/en/)** (20.4.x以上)
-- **[PostgreSQL](https://www.postgresql.org/)** (15以上)
+- **[pnpm](https://pnpm.io/)** (v10以上)
+- **[PostgreSQL](https://www.postgresql.org/)** (v15以上)
 - **[Redis](https://redis.io/)**
 - **[FFmpeg](https://www.ffmpeg.org/)**
 
 如果您使用 Debian/Ubuntu，最好安裝 `build-essential` 軟體包。
-
-#### 必須啟用 corepack
-
-```sh
-sudo corepack enable
-```
 
 :::
 
