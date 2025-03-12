@@ -18,16 +18,11 @@ Diese Anleitung erklärt, wie man Misskey installiert und einrichtet.
 
 - **[Node.js](https://nodejs.org/en/)** (Version 20.4.x oder höher)
 - **[PostgreSQL](https://www.postgresql.org/)** (Version 15 oder höher)
+- **[PostgreSQL](https://www.postgresql.org/)** (v15以上)
 - **[Redis](https://redis.io/)**
 - **[FFmpeg](https://www.ffmpeg.org/)**
 
 Wenn Debian/Ubuntu verwendet wird, sollte das `build-essential`-Paket installiert werden.
-
-#### corepack sollte aktiviert sein
-
-```sh
-sudo corepack enable
-```
 
 :::
 
