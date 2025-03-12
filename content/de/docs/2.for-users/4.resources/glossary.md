@@ -89,6 +89,10 @@ Emoji, die von den Administratoren und Benutzern der einzelnen Misskey-Server un
 
 Verweist auf den Konfigurationsbildschirm des Misskey-Servers.
 
+## システムアカウント
+
+Misskeyサーバーが、外部のサーバーとやり取りする際などに使用する特別なアカウント。Misskeyサーバーに組み込まれており、必要に応じてサーバーが自動で操作する。
+
 ## Gesperrt
 
 Bezieht sich auf den Zustand, in dem das Konto auf deaktiviert gesetzt ist.
@@ -100,6 +104,10 @@ Diese Funktion verwaltet Dateien wie Bilder und Musik, die von Benutzern auf die
 ## Notizen
 
 Ein Beitrag, der von einem Benutzer auf dem Misskey-Server veröffentlicht wurde.Sie können eine Vielzahl von Misskey-eigenen Inhalten einbinden, wie z. B. Bilder, Musik und andere Dateien, Umfragen usw.[Mehr Erfahren](../features/note).
+
+## プロキシアカウント
+
+外部のサーバーに所属するユーザーの投稿を取得するために、Misskeyサーバーが自動で作成・操作するシステムアカウント。自サーバーのユーザーが、他サーバーのユーザーのコンテンツを、そのユーザーをフォローしていない状態で取得しようとした際などに、そのユーザーを代理でフォローすることがある。
 
 ## Misskist
 
