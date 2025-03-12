@@ -1,7 +1,9 @@
 # Word Mute
 
-When a note is filtered using word mute, the note will be collapsed and the text "[Name] said something" will be displayed in its place.
+ワードミュートの設定をすると、条件に合致したノートが最小化され、ノートの代わりに「○○（ユーザー名）が何か言いました」という文言が表示されるようになります。最小化されたノートはクリックすることで表示することができます。
 
 The word mute filter can be configured in [Settings > Mutes and Blocks](x-mi-web://settings/mute-block).
 
-It is also possible to hide notes filtered by word mute completely.In [Settings > General](x-mi-web://settings/general), in the "Note display" section, select "Hide notes containing muted words".
+## ハードワードミュート
+
+ハードワードミュートを使用すると、条件に合致したノートは完全に見えなくなります。ワードミュートとは異なり、ノートは完全に表示されなくなります。
