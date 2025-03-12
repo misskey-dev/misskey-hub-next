@@ -82,6 +82,10 @@ Emoji created by administrators and users unique to each instance.Emoji that are
 
 The configuration page of a Misskey instance.
 
+## システムアカウント
+
+Misskeyサーバーが、外部のサーバーとやり取りする際などに使用する特別なアカウント。Misskeyサーバーに組み込まれており、必要に応じてサーバーが自動で操作する。
+
 ## Suspension
 
 The state of an account when it is disabled.
@@ -93,6 +97,10 @@ The file manager for user-uploaded files on Misskey, such as images and music.[D
 ## Note
 
 Messages posted by Misskey users.Notes can contain a variety of original content including images, music, and polls.[Documentation is available](../features/note)
+
+## プロキシアカウント
+
+外部のサーバーに所属するユーザーの投稿を取得するために、Misskeyサーバーが自動で作成・操作するシステムアカウント。自サーバーのユーザーが、他サーバーのユーザーのコンテンツを、そのユーザーをフォローしていない状態で取得しようとした際などに、そのユーザーを代理でフォローすることがある。
 
 ## Misskist
 
