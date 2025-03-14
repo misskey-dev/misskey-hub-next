@@ -18,16 +18,11 @@ description: 이 가이드에서는 Misskey의 설치 및 설정 방법에 대�
 
 - **[Node.js](https://nodejs.org/en/)** (20.4.x이상)
 - **[PostgreSQL](https://www.postgresql.org/)** (15이상)
+- **[PostgreSQL](https://www.postgresql.org/)** (v15以上)
 - **[Redis](https://redis.io/)**
 - **[FFmpeg](https://www.ffmpeg.org/)**
 
 데비안/우분투를 사용 중이라면 `build-essential` 패키지를 설치하면 좋습니다.
-
-#### corepack이 활성화되어 있어야 합니다.
-
-```sh
-sudo corepack enable
-```
 
 :::
 
