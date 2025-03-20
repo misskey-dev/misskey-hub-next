@@ -59,32 +59,26 @@ Misskeyのビルドには、経験則上、最低でも2GBのメモリが必要�
 ## URLとポート番号
 URLとポート番号のしくみは、少し分かりにくいと思います。
 
-### URL, ポートとTLS証明書の設定（Port and TLS settings）part A: example.ymlの解説
-リビジョン番号[85a0f69](https://github.com/misskey-dev/misskey/blob/85a0f696bcea779b02749dae596fff94a1df2467/.config/example.yml)時点での[.config/example.yml](https://github.com/misskey-dev/misskey/blob/develop/.config/example.yml)に、「Port and TLS settings」として説明図付きで順に書かれていますので、それに沿って設定をしていきましょう。
+`.config/example.yml`に「Port and TLS settings」として説明図付きで順に書かれていますので、それに沿って設定をしていきましょう。
 本文の解説を日本語訳しながらやっていきます。
 
-#### URLの設定
+### URLの設定
 ```yml
 # Final accessible URL seen by a user.
 # 最終的にユーザーがアクセスするURL
 url: https://example.tld/
 ```
 
-**`url: `には、サーバーにブラウザでアクセスしたときアドレスバーに表示される**(したい)**URLを書きます。**
+**`url`には、サーバーにブラウザでアクセスしたときアドレスバーに表示される**(したい)**URLを書きます。**
 
-#### ポートと証明書の設定
+### ポートの設定
 ```yml
-
 #   ┌───────────────────────┐
 #───┘ Port and TLS settings └───────────────────────────────────
-#### ポートと証明書の設定      ####################################
-#
-# Misskey supports two deployment options for public.
-# Misskeyは2つのサーバー開設方法をサポートしています。
-#
+#### ポートとTLSの設定         ####################################
 
-# Option 1: With Reverse Proxy
-# 方法その1 リバースプロキシを挟む
+# Misskey requires a reverse proxy to support HTTPS connections.
+# MisskeyでHTTPS接続をサポートするにはリバースプロキシが必須です。
 #
 #                 +----- https://example.tld/ ------------+
 #   +------+      |+-------------+      +----------------+|
@@ -92,82 +86,22 @@ url: https://example.tld/
 #   +------+      |+-------------+      +----------------+|
 #                 +---------------------------------------+
 #
-#   You need to setup reverse proxy. (eg. Nginx)
-#   この方法では、リバースプロキシ（例: Nginx）をセットアップする必要があります。
-#   You do not define 'https' section.
-#   'https'セクション（後述）は設定せず、コメントアウトしたままにします。
-
-# Option 2: Standalone
-# 方法その2 スタンドアロン
-#           (リバースプロキシを挟まず、nodeのプロセスで直接ユーザーからのアクセスを受ける)
-#
-#                 +- https://example.tld/ -+
-#   +------+      |   +---------------+    |
-#   | User | ---> |   | Misskey (443) |    |
-#   +------+      |   +---------------+    |
-#                 +------------------------+
-#
-#   You need to run Misskey as root.
-#   この方法では、Misskeyをルート(の権限をもたせた状態)で実行する必要があります。
-#   You need to set Certificate in 'https' section.
-#   'https'セクション(後述)で証明書の設定を行う必要があります。
+#   You need to set up a reverse proxy. (e.g. nginx)
+#   この方法では、リバースプロキシ（例: nginx）をセットアップする必要があります。
+#   An encrypted connection with HTTPS is highly recommended
+#   because tokens may be transferred in GET requests.
+#   GETリクエストでトークンがURLに含まれる可能性があるため、
+#   HTTPSによる暗号化を強く推奨します。
 ```
-
-##### 方法1 リバースプロキシを挟むとき
 
 ```yml
-# To use option 1, uncomment below line.
-# オプション1で設定する場合、以下の行をコメントアウトします　→ しました
-port: 3000    # A port that your Misskey server should listen.
+# The port that your Misskey server should listen on.
+# Misskeyサーバがリッスンするポート
+port: 3000
 ```
 
-以上の3行は、リバースプロキシを挟むときの話です。
 この例では、Misskeyはポート3000で通信します。
 リバースプロキシでは、ローカル側の宛先にこのポート番号を指定します。
-
-##### 方法2 リバースプロキシを挟まないとき
-
-```yml
-# To use option 2, uncomment below lines.
-# オプション2で設定する場合は、以下の6行をコメントアウトします　→ しました
-port: 443
-
-https:
-  # path for certification
-  key: /etc/letsencrypt/live/example.tld/privkey.pem
-  cert: /etc/letsencrypt/live/example.tld/fullchain.pem
-```
-
-以上の8行は、リバースプロキシを挟まないときの話です。
-ポート443(https)で直接ユーザーと通信します（ポート443を利用するのでMisskeyのプロセスにはルート権限が必要です）。
-
-TLS証明書を別途取得し、取得した証明書のディレクトリを`https:`で設定します。
-ここ書かれているのは、Let's Encryptで`example.tld`に対する証明書を発行したときの例です。
-
----
-
-### URL, ポートとTLS証明書の設定（Port and TLS settings）part B: 全体像
-example.ymlの解説文を省くと、default.ymlにおけるポートとTLS証明書の設定は以下のようになります。
-
-#### 方法1 リバースプロキシを挟むとき
-```yml
-url: https://example.tld/
-port: 3000
-# https:
-#   # path for certification
-#   key: /etc/letsencrypt/live/example.tld/privkey.pem
-#   cert: /etc/letsencrypt/live/example.tld/fullchain.pem
-```
-
-#### 方法2 リバースプロキシを挟まず直接通信するとき
-```yml
-url: https://example.tld/
-# port: 3000
-https:
-  # path for certification
-  key: /etc/letsencrypt/live/example.tld/privkey.pem
-  cert: /etc/letsencrypt/live/example.tld/fullchain.pem
-```
 
 ----
 
