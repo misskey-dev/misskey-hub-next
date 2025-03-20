@@ -67,12 +67,10 @@ Misskey를 빌드하기 위해서는 최소 2GB의 메모리가 필요하다는 
 
 URL과 포트 번호의 구조가 조금 이해하기 어려운 것 같습니다.
 
-### URL, 포트 및 TLS 인증서 설정(Port and TLS settings) part A: example.yml 설명
+`.config/example.yml`に「Port and TLS settings」として説明図付きで順に書かれていますので、それに沿って設定をしていきましょう。
+本文の解説を日本語訳しながらやっていきます。
 
-리비전 번호 [85a0f69](https://github.com/misskey-dev/misskey/blob/85a0f696bcea779b02749dae596fff94a1df2467/.config/example.yml) 시점의 [. config/example.yml](https://github.com/misskey-dev/misskey/blob/develop/.config/example.yml)에 'Port and TLS settings'로 설명 그림과 함께 순서대로 적혀있으므로 설명 그림과 함께 설명되어 있으므로, 이를 따라 설정해 봅시다.
-본문의 해설을 한글로 번역하면서 진행하겠습니다.
-
-#### URL의 설정
+### URL의 설정
 
 ```yml
 # Final accessible URL seen by a user.
@@ -80,9 +78,31 @@ URL과 포트 번호의 구조가 조금 이해하기 어려운 것 같습니다
 url: https://example.tld/
 ```
 
-\*\*url: \`에는 서버에 브라우저로 접속했을 때 주소창에 표시되는 \*\*(하고 싶은)**URL을 적습니다.**
+**`url`には、サーバーにブラウザでアクセスしたときアドレスバーに表示される**(したい)**URLを書きます。**
 
-#### 포트 및 인증서 설정
+### ポートの設定
+
+```yml
+#   ┌───────────────────────┐
+#───┘ Port and TLS settings └───────────────────────────────────
+#### ポートとTLSの設定         ####################################
+
+# Misskey requires a reverse proxy to support HTTPS connections.
+# MisskeyでHTTPS接続をサポートするにはリバースプロキシが必須です。
+#
+#                 +----- https://example.tld/ ------------+
+#   +------+      |+-------------+      +----------------+|
+#   | User | ---> || Proxy (443) | ---> | Misskey (3000) ||
+#   +------+      |+-------------+      +----------------+|
+#                 +---------------------------------------+
+#
+#   You need to set up a reverse proxy. (e.g. nginx)
+#   この方法では、リバースプロキシ（例: nginx）をセットアップする必要があります。
+#   An encrypted connection with HTTPS is highly recommended
+#   because tokens may be transferred in GET requests.
+#   GETリクエストでトークンがURLに含まれる可能性があるため、
+#   HTTPSによる暗号化を強く推奨します。
+```
 
 ```yml
 
@@ -124,64 +144,8 @@ url: https://example.tld/
 #   'https' 섹션(후술)에서 인증서를 설정해야 합니다.
 ```
 
-##### 방법1 리버스 프록시를 거칠때
-
-```yml
-# To use option 1, uncomment below line.
-# 옵션 1로 설정하는 경우 다음 줄을 주석 처리합니다 → 했습니다.
-port: 3000    # A port that your Misskey server should listen.
-```
-
-위의 세 줄은 리버스 프록시를 거칠때의 이야기입니다.
-이 예에서 Misskey는 포트 3000으로 통신합니다.
-리버스 프록시에서는 이 포트 번호를 로컬 측 대상에 지정합니다.
-
-##### 방법 2 리버스 프록시를 거치지 않을 때
-
-```yml
-# To use option 2, uncomment below lines.
-# 옵션 2로 설정하는 경우 아래 6줄을 주석 처리합니다 → 했습니다.
-port: 443
-
-https:
-  # path for certification
-  key: /etc/letsencrypt/live/example.tld/privkey.pem
-  cert: /etc/letsencrypt/live/example.tld/fullchain.pem
-```
-
-위의 8줄은 리버스 프록시를 거치지 않았을 때의 이야기입니다.
-포트 443(https)으로 사용자와 직접 통신합니다(포트 443을 이용하므로 Misskey의 프로세스에는 루트 권한이 필요합니다).
-
-TLS 인증서를 별도로 발급받고, 발급받은 인증서의 디렉토리를 `https:`로 설정합니다.
-여기서는 Let's Encrypt에서 `example.tld`에 대한 인증서를 발급한 예시입니다.
-
----
-
-### URL, 포트 및 TLS 인증서 설정(Port and TLS settings) part B: 전체 개요
-
-example.yml의 설명문을 생략하면 default.yml의 포트와 TLS 인증서 설정은 다음과 같습니다.
-
-#### 방법1 리버스 프록시를 거칠때
-
-```yml
-url: https://example.tld/
-port: 3000
-# https:
-#   # path for certification
-#   key: /etc/letsencrypt/live/example.tld/privkey.pem
-#   cert: /etc/letsencrypt/live/example.tld/fullchain.pem
-```
-
-#### 방법2 리버스 프록시를 거치지 않고 직접 통신할 때
-
-```yml
-url: https://example.tld/
-# port: 3000
-https:
-  # path for certification
-  key: /etc/letsencrypt/live/example.tld/privkey.pem
-  cert: /etc/letsencrypt/live/example.tld/fullchain.pem
-```
+この例では、Misskeyはポート3000で通信します。
+リバースプロキシでは、ローカル側の宛先にこのポート番号を指定します。
 
 ----
 
@@ -262,5 +226,5 @@ Cloudflare를 사용하는 경우, Rocket Loader 또는 Auto Minify가 활성화
 2. 구글에서 검색해 본다.
 3. [Misskey 저장소의 Issues](https://github.com/misskey-dev/misskey/issues)를 검색해 본다(동일한 오류가 발생하거나, Misskey의 버그일 가능성도 있습니다).
 4. 검색을 해도 잘 안 나오면 전문가에게 물어보세요.
-   1. [Misskey Discord 서버（영어/일본어）](https://discord.gg/P4yYqYBjEp)등에 물어보기
-   2. 개발자([aqz](https://p1.a9z.dev/@aqz)나 shuiro)에게 리플이나 직접 글을 보내 물어보기
+  1. [Misskey Discord 서버（영어/일본어）](https://discord.gg/P4yYqYBjEp)등에 물어보기
+  2. 개발자([aqz](https://p1.a9z.dev/@aqz)나 shuiro)에게 리플이나 직접 글을 보내 물어보기
