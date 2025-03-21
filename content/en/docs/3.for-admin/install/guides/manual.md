@@ -18,16 +18,11 @@ Do not recreate the database with the domain/hostname of the server after you ha
 
 - **[Node.js](https://nodejs.org/en/)** (above 20.4.x)
 - **[PostgreSQL](https://www.postgresql.org/)** (above 15)
+- **[PostgreSQL](https://www.postgresql.org/)** (v15以上)
 - **[Redis](https://redis.io/)**
 - **[FFmpeg](https://www.ffmpeg.org/)**
 
 If you run Misskey on Debian/Ubuntu, you need to install `build-essential` package.
-
-#### You need to enable corepack.
-
-```sh
-sudo corepack enable
-```
 
 :::
 
