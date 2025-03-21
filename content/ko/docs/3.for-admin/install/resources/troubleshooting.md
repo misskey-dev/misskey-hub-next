@@ -67,8 +67,7 @@ Misskey를 빌드하기 위해서는 최소 2GB의 메모리가 필요하다는 
 
 URL과 포트 번호의 구조가 조금 이해하기 어려운 것 같습니다.
 
-`.config/example.yml`に「Port and TLS settings」として説明図付きで順に書かれていますので、それに沿って設定をしていきましょう。
-本文の解説を日本語訳しながらやっていきます。
+`.config/example.yml`에 "Port and TLS settings"로 설명도에 따른 내용이 순서대로 적혀져 있으므로, 그 내용에 따라서 설정해봅시다.
 
 ### URL의 설정
 
@@ -78,17 +77,17 @@ URL과 포트 번호의 구조가 조금 이해하기 어려운 것 같습니다
 url: https://example.tld/
 ```
 
-**`url`には、サーバーにブラウザでアクセスしたときアドレスバーに表示される**(したい)**URLを書きます。**
+**`url`은, 서버를 브라우저로 접속했을 때 주소창에 표시 될**(하고 싶은)**URL을 적습니다.**
 
-### ポートの設定
+### 포트 설정
 
 ```yml
 #   ┌───────────────────────┐
 #───┘ Port and TLS settings └───────────────────────────────────
-#### ポートとTLSの設定         ####################################
+#### 포트와 TLS 설정         ####################################
 
 # Misskey requires a reverse proxy to support HTTPS connections.
-# MisskeyでHTTPS接続をサポートするにはリバースプロキシが必須です。
+# Misskey로 HTTPS 연결을 하려면 리버스 프록시 설정이 필수입니다.
 #
 #                 +----- https://example.tld/ ------------+
 #   +------+      |+-------------+      +----------------+|
@@ -97,11 +96,11 @@ url: https://example.tld/
 #                 +---------------------------------------+
 #
 #   You need to set up a reverse proxy. (e.g. nginx)
-#   この方法では、リバースプロキシ（例: nginx）をセットアップする必要があります。
+#   이 방법으로는, 리버스 프록시(예: nginx)를 따로 설정해야 합니다.
 #   An encrypted connection with HTTPS is highly recommended
 #   because tokens may be transferred in GET requests.
-#   GETリクエストでトークンがURLに含まれる可能性があるため、
-#   HTTPSによる暗号化を強く推奨します。
+#   GET 리퀘스트로 토큰이 URL에 포함될 가능성이 있으므로,
+#   HTTPS로 암호화 하는 것을 강력히 권장합니다.
 ```
 
 ```yml
@@ -144,8 +143,8 @@ url: https://example.tld/
 #   'https' 섹션(후술)에서 인증서를 설정해야 합니다.
 ```
 
-この例では、Misskeyはポート3000で通信します。
-リバースプロキシでは、ローカル側の宛先にこのポート番号を指定します。
+위의 예시는 Misskey가 3000번 포트로 연결됩니다.
+리버스 프록시에선, 로컬에서 쓰는 포트 번호를 설정합니다.
 
 ----
 
