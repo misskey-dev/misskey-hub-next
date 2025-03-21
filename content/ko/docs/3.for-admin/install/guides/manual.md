@@ -16,9 +16,9 @@ description: 이 가이드에서는 Misskey의 설치 및 설정 방법에 대�
 
 #### 다음 소프트웨어가 설치 및 설정되어 있어야 합니다.
 
-- **[Node.js](https://nodejs.org/en/)** (20.4.x이상)
-- **[PostgreSQL](https://www.postgresql.org/)** (15이상)
-- **[PostgreSQL](https://www.postgresql.org/)** (v15以上)
+- **[Node.js](https://nodejs.org/en/)** (v22)
+- **[pnpm](https://pnpm.io/)** (v10 이상)
+- **[PostgreSQL](https://www.postgresql.org/)** (v15 이상)
 - **[Redis](https://redis.io/)**
 - **[FFmpeg](https://www.ffmpeg.org/)**
 
