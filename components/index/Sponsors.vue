@@ -72,7 +72,11 @@ const sponsors: Sponsor[] = [
         img: '/img/sponsors/purple-dot-digital.jpg',
         margin: false,
         to: 'https://purpledotdigital.com/',
-    }
+    },
+    {
+        img: '/img/sponsors/xfolio.svg',
+        to: 'https://xfolio.jp/',
+    },
 ];
 
 const localePath = useGLocalePath();
