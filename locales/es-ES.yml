@@ -80,7 +80,7 @@ _landing:
       title: "Temas"
       description: "¿Por qué limitarte a un tema claro u oscuro cuando puedes cambiar todos los colores? Utiliza la intuitiva funcion de temas para hacer que Misskey sea como tú lo desees."
     _thread:
-      title: "Hilos\""
+      title: "Hilos"
       description: "¿Tienes mucho en mente? ¡Crea un hilo! Cada publicación puede tener hasta 3.000 caracteres por defecto, y puedes mantener la conversación durante horas."
     _charts:
       title: "Gráficas"
@@ -95,7 +95,7 @@ _landing:
       list: "Lista de servidores disponibles"
     _create:
       title: "Crea tu propio servidor"
-      guide: "Guía paso a paso para configurar tu servidor"
+      guide: "Guía paso a paso"
     _docs:
       title: "Más información"
       docs: "Consulta nuestra documentación"
@@ -147,7 +147,7 @@ _servers:
     grid: "Cuadrilla"
 _docs:
   title: "Documentación"
-  description: "Información completa que va desde cómo usar Misskey hasta recursos para los operadores de servidores y desarrolladores."
+  description: "Información completa que va desde cómo usar Misskey hasta recursos para los administradores de servidores y desarrolladores."
   indexTitle: "Índice"
   _contribute:
     editThis: "Editar esta página"
@@ -164,7 +164,7 @@ _docs:
   _forUsers:
     title: "Para usuarios de Misskey"
   _forAdmin:
-    title: "Para administradores de servidores"
+    title: "Para administradores"
   _forDevelopers:
     title: "Para desarrolladores"
   _prevNext:
