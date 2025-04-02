@@ -168,12 +168,25 @@ CREATE DATABASE mk1 OWNER misskey;
 ### Redis
 
 Redisは、NoSQLのインメモリデータベースソフトであり、データベースや連合との通信を管理するなどのために必要だ。  
-redis.ioのドキュメントに従い、snapでインストールする。
+~~redis.ioのドキュメントに従い、snapでインストールする。~~
+snapではうまくサービスが起動しなくなっている模様。
 
 https://redis.io/docs/getting-started/installation/install-redis-on-linux/
 
 ```sh
-sudo snap install redis
+sudo apt-get install lsb-release curl gpg
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+sudo chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+sudo apt-get update
+sudo apt-get install redis
+```
+
+起動する
+
+```sh
+sudo systemctl enable redis-server
+sudo systemctl start redis-server
 ```
 
 systemctlでデーモンの状態を確認。
