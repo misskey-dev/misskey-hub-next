@@ -28,4 +28,4 @@ When posting a note, you can limit the types of reactions that will be accepted 
 - Non-sensitive only (remote is like only): You will not be able to react using custom emojis flagged as “sensitive” from your own server, and all reactions from other servers are accepted as likes (❤)
 - Likes only: You can only react with a like (❤)
 
-なお、この際指定したリアクションの受け入れは自分のサーバーにおいて有効になります。例えば、リアクションの受け入れを「いいねのみ」にしたノートを他のサーバーで閲覧すると、そのサーバー上では絵文字リアクションが付与されているかもしれません。
+In this case, the reaction you specify will be accepted on your server.For example, if you view a note on another server with the “Like Only” option, the note may have an emoji reaction on that server.
