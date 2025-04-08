@@ -82,9 +82,9 @@ Emoji created by administrators and users unique to each instance.Emoji that are
 
 The configuration page of a Misskey instance.
 
-## システムアカウント
+## System Account
 
-Misskeyサーバーが、外部のサーバーとやり取りする際などに使用する特別なアカウント。Misskeyサーバーに組み込まれており、必要に応じてサーバーが自動で操作する。
+The system account is a service account used to communicate with remote instances.It is built into Misskey, and Misskey can operate it automatically as needed.
 
 ## Suspension
 
@@ -98,9 +98,9 @@ The file manager for user-uploaded files on Misskey, such as images and music.[D
 
 Messages posted by Misskey users.Notes can contain a variety of original content including images, music, and polls.[Documentation is available](../features/note)
 
-## プロキシアカウント
+## Proxy Account
 
-外部のサーバーに所属するユーザーの投稿を取得するために、Misskeyサーバーが自動で作成・操作するシステムアカウント。自サーバーのユーザーが、他サーバーのユーザーのコンテンツを、そのユーザーをフォローしていない状態で取得しようとした際などに、そのユーザーを代理でフォローすることがある。
+The proxy account is a service account used by Misskey to retrieve posts from remote instances in special circumstances.If a remote user is not followed by anyone on the local instance, the proxy account may follow the remote user to allow the remote user to continue sending notes to the local instance.
 
 ## Misskist
 
