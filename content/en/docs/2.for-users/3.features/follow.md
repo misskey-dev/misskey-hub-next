@@ -1,10 +1,10 @@
 # Follow
 
-When you follow a user, you will see their posts on your timeline.However, this does not include replies to other users. To follow a user, click the "Follow" button on the user's page.
+When you follow a user, you will see their posts on your timeline.However, this does not include replies to other users.
 
-ユーザーをフォローするには、ユーザーページの「フォロー」ボタンをクリックします。Click once more to unfollow.
+To follow a user, click the Follow button on the user's profile.Click once more to unfollow.
 
-フォローが承認制になっている場合や、外部サーバーのユーザーをフォローする場合は、フォローボタンをクリックした後に「処理中」となります。フォローが承認されると、クライアントに通知が届きます。
+If the user manually approves who follows them, or if the user is on a remote instance, the Follow button will change to "Processing..."Users will receive a notification if their follow request is approved.
 
 ## フォローされた時のメッセージ
 
