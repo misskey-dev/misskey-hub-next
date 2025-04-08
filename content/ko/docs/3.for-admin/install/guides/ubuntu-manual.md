@@ -179,6 +179,13 @@ https://redis.io/docs/getting-started/installation/install-redis-on-linux/
 sudo snap install redis
 ```
 
+起動する
+
+```sh
+sudo systemctl enable redis-server
+sudo systemctl start redis-server
+```
+
 systemctl로 데몬 상태 확인.
 
 ```sh
