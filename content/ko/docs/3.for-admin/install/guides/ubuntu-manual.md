@@ -179,7 +179,7 @@ https://redis.io/docs/getting-started/installation/install-redis-on-linux/
 sudo snap install redis
 ```
 
-起動する
+시작
 
 ```sh
 sudo systemctl enable redis-server
