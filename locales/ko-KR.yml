@@ -339,7 +339,7 @@ _customEmojiPreview:
   preview: "미리보기"
   emoji: "이모티콘 #{number}"
   placeholder: "'추가'에서 사용자 지정 이모티콘을 추가하고 미리 볼 수 있습니다."
-  limitReactionLength: "リアクションの最大横幅を制限し、縮小して表示する"
+  limitReactionLength: "반응의 최대 가로 폭을 제한하고 축소하여 표시"
   _options:
     text: "노트 본문"
     textDescription: "추가한 사용자 지정 이모티콘은 {emoji_id}로 참조할 수 있습니다."
