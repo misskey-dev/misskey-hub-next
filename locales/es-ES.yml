@@ -320,7 +320,7 @@ _avatarDecorationPreview:
   title: "アバターデコレーション プレビュー"
   description: "アバターデコレーションがきれいに反映できるかをチェックできます。"
   preview: "プレビュー"
-  settings: "設定"
+  settings: "Configuración"
   decoration: "デコ #{number}"
   placeholder: "「追加」から、アバターデコレーションを追加してプレビューできます。"
   _options:
@@ -367,8 +367,8 @@ _miHubServerListPreview:
   bannerOrBgDescription: "バナー画像と背景画像が両方指定されている場合は、背景画像の方を優先して表示します。画像は中心基準で16:9に収まる最大領域のみが表示されます。"
 _api:
   _permissions:
-    title: "権限"
-    description: "説明"
+    title: "Permisos"
+    description: "Descripción"
     _types:
       "read:account": "View your account information"
       "write:account": "Edit your account information"
