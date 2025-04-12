@@ -197,6 +197,7 @@ export default defineNuxtConfig({
 		],
 		prerender: {
 			failOnError: false,
+			concurrency: 2,
 		}
 	},
 	typescript: {
