@@ -22,6 +22,6 @@ The message will also be displayed on your profile.
 
 :::warning
 
-The welcome message is publicly accessible, even to non-followers.Do not include private information in the message.
+The Followed Message is publicly accessible, even to non-followers.Do not include private information in the message.
 
 :::
