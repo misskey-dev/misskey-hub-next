@@ -54,11 +54,11 @@ _landing:
       description: "Misskey ofereix una gamma de funcionalitats que no es troben en altres plataformes, podreu micro-bloguejar com un professional."
     _customizable:
       title: "Altament personalitzable"
-      description: "Misskeyの柔軟なWebインターフェイスにより、自分好みのUIを作れます。"
+      description: "La interfície flexible de Misskey li permet crear la seva pròpia interfície que s'adapti al teu gust."
   _decenterized:
-    title: "Misskeyは{0}"
-    decenterizedPlatform: "分散型プラットフォーム"
-    description: "Misskeyはフリーかつオープンなプロジェクトで、誰でも自由にMisskeyを使ったサーバーを作成できるため、既に様々なサーバーがインターネット上に公開されています。また重要な特徴として、Misskeyは{0}と呼ばれる分散通信プロトコルを実装しているので、どのサーバーを選んでも他のサーバーのユーザーとやりとりすることができます。これが分散型と言われる所以で、単一の運営者によって単一のURLで公開されるような、Twitterなどの他サービスとは根本的に異なっています。サーバーによって主な話題のテーマやユーザー層、言語などは異なり、自分にあったサーバーを探すのも楽しみのひとつです(もちろん自分のサーバーを作るのも一興です)。"
+    title: "Misskey és {0}"
+    decenterizedPlatform: "Plataforma descentralitzada"
+    description: "Misskey és un projecte lliure i obert, el que vol dir que qualsevol pot crear un servidor fent servir Misskey, i és per això que ja hi han molts servidors disponibles a internet. Altre característica important és que Misskey fa servir un protocol de comunicació anomenat {0}, això significa que es igual quin servidor escollís, pots interactuar amb usuaris d'altres servidors. Per això es diu descentralitzat i això el fa totalment diferent a altres serveis com Twitter, que es publica sota una mateixa adreça URL i per un únic operador. Els temes principals, els usuaris i els idiomes canvien d'un servidor a un altre i part de la diversió es trobar el servidor més adecuat a la teva manera de ser (per descomptat, crear el teu propi servidor també es divertit)."
     activityPub: "ActivityPub"
   _features:
     _root:
