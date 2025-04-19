@@ -73,6 +73,11 @@ We use [DeepL Translation](https://www.deepl.com/), the machine translation serv
 The definition of "operator," according to [documents from the Ministry of Internal Affairs and Communications](https://www.soumu.go.jp/main_content/000477428.pdf), is "a person who seeks to make a profit by providing services and collecting fees as compensation for the provision of those services."Therefore, unless you are operating the server for the purpose of making a profit as a business, registration is not necessary.Thus, even if there is revenue from sources like donations or advertising, as long as it is used solely for operating costs, it does not fall under the category of operators requiring registration (confirmed with the Ministry of Internal Affairs and Communications).<br>
 For more details, please refer to the Ministry of Internal Affairs and Communications' [Entry Manual for Telecommunications Businesses](https://www.soumu.go.jp/main_content/000477428.pdf) or contact the ministry directly.
 
+## DM機能があるため、電気通信事業の届出が必要になるのではありませんか？
+
+[「サーバーを作成しましたが、電気通信事業の届出は必要ですか？」](#サーバーを作成しましたが電気通信事業の届出は必要ですか)で説明している通りです。
+運営するサービスがどのような機能を持っていようと、「料⾦を徴収することにより収益を得ようとする」ことに該当しなければ、届出が必要な事業者とはみなされません。
+
 ## Can I release services containing the name "Misskey"?
 
 "Misskey" is a registered trademark (in Japan) by the Misskey Project, but you can publish services with the name "Misskey" (e.g., Misskey Tools) without issues.
