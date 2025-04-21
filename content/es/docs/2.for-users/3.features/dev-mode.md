@@ -1,3 +1,3 @@
-# 開発者モード
+# Modo de desarrollador
 
-[設定 > その他 > 開発者](x-mi-web://settings/other)から設定できる開発者モードを有効にすると、ノートやメディアのIDをメニューから直接コピーできるようになるなどの開発者にとって便利な機能を利用できるようになります。
+La activación del modo desarrollador, que puede configurarse a través de [Ajustes > Otros > Desarrollador] (x-mi-web://settings/other), te da acceso a funciones útiles para desarrolladores, como la posibilidad de copiar notas e identificadores multimedia directamente desde el menú.
