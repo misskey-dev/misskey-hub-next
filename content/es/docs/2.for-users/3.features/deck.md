@@ -1,26 +1,24 @@
-# デッキ
+# Deck
 
-デッキは利用可能なUIのひとつです。「カラム」と呼ばれるビューを複数並べて表示させることで、カスタマイズ性が高く、情報量の多いUIが構築できることが特徴です。\
-なお、メインカラムを追加しておくと、ノートやプロフィールをページで表示した際、メインカラムに内容が表示されます。
+Deck es una de las interfaces de usuario disponible.Ofrece la posibilidad de crear interfaces de usuario muy personalizables y densas mostrando varias vistas una al lado de la otra llamadas «columnas».\
+Además, cuando se muestren notas o perfiles en la página, si se añade una columna principal, su contenido se mostrará dentro de ella.
 
-## カラムの追加
+## Agregar Columnas
 
-デッキの背景を右クリックし、「カラムを追加」して任意のカラムを追加できます。
+Las columnas pueden añadirse haciendo clic con el botón derecho en el fondo de la cubierta y seleccionando «Añadir columna».
 
-## カラムの移動
+## Moviendo Columnas
 
-カラムは、ドラッグアンドドロップで他のカラムと位置を入れ替えることが出来るほか、カラムメニュー(カラムのヘッダー右クリック)から位置を移動させることもできます。
+Las columnas pueden moverse intercambiándose con otras columnas mediante arrastrar y soltar, así como a través del menú de columnas (que se muestra al hacer clic con el botón derecho en la cabecera de la columna).
 
-## カラムの水平分割
+## División Horizontal de Columnas
 
-カラムは左右だけでなく、上下に並べることもできます。
-カラムメニューを開き、「左に重ねる」を選択すると、左のカラムの下に現在のカラムが移動します。
-上下分割を解除するには、カラムメニューの「右に出す」を選択します。
+Las columnas pueden ordenarse no solo horizontalmente, sino también verticalmente. Abra el menú de columnas y seleccione "Apilar a la izquierda" para desplazar la columna actual por debajo de la columna de la izquierda. Para deshacer la división, seleccione "Apilar a la derecha".
 
-## カラムの設定
+## Ajustes de columna
 
-カラムメニューの「編集」を選択するとカラムの設定を編集できます。カラムの名前を変えたり、幅を変えたりできます。
+Los ajustes de la columna pueden ser editados seleccionando "Editar" desde el menú de la columna.Las columnas pueden renombrarse y su anchura modificarse.
 
-## デッキの設定
+## Ajustes del Deck
 
-デッキに関する設定は、[settings/deck](x-mi-web://settings/deck)で行えます。
+Los ajustes del deck pueden modificarse en [settings/deck](x-mi-web://settings/deck).
