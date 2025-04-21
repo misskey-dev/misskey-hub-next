@@ -1,35 +1,35 @@
-# ウェブサイトへの埋め込み
+# Incrustar en un Sitio Web
 
-Misskeyサーバー上のノートやタイムラインをお持ちのウェブサイトに埋め込むことができます。
-また、埋め込み先のウェブサイトの見た目に合わせて柔軟にカスタマイズすることもできます。
+Puedes incrustar notas y líneas de tiempo de un servidor Misskey dentro de tu página web.
+Con Misskey, el diseño de los widgets es altamente personalizable así que puedes adaptarlos para tu página web.
 
-ここでは、埋め込めるコンテンツと埋め込み方法について説明します。
+A continuación describimos los contenidos que pueden incrustarse y cómo hacerlo.
 
 :::warning
 
-この機能は、Misskey v2024.9.0以降で利用可能になる機能です。
+Esta característica está disponible en Misskey v2024.9.0 o posterior.
 
 :::
 
 :::tip
 
-MFMやカスタム絵文字などにも対応していますが、埋め込み先ページでの表示方法によってはレイアウトが崩れる可能性があります。
+MFM y emojis personalizados también están soportados, pero dependiendo de cómo se muestren en la página incrustada, la distribución puede no ser la esperada.
 
 :::
 
-## ジェネレーターを使用して埋め込みコードを生成する
+## Generar código de inserción con el generador integrado
 
-以下で紹介する埋め込みコードおよびそのカスタマイズは、すべてMisskey Webに内蔵されている埋め込みコードジェネレーターを使用して簡単に行うことができます。
-基本的にはそちらを利用することをおすすめします。
+Todos los códigos de inserción y su personalización mostrados en esta página pueden ser fácilmente realizados usando el generador integrado de código en la web de Misskey.
+Si no tienes una razón concreta para obtener el código manualmente, recomendamos usar el generador.
 
-![埋め込みコードジェネレーター](/img/docs/for-users/features/embed/generator.png)
+![Generador de código incrustado](/img/docs/for-users/features/embed/generator.png)
 
-## 単一のノートの埋め込み
+## Incrustar una sola nota
 
 ::MiWebEmbed{src="https://0key.dev/embed/notes/9tht7ungi81f0005"}
 ::
 
-埋め込み元サーバー上の、単一のノートを埋め込むことができます（リモートサーバーのノートを他のサーバーを利用して埋め込むことはできません）。コードは以下のようになります：
+Una sola nota local puede ser incrustada (las notas en un servidor remoto no pueden ser incrustadas usando otro servidor).Tu código debería verse así:
 
 ```html
 <iframe
@@ -42,11 +42,11 @@ MFMやカスタム絵文字などにも対応していますが、埋め込み�
 <script defer src="https://<HOST>/embed.js"></script>
 ```
 
-それぞれ、以下のように置き換えられます：
+Los marcadores de posición se reemplazan por lo siguiente:
 
-- `<HOST>`: Misskeyサーバーのホスト名
-- `<NOTE_ID>`: 埋め込むノートのID
-- `<RANDOM>`: ランダムな文字列（embed.jsを使用する場合は必須。埋め込みコードが同じページに複数ある場合は被らないようにしてください）
+- `<HOST>`: Nombre de dominio del servidor Misskey
+- `<NOTE_ID>`: Id de la nota a incrustar
+- `<RANDOM>`: Cadena de texto aleatoria (Requerido si se usa embed.js.Si hay varios códigos de incrustación en la misma página, asegúrese de que no estén duplicados
 
 ## ユーザーのノート一覧の埋め込み
 
