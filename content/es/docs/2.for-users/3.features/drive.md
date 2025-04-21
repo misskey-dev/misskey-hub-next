@@ -1,29 +1,27 @@
-# ドライブ
+# Drive
 
-ドライブは、Misskey上でファイルを管理できる機能です。
+Drive es una función para gestionar los archivos que has subido a Misskey.
 
 :::tip
 
-技術的に言うと、Misskeyのシステム上、すべてのファイルが一元管理されており、それをユーザーにも公開したインターフェイスがドライブと捉えることができます。
+Técnicamente hablando, todos los archivos se gestionan de forma centralizada en el sistema de Misskey, y la interfaz que los expone a los usuarios puede considerarse como una unidad de disco.
 
 :::
 
-Misskey Webの[ドライブページ](x-mi-web://my/drive)から任意のファイルをアップロードできるほか、アバターに設定した画像や、ノートに添付したファイルなどもすべてドライブにアップロードされます。
+Además de poder cargar cualquier archivo desde la [página Drive] de Misskey Web (x-mi-web://my/drive), las imágenes establecidas como avatares y los archivos adjuntos a las notas se cargarán en Drive.
 
-ドライブにアップロードされたファイルは、いつでもダウンロードすることができるほか、ノート作成時に「ドライブからファイルを添付」することでファイルを再利用することもできます。
+Los archivos cargados en Drive no solo pueden descargarse en cualquier momento, sino que también pueden reutilizarse seleccionando "Desde Drive" al crear notas.
 
-ドライブ内にフォルダを作り、複数のファイルをまとめて整理することもできます。
+Además, se pueden crear carpetas dentro del Drive para organizar varios archivos juntos.
 
 :::warning
 
-現時点で、ドライブからファイルを削除すると、そのファイルが添付された **すべてのコンテンツ(ノート、ページなど)** も同時に消えます。
+Actualmente cuando borras un archivo desde el Drive, **todo el contenido(notas, páginas etc.)** que ha sido adjuntado también desaparece.
 
 :::
 
-## センシティブ (NSFW)
+## Sensible (NSFW)
 
-センシティブまたはNSFW (Not safe for work) は、ドライブのファイルに設定することができるフラグです。
-センシティブフラグを設定されたファイルは、表示される際に閲覧者の操作なしには表示されなくなります。
-このフラグは、例えば職場や公共の場で閲覧するのに適切でないと思われる画像などに設定し、そのような画像が突然表示されてしまうことを防ぐ目的で使われます。
+Sensible o Nsfw (Not safe for work) es una opción que se puede establecer en los archivos en Drive. Los archivos marcados como sensibles no se mostrarán sin la interacción del usuario. Esta opción se utiliza, por ejemplo, para marcar imágenes que se consideran inapropiadas para su visualización en el trabajo o en lugares públicos, y evitar que se muestren de repente.
 
-このフラグは手動でオンオフを切り替えられるほか、モデレーターの判断で設定される場合もあります。
+Esta bandera puede activarse o desactivarse manualmente, así como establecerse a discreción de los moderadores.
