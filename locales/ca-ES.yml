@@ -62,17 +62,17 @@ _landing:
     activityPub: "ActivityPub"
   _features:
     _root:
-      title: "主な機能"
-      description: "Misskeyは一般的なものから特別なものまで、様々な機能を持っています。その一部を紹介します。"
+      title: "Funcions principals"
+      description: "Misskey té una gamma molt ampla de característiques, tant generals com especials. Algunes són."
     _note:
-      title: "ノート"
-      description: "Misskeyでは、ユーザーの投稿は「ノート」と呼ばれます。他のノートを引用したり、画像、動画、オーディオ、その他の任意のファイルを添付することもできます。"
+      title: "Notes"
+      description: "A Misskey les contribucions dels usuaris es diuen \"notes\". Pots citar altres notes i adjuntar imatges, vídeos, àudios o qualsevol altre arxiu."
     _federation:
-      title: "連合"
-      description: "オープンな分散プロトコルであるActivityPubを実装しているため、他のMisskeyサーバーだけでなく、ActivityPubをサポートする他のソフトウェアともやりとりできます。"
+      title: "Federació"
+      description: "Fa servir ActivityPub, un protocol distribuït de codi obert, que li permet interactuar amb altres programes que suportin ActivityPub i també altres servidors Misskey."
     _reaction:
-      title: "リアクション"
-      description: "ノートには「リアクション」を付けることができ、簡単・気軽に自分のフィーリングを表現して伝えることが出来ます。"
+      title: "Reaccions"
+      description: "Pots afegir \"reaccions\" a les teves notes, això et permetrà expressar i comunicar les teves emocions de forma fàcil i senzilla."
     _drive:
       title: "ドライブ"
       description: "アップロードしたファイルを管理するインターフェイスがあります。そのため、お気に入りの画像をフォルダにまとめたり、再度共有することも簡単に行えます。"
