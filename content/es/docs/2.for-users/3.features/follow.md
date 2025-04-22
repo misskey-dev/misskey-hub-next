@@ -1,27 +1,27 @@
-# フォロー
+# Seguir
 
-ユーザーをフォローすると、タイムラインにそのユーザーの投稿が表示されるようになります。ただし、他のユーザーに対する返信は含まれません。
+Cuando sigues a un usuario, verás sus posts en tu línea de tiempo.Sin embargo, esto no incluye las respuestas a otros usuarios.
 
-ユーザーをフォローするには、ユーザーページの「フォロー」ボタンをクリックします。フォローを解除するには、もう一度クリックします。
+Para seguir a un usuario, haz clic en el botón de Seguir en el perfil del usuario.Haz clic una vez más para dejar de seguir.
 
-フォローが承認制になっている場合や、外部サーバーのユーザーをフォローする場合は、フォローボタンをクリックした後に「処理中」となります。フォローが承認されると、クライアントに通知が届きます。
+Si el usuario aprueba manualmente quién puede seguirle, o si el usuario es de una instancia remota, el botón Seguir, cambiará a "Procesando..."Los usuarios recibirán una notificación si su petición de seguimiento es aprobada.
 
-## フォローされた時のメッセージ
+## Mensaje cuando te siguen
 
 :::tip
 
-この機能は、Misskey v2024.9.0以降を搭載したサーバー（リモートのユーザーの場合は双方のサーバーがv2024.9.0以降になっている必要があります）で使用できる機能です。
+Esta función está disponible en Misskey v2024.9.0 o posterior. Si sigue a un usuario remoto, ambas instancias deben estar en Misskey v2024.9.0 o posterior.
 
-この機能はベータ版です。
+Esta característica está en beta.
 
 :::
 
-フォローされた時に相手に表示する短いメッセージを設定できます。フォローを承認制にしている場合、フォローリクエストを許可した時に表示されます。
+Puedes establecer un mensaje de bienvenida para nuevos seguidores.Si apruebas manualmente seguidores, el mensaje se mostrará al seguidor en el momento de la aprobación.
 
-また、フォローされている間は、あなたのプロフィールにフォローされた時のメッセージが表示されます。
+El mensaje también se mostrará en tu perfil.
 
 :::warning
 
-フォローされた時のメッセージは機密情報をやり取りするためのものではありません。一般に公開したくない情報は含めないようにしてください。
+El mensaje cuando te siguen es accesible públicamente, incluso para no seguidores.No incluyas información privada en el mensaje.
 
 :::
