@@ -1,32 +1,32 @@
 ---
-description: MFMは、Misskeyの様々な場所で使用できる専用のマークアップ言語です。
+description: MFM es un lenguaje de marcado específico que puede utilizarse en varias partes de Misskey.
 ---
 
 # MFM
 
-MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使用できる専用のマークアップ言語です。一部の構文はMarkdownやHTMLと互換性があります。
+MFM, acrónimo de Markup Language For Misskey (Lenguaje de Marcado para Misskey), es un lenguaje de marcado propietario que puede ser usado en varios lugares de Misskey.Alguna de su sintaxis es compatible con Markdown y HTML.
 
 :::tip
 
-実際にMFMをお試しいただける[MFMお試しコーナー](/tools/mfm-playground/)ができました！
+¡Visita [MFM Playground](/tools/mfm-playground/) para probar MFM tu mismo!
 
 :::
 
-## MFMが使用可能な場所の例
+## Ejemplos de lugares donde MFM puede ser utilizado
 
-- ノート本文
-- CW注釈
-- ユーザーの名前
-- ユーザーの自己紹介
+- En un texto de una nota
+- Para la anotación de contenido sensible, CW
+- Nombres de usuarios
+- Biografía de usuarios
 
-## 構文
+## Sintaxis
 
-### メンション
+### Menciones
 
-アットマーク + ユーザー名で、特定のユーザーを示すことができます。
+`@` + nombre de usuario puede ser usado para mostrar un usuario específico.
 :::tip
 
-メンションについての詳細は[こちら](./mention.md)を参照してください。
+Para más información sobre las menciones mira, [aquí](./mention.md).
 
 :::
 
@@ -42,12 +42,12 @@ MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使�
 
 <MfmPreview text="@repo@p1.a9z.dev"></MfmPreview>
 
-### ハッシュタグ
+### Hashtags
 
-ナンバーサイン + タグで、ハッシュタグを示すことができます。
+`#` + palabra puede ser usado para mostrar un hashtag.
 :::tip
 
-ハッシュタグについての詳細は[こちら](./hashtag.md)を参照してください。
+Para más información sobre hashtags, mira [aquí](./hashtag.md).
 
 :::
 
@@ -59,7 +59,7 @@ MFMは、Markup language For Misskeyの略で、Misskeyの様々な場所で使�
 
 ### URL
 
-URLを示すことができます。
+Las URLs pueden ser mostradas.
 
 ```
 https://example.com
@@ -67,9 +67,9 @@ https://example.com
 
 <MfmPreview text="https://example.com"></MfmPreview>
 
-### リンク
+### Links
 
-文章の特定の範囲を、URLに紐づけることができます。
+Partes específicas de un texto se pueden mostrar como una URL.
 
 ```
 [example link](https://example.com)
@@ -77,7 +77,7 @@ https://example.com
 
 :::tip
 
-リンクテキストの前に`?`をつけると、リンクプレビューを非表示にすることができます。
+Puedes ocultar la vista previa del enlace anteponiendo al texto del enlace el prefijo `? `.
 
 ```
 ?[example link](https://example.com)
@@ -87,13 +87,13 @@ https://example.com
 
 <MfmPreview text="[example link](https://example.com)"></MfmPreview>
 
-### カスタム絵文字
+### Emoji personalizado
 
-コロンでカスタム絵文字名を囲むと、カスタム絵文字を表示させることができます。
+Se pueden mostrar emoji personalizados rodeando el nombre del emoji con dos puntos.
 
 :::tip
 
-カスタム絵文字についての詳細は[こちら](./custom-emoji.md)を参照してください。
+Para obtener más información sobre los emoji personalizados, mira [aquí](./custom-emoji.md).
 
 :::
 
@@ -103,9 +103,9 @@ https://example.com
 
 <MfmPreview text=":misskey:"></MfmPreview>
 
-### 太字
+### Negrita
 
-文字を太く表示して強調することができます。
+Texto en negrita para enfatizar.
 
 ```
 **太字**
@@ -113,39 +113,39 @@ https://example.com
 
 <MfmPreview text="**太字**"></MfmPreview>
 
-### 目立たなくする
+### Encoger
 
-内容を小さく・薄く表示させることができます。
+Muestra el contenido más pequeño y más fino.
 
 ```
-<small>MisskeyでFediverseの世界が広がります</small>
+<small>Misskey amplía el mundo del Fediverso</small>
 ```
 
 <MfmPreview text="<small>MisskeyでFediverseの世界が広がります</small>"></MfmPreview>
 
-### 引用
+### Citas
 
-内容が引用であることを示すことができます。
+Muestra el contenido como una cita.
 
 ```
-> MisskeyでFediverseの世界が広がります
+> Misskey amplía el mundo del Fediverso
 ```
 
 <MfmPreview text="> MisskeyでFediverseの世界が広がります"></MfmPreview>
 
-### 中央寄せ
+### Centrar
 
-内容を中央寄せで表示させることができます。
+Muestra el texto centrado.
 
 ```
-<center>MisskeyでFediverseの世界が広がります</center>
+<center>Misskey amplía el mundo del Fediverso</center>
 ```
 
-<MfmPreview text="<center>MisskeyでFediverseの世界が広がります</center>"></MfmPreview>
+<MfmPreview text="<center>Misskey amplía el mundo del Fediverso</center></MfmPreview>
 
-### よみがな（ルビ）
+### Furigana/Yomigana (Ruby)
 
-内容によみがなを付けることができます。
+Yomigana puede ser adjuntado al texto.
 
 ```
 $[ruby Misskey ミスキー] 
@@ -153,22 +153,22 @@ $[ruby Misskey ミスキー]
 
 <MfmPreview text="$[ruby Misskey ミスキー]"></MfmPreview>
 
-### コード(インライン)
+### Código fuente (insertado)
 
-プログラムなどのコードをインラインでシンタックスハイライトします。
+Muestra el código fuente de un programa resaltando su sintaxis.
 
 ```
-`<: "Hello, world!"`
+`<: "¡Hola, Mundo!"`
 ```
 
-### コード(ブロック)
+### Código fuente (bloque)
 
-複数行のプログラムなどのコードをブロックでシンタックスハイライトします。
+Código de resaltado de sintaxis, como programas de varias líneas con bloques.
 
-プログラミング言語をIDで指定すると、その言語でシンタックスハイライトが適用されます。指定できる言語は次のとおりです：
+Especificando el lenguaje de programación por Id, puede aplicar el resaltado de sintaxis en ese lenguaje.Los lenguajes disponibles son:
 
-- [Shikiが対応している言語（200以上）](https://shiki.style/languages)
-- AiScript: `aiscript`, `ais`, `is` のいずれかを指定すると使用できます。
+- [Lenguajes soportados por Shiki (200+)](https://shiki.style/languages)
+- AiScript: Específica uno de los siguientes `aiscript`, `ais`, o `is` para usarlo.
 
 ````
 ```ais
@@ -181,29 +181,29 @@ for (let i, 100) {
 ```
 ````
 
-### 反転
+### Voltear
 
-内容を上下または左右に反転させます。
+Voltea el contenido hacia arriba / abajo o hacia la izquierda / derecha.
 
 ```
-$[flip MisskeyでFediverseの世界が広がります]
-$[flip.v MisskeyでFediverseの世界が広がります]
-$[flip.h,v MisskeyでFediverseの世界が広がります]
+$[flip Misskey amplía el mundo del Fediverso]
+$[flip.v Misskey amplía el mundo del Fediverso]
+$[flip.h,v Misskey amplía el mundo del Fediverso]
 ```
 
 <MfmPreview text="$[flip MisskeyでFediverseの世界が広がります]
 $[flip.v MisskeyでFediverseの世界が広がります]
 $[flip.h,v MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
-### フォント
+### Fuente
 
-内容のフォントを指定することができます。
+Establece la fuente en que se mostrará el contenido.
 
 ```
-$[font.serif MisskeyでFediverseの世界が広がります]
-$[font.monospace MisskeyでFediverseの世界が広がります]
-$[font.cursive MisskeyでFediverseの世界が広がります]
-$[font.fantasy MisskeyでFediverseの世界が広がります]
+$[font.serif Misskey amplía el mundo del Fediverso]]
+$[font.monospace Misskey amplía el mundo del Fediverso]]
+$[font.cursive Misskey amplía el mundo del Fediverso]]
+$[font.fantasy Misskey amplía el mundo del Fediverso]]
 ```
 
 <MfmPreview text="$[font.serif MisskeyでFediverseの世界が広がります]
@@ -211,19 +211,19 @@ $[font.monospace MisskeyでFediverseの世界が広がります]
 $[font.cursive MisskeyでFediverseの世界が広がります]
 $[font.fantasy MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
-### ぼかし
+### Difuminar
 
-内容をぼかすことができます。ポインターを上に乗せるとはっきり見えるようになります。
+El contenido puede ser difuminado.Al pasar el ratón por encima del contenido, éste se mostrará claramente.
 
 ```
-$[blur MisskeyでFediverseの世界が広がります]
+$[blur Misskey amplía el mundo del Fediverso]
 ```
 
 <MfmPreview text="$[blur MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
-### 検索
+### Búsqueda
 
-検索ボックスを表示できます。
+Un cuadro de búsqueda puede ser mostrado.
 
 ```
 misskey 検索
