@@ -48,12 +48,12 @@ Los marcadores de posición se reemplazan por lo siguiente:
 - `<NOTE_ID>`: Id de la nota a incrustar
 - `<RANDOM>`: Cadena de texto aleatoria (Requerido si se usa embed.js.Si hay varios códigos de incrustación en la misma página, asegúrese de que no estén duplicados
 
-## ユーザーのノート一覧の埋め込み
+## Incrustar una lista de notas de un usuario
 
 ::MiWebEmbed{src="https://0key.dev/embed/user-timeline/9tht7g9ki81f0002?maxHeight=500"}
 ::
 
-ユーザーの公開ノート（パブリック・ホーム）の一覧を埋め込むことができます。コードは以下のようになります：
+Puedes incrustar una lista de notas públicas de un usuario (Con visibilidad pública o Inicio).Tu código debería verse así:
 
 ```html
 <iframe
@@ -66,18 +66,18 @@ Los marcadores de posición se reemplazan por lo siguiente:
 <script defer src="https://<HOST>/embed.js"></script>
 ```
 
-それぞれ、以下のように置き換えられます：
+Los marcadores de posición se reemplazan por lo siguiente:
 
-- `<HOST>`: Misskeyサーバーのホスト名
-- `<USER_ID>`: 埋め込むユーザーのID（`@`から始まるユーザー名ではありません）
-- `<RANDOM>`: ランダムな文字列（embed.jsを使用する場合は必須。埋め込みコードが同じページに複数ある場合は被らないようにしてください）
+- `<HOST>`: Nombre de dominio del servidor Misskey
+- `<USER_ID>`: Id del usuario a incrustar (no el nombre de usuario que empieza por `@`)
+- `<RANDOM>`: Cadena de texto aleatoria (Requerido si se usa embed.js.Si hay varios códigos de incrustación en la misma página, asegúrese de que no estén duplicados)
 
-## クリップのノート一覧の埋め込み
+## Incrustar una lista de notas de un usuario en un clip
 
 ::MiWebEmbed{src="https://0key.dev/embed/clips/9y5mpno6871g00gv?maxHeight=500"}
 ::
 
-公開範囲がパブリックなクリップのノート一覧を埋め込むことができます。コードは以下のようになります：
+Puedes incrustar una lista de notas de clips cuya visibilidad sea pública.Tu código debería verse así:
 
 ```html
 <iframe
@@ -90,18 +90,18 @@ Los marcadores de posición se reemplazan por lo siguiente:
 <script defer src="https://<HOST>/embed.js"></script>
 ```
 
-それぞれ、以下のように置き換えられます：
+Los marcadores de posición se reemplazan por lo siguiente:
 
-- `<HOST>`: Misskeyサーバーのホスト名
-- `<CLIP_ID>`: 埋め込むクリップのID
-- `<RANDOM>`: ランダムな文字列（embed.jsを使用する場合は必須。埋め込みコードが同じページに複数ある場合は被らないようにしてください）
+- `<HOST>`: Nombre de dominio del servidor Misskey
+- `<NOTE_ID>`: Id de la nota a incrustar
+- `<RANDOM>`: Cadena de texto aleatoria (Requerido si se usa embed.js.Si hay varios códigos de incrustación en la misma página, asegúrese de que no estén duplicados)
 
-## ハッシュタグのノート一覧の埋め込み
+## Incrustar una lista de notas con un hashtag
 
 ::MiWebEmbed{src="https://0key.dev/embed/tags/misskey?maxHeight=500"}
 ::
 
-特定のハッシュタグが付いたノートの一覧を埋め込むことができます。コードは以下のようになります：
+Puedes incrustar una lista de notas con un hashtag específico.Tu código debería verse así:
 
 ```html
 <iframe
@@ -114,30 +114,30 @@ Los marcadores de posición se reemplazan por lo siguiente:
 <script defer src="https://<HOST>/embed.js"></script>
 ```
 
-それぞれ、以下のように置き換えられます：
+Los marcadores de posición se reemplazan por lo siguiente:
 
-- `<HOST>`: Misskeyサーバーのホスト名
-- `<TAG>`: ハッシュタグ名（`#`を含まない）
-- `<RANDOM>`: ランダムな文字列（embed.jsを使用する場合は必須。埋め込みコードが同じページに複数ある場合は被らないようにしてください）
+- `<HOST>`: Nombre de dominio del servidor Misskey
+- `<TAG>`: Nombre del Hashtag (sin `#`)
+- `<RANDOM>`: Cadena de texto aleatoria (Requerido si se usa embed.js.Si hay varios códigos de incrustación en la misma página, asegúrese de que no estén duplicados)
 
-## カスタマイズ用のパラメータ
+## Parámetros de personalización
 
-URLパラメータに特定の値を指定することで、埋め込みの見た目をカスタマイズすることができます。
+Puede personalizar la apariencia del widget de incrustación especificando un valor concreto para el parámetro URL.
 
 <table>
 	<tbody><tr>
-		<th>パラメータ名</th>
-		<th>指定できる値</th>
-		<th>説明</th>
+		<th>Parámetros</th>
+		<th>Valores Posibles</th>
+		<th>Descripción</th>
 	</tr>
     <tr>
 		<td><code>maxHeight</code></td>
-		<td>0以上の数値</td>
+		<td>Número superior a 0</td>
 		<td>
-            埋め込みの最大高さ（px）を指定します。それ以上縦に伸びる場合は内部でスクロールできるようになります。<br>
-            <code>0</code> を指定すると、埋め込み要素の高さは内部の高さに合わせて自動で伸びていきます<b>（非推奨）</b>。<br>
-            未指定の場合は <code>700</code> です。<br>
-            単一のノートの埋め込みでは機能しません。        
+            Especifica la altura máxima del widget en píxeles.Si el contenido es más largo que eso verticalmente, se puede desplazar dentro del widget.<br>
+            Si <code>0</code> la altura del elemento incrustado se ampliará automáticamente para coincidir con la altura interna <b>(obsoleto)</b>.<br>
+            Si no se especifica, se establecerá a<code>700</code>.<br>
+             Este parámetro no funcionará para la incrustación de una sola nota.        
 </td>
 	</tr>
 	<tr>
@@ -148,7 +148,7 @@ URLパラメータに特定の値を指定することで、埋め込みの見�
                 <li><code>dark</code></li>
             </ul>
         </td>
-		<td>カラーモードをライトまたはダークに強制。<br>無指定でデバイスのダークモードと同期します。</td>
+		<td>Fuerza el modo de color de claro a oscuro.<br>Si no se especifica, se sincronizará con el ajuste de modo oscuro del dispositivo.</td>
 	</tr>
 	<tr>
 		<td><code>border</code></td>
@@ -158,7 +158,7 @@ URLパラメータに特定の値を指定することで、埋め込みの見�
                 <li><code>false</code></li>
             </ul>
         </td>
-		<td>外枠に枠線をつけるかどうか。無指定で <code>true</code></td>
+		<td>Especifica si se adjunta o no un borde al marco exterior.<code>true</code> si no se especifica</td>
 	</tr>
 	<tr>
 		<td><code>rounded</code></td>
@@ -168,7 +168,7 @@ URLパラメータに特定の値を指定することで、埋め込みの見�
                 <li><code>false</code></li>
             </ul>
         </td>
-		<td>角丸にするかどうか。無指定で <code>true</code></td>
+		<td>Especifica si las esquinas deben redondearse o no.<code>true</code> si no se especifica</td>
 	</tr>
 	<tr>
 		<td><code>showHeader</code></td>
@@ -179,15 +179,15 @@ URLパラメータに特定の値を指定することで、埋め込みの見�
             </ul>
         </td>
 		<td>
-            上部のヘッダーを表示するかどうか。無指定で <code>true</code><br>
-            単一のノートの埋め込みでは機能しません。    
+            Especifica si debe mostrarse la cabecera superior.<code>true</code> si no se especifica.<br>
+            Este parámetro no funciona si se incrusta solo una sola nota.    
         </td>
 	</tr>
 </tbody></table>
 
-:::g-details{summary="maxHeight=0 の使い道"}
+:::g-details{summary="maxHeight=0 ¿Cómo se usa?
 
-`maxHeight` を `0` にするのは基本的におすすめしていませんが、スクロールコンテナをiframe内部ではなく埋め込むサイト側で用意しておきたい場合など、特殊な用途では有用です。以下に例を示します：
+Establecer  `maxHeight` a  `0` no se recomienda, pero puede ser útil para casos especiales tales como cuando quieres  proporcionar un contenedor de desplazamiento en el sitio de incrustación en lugar de dentro de un iframe.Aquí está un ejemplo:
 
 ```html
 <div class="misskey-embed">
