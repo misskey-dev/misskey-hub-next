@@ -4,9 +4,11 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate:nuxt": "nuxt generate",
+    "generate": "pnpm generate:nuxt && pnpm gen-old-hub-redirects",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "gen-old-hub-redirects": "vite-node ./scripts/gen-old-hub-redirects.ts"
   },
   "devDependencies": {
     "@google/model-viewer": "^4.1.0",
@@ -39,6 +41,7 @@
     "three": "0.174.0",
     "ua-parser-js": "^2.0.3",
     "ufo": "^1.6.1",
+    "vite-node": "^3.1.2",
     "vite-svg-loader": "^5.1.0"
   },
   "packageManager": "pnpm@9.15.7",

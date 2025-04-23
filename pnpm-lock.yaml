@@ -105,6 +105,9 @@ importers:
       ufo:
         specifier: ^1.6.1
         version: 1.6.1
+      vite-node:
+        specifier: ^3.1.2
+        version: 3.1.2(@types/node@22.14.1)(jiti@2.4.2)(sass@1.87.0)(terser@5.39.0)(yaml@2.7.1)
       vite-svg-loader:
         specifier: ^5.1.0
         version: 5.1.0(vue@3.5.13(typescript@5.8.3))
@@ -4523,8 +4526,8 @@ packages:
     peerDependencies:
       vite: ^2.6.0 || ^3.0.0 || ^4.0.0 || ^5.0.0-0 || ^6.0.0-0
 
-  vite-node@3.0.8:
-    resolution: {integrity: sha512-6PhR4H9VGlcwXZ+KWCdMqbtG649xCPZqfI9j2PsK1FcXgEzro5bGHcVKFCTqPLaNKZES8Evqv4LwvZARsq5qlg==}
+  vite-node@3.1.2:
+    resolution: {integrity: sha512-/8iMryv46J3aK13iUXsei5G/A3CUlW4665THCPS+K8xAaqrVWiGB4RfXMQXCLjpK9P2eK//BczrVkn5JLAk6DA==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
 
@@ -5593,7 +5596,7 @@ snapshots:
       unenv: 2.0.0-rc.12
       unplugin: 2.3.2
       vite: 6.2.1(@types/node@22.14.1)(jiti@2.4.2)(sass@1.87.0)(terser@5.39.0)(yaml@2.7.1)
-      vite-node: 3.0.8(@types/node@22.14.1)(jiti@2.4.2)(sass@1.87.0)(terser@5.39.0)(yaml@2.7.1)
+      vite-node: 3.1.2(@types/node@22.14.1)(jiti@2.4.2)(sass@1.87.0)(terser@5.39.0)(yaml@2.7.1)
       vite-plugin-checker: 0.9.0(eslint@9.22.0(jiti@2.4.2))(optionator@0.9.4)(typescript@5.8.3)(vite@6.2.1(@types/node@22.14.1)(jiti@2.4.2)(sass@1.87.0)(terser@5.39.0)(yaml@2.7.1))
       vue: 3.5.13(typescript@5.8.3)
       vue-bundle-renderer: 2.1.1
@@ -10283,7 +10286,7 @@ snapshots:
     dependencies:
       vite: 6.2.1(@types/node@22.14.1)(jiti@2.4.2)(sass@1.87.0)(terser@5.39.0)(yaml@2.7.1)
 
-  vite-node@3.0.8(@types/node@22.14.1)(jiti@2.4.2)(sass@1.87.0)(terser@5.39.0)(yaml@2.7.1):
+  vite-node@3.1.2(@types/node@22.14.1)(jiti@2.4.2)(sass@1.87.0)(terser@5.39.0)(yaml@2.7.1):
     dependencies:
       cac: 6.7.14
       debug: 4.4.0(supports-color@9.4.0)

@@ -2,7 +2,7 @@
 import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
 import { readFileSync, watch as fsWatch } from 'fs';
-import { generateOldHubRedirects, getOldHubRedirects } from './scripts/get-old-hub-redirects';
+import { getOldHubRedirects } from './scripts/get-old-hub-redirects';
 import { genLocalesJson } from './scripts/gen-locales';
 import { getStaticEndpoints } from './scripts/get-static-endpoints';
 import { locales } from './assets/data/locales';
@@ -224,9 +224,6 @@ export default defineNuxtConfig({
 				genSpaLoadingTemplate(),
 				fetchCrowdinMembers(),
 			]);
-		},
-		'build:done': async () => {
-			await generateOldHubRedirects();
 		},
 	},
 	features: {
