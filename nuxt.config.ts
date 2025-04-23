@@ -226,9 +226,7 @@ export default defineNuxtConfig({
 			]);
 		},
 		'build:done': async () => {
-			if (import.meta.prerender) {
-				await generateOldHubRedirects();
-			}
+			await generateOldHubRedirects();
 		},
 	},
 	features: {
