@@ -2,7 +2,7 @@
 import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
 import { readFileSync, watch as fsWatch } from 'fs';
-import { getOldHubRedirects } from './scripts/get-old-hub-redirects';
+import { generateOldHubRedirects, getOldHubRedirects } from './scripts/get-old-hub-redirects';
 import { genLocalesJson } from './scripts/gen-locales';
 import { getStaticEndpoints } from './scripts/get-static-endpoints';
 import { locales } from './assets/data/locales';
@@ -60,7 +60,7 @@ function getRouteRules(): NuxtConfig['routeRules'] | undefined {
 	return {
 		...staticRules,
 		..._localeBasedRules,
-		...((process.env.VERCEL !== '1') ? getOldHubRedirects('nitro') : {}),
+		...((process.env.VERCEL !== '1') ? getOldHubRedirects('nitroFs') : {}),
 	};
 }
 
@@ -142,6 +142,9 @@ export default defineNuxtConfig({
 		experimental: {
 			generatedLocaleFilePathFormat: 'relative',
 		},
+		bundle: {
+			optimizeTranslationDirective: true,
+		}
 	},
 	colorMode: {
 		classSuffix: '',
@@ -221,6 +224,11 @@ export default defineNuxtConfig({
 				genSpaLoadingTemplate(),
 				fetchCrowdinMembers(),
 			]);
+		},
+		'build:done': async () => {
+			if (import.meta.prerender) {
+				await generateOldHubRedirects();
+			}
 		},
 	},
 	features: {
