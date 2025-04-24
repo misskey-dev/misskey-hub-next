@@ -106,13 +106,13 @@ _landing:
       title: "Node.jsバックエンド"
       description: "MisskeyはバックエンドにNode.jsを採用しており、高速・軽量に動作します。"
     _jobQueue:
-      title: "高効率なジョブキュー実装"
+      title: "高効率ジョブキュー"
       description: "ジョブキューにBullMQを採用し、タスクを複数のサーバーで効率的に処理可能。また、Misskeyネイティブで実装されたインスペクタはコントロールパネルに統合され、外部ツールに頼ることなく管理が可能です。"
     _ftt:
-      title: "Fan-out Timeline Technology"
-      description: "Fan-out Timeline Technology(FTT)機能を有効にすると、タイムラインをRedis上に構築しパフォーマンスを向上させることができます。"
+      title: "FTT"
+      description: "Fan-out Timeline Technology(FTT)により、タイムラインをRedis上に構築しパフォーマンスを向上させることができます。"
     _scalable:
-      title: "スケールアウト可能"
+      title: "スケーラブル"
       description: "プロセスのクラスタリング、複数サーバーによるロードバランス、データベースのレプリケーションに対応しており、ユーザーの増加にも対応できます。"
   _featuresClient:
     _root:
@@ -123,7 +123,7 @@ _landing:
       description: "UIは洗練された独自のデザインシステムを使用して設計され、デスクトップ・タブレット・スマートフォンそれぞれに最適な表示・動作となるように丁寧に実装されています。"
     _theme:
       title: "テーマ"
-      description: "自分の好きなデザインでMisskeyを使えます。もちろんダークモードも完全サポート。自分で高度にテーマを作ることも可能です。"
+      description: "自分の好きな見た目でMisskeyを使えます。もちろんダークモードも完全サポート。自分で高度にテーマを作ることも可能です。"
     _widgets:
       title: "ウィジェット"
       description: "様々な種類のウィジェットを配置し、UIを好みにカスタマイズできます。"
@@ -136,9 +136,9 @@ _landing:
     _plugin:
       title: "プラグイン"
       description: "セキュアなAiScriptを用いたプラグインをインストールして、クライアントの機能を拡張可能です。"
-    _settingsSync:
-      title: "設定の同期"
-      description: "複数のデバイス間でクライアントの設定を共有・同期することができます。設定情報は自動でバックアップ。"
+    _settingsManagement:
+      title: "柔軟な設定管理"
+      description: "アカウントごとに任意のクライアント設定を上書きできるほか、複数のデバイス間で設定を共有・同期することができます。さらに、設定情報は自動バックアップ可能です。"
     _i18n:
       title: "多言語対応"
       description: "クライアントを様々な言語で利用可能です。"

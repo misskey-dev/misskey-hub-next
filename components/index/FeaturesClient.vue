@@ -17,24 +17,29 @@
 				<div class="description">{{ $t('_landing._featuresClient._theme.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
+				<img src="/img/top-features/deck.webp" class="img">
 				<h3 class="title">{{ $t('_landing._featuresClient._deck.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresClient._deck.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
+				<img src="/img/top-features/multiAccounts.webp" class="img">
 				<h3 class="title">{{ $t('_landing._featuresClient._multiAccounts.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresClient._multiAccounts.description') }}</div>
 			</div></div>
 		</div>
 		<div class="space-y-8 lg:pt-24">
 			<div v-fade-in class="item"><div class="content">
+				<img src="/img/top-features/widgets.webp" class="img">
 				<h3 class="title">{{ $t('_landing._featuresClient._widgets.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresClient._widgets.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
-				<h3 class="title">{{ $t('_landing._featuresClient._settingsSync.title') }}</h3>
-				<div class="description">{{ $t('_landing._featuresClient._settingsSync.description') }}</div>
+				<img src="/img/top-features/settings.webp" class="img">
+				<h3 class="title">{{ $t('_landing._featuresClient._settingsManagement.title') }}</h3>
+				<div class="description">{{ $t('_landing._featuresClient._settingsManagement.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
+				<img src="/img/top-features/plugin.webp" class="img">
 				<h3 class="title">{{ $t('_landing._featuresClient._plugin.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresClient._plugin.description') }}</div>
 			</div></div>
