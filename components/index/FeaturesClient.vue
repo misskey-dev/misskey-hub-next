@@ -50,6 +50,10 @@
 				<div class="description">{{ $t('_landing._featuresClient._plugin.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
+				<h3 class="title">{{ $t('_landing._featuresClient._embed.title') }}</h3>
+				<div class="description">{{ $t('_landing._featuresClient._embed.description') }}</div>
+			</div></div>
+			<div v-fade-in class="item"><div class="content">
 				<img src="/img/top-features/i18n.webp" class="img">
 				<h3 class="title">{{ $t('_landing._featuresClient._i18n.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresClient._i18n.description') }}</div>

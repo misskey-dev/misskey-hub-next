@@ -95,6 +95,9 @@ _landing:
     _moderation:
       title: "モデレーション"
       description: "充実したモデレーション機能で、サーバー運営の負担を軽減。"
+    _privacy:
+      title: "プライバシー"
+      description: "豊富なプライバシー設定で、コンテンツの公開範囲を柔軟にコントロール。"
     _oss:
       title: "Mi ❤️ OSS"
       description: "Misskeyはこれまでもこれからもオープンソースで、誰でも自由に、無料でソースコードを利用可能です。またMisskey Projectは、他のOSSに対して積極的に支援活動を行っています。"
@@ -139,6 +142,9 @@ _landing:
     _deck:
       title: "デッキUI"
       description: "デッキUIを使うと、UIをさらに深くカスタマイズ可能。自分だけのクライアントを作ることができます。"
+    _embed:
+      title: "他サイトへの埋め込み"
+      description: "ノート、チャンネルなどを外部のサイトに埋め込んで表示可能です。"
     _multiAccounts:
       title: "マルチアカウント対応"
       description: "複数のアカウントを簡単に切り替えて使用可能です。"
