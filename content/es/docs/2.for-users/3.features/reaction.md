@@ -1,35 +1,31 @@
-# リアクション
+# Reacciones
 
-他の人のノートに、絵文字を付けて簡単にあなたの反応を伝えられる機能です。
-Misskey Webでリアクションするには、ノートの + アイコンをクリックしてピッカーを表示し、絵文字を選択します。
-リアクションには[カスタム絵文字](./custom-emoji.md)も使用できます。
+La función de reacción te permite mostrar fácilmente tus reacciones a las notas de otras personas utilizando emojis.Para reaccionar, haz clic en el icono + de la nota y selecciona un emoji del selector. También puedes reaccionar con [emojis personalizados](./custom-emoji.md).
 
-## リアクションピッカーのカスタマイズ
+## Personalizando el selector de Emojis
 
-Misskey Webでは、ピッカーに表示される絵文字を自分好みにカスタマイズすることができます。
-設定の「リアクション」で設定します。
+Puedes seleccionar qué emojis se muestran en el selector de emoji. Estas opciones se encuentran en Ajustes > Paleta emoji.
 
-## リモート投稿へのリアクションについて
+## Reacciones a Posts Remotos
 
-リアクションはMisskeyオリジナルの機能であるため、リモートサーバーがMisskeyでない限りは、ほとんどの場合「Like」としてアクティビティが送信されます。一般的にはLikeは「お気に入り」として実装されているようです。
+Las reacciones son una característica original de Misskey. Las plataformas que no soportan las reacciones de Misskey recibirán la reacción como una actividad "me gusta".Esto podría llamarse "favorito" en algunas plataformas.
 
-## リモートからのリアクションについて
+## Reacciones desde instancias remotas
 
-リモートから「Like」アクティビティを受信したとき、Misskeyでは「❤」のリアクションとして解釈されます。
+Si una actividad genérica "me gusta" es recibida desde un servidor remoto, Misskey la interpretará como una reacción «❤».
 
-## 自分のリアクション一覧を見る
+## Viendo tus reacciones
 
-Misskey Webでは、自分のプロフィールページの「リアクション」タブを開くことで、自分の行ったリアクション一覧を見ることができます。
-設定から、このリアクション一覧を公開するようにすることもできます。
+En Misskey Web, puedes ver tus reacciones anteriores yendo a tu perfil y seleccionando la pestaña Reacciones.Puedes cambiar la privacidad de tus reacciones yendo a Ajustes > Privacidad.
 
-## リアクションの受け入れ
+## Aceptación de reacciones
 
-ノートの投稿時に、そのノートにおいて受け入れるリアクションの種類を制限することができます。
+Al publicar una nota, puedes limitar los tipos de reacciones que se aceptarán para esa nota.
 
-- 全て: 全てのリアクションを許可します
-- 全て（リモートはいいねのみ）: 自分のサーバーからのリアクションは全て許可しますが、他のサーバーからのリアクションはすべていいね（❤）として受け入れます
-- 非センシティブのみ: 全てのリアクションを許可しますが、自分のサーバーからのリアクションでは「センシティブ」としてフラグ付けされたカスタム絵文字を使ってリアクションできなくなります
-- 非センシティブのみ（リモートはいいねのみ）: 自分のサーバーからのリアクションでは「センシティブ」としてフラグ付けされたカスタム絵文字を使ってリアクションできなくなり、他のサーバーからのリアクションはすべていいね（❤）として受け入れます
-- いいねのみ: いいね（❤）以外でリアクションできません
+- Todo: Se permiten todas las reacciones
+- Todos (sólo Me gusta remotos): Permite todas las reacciones de tu servidor, pero solo acepta reacciones de otros servidores como Me gusta (❤)
+- Solo no sensible: Todas las reacciones están permitidas, pero no podrás reaccionar con reacciones de tu propio servidor que estén marcadas como «sensibles»
+- Solo contenido no sensible (Solo me gusta en remoto):  No podrás reaccionar usando emojis personalizados marcados como "sensibles" desde tu propio servidor, y todas las reacciones de otros servidores se aceptan como Me gusta/likes (❤)
+- Solo Likes: Solo puedes reaccionar con un Me gusta/like (❤)
 
-なお、この際指定したリアクションの受け入れは自分のサーバーにおいて有効になります。例えば、リアクションの受け入れを「いいねのみ」にしたノートを他のサーバーで閲覧すると、そのサーバー上では絵文字リアクションが付与されているかもしれません。
+En este caso, la reacción que especifiques será aceptada en tu servidor.Por ejemplo, si ves una nota en otro servidor con la opción "Solo me gusta", la nota puede tener una reacción emoji en ese servidor.
