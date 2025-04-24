@@ -1,74 +1,74 @@
-# ページ
+# Páginas
 
-Misskey上でノートとは別にページを作成できます。v13では静的ページに特化しています。
+Además de notas, puedes crear páginas en Misskey.v13 se especializa en páginas estáticas.
 
 :::warning
 
-v13よりページによる動的ページ作成の代わりにMisskey Playが使用できます。
+a partir de la v13, se puede utilizar Misskey Play en lugar de la creación dinámica de páginas.
 
 :::
 
-## ページ設定
+## Configuración de páginas
 
-ページに関する項目を設定します。次の項目を入力できます。
+Establece los elementos relacionados con la página.Puedes introducir los siguientes elementos.
 
-- タイトル
-- ページの要約
-- ページURL
-- 中央寄せ
-- フォント
-- ピン留めされているときにタイトルを非表示
-- アイキャッチ画像
+- Título
+- Resumen de la página
+- Url de la página
+- Alineación central
+- Fuente
+- Ocultar el título de la página al fijarse
+- Elegir imagen llamativa
 
-### タイトル
+### Título
 
-このページのタイトルを入力します。一覧に表示されます。
+Introduce el título de la página.Aparecerá en la lista.
 
-### ページの要約
+### Resumen de la página
 
-簡単な説明を入力します。一覧に表示されます。
+Introduce una breve descripción.Aparecerá en la lista.
 
-### ページURL
+### Url de la página
 
-`https://サーバー名/@ユーザー/pages/●●●` の `●●●` を任意に設定できます。
+Opcionalmente establece `●●●` en `https://server-name/@user/pages/●●●`.
 
-### 中央寄せ
+### Alineación central
 
-有効にすると、中央に寄せて表示します。
+Cuando se activa, el contenido se centra.
 
-### フォント
+### Fuente
 
-**セリフ** と **サンセリフ** を選択します。
+Elige  **serif** o **sans-serif**.
 
-### ピン留めされているときにタイトルを非表示
+### Ocultar el título de la página al fijarse
 
-ピン留めされているときにタイトルを非表示にします。
+Oculta el título cuando se fija.
 
-### アイキャッチ画像
+### Elegir imagen llamativa
 
-**アイキャッチ画像を設定** より画像を設定できます。一覧表示などで表示する事が可能です。
+Puedes configurar una imagen desde los **Ajustes de imagen**.Es posible mostrar la vista previa, por ejemplo, en una vista de lista.
 
-## コンテンツ
+## Contenidos
 
-ページ本体を編集します。次のブロックを一つまたは複数組み合わせてページを生成できます。
+Edita el cuerpo de la página.Las páginas pueden generarse combinando uno o varios de los siguientes bloques.
 
-- セクション
-- テキスト
-- 画像
-- ノート埋め込み
+- Sección
+- Texto
+- Imagen
+- Nota embebida
 
-### セクション
+### Sección
 
-タイトルを設定する事で見出しとして表示します。更に中のブロックを設定できます。
+Al establecer un título, éste aparece como encabezado.Además, se pueden colocar bloques en su interior.
 
-### テキスト
+### Texto
 
-テキスト本文を入力します。MFMやカスタム絵文字を使用できます。
+Introduce el cuerpo del texto.Se puede usar MFM y emojis personalizados.
 
-### 画像
+### Imagen
 
-画像を表示します。ドライブより画像を設定します。
+Muestra una imagen.Establece una imagen desde Drive.
 
-### ノート埋め込み
+### Nota embebida
 
-ノート ID を入れる事で、そのノートを表示します。他のサーバーを埋め込みたい場合は検索でそのURLを入れ、表示させた時のIDを貼り付けて下さい。
+Al introducir el ID de una nota, se muestra su contenido.Si quieres incrustar otro servidor, pon su Url en la búsqueda y pega el Id que aparece.
