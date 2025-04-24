@@ -1,5 +1,5 @@
 <template>
-	<div class="backdrop-blur-lg bg-white dark:bg-slate-900 bg-opacity-50 dark:bg-opacity-50 rounded-2xl p-6 lg:p-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+	<div class="backdrop-blur-lg bg-white dark:bg-slate-900 bg-opacity-50 dark:bg-opacity-50 rounded-2xl p-6 lg:p-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 		<div class="item">
 			<div class="icon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
 			<h3 class="title">{{ $t('_landing._keyFeatures._open.title') }}</h3>
@@ -14,11 +14,6 @@
 			<div class="icon"><img src="/img/emojis/package_1f4e6.png" aria-hidden="true"></div>
 			<h3 class="title">{{ $t('_landing._keyFeatures._multifunction.title') }}</h3>
 			<div class="description">{{ $t('_landing._keyFeatures._multifunction.description') }}</div>
-		</div>
-		<div class="item">
-			<div class="icon"><img src="/img/emojis/gear_2699-fe0f.png" aria-hidden="true"></div>
-			<h3 class="title">{{ $t('_landing._keyFeatures._customizable.title') }}</h3>
-			<div class="description">{{ $t('_landing._keyFeatures._customizable.description') }}</div>
 		</div>
 	</div>
 </template>

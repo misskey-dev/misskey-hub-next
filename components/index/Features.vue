@@ -18,14 +18,18 @@
 				<div class="description">{{ $t('_landing._features._reaction.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
-				<img src="/img/top-features/top-features-theme.png" class="img" alt="color palette">
-				<h3 class="title">{{ $t('_landing._features._theme.title') }}</h3>
-				<div class="description">{{ $t('_landing._features._theme.description') }}</div>
+				<h3 class="title">{{ $t('_landing._features._roles.title') }}</h3>
+				<div class="description">{{ $t('_landing._features._roles.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
 				<img src="/img/top-features/top-features-charts.png" class="img" alt="Charts">
 				<h3 class="title">{{ $t('_landing._features._charts.title') }}</h3>
 				<div class="description">{{ $t('_landing._features._charts.description') }}</div>
+			</div></div>
+			<div v-fade-in class="item"><div class="content">
+				<img src="/img/top-features/oss.webp" class="img">
+				<h3 class="title">{{ $t('_landing._features._oss.title') }}</h3>
+				<div class="description">{{ $t('_landing._features._oss.description') }}</div>
 			</div></div>
 		</div>
 		<div class="space-y-8 lg:pt-24">
@@ -40,14 +44,18 @@
 				<div class="description">{{ $t('_landing._features._drive.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
-				<img src="/img/top-features/top-features-thread.png" class="img" alt="multiple messages arranged in a thread">
-				<h3 class="title">{{ $t('_landing._features._thread.title') }}</h3>
-				<div class="description">{{ $t('_landing._features._thread.description') }}</div>
+				<img src="/img/top-features/2fa.webp" class="img">
+				<h3 class="title">{{ $t('_landing._features._2fa.title') }}</h3>
+				<div class="description">{{ $t('_landing._features._2fa.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
-				<img src="/img/top-features/top-features-widgets.png" class="img" alt="sample widget showing activity as colored dots">
-				<h3 class="title">{{ $t('_landing._features._widgets.title') }}</h3>
-				<div class="description">{{ $t('_landing._features._widgets.description') }}</div>
+				<h3 class="title">{{ $t('_landing._features._branding.title') }}</h3>
+				<div class="description">{{ $t('_landing._features._branding.description') }}</div>
+			</div></div>
+			<div v-fade-in class="item"><div class="content">
+				<img src="/img/top-features/since2014.webp" class="img">
+				<h3 class="title">{{ $t('_landing._features._battleTested.title') }}</h3>
+				<div class="description">{{ $t('_landing._features._battleTested.description') }}</div>
 			</div></div>
         </div>
     </div>

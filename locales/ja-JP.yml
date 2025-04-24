@@ -49,16 +49,13 @@ _landing:
   _keyFeatures:
     _open:
       title: "オープン"
-      description: "Misskeyはオープンソースのソフトウェアで、誰でも自由にMisskeyを利用できます。"
+      description: "Misskeyはオープンソースのソフトウェアで、誰でも自由にMisskeyを使ったSNS(Misskeyサーバー)を作成・運営できます。"
     _federated:
       title: "分散"
-      description: "Misskeyは分散型のプロトコルを実装しているため、異なるサーバーのコミュニティ同士が繋がります。"
+      description: "Misskeyは分散型のプロトコルを実装しているため、異なるサーバーのコミュニティ同士が繋がることができます。"
     _multifunction:
       title: "高機能"
-      description: "Misskeyは他にはない様々な機能を備えていて、プロのようにmicro-blogging可能です。"
-    _customizable:
-      title: "高カスタマイズ性"
-      description: "Misskeyの柔軟なWebインターフェイスにより、自分好みのUIを作れます。"
+      description: "Misskeyは他にはない様々な機能を備えていて、ユーザーのニーズを満たすSNSを提供できます。また、サーバーを細かくカスタマイズすることもできます。"
   _decenterized:
     title: "Misskeyは{0}"
     decenterizedPlatform: "分散型プラットフォーム"
@@ -66,8 +63,8 @@ _landing:
     activityPub: "ActivityPub"
   _features:
     _root:
-      title: "主な機能"
-      description: "Misskeyは一般的なものから特別なものまで、様々な機能を持っています。その一部を紹介します。"
+      title: "特徴"
+      description: "Misskeyの特徴や機能を紹介。"
     _note:
       title: "ノート"
       description: "Misskeyでは、ユーザーの投稿は「ノート」と呼ばれます。他のノートを引用したり、画像、動画、オーディオ、その他の任意のファイルを添付することもできます。"
@@ -76,22 +73,75 @@ _landing:
       description: "オープンな分散プロトコルであるActivityPubを実装しているため、他のMisskeyサーバーだけでなく、ActivityPubをサポートする他のソフトウェアともやりとりできます。"
     _reaction:
       title: "リアクション"
-      description: "ノートには「リアクション」を付けることができ、簡単・気軽に自分のフィーリングを表現して伝えることが出来ます。"
+      description: "ノートに「リアクション」を付けることで、簡単・気軽に自分のフィーリングを表現して伝えることが出来ます。"
     _drive:
       title: "ドライブ"
       description: "アップロードしたファイルを管理するインターフェイスがあります。そのため、お気に入りの画像をフォルダにまとめたり、再度共有することも簡単に行えます。"
+    _2fa:
+      title: "多要素認証"
+      description: "ワンタイムパスワードを使用した多要素認証や、物理的なキーを使用したパスキー認証で、アカウントのセキュリティを高める各種機能が実装されています。"
+    _charts:
+      title: "可視化"
+      description: "Misskeyは組み込みのチャートエンジンを備えていて、サーバーの利用状況などが簡単に可視化できます。"
+    _branding:
+      title: "ブランディング"
+      description: "サーバーのロゴ、アイコン、テーマなどをカスタマイズして、イメージに合ったSNSを運用できます。"
+    _roles:
+      title: "ロール"
+      description: "ロールを使用すると、ユーザーごとに権限を細かくカスタマイズできます。また、コンディショナルロールを使えば、条件に一致するユーザーに自動でロールをアサインすることも可能です。ロールにバッジを設定して、サーバーのマネタイズに役立てることもできます。"
+    _oss:
+      title: "Mi ❤️ OSS"
+      description: "Misskeyはこれまでもこれからもオープンソースで、誰でも自由に、無料でソースコードを利用可能です。"
+    _battleTested:
+      title: "信頼性"
+      description: "Misskeyは10年以上にわたって実際の環境で使われており(battle-tested)、高い信頼性があると考えています。"
+  _featuresServer:
+    _root:
+      title: "サーバーの機能"
+      description: "Misskeyを支えるバックエンド実装の特徴。"
+    _api:
+      title: "API"
+      description: "Misskeyの全ての機能はHTTP APIを通じて操作可能で、他のアプリケーションとの連携も容易です。さらに、WebhookやWebSocket接続もサポートしているので、リアルタイムにMisskeyからのイベントを受け取ることも可能です。"
+    _nodejs:
+      title: "Node.jsバックエンド"
+      description: "MisskeyはバックエンドにNode.jsを採用しており、高速・軽量に動作します。"
+    _jobQueue:
+      title: "高効率なジョブキュー実装"
+      description: "ジョブキューにBullMQを採用し、タスクを複数のサーバーで効率的に処理可能。また、Misskeyネイティブで実装されたインスペクタはコントロールパネルに統合され、外部ツールに頼ることなく管理が可能です。"
+    _ftt:
+      title: "Fan-out Timeline Technology"
+      description: "Fan-out Timeline Technology(FTT)機能を有効にすると、タイムラインをRedis上に構築しパフォーマンスを向上させることができます。"
+    _scalable:
+      title: "スケールアウト可能"
+      description: "プロセスのクラスタリング、複数サーバーによるロードバランス、データベースのレプリケーションに対応しており、ユーザーの増加にも対応できます。"
+  _featuresClient:
+    _root:
+      title: "WebUI"
+      description: "Misskeyには高機能なWebフロントエンドが付属。"
+    _responsive:
+      title: "レスポンシブUI"
+      description: "UIは洗練された独自のデザインシステムを使用して設計され、デスクトップ・タブレット・スマートフォンそれぞれに最適な表示・動作となるように丁寧に実装されています。"
     _theme:
       title: "テーマ"
       description: "自分の好きなデザインでMisskeyを使えます。もちろんダークモードも完全サポート。自分で高度にテーマを作ることも可能です。"
-    _thread:
-      title: "スレッド"
-      description: "もちろんノートはスレッドにすることができ、気が済むまで会話を続けられます。"
-    _charts:
-      title: "チャート"
-      description: "Misskeyは組み込みのチャートエンジンを備えていて、サーバーの利用状況などが簡単に可視化できます。"
     _widgets:
       title: "ウィジェット"
       description: "様々な種類のウィジェットを配置し、UIを好みにカスタマイズできます。"
+    _deck:
+      title: "デッキUI"
+      description: "デッキを使えば、UIをさらに深くカスタマイズ可能です。"
+    _multiAccounts:
+      title: "マルチアカウント対応"
+      description: "複数のアカウントを簡単に切り替えて使用可能です。"
+    _plugin:
+      title: "プラグイン"
+      description: "セキュアなAiScriptを用いたプラグインをインストールして、クライアントの機能を拡張可能です。"
+    _settingsSync:
+      title: "設定の同期"
+      description: "複数のデバイス間でクライアントの設定を共有・同期することができます。設定情報は自動でバックアップ。"
+    _i18n:
+      title: "多言語対応"
+      description: "クライアントを様々な言語で利用可能です。"
   _getStarted:
     title: "Misskeyをはじめよう"
     _find:
