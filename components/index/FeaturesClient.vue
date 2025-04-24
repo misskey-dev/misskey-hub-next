@@ -8,6 +8,7 @@
         </div>
         <div class="space-y-8">
 			<div v-fade-in class="item"><div class="content">
+				<img src="/img/top-features/responsive.webp" class="img">
 				<h3 class="title">{{ $t('_landing._featuresClient._responsive.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresClient._responsive.description') }}</div>
 			</div></div>

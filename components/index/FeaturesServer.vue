@@ -11,6 +11,7 @@
 				<div class="description">{{ $t('_landing._featuresServer._scalable.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
+				<img src="/img/top-features/jobQueue.webp" class="img">
 				<h3 class="title">{{ $t('_landing._featuresServer._jobQueue.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresServer._jobQueue.description') }}</div>
 			</div></div>
