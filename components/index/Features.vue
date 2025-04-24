@@ -18,6 +18,12 @@
 				<div class="description">{{ $t('_landing._features._reaction.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
+				<img src="/img/top-features/customEmojis.webp" class="img">
+				<h3 class="title">{{ $t('_landing._features._customEmojis.title') }}</h3>
+				<div class="description">{{ $t('_landing._features._customEmojis.description') }}</div>
+			</div></div>
+			<div v-fade-in class="item"><div class="content">
+				<img src="/img/top-features/role.webp" class="img">
 				<h3 class="title">{{ $t('_landing._features._roles.title') }}</h3>
 				<div class="description">{{ $t('_landing._features._roles.description') }}</div>
 			</div></div>
@@ -49,6 +55,7 @@
 				<div class="description">{{ $t('_landing._features._2fa.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
+				<img src="/img/top-features/branding.webp" class="img">
 				<h3 class="title">{{ $t('_landing._features._branding.title') }}</h3>
 				<div class="description">{{ $t('_landing._features._branding.description') }}</div>
 			</div></div>
