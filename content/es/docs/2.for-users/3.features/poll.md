@@ -1,51 +1,51 @@
-# アンケート
+# Encuestas
 
-アンケートは、他の人からの意見を簡単に聞くことができる機能です。
+Las encuestas son una función que te permite solicitar opiniones de los demás.
 
-## アンケートをノートに添付する
+## Adjuntar una encuesta a una nota
 
-アンケートは、[ノート](/docs/for-users/features/note)に添付する形で投稿することができます。ノートにアンケートを添付するには、投稿フォームの下部にある「アンケート」ボタンを選択します。
+Las encuestas pueden publicarse adjuntándolas a una [nota](/docs/for-users/features/note).Para adjuntar una encuesta a su nota, seleccione el icono "Encuesta" en la parte inferior del formulario de publicación.
 
-## 選択肢を増やす
+## Añadiendo Opciones
 
-アンケートには、選択肢を10個まで作ることができます。選択肢の入力欄は、「追加」ボタンを押すことで追加することができます。
+Una encuesta puede tener hasta 10 opciones.Para añadir una opción, haz clic en el botón "Agregar".
 
-追加しすぎてしまった入力欄は、入力欄の横の☓ボタンを押すことで削除することができます。
+Si tienes demasiadas opciones, puedes eliminar una utilizando el botón «X» situado junto a la opción.
 
 :::warning
 
-いずれかの入力欄が空白だった場合、そのアンケートが添付されたノートは投稿できません。
+Si una opción está en blanco, no podrás enviar la nota.
 
 :::
 
-## 複数回答を可能にする
+## Permitir más de una respuesta
 
-「複数回答可」スイッチをオンにすると、アンケートに回答する人が複数の選択肢に投票できるようになります。
+Si se selecciona "Permitir más de una respuesta" los votantes podrán votar por más de una opción.
 
-## アンケートの期限を設定する
+## Fijar una fecha límite para la encuesta
 
-アンケートには、終了する期限を、日時指定か経過指定のいずれかで設定することができます。
+Puedes fijar una fecha límite para la encuesta, ya sea una fecha de finalización o un período de tiempo.
 
-設定するには、「期限」の欄から「日時指定」もしくは「経過指定」をクリックします。
+Para fijar una fecha límite, selecciona "Termina el" o "Finalizar después de..." en el menú desplegable "Finalizar encuesta".
 
-一度設定した期限を取り消す場合には、「期限」の欄から「無期限」を選択します。
+Para eliminar una fecha límite, selecciona "Sin límite de Tiempo" en el desplegable "Finalizar encuesta".
 
-## アンケートに投票する
+## Votando en una encuesta
 
-アンケートが添付されたノートがタイムラインに流れてきたときは、アンケートに投票してみましょう。
+Cuando veas pasar una nota con una encuesta en la línea de tiempo, ¡vota!
 
-アンケートに投票するには、各選択肢をクリックします。アンケートを投稿したユーザーが複数回答可に設定していない場合は、その時点でのアンケートの結果が表示されます。
+Para votar en una encuesta, haz clic en la opción deseada.Si el usuario que creó la encuesta no permitía opciones múltiples, se mostrarán inmediatamente los resultados actuales de la encuesta.
 
-アンケートを投稿したユーザーが複数回答可に設定していた場合、他の選択肢にも投票することができます。この場合、結果は自動では表示されません。
+Si el usuario que creó la encuesta permitía varias opciones, se te permitirá votar por otra opción.En este caso, los resultados no se mostrarán inmediatamente.
 
-複数回答の設定に関わらず、自動でアンケートの結果が表示されなかったり、投票前に結果を見たい時は、選択肢の下にある「結果を見る」をクリックしてアンケートの結果を表示することができます。
+Para ver los resultados de la encuesta antes o después de votar, haga clic en el botón "Ver resultado" situado debajo de las opciones.
 
-未投票のアンケートの結果を見たあと、もう一度隠すときは「投票する」をクリックします。
+Si has consultado los resultados sin votar, puedes volver a votar pulsando el botón "Votar".
 
 :::tip
 
-未投票アンケートには、結果を表示した状態でも投票できます。
+Si aún no has votado, puedes hacerlo después de ver los resultados actuales.
 
 :::
 
-投票をすると、自分の投票した選択肢に✔がつきます。
+Al votar, aparecerá una ✔ junto a tu selección o selecciones.
