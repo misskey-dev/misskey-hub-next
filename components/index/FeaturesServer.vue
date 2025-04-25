@@ -27,6 +27,15 @@
 				<h3 class="title">{{ $t('_landing._featuresServer._ftt.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresServer._ftt.description') }}</div>
 			</div></div>
+			<div v-fade-in class="item"><div class="content">
+				<h3 class="title">{{ $t('_landing._featuresServer._ml.title') }}</h3>
+				<div class="description">{{ $t('_landing._featuresServer._ml.description') }}</div>
+			</div></div>
+			<div v-fade-in class="item"><div class="content">
+				<img src="/img/top-features/sentry.webp" class="img">
+				<h3 class="title">{{ $t('_landing._featuresServer._sentry.title') }}</h3>
+				<div class="description">{{ $t('_landing._featuresServer._sentry.description') }}</div>
+			</div></div>
         </div>
 				<div>
             <div class="lg:sticky lg:top-32" style="text-align: right;">

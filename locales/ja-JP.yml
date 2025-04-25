@@ -44,18 +44,18 @@ _nav:
 
 _landing:
   _hero:
-    description: "Misskey（ミスキー）はオープンソースの分散型ソーシャルネットワーキングプラットフォームです。"
+    description: "Misskey（ミスキー）はフリーでオープンソースの分散型SNS作成ソフトウェアです。"
     gettingStarted: "はじめる"
   _keyFeatures:
     _open:
       title: "オープン"
-      description: "Misskeyはオープンソースのソフトウェアで、誰でも自由にMisskeyを使ったSNS(Misskeyサーバー)を作成・運営できます。"
+      description: "Misskeyはソースコードが公開されており、誰でも自由に、無料でMisskeyを使ったSNS(Misskeyサーバー)を作成・運営できます。"
     _federated:
       title: "分散"
       description: "Misskeyは分散型のプロトコルを実装しているため、異なるサーバーのコミュニティ同士が繋がることができます。"
     _multifunction:
       title: "高機能"
-      description: "Misskeyは他にはない様々な機能を備えていて、ユーザーのニーズを満たすSNSを提供できます。また、サーバーを細かくカスタマイズすることもできます。"
+      description: "Misskeyは他にはない様々な機能を備えていて、ニーズを満たすSNSを提供可能。また、サーバーを細かくカスタマイズすることもできます。"
   _decenterized:
     title: "Misskeyは{0}"
     decenterizedPlatform: "分散型プラットフォーム"
@@ -77,6 +77,12 @@ _landing:
     _customEmojis:
       title: "カスタム絵文字"
       description: "Misskeyの様々場所で使用できる、サーバーオリジナルの絵文字を作成可能です。"
+    _channel:
+      title: "チャンネル"
+      description: "チャンネルを作成すれば、共通のテーマでコミュニケーションが行えます。"
+    _antenna:
+      title: "アンテナ"
+      description: "特定のワードが含まれるノートだけを収集するタイムラインを作成可能です。"
     _drive:
       title: "ドライブ"
       description: "アップロードしたファイルを管理するインターフェイスがあります。そのため、お気に入りの画像をフォルダにまとめたり、再度共有することも簡単に行えます。"
@@ -98,6 +104,12 @@ _landing:
     _privacy:
       title: "プライバシー"
       description: "豊富なプライバシー設定で、コンテンツの公開範囲を柔軟にコントロール。"
+    _singleUser:
+      title: "お一人様歓迎"
+      description: "もちろん、Misskeyは個人用サーバーとしての利用もサポート。Fediverseと繋がるための、あなただけの強力な拠点になります。"
+    _easySetup:
+      title: "簡単インストール"
+      description: "コマンド一つでインストールできるほか、各社提供のホスティングサービスを利用すれば、管理の手間も省けます。"
     _oss:
       title: "Mi ❤️ OSS"
       description: "Misskeyはこれまでもこれからもオープンソースで、誰でも自由に、無料でソースコードを利用可能です。またMisskey Projectは、他のOSSに対して積極的に支援活動を行っています。"
@@ -123,6 +135,12 @@ _landing:
     _scalable:
       title: "スケーラブル"
       description: "プロセスのクラスタリング、複数サーバーによるロードバランス、データベースのレプリケーションに対応しており、ユーザーの増加にも対応できます。"
+    _ml:
+      title: "機械学習"
+      description: "組み込みの機械学習機能を利用して、自動的にメディアのセンシティブ判定を行うなど、運用の負担を軽減することも可能です。"
+    _sentry:
+      title: "Sentryサポート"
+      description: "Sentryによるサーバーのメトリクス収集に対応しているため、サーバーリソースの監視、ヘルスチェック、メンテナンスに役立てることができます。"
   _featuresClient:
     _root:
       title: "WebUI"
