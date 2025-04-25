@@ -1,15 +1,14 @@
-# テーマ
+# Temas
 
-テーマを設定して、Misskeyクライアントの見た目を変更できます。
+Los temas se pueden utilizar para cambiar la apariencia del cliente Misskey.
 
-## テーマの設定
+## Configuración del tema
 
-[設定 > テーマ](x-mi-web://settings/theme)
+[Configuración > Tema](x-mi-web://settings/theme)
 
-## テーマを作成する
+## Crear tema
 
-テーマコードはJSON5で記述されたテーマオブジェクトです。
-テーマは以下のようなオブジェクトです。
+Los temas se describen como objetos JSON5, escritos en el formato que se muestra a continuación:.
 
 ```js
 {
@@ -37,53 +36,52 @@
 
 ```
 
-- `id` ... テーマの一意なID。UUIDをおすすめします。
-- `name` ... テーマ名
-- `author` ... テーマの作者
-- `desc` ... テーマの説明(オプション)
-- `base` ... 明るいテーマか、暗いテーマか
-  - `light`にすると明るいテーマになり、`dark`にすると暗いテーマになります。
-  - テーマはここで設定されたベーステーマを継承します。
-- `props` ... テーマのスタイル定義。これから説明します。
+- `id` ... ID único del tema.Se recomienda un código UUID
+- `name` ... Nombre del tema
+- `author` ... El autor del tema
+- `desc` ... Descripción del tema (opcional)
+- `base` ... Si es un tema claro u oscuro
+    - Si lo ajustas a `light`, el tema aparecerá como un tema de modo claro, si lo ajustas a `dark`, aparecerá como un tema de modo oscuro.
+    - El tema heredará los valores por defecto del tema especificado aquí.
+- `props` ... Definición del estilo del tema.Se explicará a continuación.
 
-### テーマのスタイル定義
+### Definiciones de los estilos de los temas
 
-`props`下にはテーマのスタイルを定義します。
-キーがCSSの変数名になり、バリューで中身を指定します。
-なお、この`props`オブジェクトはベーステーマから継承されます。
-ベーステーマは、このテーマの`base`が`light`なら[\_light.json5][_light.json5]で、`dark`なら[\_dark.json5][_dark.json5]です。
-つまり、このテーマ内の`props`に`panel`というキーが無くても、そこにはベーステーマの`panel`があると見なされます。
+En `props` se define el estilo del tema.
+La clave es el nombre de la variable Css y el valor especifica el contenido.
+Tenga en cuenta que este objeto `props` hereda del tema base.
+El tema base es [\_light.json5][_light.json5] si la `base` de este tema es `light` y [\_dark.json5][_dark.json5] si es `dark`.
+Esto significa que incluso si no hay una clave `props` con `panel` en este tema, se asume que hay un `panel` del tema base allí.
 
 - [_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
 - [_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
 
-#### バリューで使える構文
+#### Sintaxis de los valores
 
-- 16進数で表された色
-  - 例: `#00ff00`
-- `rgb(r, g, b)`形式で表された色
-  - 例: `rgb(0, 255, 0)`
-- `rgba(r, g, b, a)`形式で表された透明度を含む色
-  - 例: `rgba(0, 255, 0, 0.5)`
-- 他のキーの値の参照
-  - `@{キー名}`と書くと他のキーの値の参照になります。`{キー名}`は参照したいキーの名前に置き換えます。
-  - 例: `@panel`
-- 定数(後述)の参照
-  - `${定数名}`と書くと定数の参照になります。`{定数名}`は参照したい定数の名前に置き換えます。
-  - 例: `$main`
-- 関数(後述)
-  - `:{関数名}<{引数}<{色}`
+- Los colores en base hexadecimal
+    - Ejemplo:. `#00ff00`
+- Los colores con la sintaxis `rgb(r, g, b)`
+    - Ej: rgb(0, 255, 0)\`
+- \`Los colores con la sintaxis rgb(r, g, b, a) con un grado de transparencia
+    - Ej: rgba(0, 255, 0, 0.5)\`
+- Referencias a valores de otras claves
+    - Escribiendo @{keyname} se hace referencia al valor de la otra clave.Reemplace {keyname} por el nombre de la clave al cual quiera hacer referencia.
+    - Ej:`@panel`
+- Referencia a una constante (ver más abajo)
+    - Escribiendo ${constant-name} se hace referencia a la constante.Reemplace {constant-name} por la constante al cual quiera hacer referencia.
+    - Ejemplo: `$main`
+- Funciones (ver más abajo)
+    - `:{function-name}<{argument}<{color}`
 
-#### 定数
+#### Constantes
 
-「CSS変数として出力はしたくないが、他のCSS変数の値として使いまわしたい」値があるときは、定数を使うと便利です。
-キー名を`$`で始めると、そのキーはCSS変数として出力されません。
+Cuando hay un valor que no se quiere generar como variable CSS pero sí se quiere reutilizar como valor de otra variable CSS, es conveniente usar constantes. Cuando a un nombre de clave se le añade como prefijo <code>$</code>, esa clave no será generada como una variable CSS.
 
-#### 関数
+#### Funciones
 
-「ボタンの上にカーソルを合わせたときだけ色を明るくしたい」のように、既存の色から少し変更した色を使いたい場合に、関数を使うと便利です。
+Las funciones son útiles cuando se desea utilizar una ligera variación de un color existente, por ejemplo, para dar más brillo a un botón al pasar el ratón por encima de él.
 
-`:{関数名}<{引数}<{色や他のキーの参照}`の形で使うことができます。
+Las funciones tienen la forma: `:{function-name}<{argument}<{color}`.
 
 ```js
 props: {
@@ -93,17 +91,17 @@ props: {
 }
 ```
 
-##### 使用できる関数
+##### Lista de funciones
 
-- `lighten` ... 渡された色の輝度(0 ~ 100)に対して引数(0 ~ 100)を加算した色を返します。
-- `darken` ... 渡された色の輝度(0 ~ 100)に対して引数(0 ~ 100)を減算した色を返します。
-- `alpha` ... 渡された色の透明度を引数(0.0 ~ 1.0)に設定した色を返します。
-  - 0.0のとき完全に透明、1.0で完全に不透明になります。
-- `hue` ... 渡された色の色相(-360 ~ 360)に対して引数(-360 ~ 360)の値だけ回転させた色を返します。
-- `saturate` ... 渡された色の彩度(0 ~ 100)に対して引数(0 ~ 100)を加算した色を返します。
+- `lighten` ... Devuelve el color obtenido al aumentar la luminosidad del color especificado en la cantidad dada (0-100). La luminosidad del color puede oscilar entre 0-100. Si se proporciona 100, siempre se obtendrá el color blanco.
+- `darken` ... Devuelve el color obtenido al disminuir la luminosidad del color especificado en la cantidad dada (0-100). Proporcionando 100 siempre devolverá el color negro.
+- `alpha` ... Devuelve el color con el valor de transparencia (alfa) ajustado al argumento dado (0.0-1.0).
+    - 0,0 es completamente transparente, mientras que 1,0 es completamente opaco.
+- `hue` ... Devuelve el color obtenido al girar el matiz en la cantidad dada (-360 a 360).
+- `saturate` ... Devuelve el color obtenido al aumentar la saturación en la cantidad dada (0-100). La saturación del color puede oscilar entre 0-100.
 
-## テーマを配布する
+## Distribuir temas
 
-v2023.11.0以降では、あなたのウェブサイトから、ワンクリックでテーマを直接インストールできるようになっています。
+desde la versión 2023.11.0, puedes instalar temas directamente desde un sitio web con un solo clic.
 
-テーマのインストール機能を提供する場合は、あなたのサイト上にAPIを実装する必要があります。詳しくは[こちら](../../for-developers/publish-on-your-website/)をご覧ください。
+Si desea proporcionar la funcionalidad de instalación de temas, tendrá que implementar una Api en su sitio.Para más información, consulte [aquí](../../for-developers/publish-on-your-website/).
