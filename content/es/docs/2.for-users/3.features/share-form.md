@@ -1,101 +1,101 @@
-# 共有フォーム
+# Formulario para compartir
 
-Misskey Webの`/share`を開くと、共有用の投稿フォームを開くことができます。この共有フォームを利用すると、外部のWebページから、ページの内容をユーザーにMisskeyで共有してもらいたいときに便利です。
+En Misskey Web, la ruta `/share` lleva a un formulario para compartir en redes sociales.Esta página es útil para los propietarios de sitios externos que desean que los usuarios compartan sus páginas en Misskey.
 
-URLにクエリパラメータとして共有内容をはじめとするいくつかのオプションを指定できます。
+Puede especificar opciones como el contenido a compartir como parámetros de consulta de URL.
 
-## クエリパラメータ
+## Parámetros de consulta
 
 :::tip
 
-すべてのパラメータは**オプション**であり、必須ではありません。
+Todos los parámetros son **opcionales** y no obligatorios.
 
 :::
 
-| 名前      | 説明                                                                           |
-| ------- | ---------------------------------------------------------------------------- |
-| `title` | タイトル。本文の先頭に[ … ]と挿入されます。 |
-| `text`  | 本文。                                                                          |
-| `url`   | URL。本文の末尾に挿入されます。                                                            |
+| Nombre  | Descripción                                                                                                                                                                                                                                 |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title` | Título.Añadido al principio de la nota... y entre corchetes en la forma "\[ Título del contenido \]". |
+| `text`  | Cuerpo del texto.                                                                                                                                                                                                           |
+| `url`   | URL.Añadida al final de la nota.                                                                                                                                                                            |
 
-### リプライ情報
+### Información de respuesta
 
-以下のいずれかを指定すると、指定のノートに対するリプライにすることができます。
+Se puede responder a una nota utilizando los siguientes parámetros:
 
-| 名前         | 説明                            |
-| ---------- | ----------------------------- |
-| `replyId`  | リプライ先のノートID。                  |
-| `replyUri` | リプライ先のURL。（リモートのノートオブジェクトを指定） |
+| Nombre     | Descripción                                                                                    |
+| ---------- | ---------------------------------------------------------------------------------------------- |
+| `replyId`  | El Id de la nota a la que responder.                                           |
+| `replyUri` | La Url de la nota a la que responder.(Para objetos remotos) |
 
-### Renote情報
+### Información para Renotar
 
-以下のいずれかを指定すると、指定のノートに対するRenote(引用)にすることができます。
+Puedes especificar una de las siguientes opciones para que la entrada sea una Renota (cita) de una nota específica.
 
-| 名前          | 説明                              |
-| ----------- | ------------------------------- |
-| `renoteId`  | Renote先のノートID。                  |
-| `renoteUri` | Renote先のURL。（リモートのノートオブジェクトを指定） |
+| Nombre      | Descripción                                                                           |
+| ----------- | ------------------------------------------------------------------------------------- |
+| `renoteId`  | El Id de la nota a Renotar.                                           |
+| `renoteUri` | La Url de la nota a renotar.(Para objetos remotos) |
 
-### 公開範囲
+### Visibilidad
 
-以下のオプションで公開範囲の指定を行えます。
+Puedes especificar la visibilidad de la nota con las siguientes opciones.
 
-| 名前               | 説明                                                                   |
-| ---------------- | -------------------------------------------------------------------- |
-| `visibility`     | `public`, `home`, `followers`, `specified` のいずれか                     |
-| `localOnly`      | 0(false) or 1(true)            |
-| `visibleUserIds` | 対象ユーザーID(カンマ区切り)                                  |
-| `visibleAccts`   | 対象ユーザー[acct](../resources/glossary/#acct)(カンマ区切り) |
+| Nombre           | Descripción                                                                                        |
+| ---------------- | -------------------------------------------------------------------------------------------------- |
+| `visibility`     | Una de las siguientes opciones: `Público`, `Inicio`, `Seguidores` o `Nota directa` |
+| `localOnly`      | 0(falso) o 1(verdadero)                                      |
+| `visibleUserIds` | Id de usuario de destino (separados por comas)                                  |
+| `visibleAccts`   | Usuario de destino [acct](../resources/glossary/#acct) (separado por comas)     |
 
 :::warning
 
-`visibility`に`specified`を指定した場合は、`visibleUserIds`または`visibleAccts`の指定も必要です。
+Si especificas la `visibility` como `nota directa`, debes especificar también `visibleUserIds` o `visibleAccts`.
 
 :::
 
-### 添付ファイル
+### Archivos adjuntos
 
-以下のオプションで添付ファイルの指定を行えます。
+Puedes especificar archivos adjuntos con la siguiente opción.
 
-| 名前        | 説明                                     |
-| --------- | -------------------------------------- |
-| `fileIds` | 添付するファイルのID(カンマ区切り) |
+| Nombre    | Descripción                                                                |
+| --------- | -------------------------------------------------------------------------- |
+| `fileIds` | Los Id de los archivos a adjuntar (separados por comas) |
 
-## Misskey Hubの共有フォーム中継サービスについて
+## Misskey Hub Share Form Relay Service
 
 <a name="hub-share-disclaimer" id="hub-share-disclaimer"></a>
 
-新Misskey Hubでは、Misskeyのシェアボタンの設置にかかる煩雑な手間を減らすために、共有フォームの中継サービスを提供しています。\
-こちらのサービスは、無料でどなたでもお使いいただけます。
+Para reducir la molestia de configurar el botón de compartir de Misskey que es compatible con múltiples servidores, el nuevo Misskey Hub proporciona un servicio de retransmisión de formulario de compartir.\
+Este servicio es gratuito.
 
-今までの共有フォームのリンクの各サーバーのドメイン部分を `misskey-hub.net` に変更するだけで、様々なMisskeyサーバーへの共有リンクへと進化させることができます！
+¡Puedes evolucionar tus enlaces de formulario de compartir para compartir enlaces a varios servidores de Misskey simplemente cambiando la parte del dominio de los enlaces de formulario de compartir anteriores a `misskey-hub.net`!
 
 :::tip
 
-[共有ボタンジェネレーター](/tools/share-link-generator/) も併せてお使いください。
+Mira también [Generador de botones para compartir](/tools/share-link-generator/).
 
 :::
 
 :::warning
 
-共有フォーム中継サービス（以下、「本サービス」という）はWebサイト管理者の便宜のためにMisskey Project（以下、「当方」という）が無償・無保証で提供する機能です。本サービスを利用したこと、または何らかの原因によりこれをご利用できなかったことにより生じたいかなる損害について、当方は一切の責任を負いません。
+El servicio de retransmisión de formularios compartidos (en lo sucesivo, «este servicio») es una función proporcionada por Misskey Project (en lo sucesivo, «nosotros») de forma gratuita y sin garantía para comodidad de los webmasters.No nos hacemos responsables de los daños que se produzcan como consecuencia de utilizar o no poder utilizar este servicio por cualquier motivo.
 
 :::
 
-### 基本のパラメータ
+### Parámetros Básicos
 
-基本的に上記で紹介されているパラメーターをそのままお使いいただけますが、ユーザーIDやファイルIDなど、 **各サーバーに依存するパラメーターは使用できません。** それらが指定されていた場合、Misskey Hub上で削除されます。
+En general, se pueden utilizar los parámetros introducidos anteriormente, pero **no se pueden utilizar los parámetros que dependen de cada servidor, como los ID de usuario y los ID de archivo.**.Si se especifica, se eliminarán en Misskey Hub y no se pasarán a los servidores de destino.
 
-### 独自機能
+### Características únicas disponibles en el Servicio Misskey Hub Share Relay
 
-#### おすすめサーバー機能
+#### Servidor Destacado
 
-URLパラメータ `manualInstance` にMisskeyサーバーのドメインを入力することで、「シェア元Webサイトからのおすすめ」として、別枠でそのサーバーへのリンクを設置することができます。ご自身のサーバーに誘導する際などにお使いいただけます。
+Introduciendo el dominio de un servidor de Misskey en el parámetro URL `manualInstance`, puede añadir un enlace independiente a ese servidor como "Recomendado por el sitio web de origen compartido" (Recommended by the Share Source Website.)Utilízalo cuando desees guiar a los usuarios a tu servidor.
 
 :::warning
 
-「おすすめサーバー機能」はWebサイト管理者の便宜のために設置してある機能であり、当方が「シェア元Webサイトからのおすすめ」欄にあるサーバーをおすすめしているものではございません。
+La función "Servidores recomendados" se ofrece para comodidad de los webmasters. Por lo tanto, no significa que recomendemos los servidores enumerados en la sección "Recomendado por el sitio web de origen compartido".
 
-「シェア元Webサイトからのおすすめ」から遷移したサーバーを利用・登録したことに起因するいかなる損害・不利益について、当方では責任を負いかねます。
+No nos hacemos responsables de los daños o desventajas que se deriven de la utilización o el registro en los servidores transitorios del "Sitio web recomendado por Share Source".
 
 :::
