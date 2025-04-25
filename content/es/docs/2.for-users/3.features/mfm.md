@@ -250,6 +250,30 @@ $[bg.color=ff0 黄背景]"></MfmPreview>
 El contenido puede rodear los bordes.Los bordes pueden tener varios estilos.
 
 ```
+border.style=solid,width=4 Default]
+
+$[border.style=hidden No border]
+
+$[border.style=dotted,width=2 Dotted]
+$[border.style=dashed,width=2 Dashed]
+$[border.style=double,width=4 Double]
+
+$[border.style=groove,width=4 Embossed A]
+$[border.style=ridge,width=4 Embossed B]
+
+$[border.style=inset,width=4 Inset A]
+$[border.style=outset,width=4 Inset B]
+
+$[border.color=d00 Border color]
+$[border.width=5 Border width]
+
+$[border.radius=6,width=2 Border radius]
+
+$[border.radius=5,width=2,color=888 $[position.x=1.5 ＣＳＳ]
+$[position.x=1.5 完全に理解した]]
+
+$[border.radius=5,width=2,color=888,noclip $[position.x=1.5 ＣＳＳ]
+$[position.x=1.5 完全に理解した]]
 ```
 
 <MfmPreview text="$[border.style=solid,width=4 Default]\
