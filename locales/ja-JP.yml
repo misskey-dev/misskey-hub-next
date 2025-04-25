@@ -187,8 +187,8 @@ _landing:
       title: "さらに詳しく知る"
       docs: "ドキュメントを見る"
   _donation:
-    title: "寄付のお願い"
-    description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
+    title: "ご支援のお願い"
+    description: "Misskeyは非営利なプロジェクトで、少数の有志による開発のため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入ってくださいましたら、今後も開発を続けられるようにぜひ支援をお願いします。"
   _sponsors:
     title: "スポンサー"
     becomeASponsor: "スポンサーになる"
