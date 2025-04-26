@@ -28,12 +28,20 @@
 				<h3 class="title">{{ $t('_landing._featuresServer._jobQueue.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresServer._jobQueue.description') }}</div>
 			</div></div>
+			<div v-fade-in class="item"><div class="content">
+				<h3 class="title">{{ $t('_landing._featuresServer._cdn.title') }}</h3>
+				<div class="description">{{ $t('_landing._featuresServer._cdn.description') }}</div>
+			</div></div>
 		</div>
 		<div class="space-y-8">
 			<div v-fade-in class="item"><div class="content">
 				<img src="/img/top-features/api.webp" class="img">
 				<h3 class="title">{{ $t('_landing._featuresServer._api.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresServer._api.description') }}</div>
+			</div></div>
+			<div v-fade-in class="item"><div class="content">
+				<h3 class="title">{{ $t('_landing._featuresServer._relay.title') }}</h3>
+				<div class="description">{{ $t('_landing._featuresServer._relay.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
 				<img src="/img/top-features/ftt.webp" class="img">
