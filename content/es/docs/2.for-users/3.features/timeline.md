@@ -1,111 +1,109 @@
-# タイムライン
+# Líneas de tiempo
 
-タイムラインは、[ノート](/docs/for-users/features/note/)が時系列で表示される機能です。
-タイムラインには以下で示す種類があり、種類によって表示されるノートも異なります。
-なお、タイムラインの種類によってはサーバーにより無効になっている場合があります。
+[Notas](/docs/for-users/features/note/) se muestran en las líneas de tiempo. Hay varios tipos de líneas de tiempo como se menciona a continuación y cada uno de ellos muestra un conjunto diferente de notas. Los servidores pueden desactivar algunas de ellas.
 
-## ホーム
+## Inicio
 
-自分のフォローしているユーザーの投稿が流れます。HTLと略されます。
+Aquí es donde ves las publicaciones de los usuarios a los que sigues.A menudo abreviado como HTL (en inglés Home Time Line).
 
-## ローカル
+## Local
 
-全てのローカルユーザーの「ホーム」指定されていない投稿が流れます。LTLと略されます。
+Aquí es donde se ven todos los mensajes de los usuarios locales, excepto aquellos con visibilidad "Inicio".A menudo abreviado como LTL (en inglés Local Time Line).
 
-## ソーシャル
+## Social
 
-自分のフォローしているユーザーの投稿と、全てのローカルユーザーの「ホーム」指定されていない投稿が流れます。STLと略されます。
+Aquí es donde ves las publicaciones de los usuarios a los que sigues Y todas las publicaciones de los usuarios locales, excepto las que tienen visibilidad de "Inicio".A menudo abreviado como STL (En inglés Social Time Line).
 
-## グローバル
+## Global
 
-全てのローカルユーザーの「ホーム」指定されていない投稿と、サーバーに届いた全てのリモートユーザーの「ホーム」指定されていない投稿が流れます。GTLと略されます。
+Aquí es donde se ven los mensajes de los usuarios locales y de los usuarios remotos en servidores federados, excepto los que tienen visibilidad "Inicio".A menudo abreviado como GTL (En inglés Global Time Line).
 
-## 比較
+## Comparación
 
 <table>
     <thead>
         <tr>
-            <th scope="col" rowspan="2">ソース</th>
-            <th scope="col" rowspan="2">公開範囲</th>
-            <th scope="col" colspan="4">タイムライン</th>
+            <th scope="col" rowspan="2">Fuente</th>
+            <th scope="col" rowspan="2">Visibilidad</th>
+            <th scope="col" colspan="4">Líneas de tiempo</th>
         </tr>
         <tr>
-            <th scope="col">ホーム</th>
-            <th scope="col">ローカル</th>
-            <th scope="col">ソーシャル</th>
-            <th scope="col">グローバル</th>
+            <th scope="col">Inicio</th>
+            <th scope="col">Local</th>
+            <th scope="col">Social</th>
+            <th scope="col">Global</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <th scope="row" rowspan="3">ローカル（フォロー）</th>
-            <th scope="row">公開</th>
+            <th scope="row" rowspan="3">Usuarios locales que sigues</th>
+            <th scope="row">Público</th>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <th scope="row">ホーム</th>
+            <th scope="row">Inicio</th>
             <td>✔</td>
             <td></td>
             <td>✔</td>
             <td></td>
         </tr>
         <tr>
-            <th scope="row">フォロワー</th>
+            <th scope="row">Seguidores</th>
             <td>✔</td>
             <td></td>
             <td>✔</td>
             <td></td>
         </tr>
         <tr>
-            <th scope="row" rowspan="3">リモート（フォロー）</th>
-            <th scope="row">公開</th>
+            <th scope="row" rowspan="3">Usuarios remotos a los que sigues</th>
+            <th scope="row">Público</th>
             <td>✔</td>
             <td></td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <th scope="row">ホーム</th>
+            <th scope="row">Inicio</th>
             <td>✔</td>
             <td></td>
             <td>✔</td>
             <td></td>
         </tr>
         <tr>
-            <th scope="row">フォロワー</th>
+            <th scope="row">Seguidores</th>
             <td>✔</td>
             <td></td>
             <td>✔</td>
             <td></td>
         </tr>
         <tr>
-            <th scope="row" rowspan="3">ローカル（未フォロー）</th>
-            <th scope="row">公開</th>
+            <th scope="row" rowspan="3">Usuarios locales que no sigues</th>
+            <th scope="row">Público</th>
             <td></td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <th scope="row">ホーム</th>
+            <th scope="row">Inicio</th>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
-            <th scope="row">フォロワー</th>
+            <th scope="row">Seguidores</th>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
-            <th scope="row">リモート（未フォロー）</th>
-            <th scope="row">公開</th>
+            <th scope="row">Usuarios remotos que no sigues</th>
+            <th scope="row">Público</th>
             <td></td>
             <td></td>
             <td></td>
