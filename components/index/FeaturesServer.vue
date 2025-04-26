@@ -2,6 +2,14 @@
     <div class="grid featuresServer gap-12">
         <div class="space-y-8 lg:pt-24">
 			<div v-fade-in class="item"><div class="content">
+				<h3 class="title">{{ $t('_landing._featuresServer._easyInstall.title') }}</h3>
+				<div class="description">{{ $t('_landing._featuresServer._easyInstall.description') }}</div>
+			</div></div>
+			<div v-fade-in class="item"><div class="content">
+				<h3 class="title">{{ $t('_landing._featuresServer._easySetup.title') }}</h3>
+				<div class="description">{{ $t('_landing._featuresServer._easySetup.description') }}</div>
+			</div></div>
+			<div v-fade-in class="item"><div class="content">
 				<img src="/img/top-features/nodejs.webp" class="img">
 				<h3 class="title">{{ $t('_landing._featuresServer._nodejs.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresServer._nodejs.description') }}</div>
@@ -30,6 +38,10 @@
 			<div v-fade-in class="item"><div class="content">
 				<h3 class="title">{{ $t('_landing._featuresServer._ftt.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresServer._ftt.description') }}</div>
+			</div></div>
+			<div v-fade-in class="item"><div class="content">
+				<h3 class="title">{{ $t('_landing._featuresServer._rbt.title') }}</h3>
+				<div class="description">{{ $t('_landing._featuresServer._rbt.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
 				<img src="/img/top-features/ml.webp" class="img">

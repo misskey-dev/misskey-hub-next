@@ -73,10 +73,6 @@
 				<div class="description">{{ $t('_landing._features._moderation.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
-				<h3 class="title">{{ $t('_landing._features._easySetup.title') }}</h3>
-				<div class="description">{{ $t('_landing._features._easySetup.description') }}</div>
-			</div></div>
-			<div v-fade-in class="item"><div class="content">
 				<img src="/img/top-features/since2014.webp" class="img">
 				<h3 class="title">{{ $t('_landing._features._battleTested.title') }}</h3>
 				<div class="description">{{ $t('_landing._features._battleTested.description') }}</div>

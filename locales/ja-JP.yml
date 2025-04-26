@@ -106,9 +106,6 @@ _landing:
     _multiPurpose:
       title: "ひとりでも、みんなでも"
       description: "多数の利用者を受け入れるSNSとしての運用はもちろん、個人用サーバーとしての利用もサポート。Fediverseと繋がるための、あなただけの強力な拠点になります。"
-    _easySetup:
-      title: "簡単インストール"
-      description: "コマンド一つでインストールできるほか、各社提供のホスティングサービスを利用すれば、管理の手間も省けます。"
     _oss:
       title: "Mi ❤️ OSS"
       description: "Misskeyはこれまでもこれからもオープンソースで、誰でも自由に、無料でソースコードを利用可能です。またMisskey Projectは、他のOSSに対して積極的に支援活動を行っています。"
@@ -119,6 +116,12 @@ _landing:
     _root:
       title: "サーバーの機能"
       description: "Misskeyを支えるバックエンド実装の特徴。"
+    _easyInstall:
+      title: "簡単インストール"
+      description: "コマンド一つでインストールできるほか、各社提供のホスティングサービスを利用すれば、管理の手間も省けます。"
+    _easySetup:
+      title: "セットアップもカンタン"
+      description: "Misskeyサーバーのセットアップに複雑な設定は不要で、すぐに運用を始められます。一方、ニーズに合わせて高度な設定を行うことも可能です。"
     _api:
       title: "API"
       description: "Misskeyの全ての機能はHTTP APIを通じて操作可能で、他のアプリケーションとの連携も容易です。さらに、WebhookやWebSocket接続もサポートしているので、リアルタイムにMisskeyからのイベントを受け取ることも可能です。"
@@ -134,6 +137,9 @@ _landing:
     _ftt:
       title: "FTT"
       description: "Fan-out Timeline Technology(FTT)により、タイムラインをRedis上に構築しパフォーマンスを向上させることができます。"
+    _rbt:
+      title: "RBT"
+      description: "Reactions Buffering Technology(RBT)により、リアクション情報をRedis上にキャッシュしパフォーマンスを向上させることができます。"
     _scalable:
       title: "スケーラブル"
       description: "プロセスのクラスタリング、複数サーバーによるロードバランス、データベースのレプリケーションに対応しており、ユーザーの増加にも対応できます。"
