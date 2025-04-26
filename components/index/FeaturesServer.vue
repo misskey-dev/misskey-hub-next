@@ -36,10 +36,12 @@
 				<div class="description">{{ $t('_landing._featuresServer._api.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
+				<img src="/img/top-features/ftt.webp" class="img">
 				<h3 class="title">{{ $t('_landing._featuresServer._ftt.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresServer._ftt.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
+				<img src="/img/top-features/rbt.webp" class="img">
 				<h3 class="title">{{ $t('_landing._featuresServer._rbt.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresServer._rbt.description') }}</div>
 			</div></div>
