@@ -8,6 +8,7 @@
         </div>
         <main class="relative container mx-auto max-w-screen-xl px-6 mt-32 mb-24 space-y-16">
             <IndexKeyFeatures id="learnMore" />
+						<IndexDecenterized />
             <IndexDonation />
             <GDots class="w-[95%] mx-auto text-accent-600" :space="30" />
             <IndexFeatures />
