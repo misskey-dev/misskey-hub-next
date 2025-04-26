@@ -126,6 +126,9 @@ _landing:
     _nodejs:
       title: "Node.jsバックエンド"
       description: "MisskeyはバックエンドにNode.jsを採用しており、高速・軽量に動作します。"
+    _postgresql:
+      title: "PostgreSQL"
+      description: "メインのデータベースにはPostgreSQLを採用し、堅牢なデータ管理を実現しています。"
     _jobQueue:
       title: "高効率ジョブキュー"
       description: "ジョブキューにBullMQを採用し、タスクを複数のサーバーで効率的に処理可能。また、Misskeyネイティブで実装されたインスペクタはコントロールパネルに統合され、外部ツールに頼ることなく管理が可能です。"
@@ -144,7 +147,7 @@ _landing:
   _featuresClient:
     _root:
       title: "WebUI"
-      description: "Misskeyには高機能なWebフロントエンドが付属。"
+      description: "Misskeyに付属する高機能なWebフロントエンドの特徴を紹介。"
     _responsive:
       title: "レスポンシブUI"
       description: "UIは洗練された独自のデザインシステムを使用して設計され、デスクトップ・タブレット・スマートフォンそれぞれに最適な表示・動作となるように丁寧に実装されています。"
@@ -163,6 +166,9 @@ _landing:
     _embed:
       title: "他サイトへの埋め込み"
       description: "ノート、チャンネルなどを外部のサイトに埋め込んで表示可能です。"
+    _realtimeMode:
+      title: "リアルタイムモード"
+      description: ""
     _multiAccounts:
       title: "マルチアカウント対応"
       description: "複数のアカウントを簡単に切り替えて使用可能です。"
@@ -175,6 +181,16 @@ _landing:
     _i18n:
       title: "多言語対応"
       description: "クライアントを様々な言語で利用可能です。"
+  _featuresUpcoming:
+    _root:
+      title: "近日公開"
+      description: "今後予定されている機能を紹介。"
+    _jwt:
+      title: "JWT認証"
+      description: "JSON Web Token(JWT)を用いたステートレス認証を実装し、よりセキュア・より高速なリクエストの検証を実現します。"
+    _newBackend:
+      title: "より軽量なバックエンド"
+      description: "より高速・軽量に動作可能にするための全く新しいバックエンド実装の開発を進めています。"
   _getStarted:
     title: "Misskeyをはじめよう"
     _find:

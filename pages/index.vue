@@ -13,6 +13,7 @@
             <IndexFeatures />
             <IndexFeaturesServer />
 						<IndexFeaturesClient />
+						<IndexFeaturesUpcoming />
             <GDots class="w-[95%] mx-auto text-accent-600" :space="30" />
             <IndexGetStarted id="getStarted" />
             <GDots class="w-[95%] mx-auto text-accent-600" :space="30" />
