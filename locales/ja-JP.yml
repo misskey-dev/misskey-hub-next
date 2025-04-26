@@ -53,8 +53,8 @@ _landing:
     _federated:
       title: "分散"
       description: "Misskeyは分散型のプロトコルを実装しているため、異なるサーバーのコミュニティ同士が繋がることができます。"
-    _multifunction:
-      title: "高機能"
+    _powerful:
+      title: "パワフル"
       description: "Misskeyは他にはない様々な機能を備えていて、ニーズを満たすSNSを提供可能。また、サーバーを細かくカスタマイズすることもできます。"
   _decenterized:
     title: "Misskeyは{0}"
@@ -104,9 +104,9 @@ _landing:
     _privacy:
       title: "プライバシー"
       description: "豊富なプライバシー設定で、コンテンツの公開範囲を柔軟にコントロール。"
-    _singleUser:
-      title: "お一人様歓迎"
-      description: "もちろん、Misskeyは個人用サーバーとしての利用もサポート。Fediverseと繋がるための、あなただけの強力な拠点になります。"
+    _multiPurpose:
+      title: "ひとりでも、みんなでも"
+      description: "多数の利用者を受け入れるSNSとしての運用はもちろん、個人用サーバーとしての利用もサポート。Fediverseと繋がるための、あなただけの強力な拠点になります。"
     _easySetup:
       title: "簡単インストール"
       description: "コマンド一つでインストールできるほか、各社提供のホスティングサービスを利用すれば、管理の手間も省けます。"

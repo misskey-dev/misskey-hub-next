@@ -12,8 +12,8 @@
 		</div>
 		<div class="item">
 			<div class="icon"><img src="/img/emojis/package_1f4e6.png" aria-hidden="true"></div>
-			<h3 class="title">{{ $t('_landing._keyFeatures._multifunction.title') }}</h3>
-			<div class="description">{{ $t('_landing._keyFeatures._multifunction.description') }}</div>
+			<h3 class="title">{{ $t('_landing._keyFeatures._powerful.title') }}</h3>
+			<div class="description">{{ $t('_landing._keyFeatures._powerful.description') }}</div>
 		</div>
 	</div>
 </template>
