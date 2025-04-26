@@ -55,7 +55,7 @@ _landing:
       description: "Misskeyは分散型のプロトコルを実装しているため、異なるサーバーのコミュニティ同士が繋がることができます。"
     _powerful:
       title: "パワフル"
-      description: "Misskeyは他にはない様々な機能を備えていて、ニーズを満たすSNSを提供可能。また、サーバーを細かくカスタマイズすることもできます。"
+      description: "Misskeyはプロダクションレベルの様々な機能を備えているため、ニーズを満たすSNSを提供可能。細かなカスタマイズも可能です。"
   _decenterized:
     title: "Misskeyは{0}"
     decenterizedPlatform: "分散型プラットフォーム"
