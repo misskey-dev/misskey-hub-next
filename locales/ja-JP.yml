@@ -202,6 +202,9 @@ _landing:
     _newBackend:
       title: "より軽量なバックエンド"
       description: "より高速・軽量に動作可能にするための全く新しいバックエンド実装の開発を進めています。"
+    _vueVapor:
+      title: "Vaporモード対応"
+      description: "フロントエンドで採用しているフレームワーク Vue の新しいコンパイルストラテジーをサポートし、より軽量なWeb UIを実現します。"
   _getStarted:
     title: "Misskeyをはじめよう"
     _find:

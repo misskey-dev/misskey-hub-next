@@ -11,6 +11,10 @@
 				<h3 class="title">{{ $t('_landing._featuresUpcoming._newBackend.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresUpcoming._newBackend.description') }}</div>
 			</div></div>
+			<div v-fade-in class="item"><div class="content">
+				<h3 class="title">{{ $t('_landing._featuresUpcoming._vueVapor.title') }}</h3>
+				<div class="description">{{ $t('_landing._featuresUpcoming._vueVapor.description') }}</div>
+			</div></div>
         </div>
 				<div>
             <div class="lg:sticky lg:top-32" style="text-align: right;">
