@@ -49,15 +49,11 @@ _landing:
     _federated:
       title: "Federat"
       description: "Misskey incorpora un protocol descentralitzat, que connecta servidors de diferents comunitats."
-    _multifunction:
-      title: "Ple de funcionalitats"
-      description: "Misskey ofereix una gamma de funcionalitats que no es troben en altres plataformes, podreu micro-bloguejar com un professional."
-    _customizable:
-      title: "Altament personalitzable"
-      description: "La interfície flexible de Misskey li permet crear la seva pròpia interfície que s'adapti al teu gust."
+    _powerful:
+      title: "パワフル"
+      description: "Misskeyはプロダクションレベルの様々な機能を備えていて、細かなカスタマイズも可能です。多人数でも少人数でも、最適なソリューションに。"
   _decenterized:
     title: "Misskey és {0}"
-    decenterizedPlatform: "Plataforma descentralitzada"
     description: "Misskey és un projecte lliure i obert, el que vol dir que qualsevol pot crear un servidor fent servir Misskey, i és per això que ja hi han molts servidors disponibles a internet. Altre característica important és que Misskey fa servir un protocol de comunicació anomenat {0}, això significa que es igual quin servidor escollís, pots interactuar amb usuaris d'altres servidors. Per això es diu descentralitzat i això el fa totalment diferent a altres serveis com Twitter, que es publica sota una mateixa adreça URL i per un únic operador. Els temes principals, els usuaris i els idiomes canvien d'un servidor a un altre i part de la diversió es trobar el servidor més adecuat a la teva manera de ser (per descomptat, crear el teu propi servidor també es divertit)."
     activityPub: "ActivityPub"
   _features:
@@ -73,21 +69,147 @@ _landing:
     _reaction:
       title: "Reaccions"
       description: "Pots afegir \"reaccions\" a les teves notes, això et permetrà expressar i comunicar les teves emocions de forma fàcil i senzilla."
+    _customEmojis:
+      title: "カスタム絵文字"
+      description: "Misskeyの様々な場所で使用できる、サーバーオリジナルの絵文字を作成可能です。"
+    _channel:
+      title: "チャンネル"
+      description: "チャンネルを作成すれば、共通のテーマでサーバー内コミュニティを作成することが可能です。"
+    _antenna:
+      title: "アンテナ"
+      description: "特定のワードが含まれるノートだけを収集するタイムラインを作成可能です。"
     _drive:
       title: "ドライブ"
       description: "アップロードしたファイルを管理するインターフェイスがあります。そのため、お気に入りの画像をフォルダにまとめたり、再度共有することも簡単に行えます。"
+    _2fa:
+      title: "多要素認証"
+      description: "ワンタイムパスワードを使用した多要素認証や、物理的なキーを使用したパスキー認証で、アカウントのセキュリティを高める各種技術をサポート。"
+    _charts:
+      title: "可視化"
+      description: "Misskeyは組み込みのチャートエンジンを備えていて、サーバーの利用状況などが簡単に可視化できます。"
+    _branding:
+      title: "ブランディング"
+      description: "サーバーのロゴ、アイコン、テーマなどをカスタマイズして、簡単にSNSのブランディングを行えます。"
+    _roles:
+      title: "ロール"
+      description: "ロールを使用すると、ユーザーごとに権限を細かくカスタマイズできます。また、コンディショナルロールを使えば、条件に一致するユーザーに自動でロールをアサインすることも可能です。ロールにバッジを設定して、サーバーのマネタイズに役立てることもできます。"
+    _moderation:
+      title: "モデレーション"
+      description: "サーバー運営を助ける、充実のモデレーション機能が標準搭載。"
+    _privacy:
+      title: "プライバシー"
+      description: "豊富なプライバシー設定で、コンテンツの公開範囲を柔軟にコントロール。"
+    _multiPurpose:
+      title: "ひとりでも、みんなでも"
+      description: "多数の利用者を受け入れるSNSとしての運用はもちろん、個人用サーバーとしての利用もサポート。Fediverseと繋がるための、あなただけの強力な拠点になります。"
+    _monetization:
+      title: "収益化"
+      description: "広告の表示など、サーバーのマネタイズを助ける機能も用意されていて、持続可能な運用を目指せます。"
+    _oss:
+      title: "Mi ❤️ OSS"
+      description: "Misskeyはこれまでもこれからもオープンソースで、誰でも自由に、無料でソースコードを利用可能です。またMisskey Projectは、他のOSSに対して積極的に支援活動を行っています。"
+    _battleTested:
+      title: "信頼性"
+      description: "Misskeyは10年以上にわたって実際の環境で使われており(battle-tested)、高い信頼性があると自負しています。"
+  _featuresServer:
+    _root:
+      title: "サーバーの機能"
+      description: "Misskeyを支えるバックエンド実装の特徴。"
+    _easyInstall:
+      title: "簡単インストール"
+      description: "簡単なコマンドでインストールできるほか、各社提供のホスティングサービスを利用すれば、管理の手間も省けます。"
+    _easySetup:
+      title: "セットアップもカンタン"
+      description: "Misskeyサーバーのセットアップに複雑な設定は不要で、すぐに運用を始められます。一方、ニーズに合わせて高度な設定を行うことも可能です。"
+    _api:
+      title: "API"
+      description: "Misskeyの全ての機能はHTTP APIを通じて操作可能で、他のアプリケーションとの連携も容易です。さらに、WebhookやWebSocket接続もサポートしているので、リアルタイムにMisskeyからのイベントを受け取ることも可能です。"
+    _relay:
+      title: "リレー対応"
+      description: "Fediverse内のアクティビティを中継するリレーサーバーへの接続をサポートしているので、手動で多数のサーバーと繋げることなく情報収集が可能です。"
+    _nodejs:
+      title: "Node.jsバックエンド"
+      description: "MisskeyはバックエンドにNode.jsを採用しており、高速・軽量に動作します。"
+    _postgresql:
+      title: "PostgreSQL"
+      description: "メインのデータベースにはPostgreSQLを採用し、堅牢なデータ管理を実現しています。"
+    _jobQueue:
+      title: "高効率ジョブキュー"
+      description: "ジョブキューにBullMQを採用し、タスクを複数のサーバーで効率的に処理可能。また、Misskeyネイティブで実装されたインスペクタはコントロールパネルに統合され、外部ツールに頼ることなく管理が可能です。"
+    _cdn:
+      title: "CDN対応"
+      description: "外部CDNによるリソースのキャッシュに対応しています。サーバーへのリクエストを減らすことで、負荷低減・コスト削減が可能です。"
+    _ftt:
+      title: "FTT"
+      description: "Fan-out Timeline Technology(FTT)により、タイムラインをRedis上に構築しパフォーマンスを向上させることができます。"
+    _rbt:
+      title: "RBT"
+      description: "Reactions Buffering Technology(RBT)により、リアクション情報をRedis上にキャッシュしパフォーマンスを向上させることができます。"
+    _scalable:
+      title: "スケーラブル"
+      description: "プロセスのクラスタリング、複数サーバーによるロードバランス、データベースのレプリケーションに対応しており、ユーザーの増加にも対応できます。"
+    _ml:
+      title: "機械学習"
+      description: "組み込みの機械学習機能を利用して、自動的にセンシティブなメディアのフィルタリングを行うなど、運用の負担を軽減することも可能です。"
+    _sentry:
+      title: "Sentryサポート"
+      description: "Sentryによるサーバーのメトリクス収集に対応しているため、サーバーリソースの監視、ヘルスチェック、メンテナンスに役立てることができます。"
+  _featuresClient:
+    _root:
+      title: "WebUI"
+      description: "Misskeyに付属する高機能なWebフロントエンド(Misskey Web)の特徴を紹介。"
+    _responsive:
+      title: "レスポンシブUI"
+      description: "UIは洗練された独自のデザインシステムを使用して設計され、デスクトップ・タブレット・スマートフォンそれぞれに最適な表示・動作となるように丁寧に実装されています。"
     _theme:
       title: "テーマ"
-      description: "自分の好きなデザインでMisskeyを使えます。もちろんダークモードも完全サポート。自分で高度にテーマを作ることも可能です。"
-    _thread:
-      title: "スレッド"
-      description: "もちろんノートはスレッドにすることができ、気が済むまで会話を続けられます。"
-    _charts:
-      title: "チャート"
-      description: "Misskeyは組み込みのチャートエンジンを備えていて、サーバーの利用状況などが簡単に可視化できます。"
+      description: "自分の好きな見た目でMisskeyを使えます。もちろんダークモードも完全サポート。自分で高度にテーマを作ることも可能です。"
+    _mfm:
+      title: "MFM"
+      description: "ノートにはMFMと呼ばれるMisskey専用のマークアップ言語が使用できます。太字にする・リンクを挿入する・動きを付けるといった、テキストの装飾がシンプルな構文で表現できます。"
     _widgets:
       title: "ウィジェット"
-      description: "様々な種類のウィジェットを配置し、UIを好みにカスタマイズできます。"
+      description: "様々な種類のウィジェットを自由に配置し、必要な情報に素早くアクセス。"
+    _deck:
+      title: "デッキUI"
+      description: "デッキUIを使うと、UIをさらに深くカスタマイズ可能。自分だけのクライアントを作ることができます。"
+    _embed:
+      title: "他サイトへの埋め込み"
+      description: "ノート、タイムラインなどを外部のサイトに埋め込んで表示可能です。"
+    _realtimeMode:
+      title: "リアルタイムモード"
+      description: ""
+    _pushNotification:
+      title: "プッシュ通知"
+      description: "プッシュ通知に対応しているため、リアルタイムでサーバーからの通知を受け取ることができます。"
+    _multiAccounts:
+      title: "マルチアカウント対応"
+      description: "複数のアカウントを簡単に切り替えて使用可能です。"
+    _plugin:
+      title: "プラグイン"
+      description: "セキュアなAiScriptを用いたプラグインをインストールして、クライアントの機能を拡張可能です。"
+    _settingsManagement:
+      title: "柔軟な設定管理"
+      description: "アカウントごとに任意のクライアント設定を上書きできるほか、複数のデバイス間で設定を共有・同期することができます。さらに、設定情報は自動バックアップ可能です。"
+    _pwa:
+      title: "PWA"
+      description: "Misskey WebはProgressive Web Apps(PWA)に準拠していて、デバイス上でネイティブアプリのように動作させることが可能です。"
+    _i18n:
+      title: "多言語対応"
+      description: "クライアントを様々な言語で利用可能です。"
+  _featuresUpcoming:
+    _root:
+      title: "近日公開"
+      description: "今後予定されている機能を紹介。"
+    _jwt:
+      title: "JWT認証"
+      description: "JSON Web Token(JWT)を用いたステートレス認証を実装し、よりセキュア・より高速なリクエストの検証を実現します。"
+    _newBackend:
+      title: "より軽量なバックエンド"
+      description: "より高速・軽量に動作可能にするための全く新しいバックエンド実装の開発を進めています。"
+    _vueVapor:
+      title: "Vaporモード対応"
+      description: "フロントエンドで採用しているフレームワーク Vue の新しいコンパイルストラテジーをサポートし、より軽量なWeb UIを実現します。"
   _getStarted:
     title: "Misskeyをはじめよう"
     _find:
@@ -100,8 +222,8 @@ _landing:
       title: "さらに詳しく知る"
       docs: "ドキュメントを見る"
   _donation:
-    title: "寄付のお願い"
-    description: "Misskeyは非営利なため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入られたら、今後も開発を続けられるようにぜひ支援をお願いします。"
+    title: "ご支援のお願い"
+    description: "Misskeyは非営利なプロジェクトで、少数の有志による開発のため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入ってくださいましたら、今後も開発を続けられるようにぜひ支援をお願いします。"
   _sponsors:
     title: "スポンサー"
     becomeASponsor: "スポンサーになる"
