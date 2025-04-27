@@ -49,15 +49,11 @@ _landing:
     _federated:
       title: "去中心化"
       description: "Misskey 採用去中心化協議，將不同伺服器的社群連結起來。"
-    _multifunction:
-      title: "多功能"
-      description: "Misskey 提供了一系列其他網站無法提供的功能，並能像專業人士一樣發布微網誌。"
-    _customizable:
-      title: "高自訂性"
-      description: "Misskey 靈活的網頁介面可讓您建立自己的使用者介面。"
+    _powerful:
+      title: "功能強大"
+      description: "Misskey 具備了適合正式營運的各種功能，並且支援細部自訂。不論是大型社群還是小型團體，都能提供最適合的解決方案。"
   _decenterized:
     title: "Misskey 是{0}"
-    decenterizedPlatform: "去中心化平台"
     description: "Misskey 是一個自由開放的項目，這意味著任何人都可以自由地使用 Misskey 創建伺服器，因此網路上已經出現了各種各樣的伺服器。另一個重要特點是，Misskey 實作了一種名為 {0} 的分散式通訊協議，這意味著無論您選擇哪台伺服器，都可以與其他伺服器上的使用者進行互動。這就是它被稱為去中心化的原因，也是它與 Twitter 等其他服務的根本不同之處。不同伺服器的主要話題、用戶群和語言各不相同，找到適合自己的伺服器也是樂趣之一（當然，創建自己的伺服器也很有趣）。"
     activityPub: "ActivityPub"
   _features:
@@ -73,21 +69,147 @@ _landing:
     _reaction:
       title: "反應"
       description: "您可以在貼文中加入「反應」，輕鬆表達和交流您的感受。"
+    _customEmojis:
+      title: "自訂表情符號"
+      description: "可以製作伺服器專屬的原創表情符號，並可在 Misskey 的各個地方使用。"
+    _channel:
+      title: "頻道"
+      description: "只要建立頻道，就可以在伺服器內打造以共同主題為中心的社群。"
+    _antenna:
+      title: "天線"
+      description: "可以建立只收集包含特定關鍵字貼文的時間軸。"
     _drive:
       title: "雲端硬碟"
       description: "它有一個管理上傳文件的介面。因此，您可以輕鬆地將您喜愛的圖像整理到資料夾中並再次分享。"
-    _theme:
-      title: "外觀主題"
-      description: "您可以將 Misskey 與您最喜歡的設計一起使用。當然，深色模式也是全面支援的。您也可以自行建立高級主題。"
-    _thread:
-      title: "對話"
-      description: "當然，貼文可以串聯起來，讓您可以繼續對話，直到您滿意為止。"
+    _2fa:
+      title: "多因素認證"
+      description: "支援各種技術來提升帳號安全性，包括使用一次性密碼的多因素驗證以及使用實體金鑰的 Passkey 認證。"
     _charts:
       title: "圖表"
       description: "Misskey 內建圖表引擎，可輕鬆實現伺服器使用情況和其他資訊的視覺化。"
+    _branding:
+      title: "品牌宣傳"
+      description: "可以自訂伺服器的標誌、圖示、主題等，輕鬆打造屬於自己的社群媒體品牌形象。"
+    _roles:
+      title: "角色"
+      description: "透過使用角色，可以針對每位使用者細部調整權限。也可以利用條件式角色，自動將角色指派給符合特定條件的使用者。除此之外，還能為角色設定徽章，協助伺服器進行變現或贊助相關的運用。"
+    _moderation:
+      title: "審查"
+      description: "內建完善的管理功能，協助伺服器營運更加順利。"
+    _privacy:
+      title: "隱私"
+      description: "透過豐富的隱私設定，可以靈活控制內容的公開範圍。"
+    _multiPurpose:
+      title: "無論是一個人，還是大家一起"
+      description: "它可作為大量使用者的社交網站，也可作為個人伺服器，成為您與聯邦宇宙聯繫的強大樞紐。"
+    _monetization:
+      title: "貨幣化"
+      description: "提供了廣告顯示等幫助伺服器變現的功能，讓你能夠實現可持續的運營。"
+    _oss:
+      title: "Mi ❤️ OSS"
+      description: "Misskey 一直以來都秉持開源精神，未來也將繼續如此，任何人都可以自由且免費地使用其源代碼。此外，Misskey Project 也積極支援其他開源軟體的發展。"
+    _battleTested:
+      title: "可靠性"
+      description: "Misskey 已經在實際環境中運行超過 10 年，並且自信地擁有高度的可靠性（battle-tested，經過實戰測試）。"
+  _featuresServer:
+    _root:
+      title: "伺服器功能"
+      description: "支撐 Misskey 的後端實現特點。"
+    _easyInstall:
+      title: "安裝簡易"
+      description: "除了可以使用簡單的命令進行安裝外，還可以利用各家公司提供的託管服務，從而省去管理上的麻煩。"
+    _easySetup:
+      title: "設定也很簡單"
+      description: "Misskey 伺服器的設置不需要複雜的設定，可以立即開始運營。另一方面，根據需求也可以進行高級設置。"
+    _api:
+      title: "應用程式介面（API）"
+      description: "Misskey 的所有功能都可以通過 HTTP API 進行操作，與其他應用程式的整合也十分容易。此外，Misskey 還支援 Webhook 和 WebSocket 連接，讓你可以即時接收來自 Misskey 的事件通知。"
+    _relay:
+      title: "支援中繼"
+      description: "支援連接中繼伺服器，這些伺服器會中繼聯邦宇宙中的活動，因此無需手動連線至大量伺服器即可收集資訊。"
+    _nodejs:
+      title: "Node.js 後端"
+      description: "Misskey 在後端採用了 Node.js，運行速度快且輕巧。"
+    _postgresql:
+      title: "PostgreSQL"
+      description: "主要資料庫為 PostgreSQL，可提供強大的資料管理功能。"
+    _jobQueue:
+      title: "高效率的工作佇列"
+      description: "Misskey 採用了 BullMQ 作為工作佇列，能夠在多個伺服器間高效處理任務。此外，Misskey 原生實現的檢查工具已經集成在控制面板中，無需依賴外部工具即可進行管理。"
+    _cdn:
+      title: "CDN 支援"
+      description: "支援外部 CDN 的資源快取。透過減少對伺服器的請求次數，可以降低負載和成本。"
+    _ftt:
+      title: "FTT"
+      description: "透過 Fan-out Timeline Technology (FTT)，Misskey 能夠將時間軸構建在 Redis 上，從而提升性能。"
+    _rbt:
+      title: "RBT"
+      description: "透過 Reactions Buffering Technology (RBT)，Misskey 能夠將反應資訊快取在 Redis 上，從而提升性能。"
+    _scalable:
+      title: "可擴展"
+      description: "Misskey 支援進程集群、透過多伺服器進行負載平衡，以及資料庫複製技術，能夠應對使用者數量的增長。"
+    _ml:
+      title: "機器學習"
+      description: "內建機器學習功能，可以自動過濾敏感媒體等內容，有效減輕運營負擔。"
+    _sentry:
+      title: "支援 Sentry"
+      description: "支援透過 Sentry 收集伺服器的指標數據，幫助進行伺服器資源監控、健康檢查以及維護。"
+  _featuresClient:
+    _root:
+      title: "網頁界面"
+      description: "介紹附屬於 Misskey 的高功能網頁前端（Misskey Web）特點。"
+    _responsive:
+      title: "響應式界面"
+      description: "界面採用了精緻的獨特設計系統，並經過精心實現，確保在桌面、平板和智能手機等設備上都能提供最佳的顯示和操作體驗。"
+    _theme:
+      title: "佈景主題"
+      description: "你可以根據自己的喜好來設定 Misskey 的外觀，當然，暗黑模式也完全支援。並且，你還可以自訂和創建高度個性化的主題。"
+    _mfm:
+      title: "MFM"
+      description: "在 Misskey 中，貼文可以使用名為 MFM 的專用標記語言。你可以使用簡單的語法來表達文本的裝飾，如加粗、插入鏈接、添加動畫等效果。"
     _widgets:
       title: "小工具"
-      description: "可以放置各種類型的小部件，根據自己的喜好自訂使用者介面。"
+      description: "可以自由配置各種種類的小工具，快速訪問所需的資訊。"
+    _deck:
+      title: "多欄界面"
+      description: "使用多欄界面，可以更深入地自訂界面，打造屬於自己的專屬客戶端。"
+    _embed:
+      title: "嵌入到其他網站"
+      description: "可以將貼文、時間軸等內容嵌入到外部網站中顯示。"
+    _realtimeMode:
+      title: "即時模式"
+      description: ""
+    _pushNotification:
+      title: "推播通知"
+      description: "支援推播通知，讓你可以即時接收來自伺服器的通知。"
+    _multiAccounts:
+      title: "支援多帳戶功能"
+      description: "可以輕鬆切換並使用多個帳戶。"
+    _plugin:
+      title: "外掛"
+      description: "可以安裝使用安全的 AiScript 插件，從而擴展客戶端的功能。"
+    _settingsManagement:
+      title: "靈活的設定管理"
+      description: "可以針對每個帳戶覆蓋自訂的客戶端設定，並且可以在多個設備間共享和同步設定。此外，設定資訊還可以自動備份。"
+    _pwa:
+      title: "PWA"
+      description: "Misskey Web 遵循漸進式網路應用程式（PWA）標準，可以像原生應用一樣在設備上運行。"
+    _i18n:
+      title: "支援多語言"
+      description: "客戶端提供多種語言版本。"
+  _featuresUpcoming:
+    _root:
+      title: "即將公開"
+      description: "介紹未來預定推出的功能。"
+    _jwt:
+      title: "JWT 認證"
+      description: "將實現使用 JSON Web Token (JWT) 的無狀態認證，從而實現更安全、更快速的請求驗證。"
+    _newBackend:
+      title: "更輕量的後端系統"
+      description: "正在開發全新的後端實現，以實現更高速、輕量的運行效果。"
+    _vueVapor:
+      title: "支援 Vapor 模式"
+      description: "支援前端框架 Vue 的全新編譯策略，實現更輕量的網頁界面。"
   _getStarted:
     title: "開始使用 Misskey"
     _find:
