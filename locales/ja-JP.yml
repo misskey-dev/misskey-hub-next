@@ -75,7 +75,7 @@ _landing:
       description: "ノートに「リアクション」を付けることで、簡単・気軽に自分のフィーリングを表現して伝えることが出来ます。"
     _customEmojis:
       title: "カスタム絵文字"
-      description: "Misskeyの様々場所で使用できる、サーバーオリジナルの絵文字を作成可能です。"
+      description: "Misskeyの様々な場所で使用できる、サーバーオリジナルの絵文字を作成可能です。"
     _channel:
       title: "チャンネル"
       description: "チャンネルを作成すれば、共通のテーマでサーバー内コミュニティを作成することが可能です。"
