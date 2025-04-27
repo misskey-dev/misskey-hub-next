@@ -28,6 +28,10 @@
 				<div class="description">{{ $t('_landing._featuresClient._deck.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
+				<h3 class="title">{{ $t('_landing._featuresClient._pushNotification.title') }}</h3>
+				<div class="description">{{ $t('_landing._featuresClient._pushNotification.description') }}</div>
+			</div></div>
+			<div v-fade-in class="item"><div class="content">
 				<img src="/img/top-features/multiAccounts.webp" class="img">
 				<h3 class="title">{{ $t('_landing._featuresClient._multiAccounts.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresClient._multiAccounts.description') }}</div>
@@ -52,6 +56,10 @@
 			<div v-fade-in class="item"><div class="content">
 				<h3 class="title">{{ $t('_landing._featuresClient._embed.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresClient._embed.description') }}</div>
+			</div></div>
+			<div v-fade-in class="item"><div class="content">
+				<h3 class="title">{{ $t('_landing._featuresClient._pwa.title') }}</h3>
+				<div class="description">{{ $t('_landing._featuresClient._pwa.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
 				<img src="/img/top-features/i18n.webp" class="img">

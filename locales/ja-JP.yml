@@ -161,7 +161,7 @@ _landing:
   _featuresClient:
     _root:
       title: "WebUI"
-      description: "Misskeyに付属する高機能なWebフロントエンドの特徴を紹介。"
+      description: "Misskeyに付属する高機能なWebフロントエンド(Misskey Web)の特徴を紹介。"
     _responsive:
       title: "レスポンシブUI"
       description: "UIは洗練された独自のデザインシステムを使用して設計され、デスクトップ・タブレット・スマートフォンそれぞれに最適な表示・動作となるように丁寧に実装されています。"
@@ -183,6 +183,9 @@ _landing:
     _realtimeMode:
       title: "リアルタイムモード"
       description: ""
+    _pushNotification:
+      title: "プッシュ通知"
+      description: "プッシュ通知に対応しているため、リアルタイムでサーバーからの通知を受け取ることができます。"
     _multiAccounts:
       title: "マルチアカウント対応"
       description: "複数のアカウントを簡単に切り替えて使用可能です。"
@@ -192,6 +195,9 @@ _landing:
     _settingsManagement:
       title: "柔軟な設定管理"
       description: "アカウントごとに任意のクライアント設定を上書きできるほか、複数のデバイス間で設定を共有・同期することができます。さらに、設定情報は自動バックアップ可能です。"
+    _pwa:
+      title: "PWA"
+      description: "Misskey WebはProgressive Web Apps(PWA)に準拠していて、デバイス上でネイティブアプリのように動作させることが可能です。"
     _i18n:
       title: "多言語対応"
       description: "クライアントを様々な言語で利用可能です。"
