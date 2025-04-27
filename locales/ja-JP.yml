@@ -106,6 +106,9 @@ _landing:
     _multiPurpose:
       title: "ひとりでも、みんなでも"
       description: "多数の利用者を受け入れるSNSとしての運用はもちろん、個人用サーバーとしての利用もサポート。Fediverseと繋がるための、あなただけの強力な拠点になります。"
+    _monetization:
+      title: "収益化"
+      description: "広告の表示など、サーバーのマネタイズを助ける機能も用意されていて、持続可能な運用を目指せます。"
     _oss:
       title: "Mi ❤️ OSS"
       description: "Misskeyはこれまでもこれからもオープンソースで、誰でも自由に、無料でソースコードを利用可能です。またMisskey Projectは、他のOSSに対して積極的に支援活動を行っています。"
