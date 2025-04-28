@@ -51,7 +51,7 @@ _landing:
       description: "Misskey es una plataforma descentralizada, por lo que las comunidades en diferentes servidores pueden conectar entre sí."
     _powerful:
       title: "パワフル"
-      description: "Misskeyはプロダクションレベルの様々な機能を備えていて、細かなカスタマイズも可能です。多人数でも少人数でも、最適なソリューションに。"
+      description: "Misskey tiene una variedad de características de nivel de producción y puede ser finamente personalizado. Es la mejor solución para grupos grandes y pequeños."
   _decenterized:
     title: "Misskey es una plataforma {0}."
     description: "Misskey es solo una plataforma para que los propietarios de servidores creen sus propias instancias de Misskey, y todas pueden comunicarse entre sí! Hay instancias grandes para las masas, instancias más pequeñas para grupos, fandoms y subculturas, e incluso instancias solo para individuos y sus amigos. ¿Quieres tener aún más control? Puedes crear tu propia instancia en tu servidor con facilidad, cortando los lazos con cualquier gran empresa que quiera espiarte y vender tus datos. Misskey se trata de comunidad y compartir, no de corporaciones y alta tecnología. ¿Tienes amigos que no están en Misskey? No hay problema. Debido a que Misskey está en el Fediverso ({0}), puedes interactuar con personas en otras plataformas como Mastodon, PixelFed, PeerTube y más."
@@ -70,34 +70,34 @@ _landing:
       title: "Reacciones"
       description: "Puedes agregar reacciones con emojis a cualquier publicación! Ya no estás limitado por un botón de me gusta, muestra a todos exactamente cómo te sientes con solo un toque."
     _customEmojis:
-      title: "カスタム絵文字"
-      description: "Misskeyの様々な場所で使用できる、サーバーオリジナルの絵文字を作成可能です。"
+      title: "Emojis personalizados"
+      description: "Es posible crear emojis de servidor originales para usarlos en varias partes de Misskey."
     _channel:
-      title: "チャンネル"
-      description: "チャンネルを作成すれば、共通のテーマでサーバー内コミュニティを作成することが可能です。"
+      title: "Canales"
+      description: "Crear un canal te permite crear una comunidad dentro del servidor con un tema común."
     _antenna:
-      title: "アンテナ"
-      description: "特定のワードが含まれるノートだけを収集するタイムラインを作成可能です。"
+      title: "Antenas"
+      description: "Puedes crear líneas de tiempos que contengan solo notas que contengan determinadas palabras."
     _drive:
       title: "Drive"
       description: "¿Odias no poder encontrar algo que subiste? Con Drive, obtienes almacenamiento en la nube organizado y eficiente directamente en tu red social!"
     _2fa:
-      title: "多要素認証"
-      description: "ワンタイムパスワードを使用した多要素認証や、物理的なキーを使用したパスキー認証で、アカウントのセキュリティを高める各種技術をサポート。"
+      title: "Autenticación de doble factor"
+      description: "Admite una serie de tecnologías para aumentar la seguridad de las cuentas, con autenticación multifactor mediante contraseñas de un solo uso y autenticación mediante claves físicas."
     _charts:
       title: "Gráficas"
       description: "Para aquellos que necesitan verlo todo, Misskey cuenta con estadísticas en tiempo real para que tanto usuarios como administradores puedan ver qué está sucediendo en su instancia."
     _branding:
-      title: "ブランディング"
-      description: "サーバーのロゴ、アイコン、テーマなどをカスタマイズして、簡単にSNSのブランディングを行えます。"
+      title: "Marca"
+      description: "Personaliza el logotipo, los iconos y los temas de tu servidor para crear, fácilmente, tu imagen de marca."
     _roles:
-      title: "ロール"
-      description: "ロールを使用すると、ユーザーごとに権限を細かくカスタマイズできます。また、コンディショナルロールを使えば、条件に一致するユーザーに自動でロールをアサインすることも可能です。ロールにバッジを設定して、サーバーのマネタイズに役立てることもできます。"
+      title: "Roles"
+      description: "Los roles permiten personalizar los permisos de cada usuario. Los roles condicionales también se pueden utilizar para asignar automáticamente roles a los usuarios que coincidan con los criterios. También puedes establecer insignias para los roles para ayudar a monetizar tu servidor."
     _moderation:
-      title: "モデレーション"
-      description: "サーバー運営を助ける、充実のモデレーション機能が標準搭載。"
+      title: "Moderación"
+      description: "Se incluyen de serie una serie de funciones de moderación para facilitar la gestión del servidor."
     _privacy:
-      title: "プライバシー"
+      title: "Privacidad"
       description: "豊富なプライバシー設定で、コンテンツの公開範囲を柔軟にコントロール。"
     _multiPurpose:
       title: "ひとりでも、みんなでも"
@@ -186,7 +186,7 @@ _landing:
       title: "マルチアカウント対応"
       description: "複数のアカウントを簡単に切り替えて使用可能です。"
     _plugin:
-      title: "プラグイン"
+      title: "Plugins"
       description: "セキュアなAiScriptを用いたプラグインをインストールして、クライアントの機能を拡張可能です。"
     _settingsManagement:
       title: "柔軟な設定管理"
