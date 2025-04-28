@@ -50,8 +50,8 @@ _landing:
       title: "Federat"
       description: "Misskey incorpora un protocol descentralitzat, que connecta servidors de diferents comunitats."
     _powerful:
-      title: "パワフル"
-      description: "Misskeyはプロダクションレベルの様々な機能を備えていて、細かなカスタマイズも可能です。多人数でも少人数でも、最適なソリューションに。"
+      title: "Potent"
+      description: "Misskey té una varietat de funcions a escala de producció i pot ser personalitzat a molts nivells. És la millor solució per a grups grans i petits."
   _decenterized:
     title: "Misskey és {0}"
     description: "Misskey és un projecte lliure i obert, el que vol dir que qualsevol pot crear un servidor fent servir Misskey, i és per això que ja hi han molts servidors disponibles a internet. Altre característica important és que Misskey fa servir un protocol de comunicació anomenat {0}, això significa que es igual quin servidor escollís, pots interactuar amb usuaris d'altres servidors. Per això es diu descentralitzat i això el fa totalment diferent a altres serveis com Twitter, que es publica sota una mateixa adreça URL i per un únic operador. Els temes principals, els usuaris i els idiomes canvien d'un servidor a un altre i part de la diversió es trobar el servidor més adecuat a la teva manera de ser (per descomptat, crear el teu propi servidor també es divertit)."
@@ -70,28 +70,28 @@ _landing:
       title: "Reaccions"
       description: "Pots afegir \"reaccions\" a les teves notes, això et permetrà expressar i comunicar les teves emocions de forma fàcil i senzilla."
     _customEmojis:
-      title: "カスタム絵文字"
-      description: "Misskeyの様々な場所で使用できる、サーバーオリジナルの絵文字を作成可能です。"
+      title: "Emojis personalitzats"
+      description: "És possible crear emojis personalitzats per al servidor i fer-los servir en diferents parts de Misskey."
     _channel:
-      title: "チャンネル"
-      description: "チャンネルを作成すれば、共通のテーマでサーバー内コミュニティを作成することが可能です。"
+      title: "Canal"
+      description: "Creant un canal et permet crear una comunitat dintre del servidor amb un tema en comú."
     _antenna:
-      title: "アンテナ"
-      description: "特定のワードが含まれるノートだけを収集するタイムラインを作成可能です。"
+      title: "Antena"
+      description: "Pots crear línies de temps que continguin només notes que continguin determinades paraules."
     _drive:
-      title: "ドライブ"
-      description: "アップロードしたファイルを管理するインターフェイスがあります。そのため、お気に入りの画像をフォルダにまとめたり、再度共有することも簡単に行えます。"
+      title: "Disc"
+      description: "Hi ha una interfície per poder gestionar els arxius que has pujat. Això permet organitzar les teves imatges favorites en carpetes i tornar-les a compartir."
     _2fa:
-      title: "多要素認証"
-      description: "ワンタイムパスワードを使用した多要素認証や、物理的なキーを使用したパスキー認証で、アカウントのセキュリティを高める各種技術をサポート。"
+      title: "Autentificació de doble factor"
+      description: "Admet un seguit de tecnologies per augmentar la seguretat dels comptes, amb autentificació de doble factor mitjançant contrasenyes d'un sol ús i mitjançant claus físiques."
     _charts:
-      title: "可視化"
-      description: "Misskeyは組み込みのチャートエンジンを備えていて、サーバーの利用状況などが簡単に可視化できます。"
+      title: "Gràfics"
+      description: "Misskey ve equipat amb un motor que et permet visualitzar l'ús del servidor i altres informacions."
     _branding:
-      title: "ブランディング"
-      description: "サーバーのロゴ、アイコン、テーマなどをカスタマイズして、簡単にSNSのブランディングを行えます。"
+      title: "Marca"
+      description: "Personalitza el logotip, les icones i els temes del teu servidor per crear, fàcilment, la teva imatge de marca."
     _roles:
-      title: "ロール"
+      title: "Rol"
       description: "ロールを使用すると、ユーザーごとに権限を細かくカスタマイズできます。また、コンディショナルロールを使えば、条件に一致するユーザーに自動でロールをアサインすることも可能です。ロールにバッジを設定して、サーバーのマネタイズに役立てることもできます。"
     _moderation:
       title: "モデレーション"
