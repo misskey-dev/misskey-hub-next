@@ -62,6 +62,12 @@ Anyone can develop a Misskey bot using the Misskey API.For more information, see
 
 We use [DeepL Translation](https://www.deepl.com/), the machine translation service.
 
+## サービスについての問い合わせがしたい
+
+「Misskey」はWebサービスを作成するためのソフトウェア、またそのプロジェクトの名称です。したがって、<b>「Misskey」自体はWebサービスではありません。</b><br>
+また、<b>当Misskey ProjectはいかなるWebサービスも運営・管轄していません</b>ので、Misskeyを使ったWebサービスについてのお問い合わせは当該Webサービスのお問い合わせ窓口にお願いします。<br>
+人によっては、「Misskeyを使って作られたWebサービス」のことを指して「Misskey」と表記している場合がありますので注意が必要です。
+
 ## Do I need to register with the Ministry of Internal Affairs and Communications if I create a server? (For servers in Japan)
 
 ### Short answer
