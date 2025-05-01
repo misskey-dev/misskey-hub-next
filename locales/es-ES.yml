@@ -50,7 +50,7 @@ _landing:
       title: "Federado"
       description: "Misskey es una plataforma descentralizada, por lo que las comunidades en diferentes servidores pueden conectar entre sí."
     _powerful:
-      title: "パワフル"
+      title: "Poderoso"
       description: "Misskey tiene una variedad de características de nivel de producción y puede ser finamente personalizado. Es la mejor solución para grupos grandes y pequeños."
   _decenterized:
     title: "Misskey es una plataforma {0}."
@@ -98,12 +98,12 @@ _landing:
       description: "Se incluyen de serie una serie de funciones de moderación para facilitar la gestión del servidor."
     _privacy:
       title: "Privacidad"
-      description: "豊富なプライバシー設定で、コンテンツの公開範囲を柔軟にコントロール。"
+      description: "Control flexible sobre el alcance de la publicación de contenidos con amplias opciones de privacidad."
     _multiPurpose:
-      title: "ひとりでも、みんなでも"
-      description: "多数の利用者を受け入れるSNSとしての運用はもちろん、個人用サーバーとしての利用もサポート。Fediverseと繋がるための、あなただけの強力な拠点になります。"
+      title: "Solo o juntos"
+      description: "Puede utilizarse como red social para un gran número de usuarios, o como servidor personal, convirtiéndolo en tu propio y potente centro de conexión con el Fediverso."
     _monetization:
-      title: "収益化"
+      title: "Monetización"
       description: "広告の表示など、サーバーのマネタイズを助ける機能も用意されていて、持続可能な運用を目指せます。"
     _oss:
       title: "Mi ❤️ OSS"
