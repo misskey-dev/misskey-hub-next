@@ -40,7 +40,7 @@ _nav:
   switchLang: "Configuración de idioma"
 _landing:
   _hero:
-    description: "Misskey es una plataforma de redes sociales código abierto y descentralizada que es libre para siempre!"
+    description: "¡Misskey es una plataforma de redes sociales código abierto y descentralizada que es libre para siempre!"
     gettingStarted: "Empezar"
   _keyFeatures:
     _open:
