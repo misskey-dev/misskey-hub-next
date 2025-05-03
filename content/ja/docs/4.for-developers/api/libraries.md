@@ -34,3 +34,7 @@ description: 'Misskey APIに関連するライブラリの一覧'
 ## Rust
 
 - [misskey-rs](https://github.com/coord-e/misskey-rs)
+
+## Swift
+
+- [MFMKit](https://github.com/chanjima/MFMKit)
