@@ -1,90 +1,89 @@
 ---
-description: Misskeyを利用する際のよくある質問について掲載しています。
+description: Este documento contiene las preguntas más frecuentes sobre el uso de Misskey.
 ---
 
-# よくある質問
+# Preguntas Frecuentes
 
-ここではMisskeyを利用する際のよくある質問について掲載しています。<br>
-Misskeyプロジェクト自体についてのよくある質問は[こちら](../../about-misskey#よくある質問)をご覧ください。
+Este documento contiene las preguntas más frecuentes sobre el uso de Misskey.<br>
+Para las preguntas más frecuentes sobre el proyecto Misskey en sí, consulte [este enlace](../../about-misskey#frequently-asked-questions).
 
-## Android/iOSのアプリはありますか？
+## ¿Hay aplicaciones disponibles para Android/iOS?
 
-MisskeyプロジェクトではそういったモバイルOS向けのネイティブアプリを開発していませんが、サードパーティ製のアプリがいくつかあります。詳しくは[こちら](./apps)をご覧ください。<br>
+El proyecto Misskey no desarrolla aplicaciones nativas para estos sistemas operativos móviles, pero hay varias aplicaciones de terceros disponibles.Para más información, por favor ve a [este enlace](./apps).<br>
 
-ただ、サードパーティ製アプリはMisskeyの最新機能への対応がどうしても遅れてしまうため、特にこだわりがなければMisskey公式のWebクライアント、Misskey Webの利用をおすすめします。なお、Misskey WebはPWAに対応しているので、ネイティブアプリのように動作させることも可能です。詳しくは[こちら](/docs/for-users/stepped-guides/how-to-use-pwa/)をご覧ください。
+Sin embargo, como las aplicaciones de terceros pueden quedarse atrás en el soporte a las últimas características de Misskey, te recomendamos que utilices el cliente oficial basado en la web llamado Misskey Web a menos que tengas preferencias específicas.Además, Misskey Web es compatible con Progressive Web App (PWA), lo que le permite comportarse como una aplicación nativa.Para más información, consulta [aquí](/docs/for-users/stepped-guides/how-to-use-pwa/).
 
-## Mastodon向けのアプリでログインできますか？
+## ¿Puedo usar Misskey con aplicaciones compatibles con Mastodon?
 
-MisskeyはMastodonのAPIと互換性がないため、一部を除いてサードパーティー製のMastodon向けのアプリやWebクライアントなどではMisskeyを利用することはできません。<br>
-Misskey公式のWebクライアント、Misskey Webをご利用ください。
+Como Misskey no es compatible con la API de Mastodon, salvo algunas excepciones, el uso de clientes Mastodon para iniciar sesión en Misskey no es posible.<br>
+En su lugar, utiliza el cliente web oficial de Misskey.
 
-## misskey.ioはMisskeyプロジェクトの公式サーバーですか？
+## ¿Es misskey.io el servidor oficial del proyecto Misskey?
 
-misskey.ioはMisskey公式サーバーではなく、またMisskeyプロジェクトには含まれません。misskey.ioは特定のテーマを持たず汎用的で、かつ気軽に登録できる、Misskeyで最も規模の大きいサーバーです。
+No, misskey.io no es el servidor oficial del proyecto Misskey y no está afiliado con él.misskey.io es el servidor más grande que ejecuta Misskey, ofreciendo una plataforma de propósito general, haciendo fácil el registro sin temática específica alguna.
 
-## 株式会社MisskeyHQとの関係は？
+## ¿Hay alguna relación con MisskeyHQ Inc.?
 
-株式会社MisskeyHQは、misskey.ioの運営を目的とした会社です。そのため、Misskey開発プロジェクトとの直接的な関係はありません。
-ただし、Misskeyプロジェクトリーダーであるsyuiloも役員として参加しており、協力してMisskeyを発展させていく関係です。
+MisskeyHQ es la empresa que opera misskey.io.Por lo tanto no tiene relación directa con el desarrollo del proyecto Misskey. Sin embargo, syuilo, el jefe de proyecto de Misskey, también participa como directivo en MisskeyHQ Inc, fomentando la cooperación para hacer avanzar Misskey.
 
-## 「Misskey」の名前の由来は何ですか？
+## ¿Cuál es el origen del nombre "Misskey"?
 
-メイン開発者のsyuiloがその名前を考えていたときに偶然聴いていた、May'nの楽曲『Brain Diver』の歌詞から採られています。
+El nombre "Misskey" se inspiró en la letra de la canción "Brain Diver" de May'n, que el desarrollador principal syuilo estaba escuchando casualmente cuando pensó en el nombre.
 
-## 他のMisskey・PleromaサーバーやMastodonサーバーなどのユーザーをフォローするには？
+## ¿Cómo puedo seguir a otros usuarios de otros servidores Misskey,Pleroma o Mastodon?
 
-メニューから検索を選び、ユーザーアカウントを以下の形式で入力します。ユーザーアカウントは、ユーザー名とユーザーが属するサーバーまたはサーバーのホスト名を含めたものになります。Misskeyに限らずMastodonやPleromaなどの多くの分散型ソフトウェアでは、以下の様なユーザーアカウントの形式が一般的です。<br>
+Selecciona "Buscar" desde el menú e introduce el nombre de usuario completo como en el formato especificado abajo.Un nombre de usuario completo incluye un nombre de usuario y el nombre de host del servidor al que pertenece el usuario.Este formato es común entre plataformas ActivityPub como Misskey, Mastodon y Pleroma.<br>
 
-ユーザーアカウントの形式: `@ユーザー名@Misskey・PleromaサーバーやMastodonサーバーのホスト名`<br>
-ユーザーアカウントの例: `@syuilo@misskey.io`<br>
+El formato de un nombre de usuario completo es el siguiente:\
+`username@hostname.example`Por ejemplo:\
+`syuilo@misskey.io`
 
-ユーザーアカウントの形式は全ての分散型ソフトウェアで共通ではありませんが、この形式によって、様々な分散型ソフトウェアが実装された他のサーバーやサーバーのユーザーをフォローすることができます。
+Aunque este formato no es universal en todo el software distribuido, permite seguir a usuarios de otros servidores o plataformas implementadas con software descentralizado diferente.
 
-## Renoteを削除するには？
+## ¿Cómo elimino una Renota?
 
-Renoteの時刻表示の隣にある「...」を押し、「Renote解除」を選択します。<br>
-Renoteについて詳しくは[こちら](../features/note/#renote)をご覧ください。
+Para anular una renota, pulsa "..." junto a la marca de tiempo de la renota y seleccione "Quitar renota".<br>
+Para más información sobre las Renotas mira  [aquí](../features/note/#renote).
 
-## ノート内のURLのプレビューを表示させたくない
+## ¿Cómo puedo deshabilitar la vista previa de las URL?
 
-MFM(Markup language For Misskey)というMisskey独自のマークアップ言語には、URLのプレビューを無効にする構文があります。詳しくはMFMチートシートをご覧ください。MFMチートシートは、あなたが属するサーバーで次のアドレスを入力すると見ることができます。`https://あなたのサーバーのホスト名/mfm-cheat-sheet`
+El lenguaje de marcado para Misskey (MFM) incluye sintaxis para deshabilitar la vista previa de las URL.Para más detalles, consulta la hoja de trucos de MFM,.A la cual puedes acceder introduciendo la siguiente dirección en tu servidor:`https://nombredetuservidor/mfm-cheat-sheet`.
 
-## カスタム絵文字を追加、編集、削除したい
+## ¿Cómo puedo añadir, editar o borrar emojis personalizados?
 
-あなたが属するサーバーの管理者のみが、カスタム絵文字を追加、編集、削除できます。それらを希望する場合は、サーバー管理者に直接連絡してください。
+Solo los administradores del servidor pueden añadir,editar o borrar emojis personalizados.Por favor contacta al administrador de tu servidor, si deseas hacer esto.
 
-## Botを開発したい
+## Quiero desarrollar un bot.
 
-Misskey APIを利用したBotの開発が可能です。詳しくは[こちら](../../for-developers/api/)をご覧ください。
+Cualquiera puede desarrollar un bot para Misskey usando la API de Misskey.Para más información, consulta [aquí](../../for-developers/api/).
 
-## ノートの翻訳機能はどのサービスを使用していますか？
+## ¿Qué servicio usa la función de traducción?
 
-機械翻訳サービスの[DeepL翻訳](https://www.deepl.com/)を使用しています。
+Usamos [DeepL](https://www.deepl.com/), el servicio de traducción automática.
 
-## サービスについての問い合わせがしたい
+## Quiero informarme sobre los servicios
 
-「Misskey」はWebサービスを作成するためのソフトウェア、またそのプロジェクトの名称です。したがって、<b>「Misskey」自体はWebサービスではありません。</b><br>
-また、<b>当Misskey ProjectはいかなるWebサービスも運営・管轄していません</b>ので、Misskeyを使ったWebサービスについてのお問い合わせは当該Webサービスのお問い合わせ窓口にお願いします。<br>
-人によっては、「Misskeyを使って作られたWebサービス」のことを指して「Misskey」と表記している場合がありますので注意が必要です。
+'Misskey' es el nombre de un software y un proyecto para crear servicios de microblogging web.Por lo tanto, <b>“Misskey” en sí no es un servicio web.</b><br>
+Además, <b>nuestro Proyecto Misskey no opera ni tiene jurisdicción sobre ningún servicio web</b>, por lo que cualquier consulta sobre servicios web que utilicen Misskey deberá dirigirse al contacto del servicio web correspondiente.<br>
+Ten en cuenta que algunas personas pueden utilizar el término “Misskey” para referirse a “servicios web construidos utilizando Misskey”.
 
-## サーバーを作成しましたが、電気通信事業の届出は必要ですか？
+## ¿Tengo que registrarme en el Ministerio de Asuntos Internos y Comunicaciones de Japón si creo un servidor? (Para servidores en Japón)
 
-### 短い答え
+### Respuesta corta
 
-**営利目的**で運営するのであれば、**はい**。そうでなければ、**いいえ**。
+**Sí**, si operas por **fines comerciales**.En caso contrario, **no**.
 
-### 長い答え
+### Respuesta larga
 
-届出が必要になる「事業者」の定義は、[総務省のドキュメント](https://www.soumu.go.jp/main_content/000477428.pdf)で「サービスの提供により、その対価として料⾦を徴収することにより収益を得ようとする者」とされています。したがって、ビジネスとして利益を得る目的でサーバーを運営しない限り届出は必要ありません。また、寄付や広告などで収入があったとしても、サーバーの維持費の範囲であれば届出が必要な事業者には該当しません。(総務省に確認済み)<br>
-詳しくは総務省の[電気通信事業参入マニュアル](https://www.soumu.go.jp/main_content/000477428.pdf)などの資料をご覧いただくか、総務省までお問い合わせください。
-なお、届出が不要な場合でも、任意で届出を行うこと自体は可能です。
+La definición de "operador", según [documentos del Ministerio de Asuntos Internos y Comunicaciones](https://www.soumu.go.jp/main_content/000477428.pdf), es "una persona que pretende obtener un beneficio mediante la prestación de servicios y el cobro de tasas como compensación por la prestación de dichos servicios".Por lo tanto, a menos que explotes el servidor con fines lucrativos como empresa, el registro no es necesario.Así, aunque haya ingresos procedentes de fuentes como donaciones o publicidad, siempre que se utilicen exclusivamente para gastos de funcionamiento, no entran en la categoría de operadores que requieren registro.(confirmado con el Ministerio de Asuntos Internos y Comunicaciones).<br>
+Para más detalles, consulte el [Manual de Entrada para Empresas de Telecomunicaciones] del Ministerio de Asuntos Internos y Comunicaciones (https://www.soumu.go.jp/main_content/000477428.pdf) o póngase en contacto directamente con el ministerio.
 
-## DM機能があるため、電気通信事業の届出が必要になるのではありませんか？
+## ¿Requiere la función DM una notificación de negocio de telecomunicaciones?
 
-[「サーバーを作成しましたが、電気通信事業の届出は必要ですか？」](#サーバーを作成しましたが電気通信事業の届出は必要ですか)で説明している通りです。
-運営するサービスがどのような機能を持っていようと、「料⾦を徴収することにより収益を得ようとする」ことに該当しなければ、届出が必要な事業者とはみなされません。
+["He creado un servidor, ¿tengo que presentar una notificación para una empresa de telecomunicaciones?Como se explica en"](#サーバーを作成しましたが電気通信事業の届出は必要ですか)
+Independientemente de la funcionalidad del servicio que explote, si no entra en la categoría de «intento de generar ingresos mediante el cobro de tasas», no se le considera un operador comercial que deba presentar una notificación.
 
-## 名称に「Misskey」を含むサービスを公開しても良いですか？
+## ¿Puedo liberar servicios que contengan el nombre "Misskey"?
 
-「Misskey」はMisskeyプロジェクトによる登録商標(日本)ですが、名称に「Misskey」を含む(例: Misskey Tools等)サービスを公開しても問題ありません。
-また、その場合でも使用料の徴収などを行う予定もありません。
+"Misskey" es una marca registrada (en Japón) por el Proyecto Misskey, pero puedes publicar servicios con el nombre "Misskey" (por ejemplo, Misskey Tools) sin problemas.
+Además, no hay planes para cobrar honorarios por tal uso.
