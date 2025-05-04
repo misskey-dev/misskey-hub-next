@@ -1,21 +1,21 @@
-# Self-XSS攻撃について
+# Ataque Self-XSS
 
 ![](/img/docs/for-users/resources/self-xss/console_warn.png)
 
-誰かに指示されてMisskeyを操作していたら、上図のような画面に遭遇してこのページに辿り着きましたか？ <u>**おそらくあなたは悪意ある攻撃者に騙されています。**</u>
+¿Has llegado a esta página después de seguir las instrucciones de alguien usando Misskey y ver una pantalla como la de arriba? <u>**Puede que hayas sido engañado por un atacante malintencionado.**</u>
 
-入力しろと指示された内容（おそらくプログラムです）を入力しない限り、指示していた攻撃者に情報が送信されることはありません。**すぐに作業を中止してください。**
+A menos que escribas el contenido que se te indique (muy probablemente un programa), no se enviará ninguna información al atacante.**Por favor, deja de hacer lo que estás haciendo inmediatamente.**
 
-この画面は開発者がコードの確認やバグ修正に使うための「コンソール」と呼ばれるツールで、**通常の利用でこの画面を必要とすることはありません。**
+La pantalla que estás viendo se llama "consola", una herramienta que los desarrolladores utilizan para comprobar el código y corregir errores. **Esta pantalla no es necesaria para el uso habitual.**
 
-## もう少し詳しく
+## Más detalles
 
-Self-XSS攻撃では、攻撃者がユーザーをだまして、ブラウザの開発者ツールに悪意のあるプログラムコードを貼り付けさせます。この際、ユーザーには以下のような文句で誘導させます：
+En un ataque Self-XSS, un atacante engaña a un usuario para que pegue código malicioso en las herramientas de desarrollo del navegador.A menudo lo hacen con afirmaciones tentadoras como:
 
-- 隠し機能や特典を開放できる
-- セキュリティテストのためにこのコードを実行してみてほしい
-- ウェブサイトをハッキングして不正にポイントを入手できる
+- Desbloquear funciones o ventajas ocultas
+- Probar este código por motivos de seguridad
+- Hackear la web para conseguir puntos extra
 
-このような文句に騙されてコードを実行してしまうと、攻撃者が意図した通りの操作を行うことになります。
+Si te convencen para que ejecutes este código, realizarás acciones que el atacante pretendía.
 
-一般的にイメージされる「サイバー攻撃」とは違い、Self-XSS攻撃はユーザーが使用する正規のアプリを通して機密データを取得するため、システム側での対策だけでなく、ユーザーが普段から注意することが重要です。
+A diferencia de lo que podría imaginarse como un "ciberataque" típico, los ataques Self-XSS obtienen datos confidenciales engañando a los usuarios para que utilicen aplicaciones legítimas. Esto significa que, además de las medidas de seguridad del sistema, es crucial que los usuarios se mantengan alerta frente a estos trucos.
