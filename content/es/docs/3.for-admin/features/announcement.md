@@ -1,16 +1,16 @@
-# お知らせ
+# Anuncios
 
-お知らせ(announcement)はMisskeyで利用可能なサーバー機能のひとつです。
+Los anuncios son una de las funciones disponibles en Misskey.
 
-お知らせ機能を使用すると、ユーザーにサーバー全体のお知らせを掲示することができるほか、ユーザー個別にサーバーからのメッセージを送ることができます。
+Utilizando la función de anuncios, puedes publicar anuncios en todo el servidor para los usuarios, así como enviar mensajes desde el servidor a usuarios individuales.
 
 :::warning
 
-アクティブなお知らせの数が多いと、特に新規ユーザーの確認作業が増え、UXが低下する可能性があります。その場合、以下のオプションを検討できます。
+Un gran número de anuncios activos puede causar una mala experiencia de usuario, debido a las excesivas solicitudes de confirmación, especialmente para los nuevos usuarios.Deben considerarse las siguientes opciones:
 
-- 「既存ユーザーのみ」オプションを有効にしてお知らせを作成する
-- 「非通知」オプションを有効にしてお知らせを作成する
-- 終了したお知らせはアーカイブする
+- Crear un anuncio con la opción "Sólo usuarios existentes" activada
+- Crear un anuncio con la opción "no notificar" activada
+- Archivar las notificaciones cerradas
 
 :::
 
