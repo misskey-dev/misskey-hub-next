@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import yaml from '@rollup/plugin-yaml';
 import svgLoader from 'vite-svg-loader';
 import { readFileSync, watch as fsWatch } from 'fs';
 import { getOldHubRedirects } from './scripts/get-old-hub-redirects';
@@ -161,7 +160,6 @@ export default defineNuxtConfig({
 	},
 	vite: {
 		plugins: [
-			yaml(),
 			svgLoader({
 				defaultImport: 'component',
 				svgoConfig: {
