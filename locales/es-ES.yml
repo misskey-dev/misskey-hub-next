@@ -223,7 +223,7 @@ _landing:
       docs: "Consulta nuestra documentación"
   _donation:
     title: "Ayuda a Misskey"
-    description: "Somos un proyecto sin fines de lucro y dependemos de tus donaciones para seguir mejorando. Si te gusta Misskey, considera apoyarnos para que podamos seguir ofreciendo una experiencia increíble!"
+    description: "Somos un proyecto sin fines de lucro y dependemos de tus donaciones para seguir mejorando. Si te gusta Misskey, ¡considera apoyarnos para que podamos seguir ofreciendo una experiencia increíble!"
   _sponsors:
     title: "Patrocinadores"
     becomeASponsor: "Convertirse en patrocinador"
