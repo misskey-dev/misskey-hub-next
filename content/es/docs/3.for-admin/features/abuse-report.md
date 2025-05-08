@@ -1,38 +1,38 @@
-# 通報
+# Reportes
 
-Misskeyでは、サーバー内外のユーザーからサーバー内のコンテンツに関する通報を受け取ることができます。
+Misskey puede recibir informes sobre el contenido en el servidor de los usuarios dentro y fuera del servidor.
 
-通報は[コントロールパネル > 通報](x-mi-web://admin/abuses)に届きます。**こまめに確認するようにしましょう。**
+El informe se entrega en [panel de control > informe] (x-mi-web://admin/abuses).**Compruébalo con frecuencia.**
 
-## 通報への対処
+## Tramitación de informes.
 
-通報には、
+Para informar,
 
-- 通報対象のユーザー
-- 通報内容
-- 通報者
+- Usuarios a denunciar.
+- Contenido reportado
+- Reportador
 
-の情報が含まれています。
+La información incluye.
 
 :::tip
 
-リモートのサーバーから通報が転送されてくる場合があります。この場合、通報者はそのサーバーのシステムアカウント（`@instance.actor`）となっている可能性があります。
+El informe puede ser reenviado desde un servidor remoto.En este caso, el invocador puede ser la cuenta del sistema (`@instance.actor`) para ese servidor.
 
 :::
 
-必要に応じて、通報に関する状況をメモするために、管理者およびモデレーター権限を持つアカウントしか確認できないモデレーションノートを残すことができます。
+Si es necesario, se puede dejar una nota de moderación, que sólo pueden ver las cuentas con derechos de administrador y moderador, para anotar el estado del informe.
 
-通報への対処が完了したら、完了としてマークしましょう。
+Una vez que haya atendido el reporte, márquelo como completa.
 
-- 内容が正当であり、何かしらのアクションを行った場合などには「解決（是認）」
-- 内容が不正で、特に対処を行わなかった場合などには「解決（否認）」
+- Resuelto (aprobado) si el contenido es legítimo y se ha tomado alguna medida, por ejemplo
+- Resuelto (denegado)", por ejemplo, si el contenido es fraudulento y no se ha tomado ninguna medida
 
-という具合に、対処の結果に応じて解決のステータスを区別して対応を終了させることができます。
+la respuesta puede terminarse distinguiendo el estado de la resolución en función del resultado de la acción emprendida.
 
-## リモートへ転送
+## Reenviar a la instancia  remota
 
-リモートのユーザーに関する通報の場合は、その通報を当該サーバーに転送することができます。通報を転送する際は、通報者が匿名のシステムアカウント（`@instance.actor`）という形で転送されます。
+En el caso de un informe relativo a un usuario remoto, el informe puede reenviarse al servidor en cuestión.Al reenviar un informe, la persona que llama se reenvía en forma de cuenta anónima del sistema (`@instance.actor`).
 
-## 通報の通知
+## Notificación del informe.
 
-通報があったことは、Webhookまたはメール通知にて受け取ることができます。[コントロールパネル > 通報](x-mi-web://admin/abuses)を開き、「通知設定」から設定してください。
+Puede recibir una notificación de que se ha realizado un informe mediante un webhook o una notificación por correo electrónico.Abra [Panel de control > Informes] (x-mi-web://admin/abuses) y vaya a 'Configuración de notificaciones'.
