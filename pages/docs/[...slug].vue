@@ -11,7 +11,7 @@
                     {{ $t('_docs._toc.title') }}
                 </summary>
                 <div class="px-3 pt-4 max-h-[65vh] overflow-y-auto">
-                    <DocsTocLinks :links="data?.body.toc?.links" :max-depth="data?.maxTocDepth ?? undefined" @child-click="openState = false" />
+                    <DocsTocLinks :links="data?.body.toc?.links" :max-depth="maxTocDepth ?? undefined" @child-click="openState = false" />
                 </div>
             </details>
             <button
@@ -43,7 +43,7 @@
 
             <!-- 通常のドキュメント -->
             <template v-else-if="data?.body">
-                <ContentRenderer v-if="typeof data.body === 'object' && ('value' in data.body && Array.isArray(data.body.value) ? data.body.value.length > 0 : data.body.children.length > 0)" :value="data" class="markdown-body w-full mb-6" />
+                <ContentRenderer :value="data" class="markdown-body w-full mb-6" />
                 <div class="mt-8 mb-4 flex flex-wrap justify-end gap-3">
                     <div v-if="filePath"><GNuxtLink class="hover:underline underline-offset-4" target="_blank" :to="`${runtimeConfig.public.repositoryUrl}/tree/master/content/${filePath.replace(/^\/?[a-z-]+\//, 'ja/')}`">{{ $t('_docs._contribute.editThis') }}<ExtIco class="ml-1" /></GNuxtLink></div>
                     <div><GNuxtLink class="hover:underline underline-offset-4" target="_blank" to="https://crowdin.com/project/misskey-hub">{{ $t('_docs._contribute.translateThis') }}<ExtIco class="ml-1" /></GNuxtLink></div>
@@ -55,14 +55,14 @@
             <template v-else>
                 <div class="markdown-body">
                     <h1>{{ data?.title ?? (typeof data?.navigation != 'boolean' ? data?.navigation?.title : '') }}</h1>
-                    <MkIndex :is-dir="filePath?.endsWith('index.md') || (!filePath)" />
+                    <MkIndex :isDir="filePath?.endsWith('index.md') || (!filePath)" />
                 </div>
             </template>
         </div>
         <div v-if="shouldShowToc" class="hidden lg:block text-sm">
             <div class="sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto py-6 pl-6">
                 <h3 class="font-bold mb-6">{{ $t('_docs._toc.title') }}</h3>
-                <DocsTocLinks v-if="data?.body" :links="data?.body.toc?.links" :max-depth="data?.maxTocDepth ?? undefined" class="break-words" />
+                <DocsTocLinks v-if="data?.body" :links="data?.body.toc?.links" :max-depth="maxTocDepth ?? undefined" class="break-words" />
             </div>
         </div>
     </div>
@@ -93,15 +93,21 @@ useHead(() => locale.value === 'ja-ks' ? ({
 const route = useRoute();
 const slugs = Array.isArray(route.params.slug) ? route.params.slug : [route.params.slug];
 
-const { data } = await useGAsyncData(`docs-${locale.value}-${slugs.join('-')}`, () => queryCollection(`docs__${locale.value === 'ja-ks' ? 'ja' : localesContentIdentifiers[locale.value]}`).path(`/${locale.value === 'ja-ks' ? 'ja' : localesContentIdentifiers[locale.value]}/docs/${slugs.join('/')}`).first());
-
-console.log(data.value);
+const { data } = await useGAsyncData(`docs-${locale.value}-${slugs.join('-')}`, async () => {
+    const docsMdData = await queryCollection(`docs__${locale.value === 'ja-ks' ? 'ja' : localesContentIdentifiers[locale.value]}`).path(`/${locale.value === 'ja-ks' ? 'ja' : localesContentIdentifiers[locale.value]}/docs/${slugs.join('/')}`).first();
+    if (docsMdData) return docsMdData;
+    
+    const docsGuidesData = await queryCollection(`steppedGuide__${locale.value === 'ja-ks' ? 'ja' : localesContentIdentifiers[locale.value]}`).path(`/${locale.value === 'ja-ks' ? 'ja' : localesContentIdentifiers[locale.value]}/docs/${slugs.join('/')}`).first();
+    if (docsGuidesData) return docsGuidesData;
+});
 
 if (!data.value) {
     throw createError({ statusCode: 404, statusMessage: 'page not found', fatal: true });
 }
 
-const shouldShowToc = computed(() => data.value?._TYPE_ !== 'STEPPED_GUIDE');
+const shouldShowToc = computed(() => data.value != null && '_TYPE_' in data.value && data.value._TYPE_ !== 'STEPPED_GUIDE');
+
+const maxTocDepth = computed(() => data.value != null && 'maxTocDepth' in data.value ? data.value.maxTocDepth ?? null : null);
 
 const filePath = data.value ? data.value.stem + data.value.extension : null;
 

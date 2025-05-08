@@ -3,23 +3,22 @@ import { defineCollection, defineContentConfig, z } from '@nuxt/content';
 import type { z as Zod } from 'zod';
 
 const markdownSharedSchema = z.object({
-    _TYPE_: z.any().optional(),
     maxTocDepth: z.number().optional(),
     ignoreDirBasedNav: z.boolean().optional(),
 });
 
 const steppedGuideSchema = z.object({
-    _TYPE_: z.literal('STEPPED_GUIDE'),
+    _TYPE_: z.enum(['STEPPED_GUIDE']),
     guides: z.array(z.object({
-        _AUTOSELECT_TYPE_: z.union([
-            z.literal('OS_ANDROID'),
-            z.literal('OS_IOS'),
-            z.literal('OS_MAC'),
-            z.literal('OS_WINDOWS'),
-            z.literal('HARD_SMARTPHONE'),
-            z.literal('HARD_PC'),
+        _AUTOSELECT_TYPE_: z.enum([
+            'OS_ANDROID',
+            'OS_IOS',
+            'OS_MAC',
+            'OS_WINDOWS',
+            'HARD_SMARTPHONE',
+            'HARD_PC',
         ]).optional(),
-        _LAYOUT_TYPE_: z.literal('IMAGE_PORTRAIT_FIXED').optional(),
+        _LAYOUT_TYPE_: z.enum(['IMAGE_PORTRAIT_FIXED']).optional(),
         title: z.string(),
         description: z.any(),
         steps: z.array(z.object({
@@ -52,10 +51,17 @@ export default defineContentConfig({
         ...Object.fromEntries(localesConst.map((locale) => [
             `docs__${locale.contentIdentifier}`,
             defineCollection({
-                source: `${locale.code}/docs/**/*.{md,yml}`,
+                source: `${locale.code}/docs/**/*.md`,
                 type: 'page',
-                // @ts-ignore
-                schema: z.union([markdownSharedSchema, steppedGuideSchema]),
+                schema: markdownSharedSchema,
+            }),
+        ])),
+        ...Object.fromEntries(localesConst.map((locale) => [
+            `steppedGuide__${locale.contentIdentifier}`,
+            defineCollection({
+                source: `${locale.code}/docs/**/*.yml`,
+                type: 'page',
+                schema: steppedGuideSchema,
             }),
         ])),
         ...Object.fromEntries(localesConst.map((locale) => [

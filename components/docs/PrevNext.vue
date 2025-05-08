@@ -30,7 +30,7 @@ const { locale } = useI18n();
 const route = useRoute();
 const slugs = (route.params.slug as string[]).filter((v) => v !== '');
 
-const props = withDefaults(defineProps<{
+withDefaults(defineProps<{
 	ignoreDirBasedNav?: boolean;
 	isDir?: boolean;
 }>(), {
@@ -38,9 +38,5 @@ const props = withDefaults(defineProps<{
 	isDir: false
 });
 
-const { data } = await useAsyncData(`docs_${locale.value}_${slugs.join('/')}_surroundings`, () => queryCollectionItemSurroundings(`docs__${localesContentIdentifiers[locale.value === 'ja-ks' ? 'ja' : locale.value]}`, slugs.join('/')));
+const { data } = await useAsyncData(`docs_${locale.value}_${slugs.join('/')}_surroundings`, () => queryCollectionItemSurroundings(`docs__${localesContentIdentifiers[locale.value === 'ja-ks' ? 'ja' : locale.value]}`, `/${locale.value === 'ja-ks' ? 'ja' : localesContentIdentifiers[locale.value]}/docs/${slugs.join('/')}`));
 </script>
-
-<style scoped>
-
-</style>

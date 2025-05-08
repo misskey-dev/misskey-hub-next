@@ -28,7 +28,7 @@ export const localesContentIdentifiers = {
 	fr: 'fr',
 	th: 'th',
 	es: 'es',
-  de: 'de',
+	de: 'de',
 	cn: 'cn',
 	tw: 'tw',
 } as const satisfies Record<Exclude<LocaleCodes, 'ja-ks'>, string>;
