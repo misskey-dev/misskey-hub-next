@@ -60,7 +60,7 @@ function getRouteRules(): NuxtConfig['routeRules'] | undefined {
 	return {
 		...staticRules,
 		..._localeBasedRules,
-		...((process.env.VERCEL !== '1') ? getOldHubRedirects('nitro') : {}),
+		...((process.env.VERCEL !== '1') ? getOldHubRedirects('nitroFs') : {}),
 	};
 }
 
@@ -140,6 +140,9 @@ export default defineNuxtConfig({
 		experimental: {
 			generatedLocaleFilePathFormat: 'relative',
 		},
+		bundle: {
+			optimizeTranslationDirective: true,
+		}
 	},
 	colorMode: {
 		classSuffix: '',

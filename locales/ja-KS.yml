@@ -44,54 +44,176 @@ _nav:
 
 _landing:
   _hero:
-    description: "Misskey（ミスキー）はオープンソースの分散型ソーシャルネットワーキングプラットフォームやで。なんかすごそうやろ？"
+    description: "Misskey（ミスキー）はオープンソースの分散型SNSを作れるソフトやで。なんかすごそうやろ？"
     gettingStarted: "はじめる"
   _keyFeatures:
     _open:
       title: "あけあけ"
-      description: "Misskeyはオープンソースやから、誰でも使えんねん。"
+      description: "Misskeyは中身のコードが公開されてるから、誰でも自由にタダでMisskeyを使ったサービス（Misskeyサーバー）を作って運営できるで。"
     _federated:
       title: "分散"
-      description: "Misskeyは分散型のプロトコルがついとるから、よそのサーバーとつながれるんやで。"
-    _multifunction:
+      description: "Misskeyは分散型のプロトコルがついとるから、よそのサーバーのコミュニティ同士がつながれるんやで。"
+    _powerful:
       title: "なんでもできる"
-      description: "Misskeyは他のソフトにはないような機能がようさんあるから、プロみたいに使いこなせんで。"
-    _customizable:
-      title: "めっちゃいじれる"
-      description: "Misskeyの柔軟なWebインターフェイスのおかげで、自分好みにアレンジできるで。"
+      description: "Misskeyは他のソフトにはないような機能がようさんあるから、こまごましたカスタマイズもお手のもんや。"
   _decenterized:
-    title: "Misskeyは{0}やで"
-    decenterizedPlatform: "分散型プラットフォーム"
-    description: "Misskeyはタダやしオープンソースやから、誰でも好きにMisskey使ってサーバー作れるんやけど、現にもういっぱいサーバーがあるんやで。それにええところは、Misskeyは{0}っていう分散通信プロトコルを使ってるから、どのサーバー選んでも他のサーバーの人と話せるねん。これが分散型って言われるわけや。ひとつのサイトでぜんぶ完結するような、Twitterみたいな他のサービスとは全然ちゃうねんで。サーバーによって話すことや人の種類や言葉が違うから、自分に合うサーバー探すのも楽しいかもしれんね（もちろん自分でサーバー作るのもおもろいで）。"
+    title: "Fediverseに繋がるための、強力なプラットフォームやで"
+    description: "Misskeyは分散サービスに使われる{0}っていう仕組みがついてるから、Misskeyを使えば分散型SNS同士のネットワークとつながるサービスを簡単に作れるっちゅうわけや。色んな人に来てもらってワイワイするようなSNSを作れるし、「お一人様」としてあんたがほかのサーバーの人らを見るための場所を作ることもできるで。あんたが作ったサービスやから、他のプラットフォームに依存して情報発信しなくても良くなるっていうのがウリや。"
     activityPub: "ActivityPub"
   _features:
     _root:
       title: "自慢の機能" 
-      description: "Misskeyには、当たり前なもんから普通はないもんまで、いろんな機能がついとるで。例えばこんなん！"
+      description: "Misskeyには、いろんな機能がついとるで。例えばこんなん！"
     _note:
       title: "ノート"
-      description: "Misskeyでは、ユーザーの投稿は「ノート」言うねん。他のノートを引用したり、画像、動画、オーディオ、なんでも添付できるで。"
+      description: "Misskeyでは、ユーザーの投稿は「ノート」って言うねん。他のノートを引用したり、画像、動画、オーディオ、なんでも添付できるで。"
     _federation:
       title: "連合"
       description: "オープンな分散プロトコルのActivityPubがついてるから、他のMisskeyサーバーとだけじゃなくて、ActivityPubをサポートする他のソフトともやりとりできるようになっとんねん。"
     _reaction:
       title: "リアクション"
       description: "ノートには「リアクション」を付けれて、思ってることをパパっと伝えられるんやで。"
+    _customEmojis:
+      title: "カスタム絵文字"
+      description: "Misskeyの色んな場所で使える、サーバーオリジナルの絵文字を作れるで。"
+    _channel:
+      title: "チャンネル"
+      description: "チャンネルを作ると、何かしらのテーマでサーバー内にコミュニティを作ることができるで。"
+    _antenna:
+      title: "アンテナ"
+      description: "キャッチしたい言葉を設定しとけば、Misskeyがその言葉が含まれるノートをかってに集めてくれる機能もあるで。"
     _drive:
       title: "ドライブ"
       description: "アップロードしたファイルがバーッって並ぶ画面があるから、好きな写真をフォルダにガー入れたり、もっかいノートしたいときもシュッってできるようになってるで。"
+    _2fa:
+      title: "多要素認証"
+      description: "ワンタイムパスワードを使った多要素認証とか、物理的なキーを使用したパスキー認証にも対応してるから、アカウントのセキュリティを上げれるっちゅうわけや。"
+    _charts:
+      title: "可視化"
+      description: "Misskeyにはチャートエンジンが入ってて、サーバーがどう使われとるかとかがパッとわかるようになっとるで。"
+    _branding:
+      title: "ブランディング"
+      description: "サーバーのロゴ、アイコン、テーマとかはいじれるようになってるから、ブランディングもバッチリや。"
+    _roles:
+      title: "ロール"
+      description: "ロールを使うと、ユーザーごとの権限を細かくいじれるで。あとは、コンディショナルロールっていう機能を使えば、条件に合うユーザーに自動でロールをつけるなんてこともできるんや。例えば、ロールにバッジを設定して、サーバーのマネタイズに使うなんてこともできるなあ。"
+    _moderation:
+      title: "モデレーション"
+      description: "サーバー運営を助けてくれる、モデレーション機能がついてくるで。"
+    _privacy:
+      title: "プライバシー"
+      description: "プライバシー設定もバッチリやから、コンテンツの公開範囲をしっかり決めれるで。"
+    _multiPurpose:
+      title: "ひとりでも、みんなでも"
+      description: "色んな人が来るようなSNSとしての使うこともできるし、個人用サーバーとしても使えるようになってるんやで。いわばFediverseと繋がるための、あんただけの拠点やな。"
+    _monetization:
+      title: "収益化"
+      description: "広告の表示とかのサーバーのマネタイズを助けてくれる機能もあるから、持続可能な運用を目指せるで。"
+    _oss:
+      title: "Mi ❤️ OSS"
+      description: "Misskeyはこれまでもこれからもオープンソースや。誰でも自由に無料でソースコードを使えるで。Misskey Projectは、他のOSSに対しても支援してるんやで。"
+    _battleTested:
+      title: "信頼性"
+      description: "Misskeyは10年以上実際の運用で使われた実績があるから、信頼性もバッチリや。"
+  _featuresServer:
+    _root:
+      title: "サーバーの機能"
+      description: "Misskeyを支えるバックエンド実装の特徴。"
+    _easyInstall:
+      title: "簡単インストール"
+      description: "コマンド一つでインストールできるし、会社さんが出してるホスティングサービスを使えば、管理の手間も省けるで。"
+    _easySetup:
+      title: "セットアップもカンタン"
+      description: "Misskeyサーバーのを立てるのに複雑な設定は要らんで。でも、ニーズに合わせて高度な設定もできるようになってるで。"
+    _api:
+      title: "API"
+      description: "Misskeyの機能はHTTP APIを通じて操作できて、他のアプリとの連携も簡単やで。あと、WebhookとかWebSocket接続もサポートしてるから、リアルタイムにMisskeyからのイベントを受け取ることもできるようになってるで。"
+    _relay:
+      title: "リレー対応"
+      description: "Fediverse内のアクティビティを中継するリレーサーバーにもつなげられるようになってるから、自分でいろんなサーバーに繋がりに行かんくても良くなってるで。"
+    _nodejs:
+      title: "Node.jsバックエンド"
+      description: "MisskeyのバックエンドはNode.jsを使ってるから、高速・軽量に動くで。"
+    _postgresql:
+      title: "PostgreSQL"
+      description: "メインのデータベースにはPostgreSQLを使ってるから、ガチガチにデータ管理できるんやで。"
+    _jobQueue:
+      title: "高効率ジョブキュー"
+      description: "ジョブキューにはBullMQを採用しとって、重いタスクもたくさんのサーバーで効率的にできるで。ジョブキューの管理ツールもMisskeyに内蔵してるから、他のツールに頼らなくても良くなってるんやで。"
+    _cdn:
+      title: "CDN対応"
+      description: "外部のCDNでリソースをキャッシュするのにも対応してるから、サーバーへのリクエストを減らして、負荷を低減してコストも抑えられるんやで。"
+    _ftt:
+      title: "FTT"
+      description: "Fan-out Timeline Technology(FTT)がついてるから、タイムラインをRedisで作るようにしてパフォーマンスを上げられるようになってるで。"
+    _rbt:
+      title: "RBT"
+      description: "Reactions Buffering Technology(RBT)を使えば、リアクション情報をRedis上に置いておいてパフォーマンスを上げられるようになってるんやで。"
+    _scalable:
+      title: "スケーラブル"
+      description: "プロセスのクラスタリング、複数サーバーによるロードバランス、データベースのレプリケーションに対応してるから、ユーザーの増加でも大丈夫や。"
+    _ml:
+      title: "機械学習"
+      description: "内蔵してある機械学習機能を使って、自動的にセンシティブなメディアのフィルタリングをしたりできるから、運営の手間も省けるで。"
+    _sentry:
+      title: "Sentryサポート"
+      description: "Sentryでサーバーのメトリクスを収集できるから、サーバーリソースの監視、ヘルスチェック、メンテナンスの役に立つで。"
+  _featuresClient:
+    _root:
+      title: "WebUI"
+      description: "Misskeyに付属する高機能なWebフロントエンド(Misskey Web)の特徴を紹介。"
+    _responsive:
+      title: "レスポンシブUI"
+      description: "UIはキレイな独自のデザインシステムで作られてるから、どんなデバイスで見てもキレイに見えるようになってるで。"
     _theme:
       title: "テーマ"
       description: "好きな見た目でMisskeyを使えるで。もちろんダークモードもあるし、頑張ればヒョウ柄っぽいのも作れんで（あんまヒョウ柄見たころないけどなぁ）。"
-    _thread:
-      title: "スレッド"
-      description: "ノートはスレッドにできて、気の合うおばちゃんと商店街で話すみたいに何時間でもおしゃべりできんで。"
-    _charts:
-      title: "チャート"
-      description: "Misskeyにはチャートエンジンが入ってて、サーバーがどう使われとるかとかがパッとわかるようになっとるで。"
+    _mfm:
+      title: "MFM"
+      description: "ノートにはMFMと呼ばれるMisskey専用のマークアップ言語が使えるで。太字にする・リンクを挿入する・動きを付けるとかのテキストの装飾がシンプルな構文で表現できるようになってるで。"
     _widgets:
       title: "ウィジェット"
       description: "いろんなウィジェットを画面上において、好きにカスタマイズできるで。"
+    _deck:
+      title: "デッキUI"
+      description: "デッキUIを使うと、UIをもっと自分好みにできるで。"
+    _embed:
+      title: "他サイトへの埋め込み"
+      description: "ノート、チャンネルなどを外部のサイトに埋め込んで表示できるようになってるで。"
+    _realtimeMode:
+      title: "リアルタイムモード"
+      description: ""
+    _pushNotification:
+      title: "プッシュ通知"
+      description: "プッシュ通知に対応してるから、リアルタイムでサーバーからの通知を受け取れるようになってるで。"
+    _multiAccounts:
+      title: "マルチアカウント対応"
+      description: "何個もアカウント持ってても簡単に切り替えられるで。"
+    _plugin:
+      title: "プラグイン"
+      description: "セキュアなAiScriptで書かれたプラグインをインストールして、クライアントの機能を拡張できるようになってるで。"
+    _settingsManagement:
+      title: "柔軟な設定管理"
+      description: "アカウントごとにクライアント設定を上書きしたり、デバイス間で設定を共有・同期できるようになってるで。設定情報は自動バックアップできるで。"
+    _pwa:
+      title: "PWA"
+      description: "Misskey WebはProgressive Web Apps(PWA)に準拠しとるから、デバイス上でネイティブアプリみたいに使えるで。"
+    _i18n:
+      title: "多言語対応"
+      description: "クライアントをいろんな言語で使えるで。もちろん関西弁も！"
+  _featuresUpcoming:
+    _root:
+      title: "近日公開"
+      description: "今後予定されている機能を紹介。"
+    _jwt:
+      title: "JWT認証"
+      description: "JSON Web Token(JWT)を使ったステートレスな認証を作って、もっとセキュアで高速なリクエストの検証ができるようにする予定やで。"
+    _newBackend:
+      title: "より軽量なバックエンド"
+      description: "もっと高速・軽量に動かせるようにするための新しいバックエンド実装を作ってるで。"
+    _vueVapor:
+      title: "Vaporモード対応"
+      description: "フロントエンドで採用しているフレームワーク Vue の新しいコンパイルストラテジーをサポートして、軽量なクライアントにできるようにする予定やで。"
   _getStarted:
     title: "Misskey、やってみーひん？"
     _find:
