@@ -1,25 +1,25 @@
-# 連合モード
+# Federación
 
-Misskeyは分散型プラットフォームとしてデフォルトでActivityPubによる連合をサポートしていますが、サーバーの運営方針などに応じて連合を限定的にしたり、無効化したりすることも可能です。
+Como plataforma descentralizada, Misskey soporta federación ActivityPub por defecto, pero la federación pueden ser limitadas o desactivadas dependiendo de la política de funcionamiento del servidor y otros factores.
 
 :::tip
 
-連合はデフォルトで有効化されていますので、通常（連合する状態で使用する場合）は特に設定を行う必要はありません。
+La federación está activada por defecto, por lo que no es necesario configurarla de ninguna manera particular en circunstancias normales (cuando se utiliza en estado de federación).
 
 :::
 
-## 設定方法
+## Configuración
 
-[コントロールパネル > 全般](x-mi-web://admin/settings) の「連合」から設定可能です。
+Puede configurarse en la sección "Federación" del [Panel de control > General] (x-mi-web://admin/settings).
 
-### 全て
+### Todo
 
-全てのサーバー（ブロックしているサーバーなどを除く）と連合します。デフォルトの設定です。
+Federación con todos los servidores (excluyendo servidores bloqueados, etc.).Esta es la opción por defecto.
 
-### ホスト指定
+### Especificar Host
 
-特定のサーバーとのみ連合します（ホワイトリスト）。「連合を許可するサーバー」に、連合を許可するサーバーのホスト名を改行区切りで入力します。
+Sólo se federa con servidores específicos (lista blanca).Introduzca los nombres de host de los servidores que pueden federarse, separados por nuevas líneas, en "Servidores que pueden federarse".
 
-### なし
+### Ninguno
 
-他のサーバーとの連合を行いません。一部の連合関連の設定画面や項目が省略されます。
+No hay federación con otros servidores.Se omiten algunas pantallas y elementos de configuración relacionados con la federación.
