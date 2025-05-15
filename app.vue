@@ -224,6 +224,12 @@ function scrollToTop() {
 	background: #e6e6e6;
 }
 
+html.dark {
+	.root {
+		background: #1a1a1a;
+	}
+}
+
 .scrollToTopButton {
     bottom: v-bind(sbPositionY);
     right: v-bind(sbPositionX);
