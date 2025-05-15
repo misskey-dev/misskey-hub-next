@@ -100,6 +100,7 @@ export default defineNuxtConfig({
 				{ rel: 'me', href: 'https://mastodon.social/@misskey' },
 			],
 			meta: [
+				{ name: 'theme-color', content: '#86b300' },
 				{ name: 'twitter:card', content: 'summary_large_image' },
 			]
 		},

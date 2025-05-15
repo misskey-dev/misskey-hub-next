@@ -47,7 +47,8 @@
   "dependencies": {
     "@types/three": "^0.176.0",
     "nanoid": "^5.1.5",
-    "swiper": "^11.2.6"
+    "swiper": "^11.2.6",
+    "tinycolor2": "^1.6.0"
   },
   "pnpm": {
     "overrides": {

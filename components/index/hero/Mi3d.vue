@@ -90,8 +90,11 @@ onMounted(() => {
 		gltf.scene.scale.set(20, 20, 20);
 		scene.add(gltf.scene);
 
+		const clock = new THREE.Clock();
+
 		function render() {
-			controls.update();
+			const deltaTime = clock.getDelta();
+			controls.update(deltaTime);
 			renderer.render( scene, camera );
 		}
 	});

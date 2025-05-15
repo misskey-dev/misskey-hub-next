@@ -1,6 +1,17 @@
 <template>
 <div>
 	<!--<IndexHeroBg />-->
+
+	<!--
+	<div style="position: absolute; top: 0; left: 0; width: 100dvw; height: 100dvh;">
+		<IndexHeroNodesAnim/>
+	</div>
+	-->
+
+	<div style="position: absolute; top: 0; left: 0; width: 100dvw; height: 700px; pointer-events: none;">
+		<IndexHeroParticles style="width: 100%; height: 100%;"/>
+	</div>
+
 	<GNav :landing="true" />
 
 	<main class="main">
@@ -18,7 +29,7 @@
 					</div>
 				</GNuxtLink>
 				</div>
-				<div class="buttons">
+				<div class="topButtons">
 					<GButton button-type="button" color="accent" @click="scrollTo('#getStarted')">{{ $t('_landing._hero.gettingStarted') }}</GButton>
 					<GButton button-type="button" @click="scrollTo('#learnMore')">{{ $t('learnMore') }}</GButton>
 				</div>
@@ -194,6 +205,8 @@ definePageMeta({
 <style scoped>
 .main {
 	--main-width: 1200px;
+	position: relative;
+	z-index: 1;
 }
 
 ._space {
@@ -205,8 +218,11 @@ definePageMeta({
 }
 
 .top {
-	padding-top: 32px;
 	display: flex;
+}
+
+.topLeft {
+	padding-top: 32px;
 }
 
 .topTagline {
@@ -216,6 +232,12 @@ definePageMeta({
 
 .topDescription {
 	margin: 16px 0;
+}
+
+.topButtons {
+	display: flex;
+	gap: 16px;
+	margin-top: 24px;
 }
 
 .topRightMi {
