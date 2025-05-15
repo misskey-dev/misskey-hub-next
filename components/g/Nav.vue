@@ -2,43 +2,40 @@
 <div :class="$style.root">
 	<div :class="$style.bg"></div>
 	<nav :class="$style.container">
-		<GNuxtLink :to="localePath('/')" class="flex items-center space-x-2 hover:opacity-80">
-				<MiIcon class="h-8 w-8" />
-				<div class="font-title font-bold text-lg">{{ $t('_seo.siteName') }}</div>
+		<GNuxtLink :to="localePath('/')" style="display: flex; align-items: center; gap: 8px;">
+			<MiIcon class="h-8 w-8" />
+			<div><b>{{ $t('_seo.siteName') }}</b></div>
 		</GNuxtLink>
-		<ul
-				class="fixed z-[9902] top-16 right-0 text-right p-4 w-[80vw] sm:w-[50vw] bg-neutral-100/90 dark:bg-neutral-950/90 space-y-2 transition-[transform,border-radius,box-shadow] lg:transition-none lg:translate-x-0 lg:backdrop-blur-none lg:w-auto lg:rounded-none lg:shadow-none lg:space-y-0 lg:p-0 lg:relative lg:top-0 lg:right-auto lg:bg-transparent dark:lg:bg-transparent lg:col-span-4 lg:space-x-8 xl:space-x-10 lg:flex lg:justify-center"
-				:class="[(scrollPos <= -40) ? 'rounded-bl-lg' : 'rounded-l-lg', navOpen ? 'translate-x-0 shadow-lg' : 'translate-x-full']"
-		>
-				<li v-for="item in NavData.center">
-						<GNuxtLink :to="localePath(item.to)" @click.native="navOpen = !navOpen" :class="['block rounded-full px-4 py-2 lg:px-4 lg:py-1.5 hover:bg-neutral-300 dark:hover:bg-neutral-800', { 'bg-neutral-300 dark:bg-neutral-800 font-bold': currentPath.includes(item.to) }]">
-								<component v-if="'icon' in item" :is="item.icon" class="h-5 w-5" />
-								<template v-else>
-										{{ $t(item.i18n) }}
-								</template>
-						</GNuxtLink>
-				</li>
-				<li class="lg:hidden px-4 py-2 flex space-x-4">
-						<button 
-								class="hover:opacity-80 disabled:opacity-70 relative before:absolute before:-z-10 before:-top-2 before:-left-2 before:w-9 before:h-9 before:rounded-full hover:before:bg-neutral-300 dark:hover:before:bg-neutral-600 h-5 w-5"
-								@click="rotateColorMode()"
-								:disabled="colorMode.forced"
-								aria-label="Change Color Mode"
-						>
-								<ClientOnly>
-										<SunIcon class="h-5 w-5" v-if="colorMode.preference === 'light' || (colorMode.forced && colorMode.value === 'light')" />
-										<MoonIcon class="h-5 w-5" v-else-if="colorMode.preference === 'dark' || (colorMode.forced && colorMode.value === 'dark')" />
-										<DisplayIcon class="h-5 w-5" v-else />
-								</ClientOnly>
-						</button>
-						<div class="input-group">
-								<span class="input-group-text !rounded-l-full"><I18nIcon class="h-5 w-5" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></span>
-								<select class="form-select !rounded-r-full" v-model="spLocaleOption" @change="changeLocale()">
-										<option v-for="locale in localesConst" :value="locale.code">{{ locale.name }}</option>
-								</select>
-						</div>
-				</li>
-		</ul>
+		<div :class="$style.navItems">
+			<span v-for="item in NavData.center">
+				<GNuxtLink :to="localePath(item.to)" @click.native="navOpen = !navOpen" :class="['block rounded-full px-4 py-2 lg:px-4 lg:py-1.5 hover:bg-neutral-300 dark:hover:bg-neutral-800', { 'bg-neutral-300 dark:bg-neutral-800 font-bold': currentPath.includes(item.to) }]">
+					<component v-if="'icon' in item" :is="item.icon" class="h-5 w-5" />
+					<template v-else>
+						{{ $t(item.i18n) }}
+					</template>
+				</GNuxtLink>
+			</span>
+			<span class="lg:hidden px-4 py-2 flex space-x-4">
+					<button 
+							class="hover:opacity-80 disabled:opacity-70 relative before:absolute before:-z-10 before:-top-2 before:-left-2 before:w-9 before:h-9 before:rounded-full hover:before:bg-neutral-300 dark:hover:before:bg-neutral-600 h-5 w-5"
+							@click="rotateColorMode()"
+							:disabled="colorMode.forced"
+							aria-label="Change Color Mode"
+					>
+							<ClientOnly>
+									<SunIcon class="h-5 w-5" v-if="colorMode.preference === 'light' || (colorMode.forced && colorMode.value === 'light')" />
+									<MoonIcon class="h-5 w-5" v-else-if="colorMode.preference === 'dark' || (colorMode.forced && colorMode.value === 'dark')" />
+									<DisplayIcon class="h-5 w-5" v-else />
+							</ClientOnly>
+					</button>
+					<div class="input-group">
+							<span class="input-group-text !rounded-l-full"><I18nIcon class="h-5 w-5" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></span>
+							<select class="form-select !rounded-r-full" v-model="spLocaleOption" @change="changeLocale()">
+									<option v-for="locale in localesConst" :value="locale.code">{{ locale.name }}</option>
+							</select>
+					</div>
+			</span>
+		</div>
 		<div class="text-right">
 				<button class="p-1 lg:hidden" @click="navOpen = !navOpen">
 						<XIcon v-if="navOpen" class="h-5 w-5" />
@@ -160,6 +157,7 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 	right: 0;
 	z-index: 9999;
 	height: var(--height);
+	color: #3c3c3c;
 }
 
 .bg {
@@ -195,5 +193,11 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 	display: flex;
 	align-items: center;
 	gap: 16px;
+}
+
+.navItems {
+	display: flex;
+	flex-direction: row;
+	font-size: 90%;
 }
 </style>
