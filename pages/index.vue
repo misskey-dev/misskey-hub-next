@@ -294,7 +294,7 @@ definePageMeta({
 }
 
 .swiper-slide {
-	width: 1000px;
+	width: 800px;
 	border-radius: 16px;
 	overflow: clip;
 	user-select: none;
