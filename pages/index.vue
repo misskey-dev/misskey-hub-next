@@ -1,6 +1,6 @@
 <template>
 <div>
-	<!--<IndexHeroBg />-->
+	<IndexHeroBg />
 
 	<!--
 	<div style="position: absolute; top: 0; left: 0; width: 100dvw; height: 100dvh;">
