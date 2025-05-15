@@ -1,11 +1,11 @@
 <template>
-    <div style="background: #eeea; backdrop-filter: blur(10px);"
+    <div style="background: #fffc; backdrop-filter: blur(12px); height: 65px;"
+			class="root"
         :class="[
             'top-0 z-[9900] w-full transition',
-            fixed ? 'fixed' : 'sticky',
-            (slim ? 'h-16' : 'h-16 lg:h-20'),
+            fixed ? 'fixed' : 'sticky',,
         ]">
-        <nav class="container mx-auto max-w-screen-xl grid items-center grid-cols-2 lg:grid-cols-6 p-4 h-full transition-[height]">
+        <nav class="container mx-auto max-w-screen-xl grid items-center grid-cols-2 lg:grid-cols-6 h-full transition-[height]">
             <div class="">
                 <GNuxtLink :to="localePath('/')" class="flex items-center space-x-2 hover:opacity-80">
                     <MiIcon class="h-8 w-8" />
@@ -24,7 +24,7 @@
                         </template>
                     </GNuxtLink>
                 </li>
-                <li class="lg:hidden px-4 py-2 flex justify-end items-center space-x-4">
+                <li class="lg:hidden px-4 py-2 flex space-x-4">
                     <button 
                         class="hover:opacity-80 disabled:opacity-70 relative before:absolute before:-z-10 before:-top-2 before:-left-2 before:w-9 before:h-9 before:rounded-full hover:before:bg-neutral-300 dark:hover:before:bg-neutral-600 h-5 w-5"
                         @click="rotateColorMode()"
@@ -155,3 +155,13 @@ function rotateColorMode() {
 
 const scrollPos = useState<number>('miHub_global_scrollPos');
 </script>
+
+<style scoped>
+.root {
+	mask-image: linear-gradient(#000, #000), url("/header-mask-r.svg");
+  mask-repeat: no-repeat;
+  mask-position: center center, calc(50dvw + 300px) -5px;
+  mask-size: 100% 100%, 1000px 100px;
+	mask-composite: exclude;
+}
+</style>

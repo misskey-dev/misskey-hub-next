@@ -198,7 +198,7 @@ function scrollToTop() {
 }
 </script>
 <template>
-    <div class="text-neutral-800 dark:text-neutral-200 bg-neutral-100 dark:bg-gray-900">
+    <div class="text-neutral-800 dark:text-neutral-200" :class="$style.root">
         <NuxtIsland name="GNoScript" />
         <NuxtLayout>
             <NuxtPage />
@@ -220,6 +220,10 @@ function scrollToTop() {
 </template>
 
 <style module>
+.root {
+	background: #e6e6e6;
+}
+
 .scrollToTopButton {
     bottom: v-bind(sbPositionY);
     right: v-bind(sbPositionX);

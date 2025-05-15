@@ -222,7 +222,7 @@ definePageMeta({
 }
 
 .topLeft {
-	padding-top: 32px;
+	padding-top: 60px;
 }
 
 .topTagline {
@@ -298,6 +298,12 @@ definePageMeta({
 	border-radius: 16px;
 	overflow: clip;
 	user-select: none;
+	cursor: grab;
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+	opacity: 0.5;
 }
 
 .decentralized {
@@ -342,7 +348,7 @@ definePageMeta({
 }
 
 .useCasesItem {
-	background: #fff;
+	background: #86b30025;
 	border-radius: 16px;
 	padding: 32px;
 	text-align: center;
