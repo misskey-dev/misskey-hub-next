@@ -21,8 +21,8 @@ html[lang='ja-KS'],
 ._i18n[lang='ja'],
 ._i18n[lang='ja-JP'],
 ._i18n[lang='ja-KS'] {
-    --mi-localized-font: 'GenJyuuGothicX';
-    --mi-localized-font-p: 'GenJyuuGothicXP';
+    --mi-localized-font: 'Hiragino Maru Gothic Pro';
+    --mi-localized-font-p: 'Hiragino Maru Gothic Pro';
 }
 
 html[lang='ko-KR'],

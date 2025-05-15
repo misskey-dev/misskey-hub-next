@@ -15,7 +15,7 @@
                 </div>
             </template>
         </GHero>
-        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
+        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-neutral-950">
             <div class="container mx-auto max-w-screen-lg px-6 space-y-6 lg:space-y-8">
                 <div class="bg-gray-100 dark:bg-gray-800 border-4 border-accent-600 p-4 lg:p-6 rounded-xl space-y-3">
                     <h2 class="font-bold text-lg lg:text-xl text-center">{{ $t('_contact.faqTitle') }}</h2>
@@ -24,7 +24,7 @@
                         <details v-for="faq in faqs" class="bg-gray-200 dark:bg-gray-700 rounded-xl overflow-clip group">
                             <summary class="font-bold p-4 cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600 group-open:border-b border-dashed border-gray-400 dark:border-gray-950">{{ faq.question }}</summary>
                             <div class="p-2">
-                                <div class="rounded-lg bg-white dark:bg-slate-950">
+                                <div class="rounded-lg bg-white dark:bg-neutral-950">
                                     <ContentRenderer class="p-4 rounded-b-lg markdown-body" :value="faq">
                                         <template #empty>
                                             <div class="p-4 text-center">{{ $t('empty') }}</div>

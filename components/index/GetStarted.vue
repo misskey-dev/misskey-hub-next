@@ -38,7 +38,7 @@ const localePath = useGLocalePath();
 
 <style scoped>
 .item {
-    @apply rounded-2xl py-12 px-4 text-center bg-white dark:bg-slate-800;
+    @apply rounded-2xl py-12 px-4 text-center bg-white dark:bg-neutral-800;
 }
 
 .find > .item {
@@ -58,6 +58,6 @@ const localePath = useGLocalePath();
 }
 
 .find .link {
-    @apply text-accent-600 dark:text-slate-200 bg-white dark:bg-accent-950 hover:bg-accent-100 dark:hover:bg-accent-900;
+    @apply text-accent-600 dark:text-neutral-200 bg-white dark:bg-accent-950 hover:bg-accent-100 dark:hover:bg-accent-900;
 }
 </style>

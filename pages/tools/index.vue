@@ -1,7 +1,7 @@
 <template>
     <div class="pt-12">
         <div class="mx-auto max-w-screen-xl">
-            <GHero class="bg-white dark:bg-slate-950 mx-6 px-3 py-5 rounded-2xl">
+            <GHero class="bg-white dark:bg-neutral-950 mx-6 px-3 py-5 rounded-2xl">
                 <template #title>{{ $t('_tools.title') }}</template>
                 <template #description>
                     {{ $t('_tools.description') }}

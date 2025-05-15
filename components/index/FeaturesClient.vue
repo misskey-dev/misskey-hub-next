@@ -28,6 +28,10 @@
 				<div class="description">{{ $t('_landing._featuresClient._deck.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
+				<h3 class="title">{{ $t('_landing._featuresClient._realtimeMode.title') }}</h3>
+				<div class="description">{{ $t('_landing._featuresClient._realtimeMode.description') }}</div>
+			</div></div>
+			<div v-fade-in class="item"><div class="content">
 				<h3 class="title">{{ $t('_landing._featuresClient._pushNotification.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresClient._pushNotification.description') }}</div>
 			</div></div>
@@ -47,6 +51,10 @@
 				<img src="/img/top-features/settings.webp" class="img">
 				<h3 class="title">{{ $t('_landing._featuresClient._settingsManagement.title') }}</h3>
 				<div class="description">{{ $t('_landing._featuresClient._settingsManagement.description') }}</div>
+			</div></div>
+			<div v-fade-in class="item"><div class="content">
+				<h3 class="title">{{ $t('_landing._featuresClient._achievements.title') }}</h3>
+				<div class="description">{{ $t('_landing._featuresClient._achievements.description') }}</div>
 			</div></div>
 			<div v-fade-in class="item"><div class="content">
 				<img src="/img/top-features/plugin.webp" class="img">
@@ -87,7 +95,7 @@ import { vFadeIn } from '@/assets/js/fadein';
 }
 
 .item > .content {
-    @apply p-5 bg-white dark:bg-slate-800 rounded-xl;
+    @apply p-5 bg-white dark:bg-neutral-800 rounded-xl;
 }
 
 .item .img {

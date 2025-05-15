@@ -198,7 +198,7 @@ function scrollToTop() {
 }
 </script>
 <template>
-    <div class="text-slate-800 dark:text-slate-200 bg-slate-100 dark:bg-gray-900">
+    <div class="text-neutral-800 dark:text-neutral-200 bg-neutral-100 dark:bg-gray-900">
         <NuxtIsland name="GNoScript" />
         <NuxtLayout>
             <NuxtPage />

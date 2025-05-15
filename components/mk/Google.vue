@@ -27,7 +27,7 @@ const search = () => {
 }
 
 .input {
-    @apply border-slate-200;
+    @apply border-neutral-200;
     flex-shrink: 1;
     padding: 10px;
     width: 100%;
@@ -39,7 +39,7 @@ const search = () => {
 }
 
 .button {
-    @apply border-slate-200;
+    @apply border-neutral-200;
     flex-shrink: 0;
     margin: 0;
     padding: 0 16px;

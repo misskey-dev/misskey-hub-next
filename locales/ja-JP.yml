@@ -52,7 +52,7 @@ _landing:
       description: "Misskeyはソースコードが公開されており、誰でも自由に、無料でMisskeyを使ったサービス(Misskeyサーバー)を作成・運営できます。"
     _federated:
       title: "分散"
-      description: "Misskeyは分散型のプロトコルを実装しているため、異なるサーバーのコミュニティ同士が繋がることができます。"
+      description: "Misskeyは分散型プロトコルを実装しているため、分散型SNSのネットワーク(Fediverse)に繋がるゲートウェイになります。"
     _powerful:
       title: "パワフル"
       description: "Misskeyはプロダクションレベルの様々な機能を備えていて、細かなカスタマイズも可能です。多人数でも少人数でも、最適なソリューションに。"
@@ -60,6 +60,11 @@ _landing:
     title: "Fediverseに繋がるための、強力なプラットフォーム"
     description: "Misskeyは分散サービス用プロトコルである{0}を実装しているため、Misskeyを使えば、分散型SNS同士のネットワーク=Fediverseと繋がるサービスを簡単に構築可能です。不特定多数の利用者を受け入れるSNSを作ることも、「お一人様」として他のサーバーの投稿を購読する拠点を作ることも、あなたがFediverseへの情報発信を行うための専用サーバーを作ることも可能です。あなたがMisskeyを使って作ったサービスはあなただけのものなので、情報発信における既存プラットフォームへの依存リスクを無くすことができます。"
     activityPub: "ActivityPub"
+  _useCases:
+    title: "こんな使い方ができます"
+    single: "情報収集・情報発信のための自分専用のサーバー"
+    official: "会社の広報アカウントを設置する専用のサーバー"
+    community: "同じ関心をもつユーザー向けのコミュニティサーバー"
   _features:
     _root:
       title: "特徴"
@@ -99,7 +104,7 @@ _landing:
       description: "ロールを使用すると、ユーザーごとに権限を細かくカスタマイズできます。また、コンディショナルロールを使えば、条件に一致するユーザーに自動でロールをアサインすることも可能です。ロールにバッジを設定して、サーバーのマネタイズに役立てることもできます。"
     _moderation:
       title: "モデレーション"
-      description: "サーバー運営を助ける、充実のモデレーション機能が標準搭載。"
+      description: "サーバー運営を助ける、充実のモデレーション機能が標準搭載。WebUIに統合されているため、シームレスに操作可能です。"
     _privacy:
       title: "プライバシー"
       description: "豊富なプライバシー設定で、コンテンツの公開範囲を柔軟にコントロール。"
@@ -124,7 +129,7 @@ _landing:
       description: "簡単なコマンドでインストールできるほか、各社提供のホスティングサービスを利用すれば、管理の手間も省けます。"
     _easySetup:
       title: "セットアップもカンタン"
-      description: "Misskeyサーバーのセットアップに複雑な設定は不要で、すぐに運用を始められます。一方、ニーズに合わせて高度な設定を行うことも可能です。"
+      description: "Misskeyサーバーのセットアップに複雑な設定は不要。ウィザードに従うだけで最適な設定が行われ、すぐに運用を始められます。一方、ニーズに合わせて高度な設定を行うことも可能です。"
     _api:
       title: "API"
       description: "Misskeyの全ての機能はHTTP APIを通じて操作可能で、他のアプリケーションとの連携も容易です。さらに、WebhookやWebSocket接続もサポートしているので、リアルタイムにMisskeyからのイベントを受け取ることも可能です。"
@@ -137,6 +142,9 @@ _landing:
     _postgresql:
       title: "PostgreSQL"
       description: "メインのデータベースにはPostgreSQLを採用し、堅牢なデータ管理を実現しています。"
+    _fullTextSearch:
+      title: "全文検索"
+      description: "PostgreSQLのほか、Meilisearchなどの全文検索エンジンを使用した全文検索を行うことができます。"
     _jobQueue:
       title: "高効率ジョブキュー"
       description: "ジョブキューにBullMQを採用し、タスクを複数のサーバーで効率的に処理可能。また、Misskeyネイティブで実装されたインスペクタはコントロールパネルに統合され、外部ツールに頼ることなく管理が可能です。"
@@ -152,6 +160,9 @@ _landing:
     _scalable:
       title: "スケーラブル"
       description: "プロセスのクラスタリング、複数サーバーによるロードバランス、データベースのレプリケーションに対応しており、ユーザーの増加にも対応できます。"
+    _seo:
+      title: "SEO"
+      description: "一部のコンテンツのSSRを行い、検索エンジンへインデックスさせることができるほか、OGPに対応しているのでソーシャルメディア上で共有された際のプレビューも可能です。もちろん、インデックスされたくないシチュエーションではクローラーを拒否する設定も可能です。"
     _ml:
       title: "機械学習"
       description: "組み込みの機械学習機能を利用して、自動的にセンシティブなメディアのフィルタリングを行うなど、運用の負担を軽減することも可能です。"
@@ -182,13 +193,16 @@ _landing:
       description: "ノート、タイムラインなどを外部のサイトに埋め込んで表示可能です。"
     _realtimeMode:
       title: "リアルタイムモード"
-      description: ""
+      description: "サーバーとWebsocket接続することで、タイムラインなどのコンテンツをリアルタイムで受信することができます。"
     _pushNotification:
       title: "プッシュ通知"
       description: "プッシュ通知に対応しているため、リアルタイムでサーバーからの通知を受け取ることができます。"
     _multiAccounts:
       title: "マルチアカウント対応"
       description: "複数のアカウントを簡単に切り替えて使用可能です。"
+    _achievements:
+      title: "実績"
+      description: "Misskeyの機能を体験するモチベーションになり、オンボーディングに役立ちます。"
     _plugin:
       title: "プラグイン"
       description: "セキュアなAiScriptを用いたプラグインをインストールして、クライアントの機能を拡張可能です。"

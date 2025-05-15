@@ -15,7 +15,7 @@
                 </div>
             </template>
         </GHero>
-        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
+        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-neutral-950">
             <div class="container mx-auto max-w-screen-xl px-6 pt-4 space-y-8">
                 <GLocalNav :items="[
                     {
@@ -71,7 +71,7 @@
                     <div>
                         <div class="grid md:grid-cols-2 gap-4">
                             <AboutUsTeamMember v-for="member in contributors" :member="member" />
-                            <GNuxtLink to="https://github.com/misskey-dev/misskey/graphs/contributors" target="_blank" class="block p-4 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 rounded-lg">
+                            <GNuxtLink to="https://github.com/misskey-dev/misskey/graphs/contributors" target="_blank" class="block p-4 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 rounded-lg">
                                 <div class="flex h-full w-full items-center">
                                     <div class="text-lg">{{ $t('_aboutUs._team._contributors.seeMore') }}</div>
                                     <ExtIco class="block ml-auto" />

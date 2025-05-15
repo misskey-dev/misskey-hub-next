@@ -45,7 +45,9 @@
   },
   "packageManager": "pnpm@9.15.7",
   "dependencies": {
-    "nanoid": "^5.1.5"
+    "@types/three": "^0.176.0",
+    "nanoid": "^5.1.5",
+    "swiper": "^11.2.6"
   },
   "pnpm": {
     "overrides": {

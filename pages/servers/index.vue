@@ -8,11 +8,11 @@
                     <GNuxtLink class="font-bold hover:underline underline-offset-4" to="https://github.com/joinmisskey/api">{{ $t('_servers.addYourServerLink') }}</GNuxtLink>
                 </I18nT>
                 <div class="!mt-2 space-y-2">
-                    <div class="text-sm p-3 rounded-lg bg-white dark:bg-slate-800 border border-gray-300 dark:border-gray-950">
+                    <div class="text-sm p-3 rounded-lg bg-white dark:bg-neutral-800 border border-gray-300 dark:border-gray-950">
                         {{ $t('lastUpdate') }}: {{ updatedAt ? $d(updatedAt, i18nDateFormatConfig) : $t('loading') }}
                     </div>
-                    <details class="group overflow-hidden text-sm rounded-lg bg-white dark:bg-slate-800 border border-gray-300 dark:border-gray-950">
-                        <summary class="p-3 cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-700 font-bold">{{ $t('_servers.disclaimerTitle') }}</summary>
+                    <details class="group overflow-hidden text-sm rounded-lg bg-white dark:bg-neutral-800 border border-gray-300 dark:border-gray-950">
+                        <summary class="p-3 cursor-pointer hover:bg-neutral-100 dark:hover:bg-neutral-700 font-bold">{{ $t('_servers.disclaimerTitle') }}</summary>
                         <div class="p-3 text-start border-t border-dashed border-gray-300 dark:border-gray-950">{{ $t('_servers.disclaimer') }}</div>
                     </details>
                 </div>
@@ -21,7 +21,7 @@
                 <div class="relative px-6 py-8">
                     <GDots class="absolute top-0 left-0 w-32 h-32 text-accent-600" />
                     <GDots class="absolute bottom-0 right-0 w-32 h-32 text-accent-600" />
-                    <div class="relative bg-white dark:bg-slate-800 shadow-lg rounded-lg w-full lg:w-80 p-6 space-y-4 break-words">
+                    <div class="relative bg-white dark:bg-neutral-800 shadow-lg rounded-lg w-full lg:w-80 p-6 space-y-4 break-words">
                         <dl>
                             <dt>{{ $t('_servers._statistics.notes') }}</dt>
                             <dd class="font-bold text-accent-600 text-2xl">{{ instancesStats?.notesCount ? $n(instancesStats.notesCount) : $t('loading') }}</dd>
@@ -41,7 +41,7 @@
                 </div>
             </template>
         </GHero>
-        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950 min-h-screen">
+        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-neutral-950 min-h-screen">
             <ClientOnly>
                 <Suspense>
                     <ServersFinder @load="setServerStats" />

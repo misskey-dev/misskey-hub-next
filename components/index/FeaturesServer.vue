@@ -48,6 +48,12 @@
 			</div>
 			<div v-fade-in class="item">
 				<div class="content">
+					<h3 class="title">{{ $t('_landing._featuresServer._seo.title') }}</h3>
+					<div class="description">{{ $t('_landing._featuresServer._seo.description') }}</div>
+				</div>
+			</div>
+			<div v-fade-in class="item">
+				<div class="content">
 					<h3 class="title">{{ $t('_landing._featuresServer._cdn.title') }}</h3>
 					<div class="description">{{ $t('_landing._featuresServer._cdn.description') }}</div>
 				</div>
@@ -79,6 +85,12 @@
 					<img src="/img/top-features/rbt.webp" class="img">
 					<h3 class="title">{{ $t('_landing._featuresServer._rbt.title') }}</h3>
 					<div class="description">{{ $t('_landing._featuresServer._rbt.description') }}</div>
+				</div>
+			</div>
+			<div v-fade-in class="item">
+				<div class="content">
+					<h3 class="title">{{ $t('_landing._featuresServer._fullTextSearch.title') }}</h3>
+					<div class="description">{{ $t('_landing._featuresServer._fullTextSearch.description') }}</div>
 				</div>
 			</div>
 			<div v-fade-in class="item">
@@ -129,7 +141,7 @@ import { vFadeIn } from '@/assets/js/fadein';
 }
 
 .item > .content {
-    @apply p-5 bg-white dark:bg-slate-800 rounded-xl;
+    @apply p-5 bg-white dark:bg-neutral-800 rounded-xl;
 }
 
 .item .img {

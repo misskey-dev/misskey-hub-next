@@ -1,7 +1,7 @@
 <template>
-    <div class="rounded-xl h-auto w-full px-4 py-3.5 md:px-8 md:py-7 flex max-w-md border border-slate-300 dark:border-slate-800">
+    <div class="rounded-xl h-auto w-full px-4 py-3.5 md:px-8 md:py-7 flex max-w-md border border-neutral-300 dark:border-neutral-800">
         <div class="mr-3.5">
-            <div class="w-[46px] h-[46px] md:w-[58px] md:h-[58px] relative rounded-full bg-slate-50 dark:bg-slate-900">
+            <div class="w-[46px] h-[46px] md:w-[58px] md:h-[58px] relative rounded-full bg-neutral-50 dark:bg-neutral-900">
                 <img class="w-full h-full object-cover rounded-full" :src="avatar" />
                 <img
                     v-for="decoration in decorations"
