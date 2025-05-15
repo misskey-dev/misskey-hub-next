@@ -1,13 +1,8 @@
 <template>
-    <div
+    <div style="background: #eeea; backdrop-filter: blur(10px);"
         :class="[
             'top-0 z-[9900] w-full transition',
             fixed ? 'fixed' : 'sticky',
-            {
-                'shadow bg-opacity-90': (!disableShadow && scrollPos <= -40),
-                'bg-white dark:bg-gray-950': (disableShadow || scrollPos <= -40),
-                'border-b border-neutral-300 dark:border-neutral-800': hasBorder,
-            },
             (slim ? 'h-16' : 'h-16 lg:h-20'),
         ]">
         <nav class="container mx-auto max-w-screen-xl grid items-center grid-cols-2 lg:grid-cols-6 p-4 h-full transition-[height]">

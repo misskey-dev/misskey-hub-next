@@ -8,7 +8,7 @@
 	</div>
 	-->
 
-	<div style="position: absolute; top: 0; left: 0; width: 100dvw; height: 700px; pointer-events: none;">
+	<div style="position: absolute; top: 50px; left: 0; width: 100dvw; height: 700px; pointer-events: none;">
 		<IndexHeroParticles style="width: 100%; height: 100%;"/>
 	</div>
 
