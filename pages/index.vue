@@ -59,82 +59,84 @@
 			</div>
 		</section>
 
-		<section class="heroSwiper">
-			<div class="swiper">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"><img src="/img/hero/misskey-light.png"></div>
-					<div class="swiper-slide"><img src="/img/hero/ss-jobqueue.light.png"></div>
-					<div class="swiper-slide"><img src="/img/hero/misskey-light.png"></div>
-					<div class="swiper-slide"><img src="/img/hero/misskey-light.png"></div>
-					<div class="swiper-slide"><img src="/img/hero/misskey-light.png"></div>
+		<div class="non-top">
+			<section class="heroSwiper">
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="/img/hero/misskey-light.png"></div>
+						<div class="swiper-slide"><img src="/img/hero/ss-jobqueue.light.png"></div>
+						<div class="swiper-slide"><img src="/img/hero/misskey-light.png"></div>
+						<div class="swiper-slide"><img src="/img/hero/misskey-light.png"></div>
+						<div class="swiper-slide"><img src="/img/hero/misskey-light.png"></div>
+					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
 				</div>
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
-			</div>
-		</section>
+			</section>
 
-		<section class="donation _space">
-			<h2 class="donationTitle">{{ $t('_landing._donation.title') }}</h2>
-			<p class="donationDescription">{{ $t('_landing._donation.description') }}</p>
-			<div>
-				<GButton buttonType="link" :to="localePath('/docs/donate/')" color="accent">{{ $t('learnMore') }}</GButton>
-			</div>
-		</section>
-
-		<section class="sponsors _space">
-			<IndexSponsors />
-		</section>
-
-		<section class="decentralized _space">
-			<h2 class="decentralizedTitle">{{ $t('_landing._decenterized.title') }}</h2>
-			<div class="decentralizedContainer">
-				<div class="decentralizedDescription">
-					<div style="line-height: 200%;">{{ $t('_landing._decenterized.description') }}</div>
-					<GButton buttonType="link" color="accent">{{ $t('learnMore') }}</GButton>
+			<section class="donation _space">
+				<h2 class="donationTitle">{{ $t('_landing._donation.title') }}</h2>
+				<p class="donationDescription">{{ $t('_landing._donation.description') }}</p>
+				<div>
+					<GButton buttonType="link" :to="localePath('/docs/donate/')" color="accent">{{ $t('learnMore') }}</GButton>
 				</div>
-				<div class="decentralizedImage">
-					aaa
+			</section>
+
+			<section class="sponsors _space">
+				<IndexSponsors />
+			</section>
+
+			<section class="decentralized _space">
+				<h2 class="decentralizedTitle">{{ $t('_landing._decenterized.title') }}</h2>
+				<div class="decentralizedContainer">
+					<div class="decentralizedDescription">
+						<div style="line-height: 200%;">{{ $t('_landing._decenterized.description') }}</div>
+						<GButton buttonType="link" color="accent">{{ $t('learnMore') }}</GButton>
+					</div>
+					<div class="decentralizedImage">
+						aaa
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<section class="useCases _space">
-			<h2 class="useCasesTitle">{{ $t('_landing._useCases.title') }}</h2>
-			<div class="useCasesItemsContainer">
-				<div class="useCasesItem">
-					<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
-					<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.single') }}</h3>
+			<section class="useCases _space">
+				<h2 class="useCasesTitle">{{ $t('_landing._useCases.title') }}</h2>
+				<div class="useCasesItemsContainer">
+					<div class="useCasesItem">
+						<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+						<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.single') }}</h3>
+					</div>
+					<div class="useCasesItem">
+						<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+						<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.official') }}</h3>
+					</div>
+					<div class="useCasesItem">
+						<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+						<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.community') }}</h3>
+					</div>
 				</div>
-				<div class="useCasesItem">
-					<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
-					<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.official') }}</h3>
-				</div>
-				<div class="useCasesItem">
-					<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
-					<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.community') }}</h3>
-				</div>
-			</div>
-		</section>
+			</section>
 
-		<section class="features _space">
-			<IndexFeatures />
-		</section>
+			<section class="features _space">
+				<IndexFeatures />
+			</section>
 
-		<section class="featuresServer _space">
-			<IndexFeaturesServer  />
-		</section>
+			<section class="featuresServer _space">
+				<IndexFeaturesServer  />
+			</section>
 
-		<section class="featuresClient _space">
-			<IndexFeaturesClient />
-		</section>
+			<section class="featuresClient _space">
+				<IndexFeaturesClient />
+			</section>
 
-		<section class="featuresUpcoming _space">
-			<IndexFeaturesUpcoming />
-		</section>
+			<section class="featuresUpcoming _space">
+				<IndexFeaturesUpcoming />
+			</section>
 
-		<section class="getStarted" id="getStarted _space">
-			<IndexGetStarted />
-		</section>
+			<section class="getStarted" id="getStarted _space">
+				<IndexGetStarted />
+			</section>
+		</div>
 	</main>
 
 	<GFooter />
@@ -272,6 +274,17 @@ definePageMeta({
 }
 .keyFeaturesItemDescription {
 	font-size: 90%;
+}
+
+.non-top {
+	padding-top: 100px;
+	background: #ddd;
+
+	mask-image: linear-gradient(#000, #000), url("/section-mask.svg");
+  mask-repeat: no-repeat;
+  mask-position: center center, center -12px;
+  mask-size: 100% 100%, 1000px 100px;
+	mask-composite: exclude;
 }
 
 .donation {
