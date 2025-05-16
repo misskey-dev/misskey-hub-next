@@ -40,7 +40,7 @@ class Ripple {
 		this.group = config.group;
 		this.sphere = new THREE.Sphere(new THREE.Vector3(config.x, config.y, config.z), 0);
 		this.strength = config.strength ? config.strength : Calc.rand(7, 15);
-		this.threshold = Calc.rand(5, 20);
+		this.threshold = Calc.rand(10, 30);
 		this.growth = Calc.rand(0.2, 0.5);
 		this.life = 1;
 		this.decay = Calc.rand(0.01, 0.02);
@@ -216,6 +216,7 @@ class Drop {
 		this.color = config.color;
 		this.opacity = config.opacity;
 		this.strength = config.strength;
+		this.progress = config.progress ?? 0;
 
 		this.yBase = config.y;
 
@@ -277,8 +278,8 @@ class System {
 
 	private tick: number = 0;
 	private dropTick = 0;
-	private dropTickMin = 25;
-	private dropTickMax = 30;
+	private dropTickMin = 20;
+	private dropTickMax = 25;
 
 	private particleColor: number;
 	private rippleColor: number;
@@ -301,8 +302,8 @@ class System {
 
 		this.loader.scene.add(this.particleGroup);
 
-		for(let col = 0; col < this.cols; col++) {
-			for(let row = 0; row < this.rows; row++) {
+		for (let col = 0; col < this.cols; col++) {
+			for (let row = 0; row < this.rows; row++) {
 				let x = Calc.map(col, 0, this.cols - 1, -this.size / 2, this.size / 2);
 				let y = 0;
 				let z = Calc.map(row, 0, this.rows - 1, -this.size / 2, this.size / 2);
@@ -318,19 +319,23 @@ class System {
 				}, this));
 			}
 		}
+
+		for (let i = 0; i < 5; i++) {
+			this.createDrop(Math.random());
+		}
 	}
 
-	createDrop(x?, y?, z?, strength?) {
+	createDrop(progress = 0) {
 		this.drops.push(new Drop({
 			array: this.drops,
 			group: this.particleGroup,
-			x: x === undefined ? Calc.rand(-this.size / 2, this.size / 2) : x,
-			y: y === undefined ? Calc.rand(30, 50) : y,
-			z: z === undefined ? Calc.rand(-this.size / 2, this.size / 2) : z,
+			x: Calc.rand(-this.size / 2, this.size / 2),
+			y: Calc.rand(30, 50),
+			z: Calc.rand(-this.size / 2, this.size / 2),
 			size: 0.15,
 			color: this.dropColor,
 			opacity: 0,
-			strength: strength
+			progress
 		}, this));
 	}
 
@@ -454,7 +459,7 @@ class Loader {
 		//this.camera.position.z = 20;
 
 		this.camera.position.x = 0;
-		this.camera.position.y = -30;
+		this.camera.position.y = -40;
 		this.camera.position.z = 0;
 	}
 

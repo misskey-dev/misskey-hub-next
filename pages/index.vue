@@ -1,16 +1,16 @@
 <template>
 <div>
-	<IndexHeroBg />
+	<div style="position: fixed; top: 0; left: 0; width: 100dvw; height: 100dvh; pointer-events: none;">
+		<IndexHeroParticles style="width: 100%; height: 100%;"/>
+	</div>
+
+	<IndexHeroBg style="pointer-events: none;"/>
 
 	<!--
 	<div style="position: absolute; top: 0; left: 0; width: 100dvw; height: 100dvh;">
 		<IndexHeroNodesAnim/>
 	</div>
 	-->
-
-	<div style="position: absolute; top: 50px; left: 0; width: 100dvw; height: 700px; pointer-events: none;">
-		<IndexHeroParticles style="width: 100%; height: 100%;"/>
-	</div>
 
 	<GNav :landing="true" />
 
@@ -59,6 +59,20 @@
 			</div>
 		</section>
 
+		<section class="donationAndSponsors _space">
+			<section class="donation">
+				<h2 class="donationTitle">{{ $t('_landing._donation.title') }}</h2>
+				<p class="donationDescription">{{ $t('_landing._donation.description') }}</p>
+				<div>
+					<GButton buttonType="link" :to="localePath('/docs/donate/')" color="accent">{{ $t('learnMore') }}</GButton>
+				</div>
+			</section>
+
+			<section class="sponsors">
+				<IndexSponsors />
+			</section>
+		</section>
+
 		<div class="scroll-text">
 			<svg class="scroll-text-svg" viewBox="0 0 300 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;fill:currentColor;">
 				<g transform="matrix(30,0,0,30,64.2,59.75)">
@@ -99,18 +113,6 @@
 					<div class="swiper-button-prev"></div>
 					<div class="swiper-button-next"></div>
 				</div>
-			</section>
-
-			<section class="donation _space">
-				<h2 class="donationTitle">{{ $t('_landing._donation.title') }}</h2>
-				<p class="donationDescription">{{ $t('_landing._donation.description') }}</p>
-				<div>
-					<GButton buttonType="link" :to="localePath('/docs/donate/')" color="accent">{{ $t('learnMore') }}</GButton>
-				</div>
-			</section>
-
-			<section class="sponsors _space">
-				<IndexSponsors />
 			</section>
 
 			<section class="decentralized _space">
@@ -163,6 +165,7 @@
 			<section class="getStarted" id="getStarted _space">
 				<IndexGetStarted />
 			</section>
+
 		</div>
 	</main>
 
@@ -233,7 +236,7 @@ definePageMeta({
 
 <style scoped>
 .main {
-	--main-width: 1200px;
+	--main-width: 1150px;
 	position: relative;
 	z-index: 1;
 }
@@ -277,7 +280,7 @@ definePageMeta({
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 16px;
 	margin-top: 64px;
-	margin-bottom: 64px;
+	margin-bottom: 16px;
 }
 .keyFeaturesItem {
 	background: #fff;
@@ -309,6 +312,12 @@ definePageMeta({
 	font-size: 90%;
 }
 
+.donationAndSponsors {
+	background: #fff;
+	border-radius: 16px;
+	padding: 32px;
+}
+
 .scroll-text {
 	position: relative;
 	text-align: center;
@@ -337,8 +346,6 @@ definePageMeta({
 	color: #3b3d20;
 	padding: 32px;
 	border-radius: 16px;
-	margin-top: 64px;
-	margin-bottom: 64px;
 }
 .donationTitle {
 	font-size: 120%;
