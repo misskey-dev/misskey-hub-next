@@ -283,7 +283,8 @@ definePageMeta({
 	margin-bottom: 16px;
 }
 .keyFeaturesItem {
-	background: #fff;
+	background: #fffa;
+	backdrop-filter: blur(8px);
 	border-radius: 16px;
 	padding: 32px;
 	text-align: center;
