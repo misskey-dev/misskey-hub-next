@@ -221,10 +221,10 @@ function scrollToTop() {
 
 <style module>
 .root {
-	background: #e6e6e6;
+	background: #eee;
 }
 
-html.dark {
+:global(html.dark)  {
 	.root {
 		background: #1a1a1a;
 	}

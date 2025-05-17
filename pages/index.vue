@@ -10,7 +10,7 @@
 			</div>
 			<div class="_space" style="display: flex;">
 				<div class="topLeft">
-					<div class="topTagline"><strong>Interplanetary<br>microblogging<br>platform</strong></div>
+					<div class="topTagline"><strong>Connect<br>Fediverse with<br>Misskey.</strong></div>
 					<div class="topDescription">{{ $t('_landing._hero.description') }}</div>
 					<div v-if="notice" class="notice w-fit mx-auto lg:mx-0 rounded-full p-0.5">
 					<GNuxtLink :to="isLocalPath(notice.to) ? localePath(notice.to) : notice.to" :target="!isLocalPath(notice.to) ? '_blank' : undefined">
@@ -239,6 +239,12 @@ definePageMeta({
 	overflow: clip;
 }
 
+:global(html.dark)  {
+	.topBg {
+		background: #222;
+	}
+}
+
 .topLeft {
 	position: relative;
 	padding: 40px 0 32px 0;
@@ -286,6 +292,12 @@ definePageMeta({
   mask-position: center center, 16px 16px;
   mask-size: 100% 100%, 16px 16px;
 	mask-composite: exclude;
+}
+:global(html.dark)  {
+	.keyFeaturesItem {
+		background: #3336;
+		border: solid 1px #fff1;
+	}
 }
 .keyFeaturesItemIcon {
 	width: 50px;
@@ -390,11 +402,9 @@ definePageMeta({
 }
 
 .decentralized {
-	margin-top: 16px;
-	margin-bottom: 16px;
-	background: #fff;
+	margin-top: 64px;
+	margin-bottom: 64px;
 	border-radius: 16px;
-	padding: 32px;
 }
 
 .decentralizedTitle {

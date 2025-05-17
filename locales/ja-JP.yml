@@ -44,7 +44,7 @@ _nav:
 
 _landing:
   _hero:
-    description: "Misskey（ミスキー）はフリーでオープンソースの分散型SNS作成ソフトウェアです。"
+    description: "Misskey（ミスキー）はフリーでオープンソースのSNS作成ソフトウェアです。"
     gettingStarted: "はじめる"
   _keyFeatures:
     _open:
