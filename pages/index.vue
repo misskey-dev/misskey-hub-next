@@ -28,7 +28,7 @@
 			</div>
 			<div class="topRight">
 				<div class="topRightMi">
-					<IndexHeroMi3d />
+					<IndexHeroMi3d style="margin: -20px 0;" />
 				</div>
 			</div>
 		</div>
