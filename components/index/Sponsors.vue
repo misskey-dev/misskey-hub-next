@@ -72,6 +72,7 @@ const localePath = useGLocalePath();
 <style module>
 .title {
 	font-size: 120%;
+	font-weight: bold;
 	text-align: center;
 	margin-bottom: 8px;
 	margin-top: 8px;

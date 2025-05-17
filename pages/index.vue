@@ -275,7 +275,7 @@ definePageMeta({
 }
 .keyFeaturesItem {
 	background: #fff6;
-	backdrop-filter: blur(8px);
+	backdrop-filter: blur(12px);
 	border: solid 1px #0001;
 	border-radius: 16px;
 	padding: 32px;
