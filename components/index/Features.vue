@@ -144,7 +144,7 @@ import { vFadeIn } from '@/assets/js/fadein';
 
 .itemContent {
 	background: #fff;
-	border: solid 1px #eaeaea;
+	border: solid 1px #ddd;
 	box-shadow: 0 2px 8px -2px #0001;
 	border-radius: 16px;
 	padding: 20px;
