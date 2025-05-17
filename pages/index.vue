@@ -325,6 +325,12 @@ definePageMeta({
 	padding: 32px;
 	gap: 16px;
 }
+:global(html.dark)  {
+	.donationAndSponsors {
+		background: #262626;
+	}
+}
+
 .donation {
 	min-width: 0;
 	width: 45%;
@@ -343,6 +349,13 @@ definePageMeta({
 	border-radius: 16px;
 	font-size: 95%;
 }
+:global(html.dark)  {
+	.donation {
+		background: #383c00;
+		color: #fff;
+	}
+}
+
 .donationTitle {
 	font-size: 120%;
 	font-weight: bold;
