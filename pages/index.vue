@@ -10,7 +10,7 @@
 			</div>
 			<div class="_space" style="display: flex;">
 				<div class="topLeft">
-					<div class="topTagline"><strong>Connect<br>Fediverse with<br>Misskey.</strong></div>
+					<div class="topTagline"><strong>Connect<br>Fediverse with<br><b class="textGradient">Misskey</b>.</strong></div>
 					<div class="topDescription">{{ $t('_landing._hero.description') }}</div>
 					<div v-if="notice" class="notice w-fit mx-auto lg:mx-0 rounded-full p-0.5">
 					<GNuxtLink :to="isLocalPath(notice.to) ? localePath(notice.to) : notice.to" :target="!isLocalPath(notice.to) ? '_blank' : undefined">
@@ -29,7 +29,7 @@
 				</div>
 				<div class="topRight">
 					<div class="topRightMi">
-						<IndexHeroMi3d style="margin: -20px 0;" />
+						<IndexHeroMi3d style="margin: -20px auto 0 auto;" />
 					</div>
 				</div>
 			</div>
@@ -53,6 +53,23 @@
 			</div>
 		</section>
 
+		<section class="introduction _space">
+			<h2 class="introductionTitle">{{ $t('_landing._introduction.title') }}</h2>
+			<div class="introductionDescription">{{ $t('_landing._introduction.description') }}</div>
+
+			<div class="swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="/img/hero/misskey-light.png"></div>
+					<div class="swiper-slide"><img src="/img/hero/ss-jobqueue.light.png"></div>
+					<div class="swiper-slide"><img src="/img/hero/misskey-light.png"></div>
+					<div class="swiper-slide"><img src="/img/hero/misskey-light.png"></div>
+					<div class="swiper-slide"><img src="/img/hero/misskey-light.png"></div>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</section>
+
 		<section class="donationAndSponsors _space">
 			<section class="donation">
 				<h2 class="donationTitle">{{ $t('_landing._donation.title') }}</h2>
@@ -68,18 +85,10 @@
 		</section>
 
 		<section class="heroSwiper _space">
-			<div class="swiper">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"><img src="/img/hero/misskey-light.png"></div>
-					<div class="swiper-slide"><img src="/img/hero/ss-jobqueue.light.png"></div>
-					<div class="swiper-slide"><img src="/img/hero/misskey-light.png"></div>
-					<div class="swiper-slide"><img src="/img/hero/misskey-light.png"></div>
-					<div class="swiper-slide"><img src="/img/hero/misskey-light.png"></div>
-				</div>
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
-			</div>
+			
 		</section>
+
+		<GDots style="width: 100%; height: 600px; color: #86b300;" :space="24" />
 
 		<section class="decentralized _space">
 			<h2 class="decentralizedTitle">{{ $t('_landing._decenterized.title') }}</h2>
@@ -220,7 +229,8 @@ definePageMeta({
 	overflow: clip;
 	box-sizing: border-box;
 	margin-top: 16px;
-	padding-bottom: 200px;
+	padding-top: 10px;
+	padding-bottom: 190px;
 	margin-bottom: -150px;
 	contain: content;
 }
@@ -252,6 +262,7 @@ definePageMeta({
 
 .topRight {
 	position: relative;
+	flex: 1;
 }
 
 .topTagline {
@@ -317,10 +328,23 @@ definePageMeta({
 	font-size: 90%;
 }
 
+.introduction {
+	text-align: center;
+	margin-top: 64px;
+	margin-bottom: 64px;
+}
+
+.introductionTitle {
+	font-size: 170%;
+	font-weight: bold;
+	margin-bottom: 16px;
+}
+
 .donationAndSponsors {
 	display: flex;
-	background: #fff;
-	box-shadow: 0 2px 8px 0px #0001;
+	background: #fff6;
+	backdrop-filter: blur(8px);
+	border: solid 1px #0001;
 	border-radius: 16px;
 	padding: 32px;
 	gap: 16px;
@@ -479,5 +503,11 @@ definePageMeta({
 .useCasesItemTitle {
 	font-size: 100%;
 	margin: 10px 0;
+}
+
+.textGradient {
+	background: linear-gradient(90deg, #86b300, #4ab300, #4ab300);
+	color: transparent;
+  background-clip: text;
 }
 </style>
