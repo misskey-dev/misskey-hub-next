@@ -1,5 +1,5 @@
 <template>
-<div ref="container"></div>
+<div ref="container" style="width: 100%; height: 100%;"></div>
 </template>
 
 <script setup lang="ts">
@@ -459,7 +459,7 @@ class Loader {
 		//this.camera.position.z = 20;
 
 		this.camera.position.x = 0;
-		this.camera.position.y = -40;
+		this.camera.position.y = -30;
 		this.camera.position.z = 0;
 	}
 

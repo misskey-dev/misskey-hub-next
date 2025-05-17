@@ -14,13 +14,12 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 
 <style scoped>
 .root {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	width: 100%;
 	height: 100%;
-	overflow: clip;
 }
 
 .blobs {
@@ -85,13 +84,13 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 
 @keyframes parallax {
 	from { transform: translateY(0); }
-	to { transform: translateY(calc(var(--coefficient-parallax) * -100vh)); }
+	to { transform: translateY(calc(var(--coefficient-parallax) * 100vh)); }
 }
 
 @screen lg {
 	@keyframes parallax {
 		from { transform: translateY(0); }
-		to { transform: translateY(calc(var(--coefficient-parallax) * -70vh)); }
+		to { transform: translateY(calc(var(--coefficient-parallax) * 70vh)); }
 	}
 }
 </style>

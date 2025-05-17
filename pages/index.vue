@@ -1,21 +1,13 @@
 <template>
 <div>
-	<div style="position: fixed; top: 0; left: 0; width: 100dvw; height: 100dvh; pointer-events: none;">
-		<IndexHeroParticles style="width: 100%; height: 100%;"/>
-	</div>
-
-	<IndexHeroBg style="pointer-events: none;"/>
-
-	<!--
-	<div style="position: absolute; top: 0; left: 0; width: 100dvw; height: 100dvh;">
-		<IndexHeroNodesAnim/>
-	</div>
-	-->
-
 	<GNav :landing="true" />
 
 	<main class="main">
 		<div class="top _space">
+			<div class="topBg">
+				<IndexHeroParticles/>
+				<IndexHeroBg/>
+			</div>
 			<div class="topLeft">
 				<div class="topTagline"><strong>Interplanetary<br>microblogging<br>platform</strong></div>
 				<div class="topDescription">{{ $t('_landing._hero.description') }}</div>
@@ -251,14 +243,36 @@ definePageMeta({
 
 .top {
 	display: flex;
+	border-radius: 16px;
+	overflow: clip;
+	box-sizing: border-box;
+	margin-top: 16px;
+	background: #ddd;
+	contain: content;
+}
+
+.topBg {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
 }
 
 .topLeft {
-	padding-top: 60px;
+	position: relative;
+	padding: 32px 0 32px 32px;
+}
+
+.topRight {
+	position: relative;
 }
 
 .topTagline {
-	font-size: 350%;
+	font-size: 320%;
 	line-height: 120%;
 }
 
@@ -279,12 +293,13 @@ definePageMeta({
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 16px;
-	margin-top: 64px;
+	margin-top: 16px;
 	margin-bottom: 16px;
 }
 .keyFeaturesItem {
 	background: #fff6;
 	backdrop-filter: blur(8px);
+	border: solid 1px #0001;
 	border-radius: 16px;
 	padding: 32px;
 	text-align: center;
@@ -315,6 +330,7 @@ definePageMeta({
 
 .donationAndSponsors {
 	background: #fff;
+	box-shadow: 0 2px 8px 0px #0001;
 	border-radius: 16px;
 	padding: 32px;
 }
@@ -332,7 +348,6 @@ definePageMeta({
 .non-top {
 	margin-top: -30px;
 	padding-top: 100px;
-	/*background: #ddd;*/
 
 	mask-image: linear-gradient(#000, #000), url("/section-mask.svg");
   mask-repeat: no-repeat;
@@ -430,6 +445,7 @@ definePageMeta({
 .useCasesItem {
 	background: #86b30025;
 	border-radius: 16px;
+	color: #484a40;
 	padding: 32px;
 	text-align: center;
 }

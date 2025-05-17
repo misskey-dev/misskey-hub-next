@@ -1,7 +1,7 @@
 <template>
 <div :class="$style.root">
 	<div :class="$style.header">
-		<h2>{{ $t('_landing._features._root.title') }}</h2>
+		<h2 :class="$style.headerTitle">{{ $t('_landing._features._root.title') }}</h2>
 		<p>{{ $t('_landing._features._root.description') }}</p>
 	</div>
 	<div :class="$style.items">
@@ -126,8 +126,13 @@ import { vFadeIn } from '@/assets/js/fadein';
 }
 
 .header {
-	min-width: 0;
-	width: 300px;
+	text-align: center;
+	margin-bottom: 16px;
+}
+
+.headerTitle {
+	font-size: 170%;
+	font-weight: bold;
 }
 
 .items {
@@ -139,8 +144,11 @@ import { vFadeIn } from '@/assets/js/fadein';
 
 .itemContent {
 	background: #fff;
+	border: solid 1px #eaeaea;
+	box-shadow: 0 2px 8px -2px #0001;
 	border-radius: 16px;
 	padding: 20px;
+
 	font-size: 90%;
 	box-sizing: border-box;
 	height: 100%;
@@ -150,6 +158,8 @@ import { vFadeIn } from '@/assets/js/fadein';
 	display: block;
 	border-radius: 8px;
 	margin: 0 0 16px 0;
+	aspect-ratio: 1.8;
+	object-fit: cover;
 }
 
 .itemContentTitle {
