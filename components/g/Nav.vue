@@ -160,6 +160,12 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 	color: #3c3c3c;
 }
 
+:global(html.dark)  {
+	.root {
+		color: #e5e5e5;
+	}
+}
+
 .bg {
 	position: absolute;
 	top: 0;
@@ -176,6 +182,12 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
   mask-position: center center, calc(50dvw + var(--shapeShift)) -5px, calc(50dvw - (1000px + var(--shapeShift))) -5px;
   mask-size: 100% 100%, 1000px 100px, 1000px 100px;
 	mask-composite: exclude;
+}
+
+:global(html.dark)  {
+	.bg {
+		background: #2e2e2ecc;
+	}
 }
 
 @media (max-width: 1500px) {
