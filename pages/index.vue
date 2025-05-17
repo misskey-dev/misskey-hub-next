@@ -332,7 +332,7 @@ definePageMeta({
 .non-top {
 	margin-top: -30px;
 	padding-top: 100px;
-	background: #ddd;
+	/*background: #ddd;*/
 
 	mask-image: linear-gradient(#000, #000), url("/section-mask.svg");
   mask-repeat: no-repeat;
@@ -382,6 +382,9 @@ definePageMeta({
 .decentralized {
 	margin-top: 64px;
 	margin-bottom: 64px;
+	background: #fff;
+	border-radius: 16px;
+	padding: 32px;
 }
 
 .decentralizedTitle {
@@ -397,14 +400,18 @@ definePageMeta({
 }
 
 .decentralizedDescription {
-	background: #fff;
+	background: #eee;
 	border-radius: 16px;
 	padding: 32px;
+	font-size: 90%;
 }
 
 .useCases {
-	margin-top: 64px;
+	margin-top: 32px;
 	margin-bottom: 64px;
+	background: #fff;
+	border-radius: 16px;
+	padding: 32px;
 }
 
 .useCasesTitle {
