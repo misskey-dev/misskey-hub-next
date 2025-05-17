@@ -10,7 +10,7 @@
 			</div>
 			<div class="_space" style="display: flex;">
 				<div class="topLeft">
-					<div class="topTagline"><strong>Connect<br>Fediverse with<br><b class="textGradient">Misskey</b>.</strong></div>
+					<div class="topTagline"><strong>Create.<br>Connect.<br>with <b class="textGradient">Misskey</b>.</strong></div>
 					<div class="topDescription">{{ $t('_landing._hero.description') }}</div>
 					<div v-if="notice" class="notice w-fit mx-auto lg:mx-0 rounded-full p-0.5">
 					<GNuxtLink :to="isLocalPath(notice.to) ? localePath(notice.to) : notice.to" :target="!isLocalPath(notice.to) ? '_blank' : undefined">
@@ -117,6 +117,10 @@
 				<div class="useCasesItem">
 					<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
 					<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.community') }}</h3>
+				</div>
+				<div class="useCasesItem">
+					<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+					<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.inHouse') }}</h3>
 				</div>
 			</div>
 		</section>
@@ -340,6 +344,10 @@ definePageMeta({
 	margin-bottom: 16px;
 }
 
+.introductionDescription {
+	margin-bottom: 32px;
+}
+
 .donationAndSponsors {
 	display: flex;
 	background: #fff6;
@@ -480,7 +488,7 @@ definePageMeta({
 
 .useCasesItemsContainer {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: 16px;
 }
 
