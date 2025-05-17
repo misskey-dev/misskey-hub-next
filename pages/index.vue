@@ -3,32 +3,34 @@
 	<GNav :landing="true" />
 
 	<main class="main">
-		<div class="top _space">
+		<div class="top">
 			<div class="topBg">
 				<IndexHeroParticles/>
 				<IndexHeroBg/>
 			</div>
-			<div class="topLeft">
-				<div class="topTagline"><strong>Interplanetary<br>microblogging<br>platform</strong></div>
-				<div class="topDescription">{{ $t('_landing._hero.description') }}</div>
-				<div v-if="notice" class="notice w-fit mx-auto lg:mx-0 rounded-full p-0.5">
-				<GNuxtLink :to="isLocalPath(notice.to) ? localePath(notice.to) : notice.to" :target="!isLocalPath(notice.to) ? '_blank' : undefined">
-					<div class="h-10 bg-white hover:bg-neutral-50 dark:bg-neutral-950 hover:dark:bg-neutral-800 rounded-full flex items-center p-0.5">
-						<div class="notice h-9 w-9 rounded-full mr-2 p-2">
-							<MegaphoneIco class="h-5 w-5 text-white -rotate-12" />
+			<div class="_space" style="display: flex;">
+				<div class="topLeft">
+					<div class="topTagline"><strong>Interplanetary<br>microblogging<br>platform</strong></div>
+					<div class="topDescription">{{ $t('_landing._hero.description') }}</div>
+					<div v-if="notice" class="notice w-fit mx-auto lg:mx-0 rounded-full p-0.5">
+					<GNuxtLink :to="isLocalPath(notice.to) ? localePath(notice.to) : notice.to" :target="!isLocalPath(notice.to) ? '_blank' : undefined">
+						<div class="h-10 bg-white hover:bg-neutral-50 dark:bg-neutral-950 hover:dark:bg-neutral-800 rounded-full flex items-center p-0.5">
+							<div class="notice h-9 w-9 rounded-full mr-2 p-2">
+								<MegaphoneIco class="h-5 w-5 text-white -rotate-12" />
+							</div>
+							<div class="font-bold text-sm md:text-base mr-2">{{ localizedNotice }}<ArrowRightIco v-if="isLocalPath(notice.to)" class="ml-0.5" /><ArrowUpRightIco v-else class="ml-0.5" /></div>
 						</div>
-						<div class="font-bold text-sm md:text-base mr-2">{{ localizedNotice }}<ArrowRightIco v-if="isLocalPath(notice.to)" class="ml-0.5" /><ArrowUpRightIco v-else class="ml-0.5" /></div>
+					</GNuxtLink>
 					</div>
-				</GNuxtLink>
+					<div class="topButtons">
+						<GButton button-type="button" color="accent" @click="scrollTo('#getStarted')">{{ $t('_landing._hero.gettingStarted') }}</GButton>
+						<GButton button-type="button" @click="scrollTo('#learnMore')">{{ $t('learnMore') }}</GButton>
+					</div>
 				</div>
-				<div class="topButtons">
-					<GButton button-type="button" color="accent" @click="scrollTo('#getStarted')">{{ $t('_landing._hero.gettingStarted') }}</GButton>
-					<GButton button-type="button" @click="scrollTo('#learnMore')">{{ $t('learnMore') }}</GButton>
-				</div>
-			</div>
-			<div class="topRight">
-				<div class="topRightMi">
-					<IndexHeroMi3d style="margin: -20px 0;" />
+				<div class="topRight">
+					<div class="topRightMi">
+						<IndexHeroMi3d style="margin: -20px 0;" />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -213,12 +215,13 @@ definePageMeta({
 }
 
 .top {
-	display: flex;
+	position: relative;
 	border-radius: 16px;
 	overflow: clip;
 	box-sizing: border-box;
 	margin-top: 16px;
-	background: #ddd;
+	padding-bottom: 200px;
+	margin-bottom: -150px;
 	contain: content;
 }
 
@@ -229,13 +232,16 @@ definePageMeta({
 	left: 0;
 	right: 0;
 	margin: 0 auto;
-	width: 100%;
+	width: calc(100% - 64px);
 	height: 100%;
+	border-radius: 16px;
+	background: #ddd;
+	overflow: clip;
 }
 
 .topLeft {
 	position: relative;
-	padding: 40px 0 32px 48px;
+	padding: 40px 0 32px 0;
 }
 
 .topRight {
@@ -243,7 +249,7 @@ definePageMeta({
 }
 
 .topTagline {
-	font-size: 300%;
+	font-size: 320%;
 	line-height: 120%;
 }
 

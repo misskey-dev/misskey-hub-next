@@ -57,7 +57,7 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 
 .object2 {
 	left: -250px;
-	top: 500px;
+	top: 350px;
 	width: 1000px;
 	opacity: .5;
 }
