@@ -12,10 +12,6 @@
 			<img
 				:src="sponsor.img"
 				class="w-full h-full object-contain"
-				:class="[
-						{ 'p-5': sponsor.margin === undefined || sponsor.margin === true || sponsor.margin === 'true' },
-				]"
-				:style="(typeof sponsor.margin === 'string' && sponsor.margin !== 'true' ? sponsor.margin : undefined)"
 			/>
 		</GNuxtLink>
 	</div>
@@ -77,14 +73,15 @@ const localePath = useGLocalePath();
 .title {
 	font-size: 120%;
 	text-align: center;
-	margin-bottom: 16px;
+	margin-bottom: 8px;
+	margin-top: 8px;
 }
 
 .grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, 100px);
 	justify-content: center;
-	gap: 16px;
+	gap: 24px;
 }
 
 .sponsor {

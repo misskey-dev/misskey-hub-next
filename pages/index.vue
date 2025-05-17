@@ -300,11 +300,37 @@ definePageMeta({
 }
 
 .donationAndSponsors {
+	display: flex;
 	background: #fff;
 	box-shadow: 0 2px 8px 0px #0001;
 	border-radius: 16px;
 	padding: 32px;
+	gap: 16px;
 }
+.donation {
+	min-width: 0;
+	width: 45%;
+	box-sizing: border-box;
+}
+.sponsors {
+	min-width: 0;
+	width: 55%;
+	box-sizing: border-box;
+}
+.donation {
+	text-align: center;
+	background: #f3f5da;
+	color: #3b3d20;
+	padding: 32px;
+	border-radius: 16px;
+	font-size: 95%;
+}
+.donationTitle {
+	font-size: 120%;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
 
 .scroll-text {
 	position: relative;
@@ -327,19 +353,6 @@ definePageMeta({
 	mask-composite: exclude;
 }
 
-.donation {
-	text-align: center;
-	background: #f3f5da;
-	color: #3b3d20;
-	padding: 32px;
-	border-radius: 16px;
-}
-.donationTitle {
-	font-size: 120%;
-	font-weight: bold;
-	margin-bottom: 8px;
-}
-
 .heroSwiper {
 	background: #fff6;
 	backdrop-filter: blur(8px);
@@ -347,6 +360,7 @@ definePageMeta({
 	padding: 32px 0;
 	overflow: clip;
 	border-radius: 16px;
+	margin-top: 16px;
 }
 
 .swiper {
@@ -370,8 +384,8 @@ definePageMeta({
 }
 
 .decentralized {
-	margin-top: 64px;
-	margin-bottom: 64px;
+	margin-top: 16px;
+	margin-bottom: 16px;
 	background: #fff;
 	border-radius: 16px;
 	padding: 32px;
