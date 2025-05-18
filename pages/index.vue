@@ -224,6 +224,8 @@
 		</section>
 
 		<section class="section_free _primaryWidth">
+			<GDots class="dotsBg" :space="30" />
+
 			<div v-fade-in="'up'">
 				<div class="free _secondaryWidth">
 					<h2 class="freeTitle"><b class="_textDecorated">{{ $t('_landing._free.title') }}</b></h2>
@@ -233,8 +235,6 @@
 		</section>
 
 		<section class="section_features _primaryWidth">
-			<GDots class="dotsBg" :space="30" />
-
 			<div class="_secondaryWidth">
 				<IndexFeatures />
 			</div>
@@ -257,7 +257,7 @@
 		-->
 
 		<section class="section_getStarted _primaryWidth" id="getStarted">
-			<GDots class="dotsBg" :space="30" />
+			<GDots class="dotsBgPrimary" :space="30" />
 
 			<div v-fade-in="'up'">
 				<div class="getStarted _secondaryWidth acrylic">
@@ -447,6 +447,15 @@ definePageMeta({
 	.dotsBg {
 		color: #fff2;
 	}
+}
+.dotsBgPrimary {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	mask-image: linear-gradient(to bottom, transparent 0px, black 100px, black calc(100% - 100px), transparent 100%);
+	color: #86b300;
 }
 
 .acrylic {
@@ -906,7 +915,6 @@ definePageMeta({
 
 .useCases {
 	margin-top: 32px;
-	margin-bottom: 64px;
 }
 
 .useCasesTitle {
@@ -954,12 +962,17 @@ definePageMeta({
 
 
 .section_free {
+	position: relative;
+	padding: 100px 0;
+}
+
+.free {
 	padding: 64px;
 	background: #f7f7f7;
 	border-radius: 16px;
 }
 :global(html.dark)  {
-	.section_free {
+	.free {
 		background: #222;
 	}
 }
@@ -968,7 +981,7 @@ definePageMeta({
 	font-size: 140%;
 	font-weight: bold;
 	margin: 0;
-	margin-bottom: 16px;
+	margin-bottom: 24px;
 }
 .freeDescription {
 	font-size: 90%;
