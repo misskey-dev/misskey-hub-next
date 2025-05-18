@@ -140,16 +140,18 @@
 			</p>
 		</section>
 
-		<section class="section_decentralized">
-			<div class="decentralized _maxWidth">
-				<h2 class="decentralizedTitle">{{ $t('_landing._decenterized.title') }}</h2>
-				<div class="decentralizedContainer">
-					<div class="decentralizedDescription">
-						<div style="line-height: 200%;">{{ $t('_landing._decenterized.description') }}</div>
-						<GButton buttonType="link" color="accent">{{ $t('learnMore') }}</GButton>
-					</div>
-					<div class="decentralizedImage">
-						aaa
+		<section class="section_decentralized _wMargin">
+			<div class="decentralized">
+				<div class="_maxWidth">
+					<h2 class="decentralizedTitle"><b class="_textDecorated">{{ $t('_landing._decenterized.title') }}</b></h2>
+					<div class="decentralizedContainer">
+						<div class="decentralizedImage">
+							aaa
+						</div>
+						<div class="decentralizedDescription">
+							<div style="line-height: 200%;">{{ $t('_landing._decenterized.description') }}</div>
+							<GButton buttonType="link" color="accent">{{ $t('learnMore') }}</GButton>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -273,6 +275,7 @@ definePageMeta({
 <style scoped>
 .main {
 	--main-width: 1150px;
+	--w-margin: 64px;
 	position: relative;
 	z-index: 1;
 }
@@ -287,7 +290,7 @@ definePageMeta({
 
 ._wMargin {
 	position: relative;
-	margin: 0 32px;
+	margin: 0 var(--w-margin);
 }
 
 ._textDecorated {
@@ -722,14 +725,17 @@ definePageMeta({
 .decentralized {
 	margin-top: 64px;
 	margin-bottom: 64px;
+	padding: 64px;
 	border-radius: 16px;
+	background: #f7f7f7;
 }
 
 .decentralizedTitle {
 	font-size: 150%;
 	font-weight: bold;
+	margin: 0;
 	margin-bottom: 32px;
-	text-align: center;
+	text-align: right;
 }
 
 .decentralizedContainer {
