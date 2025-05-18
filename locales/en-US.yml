@@ -50,7 +50,7 @@ _landing:
       title: "Federated"
       description: "Misskey is a decentralized platform, so communities on different servers can connect with each other."
     _powerful:
-      title: "パワフル"
+      title: "Powerful"
       description: "Misskeyはプロダクションレベルの様々な機能を備えていて、細かなカスタマイズも可能です。多人数でも少人数でも、最適なソリューションに。"
   _decenterized:
     title: "Misskey is a {0} Platform."
@@ -70,13 +70,13 @@ _landing:
       title: "Reactions"
       description: "You can add emoji reactions to any post! No longer are you bound by a like button, show everyone exactly how you feel with the tap of a button."
     _customEmojis:
-      title: "カスタム絵文字"
+      title: "Custom Emoji"
       description: "Misskeyの様々な場所で使用できる、サーバーオリジナルの絵文字を作成可能です。"
     _channel:
-      title: "チャンネル"
+      title: "Channel"
       description: "チャンネルを作成すれば、共通のテーマでサーバー内コミュニティを作成することが可能です。"
     _antenna:
-      title: "アンテナ"
+      title: "Antenna"
       description: "特定のワードが含まれるノートだけを収集するタイムラインを作成可能です。"
     _drive:
       title: "Drive"
