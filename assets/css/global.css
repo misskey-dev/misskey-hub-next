@@ -5,6 +5,10 @@ html, body {
 
 html {
 	overflow: auto;
+	color: #222;
+}
+html.dark {
+	color: #eee;
 }
 
 ._plainButton {

@@ -727,7 +727,6 @@ definePageMeta({
 	position: relative;
 	padding-top: 55px;
 	padding-bottom: 55px;
-	color: #404040;
 }
 
 .introductionTitle {
