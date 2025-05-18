@@ -92,19 +92,19 @@ _landing:
       description: "Personalitza el logotip, les icones i els temes del teu servidor per crear, fàcilment, la teva imatge de marca."
     _roles:
       title: "Rol"
-      description: "ロールを使用すると、ユーザーごとに権限を細かくカスタマイズできます。また、コンディショナルロールを使えば、条件に一致するユーザーに自動でロールをアサインすることも可能です。ロールにバッジを設定して、サーバーのマネタイズに役立てることもできます。"
+      description: "Els rols permeten personalitzar els permisos de cada usuari. Els rols condicionals també es poden utilitzar per assignar automàticament rols als usuaris que coincideixen amb certs criteris. També es poden fer servir insígnies als rols per ajudar a monetitzar el teu servidor."
     _moderation:
-      title: "モデレーション"
-      description: "サーバー運営を助ける、充実のモデレーション機能が標準搭載。"
+      title: "Moderació"
+      description: "Per defecte s'inclouen una sèrie de funcions de moderació per facilitar-ne la gestió del servidor."
     _privacy:
-      title: "プライバシー"
-      description: "豊富なプライバシー設定で、コンテンツの公開範囲を柔軟にコントロール。"
+      title: "Privacitat"
+      description: "Control flexible sobre l'abast de la publicació de continguts amb àmplies opcions de privacitat."
     _multiPurpose:
-      title: "ひとりでも、みんなでも"
-      description: "多数の利用者を受け入れるSNSとしての運用はもちろん、個人用サーバーとしての利用もサポート。Fediverseと繋がるための、あなただけの強力な拠点になります。"
+      title: "Un o tots"
+      description: "Pot fer-se servir com a xarxa social per un gran nombre d'usuaris, o com servidor personal, fent-lo servir com el teu propi i potent punt de connexió amb el Fedivers."
     _monetization:
-      title: "収益化"
-      description: "広告の表示など、サーバーのマネタイズを助ける機能も用意されていて、持続可能な運用を目指せます。"
+      title: "Monetització"
+      description: "Per garantir la sostenibilitat de les operacions, també hi ha ajudes que permeten monetitzar el servidor, com la visualització d'anuncis."
     _oss:
       title: "Mi ❤️ OSS"
       description: "Misskeyはこれまでもこれからもオープンソースで、誰でも自由に、無料でソースコードを利用可能です。またMisskey Projectは、他のOSSに対して積極的に支援活動を行っています。"
