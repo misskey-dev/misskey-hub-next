@@ -223,13 +223,24 @@
 			</div>
 		</section>
 
-		<!--
-
-		<section class="features _secondaryWidth">
-			<IndexFeatures />
+		<section class="section_free _primaryWidth">
+			<div v-fade-in="'up'">
+				<div class="free _secondaryWidth">
+					<h2 class="freeTitle"><b class="_textDecorated">{{ $t('_landing._free.title') }}</b></h2>
+					<div class="freeDescription">{{ $t('_landing._free.description') }}</div>
+				</div>
+			</div>
 		</section>
 
-		
+		<section class="section_features _primaryWidth">
+			<GDots class="dotsBg" :space="30" />
+
+			<div class="_secondaryWidth">
+				<IndexFeatures />
+			</div>
+		</section>
+
+		<!--
 
 		<section class="featuresServer _secondaryWidth">
 			<IndexFeaturesServer  />
@@ -416,6 +427,11 @@ definePageMeta({
 	border-radius: 999px;
 	opacity: 0.5;
 	pointer-events: none;
+}
+:global(html.dark) {
+	._textDecorated::before {
+		opacity: 0.75;
+	}
 }
 
 .dotsBg {
@@ -610,6 +626,11 @@ definePageMeta({
 	color: #0002;
 	fill: currentColor;
 }
+:global(html.dark)  {
+	.topBarcode {
+		color: #fff2;
+	}
+}
 
 /* ------------------------------------------------------------------------- */
 /* key features section */
@@ -745,6 +766,11 @@ definePageMeta({
 	height: 400px;
 	color: #0001;
 	fill: currentColor;
+}
+:global(html.dark)  {
+	.introductionBarcode {
+		color: #fff1;
+	}
 }
 
 .introduction {
@@ -921,6 +947,39 @@ definePageMeta({
 .useCasesItemTitle {
 	font-size: 90%;
 	margin: 10px 0;
+}
+
+/* ------------------------------------------------------------------------- */
+/* free section */
+
+
+.section_free {
+	padding: 64px;
+	background: #f7f7f7;
+	border-radius: 16px;
+}
+:global(html.dark)  {
+	.section_free {
+		background: #222;
+	}
+}
+
+.freeTitle {
+	font-size: 140%;
+	font-weight: bold;
+	margin: 0;
+	margin-bottom: 16px;
+}
+.freeDescription {
+	font-size: 90%;
+	margin: 0;
+}
+
+/* ------------------------------------------------------------------------- */
+/* features section */
+
+.section_features {
+	position: relative;
 }
 
 

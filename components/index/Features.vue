@@ -143,15 +143,23 @@ import { vFadeIn } from '@/assets/js/fadein';
 }
 
 .itemContent {
-	background: #fff;
-	border: solid 1px #ddd;
-	box-shadow: 0 2px 8px -2px #0001;
+	background: #fff6;
+	backdrop-filter: blur(12px);
+	color: #000b;
+	border: solid 1px #0001;
 	border-radius: 16px;
 	padding: 20px;
 
 	font-size: 90%;
 	box-sizing: border-box;
 	height: 100%;
+}
+:global(html.dark) {
+	.itemContent {
+		background: #3336;
+		color: #fffd;
+		border: solid 1px #fff1;
+	}
 }
 
 .itemContentImage {
@@ -179,11 +187,11 @@ import { vFadeIn } from '@/assets/js/fadein';
 <style scoped>
 .__v_fadeIn_default_out > * {
 	opacity: 0;
-	transform: scale(0.9) translateY(-50px);
+	transform: translateY(70px);
 }
 
 .__v_fadeIn_default_in > * {
 	opacity: 1;
-	transform: scale(1) translateY(0);
+	transform: translateY(0);
 }
 </style>
