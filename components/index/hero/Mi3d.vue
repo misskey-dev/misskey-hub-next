@@ -1,5 +1,5 @@
 <template>
-<canvas width="500" height="500" style="width: 500px; height: 500px;" ref="canvas"></canvas>
+<canvas width="500" height="500" style="display: block; width: 500px; height: 500px;" ref="canvas"></canvas>
 </template>
 
 <script setup lang="ts">
