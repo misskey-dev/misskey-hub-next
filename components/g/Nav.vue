@@ -3,19 +3,20 @@
 	<div :class="$style.bg"></div>
 	<nav :class="$style.container">
 		<GNuxtLink :to="localePath('/')" style="display: flex; align-items: center; gap: 8px;">
-			<MiIcon class="h-8 w-8" />
+			<MiIcon/>
 			<div><b>{{ $t('_seo.siteName') }}</b></div>
 		</GNuxtLink>
 		<div :class="$style.navItems">
 			<span v-for="item in NavData.center">
-				<GNuxtLink :to="localePath(item.to)" @click.native="navOpen = !navOpen" :class="['block rounded-full px-4 py-2 lg:px-4 lg:py-1.5 hover:bg-neutral-300 dark:hover:bg-neutral-800', { 'bg-neutral-300 dark:bg-neutral-800 font-bold': currentPath.includes(item.to) }]">
-					<component v-if="'icon' in item" :is="item.icon" class="h-5 w-5" />
+				<GNuxtLink :to="localePath(item.to)" @click.native="navOpen = !navOpen">
+					<component v-if="'icon' in item" :is="item.icon"/>
 					<template v-else>
 						{{ $t(item.i18n) }}
 					</template>
 				</GNuxtLink>
 			</span>
-			<span class="lg:hidden px-4 py-2 flex space-x-4">
+			<!--
+			<span>
 					<button 
 							class="hover:opacity-80 disabled:opacity-70 relative before:absolute before:-z-10 before:-top-2 before:-left-2 before:w-9 before:h-9 before:rounded-full hover:before:bg-neutral-300 dark:hover:before:bg-neutral-600 h-5 w-5"
 							@click="rotateColorMode()"
@@ -35,16 +36,16 @@
 							</select>
 					</div>
 			</span>
+			-->
 		</div>
-		<div class="text-right">
-				<button class="p-1 lg:hidden" @click="navOpen = !navOpen">
+		<div :class="$style.right">
+				<button @click="navOpen = !navOpen">
 						<XIcon v-if="navOpen" class="h-5 w-5" />
 						<MenuIcon v-else class="h-5 w-5" />
 				</button>
-				<ul class="hidden lg:col-span-4 lg:space-x-4 lg:flex justify-center">
+				<ul>
 						<li>
 								<button 
-										:class="['hover:opacity-80 disabled:opacity-70 disabled:cursor-not-allowed', { 'text-white 3xl:text-neutral-800 3xl:dark:text-neutral-200': (landing && scrollPos >= -40) }]"
 										@click="rotateColorMode()"
 										:disabled="colorMode.forced"
 										aria-label="Change Color Mode"
@@ -57,7 +58,8 @@
 								</button>
 						</li>
 						<li class="relative group">
-								<button class="hover:opacity-80"><I18nIcon :class="['h-5 w-5', { 'text-white 3xl:text-neutral-800 3xl:dark:text-neutral-200': (landing && scrollPos >= -40) }]" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></button>
+								<button class="hover:opacity-80"><I18nIcon :class="['h-5 w-5']" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></button>
+								<!--
 								<div class="absolute top-6 right-0 hidden group-hover:block group-focus-within:block z-[9955]">
 										<ul class="px-4 py-2 bg-neutral-50 dark:bg-neutral-800 rounded-lg shadow-lg space-y-1">
 												<li v-for="locale in localesConst">
@@ -67,9 +69,10 @@
 												</li>
 										</ul>
 								</div>
+								-->
 						</li>
 						<li class="border-l"></li>
-						<li v-for="item in NavData.right" :class="['transition-colors', { 'text-white 3xl:text-neutral-800 3xl:dark:text-neutral-200': (landing && scrollPos >= -40) }]">
+						<li v-for="item in NavData.right" :class="['transition-colors']">
 								<GNuxtLink :to="item.to" class="hover:opacity-80">
 										<component v-if="'icon' in item" :is="item.icon" class="h-5 w-5" />
 										<template v-else>
@@ -176,7 +179,7 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 	height: var(--height);
 	pointer-events: none;
 
-	--shapeShift: 600px;
+	--shapeShift: 550px;
 	mask-image: linear-gradient(#000, #000), url("/header-mask-r.svg"), url("/header-mask-l.svg");
   mask-repeat: no-repeat;
   mask-position: center center, calc(50dvw + var(--shapeShift)) -5px, calc(50dvw - (1000px + var(--shapeShift))) -5px;
@@ -199,7 +202,7 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 .container {
 	position: relative;
 	z-index: 1;
-	max-width: 1200px;
+	max-width: 1150px;
 	margin: 0 auto;
 	height: 100%;
 	display: flex;
@@ -211,5 +214,9 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 	display: flex;
 	flex-direction: row;
 	font-size: 90%;
+}
+
+.right {
+	margin-left: auto;
 }
 </style>

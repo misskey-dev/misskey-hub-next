@@ -3,7 +3,29 @@
 	<GNav :landing="true" />
 
 	<main class="main">
-		<div class="top">
+		<section class="tickers">
+			<span class="tickersLabel">
+				<b class="tickersLabelContent">Servers:</b>
+			</span>
+			<span class="tickersItems">
+				<GMarquee :duration="70">
+					<span class="tickersItem">xxxxxxx.example.com</span>
+					<span class="tickersItem">xxxxxxx.example.com</span>
+					<span class="tickersItem">xxxxxxx.example.com</span>
+					<span class="tickersItem">xxxxxxx.example.com</span>
+					<span class="tickersItem">xxxxxxx.example.com</span>
+					<span class="tickersItem">xxxxxxx.example.com</span>
+					<span class="tickersItem">xxxxxxx.example.com</span>
+					<span class="tickersItem">xxxxxxx.example.com</span>
+					<span class="tickersItem">xxxxxxx.example.com</span>
+					<span class="tickersItem">xxxxxxx.example.com</span>
+					<span class="tickersItem">xxxxxxx.example.com</span>
+					<span class="tickersItem">xxxxxxx.example.com</span>
+				</GMarquee>
+			</span>
+		</section>
+
+		<section class="top">
 			<div class="topBg">
 				<IndexHeroParticles/>
 				<IndexHeroBg/>
@@ -33,7 +55,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 
 		<section class="keyFeatures _space">
 			<div class="keyFeaturesItem">
@@ -53,6 +75,15 @@
 			</div>
 		</section>
 
+		<section class="stats _space">
+			<div class="statsText">
+				<span><b class="statsLabel">Commits:</b>12,345</span>
+				<span><b class="statsLabel">Commits:</b>12,345</span>
+				<span><b class="statsLabel">Commits:</b>12,345</span>
+				<span><b class="statsLabel">Commits:</b>12,345</span>
+			</div>
+		</section>
+
 		<section class="introduction _space">
 			<h2 class="introductionTitle">{{ $t('_landing._introduction.title') }}</h2>
 			<div class="introductionDescription">{{ $t('_landing._introduction.description') }}</div>
@@ -68,9 +99,19 @@
 				<div class="swiper-button-prev"></div>
 				<div class="swiper-button-next"></div>
 			</div>
+
+			<section class="introductionTip">
+				<p class="introductionTipText">
+					<b class="" style="background: #9ad11b; border-radius: 999px; padding: 4px 16px; margin-right: 16px;">TIP:</b>
+					<span>{{ $t('_landing._introduction.tip') }}</span>
+				</p>
+			</section>
 		</section>
 
 		<section class="donationAndSponsors _space">
+			<section class="sponsors">
+				<IndexSponsors />
+			</section>
 			<section class="donation">
 				<h2 class="donationTitle">{{ $t('_landing._donation.title') }}</h2>
 				<p class="donationDescription">{{ $t('_landing._donation.description') }}</p>
@@ -78,14 +119,6 @@
 					<GButton buttonType="link" :to="localePath('/docs/donate/')" color="accent">{{ $t('learnMore') }}</GButton>
 				</div>
 			</section>
-
-			<section class="sponsors">
-				<IndexSponsors />
-			</section>
-		</section>
-
-		<section class="heroSwiper _space">
-			
 		</section>
 
 		<GDots style="width: 100%; height: 600px; color: #86b300;" :space="24" />
@@ -227,14 +260,47 @@ definePageMeta({
 	margin-right: auto;
 }
 
+.tickers {
+	display: flex;
+	align-items: center;
+	background: #fff6;
+	backdrop-filter: blur(12px);
+	border-radius: 999px;
+	padding: 0 8px;
+	margin: 16px auto;
+	width: calc(100% - 64px);
+	box-sizing: border-box;
+	line-height: 40px;
+	font-size: 90%;
+	white-space: nowrap;
+	overflow: clip;
+}
+.tickersLabel {
+	margin-right: 16px;
+}
+.tickersLabelContent {
+	background: #9ad11b;
+	border-radius: 999px;
+	padding: 4px 16px;
+}
+.tickersItems {
+	display: inline-flex;
+	flex: 1;
+	min-width: 0;
+	mask-image: linear-gradient(to right, transparent 0px, black 50px, black calc(100% - 50px), transparent 100%);
+}
+.tickersItem {
+	margin: 0 16px;
+}
+
 .top {
 	position: relative;
 	border-radius: 16px;
 	overflow: clip;
 	box-sizing: border-box;
 	margin-top: 16px;
-	padding-top: 10px;
-	padding-bottom: 190px;
+	padding-top: 20px;
+	padding-bottom: 160px;
 	margin-bottom: -150px;
 	contain: content;
 }
@@ -332,10 +398,43 @@ definePageMeta({
 	font-size: 90%;
 }
 
+.stats {
+	background: #fff6;
+	backdrop-filter: blur(12px);
+	border: solid 1px #0001;
+	border-radius: 999px;
+	padding: 0 32px;
+	line-height: 40px;
+	font-size: 90%;
+	margin-bottom: 32px;
+}
+.statsText {
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	gap: 64px;
+}
+.statsLabel {
+	background: #9ad11b;
+	border-radius: 999px;
+	padding: 4px 16px;
+	margin-right: 8px;
+}
+
+.introductionTip {
+	background: #fff6;
+	backdrop-filter: blur(12px);
+	border: solid 1px #0001;
+	padding: 24px 32px;
+	border-radius: 16px;
+	font-size: 90%;
+}
+
 .introduction {
 	text-align: center;
 	margin-top: 64px;
 	margin-bottom: 64px;
+	color: #404040;
 }
 
 .introductionTitle {
