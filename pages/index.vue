@@ -62,17 +62,17 @@
 		</section>
 
 		<section class="keyFeatures _secondaryWidth">
-			<div class="keyFeaturesItem">
+			<div class="keyFeaturesItem acrylic">
 				<div class="keyFeaturesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
 				<h3 class="keyFeaturesItemTitle">{{ $t('_landing._keyFeatures._open.title') }}</h3>
 				<div class="keyFeaturesItemDescription">{{ $t('_landing._keyFeatures._open.description') }}</div>
 			</div>
-			<div class="keyFeaturesItem">
+			<div class="keyFeaturesItem acrylic">
 				<div class="keyFeaturesItemIcon"><img src="/img/emojis/ringed-planet_1fa90.png" aria-hidden="true"></div>
 				<h3 class="keyFeaturesItemTitle">{{ $t('_landing._keyFeatures._federated.title') }}</h3>
 				<div class="keyFeaturesItemDescription">{{ $t('_landing._keyFeatures._federated.description') }}</div>
 			</div>
-			<div class="keyFeaturesItem">
+			<div class="keyFeaturesItem acrylic">
 				<div class="keyFeaturesItemIcon"><img src="/img/emojis/package_1f4e6.png" aria-hidden="true"></div>
 				<h3 class="keyFeaturesItemTitle">{{ $t('_landing._keyFeatures._powerful.title') }}</h3>
 				<div class="keyFeaturesItemDescription">{{ $t('_landing._keyFeatures._powerful.description') }}</div>
@@ -113,10 +113,10 @@
 		</svg>
 
 		<section class="section_donationAndSponsors _primaryWidth">
-			<GDots style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color: #0002; mask-image: linear-gradient(to bottom, transparent 0px, black 100px, black calc(100% - 100px), transparent 100%);" :space="30" />
+			<GDots class="dotsBg" :space="30" />
 
 			<div v-fade-in="'up'">
-				<div class="donationAndSponsors _secondaryWidth">
+				<div class="donationAndSponsors _secondaryWidth acrylic">
 					<section class="sponsors">
 						<IndexSponsors />
 					</section>
@@ -151,7 +151,7 @@
 				</div>
 			</div>
 			<div v-fade-in="'up'">
-				<div class="swiper _secondaryWidth">
+				<div class="swiper _secondaryWidth acrylic">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/misskey-light.png"></div>
 						<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/ss-jobqueue.light.png"></div>
@@ -167,7 +167,7 @@
 
 		<section class="introductionTip _secondaryWidth">
 			<p class="introductionTipText">
-				<b class="" style="background: #9ad11b; border-radius: 999px; padding: 4px 16px; margin-right: 16px;">TIP:</b>
+				<b class="" style="background: #9ad11b; color: #000; border-radius: 999px; padding: 4px 16px; margin-right: 16px;">TIP:</b>
 				<span>{{ $t('_landing._introduction.tip') }}</span>
 			</p>
 		</section>
@@ -188,7 +188,7 @@
 			<div style="position: absolute; top: -30px; width: 100%;">
 				<div v-fade-in="'up'">
 					<div class="_secondaryWidth">
-						<div class="decentralizedCloud"></div>
+						<div class="decentralizedCloud acrylic"></div>
 					</div>
 				</div>
 			</div>
@@ -241,10 +241,10 @@
 		-->
 
 		<section class="section_getStarted _primaryWidth" id="getStarted">
-			<GDots style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color: #0002; mask-image: linear-gradient(to bottom, transparent 0px, black 100px, black calc(100% - 100px), transparent 100%);" :space="30" />
+			<GDots class="dotsBg" :space="30" />
 
 			<div v-fade-in="'up'">
-				<div class="getStarted _secondaryWidth">
+				<div class="getStarted _secondaryWidth acrylic">
 					<div>a</div>
 					<div>a</div>
 					<div>a</div>
@@ -411,6 +411,36 @@ definePageMeta({
 	border-radius: 999px;
 	opacity: 0.5;
 	pointer-events: none;
+}
+
+.dotsBg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	mask-image: linear-gradient(to bottom, transparent 0px, black 100px, black calc(100% - 100px), transparent 100%);
+	color: #0002;
+}
+:global(html.dark) {
+	.dotsBg {
+		color: #fff2;
+	}
+}
+
+.acrylic {
+	background: #fff6;
+	backdrop-filter: blur(12px);
+	color: #000b;
+	border: solid 1px #0001;
+	border-radius: 16px;
+}
+:global(html.dark) {
+	.acrylic {
+		background: #3336;
+		color: #fffd;
+		border: solid 1px #fff1;
+	}
 }
 
 /* ------------------------------------------------------------------------- */
@@ -587,11 +617,6 @@ definePageMeta({
 	margin-bottom: 16px;
 }
 .keyFeaturesItem {
-	background: #fff6;
-	backdrop-filter: blur(12px);
-	color: #000b;
-	border: solid 1px #0001;
-	border-radius: 16px;
 	padding: 32px;
 	text-align: center;
 
@@ -601,13 +626,7 @@ definePageMeta({
   mask-size: 100% 100%, 16px 16px;
 	mask-composite: exclude;
 }
-:global(html.dark)  {
-	.keyFeaturesItem {
-		background: #3336;
-		color: #fffd;
-		border: solid 1px #fff1;
-	}
-}
+
 .keyFeaturesItemIcon {
 	width: 50px;
 	height: 50px;
@@ -730,7 +749,7 @@ definePageMeta({
 }
 
 .introductionTitle {
-	font-size: 160%;
+	font-size: 150%;
 	font-weight: bold;
 	margin: 0;
 	margin-bottom: 24px;
@@ -746,11 +765,6 @@ definePageMeta({
 	right: 0;
 	width: 100%;
 	width: 100%;
-	background: #fff6;
-	backdrop-filter: blur(12px);
-	color: #000b;
-	border: solid 1px #0001;
-	border-radius: 16px;
 	box-sizing: border-box;
 	padding: 32px;
 }
@@ -783,17 +797,8 @@ definePageMeta({
 
 .donationAndSponsors {
 	display: flex;
-	background: #fff6;
-	backdrop-filter: blur(8px);
-	border: solid 1px #0001;
-	border-radius: 16px;
 	padding: 32px;
 	gap: 16px;
-}
-:global(html.dark)  {
-	.donationAndSponsors {
-		background: #262626;
-	}
 }
 
 .donation {
@@ -874,11 +879,6 @@ definePageMeta({
 }
 
 .decentralizedCloud {
-	background: #fff6;
-	backdrop-filter: blur(12px);
-	color: #000b;
-	border: solid 1px #0001;
-	border-radius: 16px;
 	padding: 16px;
 	width: min-content;
 }
@@ -940,17 +940,8 @@ definePageMeta({
 
 .getStarted {
 	display: flex;
-	background: #fff6;
-	backdrop-filter: blur(8px);
-	border: solid 1px #0001;
-	border-radius: 16px;
 	padding: 32px;
 	gap: 16px;
-}
-:global(html.dark) {
-	.getStarted {
-		background: #262626;
-	}
 }
 </style>
 
