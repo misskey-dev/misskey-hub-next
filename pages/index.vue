@@ -3,7 +3,7 @@
 	<GNav :landing="true" />
 
 	<main class="main">
-		<section class="top _wMargin">
+		<section class="top _primaryWidth">
 			<div class="topBg">
 				<IndexHeroParticles/>
 				<IndexHeroBg/>
@@ -29,7 +29,7 @@
 					</GMarquee>
 				</span>
 			</section>
-			<div class="_maxWidth" style="display: flex;">
+			<div class="_secondaryWidth" style="display: flex;">
 				<div class="topLeft">
 					<div class="topTagline"><strong>Create.<br>Connect.<br>with <b class="textGradient">Misskey</b>.</strong></div>
 					<div class="topDescription">{{ $t('_landing._hero.description') }}</div>
@@ -61,7 +61,7 @@
 			</svg>
 		</section>
 
-		<section class="keyFeatures _maxWidth">
+		<section class="keyFeatures _secondaryWidth">
 			<div class="keyFeaturesItem">
 				<div class="keyFeaturesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
 				<h3 class="keyFeaturesItemTitle">{{ $t('_landing._keyFeatures._open.title') }}</h3>
@@ -79,7 +79,7 @@
 			</div>
 		</section>
 
-		<section class="stats _maxWidth">
+		<section class="stats _secondaryWidth">
 			<div class="statsText">
 				<span><b class="statsLabel">Commits:</b>12,345</span>
 				<span><b class="statsLabel">Commits:</b>12,345</span>
@@ -91,7 +91,7 @@
 		<section class="section_donationAndSponsors">
 			<GDots style="position: absolute; top: 0; left: 0; right: 0; margin: auto; max-width: calc(100% - 128px); width: 100%; height: 100%; color: #0002; mask-image: linear-gradient(to bottom, transparent 0px, black 100px, black calc(100% - 100px), transparent 100%);" :space="30" />
 
-			<div class="donationAndSponsors _maxWidth">
+			<div class="donationAndSponsors _secondaryWidth">
 				<section class="sponsors">
 					<IndexSponsors />
 				</section>
@@ -105,7 +105,7 @@
 			</div>
 		</section>
 
-		<section class="section_introduction _wMargin">
+		<section class="section_introduction _primaryWidth">
 			<div class="introductionBg">
 				<img class="introductionBgImage" src="/img/hero/mi-abstract-alpha.webp" alt="">
 			</div>
@@ -116,11 +116,11 @@
 					</g>
 				</g>
 			</svg>
-			<div class="introduction _maxWidth">
+			<div class="introduction _secondaryWidth">
 				<h2 class="introductionTitle"><b class="_textDecorated">{{ $t('_landing._introduction.title') }}</b></h2>
 				<div class="introductionDescription">{{ $t('_landing._introduction.description') }}</div>
 			</div>
-			<div class="swiper _maxWidth">
+			<div class="swiper _secondaryWidth">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/misskey-light.png"></div>
 					<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/ss-jobqueue.light.png"></div>
@@ -133,16 +133,16 @@
 			</div>
 		</section>
 
-		<section class="introductionTip _maxWidth">
+		<section class="introductionTip _secondaryWidth">
 			<p class="introductionTipText">
 				<b class="" style="background: #9ad11b; border-radius: 999px; padding: 4px 16px; margin-right: 16px;">TIP:</b>
 				<span>{{ $t('_landing._introduction.tip') }}</span>
 			</p>
 		</section>
 
-		<section class="section_decentralized _wMargin">
+		<section class="section_decentralized _primaryWidth">
 			<div class="decentralized">
-				<div class="_maxWidth">
+				<div class="_secondaryWidth">
 					<h2 class="decentralizedTitle"><b class="_textDecorated">{{ $t('_landing._decenterized.title') }}</b></h2>
 					<div class="decentralizedContainer">
 						<div class="decentralizedImage">
@@ -157,7 +157,7 @@
 			</div>
 		</section>
 
-		<section class="useCases _maxWidth">
+		<section class="useCases _secondaryWidth">
 			<h2 class="useCasesTitle">{{ $t('_landing._useCases.title') }}</h2>
 			<div class="useCasesItemsContainer">
 				<div class="useCasesItem">
@@ -179,25 +179,25 @@
 			</div>
 		</section>
 
-		<section class="features _maxWidth">
+		<section class="features _secondaryWidth">
 			<IndexFeatures />
 		</section>
 
 		<!--
 
-		<section class="featuresServer _maxWidth">
+		<section class="featuresServer _secondaryWidth">
 			<IndexFeaturesServer  />
 		</section>
 
-		<section class="featuresClient _maxWidth">
+		<section class="featuresClient _secondaryWidth">
 			<IndexFeaturesClient />
 		</section>
 
-		<section class="featuresUpcoming _maxWidth">
+		<section class="featuresUpcoming _secondaryWidth">
 			<IndexFeaturesUpcoming />
 		</section>
 
-		<section class="getStarted" id="getStarted _maxWidth">
+		<section class="getStarted" id="getStarted _secondaryWidth">
 			<IndexGetStarted />
 		</section>
 
@@ -274,23 +274,27 @@ definePageMeta({
 
 <style scoped>
 .main {
-	--main-width: 1150px;
-	--w-margin: 64px;
+	--w-margin: 16px;
+	--primary-width: 1800px;
+	--secondary-width: 1150px;
 	position: relative;
 	z-index: 1;
 }
 
-._maxWidth {
-	width: 100%;
-	max-width: var(--main-width);
+._primaryWidth {
+	width: calc(100% - var(--w-margin) * 2);
+	max-width: var(--primary-width);
 	box-sizing: border-box;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-._wMargin {
-	position: relative;
-	margin: 0 var(--w-margin);
+._secondaryWidth {
+	width: calc(100% - var(--w-margin) * 2);
+	max-width: var(--secondary-width);
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 ._textDecorated {
