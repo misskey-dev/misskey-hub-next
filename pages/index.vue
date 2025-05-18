@@ -185,7 +185,7 @@
 					</div>
 				</div>
 			</div>
-			<div style="position: absolute; top: 50px; width: 100%;">
+			<div style="position: absolute; top: -30px; width: 100%;">
 				<div v-fade-in="'up'">
 					<div class="_secondaryWidth">
 						<div class="decentralizedCloud"></div>
@@ -833,7 +833,8 @@ definePageMeta({
 
 .section_decentralized {
 	position: relative;
-	margin-bottom: 100px;
+	margin-bottom: -30px;
+	margin-top: 50px;
 	padding-bottom: 100px;
 }
 
