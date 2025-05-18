@@ -24,7 +24,7 @@ Misskeyはノート検索に使用するアルゴリズムを複数ご用意し�
 - meilisearch ... 全文検索エンジンの[Meilisearch](https://www.meilisearch.com)を用いて検索を行います。
   - Meilisearchのインストールが必要です。
   - sqlLikeより高速な検索が可能です。
-  - 検索対象のノートは、公開範囲が「パブリック」または「ホーム」です。
+  - 検索対象のノートは、公開範囲が「パブリック」または「ホーム」です。フォロワー限定投稿も含めたい場合は`sqlLike`または`sqlPgroonga`を使用する必要があります。
 
 検索エンジンを変更する場合は、設定ファイルの `fulltextSearch` の `provider` を書き換えて、Misskeyのプロセスを再起動してください。
 
