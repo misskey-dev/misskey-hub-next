@@ -278,8 +278,8 @@ class System {
 
 	private tick: number = 0;
 	private dropTick = 0;
-	private dropTickMin = 20;
-	private dropTickMax = 25;
+	private dropTickMin = 18;
+	private dropTickMax = 20;
 
 	private particleColor: number;
 	private rippleColor: number;
