@@ -37,7 +37,7 @@
 					<GNuxtLink v-if="notice" class="notice _plainLink" :to="isLocalPath(notice.to) ? localePath(notice.to) : notice.to" :target="!isLocalPath(notice.to) ? '_blank' : undefined">
 						<div class="noticeInner">
 							<div class="noticeIconBase">
-								<MegaphoneIco style="width: 20px; height: 20px;" />
+								<MegaphoneIco style="width: 16px; height: 16px;" />
 							</div>
 							<span>{{ localizedNotice }}</span>
 							<ArrowRightIco v-if="isLocalPath(notice.to)" />
@@ -375,6 +375,7 @@ definePageMeta({
 	border-radius: 999px;
 	box-sizing: border-box;
 	padding: 4px 16px 4px 4px;
+	font-size: 90%;
 }
 
 .noticeIconBase {
