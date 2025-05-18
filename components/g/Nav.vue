@@ -1,90 +1,95 @@
 <template>
+<GNuxtLink :class="$style.news" class="_plainLink">
+	<b>NEWS:</b> New blog post "Lorem ipsum dolor sit amet, consectetur adipiscing elit" is published!
+</GNuxtLink>
 <div :class="$style.root">
-	<div :class="$style.bg"></div>
-	<nav :class="$style.container">
-		<GNuxtLink class="_plainLink" :to="localePath('/')" style="display: flex; align-items: center; gap: 8px; min-width: 0; white-space: nowrap;">
-			<MiIcon style="width: 30px"/>
-			<div><b>{{ $t('_seo.siteName') }}</b></div>
-		</GNuxtLink>
-		<div :class="$style.navItems">
-			<span v-for="item in NavData.center">
-				<GNuxtLink class="_plainLink" :to="localePath(item.to)" @click.native="navOpen = !navOpen">
-					<component v-if="'icon' in item" :is="item.icon"/>
-					<template v-else>
-						{{ $t(item.i18n) }}
-					</template>
-				</GNuxtLink>
-			</span>
-			<!--
-			<span>
-					<button 
-							class="hover:opacity-80 disabled:opacity-70 relative before:absolute before:-z-10 before:-top-2 before:-left-2 before:w-9 before:h-9 before:rounded-full hover:before:bg-neutral-300 dark:hover:before:bg-neutral-600 h-5 w-5"
-							@click="rotateColorMode()"
-							:disabled="colorMode.forced"
-							aria-label="Change Color Mode"
-					>
-							<ClientOnly>
-									<SunIcon class="h-5 w-5" v-if="colorMode.preference === 'light' || (colorMode.forced && colorMode.value === 'light')" />
-									<MoonIcon class="h-5 w-5" v-else-if="colorMode.preference === 'dark' || (colorMode.forced && colorMode.value === 'dark')" />
-									<DisplayIcon class="h-5 w-5" v-else />
-							</ClientOnly>
-					</button>
-					<div class="input-group">
-							<span class="input-group-text !rounded-l-full"><I18nIcon class="h-5 w-5" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></span>
-							<select class="form-select !rounded-r-full" v-model="spLocaleOption" @change="changeLocale()">
-									<option v-for="locale in localesConst" :value="locale.code">{{ locale.name }}</option>
-							</select>
-					</div>
-			</span>
-			-->
-		</div>
-		<div :class="$style.right">
-			<!--
-			<button class="_plainButton" @click="navOpen = !navOpen">
-				<XIcon v-if="navOpen" class="h-5 w-5" />
-				<MenuIcon v-else class="h-5 w-5" />
-			</button>
-			-->
-			<div style="display: flex; align-items: center; gap: 8px;">
-				<div>
-					<button class="_plainButton"
-						@click="rotateColorMode()"
-						:disabled="colorMode.forced"
-						aria-label="Change Color Mode"
-					>
-						<ClientOnly>
-							<SunIcon style="width: 20px; height: 20px;" v-if="colorMode.preference === 'light' || (colorMode.forced && colorMode.value === 'light')" />
-							<MoonIcon style="width: 20px; height: 20px;" v-else-if="colorMode.preference === 'dark' || (colorMode.forced && colorMode.value === 'dark')" />
-							<DisplayIcon style="width: 20px; height: 20px;" v-else />
-						</ClientOnly>
-					</button>
-				</div>
-				<div class="relative group">
-					<button class="_plainButton"><I18nIcon style="width: 20px; height: 20px;"/></button>
-					<!--
-					<div class="absolute top-6 right-0 hidden group-hover:block group-focus-within:block z-[9955]">
-							<ul class="px-4 py-2 bg-neutral-50 dark:bg-neutral-800 rounded-lg shadow-lg space-y-1">
-									<li v-for="locale in localesConst">
-											<GNuxtLink :to="switchLocalePath(locale.code)" :lang="locale.code" :class="['block _i18n whitespace-nowrap hover:text-accent-600 py-0.5', {'text-accent-600 font-bold': currentLocale === locale.code}]">
-													<span v-if="currentLocale === locale.code"><DotIcon class="stroke-[3] stroke-current" /></span>{{ locale.name }}
-											</GNuxtLink>
-									</li>
-							</ul>
-					</div>
-					-->
-				</div>
-				<div class="border-l"></div>
-				<div v-for="item in NavData.right" :class="['transition-colors']">
-					<GNuxtLink :to="item.to" class="_plainLink">
-						<component v-if="'icon' in item" :is="item.icon" style="width: 20px; height: 20px;" />
+	<div :class="$style.main">
+		<div :class="$style.bg"></div>
+		<nav :class="$style.container">
+			<GNuxtLink class="_plainLink" :to="localePath('/')" style="display: flex; align-items: center; gap: 8px; min-width: 0; white-space: nowrap;">
+				<MiIcon style="width: 30px"/>
+				<div><b>{{ $t('_seo.siteName') }}</b></div>
+			</GNuxtLink>
+			<div :class="$style.navItems">
+				<span v-for="item in NavData.center">
+					<GNuxtLink class="_plainLink" :to="localePath(item.to)" @click.native="navOpen = !navOpen">
+						<component v-if="'icon' in item" :is="item.icon"/>
 						<template v-else>
 							{{ $t(item.i18n) }}
 						</template>
 					</GNuxtLink>
+				</span>
+				<!--
+				<span>
+						<button 
+								class="hover:opacity-80 disabled:opacity-70 relative before:absolute before:-z-10 before:-top-2 before:-left-2 before:w-9 before:h-9 before:rounded-full hover:before:bg-neutral-300 dark:hover:before:bg-neutral-600 h-5 w-5"
+								@click="rotateColorMode()"
+								:disabled="colorMode.forced"
+								aria-label="Change Color Mode"
+						>
+								<ClientOnly>
+										<SunIcon class="h-5 w-5" v-if="colorMode.preference === 'light' || (colorMode.forced && colorMode.value === 'light')" />
+										<MoonIcon class="h-5 w-5" v-else-if="colorMode.preference === 'dark' || (colorMode.forced && colorMode.value === 'dark')" />
+										<DisplayIcon class="h-5 w-5" v-else />
+								</ClientOnly>
+						</button>
+						<div class="input-group">
+								<span class="input-group-text !rounded-l-full"><I18nIcon class="h-5 w-5" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></span>
+								<select class="form-select !rounded-r-full" v-model="spLocaleOption" @change="changeLocale()">
+										<option v-for="locale in localesConst" :value="locale.code">{{ locale.name }}</option>
+								</select>
+						</div>
+				</span>
+				-->
+			</div>
+			<div :class="$style.right">
+				<!--
+				<button class="_plainButton" @click="navOpen = !navOpen">
+					<XIcon v-if="navOpen" class="h-5 w-5" />
+					<MenuIcon v-else class="h-5 w-5" />
+				</button>
+				-->
+				<div style="display: flex; align-items: center; gap: 8px;">
+					<div>
+						<button class="_plainButton"
+							@click="rotateColorMode()"
+							:disabled="colorMode.forced"
+							aria-label="Change Color Mode"
+						>
+							<ClientOnly>
+								<SunIcon style="width: 20px; height: 20px;" v-if="colorMode.preference === 'light' || (colorMode.forced && colorMode.value === 'light')" />
+								<MoonIcon style="width: 20px; height: 20px;" v-else-if="colorMode.preference === 'dark' || (colorMode.forced && colorMode.value === 'dark')" />
+								<DisplayIcon style="width: 20px; height: 20px;" v-else />
+							</ClientOnly>
+						</button>
+					</div>
+					<div class="relative group">
+						<button class="_plainButton"><I18nIcon style="width: 20px; height: 20px;"/></button>
+						<!--
+						<div class="absolute top-6 right-0 hidden group-hover:block group-focus-within:block z-[9955]">
+								<ul class="px-4 py-2 bg-neutral-50 dark:bg-neutral-800 rounded-lg shadow-lg space-y-1">
+										<li v-for="locale in localesConst">
+												<GNuxtLink :to="switchLocalePath(locale.code)" :lang="locale.code" :class="['block _i18n whitespace-nowrap hover:text-accent-600 py-0.5', {'text-accent-600 font-bold': currentLocale === locale.code}]">
+														<span v-if="currentLocale === locale.code"><DotIcon class="stroke-[3] stroke-current" /></span>{{ locale.name }}
+												</GNuxtLink>
+										</li>
+								</ul>
+						</div>
+						-->
+					</div>
+					<div class="border-l"></div>
+					<div v-for="item in NavData.right" :class="['transition-colors']">
+						<GNuxtLink :to="item.to" class="_plainLink">
+							<component v-if="'icon' in item" :is="item.icon" style="width: 20px; height: 20px;" />
+							<template v-else>
+								{{ $t(item.i18n) }}
+							</template>
+						</GNuxtLink>
+					</div>
 				</div>
 			</div>
-		</div>
-	</nav>
+		</nav>
+	</div>
 </div>
 </template>
 
@@ -154,18 +159,31 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 
 <style module>
 .root {
-	--height: 65px;
-
 	position: sticky;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 9999;
+}
+
+.news {
+	display: block;
+	background: linear-gradient(90deg, #86b300, #4ab300, #4ab300);
+	color: #000;
+	padding: 6px 16px;
+	font-size: 90%;
+	text-align: center;
+}
+
+.main {
+	--height: 65px;
+
+	position: relative;
 	height: var(--height);
 	color: #3c3c3c;
 }
 
-:global(html.dark)  {
+:global(html.main)  {
 	.root {
 		color: #e5e5e5;
 	}
