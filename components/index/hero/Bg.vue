@@ -23,7 +23,7 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 }
 
 .blobs {
-	@apply absolute select-none pointer-events-none;
+	position: absolute;
 	animation-name: parallax;
 	animation-timing-function: linear;
 	animation-timeline: scroll(root y);
@@ -31,14 +31,14 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 }
 
 .blobs > svg {
-	@apply w-full;
+	width: 100%;
 }
 
 .object1 {
-	top: 2500px;
-	left: -300px;
+	top: -500px;
+  right: -200px;
 	width: 1000px;
-	opacity: .5;
+	opacity: 1;
 }
 
 @screen lg {
@@ -57,7 +57,7 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 
 .object2 {
 	left: -250px;
-	top: 350px;
+	top: 300px;
 	width: 1000px;
 	opacity: .5;
 }

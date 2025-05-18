@@ -162,6 +162,8 @@
 			<IndexFeatures />
 		</section>
 
+		<!--
+
 		<section class="featuresServer _space">
 			<IndexFeaturesServer  />
 		</section>
@@ -177,6 +179,8 @@
 		<section class="getStarted" id="getStarted _space">
 			<IndexGetStarted />
 		</section>
+
+		-->
 
 	</main>
 

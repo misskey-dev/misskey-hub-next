@@ -43,8 +43,8 @@
 						<XIcon v-if="navOpen" class="h-5 w-5" />
 						<MenuIcon v-else class="h-5 w-5" />
 				</button>
-				<ul>
-						<li>
+				<div>
+						<div>
 								<button 
 										@click="rotateColorMode()"
 										:disabled="colorMode.forced"
@@ -56,8 +56,8 @@
 												<DisplayIcon class="h-5 w-5" v-else />
 										</ClientOnly>
 								</button>
-						</li>
-						<li class="relative group">
+						</div>
+						<div class="relative group">
 								<button class="hover:opacity-80"><I18nIcon :class="['h-5 w-5']" /><span class="sr-only">{{ $t('_nav.switchLang') }}</span></button>
 								<!--
 								<div class="absolute top-6 right-0 hidden group-hover:block group-focus-within:block z-[9955]">
@@ -70,17 +70,17 @@
 										</ul>
 								</div>
 								-->
-						</li>
-						<li class="border-l"></li>
-						<li v-for="item in NavData.right" :class="['transition-colors']">
+						</div>
+						<div class="border-l"></div>
+						<div v-for="item in NavData.right" :class="['transition-colors']">
 								<GNuxtLink :to="item.to" class="hover:opacity-80">
 										<component v-if="'icon' in item" :is="item.icon" class="h-5 w-5" />
 										<template v-else>
 												{{ $t(item.i18n) }}
 										</template>
 								</GNuxtLink>
-						</li>
-				</ul>
+						</div>
+				</div>
 		</div>
 	</nav>
 </div>
@@ -213,6 +213,7 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 .navItems {
 	display: flex;
 	flex-direction: row;
+	gap: 16px;
 	font-size: 90%;
 }
 
