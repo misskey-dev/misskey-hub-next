@@ -2,6 +2,8 @@ import type { Directive } from 'vue';
 
 export const vFadeIn = {
 	mounted: (src, binding, vn) => {
+		if (window.location.search.includes('ss')) return;
+	
 		const name = binding.value || 'default';
 
 		src.classList.add(`__v_fadeIn_${name}_out`);

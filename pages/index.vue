@@ -967,6 +967,7 @@ definePageMeta({
 }
 
 .free {
+	position: relative;
 	padding: 64px;
 	background: #f7f7f7;
 	border-radius: 16px;
