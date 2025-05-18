@@ -9,10 +9,7 @@
 			target="_blank"
 			:class="$style.sponsor"
 		>
-			<img
-				:src="sponsor.img"
-				class="w-full h-full object-contain"
-			/>
+			<img :src="sponsor.img" alt="" :class="$style.sponsorImage" />
 		</GNuxtLink>
 	</div>
 </div>
@@ -87,5 +84,13 @@ const localePath = useGLocalePath();
 
 .sponsor {
 	aspect-ratio: 1;
+}
+
+.sponsorImage {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	border-radius: 12px;
 }
 </style>

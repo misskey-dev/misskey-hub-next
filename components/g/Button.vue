@@ -1,5 +1,5 @@
 <template>
-<GNuxtLink v-if="buttonType == 'link'" :to="to" :class="[$style.button, shadow ? $style.shadow : null, color == 'accent' ? $style.buttonAccent : $style.buttonPlain]">
+<GNuxtLink v-if="buttonType == 'link'" :to="to" class="_plainLink" :class="[$style.button, shadow ? $style.shadow : null, color == 'accent' ? $style.buttonAccent : $style.buttonPlain]">
 	<slot></slot>
 </GNuxtLink>
 <button v-else-if="buttonType == 'button'" class="_plainButton" @click="onClick()" :class="[$style.button, shadow ? $style.shadow : null, color == 'accent' ? $style.buttonAccent : $style.buttonPlain]">

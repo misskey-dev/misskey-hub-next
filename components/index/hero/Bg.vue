@@ -84,13 +84,13 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 
 @keyframes parallax {
 	from { transform: translateY(0); }
-	to { transform: translateY(calc(var(--coefficient-parallax) * 100vh)); }
+	to { transform: translateY(calc(var(--coefficient-parallax) * 60vh)); }
 }
 
 @screen lg {
 	@keyframes parallax {
 		from { transform: translateY(0); }
-		to { transform: translateY(calc(var(--coefficient-parallax) * 70vh)); }
+		to { transform: translateY(calc(var(--coefficient-parallax) * 50vh)); }
 	}
 }
 </style>
