@@ -172,12 +172,14 @@
 			</p>
 		</section>
 
-		<section class="section_decentralized _primaryWidth">
-			<div v-fade-in="'up'">
-				<div class="decentralizedBg"></div>
+		<section class="section_decentralized _secondaryWidth">
+			<div v-fade-in="'right'">
+				<div class="decentralizedCloudContainer acrylic">
+					<div class="decentralizedCloud"></div>
+				</div>
 			</div>
 			<div v-fade-in="'left'">
-				<div class="decentralizedContent _secondaryWidth">
+				<div class="decentralizedContent">
 					<h2 class="decentralizedTitle"><b class="_textDecorated">{{ $t('_landing._decenterized.title') }}</b></h2>
 					<div class="decentralizedDescription">
 						<div style="line-height: 200%;">{{ $t('_landing._decenterized.description') }}</div>
@@ -185,34 +187,37 @@
 					</div>
 				</div>
 			</div>
-			<div style="position: absolute; top: -30px; width: 100%;">
-				<div v-fade-in="'up'">
-					<div class="_secondaryWidth">
-						<div class="decentralizedCloud acrylic"></div>
-					</div>
-				</div>
-			</div>
 		</section>
 
 		<section class="section_useCases _primaryWidth">
 			<div class="useCases _secondaryWidth">
-				<h2 class="useCasesTitle">{{ $t('_landing._useCases.title') }}</h2>
+				<div v-fade-in="'up'">
+					<h2 class="useCasesTitle">{{ $t('_landing._useCases.title') }}</h2>
+				</div>
 				<div class="useCasesItemsContainer">
-					<div class="useCasesItem">
-						<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
-						<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.single') }}</h3>
+					<div v-fade-in="'up'">
+						<div class="useCasesItem">
+							<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+							<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.single') }}</h3>
+						</div>
 					</div>
-					<div class="useCasesItem">
-						<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
-						<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.official') }}</h3>
+					<div v-fade-in="'up'">
+						<div class="useCasesItem">
+							<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+							<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.official') }}</h3>
+						</div>
 					</div>
-					<div class="useCasesItem">
-						<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
-						<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.community') }}</h3>
+					<div v-fade-in="'up'">
+						<div class="useCasesItem">
+							<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+							<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.community') }}</h3>
+						</div>
 					</div>
-					<div class="useCasesItem">
-						<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
-						<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.inHouse') }}</h3>
+					<div v-fade-in="'up'">
+						<div class="useCasesItem">
+							<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+							<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.inHouse') }}</h3>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -353,7 +358,7 @@ onMounted(() => {
 		'<img src="https://0key.dev/favicon.ico" width="35">',
 		'<img src="https://0key.dev/favicon.ico" width="35">',
 	], {
-		radius: 200,
+		radius: 150,
 		maxSpeed: 'slow',
 		initSpeed: 'slow',
 		direction: 135,
@@ -837,25 +842,10 @@ definePageMeta({
 
 .section_decentralized {
 	position: relative;
-	margin-bottom: -30px;
+	margin-bottom: 50px;
 	margin-top: 50px;
-	padding-bottom: 100px;
-}
-
-.decentralizedBg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 350px;
-	background: #f7f7f7;
-	border-radius: 16px;
-	overflow: clip;
-}
-:global(html.dark)  {
-	.decentralizedBg {
-		background: #222;
-	}
+	display: flex;
+	align-items: center;
 }
 
 .decentralizedTitle {
@@ -868,14 +858,15 @@ definePageMeta({
 
 .decentralizedContent {
 	position: relative;
-	padding: 55px 0;
 }
 
 .decentralizedDescription {
 	font-size: 90%;
 	text-align: right;
-	max-width: 50%;
-	margin-left: auto;
+}
+
+.decentralizedCloudContainer {
+	margin-right: 64px;
 }
 
 .decentralizedCloud {
@@ -890,14 +881,12 @@ definePageMeta({
 .useCases {
 	margin-top: 32px;
 	margin-bottom: 64px;
-	background: #fff;
-	border-radius: 16px;
-	padding: 32px;
 }
 
 .useCasesTitle {
 	font-size: 120%;
 	font-weight: bold;
+	margin: 0;
 	margin-bottom: 32px;
 	text-align: center;
 }
@@ -915,6 +904,11 @@ definePageMeta({
 	padding: 32px;
 	text-align: center;
 }
+:global(html.dark)  {
+	.useCasesItem {
+		color: #f0ffc7;
+	}
+}
 .useCasesItemIcon {
 	width: 50px;
 	height: 50px;
@@ -925,7 +919,7 @@ definePageMeta({
 	height: 100%;
 }
 .useCasesItemTitle {
-	font-size: 100%;
+	font-size: 90%;
 	margin: 10px 0;
 }
 
