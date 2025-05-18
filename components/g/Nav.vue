@@ -183,8 +183,8 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 	color: #3c3c3c;
 }
 
-:global(html.main)  {
-	.root {
+:global(html.dark) {
+	.main {
 		color: #e5e5e5;
 	}
 }

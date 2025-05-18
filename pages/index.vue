@@ -3,33 +3,32 @@
 	<GNav :landing="true" />
 
 	<main class="main">
-		<section class="tickers">
-			<span class="tickersLabel">
-				<b class="tickersLabelContent">Servers:</b>
-			</span>
-			<span class="tickersItems">
-				<GMarquee :duration="70">
-					<span class="tickersItem">xxxxxxx.example.com</span>
-					<span class="tickersItem">xxxxxxx.example.com</span>
-					<span class="tickersItem">xxxxxxx.example.com</span>
-					<span class="tickersItem">xxxxxxx.example.com</span>
-					<span class="tickersItem">xxxxxxx.example.com</span>
-					<span class="tickersItem">xxxxxxx.example.com</span>
-					<span class="tickersItem">xxxxxxx.example.com</span>
-					<span class="tickersItem">xxxxxxx.example.com</span>
-					<span class="tickersItem">xxxxxxx.example.com</span>
-					<span class="tickersItem">xxxxxxx.example.com</span>
-					<span class="tickersItem">xxxxxxx.example.com</span>
-					<span class="tickersItem">xxxxxxx.example.com</span>
-				</GMarquee>
-			</span>
-		</section>
-
 		<section class="top">
 			<div class="topBg">
 				<IndexHeroParticles/>
 				<IndexHeroBg/>
 			</div>
+			<section class="tickers">
+				<span class="tickersLabel">
+					<b class="tickersLabelContent">Servers:</b>
+				</span>
+				<span class="tickersItems">
+					<GMarquee :duration="90">
+						<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
+						<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
+						<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
+						<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
+						<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
+						<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
+						<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
+						<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
+						<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
+						<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
+						<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
+						<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
+					</GMarquee>
+				</span>
+			</section>
 			<div class="_space" style="display: flex;">
 				<div class="topLeft">
 					<div class="topTagline"><strong>Create.<br>Connect.<br>with <b class="textGradient">Misskey</b>.</strong></div>
@@ -273,19 +272,25 @@ definePageMeta({
 	backdrop-filter: blur(12px);
 	border-radius: 999px;
 	padding: 0 8px;
-	margin: 16px auto;
-	width: calc(100% - 64px);
+	margin: 0 auto 32px auto;
+	width: calc(100% - (64px + 32px));
 	box-sizing: border-box;
 	line-height: 40px;
 	font-size: 90%;
 	white-space: nowrap;
 	overflow: clip;
 }
+:global(html.dark)  {
+	.tickers {
+		background: #4446;
+	}
+}
 .tickersLabel {
 	margin-right: 16px;
 }
 .tickersLabelContent {
 	background: #9ad11b;
+	color: #000;
 	border-radius: 999px;
 	padding: 4px 16px;
 }
@@ -296,7 +301,23 @@ definePageMeta({
 	mask-image: linear-gradient(to right, transparent 0px, black 50px, black calc(100% - 50px), transparent 100%);
 }
 .tickersItem {
-	margin: 0 16px;
+	display: inline-flex;
+	align-items: center;
+	vertical-align: bottom;
+	margin: 0 24px;
+	color: #000c;
+}
+:global(html.dark)  {
+	.tickersItem {
+		color: #fffd;
+	}
+}
+.tickersItemIcon {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 8px;
+	border-radius: 999px;
 }
 
 .top {
@@ -305,7 +326,7 @@ definePageMeta({
 	overflow: clip;
 	box-sizing: border-box;
 	margin-top: 16px;
-	padding-top: 20px;
+	padding-top: 16px;
 	padding-bottom: 160px;
 	margin-bottom: -150px;
 	contain: content;
@@ -376,6 +397,11 @@ definePageMeta({
 	box-sizing: border-box;
 	padding: 4px 16px 4px 4px;
 	font-size: 90%;
+}
+:global(html.dark) {
+	.noticeInner {
+		background: #111;
+	}
 }
 
 .noticeIconBase {

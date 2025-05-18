@@ -51,6 +51,12 @@ function onClick() {
 	background: #fff;
 }
 
+:global(html.dark) {
+	.buttonPlain {
+		background: #333;
+	}
+}
+
 .shadow.button {
 	box-shadow: 0 8px 20px -5px rgba(0, 0, 0, .2);
 }
