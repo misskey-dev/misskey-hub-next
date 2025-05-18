@@ -152,12 +152,12 @@ import { vFadeIn } from '@/assets/js/fadein';
     @apply font-title text-xl lg:text-2xl font-bold mb-2;
 }
 
-.__v_fadeIn_out > * {
+.__v_fadeIn_default_out > * {
 	opacity: 0;
 	transform: scale(0.9) translateY(-50px);
 }
 
-.__v_fadeIn_in > * {
+.__v_fadeIn_default_in > * {
 	opacity: 1;
 	transform: scale(1) translateY(0);
 }

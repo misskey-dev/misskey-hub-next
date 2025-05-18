@@ -3,6 +3,10 @@ html, body {
 	padding: 0;
 }
 
+html {
+	overflow: auto;
+}
+
 ._plainButton {
 	appearance: none;
 	display: inline-block;

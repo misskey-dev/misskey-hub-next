@@ -177,12 +177,12 @@ import { vFadeIn } from '@/assets/js/fadein';
 </style>
 
 <style scoped>
-.__v_fadeIn_out > * {
+.__v_fadeIn_default_out > * {
 	opacity: 0;
 	transform: scale(0.9) translateY(-50px);
 }
 
-.__v_fadeIn_in > * {
+.__v_fadeIn_default_in > * {
 	opacity: 1;
 	transform: scale(1) translateY(0);
 }
