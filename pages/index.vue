@@ -31,7 +31,7 @@
 			</section>
 			<div class="_secondaryWidth" style="display: flex;">
 				<div class="topLeft">
-					<div class="topTagline"><strong>Create.<br>Connect.<br>with <b class="textGradient">Misskey</b>.</strong></div>
+					<div class="topTagline"><strong>Create.<br>Connect.<br>with <b class="_textGradient">Misskey</b>.</strong></div>
 					<div class="topDescription">{{ $t('_landing._hero.description') }}</div>
 					<GNuxtLink v-if="notice" class="notice _plainLink" :to="isLocalPath(notice.to) ? localePath(notice.to) : notice.to" :target="!isLocalPath(notice.to) ? '_blank' : undefined">
 						<div class="noticeInner">
@@ -112,8 +112,8 @@
 			</g>
 		</svg>
 
-		<section class="section_donationAndSponsors">
-			<GDots style="position: absolute; top: 0; left: 0; right: 0; margin: auto; max-width: calc(100% - 128px); width: 100%; height: 100%; color: #0002; mask-image: linear-gradient(to bottom, transparent 0px, black 100px, black calc(100% - 100px), transparent 100%);" :space="30" />
+		<section class="section_donationAndSponsors _primaryWidth">
+			<GDots style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color: #0002; mask-image: linear-gradient(to bottom, transparent 0px, black 100px, black calc(100% - 100px), transparent 100%);" :space="30" />
 
 			<div v-fade-in="'up'">
 				<div class="donationAndSponsors _secondaryWidth">
@@ -174,47 +174,51 @@
 
 		<section class="section_decentralized _primaryWidth">
 			<div v-fade-in="'up'">
-				<div class="decentralized">
+				<div class="decentralizedBg"></div>
+			</div>
+			<div v-fade-in="'left'">
+				<div class="decentralizedContent _secondaryWidth">
+					<h2 class="decentralizedTitle"><b class="_textDecorated">{{ $t('_landing._decenterized.title') }}</b></h2>
+					<div class="decentralizedDescription">
+						<div style="line-height: 200%;">{{ $t('_landing._decenterized.description') }}</div>
+						<GButton buttonType="link" color="accent">{{ $t('learnMore') }}</GButton>
+					</div>
+				</div>
+			</div>
+			<div style="position: absolute; top: 50px; width: 100%;">
+				<div v-fade-in="'up'">
 					<div class="_secondaryWidth">
-						<div class="decentralizedContainer">
-							<div class="decentralizedCloud">
-							</div>
-							<div class="decentralizedContent">
-								<h2 class="decentralizedTitle"><b class="_textDecorated">{{ $t('_landing._decenterized.title') }}</b></h2>
-								<div class="decentralizedDescription">
-									<div style="line-height: 200%;">{{ $t('_landing._decenterized.description') }}</div>
-									<GButton buttonType="link" color="accent">{{ $t('learnMore') }}</GButton>
-								</div>
-							</div>
-						</div>
+						<div class="decentralizedCloud"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section_useCases _primaryWidth">
+			<div class="useCases _secondaryWidth">
+				<h2 class="useCasesTitle">{{ $t('_landing._useCases.title') }}</h2>
+				<div class="useCasesItemsContainer">
+					<div class="useCasesItem">
+						<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+						<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.single') }}</h3>
+					</div>
+					<div class="useCasesItem">
+						<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+						<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.official') }}</h3>
+					</div>
+					<div class="useCasesItem">
+						<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+						<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.community') }}</h3>
+					</div>
+					<div class="useCasesItem">
+						<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+						<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.inHouse') }}</h3>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<!--
-
-		<section class="useCases _secondaryWidth">
-			<h2 class="useCasesTitle">{{ $t('_landing._useCases.title') }}</h2>
-			<div class="useCasesItemsContainer">
-				<div class="useCasesItem">
-					<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
-					<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.single') }}</h3>
-				</div>
-				<div class="useCasesItem">
-					<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
-					<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.official') }}</h3>
-				</div>
-				<div class="useCasesItem">
-					<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
-					<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.community') }}</h3>
-				</div>
-				<div class="useCasesItem">
-					<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
-					<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.inHouse') }}</h3>
-				</div>
-			</div>
-		</section>
 
 		<section class="features _secondaryWidth">
 			<IndexFeatures />
@@ -234,13 +238,33 @@
 			<IndexFeaturesUpcoming />
 		</section>
 
-		<section class="getStarted" id="getStarted _secondaryWidth">
-			<IndexGetStarted />
-		</section>
-
 		-->
 
+		<section class="section_getStarted _primaryWidth" id="getStarted">
+			<GDots style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color: #0002; mask-image: linear-gradient(to bottom, transparent 0px, black 100px, black calc(100% - 100px), transparent 100%);" :space="30" />
+
+			<div v-fade-in="'up'">
+				<div class="getStarted _secondaryWidth">
+					<div>a</div>
+					<div>a</div>
+					<div>a</div>
+				</div>
+			</div>
+		</section>
+
 	</main>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 
 	<!--
 	<GFooter />
@@ -352,7 +376,7 @@ definePageMeta({
 }
 
 ._primaryWidth {
-	width: calc(100% - var(--w-margin) * 2);
+	width: calc(100vw - var(--w-margin) * 2);
 	max-width: var(--primary-width);
 	box-sizing: border-box;
 	margin-left: auto;
@@ -360,11 +384,17 @@ definePageMeta({
 }
 
 ._secondaryWidth {
-	width: calc(100% - var(--w-margin) * 2);
+	width: calc(100vw - var(--w-margin) * 2);
 	max-width: var(--secondary-width);
 	box-sizing: border-box;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+._textGradient {
+	background: linear-gradient(90deg, #86b300, #4ab300, #4ab300);
+	color: transparent;
+  background-clip: text;
 }
 
 ._textDecorated {
@@ -382,6 +412,9 @@ definePageMeta({
 	opacity: 0.5;
 	pointer-events: none;
 }
+
+/* ------------------------------------------------------------------------- */
+/* top section */
 
 .tickers {
 	display: flex;
@@ -543,6 +576,9 @@ definePageMeta({
 	fill: currentColor;
 }
 
+/* ------------------------------------------------------------------------- */
+/* key features section */
+
 .keyFeatures {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -590,6 +626,9 @@ definePageMeta({
 	font-size: 90%;
 }
 
+/* ------------------------------------------------------------------------- */
+/* stats section */
+
 .stats {
 	background: #fff6;
 	backdrop-filter: blur(12px);
@@ -626,6 +665,9 @@ definePageMeta({
 	fill: currentColor;
 	width: 300px;
 }
+
+/* ------------------------------------------------------------------------- */
+/* introduction section */
 
 .introductionTip {
 	padding: 24px 32px;
@@ -732,6 +774,8 @@ definePageMeta({
 	width: 100%;
 }
 
+/* ------------------------------------------------------------------------- */
+/* donation and sponsors section */
 
 .section_donationAndSponsors {
 	position: relative;
@@ -784,56 +828,49 @@ definePageMeta({
 	margin-bottom: 8px;
 }
 
+/* ------------------------------------------------------------------------- */
+/* decentralized section */
 
-.scroll-text {
+.section_decentralized {
 	position: relative;
-	text-align: center;
+	margin-bottom: 100px;
+	padding-bottom: 100px;
 }
 
-.scroll-text-svg {
-	display: inline-block;
-	width: 200px;
-}
-
-.non-top {
-	margin-top: -30px;
-	padding-top: 100px;
-
-	mask-image: linear-gradient(#000, #000), url("/section-mask.svg");
-  mask-repeat: no-repeat;
-  mask-position: center center, center -12px;
-  mask-size: 100% 100%, 1000px 100px;
-	mask-composite: exclude;
-}
-
-.decentralized {
-	margin-top: 64px;
-	margin-bottom: 64px;
-	padding: 55px;
-	border-radius: 16px;
+.decentralizedBg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 350px;
 	background: #f7f7f7;
+	border-radius: 16px;
+	overflow: clip;
+}
+:global(html.dark)  {
+	.decentralizedBg {
+		background: #222;
+	}
 }
 
 .decentralizedTitle {
-	font-size: 150%;
+	font-size: 140%;
 	font-weight: bold;
 	margin: 0;
 	margin-bottom: 32px;
 	text-align: right;
 }
 
-.decentralizedContainer {
-	display: flex;
-}
-
 .decentralizedContent {
-	flex: 1;
-	margin-left: 64px;
+	position: relative;
+	padding: 55px 0;
 }
 
 .decentralizedDescription {
 	font-size: 90%;
 	text-align: right;
+	max-width: 50%;
+	margin-left: auto;
 }
 
 .decentralizedCloud {
@@ -845,6 +882,10 @@ definePageMeta({
 	padding: 16px;
 	width: min-content;
 }
+
+
+/* ------------------------------------------------------------------------- */
+/* use cases section */
 
 .useCases {
 	margin-top: 32px;
@@ -888,10 +929,28 @@ definePageMeta({
 	margin: 10px 0;
 }
 
-.textGradient {
-	background: linear-gradient(90deg, #86b300, #4ab300, #4ab300);
-	color: transparent;
-  background-clip: text;
+
+/* ------------------------------------------------------------------------- */
+/* get started section */
+
+.section_getStarted {
+	position: relative;
+	padding: 128px 0;
+}
+
+.getStarted {
+	display: flex;
+	background: #fff6;
+	backdrop-filter: blur(8px);
+	border: solid 1px #0001;
+	border-radius: 16px;
+	padding: 32px;
+	gap: 16px;
+}
+:global(html.dark) {
+	.getStarted {
+		background: #262626;
+	}
 }
 </style>
 
@@ -911,6 +970,15 @@ definePageMeta({
 	transform: translateX(-200px);
 }
 .__v_fadeIn_right_in > * {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.__v_fadeIn_left_out > * {
+	opacity: 0;
+	transform: translateX(200px);
+}
+.__v_fadeIn_left_in > * {
 	opacity: 1;
 	transform: translateX(0);
 }
