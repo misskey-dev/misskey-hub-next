@@ -45,6 +45,7 @@
   "packageManager": "pnpm@9.15.7",
   "dependencies": {
     "@types/three": "^0.176.0",
+    "TagCloud": "^2.5.0",
     "nanoid": "^5.1.5",
     "swiper": "^11.2.6",
     "tinycolor2": "^1.6.0"

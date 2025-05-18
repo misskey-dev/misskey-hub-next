@@ -151,17 +151,17 @@
 				</div>
 			</div>
 			<div v-fade-in="'up'">
-			<div class="swiper _secondaryWidth">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/misskey-light.png"></div>
-					<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/ss-jobqueue.light.png"></div>
-					<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/misskey-light.png"></div>
-					<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/misskey-light.png"></div>
-					<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/misskey-light.png"></div>
+				<div class="swiper _secondaryWidth">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/misskey-light.png"></div>
+						<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/ss-jobqueue.light.png"></div>
+						<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/misskey-light.png"></div>
+						<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/misskey-light.png"></div>
+						<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/misskey-light.png"></div>
+					</div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
 				</div>
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
-			</div>
 			</div>
 		</section>
 
@@ -173,16 +173,19 @@
 		</section>
 
 		<section class="section_decentralized _primaryWidth">
-			<div class="decentralized">
-				<div class="_secondaryWidth">
-					<h2 class="decentralizedTitle"><b class="_textDecorated">{{ $t('_landing._decenterized.title') }}</b></h2>
-					<div class="decentralizedContainer">
-						<div class="decentralizedImage">
-							aaa
-						</div>
-						<div class="decentralizedDescription">
-							<div style="line-height: 200%;">{{ $t('_landing._decenterized.description') }}</div>
-							<GButton buttonType="link" color="accent">{{ $t('learnMore') }}</GButton>
+			<div v-fade-in="'up'">
+				<div class="decentralized">
+					<div class="_secondaryWidth">
+						<div class="decentralizedContainer">
+							<div class="decentralizedCloud">
+							</div>
+							<div class="decentralizedContent">
+								<h2 class="decentralizedTitle"><b class="_textDecorated">{{ $t('_landing._decenterized.title') }}</b></h2>
+								<div class="decentralizedDescription">
+									<div style="line-height: 200%;">{{ $t('_landing._decenterized.description') }}</div>
+									<GButton buttonType="link" color="accent">{{ $t('learnMore') }}</GButton>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -253,6 +256,7 @@ import 'swiper/css/bundle';
 import MegaphoneIco from 'bi/megaphone.svg';
 import ArrowRightIco from 'bi/arrow-right.svg';
 import { vFadeIn } from '@/assets/js/fadein';
+import TagCloud from 'TagCloud';
 
 const { notice } = useAppConfig();
 const isUwu = useState<boolean>('isUwu');
@@ -301,6 +305,35 @@ onMounted(() => {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
+	});
+
+	TagCloud('.decentralizedCloud', [
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+		'<img src="https://0key.dev/favicon.ico" width="35">',
+	], {
+		radius: 200,
+		maxSpeed: 'slow',
+		initSpeed: 'slow',
+		direction: 135,
+		useHTML: true,
 	});
 });
 
@@ -776,7 +809,7 @@ definePageMeta({
 .decentralized {
 	margin-top: 64px;
 	margin-bottom: 64px;
-	padding: 64px;
+	padding: 55px;
 	border-radius: 16px;
 	background: #f7f7f7;
 }
@@ -790,15 +823,27 @@ definePageMeta({
 }
 
 .decentralizedContainer {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	display: flex;
+}
+
+.decentralizedContent {
+	flex: 1;
+	margin-left: 64px;
 }
 
 .decentralizedDescription {
-	background: #eee;
-	border-radius: 16px;
-	padding: 32px;
 	font-size: 90%;
+	text-align: right;
+}
+
+.decentralizedCloud {
+	background: #fff6;
+	backdrop-filter: blur(12px);
+	color: #000b;
+	border: solid 1px #0001;
+	border-radius: 16px;
+	padding: 16px;
+	width: min-content;
 }
 
 .useCases {
