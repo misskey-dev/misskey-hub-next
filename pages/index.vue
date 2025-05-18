@@ -34,18 +34,18 @@
 				<div class="topLeft">
 					<div class="topTagline"><strong>Create.<br>Connect.<br>with <b class="textGradient">Misskey</b>.</strong></div>
 					<div class="topDescription">{{ $t('_landing._hero.description') }}</div>
-					<div v-if="notice" class="notice w-fit mx-auto lg:mx-0 rounded-full p-0.5">
-					<GNuxtLink :to="isLocalPath(notice.to) ? localePath(notice.to) : notice.to" :target="!isLocalPath(notice.to) ? '_blank' : undefined">
-						<div class="h-10 bg-white hover:bg-neutral-50 dark:bg-neutral-950 hover:dark:bg-neutral-800 rounded-full flex items-center p-0.5">
-							<div class="notice h-9 w-9 rounded-full mr-2 p-2">
-								<MegaphoneIco class="h-5 w-5 text-white -rotate-12" />
+					<GNuxtLink v-if="notice" class="notice _plainLink" :to="isLocalPath(notice.to) ? localePath(notice.to) : notice.to" :target="!isLocalPath(notice.to) ? '_blank' : undefined">
+						<div class="noticeInner">
+							<div class="noticeIconBase">
+								<MegaphoneIco style="width: 20px; height: 20px;" />
 							</div>
-							<div class="font-bold text-sm md:text-base mr-2">{{ localizedNotice }}<ArrowRightIco v-if="isLocalPath(notice.to)" class="ml-0.5" /><ArrowUpRightIco v-else class="ml-0.5" /></div>
+							<span>{{ localizedNotice }}</span>
+							<ArrowRightIco v-if="isLocalPath(notice.to)" />
+							<ArrowUpRightIco v-else />
 						</div>
 					</GNuxtLink>
-					</div>
 					<div class="topButtons">
-						<GButton button-type="button" color="accent" @click="scrollTo('#getStarted')">{{ $t('_landing._hero.gettingStarted') }}</GButton>
+						<GButton button-type="button" shadow color="accent" @click="scrollTo('#getStarted')">{{ $t('_landing._hero.gettingStarted') }}</GButton>
 						<GButton button-type="button" @click="scrollTo('#learnMore')">{{ $t('learnMore') }}</GButton>
 					</div>
 				</div>
@@ -193,6 +193,8 @@ import { scrollTo } from '@/assets/js/scroll-to';
 import { isLocalPath } from '@/assets/js/misc';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
+import MegaphoneIco from 'bi/megaphone.svg';
+import ArrowRightIco from 'bi/arrow-right.svg';
 
 const { notice } = useAppConfig();
 const isUwu = useState<boolean>('isUwu');
@@ -355,6 +357,36 @@ definePageMeta({
 }
 
 .topRightMi {
+}
+
+.notice {
+	display: block;
+	width: max-content;
+	box-sizing: border-box;
+	background: linear-gradient(90deg, #86b300, #4ab300, #4ab300);
+	border-radius: 999px;
+	padding: 2px;
+}
+
+.noticeInner {
+	display: flex;
+	align-items: center;
+	background: #fff;
+	border-radius: 999px;
+	box-sizing: border-box;
+	padding: 4px 16px 4px 4px;
+}
+
+.noticeIconBase {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	margin-right: 8px;
+	background: linear-gradient(90deg, #86b300, #4ab300, #4ab300);
+	border-radius: 999px;
+	color: #fff;
 }
 
 .keyFeatures {

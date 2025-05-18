@@ -1,0 +1,27 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+._plainButton {
+	appearance: none;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: inherit;
+	touch-action: manipulation;
+	tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	font-size: 1em;
+	font-family: inherit;
+	line-height: inherit;
+	max-width: 100%;
+}
+
+._plainLink {
+	color: inherit;
+	text-decoration: none;
+}

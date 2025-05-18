@@ -156,6 +156,7 @@ import { vFadeIn } from '@/assets/js/fadein';
 
 .itemContentImage {
 	display: block;
+	width: 100%;
 	border-radius: 8px;
 	margin: 0 0 16px 0;
 	aspect-ratio: 1.8;

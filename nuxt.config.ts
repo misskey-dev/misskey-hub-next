@@ -78,6 +78,7 @@ export default defineNuxtConfig({
 		CROWDIN_INTG_API: process.env.CROWDIN_INTG_API,
 	},
 	css: [
+		"@/assets/css/global.css",
 		"github-markdown-css/github-markdown.css",
 		"@/assets/css/nprogress.css",
 		"@/assets/css/mfm.scss",
