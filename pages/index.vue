@@ -1535,7 +1535,7 @@ definePageMeta({
 /* made by section */
 
 .section_madeBy {
-	min-height: 300px;
+	min-height: 350px;
 	text-align: center;
 }
 
