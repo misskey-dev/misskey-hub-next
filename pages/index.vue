@@ -237,7 +237,7 @@
 						<div class="freeDescription">{{ $t('_landing._free.description') }}</div>
 					</div>
 					<div class="section_free_sub">
-						aaa
+						<GHIcon class="section_free_sub_icon" />
 					</div>
 				</div>
 			</div>
@@ -321,6 +321,7 @@ import ArrowUpRightIco from 'bi/arrow-up-right.svg';
 import { vFadeIn } from '@/assets/js/vFadeIn';
 import { vTextUnderline } from '@/assets/js/vTextUnderline';
 import TagCloud from 'TagCloud';
+import GHIcon from "bi/github.svg";
 
 const { notice } = useAppConfig();
 const isUwu = useState<boolean>('isUwu');
@@ -994,7 +995,7 @@ definePageMeta({
 .free {
 	position: relative;
 	display: flex;
-	padding: 16px;
+	padding: 24px;
 	background: #f7f7f7;
 	border-radius: 16px;
 }
@@ -1007,7 +1008,7 @@ definePageMeta({
 .section_free_main {
 	position: relative;
 	flex: 1;
-	padding: 32px;
+	padding: 24px;
 }
 
 .section_free_sub {
@@ -1018,11 +1019,18 @@ definePageMeta({
 	text-align: center;
 	box-sizing: border-box;
 	width: 300px;
+	place-content: center;
 }
 :global(html.dark)  {
 	.section_free_sub {
 		color: #f0ffc7;
 	}
+}
+
+.section_free_sub_icon {
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
 }
 
 .freeTitle {
