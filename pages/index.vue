@@ -265,26 +265,382 @@
 			</div>
 			<div v-fade-in="'up'">
 				<div class="_secondaryWidth">
-					<IndexFeatures />
+					<div :class="$style.features_items">
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/top-features-note.png" :class="$style.features_itemContentImage" alt="some notes">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._note.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._note.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/top-features-reaction.png" :class="$style.features_itemContentImage" alt="some emojis in the reaction picker">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._reaction.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._reaction.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/customEmojis.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._customEmojis.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._customEmojis.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/role.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._roles.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._roles.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/top-features-charts.png" :class="$style.features_itemContentImage" alt="Charts">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._charts.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._charts.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._privacy.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._privacy.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._multiPurpose.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._multiPurpose.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/oss.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._oss.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._oss.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/top-features-federation.png" :class="$style.features_itemContentImage" alt="logos of Misskey and other ActivityPub server software">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._federation.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._federation.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/top-features-drive.png" :class="$style.features_itemContentImage" alt="a list of files in Misskey Drive">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._drive.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._drive.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/2fa.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._2fa.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._2fa.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/branding.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._branding.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._branding.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/moderation.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._moderation.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._moderation.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._monetization.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._monetization.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/since2014.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._battleTested.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._battleTested.description') }}</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<!--
-
-		<section class="featuresServer _secondaryWidth">
-			<IndexFeaturesServer  />
+		<section class="section_features _primaryWidth">
+			<div v-fade-in="'up'">
+				<div class="section_features_bg">
+					<IndexHeroBg/>
+				</div>
+			</div>
+			<div v-fade-in="'up'">
+				<div class="section_features_header _secondaryWidth">
+					<h2 class="section_features_title"><b v-text-underline>{{ $t('_landing._featuresServer._root.title') }}</b></h2>
+					<div class="section_features_description">{{ $t('_landing._featuresServer._root.description') }}</div>
+				</div>
+			</div>
+			<div v-fade-in="'up'">
+				<div class="_secondaryWidth">
+					<div :class="$style.features_items">
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._easyInstall.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._easyInstall.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._easySetup.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._easySetup.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/nodejs.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._nodejs.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._nodejs.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._postgresql.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._postgresql.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/scalable.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._scalable.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._scalable.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/jobQueue.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._jobQueue.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._jobQueue.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._seo.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._seo.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._cdn.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._cdn.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/api.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._api.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._api.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._relay.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._relay.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/ftt.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._ftt.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._ftt.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/rbt.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._rbt.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._rbt.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._fullTextSearch.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._fullTextSearch.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/ml.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._ml.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._ml.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/sentry.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._sentry.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._sentry.description') }}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 
-		<section class="featuresClient _secondaryWidth">
-			<IndexFeaturesClient />
+		<section class="section_features _primaryWidth">
+			<div v-fade-in="'up'">
+				<div class="section_features_bg">
+					<IndexHeroBg/>
+				</div>
+			</div>
+			<div v-fade-in="'up'">
+				<div class="section_features_header _secondaryWidth">
+					<h2 class="section_features_title"><b v-text-underline>{{ $t('_landing._featuresClient._root.title') }}</b></h2>
+					<div class="section_features_description">{{ $t('_landing._featuresClient._root.description') }}</div>
+				</div>
+			</div>
+			<div v-fade-in="'up'">
+				<div class="_secondaryWidth">
+					<div :class="$style.features_items">
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/responsive.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._responsive.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._responsive.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/theme.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._theme.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._theme.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/mfm.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._mfm.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._mfm.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/deck.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._deck.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._deck.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._realtimeMode.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._realtimeMode.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._pushNotification.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._pushNotification.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/multiAccounts.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._multiAccounts.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._multiAccounts.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/widgets.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._widgets.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._widgets.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/settings.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._settingsManagement.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._settingsManagement.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._achievements.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._achievements.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/plugin.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._plugin.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._plugin.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._embed.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._embed.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._pwa.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._pwa.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<img src="/img/top-features/i18n.webp" :class="$style.features_itemContentImage">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._i18n.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._i18n.description') }}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
-
-		<section class="featuresUpcoming _secondaryWidth">
-			<IndexFeaturesUpcoming />
+		
+		<section class="section_features _primaryWidth">
+			<div v-fade-in="'up'">
+				<div class="section_features_bg">
+					<IndexHeroBg/>
+				</div>
+			</div>
+			<div v-fade-in="'up'">
+				<div class="section_features_header _secondaryWidth">
+					<h2 class="section_features_title"><b v-text-underline>{{ $t('_landing._featuresUpcoming._root.title') }}</b></h2>
+					<div class="section_features_description">{{ $t('_landing._featuresUpcoming._root.description') }}</div>
+				</div>
+			</div>
+			<div v-fade-in="'up'">
+				<div class="_secondaryWidth">
+					<div :class="$style.features_items">
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresUpcoming._jwt.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresUpcoming._jwt.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresUpcoming._newBackend.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresUpcoming._newBackend.description') }}</div>
+							</div>
+						</div>
+						<div v-fade-in="'featuresItem'" :class="$style.features_item">
+							<div :class="$style.features_itemContent">
+								<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresUpcoming._vueVapor.title') }}</h3>
+								<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresUpcoming._vueVapor.description') }}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
-
-		-->
 
 		<section class="section_getStarted _primaryWidth" id="getStarted">
 			<GDots class="dotsBgPrimary" :space="30" />
@@ -950,11 +1306,16 @@ definePageMeta({
 }
 
 .useCasesItem {
+	/*
 	background: #86b30025;
+	*/
 	border-radius: 16px;
 	color: #484a40;
 	padding: 32px;
 	text-align: center;
+
+	background: radial-gradient(farthest-corner at 40px 40px, #84b3001f 0%, #00000000 100%);
+  border: solid 1px #7db3001c;
 
 	mask-image: linear-gradient(#000, #000), url("/circle.svg");
   mask-repeat: no-repeat;
@@ -1059,7 +1420,6 @@ definePageMeta({
 .section_features {
 	position: relative;
 	margin-bottom: 100px;
-	padding-bottom: 400px;
 }
 
 .section_features_bg {
@@ -1111,6 +1471,56 @@ definePageMeta({
 }
 </style>
 
+<style module>
+.features_items {
+	flex: 1;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 16px;
+}
+
+.features_itemContent {
+	background: #fff6;
+	backdrop-filter: blur(12px);
+	color: #000b;
+	border: solid 1px #0001;
+	border-radius: 16px;
+	padding: 20px;
+
+	font-size: 90%;
+	box-sizing: border-box;
+	height: 100%;
+}
+:global(html.dark) {
+	.features_itemContent {
+		background: #3336;
+		color: #fffd;
+		border: solid 1px #fff1;
+	}
+}
+
+.features_itemContentImage {
+	display: block;
+	width: 100%;
+	border-radius: 8px;
+	margin: 0 0 16px 0;
+	aspect-ratio: 1.8;
+	object-fit: cover;
+}
+
+.features_itemContentTitle {
+	font-size: 120%;
+	font-weight: bold;
+	margin: 0 0 8px 0;
+	padding: 0 6px;
+}
+
+.features_itemContentDescription {
+	margin: 0;
+	padding: 0 6px 0 6px;
+}
+</style>
+
 <style scoped>
 .__v_fadeIn_up_out > * {
 	opacity: 0;
@@ -1138,5 +1548,15 @@ definePageMeta({
 .__v_fadeIn_left_in > * {
 	opacity: 1;
 	transform: translateX(0);
+}
+
+.__v_fadeIn_featuresItem_out > * {
+	opacity: 0;
+	transform: translateY(150px);
+}
+
+.__v_fadeIn_featuresItem_in > * {
+	opacity: 1;
+	transform: translateY(0);
 }
 </style>
