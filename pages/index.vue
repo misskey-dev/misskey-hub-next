@@ -182,8 +182,10 @@
 				<div class="section_decentralized_content">
 					<h2 class="section_decentralized_title"><b v-text-underline>{{ $t('_landing._decenterized.title') }}</b></h2>
 					<div class="section_decentralized_description">
-						<div style="line-height: 200%;">{{ $t('_landing._decenterized.description') }}</div>
-						<GButton buttonType="link" color="accent">{{ $t('learnMore') }}</GButton>
+						<I18nT scope="global" keypath="_landing._decenterized.description" tag="div">
+							<b v-text-underline>{{ $t('_landing._decenterized.activityPub') }}</b>
+						</I18nT>
+						<GButton buttonType="link" color="accent" style="margin-top: 12px;">{{ $t('learnMore') }}</GButton>
 					</div>
 				</div>
 			</div>
