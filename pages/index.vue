@@ -645,11 +645,41 @@
 		<section class="section_getStarted _primaryWidth" id="getStarted">
 			<GDots class="dotsBgPrimary" :space="30" />
 
-			<div v-fade-in="'up'">
-				<div class="getStarted _secondaryWidth acrylic">
-					<div>a</div>
-					<div>a</div>
-					<div>a</div>
+			<div class="section_getStarted_content _secondaryWidth">
+				<div v-fade-in="'up'">
+					<div class="section_getStarted_titleContainer acrylic">
+						<b class="section_getStarted_titleContainer_title">{{ $t('_landing._getStarted.title') }}</b>
+					</div>
+				</div>
+				<div class="section_getStarted_items">
+					<div v-fade-in="'up'" class="section_getStarted_itemContainer">
+						<div class="section_getStarted_item acrylic">
+							<img class="section_getStarted_item_icon" src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true">
+							<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._create.title') }}</b>
+							<GButton color="accent" buttonType="link" :to="localePath('/servers')">{{ $t('_landing._getStarted._create.guide') }}<ArrowRightIco /></GButton>
+						</div>
+					</div>
+					<div v-fade-in="'up'" class="section_getStarted_itemContainer">
+						<div class="section_getStarted_item acrylic">
+							<img class="section_getStarted_item_icon" src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true">
+							<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._docs.title') }}</b>
+							<GButton color="accent" buttonType="link" :to="localePath('/servers')">{{ $t('_landing._getStarted._docs.docs') }}<ArrowRightIco /></GButton>
+						</div>
+					</div>
+					<div v-fade-in="'up'" class="section_getStarted_itemContainer">
+						<div class="section_getStarted_item acrylic">
+							<img class="section_getStarted_item_icon" src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true">
+							<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._find.title') }}</b>
+							<GButton color="accent" buttonType="link" :to="localePath('/servers')">{{ $t('_landing._getStarted._find.list') }}<ArrowRightIco /></GButton>
+						</div>
+					</div>
+					<div v-fade-in="'up'" class="section_getStarted_itemContainer">
+						<div class="section_getStarted_item acrylic">
+							<img class="section_getStarted_item_icon" src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true">
+							<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._dev.title') }}</b>
+							<GButton color="accent" buttonType="link" :to="localePath('/servers')">GitHub<ArrowUpRightIco /></GButton>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -1463,10 +1493,44 @@ definePageMeta({
 	padding: 128px 0;
 }
 
-.getStarted {
+.section_getStarted_titleContainer {
+	padding: 24px;
+	text-align: center;
+	margin-bottom: 16px;
+}
+
+.section_getStarted_titleContainer_title {
+	font-size: 130%;
+	font-weight: bold;
+	margin: 0;
+}
+
+.section_getStarted_items {
 	display: flex;
-	padding: 32px;
 	gap: 16px;
+}
+
+.section_getStarted_itemContainer {
+	flex: 1;
+}
+
+.section_getStarted_item {
+	padding: 24px;
+	text-align: center;
+}
+
+.section_getStarted_item_icon {
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+.section_getStarted_item_title {
+	display: block;
+	font-size: 100%;
+	font-weight: bold;
+	margin: 12px 0;
 }
 </style>
 

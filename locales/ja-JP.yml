@@ -240,13 +240,15 @@ _landing:
     title: "Misskeyをはじめよう"
     _find:
       title: "サーバーを見つける"
-      list: "サーバーのリスト"
+      list: "サーバーリスト"
     _create:
       title: "サーバーを作成"
       guide: "セットアップガイド"
     _docs:
       title: "さらに詳しく知る"
-      docs: "ドキュメントを見る"
+      docs: "ドキュメント"
+    _dev:
+      title: "開発に参加する"
   _donation:
     title: "ご支援のお願い"
     description: "Misskeyは非営利なプロジェクトで、少数の有志による開発のため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入ってくださいましたら、今後も開発を続けられるようにぜひ支援をお願いします。"
