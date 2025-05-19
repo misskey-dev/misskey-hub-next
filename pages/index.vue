@@ -693,32 +693,7 @@
 
 	</main>
 
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	
-	<!--
 	<GFooter />
-	-->
 </div>
 </template>
 
@@ -1560,6 +1535,7 @@ definePageMeta({
 /* made by section */
 
 .section_madeBy {
+	min-height: 300px;
 	text-align: center;
 }
 
