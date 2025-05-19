@@ -8,7 +8,7 @@
 		<nav :class="$style.container">
 			<GNuxtLink class="_plainLink" :to="localePath('/')" style="display: flex; align-items: center; gap: 8px; min-width: 0; white-space: nowrap;">
 				<MiIcon style="width: 30px"/>
-				<div><b>{{ $t('_seo.siteName') }}</b></div>
+				<div><b>Misskey</b></div>
 			</GNuxtLink>
 			<div :class="$style.navItems">
 				<span v-for="item in NavData.center">

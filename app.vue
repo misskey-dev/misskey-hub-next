@@ -47,7 +47,7 @@ const getDescription = (): string => {
         return t('_seo.defaultDescription');
     }
 }
-const getTitle = () => route.meta.title ? `${route.meta.title} | ${t('_seo.siteName')}` : t('_seo.siteNameLong');
+const getTitle = () => route.meta.title ? `${route.meta.title} | Misskey` : t('_seo.siteNameLong');
 const getLdJson = (additionalGraphes: Thing[] = []): string => {
     const ldJson: Graph = {
         "@context": "https://schema.org",
@@ -68,7 +68,7 @@ const getLdJson = (additionalGraphes: Thing[] = []): string => {
             {
                 "@type": "WebSite",
                 "@id": `${baseUrl}/#WebPage`,
-                "name": locale.value.includes('ja') ? '【Misskeyプロジェクト公式】Misskey Hub' : t('_seo.siteName'),
+                "name": locale.value.includes('ja') ? '【Misskeyプロジェクト公式】Misskey Hub' : 'Misskey',
                 "inLanguage": locale.value,
                 "url": `${baseUrl}${route.path}`,
                 "publisher": {
@@ -142,7 +142,7 @@ useHead(() => ({
         },
         {
             property: "og:site_name",
-            content: t('_seo.siteName'),
+            content: 'Misskey',
         },
         {
             property: "og:description",
