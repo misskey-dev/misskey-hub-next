@@ -656,14 +656,14 @@
 						<div class="section_getStarted_item acrylic">
 							<img class="section_getStarted_item_icon" src="/img/emojis/package_color.svg" aria-hidden="true">
 							<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._create.title') }}</b>
-							<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/servers')">{{ $t('_landing._getStarted._create.guide') }}<ArrowRightIco /></GButton>
+							<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/docs/for-admin/install/guides/')">{{ $t('_landing._getStarted._create.guide') }}<ArrowRightIco /></GButton>
 						</div>
 					</div>
 					<div v-fade-in="'up'" class="section_getStarted_itemContainer">
 						<div class="section_getStarted_item acrylic">
 							<img class="section_getStarted_item_icon" src="/img/emojis/light_bulb_color.svg" aria-hidden="true">
 							<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._docs.title') }}</b>
-							<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/servers')">{{ $t('_landing._getStarted._docs.docs') }}<ArrowRightIco /></GButton>
+							<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/docs')">{{ $t('_landing._getStarted._docs.docs') }}<ArrowRightIco /></GButton>
 						</div>
 					</div>
 					<div v-fade-in="'up'" class="section_getStarted_itemContainer">
@@ -677,7 +677,7 @@
 						<div class="section_getStarted_item acrylic">
 							<img class="section_getStarted_item_icon" src="/img/emojis/hammer_and_wrench_color.svg" aria-hidden="true">
 							<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._dev.title') }}</b>
-							<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/servers')">GitHub<ArrowUpRightIco /></GButton>
+							<GButton class="section_getStarted_item_button" color="accent" buttonType="link" to="https://github.com/misskey-dev">GitHub<ArrowUpRightIco /></GButton>
 						</div>
 					</div>
 				</div>
@@ -1500,7 +1500,7 @@ definePageMeta({
 }
 
 .section_getStarted_titleContainer_title {
-	font-size: 130%;
+	font-size: 120%;
 	font-weight: bold;
 	margin: 0;
 }
