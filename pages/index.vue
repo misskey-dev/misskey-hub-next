@@ -648,7 +648,7 @@
 			<div class="section_getStarted_content _secondaryWidth">
 				<div v-fade-in="'up'">
 					<div class="section_getStarted_titleContainer acrylic">
-						<b class="section_getStarted_titleContainer_title">{{ $t('_landing._getStarted.title') }}</b>
+						<h2 class="section_getStarted_titleContainer_title"><b v-text-underline>{{ $t('_landing._getStarted.title') }}</b></h2>
 					</div>
 				</div>
 				<div class="section_getStarted_items">
