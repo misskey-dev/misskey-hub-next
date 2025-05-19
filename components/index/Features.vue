@@ -1,9 +1,5 @@
 <template>
 <div :class="$style.root">
-	<div :class="$style.header">
-		<h2 :class="$style.headerTitle">{{ $t('_landing._features._root.title') }}</h2>
-		<p>{{ $t('_landing._features._root.description') }}</p>
-	</div>
 	<div :class="$style.items">
 		<div v-fade-in :class="$style.item">
 			<div :class="$style.itemContent">
@@ -112,7 +108,7 @@
 </template>
 
 <script setup lang="ts">
-import { vFadeIn } from '@/assets/js/fadein';
+import { vFadeIn } from '@/assets/js/vFadeIn';
 </script>
 
 <style module>
@@ -123,16 +119,6 @@ import { vFadeIn } from '@/assets/js/fadein';
 	.root {
 		grid-template-columns: 300px repeat(2, 1fr);
 	}
-}
-
-.header {
-	text-align: center;
-	margin-bottom: 16px;
-}
-
-.headerTitle {
-	font-size: 170%;
-	font-weight: bold;
 }
 
 .items {

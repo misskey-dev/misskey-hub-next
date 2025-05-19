@@ -80,7 +80,7 @@
 </template>
 
 <script setup lang="ts">
-import { vFadeIn } from '@/assets/js/fadein';
+import { vFadeIn } from '@/assets/js/vFadeIn';
 </script>
 
 <style scoped>

@@ -33,3 +33,32 @@ html.dark {
 	color: inherit;
 	text-decoration: none;
 }
+
+.__v_textUnderline {
+	position: relative;
+}
+.__v_textUnderline::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	height: 6px;
+	background: linear-gradient(90deg, #86b300, #4ab300, #4ab300);
+	border-radius: 999px;
+	pointer-events: none;
+	transition: all 0.5s ease;
+	transition-delay: 0.3s;
+}
+.__v_textUnderline_out::before {
+	opacity: 0;
+	width: 0%;
+}
+.__v_textUnderline_in::before {
+	opacity: 0.6;
+	width: 100%;
+}
+:global(html.dark) {
+	.__v_textUnderline_in::before {
+		opacity: 0.75;
+	}
+}

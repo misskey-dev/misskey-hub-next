@@ -146,7 +146,7 @@
 			</svg>
 			<div v-fade-in="'right'">
 				<div class="introduction _secondaryWidth">
-					<h2 class="introductionTitle"><b class="_textDecorated">{{ $t('_landing._introduction.title') }}</b></h2>
+					<h2 class="introductionTitle"><b v-text-underline>{{ $t('_landing._introduction.title') }}</b></h2>
 					<div class="introductionDescription">{{ $t('_landing._introduction.description') }}</div>
 				</div>
 			</div>
@@ -174,13 +174,13 @@
 
 		<section class="section_decentralized _secondaryWidth">
 			<div v-fade-in="'right'">
-				<div class="decentralizedCloudContainer acrylic">
+				<div class="decentralizedCloudContainer">
 					<div class="decentralizedCloud"></div>
 				</div>
 			</div>
 			<div v-fade-in="'left'">
 				<div class="decentralizedContent">
-					<h2 class="decentralizedTitle"><b class="_textDecorated">{{ $t('_landing._decenterized.title') }}</b></h2>
+					<h2 class="decentralizedTitle"><b v-text-underline>{{ $t('_landing._decenterized.title') }}</b></h2>
 					<div class="decentralizedDescription">
 						<div style="line-height: 200%;">{{ $t('_landing._decenterized.description') }}</div>
 						<GButton buttonType="link" color="accent">{{ $t('learnMore') }}</GButton>
@@ -198,24 +198,28 @@
 					<div v-fade-in="'up'">
 						<div class="useCasesItem">
 							<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+							<b class="useCasesItemLabel">Single</b>
 							<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.single') }}</h3>
 						</div>
 					</div>
 					<div v-fade-in="'up'">
 						<div class="useCasesItem">
 							<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+							<b class="useCasesItemLabel">Official</b>
 							<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.official') }}</h3>
 						</div>
 					</div>
 					<div v-fade-in="'up'">
 						<div class="useCasesItem">
 							<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+							<b class="useCasesItemLabel">Community</b>
 							<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.community') }}</h3>
 						</div>
 					</div>
 					<div v-fade-in="'up'">
 						<div class="useCasesItem">
 							<div class="useCasesItemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+							<b class="useCasesItemLabel">Private</b>
 							<h3 class="useCasesItemTitle">{{ $t('_landing._useCases.inHouse') }}</h3>
 						</div>
 					</div>
@@ -228,15 +232,33 @@
 
 			<div v-fade-in="'up'">
 				<div class="free _secondaryWidth">
-					<h2 class="freeTitle"><b class="_textDecorated">{{ $t('_landing._free.title') }}</b></h2>
-					<div class="freeDescription">{{ $t('_landing._free.description') }}</div>
+					<div class="section_free_main">
+						<h2 class="freeTitle"><b v-text-underline>{{ $t('_landing._free.title') }}</b></h2>
+						<div class="freeDescription">{{ $t('_landing._free.description') }}</div>
+					</div>
+					<div class="section_free_sub">
+						aaa
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="section_features _primaryWidth">
-			<div class="_secondaryWidth">
-				<IndexFeatures />
+			<div v-fade-in="'up'">
+				<div class="section_features_bg">
+					<IndexHeroBg/>
+				</div>
+			</div>
+			<div v-fade-in="'up'">
+				<div class="section_features_header _secondaryWidth">
+					<h2 class="section_features_title"><b v-text-underline>{{ $t('_landing._features._root.title') }}</b></h2>
+					<div class="section_features_description">{{ $t('_landing._features._root.description') }}</div>
+				</div>
+			</div>
+			<div v-fade-in="'up'">
+				<div class="_secondaryWidth">
+					<IndexFeatures />
+				</div>
 			</div>
 		</section>
 
@@ -295,7 +317,9 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import MegaphoneIco from 'bi/megaphone.svg';
 import ArrowRightIco from 'bi/arrow-right.svg';
-import { vFadeIn } from '@/assets/js/fadein';
+import ArrowUpRightIco from 'bi/arrow-up-right.svg';
+import { vFadeIn } from '@/assets/js/vFadeIn';
+import { vTextUnderline } from '@/assets/js/vTextUnderline';
 import TagCloud from 'TagCloud';
 
 const { notice } = useAppConfig();
@@ -411,27 +435,6 @@ definePageMeta({
 	background: linear-gradient(90deg, #86b300, #4ab300, #4ab300);
 	color: transparent;
   background-clip: text;
-}
-
-._textDecorated {
-	position: relative;
-}
-._textDecorated::before {
-	content: '';
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: -2px;
-	height: 6px;
-	background: linear-gradient(90deg, #86b300, #4ab300, #4ab300);
-	border-radius: 999px;
-	opacity: 0.5;
-	pointer-events: none;
-}
-:global(html.dark) {
-	._textDecorated::before {
-		opacity: 0.75;
-	}
 }
 
 .dotsBg {
@@ -565,7 +568,7 @@ definePageMeta({
 
 .topLeft {
 	position: relative;
-	padding: 40px 0 32px 0;
+	padding: 45px 0 32px 0;
 }
 
 .topRight {
@@ -878,7 +881,7 @@ definePageMeta({
 .section_decentralized {
 	position: relative;
 	margin-bottom: 50px;
-	margin-top: 50px;
+	margin-top: 32px;
 	display: flex;
 	align-items: center;
 }
@@ -887,21 +890,27 @@ definePageMeta({
 	font-size: 140%;
 	font-weight: bold;
 	margin: 0;
-	margin-bottom: 32px;
-	text-align: right;
+	margin-bottom: 24px;
 }
 
 .decentralizedContent {
 	position: relative;
+	background: #f7f7f7;
+	padding: 64px;
+	border-radius: 16px;
+}
+:global(html.dark)  {
+	.decentralizedContent {
+		background: #222;
+	}
 }
 
 .decentralizedDescription {
 	font-size: 90%;
-	text-align: right;
 }
 
 .decentralizedCloudContainer {
-	margin-right: 64px;
+	margin-right: 32px;
 }
 
 .decentralizedCloud {
@@ -937,6 +946,12 @@ definePageMeta({
 	color: #484a40;
 	padding: 32px;
 	text-align: center;
+
+	mask-image: linear-gradient(#000, #000), url("/circle.svg");
+  mask-repeat: no-repeat;
+  mask-position: center center, 16px 16px;
+  mask-size: 100% 100%, 16px 16px;
+	mask-composite: exclude;
 }
 :global(html.dark)  {
 	.useCasesItem {
@@ -952,14 +967,24 @@ definePageMeta({
 	width: 100%;
 	height: 100%;
 }
+.useCasesItemLabel {
+	display: block;
+	font-size: 90%;
+	margin: 10px auto;
+	background: #9ad11b;
+	color: #000;
+	border-radius: 999px;
+	padding: 3px 16px;
+	width: max-content;
+	margin-bottom: 8px;
+}
 .useCasesItemTitle {
 	font-size: 90%;
-	margin: 10px 0;
+	margin: 0;
 }
 
 /* ------------------------------------------------------------------------- */
 /* free section */
-
 
 .section_free {
 	position: relative;
@@ -968,13 +993,35 @@ definePageMeta({
 
 .free {
 	position: relative;
-	padding: 64px;
+	display: flex;
+	padding: 16px;
 	background: #f7f7f7;
 	border-radius: 16px;
 }
 :global(html.dark)  {
 	.free {
 		background: #222;
+	}
+}
+
+.section_free_main {
+	position: relative;
+	flex: 1;
+	padding: 32px;
+}
+
+.section_free_sub {
+	background: #86b30025;
+	border-radius: 16px;
+	color: #484a40;
+	padding: 32px;
+	text-align: center;
+	box-sizing: border-box;
+	width: 300px;
+}
+:global(html.dark)  {
+	.section_free_sub {
+		color: #f0ffc7;
 	}
 }
 
@@ -994,8 +1041,43 @@ definePageMeta({
 
 .section_features {
 	position: relative;
+	margin-bottom: 100px;
+	padding-bottom: 400px;
 }
 
+.section_features_bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 500px;
+	background: #f7f7f7;
+	border-radius: 16px;
+	overflow: clip;
+}
+:global(html.dark)  {
+	.section_features_bg {
+		background: #222;
+	}
+}
+
+.section_features_header {
+	position: relative;
+	padding-top: 55px;
+	padding-bottom: 55px;
+	text-align: center;
+}
+
+.section_features_title {
+	font-size: 150%;
+	font-weight: bold;
+	margin: 0;
+	margin-bottom: 24px;
+}
+
+.section_features_description {
+	margin: 0 auto;
+}
 
 /* ------------------------------------------------------------------------- */
 /* get started section */
