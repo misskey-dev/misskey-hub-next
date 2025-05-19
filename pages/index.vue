@@ -197,28 +197,28 @@
 				<div class="section_useCases_items">
 					<div v-fade-in="'up'">
 						<div class="section_useCases_item">
-							<div class="section_useCases_itemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+							<div class="section_useCases_itemIcon"><img src="/img/emojis/house_color.svg" aria-hidden="true"></div>
 							<b class="section_useCases_itemLabel">Single</b>
 							<h3 class="section_useCases_itemTitle">{{ $t('_landing._useCases.single') }}</h3>
 						</div>
 					</div>
 					<div v-fade-in="'up'">
 						<div class="section_useCases_item">
-							<div class="section_useCases_itemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+							<div class="section_useCases_itemIcon"><img src="/img/emojis/check_mark_button_color.svg" aria-hidden="true"></div>
 							<b class="section_useCases_itemLabel">Official</b>
 							<h3 class="section_useCases_itemTitle">{{ $t('_landing._useCases.official') }}</h3>
 						</div>
 					</div>
 					<div v-fade-in="'up'">
 						<div class="section_useCases_item">
-							<div class="section_useCases_itemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+							<div class="section_useCases_itemIcon"><img src="/img/emojis/globe_with_meridians_color.svg" aria-hidden="true"></div>
 							<b class="section_useCases_itemLabel">Community</b>
 							<h3 class="section_useCases_itemTitle">{{ $t('_landing._useCases.community') }}</h3>
 						</div>
 					</div>
 					<div v-fade-in="'up'">
 						<div class="section_useCases_item">
-							<div class="section_useCases_itemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
+							<div class="section_useCases_itemIcon"><img src="/img/emojis/locked_color.svg" aria-hidden="true"></div>
 							<b class="section_useCases_itemLabel">Private</b>
 							<h3 class="section_useCases_itemTitle">{{ $t('_landing._useCases.inHouse') }}</h3>
 						</div>
@@ -233,7 +233,7 @@
 			<div v-fade-in="'up'">
 				<div class="section_free_content _secondaryWidth">
 					<div class="section_free_main">
-						<h2 class="section_free_title"><b v-text-underline>{{ $t('_landing._free.title') }}</b></h2>
+						<h2 class="section_free_title"><b v-text-underline>{{ $t('_landing._free.title') }}🍀</b></h2>
 						<div class="section_free_description">{{ $t('_landing._free.description') }}</div>
 						<div>
 							<GButton buttonType="link" to="https://github.com/misskey-dev" color="accent">View GitHub</GButton>
@@ -654,30 +654,30 @@
 				<div class="section_getStarted_items">
 					<div v-fade-in="'up'" class="section_getStarted_itemContainer">
 						<div class="section_getStarted_item acrylic">
-							<img class="section_getStarted_item_icon" src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true">
+							<img class="section_getStarted_item_icon" src="/img/emojis/package_color.svg" aria-hidden="true">
 							<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._create.title') }}</b>
-							<GButton color="accent" buttonType="link" :to="localePath('/servers')">{{ $t('_landing._getStarted._create.guide') }}<ArrowRightIco /></GButton>
+							<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/servers')">{{ $t('_landing._getStarted._create.guide') }}<ArrowRightIco /></GButton>
 						</div>
 					</div>
 					<div v-fade-in="'up'" class="section_getStarted_itemContainer">
 						<div class="section_getStarted_item acrylic">
-							<img class="section_getStarted_item_icon" src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true">
+							<img class="section_getStarted_item_icon" src="/img/emojis/light_bulb_color.svg" aria-hidden="true">
 							<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._docs.title') }}</b>
-							<GButton color="accent" buttonType="link" :to="localePath('/servers')">{{ $t('_landing._getStarted._docs.docs') }}<ArrowRightIco /></GButton>
+							<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/servers')">{{ $t('_landing._getStarted._docs.docs') }}<ArrowRightIco /></GButton>
 						</div>
 					</div>
 					<div v-fade-in="'up'" class="section_getStarted_itemContainer">
 						<div class="section_getStarted_item acrylic">
-							<img class="section_getStarted_item_icon" src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true">
+							<img class="section_getStarted_item_icon" src="/img/emojis/ringed_planet_color.svg" aria-hidden="true">
 							<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._find.title') }}</b>
-							<GButton color="accent" buttonType="link" :to="localePath('/servers')">{{ $t('_landing._getStarted._find.list') }}<ArrowRightIco /></GButton>
+							<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/servers')">{{ $t('_landing._getStarted._find.list') }}<ArrowRightIco /></GButton>
 						</div>
 					</div>
 					<div v-fade-in="'up'" class="section_getStarted_itemContainer">
 						<div class="section_getStarted_item acrylic">
-							<img class="section_getStarted_item_icon" src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true">
+							<img class="section_getStarted_item_icon" src="/img/emojis/hammer_and_wrench_color.svg" aria-hidden="true">
 							<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._dev.title') }}</b>
-							<GButton color="accent" buttonType="link" :to="localePath('/servers')">GitHub<ArrowUpRightIco /></GButton>
+							<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/servers')">GitHub<ArrowUpRightIco /></GButton>
 						</div>
 					</div>
 				</div>
@@ -766,7 +766,7 @@ onMounted(() => {
 		},
 	});
 
-	TagCloud('.decentralizedCloud', [
+	TagCloud('.section_decentralized_cloudContainer_cloud', [
 		'<img src="https://0key.dev/favicon.ico" width="35">',
 		'<img src="https://0key.dev/favicon.ico" width="35">',
 		'<img src="https://0key.dev/favicon.ico" width="35">',
@@ -1531,6 +1531,10 @@ definePageMeta({
 	font-size: 100%;
 	font-weight: bold;
 	margin: 12px 0;
+}
+
+.section_getStarted_item_button {
+	font-size: 90%;
 }
 </style>
 
