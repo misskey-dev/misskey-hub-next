@@ -32,6 +32,7 @@ function onClick() {
 
 <style module>
 .button {
+	display: inline-block;
 	padding: 0.5em 1.5em;
 	border-radius: 999px;
 }

@@ -235,9 +235,17 @@
 					<div class="section_free_main">
 						<h2 class="freeTitle"><b v-text-underline>{{ $t('_landing._free.title') }}</b></h2>
 						<div class="freeDescription">{{ $t('_landing._free.description') }}</div>
+						<div>
+							<GButton buttonType="link" to="https://github.com/misskey-dev" color="accent">View GitHub</GButton>
+							<GButton buttonType="link" :to="localePath('/docs/donate/')">Donate</GButton>
+						</div>
 					</div>
 					<div class="section_free_sub">
-						<GHIcon class="section_free_sub_icon" />
+						<div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+							<img src="/midev.png" class="section_free_sub_icon" style="border-radius: 6px;" />
+							<div> x </div>
+							<GHIcon class="section_free_sub_icon" />
+						</div>
 					</div>
 				</div>
 			</div>
@@ -897,7 +905,7 @@ definePageMeta({
 .decentralizedContent {
 	position: relative;
 	background: #f7f7f7;
-	padding: 64px;
+	padding: 46px 58px;
 	border-radius: 16px;
 }
 :global(html.dark)  {
@@ -970,7 +978,7 @@ definePageMeta({
 }
 .useCasesItemLabel {
 	display: block;
-	font-size: 90%;
+	font-size: 85%;
 	margin: 10px auto;
 	background: #9ad11b;
 	color: #000;
@@ -1028,9 +1036,10 @@ definePageMeta({
 }
 
 .section_free_sub_icon {
+	display: inline-block;
+	vertical-align: bottom;
 	width: 50px;
 	height: 50px;
-	margin: 0 auto;
 }
 
 .freeTitle {

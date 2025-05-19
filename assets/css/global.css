@@ -12,6 +12,7 @@ html.dark {
 }
 
 ._plainButton {
+	display: inline-block;
 	appearance: none;
 	display: inline-block;
 	padding: 0;
