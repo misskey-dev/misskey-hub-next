@@ -606,11 +606,6 @@
 		
 		<section class="section_features _primaryWidth">
 			<div v-fade-in="'up'">
-				<div class="section_features_bg">
-					<IndexHeroBg/>
-				</div>
-			</div>
-			<div v-fade-in="'up'">
 				<div class="section_features_header _secondaryWidth">
 					<h2 class="section_features_title"><b v-text-underline>{{ $t('_landing._featuresUpcoming._root.title') }}</b></h2>
 					<div class="section_features_description">{{ $t('_landing._featuresUpcoming._root.description') }}</div>
@@ -643,7 +638,7 @@
 		</section>
 
 		<section class="section_getStarted _primaryWidth" id="getStarted">
-			<GDots class="dotsBgPrimary" :space="30" />
+			<GDots class="dotsBg" :space="30" />
 
 			<div class="section_getStarted_content _secondaryWidth">
 				<div v-fade-in="'up'">
@@ -684,6 +679,18 @@
 			</div>
 		</section>
 
+		<section class="section_madeBy _primaryWidth">
+			<div v-fade-in="'up'">
+				<h2 class="section_madeBy_title">Made by</h2>
+			</div>
+			<div v-fade-in="'right'">
+				<img class="section_madeBy_image" src="/midev.png" alt="">
+			</div>
+			<div v-fade-in="'left'">
+				<b class="section_madeBy_name">Misskey Project</b>
+			</div>
+		</section>
+
 	</main>
 
 	<br>
@@ -697,7 +704,18 @@
 	<br>
 	<br>
 	<br>
-
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
 	<!--
 	<GFooter />
 	-->
@@ -808,6 +826,7 @@ definePageMeta({
 	--secondary-width: 1150px;
 	position: relative;
 	z-index: 1;
+	overflow-x: clip;
 }
 
 ._primaryWidth {
@@ -1031,7 +1050,7 @@ definePageMeta({
 	fill: currentColor;
 }
 :global(html.dark)  {
-	.topBarcode {
+	.section_top_barcode {
 		color: #fff2;
 	}
 }
@@ -1535,6 +1554,34 @@ definePageMeta({
 
 .section_getStarted_item_button {
 	font-size: 90%;
+}
+
+/* ------------------------------------------------------------------------- */
+/* made by section */
+
+.section_madeBy {
+	text-align: center;
+}
+
+.section_madeBy_title {
+	font-size: 120%;
+	font-weight: bold;
+	margin: 0;
+	margin-bottom: 16px;
+}
+
+.section_madeBy_image {
+	display: block;
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+	border-radius: 8px;
+}
+
+.section_madeBy_name {
+	display: block;
+	font-size: 90%;
+	margin-top: 8px;
 }
 </style>
 
