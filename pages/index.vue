@@ -81,10 +81,10 @@
 
 		<section class="section_stats _secondaryWidth">
 			<div class="section_stats_text">
-				<span><b class="section_stats_label">Commits:</b>12,345</span>
-				<span><b class="section_stats_label">Commits:</b>12,345</span>
-				<span><b class="section_stats_label">Commits:</b>12,345</span>
-				<span><b class="section_stats_label">Commits:</b>12,345</span>
+				<span><b class="section_stats_label">Version:</b>2077.0.0</span>
+				<span><b class="section_stats_label">Date:</b>2077/0/0</span>
+				<span><b class="section_stats_label">Commits:</b>12,345+</span>
+				<span><b class="section_stats_label">Stars:</b>12,345+</span>
 			</div>
 		</section>
 
