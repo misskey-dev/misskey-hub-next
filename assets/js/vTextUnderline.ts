@@ -2,7 +2,11 @@ import type { Directive } from 'vue';
 
 export const vTextUnderline = {
 	mounted: (src, binding, vn) => {
-		if (window.location.search.includes('ss')) return;
+		if (window.location.search.includes('ss')) {
+			src.classList.add(`__v_textUnderline`);
+			src.classList.add(`__v_textUnderline_in`);
+			return;
+		}
 	
 		src.classList.add(`__v_textUnderline`);
 		src.classList.add(`__v_textUnderline_out`);
