@@ -12,6 +12,8 @@ const canvasEl = useTemplateRef('canvas');
 
 const loader = new GLTFLoader();
 
+let renderer: THREE.WebGLRenderer;
+
 onMounted(() => {
 	loader.load('/gltf/mi.glb', (gltf) => {
 		const scene = new THREE.Scene();
@@ -49,7 +51,7 @@ onMounted(() => {
 		controls.target.set(0, 0, 0);
 		controls.update();
 
-		const renderer = new THREE.WebGLRenderer({
+		renderer = new THREE.WebGLRenderer({
 			canvas: canvasEl.value,
 			alpha: true,
 			antialias: true,
@@ -99,6 +101,12 @@ onMounted(() => {
 			renderer.render( scene, camera );
 		}
 	});
+});
+
+onBeforeUnmount(() => {
+	if (renderer) {
+		renderer.dispose();
+	}
 });
 </script>
 

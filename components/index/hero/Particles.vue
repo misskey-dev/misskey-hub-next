@@ -4,7 +4,6 @@
 
 <script setup lang="ts">
 import * as THREE from 'three';
-import tinycolor from 'tinycolor2';
 import * as Calc from './calc';
 import * as Ease from './ease';
 
