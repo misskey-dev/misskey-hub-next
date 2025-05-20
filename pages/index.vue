@@ -45,7 +45,7 @@
 					</GNuxtLink>
 					<div class="section_top_buttons">
 						<GButton button-type="button" shadow color="accent" @click="scrollTo('#getStarted')">{{ $t('_landing._hero.gettingStarted') }}</GButton>
-						<GButton button-type="button" @click="scrollTo('#learnMore')">{{ $t('learnMore') }}</GButton>
+						<GButton button-type="button" @click="scrollTo('#introduction')">{{ $t('learnMore') }}</GButton>
 					</div>
 				</div>
 				<div class="section_top_right">
@@ -131,7 +131,7 @@
 			</div>
 		</section>
 
-		<section class="section_introduction _primaryWidth">
+		<section class="section_introduction _primaryWidth" id="introduction">
 			<div v-fade-in="'up'">
 				<div class="section_introduction_bg">
 					<img class="section_introduction_bg_image" src="/img/hero/mi-abstract-alpha.webp" alt="">

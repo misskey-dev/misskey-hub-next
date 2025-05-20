@@ -5,6 +5,7 @@ html, body {
 
 html {
 	overflow: auto;
+	scroll-padding: 100px; /* ヘッダーなどが干渉するため */
 	color: #222;
 }
 html.dark {
