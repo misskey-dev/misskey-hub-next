@@ -45,7 +45,7 @@
 					</GNuxtLink>
 					<div class="section_top_buttons">
 						<GButton button-type="button" shadow color="accent" @click="scrollTo('#getStarted')">{{ $t('_landing._hero.gettingStarted') }}</GButton>
-						<GButton button-type="button" @click="scrollTo('#introduction')">{{ $t('learnMore') }}</GButton>
+						<GButton button-type="button" @click="scrollTo('#learnMore')">{{ $t('learnMore') }}</GButton>
 					</div>
 				</div>
 				<div class="section_top_right">
@@ -61,7 +61,7 @@
 			</svg>
 		</section>
 
-		<section class="section_keyFeatures _secondaryWidth">
+		<section class="section_keyFeatures _secondaryWidth" id="learnMore">
 			<div class="section_keyFeatures_item acrylic">
 				<div class="section_keyFeatures_itemIcon"><img src="/img/emojis/four-leaf-clover_1f340.png" aria-hidden="true"></div>
 				<h3 class="section_keyFeatures_itemTitle">{{ $t('_landing._keyFeatures._open.title') }}</h3>
