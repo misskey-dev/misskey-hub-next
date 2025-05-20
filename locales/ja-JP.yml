@@ -245,7 +245,7 @@ _landing:
       title: "サーバーを作成"
       guide: "セットアップガイド"
     _docs:
-      title: "さらに詳しく知る"
+      title: "学ぶ"
       docs: "ドキュメント"
     _dev:
       title: "開発に参加する"

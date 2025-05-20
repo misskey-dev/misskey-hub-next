@@ -45,7 +45,7 @@
 					</GNuxtLink>
 					<div class="section_top_buttons">
 						<GButton button-type="button" shadow color="accent" @click="scrollTo('#getStarted')">{{ $t('_landing._hero.gettingStarted') }}</GButton>
-						<GButton button-type="button" @click="scrollTo('#learnMore')">{{ $t('learnMore') }}</GButton>
+						<GButton button-type="button" @click="scrollTo('#introduction')">{{ $t('learnMore') }}</GButton>
 					</div>
 				</div>
 				<div class="section_top_right">
@@ -112,24 +112,63 @@
 			</g>
 		</svg>
 
-		<section class="section_donationAndSponsors _primaryWidth">
+		<div class="_primaryWidth" style="position: relative; padding: 128px 0;" id="getStarted">
 			<GDots class="dotsBg" :space="30" />
 
-			<div v-fade-in="'up'">
-				<div class="section_donationAndSponsors_content _secondaryWidth acrylic">
-					<section class="section_donationAndSponsors_sponsors">
-						<IndexSponsors />
-					</section>
-					<section class="section_donationAndSponsors_donation">
-						<h2 class="section_donationAndSponsors_donationTitle">{{ $t('_landing._donation.title') }}</h2>
-						<p class="section_donationAndSponsors_donationDescription">{{ $t('_landing._donation.description') }}</p>
-						<div>
-							<GButton buttonType="link" :to="localePath('/docs/donate/')" color="accent">{{ $t('learnMore') }}</GButton>
-						</div>
-					</section>
+			<section class="section_getStarted _secondaryWidth">
+				<div v-fade-in="'up'">
+					<div class="section_getStarted_titleContainer acrylic">
+						<h2 class="section_getStarted_titleContainer_title"><b v-text-underline>{{ $t('_landing._getStarted.title') }}</b></h2>
+					</div>
 				</div>
-			</div>
-		</section>
+				<div class="section_getStarted_items">
+					<div v-fade-in="'up'" class="section_getStarted_itemContainer">
+						<div class="section_getStarted_item acrylic">
+							<img class="section_getStarted_item_icon" src="/img/emojis/package_color.svg" aria-hidden="true">
+							<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._create.title') }}</b>
+							<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/docs/for-admin/install/guides/')">{{ $t('_landing._getStarted._create.guide') }}<ArrowRightIco /></GButton>
+						</div>
+					</div>
+					<div v-fade-in="'up'" class="section_getStarted_itemContainer">
+						<div class="section_getStarted_item acrylic">
+							<img class="section_getStarted_item_icon" src="/img/emojis/light_bulb_color.svg" aria-hidden="true">
+							<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._docs.title') }}</b>
+							<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/docs')">{{ $t('_landing._getStarted._docs.docs') }}<ArrowRightIco /></GButton>
+						</div>
+					</div>
+					<div v-fade-in="'up'" class="section_getStarted_itemContainer">
+						<div class="section_getStarted_item acrylic">
+							<img class="section_getStarted_item_icon" src="/img/emojis/ringed_planet_color.svg" aria-hidden="true">
+							<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._find.title') }}</b>
+							<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/servers')">{{ $t('_landing._getStarted._find.list') }}<ArrowRightIco /></GButton>
+						</div>
+					</div>
+					<div v-fade-in="'up'" class="section_getStarted_itemContainer">
+						<div class="section_getStarted_item acrylic">
+							<img class="section_getStarted_item_icon" src="/img/emojis/hammer_and_wrench_color.svg" aria-hidden="true">
+							<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._dev.title') }}</b>
+							<GButton class="section_getStarted_item_button" color="accent" buttonType="link" to="https://github.com/misskey-dev">GitHub<ArrowUpRightIco /></GButton>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section_donationAndSponsors _secondaryWidth">
+				<div v-fade-in="'up'">
+					<div class="section_donationAndSponsors_content _secondaryWidth acrylic">
+						<section class="section_donationAndSponsors_sponsors">
+							<IndexSponsors />
+						</section>
+						<section class="section_donationAndSponsors_donation">
+							<h2 class="section_donationAndSponsors_donationTitle">{{ $t('_landing._donation.title') }}</h2>
+							<p class="section_donationAndSponsors_donationDescription">{{ $t('_landing._donation.description') }}</p>
+							<div>
+								<GButton buttonType="link" :to="localePath('/docs/donate/')" color="accent">{{ $t('learnMore') }}</GButton>
+							</div>
+						</section>
+					</div>
+				</div>
+			</section>
+		</div>
 
 		<section class="section_introduction _primaryWidth" id="introduction">
 			<div v-fade-in="'up'">
@@ -639,10 +678,10 @@
 			</div>
 		</section>
 
-		<section class="section_getStarted _primaryWidth" id="getStarted">
+		<div class="_primaryWidth" style="position: relative; padding: 128px 0;">
 			<GDots class="dotsBg" :space="30" />
 
-			<div class="section_getStarted_content _secondaryWidth">
+			<section class="section_getStarted _secondaryWidth">
 				<div v-fade-in="'up'">
 					<div class="section_getStarted_titleContainer acrylic">
 						<h2 class="section_getStarted_titleContainer_title"><b v-text-underline>{{ $t('_landing._getStarted.title') }}</b></h2>
@@ -678,8 +717,24 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+			<section class="section_donationAndSponsors _secondaryWidth">
+				<div v-fade-in="'up'">
+					<div class="section_donationAndSponsors_content _secondaryWidth acrylic">
+						<section class="section_donationAndSponsors_sponsors">
+							<IndexSponsors />
+						</section>
+						<section class="section_donationAndSponsors_donation">
+							<h2 class="section_donationAndSponsors_donationTitle">{{ $t('_landing._donation.title') }}</h2>
+							<p class="section_donationAndSponsors_donationDescription">{{ $t('_landing._donation.description') }}</p>
+							<div>
+								<GButton buttonType="link" :to="localePath('/docs/donate/')" color="accent">{{ $t('learnMore') }}</GButton>
+							</div>
+						</section>
+					</div>
+				</div>
+			</section>
+		</div>
 
 		<section class="section_madeBy _primaryWidth">
 			<div v-fade-in="'up'">
@@ -1223,8 +1278,7 @@ definePageMeta({
 /* donation and sponsors section */
 
 .section_donationAndSponsors {
-	position: relative;
-	padding: 128px 0;
+	margin-top: 16px;
 }
 
 .section_donationAndSponsors_content {
@@ -1487,8 +1541,6 @@ definePageMeta({
 /* get started section */
 
 .section_getStarted {
-	position: relative;
-	padding: 128px 0;
 }
 
 .section_getStarted_titleContainer {
