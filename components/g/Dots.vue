@@ -1,5 +1,5 @@
 <template>
-<svg fill="none">
+<svg fill="none" style="pointer-events: none;">
 	<defs>
 		<pattern :id="id" x="0" y="0" :width="space" :height="space" patternUnits="userSpaceOnUse">
 			<circle cx="2" cy="2" r="2" fill="currentColor"></circle>

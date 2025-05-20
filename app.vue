@@ -221,16 +221,6 @@ function scrollToTop() {
 </template>
 
 <style module>
-.root {
-	background: #eee;
-}
-
-:global(html.dark)  {
-	.root {
-		background: #1a1a1a;
-	}
-}
-
 .scrollToTopButton {
 	display: grid;
 	place-content: center;

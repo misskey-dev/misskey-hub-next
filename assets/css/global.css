@@ -1,3 +1,15 @@
+:root {
+	--THEME-bg: #eee;
+	--THEME-fg: #222;
+
+	background: var(--THEME-bg);
+	color: var(--THEME-fg);
+}
+:root.dark {
+	--THEME-bg: #1a1a1a;
+	--THEME-fg: #eee;
+}
+
 html, body {
 	margin: 0;
 	padding: 0;
@@ -6,10 +18,6 @@ html, body {
 html {
 	overflow: auto;
 	scroll-padding: 100px; /* ヘッダーなどが干渉するため */
-	color: #222;
-}
-html.dark {
-	color: #eee;
 }
 
 ._plainButton {
