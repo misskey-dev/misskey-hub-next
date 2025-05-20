@@ -949,8 +949,8 @@ definePageMeta({
 	border-radius: 16px;
 	background: #ddd;
 	overflow: clip;
+	contain: content;
 }
-
 :global(html.dark)  {
 	.section_top_bg {
 		background: #222;
@@ -1306,6 +1306,8 @@ definePageMeta({
 .section_decentralized_cloudContainer_cloud {
 	padding: 16px;
 	width: min-content;
+	contain: content;
+	content-visibility: auto;
 }
 
 
