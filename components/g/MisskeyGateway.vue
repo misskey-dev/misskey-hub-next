@@ -16,7 +16,7 @@
                             {{ $t('_share.recommendedByWebsite') }}
                             <NuxtLink :to="localePath('/docs/for-users/features/share-form/#hub-share-disclaimer')" target="_blank"><HelpIco class="ml-1" /></NuxtLink>
                         </div>
-                        <div class="rounded-lg border border-gray-300 dark:border-gray-600 group">
+                        <div class="rounded-lg border border-neutral-300 dark:border-neutral-600 group">
                             <component
                                 :is="action.type === 'link' ? GNuxtLink : 'button'"
                                 v-bind="action.type === 'link' && { to: joinURL(`https://${manualInstanceData.url}/`, action.path) }"
@@ -24,7 +24,7 @@
                                 class="group-first:rounded-t-lg group-last:rounded-b-lg py-2 px-4 sm:p-4 w-full flex items-center hover:bg-neutral-100 active:bg-neutral-200 dark:hover:bg-neutral-700 dark:active:bg-neutral-600"
                             >
                                 <div
-                                    class="h-6 w-6 sm:h-9 sm:w-9 flex-shrink-0 overflow-hidden rounded bg-white dark:bg-neutral-700 border border-gray-300 dark:border-gray-600 mr-3"
+                                    class="h-6 w-6 sm:h-9 sm:w-9 flex-shrink-0 overflow-hidden rounded bg-white dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600 mr-3"
                                 >
                                     <img v-if="manualInstanceData.icon && manualInstanceData.meta?.iconUrl" :src="manualInstanceData.meta?.iconUrl" class="w-full h-full" />
                                 </div>
@@ -37,7 +37,7 @@
                         </div>
                     </div>
 
-                    <ul class="rounded-lg border divide-y border-gray-300 dark:border-gray-600 divide-gray-300 dark:divide-gray-600">
+                    <ul class="rounded-lg border divide-y border-neutral-300 dark:border-neutral-600 divide-neutral-300 dark:divide-neutral-600">
                         <li v-for="instance in displayInstances" :key="instance.url" class="group">
                             <component
                                 :is="action.type === 'link' ? GNuxtLink : 'button'"
@@ -46,7 +46,7 @@
                                 class="group-first:rounded-t-lg group-last:rounded-b-lg py-2 px-4 sm:p-4 w-full flex items-center hover:bg-neutral-100 active:bg-neutral-200 dark:hover:bg-neutral-700 dark:active:bg-neutral-600"
                             >
                                 <div
-                                    class="h-6 w-6 sm:h-9 sm:w-9 flex-shrink-0 overflow-hidden rounded bg-white dark:bg-neutral-700 border border-gray-300 dark:border-gray-600 mr-3"
+                                    class="h-6 w-6 sm:h-9 sm:w-9 flex-shrink-0 overflow-hidden rounded bg-white dark:bg-neutral-700 border border-neutral-300 dark:border-neutral-600 mr-3"
                                     :class="instance.isUserDefined && 'transition-[border-color] hover:border-red-600 dark:hover:border-red-600'"
                                 >
                                     <template v-if="instance.isUserDefined">
@@ -73,7 +73,7 @@
                         </li>
                         <li class="group">
                             <details class="group-first:rounded-t-lg group-last:rounded-b-lg group/details">
-                                <summary class="p-4 w-full flex items-center hover:bg-neutral-100 dark:hover:bg-neutral-700 group-first:rounded-t-lg group-last:rounded-b-lg group-last:group-open/details:rounded-b-none group-open/details:border-b cursor-pointer border-gray-300 dark:border-gray-600">
+                                <summary class="p-4 w-full flex items-center hover:bg-neutral-100 dark:hover:bg-neutral-700 group-first:rounded-t-lg group-last:rounded-b-lg group-last:group-open/details:rounded-b-none group-open/details:border-b cursor-pointer border-neutral-300 dark:border-neutral-600">
                                     <div class="h-6 w-6 sm:h-9 sm:w-9 mr-2">
                                         <div class="w-full h-full rounded bg-accent-600/20 p-1 sm:p-2 text-accent-600">
                                             <PlusIco class="block h-4 w-4 sm:h-5 sm:w-5 stroke-1 stroke-current" />

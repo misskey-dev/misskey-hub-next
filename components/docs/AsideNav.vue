@@ -8,7 +8,7 @@
 		:key="link.text"
 		:class="[
 			depth === 2 && 'border-l-2 flex flex-col',
-			path.includes(link._path) ? 'border-accent-500' : 'border-gray-300 dark:border-gray-600',
+			path.includes(link._path) ? 'border-accent-500' : 'border-neutral-300 dark:border-neutral-600',
 		]"
 	>
 		<GNuxtLink

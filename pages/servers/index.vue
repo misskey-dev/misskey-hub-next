@@ -8,12 +8,12 @@
                     <GNuxtLink class="font-bold hover:underline underline-offset-4" to="https://github.com/joinmisskey/api">{{ $t('_servers.addYourServerLink') }}</GNuxtLink>
                 </I18nT>
                 <div class="!mt-2 space-y-2">
-                    <div class="text-sm p-3 rounded-lg bg-white dark:bg-neutral-800 border border-gray-300 dark:border-gray-950">
+                    <div class="text-sm p-3 rounded-lg bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-950">
                         {{ $t('lastUpdate') }}: {{ updatedAt ? $d(updatedAt, i18nDateFormatConfig) : $t('loading') }}
                     </div>
-                    <details class="group overflow-hidden text-sm rounded-lg bg-white dark:bg-neutral-800 border border-gray-300 dark:border-gray-950">
+                    <details class="group overflow-hidden text-sm rounded-lg bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-950">
                         <summary class="p-3 cursor-pointer hover:bg-neutral-100 dark:hover:bg-neutral-700 font-bold">{{ $t('_servers.disclaimerTitle') }}</summary>
-                        <div class="p-3 text-start border-t border-dashed border-gray-300 dark:border-gray-950">{{ $t('_servers.disclaimer') }}</div>
+                        <div class="p-3 text-start border-t border-dashed border-neutral-300 dark:border-neutral-950">{{ $t('_servers.disclaimer') }}</div>
                     </details>
                 </div>
             </template>

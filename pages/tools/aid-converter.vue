@@ -19,7 +19,7 @@
             <div class="my-2">
                 <button class="btn btn-primary" @click="doAidToDate()">{{ $t('_aidConverter.aidToDate') }}</button>
             </div>
-            <div class="mb-2 p-4 rounded-lg border bg-white dark:bg-[#212529] border-gray-200 dark:border-gray-600 whitespace-pre-wrap">
+            <div class="mb-2 p-4 rounded-lg border bg-white dark:bg-[#212529] border-neutral-200 dark:border-neutral-600 whitespace-pre-wrap">
                 {{ aidToDateResult }}
             </div>
         </div>
@@ -34,7 +34,7 @@
             <div class="my-2">
                 <button class="btn btn-primary" @click="doDateToAid()">{{ $t('_aidConverter.dateToAid') }}</button>
             </div>
-            <div class="mb-2 p-4 rounded-lg border bg-white dark:bg-[#212529] border-gray-200 dark:border-gray-600">
+            <div class="mb-2 p-4 rounded-lg border bg-white dark:bg-[#212529] border-neutral-200 dark:border-neutral-600">
                 {{ dateToAidResult }}
             </div>
         </div>

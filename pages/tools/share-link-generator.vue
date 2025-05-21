@@ -44,7 +44,7 @@
                     </div>
                     <div>
                         {{ $t('_mfmPlayground.preview') }}
-                        <div :class="$style.mfmRoot" class="mb-2 bg-white dark:bg-[#212529] border-gray-200 dark:border-gray-600">
+                        <div :class="$style.mfmRoot" class="mb-2 bg-white dark:bg-[#212529] border-neutral-200 dark:border-neutral-600">
                             <MkMfm :text="mfmPreviewString" />
                         </div>
                         <div class="form-text">{{ $t('_mfmPlayground.disclaimer') }}</div>

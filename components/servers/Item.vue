@@ -1,5 +1,5 @@
 <template>
-    <div class="border border-gray-300 dark:border-gray-800 dark:bg-neutral-800 rounded-lg shadow-lg overflow-hidden focus-within:ring-2 ring-accent-500 ring-offset-2">
+    <div class="border border-neutral-300 dark:border-neutral-800 dark:bg-neutral-800 rounded-lg shadow-lg overflow-hidden focus-within:ring-2 ring-accent-500 ring-offset-2">
         <GNuxtLink :to="`https://${instance.url}`" target="_blank" class="relative">
             <template v-if="view === 'grid'">
                 <div class="relative aspect-video bg-neutral-200 dark:bg-neutral-600">
