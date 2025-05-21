@@ -6,9 +6,13 @@
 	<div :class="$style.main">
 		<div :class="[$style.bg, { [$style.slim]: slim, [$style.hasBorder]: hasBorder }]"></div>
 		<nav :class="$style.container">
-			<GNuxtLink class="_plainLink" :to="localePath('/')" style="display: flex; align-items: center; gap: 8px; min-width: 0; white-space: nowrap;">
-				<MiIcon style="width: 30px"/>
-				<div><b>Misskey</b></div>
+			<button :class="$style.menuButton" class="_plainButton" @click="navOpen = !navOpen">
+				<XIcon v-if="navOpen" style="width: 24px; height: 24px;" />
+				<MenuIcon v-else style="width: 24px; height: 24px;" />
+			</button>
+			<GNuxtLink class="_plainLink" :class="$style.misskey" :to="localePath('/')">
+				<MiIcon style="width: 24px; height: 24px;"/>
+				<b>Misskey</b>
 			</GNuxtLink>
 			<div :class="$style.navItems">
 				<span v-for="item in NavData.center">
@@ -88,6 +92,7 @@
 					</div>
 				</div>
 			</div>
+			<div :class="$style.spSpacer"></div>
 		</nav>
 	</div>
 </div>
@@ -189,6 +194,12 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 	}
 }
 
+@media (max-width: 1200px) {
+	.main {
+		--height: 58px;
+	}
+}
+
 .bg {
 	position: absolute;
 	top: 0;
@@ -236,12 +247,58 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 .container {
 	position: relative;
 	z-index: 1;
+	width: calc(100% - 42px);
 	max-width: 1150px;
 	margin: 0 auto;
 	height: 100%;
 	display: flex;
 	align-items: center;
 	gap: 32px;
+}
+
+@media (max-width: 1200px) {
+	.container {
+		width: 100%;
+	}
+}
+
+.menuButton {
+	display: none;
+}
+
+@media (max-width: 1200px) {
+	.menuButton {
+		display: block;
+		height: var(--height);
+		width: var(--height);
+	}
+}
+
+.spSpacer {
+	display: none;
+}
+
+@media (max-width: 1200px) {
+	.spSpacer {
+		display: block;
+		height: var(--height);
+		width: var(--height);
+	}
+}
+
+.misskey {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	min-width: 0;
+	white-space: nowrap;
+	font-size: 110%;
+}
+
+@media (max-width: 1200px) {
+	.misskey {
+		margin: 0 auto;
+	}
 }
 
 .navItems {
@@ -251,7 +308,19 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 	font-size: 90%;
 }
 
+@media (max-width: 1200px) {
+	.navItems {
+		display: none;
+	}
+}
+
 .right {
 	margin-left: auto;
+}
+
+@media (max-width: 1200px) {
+	.right {
+		display: none;
+	}
 }
 </style>
