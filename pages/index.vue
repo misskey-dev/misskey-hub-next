@@ -890,7 +890,7 @@ definePageMeta({
 
 <style scoped>
 .main {
-	--w-margin: 16px;
+	--w-margin: 32px;
 	--primary-width: 1800px;
 	--secondary-width: 1150px;
 	position: relative;
@@ -907,7 +907,7 @@ definePageMeta({
 }
 
 ._secondaryWidth {
-	width: calc(100vw - var(--w-margin) * 2);
+	width: calc(100vw - var(--w-margin) * 4);
 	max-width: var(--secondary-width);
 	box-sizing: border-box;
 	margin-left: auto;
