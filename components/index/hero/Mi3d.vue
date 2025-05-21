@@ -32,8 +32,8 @@ onMounted(() => {
 		const light = new THREE.DirectionalLight(0xffffff, 3);
 		light.position.set(10, 10, 10);
 		light.castShadow = true;
-		light.shadow.mapSize.width = 1024;
-		light.shadow.mapSize.height = 1024;
+		light.shadow.mapSize.width = 2048;
+		light.shadow.mapSize.height = 2048;
 		light.shadow.radius = 5;
 		light.shadow.normalBias = 0.01;
 		light.shadow.camera.far = 1000;
