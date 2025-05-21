@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-const isDesktop = window.innerWidth >= 1200;
+const isDesktop = import.meta.client ? window.innerWidth >= 1200 : true;
 
 definePageMeta({
 	layout: 'landing',
