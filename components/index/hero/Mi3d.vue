@@ -32,8 +32,8 @@ onMounted(() => {
 		const light = new THREE.DirectionalLight(0xffffff, 3);
 		light.position.set(10, 10, 10);
 		light.castShadow = true;
-		light.shadow.mapSize.width = 8192;
-		light.shadow.mapSize.height = 8192;
+		light.shadow.mapSize.width = 1024;
+		light.shadow.mapSize.height = 1024;
 		light.shadow.radius = 5;
 		light.shadow.normalBias = 0.01;
 		light.shadow.camera.far = 1000;
@@ -59,8 +59,8 @@ onMounted(() => {
 		renderer.toneMapping = THREE.CineonToneMapping;
 		renderer.toneMappingExposure = 0.9;
 		renderer.shadowMap.enabled = true;
-		//renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-		renderer.shadowMap.type = THREE.VSMShadowMap;
+		renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+		//renderer.shadowMap.type = THREE.VSMShadowMap;
 		renderer.setPixelRatio(2);
 		renderer.setAnimationLoop(render);
 
