@@ -54,6 +54,12 @@ type EmojiSimple = {
 `info` `success` `warning` `error` `question`\
 省略すると `info` になります。
 
+### `Mk:toast(text)`
+
+トーストを表示します。ダイアログと違い、ユーザーがダイアログを閉じる操作が必要ないため、何らかの操作が完了したなどの単純なお知らせに使用できます。
+
+**この関数は2025.5.1（仮称）でリリース予定のものです。**
+
 ### `Mk:confirm(title, text, type)`
 
 確認ダイアログを表示します。typeには以下の値が設定できます。\
