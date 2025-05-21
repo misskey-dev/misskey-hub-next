@@ -9,7 +9,7 @@
                 <div :class="$style.mfmRoot" class="mb-2 bg-white dark:bg-[#212529] border-gray-200 dark:border-gray-600">
                     <MkMfm :text="mfmText ?? ''" :baseHost="mfmHost" />
                 </div>
-                <div class="text-xs text-gray-500">{{ $t('_mfmPlayground.disclaimer') }}</div>
+                <div class="text-xs text-neutral-500">{{ $t('_mfmPlayground.disclaimer') }}</div>
             </div>
             <div class="space-y-4">
                 <div>

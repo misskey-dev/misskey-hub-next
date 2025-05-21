@@ -15,7 +15,7 @@
                 <MDC :value="data.guides[guideIndex].description" />
             </Tip>
             <div :class="data.guides[guideIndex]?._LAYOUT_TYPE_ === 'IMAGE_PORTRAIT_FIXED' ? 'lg:mr-3' : 'lg:col-span-2'">
-                <ol class="relative before:absolute before:left-[13px] before:top-3.5 before:w-0.5 before:h-[calc(100%-.875rem)] before:rounded-full before:bg-gray-300 dark:before:bg-gray-700 space-y-8">
+                <ol class="relative before:absolute before:left-[13px] before:top-3.5 before:w-0.5 before:h-[calc(100%-.875rem)] before:rounded-full before:bg-neutral-300 dark:before:bg-neutral-700 space-y-8">
                     <li
                         v-for="(step, i) in data.guides[guideIndex]?.steps"
                         :key="`steppedGuideSection_${guideIndex}_${i}`"
@@ -48,7 +48,7 @@
                     </li>
                 </ol>
             </div>
-            <div v-if="data.guides[guideIndex]?._LAYOUT_TYPE_ === 'IMAGE_PORTRAIT_FIXED'" class="hidden lg:block rounded-lg bg-gray-100 dark:bg-gray-800">
+            <div v-if="data.guides[guideIndex]?._LAYOUT_TYPE_ === 'IMAGE_PORTRAIT_FIXED'" class="hidden lg:block rounded-lg bg-neutral-100 dark:bg-neutral-800">
                 <div class="sticky top-16 h-[calc(100vh-4rem)] p-3">
                     <div class="relative h-full">
                         <Transition

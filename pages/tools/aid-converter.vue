@@ -15,7 +15,7 @@
                 id="aidToDateAid"
                 v-model="aidToDateAid"
             ></textarea>
-            <div class="mb-2 text-xs text-gray-500">{{ $t('_aidConverter.inputByLine') }}</div>
+            <div class="mb-2 text-xs text-neutral-500">{{ $t('_aidConverter.inputByLine') }}</div>
             <div class="my-2">
                 <button class="btn btn-primary" @click="doAidToDate()">{{ $t('_aidConverter.aidToDate') }}</button>
             </div>

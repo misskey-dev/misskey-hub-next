@@ -2,7 +2,7 @@
     <div class="border border-gray-300 dark:border-gray-800 dark:bg-neutral-800 rounded-lg shadow-lg overflow-hidden focus-within:ring-2 ring-accent-500 ring-offset-2">
         <GNuxtLink :to="`https://${instance.url}`" target="_blank" class="relative">
             <template v-if="view === 'grid'">
-                <div class="relative aspect-video bg-gray-200 dark:bg-gray-600">
+                <div class="relative aspect-video bg-neutral-200 dark:bg-neutral-600">
                     <img v-if="manualBackground" :src="manualBackground" class="w-full h-full object-cover" />
                     <img v-else-if="instance.background" loading="lazy" :src="`${runtimeConfig.public.serverListApiBaseUrl}/instance-backgrounds/${instance.url}.webp`" class="w-full h-full object-cover" />
                     <img v-else-if="instance.banner" loading="lazy" :src="`${runtimeConfig.public.serverListApiBaseUrl}/instance-banners/${instance.url}.webp`" class="w-full h-full object-cover" />

@@ -1,5 +1,5 @@
 <template>
-	<div class="min-h-screen text-neutral-800 dark:text-neutral-200 bg-neutral-100 dark:bg-gray-900">
+	<div class="min-h-screen text-neutral-800 dark:text-neutral-200 bg-neutral-100 dark:bg-neutral-900">
         <NuxtIsland name="GNoScript" />
         <MkAnimBg
             class="fixed z-0 top-0 left-0 w-screen h-screen transition-opacity duration-[2s]"
@@ -36,6 +36,7 @@
 </template>
 
 <script setup lang="ts">
+import 'virtual:uno.css';
 import NProgress from 'nprogress';
 import { locales } from '@/assets/data/locales';
 import { getGhIssueUrl } from './assets/js/misc/get-issue-url';

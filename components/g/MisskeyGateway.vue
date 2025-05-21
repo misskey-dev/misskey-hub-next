@@ -1,7 +1,7 @@
 <template>
     <div class="min-h-screen">
         <div class="sm:py-20 sm:max-w-xl mx-auto">
-            <div class="p-6 bg-white dark:bg-gray-800 sm:rounded-lg min-h-screen sm:min-h-[230px]">
+            <div class="p-6 bg-white dark:bg-neutral-800 sm:rounded-lg min-h-screen sm:min-h-[230px]">
                 <div v-if="loading" class="mx-auto py-12">
                     <MkLoading />
                 </div>
@@ -21,10 +21,10 @@
                                 :is="action.type === 'link' ? GNuxtLink : 'button'"
                                 v-bind="action.type === 'link' && { to: joinURL(`https://${manualInstanceData.url}/`, action.path) }"
                                 @click="handleClick(manualInstanceData)"
-                                class="group-first:rounded-t-lg group-last:rounded-b-lg py-2 px-4 sm:p-4 w-full flex items-center hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-gray-700 dark:active:bg-gray-600"
+                                class="group-first:rounded-t-lg group-last:rounded-b-lg py-2 px-4 sm:p-4 w-full flex items-center hover:bg-neutral-100 active:bg-neutral-200 dark:hover:bg-neutral-700 dark:active:bg-neutral-600"
                             >
                                 <div
-                                    class="h-6 w-6 sm:h-9 sm:w-9 flex-shrink-0 overflow-hidden rounded bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 mr-3"
+                                    class="h-6 w-6 sm:h-9 sm:w-9 flex-shrink-0 overflow-hidden rounded bg-white dark:bg-neutral-700 border border-gray-300 dark:border-gray-600 mr-3"
                                 >
                                     <img v-if="manualInstanceData.icon && manualInstanceData.meta?.iconUrl" :src="manualInstanceData.meta?.iconUrl" class="w-full h-full" />
                                 </div>
@@ -43,10 +43,10 @@
                                 :is="action.type === 'link' ? GNuxtLink : 'button'"
                                 v-bind="action.type === 'link' && { to: joinURL(`https://${instance.url}/`, action.path) }"
                                 @click="handleClick(instance)"
-                                class="group-first:rounded-t-lg group-last:rounded-b-lg py-2 px-4 sm:p-4 w-full flex items-center hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-gray-700 dark:active:bg-gray-600"
+                                class="group-first:rounded-t-lg group-last:rounded-b-lg py-2 px-4 sm:p-4 w-full flex items-center hover:bg-neutral-100 active:bg-neutral-200 dark:hover:bg-neutral-700 dark:active:bg-neutral-600"
                             >
                                 <div
-                                    class="h-6 w-6 sm:h-9 sm:w-9 flex-shrink-0 overflow-hidden rounded bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 mr-3"
+                                    class="h-6 w-6 sm:h-9 sm:w-9 flex-shrink-0 overflow-hidden rounded bg-white dark:bg-neutral-700 border border-gray-300 dark:border-gray-600 mr-3"
                                     :class="instance.isUserDefined && 'transition-[border-color] hover:border-red-600 dark:hover:border-red-600'"
                                 >
                                     <template v-if="instance.isUserDefined">
@@ -57,7 +57,7 @@
                                                 <QuestionIco v-else class="block h-4 w-4 sm:h-5 sm:w-5" />
                                             </div>
                                             <img v-else :src="getPlaceholderImage(instance)" class="w-full h-full" />
-                                            <div class="pointer-events-none absolute top-0 left-0 w-full h-full bg-white dark:bg-gray-800 transition-opacity opacity-0 group-hover/delete:opacity-100 p-1 sm:p-2 text-red-600">
+                                            <div class="pointer-events-none absolute top-0 left-0 w-full h-full bg-white dark:bg-neutral-800 transition-opacity opacity-0 group-hover/delete:opacity-100 p-1 sm:p-2 text-red-600">
                                                 <DeleteIco class="block h-4 w-4 sm:h-5 sm:w-5" />
                                             </div>
                                         </button>
@@ -73,7 +73,7 @@
                         </li>
                         <li class="group">
                             <details class="group-first:rounded-t-lg group-last:rounded-b-lg group/details">
-                                <summary class="p-4 w-full flex items-center hover:bg-gray-100 dark:hover:bg-gray-700 group-first:rounded-t-lg group-last:rounded-b-lg group-last:group-open/details:rounded-b-none group-open/details:border-b cursor-pointer border-gray-300 dark:border-gray-600">
+                                <summary class="p-4 w-full flex items-center hover:bg-neutral-100 dark:hover:bg-neutral-700 group-first:rounded-t-lg group-last:rounded-b-lg group-last:group-open/details:rounded-b-none group-open/details:border-b cursor-pointer border-gray-300 dark:border-gray-600">
                                     <div class="h-6 w-6 sm:h-9 sm:w-9 mr-2">
                                         <div class="w-full h-full rounded bg-accent-600/20 p-1 sm:p-2 text-accent-600">
                                             <PlusIco class="block h-4 w-4 sm:h-5 sm:w-5 stroke-1 stroke-current" />

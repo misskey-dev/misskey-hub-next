@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import 'virtual:uno.css';
+
 const isNavOpen = ref<boolean>(false);
 const isAsideNavOpen = useState<boolean>('miHub_docs_asideNav_openState', () => false);
 
@@ -45,7 +47,7 @@ watch(locale, async (to) => {
                 </div>
             </div>
         </div>
-        <GFooter class="bg-neutral-100 dark:bg-gray-900" />
+        <GFooter class="bg-neutral-100 dark:bg-neutral-900" />
     </div>
 </template>
 
