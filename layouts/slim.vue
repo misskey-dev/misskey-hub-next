@@ -15,7 +15,7 @@ useHead({
         <div class="main-content" :class="$style.slimPageRoot">
             <slot />
         </div>
-        <GFooter class="bg-neutral-100 dark:bg-gray-900" />
+        <GFooter class="bg-neutral-100 dark:bg-neutral-900" />
     </div>
 </template>
 

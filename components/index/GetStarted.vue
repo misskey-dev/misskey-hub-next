@@ -54,7 +54,7 @@ const localePath = useGLocalePath();
 }
 
 .item > .link {
-    @apply px-6 py-3 rounded-lg bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors font-bold text-lg;
+    @apply px-6 py-3 rounded-lg bg-neutral-100 dark:bg-neutral-900 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors font-bold text-lg;
 }
 
 .find .link {

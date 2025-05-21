@@ -358,7 +358,7 @@ export default function(props: {
 
 			case 'blockCode': {
 				return [h('pre', {
-					class: 'p-4 bg-gray-200/50 rounded',
+					class: 'p-4 bg-neutral-200/50 rounded',
 				}, h('code', token.props.code))];
 			}
 

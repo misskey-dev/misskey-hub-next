@@ -45,7 +45,7 @@ watch(locale, async (to) => {
                 </div>
             </div>
         </div>
-        <GFooter class="bg-neutral-100 dark:bg-gray-900" />
+        <GFooter class="bg-neutral-100 dark:bg-neutral-900" />
     </div>
 </template>
 

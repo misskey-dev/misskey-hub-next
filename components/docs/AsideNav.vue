@@ -8,7 +8,7 @@
 		:key="link.text"
 		:class="[
 			depth === 2 && 'border-l-2 flex flex-col',
-			path.includes(link._path) ? 'border-accent-500' : 'border-gray-300 dark:border-gray-600',
+			path.includes(link._path) ? 'border-accent-500' : 'border-neutral-300 dark:border-neutral-600',
 		]"
 	>
 		<GNuxtLink
@@ -24,7 +24,7 @@
 			<div class="flex">
 				<button
 					v-if="link.children && link.children.filter((v) => !isSamePath(v._path, link._path)).length > 0"
-					class="block px-1 mr-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700"
+					class="block px-1 mr-1 rounded hover:bg-neutral-100 dark:hover:bg-neutral-700"
 					@click.prevent.stop="() => {
 						console.log('State:', path.includes(link._path));
 						manualOpen[link._path] = !(manualOpen[link._path] ?? path.includes(link._path));
