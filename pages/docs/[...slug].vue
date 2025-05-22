@@ -5,7 +5,7 @@
             [$style.docsLayoutWithAsideToc]: shouldShowToc,
         }"
     >
-        <div class="lg:hidden sticky top-16 -mx-6 -mt-6 w-[calc(100%+3rem)] bg-neutral-50 dark:bg-neutral-900 z-[9890] border-b dark:border-neutral-700 text-sm flex items-start">
+        <div class="lg:hidden sticky top-14 -mx-6 -mt-6 w-[calc(100%+3rem)] bg-neutral-50 dark:bg-neutral-900 z-[9890] border-b dark:border-neutral-700 text-sm flex items-start">
             <details v-if="shouldShowToc && data?.body && (data.body.toc?.links ?? []).length > 0" class="peer order-2 flex-grow dark:border-neutral-800 border-l" :open="openState">
                 <summary class="px-3 py-4 cursor-pointer">
                     {{ $t('_docs._toc.title') }}
