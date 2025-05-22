@@ -876,10 +876,6 @@ onMounted(() => {
 		useHTML: true,
 	});
 });
-
-definePageMeta({
-		layout: 'landing',
-});
 </script>
 
 <style scoped>
