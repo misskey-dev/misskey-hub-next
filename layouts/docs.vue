@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import 'virtual:uno.css';
+
 const isNavOpen = ref<boolean>(false);
 const isAsideNavOpen = useState<boolean>('miHub_docs_asideNav_openState', () => false);
 

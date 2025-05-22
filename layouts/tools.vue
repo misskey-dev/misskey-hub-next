@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import 'virtual:uno.css';
 import sections from '@/assets/data/toolsNav';
 import { isSamePath } from 'ufo';
 

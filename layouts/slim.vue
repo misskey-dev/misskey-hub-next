@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import 'virtual:uno.css';
+
 const isNavOpen = ref<boolean>(false);
 
 useHead({

@@ -4,7 +4,7 @@
 </GNuxtLink>
 <div :class="$style.root">
 	<div :class="$style.main">
-		<div :class="$style.bg"></div>
+		<div :class="[$style.bg, { [$style.slim]: slim, [$style.hasBorder]: hasBorder }]"></div>
 		<nav :class="$style.container">
 			<button :class="$style.menuButton" class="_plainButton" @click="navOpen = !navOpen">
 				<XIcon v-if="navOpen" style="width: 24px; height: 24px;" />
@@ -212,15 +212,29 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 
 	--shapeShift: 550px;
 	mask-image: linear-gradient(#000, #000), url("/header-mask-r.svg"), url("/header-mask-l.svg");
-  mask-repeat: no-repeat;
-  mask-position: center center, calc(50dvw + var(--shapeShift)) -5px, calc(50dvw - (1000px + var(--shapeShift))) -5px;
-  mask-size: 100% 100%, 1000px 100px, 1000px 100px;
+	mask-repeat: no-repeat;
+	mask-position: center center, calc(50dvw + var(--shapeShift)) -5px, calc(50dvw - (1000px + var(--shapeShift))) -5px;
+	mask-size: 100% 100%, 1000px 100px, 1000px 100px;
 	mask-composite: exclude;
+}
+
+.bg.slim {
+	backdrop-filter: none;
+	background: #fff;
+	mask-image: none;
+}
+
+.bg.hasBorder {
+	@apply border-b border-neutral-200 dark:border-neutral-700;
 }
 
 :global(html.dark)  {
 	.bg {
 		background: #2e2e2ecc;
+	}
+
+	.bg.slim {
+		background: #2e2e2e;
 	}
 }
 

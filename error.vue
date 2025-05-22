@@ -36,6 +36,7 @@
 </template>
 
 <script setup lang="ts">
+import 'virtual:uno.css';
 import NProgress from 'nprogress';
 import { locales } from '@/assets/data/locales';
 import { getGhIssueUrl } from './assets/js/misc/get-issue-url';
