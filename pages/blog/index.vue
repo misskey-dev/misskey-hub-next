@@ -15,7 +15,7 @@
                 </div>
             </template>
         </GHero>
-        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-neutral-950">
+        <div class="pb-12 pt-6 bg-white dark:bg-neutral-950">
             <div class="container mx-auto max-w-screen-lg px-6 space-y-4 lg:space-y-2">
                 <GNuxtLink
                     class="block p-4 rounded-lg border border-neutral-200 dark:border-accent-900 transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800"

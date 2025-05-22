@@ -41,7 +41,7 @@
                 </div>
             </template>
         </GHero>
-        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-neutral-950 min-h-screen">
+        <div class="pb-12 pt-6 bg-white dark:bg-neutral-950 min-h-screen">
             <ClientOnly>
                 <Suspense>
                     <ServersFinder @load="setServerStats" />

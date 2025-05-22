@@ -9,11 +9,11 @@
             <h1 class="text-center font-bold text-2xl lg:text-3xl mb-4">{{ data?.title }}</h1>
             <p class="text-center">{{ $d(new Date(data?.date)) }}</p>
         </div>
-        <div class="bg-white dark:bg-neutral-950 pb-12 lg:mt-12 pt-6 px-6">
+        <div class="bg-white dark:bg-neutral-950 pb-12 pt-6 px-6">
             <div class="mx-auto container max-w-screen-md markdown-body">
                 <ContentRenderer :value="data" />
             </div>
-            <div class="text-center mt-6 lg:mt-12">
+            <div class="text-center mt-6">
                 <GSocialShare
                     :url="`${runtimeConfig.public.baseUrl}/ja/blog/${route.params.slug}/`"
                 ></GSocialShare>
