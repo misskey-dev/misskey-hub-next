@@ -74,7 +74,7 @@
 	</section>
 
 	<section class="section_donationAndSponsors _primaryWidth">
-		<div class="section_donationAndSponsors_content _secondaryWidth acrylic">
+		<div class="section_donationAndSponsors_content acrylic">
 			<section class="section_donationAndSponsors_sponsors">
 				<IndexSponsors />
 			</section>
@@ -89,11 +89,11 @@
 	</section>
 
 	<section class="section_introduction _primaryWidth" id="introduction">
-		<div class="section_introduction_content _secondaryWidth">
+		<div class="section_introduction_content">
 			<h2 class="section_introduction_content_title"><b v-text-underline>{{ $t('_landing._introduction.title') }}</b></h2>
 			<div class="section_introduction_content_description">{{ $t('_landing._introduction.description') }}</div>
 		</div>
-		<div class="swiper _secondaryWidth acrylic">
+		<div class="swiper acrylic">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/misskey-light.png"></div>
 				<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/ss-jobqueue.light.png"></div>
@@ -106,11 +106,9 @@
 		</div>
 	</section>
 
-	<section class="introductionTip _secondaryWidth">
-		<p class="introductionTipText">
-			<b class="" style="background: #9ad11b; color: #000; border-radius: 999px; padding: 4px 16px; margin-right: 16px;">TIP:</b>
-			<span>{{ $t('_landing._introduction.tip') }}</span>
-		</p>
+	<section class="introductionTip _primaryWidth">
+		<b class="" style="background: #9ad11b; color: #000; border-radius: 999px; padding: 4px 16px; margin-right: 16px;">TIP:</b>
+		<span>{{ $t('_landing._introduction.tip') }}</span>
 	</section>
 
 	<section class="section_decentralized _secondaryWidth">
@@ -1034,82 +1032,32 @@ onMounted(() => {
 
 .section_introduction {
 	position: relative;
-	margin-bottom: 100px;
-	padding-bottom: 400px;
-}
-
-.section_introduction_bg {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 500px;
-	background: #f7f7f7;
-	border-radius: 16px;
-	overflow: clip;
-}
-:global(html.dark)  {
-	.section_introduction_bg {
-		background: #222;
-	}
-}
-
-.section_introduction_bg_image {
-	position: absolute;
-	bottom: -700px;
-	right: -1200px;
-	width: 2000px;
-
-	animation-name: parallax;
-	animation-timing-function: linear;
-	animation-timeline: scroll(root y);
-	--coefficient-parallax: 6;
-}
-
-@keyframes parallax {
-	from { transform: translateY(0); }
-	to { transform: translateY(calc(-1700px + (var(--coefficient-parallax) * 400px))); }
-}
-
-.section_introduction_barcode {
-	position: absolute;
-	top: 42px;
-	left: 38px;
-	height: 400px;
-	color: #0001;
-	fill: currentColor;
-}
-:global(html.dark)  {
-	.section_introduction_barcode {
-		color: #fff1;
-	}
 }
 
 .section_introduction_content {
 	position: relative;
 	padding-top: 55px;
 	padding-bottom: 55px;
+	text-align: center;
 }
 
 .section_introduction_content_title {
-	font-size: 150%;
+	font-size: 130%;
 	font-weight: bold;
 	margin: 0;
 	margin-bottom: 24px;
 }
 
 .section_introduction_content_description {
-	max-width: 60%;
+	font-size: 90%;
 }
 
 .swiper {
-	position: absolute;
-	left: 0;
-	right: 0;
+	position: relative;
 	width: 100%;
 	width: 100%;
 	box-sizing: border-box;
-	padding: 32px;
+	padding: 16px;
 }
 
 .swiper-wrapper {
@@ -1117,7 +1065,7 @@ onMounted(() => {
 }
 
 .swiper-slide {
-	width: 700px;
+	width: 300px;
 	border-radius: 16px;
 	overflow: clip;
 	user-select: none;
@@ -1131,8 +1079,8 @@ onMounted(() => {
 }
 
 .introductionTip {
-	padding: 24px 32px;
-	font-size: 90%;
+	margin-top: 24px;
+	font-size: 80%;
 	text-align: center;
 }
 
