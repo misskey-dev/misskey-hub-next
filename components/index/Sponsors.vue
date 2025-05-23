@@ -19,48 +19,48 @@
 import ArrowRightIco from 'bi/arrow-right.svg';
 
 type Sponsor = {
-    /** 画像URL */
-    img: string;
-    /** イメージにマージンを設けない場合はこちら */
-    margin?: boolean | string;
-    /** イメージを角丸にしない場合はこちら */
-    noRounded?: boolean;
-    /** 外部ページURL */
-    to?: string;
+	/** 画像URL */
+	img: string;
+	/** イメージにマージンを設けない場合はこちら */
+	margin?: boolean | string;
+	/** イメージを角丸にしない場合はこちら */
+	noRounded?: boolean;
+	/** 外部ページURL */
+	to?: string;
 };
 
 const sponsors: Sponsor[] = [
-    {
-        img: '/img/sponsors/mask.svg',
-        to: 'https://mask.io/',
-    },
-    {
-        img: '/img/sponsors/rss3.png',
-        to: 'https://rss3.io/',
-    },
-    {
-        img: '/img/sponsors/skeb.svg',
-        to: 'https://skeb.jp/',
-    },
-    {
-        img: '/img/sponsors/xserver.png',
-        margin: false,
-        to: 'https://www.xserver.ne.jp/',
-    },
-    {
-        img: '/img/sponsors/gmo_pepabo.svg',
-        margin: 'padding: 0.625rem',
-        to: 'https://pepabo.com/',
-    },
-    {
-        img: '/img/sponsors/purple-dot-digital.jpg',
-        margin: false,
-        to: 'https://purpledotdigital.com/',
-    },
-    {
-        img: '/img/sponsors/xfolio.svg',
-        to: 'https://xfolio.jp/',
-    },
+	{
+			img: '/img/sponsors/mask.svg',
+			to: 'https://mask.io/',
+	},
+	{
+			img: '/img/sponsors/rss3.png',
+			to: 'https://rss3.io/',
+	},
+	{
+			img: '/img/sponsors/skeb.svg',
+			to: 'https://skeb.jp/',
+	},
+	{
+			img: '/img/sponsors/xserver.png',
+			margin: false,
+			to: 'https://www.xserver.ne.jp/',
+	},
+	{
+			img: '/img/sponsors/gmo_pepabo.svg',
+			margin: 'padding: 0.625rem',
+			to: 'https://pepabo.com/',
+	},
+	{
+			img: '/img/sponsors/purple-dot-digital.jpg',
+			margin: false,
+			to: 'https://purpledotdigital.com/',
+	},
+	{
+			img: '/img/sponsors/xfolio.svg',
+			to: 'https://xfolio.jp/',
+	},
 ];
 
 const localePath = useGLocalePath();
@@ -80,6 +80,13 @@ const localePath = useGLocalePath();
 	grid-template-columns: repeat(auto-fit, 100px);
 	justify-content: center;
 	gap: 24px;
+}
+
+@media (max-width: 1200px) {
+	.grid {
+		grid-template-columns: repeat(auto-fit, 75px);
+		gap: 18px;
+	}
 }
 
 .sponsor {
