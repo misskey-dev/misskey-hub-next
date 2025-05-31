@@ -56,9 +56,9 @@ If omitted, it will be `info`.
 
 ### `Mk:toast(text)`
 
-トーストを表示します。ダイアログと違い、ユーザーがダイアログを閉じる操作が必要ないため、何らかの操作が完了したなどの単純なお知らせに使用できます。
+Display a toast.Unlike dialogs, it does not require the user to close the dialog, so it can be used for simple notifications such as when some operation has been completed.
 
-**この関数は2025.5.1（仮称）でリリース予定のものです。**
+**This function is scheduled for release in 2025.5.1 (tentative name).**
 
 ### `Mk:confirm(title, text, type)`
 
