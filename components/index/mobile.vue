@@ -543,6 +543,18 @@
 					</div>
 					<div v-fade-in="'featuresItem'" :class="$style.features_item">
 						<div :class="$style.features_itemContent">
+							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._watermark.title') }}</h3>
+							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._watermark.description') }}</div>
+						</div>
+					</div>
+					<div v-fade-in="'featuresItem'" :class="$style.features_item">
+						<div :class="$style.features_itemContent">
+							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._imageEditing.title') }}</h3>
+							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._imageEditing.description') }}</div>
+						</div>
+					</div>
+					<div v-fade-in="'featuresItem'" :class="$style.features_item">
+						<div :class="$style.features_itemContent">
 							<img src="/img/top-features/widgets.webp" :class="$style.features_itemContentImage">
 							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._widgets.title') }}</h3>
 							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._widgets.description') }}</div>

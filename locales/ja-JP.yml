@@ -208,6 +208,12 @@ _landing:
     _multiAccounts:
       title: "マルチアカウント対応"
       description: "複数のアカウントを簡単に切り替えて使用可能です。"
+    _watermark:
+      title: "ウォーターマーク付与機能"
+      description: "投稿する画像にウォーターマークを自動で付与して、簡単にクレジット情報を残すことができます。ウォーターマークは自由にカスタマイズ可能です。"
+    _imageEditing:
+      title: "画像加工機能"
+      description: "画像にエフェクトを追加し、カラーグレーディングを行ったり、様々なクリエイティブな表現を行うことが可能です。"
     _achievements:
       title: "実績"
       description: "Misskeyの機能を体験するモチベーションになり、オンボーディングに役立ちます。"
