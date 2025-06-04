@@ -111,13 +111,13 @@
 		<span>{{ $t('_landing._introduction.tip') }}</span>
 	</section>
 
-	<section class="section_decentralized _secondaryWidth">
-		<div v-fade-in="'right'">
+	<section class="section_decentralized _primaryWidth">
+		<div v-fade-in="'top'">
 			<div class="section_decentralized_cloudContainer">
 				<div class="section_decentralized_cloudContainer_cloud"></div>
 			</div>
 		</div>
-		<div v-fade-in="'left'">
+		<div v-fade-in="'top'">
 			<div class="section_decentralized_content">
 				<h2 class="section_decentralized_title"><b v-text-underline>{{ $t('_landing._decenterized.title') }}</b></h2>
 				<div class="section_decentralized_description">
@@ -1140,12 +1140,11 @@ onMounted(() => {
 	position: relative;
 	margin-bottom: 50px;
 	margin-top: 32px;
-	display: flex;
-	align-items: center;
+	text-align: center;
 }
 
 .section_decentralized_title {
-	font-size: 140%;
+	font-size: 120%;
 	font-weight: bold;
 	margin: 0;
 	margin-bottom: 24px;
@@ -1154,7 +1153,7 @@ onMounted(() => {
 .section_decentralized_content {
 	position: relative;
 	background: #f7f7f7;
-	padding: 46px 58px;
+	padding: 24px;
 	border-radius: 16px;
 }
 :global(html.dark)  {
@@ -1168,7 +1167,6 @@ onMounted(() => {
 }
 
 .section_decentralized_cloudContainer {
-	margin-right: 32px;
 }
 
 .section_decentralized_cloudContainer_cloud {
@@ -1196,7 +1194,6 @@ onMounted(() => {
 
 .section_useCases_items {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: 16px;
 }
 
@@ -1258,10 +1255,10 @@ onMounted(() => {
 
 .section_free_content {
 	position: relative;
-	display: flex;
 	padding: 24px;
 	background: #f7f7f7;
 	border-radius: 16px;
+	text-align: center;
 }
 :global(html.dark)  {
 	.section_free_content {
@@ -1271,8 +1268,6 @@ onMounted(() => {
 
 .section_free_main {
 	position: relative;
-	flex: 1;
-	padding: 24px;
 }
 
 .section_free_sub {
@@ -1284,6 +1279,7 @@ onMounted(() => {
 	box-sizing: border-box;
 	width: 300px;
 	place-content: center;
+	margin-top: 16px;
 }
 :global(html.dark)  {
 	.section_free_sub {
@@ -1299,7 +1295,7 @@ onMounted(() => {
 }
 
 .section_free_title {
-	font-size: 140%;
+	font-size: 120%;
 	font-weight: bold;
 	margin: 0;
 	margin-bottom: 24px;
