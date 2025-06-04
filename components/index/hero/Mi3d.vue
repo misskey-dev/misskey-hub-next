@@ -5,7 +5,7 @@
 <script setup lang="ts">
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { OrbitControls } from './OrbitControls.js';
 import { DebugEnvironment } from 'three/addons/environments/DebugEnvironment.js';
 
 const canvasEl = useTemplateRef('canvas');
@@ -21,14 +21,6 @@ onMounted(() => {
 		const camera = new THREE.PerspectiveCamera(50, canvasEl.value.offsetWidth / canvasEl.value?.offsetHeight, 0.1, 1000);
 		camera.position.z = 1.5;
 
-		//const light = new THREE.PointLight(0xffffff, 1000);
-		//light.position.set(10, 10, 10);
-		//light.castShadow = true;
-		//light.shadow.mapSize.width = 2048 * 16;
-		//light.shadow.mapSize.height = 2048 * 16;
-		//light.shadow.radius = 5;
-		//light.shadow.normalBias = 0.01;
-		//light.shadow.camera.far = 1000;
 		const light = new THREE.DirectionalLight(0xffffff, 3);
 		light.position.set(10, 10, 10);
 		light.castShadow = true;
@@ -49,7 +41,6 @@ onMounted(() => {
 		controls.enableRotate = true;
 		controls.autoRotate = true;
 		controls.target.set(0, 0, 0);
-		controls.update();
 
 		renderer = new THREE.WebGLRenderer({
 			canvas: canvasEl.value,
