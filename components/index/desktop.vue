@@ -1246,16 +1246,16 @@ onMounted(() => {
 	bottom: -700px;
 	right: -1200px;
 	width: 2000px;
+	max-width: initial;
 
-	animation-name: parallax;
-	animation-timing-function: linear;
-	animation-timeline: scroll(root y);
-	--coefficient-parallax: 6;
+	animation: parallax linear both;
+	animation-timeline: view(y -50%);
+	animation-range: cover;
 }
 
 @keyframes parallax {
-	from { transform: translateY(0); }
-	to { transform: translateY(calc(-1700px + (var(--coefficient-parallax) * 400px))); }
+	from { transform: translateY(-800px) }
+	to { transform: translateY(800px) }
 }
 
 .section_introduction_barcode {
