@@ -10,6 +10,11 @@
 	--THEME-fg: #eee;
 }
 
+::selection {
+	color: #fff;
+	background-color: #86b300;
+}
+
 html, body {
 	margin: 0;
 	padding: 0;
