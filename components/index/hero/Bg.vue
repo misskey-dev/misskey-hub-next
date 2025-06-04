@@ -24,10 +24,16 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 
 .blobs {
 	position: absolute;
-	animation-name: parallax;
-	animation-timing-function: linear;
-	animation-timeline: scroll(root y);
-	--parallax-factor: 50;
+	/*will-change: transform;*/
+
+	animation: parallax linear both;
+  animation-timeline: view(y);
+	animation-range: normal;
+}
+
+@keyframes parallax {
+  from { transform: translateY(-600px) }
+  to { transform: translateY(600px) }
 }
 
 .blobs > svg {
@@ -80,10 +86,5 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 @keyframes spin {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
-}
-
-@keyframes parallax {
-	from { transform: translateY(0); }
-	to { transform: translateY(calc(var(--parallax-factor) * 100px)); }
 }
 </style>
