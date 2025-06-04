@@ -1,8 +1,7 @@
 <template>
 <div class="root">
-	<div class="blobs object1"><Blob1 aria-hidden="true" /></div>
-	<div class="blobs object2"><Blob2 aria-hidden="true" /></div>
-	<div class="blobs object3"><Blob2 aria-hidden="true" /></div>
+	<div class="object object1"><Blob1 aria-hidden="true" /></div>
+	<div class="object object2"><Blob2 aria-hidden="true" /></div>
 </div>
 </template>
 
@@ -22,39 +21,30 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 	height: 100%;
 }
 
-.blobs {
+.object {
 	position: absolute;
 	/*will-change: transform;*/
 
 	animation: parallax linear both;
-  animation-timeline: view(y);
-	animation-range: normal;
+  animation-timeline: view(y -50%);
+	animation-range: cover;
 }
 
 @keyframes parallax {
-  from { transform: translateY(-600px) }
-  to { transform: translateY(600px) }
+  from { transform: translateY(-800px) }
+  to { transform: translateY(800px) }
 }
 
-.blobs > svg {
+.object > svg {
 	width: 100%;
 }
 
 .object1 {
-	top: -500px;
-  right: -200px;
+	left: auto;
+	right: -300px;
+	top: -700px;
 	width: 1000px;
 	opacity: 1;
-}
-
-@screen lg {
-	.object1 {
-		left: auto;
-		right: -300px;
-		top: -400px;
-		width: 1000px;
-		opacity: 1;
-	}
 }
 
 .object1 > svg {
@@ -63,24 +53,13 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 
 .object2 {
 	left: -250px;
-	top: 300px;
+	top: 800px;
 	width: 1000px;
 	opacity: .5;
 }
 
 .object2 > svg {
 	animation: 80s linear 0s infinite reverse none running spin;
-}
-
-.object3 {
-	right: -300px;
-	top: 1400px;
-	width: 1000px;
-	opacity: .5;
-}
-
-.object3 > svg {
-	animation: 80s linear 0s infinite normal none running spin;
 }
 
 @keyframes spin {
