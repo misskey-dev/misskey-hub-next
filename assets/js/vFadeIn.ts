@@ -21,7 +21,7 @@ export const vFadeIn = {
 
 		const observer = new IntersectionObserver(onIntersect, {
 			root: null,
-			rootMargin: '9999px 0px -300px 0px',
+			rootMargin: '9999px 0px -200px 0px',
 			threshold: 0,
 		});
 
