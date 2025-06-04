@@ -695,14 +695,10 @@
 		</section>
 	</div>
 
-	<section class="section_madeBy _primaryWidth">
-		<div v-fade-in="'up'">
+	<section class="section_madeBy _primaryWidth" v-fade-in="'up'">
+		<div>
 			<h2 class="section_madeBy_title">Made by</h2>
-		</div>
-		<div v-fade-in="'right'">
 			<img class="section_madeBy_image" src="/midev.png" alt="">
-		</div>
-		<div v-fade-in="'left'">
 			<b class="section_madeBy_name">Misskey Project</b>
 		</div>
 	</section>
