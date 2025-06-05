@@ -50,8 +50,8 @@ _landing:
       title: "분산"
       description: "Misskey는 분산형 프로토콜을 채용하고 있으므로, 다른 서버의 커뮤니티에 연결할 수 있습니다."
     _powerful:
-      title: "パワフル"
-      description: "Misskeyはプロダクションレベルの様々な機能を備えていて、細かなカスタマイズも可能です。多人数でも少人数でも、最適なソリューションに。"
+      title: "파워풀"
+      description: "Misskey는 프로덕션 레벨의 여러 기능을 갖춰 세세한 커스터마이징도 가능합니다. 인원이 많거나 적어도 최적의 솔루션으로 됩니다."
   _decenterized:
     title: "Misskey는 {0}"
     description: "Misskey는 오픈 소스 프로젝트로 누구나 자유롭게 Misskey를 사용한 서버를 만들 수 있고, 이미 다양한 서버에서 Misskey를 사용하고 있어요. 특히, Misskey는 {0}이라고 불리는 분산형 통신 프로토콜을 사용하고 있어서 어떤 서버를 골라도 다른 서버에 있는 유저와 소통을 할 수 있어요. 이것이 분산형이라고 불리는 이유이며, 다른 플랫폼과는 통신할 수 없는 Twitter 등의 서비스와는 근본적으로 다르답니다. 그렇기 때문에 서버에 따라 주제나 테마, 유저 층, 언어 등이 다르니 당신에게 딱 맞는 서버를 찾아보는 것이 좋아요. (물론, 본인이 직접 서버를 만드는 것도 괜찮아요.)"
@@ -70,146 +70,146 @@ _landing:
       title: "리액션"
       description: "노트에 \"리액션\"을 달아서 간단하게 본인의 느낌을 표현, 전달할 수 있습니다."
     _customEmojis:
-      title: "カスタム絵文字"
-      description: "Misskeyの様々な場所で使用できる、サーバーオリジナルの絵文字を作成可能です。"
+      title: "커스텀 이모티콘"
+      description: "Misskey는 여러 장소에서 사용할 수 있는 서버 오리지널 이모티콘을 작성할 수 있습니다."
     _channel:
-      title: "チャンネル"
-      description: "チャンネルを作成すれば、共通のテーマでサーバー内コミュニティを作成することが可能です。"
+      title: "채널"
+      description: "채널을 만들면 공통 테마로 서버 내 커뮤니티를 만들 수 있습니다."
     _antenna:
-      title: "アンテナ"
-      description: "特定のワードが含まれるノートだけを収集するタイムラインを作成可能です。"
+      title: "안테나"
+      description: "특정 단어가 포함된 노트만 수집하는 타임라인을 만들 수 있습니다."
     _drive:
       title: "드라이브"
       description: "업로드한 파일은 '드라이브'에 저장되어, 마음에 드는 사진을 폴더에 모아 두고, 원할 때 쉽게 공유할 수 있습니다."
     _2fa:
-      title: "多要素認証"
-      description: "ワンタイムパスワードを使用した多要素認証や、物理的なキーを使用したパスキー認証で、アカウントのセキュリティを高める各種技術をサポート。"
+      title: "다단계 인증"
+      description: "일회용 비밀번호를 사용한 다단계 인증이나 물리적인 키를 사용한 패스키 인증으로 계정의 보안을 높이는 각종 기술을 지원합니다. "
     _charts:
       title: "차트"
       description: "Misskey에 내장된 차트 엔진을 이용하여, 서버의 이용 통계와 같은 정보를 한 눈에 파악할 수 있습니다."
     _branding:
-      title: "ブランディング"
-      description: "サーバーのロゴ、アイコン、テーマなどをカスタマイズして、簡単にSNSのブランディングを行えます。"
+      title: "브랜딩"
+      description: "서버의 로고, 아이콘, 테마 등을 커스터마이징해 간단히 SNS 브랜딩을 할 수 있습니다."
     _roles:
-      title: "ロール"
-      description: "ロールを使用すると、ユーザーごとに権限を細かくカスタマイズできます。また、コンディショナルロールを使えば、条件に一致するユーザーに自動でロールをアサインすることも可能です。ロールにバッジを設定して、サーバーのマネタイズに役立てることもできます。"
+      title: "역할"
+      description: "역할을 사용하면 유저마다 권한을 세세하게 커스터마이징할 수 있습니다. 또 조건부 역할을 사용하면 조건에 일치하는 유저에 자동으로 역할을 할당할 수 있습니다. 역할에게 배지를 설정해 서버의 수익화에 도움을 줄 수 있습니다."
     _moderation:
-      title: "モデレーション"
-      description: "サーバー運営を助ける、充実のモデレーション機能が標準搭載。"
+      title: "조정"
+      description: "서버 운영을 돕는 충실한 조정 기능이 표준 탑재돼있습니다."
     _privacy:
-      title: "プライバシー"
-      description: "豊富なプライバシー設定で、コンテンツの公開範囲を柔軟にコントロール。"
+      title: "개인 정보 보호"
+      description: "풍부한 개인 정보 보호 설정에서 콘텐츠의 공개 범위를 유연히 조정할 수 있습니다."
     _multiPurpose:
-      title: "ひとりでも、みんなでも"
-      description: "多数の利用者を受け入れるSNSとしての運用はもちろん、個人用サーバーとしての利用もサポート。Fediverseと繋がるための、あなただけの強力な拠点になります。"
+      title: "혼자여도, 여러 명이어도"
+      description: "여러 유저를 받아들이는 SNS로의 운영은 물론, 개인용 서버로의 이용도 지원합니다. Fediverse와 연결되기에 당신만의 강력한 거점으로 됩니다."
     _monetization:
-      title: "収益化"
-      description: "広告の表示など、サーバーのマネタイズを助ける機能も用意されていて、持続可能な運用を目指せます。"
+      title: "수익화"
+      description: "광고의 표시 등 서버의 수익화를 돕는 기능도 준비돼있으며, 지속 가능한 운용을 목표로 합니다."
     _oss:
       title: "Mi ❤️ OSS"
-      description: "Misskeyはこれまでもこれからもオープンソースで、誰でも自由に、無料でソースコードを利用可能です。またMisskey Projectは、他のOSSに対して積極的に支援活動を行っています。"
+      description: "Misskey는 여태까지 그리고 앞으로도 오픈 소스로, 누구나 자유롭게 무료로 소스 코드를 이용할 수 있습니다. 또 Misskey Project는 다른 OSS에 대해 적극적으로 지원 활동을 하고 있습니다."
     _battleTested:
-      title: "信頼性"
-      description: "Misskeyは10年以上にわたって実際の環境で使われており(battle-tested)、高い信頼性があると自負しています。"
+      title: "신뢰성"
+      description: "Misskey는 10년 이상에 걸쳐 실제 환경에서 사용되고 있고(battle-tested), 높은 신뢰성이 있다고 자부합니다."
   _featuresServer:
     _root:
-      title: "サーバーの機能"
-      description: "Misskeyを支えるバックエンド実装の特徴。"
+      title: "서버의 기능"
+      description: "Misskey를 지원하는 백엔드 실장의 특징"
     _easyInstall:
-      title: "簡単インストール"
-      description: "簡単なコマンドでインストールできるほか、各社提供のホスティングサービスを利用すれば、管理の手間も省けます。"
+      title: "쉬운 설치"
+      description: "간단한 커맨드로 설치할 수 있고, 각사 제공 호스팅 서비스를 이용하면 관리의 수고를 덜 수 있습니다."
     _easySetup:
-      title: "セットアップもカンタン"
-      description: "Misskeyサーバーのセットアップに複雑な設定は不要で、すぐに運用を始められます。一方、ニーズに合わせて高度な設定を行うことも可能です。"
+      title: "쉬운 설정"
+      description: "Misskey는 서버의 설정에서 복잡한 설정은 불필요하고, 바로 운용을 시작할 수 있습니다. 한편, 요구에 맞춰 고급 설정을 하는 것도 가능합니다."
     _api:
       title: "API"
-      description: "Misskeyの全ての機能はHTTP APIを通じて操作可能で、他のアプリケーションとの連携も容易です。さらに、WebhookやWebSocket接続もサポートしているので、リアルタイムにMisskeyからのイベントを受け取ることも可能です。"
+      description: "Misskey의 모든 기능은 HTTP API를 통해 조작할 수 있고, 다른 애플리케이션과의 연휴도 용이합니다. 더욱이 Webhook이나 WebSocket 접속도 지원하고 있으므로 실시간으로 Misskey에서 이벤트를 받을 수 있습니다."
     _relay:
-      title: "リレー対応"
-      description: "Fediverse内のアクティビティを中継するリレーサーバーへの接続をサポートしているので、手動で多数のサーバーと繋げることなく情報収集が可能です。"
+      title: "릴레이 대응"
+      description: "Fediverse 내 액티비티를 중계하는 릴레이 서버로의 접속을 지원하고 있으므로 수동으로 여러 서버와 연결하는 일 없이 정보 수집을 할 수 있습니다."
     _nodejs:
-      title: "Node.jsバックエンド"
-      description: "MisskeyはバックエンドにNode.jsを採用しており、高速・軽量に動作します。"
+      title: "Node.js 백엔드"
+      description: "Misskey는 백엔드로 Node.js를 채용하고 있고, 빠르고 가볍게 작동합니다."
     _postgresql:
       title: "PostgreSQL"
-      description: "メインのデータベースにはPostgreSQLを採用し、堅牢なデータ管理を実現しています。"
+      description: "메인 데이터베이스에는 PostgreSQL을 채용하고, 견고한 데이터 관리를 실현하고 있습니다."
     _jobQueue:
-      title: "高効率ジョブキュー"
-      description: "ジョブキューにBullMQを採用し、タスクを複数のサーバーで効率的に処理可能。また、Misskeyネイティブで実装されたインスペクタはコントロールパネルに統合され、外部ツールに頼ることなく管理が可能です。"
+      title: "고효율 작업 대기열"
+      description: "작업 대기열에는 BullMQ를 채용하고, 작업을 여러 서버에서 효율적으로 처리할 수 있습니다. 또 Misskey 네이티브에서 실장된 인스펙터는 제어판으로 통합돼 외부 툴에 의존하는 일 없이 관리할 수 있습니다."
     _cdn:
-      title: "CDN対応"
-      description: "外部CDNによるリソースのキャッシュに対応しています。サーバーへのリクエストを減らすことで、負荷低減・コスト削減が可能です。"
+      title: "CDN 대응"
+      description: "외부 CDN의 리소스 캐시에 대응합니다. 서버로의 요청을 줄여 부하 감소, 비용 감소가 가능합니다."
     _ftt:
       title: "FTT"
-      description: "Fan-out Timeline Technology(FTT)により、タイムラインをRedis上に構築しパフォーマンスを向上させることができます。"
+      description: "Fan-out Timeline Technology(FTT)로 타임라인을 Redis상에 구축해 성능을 향상시킬 수 있습니다."
     _rbt:
       title: "RBT"
-      description: "Reactions Buffering Technology(RBT)により、リアクション情報をRedis上にキャッシュしパフォーマンスを向上させることができます。"
+      description: "Reactions Buffering Technology(RBT)로 리액션 정보를 Redis상에 캐시해 성능을 향상시킬 수 있습니다."
     _scalable:
-      title: "スケーラブル"
-      description: "プロセスのクラスタリング、複数サーバーによるロードバランス、データベースのレプリケーションに対応しており、ユーザーの増加にも対応できます。"
+      title: "확장 가능"
+      description: "프로세스의 클러스터 분석, 여러 서버의 부하분산, 데이터베이스의 복제에 대응하고, 유저의 증가에도 대응합니다."
     _ml:
-      title: "機械学習"
-      description: "組み込みの機械学習機能を利用して、自動的にセンシティブなメディアのフィルタリングを行うなど、運用の負担を軽減することも可能です。"
+      title: "기계 학습"
+      description: "내장 기계 학습 기능을 이용해 자동적으로 민감한 미디어의 필터링을 하는 등 운용의 부담을 줄일 수 있습니다."
     _sentry:
-      title: "Sentryサポート"
-      description: "Sentryによるサーバーのメトリクス収集に対応しているため、サーバーリソースの監視、ヘルスチェック、メンテナンスに役立てることができます。"
+      title: "Sentry 지원"
+      description: "Sentry로 서버 통계 수집에 대응하고 있기에 서버 리소스의 감시, 헬스체크, 유지 보수에 도움을 줄 수 있습니다."
   _featuresClient:
     _root:
       title: "WebUI"
-      description: "Misskeyに付属する高機能なWebフロントエンド(Misskey Web)の特徴を紹介。"
+      description: "Misskey에 부속된 높은 기능인 Web 프론트엔드(Misskey Web)의 특징을 소개"
     _responsive:
-      title: "レスポンシブUI"
-      description: "UIは洗練された独自のデザインシステムを使用して設計され、デスクトップ・タブレット・スマートフォンそれぞれに最適な表示・動作となるように丁寧に実装されています。"
+      title: "반응형 UI"
+      description: "UI는 세련된 독자 디자인 시스템을 사용해 설계됐고, 데스크톱, 태블릿, 스마트폰 각각에 최적인 표시, 작동으로 되게끔 정성스럽게 실장돼있습니다."
     _theme:
-      title: "テーマ"
-      description: "自分の好きな見た目でMisskeyを使えます。もちろんダークモードも完全サポート。自分で高度にテーマを作ることも可能です。"
+      title: "테마"
+      description: "원하는 디자인으로 Misskey를 사용할 수 있습니다. 물론 다크 모드도 확실하게 지원합니다. 스스로 고급 테마를 만들 수도 있습니다."
     _mfm:
       title: "MFM"
-      description: "ノートにはMFMと呼ばれるMisskey専用のマークアップ言語が使用できます。太字にする・リンクを挿入する・動きを付けるといった、テキストの装飾がシンプルな構文で表現できます。"
+      description: "노트에는 MFM이라 불리는 Misskey 전용 마크업 언어를 사용할 수 있습니다. 볼드체로 하기, 링크를 삽입하기, 움직임을 붙이기 등 텍스트의 장식을 간단한 구문으로 표현할 수 있습니다."
     _widgets:
-      title: "ウィジェット"
-      description: "様々な種類のウィジェットを自由に配置し、必要な情報に素早くアクセス。"
+      title: "위젯"
+      description: "여러 종류의 위젯을 자유롭게 배치하고, 필요한 정보에 재빨리 접근할 수 있습니다."
     _deck:
-      title: "デッキUI"
-      description: "デッキUIを使うと、UIをさらに深くカスタマイズ可能。自分だけのクライアントを作ることができます。"
+      title: "덱 UI"
+      description: "덱 UI를 사용하면 UI를 더욱 깊이 커스터마이징을 할 수 있습니다. 자신만의 클라이언트를 만들 수 있습니다."
     _embed:
-      title: "他サイトへの埋め込み"
-      description: "ノート、タイムラインなどを外部のサイトに埋め込んで表示可能です。"
+      title: "다른 사이트로의 임베딩"
+      description: "노트, 타임라인 등을 외부 사이트에 임베딩해 표시할 수 있습니다."
     _realtimeMode:
-      title: "リアルタイムモード"
+      title: "실시간 모드"
       description: ""
     _pushNotification:
-      title: "プッシュ通知"
-      description: "プッシュ通知に対応しているため、リアルタイムでサーバーからの通知を受け取ることができます。"
+      title: "푸시 알림"
+      description: "푸시 알림에 대응하기에 실시간으로 서버에서 알림을 받을 수 있습니다."
     _multiAccounts:
-      title: "マルチアカウント対応"
-      description: "複数のアカウントを簡単に切り替えて使用可能です。"
+      title: "멀티 계정 대응"
+      description: "여러 계정을 쉽게 교체해 사용할 수 있습니다."
     _plugin:
-      title: "プラグイン"
-      description: "セキュアなAiScriptを用いたプラグインをインストールして、クライアントの機能を拡張可能です。"
+      title: "플러그인"
+      description: "안전한 AiScript를 사용한 플러그인을 설치해 클라이언트의 기능을 확장할 수 있습니다."
     _settingsManagement:
-      title: "柔軟な設定管理"
-      description: "アカウントごとに任意のクライアント設定を上書きできるほか、複数のデバイス間で設定を共有・同期することができます。さらに、設定情報は自動バックアップ可能です。"
+      title: "유연한 설정 관리"
+      description: "계정마다 임의의 클라이언트 설정을 덮어쓰기할 수 있고, 여러 장치간에 설정을 공유, 동기화할 수 있습니다. 더욱이 설정 정보는 자동 백업이 가능합니다."
     _pwa:
       title: "PWA"
-      description: "Misskey WebはProgressive Web Apps(PWA)に準拠していて、デバイス上でネイティブアプリのように動作させることが可能です。"
+      description: "Misskey Web은 Progressive Web Apps(PWA)에 준거해 장치상에 네이티브 애플리케이션처럼 작동시킬 수 있습니다."
     _i18n:
-      title: "多言語対応"
-      description: "クライアントを様々な言語で利用可能です。"
+      title: "다국어 지원"
+      description: "클라이언트를 여러 언어로 이용할 수 있습니다."
   _featuresUpcoming:
     _root:
-      title: "近日公開"
-      description: "今後予定されている機能を紹介。"
+      title: "추후 공개"
+      description: "이후 예정된 기능을 소개"
     _jwt:
-      title: "JWT認証"
-      description: "JSON Web Token(JWT)を用いたステートレス認証を実装し、よりセキュア・より高速なリクエストの検証を実現します。"
+      title: "JWT 인증"
+      description: "JSON Web Token(JWT)을 사용한 무상태 인증을 실장하고, 더욱 안전하며 더욱 빠른 요청의 검증을 실현합니다."
     _newBackend:
-      title: "より軽量なバックエンド"
-      description: "より高速・軽量に動作可能にするための全く新しいバックエンド実装の開発を進めています。"
+      title: "더욱 가벼운 백엔드"
+      description: "더욱 빠르고 가벼운 작동을 할 수 있게 하기 위해 완전히 새로운 백엔드 실장의 개발을 진행하고 있습니다."
     _vueVapor:
-      title: "Vaporモード対応"
-      description: "フロントエンドで採用しているフレームワーク Vue の新しいコンパイルストラテジーをサポートし、より軽量なWeb UIを実現します。"
+      title: "Vapor 모드 대응"
+      description: "프론트엔드에서 채용한 프레임워크 Vue의 새로운 컴파일 전략을 지원하고 더욱 가벼운 Web UI를 실현합니다."
   _getStarted:
     title: "Misskey 시작하기"
     _find:
