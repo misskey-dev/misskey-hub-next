@@ -53,22 +53,23 @@
 					<MenuIcon v-else class="h-5 w-5" />
 				</button>
 				-->
-				<div style="display: flex; align-items: center; gap: 8px;">
+				<div style="display: flex; align-items: center; gap: 12px;">
 					<div>
 						<button class="_plainButton"
+							:class="$style.rightButton"
 							@click="rotateColorMode()"
 							:disabled="colorMode.forced"
 							aria-label="Change Color Mode"
 						>
 							<ClientOnly>
-								<SunIcon style="width: 20px; height: 20px;" v-if="colorMode.preference === 'light' || (colorMode.forced && colorMode.value === 'light')" />
-								<MoonIcon style="width: 20px; height: 20px;" v-else-if="colorMode.preference === 'dark' || (colorMode.forced && colorMode.value === 'dark')" />
-								<DisplayIcon style="width: 20px; height: 20px;" v-else />
+								<SunIcon style="width: 18px; height: 18px; display: block; margin: auto;" v-if="colorMode.preference === 'light' || (colorMode.forced && colorMode.value === 'light')" />
+								<MoonIcon style="width: 18px; height: 18px; display: block; margin: auto;" v-else-if="colorMode.preference === 'dark' || (colorMode.forced && colorMode.value === 'dark')" />
+								<DisplayIcon style="width: 18px; height: 18px; display: block; margin: auto;" v-else />
 							</ClientOnly>
 						</button>
 					</div>
-					<div class="relative group">
-						<button class="_plainButton"><I18nIcon style="width: 20px; height: 20px;"/></button>
+					<div>
+						<button class="_plainButton" :class="$style.rightButton"><I18nIcon style="width: 18px; height: 18px; display: block; margin: auto;"/></button>
 						<!--
 						<div class="absolute top-6 right-0 hidden group-hover:block group-focus-within:block z-[9955]">
 								<ul class="px-4 py-2 bg-neutral-50 dark:bg-neutral-800 rounded-lg shadow-lg space-y-1">
@@ -81,10 +82,9 @@
 						</div>
 						-->
 					</div>
-					<div class="border-l"></div>
 					<div v-for="item in NavData.right" :class="['transition-colors']">
-						<GNuxtLink :to="item.to" class="_plainLink">
-							<component v-if="'icon' in item" :is="item.icon" style="width: 20px; height: 20px;" />
+						<GNuxtLink :to="item.to" class="_plainLink" :class="$style.rightButton">
+							<component v-if="'icon' in item" :is="item.icon" style="width: 18px; height: 18px; display: block; margin: auto;" />
 							<template v-else>
 								{{ $t(item.i18n) }}
 							</template>
@@ -321,6 +321,22 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 @media (max-width: 1200px) {
 	.right {
 		display: none;
+	}
+}
+
+.rightButton {
+	display: block;
+	width: 40px;
+	height: 40px;
+	place-content: center;
+	text-align: center;
+	background: #0001;
+	border-radius: 999px;
+}
+
+:global(html.dark) {
+	.rightButton {
+		background: #fff2;
 	}
 }
 </style>
