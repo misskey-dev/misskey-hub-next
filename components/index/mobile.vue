@@ -81,7 +81,7 @@
 			<section class="section_donationAndSponsors_donation">
 				<h2 class="section_donationAndSponsors_donationTitle">{{ $t('_landing._donation.title') }}</h2>
 				<p class="section_donationAndSponsors_donationDescription">{{ $t('_landing._donation.description') }}</p>
-				<div>
+				<div style="margin-top: 0.75em;">
 					<GButton buttonType="link" :to="localePath('/docs/donate/')" color="accent">{{ $t('learnMore') }}</GButton>
 				</div>
 			</section>
@@ -176,7 +176,7 @@
 				<div class="section_free_main">
 					<h2 class="section_free_title"><b v-text-underline>{{ $t('_landing._free.title') }}🍀</b></h2>
 					<div class="section_free_description">{{ $t('_landing._free.description') }}</div>
-					<div>
+					<div style="margin-top: 0.75em; display: flex; gap: 12px;">
 						<GButton buttonType="link" to="https://github.com/misskey-dev" color="accent">View GitHub</GButton>
 						<GButton buttonType="link" :to="localePath('/docs/donate/')">Donate</GButton>
 					</div>
@@ -686,7 +686,7 @@
 					<section class="section_donationAndSponsors_donation">
 						<h2 class="section_donationAndSponsors_donationTitle">{{ $t('_landing._donation.title') }}</h2>
 						<p class="section_donationAndSponsors_donationDescription">{{ $t('_landing._donation.description') }}</p>
-						<div>
+						<div style="margin-top: 0.75em;">
 							<GButton buttonType="link" :to="localePath('/docs/donate/')" color="accent">{{ $t('learnMore') }}</GButton>
 						</div>
 					</section>
