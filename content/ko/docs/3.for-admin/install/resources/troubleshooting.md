@@ -226,4 +226,4 @@ Cloudflare를 사용하는 경우, Rocket Loader 또는 Auto Minify가 활성화
 3. [Misskey 저장소의 Issues](https://github.com/misskey-dev/misskey/issues)를 검색해 본다(동일한 오류가 발생하거나, Misskey의 버그일 가능성도 있습니다).
 4. 검색을 해도 잘 안 나오면 전문가에게 물어보세요.
   1. [Misskey Discord 서버（영어/일본어）](https://discord.gg/P4yYqYBjEp)등에 물어보기
-  2. 개발자([aqz](https://p1.a9z.dev/@aqz)나 shuiro)에게 리플이나 직접 글을 보내 물어보기
+  2. 개발자([aqz](https://p1.a9z.dev/@aqz)나 shuiro)에게 답글이나 직접 글을 보내 물어보기
