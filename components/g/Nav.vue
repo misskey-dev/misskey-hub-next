@@ -293,11 +293,21 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 	min-width: 0;
 	white-space: nowrap;
 	font-size: 110%;
+
+	padding-right: 32px;
+	border-right: solid 1px #0002;
+}
+:global(html.dark) {
+	.misskey {
+		border-right-color: #fff2;
+	}
 }
 
 @media (max-width: 1200px) {
 	.misskey {
 		margin: 0 auto;
+		padding-right: 0;
+		border-right: none;
 	}
 }
 
