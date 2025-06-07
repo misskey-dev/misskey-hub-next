@@ -30,8 +30,8 @@ _error:
   goToTop: "トップページにもどる"
 
 _seo:
-  siteName: "Misskey Hub"
-  siteNameLong: "Misskey Hub – Misskeyプロジェクト 公式サイト"
+  siteName: "Misskey"
+  siteNameLong: "Misskeyオフィシャルサイト Misskey Hub"
   defaultTitleTagline: "フリーでオープンソースの分散型SNS作成ソフトウェア"
   defaultDescription: "分散型SNS作成ソフトウェア Misskeyの公式サイト。Misskeyサーバーの作り方やサーバー一覧など、Misskeyに関する情報が満載！"
 
