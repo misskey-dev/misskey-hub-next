@@ -44,7 +44,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="pb-12 bg-black text-slate-200">
+		<div class="pb-12 bg-black text-neutral-200">
 			<div class="container mx-auto max-w-screen-xl px-6 pt-4 space-y-12">
 				<GLocalNav :items="[
 					{
@@ -89,8 +89,8 @@
 									<img src="/img/historical-materials/2014/e32efd98b06f42efb19504574ce31e42.png" />
 								</div>
 								<div class="text-center mt-2">
-									<p class="text-sm text-slate-300">2014年7月ごろ</p>
-									<p class="text-sm text-slate-300">Misskey公開。ウィンドウが並ぶ特徴的なUI</p>
+									<p class="text-sm text-neutral-300">2014年7月ごろ</p>
+									<p class="text-sm text-neutral-300">Misskey公開。ウィンドウが並ぶ特徴的なUI</p>
 								</div>
 							</div>
 							<div :class="$style.yearContentItem">
@@ -98,8 +98,8 @@
 									<img src="/img/historical-materials/2014/20141100.jpg" />
 								</div>
 								<div class="text-center mt-2">
-									<p class="text-sm text-slate-300">2014年11月ごろ</p>
-									<p class="text-sm text-slate-300">記事を公開できる「ノート機能」(※現在の「ノート」とは別)</p>
+									<p class="text-sm text-neutral-300">2014年11月ごろ</p>
+									<p class="text-sm text-neutral-300">記事を公開できる「ノート機能」(※現在の「ノート」とは別)</p>
 								</div>
 							</div>
 							<div :class="$style.yearContentItem">
@@ -107,8 +107,8 @@
 									<img src="/img/historical-materials/2014/20141203.jpg" />
 								</div>
 								<div class="text-center mt-2">
-									<p class="text-sm text-slate-300">2014年12月ごろ</p>
-									<p class="text-sm text-slate-300">タイムライン機能がメインになる</p>
+									<p class="text-sm text-neutral-300">2014年12月ごろ</p>
+									<p class="text-sm text-neutral-300">タイムライン機能がメインになる</p>
 								</div>
 							</div>
 							<div :class="$style.yearContentItem">
@@ -116,8 +116,8 @@
 									<img src="/img/historical-materials/2014/56002e01550f83a515819092-1.jpg" />
 								</div>
 								<div class="text-center mt-2">
-									<p class="text-sm text-slate-300">時期不明</p>
-									<p class="text-sm text-slate-300">しゅいろの操作ミスでデータ全消滅事件</p>
+									<p class="text-sm text-neutral-300">時期不明</p>
+									<p class="text-sm text-neutral-300">しゅいろの操作ミスでデータ全消滅事件</p>
 								</div>
 							</div>
 							<div :class="$style.yearContentItem">
@@ -125,8 +125,8 @@
 									<img src="/img/historical-materials/2014/56031e4a20b3edf83c3dd100-1.jpg" />
 								</div>
 								<div class="text-center mt-2">
-									<p class="text-sm text-slate-300">時期不明</p>
-									<p class="text-sm text-slate-300">この頃配布された壁紙</p>
+									<p class="text-sm text-neutral-300">時期不明</p>
+									<p class="text-sm text-neutral-300">この頃配布された壁紙</p>
 								</div>
 							</div>
 						</div>
@@ -142,14 +142,14 @@
 						<div>
 							<img src="/img/historical-materials/2015/20150201.png" class="rounded-lg" />
 							<div class="text-center mt-2">
-								<p class="text-sm text-slate-300">2015年2月ごろ</p>
+								<p class="text-sm text-neutral-300">2015年2月ごろ</p>
 							</div>
 						</div>
 						<div>
 							<img src="/img/historical-materials/2015/20151025.png" class="rounded-lg" />
 							<div class="text-center mt-2">
-								<p class="text-sm text-slate-300">2015年10月ごろ</p>
-								<p class="text-sm text-slate-300">UIが現代のものに近づく</p>
+								<p class="text-sm text-neutral-300">2015年10月ごろ</p>
+								<p class="text-sm text-neutral-300">UIが現代のものに近づく</p>
 							</div>
 						</div>
 					</div>
@@ -164,8 +164,8 @@
 						<div>
 							<img src="/img/historical-materials/2016/20160501.png" class="rounded-lg" />
 							<div class="text-center mt-2">
-								<p class="text-sm text-slate-300">2016年5月ごろ</p>
-								<p class="text-sm text-slate-300">まだ分散型ではないものの、この頃から既にいくつかサーバーがあった</p>
+								<p class="text-sm text-neutral-300">2016年5月ごろ</p>
+								<p class="text-sm text-neutral-300">まだ分散型ではないものの、この頃から既にいくつかサーバーがあった</p>
 							</div>
 						</div>
 					</div>
@@ -183,8 +183,8 @@
 									<img src="/img/historical-materials/2018/20180930.png" />
 								</div>
 								<div class="text-center mt-2">
-									<p class="text-sm text-slate-300">2018年9月ごろ</p>
-									<p class="text-sm text-slate-300">この頃になるとUIも洗練され、現代のMisskeyとあまり変わらない。分散型になり、リアクション機能もある</p>
+									<p class="text-sm text-neutral-300">2018年9月ごろ</p>
+									<p class="text-sm text-neutral-300">この頃になるとUIも洗練され、現代のMisskeyとあまり変わらない。分散型になり、リアクション機能もある</p>
 								</div>
 							</div>
 							<div :class="$style.yearContentItem">
@@ -192,7 +192,7 @@
 									<img src="/img/historical-materials/2018/20181003.webp" />
 								</div>
 								<div class="text-center mt-2">
-									<p class="text-sm text-slate-300">2018年10月ごろ</p>
+									<p class="text-sm text-neutral-300">2018年10月ごろ</p>
 								</div>
 							</div>
 							<div :class="$style.yearContentItem">
@@ -200,8 +200,8 @@
 									<img src="/img/historical-materials/2018/propaganda.jpg" />
 								</div>
 								<div class="text-center mt-2">
-									<p class="text-sm text-slate-300">2018年9月ごろ</p>
-									<p class="text-sm text-slate-300">当時のプロパガンダ画像。なお画像を制作したのは海外ユーザーで、何故か藍ちゃんが管理者扱いになっている</p>
+									<p class="text-sm text-neutral-300">2018年9月ごろ</p>
+									<p class="text-sm text-neutral-300">当時のプロパガンダ画像。なお画像を制作したのは海外ユーザーで、何故か藍ちゃんが管理者扱いになっている</p>
 								</div>
 							</div>
 						</div>
@@ -217,8 +217,8 @@
 						<div>
 							<img src="/img/historical-materials/2019/20190414.png" class="rounded-lg" />
 							<div class="text-center mt-2">
-								<p class="text-sm text-slate-300">2019年4月ごろ</p>
-								<p class="text-sm text-slate-300">時代は平成から令和に</p>
+								<p class="text-sm text-neutral-300">2019年4月ごろ</p>
+								<p class="text-sm text-neutral-300">時代は平成から令和に</p>
 							</div>
 						</div>
 						<div class="grid md:grid-cols-2 gap-4">
@@ -227,8 +227,8 @@
 									<img src="/img/historical-materials/2019/2019d.webp" />
 								</div>
 								<div class="text-center mt-2">
-									<p class="text-sm text-slate-300">時期不明</p>
-									<p class="text-sm text-slate-300">Misskeyから機能を大幅にそぎ落とした分散型ソフト「Dolphin」</p>
+									<p class="text-sm text-neutral-300">時期不明</p>
+									<p class="text-sm text-neutral-300">Misskeyから機能を大幅にそぎ落とした分散型ソフト「Dolphin」</p>
 								</div>
 							</div>
 							<div :class="$style.yearContentItem">
@@ -236,8 +236,8 @@
 									<img src="/img/historical-materials/2019/20190307.webp" />
 								</div>
 								<div class="text-center mt-2">
-									<p class="text-sm text-slate-300">2019年3月ごろ</p>
-									<p class="text-sm text-slate-300">このころまでにはデッキUIが使用できるように</p>
+									<p class="text-sm text-neutral-300">2019年3月ごろ</p>
+									<p class="text-sm text-neutral-300">このころまでにはデッキUIが使用できるように</p>
 								</div>
 							</div>
 						</div>
@@ -256,8 +256,8 @@
 									<img src="/img/historical-materials/2020/20200215.png" />
 								</div>
 								<div class="text-center mt-2">
-									<p class="text-sm text-slate-300">2020年2月ごろ</p>
-									<p class="text-sm text-slate-300">UIが少し変わる</p>
+									<p class="text-sm text-neutral-300">2020年2月ごろ</p>
+									<p class="text-sm text-neutral-300">UIが少し変わる</p>
 								</div>
 							</div>
 							<div :class="$style.yearContentItem">
@@ -265,8 +265,8 @@
 									<img src="/img/historical-materials/2020/20200409.png" />
 								</div>
 								<div class="text-center mt-2">
-									<p class="text-sm text-slate-300">2020年4月ごろ</p>
-									<p class="text-sm text-slate-300">このころのデッキUI</p>
+									<p class="text-sm text-neutral-300">2020年4月ごろ</p>
+									<p class="text-sm text-neutral-300">このころのデッキUI</p>
 								</div>
 							</div>
 						</div>
@@ -282,8 +282,8 @@
 						<div>
 							<img src="/img/historical-materials/2024/acbedd05d6ef418498c6b9467dd0fe6c.webp" class="rounded-lg" />
 							<div class="text-center mt-2">
-								<p class="text-sm text-slate-300">2024年6月</p>
-								<p class="text-sm text-slate-300">現代のMisskey</p>
+								<p class="text-sm text-neutral-300">2024年6月</p>
+								<p class="text-sm text-neutral-300">現代のMisskey</p>
 							</div>
 						</div>
 					</div>
