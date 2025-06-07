@@ -1688,7 +1688,6 @@ onMounted(() => {
 	background: #fff6;
 	backdrop-filter: blur(12px);
 	color: #000b;
-	border: solid 1px #0001;
 	border-radius: 16px;
 	padding: 20px;
 
@@ -1700,7 +1699,6 @@ onMounted(() => {
 	.features_itemContent {
 		background: #3336;
 		color: #fffd;
-		border: solid 1px #fff1;
 	}
 }
 
