@@ -1,14 +1,14 @@
-# ロール
+# Roles
 
-ロールはユーザーに割り当てることのできる属性で、ロールごとにバッジを表示させたりポリシー設定でユーザーの権限を調整したりできます。
+Las funciones son atributos asignados a los usuarios que permiten mostrar distintivos y asignar permisos mediante la configuración de políticas.
 
-ユーザーのロール割り当て(アサイン)は手動で行うことも、条件を指定して自動で行うようにすることもできます。
+La asignación de funciones puede hacerse manual (asignación) o automáticamente en función de determinadas condiciones.
 
-ロールは一人のユーザーに対して複数アサインすることができます。
+Un usuario puede tener varios roles a la vez.
 
-## ベースロール
+## Rol base
 
-全てのユーザーにデフォルトで適用されるポリシーの設定はベースロールの設定で行うことができます。
+Puedes establecer políticas que se aplicarán por defecto a todos los usuarios en la configuración de la plantilla de roles (rol base).
 
 ベースロールの設定はコントロールパネルの「ロール→ベースロール」で行えます。
 
@@ -17,7 +17,7 @@
 アサイン方法はマニュアルまたはコンディショナルから選択できます。
 
 - **マニュアル** ... 手動でユーザーをアサインしたりアサイン解除します。(マニュアル ロール)
-  - アサインする期間を設定することも可能です。
+    - アサインする期間を設定することも可能です。
 - **コンディショナル** ... 条件を設定し、それに合致するユーザーが自動で含まれるようになります。(コンディショナル ロール)
 
 :::warning
