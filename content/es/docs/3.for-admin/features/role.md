@@ -10,96 +10,95 @@ Un usuario puede tener varios roles a la vez.
 
 Puedes establecer políticas que se aplicarán por defecto a todos los usuarios en la configuración de la plantilla de roles (rol base).
 
-ベースロールの設定はコントロールパネルの「ロール→ベースロール」で行えます。
+Puede configurar la plantilla de funciones en el panel de control, en "Funciones > Plantilla de funciones".
 
-## アサインの種類
+## Modo de Asignación
 
-アサイン方法はマニュアルまたはコンディショナルから選択できます。
+Puedes configurar un rol para que se asigne manual o automáticamente.
 
-- **マニュアル** ... 手動でユーザーをアサインしたりアサイン解除します。(マニュアル ロール)
-    - アサインする期間を設定することも可能です。
-- **コンディショナル** ... 条件を設定し、それに合致するユーザーが自動で含まれるようになります。(コンディショナル ロール)
-
-:::warning
-
-コンディショナル ロールは、マニュアル ロールと比較して以下の制限があります。
-
-- 手動でのアサイン/アサイン解除は行えません。
-- 指定したコンディショナル ロールに含まれるユーザー一覧を取得することはできません。
-
-:::
-
-## 権限
-
-ロールの基本的な権限は以下から選択できます。
-
-- **一般ユーザー** ... 特別な権限はありません。
-- **モデレーター** ... 基本的なモデレーションに関する操作を行えます。
-- **管理者** ... サーバーの全ての設定を変更できます。
-
-より詳細な権限はポリシーの設定で行います。
-
-## ポリシー
-
-ロールのポリシーを調整して、権限や機能の制限を変更できます。
-
-ポリシーはベースロールに設定された値を継承するように設定することもできます。
-
-### 優先度
-
-複数のロールが割り当てられていて、同じポリシーがそれぞれ異なる値で定義されている場合に、他の定義よりどれくらい優先するかを設定できます。
-優先度を高く設定するほど他の定義より優先されます。
-
-優先度はポリシーごとの設定であり、ロールごとの設定ではありません。また、ベースロールでは設定できません。
-
-**優先度が同じ場合、デフォルトで最も大きい、または最も権限が広い値が選択されます。**
-
-:::tip
-
-例えば、ユーザーにロールAとロールBがアサインされていて、ロールAのドライブ容量ポリシーが 500MB、ロールBのドライブ容量ポリシーが 300MB に定義されている場合、
-
-- 優先度が同じ、もしくはロールAのドライブ容量ポリシーの優先度の方が高い場合 500MB の値が採用されます。
-- ロールBのドライブ容量ポリシーの優先度の方が高い場合 300MB の値が採用されます。
-
-また、ユーザーにロールCとロールDがアサインされていて、ロールCのパブリック投稿可否ポリシーが「いいえ」、ロールDのパブリック投稿可否ポリシーが「はい」に定義されている場合、
-
-- 優先度が同じ、もしくはロールDのパブリック投稿可否ポリシーの優先度の方が高い場合「はい」の値が採用されます。
-- ロールCのパブリック投稿可否ポリシーの優先度の方が高い場合「いいえ」の値が採用されます。
-
-:::
-
-### ベースロールの値を使用
-
-この設定をオンにすると、ポリシーの値をベースロールから継承します。
-
-## ロールの作成
-
-コントロールパネルの「ロール」から新しいロールを作成することができます。
-
-## ロール情報の確認、編集、および削除
-
-コントロールパネルの「ロール」で行うことができます。
-
-## ユーザーへのロールのアサイン、アサイン解除
-
-ユーザーの「モデレーション→ロール」で行うことができます。
-
-また、ユーザーのメニューから直接アサインすることもできます。
-
-アサインする際にアサインされる期間を設定することが可能です。
-
-:::tip
-
-ロールのアサイン/アサイン解除が反映されるまで時間がかかることがあります。
-
-:::
+- **Manual:**... Asignar y desasignar usuarios manualmente.(Roles manuales)
+    - También puede establecer una duración para el rol.
+- **Condicional:** Establezca las condiciones para la asignación. Los usuarios que cumplan las condiciones se asignarán automáticamente.(Rol Automático)
 
 :::warning
 
-コンディショナル ロールには手動でのアサインはできません。
+En comparación con los roles manuales, los roles condicionales tienen las siguientes limitaciones.
+
+- Los roles condicionales no se pueden asignar/desasignar manualmente.
+- No hay forma de ver una lista de usuarios a los que se ha asignado un rol condicional.
 
 :::
 
-## ユーザーのポリシーの確認
+## Permisos
 
-ユーザーの「モデレーション→概要→ポリシー」で行うことができます。
+Cada rol puede recibir los siguientes permisos básicos.
+
+- **Usuario Normal:**  No tiene ningún permiso especial.
+- **Moderador:**... Puede realizar operaciones básicas de moderación
+- **Administrador:** Puede modificar todos los ajustes de la instancia
+
+Se pueden establecer permisos más detallados en Políticas.
+
+## Políticas
+
+Las políticas de roles pueden ajustarse para implementar permisos y restricciones de funciones.
+
+Las políticas también pueden configurarse para que hereden los valores de la plantilla de roles.
+
+### Prioridad
+
+Si se asignan varios roles y se define la misma política con valores diferentes para cada rol, se pueden asignar prioridades a cada política para determinar cuál prevalece. Las políticas con mayor prioridad prevalecen sobre las de menor prioridad.
+
+La prioridad se asigna por política, no por rol.Las plantillas de rol no pueden tener prioridad
+
+**Si las prioridades de una política son las mismas, prevalece por defecto el valor mayor o más permisivo.**
+
+:::tip
+
+Por ejemplo, supongamos que a un usuario se le asignan los roles A y B. La política de capacidad de la unidad para el rol A se establece en 500 MB y la política de capacidad de la unidad para el rol B se establece en 300 MB
+
+- Si la prioridad para esta política en el rol A es mayor o las prioridades son las mismas, entonces el usuario tendrá 500MB de capacidad en Drive.
+- Si la prioridad para esta política en el rol B es más alta, entonces el usuario tendrá 300MB de capacidad en Drive.
+
+Además, supongamos que el usuario también tiene asignados los roles C y D. El rol C tiene la política "Puede enviar notas públicas" establecida en "No", mientras que el rol D tiene la misma política establecida en "Sí".
+
+- Si la prioridad de esta política en el rol D es mayor o las prioridades son las mismas, entonces el usuario tendrá la política establecida en "Sí".
+- Si la prioridad de esta política en el rol C es mayor, entonces el usuario tendrá la política establecida en "No".
+
+:::
+
+### Usar los valores del rol base
+
+Activa esta opción para heredar el valor de la política de la plantilla de roles.
+
+## Creando Roles
+
+Se pueden crear nuevos roles desde "Roles" en el Panel de Control.
+
+## Ver, editar o eliminar detalles de roles
+
+Los roles pueden editarse en "Roles" en el Panel de Control.
+
+## Asignación y desasignación de funciones a los usuarios
+
+Las funciones pueden asignarse a los usuarios en "Moderación > Funciones".
+
+También puedes asignar funciones directamente desde el menú del usuario.
+
+Puede establecer un periodo de tiempo para asignar el rol.
+
+:::tip
+
+Los cambios en la asignación de roles pueden tardar algún tiempo en surtir efecto.
+
+:::
+
+:::warning
+
+Los roles condicionales no pueden asignarse manualmente.
+
+:::
+
+## Comprobación de las políticas de un usuario
+
+Las políticas de un usuario pueden consultarse en "Moderación > Visión general > Políticas".
