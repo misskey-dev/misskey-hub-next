@@ -243,7 +243,7 @@ _landing:
       title: "Vaporモード対応"
       description: "フロントエンドで採用しているフレームワーク Vue の新しいコンパイルストラテジーをサポートし、より軽量なWeb UIを実現します。"
   _getStarted:
-    title: "Misskeyをはじめよう"
+    title: "Misskeyをはじめる"
     _find:
       title: "サーバーを見つける"
       list: "サーバーリスト"
