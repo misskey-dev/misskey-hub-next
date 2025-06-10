@@ -95,11 +95,54 @@
 		</div>
 		<div class="swiper acrylic">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/misskey-light.png"></div>
-				<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/ss-jobqueue.light.png"></div>
-				<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/misskey-light.png"></div>
-				<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/misskey-light.png"></div>
-				<div class="swiper-slide"><img class="swiper-slide-image" src="/img/hero/misskey-light.png"></div>
+				<div class="swiper-slide">
+					<picture class="swiper-slide-image">
+						<source media="(prefers-color-scheme: dark)" srcset="/img/hero/ss/tl.dark.webp" />
+						<img src="/img/hero/ss/tl.light.webp" alt="" />
+					</picture>
+				</div>
+				<div class="swiper-slide">
+					<picture class="swiper-slide-image">
+						<source media="(prefers-color-scheme: dark)" srcset="/img/hero/ss/user.dark.webp" />
+						<img src="/img/hero/ss/user.light.webp" alt="" />
+					</picture>
+				</div>
+				<div class="swiper-slide">
+					<picture class="swiper-slide-image">
+						<source media="(prefers-color-scheme: dark)" srcset="/img/hero/ss/drive.dark.webp" />
+						<img src="/img/hero/ss/drive.light.webp" alt="" />
+					</picture>
+				</div>
+				<div class="swiper-slide">
+					<picture class="swiper-slide-image">
+						<source media="(prefers-color-scheme: dark)" srcset="/img/hero/ss/chat.dark.webp" />
+						<img src="/img/hero/ss/chat.light.webp" alt="" />
+					</picture>
+				</div>
+				<div class="swiper-slide">
+					<picture class="swiper-slide-image">
+						<source media="(prefers-color-scheme: dark)" srcset="/img/hero/ss/deck.dark.webp" />
+						<img src="/img/hero/ss/deck.light.webp" alt="" />
+					</picture>
+				</div>
+				<div class="swiper-slide">
+					<picture class="swiper-slide-image">
+						<source media="(prefers-color-scheme: dark)" srcset="/img/hero/ss/theme-setting.dark.webp" />
+						<img src="/img/hero/ss/theme-setting.light.webp" alt="" />
+					</picture>
+				</div>
+				<div class="swiper-slide">
+					<picture class="swiper-slide-image">
+						<source media="(prefers-color-scheme: dark)" srcset="/img/hero/ss/jobqueue.dark.webp" />
+						<img src="/img/hero/ss/jobqueue.light.webp" alt="" />
+					</picture>
+				</div>
+				<div class="swiper-slide">
+					<picture class="swiper-slide-image">
+						<source media="(prefers-color-scheme: dark)" srcset="/img/hero/ss/watermark.dark.webp" />
+						<img src="/img/hero/ss/watermark.light.webp" alt="" />
+					</picture>
+				</div>
 			</div>
 			<div class="swiper-button-prev"></div>
 			<div class="swiper-button-next"></div>
