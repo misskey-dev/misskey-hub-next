@@ -109,6 +109,12 @@
 				</div>
 				<div class="swiper-slide">
 					<picture class="swiper-slide-image">
+						<source media="(prefers-color-scheme: dark)" srcset="/img/hero/ss/deck2.dark.webp" />
+						<img src="/img/hero/ss/deck2.light.webp" alt="" />
+					</picture>
+				</div>
+				<div class="swiper-slide">
+					<picture class="swiper-slide-image">
 						<source media="(prefers-color-scheme: dark)" srcset="/img/hero/ss/drive.dark.webp" />
 						<img src="/img/hero/ss/drive.light.webp" alt="" />
 					</picture>
