@@ -11,18 +11,7 @@
 			</span>
 			<span class="tickersItems">
 				<GMarquee :duration="90">
-					<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
-					<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
-					<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
-					<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
-					<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
-					<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
-					<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
-					<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
-					<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
-					<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
-					<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
-					<span class="tickersItem"><img class="tickersItemIcon" src="https://0key.dev/favicon.ico" alt="">xxxxxxx.example.com</span>
+					<span v-for="instance in tickerServers" class="tickersItem"><img class="tickersItemIcon" :src="`https://${instance.url}/favicon.ico`" alt="">{{ instance.url }}</span>
 				</GMarquee>
 			</span>
 		</section>
@@ -811,11 +800,13 @@ import { vFadeIn } from '@/assets/js/vFadeIn';
 import { vTextUnderline } from '@/assets/js/vTextUnderline';
 import TagCloud from 'TagCloud';
 import GHIcon from "bi/github.svg";
+import type { InstanceInfo, InstanceItem, InstancesStatsObj } from '@/types/instances-info';
 
 const { notice } = useAppConfig();
 const isUwu = useState<boolean>('isUwu');
 const localePath = useGLocalePath();
 const { locale, fallbackLocale } = useI18n();
+const runtimeConfig = useRuntimeConfig();
 
 // お知らせ欄にブログが来る可能性もあるので
 const localeState = useState('miHub_blog_originalLocale', () => locale.value);
@@ -830,6 +821,20 @@ const localizedNotice = computed(() => {
 		return notice.title?.en ?? notice.title.ja;
 	}
 });
+
+const { data: instances } = await useGAsyncData<InstanceInfo | null>('serverInfo', () => Promise.allSettled([
+    $fetch<InstanceInfo>(`${runtimeConfig.public.serverListApiBaseUrl}/instances.json`),
+]).then(([instances]) => {
+    if (instances.status !== 'fulfilled') {
+        return null;
+    }
+
+    return instances.status === 'fulfilled' ? instances.value : null;
+}));
+
+const tickerServers = instances.value == null ? [] : instances.value.instancesInfos
+	.sort((a, b) => (b.stats?.originalUsersCount ?? 0) - (a.stats?.originalUsersCount ?? 0))
+	.slice(0, 30);
 
 useHead(() => ({
 		link: isUwu ? [
@@ -861,28 +866,13 @@ onMounted(() => {
 		},
 	});
 
-	TagCloud('.section_decentralized_cloudContainer_cloud', [
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-		'<img src="https://0key.dev/favicon.ico" width="35">',
-	], {
+	const cloudItems = instances.value == null ? [] : instances.value.instancesInfos
+		.sort((a, b) => (b.stats?.originalUsersCount ?? 0) - (a.stats?.originalUsersCount ?? 0))
+		.slice(0, 30)
+		.filter(info => /^[a-zA-Z0-9\-\.]+$/.test(info.url))
+		.map(info => `<img src="https://${info.url}/favicon.ico" alt="" width="35">`);
+
+	TagCloud('.section_decentralized_cloudContainer_cloud', cloudItems, {
 		radius: 150,
 		maxSpeed: 'slow',
 		initSpeed: 'slow',
