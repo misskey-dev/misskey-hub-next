@@ -1026,7 +1026,7 @@ onMounted(() => {
 	box-sizing: border-box;
 	margin-top: 16px;
 	padding-top: 16px;
-	padding-bottom: 160px;
+	padding-bottom: 140px;
 	margin-bottom: -150px;
 	contain: content;
 }
