@@ -46,7 +46,7 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 	right: -300px;
 	top: -500px;
 	width: 1000px;
-	opacity: 1;
+	opacity: 0.5;
 }
 
 .object1 > svg {
@@ -57,7 +57,7 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 	left: -250px;
 	top: 300px;
 	width: 1000px;
-	opacity: .5;
+	opacity: 0.5;
 }
 
 .object2 > svg {
