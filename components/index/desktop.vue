@@ -67,10 +67,10 @@
 
 	<section class="section_stats _secondaryWidth">
 		<div class="section_stats_text">
-			<span><b class="section_stats_label">Version:</b>2077.0.0</span>
-			<span><b class="section_stats_label">Date:</b>2077/0/0</span>
-			<span><b class="section_stats_label">Commits:</b>12,345+</span>
-			<span><b class="section_stats_label">Stars:</b>12,345+</span>
+			<span><b class="section_stats_label">Notes:</b>{{ instances?.stats.notesCount }}+</span>
+			<span><b class="section_stats_label">Users:</b>{{ instances?.stats.usersCount }}+</span>
+			<span><b class="section_stats_label">MAUs:</b>{{ instances?.stats.mau }}+</span>
+			<span><b class="section_stats_label">Servers:</b>{{ instances?.stats.instancesCount }}+</span>
 		</div>
 	</section>
 
