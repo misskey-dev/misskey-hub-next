@@ -19,6 +19,8 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 	right: 0;
 	width: 100%;
 	height: 100%;
+	view-timeline-name: --parallax;
+	view-timeline-axis: block;
 }
 
 .object {
@@ -26,13 +28,13 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 	/*will-change: transform;*/
 
 	animation: parallax linear both;
-  animation-timeline: view(y -50%);
+	animation-timeline: --parallax;
 	animation-range: cover;
 }
 
 @keyframes parallax {
-  from { transform: translateY(-800px) }
-  to { transform: translateY(800px) }
+	from { transform: translateY(-400px) }
+	to { transform: translateY(400px) }
 }
 
 .object > svg {
@@ -42,7 +44,7 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 .object1 {
 	left: auto;
 	right: -300px;
-	top: -700px;
+	top: -500px;
 	width: 1000px;
 	opacity: 1;
 }
@@ -53,7 +55,7 @@ import Blob2 from '@/assets/svg/top-bg-object2.svg';
 
 .object2 {
 	left: -250px;
-	top: 800px;
+	top: 300px;
 	width: 1000px;
 	opacity: .5;
 }
