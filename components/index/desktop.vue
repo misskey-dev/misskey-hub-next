@@ -872,13 +872,13 @@ const localizedNotice = computed(() => {
 });
 
 const { data: instances } = await useGAsyncData<InstanceInfo | null>('serverInfo', () => Promise.allSettled([
-    $fetch<InstanceInfo>(`${runtimeConfig.public.serverListApiBaseUrl}/instances.json`),
+	$fetch<InstanceInfo>(`${runtimeConfig.public.serverListApiBaseUrl}/instances.json`),
 ]).then(([instances]) => {
-    if (instances.status !== 'fulfilled') {
-        return null;
-    }
+	if (instances.status !== 'fulfilled') {
+		return null;
+	}
 
-    return instances.status === 'fulfilled' ? instances.value : null;
+	return instances.status === 'fulfilled' ? instances.value : null;
 }));
 
 const tickerServers = instances.value == null ? [] : instances.value.instancesInfos
@@ -886,12 +886,12 @@ const tickerServers = instances.value == null ? [] : instances.value.instancesIn
 	.slice(0, 30);
 
 useHead(() => ({
-		link: isUwu ? [
-				{ rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-light.png' },
-				{ rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-dark.png' },
-				{ rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-mobile-light.png' },
-				{ rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-mobile-dark.png' },
-		] : [],
+	link: isUwu ? [
+		{ rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-light.png' },
+		{ rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-dark.png' },
+		{ rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-mobile-light.png' },
+		{ rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-mobile-dark.png' },
+	] : [],
 }));
 
 onMounted(() => {
