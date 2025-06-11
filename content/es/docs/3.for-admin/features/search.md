@@ -1,11 +1,11 @@
-# ノート検索
+# Búsqueda de Notas
 
-Misskeyにはノートの検索機能があります。有効化することで、ノートの検索ができるようになります。
+Misskey tiene una función de búsqueda de notas.La activación permite buscar notas.
 
 :::tip
 
-検索機能はデフォルトで無効となっています。
-利用する場合は、ロールの「ノート検索の利用」を有効にしてください。
+La función de búsqueda está desactivada por defecto.
+Si desea utilizarla, active la opción "Utilizar búsqueda de notas" en el rol.
 
 :::
 
