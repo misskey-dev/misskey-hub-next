@@ -9,39 +9,39 @@ Si desea utilizarla, active la opción "Utilizar búsqueda de notas" en el rol.
 
 :::
 
-## サポートしている検索エンジン
+## Motores de búsqueda compatibles
 
-Misskeyはノート検索に使用するアルゴリズムを複数ご用意しています。サーバーの規模やニーズに応じて切り替えることができます。
+Misskey ofrece varios algoritmos para la búsqueda de notas.Puedes cambiar de uno a otro en función del tamaño de tu servidor y de tus necesidades.
 
-- sqlLike ... PostgreSQLの標準機能を用いて検索を行います。(デフォルト)
-  - データベース組み込みの機能を使用するためお手軽です。
-  - データの量が増えてくると検索に時間がかかりやすくなります。
+- sqlLike ... Búsqueda utilizando las funciones estándar de PostgreSQL.(Predeterminado)
+  - Es fácil de usar, ya que utiliza funciones de base de datos incorporadas.
+  - A medida que aumenta el volumen de datos, es probable que las búsquedas lleven más tiempo.
 
-- sqlPgroonga ... 全文検索エンジンの[Pgroonga](https://pgroonga.github.io)を用いて検索を行います。
-  - Pgroongaのインストールが必要です。
-  - sqlLikeより高速な検索が可能です。
+- sqlPgroonga ... Para realizar la búsqueda se utiliza el motor de búsqueda de texto completo [Pgroonga](https://pgroonga.github.io).
+  - Es necesario instalar Pgroonga.
+  - Búsquedas más rápidas que sqlLike.
 
-- meilisearch ... 全文検索エンジンの[Meilisearch](https://www.meilisearch.com)を用いて検索を行います。
-  - Meilisearchのインストールが必要です。
-  - sqlLikeより高速な検索が可能です。
-  - 検索対象のノートは、公開範囲が「パブリック」または「ホーム」です。フォロワー限定投稿も含めたい場合は`sqlLike`または`sqlPgroonga`を使用する必要があります。
+- meilisearch ... Búsqueda mediante el motor de búsqueda de texto completo [Meilisearch](https://www.meilisearch.com).
+  - Meilisearch debe estar instalado.
+  - Búsquedas más rápidas que sqlLike.
+  - Las notas que se buscan en las líneas de tiempo Inicio y Local.Si quieres incluir publicaciones sólo de seguidores, debes usar `sqlLike` o `sqlPgroonga`.
 
-検索エンジンを変更する場合は、設定ファイルの `fulltextSearch` の `provider` を書き換えて、Misskeyのプロセスを再起動してください。
+Para cambiar el motor de búsqueda, reescriba el `provider` en `fulltextSearch` en el archivo de configuración y reinicie el proceso de Misskey.
 
-## Pgroongaを使う
+## Uso de Pgroonga
 
-### Pgroongaのインストール
+### Instalación de Pgroonga
 
 :::warning
 
-作業前にデータベースのバックアップをおすすめします。\
-また、Misskeyを停止してから作業を開始してください。
+Se recomienda hacer una copia de seguridad de la base de datos antes de realizar cualquier trabajo.\
+Además, detenga a Misskey antes de empezar a trabajar.
 
 :::
 
-Ubuntu 22.04、PostgreSQL 15の環境にPgroongaをインストールする例です。
+Este es un ejemplo de instalación de Pgroonga en un entorno Ubuntu 22.04, PostgreSQL 15.
 
-詳細は[公式PostgreSQL用のインストール方法](https://pgroonga.github.io/ja/install/ubuntu.html)をご確認ください。
+Para más información, consulte [Cómo instalar para PostgreSQL oficial](https://pgroonga.github.io/ja/install/ubuntu.html).
 
 ```sh
 sudo apt install -y -V ca-certificates lsb-release wget
@@ -58,37 +58,37 @@ sudo apt update
 sudo apt install -y -V postgresql-15-pgdg-pgroonga
 ```
 
-MeCabベースのトークナイザーを使いたい場合は、以下も実行します。
+Si desea utilizar un tokenizador basado en MeCab, haga también lo siguiente
 
 ```sh
 sudo apt install -y -V groonga-tokenizer-mecab
 ```
 
-### Pgroongaの有効化
+### Habilitación de Pgroonga
 
-次にPostgreSQLにログインします。
+A continuación, inicie sesión en PostgreSQL.
 
 ```sh
 sudo -u postgres psql
 ```
 
-ログインをしたら、Misskeyのデータベースを選択します。
+Una vez conectado, seleccione la base de datos Misskey.
 
 ```sh
 \c "mk1"
 ```
 
-PGroongaを有効化します。
+Habilitar PGroonga.
 
 ```sh
 CREATE EXTENSION pgroonga;
 ```
 
-PGroonga用のインデックスを作成します。
+Crear un índice para PGroonga.
 
 :::warning
 
-インデックス作成には時間がかかります。十分な作業時間を確保してください。
+La indexación lleva tiempo.Asegúrate de disponer de tiempo suficiente
 
 :::
 
@@ -96,16 +96,16 @@ PGroonga用のインデックスを作成します。
 CREATE INDEX idx_note_text_with_pgroonga ON note USING pgroonga (text);
 ```
 
-完了したら、`exit` と入力し、Postgresqlからログアウトします。
+Cuando termine, escriba `exit` para salir de Postgresql.
 
-### 検索エンジンの変更
+### Cambio de motores de búsqueda
 
-Misskeyの設定ファイルを編集します。\
-`fulltextSearch` を `sqlPgroonga` に変更してください。
+Edite el archivo de configuración de Misskey.\
+Cambiar `fulltextSearch` por `sqlPgroonga`.
 
 ```sh
 fulltextSearch:
   provider: sqlPgroonga
 ```
 
-Misskeyのプロセスを起動し、ノートの検索ができれば完了です。
+Inicie el proceso Misskey y si puede encontrar la nota, ya está.
