@@ -95,6 +95,14 @@
 			<div :class="$style.spSpacer"></div>
 		</nav>
 	</div>
+	<div :class="$style.mobileNav" v-if="navOpen">
+		<GNuxtLink v-for="item in NavData.center" :class="$style.mobileNavItem" class="_plainLink" :to="localePath(item.to)" @click.native="navOpen = !navOpen">
+			<component v-if="'icon' in item" :is="item.icon"/>
+			<template v-else>
+				{{ $t(item.i18n) }}
+			</template>
+		</GNuxtLink>
+	</div>
 </div>
 </template>
 
@@ -178,6 +186,37 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 	padding: 6px 16px;
 	font-size: 90%;
 	text-align: center;
+}
+
+.mobileNav {
+	background: #fffc;
+	backdrop-filter: blur(12px);
+}
+:global(html.dark)  {
+	.mobileNav {
+		background: #2e2e2ecc;
+	}
+}
+
+.mobileNavItem {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 12px 16px;
+	color: #3c3c3c;
+	font-size: 90%;
+}
+.mobileNavItem:not(:last-child) {
+	border-bottom: solid 1px #0002;
+}
+:global(html.dark) {
+	.mobileNavItem {
+		color: #e5e5e5;
+	}
+
+	.mobileNavItem:not(:last-child) {
+		border-bottom-color: #fff2;
+	}
 }
 
 .main {
