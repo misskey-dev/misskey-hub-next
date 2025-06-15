@@ -1,3 +1,36 @@
+:root {
+	--THEME-bg: #eee;
+	--THEME-fg: #222;
+
+	background: var(--THEME-bg);
+	color: var(--THEME-fg);
+}
+:root.dark {
+	--THEME-bg: #1a1a1a;
+	--THEME-fg: #eee;
+}
+
+::selection {
+	color: #fff;
+	background-color: #86b300;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	overflow: auto;
+	scroll-padding: 100px; /* ヘッダーなどが干渉するため */
+	min-height: 100vh;
+	-webkit-tap-highlight-color: transparent;
+}
+
+html:not(.landing) {
+    @apply font-sans;
+}
+
 .bi::before,
 [class^="bi-"]::before,
 [class*=" bi-"]::before,
@@ -19,49 +52,56 @@
 	height: 1em;
 }
 
-body {
-	min-height: 100vh;
-	-webkit-tap-highlight-color: transparent;
-}
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/*  */
-.uwu-enter-active, .uwu-leave-active {
-    position: relative;
-    top: 0;
-    left: 0;
-}
-
-.uwu-enter-active {
-    transition: transform 1.5s cubic-bezier(0.22, 0.61, 0.36, 1),
-    opacity 1.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-.uwu-leave-active {
-    transition: transform 1s cubic-bezier(0.55, 0.06, 0.68, 0.19),
-    opacity 1s cubic-bezier(0.55, 0.06, 0.68, 0.19);
-}
-
-.uwu-enter-from {
-    transform: rotateY(3turn);
-    opacity: 0;
-}
-
-.uwu-leave-to {
-    transform: rotateY(6turn);
-    opacity: 0;
-}
-
-/*  */
-.hoverRubber:hover {
+._hoverRubber:hover {
     animation: .75s linear 0s 1 normal both running mfm-rubberBand;
 }
 
-.hoverTada:hover {
+._hoverTada:hover {
     animation: .75s linear 0s 1 normal both running tada;
+}
+
+._plainButton {
+	display: inline-block;
+	appearance: none;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: inherit;
+	touch-action: manipulation;
+	tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	font-size: 1em;
+	font-family: inherit;
+	line-height: inherit;
+	max-width: 100%;
+}
+
+._plainLink {
+	color: inherit;
+	text-decoration: none;
+}
+
+.__v_textUnderline {
+    background-image: linear-gradient(90deg, rgba(134, 179, 0, 0), rgba(74, 179, 0, 0), rgba(74, 179, 0, 0));
+    background-size: 100% 6px;
+    background-repeat: no-repeat;
+    background-position: 0% calc(100% + 2px);
+    transition: background-size 0.5s ease, background-image 0.5s ease;
+    transition-delay: 0.3s;
+}
+.__v_textUnderline_out {
+    background-image: linear-gradient(90deg, rgba(134, 179, 0, 0), rgba(74, 179, 0, 0), rgba(74, 179, 0, 0));
+	background-size: 0% 6px;
+}
+.__v_textUnderline_in {
+    background-image: linear-gradient(90deg, #86b300, #4ab300, #4ab300);
+	background-size: 100% 6px;
+}
+html.dark .__v_textUnderline_in {
+	opacity: 0.75;
 }
 
 /* Github Markdown Css Override */
@@ -175,7 +215,7 @@ html.light .markdown-body {
 }
 
 .markdown-body {
-	@apply font-content-sans;
+	@apply !font-content-sans;
 	--bgColor-default: transparent!important;
 	min-height: 0!important;
 }
