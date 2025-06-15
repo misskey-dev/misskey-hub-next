@@ -886,39 +886,62 @@ if (import.meta.client) {
 	instances.value = await instanceRes.json();
 }
 
-watch(() => props.clientLoaded, async () => {
+let isMounted = false;
+onMounted(() => {
+	isMounted = true;
+});
+
+let clientLoadedWatchStop: (() => void) | null = null;
+
+clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
 	if (!import.meta.client) return;
+	if (!props.clientLoaded) return;
+	if (clientLoadedWatchStop != null) {
+		clientLoadedWatchStop();
+		clientLoadedWatchStop = null;
+	}
+	console.log('Misskey client loaded');
 
-	const swiper = new Swiper('.swiper', {
-		slidesPerView: 'auto',
-		centeredSlides: true,
-		loop: true,
-		spaceBetween: 100,
-		effect: 'coverflow',
-		coverflowEffect: {
-			rotate: 0,
-			stretch: 0,
-			depth: 100,
-			modifier: 2,
-			slideShadows: false,
-		},
+	function initClientScripts() {
+		const swiper = new Swiper('.swiper', {
+			slidesPerView: 'auto',
+			centeredSlides: true,
+			loop: true,
+			spaceBetween: 100,
+			effect: 'coverflow',
+			coverflowEffect: {
+				rotate: 0,
+				stretch: 0,
+				depth: 100,
+				modifier: 2,
+				slideShadows: false,
+			},
 
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-	});
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
 
-	const cloudItems = instances.value.map(instance => `<img src="${runtimeConfig.public.serverListApiBaseUrl}/instance-icons/${instance.url}.webp" width="35" />`);
+		const cloudItems = instances.value.map(instance => `<img src="${runtimeConfig.public.serverListApiBaseUrl}/instance-icons/${instance.url}.webp" width="35" />`);
 
-	TagCloud('.section_decentralized_cloudContainer_cloud', cloudItems, {
-		radius: 150,
-		maxSpeed: 'slow',
-		initSpeed: 'slow',
-		direction: 135,
-		useHTML: true,
-	});
-}, { once: true });
+		TagCloud('.section_decentralized_cloudContainer_cloud', cloudItems, {
+			radius: 150,
+			maxSpeed: 'slow',
+			initSpeed: 'slow',
+			direction: 135,
+			useHTML: true,
+		});
+	}
+
+	if (isMounted) {
+		initClientScripts();
+	} else {
+		onMounted(() => {
+			initClientScripts();
+		});
+	}
+}, { immediate: true });
 </script>
 
 <style scoped>
