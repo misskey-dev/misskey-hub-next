@@ -2,7 +2,7 @@
 <main class="main">
 	<section class="section_top _primaryWidth">
 		<div class="section_top_bg">
-			<IndexHeroParticles/>
+			<LazyIndexHeroParticles v-if="clientLoaded"/>
 			<IndexHeroBg/>
 		</div>
 		<section class="tickers">
@@ -11,7 +11,7 @@
 			</span>
 			<span class="tickersItems">
 				<GMarquee :duration="90">
-					<span v-for="instance in tickerServers" class="tickersItem"><img class="tickersItemIcon" :src="`https://${instance.url}/favicon.ico`" alt="">{{ instance.url }}</span>
+					<span v-for="instance in instances" class="tickersItem"><img class="tickersItemIcon" :src="`${runtimeConfig.public.serverListApiBaseUrl}/instance-icons/${instance.url}.webp`" alt="">{{ instance.url }}</span>
 				</GMarquee>
 			</span>
 		</section>
@@ -36,7 +36,7 @@
 			</div>
 			<div class="section_top_right">
 				<div>
-					<IndexHeroMi3d style="margin: -20px auto 0 auto;" />
+					<LazyIndexHeroMi3d v-if="clientLoaded" style="margin: -20px auto 0 auto;" />
 				</div>
 			</div>
 		</div>
@@ -66,12 +66,13 @@
 	</section>
 
 	<section class="section_stats _secondaryWidth">
-		<div class="section_stats_text">
+		<!-- TODO -->
+		<!-- <div class="section_stats_text">
 			<span><b class="section_stats_label">Notes:</b>{{ instances?.stats.notesCount }}+</span>
 			<span><b class="section_stats_label">Users:</b>{{ instances?.stats.usersCount }}+</span>
 			<span><b class="section_stats_label">MAUs:</b>{{ instances?.stats.mau }}+</span>
 			<span><b class="section_stats_label">Servers:</b>{{ instances?.stats.instancesCount }}+</span>
-		</div>
+		</div> -->
 	</section>
 
 	<div class="scrollLabel">
@@ -849,12 +850,15 @@ import { vFadeIn } from '@/assets/js/vFadeIn';
 import { vTextUnderline } from '@/assets/js/vTextUnderline';
 import TagCloud from 'TagCloud';
 import GHIcon from "bi/github.svg";
-import type { InstanceInfo, InstanceItem, InstancesStatsObj } from '@/types/instances-info';
+
+const props = defineProps<{
+	clientLoaded: boolean;
+}>();
 
 const { notice } = useAppConfig();
 const isUwu = useState<boolean>('isUwu');
 const localePath = useGLocalePath();
-const { locale, fallbackLocale } = useI18n();
+const { locale } = useI18n();
 const runtimeConfig = useRuntimeConfig();
 
 // お知らせ欄にブログが来る可能性もあるので
@@ -871,30 +875,20 @@ const localizedNotice = computed(() => {
 	}
 });
 
-const { data: instances } = await useGAsyncData<InstanceInfo | null>('serverInfo', () => Promise.allSettled([
-	$fetch<InstanceInfo>(`${runtimeConfig.public.serverListApiBaseUrl}/instances.json`),
-]).then(([instances]) => {
-	if (instances.status !== 'fulfilled') {
-		return null;
-	}
+const instances = ref<{
+	name: string;
+	description: string;
+	url: string;
+}[]>([]);
 
-	return instances.status === 'fulfilled' ? instances.value : null;
-}));
+if (import.meta.client) {
+	const instanceRes = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances20.json`);
+	instances.value = await instanceRes.json();
+}
 
-const tickerServers = instances.value == null ? [] : instances.value.instancesInfos
-	.sort((a, b) => (b.stats?.originalUsersCount ?? 0) - (a.stats?.originalUsersCount ?? 0))
-	.slice(0, 30);
+watch(() => props.clientLoaded, async () => {
+	if (!import.meta.client) return;
 
-useHead(() => ({
-	link: isUwu ? [
-		{ rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-light.png' },
-		{ rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-dark.png' },
-		{ rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-mobile-light.png' },
-		{ rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-mobile-dark.png' },
-	] : [],
-}));
-
-onMounted(() => {
 	const swiper = new Swiper('.swiper', {
 		slidesPerView: 'auto',
 		centeredSlides: true,
@@ -915,11 +909,7 @@ onMounted(() => {
 		},
 	});
 
-	const cloudItems = instances.value == null ? [] : instances.value.instancesInfos
-		.sort((a, b) => (b.stats?.originalUsersCount ?? 0) - (a.stats?.originalUsersCount ?? 0))
-		.slice(0, 30)
-		.filter(info => /^[a-zA-Z0-9\-\.]+$/.test(info.url))
-		.map(info => `<img src="https://${info.url}/favicon.ico" alt="" width="35">`);
+	const cloudItems = instances.value.map(instance => `<img src="${runtimeConfig.public.serverListApiBaseUrl}/instance-icons/${instance.url}.webp" width="35" />`);
 
 	TagCloud('.section_decentralized_cloudContainer_cloud', cloudItems, {
 		radius: 150,
@@ -928,7 +918,7 @@ onMounted(() => {
 		direction: 135,
 		useHTML: true,
 	});
-});
+}, { once: true });
 </script>
 
 <style scoped>
