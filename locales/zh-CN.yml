@@ -73,17 +73,17 @@ _landing:
       title: "自定义表情"
       description: "可制作服务器专属的的自定义表情，并在Misskey内的各处使用。"
     _channel:
-      title: "チャンネル"
-      description: "チャンネルを作成すれば、共通のテーマでサーバー内コミュニティを作成することが可能です。"
+      title: "频道"
+      description: "创建频道后，即可围绕共同主题在实例内建立专属社区。"
     _antenna:
       title: "アンテナ"
-      description: "特定のワードが含まれるノートだけを収集するタイムラインを作成可能です。"
+      description: "创建仅收集包含特定词汇的帖子的时间线。"
     _drive:
       title: "网盘"
       description: "Misskey 的网盘功能可以让你轻松地将收藏收藏的图片上传到网盘、整理到文件夹中，以供分享。"
     _2fa:
       title: "多要素認証"
-      description: "ワンタイムパスワードを使用した多要素認証や、物理的なキーを使用したパスキー認証で、アカウントのセキュリティを高める各種技術をサポート。"
+      description: "支持通过一次性密码多因素认证及物理密钥通行密钥认证等多种技术增强账户安全性。"
     _charts:
       title: "图表"
       description: "Misskey 内置图表引擎，可轻松实现服务器的使用情况和其他信息的可视化。"
