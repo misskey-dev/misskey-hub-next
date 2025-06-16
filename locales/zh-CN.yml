@@ -76,57 +76,57 @@ _landing:
       title: "频道"
       description: "创建频道后，即可围绕共同主题在实例内建立专属社区。"
     _antenna:
-      title: "アンテナ"
+      title: "天线功能"
       description: "创建仅收集包含特定词汇的帖子的时间线。"
     _drive:
       title: "网盘"
       description: "Misskey 的网盘功能可以让你轻松地将收藏收藏的图片上传到网盘、整理到文件夹中，以供分享。"
     _2fa:
-      title: "多要素認証"
+      title: "多要素验证"
       description: "支持通过一次性密码多因素认证及物理密钥通行密钥认证等多种技术增强账户安全性。"
     _charts:
       title: "图表"
       description: "Misskey 内置图表引擎，可轻松实现服务器的使用情况和其他信息的可视化。"
     _branding:
-      title: "ブランディング"
-      description: "サーバーのロゴ、アイコン、テーマなどをカスタマイズして、簡単にSNSのブランディングを行えます。"
+      title: "品牌化"
+      description: "通过定制实例标识、图标及主题，轻松实现社交平台品牌打造。"
     _roles:
       title: "角色"
-      description: "ロールを使用すると、ユーザーごとに権限を細かくカスタマイズできます。また、コンディショナルロールを使えば、条件に一致するユーザーに自動でロールをアサインすることも可能です。ロールにバッジを設定して、サーバーのマネタイズに役立てることもできます。"
+      description: "通过角色功能可精细化配置用户权限；使用条件角色还能自动为匹配用户分配角色，并设置角色徽章助力实例变现。"
     _moderation:
-      title: "モデレーション"
-      description: "サーバー運営を助ける、充実のモデレーション機能が標準搭載。"
+      title: "内容审查"
+      description: "原生内置完备的内容审查功能，助力实例高效运维。"
     _privacy:
       title: "プライバシー"
       description: "豊富なプライバシー設定で、コンテンツの公開範囲を柔軟にコントロール。"
     _multiPurpose:
       title: "ひとりでも、みんなでも"
-      description: "多数の利用者を受け入れるSNSとしての運用はもちろん、個人用サーバーとしての利用もサポート。Fediverseと繋がるための、あなただけの強力な拠点になります。"
+      description: "既支持作为多用户社交平台的运营，也可用作个人实例。它将成为您在联邦宇宙中专属的枢纽节点。"
     _monetization:
       title: "収益化"
-      description: "広告の表示など、サーバーのマネタイズを助ける機能も用意されていて、持続可能な運用を目指せます。"
+      description: "提供广告展示等实例变现辅助功能，助您实现可持续运营。"
     _oss:
       title: "Mi ❤️ OSS"
-      description: "Misskeyはこれまでもこれからもオープンソースで、誰でも自由に、無料でソースコードを利用可能です。またMisskey Projectは、他のOSSに対して積極的に支援活動を行っています。"
+      description: "Misskey始终并将持续开源，允许任何人免费自由使用源代码；同时Misskey项目积极为其他开源软件提供支援。"
     _battleTested:
       title: "信頼性"
-      description: "Misskeyは10年以上にわたって実際の環境で使われており(battle-tested)、高い信頼性があると自負しています。"
+      description: "Misskey历经逾十年实战环境检验，自信具备卓越可靠性。"
   _featuresServer:
     _root:
       title: "サーバーの機能"
       description: "Misskeyを支えるバックエンド実装の特徴。"
     _easyInstall:
       title: "簡単インストール"
-      description: "簡単なコマンドでインストールできるほか、各社提供のホスティングサービスを利用すれば、管理の手間も省けます。"
+      description: "支持简单命令行安装，亦可选用托管服务，省去管理维护成本。"
     _easySetup:
       title: "セットアップもカンタン"
-      description: "Misskeyサーバーのセットアップに複雑な設定は不要で、すぐに運用を始められます。一方、ニーズに合わせて高度な設定を行うことも可能です。"
+      description: "Misskey实例部署无需复杂配置，即可即刻投入运营；亦支持按需进行高级定制。"
     _api:
       title: "API"
-      description: "Misskeyの全ての機能はHTTP APIを通じて操作可能で、他のアプリケーションとの連携も容易です。さらに、WebhookやWebSocket接続もサポートしているので、リアルタイムにMisskeyからのイベントを受け取ることも可能です。"
+      description: "Misskey所有功能均可通过HTTP API操作，便于第三方应用集成；更支持Webhook与WebSocket连接，实时获取事件推送。"
     _relay:
-      title: "リレー対応"
-      description: "Fediverse内のアクティビティを中継するリレーサーバーへの接続をサポートしているので、手動で多数のサーバーと繋げることなく情報収集が可能です。"
+      title: "中继支持"
+      description: "支持连接联邦宇宙中继服务器，自动同步全网活动数据，无需手动关联多个实例。"
     _nodejs:
       title: "Node.jsバックエンド"
       description: "MisskeyはバックエンドにNode.jsを採用しており、高速・軽量に動作します。"
@@ -135,7 +135,7 @@ _landing:
       description: "メインのデータベースにはPostgreSQLを採用し、堅牢なデータ管理を実現しています。"
     _jobQueue:
       title: "高効率ジョブキュー"
-      description: "ジョブキューにBullMQを採用し、タスクを複数のサーバーで効率的に処理可能。また、Misskeyネイティブで実装されたインスペクタはコントロールパネルに統合され、外部ツールに頼ることなく管理が可能です。"
+      description: "采用 BullMQ 任务队列支持跨实例高效处理任务；深度集成的原生队列检视器可直接在控制台管理，无需第三方工具。"
     _cdn:
       title: "CDN対応"
       description: "外部CDNによるリソースのキャッシュに対応しています。サーバーへのリクエストを減らすことで、負荷低減・コスト削減が可能です。"
@@ -162,8 +162,8 @@ _landing:
       title: "レスポンシブUI"
       description: "UIは洗練された独自のデザインシステムを使用して設計され、デスクトップ・タブレット・スマートフォンそれぞれに最適な表示・動作となるように丁寧に実装されています。"
     _theme:
-      title: "テーマ"
-      description: "自分の好きな見た目でMisskeyを使えます。もちろんダークモードも完全サポート。自分で高度にテーマを作ることも可能です。"
+      title: "主题"
+      description: "可自由定制界面风格，完整支持深色模式，更能深度创作个性化主题。"
     _mfm:
       title: "MFM"
       description: "ノートにはMFMと呼ばれるMisskey専用のマークアップ言語が使用できます。太字にする・リンクを挿入する・動きを付けるといった、テキストの装飾がシンプルな構文で表現できます。"
@@ -172,7 +172,7 @@ _landing:
       description: "様々な種類のウィジェットを自由に配置し、必要な情報に素早くアクセス。"
     _deck:
       title: "デッキUI"
-      description: "デッキUIを使うと、UIをさらに深くカスタマイズ可能。自分だけのクライアントを作ることができます。"
+      description: "启用Deck界面可深度自定义UI，构建专属客户端。"
     _embed:
       title: "他サイトへの埋め込み"
       description: "ノート、タイムラインなどを外部のサイトに埋め込んで表示可能です。"
