@@ -272,106 +272,11 @@
 		<div v-fade-in="'up'">
 			<div class="_secondaryWidth">
 				<div :class="$style.features_items">
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
+					<div v-fade-in="'featuresItem'" :class="$style.features_item" v-for="item in features">
 						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/top-features-note.png" :class="$style.features_itemContentImage" alt="some notes">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._note.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._note.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/top-features-reaction.png" :class="$style.features_itemContentImage" alt="some emojis in the reaction picker">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._reaction.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._reaction.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/customEmojis.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._customEmojis.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._customEmojis.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/role.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._roles.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._roles.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/top-features-charts.png" :class="$style.features_itemContentImage" alt="Charts">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._charts.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._charts.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._privacy.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._privacy.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._multiPurpose.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._multiPurpose.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/oss.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._oss.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._oss.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/top-features-federation.png" :class="$style.features_itemContentImage" alt="logos of Misskey and other ActivityPub server software">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._federation.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._federation.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/top-features-drive.png" :class="$style.features_itemContentImage" alt="a list of files in Misskey Drive">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._drive.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._drive.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/2fa.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._2fa.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._2fa.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/branding.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._branding.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._branding.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/moderation.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._moderation.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._moderation.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._monetization.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._monetization.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/since2014.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._features._battleTested.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._features._battleTested.description') }}</div>
+							<img v-if="item.img" :src="item.img" :class="$style.features_itemContentImage" alt="">
+							<h3 :class="$style.features_itemContentTitle">{{ $t(item.title) }}</h3>
+							<div :class="$style.features_itemContentDescription">{{ $t(item.description) }}</div>
 						</div>
 					</div>
 				</div>
@@ -409,102 +314,11 @@
 		<div v-fade-in="'up'">
 			<div class="_secondaryWidth">
 				<div :class="$style.features_items">
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
+					<div v-fade-in="'featuresItem'" :class="$style.features_item" v-for="item in featuresServer">
 						<div :class="$style.features_itemContent">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._easyInstall.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._easyInstall.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._easySetup.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._easySetup.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/nodejs.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._nodejs.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._nodejs.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._postgresql.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._postgresql.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/scalable.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._scalable.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._scalable.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/jobQueue.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._jobQueue.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._jobQueue.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._seo.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._seo.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._cdn.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._cdn.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/api.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._api.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._api.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._relay.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._relay.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/ftt.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._ftt.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._ftt.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/rbt.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._rbt.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._rbt.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._fullTextSearch.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._fullTextSearch.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/ml.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._ml.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._ml.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/sentry.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresServer._sentry.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresServer._sentry.description') }}</div>
+							<img v-if="item.img" :src="item.img" :class="$style.features_itemContentImage" alt="">
+							<h3 :class="$style.features_itemContentTitle">{{ $t(item.title) }}</h3>
+							<div :class="$style.features_itemContentDescription">{{ $t(item.description) }}</div>
 						</div>
 					</div>
 				</div>
@@ -543,109 +357,11 @@
 		<div v-fade-in="'up'">
 			<div class="_secondaryWidth">
 				<div :class="$style.features_items">
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
+					<div v-fade-in="'featuresItem'" :class="$style.features_item" v-for="item in featuresClient">
 						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/responsive.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._responsive.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._responsive.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/theme.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._theme.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._theme.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/mfm.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._mfm.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._mfm.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/deck.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._deck.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._deck.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._realtimeMode.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._realtimeMode.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._pushNotification.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._pushNotification.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/multiAccounts.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._multiAccounts.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._multiAccounts.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._watermark.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._watermark.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._imageEditing.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._imageEditing.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/widgets.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._widgets.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._widgets.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/settings.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._settingsManagement.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._settingsManagement.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._achievements.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._achievements.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/plugin.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._plugin.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._plugin.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._embed.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._embed.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._pwa.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._pwa.description') }}</div>
-						</div>
-					</div>
-					<div v-fade-in="'featuresItem'" :class="$style.features_item">
-						<div :class="$style.features_itemContent">
-							<img src="/img/top-features/i18n.webp" :class="$style.features_itemContentImage">
-							<h3 :class="$style.features_itemContentTitle">{{ $t('_landing._featuresClient._i18n.title') }}</h3>
-							<div :class="$style.features_itemContentDescription">{{ $t('_landing._featuresClient._i18n.description') }}</div>
+							<img v-if="item.img" :src="item.img" :class="$style.features_itemContentImage" alt="">
+							<h3 :class="$style.features_itemContentTitle">{{ $t(item.title) }}</h3>
+							<div :class="$style.features_itemContentDescription">{{ $t(item.description) }}</div>
 						</div>
 					</div>
 				</div>
@@ -768,6 +484,7 @@ import { vTextUnderline } from '@/assets/js/vTextUnderline';
 import TagCloud from 'TagCloud';
 import GHIcon from "bi/github.svg";
 import type { InstanceInfo, InstanceItem, InstancesStatsObj } from '@/types/instances-info';
+import { features, featuresClient, featuresServer } from './features.js';
 
 const { notice } = useAppConfig();
 const isUwu = useState<boolean>('isUwu');

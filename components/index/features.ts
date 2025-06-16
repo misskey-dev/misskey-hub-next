@@ -1,0 +1,178 @@
+export const features = [{
+	img: '/img/top-features/top-features-note.png',
+	title: '_landing._features._note.title',
+	description: '_landing._features._note.description',
+}, {
+	img: '/img/top-features/top-features-reaction.png',
+	title: '_landing._features._reaction.title',
+	description: '_landing._features._reaction.description',
+}, {
+	img: '/img/top-features/customEmojis.webp',
+	title: '_landing._features._customEmojis.title',
+	description: '_landing._features._customEmojis.description',
+}, {
+	title: '_landing._features._channel.title',
+	description: '_landing._features._channel.description',
+}, {
+	title: '_landing._features._antenna.title',
+	description: '_landing._features._antenna.description',
+}, {
+	img: '/img/top-features/role.webp',
+	title: '_landing._features._roles.title',
+	description: '_landing._features._roles.description',
+}, {
+	img: '/img/top-features/top-features-charts.png',
+	title: '_landing._features._charts.title',
+	description: '_landing._features._charts.description',
+}, {
+	title: '_landing._features._privacy.title',
+	description: '_landing._features._privacy.description',
+}, {
+	title: '_landing._features._multiPurpose.title',
+	description: '_landing._features._multiPurpose.description',
+}, {
+	img: '/img/top-features/oss.webp',
+	title: '_landing._features._oss.title',
+	description: '_landing._features._oss.description',
+}, {
+	img: '/img/top-features/top-features-federation.png',
+	title: '_landing._features._federation.title',
+	description: '_landing._features._federation.description',
+}, {
+	img: '/img/top-features/top-features-drive.png',
+	title: '_landing._features._drive.title',
+	description: '_landing._features._drive.description',
+}, {
+	img: '/img/top-features/2fa.webp',
+	title: '_landing._features._2fa.title',
+	description: '_landing._features._2fa.description',
+}, {
+	img: '/img/top-features/branding.webp',
+	title: '_landing._features._branding.title',
+	description: '_landing._features._branding.description',
+}, {
+	img: '/img/top-features/moderation.webp',
+	title: '_landing._features._moderation.title',
+	description: '_landing._features._moderation.description',
+}, {
+	title: '_landing._features._monetization.title',
+	description: '_landing._features._monetization.description',
+}, {
+	img: '/img/top-features/since2014.webp',
+	title: '_landing._features._battleTested.title',
+	description: '_landing._features._battleTested.description',
+}];
+
+export const featuresServer = [{
+	title: '_landing._featuresServer._easyInstall.title',
+	description: '_landing._featuresServer._easyInstall.description',
+}, {
+	title: '_landing._featuresServer._easySetup.title',
+	description: '_landing._featuresServer._easySetup.description',
+}, {
+	img: '/img/top-features/nodejs.webp',
+	title: '_landing._featuresServer._nodejs.title',
+	description: '_landing._featuresServer._nodejs.description',
+}, {
+	title: '_landing._featuresServer._postgresql.title',
+	description: '_landing._featuresServer._postgresql.description',
+}, {
+	img: '/img/top-features/scalable.webp',
+	title: '_landing._featuresServer._scalable.title',
+	description: '_landing._featuresServer._scalable.description',
+}, {
+	img: '/img/top-features/jobQueue.webp',
+	title: '_landing._featuresServer._jobQueue.title',
+	description: '_landing._featuresServer._jobQueue.description',
+}, {
+	title: '_landing._featuresServer._seo.title',
+	description: '_landing._featuresServer._seo.description',
+}, {
+	title: '_landing._featuresServer._cdn.title',
+	description: '_landing._featuresServer._cdn.description',
+}, {
+	img: '/img/top-features/api.webp',
+	title: '_landing._featuresServer._api.title',
+	description: '_landing._featuresServer._api.description',
+}, {
+	title: '_landing._featuresServer._relay.title',
+	description: '_landing._featuresServer._relay.description',
+}, {
+	img: '/img/top-features/ftt.webp',
+	title: '_landing._featuresServer._ftt.title',
+	description: '_landing._featuresServer._ftt.description',
+}, {
+	img: '/img/top-features/rbt.webp',
+	title: '_landing._featuresServer._rbt.title',
+	description: '_landing._featuresServer._rbt.description',
+}, {
+	title: '_landing._featuresServer._fullTextSearch.title',
+	description: '_landing._featuresServer._fullTextSearch.description',
+}, {
+	img: '/img/top-features/ml.webp',
+	title: '_landing._featuresServer._ml.title',
+	description: '_landing._featuresServer._ml.description',
+}, {
+	img: '/img/top-features/sentry.webp',
+	title: '_landing._featuresServer._sentry.title',
+	description: '_landing._featuresServer._sentry.description',
+}];
+
+export const featuresClient = [{
+	img: '/img/top-features/responsive.webp',
+	title: '_landing._featuresClient._responsive.title',
+	description: '_landing._featuresClient._responsive.description',
+}, {
+	img: '/img/top-features/theme.webp',
+	title: '_landing._featuresClient._theme.title',
+	description: '_landing._featuresClient._theme.description',
+}, {
+	img: '/img/top-features/mfm.webp',
+	title: '_landing._featuresClient._mfm.title',
+	description: '_landing._featuresClient._mfm.description',
+}, {
+	img: '/img/top-features/deck.webp',
+	title: '_landing._featuresClient._deck.title',
+	description: '_landing._featuresClient._deck.description',
+}, {
+	title: '_landing._featuresClient._realtimeMode.title',
+	description: '_landing._featuresClient._realtimeMode.description',
+}, {
+	title: '_landing._featuresClient._pushNotification.title',
+	description: '_landing._featuresClient._pushNotification.description',
+}, {
+	img: '/img/top-features/multiAccounts.webp',
+	title: '_landing._featuresClient._multiAccounts.title',
+	description: '_landing._featuresClient._multiAccounts.description',
+}, {
+	title: '_landing._featuresClient._watermark.title',
+	description: '_landing._featuresClient._watermark.description',
+}, {
+	title: '_landing._featuresClient._imageEditing.title',
+	description: '_landing._featuresClient._imageEditing.description',
+}, {
+	img: '/img/top-features/widgets.webp',
+	title: '_landing._featuresClient._widgets.title',
+	description: '_landing._featuresClient._widgets.description',
+}, {
+	img: '/img/top-features/settings.webp',
+	title: '_landing._featuresClient._settingsManagement.title',
+	description: '_landing._featuresClient._settingsManagement.description',
+}, {
+	title: '_landing._featuresClient._achievements.title',
+	description: '_landing._featuresClient._achievements.description',
+}, {
+	img: '/img/top-features/plugin.webp',
+	title: '_landing._featuresClient._plugin.title',
+	description: '_landing._featuresClient._plugin.description',
+}, {
+	title: '_landing._featuresClient._embed.title',
+	description: '_landing._featuresClient._embed.description',
+}, {
+	title: '_landing._featuresClient._pwa.title',
+	description: '_landing._featuresClient._pwa.description',
+}, {
+	img: '/img/top-features/i18n.webp',
+	title: '_landing._featuresClient._i18n.title',
+	description: '_landing._featuresClient._i18n.description',
+}];
