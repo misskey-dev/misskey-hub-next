@@ -189,12 +189,22 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 }
 
 .mobileNav {
+	position: fixed;
+	top: 58px;
+	left: 0;
+	width: 100%;
 	background: #fffc;
 	backdrop-filter: blur(12px);
 }
 :global(html.dark)  {
 	.mobileNav {
 		background: #2e2e2ecc;
+	}
+}
+
+@media (min-width: 1200px) {
+	.mobileNav {
+		display: none;
 	}
 }
 

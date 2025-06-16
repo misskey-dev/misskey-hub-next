@@ -2,7 +2,7 @@
 <div>
 	<GNav :landing="true" />
 
-	<IndexDesktop v-if="isDesktop" />
+	<IndexDesktop v-if="isDesktop" :clientLoaded="deviceSizeDetermined" />
 	<IndexMobile v-else />
 
 	<GFooter />

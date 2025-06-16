@@ -86,7 +86,7 @@ const getLdJson = (additionalGraphes: Thing[] = []): string => {
 const currentLocaleIso = computed(() => locales.find((e) => e?.code === locale.value)?.language);
 
 const head = useLocaleHead({
-	addSeoAttributes: true,
+	seo: true,
 });
 
 const i18nLinks = computed(() => head.value.link?.map((e: any) => {
