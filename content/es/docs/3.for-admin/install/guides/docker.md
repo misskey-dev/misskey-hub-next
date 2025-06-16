@@ -1,24 +1,24 @@
 ---
-description: このガイドはDockerを使ったMisskeyセットアップ方法を説明します。
+description: 'Esta guía explica cómo configurar Misskey utilizando Docker.'
 ---
 
-# Docker Composeを使ったMisskey構築
+# Construyendo Misskey con Docker Compose
 
-このガイドはDocker Composeを使ったMisskeyセットアップ方法を説明します。
+Esta guía explica cómo configurar Misskey utilizando Docker
 
 :::danger
 
-一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
+¡No vuelvas a crear la base de datos con el dominio/nombre de host del servidor una vez que hayas empezado a utilizarla!
 
 :::
 
 :::tip{label='前提条件'}
 
-- DockerおよびDocker Composeがインストールされていること。
+- Asegúrese de que Docker y Docker Compose están instalados en su sistema.
 
 :::
 
-## リポジトリの取得
+## Clonar el repositorio
 
 ```sh
 git clone -b master https://github.com/misskey-dev/misskey.git
@@ -26,9 +26,9 @@ cd misskey
 git checkout master
 ```
 
-## 設定
+## Configuración
 
-下記コマンドで、各種設定ファイルのサンプルをコピーします。
+Los siguientes comandos copiarán los distintos archivos de configuración de ejemplos a su ubicación de configuración real.
 
 ```sh
 cp .config/docker_example.yml .config/default.yml
@@ -36,22 +36,22 @@ cp .config/docker_example.env .config/docker.env
 cp ./compose_example.yml ./compose.yml
 ```
 
-`default.yml`と`docker.env`をファイル内の説明に従って編集してください。\
-また、必要に応じて、`compose.yml`を編集します。(ポートを変更したい場合など)
+Por favor edita `default.yml` y `docker.env` así como su descripción.\
+También edita `compose.yml` si es necesario( Por si quieres cambiar el puerto etc.).\
+Asegúrate de comprobar con antelación cualquier cambio que pueda ser necesario.(Si deseas cambiar el puerto etc.)
 
-## ビルドと初期化
+## Construir y inicializar
 
-次のコマンドでMisskeyのビルドとデータベースの初期化を行います。
-これにはしばらく時間がかかります。
+El siguiente conjunto de comandos construirá la imagen de Misskey y realizará la inicialización de la base de datos. Esto llevará algún tiempo.
 
 ```shell
 sudo docker compose build
 sudo docker compose run --rm web pnpm run init
 ```
 
-## 起動
+## Iniciar
 
-お疲れ様でした。以下のコマンドでMisskeyを起動できます。
+¡Felicidades!Puedes ejecutar Misskey con el siguiente comando.
 
 ```sh
 sudo docker compose up -d
@@ -59,11 +59,11 @@ sudo docker compose up -d
 
 GLHF✨
 
-## Misskeyのアップデート方法
+## Actualizando Misskey
 
 :::warning
 
-アップデートの際は必ず[リリースノート](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)を確認し、変更点や追加で必要になる作業の有無(ほとんどの場合ありません)を予め把握するようにしてください。
+Las actualizaciones están siempre disponibles en [ las notas de lanzamiento] (https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md).
 
 :::
 
@@ -77,9 +77,9 @@ sudo docker compose build
 sudo docker compose stop && sudo docker compose up -d
 ```
 
-アップデート内容、およびデータベースの規模によっては時間がかかることがあります。
+Puede tardar dependiendo del contenido de la actualización y del tamaño de la base de datos.
 
-## cliコマンドを実行する方法
+## Cómo ejecutar comandos Cli
 
 ```sh
 sudo docker compose run --rm web node packages/backend/built/tools/foo bar
