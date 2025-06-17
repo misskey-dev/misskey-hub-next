@@ -1,24 +1,24 @@
-# Kubernetes/TrueNASを使ったMisskey構築
+# Creación de un servidor Misskey con Kubernetes/TrueNAS
 
-このガイドでは、Kubernetes と HelmChartを使用したMisskeyセットアップ方法について説明します。
+Esta guía describe cómo configurar Misskey utilizando Kubernetes y HelmChart.
 
 :::danger
 
-一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
+¡No vuelvas a crear la base de datos con el dominio/nombre de host del servidor una vez que hayas empezado a utilizarla!
 
 :::
 
-## TrueCharts と TrueNAS Scale
+## Escala TrueCharts y TrueNAS
 
-MisskeyのHelmChartsはTrueNAS Scaleで使用するためのTrueChartsで公開されていますが、HelmChartsとしてインストールすることもできます。
+Los HelmCharts de Misskey se publican en TrueCharts para su uso con TrueNAS Scale, pero también se pueden instalar como HelmCharts.
 
-[TrueCharts](https://truecharts.org/charts/description_list) のサイトには利用可能なすべてのChartsやインストール方法などのドキュメントがあります。
+El sitio [TrueCharts](https://truecharts.org/charts/description_list) contiene documentación sobre todos los gráficos disponibles e instrucciones de instalación.
 
-また、不明な点があればTrueChartsの[Discord](https://discord.gg/Ax9ZgzKx9t)サーバーで質問をすることもできます。
+También puedes hacer preguntas en el servidor [Discord](https://discord.gg/Ax9ZgzKx9t) de TrueCharts si no estás seguro.
 
-現在、Misskeyは_incubator_ trainで進行中です。
+Misskey está actualmente en período de _incubación_.
 
-:::前提条件
+:::tip{label='前提条件'}
 
 - TrueNAS Scale
   または

@@ -17,7 +17,7 @@ detail: "Detalles"
 lastUpdate: "Última actualización"
 empty: "Sin contenido"
 threeDimensionModel: "Modelo 3D"
-clickToShow: "Click para mostrar"
+clickToShow: "Clic para mostrar"
 preview: "Preview"
 scrollable: "Esto se puede desplazar"
 _error:
@@ -40,7 +40,7 @@ _nav:
   switchLang: "Configuración de idioma"
 _landing:
   _hero:
-    description: "Misskey es una plataforma de redes sociales código abierto y descentralizada que es libre para siempre!"
+    description: "¡Misskey es una plataforma de redes sociales código abierto y descentralizada que es libre para siempre!"
     gettingStarted: "Empezar"
   _keyFeatures:
     _open:
@@ -49,15 +49,11 @@ _landing:
     _federated:
       title: "Federado"
       description: "Misskey es una plataforma descentralizada, por lo que las comunidades en diferentes servidores pueden conectar entre sí."
-    _multifunction:
-      title: "Flexible"
-      description: "Misskey es fácil de entender para principiantes y tiene características complejas para usuarios avanzados."
-    _customizable:
-      title: "Altamente personalizable"
-      description: "Haz que Misskey sea tuyo! Con temas, widgets, diseños y más, puedes personalizar Misskey a tu gusto."
+    _powerful:
+      title: "Poderoso"
+      description: "Misskey tiene una variedad de características de nivel de producción y puede ser finamente personalizado. Es la mejor solución para grupos grandes y pequeños."
   _decenterized:
     title: "Misskey es una plataforma {0}."
-    decenterizedPlatform: "Descentralizada"
     description: "Misskey es solo una plataforma para que los propietarios de servidores creen sus propias instancias de Misskey, y todas pueden comunicarse entre sí! Hay instancias grandes para las masas, instancias más pequeñas para grupos, fandoms y subculturas, e incluso instancias solo para individuos y sus amigos. ¿Quieres tener aún más control? Puedes crear tu propia instancia en tu servidor con facilidad, cortando los lazos con cualquier gran empresa que quiera espiarte y vender tus datos. Misskey se trata de comunidad y compartir, no de corporaciones y alta tecnología. ¿Tienes amigos que no están en Misskey? No hay problema. Debido a que Misskey está en el Fediverso ({0}), puedes interactuar con personas en otras plataformas como Mastodon, PixelFed, PeerTube y más."
     activityPub: "ActivityPub"
   _features:
@@ -73,21 +69,147 @@ _landing:
     _reaction:
       title: "Reacciones"
       description: "Puedes agregar reacciones con emojis a cualquier publicación! Ya no estás limitado por un botón de me gusta, muestra a todos exactamente cómo te sientes con solo un toque."
+    _customEmojis:
+      title: "Emojis personalizados"
+      description: "Es posible crear emojis de servidor originales para usarlos en varias partes de Misskey."
+    _channel:
+      title: "Canales"
+      description: "Crear un canal te permite crear una comunidad dentro del servidor con un tema común."
+    _antenna:
+      title: "Antenas"
+      description: "Puedes crear líneas de tiempos que contengan solo notas que contengan determinadas palabras."
     _drive:
       title: "Drive"
       description: "¿Odias no poder encontrar algo que subiste? Con Drive, obtienes almacenamiento en la nube organizado y eficiente directamente en tu red social!"
-    _theme:
-      title: "Temas"
-      description: "¿Por qué limitarte a un tema claro u oscuro cuando puedes cambiar todos los colores? Utiliza la intuitiva funcion de temas para hacer que Misskey sea como tú lo desees."
-    _thread:
-      title: "Hilos\""
-      description: "¿Tienes mucho en mente? ¡Crea un hilo! Cada publicación puede tener hasta 3.000 caracteres por defecto, y puedes mantener la conversación durante horas."
+    _2fa:
+      title: "Autenticación de doble factor"
+      description: "Admite una serie de tecnologías para aumentar la seguridad de las cuentas, con autenticación multifactor mediante contraseñas de un solo uso y autenticación mediante claves físicas."
     _charts:
       title: "Gráficas"
       description: "Para aquellos que necesitan verlo todo, Misskey cuenta con estadísticas en tiempo real para que tanto usuarios como administradores puedan ver qué está sucediendo en su instancia."
+    _branding:
+      title: "Marca"
+      description: "Personaliza el logotipo, los iconos y los temas de tu servidor para crear, fácilmente, tu imagen de marca."
+    _roles:
+      title: "Roles"
+      description: "Los roles permiten personalizar los permisos de cada usuario. Los roles condicionales también se pueden utilizar para asignar automáticamente roles a los usuarios que coincidan con los criterios. También puedes establecer insignias para los roles para ayudar a monetizar tu servidor."
+    _moderation:
+      title: "Moderación"
+      description: "Se incluyen de serie una serie de funciones de moderación para facilitar la gestión del servidor."
+    _privacy:
+      title: "Privacidad"
+      description: "Control flexible sobre el alcance de la publicación de contenidos con amplias opciones de privacidad."
+    _multiPurpose:
+      title: "Solo o juntos"
+      description: "Puede utilizarse como red social para un gran número de usuarios, o como servidor personal, convirtiéndolo en tu propio y potente centro de conexión con el Fediverso."
+    _monetization:
+      title: "Monetización"
+      description: "Para garantizar la sostenibilidad de las operaciones, también hay disponibles funciones que ayudan a monetizar el servidor, como la visualización de anuncios."
+    _oss:
+      title: "Mi ❤️ OSS"
+      description: "Misskey ha sido y seguirá siendo de código abierto, y el código fuente está a disposición de todo el mundo, de forma gratuita. El proyecto Misskey también apoya activamente otros OSS."
+    _battleTested:
+      title: "Confiabilidad"
+      description: "Misskey ha sido utilizado en entornos reales (probado en batalla) durante más de una década y se enorgullece de ser altamente fiable."
+  _featuresServer:
+    _root:
+      title: "Características del lado del servidor"
+      description: "Características de la implementación back-end detrás de Misskey."
+    _easyInstall:
+      title: "Fácil de instalar"
+      description: "Puede instalarse con sencillos comandos y también puede gestionarse con servicios de alojamiento proporcionados por diversas empresas."
+    _easySetup:
+      title: "Fácil de instalar"
+      description: "La instalación de un servidor Misskey no requiere ninguna configuración compleja y puede estar operativo inmediatamente. Por otro lado, se pueden realizar configuraciones avanzadas que se adapten a sus necesidades."
+    _api:
+      title: "API"
+      description: "Todas las funciones de Misskey pueden ser operadas a través de una API HTTP, por lo que es fácil de integrar con otras aplicaciones. Además, también es compatible con conexiones Webhook y WebSocket, por lo que puede recibir eventos de Misskey en tiempo real."
+    _relay:
+      title: "Soporte de Relays"
+      description: "Admite conexiones a servidores de retransmisión que retransmiten la actividad en el Fediverso, de modo que se puede recopilar información sin tener que conectarse manualmente a un gran número de servidores."
+    _nodejs:
+      title: "Node.js Backend"
+      description: "Misskey utiliza Node.js como backend, por lo que es rápido y ligero."
+    _postgresql:
+      title: "PostgreSQL"
+      description: "La base de datos principal es PostgreSQL, que proporciona una sólida gestión de datos."
+    _jobQueue:
+      title: "Cola de trabajos muy eficaz"
+      description: "BullMQ se utiliza para la cola de trabajos, permitiendo que las tareas sean procesadas eficientemente en múltiples servidores. Además, el Inspector de Misskey implementado de forma nativa está integrado en el panel de control y se puede gestionar sin tener que depender de herramientas externas."
+    _cdn:
+      title: "Compatibilidad con CDN"
+      description: "Admite el almacenamiento en caché de recursos mediante CDN externas. Al reducir el número de peticiones al servidor, pueden reducirse la carga y los costes."
+    _ftt:
+      title: "FTT"
+      description: "La tecnología Fan-out Timeline (FTT) permite construir líneas de tiempo en Redis para mejorar el rendimiento."
+    _rbt:
+      title: "RBT"
+      description: "Reactions Buffering Technology (RBT) permite almacenar en caché la información de las reacciones en Redis para mejorar el rendimiento."
+    _scalable:
+      title: "Escalable"
+      description: "Admite la agrupación de procesos, el equilibrio de carga con varios servidores, la replicación de bases de datos y puede dar cabida a un número creciente de usuarios."
+    _ml:
+      title: "Aprendizaje automático"
+      description: "Las funciones integradas de aprendizaje automático también pueden utilizarse para reducir las cargas operativas, por ejemplo filtrando automáticamente los medios sensibles."
+    _sentry:
+      title: "Soporte para Sentry"
+      description: "Sentry permite la recopilación de métricas del servidor para ayudar a supervisar, comprobar el estado y mantener los recursos del servidor."
+  _featuresClient:
+    _root:
+      title: "WebUI"
+      description: "Cuenta con un sofisticado front-end web (Misskey Web) que viene con Misskey."
+    _responsive:
+      title: "Interfaz de usuario adaptable"
+      description: "La interfaz de usuario se diseña mediante un sofisticado sistema de diseño propio y se implementa cuidadosamente para optimizar la visualización y el comportamiento de cada ordenador de sobremesa, tableta y smartphone."
+    _theme:
+      title: "Temas"
+      description: "Puedes utilizar Misskey con el aspecto que desees. Por supuesto, el modo oscuro es totalmente compatible. También puedes crear tus propios temas avanzados."
+    _mfm:
+      title: "MFM"
+      description: "Para las notas existe un lenguaje de marcado específico de Misskey, denominado MFM. La decoración del texto, como negritas, inserción de enlaces y adición de movimiento, puede expresarse mediante una sintaxis sencilla."
     _widgets:
       title: "Widgets"
-      description: "Ten todo al alcance de tu mano con todo tipo de widgets personalizables!"
+      description: "Coloca libremente varios tipos de widgets para acceder rápidamente a la información que necesitas."
+    _deck:
+      title: "Deck UI"
+      description: "Con el deck UI, la interfaz de usuario puede personalizarse aún más. Puedes crear tu propio cliente único."
+    _embed:
+      title: "Incrustación en otros sitios web"
+      description: "Las notas, líneas de tiempo, etc. pueden incrustarse y mostrarse en sitios web externos."
+    _realtimeMode:
+      title: "Modo en tiempo real"
+      description: ""
+    _pushNotification:
+      title: "Notificaciones push"
+      description: "Las notificaciones push son compatibles, por lo que puedes recibir notificaciones del servidor en tiempo real."
+    _multiAccounts:
+      title: "Soporte multicuenta"
+      description: "Se puede alternar fácilmente entre varias cuentas."
+    _plugin:
+      title: "Plugins"
+      description: "La funcionalidad del cliente puede ampliarse instalando plug-ins mediante AiScript seguro."
+    _settingsManagement:
+      title: "Gestión flexible de la configuración"
+      description: "Cualquier configuración del cliente puede anularse por cuenta, y los ajustes pueden compartirse y sincronizarse entre varios dispositivos. Además, se pueden realizar copias de seguridad automáticas de la información de configuración."
+    _pwa:
+      title: "PWA"
+      description: "Misskey Web es compatible con Progressive Web Apps (PWA) y puede funcionar como una aplicación nativa en el dispositivo."
+    _i18n:
+      title: "Soporte Multilingüe"
+      description: "Los clientes están disponibles en varios idiomas."
+  _featuresUpcoming:
+    _root:
+      title: "Próximamente"
+      description: "Funciones previstas para el futuro."
+    _jwt:
+      title: "Certificados JWT"
+      description: "La autenticación sin estado mediante JSON Web Token (JWT) se implementa para una validación de solicitudes más segura y rápida."
+    _newBackend:
+      title: "Back-end más ligero"
+      description: "Se está desarrollando un back-end completamente nuevo para permitir un funcionamiento más rápido y ligero."
+    _vueVapor:
+      title: "Compatibilidad con Vue Vapor"
+      description: "Es compatible con la nueva estrategia de compilación del framework Vue empleada en el front-end, lo que permite una interfaz de usuario web más ligera."
   _getStarted:
     title: "Comienza con Misskey"
     _find:
@@ -95,13 +217,13 @@ _landing:
       list: "Lista de servidores disponibles"
     _create:
       title: "Crea tu propio servidor"
-      guide: "Guía paso a paso para configurar tu servidor"
+      guide: "Guía paso a paso"
     _docs:
       title: "Más información"
       docs: "Consulta nuestra documentación"
   _donation:
     title: "Ayuda a Misskey"
-    description: "Somos un proyecto sin fines de lucro y dependemos de tus donaciones para seguir mejorando. Si te gusta Misskey, considera apoyarnos para que podamos seguir ofreciendo una experiencia increíble!"
+    description: "Somos un proyecto sin fines de lucro y dependemos de tus donaciones para seguir mejorando. Si te gusta Misskey, ¡considera apoyarnos para que podamos seguir ofreciendo una experiencia increíble!"
   _sponsors:
     title: "Patrocinadores"
     becomeASponsor: "Convertirse en patrocinador"
@@ -147,7 +269,7 @@ _servers:
     grid: "Cuadrilla"
 _docs:
   title: "Documentación"
-  description: "Información completa que va desde cómo usar Misskey hasta recursos para los operadores de servidores y desarrolladores."
+  description: "Información completa que va desde cómo usar Misskey hasta recursos para los administradores de servidores y desarrolladores."
   indexTitle: "Índice"
   _contribute:
     editThis: "Editar esta página"
@@ -164,7 +286,7 @@ _docs:
   _forUsers:
     title: "Para usuarios de Misskey"
   _forAdmin:
-    title: "Para administradores de servidores"
+    title: "Para administradores"
   _forDevelopers:
     title: "Para desarrolladores"
   _prevNext:
@@ -256,9 +378,9 @@ _aboutUs:
   description: "Información sobre el equipo de desarrollo de Misskey."
   _team:
     title: "Miembros del Equipo"
-    description: "Conoce a las personas involucradas en el desarrollo de Misskey!"
+    description: "¡Conoce a las personas involucradas en el desarrollo de Misskey!"
     _core:
-      title: "Miembro del Equipo Central"
+      title: "Miembros del Equipo Principal"
       description: "Estos miembros del equipo central están activamente manteniendo proyectos relacionados con Misskey."
     _coreEmeriti:
       title: "Miembros Veteranos del Equipo Central"
@@ -293,7 +415,7 @@ _noteVisibility:
   home: "Inicio"
   followers: "Seguidores"
   specified: "Directa"
-  localOnly: "Defederar"
+  localOnly: "Desfederar"
 _shareLinkGenerator:
   title: "Compartir generador de botones"
   description: "Crear botones de compartir para Misskey usando el servicio de retransmisión de URL de Misskey Hub."
@@ -306,7 +428,7 @@ _shareLinkGenerator:
   manualInstanceDescription: "El servidor especificado aquí puede mostrarse en la parte superior de la página de retransmisión del botón Compartir. Puede utilizarlo para dirigir a los usuarios a su propio servidor, por ejemplo."
   visibility: "Visibilidad"
   recipents: "Cuenta de la persona que recibe el mensaje directo (separado por reglones"
-  resultLink: "リンク生成結果"
+  resultLink: "Resultados generados de enlaces compartidos"
   resultButton: "Botón de compartir de ejemplo"
   testLink: "Probar el enlace de compartir"
   typeSomethingToGetLink: "Ingresa el texto para generar el enlace."
@@ -314,86 +436,86 @@ _shareLinkGenerator:
   documentationIs: "Puedes encontrar más información técnica, como referencias de parámetros, en {here}"
   here: "este enlace"
 _goToMisskey:
-  title: "Misskey Webに移動"
-  heading: "このページを開きたいサーバーを選択してください"
+  title: "Ir a tu web Misskey"
+  heading: "Seleccione el servidor/instancia en el que desea abrir la página y continúe"
 _avatarDecorationPreview:
-  title: "アバターデコレーション プレビュー"
-  description: "アバターデコレーションがきれいに反映できるかをチェックできます。"
-  preview: "プレビュー"
-  settings: "設定"
-  decoration: "デコ #{number}"
-  placeholder: "「追加」から、アバターデコレーションを追加してプレビューできます。"
+  title: "Previsualización de la decoración del Avatar"
+  description: "Puedes comprobar si la decoración del avatar se ajusta correctamente."
+  preview: "Vista Previa"
+  settings: "Configuración"
+  decoration: "Decoración #{number}"
+  placeholder: "A través del botón «Añadir» puedes añadir y previsualizar las decoraciones del avatar."
   _options:
-    offsetX: "横位置調整"
-    offsetY: "縦位置調整"
-    angle: "角度"
-    flip: "左右反転"
-    overlayTemplate: "テンプレートを重ねる"
+    offsetX: "Desplazamiento horizontal"
+    offsetY: "Desplazamiento vertical"
+    angle: "Ángulo"
+    flip: "Voltear horizontalmente"
+    overlayTemplate: "Superponer plantilla"
   _placeholder:
     username: "Ai"
     noteText: "Acabo de comer una dona glaseada 🍩😋"
     profileDescription: "Soy Ai, la IA de Misskey. Encantada de conocerte ♪"
 _customEmojiPreview:
   title: "Preview de Emojis personalizados"
-  description: "カスタム絵文字の視認性をチェックできます。"
+  description: "La utilidad de los emojis personalizados puede comprobarse aquí."
   preview: "Preview"
   emoji: "Emoji #{number}"
-  placeholder: "「追加」から、カスタム絵文字を追加してプレビューできます。"
-  limitReactionLength: "リアクションの最大横幅を制限し、縮小して表示する"
+  placeholder: "En «Añadir», puedes añadir y previsualizar emojis personalizados."
+  limitReactionLength: "Limitar la anchura máxima de las reacciones y mostrarlas en tamaño reducido"
   _options:
-    text: "ノート文面"
-    textDescription: "追加したカスタム絵文字は{emoji_id}で参照できます。"
+    text: "Texto de la nota"
+    textDescription: "El emoticono personalizado que has añadido puede ser referenciado por {emoji_id}."
   _placeholder:
-    noteText: "カスタム絵文字はこんな感じで表示されます→ :emoji_preview_1:\n文章を書き換えて、使い勝手を試してみてくださいね✨"
+    noteText: "El emoticono aparecerá así → :emoji_preview_1:\nPuedes reescribir el texto y probar su funcionalidad✨"
 _identiconGenerator:
-  title: "初期アイコンジェネレーター"
-  description: "Misskeyに登録した際にデフォルトで指定される初期アイコンを生成できます。"
-  userName: "ユーザー名"
-  includeDomain: "サーバーのドメイン名を含む完全なユーザー名を指定してください。"
+  title: "Generador de Icono de Identidad"
+  description: "Puede generar un icono inicial que se especificará por defecto cuando te registres en Misskey."
+  userName: "Nombre de usuario"
+  includeDomain: "Especifica el nombre de usuario completo, incluyendo el nombre de dominio del servidor."
 _historicalMaterials:
-  title: "歴史資料館"
-  description: "Misskeyに関する歴史的資料を一挙公開"
-  heroSubtitle: "Misskey 10周年記念企画"
-  heroDescription: "Misskeyは2014年に掲示板サービスとして生まれました。それから10年経ち、今ではたくさんの方々に利用していただけるプラットフォームになりました。\nここではMisskeyに関する歴史的資料を一挙公開します！"
-  submissionTitle: "古いMisskeyの写真をお持ちですか？"
-  submissionDescription: "昔のMisskeyにまつわる資料をお持ちの方は、ぜひ当館にお寄せください。\nGitHubを利用できる方は{gh_issue}に、利用できない方は {'@'}syuilo{'@'}misskey.io にお送りください。"
+  title: "Museo Histórico"
+  description: "Explora algunas fotos antiguas de Misskey"
+  heroSubtitle: "10º Aniversario del Proyecto Misskey"
+  heroDescription: "Misskey fue lanzado en 2014 como un tablón de anuncios. Han pasado diez años desde entonces y ahora se convertido en una plataforma usada por mucha gente.\n¡Descubramos las históricas capturas de pantalla de Misskey!"
+  submissionTitle: "¿Tienes alguna captura de pantalla antigua de Misskey?"
+  submissionDescription: "Si tienes cualquier material relacionado con versiones antiguas de Misskey, por favor mandádnoslas.\nLos usuarios de GitHub pueden enviarlas a {gh_issue}, y aquellos que no puedan utilizar GitHub pueden mandarlas a {'@'}syuilo{'@'}misskey.io."
 _miHubServerListPreview:
-  title: "Misskey Hub サーバー一覧 プレビュー"
-  description: "Misskey Hubのサーバー一覧にお手持ちの画像を当てはめて見栄えをチェックできます。"
-  name: "サーバー名"
-  serverDescription: "説明文"
-  icon: "アイコン画像"
-  bannerOrBg: "バナー画像 or 背景画像"
-  bannerOrBgDescription: "バナー画像と背景画像が両方指定されている場合は、背景画像の方を優先して表示します。画像は中心基準で16:9に収まる最大領域のみが表示されます。"
+  title: "Vista previa en la lista de servidores de Misskey Hub"
+  description: "Puedes comprobar como se ve tu servidor aplicando tus imágenes a la lista de servidores en Misskey Hub."
+  name: "Nombre del servidor"
+  serverDescription: "Descripción"
+  icon: "Icono del servidor"
+  bannerOrBg: "Imagen del Banner o imagen de fondo"
+  bannerOrBgDescription: "Si se especifican una imagen de banner y una imagen de fondo, se mostrará la imagen de fondo. Solo se mostrará el área más grande de la imagen que quepa en el marco central de 16:9."
 _api:
   _permissions:
-    title: "権限"
-    description: "説明"
+    title: "Permisos"
+    description: "Descripción"
     _types:
-      "read:account": "View your account information"
-      "write:account": "Edit your account information"
-      "read:blocks": "View your list of blocked users"
-      "write:blocks": "Edit your list of blocked users"
-      "read:drive": "Access your Drive files and folders"
-      "write:drive": "Edit or delete your Drive files and folders"
-      "read:favorites": "View your list of favorites"
-      "write:favorites": "Edit your list of favorites"
-      "read:following": "View information on who you follow"
-      "write:following": "Follow or unfollow other accounts"
-      "read:messaging": "View your chats"
-      "write:messaging": "Compose or delete chat messages"
-      "read:mutes": "View your list of muted users"
-      "write:mutes": "Edit your list of muted users"
-      "write:notes": "Compose or delete notes"
-      "read:notifications": "View your notifications"
-      "write:notifications": "Manage your notifications"
-      "read:reactions": "View your reactions"
-      "write:reactions": "Edit your reactions"
-      "write:votes": "Add Vote"
-      "read:pages": "View your Pages"
-      "write:pages": "Edit or delete your Pages"
-      "read:page-likes": "View list of liked Pages"
-      "write:page-likes": "Edit list of liked Pages"
+      "read:account": "Ver información de la cuenta"
+      "write:account": "Editar información de la cuenta"
+      "read:blocks": "Ver usuarios bloqueados"
+      "write:blocks": "Administrar usuarios bloqueados"
+      "read:drive": "Accede a tus archivos y carpetas de Drive"
+      "write:drive": "Edita o elimina tus archivos y carpetas del Drive"
+      "read:favorites": "Ver tu lista de favoritos"
+      "write:favorites": "Editar tu lista de favoritos"
+      "read:following": "Ver información sobre a quién sigues"
+      "write:following": "Sigue o deja de seguir a otras cuentas"
+      "read:messaging": "Ver tus chats"
+      "write:messaging": "Redacta o elimina mensajes de chat"
+      "read:mutes": "Ver tu lista de usuarios silenciados"
+      "write:mutes": "Editar tu lista de usuarios silenciados"
+      "write:notes": "Redactar o eliminar mensajes de chat"
+      "read:notifications": "Ver tus notificaciones"
+      "write:notifications": "Gestionar tus notificaciones"
+      "read:reactions": "Ver tus reacciones"
+      "write:reactions": "Editar tus reacciones"
+      "write:votes": "Añadir Voto"
+      "read:pages": "Ver tus páginas"
+      "write:pages": "Editar o borrar tus páginas"
+      "read:page-likes": "Ver los «Me gusta» de la página"
+      "write:page-likes": "Administrar páginas que te gustan"
       "read:user-groups": "View your user groups"
       "write:user-groups": "Edit or delete your user groups"
       "read:channels": "View your channels"

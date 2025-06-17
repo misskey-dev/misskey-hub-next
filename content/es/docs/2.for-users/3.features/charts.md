@@ -1,74 +1,71 @@
-# チャート
+# Gráficos
 
-Misskeyはサーバーの様々なデータソースに対するチャートを生成し表示する機能を備えています。
-チャートを利用することで、サーバーの利用状況や連合の状況、各ユーザーのアクティビティなどを視覚的に把握することができます。
+Misskey tiene una característica que muestra y genera gráficos de varias fuentes de datos del servidor. El gráfico del servidor puede ser mostrado en la página de Información del Servidor. Abajo hay una descripción de cada gráfico y cada uno de sus elementos.
 
-サーバーのチャートはサーバー情報ページから表示することができます。
+El gráfico del servidor puede visualizarse en la página Información del servidor.
 
-以下は各チャートとその各項目の説明です。
+A continuación se describe cada gráfico y cada uno de sus elementos.
 
-## 連合チャート
+## Gráficos de Federación
 
-連合しているサーバーについてのチャートです。
+Gráficos sobre servidores federados.
 
 ### Pub
 
-アクティビティを配送しているサーバーの数。
-言い換えると、自サーバーのユーザーをフォローしているリモートユーザーの所属サーバーのユニークなカウントを表します。
+Número único de servidor que ha enviado actividades a servidores remotos.
 
 ### Sub
 
-アクティビティを受信しているサーバーの数。
-言い換えると、自サーバーのユーザーがフォローしているリモートユーザーの所属サーバーのユニークなカウントを表します。
+Número único de servidores remotos que han enviado actividad al servidor.
 
-### Received
+### Recibido
 
-アクティビティを送ってきたサーバーの数。
+El número de usuarios recibiendo actividades.
 
-### Delivered
+### Entregado
 
-アクティビティを配送したサーバーの数。
+El número de servidores que proporcionan actividad.
 
-### Stalled
+### Estancado
 
-アクティビティを配送する際、エラーになったサーバーの数。
+Número único de fallos cuando el servidor intentó entregar actividades a servidores remotos.
 
-## アクティブユーザー数チャート
+## Cantidad de usuarios activos
 
-自サーバーのユーザーの利用状況についてのチャートです。
+Gráficos de uso de usuarios del propio servidor.
 
-### Read & Write
+### Lectura & Escritura
 
-閲覧と書き込みを行ったユーザーの数。
+Número único de usuarios que han navegado y escrito.
 
-### Read
+### Lectura
 
-閲覧を行ったユーザーの数。
+Número único de usuarios que han navegado y escrito.
 
-### Write
+### Escritura
 
-書き込みを行ったユーザーの数。
+Número único de usuarios que han navegado y escrito.
 
-### < Week
+### < Semana
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1週間未満であるユーザーの数。
+Número de usuarios que han navegado y cuya fecha y hora de creación de la cuenta es inferior a una semana.
 
-### < Month
+### < Mes
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1ヶ月未満であるユーザーの数。
+Número de usuarios que han navegado cuya fecha y hora de creación de la cuenta es inferior a un mes.
 
-### < Year
+### < Año
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1年未満であるユーザーの数。
+Número de usuarios que han navegado cuya fecha y hora de creación de la cuenta es inferior a un año.
 
-### > Week
+### > Semana
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1週間以上前であるユーザーの数。
+Número de usuarios que han navegado cuya fecha y hora de creación de la cuenta fue hace más de una semana.
 
-### > Month
+### > Mes
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1ヶ月以上前であるユーザーの数。
+Número de usuarios que han navegado cuya fecha y hora de creación de la cuenta fue hace más de un mes.
 
-### > Year
+### > Año
 
-閲覧を行ったユーザーのうち、アカウント作成日時が1年以上前であるユーザーの数。
+Número de usuarios que han navegado cuya fecha y hora de creación de la cuenta fue hace más de un año.
