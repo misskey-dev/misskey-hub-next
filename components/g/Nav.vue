@@ -1,7 +1,9 @@
 <template>
+	<!--
 <GNuxtLink :class="$style.news" class="_plainLink">
 	<b>NEWS:</b> New blog post "Lorem ipsum dolor sit amet, consectetur adipiscing elit" is published!
 </GNuxtLink>
+-->
 <div :class="$style.root">
 	<div :class="$style.main">
 		<div :class="[$style.bg, { [$style.slim]: slim, [$style.hasBorder]: hasBorder }]"></div>
