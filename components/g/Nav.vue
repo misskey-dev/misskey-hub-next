@@ -4,7 +4,7 @@
 	<b>NEWS:</b> New blog post "Lorem ipsum dolor sit amet, consectetur adipiscing elit" is published!
 </GNuxtLink>
 -->
-<div :class="$style.root">
+<div :class="[$style.root, { [$style.fixed]: fixed }]">
 	<div :class="$style.main">
 		<div :class="[$style.bg, { [$style.slim]: slim, [$style.hasBorder]: hasBorder }]"></div>
 		<nav :class="$style.container">
@@ -116,7 +116,6 @@ import MoonIcon from 'bi/moon-stars.svg';
 import DisplayIcon from 'bi/display.svg';
 import MenuIcon from 'bi/list.svg';
 import XIcon from 'bi/x.svg';
-import DotIcon from 'bi/dot.svg';
 
 import { sanitizeInternalPath } from '@/assets/js/misc';
 import { withTrailingSlash, cleanDoubleSlashes } from 'ufo';
@@ -179,6 +178,10 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 	left: 0;
 	right: 0;
 	z-index: 9999;
+}
+
+.root.fixed {
+	position: fixed;
 }
 
 .news {
@@ -256,7 +259,7 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 	top: 0;
 	left: 0;
 	right: 0;
-	background: #fffc;
+	background: #fbfbfbcc;
 	backdrop-filter: blur(12px);
 	height: var(--height);
 	pointer-events: none;
@@ -393,6 +396,11 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 	text-align: center;
 	background: #0001;
 	border-radius: 999px;
+}
+
+.rightButton:disabled {
+	opacity: 0.7;
+	cursor: not-allowed;
 }
 
 :global(html.dark) {
