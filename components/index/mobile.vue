@@ -225,7 +225,7 @@
 				<div class="section_free_main">
 					<h2 class="section_free_title"><b v-text-underline>{{ $t('_landing._free.title') }}🍀</b></h2>
 					<div class="section_free_description">{{ $t('_landing._free.description') }}</div>
-					<div style="margin-top: 0.75em; display: flex; gap: 12px;">
+					<div style="margin: 0.75em; display: flex; justify-content: center; gap: 12px;">
 						<GButton buttonType="link" to="https://github.com/misskey-dev" color="accent">View GitHub</GButton>
 						<GButton buttonType="link" :to="localePath('/docs/donate/')">Donate</GButton>
 					</div>
@@ -1029,7 +1029,7 @@ onMounted(() => {
 	box-sizing: border-box;
 	width: 300px;
 	place-content: center;
-	margin-top: 16px;
+	margin: 16px auto 0;
 }
 :global(html.dark)  {
 	.section_free_sub {

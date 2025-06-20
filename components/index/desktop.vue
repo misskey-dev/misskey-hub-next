@@ -65,14 +65,13 @@
 		</div>
 	</section>
 
-	<section class="section_stats _secondaryWidth">
-		<!-- TODO -->
-		<!-- <div class="section_stats_text">
-			<span><b class="section_stats_label">Notes:</b>{{ instances?.stats.notesCount }}+</span>
-			<span><b class="section_stats_label">Users:</b>{{ instances?.stats.usersCount }}+</span>
-			<span><b class="section_stats_label">MAUs:</b>{{ instances?.stats.mau }}+</span>
-			<span><b class="section_stats_label">Servers:</b>{{ instances?.stats.instancesCount }}+</span>
-		</div> -->
+	<section v-if="stats != null" class="section_stats _secondaryWidth">
+		<div class="section_stats_text">
+			<span><b class="section_stats_label">Notes:</b>{{ $n(stats.notesCount) }}+</span>
+			<span><b class="section_stats_label">Users:</b>{{ $n(stats.usersCount) }}+</span>
+			<span><b class="section_stats_label">MAUs:</b>{{ $n(stats.mau) }}+</span>
+			<span><b class="section_stats_label">Servers:</b>{{ $n(stats.instancesCount) }}+</span>
+		</div>
 	</section>
 
 	<div class="scrollLabel">
@@ -103,28 +102,28 @@
 					<div class="section_getStarted_item acrylic">
 						<img class="section_getStarted_item_icon" src="/img/emojis/package_color.svg" aria-hidden="true">
 						<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._create.title') }}</b>
-						<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/docs/for-admin/install/guides/')">{{ $t('_landing._getStarted._create.guide') }}<ArrowRightIco /></GButton>
+						<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/docs/for-admin/install/guides/')">{{ $t('_landing._getStarted._create.guide') }}<ArrowRightIco class="ml-1" /></GButton>
 					</div>
 				</div>
 				<div v-fade-in="'up'" class="section_getStarted_itemContainer">
 					<div class="section_getStarted_item acrylic">
 						<img class="section_getStarted_item_icon" src="/img/emojis/light_bulb_color.svg" aria-hidden="true">
 						<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._docs.title') }}</b>
-						<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/docs')">{{ $t('_landing._getStarted._docs.docs') }}<ArrowRightIco /></GButton>
+						<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/docs')">{{ $t('_landing._getStarted._docs.docs') }}<ArrowRightIco class="ml-1" /></GButton>
 					</div>
 				</div>
 				<div v-fade-in="'up'" class="section_getStarted_itemContainer">
 					<div class="section_getStarted_item acrylic">
 						<img class="section_getStarted_item_icon" src="/img/emojis/ringed_planet_color.svg" aria-hidden="true">
 						<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._find.title') }}</b>
-						<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/servers')">{{ $t('_landing._getStarted._find.list') }}<ArrowRightIco /></GButton>
+						<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/servers')">{{ $t('_landing._getStarted._find.list') }}<ArrowRightIco class="ml-1" /></GButton>
 					</div>
 				</div>
 				<div v-fade-in="'up'" class="section_getStarted_itemContainer">
 					<div class="section_getStarted_item acrylic">
 						<img class="section_getStarted_item_icon" src="/img/emojis/hammer_and_wrench_color.svg" aria-hidden="true">
 						<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._dev.title') }}</b>
-						<GButton class="section_getStarted_item_button" color="accent" buttonType="link" to="https://github.com/misskey-dev">GitHub<ArrowUpRightIco /></GButton>
+						<GButton class="section_getStarted_item_button" color="accent" buttonType="link" to="https://github.com/misskey-dev">GitHub<ArrowUpRightIco class="ml-1" /></GButton>
 					</div>
 				</div>
 			</div>
@@ -499,28 +498,28 @@
 					<div class="section_getStarted_item acrylic">
 						<img class="section_getStarted_item_icon" src="/img/emojis/package_color.svg" aria-hidden="true">
 						<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._create.title') }}</b>
-						<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/docs/for-admin/install/guides/')">{{ $t('_landing._getStarted._create.guide') }}<ArrowRightIco /></GButton>
+						<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/docs/for-admin/install/guides/')">{{ $t('_landing._getStarted._create.guide') }}<ArrowRightIco class="ml-1" /></GButton>
 					</div>
 				</div>
 				<div v-fade-in="'up'" class="section_getStarted_itemContainer">
 					<div class="section_getStarted_item acrylic">
 						<img class="section_getStarted_item_icon" src="/img/emojis/light_bulb_color.svg" aria-hidden="true">
 						<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._docs.title') }}</b>
-						<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/docs')">{{ $t('_landing._getStarted._docs.docs') }}<ArrowRightIco /></GButton>
+						<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/docs')">{{ $t('_landing._getStarted._docs.docs') }}<ArrowRightIco class="ml-1" /></GButton>
 					</div>
 				</div>
 				<div v-fade-in="'up'" class="section_getStarted_itemContainer">
 					<div class="section_getStarted_item acrylic">
 						<img class="section_getStarted_item_icon" src="/img/emojis/ringed_planet_color.svg" aria-hidden="true">
 						<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._find.title') }}</b>
-						<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/servers')">{{ $t('_landing._getStarted._find.list') }}<ArrowRightIco /></GButton>
+						<GButton class="section_getStarted_item_button" color="accent" buttonType="link" :to="localePath('/servers')">{{ $t('_landing._getStarted._find.list') }}<ArrowRightIco class="ml-1" /></GButton>
 					</div>
 				</div>
 				<div v-fade-in="'up'" class="section_getStarted_itemContainer">
 					<div class="section_getStarted_item acrylic">
 						<img class="section_getStarted_item_icon" src="/img/emojis/hammer_and_wrench_color.svg" aria-hidden="true">
 						<b class="section_getStarted_item_title">{{ $t('_landing._getStarted._dev.title') }}</b>
-						<GButton class="section_getStarted_item_button" color="accent" buttonType="link" to="https://github.com/misskey-dev">GitHub<ArrowUpRightIco /></GButton>
+						<GButton class="section_getStarted_item_button" color="accent" buttonType="link" to="https://github.com/misskey-dev">GitHub<ArrowUpRightIco class="ml-1" /></GButton>
 					</div>
 				</div>
 			</div>
@@ -567,6 +566,7 @@ import { vTextUnderline } from '@/assets/js/vTextUnderline';
 import TagCloud from 'TagCloud';
 import GHIcon from "bi/github.svg";
 import { features, featuresClient, featuresServer } from './features.js';
+import type { InstanceInfo } from '@/types/instances-info.js';
 
 const props = defineProps<{
 	clientLoaded: boolean;
@@ -598,9 +598,17 @@ const instances = ref<{
 	url: string;
 }[]>([]);
 
+const stats = ref<InstanceInfo['stats'] | null>(null);
+
 if (import.meta.client) {
-	const instanceRes = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances20.json`);
-	instances.value = await instanceRes.json();
+	const res = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances20.json`);
+	if (res.ok) {
+		instances.value = await res.json();
+	}
+	const statsRes = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/stats.json`);
+	if (statsRes.ok) {
+		stats.value = await statsRes.json();
+	}
 }
 
 let isMounted = false;
@@ -1450,7 +1458,15 @@ clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
 	flex: 1;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-	gap: 16px;
+	grid-template-rows: auto;
+	row-gap: 16px;
+	column-gap: 16px;
+}
+
+.features_item {
+	display: grid;
+	grid-template-rows: subgrid;
+	grid-row-end: span 3;
 }
 
 .features_itemContent {
@@ -1462,7 +1478,10 @@ clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
 
 	font-size: 90%;
 	box-sizing: border-box;
-	height: 100%;
+
+	display: grid;
+	grid-row-end: span 3;
+	grid-template-rows: subgrid;
 }
 :global(html.dark) {
 	.features_itemContent {
@@ -1472,23 +1491,26 @@ clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
 }
 
 .features_itemContentImage {
+	grid-row: 1 / 2;
 	display: block;
 	width: 100%;
+	margin-bottom: 16px;
 	border-radius: 8px;
-	margin: 0 0 16px 0;
 	aspect-ratio: 1.8;
 	object-fit: cover;
 }
 
 .features_itemContentTitle {
+	grid-row: 2 / 3;
 	font-size: 120%;
 	font-weight: bold;
-	margin: 0 0 8px 0;
+	margin-top: -16px;
 	padding: 0 6px;
 }
 
 .features_itemContentDescription {
-	margin: 0;
+	grid-row: 3 / 4;
+	margin: -8px 0 0 0;
 	padding: 0 6px 0 6px;
 }
 </style>

@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, useTemplateRef, watch } from 'vue';
+import { onMounted, onBeforeUnmount, useTemplateRef, watch } from 'vue';
 
 const props = withDefaults(defineProps<{
 	duration?: number;
@@ -31,6 +31,8 @@ const props = withDefaults(defineProps<{
 
 const contentEl = useTemplateRef('contentEl');
 
+let observer: MutationObserver | null = null;
+
 function calcDuration() {
 	if (contentEl.value == null) return;
 	const eachLength = contentEl.value.offsetWidth / props.repeat;
@@ -41,7 +43,25 @@ function calcDuration() {
 
 watch(() => props.duration, calcDuration);
 
-onMounted(calcDuration);
+onMounted(() => {
+	calcDuration();
+	if (contentEl.value) {
+		observer = new MutationObserver(() => {
+			calcDuration();
+		});
+		observer.observe(contentEl.value, {
+			childList: true,
+			subtree: true,
+		});
+	}
+});
+
+onBeforeUnmount(() => {
+	if (observer) {
+		observer.disconnect();
+		observer = null;
+	}
+});
 </script>
 
 <style module>
