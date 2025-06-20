@@ -11,7 +11,7 @@
 			</span>
 			<span class="tickersItems">
 				<GMarquee :duration="90">
-					<span v-for="instance in instances" class="tickersItem"><img class="tickersItemIcon" :src="`${runtimeConfig.public.serverListApiBaseUrl}/instance-icons/${instance.url}.webp`" alt="">{{ instance.url }}</span>
+					<span v-for="instance in instances" :key="instance.url" class="tickersItem"><img class="tickersItemIcon" :src="`${runtimeConfig.public.serverListApiBaseUrl}/instance-icons/${instance.url}.webp`" alt="">{{ instance.url }}</span>
 				</GMarquee>
 			</span>
 		</section>
@@ -600,17 +600,6 @@ const instances = ref<{
 
 const stats = ref<InstanceInfo['stats'] | null>(null);
 
-if (import.meta.client) {
-	const res = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances20.json`);
-	if (res.ok) {
-		instances.value = await res.json();
-	}
-	const statsRes = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/stats.json`);
-	if (statsRes.ok) {
-		stats.value = await statsRes.json();
-	}
-}
-
 let isMounted = false;
 onMounted(() => {
 	isMounted = true;
@@ -625,9 +614,17 @@ clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
 		clientLoadedWatchStop();
 		clientLoadedWatchStop = null;
 	}
-	console.log('Misskey client loaded');
 
-	function initClientScripts() {
+	async function initClientScripts() {
+		const res = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances20.json`);
+		if (res.ok) {
+			instances.value = await res.json();
+		}
+		const statsRes = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/stats.json`);
+		if (statsRes.ok) {
+			stats.value = await statsRes.json();
+		}
+
 		const swiper = new Swiper('.swiper', {
 			slidesPerView: 'auto',
 			centeredSlides: true,

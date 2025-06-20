@@ -485,6 +485,10 @@ import TagCloud from 'TagCloud';
 import GHIcon from "bi/github.svg";
 import { features, featuresClient, featuresServer } from './features.js';
 
+const props = defineProps<{
+	clientLoaded: boolean;
+}>();
+
 const { notice } = useAppConfig();
 const isUwu = useState<boolean>('isUwu');
 const localePath = useGLocalePath();
@@ -505,48 +509,69 @@ const localizedNotice = computed(() => {
 	}
 });
 
-
 const instances = ref<{
 	name: string;
 	description: string;
 	url: string;
 }[]>([]);
 
-if (import.meta.client) {
-	const instanceRes = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances20.json`);
-	instances.value = await instanceRes.json();
-}
-
+let isMounted = false;
 onMounted(() => {
-	const swiper = new Swiper('.swiper', {
-		slidesPerView: 'auto',
-		centeredSlides: true,
-		loop: true,
-		spaceBetween: 100,
-		effect: 'coverflow',
-		coverflowEffect: {
-			rotate: 0,
-			stretch: 0,
-			depth: 100,
-			modifier: 2,
-			slideShadows: false,
-		},
+	isMounted = true;
+});
 
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-	});
+let clientLoadedWatchStop: (() => void) | null = null;
 
-	const cloudItems = instances.value.map(instance => `<img src="${runtimeConfig.public.serverListApiBaseUrl}/instance-icons/${instance.url}.webp" width="35" />`);
+clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
+	if (!import.meta.client) return;
+	if (!props.clientLoaded) return;
+	if (clientLoadedWatchStop != null) {
+		clientLoadedWatchStop();
+		clientLoadedWatchStop = null;
+	}
 
-	TagCloud('.section_decentralized_cloudContainer_cloud', cloudItems, {
-		radius: 150,
-		maxSpeed: 'slow',
-		initSpeed: 'slow',
-		direction: 135,
-		useHTML: true,
-	});
+	async function initClientScripts() {
+		const instanceRes = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances20.json`);
+		instances.value = await instanceRes.json();
+
+		const swiper = new Swiper('.swiper', {
+			slidesPerView: 'auto',
+			centeredSlides: true,
+			loop: true,
+			spaceBetween: 100,
+			effect: 'coverflow',
+			coverflowEffect: {
+				rotate: 0,
+				stretch: 0,
+				depth: 100,
+				modifier: 2,
+				slideShadows: false,
+			},
+
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+
+		const cloudItems = instances.value.map(instance => `<img src="${runtimeConfig.public.serverListApiBaseUrl}/instance-icons/${instance.url}.webp" width="35" />`);
+
+		TagCloud('.section_decentralized_cloudContainer_cloud', cloudItems, {
+			radius: 150,
+			maxSpeed: 'slow',
+			initSpeed: 'slow',
+			direction: 135,
+			useHTML: true,
+		});
+	}
+	
+	if (isMounted) {
+		initClientScripts();
+	} else {
+		onMounted(() => {
+			initClientScripts();
+		});
+	}
 });
 </script>
 

@@ -44,6 +44,7 @@ function calcDuration() {
 watch(() => props.duration, calcDuration);
 
 onMounted(() => {
+	if (!import.meta.client) return;
 	calcDuration();
 	if (contentEl.value) {
 		observer = new MutationObserver(() => {
