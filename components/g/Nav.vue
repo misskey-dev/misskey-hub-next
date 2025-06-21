@@ -114,6 +114,7 @@ import MoonIcon from 'bi/moon-stars.svg';
 import DisplayIcon from 'bi/display.svg';
 import MenuIcon from 'bi/list.svg';
 import XIcon from 'bi/x.svg';
+import DotIcon from 'bi/dot.svg';
 
 import { sanitizeInternalPath } from '@/assets/js/misc';
 import { withTrailingSlash, cleanDoubleSlashes } from 'ufo';
@@ -413,6 +414,7 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 	top: calc(calc(var(--height) / 2) + 20px);
 	right: 0;
 	padding-top: calc(calc(var(--height) / 2) - 20px);
+	text-align: right;
 }
 
 .i18nSwitcherButton:hover ~ .i18nSwitcherRoot,
