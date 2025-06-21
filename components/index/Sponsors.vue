@@ -7,7 +7,8 @@
 			v-for="sponsor in sponsors"
 			:to="sponsor.to"
 			target="_blank"
-			:class="$style.sponsor"
+			:class="[$style.sponsor, { [$style.margin]: sponsor.margin !== false }]"
+			:style="typeof sponsor.margin === 'string' ? sponsor.margin : ''"
 		>
 			<img :src="sponsor.img" alt="" :class="$style.sponsorImage" />
 		</GNuxtLink>
@@ -49,7 +50,7 @@ const sponsors: Sponsor[] = [
 	},
 	{
 			img: '/img/sponsors/gmo_pepabo.svg',
-			margin: 'padding: 0.625rem',
+			margin: false,
 			to: 'https://pepabo.com/',
 	},
 	{
@@ -62,8 +63,6 @@ const sponsors: Sponsor[] = [
 			to: 'https://xfolio.jp/',
 	},
 ];
-
-const localePath = useGLocalePath();
 </script>
 
 <style module>
@@ -91,6 +90,14 @@ const localePath = useGLocalePath();
 
 .sponsor {
 	aspect-ratio: 1;
+	overflow: clip;
+	border-radius: 12px;
+	/* ダークモードでロゴが見えなくなるのを避けるために背景色は白で固定 */
+	background-color: #fff;
+}
+
+.sponsor.margin {
+	padding: 0.625rem;
 }
 
 .sponsorImage {
@@ -98,6 +105,5 @@ const localePath = useGLocalePath();
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
-	border-radius: 12px;
 }
 </style>
