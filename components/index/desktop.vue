@@ -867,7 +867,9 @@ clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
 	box-sizing: border-box;
 	padding: 4px 16px 4px 4px;
 	font-size: 90%;
+	font-weight: 700;
 }
+
 :global(html.dark) {
 	.noticeInner {
 		background: #111;
