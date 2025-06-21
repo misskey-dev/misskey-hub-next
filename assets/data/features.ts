@@ -1,3 +1,9 @@
+type FeatureItem = {
+	img?: string;
+	title: string;
+	description: string;
+};
+
 export const features = [{
 	img: '/img/top-features/top-features-note.png',
 	title: '_landing._features._note.title',
@@ -61,7 +67,7 @@ export const features = [{
 	img: '/img/top-features/since2014.webp',
 	title: '_landing._features._battleTested.title',
 	description: '_landing._features._battleTested.description',
-}];
+}] satisfies FeatureItem[];
 
 export const featuresServer = [{
 	title: '_landing._featuresServer._easyInstall.title',
@@ -116,7 +122,7 @@ export const featuresServer = [{
 	img: '/img/top-features/sentry.webp',
 	title: '_landing._featuresServer._sentry.title',
 	description: '_landing._featuresServer._sentry.description',
-}];
+}] satisfies FeatureItem[];
 
 export const featuresClient = [{
 	img: '/img/top-features/responsive.webp',
@@ -175,4 +181,4 @@ export const featuresClient = [{
 	img: '/img/top-features/i18n.webp',
 	title: '_landing._featuresClient._i18n.title',
 	description: '_landing._featuresClient._i18n.description',
-}];
+}] satisfies FeatureItem[];

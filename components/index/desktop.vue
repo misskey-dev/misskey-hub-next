@@ -565,7 +565,7 @@ import { vFadeIn } from '@/assets/js/vFadeIn';
 import { vTextUnderline } from '@/assets/js/vTextUnderline';
 import TagCloud from 'TagCloud';
 import GHIcon from "bi/github.svg";
-import { features, featuresClient, featuresServer } from './features.js';
+import { features, featuresClient, featuresServer } from '@/assets/data/features.js';
 import type { InstanceInfo } from '@/types/instances-info.js';
 
 const props = defineProps<{
