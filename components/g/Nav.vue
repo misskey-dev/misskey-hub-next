@@ -71,18 +71,16 @@
 						</button>
 					</div>
 					<div>
-						<button class="_plainButton" :class="$style.rightButton"><I18nIcon style="width: 18px; height: 18px; display: block; margin: auto;"/></button>
-						<!--
-						<div class="absolute top-6 right-0 hidden group-hover:block group-focus-within:block z-[9955]">
-								<ul class="px-4 py-2 bg-neutral-50 dark:bg-neutral-800 rounded-lg shadow-lg space-y-1">
-										<li v-for="locale in localesConst">
-												<GNuxtLink :to="switchLocalePath(locale.code)" :lang="locale.code" :class="['block _i18n whitespace-nowrap hover:text-accent-600 py-0.5', {'text-accent-600 font-bold': currentLocale === locale.code}]">
-														<span v-if="currentLocale === locale.code"><DotIcon class="stroke-[3] stroke-current" /></span>{{ locale.name }}
-												</GNuxtLink>
-										</li>
-								</ul>
+						<button class="_plainButton" :class="[$style.rightButton, $style.i18nSwitcherButton]"><I18nIcon style="width: 18px; height: 18px; display: block; margin: auto;"/></button>
+						<div :class="$style.i18nSwitcherRoot">
+							<ul :class="$style.i18nSwitcherContainer" class="px-4 py-2 bg-neutral-50 dark:bg-neutral-800 rounded-lg shadow-lg space-y-1">
+								<li v-for="locale in localesConst">
+									<GNuxtLink :to="switchLocalePath(locale.code)" :lang="locale.code" :class="['block _i18n whitespace-nowrap hover:text-accent-600 py-0.5', {'text-accent-600 font-bold': currentLocale === locale.code}]">
+										<span v-if="currentLocale === locale.code"><DotIcon class="stroke-[3] stroke-current" /></span><span class="_i18n" :lang="locale.language">{{ locale.name }}</span>
+									</GNuxtLink>
+								</li>
+							</ul>
 						</div>
-						-->
 					</div>
 					<div v-for="item in NavData.right" :class="['transition-colors']">
 						<GNuxtLink :to="item.to" class="_plainLink" :class="$style.rightButton">
@@ -407,5 +405,20 @@ const scrollPos = useState<number>('miHub_global_scrollPos');
 	.rightButton {
 		background: #fff2;
 	}
+}
+
+.i18nSwitcherRoot {
+	display: none;
+	position: absolute;
+	top: calc(calc(var(--height) / 2) + 20px);
+	right: 0;
+	padding-top: calc(calc(var(--height) / 2) - 20px);
+}
+
+.i18nSwitcherButton:hover ~ .i18nSwitcherRoot,
+.i18nSwitcherButton:focus ~ .i18nSwitcherRoot,
+.i18nSwitcherRoot:hover,
+.i18nSwitcherRoot:focus-within {
+	display: block;
 }
 </style>

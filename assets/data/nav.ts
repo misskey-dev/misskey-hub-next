@@ -54,7 +54,7 @@ export default <{
     right: [
         {
             icon: GHIcon,
-            to: 'https://github.com/misskey-dev/misskey-hub-next',
+            to: 'https://github.com/misskey-dev/misskey',
         },
     ]
 };
