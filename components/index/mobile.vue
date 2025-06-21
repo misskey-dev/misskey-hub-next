@@ -9,8 +9,8 @@
 					<MegaphoneIco style="width: 16px; height: 16px;" />
 				</div>
 				<span>{{ localizedNotice }}</span>
-				<ArrowRightIco v-if="isLocalPath(notice.to)" />
-				<ArrowUpRightIco v-else />
+				<ArrowRightIco class="noticeArrowIcon" v-if="isLocalPath(notice.to)" />
+				<ArrowUpRightIco class="noticeArrowIcon" v-else />
 			</div>
 		</GNuxtLink>
 		<div class="section_top_buttons">
@@ -708,6 +708,10 @@ clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
 	background: linear-gradient(90deg, #86b300, #4ab300, #4ab300);
 	border-radius: 999px;
 	color: #fff;
+}
+
+.noticeArrowIcon {
+	margin-left: 0.5em;
 }
 
 .section_top_barcode {
