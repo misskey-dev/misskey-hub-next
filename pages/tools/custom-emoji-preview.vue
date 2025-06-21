@@ -5,8 +5,8 @@
         </h1>
 
         <div class="space-y-8">
-            <div class="p-6 space-y-4 rounded-lg bg-white dark:bg-slate-950">
-                <header class="-mt-6 -mx-6 px-6 py-3 font-bold text-lg border-b border-slate-300 dark:border-slate-800">
+            <div class="p-6 space-y-4 rounded-lg bg-white dark:bg-neutral-950">
+                <header class="-mt-6 -mx-6 px-6 py-3 font-bold text-lg border-b border-neutral-300 dark:border-neutral-800">
                     {{ $t('_customEmojiPreview.preview') }}
                 </header>
                 <div class="flex gap-8 items-center justify-center flex-wrap">
@@ -23,8 +23,8 @@
                 </div>
             </div>
             <div class="grid md:grid-cols-5 gap-8">
-                <div class="p-6 space-y-4 rounded-lg bg-white dark:bg-slate-950 order-1 md:col-span-2 md:order-2">
-                    <header class="-mt-6 -mx-6 px-6 py-3 font-bold text-lg border-b border-slate-300 dark:border-slate-800">
+                <div class="p-6 space-y-4 rounded-lg bg-white dark:bg-neutral-950 order-1 md:col-span-2 md:order-2">
+                    <header class="-mt-6 -mx-6 px-6 py-3 font-bold text-lg border-b border-neutral-300 dark:border-neutral-800">
                         {{ $t('_customEmojiPreview._options.text') }}
                     </header>
                     <div>
@@ -37,14 +37,14 @@
                         ></textarea>
                     </div>
                 </div>
-                <div class="p-6 rounded-lg bg-white dark:bg-slate-950 order-2 md:col-span-3 md:order-1">
-                    <header class="-mt-6 -mx-6 px-6 py-3 border-b border-slate-300 dark:border-slate-800 flex items-center">
+                <div class="p-6 rounded-lg bg-white dark:bg-neutral-950 order-2 md:col-span-3 md:order-1">
+                    <header class="-mt-6 -mx-6 px-6 py-3 border-b border-neutral-300 dark:border-neutral-800 flex items-center">
                         <h2 class="font-bold text-lg">{{ $t('settings') }}</h2>
                         <div class="ml-auto">
                             <button class="btn btn-primary" @click="addEmoji()"><PlusIco class="mr-1" />{{ $t('add') }}</button>
                         </div>
                     </header>
-                    <div class="-mx-6 px-6 py-3 border-b border-slate-300 dark:border-slate-800">
+                    <div class="-mx-6 px-6 py-3 border-b border-neutral-300 dark:border-neutral-800">
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" role="switch" id="limitEmojiWidth" v-model="limitEmojiWidth">
                             <label class="form-check-label" for="limitEmojiWidth">{{ $t('_customEmojiPreview.limitReactionLength') }}</label>
@@ -53,8 +53,8 @@
                     <div v-if="emojis.length === 0" class="p-8 text-center font-bold text-lg">
                         {{ $t('_customEmojiPreview.placeholder') }}
                     </div>
-                    <div v-for="emoji, index in emojis" :key="emoji.id" class="mt-8 p-4 rounded-lg bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-800">
-                        <h3 class="-mt-7 font-bold flex items-center w-fit px-3 bg-white dark:bg-slate-950 mb-4">
+                    <div v-for="emoji, index in emojis" :key="emoji.id" class="mt-8 p-4 rounded-lg bg-white dark:bg-neutral-950 border border-neutral-300 dark:border-neutral-800">
+                        <h3 class="-mt-7 font-bold flex items-center w-fit px-3 bg-white dark:bg-neutral-950 mb-4">
                             <button type="button" class="btn btn-sm btn-outline-danger mr-2" @click="deleteEmoji(index)"><XIco class="h-3.5 w-3.5 stroke-1 stroke-current" /></button>
                             <div>{{ $t('_customEmojiPreview.emoji', { number: emoji.id }) }}</div>
                         </h3>
@@ -62,7 +62,7 @@
                             <div class="mx-auto lg:mx-0 w-fit space-y-2 flex-shrink-0">
                                 <div
                                     class="h-16 p-2 rounded-lg max-w-[200px] transition-colors"
-                                    :class="emoji.invertColorScheme ? 'bg-slate-800 dark:bg-slate-200' : 'bg-slate-200 dark:bg-slate-800'"
+                                    :class="emoji.invertColorScheme ? 'bg-neutral-800 dark:bg-neutral-200' : 'bg-neutral-200 dark:bg-neutral-800'"
                                 >
                                     <img class="h-full w-full object-contain" :src="getEmojiUrl(emoji)" />
                                 </div>
@@ -74,7 +74,7 @@
                             </div>
                             <I18nT scope="global" keypath="_customEmojiPreview._options.textDescription" tag="div">
                                 <template #emoji_id>
-                                    <code class="inline-block text-sm bg-slate-200 dark:bg-slate-800 mx-0.5 p-0.5 rounded">{{ noteReactions[index].name }}</code>
+                                    <code class="inline-block text-sm bg-neutral-200 dark:bg-neutral-800 mx-0.5 p-0.5 rounded">{{ noteReactions[index].name }}</code>
                                 </template>
                             </I18nT>
                         </div>
