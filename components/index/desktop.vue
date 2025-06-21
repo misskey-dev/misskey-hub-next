@@ -249,7 +249,7 @@
 					<I18nT scope="global" keypath="_landing._decenterized.description" tag="div">
 						<b v-text-underline>{{ $t('_landing._decenterized.activityPub') }}</b>
 					</I18nT>
-					<GButton buttonType="link" color="accent" style="margin-top: 12px;">{{ $t('learnMore') }}</GButton>
+					<GButton buttonType="link" :to="localePath('/docs/about-misskey/')" color="accent" style="margin-top: 12px;">{{ $t('learnMore') }}</GButton>
 				</div>
 			</div>
 		</div>
