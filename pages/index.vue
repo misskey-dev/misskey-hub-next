@@ -3,7 +3,7 @@
 	<GNav :landing="true" />
 
 	<IndexDesktop v-if="isDesktop" :clientLoaded="deviceSizeDetermined" />
-	<IndexMobile v-else />
+	<IndexMobile v-else :clientLoaded="deviceSizeDetermined" />
 
 	<GFooter />
 
@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import Loading from '~/components/mk/Loading.vue';
+import Loading from '@/components/mk/Loading.vue';
 
 const { isHydrating } = useNuxtApp();
 const deviceSizeDetermined = ref(!(!import.meta.client || isHydrating === true));
