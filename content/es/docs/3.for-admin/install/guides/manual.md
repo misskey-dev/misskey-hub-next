@@ -1,35 +1,34 @@
 ---
-description: このガイドではMisskeyのインストール・セットアップ方法について解説します。
+description: 'Esta guía te mostrará cómo instalar y configurar Misskey.'
 ---
 
-# Misskeyを手動で構築する
+# Instalación Manual de Misskey
 
-このガイドではMisskeyのインストール・セットアップ方法について解説します。
+Esta guía te mostrará cómo instalar y configurar Misskey.
 
 :::danger
 
-一度使用を始めたサーバーのドメイン・ホスト名は、決して変更しないでください！
+¡No vuelvas a crear la base de datos con el dominio/nombre de host del servidor una vez que hayas empezado a utilizarla!
 
 :::
 
 :::tip{label='前提条件'}
 
-#### 以下のソフトウェアがインストール・設定されていること
+#### Necesitarás instalar los siguientes paquetes:
 
-- **[Node.js](https://nodejs.org/en/)** (v22)
-- **[pnpm](https://pnpm.io/)** (v10以上)
-- **[PostgreSQL](https://www.postgresql.org/)** (v15以上)
+- **[Node.js](https://nodejs.org/es/)** (v22)
+- **[pnpm](https://pnpm.io/)** (versión 10 o superiores)
+- **[PostgreSQL](https://www.postgresql.org/)** (versión 15 o superiores)
 - **[Redis](https://redis.io/)**
 - **[FFmpeg](https://www.ffmpeg.org/)**
 
-Debian/Ubuntuをお使いであれば、`build-essential`パッケージをインストールしておくと良いです。
+Si ejecutas Misskey en Debian/Ubuntu, necesitas instalar el paquete `build-essential`.
 
 :::
 
-## ユーザーの作成
+## Creando los usuarios necesarios
 
-Misskeyはrootユーザーで実行しない方がよいため、代わりにユーザーを作成します。
-Debianの例:
+Misskey no debería ejecutarse con permisos de superusuario, root, así que deberías crear un nuevo usuario.En Debian por ejemplo:
 
 ```sh
 adduser --disabled-password --disabled-login misskey
