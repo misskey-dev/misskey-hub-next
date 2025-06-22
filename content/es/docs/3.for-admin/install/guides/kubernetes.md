@@ -20,31 +20,30 @@ Misskey está actualmente en período de _incubación_.
 
 :::tip{label='前提条件'}
 
-- TrueNAS Scale
-  または
-- KubernetesクラスターとHelm
+- Escalar TrueNas
+- Clústeres Kubernetes y Helm
 
 :::
 
-## TrueNAS Scale
+## Escalando TrueNas
 
-[TrueCharts Guide](https://truecharts.org/manual/guides/Adding-TrueCharts/)の手順に従ってください。
+Sigue las instrucciones de la [Guía TrueCharts](https://truecharts.org/manual/guides/Adding-TrueCharts/).
 
-_incubator_ trainを追加し、Misskeyをインストールします。
+Añade la rama _incubadora_ e instala Misskey.
 
-設定の URL の欄は必ず変更してください。
+Asegúrate de cambiar el campo URL en la configuración.
 
-TrueChartsはデフォルトでTraefikを使用してサービスをHTTPSで外部に公開しますが、手動ですることにより他のソフトウェアを使用することもできます。
+TrueCharts utiliza Traefik por defecto para exponer sus servicios al mundo exterior a través de Https, pero se puede utilizar otro software haciéndolo manualmente.
 
-## Helmを使用して手動で構築
+## Configuración Manual con Helm
 
-TrueNAS Scaleを使用していない場合はHelmを使用して、Misskeyをインストールすることができます。
+Si no estás utilizando TrueNAS Scale, puede utilizar Helm para instalar Misskey.
 
-values.yamlの `misskey:` の `url:` を必ず書き換えてください。
+Asegúrate de reemplazar la `url:` en `misskey:` en values.yaml.
 
-他の個所は、必要に応じて書き換えてください。
+Las demás áreas deben reescribirse según sea necesario.
 
-このChartでは現在Misskeyコンテナ内でTLSを有効にすることに対応していないので、サーバーへのアクセスを保護したい場合はリバースプロキシを使用することが推奨されています。
+Este gráfico no soporta actualmente TLS dentro del contenedor Misskey. Para asegurar el acceso al servidor, se recomienda el uso de un proxy inverso.
 
 ```
 helm repo add TrueCharts https://charts.truecharts.org
@@ -52,8 +51,8 @@ helm repo update
 helm install misskey TrueCharts/misskey
 ```
 
-## Misskey のアップグレード
+## Actualizaciones de Misskey
 
-Misskey をアップグレードするには、TrueNAS Scale に内蔵されているアップグレード機能を使用するか、kubernetes を手動で実行している場合は [helm repo update](https://helm.sh/docs/helm/helm_repo_update/) または [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) を使用することができます。
+Para actualizar Misskey, utiliza la funcionalidad de actualización integrada de TrueNAS Scale o, si estás ejecutando kubernetes manualmente, utiliza [helm repo update](https://helm.sh/docs/helm/helm_ repo_update/) o [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/).
 
-問題が発生する可能性も考え、アップグレード前にデータをバックアップすることを強くお勧めします。
+Se recomienda encarecidamente hacer una copia de seguridad de los datos antes de actualizar, en vista de los posibles problemas.
