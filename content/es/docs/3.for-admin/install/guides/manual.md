@@ -34,7 +34,7 @@ Misskey no debería ejecutarse con permisos de superusuario, root, así que debe
 adduser --disabled-password --disabled-login misskey
 ```
 
-## Misskeyのインストール
+## Instalación de Misskey
 
 ```sh
 sudo -iu misskey
@@ -45,29 +45,29 @@ git submodule update --init
 NODE_ENV=production pnpm install --frozen-lockfile
 ```
 
-## 設定
+## Configurando  Misskey
 
-設定サンプルの`.config/example.yml`をコピーし、`default.yml`にリネームします。
+Por favor copia el archivo del archivo de configuración de ejemplo `.config/example.yml` a `default.yml` .
 
 ```sh
 cp .config/example.yml .config/default.yml
 ```
 
-`default.yml` をファイル内の指示に従って編集します。
+Y edita `default.yml` siguiendo las instrucciones dentro del archivo
 
-## ビルドと初期化
+## Construyendo e iniciando Misskey
 
-次のコマンドでMisskeyのビルドとデータベースの初期化を行います。
-これにはしばらく時間がかかります。
+El siguiente comando construirá Misskey e inicializará la base de datos.
+Esto puede tardar un tiempo.
 
 ```sh
 NODE_ENV=production pnpm run build
 pnpm run init
 ```
 
-## 起動
+## Ejecutar Misskey
 
-お疲れ様でした。以下のコマンドでMisskeyを起動できます。
+¡Felicidades!Puedes iniciar Misskey con el siguiente comando:
 
 ```sh
 NODE_ENV=production pnpm run start
@@ -75,13 +75,13 @@ NODE_ENV=production pnpm run start
 
 GLHF✨
 
-::::g-details{summary="systemdを用いた管理"}
+::::g-details{summary="Gestión con systemd"}
 
-systemdサービスのファイルを作成
+Crea una configuración de servicio systemd
 
 `/etc/systemd/system/misskey.service`
 
-エディタで開き、以下のコードを貼り付けて保存:
+Abre tu editor y pega el siguiente código:
 
 ```ini
 [Unit]
@@ -105,18 +105,18 @@ WantedBy=multi-user.target
 
 :::warning
 
-CentOSで1024以下のポートを使用してMisskeyを使用する場合は`ExecStart=/usr/bin/sudo /usr/bin/npm start`に変更する必要があります。
+Si estás usando CentOS y estás utilizando un número de puerto menor que 1024. Por favor cámbialo a `ExecStart=/usr/bin/sudo /usr/bin/npm start`
 
 :::
 
-systemdを再読み込みしmisskeyサービスを有効化
+Recarga systemd y habilita el servicio de misskey.
 
 ```sh
 sudo systemctl daemon-reload
 sudo systemctl enable misskey
 ```
 
-misskeyサービスの起動
+Ejecuta el servicio de Misskey
 
 ```sh
 sudo systemctl start misskey
@@ -124,21 +124,21 @@ sudo systemctl start misskey
 
 :::tip
 
-`systemctl status misskey`と入力すると、サービスの状態を調べることができます。
+Puedes comprobar el estado del servicio con 'systemctl status misskey'.
 
 :::
 
 ::::
 
-## Misskeyのアップデート方法
+## Actualizando Misskey
 
 :::warning
 
-アップデートの際は必ず[リリースノート](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md)を確認し、変更点や追加で必要になる作業の有無(ほとんどの場合ありません)を予め把握するようにしてください。
+Consulta siempre las [notas de la versión](https://github.com/misskey-dev/misskey/blob/master/CHANGELOG.md) antes de actualizar, para saber de antemano qué cambios se han introducido y si es necesario realizar algún trabajo adicional (en la mayoría de los casos, no lo es)
 
 :::
 
-masterをpullし直し、インストール、ビルド、データベースのマイグレーションを行います:
+Haz pull de master, instala, recompila y migra la base de datos:
 
 ```sh
 git checkout master
@@ -149,9 +149,9 @@ NODE_ENV=production pnpm run build
 pnpm run migrate
 ```
 
-アップデート内容、およびデータベースの規模によっては時間がかかることがあります。
+Dependiendo del contenido de la actualización y del tamaño de la base de datos, esto puede llevar algún tiempo.
 
-アップデートが終わり次第、Misskeyプロセスを再起動してください。
+Reinicia el proceso de Misskey en cuanto finalice la actualización.
 
 ```sh
 sudo systemctl restart misskey
@@ -159,9 +159,9 @@ sudo systemctl restart misskey
 
 :::tip
 
-ビルドや起動時にエラーが発生した場合は、以下のコマンドをお試しください:
+Si se produce un error durante la compilación o la inicialización, prueba con los siguientes comandos:
 
-- `pnpm run clean`または`pnpm run clean-all`
+- `pnpm run clean` or `pnpm run clean-all`
 - `pnpm rebuild`
 
 :::
