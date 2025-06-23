@@ -1,86 +1,86 @@
-# Ubuntu版Misskeyインストール方法詳説
+# Instrucciones detalladas para instalar Misskey en Ubuntu
 
-## その他のMisskeyインストール方法
+## Otras instrucciones de instalación de Misskey
 
-- [基本版 Misskey構築の手引き (manual)](./manual/)
-- [その他のインストール方法一覧](/docs/for-admin/install/guides/#インストール方法一覧)
+- [Guía de construcción manual de  Misskey  (manual)](. /manual/)
+- [Otros métodos de instalación](/docs/for-admin/install/guides/#インストール方法一覧)
 
-## シェルスクリプトのお知らせ
+## Avisos de secuencias de comandos.
 
-コピペばかりならシェルスクリプトでいいじゃん、と言うことで**シェルスクリプトでほぼ全部やってくれるやつを作ってみました！**\
-[**シェルスクリプトの詳細と使用方法はこちらから！**](./bash/)
-
-:::tip
-
-シェルスクリプトでの開発環境へのインストールは想定されていません。
-
-:::
+Si todo lo que haces es copiar y pegar, ¿por qué no usas un shell script? ¡Así que hicimos uno que hace casi todo en un \*\* script de shell!\*\*\
+[**Aquí encontrarás más información sobre los shell scripts y cómo utilizarlos.**](./bash/)
 
 :::tip
 
-ドメインの購入とCloudflareのセットアップ、サーバーの確保についてはご自身でご準備ください。
+No está prevista la instalación en entornos de desarrollo mediante shell scripts.
 
 :::
 
-不具合があれば[ @aqz@p1.a9z.dev へのメンション](https://p1.a9z.dev/@aqz)にてお知らせいただければと思います。
+:::tip
 
-## この記事について
+Eres responsable de comprar el dominio y configurar Cloudflare y asegurar el servidor.
 
-この記事では、[Misskey構築の手引き (manual)](./manual/)で紹介されている通り、systemdでMisskeyを動作させています。
+:::
 
-[docker-compose](./docker/)なら、手作業でももうちょっと簡単に実行できるはずです。
+Le agradeceríamos que nos informara de cualquier problema mediante [Mención a @aqz@p1.a9z.dev](https://p1.a9z.dev/@aqz).
+
+## Sobre este artículo.
+
+En este artículo, encontrarás una guía para construir Misskey (manual)](./manual/), como se describe en [La guia de construcción de Misskey]
+
+[docker-compose](. /docker/) debería ser un poco más fácil de realizar manualmente.
 
 :::danger
 
-一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
+¡No vuelvas a crear la base de datos con el dominio/nombre de host del servidor una vez que hayas empezado a utilizarla!
 
 :::
 
-## はじめに
+## Introducción
 
-この記事では、[Misskey構築の手引き (manual)](./manual/)を基に、一般的なUbuntuサーバーへMisskeyをインストールし公開する方法の一挙手一投足を解説する。
+Este artículo explica paso a paso cómo instalar Misskey en un servidor Ubuntu general y hacerlo accesible al público, basándose en la [Guía de instalación de Misskey (manual)](./manual/).
 
-Bashのコマンド入力、いくつかの設定ファイルの編集、そしてブラウザの操作だけで設定が完了するようにしている。インストールするソフトウェアについて簡単に説明しているが、気にする必要はない。
+La configuración se completa simplemente introduciendo comandos Bash, editando algunos archivos de configuración y operando el navegador.Se ofrece una breve explicación del software que debe instalarse, pero no tiene mayor importancia.
 
-この記事では、具体性を重視し、特定の環境に特化した記述をしている。
+En este artículo se hace hincapié en la especificidad y las descripciones propias de entornos concretos.
 
-OSの違い、Misskey本体や依存するソフトウェアのバージョンアップで変わってしまった部分等があるかもしれないが、ご容赦いただきたく思う。
+Ten en cuenta que puede haber diferencias entre sistemas operativos, y que algunas partes pueden haber cambiado debido a actualizaciones del propio Misskey o del software del que depende.
 
-わからない単語については、[『「分かりそう」で「分からない」でも「分かった」気になれるIT用語辞典』](https://wa3.i-3-i.info/) で調べて分かった気になってほしい。
+Si los términos no están claros, recomendamos consultar el [diccionario informático](https://wa3.i-3-i.info/) para comprenderlos mejor.
 
-## 環境と条件
+## Entorno y condiciones
 
-- OSは**Ubuntu 22.04 LTS**を利用する。
-- ハードウェア要件としては、CPUは最近のものなら最小限で動く。アーキテクチャはamd64及びarm64を想定している。
-- メモリは4GB程度あると良い。
-  - （従来Viteの導入により1.5GB程度でもビルド可能と説明していたが、最近またフロントエンドのビルドで要件が厳しくなってきた。）
-- 独自のドメインを購入し、Cloudflareを使用する。
-- ドメインは[Cloudflare Registrar](https://www.cloudflare.com/ja-jp/products/registrar/)などで予め用意しておくこと。
-- ここではドメインをexample.tldとして解説を進めるので、自分が買ったドメインに適宜置き換えて読むこと。開発環境の場合はlocalhostと読み替えます（設定ファイルの項で別途説明）
+- El sistema operativo debe ser **Ubuntu 22.04 LTS**.
+- En cuanto a los requisitos de hardware, las CPU pueden funcionar mínimamente si son recientes.Se supone que la arquitectura es amd64 y arm64.
+- Se recomiendan unos 4 GB de memoria.
+  - (Anteriormente, se explicó que con la introducción de Vite, era posible construir con tan sólo 1,5 GB, pero recientemente los requisitos han vuelto a ser más estrictos para las construcción de Frontend)
+- Compra tu propio dominio y utiliza Cloudflare.
+- El dominio debe estar preparado de antemano, por ejemplo, en [Cloudflare Registrar](https://www.cloudflare.com/es-es/products/registrar/).
+- Usaremos como ejemplo el dominio example.tld, así que sustitúyelo por el dominio que has comprado y lee la documentación acorde a este cambio.Para entornos de desarrollo, lee localhost (se explica por separado en la sección sobre archivos de configuración).
 
 :::danger
 
-一度使用を始めたサーバーのドメイン・ホスト名は、決して変更しないでください！
+No cambies nunca el nombre de dominio de un servidor una vez que hayas empezado a utilizarlo.
 
 :::
 
-## nanoの使い方
+## Cómo utilizar nano
 
-今回はテキストエディターにnanoを使う。次のように起動する。
+Vamos a usar nano como editor de texto.Ejecútalo de la siguiente forma:
 
 ```sh
-nano /path/to/file
+nano /ruta/al/archivo
 ```
 
-一般的な矢印ボタンやHome/Endなどを利用してカーソルを移動できる。
+El cursor puede desplazarse con los botones de flecha  y con Inicio/Fin.
 
-終了はCtrl+Xで、変更を保存するか聞かれた場合Y(Yes)を入力しEnterすると保存できる。
+Para salir, pulsa Ctrl+X. Cuando se te pregunte si deseas guardar los cambios, escribe Y (Sí) e Intro  para guardar.
 
-下部にコマンド一覧が表示されるので、^をCtrl、M-をAltと読み替えて参考にしよう。
+En la parte inferior aparece una lista de comandos, así que lea ^ como Ctrl y M- como Alt y utilízalo como referencia.
 
-## ユーザーの作成
+## Creando los usuarios necesarios
 
-Misskeyはrootで実行しない方がよいため、専用のユーザーを作成する。
+Misskey no debe ejecutarse como root, así que crea un usuario dedicado.
 
 ```sh
 sudo adduser --disabled-password --disabled-login misskey
@@ -88,17 +88,17 @@ sudo adduser --disabled-password --disabled-login misskey
 
 :::tip
 
-開発環境の場合はユーザーを分ける必要はありません
+En los entornos de desarrollo, no es necesario separar a los usuarios
 
 :::
 
-## 基本的なソフトウェアのインストールと設定
+## Instalación y configuración básica del software
 
-基本的なソフトウェアのインストールを行う。
+Instalación de dependencias.
 
 ### Node.js
 
-Node.jsは、サーバーサイドJavaScript環境であり、Misskeyの基本的な実行環境である。
+Node.js es un entorno JavaScript del lado del servidor y el entorno de ejecución (runtime) para Misskey.
 
 ```sh
 sudo rm /usr/share/keyrings/nodesource.gpg;
@@ -107,17 +107,20 @@ NODE_MAJOR=22; echo "deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://
 sudo apt update;
 sudo apt install -y nodejs;
 
-# Node.jsがインストールされたので、バージョンを確認する。
+# Node.js ya está instalado, comprueba la versión.
 node -v
+
+# Habilita corepack
+sudo corepack enable
 ```
 
-v22.x.xなどと表示されればOK。v8.x.xのように低いバージョンが表示された場合は、正しくインストールが行えていないため、サーバーを再起動してもう一度インストールし直すなどしてみよう。
+Si muestra v22.x.x, etc., está bien.Si aparece una versión inferior, como v8.x.x, la instalación no se ha realizado correctamente y debes reiniciar el servidor e intentar instalarlo de nuevo.
 
 ### pnpm
 
-pnpmは、Misskeyで使用しているパッケージ管理ツールであり、外部ライブラリを参照したり、その依存関係を管理したりするのに使用されている。
+pnpm es la herramienta de gestión de paquetes utilizada por Misskey para referenciar librerías externas y gestionar sus dependencias.
 
-ここでは、Node.jsに付属しているパッケージ管理ツール「npm」を使用してpnpmをインストールする方法を紹介しているが、[pnpmのウェブサイト](https://pnpm.io/installation)では他にも様々な方法でのインストール方法が紹介されているので、一度目を通したうえで、お使いの環境に最適な方法でインストールすることをお勧めする。
+Esta sección presenta cómo instalar pnpm usando npm, la herramienta de gestión de paquetes que viene con Node.js, pero el [sitio web de pnpm](https://pnpm.io/installation) presenta varios otros métodos de instalación. Te recomendamos que leas la información e instales pnpm de la forma que mejor se adapte a tu entorno.
 
 ```sh
 npm i -g pnpm
@@ -125,11 +128,11 @@ npm i -g pnpm
 
 ### PostgreSQL
 
-PostgreSQLは、オブジェクト関係データベース管理システムであり、Misskeyの種々のデータを保存するために必要不可欠なソフトだ。
+PostgreSQL es un sistema de gestión de bases de datos relacionales por objetos y un software esencial para almacenar los distintos datos de Misskey.
 
-#### インストール
+#### Instalación
 
-シェルスクリプトを実行し、最新バージョン（v15）をインストールしよう。
+Ejecuta el script de shell e instala la última versión (v15).
 
 ```sh
 sudo apt install -y postgresql-common
@@ -140,25 +143,24 @@ sudo sh /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -i -v 15;
 systemctl status postgresql
 ```
 
-activeならOK。
+OK si está activo.
 
-#### ユーザーとデータベースの作成
+#### Creación de usuarios y bases de datos
 
-psqlを起動。
+Inicia psql.
 
 ```sh
 sudo -u postgres psql
 ```
 
-Misskeyで使うユーザーを作成する。\
-ユーザー名をmisskey、パスワードをhogeとする場合は次のようになる。\
-（LinuxのユーザーとPostgreSQLのユーザーは別物なので、混同しないよう注意すること。）
+Crear usuarios para su uso con Misskey.Si el nombre de usuario es misskey y la contraseña es hoge, se aplica lo siguiente.\
+(Los usuarios de Linux y los usuarios de PostgreSQL son diferentes, así que tenga cuidado de no confundirlos.）
 
 ```sql
 CREATE ROLE misskey LOGIN PASSWORD 'hoge';
 ```
 
-データベースを作成。データベース名をmk1としている。
+Creación de la base de datos.El nombre de la base de datos es mk1.
 
 ```sql
 CREATE DATABASE mk1 OWNER misskey;
@@ -167,8 +169,8 @@ CREATE DATABASE mk1 OWNER misskey;
 
 ### Redis
 
-Redisは、NoSQLのインメモリデータベースソフトであり、データベースや連合との通信を管理するなどのために必要だ。\
-redis.ioのドキュメントに従いインストールする。
+Redis es un software de base de datos NoSQL en memoria, necesario, entre otras cosas, para gestionar la comunicación con bases de datos y la federación.\
+Instálalo según la documentación de redis.io.
 
 https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-linux/
 
@@ -181,32 +183,32 @@ sudo apt-get update
 sudo apt-get install redis
 ```
 
-起動する
+Activar Redis
 
 ```sh
 sudo systemctl enable redis-server
 sudo systemctl start redis-server
 ```
 
-systemctlでデーモンの状態を確認。
+Compruebe el estado del demonio(daemon) con systemctl.
 
 ```sh
 systemctl status redis-server
 ```
 
-activeならOK。
+OK si está activo.
 
 ### nginx
 
-nginxは、主としてリバースプロキシに用いられるWebサーバーソフトである。Misskeyには必須ではないが、キャッシュ等をするとパフォーマンスが向上したり、httpからhttpsへの転送などをするために、インストールしておこう。
+Nginx es un software de servidor web utilizado principalmente para el proxy inverso.No es esencial para Misskey, pero debería instalarse para mejorar el rendimiento al almacenar en caché, etc., o para transferir de http a https, etc.
 
 :::tip
 
-開発環境の場合はnginxのセットアップは不要です
+Para entornos de desarrollo, no es necesario configurar nginx
 
 :::
 
-nginx.orgのドキュメント http://nginx.org/en/linux_packages.html#Ubuntu に従ってインストールする。
+Instale según la documentación de nginx.org http://nginx.org/en/linux_packages.html#Ubuntu.
 
 ```sh
 sudo apt install -y curl ca-certificates gnupg2 lsb-release ubuntu-keyring
@@ -216,7 +218,7 @@ curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor | sudo tee /usr/sh
 gpg --dry-run --quiet --no-keyring --import --import-options import-show /usr/share/keyrings/nginx-archive-keyring.gpg
 ```
 
-このとき出力に 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62 とあるか確認する。
+Comprueba si la salida contiene 573BFD6B3D8FBC641079A6ABF5BD827BD9BF62.
 
 ```sh
 echo "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" | sudo tee /etc/apt/sources.list.d/nginx.list
@@ -228,13 +230,13 @@ sudo apt update
 sudo apt install -y nginx
 ```
 
-systemctlでデーモンの状態を確認。
+comprueba el estado del demonio(daemon) con systemctl.
 
 ```sh
 systemctl status nginx
 ```
 
-activeならOK。そうでなければ、次のコマンドを実行。
+OK si está activo.En caso contrario, ejecuta el siguiente comando.
 
 ```sh
 sudo systemctl start nginx
@@ -242,16 +244,16 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
 
-<http://localhost> にアクセスし、\*Welcome to nginx!\*と表示されればOK。\
-curlで確認するのもよいだろう。
+Ve a http\://localhost y si ves \*¡Bienvenido a nginx!\*, está bien.También puedes comprobarlo con \
+curl.
 
 ```sh
 curl http://localhost
 ```
 
-### その他
+### Más
 
-Git（バージョン管理ソフト）およびbuild-essential（Misskeyのビルド時に必要）をインストールする。
+Instala Git (software de control de versiones) y build-essential (necesario para compilar Misskey).
 
 ```sh
 sudo apt update
@@ -259,21 +261,21 @@ sudo apt update
 sudo apt install -y git build-essential
 ```
 
-## 追加の設定とインストール
+## Configuración e instalación adicionales
 
-サーバーをインターネットに公開する準備をする。
+Prepara el servidor para su publicación en Internet.
 
 :::tip
 
-開発環境の場合はファイヤーウォールやCloudflare、Certbotの設定は不要です
+No se requiere configuración de cortafuegos, Cloudflare o Certbot para entornos de desarrollo.
 
 :::
 
-### ファイヤーウォール
+### Cortafuegos (Firewall)
 
-今回は、ファイヤーウォールとしてufwを使用する。
+En este caso, utiliza ufw como cortafuegos.
 
-次では、接続許可をホワイトリスト形式とし、22番SSHポートを接続回数制限を設けながら開放、80番HTTPポート及び443番HTTPSポートを開放とした。
+En el siguiente paso, se establecieron los permisos de conexión en formato de lista blanca, se abrió el puerto SSH 22 con un límite en el número de conexiones y se abrieron los puertos HTTP 80 y HTTPS 443.
 
 ```sh
 sudo ufw enable
@@ -287,13 +289,13 @@ sudo ufw allow 80
 sudo ufw allow 443
 ```
 
-ufwのステータスを確認しておく。
+Comprueba el estado de ufw.
 
 ```sh
 sudo ufw status
 ```
 
-systemctlで永続化する。
+Persistencia del estado con systemctl (para que arranque al inicio)
 
 ```sh
 sudo systemctl enable ufw
@@ -301,79 +303,79 @@ sudo systemctl enable ufw
 
 :::tip
 
-ufwは、netfilter(iptables)を人間が操作しやすいようにするアプリだ。インストールスクリプトは、OCI環境ではnetfilterを直接操作する。
+UFW es una aplicación que hace que netfilter (iptables) sea más fácil de usar.Los scripts de instalación operan directamente sobre netfilter en el entorno OCI.
 
 :::
 
 ### Cloudflare
 
-Cloudflareは、自分のドメインに対してDNSサーバー・リバースプロキシ・CDNをいっぺんに提供してくれるたいへん便利なサービスである。\
-Cloudflareを経由せずにサーバーを公開することも可能だが、たいへん便利なので導入することをお勧めする。
-[**→ CDNの設定**](../resources/cdn/)
+Cloudflare es un servicio muy práctico que proporciona un servidor DNS, proxy inverso y CDN para su dominio, todo a la vez.\
+Es posible publicar tu servidor sin pasar por Cloudflare, pero es muy conveniente y recomendable instalarlo.
+[**→ Configuración CDN**](../resources/cdn/)
 
-[Cloudflareにサインアップ](https://dash.cloudflare.com/sign-up) し、購入したドメインを案内に従って登録する。
+[Regístrate en Cloudflare](https://dash.cloudflare.com/sign-up) y sigue las instrucciones para registrar el dominio que ha adquirido.
 
-DNSの登録画面でサーバーのIPアドレスを入力しておくとよい。
+Puede introducir la dirección IP del servidor en la pantalla de registro DNS.
 
-ドメインを購入した所によっては適用に3日程度かかる場合がある。
+Dependiendo de dónde se haya comprado el dominio, la solicitud puede tardar hasta tres días.
 
-### Certbot (Let’s Encrypt) の設定
+### Configuración de Certbot (Let's Encrypt)
 
-HTTPS･WSS通信に使用する証明書をCloudflareを使う方式でLet’s Encryptから取得する。
+Obtén los certificados utilizados para la comunicación HTTPS y WSS de Let's Encrypt utilizando el método basado en Cloudflare.
 
-certbotとCloudflareプラグインをインストール
+Instalar los plugins certbot y Cloudflare
 
 ```sh
 sudo apt install -y certbot python3-certbot-dns-cloudflare
 ```
 
-CloudflareのAPIキーを取得する。以下の手順で取得されたい。
+Obtén una clave API de Cloudflare.Para obtener la información deben seguirse los siguientes pasos.
 
-1. <https://dash.cloudflare.com/profile/api-tokens> にアクセス
-2. Global API KeyのViewを選択
-3. パスワードを入力しhCaptchaを解除、Viewを選択
+1. Accede a https\://dash.cloudflare.com/profile/api-tokens
+2. Selecciona View para la Clave API global.
+3. Introduzca la contraseña para eliminar hCaptcha, selecciona  View (Ver)
 
-Cloudflareの情報を記載した設定ファイル/etc/cloudflare/cloudflare.iniを作成する。
+Crea un archivo de configuración /etc/cloudflare/cloudflare.ini con la información de Cloudflare.
 
 ```sh
 mkdir /etc/cloudflare
 nano /etc/cloudflare/cloudflare.ini
 ```
 
-dns_cloudflare_email（下の例ではbar@fuga.foo）にはCloudflareで登録しているメールアドレスを設定する。
+Establezca en dns_cloudflare_email (下の例ではbar@fuga.foo) la dirección de correo electrónico registrada en Cloudflare.
 
 ```sh
 dns_cloudflare_email = bar@fuga.foo
 dns_cloudflare_api_key = xxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-これを保存し、パーミッションを600に設定。
+Guárdalo y establece los permisos en 600.
 
 ```sh
 sudo chmod 600 /etc/cloudflare/cloudflare.ini
 ```
 
-準備ができたのでコマンドを実行する。**途中の2箇所のexample.tldは自分のものに置き換えること**。
+Ejecuta el comando cuando esté listo.**Reemplace el example.tld en dos lugares a lo largo del tutorial con su propio dominio**.
 
 ```sh
 sudo certbot certonly --dns-cloudflare --dns-cloudflare-credentials /etc/cloudflare/cloudflare.ini --dns-cloudflare-propagation-seconds 60 --server https://acme-v02.api.letsencrypt.org/directory -d example.tld -d *.example.tld
 ```
 
-\*Congratulations!\*と表示されたらOK。生成された.pemファイルのパスは今後使うので記録しておくこと。
+\*Bien, si ves\*... ¡Felicidades!Se debe registrar la ruta del archivo .pem generado, ya que se utilizará en el futuro.
 
-自動更新の設定はインストールと同時に行われているため不要。
+Las actualizaciones automáticas se configuran al mismo tiempo que la instalación, por lo que no son necesarias.
 
-## Misskeyのインストール
+## Instalación de Misskey
 
-これで前準備はあらかた終わったので、Misskeyを準備していく。
+Ahora que la configuración previa está casi terminado, vamos a preparar la instalación de Misskey.
 
-misskeyユーザーに変更。
+Cambia al usuario de Misskey
 
 ```sh
 sudo su - misskey
 ```
 
-Gitでファイル類を展開。
+Obtén los archivos de Misskey  con Git
 
 ```sh
 git clone -b master https://github.com/misskey-dev/misskey.git --recurse-submodules
@@ -383,54 +385,54 @@ cd misskey
 git checkout master
 ```
 
-必要なnpmパッケージをインストール。
+Instala los paquetes npm necesarios.
 
 ```sh
 NODE_ENV=production pnpm install --frozen-lockfile
 ```
 
-## Misskeyを設定する
+## Prepara Misskey.
 
 ### default.yml
 
-設定ファイル.config/default.ymlを作成。
+Crea un archivo de configuración .config/default.yml.
 
 ```sh
 nano .config/default.yml
 ```
 
-次の内容を貼り付け、適宜置き換える。設定値の変更が必要な箇所は●で、これまでの流れの中で設定した値を用いる箇所は〇で示した。
+Pega el siguiente contenido y sustitúyelo según proceda.Las zonas en las que es necesario modificar los valores de consigna se marcan con ●, mientras que las zonas en las que se utilizan los valores de consigna del flujo anterior se marcan con 0.
 
-この設定ファイルはYAML形式で書かれており、行頭のスペースの数などを間違えるとMisskeyが動かないので、特に注意すること。
+Este archivo de configuración está escrito en formato YAML, y se debe tener especial cuidado porque Misskey no funcionará si el número de espacios al principio de una línea, etc., es incorrecto.
 
-設定できる値と記述方法は[.config/example.yml](https://github.com/syuilo/misskey/blob/develop/.config/example.yml)に書かれている。
+Los valores que se pueden establecer y cómo describirlos se describen en [.config/example.yml](https://github.com/syuilo/misskey/blob/develop/.config/example.yml).
 
 :::tip
 
-開発環境の場合、urlは`url: http://localhost:3000`と指定します。
+En el entorno de desarrollo, la url se especifica como `url: http://localhost:3000`.
 
 :::
 
 ```yml
-# ● Misskeyを公開するURL
+# ● Misskeyを公開するURL  URL de publicación de Misskey.
 url: https://example.tld/
-# ポートを3000とする。
+# ポートを3000とする。 El puerto está fijado en 3000.
 port: 3000
 
-# ● PostgreSQLの設定。
+# ● PostgreSQLの設定。 Configuración de PostgreSQL.
 db:
   host: localhost
   port: 5432
-  db  : mk1 # 〇 PostgreSQLのデータベース名
-  user: misskey # 〇 PostgreSQLのユーザー名
-  pass: hoge # ● PostgreSQLのパスワード
+  db  : mk1 # 〇 PostgreSQLのデータベース名 Nombre de la base de datos de PostgreSQL
+  user: misskey # 〇 PostgreSQLのユーザー名 Nombre del usuario de PostgreSQL
+  pass: hoge # ● PostgreSQLのパスワード Contraseña del usuario de PostgreSQL
 
-# 　 Redisの設定。
+# 　 Redisの設定。Configuración de Redis
 redis:
   host: localhost
   port: 6379
 
-# 　 IDタイプの設定。
+# 　 IDタイプの設定。  Configuración del ID
 id: 'aidx'
 
 # 　 syslog
@@ -439,61 +441,61 @@ syslog:
   port: 514
 ```
 
-指定できたら保存する。
+Guarda el archivo.
 
-### nginxの設定
+### Configuración de Nginx
 
-nginxの設定を行う。
+Configurar nginx.
 
-ルート権限で行う。
+Realizado con root.
 
 ```sh
 exit
 ```
 
-/etc/nginx/conf.d/misskey.confを作成する。
+Crea `/etc/nginx/conf.d/misskey.conf`.
 
 ```sh
 sudo nano /etc/nginx/conf.d/misskey.conf
 ```
 
-[Misskey Hub](/docs/for-admin/install/resources/nginx/)の設定例をnanoへコピー＆ペーストし、次の部分を自分のものに書き換える。
+Copia y pega la configuración de ejemplo de [Misskey Hub](/docs/for-admin/install/resources/nginx/) en nano y reescribe las siguientes partes con tu configuración.
 
-- 18行目と30行目のドメイン名
-- 34-35行目の証明書へのパスをCertbotで取得したものに (基本的にexample.tldを置き換えるだけでOK)
-- 56行目 (If it's behind another reverse proxy or CDN, remove the following.) から4行を削除
+- Nombre de dominio en las líneas 18 y 30
+- La ruta al certificado en las líneas 34-35 está tomada de Certbot (básicamente sustituye example.tld).
+- Línea 56 (Si se encuentra tras otro proxy inverso o CDN, elimine lo siguiente) Suprime las cuatro líneas
 
-変更を保存する。
+Guarda los cambios.
 
-設定ファイルがきちんと機能するか確認。
+Comprueba que el archivo de configuración funciona correctamente.
 
 ```sh
 sudo nginx -t
 ```
 
-OKならば、nginxデーモンを再起動。
+Si está bien, reinicia el demonio nginx.
 
 ```sh
 sudo systemctl restart nginx
 ```
 
-ステータスを確認。
+Verifica el estado.
 
 ```sh
 sudo systemctl status nginx
 ```
 
-activeであればOK。
+OK si es ACTIVE.
 
-## Misskeyのビルド
+## Compilando Misskey
 
-misskeyユーザーにログインし直す。
+Vuelve a iniciar sesión como usuario misskey.
 
 ```sh
 sudo su - misskey
 ```
 
-ビルドをする。yes we can…
+Compila Misskeysí podemos...
 
 ```sh
 cd misskey
@@ -502,73 +504,73 @@ NODE_ENV=production pnpm run build
 
 :::tip
 
-開発環境の場合、`NODE_ENV=production`は不要です。以降のコマンドでも同様に削除してください。
+Para entornos de desarrollo, `NODE_ENV=production` no es necesario.Elimínalo del mismo modo en los comandos siguientes.
 
 :::
 
-### サーバーでビルドできない場合
+### Si no puedes construir en el servidor
 
-RAMの不足が考えられる。
+Posible falta de RAM.
 
-Misskeyのビルドやデータベースのマイグレーション（初期化を含む）には、RAMが2GB以上必要になっている。\
-RAMが足りない場合、以下のような解決策が考えられる。
+Las compilaciones de Misskey y las migraciones de bases de datos (incluida la inicialización) requieren al menos 2 GB de RAM.\
+Si la RAM es insuficiente, se pueden adoptar las siguientes soluciones
 
-- サーバーにスワップを追加する
-- ローカルでビルドしたもの（builtディレクトリ）をsftpで転送する
+- Añadir swap al servidor
+- Transferir localmente construido (directorio construido) a través de sftp.
 
-## データベースの初期化
+## Inicialización de la base de datos
 
 ```sh
 pnpm run init
 ```
 
-## Misskeyを起動する
+## Prepara Misskey.
 
 ```sh
 NODE_ENV=production pnpm run start
 ```
 
-**Now listening on port 3000 on** [**http://example.tld**](http://example.tld) と表示されたら、設定したURLにアクセスする。
+**Now listening on port 3000 on** [**http://example.tld**](http://example.tld) Accede a la URL que has configurado.
 
-Misskeyのウェルカムページが表示されるはずだ。
+Debería aparecer la página de bienvenida de Misskey.
 
-アカウントの作成、ノートの作成やファイルのアップロードといった一通りの操作が正しく行えるか確認しよう。
+Comprueba que puedes realizar correctamente una serie de operaciones, como crear una cuenta, crear notas y cargar archivos.
 
-### アクセスできない場合
+### En caso de inaccesibilidad
 
-#### CloudflareのDNSを確認する
+#### Comprueba el DNS de CloudFlare
 
-CloudflareのDNS設定が正しいIPアドレスになっているかもう一度確認しよう。
+Comprueba de nuevo que la configuración DNS de Cloudflare está establecida en la dirección IP correcta.
 
-#### ルーターの設定を確認する
+#### Comprueba la configuración del router.
 
-自宅サーバーの場合、ルーターがサーバーと外部との80ポート・443ポートの通信を許可する設定になっているかどうか確認しよう。
+Para servidores domésticos, comprueba que el router está configurado para permitir la comunicación en los puertos 80 y 443 entre el servidor y el mundo exterior.
 
-クラウドの場合でも、ネットワーク設定でポート開放が必要な場合が多い。
+Incluso en la nube, a menudo es necesario abrir puertos en la configuración de la red.
 
-## Misskeyのデーモンを作成
+## Crear un demonio para Misskey.
 
 :::tip
 
-開発環境の場合、デーモンの作成は不要です。
+Para entornos de desarrollo, no es necesario crear un demonio.
 
 :::
 
-いったんCtrl+Cでプロセスをキルし、Misskeyをデーモンで起動する設定をしよう。
+Una vez que mates el proceso con Ctrl+C, configura Misskey para que se inicie como demonio.
 
-ルート権限で行う。
+Hazlo como root
 
 ```sh
 exit
 ```
 
-/etc/systemd/system/misskey.serviceを作成する。
+Crea /etc/systemd/system/misskey.service.
 
 ```sh
 sudo nano /etc/systemd/system/misskey.service
 ```
 
-次の内容を貼り付け、保存する。
+Pega y guarda el siguiente contenido.
 
 ```ini
 [Unit]
@@ -590,7 +592,7 @@ Restart=always
 WantedBy=multi-user.target
 ```
 
-systemdを設定し、misskeyデーモンを開始。
+Configura systemd e inicia el demonio misskey.
 
 ```sh
 sudo systemctl daemon-reload
@@ -600,29 +602,29 @@ sudo systemctl enable misskey
 sudo systemctl start misskey
 ```
 
-systemctlでデーモンの状態を確認。起動に少し時間がかかるため、15秒程度待ってからのほうが良い。
+comprueba el estado del demonio(daemon) con systemctl.Tarda un poco en arrancar, así que es mejor esperar 15 segundos.
 
 ```sh
 sudo systemctl status misskey
 ```
 
-activeならOK。
+OK si está activo.
 
-**これでMisskeyのインストールはほぼ完了だ。**
+**La instalación de Misskey está casi terminada.**
 
-Misskeyサーバーに自分のアカウントを登録・ログインし、設定を続けよう。
+Regístrate e inicia sesión con tu cuenta en el servidor de Misskey y continúa con la configuración.
 
-## Misskeyの設定を続ける
+## Prepara Misskey.
 
-- [**Misskeyサーバーで最初に設定するべきサーバー設定とその他設定の説明**](https://hide.ac/articles/Y504SIabp)
-- [**Squidプロキシを設定してMisskeyを守る**](https://hide.ac/articles/MC7WsPDqw)
-- [**Misskeyのデータベースをバックアップしよう【OCIオブジェクトストレージ編】**](https://hide.ac/articles/E2Ea3cauk)
+- [**Descripción de la primera y otras configuraciones del servidor que deben configurarse en el servidor Misskey**](https://hide.ac/articles/Y504SIabp).
+- [**Crear un proxy Squid para proteger Misskey**](https://hide.ac/articles/MC7WsPDqw)
+- [Copia de seguridad de la base de datos Misskey [versión de almacenamiento de objetos OCI]\*\*](https://hide.ac/articles/E2Ea3cauk)
 
-## Misskeyのアップデート
+## Actualizando Misskey
 
-[Misskeyのアップデート方法](./manual/#misskeyのアップデート方法)
+[Cómo actualizar Misskey](./manual/#misskeyのアップデート方法)
 
-作業中はMisskeyを使うことができません。
+Misskey no puede actualizarse mientras se está ejecutando.
 
 ```sh
 sudo systemctl stop misskey
@@ -638,7 +640,7 @@ pnpm run migrate;
 exit
 ```
 
-### Case 1: apt upgradeをする場合
+### Caso 1: Al realizar una actualización apt
 
 ```sh
 sudo apt update -y
@@ -646,9 +648,9 @@ sudo apt full-upgrade -y
 sudo reboot
 ```
 
-再起動後はMisskeyは自動で起動します。
+Después de reiniciar, Misskey se iniciará automáticamente.
 
-### Case 2: そのまま起動
+### Caso 2: Empezar como está
 
 ```sh
 sudo systemctl start misskey
