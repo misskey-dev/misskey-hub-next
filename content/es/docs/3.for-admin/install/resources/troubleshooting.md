@@ -1,92 +1,95 @@
-# マニュアルインストール時のトラブルシューティング
+# Solución de problemas durante la instalación manual
 
-<small>2018年10月07日 / 2021年12月20日 最終更新 / 文責 aqz/tamaina</small>
+<small>07 de octubre de 2018 / 20 de diciembre de 2021 Actualización final / Responsabilidad textual aqz/tamaina</small>
 
-MisskeyInstallBattle参加者が増えましたが、それに伴い時期を追うごとに重軽傷者が増加しています。\
-この記事ではそのような負傷者を減らすため、過去に事故が起きてしまった個所の傾向と対策をわかりやすく解説します。
+MisskeyInstallBattleHa aumentado el número de participantes, pero también el número de heridos graves y leves.\
+Para reducir el número de lesiones de este tipo, este artículo ofrece una explicación clara de las tendencias y contramedidas en las zonas donde se han producido accidentes en el pasado.
 
-**まず最初に、[構築の手引き](../guides/manual/)を熟読してください。**
+\*\*En primer lugar, lee la [guía de construcción] (../guides/manual/) \*\*
 
-また、拙著の[Ubuntu向けsystemd版解説](https://hide.ac/articles/iFwm5HDvH)、[Oracle Cloud版詳細解説](https://hide.ac/articles/csERs-7SU)も参考までにお読みいただけると幸いです。
+También, por favor, lee  [Explicación de la versión de systemd para Ubuntu](https://hide.ac/articles/iFwm5HDvH) y [Explicación detallada de la versión de Oracle Cloud](https://hide.ac/articles/csERs-7SU) como referencia. Estaría encantado de que los leyeras también.
 
-# Ubuntu向けシェルスクリプトのお知らせ
+# Anuncios de scripts de shell para Ubuntu
 
-Ubuntu向け解説はコピペばかりでつまらない！時間がかかる！とにかく面倒！
+Explicar Ubuntu es aburrido porque todo es copiar y pegar.¡Lleva mucho tiempo!De todos modos, ¡es una molestia!
 
-……あれ、コピペだけでできるなら、つまり完全自動化できるのでは？
+……Oye, si puedes hacerlo simplemente copiando y pegando, significa que puedes automatizarlo por completo, ¿no?
 
-というわけで、**シェルスクリプトでほぼ全部やってくれるやつを作ってみました！**\
-[**詳細と使用方法はこちらから！** https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
+¡Así que hice un \*\* shell script que hace casi todo por mí!\*\*\
+[**¡Para más información e instrucciones de uso, haz clic aquí!** https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
 
-ドメインの購入とCloudflareのセットアップ、サーバーの確保についてはご自身でご準備ください。
+Eres responsable de comprar el dominio y configurar Cloudflare y asegurar el servidor.
 
-シェルスクリプトに不具合があれば[製作者(aqz)](https://p1.a9z.dev/@aqz)にお知らせいただければと思います。
+Si tienes algún problema con el script de comandos, comunícalo al [autor (aqz)](https://p1.a9z.dev/@aqz).
 
-# インストールとビルド
+# Instalación y compilación
 
-[構築の手引き](../guides/manual/)をよく読みましょう。
+Lee las [instrucciones de construcción](. /guías/manual/)  léelo atentamente.
 
-## ImageMagick関連
+## Relacionado con ImageMagick
 
-_**ImageMagickは不要です！**_
+_**¡ImageMagick no es necesario!**_
 
-## ビルドが失敗する
+## La compilación ha fallado
 
-Misskeyのビルドには、経験則上、最低でも2GBのメモリが必要となっています。\
-サーバーをスケールアップする手もありますが、お使いのPCでビルドしてサーバーにデプロイするという手もあります。
+Misskey requiere, como regla general, al menos 2 GB de memoria.\
+Podrías escalar el servidor, o podrías compilarlo en tu PC y desplegarlo en el servidor.
 
-## なんだかうまくいかない
+## Algo va mal
 
-- [構築の手引き](../guides/manual/)をよく読みましょう。
-- node.jsのバージョンが古いかも？
-  - 新しめのバージョンにしましょう。
-- インストールやビルドの際にErrorとかWARNとかが出てくることがありますが、問題ない場合もあります。とりあえず`npm start`して動作確認しちゃいましょう。
-- node-gypがインストールされていないかも？
-  - `apt install build-essential`を試す。
-  - Windowsは[この記事](https://qiita.com/AkihiroTakamura/items/25ba516f8ec624e66ee7)も参考にしてみる。
-- これでもだめそうだったら、最初から[構築の手引き](../guides/manual/)の手順に従ってやり直してみてください。
+- Lee las [instrucciones de construcción](. /guías/manual/)  léelo atentamente.
+- ¿Es posible que la versión de node.js no esté actualizada?
+  - Actualiza a la versión más reciente
+- Puede aparecer un error o WARN(Aviso) durante la instalación y la compilación, pero puede que no sea un problema.Vamos a usar `npm start` y comprobar que funciona.
+- ¿Quizás node-gyp no está instalado?
+  - Prueba lo siguiente `apt install build-essential`
+  - En Windows también puede referirse a [este artículo](https://qiita.com/AkihiroTakamura/items/25ba516f8ec624e66ee7).
+- Si esto no parece funcionar, empieza desde el principio y sigue las instrucciones de las [instrucciones de construcción](../guides/manual/) desde el principio.
 
-## バージョンアップ後に不具合が発生した
+## Los defectos se produjeron después de la actualización.
 
-- [構築の手引き](../guides/manual/)およびリリースノートをよく読みましょう。
-- Misskeyのバージョンアップ時にはしっかり`pnpm install`や`pnpm run migrate`してください。それでも直らない場合、`pnpm run clean-all && pnpm install`を試し、`pnpm run build && pnpm run migrate && pnpm start`してみてください。
-- これでもだめそうだったら、最初から[構築の手引き](../guides/manual/)の手順に従ってやり直してみてください。
+- Lee las [instrucciones de construcción](. /guides/manual/) y las notas de la versión.
+- Asegúrate de que `pnpm install` y `pnpm run migrate` al actualizar Misskey.Si eso no lo arregla, prueba `pnpm run clean-all && pnpm install`, luego prueba `pnpm run build && pnpm run migrate && pnpm start`.
+- Si esto no parece funcionar, empieza desde el principio y sigue las instrucciones de las [instrucciones de construcción](. /guías/manual/) desde el principio.
 
 ---
 
-# 設定
+# Configuración
 
-[構築の手引き](../guides/manual/)をよく読みましょう。
+Lee las [instrucciones de construcción](. /guías/manual/)  léelo atentamente.
 
-`.config/default.yml`で設定を行います。
-[`.config/example.yml`](https://github.com/misskey-dev/misskey/blob/develop/.config/example.yml)をコピーし、コメントに従って記述します。
+Configura los ajustes en `.config/default.yml`.
+Copia [`.config/example.yml`](https://github.com/misskey-dev/misskey/blob/develop/.config/example.yml) y sigue los comentarios.
 
-（YAML形式では、`#`から行末まではコメントとして扱われます。）
+(En formato YAML, desde `#` hasta el final de la línea se trata como un comentario.）
 
-## URLとポート番号
+## URL y número de puerto
 
-URLとポート番号のしくみは、少し分かりにくいと思います。
+La mecánica de las URL y los números de puerto puede resultar un poco confusa.
 
-`.config/example.yml`に「Port and TLS settings」として説明図付きで順に書かれていますので、それに沿って設定をしていきましょう。
-本文の解説を日本語訳しながらやっていきます。
+El archivo `.config/example.yml` contiene `Port and TLS settings` en orden con diagramas explicativos, así que vamos a configurar los ajustes en consecuencia.
+Haremos esto mientras traducimos las explicaciones del texto al japonés.
 
-### URLの設定
+### Configuración de la URL
 
 ```yml
 # Final accessible URL seen by a user.
-# 最終的にユーザーがアクセスするURL
+# 사용자가 최종적으로 접속하는 URL
+# URL final accesible vista por un usuario.
 url: https://example.tld/
 ```
 
-**`url`には、サーバーにブラウザでアクセスしたときアドレスバーに表示される**(したい)**URLを書きます。**
+**En el campo `url`, escribe la URL **(deseada)** que se mostrará en la barra de direcciones cuando se acceda al servidor con un navegador.**
 
-### ポートの設定
+### Configuración de puertos
 
 ```yml
 #   ┌───────────────────────┐
 #───┘ Port and TLS settings └───────────────────────────────────
 #### ポートとTLSの設定         ####################################
+#### Configuración de puertos y TLS ####################################
 
+# Misskey requiere un proxy inverso para soportar conexiones HTTPS 
 # Misskey requires a reverse proxy to support HTTPS connections.
 # MisskeyでHTTPS接続をサポートするにはリバースプロキシが必須です。
 #
@@ -96,8 +99,12 @@ url: https://example.tld/
 #   +------+      |+-------------+      +----------------+|
 #                 +---------------------------------------+
 #
+#   Necesitas configurar un proxy inverso. (por ejemplo, nginx)
 #   You need to set up a reverse proxy. (e.g. nginx)
 #   この方法では、リバースプロキシ（例: nginx）をセットアップする必要があります。
+#
+#   Se recomienda encarecidamente una conexión cifrada con HTTPS
+#   ya que los tokens pueden transferirse en solicitudes GET.
 #   An encrypted connection with HTTPS is highly recommended
 #   because tokens may be transferred in GET requests.
 #   GETリクエストでトークンがURLに含まれる可能性があるため、
@@ -105,92 +112,93 @@ url: https://example.tld/
 ```
 
 ```yml
+# El puerto en el que tu servidor Misskey debería estar escuchando
 # The port that your Misskey server should listen on.
 # Misskeyサーバがリッスンするポート
 port: 3000
 ```
 
-この例では、Misskeyはポート3000で通信します。
-リバースプロキシでは、ローカル側の宛先にこのポート番号を指定します。
+En este ejemplo, Misskey se comunica en el puerto 3000.
+El proxy inverso especifica este número de puerto para el destino en el lado local.
 
 ----
 
-# `npm start`やアクセス時によく遭遇するエラー
+# Errores comunes encontrados durante el `npm start` y el acceso.
 
-`npm start`でサーバーを立てられたものの、その後不具合に遭遇してしまう場合もあります。
+Es posible configurar un servidor con `npm start` pero luego encontrar problemas.
 
-まず、[構築の手引き](../guides/manual/)をよく読みましょう。
+\*\*En primer lugar, lee la [guía de construcción] (../guides/manual/)
 
-## YAMLのエラーが出る
+## Errores YAML.
 
-`default.yml`の構文にミスがある可能性があります。
-行頭に余分なスペースはありませんか？
+Puede haber un error de sintaxis en `default.yml`.
+¿Hay espacios de más al principio de la línea?
 
-## redisに接続できない
+## No se puede conectar a redis
 
-redis-serverは起動していますか？
-何らかの接続数の上限に達していませんか？
+¿Está funcionando el servidor redis?
+¿Se ha alcanzado algún límite de conexión?
 
-11.20.2より前のバージョンのMisskeyはredisのパスワードを解くことができません。以下の2点を確認してください。
+Las versiones de Misskey anteriores a la 11.20.2 no pueden resolver las contraseñas de redis.Comprueba los dos puntos siguientes.
 
-- redisにパスワードを設定しない。
-- `default.yml`の`redis:`の`pass:`の行をコメントアウトする。
+- No hay contraseña para redis.
+- Comenta la línea `pass:` en `redis:` en `default.yml`.
 
-## 上部に「開発ビルドです」と書かれた赤いバーが表示される
+## Aparece una barra roja en la parte superior que dice "Esta es una compilación de desarrollo".
 
-サーバーを公開する場合は必ずproductionビルドを使いましょう。
+Utiliza siempre la versión de producción cuando vayas a publicar  un servidor.
 
-製品ビルドにするには、環境変数が`NODE_ENV=production`になるように設定し`npm run build && npm start`します。
+Para realizar una compilación de producción, configura la variable de entorno como `NODE_ENV=production` y `npm run build && npm start`.
 
-## 新規登録できない
+## No es posible un nuevo registro.
 
-APIに接続できないようです。
-`default.yml`の冒頭の`url:`が正しく設定されているか確認しましょう。
-Node.jsのバージョンや、インストールの設定ももう一度よく確認しましょう。
+Parece que no puedes conectarte a la API.
+Comprueba que la `url:` al principio del `default.yml` está configurada correctamente.
+Comprueba también la versión de Node.js y la configuración de la instalación.
 
-また、正しく`default.yml`が書かれていますか？
+Además, ¿está escrito correctamente el archivo `default.yml`?
 
-## タイムラインの表示に問題が発生する、リアルタイムでTLが更新されない
+## Problemas con la visualización de la línea de tiempo, la TL no se actualiza en tiempo real
 
-タイムラインの読み込みに失敗する場合、mongoDBやPostgreSQLのバージョンが古い可能性があります。
-PostgreSQLはなるべくv13にしてください。
+Si la línea de tiempo no se carga, la versión de mongoDB o PostgreSQL puede estar desactualizada.
+PostgreSQL debe ser v13 si es posible.
 
-redisの接続も確認した方がよいでしょう。 [→ redisに接続できない？ を参照](#redisに接続できない？)
+También deberías comprobar la conexión a redis. [→ ¿No se puede conectar a redis？ Ver](#¿No puede conectarse a redis?)
 
-## 永遠に「再接続中」と右下に表示される、リアルタイムでTLが更新されない
+## Siempre "reconectando" aparece en la esquina inferior derecha, TL (Línea del Tiempo) no se actualiza en tiempo real.
 
-プロキシを利用している場合、それがWebSocket通信を阻害している可能性が考えられます。
+Si está utilizando un proxy, es posible que esté bloqueando la comunicación WebSocket.
 
-## オブジェクトストレージ使用時、不具合が出る
+## Fallo al utilizar almacenamiento de objetos.
 
-オブジェクトストレージの権限の設定が厳しくなっている可能性があります。「ファイル（オブジェクト）が誰でも取得可能」なように権限を設定してみてください。
-また、`default.yml`をもう一度確認してみてください。
+Los permisos de almacenamiento de objetos pueden configurarse de forma estricta.Intenta configurar los permisos para que "los archivos (objetos) puedan ser recuperados por cualquiera".
+Además, comprueba de nuevo el `default.yml`.
 
-### S3 example (with CDN, custom domain)
+### Ejemplo de S3 (con CDN, dominio personalizado)
 
-S3 example (with CDN, custom domain)は、AWSのデフォルトのドメインではなく独自ドメインでストレージを公開したい場合の設定です。
-endpointと公開ドメインが同じサービスの場合はS3 exampleのように`baseUrl`は明記しなくてよく、さらにregionの概念がないサービスの場合はregionの行は必要ありません。
+S3 ejemplo (con CDN, dominio personalizado) es para cuando quieres publicar almacenamiento en tu propio dominio en lugar del dominio por defecto de AWS.
+Si el endpoint y el dominio publicado son el mismo servicio, no es necesario especificar la `baseUrl`, como en el ejemplo de S3, y además, la línea de región no es necesaria si el servicio no tiene concepto de región.
 
-### S3互換サービスでの設定
+### Configuración en servicios compatibles con S3
 
-Misskeyではオブジェクトストレージの接続に[aws-sdk](https://www.npmjs.com/package/aws-sdk)を利用しています。
-Amazon S3に互換性のあるオブジェクトストレージであれば利用できる可能性があります。
+Misskey utiliza [aws-sdk](https://www.npmjs.com/package/aws-sdk) para las conexiones de almacenamiento de objetos.
+Se puede utilizar cualquier almacenamiento de objetos compatible con Amazon S3.
 
-各サービス/ソフトウェアのドキュメントをよく読み、設定してみてください。
+Lee atentamente la documentación de cada servicio/software e intenta configurarlo.
 
-### ローディングが終わらない
+### La carga nunca termina.
 
-Cloudflare を使用している場合は、Rocket LoaderやAuto Minifyが有効になっていないか確認してください。有効になっている場合は無効にすることで解決する場合があります。
+Si utilizas Cloudflare, comprueba que Rocket Loader y Auto Minify no están activados.Si está activada, desactivarla puede resolver el problema.
 
 ---
 
-# まったく解決しなかった場合
+# Si no se resuelve en absoluto
 
-以下の順序を試してみてください。
+Intenta los siguientes pasos:
 
-1. Misskeyのドキュメントをよく読む。
-2. Googleで検索してみる。
-3. [MisskeyリポジトリのIssues](https://github.com/misskey-dev/misskey/issues)を検索してみる（同じエラーに遭遇している場合や、Misskeyのバグの可能性もあります）。
-4. 検索してどうしても見つからなかったら、専門家に質問してみてください。
-  1. [MisskeyのDiscordサーバー](https://discord.gg/P4yYqYBjEp)などで聞いてみる
-  2. 開発者（[aqz](https://p1.a9z.dev/@aqz)やしゅいろ）にリプライやダイレクト投稿を送信して聞いてみる
+1. Lea atentamente la documentación de Misskey.
+2. Busca en Google.
+3. Busca [Problemas en el repositorio de Misskey](https://github.com/misskey-dev/misskey/issues) (es posible que hayas encontrado el mismo error o que se trate de un fallo de Misskey).
+4. Si buscas y no encuentras lo que buscas, pregunta a un experto.
+  1. Pregunta en [servidor Discord de Misskey](https://discord.gg/P4yYqYBjEp), por ejemplo.
+  2. Envía una respuesta o un mensaje directo al desarrollador ([aqz](https://p1.a9z.dev/@aqz) o Syuilo) y pregunta
