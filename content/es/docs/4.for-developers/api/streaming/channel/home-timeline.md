@@ -1,16 +1,16 @@
 ---
-description: ホームタイムラインのノートが流れるチャンネルです。
+description: "Es el canal a través del cual se reproducen las notas de la línea de tiempo de Inicio"
 ---
 
 # `homeTimeline`
 
-ホームタイムラインのノートが流れるチャンネルです。
+Es el canal a través del cual se reproducen las notas de la línea de tiempo de Inicio
 
-## パラメータ
+## Parámetros
 
-なし
+Ninguno
 
-## イベント
+## Eventos
 
 ### `note`
 
@@ -18,8 +18,8 @@ description: ホームタイムラインのノートが流れるチャンネル�
  $ref: 'misskey://Note'
 }"/>
 
-ホームタイムラインに新しいノートが追加されたときに発生します。
+Se produce cuando se añade una nueva nota a la línea de tiempo de inicio.
 
-## 操作
+## Acciones
 
-なし
+Ninguna
