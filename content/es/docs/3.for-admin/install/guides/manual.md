@@ -161,7 +161,7 @@ sudo systemctl restart misskey
 
 Si se produce un error durante la compilación o la inicialización, prueba con los siguientes comandos:
 
-- `pnpm run clean` or `pnpm run clean-all`
+- `pnpm run clean` o `pnpm run clean-all`
 - `pnpm rebuild`
 
 :::
