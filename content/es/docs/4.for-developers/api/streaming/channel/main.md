@@ -1,16 +1,16 @@
 ---
-description: 基本的な情報が流れるチャンネルです。
+description: "基本的な情報が流れるチャンネルです。"
 ---
 
 # `main`
 
-基本的な情報が流れるチャンネルです。
+Es el canal en el que se reproduce la información básica.
 
-## パラメータ
+## Parámetros
 
-なし
+Ninguno
 
-## イベント
+## Eventos
 
 ### `notification`
 
@@ -18,7 +18,7 @@ description: 基本的な情報が流れるチャンネルです。
  $ref: 'misskey://Notification'
 }"/>
 
-通知を受け取ったときに発生します。
+Se produce cuando se recibe la notificación.
 
 ### `mention`
 
