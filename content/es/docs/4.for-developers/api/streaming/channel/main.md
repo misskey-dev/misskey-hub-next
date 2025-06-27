@@ -1,5 +1,5 @@
 ---
-description: "基本的な情報が流れるチャンネルです。"
+description: "Es el canal en el que se reproduce la información básica."
 ---
 
 # `main`
@@ -26,7 +26,7 @@ Se produce cuando se recibe la notificación.
  $ref: 'misskey://Note'
 }"/>
 
-メンションされたときに発生します。
+Ocurre cuando te mencionan.
 
 ### `reply`
 
@@ -34,7 +34,7 @@ Se produce cuando se recibe la notificación.
  $ref: 'misskey://Note'
 }"/>
 
-返信されたときに発生します。
+Esto ocurre cuando se recibe una respuesta.
 
 ### `renote`
 
@@ -42,7 +42,7 @@ Se produce cuando se recibe la notificación.
  $ref: 'misskey://Note'
 }"/>
 
-Renoteされたときに発生します。
+Se produce cuando se vuelve a compartir (Repost) un post.
 
 ### `follow`
 
@@ -50,7 +50,7 @@ Renoteされたときに発生します。
  $ref: 'misskey://User'
 }"/>
 
-自分が他のユーザーをフォローしたときに発生します。
+Ocurre cuando sigues a otro usuario.
 
 ### `followed`
 
@@ -58,7 +58,7 @@ Renoteされたときに発生します。
  $ref: 'misskey://User'
 }"/>
 
-他のユーザーが自分をフォローしたときに発生します。
+Se produce cuando otro usuario te sigue.
 
 ### `unfollow`
 
@@ -66,7 +66,7 @@ Renoteされたときに発生します。
  $ref: 'misskey://User'
 }"/>
 
-自分が他のユーザーをフォロー解除したときに発生します。
+Ocurre cuando dejas de seguir a otro usuario.
 
 ### `messagingMessage`
 
@@ -74,40 +74,40 @@ Renoteされたときに発生します。
  $ref: 'misskey://MessagingMessage'
 }"/>
 
-メッセージを受け取ったときに発生します。
+Se produce cuando se recibe un mensaje.
 
 ### `readAllNotifications`
 
-全ての通知が既読になったときに発生します。
+Se produce cuando se han leído todas las notificaciones.
 
 ### `unreadNotification`
 
-新しい通知があるときに発生します。
+Se produce cuando hay una nueva notificación.
 
 ### `unreadMention`
 
-新しいメンションがあるときに発生します。
+Se produce cuando se recibe una nueva mención.
 
 ### `readAllUnreadMentions`
 
-全てのメンションが既読になったときに発生します。
+Se produce cuando todas las menciones se marcan como leídas.
 
 ### `unreadSpecifiedNote`
 
-新しいダイレクト投稿があるときに発生します。
+Se produce cuando se recibe una nueva contribución directa.
 
 ### `readAllUnreadSpecifiedNotes`
 
-全てのダイレクト投稿が既読になったときに発生します。
+Esto ocurre cuando se han leído todos los mensajes directos.
 
 ### `unreadMessagingMessage`
 
-新しいメッセージがあるときに発生します。
+Se produce cuando hay un nuevo mensaje.
 
 ### `readAllMessagingMessages`
 
-全てのメッセージが既読になったときに発生します。
+Se produce cuando se han leído todos los mensajes.
 
-## 操作
+## Acciones
 
-なし
+Ninguna
