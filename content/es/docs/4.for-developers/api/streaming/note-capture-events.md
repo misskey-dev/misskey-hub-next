@@ -1,4 +1,4 @@
-# 投稿キャプチャイベント
+# Eventos posteriores a la captura
 
 ## `reacted`
 
@@ -16,7 +16,7 @@
  }
 }"/>
 
-対象のノートにリアクションがされた場合に発生します。
+Ocurre cuando se produce una reacción a la nota de destino.
 
 ## `pollVoted`
 
@@ -34,7 +34,7 @@
  }
 }"/>
 
-対象のノートに添付されたアンケートに投票がされた場合に発生します。
+Se produce cuando se vota el cuestionario adjunto a la nota en cuestión.
 
 ## `deleted`
 
@@ -48,4 +48,4 @@
  }
 }"/>
 
-対象のノートが削除された場合に発生します。
+Esto ocurre cuando se elimina la nota de destino.
