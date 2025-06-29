@@ -1,45 +1,75 @@
 <template>
-    <div class="relative min-h-full">
-        <IndexHeroBg />
-        <GNav :landing="true" />
-        <IndexHeroRight />
-        <div class="relative container mx-auto p-6 md:p-8 max-w-screen-sm lg:max-w-screen-xl">
-            <IndexHeroLeft />
-        </div>
-        <main class="relative container mx-auto max-w-screen-xl px-6 mt-32 mb-24 space-y-16">
-            <IndexKeyFeatures id="learnMore" />
-            <IndexDecenterized />
-            <GDots class="w-[95%] mx-auto text-accent-600" :space="30" />
-            <IndexFeatures />
-            <IndexFeaturesServer />
-            <IndexFeaturesClient />
-            <IndexFeaturesUpcoming />
-            <GDots class="w-[95%] mx-auto text-accent-600" :space="30" />
-            <IndexGetStarted id="getStarted" />
-            <GDots class="w-[95%] mx-auto text-accent-600" :space="30" />
-            <IndexSponsors />
-        </main>
-        <GFooter class="relative !bg-transparent dark:!bg-transparent" />
-    </div>
+<div>
+	<GNav :landing="true" />
+
+	<IndexDesktop v-if="isDesktop" :clientLoaded="deviceSizeDetermined" />
+	<IndexMobile v-else :clientLoaded="deviceSizeDetermined" />
+
+	<GFooter />
+
+	<Transition
+		:leaveActiveClass="$style.xLeaveActive"
+		:leaveToClass="$style.xLeaveTo"
+	>
+		<div v-if="!deviceSizeDetermined" :class="$style.loader">
+			<Loading />
+		</div>
+	</Transition>
+</div>
 </template>
 
 <script setup lang="ts">
-const isUwu = useState<boolean>('isUwu');
+import Loading from '@/components/mk/Loading.vue';
 
-useHead(() => ({
-    link: isUwu ? [
-        { rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-light.png' },
-        { rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-dark.png' },
-        { rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-mobile-light.png' },
-        { rel: 'preload', as: 'image', href: '/img/uwu/misskey-uwu-mobile-dark.png' },
-    ] : [],
-}));
+const { isHydrating } = useNuxtApp();
+const deviceSizeDetermined = ref(!(!import.meta.client || isHydrating === true));
+
+function getIsDesktop() {
+	if (import.meta.client) {
+		deviceSizeDetermined.value = true;
+		return window.innerWidth > 1200;
+	}
+	return true;
+}
+
+const isDesktop = ref(true);
+
+onMounted(() => {
+	if (import.meta.client) {
+		isDesktop.value = getIsDesktop();
+		window.addEventListener('resize', () => {
+			isDesktop.value = getIsDesktop();
+		});
+	}
+});
 
 definePageMeta({
-    layout: 'landing',
+	layout: 'landing',
 });
 </script>
 
-<style scoped>
+<style module>
+.root {
+	position: relative;
+}
 
+.loader { 
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100dvw;
+	height: 100dvh;
+	z-index: 10050;
+	background: var(--THEME-bg);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.xLeaveActive {
+	transition: opacity 0.5s ease;
+}
+.xLeaveTo {
+	opacity: 0;
+}
 </style>

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import 'virtual:uno.css';
+
 const isNavOpen = ref<boolean>(false);
 
 useHead({
@@ -10,12 +12,12 @@ useHead({
 </script>
 
 <template>
-    <div class="bg-white dark:bg-slate-950">
+    <div class="bg-white dark:bg-neutral-950">
         <GNav @toggleNav="isNavOpen = !isNavOpen" :is-open="isNavOpen" :slim="true" :disable-shadow="true" :hasBorder="true" />
         <div class="main-content" :class="$style.slimPageRoot">
             <slot />
         </div>
-        <GFooter class="bg-slate-100 dark:bg-gray-900" />
+        <GFooter class="bg-neutral-100 dark:bg-neutral-900" />
     </div>
 </template>
 
