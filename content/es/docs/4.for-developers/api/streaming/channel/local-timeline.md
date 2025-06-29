@@ -1,16 +1,16 @@
 ---
-description: ローカルタイムラインのノートが流れるチャンネルです。
+description: "Es el canal en el que se reproducen las notas de la línea de tiempo local."
 ---
 
 # `localTimeline`
 
-ローカルタイムラインのノートが流れるチャンネルです。
+Es el canal en el que se reproducen las notas de la línea de tiempo local.
 
-## パラメータ
+## Parámetros
 
-なし
+Ninguno
 
-## イベント
+## Eventos
 
 ### `note`
 
@@ -18,8 +18,8 @@ description: ローカルタイムラインのノートが流れるチャンネ�
  $ref: 'misskey://Note'
 }"/>
 
-ローカルタイムラインに新しいノートが追加されたときに発生します。
+Se produce cuando se añade una nueva nota a la línea de tiempo local.
 
-## 操作
+## Acciones
 
-なし
+Ninguna

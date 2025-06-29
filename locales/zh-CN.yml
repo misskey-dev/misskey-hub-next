@@ -49,15 +49,11 @@ _landing:
     _federated:
       title: "去中心化"
       description: "Misskey 采用去中心化协议，将不同服务器上的社区连接起来。"
-    _multifunction:
-      title: "功能丰富"
-      description: "Misskey 拥有多种独特的功能，让您可更专业地发帖。"
-    _customizable:
-      title: "高度可定制"
-      description: "Misskey 有灵活的 Web 界面，你可以按喜好自己定制页面的样式。"
+    _powerful:
+      title: "功能强大"
+      description: "Misskey具备着多种多样的产品级功能，可依照需求进行精细化定制。无论人数多少，都是最合适您的解决方案。"
   _decenterized:
     title: "Misskey 是{0}"
-    decenterizedPlatform: "去中心化平台"
     description: "Misskey 是一个自由开放的项目，任何人都可以自由地使用 Misskey 创建服务器，因此互联网上已经诞生了各种各样的服务器。 此外，Misskey 实现了一个名叫{0}的分布式通信协议。因此，无论您选择哪台服务器，都可以与其他服务器上的用户交互。 这就是它被称为去中心化的原因，也是它与 Twitter 等其他服务的根本不同之处。 不同服务器的主要话题、用户群和语言各不相同，找到适合自己的服务器也是乐趣之一（当然，创建自己的服务器也很有趣哦）。"
     activityPub: "ActivityPub"
   _features:
@@ -73,21 +69,147 @@ _landing:
     _reaction:
       title: "回应"
       description: "您可以在帖子中添加 \"回应\"，轻松传达和交流您的感受。"
+    _customEmojis:
+      title: "自定义表情"
+      description: "可制作服务器专属的的自定义表情，并在Misskey内的各处使用。"
+    _channel:
+      title: "频道"
+      description: "创建频道后，即可围绕共同主题在实例内建立专属社区。"
+    _antenna:
+      title: "天线功能"
+      description: "创建仅收集包含特定词汇的帖子的时间线。"
     _drive:
       title: "网盘"
       description: "Misskey 的网盘功能可以让你轻松地将收藏收藏的图片上传到网盘、整理到文件夹中，以供分享。"
-    _theme:
-      title: "主题"
-      description: "您可以将 Misskey 定制为喜欢的主题。 Misskey 完全支持深色模式，此外，您还可以创建自己的高级主题。"
-    _thread:
-      title: "话题"
-      description: "您可以将帖子串起来，形成一个长长的串，持续交流，直到满意为止。"
+    _2fa:
+      title: "多要素验证"
+      description: "支持通过一次性密码多因素认证及物理密钥通行密钥认证等多种技术增强账户安全性。"
     _charts:
       title: "图表"
       description: "Misskey 内置图表引擎，可轻松实现服务器的使用情况和其他信息的可视化。"
+    _branding:
+      title: "品牌化"
+      description: "通过定制实例标识、图标及主题，轻松实现社交平台品牌打造。"
+    _roles:
+      title: "角色"
+      description: "通过角色功能可精细化配置用户权限；使用条件角色还能自动为匹配用户分配角色，并设置角色徽章助力实例变现。"
+    _moderation:
+      title: "内容审查"
+      description: "原生内置完备的内容审查功能，助力实例高效运维。"
+    _privacy:
+      title: "プライバシー"
+      description: "豊富なプライバシー設定で、コンテンツの公開範囲を柔軟にコントロール。"
+    _multiPurpose:
+      title: "ひとりでも、みんなでも"
+      description: "既支持作为多用户社交平台的运营，也可用作个人实例。它将成为您在联邦宇宙中专属的枢纽节点。"
+    _monetization:
+      title: "収益化"
+      description: "提供广告展示等实例变现辅助功能，助您实现可持续运营。"
+    _oss:
+      title: "Mi ❤️ OSS"
+      description: "Misskey始终并将持续开源，允许任何人免费自由使用源代码；同时Misskey项目积极为其他开源软件提供支援。"
+    _battleTested:
+      title: "信頼性"
+      description: "Misskey历经逾十年实战环境检验，自信具备卓越可靠性。"
+  _featuresServer:
+    _root:
+      title: "サーバーの機能"
+      description: "Misskeyを支えるバックエンド実装の特徴。"
+    _easyInstall:
+      title: "簡単インストール"
+      description: "支持简单命令行安装，亦可选用托管服务，省去管理维护成本。"
+    _easySetup:
+      title: "セットアップもカンタン"
+      description: "Misskey实例部署无需复杂配置，即可即刻投入运营；亦支持按需进行高级定制。"
+    _api:
+      title: "API"
+      description: "Misskey所有功能均可通过HTTP API操作，便于第三方应用集成；更支持Webhook与WebSocket连接，实时获取事件推送。"
+    _relay:
+      title: "中继支持"
+      description: "支持连接联邦宇宙中继服务器，自动同步全网活动数据，无需手动关联多个实例。"
+    _nodejs:
+      title: "Node.jsバックエンド"
+      description: "MisskeyはバックエンドにNode.jsを採用しており、高速・軽量に動作します。"
+    _postgresql:
+      title: "PostgreSQL"
+      description: "メインのデータベースにはPostgreSQLを採用し、堅牢なデータ管理を実現しています。"
+    _jobQueue:
+      title: "高効率ジョブキュー"
+      description: "采用 BullMQ 任务队列支持跨实例高效处理任务；深度集成的原生队列检视器可直接在控制台管理，无需第三方工具。"
+    _cdn:
+      title: "CDN対応"
+      description: "外部CDNによるリソースのキャッシュに対応しています。サーバーへのリクエストを減らすことで、負荷低減・コスト削減が可能です。"
+    _ftt:
+      title: "FTT"
+      description: "Fan-out Timeline Technology(FTT)により、タイムラインをRedis上に構築しパフォーマンスを向上させることができます。"
+    _rbt:
+      title: "RBT"
+      description: "Reactions Buffering Technology(RBT)により、リアクション情報をRedis上にキャッシュしパフォーマンスを向上させることができます。"
+    _scalable:
+      title: "スケーラブル"
+      description: "プロセスのクラスタリング、複数サーバーによるロードバランス、データベースのレプリケーションに対応しており、ユーザーの増加にも対応できます。"
+    _ml:
+      title: "機械学習"
+      description: "組み込みの機械学習機能を利用して、自動的にセンシティブなメディアのフィルタリングを行うなど、運用の負担を軽減することも可能です。"
+    _sentry:
+      title: "Sentryサポート"
+      description: "Sentryによるサーバーのメトリクス収集に対応しているため、サーバーリソースの監視、ヘルスチェック、メンテナンスに役立てることができます。"
+  _featuresClient:
+    _root:
+      title: "WebUI"
+      description: "Misskeyに付属する高機能なWebフロントエンド(Misskey Web)の特徴を紹介。"
+    _responsive:
+      title: "レスポンシブUI"
+      description: "UIは洗練された独自のデザインシステムを使用して設計され、デスクトップ・タブレット・スマートフォンそれぞれに最適な表示・動作となるように丁寧に実装されています。"
+    _theme:
+      title: "主题"
+      description: "可自由定制界面风格，完整支持深色模式，更能深度创作个性化主题。"
+    _mfm:
+      title: "MFM"
+      description: "ノートにはMFMと呼ばれるMisskey専用のマークアップ言語が使用できます。太字にする・リンクを挿入する・動きを付けるといった、テキストの装飾がシンプルな構文で表現できます。"
     _widgets:
-      title: "小组件"
-      description: "你可以放置各种类型的小部件，根据喜好定制界面。"
+      title: "ウィジェット"
+      description: "様々な種類のウィジェットを自由に配置し、必要な情報に素早くアクセス。"
+    _deck:
+      title: "デッキUI"
+      description: "启用Deck界面可深度自定义UI，构建专属客户端。"
+    _embed:
+      title: "他サイトへの埋め込み"
+      description: "ノート、タイムラインなどを外部のサイトに埋め込んで表示可能です。"
+    _realtimeMode:
+      title: "リアルタイムモード"
+      description: ""
+    _pushNotification:
+      title: "プッシュ通知"
+      description: "プッシュ通知に対応しているため、リアルタイムでサーバーからの通知を受け取ることができます。"
+    _multiAccounts:
+      title: "マルチアカウント対応"
+      description: "複数のアカウントを簡単に切り替えて使用可能です。"
+    _plugin:
+      title: "プラグイン"
+      description: "セキュアなAiScriptを用いたプラグインをインストールして、クライアントの機能を拡張可能です。"
+    _settingsManagement:
+      title: "柔軟な設定管理"
+      description: "アカウントごとに任意のクライアント設定を上書きできるほか、複数のデバイス間で設定を共有・同期することができます。さらに、設定情報は自動バックアップ可能です。"
+    _pwa:
+      title: "PWA"
+      description: "Misskey WebはProgressive Web Apps(PWA)に準拠していて、デバイス上でネイティブアプリのように動作させることが可能です。"
+    _i18n:
+      title: "多言語対応"
+      description: "クライアントを様々な言語で利用可能です。"
+  _featuresUpcoming:
+    _root:
+      title: "近日公開"
+      description: "今後予定されている機能を紹介。"
+    _jwt:
+      title: "JWT認証"
+      description: "JSON Web Token(JWT)を用いたステートレス認証を実装し、よりセキュア・より高速なリクエストの検証を実現します。"
+    _newBackend:
+      title: "より軽量なバックエンド"
+      description: "より高速・軽量に動作可能にするための全く新しいバックエンド実装の開発を進めています。"
+    _vueVapor:
+      title: "Vaporモード対応"
+      description: "フロントエンドで採用しているフレームワーク Vue の新しいコンパイルストラテジーをサポートし、より軽量なWeb UIを実現します。"
   _getStarted:
     title: "开始使用 Misskey"
     _find:

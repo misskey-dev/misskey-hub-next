@@ -54,6 +54,12 @@ Display a dialog box.The following values ​​can be set for type.\
 `info` `success` `warning` `error` `question`\
 If omitted, it will be `info`.
 
+### `Mk:toast(text)`
+
+Display a toast.Unlike dialogs, it does not require the user to close the dialog, so it can be used for simple notifications such as when some operation has been completed.
+
+**This function is scheduled for release in 2025.5.1 (tentative name).**
+
 ### `Mk:confirm(title, text, type)`
 
 Display a confirmation dialog.The following values ​​can be set for type.\
@@ -141,7 +147,7 @@ Plugin:register_post_form_action('Item name displayed on the menu', @(note, rewr
 
 ### `Plugin:register_note_action(title, fn)`
 
-Adds an action in the note menu.Passes the name of the action as the first argument and the callback function when the action is selected as the second argument.\
+Adds an action in the note menu.Passes the name of the item as the first argument and the callback function when the action is selected as the second argument.\
 The target note object is passed to the callback function as the first argument.
 
 ```AiScript
@@ -158,7 +164,7 @@ Plugin:register_note_action('Item name displayed on the menu', @(note) {
 
 ### `Plugin:register_user_action(title, fn)`
 
-Adds an action in the user menu.Passes the name of the item as the first argument and the callback function when the action is selected as the second argument.\
+Adds an action in the user menu.Passes the name of the action as the first argument and the callback function when the action is selected as the second argument.\
 The target user object is passed to the callback function as the first argument.
 
 ```AiScript
