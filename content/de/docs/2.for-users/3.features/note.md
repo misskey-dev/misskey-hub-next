@@ -17,7 +17,7 @@ Notizen können auch als [favorit](./favorite) hinterlegt werden, um sie so spä
 ## Notizen schreiben oder löschen
 
 Um eine Notiz in Misskey Web zu erstellen, drücke auf die Schaltfläche mit dem Bleistiftsymbol auf dem Bildschirm, um das Erstellungsfenster zu öffnen.Eine Notiz wird erstellt, indem der Inhalt in das Erstellungsfenster eingegeben und die Schaltfläche [Notiz] gedrückt wird.
-Die Notiz kann eine beliebige Datei enthalten, z. B. ein Bild oder ein Video, oder eine [Umfrage](./poll) kann an die Notiz angehängt werden.Darüber hinaus können [MFM](./mfm) im Text verwendet werden, [Erwähnungen](./mention], sowie [hashtags](./hashtag) eingefügt werden.
+Die Notiz kann eine beliebige Datei enthalten, z. B. ein Bild oder ein Video, oder eine [Umfrage](./poll) kann an die Notiz angehängt werden.Darüber hinaus können [MFM](./mfm) im Text verwendet werden, [Erwähnungen](./mention), sowie [hashtags](./hashtag) eingefügt werden.
 Es können auch andere Einstellungen wie Inhaltswarnungen und Publikationsbereich festgelegt werden (Mehr dazu weiter unten).
 
 :::tip
@@ -63,7 +63,7 @@ Die Notiz ist nicht nur für alle öffentlich, sondern durchläuft auch alle Zei
 
 :::warning
 
-Dieser öffentliche Bereich ist nicht verfügbar, wenn sich das Konto im Status [stumm] (./silence) befindet.
+Dieser öffentliche Bereich ist nicht verfügbar, wenn sich das Konto im Status [stumm](./silence) befindet.
 
 :::
 
