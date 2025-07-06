@@ -198,7 +198,7 @@ activeならOK。
 
 ### FFmpeg
 
-FFmpegは、動画や音声の変換、編集、ストリーミングなどを担当する。以下でインストールしておく。
+FFmpegは、動画や音声に関する処理を担う。以下でインストールしておく。
 
 ```sh
 sudo apt install ffmpeg
