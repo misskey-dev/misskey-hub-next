@@ -196,6 +196,14 @@ systemctl status redis-server
 
 activeならOK。
 
+### FFmpeg
+
+FFmpegは、動画や音声に関する処理を担う。以下でインストールしておく。
+
+```sh
+sudo apt install ffmpeg
+```
+
 ### nginx
 
 nginxは、主としてリバースプロキシに用いられるWebサーバーソフトである。Misskeyには必須ではないが、キャッシュ等をするとパフォーマンスが向上したり、httpからhttpsへの転送などをするために、インストールしておこう。
