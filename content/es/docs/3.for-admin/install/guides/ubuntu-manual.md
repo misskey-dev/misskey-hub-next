@@ -198,6 +198,14 @@ systemctl status redis-server
 
 OK si está activo.
 
+### FFmpeg
+
+FFmpeg se encarga del procesamiento relacionado con el vídeo y el audio.Instálalo con el siguiente comando
+
+```sh
+sudo apt install ffmpeg
+```
+
 ### nginx
 
 Nginx es un software de servidor web utilizado principalmente para el proxy inverso.No es esencial para Misskey, pero debería instalarse para mejorar el rendimiento al almacenar en caché, etc., o para transferir de http a https, etc.
