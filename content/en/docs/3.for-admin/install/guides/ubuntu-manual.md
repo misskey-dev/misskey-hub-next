@@ -194,6 +194,14 @@ systemctl status redis-server
 
 activeならOK。
 
+### FFmpeg
+
+FFmpegは、動画や音声に関する処理を担う。以下でインストールしておく。
+
+```sh
+sudo apt install ffmpeg
+```
+
 ### nginx
 
 http\://localhost にアクセスし、\*Welcome to nginx!\*と表示されればOK。Misskeyには必須ではないが、キャッシュ等をするとパフォーマンスが向上したり、httpからhttpsへの転送などをするために、インストールしておこう。
