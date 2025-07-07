@@ -194,6 +194,14 @@ systemctl status nginx
 
 active이면 OK.
 
+### FFmpeg
+
+FFmpegは、動画や音声に関する処理を担う。以下でインストールしておく。
+
+```sh
+sudo apt install ffmpeg
+```
+
 ### nginx
 
 nginx는 주로 리버스 프록시에 사용되는 웹 서버 소프트웨어입니다.Misskey에 필수적인 것은 아니지만, 캐시 등을 하면 성능이 향상되고 http에서 https로 전송하는 등의 작업을 위해 설치해 둡니다.
