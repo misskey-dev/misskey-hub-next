@@ -401,13 +401,19 @@ NODE_ENV=production pnpm install --frozen-lockfile
 
 ### default.yml
 
-設定ファイル.config/default.ymlを作成。
+設定ファイル.config/default.ymlを.config/example.ymlから作成。
+
+設定サンプルの`.config/example.yml`をコピーし、`default.yml`にリネーム。
+
+```sh
+cp .config/example.yml .config/default.yml
+```
 
 ```sh
 nano .config/default.yml
 ```
 
-次の内容を貼り付け、適宜置き換える。設定値の変更が必要な箇所は●で、これまでの流れの中で設定した値を用いる箇所は〇で示した。
+次の内容を適宜置き換える。設定値の変更が必要な箇所は●で、これまでの流れの中で設定した値を用いる箇所は〇で示した。
 
 この設定ファイルはYAML形式で書かれており、行頭のスペースの数などを間違えるとMisskeyが動かないので、特に注意すること。
 
