@@ -1,8 +1,8 @@
 ---
-description: Misskey APIに関連するライブラリの一覧
+description: 'Lista de bibliotecas API de Misskey'
 ---
 
-# ライブラリの一覧
+# Lista de bibliotecas
 
 ## JavaScript
 
