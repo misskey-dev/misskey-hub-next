@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useHead({
     htmlAttrs: {
-        class: 'scroll-pt-20 lg:scroll-pt-24',
+        class: 'landing scroll-pt-20 lg:scroll-pt-24',
     },
 });
 </script>

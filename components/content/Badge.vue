@@ -8,7 +8,7 @@
             { 'bg-red-200 text-red-800 dark:bg-red-800 dark:text-red-200': color === 'red' },
             { 'bg-blue-200 text-blue-800 dark:bg-blue-800 dark:text-blue-200': color === 'blue' },
             { 'bg-purple-200 text-purple-800 dark:bg-purple-800 dark:text-purple-200': color === 'purple' },
-            { 'bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-gray-200': !color || color === 'gray' },
+            { 'bg-neutral-200 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200': !color || color === 'gray' },
         ]"
     >
         {{ label }}
