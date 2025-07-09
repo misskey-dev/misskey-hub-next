@@ -196,7 +196,7 @@ active이면 OK.
 
 ### FFmpeg
 
-FFmpegは、動画や音声に関する処理を担う。以下でインストールしておく。
+FFmpeg는 영상이나 음성에 관한 처리를 담당합니다.아래로 설치합니다.
 
 ```sh
 sudo apt install ffmpeg
