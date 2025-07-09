@@ -1,4 +1,4 @@
-noScript: "Javascript 目前處於禁用狀態。必須啟用 Javascript 才能瀏覽網站。"
+noScript: "Javascript 目前處於停用狀態。必須啟用 Javascript 才能瀏覽網站。"
 learnMore: "了解更多"
 loading: "載入中..."
 clickToExpand: "（點擊展開）"
@@ -54,7 +54,7 @@ _landing:
       description: "Misskey 具備了適合正式營運的各種功能，並且支援細部自訂。不論是大型社群還是小型團體，都能提供最適合的解決方案。"
   _decenterized:
     title: "Misskey 是{0}"
-    description: "Misskey 是一個自由開放的項目，這意味著任何人都可以自由地使用 Misskey 創建伺服器，因此網路上已經出現了各種各樣的伺服器。另一個重要特點是，Misskey 實作了一種名為 {0} 的分散式通訊協議，這意味著無論您選擇哪台伺服器，都可以與其他伺服器上的使用者進行互動。這就是它被稱為去中心化的原因，也是它與 Twitter 等其他服務的根本不同之處。不同伺服器的主要話題、用戶群和語言各不相同，找到適合自己的伺服器也是樂趣之一（當然，創建自己的伺服器也很有趣）。"
+    description: "Misskey 是一個自由開放的項目，這意味著任何人都可以自由地使用 Misskey 建立伺服器，因此網路上已經出現了各種各樣的伺服器。另一個重要特點是，Misskey 實作了一種名為 {0} 的分散式通訊協議，這意味著無論您選擇哪台伺服器，都可以與其他伺服器上的使用者進行互動。這就是它被稱為去中心化的原因，也是它與 Twitter 等其他服務的根本不同之處。不同伺服器的主要話題、族群和語言各不相同，找到適合自己的伺服器也是樂趣之一（當然，建立自己的伺服器也很有趣）。"
     activityPub: "ActivityPub"
   _features:
     _root:
@@ -62,10 +62,10 @@ _landing:
       description: "Misskey 具有多種功能，既有一般功能，也有特殊功能。以下會介紹其中一部份。"
     _note:
       title: "貼文"
-      description: "在 Misskey 上，用戶發布的內容被稱為「貼文」。您也可以引用其他貼文或附加圖像、視訊、音訊和任何其他文件。"
+      description: "在 Misskey 上，使用者發表的內容被稱為「貼文」。您也可以引用其他貼文或附加圖片、影片、音訊和任何其他檔案。"
     _federation:
       title: "聯邦宇宙"
-      description: "因為實做了ActivityPub，一個開放的分散式協議，因此不僅可以連接其他Misskey伺服器，還可以與連接其他支援ActivityPub的軟體平台。"
+      description: "因為實做了 ActivityPub，一個開放的分散式協議，因此不僅可以連線至其他 Misskey 伺服器，還可以與其他支援 ActivityPub 的軟體平台相互連線。"
     _reaction:
       title: "反應"
       description: "您可以在貼文中加入「反應」，輕鬆表達和交流您的感受。"
@@ -80,7 +80,7 @@ _landing:
       description: "可以建立只收集包含特定關鍵字貼文的時間軸。"
     _drive:
       title: "雲端硬碟"
-      description: "它有一個管理上傳文件的介面。因此，您可以輕鬆地將您喜愛的圖像整理到資料夾中並再次分享。"
+      description: "它有一個管理上傳檔案的介面。因此，您可以輕鬆地將您喜愛的圖片整理到資料夾中並再次分享。"
     _2fa:
       title: "多因素認證"
       description: "支援各種技術來提升帳號安全性，包括使用一次性密碼的多因素驗證以及使用實體金鑰的 Passkey 認證。"
@@ -107,7 +107,7 @@ _landing:
       description: "提供了廣告顯示等幫助伺服器變現的功能，讓你能夠實現可持續的運營。"
     _oss:
       title: "Mi ❤️ OSS"
-      description: "Misskey 一直以來都秉持開源精神，未來也將繼續如此，任何人都可以自由且免費地使用其源代碼。此外，Misskey Project 也積極支援其他開源軟體的發展。"
+      description: "Misskey 一直以來都秉持開源精神，未來也將繼續如此，任何人都可以自由且免費地使用其原始碼。此外，Misskey Project 也積極支援其他開源軟體的發展。"
     _battleTested:
       title: "可靠性"
       description: "Misskey 已經在實際環境中運行超過 10 年，並且自信地擁有高度的可靠性（battle-tested，經過實戰測試）。"
@@ -120,34 +120,34 @@ _landing:
       description: "除了可以使用簡單的命令進行安裝外，還可以利用各家公司提供的託管服務，從而省去管理上的麻煩。"
     _easySetup:
       title: "設定也很簡單"
-      description: "Misskey 伺服器的設置不需要複雜的設定，可以立即開始運營。另一方面，根據需求也可以進行高級設置。"
+      description: "Misskey 伺服器的設置不需要複雜的設定，可以立即開始運營。另一方面，根據需求也可以進行進階設定。"
     _api:
       title: "應用程式介面（API）"
-      description: "Misskey 的所有功能都可以通過 HTTP API 進行操作，與其他應用程式的整合也十分容易。此外，Misskey 還支援 Webhook 和 WebSocket 連接，讓你可以即時接收來自 Misskey 的事件通知。"
+      description: "Misskey 的所有功能都可以通過 HTTP API 進行操作，與其他應用程式的整合也十分容易。此外，Misskey 還支援 Webhook 和 WebSocket 連線，讓你可以即時接收來自 Misskey 的事件通知。"
     _relay:
       title: "支援中繼"
-      description: "支援連接中繼伺服器，這些伺服器會中繼聯邦宇宙中的活動，因此無需手動連線至大量伺服器即可收集資訊。"
+      description: "支援連線至中繼伺服器，這些伺服器會中繼聯邦宇宙中的活動，因此無需手動連線至大量伺服器即可收集資訊。"
     _nodejs:
       title: "Node.js 後端"
-      description: "Misskey 在後端採用了 Node.js，運行速度快且輕巧。"
+      description: "Misskey 在後端採用了 Node.js，執行速度快且輕巧。"
     _postgresql:
       title: "PostgreSQL"
       description: "主要資料庫為 PostgreSQL，可提供強大的資料管理功能。"
     _jobQueue:
       title: "高效率的工作佇列"
-      description: "Misskey 採用了 BullMQ 作為工作佇列，能夠在多個伺服器間高效處理任務。此外，Misskey 原生實現的檢查工具已經集成在控制面板中，無需依賴外部工具即可進行管理。"
+      description: "Misskey 採用了 BullMQ 作為工作佇列，能夠在多個伺服器間高效處理任務。此外，Misskey 原生實現的檢查工具已經整合在控制面板中，無需依賴外部工具即可進行管理。"
     _cdn:
       title: "CDN 支援"
       description: "支援外部 CDN 的資源快取。透過減少對伺服器的請求次數，可以降低負載和成本。"
     _ftt:
       title: "FTT"
-      description: "透過 Fan-out Timeline Technology (FTT)，Misskey 能夠將時間軸構建在 Redis 上，從而提升性能。"
+      description: "透過 Fan-out Timeline Technology (FTT)，Misskey 能夠將時間軸構建在 Redis 上，從而提升效能。"
     _rbt:
       title: "RBT"
       description: "透過 Reactions Buffering Technology (RBT)，Misskey 能夠將反應資訊快取在 Redis 上，從而提升性能。"
     _scalable:
       title: "可擴展"
-      description: "Misskey 支援進程集群、透過多伺服器進行負載平衡，以及資料庫複製技術，能夠應對使用者數量的增長。"
+      description: "Misskey 支援叢集、透過多伺服器進行負載平衡，以及資料庫複製技術，能夠應對使用者數量的增長。"
     _ml:
       title: "機器學習"
       description: "內建機器學習功能，可以自動過濾敏感媒體等內容，有效減輕運營負擔。"
@@ -156,23 +156,23 @@ _landing:
       description: "支援透過 Sentry 收集伺服器的指標數據，幫助進行伺服器資源監控、健康檢查以及維護。"
   _featuresClient:
     _root:
-      title: "網頁界面"
-      description: "介紹附屬於 Misskey 的高功能網頁前端（Misskey Web）特點。"
+      title: "網頁介面"
+      description: "介紹附屬於 Misskey 的多功能網頁前端（Misskey Web）特色。"
     _responsive:
-      title: "響應式界面"
-      description: "界面採用了精緻的獨特設計系統，並經過精心實現，確保在桌面、平板和智能手機等設備上都能提供最佳的顯示和操作體驗。"
+      title: "響應式介面"
+      description: "介面採用了精緻的獨特設計系統，並經過精心實現，確保在桌面、平板和智慧型手機等裝置上都能提供最佳的顯示和互動體驗。"
     _theme:
       title: "佈景主題"
-      description: "你可以根據自己的喜好來設定 Misskey 的外觀，當然，暗黑模式也完全支援。並且，你還可以自訂和創建高度個性化的主題。"
+      description: "你可以根據自己的喜好來設定 Misskey 的外觀，當然，暗黑模式也完全支援。並且，你還可以自訂和建立高度個性化的主題。"
     _mfm:
       title: "MFM"
-      description: "在 Misskey 中，貼文可以使用名為 MFM 的專用標記語言。你可以使用簡單的語法來表達文本的裝飾，如加粗、插入鏈接、添加動畫等效果。"
+      description: "在 Misskey 中，貼文可以使用名為 MFM 的專用標記語言。你可以使用簡單的語法來表達文字的裝飾，如加粗、插入連結、增加動畫等效果。"
     _widgets:
       title: "小工具"
-      description: "可以自由配置各種種類的小工具，快速訪問所需的資訊。"
+      description: "可以自由配置各種種類的小工具，快速存取所需的資訊。"
     _deck:
-      title: "多欄界面"
-      description: "使用多欄界面，可以更深入地自訂界面，打造屬於自己的專屬客戶端。"
+      title: "多欄介面"
+      description: "使用多欄介面，可以更深入地自訂介面，打造屬於自己的專屬客戶端。"
     _embed:
       title: "嵌入到其他網站"
       description: "可以將貼文、時間軸等內容嵌入到外部網站中顯示。"
@@ -193,7 +193,7 @@ _landing:
       description: "可以針對每個帳戶覆蓋自訂的客戶端設定，並且可以在多個設備間共享和同步設定。此外，設定資訊還可以自動備份。"
     _pwa:
       title: "PWA"
-      description: "Misskey Web 遵循漸進式網路應用程式（PWA）標準，可以像原生應用一樣在設備上運行。"
+      description: "Misskey Web 遵循漸進式網路應用程式（PWA）標準，可以像原生應用程式一樣在裝置上執行。"
     _i18n:
       title: "支援多語言"
       description: "客戶端提供多種語言版本。"
@@ -209,7 +209,7 @@ _landing:
       description: "正在開發全新的後端實現，以實現更高速、輕量的運行效果。"
     _vueVapor:
       title: "支援 Vapor 模式"
-      description: "支援前端框架 Vue 的全新編譯策略，實現更輕量的網頁界面。"
+      description: "支援前端框架 Vue 的全新編譯策略，實現更輕量的網頁介面。"
   _getStarted:
     title: "開始使用 Misskey"
     _find:
@@ -220,7 +220,7 @@ _landing:
       guide: "安裝指南"
     _docs:
       title: "進一步瞭解"
-      docs: "查看文件"
+      docs: "檢視文件"
   _donation:
     title: "請求捐款"
     description: "Misskey 是一家非營利組織，因此我們依靠您的捐款來資助我們的發展。如果你喜歡 Misskey，請支持我們，以便我們繼續開發它。"
