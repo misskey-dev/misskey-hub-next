@@ -97,7 +97,7 @@ _landing:
       title: "内容审查"
       description: "原生内置完备的内容审查功能，助力实例高效运维。"
     _privacy:
-      title: "プライバシー"
+      title: "隐私"
       description: "豊富なプライバシー設定で、コンテンツの公開範囲を柔軟にコントロール。"
     _multiPurpose:
       title: "ひとりでも、みんなでも"
