@@ -1,8 +1,8 @@
-# クリップ
+# Clips
 
-クリップは、複数のノートをまとめることができる機能です。自分のノート・他者のノートは問いません。
-クリップは複数作ることができ、それぞれに名前や説明を設定して管理することが可能です。また、クリップを他のユーザーに公開するかどうかも選択することができます。
+Clip es una función que permite agrupar varias notas.No importa si las notas son tuyas o de otra persona.
+Puedes crear varios clips y gestionarlos estableciendo un nombre y una descripción para cada uno.También puedes elegir si quieres poner los clips a disposición de otros usuarios.
 
-クリップを作るには、[クリップ管理ページ](x-mi-web://my/clips)から「追加」をクリックします。
+Para crear un clip, ve a la [página de gestión de clips] (x-mi-web://my/clips) y haz clic en «Añadir».
 
-クリップにノートを追加するには、対象のノートのメニューから「クリップ」をクリックし、追加先のクリップを選択します。
+Para añadir notas a un clip, haz clic en «Clip» en el menú de la nota de destino y selecciona el clip al que quieras añadir notas.
