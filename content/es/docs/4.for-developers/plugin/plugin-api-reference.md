@@ -1,30 +1,30 @@
-# AiScript Misskey拡張API リファレンス
+# Referencia de la API ampliada de AiScript Misskey
 
-ここでは、Misskeyで独自に拡張されたAiScript APIについて紹介しています。
+Esta sección presenta la API AiScript extendida para Misskey.
 
 :::tip
 
-標準装備のAiScript APIは[こちら](https://aiscript-dev.github.io/guides/get-started.html)からご覧いただけます。
+La documentación de la API estándar de AiScript se encuentra  [aquí](https://aiscript-dev.github.io/guides/get-started.html).
 
 :::
 
-## 全分野共通定数
+## Constantes comunes para todos los casos de uso
 
 ### `USER_ID`
 
-現在のユーザーのID
+ID del usuario actual
 
 ### `USER_NAME`
 
-現在のユーザーの名前
+Nombre del usuario actual.
 
 ### `USER_USERNAME`
 
-現在のユーザーのハンドル（`@`より後ろの部分。例: `@ai@example.com` → `ai`）
+Handle (Nombre de usuario)  del usuario actual (la parte después de la `@`.e.g. `@ai@example.com` → `ai`)
 
 ### `CUSTOM_EMOJIS`
 
-カスタム絵文字の一覧。以下のようなオブジェクトが配列で格納されています
+La matriz de los emojis personalizados.Una matriz de objetos de los siguientes tipos:
 
 ```ts
 type EmojiSimple = {
@@ -40,56 +40,56 @@ type EmojiSimple = {
 
 ### `LOCALE`
 
-現在のMisskey Webの設定言語。RFC4646互換の形式（`ja-JP`など）で表されます
+El idioma actual de visualización de Misskey Web.Formato RFC4646 compatible  (e.j. `ja-JP`)
 
 ### `SERVER_URL`
 
-現在のサーバーのURL。`https://www.example.com` のようにオリジンで表されます
+La URL del servidor actual.Se representa mediante un origen, como `https://www.example.com`.
 
-## 全分野共通関数
+## Funciones comunes para todos los casos de uso
 
 ### `Mk:dialog(title, text, type)`
 
-ダイアログを表示します。typeには以下の値が設定できます。\
+Mostrar un cuadro de diálogo.Se pueden establecer los siguientes valores para el tipo.\
 `info` `success` `warning` `error` `question`\
-省略すると `info` になります。
+Si se omite será `info`.
 
 ### `Mk:toast(text)`
 
-トーストを表示します。ダイアログと違い、ユーザーがダイアログを閉じる操作が必要ないため、何らかの操作が完了したなどの単純なお知らせに使用できます。
+Muestra un toast.A diferencia de los diálogos, no requiere que el usuario cierre el diálogo, por lo que puede utilizarse para notificaciones sencillas, como cuando se ha completado alguna operación.
 
-**この関数は2025.5.1（仮称）でリリース予定のものです。**
+**El lanzamiento de esta función está previsto para 2025.5.1 (nombre provisional).**
 
 ### `Mk:confirm(title, text, type)`
 
-確認ダイアログを表示します。typeには以下の値が設定できます。\
+Muestra un diálogo de confirmación.Se pueden establecer los siguientes valores para el tipo.\
 `info` `success` `warning` `error` `question`\
-省略すると `question` になります。\
-ユーザーが"OK"を選択した場合は `true` を、"キャンセル"を選択した場合は `false` が返ります。
+Si se omite será `question`.\
+Devuelve `true` si el usuario selecciona "OK" o `false` si el usuario selecciona "cancel".
 
 ```AiScript
 let response = Mk:confirm(
-  '操作を続行しますか？'
-  'この操作は取り消せません。よく確認してください。'
+  '¿Estás seguro de que quieres continuar?'
+  'Esta operación no se puede deshacer. Compruébalo cuidadosamente.'
   'warning'
 )
 
 if (response) {
-  // OKした場合
+  // Cuando el usuario hace clic en "OK"
 } else {
-  // キャンセルした場合
+  // Cuando el usuario hace clic en "Cancelar"
 }
 ```
 
 ### `Mk:api(endpoint, params, token?)`
 
-Misskey APIにリクエストします。第一引数にエンドポイント名、第二引数にパラメータオブジェクトを渡します。
+Realiza una solicitud a la API de Misskey.Realiza una petición a la API de Misskey.Pasa el nombre del endpoint como primer argumento y el objeto parámetro como segundo argumento.
 
-第三引数にtokenを入れることもできます。プラグインで動作するとき、メタデータブロックにて`permissions`が指定されている場合、第三引数を指定しないことでそのpermissionが付与されたtokenが使用されます。
+También puedes incluir el token de API como tercer argumento.Cuando se llama dentro de un plugin, si se especifica `permissions` en el bloque de metadatos, se utilizará el token con los permisos especificados si no se especifica el tercer argumento.
 
 :::tip
 
-permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+Consulta [la documentación](/docs/for-developers/api/permission/) para obtener una lista de permisos.
 
 :::
 
@@ -111,11 +111,11 @@ permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧
 
 ### `Mk:save(key, value)`
 
-任意の値に任意の名前を付けて永続化します。永続化した値は、AiScriptコンテキストが終了しても残り、Mk:loadで読み取ることができます。
+Guarda de forma persistente una clave arbitraria con cualquier valor dado.Guarda de forma persistente una clave arbitraria con cualquier valor dado. El valor guardado permanecerá después de que finalice el contexto AiScript y puede cargarse con Mk:load.
 
 ### `Mk:load(key)`
 
-Mk:saveで永続化した指定の名前の値を読み取ります。
+Lee el valor del nombre especificado guardado por Mk:save.
 
 ### `Mk:remove(key)`
 
