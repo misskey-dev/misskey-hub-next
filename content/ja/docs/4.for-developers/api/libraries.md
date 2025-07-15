@@ -12,6 +12,10 @@ description: 'Misskey APIに関連するライブラリの一覧'
 
 - [misskey4j](https://github.com/uakihir0/misskey4j)
 
+## Kotlin
+
+- [kmisskey](https://github.com/uakihir0/kmisskey)
+
 ## Python
 
 - [Misskey.py](https://github.com/YuzuRyo61/Misskey.py)
