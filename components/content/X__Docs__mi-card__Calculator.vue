@@ -1,5 +1,5 @@
 <template>
-	<div class="block mx-auto max-w-lg p-4 rounded-lg border border-slate-200 dark:border-slate-700">
+	<div class="block mx-auto max-w-lg p-4 rounded-lg border border-neutral-200 dark:border-neutral-700">
 		<label for="miCardCalculatorAmount" class="inline-block form-label">合計の支援額</label>
         <div class="input-group">
             <input v-model="paidAmount" id="miCardCalculatorAmount" type="number" class="form-control !flex-grow">

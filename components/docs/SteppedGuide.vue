@@ -15,7 +15,7 @@
                 <MDC :value="data.guides[guideIndex].description" />
             </Tip>
             <div :class="data.guides[guideIndex]?._LAYOUT_TYPE_ === 'IMAGE_PORTRAIT_FIXED' ? 'lg:mr-3' : 'lg:col-span-2'">
-                <ol class="relative before:absolute before:left-[13px] before:top-3.5 before:w-0.5 before:h-[calc(100%-.875rem)] before:rounded-full before:bg-gray-300 dark:before:bg-gray-700 space-y-8">
+                <ol class="relative before:absolute before:left-[13px] before:top-3.5 before:w-0.5 before:h-[calc(100%-.875rem)] before:rounded-full before:bg-neutral-300 dark:before:bg-neutral-700 space-y-8">
                     <li
                         v-for="(step, i) in data.guides[guideIndex]?.steps"
                         :key="`steppedGuideSection_${guideIndex}_${i}`"
@@ -27,7 +27,7 @@
                     >
                         <div class="flex-grow">
                             <div class="flex items-center space-x-4 mb-4">
-                                <div class="w-7 h-7 rounded-full flex-shrink-0 -ml-7 font-bold leading-7 text-center text-white bg-accent-600 ring-4 ring-white dark:ring-slate-950">{{ i + 1 }}</div>
+                                <div class="w-7 h-7 rounded-full flex-shrink-0 -ml-7 font-bold leading-7 text-center text-white bg-accent-600 ring-4 ring-white dark:ring-neutral-950">{{ i + 1 }}</div>
                                 <h3 class="font-bold text-lg">{{ step.title }}</h3>
                             </div>
                             <div class="ml-4">
@@ -43,12 +43,12 @@
                             </div>
                         </div>
                     </li>
-                    <li class="pl-7 pt-[18px] relative items-center before:absolute before:left-[13px] before:top-[calc(50%-30px)] before:w-0.5 before:h-[calc(50%+30px)] before:bg-white dark:before:bg-slate-950 after:absolute after:left-[13px] after:top-[calc(50%-30px)] after:h-[30px] after:w-[15px] after:rounded-bl-[15px] after:border-l-[0.125rem] after:border-b-[0.125rem] after:border-gray-300 dark:after:border-gray-700">
+                    <li class="pl-7 pt-[18px] relative items-center before:absolute before:left-[13px] before:top-[calc(50%-30px)] before:w-0.5 before:h-[calc(50%+30px)] before:bg-white dark:before:bg-neutral-950 after:absolute after:left-[13px] after:top-[calc(50%-30px)] after:h-[30px] after:w-[15px] after:rounded-bl-[15px] after:border-l-[0.125rem] after:border-b-[0.125rem] after:border-neutral-300 dark:after:border-neutral-700">
                         <Fukidashi chara="smiling_ai" :charaName="$t('_links._aiChan.title')" class="!mb-0">{{ $t('_docs._steppedGuide.aiWellDone') }}</Fukidashi>
                     </li>
                 </ol>
             </div>
-            <div v-if="data.guides[guideIndex]?._LAYOUT_TYPE_ === 'IMAGE_PORTRAIT_FIXED'" class="hidden lg:block rounded-lg bg-gray-100 dark:bg-gray-800">
+            <div v-if="data.guides[guideIndex]?._LAYOUT_TYPE_ === 'IMAGE_PORTRAIT_FIXED'" class="hidden lg:block rounded-lg bg-neutral-100 dark:bg-neutral-800">
                 <div class="sticky top-16 h-[calc(100vh-4rem)] p-3">
                     <div class="relative h-full">
                         <Transition

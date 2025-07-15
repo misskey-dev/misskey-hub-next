@@ -13,8 +13,8 @@
             <div class="text-center">
                 <CaretDownFillIco class="w-12 h-12 mx-auto" />
             </div>
-            <div class="mb-2 p-4 rounded-lg border bg-white dark:bg-slate-950 border-slate-300 dark:border-slate-800">
-                <canvas ref="canvas" width="128" height="128" class="w-full max-w-40 h-auto mx-auto mb-4 rounded-full bg-slate-200 dark:bg-slate-700" />
+            <div class="mb-2 p-4 rounded-lg border bg-white dark:bg-neutral-950 border-neutral-300 dark:border-neutral-800">
+                <canvas ref="canvas" width="128" height="128" class="w-full max-w-40 h-auto mx-auto mb-4 rounded-full bg-neutral-200 dark:bg-neutral-700" />
                 <div class="text-center">
                     <button class="btn btn-primary" @click="download()" :disabled="!onceGenerated">{{ $t('download') }}</button>
                 </div>
