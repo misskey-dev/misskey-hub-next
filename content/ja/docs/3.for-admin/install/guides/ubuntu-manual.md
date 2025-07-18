@@ -636,6 +636,7 @@ Misskeyサーバーに自分のアカウントを登録・ログインし、設�
 sudo systemctl stop misskey
 
 su - misskey
+cd misskey
 
 git pull;
 NODE_ENV=production pnpm install --frozen-lockfile
