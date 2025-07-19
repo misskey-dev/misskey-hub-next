@@ -2,11 +2,11 @@
 
 This shell script was made to make the installation of Misskey easy!
 
-いくつかの質問に答えるだけで、UbuntuサーバーへMisskeyを簡単にインストールできます！
+By answering a couple of questions, you can easily install Misskey on an Ubuntu server!
 
-また、アップデートスクリプトもあります。
+There is also an update script.
 
-[v12の場合はこちら](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)
+The (older) v12 script is available here
 
 ## Requirements
 
@@ -20,9 +20,9 @@ Do not recreate the database with the domain/hostname of the server once you hav
 
 :::
 
-Let's Encryptの認証を試行できる回数が少ないので、サーバーのネットワークやDNSの設定を十分確認してからインストールを開始してください。
+Since Let's Encrypt's verification attempts are limited, please double-check your server's network and DNS settings prior to starting the installation.
 
-## Cloudflareの設定
+## Cloudflare Configuration
 
 Cloudflareを使う場合、Cloudflareのドメインの設定を完了してからインストールを開始するようにしてください。\
 ネームサーバーの適用には最大で3日程度かかる場合があります。
