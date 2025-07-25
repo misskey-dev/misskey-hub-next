@@ -1,9 +1,9 @@
 # Word Mute
 
-ワードミュートの設定をすると、条件に合致したノートが最小化され、ノートの代わりに「○○（ユーザー名）が何か言いました」という文言が表示されるようになります。最小化されたノートはクリックすることで表示することができます。
+When Word Mute is configured, a note that matches the conditions set in Word Mute will be minimized and shown as "[Username] said something".The contents of the note can be seen by clicking on the minimized note.
 
-The word mute filter can be configured in [Settings > Mutes and Blocks](x-mi-web://settings/mute-block).
+The Word Mute filter can be configured in [Settings > Mutes and Blocks](x-mi-web://settings/mute-block).
 
-## ハードワードミュート
+## Hard Word Mute
 
-ハードワードミュートを使用すると、条件に合致したノートは完全に見えなくなります。ワードミュートとは異なり、ノートは完全に表示されなくなります。
+Notes filtered by the Hard Word Mute filter will be invisible.This differs from Word Mute in that notes filtered by Hard Word Mute will not be displayed at all.
