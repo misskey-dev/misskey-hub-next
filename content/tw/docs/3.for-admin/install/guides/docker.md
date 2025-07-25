@@ -1,5 +1,5 @@
 ---
-description: 本指南介紹如何使用 Docker 安裝設置 Misskey。
+description: '本指南介紹如何使用 Docker 安裝設置 Misskey。'
 ---
 
 # 使用 Docker Compose 建置 Misskey
