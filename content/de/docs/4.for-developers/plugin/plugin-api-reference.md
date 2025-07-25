@@ -54,6 +54,12 @@ Zeigt ein Dialogfenster an.Die folgenden Werte können für ype eingestellt werd
 `info` `success` `warning` `error` `question`\
 Standard ist `info`¸ wenn kein anderes Attribut erstellt wurde.
 
+### `Mk:toast(text)`
+
+トーストを表示します。ダイアログと違い、ユーザーがダイアログを閉じる操作が必要ないため、何らかの操作が完了したなどの単純なお知らせに使用できます。
+
+**この関数は2025.5.1（仮称）でリリース予定のものです。**
+
 ### `Mk:confirm(title, text, type)`
 
 Zeigt ein Dialogfenster an.Für type können die folgenden Werte eingestellt werden.\

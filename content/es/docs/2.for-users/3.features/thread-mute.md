@@ -1,19 +1,19 @@
-# スレッドミュート
+# Silenciar Hilo
 
 :::tip
 
-バージョン 12.95.0 以降の機能です。
+Esta función está disponible a partir de la versión 12.95.0 y superiores.
 
 :::
 
-スレッドミュートは、指定したノートのスレッドをミュートします。スレッドとは、起点のノートから繋がった全てのリプライのことです。
+"Silenciar hilo" silencia el hilo de la nota especificada.Un hilo son todas las notas conectadas a la nota especificada.
 
-スレッドをミュートすると、そのスレッドへの新たなリプライおよびリプライに含まれるあなた宛てのメンションが、通知されなくなるほか「あなた宛て」にも載らなくなります。
+Cuando un tema está silenciado, no recibirás notificaciones sobre nuevas respuestas en el hilo, ni recibirás notificaciones de tus menciones en el hilo. Además, las menciones a tu persona en la conversación no aparecerán en la columna "Menciones".
 
-Misskey Webでスレッドをミュートするには、対象のスレッドに属する任意のノートもしくは起点のノートのメニューを開き、「スレッドをミュート」を選択します。
+Para silenciar un hilo en Misskey, abre el menú de cualquier nota perteneciente al hilo o a la nota original y selecciona "Silenciar hilo".
 
 :::warning
 
-スレッド内のどのノートからミュート操作を行ったかに関わらず、そのスレッド全体がミュートされます。
+Se silenciará todo el hilo, independientemente de la nota del hilo que se haya seleccionado.
 
 :::

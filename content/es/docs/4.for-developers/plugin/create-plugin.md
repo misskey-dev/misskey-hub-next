@@ -1,13 +1,13 @@
-# プラグインの作成
+# Creando un Plugin
 
-Misskey Webクライアントのプラグイン機能を使うと、クライアントを拡張し、様々な機能を追加できます。
-このドキュメントではプラグインの作成方法について説明します。
+La funcionalidad de plugin del cliente web Misskey le permite extender el cliente y añadir varias características.
+Este documento explica cómo crear plugins.
 
-## プラグインの例
+## Creando un Plugin
 
-以下に完全なプラグインの例を示します。このプラグインは、[`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn)を使用して、投稿フォームに「フグパンチボタン」を追加するものです。
+Este es un ejemplo completo de plugin.Este plugin añade un «Botón Fugu Punch» al formulario de la entrada utilizando [`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn).
 
-このプラグインをインストールすると、投稿フォーム上のプラグインメニューに「フグパンチ」の項目が追加されます。クリックすると、投稿フォーム上のテキストに `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )` が追加されます。
+Al instalar este plugin, encontrará un elemento adicional llamado "Fugu Punch" en la sección de plugins del formulario de la entrada.Y si hace clic en el botón, `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )` se añadirá en el cuerpo del texto.
 
 ```ais
 /// @ 0.12.4
@@ -32,11 +32,11 @@ Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
 
 ## AiScript
 
-プラグインはAiScriptを使って記述されるスクリプトです。
+Los plugins son scripts escritos con AiScript.
 
-## メタデータ
+## Metadatos
 
-プラグインは、AiScriptのメタデータ埋め込み機能を使って、デフォルトとしてプラグインのメタデータを定義する必要があります。メタデータの例は以下の通りです。
+Los plugins deben definir los metadatos del plugin como predeterminados utilizando la función de incrustación de metadatos de AiScript.Algunos ejemplos de metadatos son:
 
 ```AiScript
 /// @ 0.12.4
@@ -48,65 +48,63 @@ Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
 }
 ```
 
-メタデータは次のプロパティを含むオブジェクトです。
+Los metadatos son un objeto que contiene las siguientes propiedades:
 
 ### name
 
-プラグイン名
+Nombre del plugin
 
 ### author
 
-プラグイン作者
+Autor del plugin
 
 ### version
 
-プラグインバージョン。数値を指定してください。
+Versión del plugin.Debe ser un número.
 
 ### description
 
-プラグインの説明
+Descripción del plugin.
 
 ### permissions
 
-プラグインが要求する権限。MisskeyAPIにリクエストする際に用いられます。
+Permisos requeridos por el plugin.Se utiliza para realizar peticiones a la MisskeyAPI.
 
-APIのリクエスト方法については、[AiScript Misskey拡張API リファレンス](/docs/for-developers/plugin/plugin-api-reference/)をご覧ください。
+Para obtener información sobre cómo solicitar la API, consulta [AiScript Misskey Extension API Reference](/docs/for-developers/plugin/plugin-api-reference/).
 
 :::tip
 
-permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+Consulta [la documentación](/docs/for-developers/api/permission/) para obtener una lista de permisos.
 
 :::
 
 ### config
 
-プラグインの設定情報を表すオブジェクト。
-キーに設定名、値に以下のプロパティを含めます。
+Un objeto que representa la configuración del plugin. Las claves son los nombres de los ajustes y los valores son cualquiera de las siguientes propiedades. Consulte la [Referencia de la API del complemento](./plugin-api-reference/) para obtener información sobre las API disponibles.
 
 #### type
 
-設定値の種類を表す文字列。以下から選択します。
-string number boolean
+A string representing the setting's value type.Can be either a string, number, or boolean.Can be either a string, number, or boolean.
 
 #### label
 
-ユーザーに表示する設定名
+Nombre de la configuración que se muestra a los usuarios
 
 #### description
 
-設定の説明
+Descripción del entorno
 
 #### default
 
-設定のデフォルト値
+Valor por defecto del ajuste
 
 ## API
 
-Misskey Webはプラグインに対してAPIを公開していて、それらを利用することでクライアントの機能を拡張できます。
-どのようなAPIがあるかは[AiScript Misskey拡張API リファレンス](./plugin-api-reference/)を参照してください。
+Misskey Web expone APIs para Plugins, que pueden ser utilizados para extender la funcionalidad del cliente.
+Por favor, consulte [AiScript Misskey Extension API Reference](./plugin-api-reference/) para ver qué APIs están disponibles.
 
-## プラグインを配布する
+## Distribuyendo plugins
 
-v2023.11.0以降では、あなたのウェブサイトからワンクリックでプラグインを直接インストールできるようになっています。
+A partir de la versión 2023.11.0, puedes instalar el plugin directamente desde tu sitio web con un solo clic.
 
-プラグインのインストール機能を提供する場合は、あなたのサイト上にAPIを実装する必要があります。詳しくは[こちら](../publish-on-your-website.md)をご覧ください。
+Si deseas proporcionar la funcionalidad de instalación de plugins, tendrás que implementar una API en tu sitio.Para más información, consulta [aquí](../publish-on-your-website.md).

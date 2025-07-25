@@ -1,5 +1,5 @@
 ---
-description: 與 Misskey API 相關的函式庫列表
+description: '與 Misskey API 相關的函式庫列表'
 ---
 
 # 函式庫一覽
@@ -11,6 +11,10 @@ description: 與 Misskey API 相關的函式庫列表
 ## Java
 
 - [misskey4j](https://github.com/uakihir0/misskey4j)
+
+## Kotlin
+
+- [kmisskey](https://github.com/uakihir0/kmisskey)
 
 ## Python
 
@@ -24,7 +28,6 @@ description: 與 Misskey API 相關的函式庫列表
 
 ## Dart / Flutter
 
-- [misskey](https://github.com/misskey-dart/misskey)
 - [misskey_dart](https://github.com/shiosyakeyakini-info/misskey_dart)
 
 ## Go
