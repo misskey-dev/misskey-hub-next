@@ -10,7 +10,7 @@
                 :style="{ height: `${iframeHeight}px` }"
             ></iframe>
             <template #fallback>
-                <div class="border border-gray-200 dark:border-gray-700 mx-auto w-full max-w-[500px] p-4 rounded-lg">
+                <div class="border border-neutral-200 dark:border-neutral-700 mx-auto w-full max-w-[500px] p-4 rounded-lg">
                     <MkLoading />
                 </div>
             </template>

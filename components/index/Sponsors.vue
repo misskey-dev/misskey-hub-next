@@ -1,83 +1,109 @@
 <template>
-    <div>
-        <h2 class="mb-12 text-2xl lg:text-3xl text-center font-bold font-title">{{ $t('_landing._sponsors.title') }}</h2>
-        <div class="mx-auto max-w-screen-lg gap-8 grid items-center lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2">
-            <!-- スポンサーはscriptタグから追加してください -->
-            <GNuxtLink
-                v-for="sponsor in sponsors"
-                :to="sponsor.to"
-                target="_blank"
-                class="block aspect-square bg-white overflow-clip"
-                :class="[
-                    { 'rounded-full': !sponsor.noRounded }
-                ]"
-            >
-                <img    
-                    :src="sponsor.img"
-                    class="w-full h-full object-contain"
-                    :class="[
-                        { 'p-5': sponsor.margin === undefined || sponsor.margin === true || sponsor.margin === 'true' },
-                    ]"
-                    :style="(typeof sponsor.margin === 'string' && sponsor.margin !== 'true' ? sponsor.margin : undefined)"
-                />
-            </GNuxtLink>
-            <GNuxtLink
-                :to="localePath('/docs/become-a-sponsor/')"
-                class="flex flex-col p-5 items-center justify-center aspect-square bg-white hover:bg-gray-50 rounded-full border-2 border-dashed dark:border-0 hover:border-solid dark:hover:opacity-80 border-gray-300 text-gray-500"
-            >
-                <div class="text-center text-lg sm:text-xl" style="word-break: auto-phrase;">{{ $t('_landing._sponsors.becomeASponsor') }}<ArrowRightIco class="ml-1" /></div>
-            </GNuxtLink>
-        </div>
-    </div>
+<div>
+	<h2 :class="$style.title">{{ $t('_landing._sponsors.title') }}</h2>
+	<div :class="$style.grid">
+		<!-- スポンサーはscriptタグから追加してください -->
+		<GNuxtLink
+			v-for="sponsor in sponsors"
+			:to="sponsor.to"
+			target="_blank"
+			:class="[$style.sponsor, { [$style.margin]: sponsor.margin !== false }]"
+			:style="typeof sponsor.margin === 'string' ? sponsor.margin : ''"
+		>
+			<img :src="sponsor.img" alt="" :class="$style.sponsorImage" />
+		</GNuxtLink>
+	</div>
+</div>
 </template>
 
 <script setup lang="ts">
 import ArrowRightIco from 'bi/arrow-right.svg';
 
 type Sponsor = {
-    /** 画像URL */
-    img: string;
-    /** イメージにマージンを設けない場合はこちら */
-    margin?: boolean | string;
-    /** イメージを角丸にしない場合はこちら */
-    noRounded?: boolean;
-    /** 外部ページURL */
-    to?: string;
+	/** 画像URL */
+	img: string;
+	/** イメージにマージンを設けない場合はこちら */
+	margin?: boolean | string;
+	/** イメージを角丸にしない場合はこちら */
+	noRounded?: boolean;
+	/** 外部ページURL */
+	to?: string;
 };
 
 const sponsors: Sponsor[] = [
-    {
-        img: '/img/sponsors/mask.svg',
-        to: 'https://mask.io/',
-    },
-    {
-        img: '/img/sponsors/rss3.png',
-        to: 'https://rss3.io/',
-    },
-    {
-        img: '/img/sponsors/skeb.svg',
-        to: 'https://skeb.jp/',
-    },
-    {
-        img: '/img/sponsors/xserver.png',
-        margin: false,
-        to: 'https://www.xserver.ne.jp/',
-    },
-    {
-        img: '/img/sponsors/gmo_pepabo.svg',
-        margin: 'padding: 0.625rem',
-        to: 'https://pepabo.com/',
-    },
-    {
-        img: '/img/sponsors/purple-dot-digital.jpg',
-        margin: false,
-        to: 'https://purpledotdigital.com/',
-    },
-    {
-        img: '/img/sponsors/xfolio.svg',
-        to: 'https://xfolio.jp/',
-    },
+	{
+			img: '/img/sponsors/mask.svg',
+			to: 'https://mask.io/',
+	},
+	{
+			img: '/img/sponsors/rss3.png',
+			to: 'https://rss3.io/',
+	},
+	{
+			img: '/img/sponsors/skeb.svg',
+			to: 'https://skeb.jp/',
+	},
+	{
+			img: '/img/sponsors/xserver.png',
+			margin: false,
+			to: 'https://www.xserver.ne.jp/',
+	},
+	{
+			img: '/img/sponsors/gmo_pepabo.svg',
+			margin: false,
+			to: 'https://pepabo.com/',
+	},
+	{
+			img: '/img/sponsors/purple-dot-digital.jpg',
+			margin: false,
+			to: 'https://purpledotdigital.com/',
+	},
+	{
+			img: '/img/sponsors/xfolio.svg',
+			to: 'https://xfolio.jp/',
+	},
 ];
-
-const localePath = useGLocalePath();
 </script>
+
+<style module>
+.title {
+	font-size: 120%;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 100px);
+	justify-content: center;
+	gap: 24px;
+}
+
+@media (max-width: 1200px) {
+	.grid {
+		grid-template-columns: repeat(auto-fit, 75px);
+		gap: 18px;
+	}
+}
+
+.sponsor {
+	aspect-ratio: 1;
+	overflow: clip;
+	border-radius: 12px;
+	/* ダークモードでロゴが見えなくなるのを避けるために背景色は白で固定 */
+	background-color: #fff;
+}
+
+.sponsor.margin {
+	padding: 0.625rem;
+}
+
+.sponsorImage {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+</style>

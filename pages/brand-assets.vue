@@ -15,7 +15,7 @@
                 </div>
             </template>
         </GHero>
-        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
+        <div class="pb-12 pt-6 bg-white dark:bg-neutral-950">
             <div class="container mx-auto max-w-screen-lg px-6 space-y-6 lg:space-y-8">
                 <GLocalNav :items="[
                     {
@@ -54,10 +54,10 @@
                 <div id="banner">
                     <h2 class="text-2xl lg:text-3xl font-title font-bold mb-4">{{ $t(`_brandAssets.banner`) }}</h2>
                     <a class="mb-4 block mx-auto" href="https://assets.misskey-hub.net/public/banner.png" target="_blank">
-                        <img class="border border-slate-200 dark:border-slate-700" src="https://assets.misskey-hub.net/public/banner.png" />
+                        <img class="border border-neutral-200 dark:border-neutral-700" src="https://assets.misskey-hub.net/public/banner.png" />
                     </a>
                     <a class="block mx-auto" href="https://assets.misskey-hub.net/public/banner-2.png" target="_blank">
-                        <img class="border border-slate-200 dark:border-slate-700" src="https://assets.misskey-hub.net/public/banner-2.png" />
+                        <img class="border border-neutral-200 dark:border-neutral-700" src="https://assets.misskey-hub.net/public/banner-2.png" />
                     </a>
                 </div>
                 <div id="avatar-decoration">

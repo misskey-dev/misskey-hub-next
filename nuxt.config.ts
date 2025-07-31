@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import svgLoader from 'vite-svg-loader';
+import unocss from 'unocss/vite';
 import { readFileSync, watch as fsWatch } from 'fs';
 import { getOldHubRedirects } from './scripts/get-old-hub-redirects';
 import { genLocalesJson } from './scripts/gen-locales';
@@ -78,9 +79,10 @@ export default defineNuxtConfig({
 		CROWDIN_INTG_API: process.env.CROWDIN_INTG_API,
 	},
 	css: [
+		"@unocss/reset/tailwind.css",
+		"@/assets/css/global.css",
 		"github-markdown-css/github-markdown.css",
 		"@/assets/css/nprogress.css",
-		"@/assets/css/tailwind.css",
 		"@/assets/css/mfm.scss",
 		"@/assets/css/bootstrap-forms.scss",
 	],
@@ -100,6 +102,7 @@ export default defineNuxtConfig({
 				{ rel: 'me', href: 'https://mastodon.social/@misskey' },
 			],
 			meta: [
+				{ name: 'theme-color', content: '#9ad11b' },
 				{ name: 'twitter:card', content: 'summary_large_image' },
 			]
 		},
@@ -150,7 +153,6 @@ export default defineNuxtConfig({
 	},
 	postcss: {
 		plugins: {
-			tailwindcss: {},
 			autoprefixer: {},
 		},
 	},
@@ -160,6 +162,7 @@ export default defineNuxtConfig({
 	},
 	vite: {
 		plugins: [
+			unocss(),
 			svgLoader({
 				defaultImport: 'component',
 				svgoConfig: {

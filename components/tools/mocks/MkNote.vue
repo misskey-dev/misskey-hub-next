@@ -1,7 +1,7 @@
 <template>
-    <div class="rounded-xl h-auto w-full px-4 py-3.5 md:px-8 md:py-7 flex max-w-md border border-slate-300 dark:border-slate-800">
+    <div class="rounded-xl h-auto w-full px-4 py-3.5 md:px-8 md:py-7 flex max-w-md border border-neutral-300 dark:border-neutral-800">
         <div class="mr-3.5">
-            <div class="w-[46px] h-[46px] md:w-[58px] md:h-[58px] relative rounded-full bg-slate-50 dark:bg-slate-900">
+            <div class="w-[46px] h-[46px] md:w-[58px] md:h-[58px] relative rounded-full bg-neutral-50 dark:bg-neutral-900">
                 <img class="w-full h-full object-cover rounded-full" :src="avatar" />
                 <img
                     v-for="decoration in decorations"
@@ -18,7 +18,7 @@
             </div>
             <div><slot>{{ $t('_avatarDecorationPreview._placeholder.noteText') }}</slot></div>
             <div class="mt-1 flex flex-wrap gap-2">
-                <span v-for="reaction in reactions" class="inline-flex items-center space-x-1 px-1.5 py-1 rounded bg-gray-100 dark:bg-gray-800">
+                <span v-for="reaction in reactions" class="inline-flex items-center space-x-1 px-1.5 py-1 rounded bg-neutral-100 dark:bg-neutral-800">
                     <MkCustomEmoji class="hover:!transform-none" v-if="reaction.name.startsWith(':')" :name="reaction.name" :url="reaction.url" :useOriginalSize="true" :limitLength="limitReactionLength" />
                     <div v-else class="text-xl leading-[1.35] select-none">{{ reaction.name }}</div>
                     <span class="text-sm">{{ reaction.count }}</span>
