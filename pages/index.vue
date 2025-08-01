@@ -12,14 +12,16 @@
 		:leaveToClass="$style.xLeaveTo"
 	>
 		<div v-if="!deviceSizeDetermined" :class="$style.loader">
-			<Loading />
+			<MkLoading />
 		</div>
 	</Transition>
 </div>
 </template>
 
 <script setup lang="ts">
-import Loading from '@/components/mk/Loading.vue';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/navigation';
 
 const { isHydrating } = useNuxtApp();
 const deviceSizeDetermined = ref(!(!import.meta.client || isHydrating === true));

@@ -1,5 +1,5 @@
 <template>
-<ul class="toc-links mb-4 space-y-2">
+<ul class="toc-links mb-2 space-y-2" :class="{ 'mt-2': (links != null && links[0]?.depth > 1) }">
 	<li
 		v-for="link in links"
 		:key="link.text"

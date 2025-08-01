@@ -5,7 +5,7 @@
             [$style.docsLayoutWithAsideToc]: shouldShowToc,
         }"
     >
-        <div class="lg:hidden sticky top-14 -mx-6 -mt-6 w-[calc(100%+3rem)] bg-neutral-50 dark:bg-neutral-900 z-[9890] border-b dark:border-neutral-700 text-sm flex items-start">
+        <div class="lg:hidden sticky top-[58px] -mx-6 -mt-6 w-[calc(100%+3rem)] bg-neutral-50 dark:bg-neutral-900 z-[9890] border-b dark:border-neutral-700 text-sm flex items-start">
             <details v-if="shouldShowToc && data?.body && (data.body.toc?.links ?? []).length > 0" class="peer order-2 flex-grow dark:border-neutral-800 border-l" :open="openState">
                 <summary class="px-3 py-4 cursor-pointer">
                     {{ $t('_docs._toc.title') }}
@@ -60,7 +60,7 @@
             </template>
         </div>
         <div v-if="shouldShowToc" class="hidden lg:block text-sm">
-            <div class="sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto py-6 pl-6">
+            <div class="sticky top-[65px] h-[calc(100vh-4rem)] overflow-y-auto py-6 pl-6">
                 <h3 class="font-bold mb-6">{{ $t('_docs._toc.title') }}</h3>
                 <DocsTocLinks v-if="data?.body" :links="data?.body.toc?.links" :max-depth="data?.maxTocDepth ?? undefined" class="break-words" />
             </div>

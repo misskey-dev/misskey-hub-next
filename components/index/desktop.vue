@@ -556,8 +556,8 @@
 <script setup lang="ts">
 import { scrollTo } from '@/assets/js/scroll-to';
 import { isLocalPath } from '@/assets/js/misc';
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
+import Swiper from 'swiper';
+import { Navigation, EffectCoverflow } from 'swiper/modules';
 import MegaphoneIco from 'bi/megaphone.svg';
 import ArrowRightIco from 'bi/arrow-right.svg';
 import ArrowUpRightIco from 'bi/arrow-up-right.svg';
@@ -605,6 +605,14 @@ onMounted(() => {
 	isMounted = true;
 });
 
+let swiperInstance: Swiper | null = null;
+onBeforeUnmount(() => {
+	if (swiperInstance) {
+		swiperInstance.destroy();
+		swiperInstance = null;
+	}
+});
+
 let clientLoadedWatchStop: (() => void) | null = null;
 
 clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
@@ -625,7 +633,8 @@ clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
 			stats.value = await statsRes.json();
 		}
 
-		const swiper = new Swiper('.swiper', {
+		swiperInstance = new Swiper('.swiper', {
+			modules: [Navigation, EffectCoverflow],
 			slidesPerView: 'auto',
 			centeredSlides: true,
 			loop: true,

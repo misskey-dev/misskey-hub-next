@@ -5,7 +5,7 @@
 <script setup lang="ts">
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { OrbitControls } from './OrbitControls.js';
+import { OrbitControls } from 'three/examples/jsm/Addons.js';
 import { DebugEnvironment } from 'three/addons/environments/DebugEnvironment.js';
 
 const canvasEl = useTemplateRef('canvas');
@@ -16,9 +16,17 @@ let renderer: THREE.WebGLRenderer;
 
 onMounted(() => {
 	loader.load('/gltf/mi.glb', (gltf) => {
+		if (!canvasEl.value) {
+			console.error('Canvas element not found');
+			return;
+		}
+
+		const rect = canvasEl.value.getBoundingClientRect();
+		const aspectRatio = rect.width / rect.height;
+
 		const scene = new THREE.Scene();
 		
-		const camera = new THREE.PerspectiveCamera(50, canvasEl.value.offsetWidth / canvasEl.value?.offsetHeight, 0.1, 1000);
+		const camera = new THREE.PerspectiveCamera(50, aspectRatio, 0.1, 1000);
 		camera.position.z = 1.5;
 
 		const light = new THREE.DirectionalLight(0xffffff, 3);
@@ -59,7 +67,7 @@ onMounted(() => {
 		pmremGenerator.compileCubemapShader();
 
 		const envScene = new DebugEnvironment();
-		const generatedCubeRenderTarget = pmremGenerator.fromScene( envScene );
+		const generatedCubeRenderTarget = pmremGenerator.fromScene(envScene);
 
 		const material = new THREE.MeshPhysicalMaterial({
 			color: 0x87E700,
@@ -72,8 +80,8 @@ onMounted(() => {
 			iridescence: 0,
 		});
 
-		gltf.scene.traverse((child) => {
-			if (child.isMesh) {
+		gltf.scene.traverse((child: THREE.Object3D & { material?: THREE.MeshPhysicalMaterial; }) => {
+			if ('isMesh' in child && child.isMesh) {
 				child.castShadow = true;
 				child.receiveShadow = true;
 				child.material = material;
@@ -81,16 +89,33 @@ onMounted(() => {
 				child.material.needsUpdate = true;
 			}
 		});
+
 		gltf.scene.scale.set(20, 20, 20);
 		scene.add(gltf.scene);
 
-		const clock = new THREE.Clock();
+		let lastRenderTime: number | null = null;
 
-		function render() {
-			const deltaTime = clock.getDelta();
+		function render(timestamp: DOMHighResTimeStamp) {
+			if (lastRenderTime == null) {
+				lastRenderTime = timestamp;
+			}
+
+			const deltaTime = (timestamp - lastRenderTime) / 1000; // Convert to seconds
+
 			controls.update(deltaTime);
-			renderer.render( scene, camera );
+			renderer.render(scene, camera);
+
+			lastRenderTime = timestamp;
 		}
+
+		document.addEventListener('visibilitychange', () => {
+			if (document.visibilityState === 'visible') {
+				renderer.setAnimationLoop(render);
+			} else {
+				renderer.setAnimationLoop(null);
+				lastRenderTime = null;
+			}
+		});
 	});
 });
 

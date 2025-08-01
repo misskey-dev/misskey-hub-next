@@ -474,8 +474,8 @@
 <script setup lang="ts">
 import { scrollTo } from '@/assets/js/scroll-to';
 import { isLocalPath } from '@/assets/js/misc';
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
+import Swiper from 'swiper';
+import { Navigation, EffectCoverflow } from 'swiper/modules';
 import MegaphoneIco from 'bi/megaphone.svg';
 import ArrowRightIco from 'bi/arrow-right.svg';
 import ArrowUpRightIco from 'bi/arrow-up-right.svg';
@@ -492,7 +492,7 @@ const props = defineProps<{
 const { notice } = useAppConfig();
 const isUwu = useState<boolean>('isUwu');
 const localePath = useGLocalePath();
-const { locale, fallbackLocale } = useI18n();
+const { locale } = useI18n();
 const runtimeConfig = useRuntimeConfig();
 
 // お知らせ欄にブログが来る可能性もあるので
@@ -520,6 +520,15 @@ onMounted(() => {
 	isMounted = true;
 });
 
+let swiperInstance: Swiper | null = null;
+
+onBeforeUnmount(() => {
+	if (swiperInstance) {
+		swiperInstance.destroy();
+		swiperInstance = null;
+	}
+});
+
 let clientLoadedWatchStop: (() => void) | null = null;
 
 clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
@@ -534,7 +543,8 @@ clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
 		const instanceRes = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances20.json`);
 		instances.value = await instanceRes.json();
 
-		const swiper = new Swiper('.swiper', {
+		swiperInstance = new Swiper('.swiper', {
+			modules: [Navigation, EffectCoverflow],
 			slidesPerView: 'auto',
 			centeredSlides: true,
 			loop: true,
@@ -572,7 +582,7 @@ clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
 			initClientScripts();
 		});
 	}
-});
+}, { immediate: true });
 </script>
 
 <style scoped>

@@ -134,7 +134,7 @@ onMounted(() => {
 	const u_nodesY = gl.getUniformLocation(shaderProgram, 'u_nodesY');
 	gl.uniform1i(u_nodesY, NODES_Y_COUNT);
 
-	function render(timeStamp: number) {
+	function render(timestamp: number) {
 		let sizeChanged = false;
 		if (Math.abs(height - canvas.offsetHeight) > 2) {
 			height = canvas.offsetHeight;
@@ -152,7 +152,7 @@ onMounted(() => {
 		}
 
 		//gl!.uniform1f(u_time, timeStamp);
-		gl.drawArrays(gl.TRIANGLES, 0, 6);
+		gl!.drawArrays(gl!.TRIANGLES, 0, 6);
 
 		handle = window.requestAnimationFrame(render);
 	}
