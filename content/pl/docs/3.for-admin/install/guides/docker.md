@@ -1,5 +1,5 @@
 ---
-description: このガイドはDockerを使ったMisskeyセットアップ方法を説明します。
+description: 'このガイドはDockerを使ったMisskeyセットアップ方法を説明します。'
 ---
 
 # Docker Composeを使ったMisskey構築

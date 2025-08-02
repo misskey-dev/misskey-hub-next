@@ -1,35 +1,35 @@
-# プラグイン・テーマを配布する
+# Distribuyendo Plugins y Temas
 
-Misskey v2023.11.0以降では、様々な追加リソースをあなたのウェブサイトから直接インストールできるようになりました。特に、プラグインやテーマなどをたくさん制作している方や、プラグイン配布サイトを作りたい方にとっては便利な機能です。
+A partir de Misskey v2023.11.0, varios recursos adicionales pueden ser instalados directamente desde su página web.Esto es especialmente útil para quienes producen muchos plug-ins y temas, o para quienes desean crear un sitio de distribución de plug-ins.
 
-## 外部からのインストールに対応しているリソース
+## Recursos para la instalación externa.
 
-- [プラグイン](./plugin/create-plugin/) ... `plugin`
-- [テーマ](../for-users/features/theme/) ... `theme`
+- [Plugins](./plugin/create-plugin/) ... `plugin`
+- [Temas](../for-users/features/theme/) ... `theme`
 
-## しくみ
+## Cómo Funciona
 
-インストール時に、Misskey Webで受け取るリソースに予期せぬ改ざんが起こらないようにするため、配布サイト側とMisskey双方でハッシュ値を計算し、Misskeyで照合を行います。
+Para asegurar que los recursos recibidos por Misskey Web no son manipulados inesperadamente durante la instalación, se calcula un valor hash tanto en el lado del sitio de distribución como en Misskey, y luego es verificado por Misskey.
 
-ハッシュ値が照合できない場合はリソースをインストールすることができないようになっています。
+Si el valor hash no coincide, el recurso no puede instalarse.
 
-## 実装方法
+## Cómo implementarlo
 
-### 配布ページ側
+### Página de distribución
 
-「インストール」ボタンに、以下のようなURLを持つリンクを作成する
+Cree un enlace en el botón "Instalar" con una URL como la siguiente
 
 ```
 https://{HOST}/install-extensions?url={API_URL}&hash={HASH}
 ```
 
-- `{HOST}`: ユーザーのサーバーのホストに置き換えます。ホストはユーザーが入力できるようにすることが一般的です。
-- `{API_URL}`: リソース配布用API（後述）のURLに置き換えます。相対パスは不可
-- `{HASH}`: 配布するリソースのSHA-512ハッシュに置き換えます。**リソース内での改行コードはLFに統一してください。**
+- Sustituye `{HOST}` por el nombre  del servidor del usuario.Es habitual que el host permita la entrada del usuario.
+- `{API_URL}`: se sustituye por la URL de la API para la distribución de recursos (véase más abajo).Las rutas relativas no se aceptan.
+- `{HASH}`: sustituye el hash SHA-512 del recurso a distribuir.**Los códigos de salto de línea dentro del recurso deben ser coherentes con LF.**
 
-### リソース配布用API側
+### API para la distribución de recursos
 
-上記 `{API_URL}` で指定したエンドポイントから、以下のようなJSONオブジェクトを返してください。
+Devuelve un objeto JSON desde el endpoint especificado en `{API_URL}` anteriormente, como por ejemplo
 
 ```json
 {
@@ -38,6 +38,6 @@ https://{HOST}/install-extensions?url={API_URL}&hash={HASH}
 }
 ```
 
-- `type`: 上記「外部からのインストールに対応しているリソース」のコードを参照して入力してください。
-- `data`: リソースのソースコードを**文字列で**入力
-  - この際、改行コードは**LF**としてください
+- Tipo": introdúzcalo con referencia al código de "Recursos admitidos para la instalación externa" anterior.
+- `data`: \*\*introduce el código fuente del recurso como una **cadena**.
+    - En este caso, el código de avance de línea debe ser **LF**.

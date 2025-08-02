@@ -17,7 +17,7 @@ You can set the role template in the control panel under "Roles > Role Template"
 You can set a role to be assigned manually or automatically.
 
 - **Manual:** Manually assign and unassign users.(Manual Role)
-  - You can also set a length of time for the assignment.
+    - You can also set a length of time for the assignment.
 - **Conditional:** Set conditions for assignment. Users who meet the conditions will be assigned automatically.(Automatic Role)
 
 :::warning

@@ -1,5 +1,5 @@
 ---
-description: Misskey API 관련 라이브러리 목록
+description: 'Misskey API 관련 라이브러리 목록'
 ---
 
 # 라이브러리 목록
@@ -11,6 +11,10 @@ description: Misskey API 관련 라이브러리 목록
 ## Java
 
 - [misskey4j](https://github.com/uakihir0/misskey4j)
+
+## Kotlin
+
+- [kmisskey](https://github.com/uakihir0/kmisskey)
 
 ## Python
 
@@ -24,7 +28,6 @@ description: Misskey API 관련 라이브러리 목록
 
 ## Dart / Flutter
 
-- [misskey](https://github.com/misskey-dart/misskey)
 - [misskey_dart](https://github.com/shiosyakeyakini-info/misskey_dart)
 
 ## Go
