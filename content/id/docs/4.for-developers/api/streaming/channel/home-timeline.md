@@ -1,5 +1,5 @@
 ---
-description: ホームタイムラインのノートが流れるチャンネルです。
+description: "ホームタイムラインのノートが流れるチャンネルです。"
 ---
 
 # `homeTimeline`
