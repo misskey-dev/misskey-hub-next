@@ -1,5 +1,5 @@
 ---
-description: 本教程说明了使用Docker安装Misskey的方法。
+description: '本教程说明了使用Docker安装Misskey的方法。'
 ---
 
 # 使用 Docker Compose 构建 Misskey
