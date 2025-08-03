@@ -1,5 +1,5 @@
 ---
-description: Misskeyを使うためのアプリを紹介します。
+description: 'Misskeyを使うためのアプリを紹介します。'
 ---
 
 # Aplikasi
