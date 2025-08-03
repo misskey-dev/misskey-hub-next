@@ -17,7 +17,7 @@ Basisrollen können in der Systemsteuerung unter Rollen → Basisrollen eingeste
 Die Zuweisungsmethode kann zwischen Manuell und automatisch gewählt werden.
 
 - **Manuell** ... Manuelle Zuweisung und Aufhebung der Zuweisung von Benutzern.(Manuelle Rollen)
-  - Es ist auch möglich, die Dauer der Rolle festzulegen.
+    - Es ist auch möglich, die Dauer der Rolle festzulegen.
 - **Automatisch** ... Bedingungen festlegen, und Benutzer, die diese Bedingungen erfüllen, werden automatisch berücksichtigt.(Automatische Rolle)
 
 :::warning
