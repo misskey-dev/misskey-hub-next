@@ -35,7 +35,7 @@ _seo:
 _nav:
   servers: "Servidors"
   docs: "Documentació"
-  blog: "Bloc"
+  news: "ニュース"
   other: "Més!"
   switchLang: "Canvia l'idioma"
 _landing:
@@ -52,10 +52,23 @@ _landing:
     _powerful:
       title: "Potent"
       description: "Misskey té una varietat de funcions a escala de producció i pot ser personalitzat a molts nivells. És la millor solució per a grups grans i petits."
+  _introduction:
+    title: "Misskeyで作ろう"
+    description: "Misskeyを使えば、面倒な実装を行うことなく、簡単に独自のプラットフォームを構築可能です。あなたがMisskeyを使って作ったサービスはあなただけのものなので、情報発信における既存プラットフォームへの依存リスクもありません。"
+    tip: "Misskeyは「Webサービスそのもの」ではなく、マイクロブログサービスを作るための「基盤となるソフトウェア」です。Webサイトを作るのにWordPressといったソフトウェアを使うのと同じです。"
   _decenterized:
     title: "Misskey és {0}"
     description: "Misskey és un projecte lliure i obert, el que vol dir que qualsevol pot crear un servidor fent servir Misskey, i és per això que ja hi han molts servidors disponibles a internet. Altre característica important és que Misskey fa servir un protocol de comunicació anomenat {0}, això significa que es igual quin servidor escollís, pots interactuar amb usuaris d'altres servidors. Per això es diu descentralitzat i això el fa totalment diferent a altres serveis com Twitter, que es publica sota una mateixa adreça URL i per un únic operador. Els temes principals, els usuaris i els idiomes canvien d'un servidor a un altre i part de la diversió es trobar el servidor més adecuat a la teva manera de ser (per descomptat, crear el teu propi servidor també es divertit)."
     activityPub: "ActivityPub"
+  _useCases:
+    title: "こんな使い方ができます"
+    single: "情報収集・情報発信のための自分専用のサーバー"
+    official: "会社の広報アカウントを設置する専用のサーバー"
+    community: "同じ関心をもつユーザー向けのコミュニティサーバー"
+    inHouse: "社内SNSとしてのプライベートサーバー"
+  _free:
+    title: "Misskeyはずっと無料でオープン"
+    description: "Misskeyは2014年の開発当初から、そしてこれから未来も、プログラムのソースコードが公開されているオープンソースソフトウェア(OSS)です。また、誰でも無料で・自由にソースコードを利用可能です。MisskeyがOSSであり続けられるのは皆様からの支援のおかげです。"
   _features:
     _root:
       title: "Funcions principals"
@@ -106,38 +119,41 @@ _landing:
       title: "Monetització"
       description: "Per garantir la sostenibilitat de les operacions, també hi ha ajudes que permeten monetitzar el servidor, com la visualització d'anuncis."
     _oss:
-      title: "Mi ❤️ OSS"
-      description: "Misskeyはこれまでもこれからもオープンソースで、誰でも自由に、無料でソースコードを利用可能です。またMisskey Projectは、他のOSSに対して積極的に支援活動を行っています。"
+      title: "Mi ♥️ OSS"
+      description: "Misskey ha sigut i continuarà sent de codi obert, amb el codi font accessible per tothom gratuïtament. El projecte Misskey també suporta altres aplicacions OSS."
     _battleTested:
-      title: "信頼性"
-      description: "Misskeyは10年以上にわたって実際の環境で使われており(battle-tested)、高い信頼性があると自負しています。"
+      title: "fiabilitat"
+      description: "Misskey ha estat provat en entorns reals durant més d'una dècada i està orgullós de ser altament fiable."
   _featuresServer:
     _root:
-      title: "サーバーの機能"
-      description: "Misskeyを支えるバックエンド実装の特徴。"
+      title: "Funcions del servidor"
+      description: "Característiques d'implementacions darrere de Misskey."
     _easyInstall:
-      title: "簡単インストール"
-      description: "簡単なコマンドでインストールできるほか、各社提供のホスティングサービスを利用すれば、管理の手間も省けます。"
+      title: "Instal·lació senzilla"
+      description: "Pot instal·lar-se amb comandes senzilles i també pot gestionar-se amb serveis d'allotjament proporcionats per diferents empreses."
     _easySetup:
-      title: "セットアップもカンタン"
-      description: "Misskeyサーバーのセットアップに複雑な設定は不要で、すぐに運用を始められます。一方、ニーズに合わせて高度な設定を行うことも可能です。"
+      title: "Senzill de configurar"
+      description: "La instal·lació d'un servidor Misskey no requereix cap configuració complexa i pot estar operatiu immediatament. Per altra banda es poden realitzar configuracions més avançades que s'adaptin a les seves necessitats."
     _api:
       title: "API"
-      description: "Misskeyの全ての機能はHTTP APIを通じて操作可能で、他のアプリケーションとの連携も容易です。さらに、WebhookやWebSocket接続もサポートしているので、リアルタイムにMisskeyからのイベントを受け取ることも可能です。"
+      description: "Totes les funcions de Misskey és poden fer servir mitjançant una API HTTP, això facilita la integració amb altres aplicacions. També és compatible amb connexions Webhook i WebSockets que permet rebre esdeveniments de Misskey en temps real."
     _relay:
-      title: "リレー対応"
-      description: "Fediverse内のアクティビティを中継するリレーサーバーへの接続をサポートしているので、手動で多数のサーバーと繋げることなく情報収集が可能です。"
+      title: "Suport de repetidors"
+      description: "Admet servidors repetidors, que transmeten la informació del Fediverse, fent que es pugui recopilar informació sense la necessitat de connectar-se manualment a un gran nombre de servidors."
     _nodejs:
-      title: "Node.jsバックエンド"
-      description: "MisskeyはバックエンドにNode.jsを採用しており、高速・軽量に動作します。"
+      title: "Node.js al darrere"
+      description: "Misskey fa servir Node.js pel darrere, el que fa que sigui ràpid i lleuger."
     _postgresql:
       title: "PostgreSQL"
-      description: "メインのデータベースにはPostgreSQLを採用し、堅牢なデータ管理を実現しています。"
+      description: "La base de dades principal és PostgreSQL, que proporciona una gestió sòlida de les dades."
+    _fullTextSearch:
+      title: "全文検索"
+      description: "PostgreSQLのほか、Meilisearchなどの全文検索エンジンを使用した全文検索を行うことができます。"
     _jobQueue:
-      title: "高効率ジョブキュー"
-      description: "ジョブキューにBullMQを採用し、タスクを複数のサーバーで効率的に処理可能。また、Misskeyネイティブで実装されたインスペクタはコントロールパネルに統合され、外部ツールに頼ることなく管理が可能です。"
+      title: "Eficaç cua de feines"
+      description: "Per gestionar la cua de feines es fa servir BullMQ, que permet que les tasques es processin ràpida i amb eficiència. A més l'inspector de Misskey, implementar de forma nativa al taulell de control, permet fer la gestió sense la necessitat de fer servir eines externes."
     _cdn:
-      title: "CDN対応"
+      title: "Suport de CDN"
       description: "外部CDNによるリソースのキャッシュに対応しています。サーバーへのリクエストを減らすことで、負荷低減・コスト削減が可能です。"
     _ftt:
       title: "FTT"
@@ -148,6 +164,9 @@ _landing:
     _scalable:
       title: "スケーラブル"
       description: "プロセスのクラスタリング、複数サーバーによるロードバランス、データベースのレプリケーションに対応しており、ユーザーの増加にも対応できます。"
+    _seo:
+      title: "SEO"
+      description: "一部のコンテンツのSSRを行い、検索エンジンへインデックスさせることができるほか、OGPに対応しているのでソーシャルメディア上で共有された際のプレビューも可能です。もちろん、インデックスされたくないシチュエーションではクローラーを拒否する設定も可能です。"
     _ml:
       title: "機械学習"
       description: "組み込みの機械学習機能を利用して、自動的にセンシティブなメディアのフィルタリングを行うなど、運用の負担を軽減することも可能です。"
@@ -178,13 +197,22 @@ _landing:
       description: "ノート、タイムラインなどを外部のサイトに埋め込んで表示可能です。"
     _realtimeMode:
       title: "リアルタイムモード"
-      description: ""
+      description: "サーバーとWebsocket接続することで、タイムラインなどのコンテンツをリアルタイムで受信することができます。"
     _pushNotification:
       title: "プッシュ通知"
       description: "プッシュ通知に対応しているため、リアルタイムでサーバーからの通知を受け取ることができます。"
     _multiAccounts:
       title: "マルチアカウント対応"
       description: "複数のアカウントを簡単に切り替えて使用可能です。"
+    _watermark:
+      title: "ウォーターマーク付与機能"
+      description: "投稿する画像にウォーターマークを自動で付与して、簡単にクレジット情報を残すことができます。ウォーターマークは自由にカスタマイズ可能です。"
+    _imageEditing:
+      title: "画像加工機能"
+      description: "画像にエフェクトを追加し、カラーグレーディングを行ったり、様々なクリエイティブな表現を行うことが可能です。"
+    _achievements:
+      title: "実績"
+      description: "Misskeyの機能を体験するモチベーションになり、オンボーディングに役立ちます。"
     _plugin:
       title: "プラグイン"
       description: "セキュアなAiScriptを用いたプラグインをインストールして、クライアントの機能を拡張可能です。"
@@ -211,19 +239,21 @@ _landing:
       title: "Vaporモード対応"
       description: "フロントエンドで採用しているフレームワーク Vue の新しいコンパイルストラテジーをサポートし、より軽量なWeb UIを実現します。"
   _getStarted:
-    title: "Misskeyをはじめよう"
+    title: "Misskeyをはじめる"
     _find:
       title: "サーバーを見つける"
-      list: "サーバーのリスト"
+      list: "サーバーリスト"
     _create:
       title: "サーバーを作成"
       guide: "セットアップガイド"
     _docs:
-      title: "さらに詳しく知る"
-      docs: "ドキュメントを見る"
+      title: "学ぶ"
+      docs: "ドキュメント"
+    _dev:
+      title: "開発に参加する"
   _donation:
     title: "ご支援のお願い"
-    description: "Misskeyは非営利なプロジェクトで、少数の有志による開発のため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入ってくださいましたら、今後も開発を続けられるようにぜひ支援をお願いします。"
+    description: "Misskeyは非営利なプロジェクトで、少数の有志による開発のため、開発資金は皆様からの寄付に頼っています。Misskeyを気に入ってくださいましたら、今後も開発を続けられるようにぜひ支援をお願いします！"
   _sponsors:
     title: "スポンサー"
     becomeASponsor: "スポンサーになる"
