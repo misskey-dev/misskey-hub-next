@@ -1,5 +1,5 @@
 ---
-description: Dieser Abschnitt enthält häufig gestellte Fragen zur Verwendung von Misskey.
+description: 'Dieser Abschnitt enthält häufig gestellte Fragen zur Verwendung von Misskey.'
 ---
 
 # FAQ - Häufig gestellte Fragen
