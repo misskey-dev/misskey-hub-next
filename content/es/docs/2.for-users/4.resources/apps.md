@@ -1,5 +1,5 @@
 ---
-description: Aquí tienes algunas aplicaciones para usar con Misskey.
+description: 'Aquí tienes algunas aplicaciones para usar con Misskey.'
 ---
 
 # Aplicaciones
