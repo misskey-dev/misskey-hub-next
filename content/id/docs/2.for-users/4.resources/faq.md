@@ -1,5 +1,5 @@
 ---
-description: Misskeyを利用する際のよくある質問について掲載しています。
+description: 'Misskeyを利用する際のよくある質問について掲載しています。'
 ---
 
 # よくある質問
