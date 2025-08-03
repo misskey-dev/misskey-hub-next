@@ -1,5 +1,5 @@
 ---
-description: Kosakata yang terkait dengan Misskey.
+description: 'Kosakata yang terkait dengan Misskey.'
 ---
 
 # Kosakata
