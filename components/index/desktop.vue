@@ -69,7 +69,8 @@
 		<div class="section_stats_text">
 			<span><b class="section_stats_label">Notes:</b>{{ $n(stats.notesCount) }}+</span>
 			<span><b class="section_stats_label">Users:</b>{{ $n(stats.usersCount) }}+</span>
-			<span><b class="section_stats_label">MAUs:</b>{{ $n(stats.mau) }}+</span>
+			<span v-if="stats.mau != null"><b class="section_stats_label">MAUs:</b>{{ $n(stats.mau) }}+</span>
+			<span v-else-if="stats.druYesterday != null"><b class="section_stats_label">DRUs:</b>{{ $n(stats.druYesterday) }}+</span>
 			<span><b class="section_stats_label">Servers:</b>{{ $n(stats.instancesCount) }}+</span>
 		</div>
 	</section>
