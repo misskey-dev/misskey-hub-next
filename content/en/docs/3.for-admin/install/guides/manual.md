@@ -1,5 +1,5 @@
 ---
-description: This guide will tell you how to install and setting Misskey.
+description: 'This guide will tell you how to install and setting Misskey.'
 ---
 
 # Manual Misskey Installation
