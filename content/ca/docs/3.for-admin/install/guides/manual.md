@@ -1,5 +1,5 @@
 ---
-description: このガイドではMisskeyのインストール・セットアップ方法について解説します。
+description: 'このガイドではMisskeyのインストール・セットアップ方法について解説します。'
 ---
 
 # Misskeyを手動で構築する
