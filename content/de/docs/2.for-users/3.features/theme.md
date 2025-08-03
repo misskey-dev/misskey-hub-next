@@ -42,8 +42,8 @@ Themen werden wie das folgende Objekt dargestellt:
 - `author` ... Ersteller des Themas
 - `desc` ... Beschreibung des Themas (optional)
 - `base` ... Ob dies ein Thema für den Hell- oder Dunkelmodus ist
-  - Wird light angegeben, so wird es als Thema des Hellmodus angezeigt, wird dark angegeben, so wird es als Thema des Dunkelmodus angezeigt.
-  - Das Thema erbt die Eigenschaften der hier eingestellten Vorlage.
+    - Wird light angegeben, so wird es als Thema des Hellmodus angezeigt, wird dark angegeben, so wird es als Thema des Dunkelmodus angezeigt.
+    - Das Thema erbt die Eigenschaften der hier eingestellten Vorlage.
 - `props` ... Definitionen der Themenoptionen.Diese werden im folgenden erläutert.
 
 ### Definition von Themenoptionen
@@ -60,19 +60,19 @@ Das bedeutet, dass, auch wenn es in diesem Thema keinen Schlüssel `props` mit `
 #### Syntax für Wertangaben
 
 - Hexadezimalfarben
-  - Beispiel: „#00ff00“
+    - Beispiel: „#00ff00“
 - \`RGB-Farben mit rgb(r, g, b)-Syntax
-  - z.B.: rgb(0, 255, 0)\`
+    - z.B.: rgb(0, 255, 0)\`
 - \`RGBA-Farben mit rgb(r, g, b, a)-Syntax
-  - z.B.: rgba(0, 255, 0, 0.5)\`
+    - z.B.: rgba(0, 255, 0, 0.5)\`
 - Werte anderer Schlüssel referenzieren
-  - Durch das angeben von @{Schlüsselname} wird dies durch eine Referenz auf den Wert des gegebenen Schlüssels ersetzt.Ersetze {Schlüsselname} mit dem Namen des Schlüssels, der referenziert werden soll.
-  - Beispiel: `@panel`
+    - Durch das angeben von @{Schlüsselname} wird dies durch eine Referenz auf den Wert des gegebenen Schlüssels ersetzt.Ersetze {Schlüsselname} mit dem Namen des Schlüssels, der referenziert werden soll.
+    - Beispiel: `@panel`
 - Konstantenreferenz (später erläutert)
-  - Durch das angeben von ${Konstantenname} wird dies durch eine Referenz auf den Wert der angegebenen Konstante ersetzt.Ersetze {Konstantenname} durch den Namen der Konstanten, die referenziert werden soll.
-  - Beispiel: `$main`
+    - Durch das angeben von ${Konstantenname} wird dies durch eine Referenz auf den Wert der angegebenen Konstante ersetzt.Ersetze {Konstantenname} durch den Namen der Konstanten, die referenziert werden soll.
+    - Beispiel: `$main`
 - Funktionen (später erläutert)
-  - `:{Funktionsname}{Parameter}{Farbe}`
+    - `:{Funktionsname}{Parameter}{Farbe}`
 
 #### Konstante
 
@@ -98,7 +98,7 @@ props: {
 - `lighten` ... Gibt die Farbe der übergebenen Farbe zurück, wobei das Argument (0 ~ 100) zur Leuchtdichte (0 ~ 100) der übergebenen Farbe addiert wird.
 - `darken` ... Gibt die von dem Argument (0 ~ 100) subtrahierte Farbe für die übergebene Farbhelligkeit (0 ~ 100) zurück
 - `alpha` ... Gibt eine Farbe zurück, bei der die Transparenz der übergebenen Farbe auf das Argument (0.0 ~ 1.0) eingestellt ist
-  - Vollständig transparent bei 0,0, vollständig undurchsichtig bei 1,0
+    - Vollständig transparent bei 0,0, vollständig undurchsichtig bei 1,0
 - `hue` ... Gibt die um den Wert des Arguments (-360 ~ 360) gedrehte Farbe für den übergebenen Farbton (-360 ~ 360) zurück
 - `saturate` ... Gibt die Farbe des Arguments (0 ~ 100) addiert mit der Sättigung (0 ~ 100) der übergebenen Farbe zurück
 
