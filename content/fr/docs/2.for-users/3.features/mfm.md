@@ -1,5 +1,5 @@
 ---
-description: MFMは、Misskeyの様々な場所で使用できる専用のマークアップ言語です。
+description: 'MFMは、Misskeyの様々な場所で使用できる専用のマークアップ言語です。'
 ---
 
 # MFM
