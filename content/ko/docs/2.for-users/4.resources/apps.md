@@ -1,5 +1,5 @@
 ---
-description: Misskey를 사용하기 위한 앱을 소개합니다.
+description: 'Misskey를 사용하기 위한 앱을 소개합니다.'
 ---
 
 # 앱
