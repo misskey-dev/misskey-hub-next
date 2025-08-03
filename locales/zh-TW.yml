@@ -35,7 +35,7 @@ _seo:
 _nav:
   servers: "伺服器"
   docs: "文件"
-  blog: "網誌"
+  news: "ニュース"
   other: "更多！"
   switchLang: "語言設定"
 _landing:
@@ -52,10 +52,23 @@ _landing:
     _powerful:
       title: "功能強大"
       description: "Misskey 具備了適合正式營運的各種功能，並且支援細部自訂。不論是大型社群還是小型團體，都能提供最適合的解決方案。"
+  _introduction:
+    title: "Misskeyで作ろう"
+    description: "Misskeyを使えば、面倒な実装を行うことなく、簡単に独自のプラットフォームを構築可能です。あなたがMisskeyを使って作ったサービスはあなただけのものなので、情報発信における既存プラットフォームへの依存リスクもありません。"
+    tip: "Misskeyは「Webサービスそのもの」ではなく、マイクロブログサービスを作るための「基盤となるソフトウェア」です。Webサイトを作るのにWordPressといったソフトウェアを使うのと同じです。"
   _decenterized:
     title: "Misskey 是{0}"
     description: "Misskey 是一個自由開放的項目，這意味著任何人都可以自由地使用 Misskey 建立伺服器，因此網路上已經出現了各種各樣的伺服器。另一個重要特點是，Misskey 實作了一種名為 {0} 的分散式通訊協議，這意味著無論您選擇哪台伺服器，都可以與其他伺服器上的使用者進行互動。這就是它被稱為去中心化的原因，也是它與 Twitter 等其他服務的根本不同之處。不同伺服器的主要話題、族群和語言各不相同，找到適合自己的伺服器也是樂趣之一（當然，建立自己的伺服器也很有趣）。"
     activityPub: "ActivityPub"
+  _useCases:
+    title: "こんな使い方ができます"
+    single: "情報収集・情報発信のための自分専用のサーバー"
+    official: "会社の広報アカウントを設置する専用のサーバー"
+    community: "同じ関心をもつユーザー向けのコミュニティサーバー"
+    inHouse: "社内SNSとしてのプライベートサーバー"
+  _free:
+    title: "Misskeyはずっと無料でオープン"
+    description: "Misskeyは2014年の開発当初から、そしてこれから未来も、プログラムのソースコードが公開されているオープンソースソフトウェア(OSS)です。また、誰でも無料で・自由にソースコードを利用可能です。MisskeyがOSSであり続けられるのは皆様からの支援のおかげです。"
   _features:
     _root:
       title: "主要功能"
@@ -133,6 +146,9 @@ _landing:
     _postgresql:
       title: "PostgreSQL"
       description: "主要資料庫為 PostgreSQL，可提供強大的資料管理功能。"
+    _fullTextSearch:
+      title: "全文検索"
+      description: "PostgreSQLのほか、Meilisearchなどの全文検索エンジンを使用した全文検索を行うことができます。"
     _jobQueue:
       title: "高效率的工作佇列"
       description: "Misskey 採用了 BullMQ 作為工作佇列，能夠在多個伺服器間高效處理任務。此外，Misskey 原生實現的檢查工具已經整合在控制面板中，無需依賴外部工具即可進行管理。"
@@ -148,6 +164,9 @@ _landing:
     _scalable:
       title: "可擴展"
       description: "Misskey 支援叢集、透過多伺服器進行負載平衡，以及資料庫複製技術，能夠應對使用者數量的增長。"
+    _seo:
+      title: "SEO"
+      description: "一部のコンテンツのSSRを行い、検索エンジンへインデックスさせることができるほか、OGPに対応しているのでソーシャルメディア上で共有された際のプレビューも可能です。もちろん、インデックスされたくないシチュエーションではクローラーを拒否する設定も可能です。"
     _ml:
       title: "機器學習"
       description: "內建機器學習功能，可以自動過濾敏感媒體等內容，有效減輕運營負擔。"
@@ -178,13 +197,22 @@ _landing:
       description: "可以將貼文、時間軸等內容嵌入到外部網站中顯示。"
     _realtimeMode:
       title: "即時模式"
-      description: ""
+      description: "サーバーとWebsocket接続することで、タイムラインなどのコンテンツをリアルタイムで受信することができます。"
     _pushNotification:
       title: "推播通知"
       description: "支援推播通知，讓你可以即時接收來自伺服器的通知。"
     _multiAccounts:
       title: "支援多帳戶功能"
       description: "可以輕鬆切換並使用多個帳戶。"
+    _watermark:
+      title: "ウォーターマーク付与機能"
+      description: "投稿する画像にウォーターマークを自動で付与して、簡単にクレジット情報を残すことができます。ウォーターマークは自由にカスタマイズ可能です。"
+    _imageEditing:
+      title: "画像加工機能"
+      description: "画像にエフェクトを追加し、カラーグレーディングを行ったり、様々なクリエイティブな表現を行うことが可能です。"
+    _achievements:
+      title: "実績"
+      description: "Misskeyの機能を体験するモチベーションになり、オンボーディングに役立ちます。"
     _plugin:
       title: "外掛"
       description: "可以安裝使用安全的 AiScript 插件，從而擴展客戶端的功能。"
@@ -221,6 +249,8 @@ _landing:
     _docs:
       title: "進一步瞭解"
       docs: "檢視文件"
+    _dev:
+      title: "開発に参加する"
   _donation:
     title: "請求捐款"
     description: "Misskey 是一家非營利組織，因此我們依靠您的捐款來資助我們的發展。如果你喜歡 Misskey，請支持我們，以便我們繼續開發它。"
