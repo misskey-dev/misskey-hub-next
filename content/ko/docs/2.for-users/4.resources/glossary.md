@@ -1,5 +1,5 @@
 ---
-description: Misskey 관련 용어집입니다.
+description: 'Misskey 관련 용어집입니다.'
 ---
 
 # 용어집
