@@ -1,5 +1,5 @@
 ---
-description: Misskeyに関する用語集です。
+description: 'Misskeyに関する用語集です。'
 ---
 
 # 用語集
