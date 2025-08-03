@@ -1,5 +1,5 @@
 ---
-description: Este documento contiene las preguntas más frecuentes sobre el uso de Misskey.
+description: 'Este documento contiene las preguntas más frecuentes sobre el uso de Misskey.'
 ---
 
 # Preguntas Frecuentes
