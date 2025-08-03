@@ -1,5 +1,5 @@
 ---
-description: Anwendungen für die Verwendung von Misskey
+description: 'Anwendungen für die Verwendung von Misskey'
 ---
 
 # Anwendungen
