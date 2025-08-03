@@ -1,5 +1,5 @@
 ---
-description: Here are some apps to use with Misskey.
+description: 'Here are some apps to use with Misskey.'
 ---
 
 # Apps
@@ -18,4 +18,4 @@ Once you get used to Misskey Web, you may want to try unofficial apps developed 
 - **ZonePane** (Android): Allows the creation of tabs for timelines, lists, and channels.Excellent read management.The Misskey version of the Twitter app TwitPane also supports Mastodon. [Google Play](https://play.google.com/store/apps/details?id=com.zonepane).
 - **TootRain** (Mac): This is a Mac application that displays posts on the timeline and lists in real time on the screen in the style of comments. [Official website](https://b123400.net/tootrain), [Source code](https://github.com/b123400/TootRain).
 
-However, since Misskey's features are being updated frequently, there may be a delay in adding the latest features.If you have no particular preferences, we recommend using Misskey Web.If you have no particular preferences, we recommend using Misskey Web.
+However, since Misskey's features are being updated frequently, there may be a delay in adding the latest features.If you have no particular preferences, we recommend using Misskey Web.
