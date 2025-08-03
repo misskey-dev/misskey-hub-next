@@ -1,5 +1,5 @@
 ---
-description: Un glosario de términos relacionados con Misskey.
+description: 'Un glosario de términos relacionados con Misskey.'
 ---
 
 # Glosario
