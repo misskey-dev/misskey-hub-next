@@ -1,5 +1,5 @@
 ---
-description: 本指南介紹如何安裝和設定 Misskey。
+description: '本指南介紹如何安裝和設定 Misskey。'
 ---
 
 # 手動建置 Misskey
