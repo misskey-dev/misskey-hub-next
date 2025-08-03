@@ -1,5 +1,5 @@
 ---
-description: MFM es un lenguaje de marcado específico que puede utilizarse en varias partes de Misskey.
+description: 'MFM es un lenguaje de marcado específico que puede utilizarse en varias partes de Misskey.'
 ---
 
 # MFM
