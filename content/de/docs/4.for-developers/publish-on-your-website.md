@@ -40,4 +40,4 @@ Rückgabe eines JSON-Objekts von dem in `{API_URL}` angegebenen Endpunkt, z. B.
 
 - `type`: Gibt den Code an, der unter „Unterstützte Ressourcen für die externe Installation“ angegeben ist.
 - `data`: Der Quellcode der Ressource wird als **Zeichenfolge** eingegeben.
-  - In diesem Fall sollte der Zeilenvorschubcode **LF** lauten.
+    - In diesem Fall sollte der Zeilenvorschubcode **LF** lauten.
