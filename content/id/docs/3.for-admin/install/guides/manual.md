@@ -1,5 +1,5 @@
 ---
-description: Panduan ini akan menjelaskan bagaimana cara memasang dan menyetel peladen Misskey.
+description: 'Panduan ini akan menjelaskan bagaimana cara memasang dan menyetel peladen Misskey.'
 ---
 
 # Panduan Pemasangan dan Penyetelan Misskey
