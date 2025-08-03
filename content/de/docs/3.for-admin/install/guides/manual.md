@@ -1,5 +1,5 @@
 ---
-description: Diese Anleitung erklärt, wie man Misskey installiert und einrichtet.
+description: 'Diese Anleitung erklärt, wie man Misskey installiert und einrichtet.'
 ---
 
 # Manuelles Setup von Misskey
