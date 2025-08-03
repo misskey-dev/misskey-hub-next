@@ -1,5 +1,5 @@
 ---
-description: 與 Misskey 相關的用語表。
+description: '與 Misskey 相關的用語表。'
 ---
 
 # 用語表
