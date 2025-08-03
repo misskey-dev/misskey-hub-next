@@ -35,7 +35,7 @@ _seo:
 _nav:
   servers: "서버"
   docs: "문서"
-  blog: "블로그"
+  news: "ニュース"
   other: "더보기"
   switchLang: "언어 설정"
 _landing:
@@ -52,10 +52,23 @@ _landing:
     _powerful:
       title: "파워풀"
       description: "Misskey는 프로덕션 레벨의 여러 기능을 갖춰 세세한 커스터마이징도 가능합니다. 인원이 많거나 적어도 최적의 솔루션으로 됩니다."
+  _introduction:
+    title: "Misskeyで作ろう"
+    description: "Misskeyを使えば、面倒な実装を行うことなく、簡単に独自のプラットフォームを構築可能です。あなたがMisskeyを使って作ったサービスはあなただけのものなので、情報発信における既存プラットフォームへの依存リスクもありません。"
+    tip: "Misskeyは「Webサービスそのもの」ではなく、マイクロブログサービスを作るための「基盤となるソフトウェア」です。Webサイトを作るのにWordPressといったソフトウェアを使うのと同じです。"
   _decenterized:
     title: "Misskey는 {0}"
     description: "Misskey는 오픈 소스 프로젝트로 누구나 자유롭게 Misskey를 사용한 서버를 만들 수 있고, 이미 다양한 서버에서 Misskey를 사용하고 있어요. 특히, Misskey는 {0}이라고 불리는 분산형 통신 프로토콜을 사용하고 있어서 어떤 서버를 골라도 다른 서버에 있는 유저와 소통을 할 수 있어요. 이것이 분산형이라고 불리는 이유이며, 다른 플랫폼과는 통신할 수 없는 Twitter 등의 서비스와는 근본적으로 다르답니다. 그렇기 때문에 서버에 따라 주제나 테마, 유저 층, 언어 등이 다르니 당신에게 딱 맞는 서버를 찾아보는 것이 좋아요. (물론, 본인이 직접 서버를 만드는 것도 괜찮아요.)"
     activityPub: "ActivityPub"
+  _useCases:
+    title: "こんな使い方ができます"
+    single: "情報収集・情報発信のための自分専用のサーバー"
+    official: "会社の広報アカウントを設置する専用のサーバー"
+    community: "同じ関心をもつユーザー向けのコミュニティサーバー"
+    inHouse: "社内SNSとしてのプライベートサーバー"
+  _free:
+    title: "Misskeyはずっと無料でオープン"
+    description: "Misskeyは2014年の開発当初から、そしてこれから未来も、プログラムのソースコードが公開されているオープンソースソフトウェア(OSS)です。また、誰でも無料で・自由にソースコードを利用可能です。MisskeyがOSSであり続けられるのは皆様からの支援のおかげです。"
   _features:
     _root:
       title: "주요 기능"
@@ -133,6 +146,9 @@ _landing:
     _postgresql:
       title: "PostgreSQL"
       description: "메인 데이터베이스에는 PostgreSQL을 채용하고, 견고한 데이터 관리를 실현하고 있습니다."
+    _fullTextSearch:
+      title: "全文検索"
+      description: "PostgreSQLのほか、Meilisearchなどの全文検索エンジンを使用した全文検索を行うことができます。"
     _jobQueue:
       title: "고효율 작업 대기열"
       description: "작업 대기열에는 BullMQ를 채용하고, 작업을 여러 서버에서 효율적으로 처리할 수 있습니다. 또 Misskey 네이티브에서 실장된 인스펙터는 제어판으로 통합돼 외부 툴에 의존하는 일 없이 관리할 수 있습니다."
@@ -148,6 +164,9 @@ _landing:
     _scalable:
       title: "확장 가능"
       description: "프로세스의 클러스터 분석, 여러 서버의 부하분산, 데이터베이스의 복제에 대응하고, 유저의 증가에도 대응합니다."
+    _seo:
+      title: "SEO"
+      description: "一部のコンテンツのSSRを行い、検索エンジンへインデックスさせることができるほか、OGPに対応しているのでソーシャルメディア上で共有された際のプレビューも可能です。もちろん、インデックスされたくないシチュエーションではクローラーを拒否する設定も可能です。"
     _ml:
       title: "기계 학습"
       description: "내장 기계 학습 기능을 이용해 자동적으로 민감한 미디어의 필터링을 하는 등 운용의 부담을 줄일 수 있습니다."
@@ -178,13 +197,22 @@ _landing:
       description: "노트, 타임라인 등을 외부 사이트에 임베딩해 표시할 수 있습니다."
     _realtimeMode:
       title: "실시간 모드"
-      description: ""
+      description: "サーバーとWebsocket接続することで、タイムラインなどのコンテンツをリアルタイムで受信することができます。"
     _pushNotification:
       title: "푸시 알림"
       description: "푸시 알림에 대응하기에 실시간으로 서버에서 알림을 받을 수 있습니다."
     _multiAccounts:
       title: "멀티 계정 대응"
       description: "여러 계정을 쉽게 교체해 사용할 수 있습니다."
+    _watermark:
+      title: "ウォーターマーク付与機能"
+      description: "投稿する画像にウォーターマークを自動で付与して、簡単にクレジット情報を残すことができます。ウォーターマークは自由にカスタマイズ可能です。"
+    _imageEditing:
+      title: "画像加工機能"
+      description: "画像にエフェクトを追加し、カラーグレーディングを行ったり、様々なクリエイティブな表現を行うことが可能です。"
+    _achievements:
+      title: "実績"
+      description: "Misskeyの機能を体験するモチベーションになり、オンボーディングに役立ちます。"
     _plugin:
       title: "플러그인"
       description: "안전한 AiScript를 사용한 플러그인을 설치해 클라이언트의 기능을 확장할 수 있습니다."
@@ -221,6 +249,8 @@ _landing:
     _docs:
       title: "자세히 보기"
       docs: "문서 보기"
+    _dev:
+      title: "開発に参加する"
   _donation:
     title: "기부하기"
     description: "Misskey는 비영리 프로젝트입니다. 개발 자금은 여러분의 기부를 통해 모아지고 있습니다. Misskey가 마음에 드신다면 개발이 지속될 수 있도록 꼭 지원을 부탁드립니다."
