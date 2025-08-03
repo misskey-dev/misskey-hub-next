@@ -1,5 +1,5 @@
 ---
-description: ローカルタイムラインのノートが流れるチャンネルです。
+description: "ローカルタイムラインのノートが流れるチャンネルです。"
 ---
 
 # `localTimeline`
