@@ -18,7 +18,7 @@ Falls du Fragen hast, kannst du auch auf dem [TrueCharts Discord](https://discor
 
 Misskey befindet sich derzeit im _incubator_ Zweig.
 
-:::前提条件
+:::tip{label='前提条件'}
 
 - TrueNAS Scale oder
 - Kubernetes-Cluster und Helm
