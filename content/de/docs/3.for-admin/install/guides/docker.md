@@ -1,5 +1,5 @@
 ---
-description: Diese Anleitung erklärt, wie man Misskey mit Docker einrichtet.
+description: 'Diese Anleitung erklärt, wie man Misskey mit Docker einrichtet.'
 ---
 
 # Misskey-Setup mit Docker Compose
