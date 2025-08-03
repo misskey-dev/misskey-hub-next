@@ -1,5 +1,5 @@
 ---
-description: MFM is a proprietary markup language that can be used in various locations in Misskey.
+description: 'MFM is a proprietary markup language that can be used in various locations in Misskey.'
 ---
 
 # MFM
