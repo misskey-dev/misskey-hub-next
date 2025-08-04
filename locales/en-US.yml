@@ -35,211 +35,211 @@ _seo:
 _nav:
   servers: "Servers"
   docs: "Docs"
-  news: "ニュース"
+  news: "News"
   other: "More!"
   switchLang: "Language Settings"
 _landing:
   _hero:
-    description: "Misskey is an open source, decentralized social media platform that's free forever!"
+    description: "Misskey is free and open-source software for creating social networking services."
     gettingStarted: "Get Started"
   _keyFeatures:
     _open:
       title: "Open"
-      description: "Misskey is open-source software, and anyone can use it freely."
+      description: "Misskey is open source. Anyone can freely create and operate their own Misskey server at no cost."
     _federated:
       title: "Federated"
-      description: "Misskey is a decentralized platform, so communities on different servers can connect with each other."
+      description: "Because Misskey implements a decentralized protocol, it serves as a gateway to the federated social network, the Fediverse."
     _powerful:
       title: "Powerful"
       description: "Misskey comes with a variety of production-level features and is highly customizable. It's the optimal solution, whether for a large number of users or a small group."
   _introduction:
-    title: "Misskeyで作ろう"
-    description: "Misskeyを使えば、面倒な実装を行うことなく、簡単に独自のプラットフォームを構築可能です。あなたがMisskeyを使って作ったサービスはあなただけのものなので、情報発信における既存プラットフォームへの依存リスクもありません。"
-    tip: "Misskeyは「Webサービスそのもの」ではなく、マイクロブログサービスを作るための「基盤となるソフトウェア」です。Webサイトを作るのにWordPressといったソフトウェアを使うのと同じです。"
+    title: "Create with Misskey"
+    description: "Misskey allows you to easily build your own unique platform without any complex implementation. Since the service you create is entirely your own, there's no risk of depending on existing platforms for your online presence."
+    tip: "Misskey isn't a web service in itself, but rather the foundational software for creating one, much like using WordPress to build a website."
   _decenterized:
-    title: "Misskey is a {0} Platform."
-    description: "Misskey is just a platform for server owners to make their own instances of Misskey, and they can all talk to each other! There's large instances for the masses, smaller ones for groups, fandoms, and subcultures, and even instances just for individuals and their friends. Want to have even more control? You can make your own instance on your server with relative ease, cutting ties from any large company who wants to spy on you and sell your data. Misskey is about community and sharing, not corporations and big tech. Have friends not on Misskey? No problem! Because Misskey is on the Fediverse ({0}), you can interact with people on other platforms like Mastodon, PixelFed, PeerTube, and more!"
+    title: "A powerful platform for connecting to the Fediverse"
+    description: "Misskey implements {0}, a protocol for decentralized services, allowing you to easily build a platform connected to the Fediverse—a network of federated social media. Whether you want to create a public social network, a personal hub for following other servers, or a dedicated server for broadcasting your content to the Fediverse, Misskey has you covered."
     activityPub: "ActivityPub"
   _useCases:
-    title: "こんな使い方ができます"
-    single: "情報収集・情報発信のための自分専用のサーバー"
-    official: "会社の広報アカウントを設置する専用のサーバー"
-    community: "同じ関心をもつユーザー向けのコミュニティサーバー"
-    inHouse: "社内SNSとしてのプライベートサーバー"
+    title: "Use Cases"
+    single: "A personal server for gathering and sharing information."
+    official: "A dedicated server for a company's promotional account."
+    community: "A community server for users with shared interests."
+    inHouse: "A private server for internal company social networking."
   _free:
-    title: "Misskeyはずっと無料でオープン"
-    description: "Misskeyは2014年の開発当初から、そしてこれから未来も、プログラムのソースコードが公開されているオープンソースソフトウェア(OSS)です。また、誰でも無料で・自由にソースコードを利用可能です。MisskeyがOSSであり続けられるのは皆様からの支援のおかげです。"
+    title: "Misskey is, and always will be, free and open"
+    description: "From its inception in 2014 and into the future, Misskey is and will remain open-source software (OSS). Its source code is publicly available for anyone to use, modify, and distribute freely. Misskey continues to be OSS thanks to the support of our community."
   _features:
     _root:
-      title: "Key Features"
-      description: "Misskey offers a wide variety of unique features! Here are some highlights."
+      title: "Features"
+      description: "An introduction to Misskey's features and functions."
     _note:
       title: "Notes"
-      description: "On Misskey, user posts are called 'Notes.' Reply, quote, add custom emojis, animated text, content warnings, attach multiple images, videos, GIFs, audio clips, or anything else!"
+      description: "User posts are called 'Notes'. You can quote other notes, attach images, videos, audio, or any other file, and even create polls."
     _federation:
       title: "Federation"
-      description: "Not on Misskey? No problem! Not only can Misskey instances talk to each other, but you can make friends with people on other networks like Mastodon and Pixelfed!"
+      description: "Implementing the open, decentralized protocol ActivityPub allows you to interact not just with other Misskey servers, but with any software that supports it."
     _reaction:
       title: "Reactions"
-      description: "You can add emoji reactions to any post! No longer are you bound by a like button, show everyone exactly how you feel with the tap of a button."
+      description: "Easily express yourself by adding 'Reactions' to notes."
     _customEmojis:
-      title: "Custom Emoji"
-      description: "You can create server-original emojis that can be used in various places on Misskey."
+      title: "Custom Emojis"
+      description: "Create your own server-specific emojis for use anywhere on Misskey."
     _channel:
-      title: "Channel"
-      description: "Create channels to build communities within your server around shared themes."
+      title: "Channels"
+      description: "Create channels to build communities around specific topics within your server."
     _antenna:
-      title: "Antenna"
-      description: "You can create timelines that exclusively collect notes containing specific keywords."
+      title: "Antennas"
+      description: "Create timelines that collect only notes containing specific keywords."
     _drive:
       title: "Drive"
-      description: "Hate not being able to find something you uploaded? With Drive, you get managed and powerful cloud storage right in your social media!"
+      description: "Manage your uploaded files with a dedicated interface. Easily organize your favorite images into folders and share them again."
     _2fa:
       title: "Multi-Factor Authentication"
-      description: "Supports various technologies to enhance account security, such as multi-factor authentication using one-time passwords and passkey authentication using physical keys."
+      description: "Enhance your account security with support for multi-factor authentication using one-time passwords and passkeys with physical security keys."
     _charts:
       title: "Charts"
-      description: "For those who need to see everything, Misskey has powerful charts for both users and admins to see what exactly is going on in your instance in real time."
+      description: "Misskey comes with a built-in chart engine, making it easy to visualize server usage statistics."
     _branding:
       title: "Branding"
-      description: "Easily brand your social network by customizing the server's logo, icon, theme, and more."
+      description: "Easily brand your server by customizing its logo, icons, themes, and more."
     _roles:
       title: "Roles"
-      description: "Roles allow for fine-grained permission customization for each user. Conditional roles can automatically assign roles to users meeting specific criteria. You can also set badges for roles, aiding in server monetization."
+      description: "Use Roles to finely tune user permissions. With Conditional Roles, you can automatically assign roles to users who meet specific criteria. You can also set badges for roles, helping to monetize your server."
     _moderation:
       title: "Moderation"
-      description: "Comprehensive moderation features are built-in to assist with server operation."
+      description: "Comes standard with a comprehensive suite of moderation tools to help you run your server. It's fully integrated into the web UI for seamless operation."
     _privacy:
       title: "Privacy"
-      description: "Flexibly control the visibility of your content with a wide range of privacy settings."
+      description: "Take control of your content's visibility with a rich set of privacy settings."
     _multiPurpose:
-      title: "For Individuals, For Everyone"
-      description: "It supports operation as an SNS for many users, as well as use as a personal server. It becomes your own powerful hub for connecting with the Fediverse."
+      title: "For One, or For Many"
+      description: "Misskey works great as a large social network, but it's also perfect for personal use. It can be your own powerful hub connected to the Fediverse."
     _monetization:
       title: "Monetization"
-      description: "Features to help monetize the server, such as displaying ads, are also available, enabling sustainable operation."
+      description: "Features like ad display are available to help monetize your server, enabling sustainable operation."
     _oss:
       title: "Mi ❤️ OSS"
-      description: "Misskey is and always will be open source, with its source code freely available for anyone to use at no cost. The Misskey Project also actively supports other open-source software."
+      description: "Misskey is and always will be open source, with its code freely available to everyone. The Misskey Project also actively supports other open-source software projects."
     _battleTested:
-      title: "Reliability"
-      description: "Misskey has been battle-tested in real-world environments for over 10 years, and we pride ourselves on its high reliability."
+      title: "Battle-Tested"
+      description: "Having been in real-world use for over a decade, Misskey is battle-tested and we're confident in its high reliability."
   _featuresServer:
     _root:
       title: "Server Features"
-      description: "Features of the backend implementation that powers Misskey."
+      description: "An overview of Misskey's backend features."
     _easyInstall:
       title: "Easy Installation"
-      description: "Installable with simple commands. You can also save administrative effort by using various hosting services."
+      description: "Install with a simple command, or use a managed hosting service to save on administrative overhead."
     _easySetup:
-      title: "Easy Setup"
-      description: "Setting up a Misskey server requires no complex configuration, allowing you to start operations quickly. Advanced settings are also available to meet specific needs."
+      title: "Simple Setup"
+      description: "Setting up a Misskey server requires no complex configuration. Simply follow the wizard for an optimal setup and start running your server right away. Advanced settings are also available for specific needs."
     _api:
       title: "API"
-      description: "All Misskey features are accessible via an HTTP API, facilitating easy integration with other applications. Webhook and WebSocket support also allows for real-time event reception from Misskey."
+      description: "All of Misskey's functions are accessible via an HTTP API, making integration with other applications easy. It also supports Webhooks and WebSocket connections for receiving real-time events."
     _relay:
       title: "Relay Support"
-      description: "Supports connection to relay servers that relay Fediverse activity, enabling information gathering without manually connecting to numerous servers."
+      description: "Support for relay servers, which forward activity across the Fediverse, allows you to discover content without manually connecting to numerous other servers."
     _nodejs:
       title: "Node.js Backend"
-      description: "Misskey uses Node.js for its backend, enabling fast and lightweight operation."
+      description: "Misskey uses a Node.js backend, ensuring fast and lightweight performance."
     _postgresql:
       title: "PostgreSQL"
-      description: "PostgreSQL is used as the main database, ensuring robust data management."
+      description: "Utilizes PostgreSQL as the main database for robust data management."
     _fullTextSearch:
-      title: "全文検索"
-      description: "PostgreSQLのほか、Meilisearchなどの全文検索エンジンを使用した全文検索を行うことができます。"
+      title: "Full-Text Search"
+      description: "Perform full-text searches using PostgreSQL's built-in capabilities or external engines like Meilisearch."
     _jobQueue:
-      title: "High-Efficiency Job Queue"
-      description: "Utilizes BullMQ for its job queue, efficiently processing tasks across multiple servers. A natively implemented inspector integrated into the control panel allows for management without external tools."
+      title: "Efficient Job Queue"
+      description: "Employs BullMQ for its job queue, efficiently processing tasks across multiple workers. A native inspector integrated into the control panel allows for management without external tools."
     _cdn:
       title: "CDN Support"
-      description: "Supports resource caching via external CDNs. Reducing server requests can lead to lower load and cost savings."
+      description: "Supports resource caching via external CDNs, reducing server load and cutting costs."
     _ftt:
       title: "FTT"
-      description: "With Fan-out Timeline Technology (FTT), timelines can be built on Redis to improve performance."
+      description: "Fan-out Timeline Technology (FTT) builds timelines on Redis to improve performance."
     _rbt:
       title: "RBT"
-      description: "With Reactions Buffering Technology (RBT), reaction information can be cached on Redis to improve performance."
+      description: "Reactions Buffering Technology (RBT) caches reaction data on Redis to improve performance."
     _scalable:
       title: "Scalable"
-      description: "Supports process clustering, load balancing across multiple servers, and database replication, enabling it to handle user growth."
+      description: "Designed to scale with user growth through process clustering, multi-server load balancing, and database replication."
     _seo:
       title: "SEO"
-      description: "一部のコンテンツのSSRを行い、検索エンジンへインデックスさせることができるほか、OGPに対応しているのでソーシャルメディア上で共有された際のプレビューも可能です。もちろん、インデックスされたくないシチュエーションではクローラーを拒否する設定も可能です。"
+      description: "Server-side rendering (SSR) for certain content ensures indexability by search engines. OGP support provides rich previews when shared on social media. Of course, you can also configure your server to block crawlers if you prefer not to be indexed."
     _ml:
       title: "Machine Learning"
-      description: "Utilize built-in machine learning features to automatically filter sensitive media, reducing the operational burden."
+      description: "Leverage built-in machine learning features to automatically filter sensitive media, reducing the moderation workload."
     _sentry:
       title: "Sentry Support"
-      description: "Supports server metrics collection via Sentry, aiding in server resource monitoring, health checks, and maintenance."
+      description: "Supports metrics collection with Sentry, helping you monitor server resources, perform health checks, and simplify maintenance."
   _featuresClient:
     _root:
-      title: "WebUI"
-      description: "Introducing the features of Misskey Web, the high-performance web frontend included with Misskey."
+      title: "Web UI"
+      description: "An introduction to Misskey Web, the powerful web frontend included with Misskey."
     _responsive:
       title: "Responsive UI"
-      description: "The UI is designed using a sophisticated proprietary design system and meticulously implemented for optimal display and operation on desktops, tablets, and smartphones."
+      description: "The UI is built on a sophisticated, proprietary design system and is carefully crafted to provide an optimal experience on desktops, tablets, and smartphones."
     _theme:
       title: "Themes"
-      description: "Use Misskey with your preferred appearance. Dark mode is fully supported. You can also create your own advanced themes."
+      description: "Use Misskey with a look and feel you love. Full dark mode support is included, and you can even create your own advanced themes."
     _mfm:
       title: "MFM"
-      description: "Notes can use MFM, a Misskey-specific markup language. Text decorations like bolding, inserting links, and adding animations can be achieved with simple syntax."
+      description: "Use MFM (Misskey Flavored Markdown), a special markup language, in your notes. Decorate your text with bolding, links, animations, and more using a simple syntax."
     _widgets:
       title: "Widgets"
-      description: "Freely arrange various types of widgets for quick access to the information you need."
+      description: "Freely arrange various types of widgets to get quick access to the information you need."
     _deck:
       title: "Deck UI"
-      description: "The Deck UI allows for even deeper UI customization, enabling you to create your own unique client."
+      description: "The Deck UI allows for even deeper customization. Build your own unique client experience."
     _embed:
-      title: "Embedding on Other Sites"
-      description: "Embed and display notes, timelines, and more on external sites."
+      title: "Embeds"
+      description: "Embed and display notes, timelines, and more on external websites."
     _realtimeMode:
       title: "Real-time Mode"
       description: "サーバーとWebsocket接続することで、タイムラインなどのコンテンツをリアルタイムで受信することができます。"
     _pushNotification:
       title: "Push Notifications"
-      description: "With push notification support, you can receive server notifications in real-time."
+      description: "Receive real-time alerts from your server with support for push notifications."
     _multiAccounts:
-      title: "Multi-Account Support"
+      title: "Multiple Accounts"
       description: "Easily switch between and use multiple accounts."
     _watermark:
-      title: "ウォーターマーク付与機能"
-      description: "投稿する画像にウォーターマークを自動で付与して、簡単にクレジット情報を残すことができます。ウォーターマークは自由にカスタマイズ可能です。"
+      title: "Watermarking"
+      description: "Automatically add a customizable watermark to your images to easily credit your work."
     _imageEditing:
-      title: "画像加工機能"
-      description: "画像にエフェクトを追加し、カラーグレーディングを行ったり、様々なクリエイティブな表現を行うことが可能です。"
+      title: "Image Editing"
+      description: "Add effects, perform color grading, and apply various other creative edits to your images."
     _achievements:
-      title: "実績"
-      description: "Misskeyの機能を体験するモチベーションになり、オンボーディングに役立ちます。"
+      title: "Achievements"
+      description: "Serves as a motivation to explore Misskey's features and aids in user onboarding."
     _plugin:
       title: "Plugins"
-      description: "Extend client functionality by installing plugins using secure AiScript."
+      description: "Extend the client's functionality by installing plugins written in the secure AiScript language."
     _settingsManagement:
       title: "Flexible Settings Management"
-      description: "Override client settings per account, share and sync settings across multiple devices, and automatically back up configuration data."
+      description: "Override any client setting on a per-account basis, and share and sync settings across multiple devices. Plus, your settings can be backed up automatically."
     _pwa:
       title: "PWA"
-      description: "Misskey Web is PWA compliant, allowing it to function like a native app on your device."
+      description: "Misskey Web is a Progressive Web App (PWA), allowing it to run like a native app on your device."
     _i18n:
-      title: "Multilingual Support"
-      description: "The client is available in various languages."
+      title: "Internationalization"
+      description: "The client is available in a wide variety of languages."
   _featuresUpcoming:
     _root:
       title: "Coming Soon"
       description: "Introducing features planned for upcoming releases."
     _jwt:
       title: "JWT Authentication"
-      description: "Implementing stateless authentication using JSON Web Tokens (JWT) for more secure and faster request validation."
+      description: "Implementing stateless authentication with JSON Web Tokens (JWT) for more secure and faster request validation."
     _newBackend:
       title: "Lighter Backend"
-      description: "Development of an entirely new backend implementation is underway for faster and more lightweight operation."
+      description: "We are developing an all-new backend for even faster and more lightweight performance."
     _vueVapor:
       title: "Vapor Mode Support"
-      description: "Support for Vue's new Vapor Mode compilation strategy will deliver a more lightweight Web UI."
+      description: "Support for Vapor, the new compile strategy for the Vue framework, will deliver an even more lightweight web UI."
   _getStarted:
-    title: "Getting Started with Misskey"
+    title: "Get Started with Misskey"
     _find:
       title: "Find a Server"
       list: "Server List"
@@ -247,13 +247,13 @@ _landing:
       title: "Create a Server"
       guide: "Setup Guide"
     _docs:
-      title: "Learn More"
-      docs: "See Documentation"
+      title: "Learn"
+      docs: "Documentation"
     _dev:
-      title: "開発に参加する"
+      title: "Contribute to Development"
   _donation:
-    title: "Donation"
-    description: "Misskey is a non-profit project, and development funding relies on donations from users like you. If you enjoy using Misskey, please consider supporting us so that we can continue to make Misskey awesome for years to come!"
+    title: "Support Us"
+    description: "Misskey is a non-profit project developed by a small team of volunteers, and we rely on donations for our development funds. If you enjoy Misskey, please consider supporting us so we can continue its development!"
   _sponsors:
     title: "Sponsors"
     becomeASponsor: "Become a Sponsor"
