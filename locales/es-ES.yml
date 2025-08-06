@@ -35,7 +35,7 @@ _seo:
 _nav:
   servers: "Servidores"
   docs: "Documentación"
-  news: "ニュース"
+  news: "Noticias"
   other: "Más"
   switchLang: "Configuración de idioma"
 _landing:
@@ -53,22 +53,22 @@ _landing:
       title: "Poderoso"
       description: "Misskey tiene una variedad de características de nivel de producción y puede ser finamente personalizado. Es la mejor solución para grupos grandes y pequeños."
   _introduction:
-    title: "Misskeyで作ろう"
-    description: "Misskeyを使えば、面倒な実装を行うことなく、簡単に独自のプラットフォームを構築可能です。あなたがMisskeyを使って作ったサービスはあなただけのものなので、情報発信における既存プラットフォームへの依存リスクもありません。"
-    tip: "Misskeyは「Webサービスそのもの」ではなく、マイクロブログサービスを作るための「基盤となるソフトウェア」です。Webサイトを作るのにWordPressといったソフトウェアを使うのと同じです。"
+    title: "Creemos con Misskey"
+    description: "Con Misskey, puedes crear fácilmente tu propia plataforma sin necesidad de realizar complicadas implementaciones. El servicio que crees con Misskey será exclusivamente tuyo, por lo que no correrás el riesgo de depender de plataformas existentes para la difusión de información."
+    tip: "Misskey no es un «servicio web en sí mismo», sino un «software base» para crear servicios de microblogging. Es similar a utilizar software como WordPress para crear un sitio web."
   _decenterized:
     title: "Misskey es una plataforma {0}."
     description: "Misskey es solo una plataforma para que los propietarios de servidores creen sus propias instancias de Misskey, y todas pueden comunicarse entre sí! Hay instancias grandes para las masas, instancias más pequeñas para grupos, fandoms y subculturas, e incluso instancias solo para individuos y sus amigos. ¿Quieres tener aún más control? Puedes crear tu propia instancia en tu servidor con facilidad, cortando los lazos con cualquier gran empresa que quiera espiarte y vender tus datos. Misskey se trata de comunidad y compartir, no de corporaciones y alta tecnología. ¿Tienes amigos que no están en Misskey? No hay problema. Debido a que Misskey está en el Fediverso ({0}), puedes interactuar con personas en otras plataformas como Mastodon, PixelFed, PeerTube y más."
     activityPub: "ActivityPub"
   _useCases:
-    title: "こんな使い方ができます"
-    single: "情報収集・情報発信のための自分専用のサーバー"
-    official: "会社の広報アカウントを設置する専用のサーバー"
-    community: "同じ関心をもつユーザー向けのコミュニティサーバー"
-    inHouse: "社内SNSとしてのプライベートサーバー"
+    title: "Se puede utilizar de esta manera."
+    single: "Servidor propio para la recopilación y difusión de información."
+    official: "Servidor dedicado para la creación de una cuenta de relaciones públicas de la empresa."
+    community: "Servidor para una comunidad para personas con intereses comunes."
+    inHouse: "Servidor privado como red social interna de una empresa"
   _free:
-    title: "Misskeyはずっと無料でオープン"
-    description: "Misskeyは2014年の開発当初から、そしてこれから未来も、プログラムのソースコードが公開されているオープンソースソフトウェア(OSS)です。また、誰でも無料で・自由にソースコードを利用可能です。MisskeyがOSSであり続けられるのは皆様からの支援のおかげです。"
+    title: "Misskey siempre ha sido gratuito y abierto."
+    description: "Misskey es un software de código abierto (OSS) desde su desarrollo inicial en 2014 y seguirá siéndolo en el futuro. El código fuente del programa está disponible públicamente. Además, cualquiera puede utilizar el código fuente de forma gratuita y libre. Misskey puede seguir siendo un OSS gracias al apoyo de todos ustedes."
   _features:
     _root:
       title: "Características clave"
@@ -147,8 +147,8 @@ _landing:
       title: "PostgreSQL"
       description: "La base de datos principal es PostgreSQL, que proporciona una sólida gestión de datos."
     _fullTextSearch:
-      title: "全文検索"
-      description: "PostgreSQLのほか、Meilisearchなどの全文検索エンジンを使用した全文検索を行うことができます。"
+      title: "Búsqueda de texto completo"
+      description: "Además de PostgreSQL, es posible realizar búsquedas de texto completo utilizando motores de búsqueda de texto completo como Meilisearch."
     _jobQueue:
       title: "Cola de trabajos muy eficaz"
       description: "BullMQ se utiliza para la cola de trabajos, permitiendo que las tareas sean procesadas eficientemente en múltiples servidores. Además, el Inspector de Misskey implementado de forma nativa está integrado en el panel de control y se puede gestionar sin tener que depender de herramientas externas."
@@ -166,7 +166,7 @@ _landing:
       description: "Admite la agrupación de procesos, el equilibrio de carga con varios servidores, la replicación de bases de datos y puede dar cabida a un número creciente de usuarios."
     _seo:
       title: "SEO"
-      description: "一部のコンテンツのSSRを行い、検索エンジンへインデックスさせることができるほか、OGPに対応しているのでソーシャルメディア上で共有された際のプレビューも可能です。もちろん、インデックスされたくないシチュエーションではクローラーを拒否する設定も可能です。"
+      description: "Además de poder realizar SSR en parte del contenido y indexarlo en los motores de búsqueda, también es compatible con OGP, lo que permite previsualizar el contenido cuando se comparte en redes sociales. Por supuesto, también es posible configurar el rechazo de rastreadores en situaciones en las que no se desea que el contenido sea indexado."
     _ml:
       title: "Aprendizaje automático"
       description: "Las funciones integradas de aprendizaje automático también pueden utilizarse para reducir las cargas operativas, por ejemplo filtrando automáticamente los medios sensibles."
@@ -205,14 +205,14 @@ _landing:
       title: "Soporte multicuenta"
       description: "Se puede alternar fácilmente entre varias cuentas."
     _watermark:
-      title: "ウォーターマーク付与機能"
-      description: "投稿する画像にウォーターマークを自動で付与して、簡単にクレジット情報を残すことができます。ウォーターマークは自由にカスタマイズ可能です。"
+      title: "Marca de agua"
+      description: "Puedes añadir automáticamente una marca de agua a las imágenes que publiques y dejar fácilmente una información para identificarte como autor. La marca de agua se puede personalizar como quieras."
     _imageEditing:
-      title: "画像加工機能"
-      description: "画像にエフェクトを追加し、カラーグレーディングを行ったり、様々なクリエイティブな表現を行うことが可能です。"
+      title: "Edición de imagen"
+      description: "Añade efectos, realiza ajustes de color y aplica otras ediciones creativas a tus imágenes."
     _achievements:
-      title: "実績"
-      description: "Misskeyの機能を体験するモチベーションになり、オンボーディングに役立ちます。"
+      title: "Logros"
+      description: "Sirve como motivación para explorar las funciones de Misskey y ayuda a la incorporación de los usuarios."
     _plugin:
       title: "Plugins"
       description: "La funcionalidad del cliente puede ampliarse instalando plug-ins mediante AiScript seguro."
@@ -250,7 +250,7 @@ _landing:
       title: "Más información"
       docs: "Consulta nuestra documentación"
     _dev:
-      title: "開発に参加する"
+      title: "Contribuye al desarrollo"
   _donation:
     title: "Ayuda a Misskey"
     description: "Somos un proyecto sin fines de lucro y dependemos de tus donaciones para seguir mejorando. Si te gusta Misskey, ¡considera apoyarnos para que podamos seguir ofreciendo una experiencia increíble!"
