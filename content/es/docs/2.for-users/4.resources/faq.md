@@ -67,6 +67,20 @@ Usamos [DeepL](https://www.deepl.com/), el servicio de traducción automática.
 Además, <b>nuestro Proyecto Misskey no opera ni tiene jurisdicción sobre ningún servicio web</b>, por lo que cualquier consulta sobre servicios web que utilicen Misskey deberá dirigirse al contacto del servicio web correspondiente.<br>
 Ten en cuenta que algunas personas pueden utilizar el término “Misskey” para referirse a “servicios web construidos utilizando Misskey”.
 
+## ¿Cómo se utilizará la ayuda económica?
+
+Se utilizará para el desarrollo continuo de Misskey.
+
+El uso principal específico es el salario (remuneración) de los desarrolladores a tiempo completo (actualmente @syuilo).
+El proyecto Misskey se sustenta gracias a la presencia de desarrolladores a tiempo completo.
+Además, se destina al pago de remuneraciones por trabajos subcontratados y al pago de prestaciones irregulares a los desarrolladores que no trabajan a tiempo completo.
+
+Además, aunque en proporción es menor, los gastos de representación de las partes interesadas, los gastos de apoyo a otros OSS, los gastos de mantenimiento del dominio, las tarifas de uso de diversos programas y servicios de software destinados al desarrollo, los gastos de adquisición de materiales (libros, etc.), los gastos de equipamiento (dispositivos para la verificación del funcionamiento, etc.), los gastos de mantenimiento de derechos como marcas registradas, los honorarios de los asesores fiscales, los gastos relacionados con los productos promocionales (tarjetas Misskey, etc.) (costes de producción, gastos de envío, etc.), gastos de pedido de activos (logotipos, iconos, ilustraciones, sonidos, etc.), gastos de uso de oficinas virtuales, etc.
+
+Actualmente no estamos realizando ninguna campaña publicitaria, por lo que no se generan gastos de publicidad.
+
+Por favor, ten en cuenta que, en principio, las donaciones recibidas se consideran "ingresos" a efectos fiscales, por lo que están sujetas a impuestos por parte del receptor. Además, el receptor debe pagar las comisiones por el servicio utilizado para la transferencia, por lo que no se puede utilizar el importe total de las donaciones recibidas.
+
 ## ¿Tengo que registrarme en el Ministerio de Asuntos Internos y Comunicaciones de Japón si creo un servidor? (Para servidores en Japón)
 
 ### Respuesta corta
