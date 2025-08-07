@@ -131,7 +131,7 @@ Displays content as a quote.
 > MisskeyでFediverseの世界が広がります
 ```
 
-<MfmPreview text="> MisskeyでFediverseの世界が広がります"></MfmPreview>
+<MfmPreview text="> Misskey expands the world of Fediverse"></MfmPreview>
 
 ### Center align
 
@@ -141,7 +141,7 @@ Displays content centered.
 <center>MisskeyでFediverseの世界が広がります</center>
 ```
 
-<MfmPreview text="<center>MisskeyでFediverseの世界が広がります</center>"></MfmPreview>
+<MfmPreview text="<center>Misskey expands the world of Fediverse</center>"></MfmPreview>
 
 ### Yomigana (Ruby characters)
 
