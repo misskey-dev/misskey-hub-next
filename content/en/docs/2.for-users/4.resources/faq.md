@@ -66,9 +66,9 @@ We use [DeepL Translation](https://www.deepl.com/), the machine translation serv
 
 "Misskey" is the name of software used to operate social media services, as well as the development project of this software."Misskey" itself is not a social media service.The Misskey Project does not operate or manage any social media services itself. Any inquiries about services using Misskey software should be directed to their respective service.Note that colloquially, "Misskey" is often used to refer to social media services using Misskey software.
 
-## 支援金はどのように活用されますか？
+## How will the support money use?
 
-継続的なMisskey開発のために活用されます。
+It will be used for continuous development of Misskey.
 
 具体的な主な使途はフルタイム開発者(=現在@syuilo)への給与(報酬)です。
 フルタイムの開発者がいることによりMisskey Projectは成り立っています。
