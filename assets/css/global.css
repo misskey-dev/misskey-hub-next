@@ -100,9 +100,6 @@ html:not(.landing) {
     background-image: linear-gradient(90deg, #86b300, #4ab300, #4ab300);
 	background-size: 100% 6px;
 }
-html.dark .__v_textUnderline_in {
-	opacity: 0.75;
-}
 
 /* Github Markdown Css Override */
 html.dark .markdown-body {
