@@ -58,8 +58,6 @@ Standard ist `info`¸ wenn kein anderes Attribut erstellt wurde.
 
 トーストを表示します。ダイアログと違い、ユーザーがダイアログを閉じる操作が必要ないため、何らかの操作が完了したなどの単純なお知らせに使用できます。
 
-**この関数は2025.5.1（仮称）でリリース予定のものです。**
-
 ### `Mk:confirm(title, text, type)`
 
 Zeigt ein Dialogfenster an.Für type können die folgenden Werte eingestellt werden.\
@@ -184,6 +182,15 @@ Schreibt die in der Benutzeroberfläche angezeigten Notizinformationen um.\
 Der Callback-Funktion wird als erstes Argument ein Ziel-notizen-Objekt übergeben.\
 Die Notiz wird in den Rückgabewert der Callback-Funktion umgeschrieben.\
 Die Rückgabe von `null` blendet die Notiz aus.
+
+:::warning
+
+v2025.8.0以降では、この関数は**同期的に実行**されます。
+内部的に非同期な処理が実行される関数（`Mk:api`など）は実行できず、エラーとなります。
+
+また、同期的に実行されるということは、プラグインの実行中はほかのJavaScriptの処理がすべて停止するということを意味します。これにより、ほかのプラグインフックと比べ、問題のあるスクリプト（無限ループなど）が実行された場合、ホストのJavascript環境に重大な影響を及ぼす可能性があります。十分注意してください。
+
+:::
 
 ```AiScript
 Plugin:register_note_view_interruptor(@(note) {
