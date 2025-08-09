@@ -58,8 +58,6 @@ Si se omite será `info`.
 
 Muestra un toast.A diferencia de los diálogos, no requiere que el usuario cierre el diálogo, por lo que puede utilizarse para notificaciones sencillas, como cuando se ha completado alguna operación.
 
-**El lanzamiento de esta función está previsto para 2025.5.1 (nombre provisional).**
-
 ### `Mk:confirm(title, text, type)`
 
 Muestra un diálogo de confirmación.Se pueden establecer los siguientes valores para el tipo.\
@@ -185,6 +183,15 @@ Reescribe la información de la nota mostrada en la interfaz de usuario.\
 A la función callback se le pasa un objeto nota destino como primer argumento.\
 La nota se reescribirá con el valor de retorno de la función callback.\
 Devuelve `null` para ocultarlo.
+
+:::warning
+
+v2025.8.0以降では、この関数は**同期的に実行**されます。
+内部的に非同期な処理が実行される関数（`Mk:api`など）は実行できず、エラーとなります。
+
+また、同期的に実行されるということは、プラグインの実行中はほかのJavaScriptの処理がすべて停止するということを意味します。これにより、ほかのプラグインフックと比べ、問題のあるスクリプト（無限ループなど）が実行された場合、ホストのJavascript環境に重大な影響を及ぼす可能性があります。十分注意してください。
+
+:::
 
 ```AiScript
 Plugin:register_note_view_interruptor(@(note) {
