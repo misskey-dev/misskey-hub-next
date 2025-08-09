@@ -1,55 +1,51 @@
-# カスタム絵文字の管理
+# Administrar emojis personalizados
 
 :::warning
 
-現在、このドキュメントは更新作業中です。過去の情報が含まれていることがありますのでご注意ください。
+Esta documentación está actualmente en fase de confirmación.Es posible que parte de la información no esté actualizada, por lo que le rogamos tenga cuidado al consultarla.
 
 :::
 
-カスタム絵文字は、管理者・モデレーターと、カスタム絵文字の管理のロールポリシーを持つユーザーが設定からカスタム絵文字ページにあるサブメニューにアクセスして管理できます。
-デフォルトでは、現在ローカルにインストールされている絵文字の一覧が表示されます。
-最初はこのリストは空ですが、さまざまな方法でカスタム絵文字を追加できます。
+Los administradores o moderadores pueden gestionar los emoji personalizados accediendo a la configuración de la instancia y, a continuación, al submenú de emoji personalizados.
+Por defecto verás una lista de los emoji instalados localmente. Al principio esta lista estará vacía, pero puedes añadir emoji personalizados de diferentes maneras.
 
-## 他のインスタンスから絵文字をコピーする
+## Copiar Emoji de otra Instancia
 
-絵文字は他のインスタンスから簡単にコピーできます。
+Los emoji pueden copiarse fácilmente de otra instancia.
 
-まず、カスタム絵文字設定の「リモート」タブに切り替えます。絵文字は名前やホストで検索することができます。
+Para ello, cambia a la pestaña "remoto" en la configuración de emoji personalizados.Puedes buscar emoji por su nombre y/o por el host del que proceden.
 
-欲しい絵文字が見つかったら、それをクリックしてメニューを開き、絵文字をインポートすることができます。
+Cuando hayas encontrado el emoji que deseas, haz clic en él para abrir un pequeño menú que te permitirá importarlo.
 
-絵文字は著作権保護の対象となる場合がありますので、絵文字が利用できるかどうか、権利面の確認を忘れないようにしましょう。
+Ten en cuenta que los emoji pueden estar sujetos a derechos de autor y eres responsable de comprobar si puedes utilizar legalmente otro emoji.
 
-## 個別の絵文字のインポート
+## Importar Emoji Individualmente
 
-カスタム絵文字にしたい画像ファイルがある場合、その画像を絵文字としてインポートできます。
+Si tienes un archivo de imagen que te gustaría convertir en un emoji personalizado, puedes importar la imagen como emoji.
 
 :::danger
 
-ドライブから絵文字をインポートする場合、ファイルはドライブ内に残ります。
-Misskeyはこのファイルのコピーを作成しないため、ファイルを削除すると、絵文字が表示されなくなります。
+Cuando importas el emoji desde tu Drive el archivo permanecerá dentro de tu Drive. Misskey no hace una copia de este archivo por lo que si lo borras, el emoji se romperá.
 
 :::
 
-絵文字がサーバーに追加され、通常通り編集や削除ができるようになります。
+El emoji se añadirá a la instancia y luego podrás editarlo o eliminarlo como de costumbre.
 
-## 一括インポート
+## Importación Masiva
 
-絵文字は、特別な形式でパッケージ化されたZIPファイルとして一括でインポートできます。
-この機能は、カスタム絵文字メニューの右上隅にあるメニューボタンから利用できます。
+Los emojis se pueden importar a granel como archivos ZIP empaquetados con un formato especial. Esta capacidad se puede encontrar en el menú de tres puntos en la esquina superior derecha del menú personalizado emoji.
 
 :::warning
 
-一括インポートは、既存の絵文字を上書きしたり、サーバーに問題を引き起こす可能性があります。
-可能な限りご自身でエクスポートした絵文字のみをインポートするようにし、外部から一括インポートを行う場合は、信頼できるソースかどうかを確認してください。
+La importación masiva de emoji puede sobrescribir los emoji existentes o estropear tu instancia. Asegúrate de importar solo emoji de fuentes fiables, idealmente solo los que hayas exportado tú mismo.
 
 :::
 
-### パッケージ化された絵文字の形式
+### Formato Emoji Empaquetado
 
-トップレベルには `meta.json` というファイルがあり、このファイルにはパッケージ化された絵文字に関する情報が含まれています。
+En el nivel superior hay un archivo llamado "meta.json" que contiene información sobre los emojis contenidos en el archivo empaquetado.
 
-このファイルの型定義は以下のようになり、`Meta` はファイル全体の構造です。
+Una definición de tipo para este fichero tendría este aspecto, donde `Meta` es la estructura de todo el fichero.
 
 ```typescript
 class Meta {
@@ -80,43 +76,42 @@ class Emoji {
 }
 ```
 
-`Meta` のフィールドは現在、絵文字のインポート時に使用またはチェックされていませんが、`emojis` フィールドは使用されます。
+Actualmente, los campos de `Meta` no se utilizan ni se comprueban al importar emoji, excepto el campo `emojis`.
 
-各 `Emoji` に対して:
+Para cada 'Emoji':
 
-- `downloaded`: 常に true に設定します。このフィールドがないか、true でない場合、その絵文字はインポートされません。
-- `fileName`: パッケージ化されたファイル内の画像ファイルの名前。
-- `emoji`: データベースに保存されていた絵文字に関連するデータ。以下の項目が現在使用されています:
-  - `name`: ユーザーが入力する絵文字の名前、例: `blobfox`（ユーザーが `:blobfox:` と入力するとその絵文字が表示されます）。\
-    同じ名前の絵文字が既に存在する場合、**上書きされます**
-  - `category`: 絵文字のカテゴリ
-  - `aliases`: 別名として追加される文字列のリスト。管理者UIではこれを「タグ」と呼びます。
+- `downloaded`: debe ser siempre true.Si el campo falta o no es true, el emoji no se importará.
+- `fileName`: nombre del archivo de imagen dentro del archivo empaquetado.
+- `emoji`: datos asociados al emoji tal y como estaban almacenados en la base de datos.Actualmente se utilizan los siguientes:
+  - `name`: nombre del emoji para el usuario,, ej. `blobfox` si un usuario debe escribir `:blobfox:` para obtener el emoji.\
+    Si existe un emoji anterior con el mismo nombre, **se sobrescribirá!**
+  - `category`: categoría del emoji
+  - `aliases`: lista de cadena de caracteres que deben añadirse como alias.La interfaz de administración las denomina "etiquetas (en inglés: tags)".
 
-## 絵文字の編集と削除
+## Editando y Borrando Emojis
 
-絵文字のプロパティは、ローカル絵文字のリストでクリックすることで編集できます。
-カスタム絵文字をクリックすると、そのプロパティを編集するためのダイアログが開きます。
-このダイアログでは、絵文字を削除することもできます。
+Las propiedades de un emoji se pueden editar haciendo clic en él en la lista de emojis locales.
+Cuando hagas clic en un emoji personalizado, se abrirá un cuadro de diálogo para editar sus propiedades.
+Este diálogo también te permitirá eliminar un emoji.
 
 :::danger
 
-カスタム絵文字を削除すると、それを含む古いノートには絵文字の名前がテキストとして残ります。
-その絵文字は正しく表示されなくなります。
+Cuando eliminas un emoji personalizado, las notas antiguas que lo contengan seguirán teniendo el nombre de texto del emoji. El emoji ya no se mostrará correctamente.
 
 :::
 
-リモート絵文字は編集や削除ができないことに注意してください。
+Ten en cuenta que los emoji remotos no se pueden editar ni borrar.
 
-各絵文字には名前とカテゴリ、いくつかのタグを設定できます。
-カテゴリは絵文字ピッカーの構造化に使用されます。
-タグは絵文字ピッカーで検索する際に絵文字を見つけるための別名として使用されます。
+Cada emoji puede tener un nombre, una categoría y varias etiquetas.
+La categoría se utiliza para estructurar el selector de emoji.
+Mientras tanto, las etiquetas se pueden utilizar como nombres alternativos con los que se puede encontrar el emoji al buscarlo en el selector de emoji.
 
-編集が終わったら、ダイアログの右上隅にあるチェックマークをクリックして変更を保存します。
+Cuando termine de editar, guarde los cambios haciendo clic en la marca de verificación de la esquina superior derecha del cuadro de diálogo.
 
-### 一括編集
+### Edición masiva
 
-絵文字は、検索フィールドの下にあるボックスをチェックすることで一括編集できます。
-これを有効にすると、絵文字をクリックしても編集ダイアログが開くのではなく、絵文字が選択されます。
+Los emoji pueden editarse en bloque marcando la casilla situada debajo del campo de búsqueda.
+Con esta opción activada, al hacer clic en un emoji, éste se seleccionará en lugar de abrirse el cuadro de diálogo de edición.
 
-編集オプションは、チェックボックスの下にボタンとして表示されます。
-通常の動作に戻るには、もう一度ボックスのチェックを外します。
+Las opciones de edición se mostrarán como botones debajo de la casilla de verificación.
+Para volver al comportamiento normal basta con volver a desmarcar la casilla.

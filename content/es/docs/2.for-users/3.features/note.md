@@ -1,107 +1,105 @@
-# ノート
+# Notas
 
-ノートは、Misskeyに投稿される、文章、ファイル、アンケートなどを含むコンテンツで、Misskeyの中心的概念です。また、そのノートを作成する行為自体もノートと呼ばれます。
-
-:::tip
-
-ノートという名称は、英語で「短い記録」を意味する Note が由来になっています。
-
-:::
-
-ノートが作成されると、[タイムライン](./timeline)に追加され、自分の[フォロワー](./follow)やサーバーのユーザーが見れるようになります。
-
-ノートには、[リアクション](./reaction)を行うことができます。また、返信や引用もできます。
-
-ノートを[お気に入り](./favorite)登録することで、後で簡単に見返すことができます。
-
-## ノートを作成する
-
-Misskey Webでノートを作成するには、画面上にある鉛筆マークのボタンを押して、作成フォームを開きます。作成フォームに内容を入力し、「ノート」ボタンを押すことでノートが作成されます。
-ノートには、画像、動画など任意のファイルや、[アンケート](./poll)を添付することができます。また、本文中には[MFM](./mfm)が使用でき、[メンション](./mention)や[ハッシュタグ](./hashtag)を含めることもできます。
-他にも、CWや公開範囲といった設定も行えます(詳細は後述)。
+Las notas son el contenido principal de Misskey. Pueden consistir en imágenes, textos, encuestas y más.En otras plataformas, las notas se conocen como posts.
 
 :::tip
 
-Misskey Webでは、コンピューターのクリップボードに画像データがある状態で、フォーム内のテキストボックスにペーストするとその画像を添付することができます。
+El nombre «nota» proviene del tipo de objeto ActivityPub `Note`, que en este contexto «Representa un breve trabajo escrito típicamente de menos de un párrafo de longitud».
+
+:::
+
+Una vez creada una nota, se añadirá a tu [Línea del Tiempo](./timeline) y será visible para tus [seguidores](./follow) y otros usuarios de tu instancia.
+
+Puedes [reaccionar](./reaction),contestar o citar notas.
+
+Puedes encontrar una nota más tarde añadiéndola a tus [Favoritos](./favorite).
+
+## Redactar una nota
+
+Para redactar una nota, haz clic en el botón Nota (representado por el icono de un lápiz) para abrir el formulario de redacción.Introduce el contenido y haz clic en el botón Nota (con el icono de un avión de papel) para enviar la nota. Las notas pueden contener texto, imágenes, vídeos y [encuestas](./poll).Puedes formatear tu nota usando [Markup language For Misskey (MFM)](./mfm), [mencionar](./mention) otros usuarios, o incluir [hashtags](./hashtag). También puedes añadir advertencias de contenido (CW) y cambiar la visibilidad de la nota (más sobre esto debajo).
+
+:::tip
+
+En Misskey Web, puedes pegar imágenes directamente desde el portapapeles al cuadro de texto utilizando los atajos habituales de copiar y pegar.
 
 :::
 
 :::tip
 
-Misskey Webでは、テキストボックス内で<kbd class="key">Ctrl + Enter</kbd>を押すことでも投稿できます。
+También puedes presionar <kbd class="key">Ctrl + Enter</kbd> dentro del cuadro de texto para publicar la nota.
 
 :::
 
-## リノート
+## Renota
 
-既にあるノートを引用、もしくはそのノートを新しいノートとして共有する行為、またそれによって作成されたノートを「リノート」と呼びます。
-自分がフォローしているユーザーの、気に入ったノートを自分のフォロワーに共有したい場合や、過去の自分のノートを再度共有したい場合に使います。
-同じノートに対して無制限にリノートを行うことができますが、あまり連続して使用すると迷惑になる場合もあるので、注意しましょう。
+El acto de citar una nota existente, compartir una nota existente o la nota creada como resultado de estos actos se denominan Renota (o "renotar" como verbo).
+La mayoría de las veces se utiliza cuando quieres compartir una nota que te gusta con tus propios seguidores, o cuando quieres volver a compartir una nota que publicaste en el pasado.
+Aunque es posible renotar la misma nota varias veces, ten en cuenta que hacerlo puede resultar molesto para los demás.
 
 :::warning
 
-公開範囲がフォロワーやダイレクトのノートはリノートできません。
+Si has configurado la visibilidad de tu nota como Solo seguidores o Nota Directa, no será posible renotarla.
 
 :::
 
-Misskey Webでリノートを削除するには、リノートの時刻表示の隣にある「...」を押し、「リノート解除」を選択します。
+Para eliminar una renota en la web de Misskey, presiona "..." junto a la hora de la renota y selecciona "Quitar Renota".
 
-## CW
+## CW Advertencia de Contenido
 
-Contents Warningの略で、ノートの内容を、閲覧者の操作なしには表示しないようにできる機能です。主に長大な内容を隠すためや、ネタバレ防止などに使うことができます。
-Misskey WebでCWを設定するには、フォームの「内容を隠す」ボタン(目のアイコン)を押します。すると新しい入力エリアが表れるので、そこに内容の要約を記入します。
+Abreviatura de "Advertencia de contenido", en inglés Content Warning, que hace que el contenido de una nota quede oculto a menos que el usuario que la ve solicite explícitamente que se muestre.Se utiliza principalmente para ocultar el contenido de notas largas o para evitar publicar spoilers públicamente.
+Para activar el Cw de una nota, pulsa el botón «Esconder contenidos» (icono del ojo) en el formulario de publicación.Al hacerlo, aparecerá una nueva área de introducción de texto, donde podrás escribir un resumen del contenido oculto por el CW.
 
-## 公開範囲
+## Visibilidad
 
-ノートごとに、そのノートが公開される範囲を設定することができます。
-Misskey Webで公開範囲を設定するには、フォームの「ノート」ボタンの左にあるアイコンを押します。
-公開範囲には、以下の種類があります。
+Para cada nota, puedes establecer el rango dentro del cual la nota se hará pública.
+Para establecer la visibilidad en Misskey Web, haga clic en el icono situado a la izquierda del botón "Nota" del formulario de composición.
+Existen los siguientes tipos de visibilidad:
 
-### パブリック
+### Público
 
-全ての人に対してノートが公開されるほか、サーバーの全てのタイムライン(ホームタイムライン、ローカルタイムライン、ソーシャルタイムライン、グローバルタイムライン)にノートが流れます。
+Tu nota será visible para todos los usuarios y aparecerá en todas las líneas de tiempo (inicio, local, social, global).
 
 :::warning
 
-アカウントが[サイレンス](./silence)状態の時は、この公開範囲は使用できません。
+Si tu cuenta está [silenciada](./silence), no puedes establecer la visibilidad de tu nota como pública.
 
 :::
 
-### ホーム
+### Inicio
 
-全ての人に対してノートが公開されますが、フォロワー以外のローカルタイムライン、ソーシャルタイムライン、グローバルタイムラインにはノートは流れません。
+Tu nota será visible para todos los usuarios, pero no aparecerá en la cronología local, social o global para los no seguidores.
 
-### フォロワー
+### Seguidores
 
-自分のフォロワーに対してのみノートを公開します。フォロワーの全てのタイムラインに流れます。
+Tu nota solo será visible para quienes te sigan.La nota aparecerá en todas las líneas de tiempo de tus seguidores.
 
-### ダイレクト
+### Nota Directa
 
-指定したユーザーに対してのみノートを公開します。指定したユーザーの全てのタイムラインに流れます。
+Tu nota solo será visible para los usuarios especificados individualmente.La nota aparecerá en todas las líneas de tiempo de los usuarios especificados.
 
-### 「ローカルのみ」オプション
+### No Federado
 
-このオプションを有効にすると、リモートにノートを連合しなくなります。
+Si activas esta opción, tu nota no se federará a instancias remotas.
 
-### 公開範囲の比較
+### Comparación de visibilidad
 
 <table>
-	<tbody><tr><th></th><th>パブリック</th><th>ホーム</th><th>フォロワー</th><th>ダイレクト</th></tr>
-	<tr><th>フォロワーのLTL/STL/GTL</th><td>✔</td><td>✔</td><td>✔</td><td></td></tr>
-	<tr><th>非フォロワーのLTL/STL/GTL</th><td>✔</td><td></td><td></td><td></td></tr>
+	<tbody><tr><th></th><th>Público</th><th>Inicio</th><th>Seguidores</th><th>Nota Directa</th></tr>
+	<tr><th>LTL/STL/GTL de Seguidores</th><td>✔</td><td>✔</td><td>✔</td><td></td></tr>
+	<tr><th>LTL/STL/GTL de Otros</th><td>✔</td><td></td><td></td><td></td></tr>
 </tbody></table>
 
-## ピン留め
+## Fijar al perfil
 
-ノートをピン留めすると、ユーザーページに常にそのノートを表示しておくことができます。
-Misskey Webでピン留めを行うには、ノートのメニューを開き、「ピン留め」を選択します。
+Al fijar una nota a tu perfil, ésta se mostrará constantemente en tu página de perfil.
+Para fijar una nota, abre el menú de notas y pulsa "Fijar al perfil".
 
 :::tip
 
-複数のノートを同時にピン留めすることも可能です。
+Puedes fijar múltiples notas en tu perfil.
 
 :::
 
-## 新規投稿の通知
+## Notificación sobre una nueva nota de usuario
 
-ユーザーが新しいノートを投稿した際に通知を出すことができます。ユーザーページを開き、フォローボタン横の詳細ボタンを選択した後、「投稿を通知」をクリックして有効化してください。
+Se puede enviar una notificación cuando un usuario publique una nueva nota.Ve a la página del usuario del que deseas recibir notificaciones, selecciona el botón Detalles situado junto al botón Seguir y, a continuación, haz clic en "Notificar nuevas notas" para activarlo.

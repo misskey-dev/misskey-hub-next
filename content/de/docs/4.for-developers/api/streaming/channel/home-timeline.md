@@ -1,5 +1,5 @@
 ---
-description: Dies ist ein Kanal, in dem die Notizen der Home-Timeline durchlaufen.
+description: "Dies ist ein Kanal, in dem die Notizen der Home-Timeline durchlaufen."
 ---
 
 # `homeTimeline`
