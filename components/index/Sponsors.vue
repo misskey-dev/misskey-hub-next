@@ -59,6 +59,11 @@ const sponsors: Sponsor[] = [
 			to: 'https://purpledotdigital.com/',
 	},
 	{
+			img: '/img/sponsors/sads-llc.png',
+			margin: false,
+			to: 'https://sads-llc.co.jp/',
+	},
+	{
 			img: '/img/sponsors/xfolio.svg',
 			to: 'https://xfolio.jp/',
 	},
