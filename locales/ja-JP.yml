@@ -463,7 +463,7 @@ _noteVisibility:
   public: "パブリック"
   home: "ホーム"
   followers: "フォロワー"
-  specified: "ダイレクト"
+  specified: "指名"
   localOnly: "連合なし"
 
 _shareLinkGenerator:
@@ -477,7 +477,7 @@ _shareLinkGenerator:
   manualInstance: "おすすめサーバー ドメイン"
   manualInstanceDescription: "ここに指定したサーバー（ひとつ）をシェアボタン中継ページのトップに表示できます。ご自身のサーバーに誘導する際などにお使いいただけます。"
   visibility: "公開範囲"
-  recipents: "ダイレクトを受け取る人のacct（改行区切り）"
+  recipents: "指名ノートを受け取る人のacct（改行区切り）"
   resultLink: "リンク生成結果"
   resultButton: "共有ボタンのサンプル"
   testLink: "共有リンクを試す"
