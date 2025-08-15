@@ -79,6 +79,12 @@ Contents Warning 的縮寫，它允許您防止在沒有查看者互動的情況
 
 貼文只提供給指定的使用者。顯示在指定使用者的所有時間軸。
 
+:::tip
+
+v2025.7.0までは「ダイレクト」と呼ばれていました。
+
+:::
+
 ### 「停用聯邦」（僅限本地）選項
 
 如果啟用此選項，則不會將貼文發布到聯邦宇宙（遠端）。
@@ -86,7 +92,7 @@ Contents Warning 的縮寫，它允許您防止在沒有查看者互動的情況
 ### 可見性的比較
 
 <table>
-	<tbody><tr><th></th><th>公開</th><th>首頁</th><th>追隨者</th><th>指定使用者</th></tr>
+	<tbody><tr><th></th><th>公開</th><th>首頁</th><th>追隨者</th><th>指名</th></tr>
 	<tr><th>追隨者的 LTL/STL/GTL</th><td>✔</td><td>✔</td><td>✔</td><td></td></tr>
 	<tr><th>非追隨者的 LTL/STL/GTL</th><td>✔</td><td></td><td></td><td></td></tr>
 </tbody></table>
