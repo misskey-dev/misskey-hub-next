@@ -606,3 +606,5 @@ _api:
       "read:clip-favorite": "查看摘錄的讚"
       "read:federation": "查看站台聯邦的相關資訊"
       "write:report-abuse": "檢舉違規行為"
+      "write:chat": "チャットを操作する"
+      "read:chat": "チャットを閲覧する"
