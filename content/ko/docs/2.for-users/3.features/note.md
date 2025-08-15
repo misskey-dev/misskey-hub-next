@@ -79,6 +79,12 @@ Misskey Web에서 공개 범위를 설정하려면 폼의 '노트' 버튼 왼쪽
 
 지정한 사용자에게만 노트를 공개합니다.지정한 사용자의 모든 타임라인으로 흐릅니다.
 
+:::tip
+
+v2025.7.0までは「ダイレクト」と呼ばれていました。
+
+:::
+
 ### "로컬 전용" 옵션
 
 이 옵션을 활성화하면 원격으로 노트를 연합하지 않습니다.
@@ -86,7 +92,7 @@ Misskey Web에서 공개 범위를 설정하려면 폼의 '노트' 버튼 왼쪽
 ### 공개 범위 비교
 
 <table>
-	<tbody><tr><th></th><th>전체 공개</th><th>홈</th><th>팔로워</th><th>다이렉트</th></tr>
+	<tbody><tr><th></th><th>전체 공개</th><th>홈</th><th>팔로워</th><th>指名</th></tr>
 	<tr><th>팔로워의 LTL/STL/GTL</th><td>✔</td><td>✔</td><td>✔</td><td></td></tr>
 	<tr><th>팔로워가 아닌 경우의 LTL/STL/GTL</th><td>✔</td><td></td><td></td><td></td></tr>
 </tbody></table>
