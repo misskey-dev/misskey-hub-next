@@ -77,6 +77,12 @@ Tu nota solo será visible para quienes te sigan.La nota aparecerá en todas las
 
 Tu nota solo será visible para los usuarios especificados individualmente.La nota aparecerá en todas las líneas de tiempo de los usuarios especificados.
 
+:::tip
+
+v2025.7.0までは「ダイレクト」と呼ばれていました。
+
+:::
+
 ### No Federado
 
 Si activas esta opción, tu nota no se federará a instancias remotas.
@@ -84,7 +90,7 @@ Si activas esta opción, tu nota no se federará a instancias remotas.
 ### Comparación de visibilidad
 
 <table>
-	<tbody><tr><th></th><th>Público</th><th>Inicio</th><th>Seguidores</th><th>Nota Directa</th></tr>
+	<tbody><tr><th></th><th>Público</th><th>Inicio</th><th>Seguidores</th><th>指名</th></tr>
 	<tr><th>LTL/STL/GTL de Seguidores</th><td>✔</td><td>✔</td><td>✔</td><td></td></tr>
 	<tr><th>LTL/STL/GTL de Otros</th><td>✔</td><td></td><td></td><td></td></tr>
 </tbody></table>
