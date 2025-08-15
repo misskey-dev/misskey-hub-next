@@ -79,6 +79,12 @@ Macht Notizen nur für eigene Follower zugänglich.Es wird an alle Timelines der
 
 Die Notiz ist nur für den/die angegebenen Benutzer zugänglich.Sie fließt in die Timeline des angegebenen Benutzers.
 
+:::tip
+
+v2025.7.0までは「ダイレクト」と呼ばれていました。
+
+:::
+
 ### Option - „nur lokal“
 
 Wenn diese Option aktiviert ist, wird die Notiz nicht an das Fediverse übertragen und bleibt in der Heiminstanz.
@@ -86,7 +92,7 @@ Wenn diese Option aktiviert ist, wird die Notiz nicht an das Fediverse übertrag
 ### Vergleich des Veröffentlichungsumfangs
 
 <table>
-	<tbody><tr><th></th><th>Öffentlich</th><th>Home</th><th>Follower</th><th>Direktnachrichten</th></tr>
+	<tbody><tr><th></th><th>Öffentlich</th><th>Home</th><th>Follower</th><th>指名</th></tr>
 	<tr><th>Follower LTL/STL/GTL</th><td>✔</td><td>✔</td><td>✔</td><td></td></tr>
 	<tr><th>Nicht-Follower LTL/STL/GTL</th><td>✔</td><td></td><td></td><td></td></tr>
 </tbody></table>
