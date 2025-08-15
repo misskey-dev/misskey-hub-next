@@ -606,3 +606,5 @@ _api:
       "read:clip-favorite": "ดูคลิปที่ถูกใจ"
       "read:federation": "รับข้อมูลเกี่ยวกับสหพันธ์"
       "write:report-abuse": "รายงานการละเมิด"
+      "write:chat": "チャットを操作する"
+      "read:chat": "チャットを閲覧する"
