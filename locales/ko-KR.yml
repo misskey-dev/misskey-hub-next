@@ -606,3 +606,5 @@ _api:
       "read:clip-favorite": "클립의 좋아요 보기"
       "read:federation": "연합 정보 불러오기"
       "write:report-abuse": "위반 내용 신고하기"
+      "write:chat": "チャットを操作する"
+      "read:chat": "チャットを閲覧する"
