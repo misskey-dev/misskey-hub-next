@@ -606,3 +606,5 @@ _api:
       "read:clip-favorite": "View favorited clips"
       "read:federation": "Get federation info"
       "write:report-abuse": "Report violation"
+      "write:chat": "チャットを操作する"
+      "read:chat": "チャットを閲覧する"
