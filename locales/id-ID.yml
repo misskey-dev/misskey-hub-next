@@ -606,3 +606,5 @@ _api:
       "read:clip-favorite": "Lihat klip yang difavoritkan"
       "read:federation": "Mendapatkan informasi federasi"
       "write:report-abuse": "Melaporkan pelanggaran"
+      "write:chat": "チャットを操作する"
+      "read:chat": "チャットを閲覧する"
