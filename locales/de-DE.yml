@@ -606,3 +606,5 @@ _api:
       "read:clip-favorite": "Clip-Likes ansehen"
       "read:federation": "Informationen über Förderationen bearbeiten oder löschen"
       "write:report-abuse": "Fehler melden"
+      "write:chat": "チャットを操作する"
+      "read:chat": "チャットを閲覧する"
