@@ -81,7 +81,7 @@ Misskey Web에서 공개 범위를 설정하려면 폼의 '노트' 버튼 왼쪽
 
 :::tip
 
-v2025.7.0までは「ダイレクト」と呼ばれていました。
+v2025.7.0까지는 '다이렉트'라고 불렸습니다.
 
 :::
 
@@ -92,7 +92,7 @@ v2025.7.0までは「ダイレクト」と呼ばれていました。
 ### 공개 범위 비교
 
 <table>
-	<tbody><tr><th></th><th>전체 공개</th><th>홈</th><th>팔로워</th><th>指名</th></tr>
+	<tbody><tr><th></th><th>전체 공개</th><th>홈</th><th>팔로워</th><th>지명</th></tr>
 	<tr><th>팔로워의 LTL/STL/GTL</th><td>✔</td><td>✔</td><td>✔</td><td></td></tr>
 	<tr><th>팔로워가 아닌 경우의 LTL/STL/GTL</th><td>✔</td><td></td><td></td><td></td></tr>
 </tbody></table>
