@@ -1,5 +1,5 @@
 ---
-description: Dies ist ein Kanal, in dem grundlegende Informationen durchlaufen.
+description: "Dies ist ein Kanal, in dem grundlegende Informationen durchlaufen."
 ---
 
 # `main`

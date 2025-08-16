@@ -1,5 +1,5 @@
 ---
-description: This document contains frequently asked questions about using Misskey.
+description: 'This document contains frequently asked questions about using Misskey.'
 ---
 
 # Frequently Asked Questions
@@ -62,6 +62,24 @@ Anyone can develop a Misskey bot using the Misskey API.For more information, see
 
 We use [DeepL Translation](https://www.deepl.com/), the machine translation service.
 
+## I want to inquire about your service.
+
+"Misskey" is the name of software used to operate social media services, as well as the development project of this software."Misskey" itself is not a social media service.The Misskey Project does not operate or manage any social media services itself. Any inquiries about services using Misskey software should be directed to their respective service.Note that colloquially, "Misskey" is often used to refer to social media services using Misskey software.
+
+## How will the support money use?
+
+It will be used for continuous development of Misskey.
+
+具体的な主な使途はフルタイム開発者(=現在@syuilo)への給与(報酬)です。
+フルタイムの開発者がいることによりMisskey Projectは成り立っています。
+また、フルタイムではない開発者に対して、業務委託した際の報酬の支払いや、不定期的な給付金の支払いにも充てられます。
+
+他には、割合としては低いですが、関係者の接待交際費用、他OSSへの支援費用、ドメイン維持費用、開発に供する各種ソフトウェア・サービスの利用料金、資料(書籍等)購入費用、備品(動作検証用デバイス等)費用、商標など権利の維持費用、税理士報酬、グッズ(Misskeyカード等)に係る費用(製作費、発送費用等)、アセット(ロゴ、アイコン、イラスト、サウンド等)発注費用、バーチャルオフィス利用料等に充てられることもあります。
+
+広告に関しては現在実施していませんので宣伝広告費用は発生していません。
+
+なお、基本的にいただいたご支援金は税制上「売上」扱いになり、受け取り側で課税対象になるほか、受け取り側で送金に使用されたサービスに対する手数料を支払いますので、いただいたご支援金の全額を活用できるわけではない点にご留意ください。
+
 ## Do I need to register with the Ministry of Internal Affairs and Communications if I create a server? (For servers in Japan)
 
 ### Short answer
@@ -72,6 +90,10 @@ We use [DeepL Translation](https://www.deepl.com/), the machine translation serv
 
 The definition of "operator," according to [documents from the Ministry of Internal Affairs and Communications](https://www.soumu.go.jp/main_content/000477428.pdf), is "a person who seeks to make a profit by providing services and collecting fees as compensation for the provision of those services."Therefore, unless you are operating the server for the purpose of making a profit as a business, registration is not necessary.Thus, even if there is revenue from sources like donations or advertising, as long as it is used solely for operating costs, it does not fall under the category of operators requiring registration (confirmed with the Ministry of Internal Affairs and Communications).<br>
 For more details, please refer to the Ministry of Internal Affairs and Communications' [Entry Manual for Telecommunications Businesses](https://www.soumu.go.jp/main_content/000477428.pdf) or contact the ministry directly.
+
+## Since Misskey has a DM function, don't I need to register as a telecommunications business to run a server?
+
+As mentioned in ["Do I need to register with the Ministry of Internal Affairs and Communications if I create a server? (For servers in Japan)"](#Do I need to register with the Ministry of Internal Affairs and Communications if I create a server? (For servers in Japan)), any service operating on a non-profit basis does not require registration, regardless of the services offered.
 
 ## Can I release services containing the name "Misskey"?
 

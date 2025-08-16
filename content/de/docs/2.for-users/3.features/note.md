@@ -17,7 +17,7 @@ Notizen können auch als [favorit](./favorite) hinterlegt werden, um sie so spä
 ## Notizen schreiben oder löschen
 
 Um eine Notiz in Misskey Web zu erstellen, drücke auf die Schaltfläche mit dem Bleistiftsymbol auf dem Bildschirm, um das Erstellungsfenster zu öffnen.Eine Notiz wird erstellt, indem der Inhalt in das Erstellungsfenster eingegeben und die Schaltfläche [Notiz] gedrückt wird.
-Die Notiz kann eine beliebige Datei enthalten, z. B. ein Bild oder ein Video, oder eine [Umfrage](./poll) kann an die Notiz angehängt werden.Darüber hinaus können [MFM](./mfm) im Text verwendet werden, [Erwähnungen](./mention], sowie [hashtags](./hashtag) eingefügt werden.
+Die Notiz kann eine beliebige Datei enthalten, z. B. ein Bild oder ein Video, oder eine [Umfrage](./poll) kann an die Notiz angehängt werden.Darüber hinaus können [MFM](./mfm) im Text verwendet werden, [Erwähnungen](./mention), sowie [hashtags](./hashtag) eingefügt werden.
 Es können auch andere Einstellungen wie Inhaltswarnungen und Publikationsbereich festgelegt werden (Mehr dazu weiter unten).
 
 :::tip
@@ -63,7 +63,7 @@ Die Notiz ist nicht nur für alle öffentlich, sondern durchläuft auch alle Zei
 
 :::warning
 
-Dieser öffentliche Bereich ist nicht verfügbar, wenn sich das Konto im Status [stumm] (./silence) befindet.
+Dieser öffentliche Bereich ist nicht verfügbar, wenn sich das Konto im Status [stumm](./silence) befindet.
 
 :::
 
@@ -79,6 +79,12 @@ Macht Notizen nur für eigene Follower zugänglich.Es wird an alle Timelines der
 
 Die Notiz ist nur für den/die angegebenen Benutzer zugänglich.Sie fließt in die Timeline des angegebenen Benutzers.
 
+:::tip
+
+v2025.7.0までは「ダイレクト」と呼ばれていました。
+
+:::
+
 ### Option - „nur lokal“
 
 Wenn diese Option aktiviert ist, wird die Notiz nicht an das Fediverse übertragen und bleibt in der Heiminstanz.
@@ -86,7 +92,7 @@ Wenn diese Option aktiviert ist, wird die Notiz nicht an das Fediverse übertrag
 ### Vergleich des Veröffentlichungsumfangs
 
 <table>
-	<tbody><tr><th></th><th>Öffentlich</th><th>Home</th><th>Follower</th><th>Direktnachrichten</th></tr>
+	<tbody><tr><th></th><th>Öffentlich</th><th>Home</th><th>Follower</th><th>指名</th></tr>
 	<tr><th>Follower LTL/STL/GTL</th><td>✔</td><td>✔</td><td>✔</td><td></td></tr>
 	<tr><th>Nicht-Follower LTL/STL/GTL</th><td>✔</td><td></td><td></td><td></td></tr>
 </tbody></table>
