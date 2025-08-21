@@ -116,10 +116,10 @@ _landing:
       title: "ひとりでも、みんなでも"
       description: "既支持作为多用户社交平台的运营，也可用作个人实例。它将成为您在联邦宇宙中专属的枢纽节点。"
     _monetization:
-      title: "収益化"
+      title: "收益化"
       description: "提供广告展示等实例变现辅助功能，助您实现可持续运营。"
     _oss:
-      title: "Mi ❤️ OSS"
+      title: "我们❤开源"
       description: "Misskey始终并将持续开源，允许任何人免费自由使用源代码；同时Misskey项目积极为其他开源软件提供支援。"
     _battleTested:
       title: "信頼性"
