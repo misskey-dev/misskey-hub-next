@@ -186,10 +186,10 @@ Devuelve `null` para ocultarlo.
 
 :::warning
 
-v2025.8.0以降では、この関数は**同期的に実行**されます。
-内部的に非同期な処理が実行される関数（`Mk:api`など）は実行できず、エラーとなります。
+En la versión 2025.8.0 y posteriores, esta función se ejecuta de forma sincrónica.
+Las funciones que ejecutan procesamiento asincrónico internamente (como `Mk:api`) no se pueden ejecutar y darán lugar a un error.
 
-また、同期的に実行されるということは、プラグインの実行中はほかのJavaScriptの処理がすべて停止するということを意味します。これにより、ほかのプラグインフックと比べ、問題のあるスクリプト（無限ループなど）が実行された場合、ホストのJavascript環境に重大な影響を及ぼす可能性があります。十分注意してください。
+Además, la ejecución sincrónica significa que todo el resto del procesamiento de JavaScript se suspende mientras el complemento está en funcionamiento.Esto significa que, en comparación con otros ganchos de complementos, los scripts problemáticos (como los bucles infinitos) podrían tener un impacto significativo en el entorno JavaScript del host si se ejecutan.Por favor, tenga cuidado.
 
 :::
 
