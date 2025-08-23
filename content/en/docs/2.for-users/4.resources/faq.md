@@ -66,19 +66,17 @@ We use [DeepL Translation](https://www.deepl.com/), the machine translation serv
 
 "Misskey" is the name of software used to operate social media services, as well as the development project of this software."Misskey" itself is not a social media service.The Misskey Project does not operate or manage any social media services itself. Any inquiries about services using Misskey software should be directed to their respective service.Note that colloquially, "Misskey" is often used to refer to social media services using Misskey software.
 
-## How will the support money use?
+## How will we use your donations?
 
-It will be used for continuous development of Misskey.
+Your donations will be used to support the continuous development of Misskey.
 
-具体的な主な使途はフルタイム開発者(=現在@syuilo)への給与(報酬)です。
-フルタイムの開発者がいることによりMisskey Projectは成り立っています。
-また、フルタイムではない開発者に対して、業務委託した際の報酬の支払いや、不定期的な給付金の支払いにも充てられます。
+Specifically, your donations will primarily go towards the salary of a full-time developer (currently @syuilo). The Misskey Project could not be possible without our full-time developer. From time to time the funds may also be used to pay for contract work, as well as stipends.
 
-他には、割合としては低いですが、関係者の接待交際費用、他OSSへの支援費用、ドメイン維持費用、開発に供する各種ソフトウェア・サービスの利用料金、資料(書籍等)購入費用、備品(動作検証用デバイス等)費用、商標など権利の維持費用、税理士報酬、グッズ(Misskeyカード等)に係る費用(製作費、発送費用等)、アセット(ロゴ、アイコン、イラスト、サウンド等)発注費用、バーチャルオフィス利用料等に充てられることもあります。
+A small proportion of our expenses may include hospitality, donations to other open source software, domain registration, development software and services, materials (e.g. books), hardware (e.g. test benches), fees for trademarks and other rights, accounting fees, merchandise costs (production, shipping, etc. for Misskey cards, etc.), purchasing art assets (logos, icons, illustrations, sounds, etc.), virtual office fees, etc.
 
-広告に関しては現在実施していませんので宣伝広告費用は発生していません。
+We are not currently advertising, so we do not have any advertising expenses.
 
-なお、基本的にいただいたご支援金は税制上「売上」扱いになり、受け取り側で課税対象になるほか、受け取り側で送金に使用されたサービスに対する手数料を支払いますので、いただいたご支援金の全額を活用できるわけではない点にご留意ください。
+Please note that donations to us are considered "sales" for tax purposes and will be subject to sales tax. Additionally, donations are subject to payment processor fees, meaning a portion of your donations will not go to us.
 
 ## Do I need to register with the Ministry of Internal Affairs and Communications if I create a server? (For servers in Japan)
 
