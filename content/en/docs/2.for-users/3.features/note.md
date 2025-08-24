@@ -77,6 +77,12 @@ Your note will only be visible to those that are following you.The note will sho
 
 Your note will only be visible to individually specified users.The note will show up on all timelines of the specified users.
 
+:::tip
+
+v2025.7.0までは「ダイレクト」と呼ばれていました。
+
+:::
+
 ### Local Only
 
 If you enable this option, your note won't be federated to remote instances.
@@ -84,7 +90,7 @@ If you enable this option, your note won't be federated to remote instances.
 ### Visibility comparison
 
 <table>
-	<tbody><tr><th></th><th>Public</th><th>Home</th><th>Followers</th><th>Direct</th></tr>
+	<tbody><tr><th></th><th>Public</th><th>Home</th><th>Followers</th><th>指名</th></tr>
 	<tr><th>LTL/STL/GTL of Followers</th><td>✔</td><td>✔</td><td>✔</td><td></td></tr>
 	<tr><th>LTL/STL/GTL of Others</th><td>✔</td><td></td><td></td><td></td></tr>
 </tbody></table>

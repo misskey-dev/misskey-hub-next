@@ -1,5 +1,5 @@
 ---
-description: Panduan ini akan menjelaskan tentang bagaimana cara memasang dan menyetel instansi Misskey dengan menggunakan Docker Compose.
+description: 'Panduan ini akan menjelaskan tentang bagaimana cara memasang dan menyetel instansi Misskey dengan menggunakan Docker Compose.'
 ---
 
 # Buat instansi Misskey dengan Docker Compose
