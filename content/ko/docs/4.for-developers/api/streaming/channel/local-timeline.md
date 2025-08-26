@@ -1,5 +1,5 @@
 ---
-description: 로컬 타임라인의 노트를 표시하는 채널입니다.
+description: "로컬 타임라인의 노트를 표시하는 채널입니다."
 ---
 
 # `localTimeline`
