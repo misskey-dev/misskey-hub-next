@@ -1,25 +1,25 @@
-# セーフモード
+# Modo seguro
 
-v2025.8.0 以降の Misskey Webでは、プラグイン・カスタムCSS・テーマによってクライアントの動作に支障をきたした場合に、これらを無効にした状態で起動する「セーフモード」が備わっています。
+A partir de la versión 2025.8.0, Misskey Web incluye una función de «modo seguro». Este modo inicia el cliente con los complementos, el CSS personalizado y los temas desactivados en caso de que causen problemas operativos.
 
-以下の方法で、セーフモードに入ることができます。
+Puedes acceder al modo seguro mediante el siguiente método.
 
-- （起動時にエラー画面が表示された場合）エラー画面上の「Misskeyをセーフモードで起動」ボタンをクリック
-- （キーボードが接続されている場合）`g` キーを連打
-- URLに`?safemode=true`を付ける
-- （PWAを利用している場合）ショートカットで Safemode を選択して起動する
+- (Si aparece una pantalla de error al iniciar) Haz clic en el botón «Iniciar Misskey en modo seguro» en la pantalla de error.
+- (Si hay un teclado conectado) Pulsa rápidamente la tecla «g».
+- Añade «?safemode=true» a la URL.
+- (Cuando se utiliza PWA) Inicie seleccionando Safemode a través del acceso directo.
 
-セーフモード実行中は、以下の機能が制限されます。
+Las siguientes funciones están restringidas mientras se ejecuta en modo seguro.
 
-- 有効・無効の設定にかかわらずプラグインがすべて無効化され、新規インストールはできません。
-- カスタムCSSは適用されません。
-- 設定にかかわらずデフォルトテーマで起動し、テーマの変更ができなくなります（テーマの管理ページから削除することは可能）。
-- 画面上に常に「セーフモード」の表示が出る
+- Independientemente de si están habilitados o deshabilitados, todos los complementos se desactivarán y no será posible realizar nuevas instalaciones.
+- No se aplicará el CSS personalizado.
+- Se iniciará utilizando el tema predeterminado independientemente de la configuración, y no podrás cambiar el tema (aunque se puede eliminar a través de la página de gestión de temas).
+- El mensaje «Modo seguro» se muestra constantemente en la pantalla.
 
-セーフモードを活用し、問題の原因となった部分を特定・対処してください。対応が完了したら、セーフモード実行中常に表示されるメニューから「オフにする」をクリックしてセーフモードを無効化してください。
+Utiliza el modo seguro para identificar y solucionar el problema causado por algún componente.Una vez completado el procedimiento, desactiva el modo seguro haciendo clic en «Desactivar» en el menú que se muestra siempre durante el funcionamiento del modo seguro.
 
 :::tip
 
-セーフモードで常用することは想定されていません。対処が完了したらオフにして通常モードで起動してください。
+El modo seguro no está diseñado para un uso regularUna vez completado el procedimiento, apágalo y reinicia  en modo normal.
 
 :::
