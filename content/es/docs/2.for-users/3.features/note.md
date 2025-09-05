@@ -79,7 +79,7 @@ Tu nota solo será visible para los usuarios especificados individualmente.La no
 
 :::tip
 
-v2025.7.0までは「ダイレクト」と呼ばれていました。
+Hasta la versión 2025.7.0, se llamaba «Nota directa».
 
 :::
 
