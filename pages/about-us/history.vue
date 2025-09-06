@@ -86,11 +86,19 @@
 						<div class="grid md:grid-cols-2 gap-4">
 							<div :class="$style.yearContentItem">
 								<div :class="$style.yearImage">
-									<img src="/img/historical-materials/2014/e32efd98b06f42efb19504574ce31e42.png" />
+									<img src="/img/historical-materials/2014/e32efd98b06f42efb19504574ce31e42.jpg" />
 								</div>
 								<div class="text-center mt-2">
 									<p class="text-sm text-neutral-300">2014年7月ごろ</p>
 									<p class="text-sm text-neutral-300">Misskey公開。ウィンドウが並ぶ特徴的なUI</p>
+								</div>
+							</div>
+							<div :class="$style.yearContentItem">
+								<div :class="$style.yearImage">
+									<img src="/img/historical-materials/2014/8256ad0d69164bdda7a0804736c5d52b.jpg" />
+								</div>
+								<div class="text-center mt-2">
+									<p class="text-sm text-neutral-300">2014年7月ごろ</p>
 								</div>
 							</div>
 							<div :class="$style.yearContentItem">
