@@ -103,6 +103,14 @@
 							</div>
 							<div :class="$style.yearContentItem">
 								<div :class="$style.yearImage">
+									<img src="/img/historical-materials/2014/20140821.png" />
+								</div>
+								<div class="text-center mt-2">
+									<p class="text-sm text-neutral-300">2014年8月ごろ</p>
+								</div>
+							</div>
+							<div :class="$style.yearContentItem">
+								<div :class="$style.yearImage">
 									<img src="/img/historical-materials/2014/20141100.jpg" />
 								</div>
 								<div class="text-center mt-2">
