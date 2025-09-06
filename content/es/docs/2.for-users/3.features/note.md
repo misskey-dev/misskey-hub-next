@@ -90,7 +90,7 @@ Si activas esta opción, tu nota no se federará a instancias remotas.
 ### Comparación de visibilidad
 
 <table>
-	<tbody><tr><th></th><th>Público</th><th>Inicio</th><th>Seguidores</th><th>指名</th></tr>
+	<tbody><tr><th></th><th>Público</th><th>Inicio</th><th>Seguidores</th><th>Mensaje Directo</th></tr>
 	<tr><th>LTL/STL/GTL de Seguidores</th><td>✔</td><td>✔</td><td>✔</td><td></td></tr>
 	<tr><th>LTL/STL/GTL de Otros</th><td>✔</td><td></td><td></td><td></td></tr>
 </tbody></table>
