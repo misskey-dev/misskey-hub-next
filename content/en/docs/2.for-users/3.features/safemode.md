@@ -1,6 +1,6 @@
-# セーフモード
+# Safe Mode
 
-v2025.8.0 以降の Misskey Webでは、プラグイン・カスタムCSS・テーマによってクライアントの動作に支障をきたした場合に、これらを無効にした状態で起動する「セーフモード」が備わっています。
+Since Misskey Web v2025.8.0, Misskey features a Safe Mode which disables custom CSS, plugins, and themes, for cases where they interfere with normal operation.
 
 以下の方法で、セーフモードに入ることができます。
 
