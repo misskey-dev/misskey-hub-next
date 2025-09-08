@@ -1,25 +1,25 @@
 # Safe Mode
 
-Since Misskey Web v2025.8.0, Misskey features a Safe Mode which disables custom CSS, plugins, and themes, for cases where they interfere with normal operation.
+Since Misskey Web v2025.8.0, Misskey features a Safe Mode which disables custom CSS, plugins, and themes. This is for cases where these features interfere with the normal operation of the app.
 
-以下の方法で、セーフモードに入ることができます。
+Safe Mode can be activated in the following ways:
 
-- （起動時にエラー画面が表示された場合）エラー画面上の「Misskeyをセーフモードで起動」ボタンをクリック
-- （キーボードが接続されている場合）`g` キーを連打
-- URLに`?safemode=true`を付ける
-- （PWAを利用している場合）ショートカットで Safemode を選択して起動する
+- If an error appears on startup: Click the "Launch Misskey in safe mode" button on the error screen.
+- If using a keyboard: Press the G key repeatedly
+- Add "?safemode=true" to the URL
+- If using the PWA: Use the Safe Mode shortcut to launch the app
 
-セーフモード実行中は、以下の機能が制限されます。
+When Safe Mode is enabled, the following limitations will apply:
 
-- 有効・無効の設定にかかわらずプラグインがすべて無効化され、新規インストールはできません。
-- カスタムCSSは適用されません。
-- 設定にかかわらずデフォルトテーマで起動し、テーマの変更ができなくなります（テーマの管理ページから削除することは可能）。
-- 画面上に常に「セーフモード」の表示が出る
+- All plugins will be disabled regardless of whether they are configured to be enabled or disabled, and new plugins cannot be installed.
+- Custom CSS will not be applied.
+- The default theme will be applied regardless of settings, and theme changes will be disabled. Themes can still be deleted from the Theme settings page.
+- A "Safe Mode" message will always be displayed on screen.
 
-セーフモードを活用し、問題の原因となった部分を特定・対処してください。対応が完了したら、セーフモード実行中常に表示されるメニューから「オフにする」をクリックしてセーフモードを無効化してください。
+Use Safe Mode to troubleshoot issues.Once you have resolved your issues, click "Turn off" in the Safe Mode menu to return to normal operation.
 
 :::tip
 
-セーフモードで常用することは想定されていません。対処が完了したらオフにして通常モードで起動してください。
+Safe Mode is not intended for normal use.Once you have finished troubleshooting your issue, disable Safe Mode and resume normal operation.
 
 :::
