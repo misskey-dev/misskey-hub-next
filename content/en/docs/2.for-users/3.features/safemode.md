@@ -6,7 +6,7 @@ Safe Mode can be activated in the following ways:
 
 - If an error appears on startup: Click the "Launch Misskey in safe mode" button on the error screen.
 - If using a keyboard: Press the G key repeatedly
-- Add "?safemode=true" to the URL
+- Add `?safemode=true` to the URL
 - If using the PWA: Use the Safe Mode shortcut to launch the app
 
 When Safe Mode is enabled, the following limitations will apply:
