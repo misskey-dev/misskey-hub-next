@@ -1,47 +1,47 @@
-# ノート検索
+# 搜尋貼文
 
-Misskeyにはノートの検索機能があります。有効化することで、ノートの検索ができるようになります。
+Misskey 具有貼文的搜尋功能。啟用後，即可使用貼文搜尋功能。
 
 :::tip
 
-検索機能はデフォルトで無効となっています。
-利用する場合は、ロールの「ノート検索の利用」を有効にしてください。
+搜尋功能預設為關閉。
+如要使用，請在角色設定中啟用「可否搜尋貼文」。
 
 :::
 
-## サポートしている検索エンジン
+## 支援的搜尋引擎
 
-Misskeyはノート検索に使用するアルゴリズムを複数ご用意しています。サーバーの規模やニーズに応じて切り替えることができます。
+Misskey 提供了多種用於貼文搜尋的演算法。可依伺服器規模或需求進行切換。
 
-- sqlLike ... PostgreSQLの標準機能を用いて検索を行います。(デフォルト)
-  - データベース組み込みの機能を使用するためお手軽です。
-  - データの量が増えてくると検索に時間がかかりやすくなります。
+- sqlLike ... 使用 PostgreSQL 的標準功能進行搜尋。(預設)
+  - 由於使用資料庫內建功能，因此操作簡便。
+  - 隨著資料量增加，搜尋可能會變得較慢。
 
-- sqlPgroonga ... 全文検索エンジンの[Pgroonga](https://pgroonga.github.io)を用いて検索を行います。
-  - Pgroongaのインストールが必要です。
-  - sqlLikeより高速な検索が可能です。
+- sqlPgroonga ... 使用全文搜尋引擎 [Pgroonga](https://pgroonga.github.io) 進行搜尋。
+  - 需要安裝 Pgroonga。
+  - 比 sqlLike 提供更高速的搜尋。
 
-- meilisearch ... 全文検索エンジンの[Meilisearch](https://www.meilisearch.com)を用いて検索を行います。
-  - Meilisearchのインストールが必要です。
-  - sqlLikeより高速な検索が可能です。
-  - 検索対象のノートは、公開範囲が「パブリック」または「ホーム」です。フォロワー限定投稿も含めたい場合は`sqlLike`または`sqlPgroonga`を使用する必要があります。
+- meilisearch ... 使用全文搜尋引擎 [Meilisearch](https://www.meilisearch.com) 進行搜尋。
+  - 需要安裝 Meilisearch。
+  - 比 sqlLike 提供更高速的搜尋。
+  - 可搜尋公開範圍為「公開」或「首頁」的貼文。如要包含僅限追隨者的貼文，則需要使用 `sqlLike` 或 `sqlPgroonga`。
 
-検索エンジンを変更する場合は、設定ファイルの `fulltextSearch` の `provider` を書き換えて、Misskeyのプロセスを再起動してください。
+若要更換搜尋引擎，請修改設定檔中 `fulltextSearch` 的 `provider`，並重新啟動 Misskey 。
 
-## Pgroongaを使う
+## 使用 Pgroonga
 
-### Pgroongaのインストール
+### 安裝 Pgroonga
 
 :::warning
 
-作業前にデータベースのバックアップをおすすめします。\
-また、Misskeyを停止してから作業を開始してください。
+建議在操作前先備份資料庫。\
+此外，請在操作前先停止 Misskey。
 
 :::
 
-Ubuntu 22.04、PostgreSQL 15の環境にPgroongaをインストールする例です。
+以下是在 Ubuntu 22.04、PostgreSQL 15 環境下安裝 Pgroonga 的範例。
 
-詳細は[公式PostgreSQL用のインストール方法](https://pgroonga.github.io/ja/install/ubuntu.html)をご確認ください。
+詳細請參考 [官方 PostgreSQL 安裝方法](https://pgroonga.github.io/ja/install/ubuntu.html)。
 
 ```sh
 sudo apt install -y -V ca-certificates lsb-release wget
@@ -58,37 +58,37 @@ sudo apt update
 sudo apt install -y -V postgresql-15-pgdg-pgroonga
 ```
 
-MeCabベースのトークナイザーを使いたい場合は、以下も実行します。
+如要使用基於 MeCab 的分詞器，請同時執行以下操作。
 
 ```sh
 sudo apt install -y -V groonga-tokenizer-mecab
 ```
 
-### Pgroongaの有効化
+### 啟用 Pgroonga
 
-次にPostgreSQLにログインします。
+接著登入 PostgreSQL。
 
 ```sh
 sudo -u postgres psql
 ```
 
-ログインをしたら、Misskeyのデータベースを選択します。
+登入後，選擇 Misskey 的資料庫。
 
 ```sh
 \c "mk1"
 ```
 
-PGroongaを有効化します。
+啟用 PGroonga。
 
 ```sh
 CREATE EXTENSION pgroonga;
 ```
 
-PGroonga用のインデックスを作成します。
+建立 PGroonga 專用的索引。
 
 :::warning
 
-インデックス作成には時間がかかります。十分な作業時間を確保してください。
+建立索引可能需要一些時間。請確保有足夠的操作時間。
 
 :::
 
@@ -96,16 +96,16 @@ PGroonga用のインデックスを作成します。
 CREATE INDEX idx_note_text_with_pgroonga ON note USING pgroonga (text);
 ```
 
-完了したら、`exit` と入力し、Postgresqlからログアウトします。
+完成後，輸入 `exit`，並登出 PostgreSQL。
 
-### 検索エンジンの変更
+### 更換搜尋引擎
 
-Misskeyの設定ファイルを編集します。\
-`fulltextSearch` を `sqlPgroonga` に変更してください。
+編輯 Misskey 的設定檔。\
+將 `fulltextSearch` 更改為 `sqlPgroonga`。
 
 ```sh
 fulltextSearch:
   provider: sqlPgroonga
 ```
 
-Misskeyのプロセスを起動し、ノートの検索ができれば完了です。
+啟動 Misskey 的程序，確認貼文搜尋功能可用後，即完成設定。
