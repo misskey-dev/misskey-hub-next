@@ -81,7 +81,7 @@ Contents Warning 的縮寫，它允許您防止在沒有查看者互動的情況
 
 :::tip
 
-v2025.7.0までは「ダイレクト」と呼ばれていました。
+在 v2025.7.0 之前，稱作「私訊」。
 
 :::
 
@@ -92,7 +92,7 @@ v2025.7.0までは「ダイレクト」と呼ばれていました。
 ### 可見性的比較
 
 <table>
-	<tbody><tr><th></th><th>公開</th><th>首頁</th><th>追隨者</th><th>指名</th></tr>
+	<tbody><tr><th></th><th>公開</th><th>首頁</th><th>追隨者</th><th>指定使用者</th></tr>
 	<tr><th>追隨者的 LTL/STL/GTL</th><td>✔</td><td>✔</td><td>✔</td><td></td></tr>
 	<tr><th>非追隨者的 LTL/STL/GTL</th><td>✔</td><td></td><td></td><td></td></tr>
 </tbody></table>
