@@ -48,7 +48,7 @@ An abbreviation for "Local TimeLine".See the documentation on the [timelines.](.
 
 ## MFM
 
-Abbreviation for Markup language for Misskey. The markup language used on Misskey.[Documentation is available](../features/mfm)
+Abbreviation for Markup Language for Misskey (Misskey Flavored Markdown). The markup language used on Misskey. [Documentation is available](../features/mfm)
 
 ## Misskey Web
 
