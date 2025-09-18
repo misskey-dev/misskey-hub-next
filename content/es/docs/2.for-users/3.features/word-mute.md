@@ -1,7 +1,9 @@
-# ワードミュート
+# Silenciar palabras
 
-ワードミュートの設定をすると、条件に合致したノートが最小化され、ノートの代わりに「○○（ユーザー名）が何か言いました」という文言が表示されるようになります。
+Cuando se filtra una nota utilizando el silenciador de palabras, la nota se colapsará y en su lugar aparecerá  "XX (nombre de usuario) dijo algo" en lugar de la nota.Las notas minimizadas pueden visualizarse pulsando sobre ellas.
 
-ワードミュートは、[設定 > ミュートとブロック](x-mi-web://settings/mute-block)から設定できます。
+Las palabras silenciadas pueden configurarse en [Configuración > Silenciar y Bloquear](x-mi-web://settings/mute-block).
 
-ノートを完全に非表示にする（ハードミュートと同等の機能を実現する）こともできます。[設定 > 全般](x-mi-web://settings/general)の「ノートの表示」セクションにある「ミュートされた単語を含むノートを非表示にする」をオンにしてください。
+## Filtro de palabra fuerte
+
+El silenciador de palabras fuertes hace que las notas que coinciden con los criterios sean completamente invisibles.A diferencia de la palabra silenciada, la nota quedará completamente oculta a la vista.

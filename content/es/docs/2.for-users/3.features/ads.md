@@ -1,15 +1,14 @@
-# 広告
+# Anuncios
 
-Misskeyではサーバーによる広告をタイムラインなどに表示できる機能があります。
-広告の右上に表示されるアイコンをクリックすることで、当該の広告の表示頻度を下げることができます。
+Misskey tiene la capacidad de mostrar anuncios basados en el servidor en líneas de tiempo y otras áreas.
+Haciendo clic en el icono de la esquina superior derecha de un anuncio, puede reducir la frecuencia con la que se muestra el anuncio en cuestión.
 
 :::tip
 
-広告の総数が少ない場合は、表示頻度を下げた後も連続で表示される可能性があります。
+Si el número total de anuncios es bajo, los anuncios pueden reaparecer aunque se haya reducido su frecuencia.
 
 :::
 
-## 広告の設定(管理者)
+## Configurar los anuncios (Sólo para administradores)
 
-サーバーのコントロールパネルから広告の追加、編集、削除を行えます。
-広告には任意の画像、遷移先URL、形状、表示割合を設定できます。
+Puede añadir, editar y eliminar anuncios en el panel de control de su servidor.

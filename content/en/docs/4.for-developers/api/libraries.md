@@ -1,5 +1,5 @@
 ---
-description: List of Misskey API libraries
+description: 'List of Misskey API libraries'
 ---
 
 # List of Libraries
@@ -11,6 +11,10 @@ description: List of Misskey API libraries
 ## Java
 
 - [misskey4j](https://github.com/uakihir0/misskey4j)
+
+## Kotlin
+
+- [kmisskey](https://github.com/uakihir0/kmisskey)
 
 ## Python
 
@@ -24,7 +28,6 @@ description: List of Misskey API libraries
 
 ## Dart / Flutter
 
-- [misskey](https://github.com/misskey-dart/misskey)
 - [misskey_dart](https://github.com/shiosyakeyakini-info/misskey_dart)
 
 ## Go
