@@ -10,6 +10,12 @@ Técnicamente hablando, todos los archivos se gestionan de forma centralizada en
 
 Además de poder cargar cualquier archivo desde la [página Drive] de Misskey Web (x-mi-web://my/drive), las imágenes establecidas como avatares y los archivos adjuntos a las notas se cargarán en Drive.
 
+:::tip
+
+Los tipos de archivos que se pueden cargar a través de los roles se pueden configurar; de forma predeterminada, se pueden cargar archivos de texto, JSON, imagen, vídeo y audio.
+
+:::
+
 Los archivos cargados en Drive no solo pueden descargarse en cualquier momento, sino que también pueden reutilizarse seleccionando "Desde Drive" al crear notas.
 
 Además, se pueden crear carpetas dentro del Drive para organizar varios archivos juntos.
