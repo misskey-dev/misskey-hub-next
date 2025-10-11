@@ -1,5 +1,5 @@
 ---
-description: Permissions required by the application
+description: 'Permissions required by the application'
 ---
 
 # List of permissions

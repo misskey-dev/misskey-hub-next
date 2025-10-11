@@ -1,53 +1,53 @@
-# Misskeyをフォーク・カスタマイズする際の注意点
+# Notas sobre la bifurcación (Forking) y personalización de Misskey
 
-Misskeyが採用するGNU Affero General Public License v3.0（AGPL-3.0）は、Misskeyのソースコードを変更した場合、その変更点を公開することを義務付けています。
+La Licencia Pública General Affero GNU v3.0 (AGPL-3.0), adoptada por Misskey, obliga a revelar cualquier modificación realizada en el código fuente de Misskey.
 
-Misskey v2024.2.0以降では、このライセンスへの適合をかんたんにできるようにする機能を実装しています。ここではその設定方法をご紹介します。
+A partir de Misskey v2024.2.0, se ha implementado una función para facilitar el cumplimiento de esta licencia.A continuación, presentamos cómo configurar esta función.
 
 :::warning
 
-もちろん、それ以前のバージョンをベースにする場合でも、ライセンスに適合するための措置を講じる必要があります。
+Por supuesto, incluso si basas tu trabajo en versiones anteriores a ésta, debes tomar medidas para cumplir la licencia.
 
 :::
 
-## Misskeyをそのまま使う場合
+## Usando de Misskey sin modificaciones
 
-Misskeyのコードベースに一切変更を加えることなく、内蔵の機能だけを使用する場合は、特に何もする必要はありません。
+Si  tienes la intención de utilizar sólo las características incorporadas de Misskey sin hacer ningún cambio en el código base, no hay ninguna acción específica requerida.
 
-## Misskeyのコードに何らかの変更を加え、その変更したバージョンをGitHubなどで公開する場合
+## Realización de cambios en el código de Misskey y publicación de la versión modificada en plataformas como GitHub
 
-Misskeyのコードに何らかの変更を加え、その変更したバージョンをGitHubなどで公開する場合は、以下の点を確認してください。
+Si modificas el código de Misskey y pretendes publicar la versión modificada en plataformas como GitHub, asegúrate de lo siguiente:
 
-- リポジトリを公開しておくこと（アクセス制限などを行わず、誰でもアクセスできるようにすること）
+- Mantén tu repositorio público ( sin ninguna restricción de acceso, permitiendo que cualquiera pueda tener acceso)
 
-では、早速設定を行いましょう。
+Procedamos con la configuración.
 
-1. 変更したバージョンのMisskeyをビルドし、本番環境で稼働させます。
-2. Adminアカウントでログインした状態で [管理画面](x-mi-web://admin/settings) を開きます。
-3. 「リポジトリURL」の欄に、あなたのMisskeyのリポジトリへのURLを入力します。
+1. Construye la versión modificada de Misskey y despliégalo en tu entorno de producción.
+2. Abra [admin] (x-mi-web://admin/settings) mientras está conectado con la cuenta Admin.
+3. Introduce la URL de tu repositorio Misskey en el campo 'URL del repositorio'.
 
-## Misskeyのコードに何らかの変更を加えるが、その変更したバージョンをGitHubなどで公開しない（できない）場合
+## Si realiza algunos cambios en el código de Misskey, pero no publicas (o no puedes publicar) la versión modificada en GitHub o en otro lugar
 
-この場合でも、ソースコードをMisskeyのインターフェイス上から直接アクセスできるようにする必要があります。Misskey v2024.2.0以降では、ビルド時に自動的にソースコードを書庫ファイルにまとめる機能が実装されています。
+En este caso, el código fuente debe seguir siendo accesible directamente en la interfaz de Misskey.En Misskey v2024.2.0 y posteriores, se ha implementado la capacidad de compilar automáticamente el código fuente en ficheros de archivo en tiempo de compilación.
 
 :::tip
 
-なお、**ソースコードを要求されたときにだけ開示するという処置はライセンスの履行には不十分だとされています。**
+Obsérvese que el tratamiento de divulgar **el código fuente sólo previa solicitud se considera insuficiente para cumplir la licencia.**
 
-Misskey内蔵のソースコード提供機能を使用しない場合でも、何らかの方法で、動作中のバージョンのMisskeyのソースコードへのリンクをMisskey Webのインターフェイス上から直接アクセスできるようにしてください。
+Incluso si  no utilizas la función incorporada de Misskey para revelar el código fuente, asegúrate de que hay alguna manera de acceder directamente al código fuente de la versión en ejecución de Misskey desde la interfaz Web de Misskey.
 
 :::
 
-では、早速設定を行いましょう。
+Procedamos con la configuración.
 
-1. Misskeyのコンフィグファイル（デフォルトは `.config/default.yml` ）を開きます。
-2. `publishTarballInsteadOfProvideRepositoryUrl` を `true` に設定します（コンフィグファイル内の指定のコメントアウト部分を外すだけでもOKです）。
-3. Misskeyをビルドします（この際ソースコードのtarballが生成されます）。
-4. 生成された書庫ファイルを開き、**トークンなどの機密情報が配布用のソースコードに含まれていないかを確認してください。**
-5. 機密情報が含まれていた場合は、`scripts/tarball.mjs` を編集して、それらの情報を除外するようにしてください。
+1. Abre el archivo de configuración de Misskey (por defecto es `.config/default.yml`).
+2. Establece `publishTarballInsteadOfProvideRepositoryUrl` en `true` (puedes simplemente descomentar la parte especificada en el archivo de configuración).
+3. Construye Misskey (esto generará un tarball del código fuente).
+4. Abra el tarball generado y asegúrese de que **no se incluye información confidencial como tokens en el código fuente distribuido.**
+5. Si se incluye alguna información confidencial, edita `scripts/tarball.mjs` para excluir dicha información.
 
 :::warning
 
-ソースコードの書庫ファイル生成はビルド時に行われます。`scripts/tarball.mjs` に変更を加えた際には必ず再度ビルドを行ってください。
+La generación del tarball del código fuente se produce durante el proceso de compilación.Asegúrese de reconstruir cada vez que se realicen cambios en `scripts/tarball.mjs`.
 
 :::
