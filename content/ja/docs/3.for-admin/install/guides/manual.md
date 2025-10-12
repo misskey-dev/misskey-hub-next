@@ -16,7 +16,7 @@ Misskeyを手動で構築する
 :::tip{label='前提条件'}
 
 #### 以下のソフトウェアがインストール・設定されていること
-- **[Node.js](https://nodejs.org/en/)** (v22.x.y ただしxは15以上)
+- **[Node.js](https://nodejs.org/en/)** (v22.15.0 以降の v22 系)
 - **[pnpm](https://pnpm.io/)** (v10.16.0以上)
 - **[PostgreSQL](https://www.postgresql.org/)** (v15以上)
 - **[Redis](https://redis.io/)**
