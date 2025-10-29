@@ -10,6 +10,12 @@ Technisch gesehen werden alle Dateien zentral auf dem Misskey-System verwaltet, 
 
 Es kann jede Datei von der [Laufwerksseite](x-mi-web://my/drive) auf Misskey Web sowie alle Bilder, die als Avatar eingestellt wurde, und Dateien, die an Ihre Notizen angehängt sind, auf das Laufwerk hochladen.
 
+:::tip
+
+ロールでアップロード可能なファイル種別を設定可能で、デフォルトではテキスト、JSON、画像、動画、音声ファイルがアップロード可能です。
+
+:::
+
 Auf das Laufwerk hochgeladene Dateien können jederzeit heruntergeladen werden, oder die Dateien können beim Erstellen von Notizen durch „Anhängen von Dateien vom Laufwerk“ wiederverwendet werden.
 
 Ebenfalls können Ordner erstellt werden, um die Bilder im Dive zu sortieren.

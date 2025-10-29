@@ -1,8 +1,7 @@
-# お気に入り
+# Marcadores
 
-[ノート](./note)をお気に入りとして登録できる機能です。
+Esta función te permite guardar notas [notes](./note) como marcadores.
 
-お気に入り登録したノートは、[お気に入りページ](x-mi-web://my/favorites)で一覧することができます。
-お気に入りに登録したことは相手に通知されず、お気に入りは自分しか見ることができません。
+Puedes ver tus notas guardadas en la [Página de Marcadores](x-mi-web://my/favorites). El autor de una nota no será notificado cuando añadas una nota como marcador, y solo tú puedes ver tus marcadores.
 
-ノートをお気に入り登録するには、ノートメニューの「お気に入り」を押します。お気に入り解除するには、ノートメニューの「お気に入り解除」を押します。
+Para añadir una nota, selecciona "Añadir a favoritos" en el menú de las Notas.Para eliminar una nota, selecciona "Quitar de favoritos" en el menú de las Notas.

@@ -1,5 +1,5 @@
 ---
-description: Dies ist ein Kanal, in dem die Notizen der Globalen-Timeline durchlaufen.
+description: "Dies ist ein Kanal, in dem die Notizen der Globalen-Timeline durchlaufen."
 ---
 
 # `globalTimeline`

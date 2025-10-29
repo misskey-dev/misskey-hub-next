@@ -41,8 +41,8 @@ Themes are described as JSON5 objects, written in the format shown below:
 - `author` ... The author of the theme
 - `desc` ... The description of the theme (optional)
 - `base` ... Whether the theme is a light or dark theme
-  - If you set it to light the theme will be listed as a light mode theme, if you set it to dark it will be listed as a dark mode theme.
-  - The theme will be inheriting the default values of the theme specified here.
+    - If you set it to light the theme will be listed as a light mode theme, if you set it to dark it will be listed as a dark mode theme.
+    - The theme will be inheriting the default values of the theme specified here.
 - `props` ... The style definitions of the theme.These will be explained below.
 
 ### Definitions Used in Theme Styles
@@ -55,19 +55,19 @@ The styles used in a theme are defined in the `props` property.
 #### Syntax for Values
 
 - Hexadecimal colours
-  - e.g. `#00ff00`
+    - e.g. `#00ff00`
 - RGB colors with `rgb(r, g, b)` syntax
-  - e.g. `rgb(0,255,0)`
+    - e.g. `rgb(0,255,0)`
 - RGBA colors with `rgb(r, g, b, a)` syntax
-  - e.g. `rgba(0, 255, 0, 0.5)`
+    - e.g. `rgba(0, 255, 0, 0.5)`
 - References to values of other keys
-  - If you write `@{key-name}` the value of the given key will be used.Replace `{key-name}` with the name of the key to reference.
-  - e.g. `@panel`
+    - If you write `@{key-name}` the value of the given key will be used.Replace `{key-name}` with the name of the key to reference.
+    - e.g. `@panel`
 - Constants (see below)
-  - If you write `${constant-name}` the value of the given constant will be used.Replace `{constant-name}` with the name of the constant to reference.
-  - e.g. `$main`
+    - If you write `${constant-name}` the value of the given constant will be used.Replace `{constant-name}` with the name of the constant to reference.
+    - e.g. `$main`
 - Functions (see below)
-  - `:{function-name}<{argument}<{color}`
+    - `:{function-name}<{argument}<{color}`
 
 #### Constants
 
@@ -93,7 +93,7 @@ props: {
 - `lighten` ... Returns the color obtained by increasing the lightness of the specified color by the given amount (0-100). The lightness of the color can range from 0-100. Providing 100 will always return white.
 - `darken` ... Returns the color obtained by decreasing the lightness of the specified color by the given amount (0-100). Providing 100 will always return black.
 - `alpha` ... Return the color with the transparency (alpha) value set to the given argument (0.0-1.0).
-  - 0.0 is completely transparent, while 1.0 is completely opaque.
+    - 0.0 is completely transparent, while 1.0 is completely opaque.
 - `hue` ... Return the color obtained by spinning the hue by the given amount (-360 to 360).
 - `saturate` ... Returns the color obtained by increasing the saturation by the given amount (0-100). The saturation of the color can range from 0-100.
 

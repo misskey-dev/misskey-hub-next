@@ -1,5 +1,5 @@
 ---
-description: Liste der von der Anwendung geforderten Berechtigungen
+description: 'Liste der von der Anwendung geforderten Berechtigungen'
 ---
 
 # Liste der Berechtigungen

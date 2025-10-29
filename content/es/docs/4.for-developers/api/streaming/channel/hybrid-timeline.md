@@ -1,16 +1,16 @@
 ---
-description: ソーシャルタイムラインのノートが流れるチャンネルです。
+description: "Este es el canal a través del cual se reproducen las notas de la línea de tiempo social."
 ---
 
 # `hybridTimeline`
 
-ソーシャルタイムラインのノートが流れるチャンネルです。
+Este es el canal a través del cual se reproducen las notas de la línea de tiempo social.
 
-## パラメータ
+## Parámetros
 
-なし
+Ninguno
 
-## イベント
+## Eventos
 
 ### `note`
 
@@ -18,8 +18,8 @@ description: ソーシャルタイムラインのノートが流れるチャン�
  $ref: 'misskey://Note'
 }"/>
 
-ソーシャルタイムラインに新しいノートが追加されたときに発生します。
+Se produce cuando se añade una nueva nota a la línea de tiempo social.
 
-## 操作
+## Acciones
 
-なし
+Ninguna

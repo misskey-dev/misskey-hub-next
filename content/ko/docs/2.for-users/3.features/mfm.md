@@ -1,5 +1,5 @@
 ---
-description: MFM은 미스키에서 사용할 수 있는 전용 마크업 언어입니다.
+description: 'MFM은 미스키에서 사용할 수 있는 전용 마크업 언어입니다.'
 ---
 
 # MFM
