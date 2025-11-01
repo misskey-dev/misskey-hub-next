@@ -14,18 +14,18 @@ GitHub Action 描述了一个将推送到 Docker Hub 的工作流</br>
 
 1. 在 Docker Hub 中创建一个仓库
 2. 将工作流文件中的 [images](https://github.com/misskey-dev/misskey/blob/53f3b779bf16abcda4f6e026c51384f3b8fbcc62/.github/workflows/docker.yml#L20) 替换为您创建的存储库
-3. 在 GitHub 上创建加密的 secret\
+3. 在 GitHub 上创建加密的 secret  
    \
    您需要创建 `DOCKER_USERNAME` 和 `DOCKER_PASSWORD`，分别是 Docker Hub 用户和密码。
 
 ## push的方法
 
-通过上述设置，它将在发布时自动推送到 Docker Hub\
+通过上述设置，它将在发布时自动推送到 Docker Hub  
 \
 具体来说，当您使用 GitHub 发布功能发布时 ，`latest`、`< 版本名称>` 将被推送到 Docker Hub
 
-您也可以在 GitHub 上手动推送\
+您也可以在 GitHub 上手动推送  
 \
-要执行此操作，请从 Actions => Publish Docker image => Run workflow 中选择分支来运行工作流。\
+要执行此操作，请从 Actions => Publish Docker image => Run workflow 中选择分支来运行工作流。  
 \
 但是，在这种情况下创建的标签将是`<branch name>`
