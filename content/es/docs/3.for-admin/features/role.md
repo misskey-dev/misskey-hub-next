@@ -17,7 +17,7 @@ Puede configurar la plantilla de funciones en el panel de control, en "Funciones
 Puedes configurar un rol para que se asigne manual o automáticamente.
 
 - **Manual:**... Asignar y desasignar usuarios manualmente.(Roles manuales)
-    - También puede establecer una duración para el rol.
+  - También puede establecer una duración para el rol.
 - **Condicional:** Establezca las condiciones para la asignación. Los usuarios que cumplan las condiciones se asignarán automáticamente.(Rol Automático)
 
 :::warning
