@@ -65,7 +65,7 @@ Die folgenden Optionen können verwendet werden, um Anhänge zu spezifizieren.
 
 <a name="hub-share-disclaimer" id="hub-share-disclaimer"></a>
 
-Der neue Misskey Hub bietet einen Relay Service für die Freigabe von Formularen, um den Schweregrad der Einrichtung von Misskey Share Buttons zu reduzieren.\
+Der neue Misskey Hub bietet einen Relay Service für die Freigabe von Formularen, um den Schweregrad der Einrichtung von Misskey Share Buttons zu reduzieren.  
 Dieser Dienst ist kostenlos und steht jedem offen.
 
 Einfach den Domain-Teil jedes Servers den bestehenden gemeinsamen Formular-Links in `misskey-hub.net` ändern und es wird sich in einen gemeinsamen Link zu den verschiedenen Misskey-Servern verwandeln!
