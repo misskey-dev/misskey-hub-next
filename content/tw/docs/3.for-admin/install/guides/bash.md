@@ -25,7 +25,7 @@
 
 ## 設定 Cloudflare
 
-Cloudflareを使う場合、Cloudflareのドメインの設定を完了してからインストールを開始するようにしてください。\
+Cloudflareを使う場合、Cloudflareのドメインの設定を完了してからインストールを開始するようにしてください。  
 \
 ネームサーバーの適用には最大で3日程度かかる場合があります。
 
@@ -38,7 +38,7 @@ Cloudflareを使う場合、Cloudflareのドメインの設定を完了してか
 
 ### 1. SSH
 
-サーバーにSSH接続します。\
+サーバーにSSH接続します。  
 \
 （サーバーのデスクトップを開いている方はシェルを開きましょう。）
 
@@ -110,13 +110,13 @@ sudo bash update.sh
 
 v1から、インストールメソッドにsystemdとDockerとを選べるようにしました。
 
-Dockerと言っても、**MisskeyだけをDockerで実行**し、RedisやPostgresなどはホストで直接実行します。\
+Dockerと言っても、**MisskeyだけをDockerで実行**し、RedisやPostgresなどはホストで直接実行します。  
 \
 [docker-composeですべての機能を動かす方法については、mamemonongaさんが作成したこちらの記事がおすすめです。](https://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0)
 
-Docker Hubイメージを使う設定であれば、Misskeyのビルドが不要になるため、**一番お勧めです**。\
+Docker Hubイメージを使う設定であれば、Misskeyのビルドが不要になるため、**一番お勧めです**。  
 \
-ただし、マイグレーションは必要なので、アップデート時にMisskeyを使えない時間がゼロになるわけではありません。\
+ただし、マイグレーションは必要なので、アップデート時にMisskeyを使えない時間がゼロになるわけではありません。  
 \
 また、Misskeyのビルド環境を準備しない(git pullしない)ので、フォークを動かしたくなった時に設定が面倒になります。
 
@@ -150,14 +150,14 @@ nginxをリバースプロキシとして採用することにより、画像フ
 
 万が一途中で失敗してもう一度スクリプトを動作させる場合、次のことに注意してください。
 
-- RedisやPostgresのインストールが終わっている場合、「install locally」はNoにしてください。\
+- RedisやPostgresのインストールが終わっている場合、「install locally」はNoにしてください。  
   \
   host・port設定はそのままEnterを押します。
   ユーザー名やパスワードは、前回実行した際に指定したものを入力します。
 
 ## .envファイルについて
 
-インストールスクリプトは、2つの.envファイルを作成します。\
+インストールスクリプトは、2つの.envファイルを作成します。  
 \
 在更新時會使用到。
 
@@ -167,15 +167,15 @@ misskeyを実行するユーザーを覚えておくために必要です。
 
 ### /home/(misskey user)/.misskey.env
 
-systemdの場合に生成されます。\
+systemdの場合に生成されます。  
 \
 実行されているコンテナとイメージの番号を保存しています。
 
 ### /home/(misskey user)/.misskey-docker.env
 
-Dockerの場合に生成されます。\
+Dockerの場合に生成されます。  
 \
-実行されているコンテナとイメージの番号を保存しています。\
+実行されているコンテナとイメージの番号を保存しています。  
 \
 コンテナの番号はアップデートの際に更新されます。古いイメージは削除されます。
 
@@ -187,7 +187,7 @@ Dockerの場合に生成されます。\
 
 ### Misskey 目錄
 
-Misskey 的原始碼會被 clone 到 `/home/{{user}}/{{directory}}` 底下。\
+Misskey 的原始碼會被 clone 到 `/home/{{user}}/{{directory}}` 底下。  
 \
 （{{user}}、{{directory}} 的預設值都是 misskey。）
 
@@ -206,7 +206,7 @@ exit
 
 ### systemd
 
-systemd 的 process name 是 example.com.\
+systemd 的 process name 是 example.com.  
 \
 たとえば再起動するには次のようにします。
 
@@ -262,7 +262,7 @@ requirepassとbindを`/etc/redis/misskey.conf`で設定しています。
 
 ## Q. 更新後出現 502 無法存取
 
-Dockerでは、起動後にマイグレーションをするため、すぐにアクセスできません。\
+Dockerでは、起動後にマイグレーションをするため、すぐにアクセスできません。  
 \
 マイグレーションが終わっているかどうか確認してみてください。
 
@@ -278,6 +278,6 @@ journalctlでログを確認すると、たいていre2が云々という記述�
 
 ## Q. 想要在同個伺服器裡面再建一個 Misskey
 
-スクリプトは同じサーバーに追加でMisskeyをインストールすることは想定していません。\
+スクリプトは同じサーバーに追加でMisskeyをインストールすることは想定していません。  
 \
 幾つかの設定が上書きされるか、途中でエラーになってしまうでしょう。
