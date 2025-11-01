@@ -37,7 +37,7 @@ cp ./compose_example.yml ./compose.yml
 ```
 
 Por favor edita `default.yml` y `docker.env` así como su descripción.\
-También edita `compose.yml` si es necesario( Por si quieres cambiar el puerto etc.).\
+También edita `compose.yml` si es necesario( Por si quieres cambiar el puerto etc.).  
 Asegúrate de comprobar con antelación cualquier cambio que pueda ser necesario.(Si deseas cambiar el puerto etc.)
 
 ## Construir y inicializar
