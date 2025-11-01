@@ -169,7 +169,7 @@ CREATE DATABASE mk1 OWNER misskey;
 
 ### Redis
 
-Redis es un software de base de datos NoSQL en memoria, necesario, entre otras cosas, para gestionar la comunicación con bases de datos y la federación.\
+Redis es un software de base de datos NoSQL en memoria, necesario, entre otras cosas, para gestionar la comunicación con bases de datos y la federación.  
 Instálalo según la documentación de redis.io.
 
 https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-linux/
