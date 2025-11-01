@@ -36,7 +36,7 @@ cp .config/docker_example.env .config/docker.env
 cp ./docker-compose_example.yml ./docker-compose.yml
 ```
 
-`default.yml`과 `docker.env`를 파일 내 설명에 따라 편집합니다.\
+`default.yml`과 `docker.env`를 파일 내 설명에 따라 편집합니다.  
 또한, 필요에 의해서 `docker-compose.yml`을 편집합니다.(포트를 변경하고 싶은 경우 등)
 
 ## 빌드 및 초기화
