@@ -10,10 +10,11 @@ Misskeyを使うためのアプリ（クライアント）を紹介します。
 
 Misskey Webに慣れてきたら、有志が開発する非公式アプリを試してみるのもいいでしょう。ここでは、広く使われているアプリを紹介します（アルファベット順）。
 
-- **Aria** (iOS, Mac, Android, Windows, Linux): Misskeyのほとんどの機能を利用可能。公式のMisskey Webクライアントに近いUI。[公式サイト](https://misskey.io/@aria_app)。[App Store](https://apps.apple.com/jp/app/aria-for-misskey/id6499410880)。[Google Play](https://play.google.com/store/apps/details?id=com.poppingmoon.aria)。[ソースコード](https://github.com/poppingmoon/aria)
+- **Aria** (iOS, Mac, Android, Windows, Linux): Misskeyのほとんどの機能を利用可能。公式のMisskey Webクライアントに近いUI。[公式サイト](https://misskey.io/@aria_app)。[App Store](https://apps.apple.com/jp/app/aria-for-misskey/id6499410880)。[Google Play](https://play.google.com/store/apps/details?id=com.poppingmoon.aria)。[ソースコード](https://github.com/poppingmoon/aria)。
+- **Flare** (iOS, Mac, Android, Windows): 閲覧履歴の保存やRSSリーダーが利用可能。Mastodon, Bluesky, Xに対応し、それらのタイムラインをひとつに統合可能。[公式サイト](https://flareapp.moe)。[TestFlight](https://testflight.apple.com/join/iYP7QZME)。[Google Play](https://play.google.com/store/apps/details?id=dev.dimension.flare)。[Microsoft Store](https://apps.microsoft.com/detail/9NLRN0BKZ357)。[ソースコード](https://github.com/DimensionDev/Flare)。
 - **Milktea** (Android): タイムラインや特定の検索結果にタブから素早くアクセスできる。他のユーザーにニックネームを与えることができる。[Google Play](https://play.google.com/store/apps/details?id=jp.panta.misskeyandroidclient)。[ソースコード](https://github.com/pantasystem/Milktea)。
-- **Miria** (iOS, Mac, Android, Windows, Linux): タブにカスタム絵文字を設定できる機能や、MFMの入力補完等のMisskeyに特化した独自機能を持つ。[公式サイト](https://shiosyakeyakini.info/miria_web/index.html)。[App Store](https://apps.apple.com/jp/app/miria/id6449201469)。[Google Play](https://play.google.com/store/apps/details?id=info.shiosyakeyakini.miria)。[ソースコード](https://github.com/shiosyakeyakini-info/miria)
-- **MissRirica** (iOS, Android): Misskey用iOS/Androidクライアント。ほぼMisskey Web(v13)のUI、Push通知が届く。[ソースコード](https://github.com/fruitriin/missRirica-client)
+- **Miria** (iOS, Mac, Android, Windows, Linux): タブにカスタム絵文字を設定できる機能や、MFMの入力補完等のMisskeyに特化した独自機能を持つ。[公式サイト](https://shiosyakeyakini.info/miria_web/index.html)。[App Store](https://apps.apple.com/jp/app/miria/id6449201469)。[Google Play](https://play.google.com/store/apps/details?id=info.shiosyakeyakini.miria)。[ソースコード](https://github.com/shiosyakeyakini-info/miria)。
+- **MissRirica** (iOS, Android): Misskey用iOS/Androidクライアント。ほぼMisskey Web(v13)のUI、Push通知が届く。[ソースコード](https://github.com/fruitriin/missRirica-client)。
 - **Misscat** (iOS): スマホに適した直感的な操作性を提供することを目標に開発されている。[公式サイト](https://yuiga.dev/misscat/)。[ソースコード](https://github.com/YuigaWada/MissCat)。
 - **SocialHub** (iOS): Misskey, Mastodon, Bluesky, Slack, Tumblrにも対応した有料アプリ。[公式サイト](https://uakihir0.github.io/socialhub/)。[App Store](https://apps.apple.com/us/app/socialhub-socialmedia-client/id1474451582)。
 - **ZonePane(ぞーぺん)** (Android): タイムラインやリスト、チャンネルをタブ化できる。既読管理が優秀。TwitterアプリTwitPaneのMisskey版でMastodonやBlueskyにも対応。 [Google Play](https://play.google.com/store/apps/details?id=com.zonepane)。
