@@ -65,7 +65,7 @@ Puedes especificar archivos adjuntos con la siguiente opción.
 
 <a name="hub-share-disclaimer" id="hub-share-disclaimer"></a>
 
-Para reducir la molestia de configurar el botón de compartir de Misskey que es compatible con múltiples servidores, el nuevo Misskey Hub proporciona un servicio de retransmisión de formulario de compartir.\
+Para reducir la molestia de configurar el botón de compartir de Misskey que es compatible con múltiples servidores, el nuevo Misskey Hub proporciona un servicio de retransmisión de formulario de compartir.  
 Este servicio es gratuito.
 
 ¡Puedes evolucionar tus enlaces de formulario de compartir para compartir enlaces a varios servidores de Misskey simplemente cambiando la parte del dominio de los enlaces de formulario de compartir anteriores a `misskey-hub.net`!
