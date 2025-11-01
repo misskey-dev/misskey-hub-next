@@ -65,7 +65,7 @@ You can specify attachments with the following option.
 
 <a name="hub-share-disclaimer" id="hub-share-disclaimer"></a>
 
-To reduce the hassle of setting up the Misskey share button that's compatible with multiple servers, the new Misskey Hub provides a share form relay service.\
+To reduce the hassle of setting up the Misskey share button that's compatible with multiple servers, the new Misskey Hub provides a share form relay service.  
 This service is free for anyone to use.
 
 You can evolve your share form links to share links to various Misskey servers by simply changing the domain part of the previous share form links to `misskey-hub.net`!
