@@ -31,17 +31,17 @@ Zusätzlich werden die speziellen eingebauten Konstanten und Funktionen von Miss
 
 ### Misskey AiScript API
 
-Präfix: `Mk:`\
+Präfix: `Mk:`  
 Eine Gruppe von Konstanten und Funktionen, die in allen AiScript-Umgebungen in Misskey verwendet werden können. Weitere Informationen findest du im [AiScript Misskey Erweiterungs-API-Referenz](./plugin/plugin-api-reference/) im Abschnitt `Mk:`.
 
 ### Plugin-API
 
-Präfix: `Plugin:`\
+Präfix: `Plugin:`  
 Eine Gruppe von Konstanten und Funktionen, die nur in [Plugins](./plugin/) verwendet werden können. Weitere Informationen findest du im [AiScript Misskey Erweiterungs-API-Referenz](./plugin/plugin-api-reference/) im Abschnitt `Plugin:`.
 
 ### UI API
 
-Präfix: `Ui:`\
+Präfix: `Ui:`  
 Kann in [Widgets](/docs/for-users/features/widgets/) (AiScript App), [Misskey Play](./plugin/create-play/) und Scratchpad verwendet werden. Weitere Informationen findest du im [AiScript Misskey Erweiterungs-API-Referenz](./plugin/plugin-api-reference/) im Abschnitt `Ui:`.
 
 ### Standard-Ein- & Ausgabe
@@ -50,15 +50,15 @@ Die interne Implementierung der in AiScript definierten `readline`- und `print`-
 
 #### readline(message)
 
-`message`: `str`\
-Rückgabewert: `str`\
-Kann in allen AiScript-Umgebungen innerhalb von Misskey verwendet werden.\
+`message`: `str`  
+Rückgabewert: `str`  
+Kann in allen AiScript-Umgebungen innerhalb von Misskey verwendet werden.  
 Ein Popup-Fenster wird angezeigt, das die Eingabe einer Zeichenfolge anfordert.
 
 #### print(message)
 
-`message`: `any`\
-Rückgabewert: `null`\
-Kann in [Widgets](/docs/for-users/features/widgets/) (AiScript-Konsole) und Scratchpad verwendet werden.\
-Gibt eine Zeichenfolge in die Konsole aus.\
+`message`: `any`  
+Rückgabewert: `null`  
+Kann in [Widgets](/docs/for-users/features/widgets/) (AiScript-Konsole) und Scratchpad verwendet werden.  
+Gibt eine Zeichenfolge in die Konsole aus.  
 Die `<:`-Syntax funktioniert auf die gleiche Weise.
