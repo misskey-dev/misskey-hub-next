@@ -40,4 +40,4 @@ https://{HOST}/install-extensions?url={API_URL}&hash={HASH}
 
 - `type`: 请参阅上面的“支持外部安装的资源”中的代码并输入。
 - `data`: 以 \*\* 字符串形式\*\* 输入资源代码
-    - 在这种情况下，换行符应该是 **LF**。
+  - 在这种情况下，换行符应该是 **LF**。
