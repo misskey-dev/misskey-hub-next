@@ -34,7 +34,7 @@ Misskeyはノート検索に使用するアルゴリズムを複数ご用意し�
 
 :::warning
 
-作業前にデータベースのバックアップをおすすめします。\
+作業前にデータベースのバックアップをおすすめします。  
 また、Misskeyを停止してから作業を開始してください。
 
 :::
@@ -100,7 +100,7 @@ CREATE INDEX idx_note_text_with_pgroonga ON note USING pgroonga (text);
 
 ### 検索エンジンの変更
 
-Misskeyの設定ファイルを編集します。\
+Misskeyの設定ファイルを編集します。  
 `fulltextSearch` を `sqlPgroonga` に変更してください。
 
 ```sh
