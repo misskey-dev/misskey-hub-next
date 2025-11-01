@@ -200,5 +200,5 @@ Intenta los siguientes pasos:
 2. Busca en Google.
 3. Busca [Problemas en el repositorio de Misskey](https://github.com/misskey-dev/misskey/issues) (es posible que hayas encontrado el mismo error o que se trate de un fallo de Misskey).
 4. Si buscas y no encuentras lo que buscas, pregunta a un experto.
-  1. Pregunta en [servidor Discord de Misskey](https://discord.gg/P4yYqYBjEp), por ejemplo.
-  2. Envía una respuesta o un mensaje directo al desarrollador ([aqz](https://p1.a9z.dev/@aqz) o Syuilo) y pregunta
+   1. Pregunta en [servidor Discord de Misskey](https://discord.gg/P4yYqYBjEp), por ejemplo.
+   2. Envía una respuesta o un mensaje directo al desarrollador ([aqz](https://p1.a9z.dev/@aqz) o Syuilo) y pregunta
