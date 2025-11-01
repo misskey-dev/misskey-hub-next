@@ -34,8 +34,8 @@ El nombre "Misskey" se inspiró en la letra de la canción "Brain Diver" de May'
 
 Selecciona "Buscar" desde el menú e introduce el nombre de usuario completo como en el formato especificado abajo.Un nombre de usuario completo incluye un nombre de usuario y el nombre de host del servidor al que pertenece el usuario.Este formato es común entre plataformas ActivityPub como Misskey, Mastodon y Pleroma.<br>
 
-El formato de un nombre de usuario completo es el siguiente:\
-`username@hostname.example`Por ejemplo:\
+El formato de un nombre de usuario completo es el siguiente:  
+`username@hostname.example`Por ejemplo:  
 `syuilo@misskey.io`
 
 Aunque este formato no es universal en todo el software distribuido, permite seguir a usuarios de otros servidores o plataformas implementadas con software descentralizado diferente.
