@@ -170,7 +170,7 @@ CREATE DATABASE mk1 OWNER misskey;
 
 ### Redis
 
-Redis는 NoSQL의 인메모리 데이터베이스 소프트웨어로, 데이터베이스 및 연합과의 통신 관리 등을 위해 필요합니다.\
+Redis는 NoSQL의 인메모리 데이터베이스 소프트웨어로, 데이터베이스 및 연합과의 통신 관리 등을 위해 필요합니다.  
 redis.io의 문서에 따라, snap을 이용해 설치합니다.
 
 https://redis.io/docs/getting-started/installation/install-redis-on-linux/
