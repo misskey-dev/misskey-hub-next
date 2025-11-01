@@ -40,4 +40,4 @@ Devuelve un objeto JSON desde el endpoint especificado en `{API_URL}` anteriorme
 
 - Tipo": introdúzcalo con referencia al código de "Recursos admitidos para la instalación externa" anterior.
 - `data`: \*\*introduce el código fuente del recurso como una **cadena**.
-    - En este caso, el código de avance de línea debe ser **LF**.
+  - En este caso, el código de avance de línea debe ser **LF**.
