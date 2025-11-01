@@ -34,7 +34,7 @@ Para cambiar el motor de búsqueda, reescriba el `provider` en `fulltextSearch` 
 
 :::warning
 
-Se recomienda hacer una copia de seguridad de la base de datos antes de realizar cualquier trabajo.\
+Se recomienda hacer una copia de seguridad de la base de datos antes de realizar cualquier trabajo.  
 Además, detenga a Misskey antes de empezar a trabajar.
 
 :::
@@ -100,7 +100,7 @@ Cuando termine, escriba `exit` para salir de Postgresql.
 
 ### Cambio de motores de búsqueda
 
-Edite el archivo de configuración de Misskey.\
+Edite el archivo de configuración de Misskey.  
 Cambiar `fulltextSearch` por `sqlPgroonga`.
 
 ```sh
