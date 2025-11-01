@@ -55,13 +55,13 @@ Las implementaciones internas de las funciones `readline` e `print` (y la sintax
 
 `message`: `str`
 Valor de retorno: `str`
-Se puede utilizar en todos los entornos AiScript dentro de Misskey.\
+Se puede utilizar en todos los entornos AiScript dentro de Misskey.  
 Muestra una ventana emergente solicitando una cadena.
 
 #### print(message)
 
 `message`: `any`
 Valor de retorno: `null`
-[widget](/docs/for-users/features/widgets/) (consola AiScript), disponible en Scratchpad.\
-Envía una cadena a la consola.\
+[widget](/docs/for-users/features/widgets/) (consola AiScript), disponible en Scratchpad.  
+Envía una cadena a la consola.  
 La sintaxis `<:` funciona de forma similar.
