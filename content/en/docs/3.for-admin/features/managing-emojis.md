@@ -83,7 +83,7 @@ For each `Emoji`:
 - `downloaded`: should always be true.If the field is missing or not truthy, the emoji will not be imported.
 - `fileName`: name of the image file inside the packed file.
 - `emoji`: data associated with the emoji as it was stored in the database.The following are currently used:
-  - `name`: name of the emoji for the user, e.g. `blobfox` if a user should type in `:blobfox:` to get the emoji.\
+  - `name`: name of the emoji for the user, e.g. `blobfox` if a user should type in `:blobfox:` to get the emoji.  
     If a previous emoji with the same name exists, **it will be overwritten!**
   - `category`: category of the emoji
   - `aliases`: list of strings that should be added as aliases.The admin UI calls these "tags".
