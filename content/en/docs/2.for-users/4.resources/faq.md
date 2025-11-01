@@ -35,8 +35,8 @@ The name "Misskey" was inspired by the lyrics of May'n's song "Brain Diver," whi
 
 Select "Search" from the menu and enter the user's fully-qualified username in the format specified below.A fully-qualified username includes a username and the hostname of the server to which the user belongs.This format is common between ActivityPub platforms such as Misskey, Mastodon, and Pleroma.<br>
 
-The format of a fully-qualified username is as follows:\
-`username@hostname.example`Here's a live example:\
+The format of a fully-qualified username is as follows:  
+`username@hostname.example`Here's a live example:  
 `syuilo@misskey.io`
 
 While this format is not universal across all distributed software, it allows you to follow users from other servers or platforms implemented with different decentralized software.
