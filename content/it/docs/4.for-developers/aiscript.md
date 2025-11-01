@@ -55,7 +55,7 @@ AiScript標準で定義されている`readline`関数と`print`関数（およ�
 
 `message`: `str`\
 返り値: `str`\
-Misskey内の全てのAiScript環境で使用できます。\
+Misskey内の全てのAiScript環境で使用できます。  
 \
 文字列の入力を求めるポップアップを表示します。
 
@@ -63,8 +63,8 @@ Misskey内の全てのAiScript環境で使用できます。\
 
 `message`: `any`\
 返り値: `null`\
-[ウィジェット](/docs/for-users/features/widgets/)（AiScriptコンソール）、Scratchpadで使用できます。\
+[ウィジェット](/docs/for-users/features/widgets/)（AiScriptコンソール）、Scratchpadで使用できます。  
 \
-コンソールに文字列を出力します。\
+コンソールに文字列を出力します。  
 \
 `<:`構文も同様の働きをします。
