@@ -34,7 +34,7 @@ Misskey 提供了多種用於貼文搜尋的演算法。可依伺服器規模或
 
 :::warning
 
-建議在操作前先備份資料庫。\
+建議在操作前先備份資料庫。  
 此外，請在操作前先停止 Misskey。
 
 :::
@@ -100,7 +100,7 @@ CREATE INDEX idx_note_text_with_pgroonga ON note USING pgroonga (text);
 
 ### 更換搜尋引擎
 
-編輯 Misskey 的設定檔。\
+編輯 Misskey 的設定檔。  
 將 `fulltextSearch` 更改為 `sqlPgroonga`。
 
 ```sh
