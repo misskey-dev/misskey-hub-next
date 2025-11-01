@@ -84,7 +84,7 @@ Für jedes `Emoji`:
 - `downloaded`: Immer auf true setzen.Wenn dieses Feld fehlt oder nicht auf true gesetzt ist, wird das Emoji nicht importiert.
 - `fileName`: Der Name der Bilddatei im paketierten Archiv.
 - `emoji`: Daten, die mit dem in der Datenbank gespeicherten Emoji verknüpft sind.Die folgenden Felder werden derzeit verwendet:
-  - `name`: Der Name des Emojis, den der Benutzer eingibt, z.B.: `blobfox` (wenn der Benutzer `:blobfox:` eingibt, wird dieses Emoji angezeigt).\
+  - `name`: Der Name des Emojis, den der Benutzer eingibt, z.B.: `blobfox` (wenn der Benutzer `:blobfox:` eingibt, wird dieses Emoji angezeigt).  
     Falls ein Emoji mit demselben Namen bereits existiert, wird es **überschrieben**.
   - `category`: Die Kategorie des Emojis.
   - `aliases`: Eine Liste von Zeichenfolgen, die als alternative Namen hinzugefügt werden.In der Administrator-Oberfläche wird dies als „Tags” bezeichnet.
