@@ -24,7 +24,7 @@ Dado que los intentos de verificación de Let's Encrypt son limitados, compruebe
 
 ## Configuración de Cloudflare
 
-Si utiliza Cloudflare, asegúrese de completar la configuración de su dominio Cloudflare antes de iniciar la instalación.\
+Si utiliza Cloudflare, asegúrese de completar la configuración de su dominio Cloudflare antes de iniciar la instalación.  
 El servidor de nombres puede tardar hasta tres días en aplicarse.
 
 Además, al configurar nginx y Cloudflare, en la pantalla de configuración de Cloudflare,
@@ -36,7 +36,7 @@ Además, al configurar nginx y Cloudflare, en la pantalla de configuración de C
 
 ### 1. SSH
 
-Conéctate al servidor por SSH.\
+Conéctate al servidor por SSH.  
 (Si tienes abierto el escritorio del servidor, abra un intérprete de comandos.）
 
 ### 2. Actualizar el entorno
@@ -107,11 +107,11 @@ Cómo elegir opciones y especificaciones.
 
 A partir de v1, se puede seleccionar el método de instalación entre systemd y Docker.
 
-Cuando decimos Docker, solo ejecutamos **Misskey en Docker** y Redis, Postgres, etc. directamente en el host.\
+Cuando decimos Docker, solo ejecutamos **Misskey en Docker** y Redis, Postgres, etc. directamente en el host.  
 Para más información sobre cómo hacer que todo funcione con [docker-compose, recomendamos este artículo creado por mamemononga.](https://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0)
 
-Si está configurado para utilizar imágenes Docker Hub, esto es **más recomendable** ya que elimina la necesidad de construir Misskey.\
-Sin embargo, la migración es necesaria, por lo que no hay tiempo de parada (downtime) cuando Misskey no se puede utilizar para las actualizaciones.\
+Si está configurado para utilizar imágenes Docker Hub, esto es **más recomendable** ya que elimina la necesidad de construir Misskey.  
+Sin embargo, la migración es necesaria, por lo que no hay tiempo de parada (downtime) cuando Misskey no se puede utilizar para las actualizaciones.  
 Además, el entorno de compilación de Misskey no está preparado (no hay git pull), lo que hace que sea una molestia configurarlo cuando se quiere ejecutar un fork.
 
 El método de compilación local de Docker está obsoleto por razones de rendimiento.
@@ -144,13 +144,13 @@ Si el swap está configurado, la memoria total debe ser de al menos 3 Gb para pe
 
 En el improbable caso de que el script falle a la mitad y quieras ejecutarlo de nuevo, ten en cuenta lo siguiente.
 
-- Si Redis o Postgres ya han sido instalados, 'instalar localmente' debe ser No.\
+- Si Redis o Postgres ya han sido instalados, 'instalar localmente' debe ser No.  
   Para la configuración de host y puerto, pulse Intro tal cual.
   Introduzca el nombre de usuario y la contraseña especificados en la ejecución anterior.
 
 ## Acerca de los archivos .env
 
-El script de instalación crea dos archivos.env.\
+El script de instalación crea dos archivos.env.  
 Se utiliza para actualizar.
 
 ### /root/.misskey.env
@@ -159,13 +159,13 @@ esto es necesario para recordar el usuario que ejecuta misskey.
 
 ### /home/(misskeyユーザー)/.misskey.env
 
-generado para systemd.\
+generado para systemd.  
 Se utiliza principalmente para recordar directorios.
 
 ### /home/(misskeyユーザー)/.misskey-docker.env
 
-Generado para Docker.\
-Almacena el número del contenedor y de la imagen que se está ejecutando.\
+Generado para Docker.  
+Almacena el número del contenedor y de la imagen que se está ejecutando.  
 Los números de contenedor se actualizan durante las actualizaciones.Las imágenes antiguas se borran.
 
 ## Gestionar por su cuenta
@@ -176,7 +176,7 @@ Sustituye "example.com" por tu dominio.
 
 ### Directorio Misskey
 
-La fuente de Misskey se clona en el directorio `/home/user/ `.\
+La fuente de Misskey se clona en el directorio `/home/user/ `.  
 (Los valores por defecto tanto para el usuario como para directorio son misskey.）
 
 Puedes navegar al directorio Misskey de la siguiente manera.
@@ -194,7 +194,7 @@ exit
 
 ### systemd
 
-el nombre del proceso systemd es example.com.\
+el nombre del proceso systemd es example.com.  
 Por ejemplo, para reiniciar, haz lo siguiente.
 
 ```sh
@@ -246,7 +246,7 @@ requirepass y bind se configuran en `/etc/redis/misskey.conf`.
 
 ## P. Error 502 Inaccesible después de la actualización
 
-Con Docker, la migración se realiza después de la puesta en marcha y no es inmediatamente accesible.\
+Con Docker, la migración se realiza después de la puesta en marcha y no es inmediatamente accesible.  
 Compruebe que la migración se ha completado.
 
 en el caso de systemd, la instalación pnpm puede haber fallado.
@@ -261,5 +261,5 @@ Si compruebas los registros con journalctl, normalmente encontrarás una declara
 
 ## P. Quiero construir otro Misskey en el mismo servidor
 
-El script no contempla instalaciones adicionales de Misskey en el mismo servidor.\
+El script no contempla instalaciones adicionales de Misskey en el mismo servidor.  
 Algunos ajustes se sobrescribirán o habrá errores por el camino.
