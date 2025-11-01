@@ -15,7 +15,7 @@ Ubuntu向け解説はコピペばかりでつまらない！時間がかかる�
 
 ……あれ、コピペだけでできるなら、つまり完全自動化できるのでは？
 
-というわけで、**シェルスクリプトでほぼ全部やってくれるやつを作ってみました！**\
+というわけで、**シェルスクリプトでほぼ全部やってくれるやつを作ってみました！**  
 [**詳細と使用方法はこちらから！** https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
 
 ドメインの購入とCloudflareのセットアップ、サーバーの確保についてはご自身でご準備ください。
@@ -192,5 +192,5 @@ Cloudflare を使用している場合は、Rocket LoaderやAuto Minifyが有効
 2. Googleで検索してみる。
 3. [MisskeyリポジトリのIssues](https://github.com/misskey-dev/misskey/issues)を検索してみる（同じエラーに遭遇している場合や、Misskeyのバグの可能性もあります）。
 4. 検索してどうしても見つからなかったら、専門家に質問してみてください。
-  1. [MisskeyのDiscordサーバー](https://discord.gg/P4yYqYBjEp)などで聞いてみる
-  2. 開発者（[aqz](https://p1.a9z.dev/@aqz)やしゅいろ）にリプライや指名投稿を送信して聞いてみる
+   1. [MisskeyのDiscordサーバー](https://discord.gg/P4yYqYBjEp)などで聞いてみる
+   2. 開発者（[aqz](https://p1.a9z.dev/@aqz)やしゅいろ）にリプライや指名投稿を送信して聞いてみる
