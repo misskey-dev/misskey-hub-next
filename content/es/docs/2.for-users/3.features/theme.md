@@ -41,8 +41,8 @@ Los temas se describen como objetos JSON5, escritos en el formato que se muestra
 - `author` ... El autor del tema
 - `desc` ... Descripción del tema (opcional)
 - `base` ... Si es un tema claro u oscuro
-    - Si lo ajustas a `light`, el tema aparecerá como un tema de modo claro, si lo ajustas a `dark`, aparecerá como un tema de modo oscuro.
-    - El tema heredará los valores por defecto del tema especificado aquí.
+  - Si lo ajustas a `light`, el tema aparecerá como un tema de modo claro, si lo ajustas a `dark`, aparecerá como un tema de modo oscuro.
+  - El tema heredará los valores por defecto del tema especificado aquí.
 - `props` ... Definición del estilo del tema.Se explicará a continuación.
 
 ### Definiciones de los estilos de los temas
@@ -59,19 +59,19 @@ Esto significa que incluso si no hay una clave `props` con `panel` en este tema,
 #### Sintaxis de los valores
 
 - Los colores en base hexadecimal
-    - Ejemplo:. `#00ff00`
+  - Ejemplo:. `#00ff00`
 - Los colores con la sintaxis `rgb(r, g, b)`
-    - Ej: rgb(0, 255, 0)\`
+  - Ej: rgb(0, 255, 0)\`
 - \`Los colores con la sintaxis rgb(r, g, b, a) con un grado de transparencia
-    - Ej: rgba(0, 255, 0, 0.5)\`
+  - Ej: rgba(0, 255, 0, 0.5)\`
 - Referencias a valores de otras claves
-    - Escribiendo @{keyname} se hace referencia al valor de la otra clave.Reemplace {keyname} por el nombre de la clave al cual quiera hacer referencia.
-    - Ej:`@panel`
+  - Escribiendo @{keyname} se hace referencia al valor de la otra clave.Reemplace {keyname} por el nombre de la clave al cual quiera hacer referencia.
+  - Ej:`@panel`
 - Referencia a una constante (ver más abajo)
-    - Escribiendo ${constant-name} se hace referencia a la constante.Reemplace {constant-name} por la constante al cual quiera hacer referencia.
-    - Ejemplo: `$main`
+  - Escribiendo ${constant-name} se hace referencia a la constante.Reemplace {constant-name} por la constante al cual quiera hacer referencia.
+  - Ejemplo: `$main`
 - Funciones (ver más abajo)
-    - `:{function-name}<{argument}<{color}`
+  - `:{function-name}<{argument}<{color}`
 
 #### Constantes
 
@@ -96,7 +96,7 @@ props: {
 - `lighten` ... Devuelve el color obtenido al aumentar la luminosidad del color especificado en la cantidad dada (0-100). La luminosidad del color puede oscilar entre 0-100. Si se proporciona 100, siempre se obtendrá el color blanco.
 - `darken` ... Devuelve el color obtenido al disminuir la luminosidad del color especificado en la cantidad dada (0-100). Proporcionando 100 siempre devolverá el color negro.
 - `alpha` ... Devuelve el color con el valor de transparencia (alfa) ajustado al argumento dado (0.0-1.0).
-    - 0,0 es completamente transparente, mientras que 1,0 es completamente opaco.
+  - 0,0 es completamente transparente, mientras que 1,0 es completamente opaco.
 - `hue` ... Devuelve el color obtenido al girar el matiz en la cantidad dada (-360 a 360).
 - `saturate` ... Devuelve el color obtenido al aumentar la saturación en la cantidad dada (0-100). La saturación del color puede oscilar entre 0-100.
 
