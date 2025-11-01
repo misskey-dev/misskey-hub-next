@@ -83,7 +83,7 @@ Para cada 'Emoji':
 - `downloaded`: debe ser siempre true.Si el campo falta o no es true, el emoji no se importará.
 - `fileName`: nombre del archivo de imagen dentro del archivo empaquetado.
 - `emoji`: datos asociados al emoji tal y como estaban almacenados en la base de datos.Actualmente se utilizan los siguientes:
-  - `name`: nombre del emoji para el usuario,, ej. `blobfox` si un usuario debe escribir `:blobfox:` para obtener el emoji.\
+  - `name`: nombre del emoji para el usuario,, ej. `blobfox` si un usuario debe escribir `:blobfox:` para obtener el emoji.  
     Si existe un emoji anterior con el mismo nombre, **se sobrescribirá!**
   - `category`: categoría del emoji
   - `aliases`: lista de cadena de caracteres que deben añadirse como alias.La interfaz de administración las denomina "etiquetas (en inglés: tags)".
