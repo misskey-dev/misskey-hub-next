@@ -20,6 +20,7 @@ threeDimensionModel: "3D Model"
 clickToShow: "Click to show"
 preview: "Preview"
 scrollable: "This can be scrolled"
+serverListGone: "The server list by the Misskey Project has been discontinued to prevent abuse and avoid troubles.\nMisskey Project is an organization that develops the software called Misskey, and does not provide any services using Misskey."
 _error:
   notFound: "Page not found"
   notFoundDesc: "The page you are looking for could not be found. Please check the URL."

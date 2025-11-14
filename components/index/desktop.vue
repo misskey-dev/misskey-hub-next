@@ -5,7 +5,7 @@
 			<LazyIndexHeroParticles v-if="clientLoaded"/>
 			<IndexHeroBg/>
 		</div>
-		<section class="tickers">
+		<!-- <section class="tickers">
 			<span class="tickersLabel">
 				<b class="tickersLabelContent">Servers:</b>
 			</span>
@@ -14,7 +14,7 @@
 					<span v-for="instance in instances" :key="instance.url" class="tickersItem"><img class="tickersItemIcon" :src="`${runtimeConfig.public.serverListApiBaseUrl}/instance-icons/${instance.url}.webp`" alt="">{{ instance.url }}</span>
 				</GMarquee>
 			</span>
-		</section>
+		</section> -->
 		<div class="_secondaryWidth" style="display: flex;">
 			<div class="section_top_left">
 				<div class="section_top_tagline"><strong>Create.<br>Connect.<br>with <b class="_textGradient">Misskey</b>.</strong></div>
@@ -65,7 +65,7 @@
 		</div>
 	</section>
 
-	<section v-if="stats != null" class="section_stats _secondaryWidth">
+	<!-- <section v-if="stats != null" class="section_stats _secondaryWidth">
 		<div class="section_stats_text">
 			<span><b class="section_stats_label">Notes:</b>{{ $n(stats.notesCount) }}+</span>
 			<span><b class="section_stats_label">Users:</b>{{ $n(stats.usersCount) }}+</span>
@@ -73,7 +73,7 @@
 			<span v-else-if="stats.druYesterday != null"><b class="section_stats_label">DRUs:</b>{{ $n(stats.druYesterday) }}+</span>
 			<span><b class="section_stats_label">Servers:</b>{{ $n(stats.instancesCount) }}+</span>
 		</div>
-	</section>
+	</section> -->
 
 	<div class="scrollLabel">
 		<svg class="scrollText" width="100%" height="100%" viewBox="0 0 170 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
@@ -564,20 +564,20 @@ import ArrowRightIco from 'bi/arrow-right.svg';
 import ArrowUpRightIco from 'bi/arrow-up-right.svg';
 import { vFadeIn } from '@/assets/js/vFadeIn';
 import { vTextUnderline } from '@/assets/js/vTextUnderline';
-import TagCloud from 'TagCloud';
+// import TagCloud from 'TagCloud';
 import GHIcon from "bi/github.svg";
 import { features, featuresClient, featuresServer } from '@/assets/data/features.js';
-import type { InstanceInfo } from '@/types/instances-info.js';
+// import type { InstanceInfo } from '@/types/instances-info.js';
 
 const props = defineProps<{
 	clientLoaded: boolean;
 }>();
 
 const { notice } = useAppConfig();
-const isUwu = useState<boolean>('isUwu');
+// const isUwu = useState<boolean>('isUwu');
 const localePath = useGLocalePath();
 const { locale } = useI18n();
-const runtimeConfig = useRuntimeConfig();
+// const runtimeConfig = useRuntimeConfig();
 
 // お知らせ欄にブログが来る可能性もあるので
 const localeState = useState('miHub_blog_originalLocale', () => locale.value);
@@ -593,13 +593,13 @@ const localizedNotice = computed(() => {
 	}
 });
 
-const instances = ref<{
-	name: string;
-	description: string;
-	url: string;
-}[]>([]);
+// const instances = ref<{
+// 	name: string;
+// 	description: string;
+// 	url: string;
+// }[]>([]);
 
-const stats = ref<InstanceInfo['stats'] | null>(null);
+// const stats = ref<InstanceInfo['stats'] | null>(null);
 
 let isMounted = false;
 onMounted(() => {
@@ -625,14 +625,14 @@ clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
 	}
 
 	async function initClientScripts() {
-		const res = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances20.json`);
-		if (res.ok) {
-			instances.value = await res.json();
-		}
-		const statsRes = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/stats.json`);
-		if (statsRes.ok) {
-			stats.value = await statsRes.json();
-		}
+// 		const res = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances20.json`);
+// 		if (res.ok) {
+// 			instances.value = await res.json();
+// 		}
+// 		const statsRes = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/stats.json`);
+// 		if (statsRes.ok) {
+// 			stats.value = await statsRes.json();
+// 		}
 
 		swiperInstance = new Swiper('.swiper', {
 			modules: [Navigation, EffectCoverflow],
@@ -655,15 +655,15 @@ clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
 			},
 		});
 
-		const cloudItems = instances.value.map(instance => `<img src="${runtimeConfig.public.serverListApiBaseUrl}/instance-icons/${instance.url}.webp" width="35" />`);
+// 		const cloudItems = instances.value.map(instance => `<img src="${runtimeConfig.public.serverListApiBaseUrl}/instance-icons/${instance.url}.webp" width="35" />`);
 
-		TagCloud('.section_decentralized_cloudContainer_cloud', cloudItems, {
-			radius: 150,
-			maxSpeed: 'slow',
-			initSpeed: 'slow',
-			direction: 135,
-			useHTML: true,
-		});
+// 		TagCloud('.section_decentralized_cloudContainer_cloud', cloudItems, {
+// 			radius: 150,
+// 			maxSpeed: 'slow',
+// 			initSpeed: 'slow',
+// 			direction: 135,
+// 			useHTML: true,
+// 		});
 	}
 
 	if (isMounted) {
