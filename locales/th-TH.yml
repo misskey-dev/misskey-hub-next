@@ -20,7 +20,7 @@ threeDimensionModel: "โมเดล 3 มิติ"
 clickToShow: "คลิกเพื่อแสดง"
 preview: "แสดงตัวอย่าง"
 scrollable: "สิ่งนี้สามารถเลื่อนขึ้นเลื่อนลงได้"
-serverListGone: "Misskey Projectが提供するサーバー一覧は、悪用防止やトラブルの回避のため、提供を終了しました。\nMisskey ProjectはMisskeyというソフトウェアを開発する組織であり、Misskeyを利用したサービスの提供は一切行っていません。"
+serverListUnderMaintenance: "サーバー一覧は現在メンテナンス中です。"
 _error:
   notFound: "ไม่พบหน้า"
   notFoundDesc: "ไม่พบหน้าที่ค้นหา กรุณาตรวจสอบ URL อีกครั้ง"
