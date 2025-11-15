@@ -20,7 +20,7 @@ threeDimensionModel: "3D 모델"
 clickToShow: "클릭하여 표시"
 preview: "미리보기"
 scrollable: "스크롤 할 수 있습니다."
-serverListGone: "Misskey Projectが提供するサーバー一覧は、悪用防止やトラブルの回避のため、提供を終了しました。\nMisskey ProjectはMisskeyというソフトウェアを開発する組織であり、Misskeyを利用したサービスの提供は一切行っていません。"
+serverListUnderMaintenance: "サーバー一覧は現在メンテナンス中です。"
 _error:
   notFound: "페이지를 찾을 수 없습니다"
   notFoundDesc: "요청하신 페이지를 찾을 수 없습니다. URL을 확인하여 주십시오."
