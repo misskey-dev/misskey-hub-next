@@ -240,14 +240,12 @@ async function handleClick(instance: ExtendedInstanceItem) {
 onMounted(async () => {
     if (import.meta.client) {
         const fetchedInfo = await window.fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances5.json`);
-        if (![200, 304].includes(fetchedInfo.status)) {
-            alert(t('_servers._system.fetchError'));
-            return;
+        if (fetchedInfo.ok) {
+            const fetchedInfoJson = await fetchedInfo.json() as InstanceItem[];
+            featuredInstances.value = fetchedInfoJson.sort((a, b) => {
+                return resolveObjPath(a, 'stats.originalUsersCount') > resolveObjPath(b, 'stats.originalUsersCount') ? -1 : 1;
+            }).slice(0, 5);
         }
-        const fetchedInfoJson = await fetchedInfo.json() as InstanceItem[];
-        featuredInstances.value = fetchedInfoJson.sort((a, b) => {
-            return resolveObjPath(a, 'stats.originalUsersCount') > resolveObjPath(b, 'stats.originalUsersCount') ? -1 : 1;
-        }).slice(0, 5);
 
         const ls = localStorage.getItem('miHub_share_instances');
         if (ls) {
