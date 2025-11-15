@@ -20,6 +20,7 @@ threeDimensionModel: "3Dモデル"
 clickToShow: "クリックして表示"
 preview: "プレビュー"
 scrollable: "スクロールできます"
+serverListUnderMaintenance: "サーバー一覧は現在メンテナンス中です。"
 
 _error:
   notFound: "ページが見つかりませんでした"
