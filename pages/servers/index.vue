@@ -4,7 +4,6 @@
             <template #title>{{ $t('_servers.title') }}</template>
             <template #description>
                 {{ $t('_servers.description') }}<br>
-                
             </template>
         </GHero>
         <div class="pb-12 pt-6 px-6 bg-white dark:bg-neutral-950 min-h-screen font-bold text-center whitespace-pre-wrap">

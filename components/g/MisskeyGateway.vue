@@ -239,8 +239,9 @@ async function handleClick(instance: ExtendedInstanceItem) {
 
 onMounted(async () => {
     if (import.meta.client) {
-        const fetchedInfo = await window.fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances5.json`);
-        if (fetchedInfo.ok) {
+        const fetchedInfo = await window.fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances5.json`).catch(() => null);
+
+        if (fetchedInfo != null && fetchedInfo.ok) {
             const fetchedInfoJson = await fetchedInfo.json() as InstanceItem[];
             featuredInstances.value = fetchedInfoJson.sort((a, b) => {
                 return resolveObjPath(a, 'stats.originalUsersCount') > resolveObjPath(b, 'stats.originalUsersCount') ? -1 : 1;

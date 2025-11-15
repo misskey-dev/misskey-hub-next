@@ -5,7 +5,7 @@
 			<LazyIndexHeroParticles v-if="clientLoaded"/>
 			<IndexHeroBg/>
 		</div>
-		<section class="tickers">
+		<section v-if="instances.length > 0" class="tickers">
 			<span class="tickersLabel">
 				<b class="tickersLabelContent">Servers:</b>
 			</span>
@@ -625,12 +625,12 @@ clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
 	}
 
 	async function initClientScripts() {
-		const res = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances20.json`);
-		if (res.ok) {
+		const res = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances20.json`).catch(() => null);
+		if (res != null && res.ok) {
 			instances.value = await res.json();
 		}
-		const statsRes = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/stats.json`);
-		if (statsRes.ok) {
+		const statsRes = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/stats.json`).catch(() => null);
+		if (statsRes != null && statsRes.ok) {
 			stats.value = await statsRes.json();
 		}
 
