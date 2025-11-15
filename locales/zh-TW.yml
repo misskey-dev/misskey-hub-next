@@ -20,7 +20,7 @@ threeDimensionModel: "3D 模型"
 clickToShow: "點擊以顯示"
 preview: "預覽"
 scrollable: "可以滾動"
-serverListGone: "Misskey Projectが提供するサーバー一覧は、悪用防止やトラブルの回避のため、提供を終了しました。\nMisskey ProjectはMisskeyというソフトウェアを開発する組織であり、Misskeyを利用したサービスの提供は一切行っていません。"
+serverListUnderMaintenance: "サーバー一覧は現在メンテナンス中です。"
 _error:
   notFound: "找不到此頁面"
   notFoundDesc: "找不到此頁面，請確認網址是否正確。"
