@@ -15,8 +15,16 @@
                 </div>
             </template>
         </GHero>
-        <div class="pb-12 pt-6 px-6 bg-white dark:bg-neutral-950 min-h-screen font-bold text-center whitespace-pre-wrap">
-            {{ $t('serverListGone') }}
+        <div class="pb-12 pt-6 bg-white dark:bg-neutral-950 min-h-screen">
+            <ClientOnly>
+                <ServersStatsViewer />
+                <template #fallback>
+                    <div class="container mx-auto max-w-screen-xl p-6">
+                        <MkLoading class="mx-auto text-accent-600"></MkLoading>
+                        <p class="text-center">{{ $t('loading') }}</p>
+                    </div>
+                </template>
+            </ClientOnly>
         </div>
     </div>
 </template>

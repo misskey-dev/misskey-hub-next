@@ -481,7 +481,7 @@ import ArrowRightIco from 'bi/arrow-right.svg';
 import ArrowUpRightIco from 'bi/arrow-up-right.svg';
 import { vFadeIn } from '@/assets/js/vFadeIn';
 import { vTextUnderline } from '@/assets/js/vTextUnderline';
-// import TagCloud from 'TagCloud';
+import TagCloud from 'TagCloud';
 import GHIcon from "bi/github.svg";
 import { features, featuresClient, featuresServer } from '@/assets/data/features.js';
 
@@ -540,8 +540,8 @@ clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
 	}
 
 	async function initClientScripts() {
-		// const instanceRes = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances20.json`);
-		// instances.value = await instanceRes.json();
+		const instanceRes = await fetch(`${runtimeConfig.public.serverListApiBaseUrl}/_hub/instances20.json`);
+		instances.value = await instanceRes.json();
 
 		swiperInstance = new Swiper('.swiper', {
 			modules: [Navigation, EffectCoverflow],
@@ -564,15 +564,15 @@ clientLoadedWatchStop = watch(() => props.clientLoaded, () => {
 			},
 		});
 
-		// const cloudItems = instances.value.map(instance => `<img src="${runtimeConfig.public.serverListApiBaseUrl}/instance-icons/${instance.url}.webp" width="35" />`);
+		const cloudItems = instances.value.map(instance => `<img src="${runtimeConfig.public.serverListApiBaseUrl}/instance-icons/${instance.url}.webp" width="35" />`);
 
-		// TagCloud('.section_decentralized_cloudContainer_cloud', cloudItems, {
-		// 	radius: 150,
-		// 	maxSpeed: 'slow',
-		// 	initSpeed: 'slow',
-		// 	direction: 135,
-		// 	useHTML: true,
-		// });
+		TagCloud('.section_decentralized_cloudContainer_cloud', cloudItems, {
+			radius: 150,
+			maxSpeed: 'slow',
+			initSpeed: 'slow',
+			direction: 135,
+			useHTML: true,
+		});
 	}
 	
 	if (isMounted) {
