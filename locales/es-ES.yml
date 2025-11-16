@@ -20,7 +20,7 @@ threeDimensionModel: "Modelo 3D"
 clickToShow: "Clic para mostrar"
 preview: "Preview"
 scrollable: "Esto se puede desplazar"
-serverListUnderMaintenance: "サーバー一覧は現在メンテナンス中です。"
+serverListUnderMaintenance: "La lista de servidores está actualmente en mantenimiento."
 _error:
   notFound: "Página no encontrada"
   notFoundDesc: "No se ha podido encontrar la página que buscas. Por favor, comprueba la URL."
