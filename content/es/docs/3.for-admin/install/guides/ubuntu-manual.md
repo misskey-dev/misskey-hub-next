@@ -556,7 +556,7 @@ Para servidores domésticos, comprueba que el router está configurado para perm
 
 Incluso en la nube, a menudo es necesario abrir puertos en la configuración de la red.
 
-## Crear un demonio para Misskey.
+## Crear un demonio para Misskey
 
 :::tip
 
