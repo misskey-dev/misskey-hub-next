@@ -64,6 +64,12 @@ MeCabベースのトークナイザーを使いたい場合は、以下も実行
 sudo apt install -y -V groonga-tokenizer-mecab
 ```
 
+#### Docker環境を使用している場合
+
+Docker環境ではPGroonga導入済みのDockerイメージが使用できます。
+
+PGroonga導入済みのPostgreSQLイメージを使用するには、`postgres:15-alpine`の代わりに`groonga/pgroonga:latest-alpine-15-slim`を使用してください。
+
 ### Pgroongaの有効化
 
 次にPostgreSQLにログインします。
