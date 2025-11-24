@@ -64,6 +64,12 @@ Si desea utilizar un tokenizador basado en MeCab, haga también lo siguiente
 sudo apt install -y -V groonga-tokenizer-mecab
 ```
 
+#### Al utilizar un entorno Docker
+
+En un entorno Docker, puede utilizar una imagen Docker con PGroonga ya instalado.
+
+Para utilizar una imagen de PostgreSQL con PGroonga ya instalado, utilice `groonga/pgroonga:latest-alpine-15-slim` en lugar de `postgres:15-alpine`.
+
 ### Habilitación de Pgroonga
 
 A continuación, inicie sesión en PostgreSQL.
