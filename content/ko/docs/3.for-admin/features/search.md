@@ -64,11 +64,11 @@ MeCab 베이스 토크나이저를 사용하고 싶은 경우에는 아래도 �
 sudo apt install -y -V groonga-tokenizer-mecab
 ```
 
-#### Docker環境を使用している場合
+#### Docker 환경을 사용하고 있는 경우
 
-Docker環境ではPGroonga導入済みのDockerイメージが使用できます。
+Docker 환경에서는 PGroonga가 도입된 Docker 이미지를 사용할 수 있습니다.
 
-PGroonga導入済みのPostgreSQLイメージを使用するには、`postgres:15-alpine`の代わりに`groonga/pgroonga:latest-alpine-15-slim`を使用してください。
+PGroonga가 도입된 PostgreSQL 이미지를 사용하려면 `postgres:15-alpine` 대신에 `groonga/pgroonga:latest-alpine-15-slim`을 사용해 주십시오.
 
 ### Pgroonga의 활성화
 
