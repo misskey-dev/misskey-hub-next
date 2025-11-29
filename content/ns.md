@@ -178,3 +178,32 @@ Source servers SHOULD NOT set properties in other way that differs in above desc
 Source servers SHOULD NOT set unknown properties except in the case of keeping backwards compatibility, because more property may be added in the future.
 
 Recipient servers SHOULD ignore unknown properties.
+
+## `_misskey_reactionAcceptance`
+
+- compact IRI: `misskey:_misskey_reactionAcceptance`
+- canonical IRI: `https://misskey-hub.net/ns#_misskey_reactionAcceptance`
+
+This property is used on `Note` objects to express which Emojis can be used as an "Reaction".
+This property may not exist due to following reasons:
+
+- The Source server do not follow this extension,
+- The Source server used old Misskey version, or
+- The Source server do not have "acceptance" controls on users' note.
+
+If this propert is absent, then the Source server MUST treat it as if the value is `null`.
+This property can be either `null` or string.
+Valid values are following:
+- `null`: any Emoji can be used as a reaction.
+- `"nonSensitiveOnly"`: Only non-"sensitive" emoji can be used as a reaction.
+- `"likeOnly"`: Only emoji-less `Like` can be performed as a reaction (non-normative: `\u2764` is used to express likes in vanilla-Misskey.)
+
+(Note: if the Source server declared original reaction acceptance setting is either `"likeOnlyForRemote"` or `"nonSensitiveOnlyForLocalLikeOnlyForRemote"`, then it MUST be rendered as `"likeOnly"` because there's no reason to distinguish them.)
+
+Source server SHOULD NOT set unknown value except in the case of keeping backwards compatibility, because more value may be added in the future.
+
+When Recipient server received this property, Recipient server MUST persistent this value to determine which Emoji can be used. If the value is `"nonSensitiveOnly"`, then Recipient server MUST NOT allow "sensitive" emojis to be used as a reaction. It depends on the Recipient server that which emoji is flagged as "sensitive".
+When Source server received a `Like` activity to a certain Note with an emoji, the Source server MUST perform certain validation to if it's acceptable according to the acceptance setting on that Note. If validation was failed, the `Like` activity is treated as if the emoji isn't set.
+(non-normative Note: the `Like` activility without emoji is always acceptable.)
+
+This property is not guaranteed to work on older Misskey or non-Misskey implementation.
