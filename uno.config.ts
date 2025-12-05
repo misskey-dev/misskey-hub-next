@@ -33,7 +33,7 @@ export default defineConfig({
         theme.fontFamily = {
             sans: ['Nunito', 'var(--mi-localized-font, \'\')', theme.fontFamily?.sans ?? 'sans-serif'].join(','),
             title: ['Nunito', 'var(--mi-localized-font, \'\')', theme.fontFamily?.sans ?? 'sans-serif'].join(','),
-            'content-sans': ['Nunito', 'var(--mi-localized-font-p, \'\')', theme.fontFamily?.sans ?? 'sans-serif'].join(','),
+            'content-sans': ['Nunito', 'var(--mi-localized-font-p, \'\')', 'var(--mi-localized-font, \'\')', theme.fontFamily?.sans ?? 'sans-serif'].join(','),
         };
     },
 });
