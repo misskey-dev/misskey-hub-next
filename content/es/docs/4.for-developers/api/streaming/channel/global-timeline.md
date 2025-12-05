@@ -1,16 +1,16 @@
 ---
-description: グローバルタイムラインのノートが流れるチャンネルです。
+description: "Es el canal a través del cual se reproducen las notas de la línea de tiempo global."
 ---
 
 # `globalTimeline`
 
-グローバルタイムラインのノートが流れるチャンネルです。
+Es el canal a través del cual se reproducen las notas de la línea de tiempo global.
 
-## パラメータ
+## Parámetros
 
-なし
+Ninguno
 
-## イベント
+## Eventos
 
 ### `note`
 
@@ -18,8 +18,8 @@ description: グローバルタイムラインのノートが流れるチャン�
  $ref: 'misskey://Note'
 }"/>
 
-グローバルタイムラインに新しいノートが追加されたときに発生します。
+Se produce cuando se añade una nueva nota a la línea de tiempo global.
 
-## 操作
+## Acciones
 
-なし
+Ninguna

@@ -1,5 +1,5 @@
 ---
-description: MFM ist eine spezielle Markup-Sprache, die in verschiedenen Teilen von Misskey verwendet werden kann.
+description: 'MFM ist eine spezielle Markup-Sprache, die in verschiedenen Teilen von Misskey verwendet werden kann.'
 ---
 
 # MFM

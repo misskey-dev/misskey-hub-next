@@ -1,5 +1,5 @@
 ---
-description: 글로벌 타임라인의 노트를 표시하는 채널입니다.
+description: "글로벌 타임라인의 노트를 표시하는 채널입니다."
 ---
 
 # `globalTimeline`

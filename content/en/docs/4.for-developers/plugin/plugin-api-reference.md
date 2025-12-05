@@ -54,6 +54,10 @@ Display a dialog box.The following values ​​can be set for type.\
 `info` `success` `warning` `error` `question`\
 If omitted, it will be `info`.
 
+### `Mk:toast(text)`
+
+Display a toast.Unlike dialogs, it does not require the user to close the dialog, so it can be used for simple notifications such as when some operation has been completed.
+
 ### `Mk:confirm(title, text, type)`
 
 Display a confirmation dialog.The following values ​​can be set for type.\
@@ -141,7 +145,7 @@ Plugin:register_post_form_action('Item name displayed on the menu', @(note, rewr
 
 ### `Plugin:register_note_action(title, fn)`
 
-Adds an action in the note menu.Passes the name of the action as the first argument and the callback function when the action is selected as the second argument.\
+Adds an action in the note menu.Passes the name of the item as the first argument and the callback function when the action is selected as the second argument.\
 The target note object is passed to the callback function as the first argument.
 
 ```AiScript
@@ -158,7 +162,7 @@ Plugin:register_note_action('Item name displayed on the menu', @(note) {
 
 ### `Plugin:register_user_action(title, fn)`
 
-Adds an action in the user menu.Passes the name of the item as the first argument and the callback function when the action is selected as the second argument.\
+Adds an action in the user menu.Passes the name of the action as the first argument and the callback function when the action is selected as the second argument.\
 The target user object is passed to the callback function as the first argument.
 
 ```AiScript
@@ -178,6 +182,15 @@ Rewrites the note information displayed on the UI.\
 The target note object is passed to the callback function as the first argument.\
 The note will be rewritten with the return value of the callback function.\
 Return `null` to make it hidden.
+
+:::warning
+
+v2025.8.0以降では、この関数は**同期的に実行**されます。
+内部的に非同期な処理が実行される関数（`Mk:api`など）は実行できず、エラーとなります。
+
+また、同期的に実行されるということは、プラグインの実行中はほかのJavaScriptの処理がすべて停止するということを意味します。これにより、ほかのプラグインフックと比べ、問題のあるスクリプト（無限ループなど）が実行された場合、ホストのJavascript環境に重大な影響を及ぼす可能性があります。十分注意してください。
+
+:::
 
 ```AiScript
 Plugin:register_note_view_interruptor(@(note) {

@@ -65,7 +65,7 @@ Kamu dapat menentukan lampiran berkas dengan opsi di bawah berikut.
 
 <a name="hub-share-disclaimer" id="hub-share-disclaimer"></a>
 
-新Misskey Hubでは、Misskeyのシェアボタンの設置にかかる煩雑な手間を減らすために、共有フォームの中継サービスを提供しています。\
+新Misskey Hubでは、Misskeyのシェアボタンの設置にかかる煩雑な手間を減らすために、共有フォームの中継サービスを提供しています。  
 こちらのサービスは、無料でどなたでもお使いいただけます。
 
 今までの共有フォームのリンクの各サーバーのドメイン部分を `misskey-hub.net` に変更するだけで、様々なMisskeyサーバーへの共有リンクへと進化させることができます！

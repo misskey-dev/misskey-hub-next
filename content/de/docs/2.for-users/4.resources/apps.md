@@ -1,5 +1,5 @@
 ---
-description: Anwendungen für die Verwendung von Misskey
+description: 'Anwendungen für die Verwendung von Misskey'
 ---
 
 # Anwendungen
@@ -10,12 +10,14 @@ Logge dich über einen Browser auf dem Misskey-Server ein und du landest auf der
 
 Sobald du dich an das Interface gewöhnt hast, können wir die von Freiwilligen entwickelten INOFFIZIELLEN Anwendungen ausprobieren.Hier sind einige weit verbreitete Anwendungen (in alphabetischer Reihenfolge):
 
+- **Aria** (iOS, Mac, Android, Windows, Linux): Misskeyのほとんどの機能を利用可能。公式のMisskey Webクライアントに近いUI。[公式サイト](https://misskey.io/@aria_app)。[App Store](https://apps.apple.com/jp/app/aria-for-misskey/id6499410880)。[Google Play](https://play.google.com/store/apps/details?id=com.poppingmoon.aria)。[ソースコード](https://github.com/poppingmoon/aria)。
+- **Flare** (iOS, Mac, Android, Windows): 閲覧履歴の保存やRSSリーダーが利用可能。Mastodon, Bluesky, Xに対応し、それらのタイムラインをひとつに統合可能。[公式サイト](https://flareapp.moe)。[TestFlight](https://testflight.apple.com/join/iYP7QZME)。[Google Play](https://play.google.com/store/apps/details?id=dev.dimension.flare)。[Microsoft Store](https://apps.microsoft.com/detail/9NLRN0BKZ357)。[ソースコード](https://github.com/DimensionDev/Flare)。
 - **Milktea** (Android): ermöglicht den schnellen Zugriff auf die Timeline und spezifische Suchergebnisse über eine Registerkarte.Ermöglicht es Benutzern, anderen Benutzern Spitznamen zu geben.[Google Play](https://play.google.com/store/apps/details?id=jp.panta.misskeyandroidclient)| [Repository](https://github.com/pantasystem/Milktea)
-- **Miria** (iOS, Mac, Android): verfügt über einzigartige Misskey-spezifische Funktionen wie die Möglichkeit, benutzerdefinierte Emoji auf Tabs und MFM-Eingabevervollständigung zu setzen.[Homepage](https://shiosyakeyakini.info/miria_web/index.html)| [App Store](https://apps.apple.com/jp/app/miria/id6449201469)| [Google Play](https://play.google.com/store/apps/details?id=info.shiosyakeyakini.miria)| [Repository](https://github.com/shiosyakeyakini-info/miria)
-- **MissRirica** (iOS, Android): iOS/Android-Client für Misskey.Die Benutzeroberfläche ist fast identisch mit der von Misskey Web (v13) und es sind Push-Benachrichtigungen verfügbar.| [Repository](https://github.com/fruitriin/missRirica-client)
-- **Misscat** (iOS): wurde mit dem Ziel entwickelt, eine intuitive, für Smartphones geeignete Benutzerfreundlichkeit zu bieten.[Homepage](https://yuiga.dev/misscat/)| [App Store](https://apps.apple.com/app/id1505059993)| [Repository](https://github.com/YuigaWada/MissCat)
-- **SocialHub** (iOS): kostenpflichtige App, die neben Misskey auch Mastodon, Twitter, Slack und Tumblr unterstützt.[Repository](https://uakihir0.github.io/socialhub/)| [App Store](https://apps.apple.com/us/app/socialhub-socialmedia-client/id1474451582)
-- **ZonePane** (Android): ermöglicht Timelines, Listen und Kanäle mit Registerkarten.Ausgezeichnetes LesemanagementMisskey-Version der Twitter-App TwitPane mit Unterstützung für Mastodon. [Google Play](https://play.google.com/store/apps/details?id=com.zonepane)
-- **TootRain** (Mac): eine Mac-Anwendung, die Timeline und Listeneinträge in Echtzeit auf dem Bildschirm anzeigt, wie bei einem Kommentar. [Homepage](https://b123400.net/tootrain/ja) | [Repository](https://github.com/b123400/TootRain)
+- **Miria** (iOS, Mac, Android, Windows, Linux): タブにカスタム絵文字を設定できる機能や、MFMの入力補完等のMisskeyに特化した独自機能を持つ。[Homepage](https://shiosyakeyakini.info/miria_web/index.html)| [App Store](https://apps.apple.com/jp/app/miria/id6449201469)| [Google Play](https://play.google.com/store/apps/details?id=info.shiosyakeyakini.miria)[ソースコード](https://github.com/shiosyakeyakini-info/miria)。
+- **MissRirica** (iOS, Android): iOS/Android-Client für Misskey.Die Benutzeroberfläche ist fast identisch mit der von Misskey Web (v13) und es sind Push-Benachrichtigungen verfügbar.[ソースコード](https://github.com/fruitriin/missRirica-client)。
+- **Misscat** (iOS): wurde mit dem Ziel entwickelt, eine intuitive, für Smartphones geeignete Benutzerfreundlichkeit zu bieten.[Homepage](https://yuiga.dev/misscat/)| [Repository](https://github.com/YuigaWada/MissCat)
+- **SocialHub** (iOS): Misskey, Mastodon, Bluesky, Slack, Tumblrにも対応した有料アプリ。[Repository](https://uakihir0.github.io/socialhub/)| [App Store](https://apps.apple.com/us/app/socialhub-socialmedia-client/id1474451582)
+- **ZonePane** (Android): ermöglicht Timelines, Listen und Kanäle mit Registerkarten.Ausgezeichnetes LesemanagementTwitterアプリTwitPaneのMisskey版でMastodonやBlueskyにも対応。 [Google Play](https://play.google.com/store/apps/details?id=com.zonepane)
+- **TootRain** (Mac): タイムラインやリストの投稿をリアルタイムに、コメント風に画面上に表示するMacアプリ。 [Homepage](https://b123400.net/tootrain/ja) | [Repository](https://github.com/b123400/TootRain)
 
 Misskey wird ständig mit neuen Funktionen aktualisiert, wodurch sich die Unterstützung für die neuesten Funktionen manchmal verzögern kann.Die beste Erfahrung erhältst du mit unserer Webapp

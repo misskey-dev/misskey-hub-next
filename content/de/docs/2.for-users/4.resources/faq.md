@@ -1,5 +1,5 @@
 ---
-description: Dieser Abschnitt enthält häufig gestellte Fragen zur Verwendung von Misskey.
+description: 'Dieser Abschnitt enthält häufig gestellte Fragen zur Verwendung von Misskey.'
 ---
 
 # FAQ - Häufig gestellte Fragen
@@ -61,6 +61,26 @@ Es kann ein Bot mit der Misskey-API entwickelt werden.Für weitere Informationen
 
 Für die Übersetzung verwenden wir [DeepL](https://www.deepl.com/).
 
+## サービスについての問い合わせがしたい
+
+「Misskey」はWebサービスを作成するためのソフトウェア、またそのプロジェクトの名称です。したがって、<b>「Misskey」自体はWebサービスではありません。</b><br>
+また、<b>当Misskey ProjectはいかなるWebサービスも運営・管轄していません</b>ので、Misskeyを使ったWebサービスについてのお問い合わせは当該Webサービスのお問い合わせ窓口にお願いします。<br>
+人によっては、「Misskeyを使って作られたWebサービス」のことを指して「Misskey」と表記している場合がありますので注意が必要です。
+
+## 支援金はどのように活用されますか？
+
+継続的なMisskey開発のために活用されます。
+
+具体的な主な使途はフルタイム開発者(=現在@syuilo)への給与(報酬)です。
+フルタイムの開発者がいることによりMisskey Projectは成り立っています。
+また、フルタイムではない開発者に対して、業務委託した際の報酬の支払いや、不定期的な給付金の支払いにも充てられます。
+
+他には、割合としては低いですが、関係者の接待交際費用、他OSSへの支援費用、ドメイン維持費用、開発に供する各種ソフトウェア・サービスの利用料金、資料(書籍等)購入費用、備品(動作検証用デバイス等)費用、商標など権利の維持費用、税理士報酬、グッズ(Misskeyカード等)に係る費用(製作費、発送費用等)、アセット(ロゴ、アイコン、イラスト、サウンド等)発注費用、バーチャルオフィス利用料等に充てられることもあります。
+
+広告に関しては現在実施していませんので宣伝広告費用は発生していません。
+
+なお、基本的にいただいたご支援金は税制上「売上」扱いになり、受け取り側で課税対象になるほか、受け取り側で送金に使用されたサービスに対する手数料を支払いますので、いただいたご支援金の全額を活用できるわけではない点にご留意ください。
+
 ## Ich habe einen Server eingerichtet, muss ich meinem Internetanbieter (ISP) informieren?
 
 ### Kurze Antwort:
@@ -71,6 +91,11 @@ Für die Übersetzung verwenden wir [DeepL](https://www.deepl.com/).
 
 // Zusatz vom Übersetzer: "Es gelten die Normen und Gesetze in deinem Land. Frage zur Sicherheit deinen Internetanbieter und überprüfe deinen Vertrag. Sollte ich mehr erfahren, ändere ich diesen Absatz entsprechend. Das Lokale hosten Daheim ist hingegen kein Problem [via Intranet/LAN]." ~ [TIZEN](https://mk.absturztau.be/@Tizen)Folgende Übersetzung gilt vorweg für das Land "Japan":Die Definition des Begriffs „Betreiber“ lautet laut [MIC-Dokument](https://www.soumu.go.jp/main_content/000477428.pdf): „eine Person, die beabsichtigt, Einnahmen aus der Erbringung einer Dienstleistung zu erzielen, indem sie eine Gebühr als Gegenleistung für die Dienstleistung erhebt“.Daher ist keine Anmeldung erforderlich, es sei denn, der Server wird zur Erzielung von Einnahmen als Unternehmen betrieben.Selbst wenn es also Einnahmen aus Spenden oder Werbung gibt, fallen diese nicht unter die Kategorie der meldepflichtigen Unternehmen, wenn sie nur zur Deckung der Betriebskosten des Servers dienen.(Bestätigt durch das Ministerium für innere Angelegenheiten und Kommunikation) <br>
 Weitere Informationen finden Sie in Dokumenten wie dem [Telecommunications Business Entry Manual] des Ministeriums für innere Angelegenheiten und Kommunikation (https://www.soumu.go.jp/main_content/000477428.pdf) oder wenden Sie sich an das Ministerium für innere Angelegenheiten und Kommunikation.
+
+## DM機能があるため、電気通信事業の届出が必要になるのではありませんか？
+
+[「サーバーを作成しましたが、電気通信事業の届出は必要ですか？」](#サーバーを作成しましたが電気通信事業の届出は必要ですか)で説明している通りです。
+運営するサービスがどのような機能を持っていようと、「料⾦を徴収することにより収益を得ようとする」ことに該当しなければ、届出が必要な事業者とはみなされません。
 
 ## Kann ich Dienste mit „Misskey“ im Namen veröffentlichen?
 

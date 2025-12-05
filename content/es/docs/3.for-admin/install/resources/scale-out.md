@@ -1,21 +1,21 @@
-# Misskeyサーバーのスケールアウト
+# Escalando Misskey
 
-サーバーの利用者が増えるにしたがって、サーバーマシンのスペックを強化したり台数を増やして負荷に対応する必要が生じます。この記事ではMisskeyサーバーのスケールアウトに関するTipsを紹介します。
+A medida que aumenta el número de usuarios, se hace necesario mejorar las especificaciones del servidor o aumentar el número de servidores para gestionar la carga.Este artículo presenta consejos sobre cómo escalar tu servidor o instancia de Misskey.
 
-## PostgreSQLのレプリケーション
+## Replicación PostgreSQL
 
-PostgreSQLのレプリケーションを行うと、データベースの負荷を複数のサーバーマシンに分散させることができます
-レプリケーションについての詳細はPostgreSQLのドキュメントを参照してください。
-MisskeyではPostgreSQLのレプリケーションに対応しており、configファイルで以下のように設定します。(一部抜粋)
+La replicación PostgreSQL le permite distribuir la carga de la base de datos entre varios servidores
+Para más información sobre la replicación, consulta la documentación de PostgreSQL.
+Misskey soporta replicación PostgreSQL y puede ser configurado en el archivo de configuración como se indica a continuación.(Extracto)
 
 ```yml
-# レプリケーションを使用する場合は true にします
+# Establece a true if replication is used
 dbReplications: true
 
-# リードレプリカのリストをここで設定します(いくつでも設定可能)
+# Configura todos los esclavos (slaves) para replicar la BD
 dbSlaves:
   -
-    host: foo
+    host: foo 
     port: 5432
     db: misskey
     user: xxxxx
@@ -28,20 +28,20 @@ dbSlaves:
     pass: xxxxx
 ```
 
-このように設定すると、Misskeyがデータベースに対してreadクエリを発行するとき設定した`dbSlaves`の中からランダムにreadレプリカ選択してクエリを送信するようになり、データベースの負荷が分散されます。
+Con esta configuración, cuando Misskey emita una consulta de lectura a la base de datos, seleccionará aleatoriamente réplicas de la base de datos de los `dbSlaves` configurados y enviará la consulta a uno de ellos, distribuyendo así la carga de la base de datos.
 
-## 役割に応じたRedisの分割
+## Partición de Redis basada en roles
 
-Misskeyは以下のように様々な用途でRedisを使用します。
+Misskey utiliza Redis para una variedad de propósitos, incluyendo:
 
-- ジョブキューの管理
-- レートリミットの管理
-- キャッシュ
-- 通知などの情報の保存
-- グローバルなイベントのPub/Sub
+- Gestión de colas de trabajos
+- Gestión de límites de peticiones
+- Caché
+- Almacenamiento de notificaciones y otra información
+- Publicación y suscripción de los eventos globales
 
-Misskeyでは、これらの用途ごとに異なるRedisサーバーを使用するように設定することができ、負荷を複数のサーバーマシンに分散させることができます。
-configファイルで以下のように設定します。(一部抜粋)
+Misskey puede ser configurado para usar un servidor Redis diferente para cada uno de estos usos, permitiendo que la carga sea distribuida a través de múltiples  servidores.
+Configura lo siguiente en el archivo de configuración.(Extracto)
 
 ```yml
 redisForPubsub:
@@ -61,9 +61,9 @@ redisForJobQueue:
   #db: 1
 ```
 
-現在設定可能なのはメインのRedisに加えて上記のように「グローバルなイベントのPub/Sub」と「ジョブキューの管理」用のRedisです。
+Actualmente, además de la configuración principal de Redis, también puedes configurar Redis para "Pub/Sub para Eventos Globales" y "Gestión de Colas de Trabajos" como se ha descrito anteriormente.
 
-## リモートのチャートの無効化
+## Deshabilitar gráficos remotos
 
-個々のリモートユーザーのアクティビティなどのチャートや個々のリモートサーバーのチャートが必要無い場合、それらの生成を無効にするとパフォーマンスが向上します。
-コントロールパネルから、「リモートユーザーのチャートを生成」および「リモートサーバーのチャートを生成」をオフにすることで無効にできます。
+Si no necesitas gráficos como los de actividad para usuarios remotos individuales o gráficos para servidores remotos individuales, desactivar su generación mejorará el rendimiento.
+Para ello, desactiva las opciones "Generar gráficos de usuarios remotos" y "Generar gráficos de servidores remotos" en el panel de control.

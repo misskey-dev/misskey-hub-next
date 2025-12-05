@@ -1,5 +1,5 @@
 ---
-description: グローバルタイムラインのノートが流れるチャンネルです。
+description: "グローバルタイムラインのノートが流れるチャンネルです。"
 ---
 
 # `globalTimeline`

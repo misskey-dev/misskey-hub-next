@@ -20,6 +20,7 @@ threeDimensionModel: "3D 모델"
 clickToShow: "클릭하여 표시"
 preview: "미리보기"
 scrollable: "스크롤 할 수 있습니다."
+serverListUnderMaintenance: "서버 목록은 현재 점검 중입니다."
 _error:
   notFound: "페이지를 찾을 수 없습니다"
   notFoundDesc: "요청하신 페이지를 찾을 수 없습니다. URL을 확인하여 주십시오."
@@ -35,7 +36,7 @@ _seo:
 _nav:
   servers: "서버"
   docs: "문서"
-  blog: "블로그"
+  news: "뉴스"
   other: "더보기"
   switchLang: "언어 설정"
 _landing:
@@ -49,17 +50,26 @@ _landing:
     _federated:
       title: "분산"
       description: "Misskey는 분산형 프로토콜을 채용하고 있으므로, 다른 서버의 커뮤니티에 연결할 수 있습니다."
-    _multifunction:
-      title: "다기능"
-      description: "Misskey는 다른 곳에서 찾기 힘든 여러 기능이 있는 프로를 위한 마이크로 블로깅 플랫폼입니다."
-    _customizable:
-      title: "사용자화"
-      description: "Misskey의 유연한 인터페이스를 통해 자신이 원하는 UI를 만들 수 있습니다."
+    _powerful:
+      title: "파워풀"
+      description: "Misskey는 프로덕션 레벨의 여러 기능을 갖춰 세세한 커스터마이징도 가능합니다. 인원이 많거나 적어도 최적의 솔루션으로 됩니다."
+  _introduction:
+    title: "Misskey로 만들기"
+    description: "Misskey를 사용하면 번거로운 실장을 할 필요 없이 간단하게 독자의 플랫폼을 구축할 수 있습니다. 당신이 Misskey를 사용해 만든 서비스는 당신만의 것이므로, 정보 발신의 기존 플랫폼으로의 의존 위험도 없습니다."
+    tip: "Misskey는 'Web 서비스 그 자체'가 아닌 마이크로 블로그 서비스를 만들기 위한 '기반이 되는 소프트웨어'입니다. Web 사이트를 만드려는데 WordPress와 같은 소프트웨어를 사용하는 것과 같습니다."
   _decenterized:
     title: "Misskey는 {0}"
-    decenterizedPlatform: "분산형 플랫폼"
     description: "Misskey는 오픈 소스 프로젝트로 누구나 자유롭게 Misskey를 사용한 서버를 만들 수 있고, 이미 다양한 서버에서 Misskey를 사용하고 있어요. 특히, Misskey는 {0}이라고 불리는 분산형 통신 프로토콜을 사용하고 있어서 어떤 서버를 골라도 다른 서버에 있는 유저와 소통을 할 수 있어요. 이것이 분산형이라고 불리는 이유이며, 다른 플랫폼과는 통신할 수 없는 Twitter 등의 서비스와는 근본적으로 다르답니다. 그렇기 때문에 서버에 따라 주제나 테마, 유저 층, 언어 등이 다르니 당신에게 딱 맞는 서버를 찾아보는 것이 좋아요. (물론, 본인이 직접 서버를 만드는 것도 괜찮아요.)"
     activityPub: "ActivityPub"
+  _useCases:
+    title: "이렇게 사용할 수 있습니다"
+    single: "정보 수집·정보 발신을 위한 자신의 전용 서버"
+    official: "회사의 광고 계정을 설치하는 전용 서버"
+    community: "같은 흥미를 가진 유저 대상 커뮤니티 서버"
+    inHouse: "사내 SNS로의 비공개 서버"
+  _free:
+    title: "Misskey는 계속 무료로 오픈"
+    description: "Misskey는 2014년의 개발 초창기부터, 그리고 지금부터 미래에도, 프로그램의 소스 코드가 공개된 오픈 소스 소프트웨어(OSS)입니다. 또 누구나 무료로 자유롭게 소스 코드를 이용할 수 있습니다. Misskey가 OSS이고 계속할 수 있는 것은 여러분으로부터의 지원 덕분입니다."
   _features:
     _root:
       title: "주요 기능"
@@ -73,21 +83,162 @@ _landing:
     _reaction:
       title: "리액션"
       description: "노트에 \"리액션\"을 달아서 간단하게 본인의 느낌을 표현, 전달할 수 있습니다."
+    _customEmojis:
+      title: "커스텀 이모티콘"
+      description: "Misskey는 여러 장소에서 사용할 수 있는 서버 오리지널 이모티콘을 작성할 수 있습니다."
+    _channel:
+      title: "채널"
+      description: "채널을 만들면 공통 테마로 서버 내 커뮤니티를 만들 수 있습니다."
+    _antenna:
+      title: "안테나"
+      description: "특정 단어가 포함된 노트만 수집하는 타임라인을 만들 수 있습니다."
     _drive:
       title: "드라이브"
       description: "업로드한 파일은 '드라이브'에 저장되어, 마음에 드는 사진을 폴더에 모아 두고, 원할 때 쉽게 공유할 수 있습니다."
-    _theme:
-      title: "테마"
-      description: "원하는 디자인으로 Misskey를 사용해보세요. 물론 다크 모드도 확실하게 지원합니다. 원한다면 자신에게 딱 맞는 디자인의 테마도 만들 수 있습니다."
-    _thread:
-      title: "글타래"
-      description: "물론 노트는 타래로 이어서 쓸 수 있어서, 이야기를 무한정 풀어 나갈 수 있습니다."
+    _2fa:
+      title: "다단계 인증"
+      description: "일회용 비밀번호를 사용한 다단계 인증이나 물리적인 키를 사용한 패스키 인증으로 계정의 보안을 높이는 각종 기술을 지원합니다. "
     _charts:
       title: "차트"
       description: "Misskey에 내장된 차트 엔진을 이용하여, 서버의 이용 통계와 같은 정보를 한 눈에 파악할 수 있습니다."
+    _branding:
+      title: "브랜딩"
+      description: "서버의 로고, 아이콘, 테마 등을 커스터마이징해 간단히 SNS 브랜딩을 할 수 있습니다."
+    _roles:
+      title: "역할"
+      description: "역할을 사용하면 유저마다 권한을 세세하게 커스터마이징할 수 있습니다. 또 조건부 역할을 사용하면 조건에 일치하는 유저에 자동으로 역할을 할당할 수 있습니다. 역할에게 배지를 설정해 서버의 수익화에 도움을 줄 수 있습니다."
+    _moderation:
+      title: "조정"
+      description: "서버 운영을 돕는 충실한 조정 기능이 표준 탑재돼있습니다."
+    _privacy:
+      title: "개인 정보 보호"
+      description: "풍부한 개인 정보 보호 설정에서 콘텐츠의 공개 범위를 유연히 조정할 수 있습니다."
+    _multiPurpose:
+      title: "혼자여도, 여러 명이어도"
+      description: "여러 유저를 받아들이는 SNS로의 운영은 물론, 개인용 서버로의 이용도 지원합니다. Fediverse와 연결되기에 당신만의 강력한 거점으로 됩니다."
+    _monetization:
+      title: "수익화"
+      description: "광고의 표시 등 서버의 수익화를 돕는 기능도 준비돼있으며, 지속 가능한 운용을 목표로 합니다."
+    _oss:
+      title: "Mi ❤️ OSS"
+      description: "Misskey는 여태까지 그리고 앞으로도 오픈 소스로, 누구나 자유롭게 무료로 소스 코드를 이용할 수 있습니다. 또 Misskey Project는 다른 OSS에 대해 적극적으로 지원 활동을 하고 있습니다."
+    _battleTested:
+      title: "신뢰성"
+      description: "Misskey는 10년 이상에 걸쳐 실제 환경에서 사용되고 있고(battle-tested), 높은 신뢰성이 있다고 자부합니다."
+  _featuresServer:
+    _root:
+      title: "서버의 기능"
+      description: "Misskey를 지원하는 백엔드 실장의 특징"
+    _easyInstall:
+      title: "쉬운 설치"
+      description: "간단한 커맨드로 설치할 수 있고, 각사 제공 호스팅 서비스를 이용하면 관리의 수고를 덜 수 있습니다."
+    _easySetup:
+      title: "쉬운 설정"
+      description: "Misskey는 서버의 설정에서 복잡한 설정은 불필요하고, 바로 운용을 시작할 수 있습니다. 한편, 요구에 맞춰 고급 설정을 하는 것도 가능합니다."
+    _api:
+      title: "API"
+      description: "Misskey의 모든 기능은 HTTP API를 통해 조작할 수 있고, 다른 애플리케이션과의 연휴도 용이합니다. 더욱이 Webhook이나 WebSocket 접속도 지원하고 있으므로 실시간으로 Misskey에서 이벤트를 받을 수 있습니다."
+    _relay:
+      title: "릴레이 대응"
+      description: "Fediverse 내 액티비티를 중계하는 릴레이 서버로의 접속을 지원하고 있으므로 수동으로 여러 서버와 연결하는 일 없이 정보 수집을 할 수 있습니다."
+    _nodejs:
+      title: "Node.js 백엔드"
+      description: "Misskey는 백엔드로 Node.js를 채용하고 있고, 빠르고 가볍게 작동합니다."
+    _postgresql:
+      title: "PostgreSQL"
+      description: "메인 데이터베이스에는 PostgreSQL을 채용하고, 견고한 데이터 관리를 실현하고 있습니다."
+    _fullTextSearch:
+      title: "전체 텍스트 검색"
+      description: "PostgreSQL 외에, Meilisearch 등의 전체 텍스트 검색 엔진을 사용한 전체 텍스트 검색을 할 수 있습니다."
+    _jobQueue:
+      title: "고효율 작업 대기열"
+      description: "작업 대기열에는 BullMQ를 채용하고, 작업을 여러 서버에서 효율적으로 처리할 수 있습니다. 또 Misskey 네이티브에서 실장된 인스펙터는 제어판으로 통합돼 외부 툴에 의존하는 일 없이 관리할 수 있습니다."
+    _cdn:
+      title: "CDN 대응"
+      description: "외부 CDN의 리소스 캐시에 대응합니다. 서버로의 요청을 줄여 부하 감소, 비용 감소가 가능합니다."
+    _ftt:
+      title: "FTT"
+      description: "Fan-out Timeline Technology(FTT)로 타임라인을 Redis상에 구축해 성능을 향상시킬 수 있습니다."
+    _rbt:
+      title: "RBT"
+      description: "Reactions Buffering Technology(RBT)로 리액션 정보를 Redis상에 캐시해 성능을 향상시킬 수 있습니다."
+    _scalable:
+      title: "확장 가능"
+      description: "프로세스의 클러스터 분석, 여러 서버의 부하분산, 데이터베이스의 복제에 대응하고, 유저의 증가에도 대응합니다."
+    _seo:
+      title: "SEO"
+      description: "일부 콘텐츠의 SSR을 하고, 검색 엔진으로 인덱스시킬 수 있으며, OGP에 대응하고 있으므로 소셜 미디어 상에서 공유됐을 때의 미리보기도 가능합니다. 물론 인덱스되고 싶지 않은 상황에는 크롤러를 거부하는 설정도 가능합니다."
+    _ml:
+      title: "기계 학습"
+      description: "내장 기계 학습 기능을 이용해 자동적으로 민감한 미디어의 필터링을 하는 등 운용의 부담을 줄일 수 있습니다."
+    _sentry:
+      title: "Sentry 지원"
+      description: "Sentry로 서버 통계 수집에 대응하고 있기에 서버 리소스의 감시, 헬스체크, 유지 보수에 도움을 줄 수 있습니다."
+  _featuresClient:
+    _root:
+      title: "WebUI"
+      description: "Misskey에 부속된 높은 기능인 Web 프론트엔드(Misskey Web)의 특징을 소개"
+    _responsive:
+      title: "반응형 UI"
+      description: "UI는 세련된 독자 디자인 시스템을 사용해 설계됐고, 데스크톱, 태블릿, 스마트폰 각각에 최적인 표시, 작동으로 되게끔 정성스럽게 실장돼있습니다."
+    _theme:
+      title: "테마"
+      description: "원하는 디자인으로 Misskey를 사용할 수 있습니다. 물론 다크 모드도 확실하게 지원합니다. 스스로 고급 테마를 만들 수도 있습니다."
+    _mfm:
+      title: "MFM"
+      description: "노트에는 MFM이라 불리는 Misskey 전용 마크업 언어를 사용할 수 있습니다. 볼드체로 하기, 링크를 삽입하기, 움직임을 붙이기 등 텍스트의 장식을 간단한 구문으로 표현할 수 있습니다."
     _widgets:
       title: "위젯"
-      description: "여러 종류의 위젯을 배치하여 UI를 원하는대로 커스텀 할 수 있습니다."
+      description: "여러 종류의 위젯을 자유롭게 배치하고, 필요한 정보에 재빨리 접근할 수 있습니다."
+    _deck:
+      title: "덱 UI"
+      description: "덱 UI를 사용하면 UI를 더욱 깊이 커스터마이징을 할 수 있습니다. 자신만의 클라이언트를 만들 수 있습니다."
+    _embed:
+      title: "다른 사이트로의 임베딩"
+      description: "노트, 타임라인 등을 외부 사이트에 임베딩해 표시할 수 있습니다."
+    _realtimeMode:
+      title: "실시간 모드"
+      description: "サーバーとWebsocket接続することで、タイムラインなどのコンテンツをリアルタイムで受信することができます。"
+    _pushNotification:
+      title: "푸시 알림"
+      description: "푸시 알림에 대응하기에 실시간으로 서버에서 알림을 받을 수 있습니다."
+    _multiAccounts:
+      title: "멀티 계정 대응"
+      description: "여러 계정을 쉽게 교체해 사용할 수 있습니다."
+    _watermark:
+      title: "워터마크 부여 기능"
+      description: "게시하는 이미지에 워터마크를 자동으로 부여해 간단하게 신용 정보를 남길 수 있습니다. 워터마크는 자유롭게 커스터마이징할 수 있습니다."
+    _imageEditing:
+      title: "이미지 가공 기능"
+      description: "이미지에 이펙트를 추가하고, 컬러 그레이딩을 하는 등 다양한 창의적인 표현을 할 수 있습니다."
+    _achievements:
+      title: "도전 과제"
+      description: "Misskey의 기능을 시험하는 동기 부여가 되고, 온보딩에 도움이 됩니다."
+    _plugin:
+      title: "플러그인"
+      description: "안전한 AiScript를 사용한 플러그인을 설치해 클라이언트의 기능을 확장할 수 있습니다."
+    _settingsManagement:
+      title: "유연한 설정 관리"
+      description: "계정마다 임의의 클라이언트 설정을 덮어쓰기할 수 있고, 여러 장치간에 설정을 공유, 동기화할 수 있습니다. 더욱이 설정 정보는 자동 백업이 가능합니다."
+    _pwa:
+      title: "PWA"
+      description: "Misskey Web은 Progressive Web Apps(PWA)에 준거해 장치상에 네이티브 애플리케이션처럼 작동시킬 수 있습니다."
+    _i18n:
+      title: "다국어 지원"
+      description: "클라이언트를 여러 언어로 이용할 수 있습니다."
+  _featuresUpcoming:
+    _root:
+      title: "추후 공개"
+      description: "이후 예정된 기능을 소개"
+    _jwt:
+      title: "JWT 인증"
+      description: "JSON Web Token(JWT)을 사용한 무상태 인증을 실장하고, 더욱 안전하며 더욱 빠른 요청의 검증을 실현합니다."
+    _newBackend:
+      title: "더욱 가벼운 백엔드"
+      description: "더욱 빠르고 가벼운 작동을 할 수 있게 하기 위해 완전히 새로운 백엔드 실장의 개발을 진행하고 있습니다."
+    _vueVapor:
+      title: "Vapor 모드 대응"
+      description: "프론트엔드에서 채용한 프레임워크 Vue의 새로운 컴파일 전략을 지원하고 더욱 가벼운 Web UI를 실현합니다."
   _getStarted:
     title: "Misskey 시작하기"
     _find:
@@ -99,6 +250,8 @@ _landing:
     _docs:
       title: "자세히 보기"
       docs: "문서 보기"
+    _dev:
+      title: "개발에 참여하기"
   _donation:
     title: "기부하기"
     description: "Misskey는 비영리 프로젝트입니다. 개발 자금은 여러분의 기부를 통해 모아지고 있습니다. Misskey가 마음에 드신다면 개발이 지속될 수 있도록 꼭 지원을 부탁드립니다."
@@ -339,7 +492,7 @@ _customEmojiPreview:
   preview: "미리보기"
   emoji: "이모티콘 #{number}"
   placeholder: "'추가'에서 사용자 지정 이모티콘을 추가하고 미리 볼 수 있습니다."
-  limitReactionLength: "リアクションの最大横幅を制限し、縮小して表示する"
+  limitReactionLength: "반응의 최대 가로 폭을 제한하고 축소하여 표시"
   _options:
     text: "노트 본문"
     textDescription: "추가한 사용자 지정 이모티콘은 {emoji_id}로 참조할 수 있습니다."
@@ -454,3 +607,5 @@ _api:
       "read:clip-favorite": "클립의 좋아요 보기"
       "read:federation": "연합 정보 불러오기"
       "write:report-abuse": "위반 내용 신고하기"
+      "write:chat": "채팅 조작하기"
+      "read:chat": "채팅 열람하기"

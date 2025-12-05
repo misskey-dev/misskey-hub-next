@@ -1,5 +1,5 @@
 ---
-description: 应用程序需要的权限
+description: '应用程序需要的权限'
 ---
 
 # 权限列表

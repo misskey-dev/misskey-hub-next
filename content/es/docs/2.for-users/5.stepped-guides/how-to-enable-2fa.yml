@@ -1,94 +1,94 @@
-title: "2段階認証を設定する方法（ワンタイムパスワード）"
-description: "Misskeyのアカウントにワンタイムパスワードを設定してセキュリティを強化する方法を説明します。"
+title: "Cómo habilitar la Autenticación en Dos Pasos (Contraseña de un solo uso)"
+description: "Esta guía explica como configurar una contraseña de un solo uso en tu cuenta de Misskey para mejorar la seguridad."
 #Do not translate any keys that includes underscore
 _TYPE_: "STEPPED_GUIDE"
 body: |
-  2段階認証を設定すると、アカウントへの侵入リスクを軽減し、セキュリティを強化できます。ここでは、ワンタイムパスワードの設定方法をご紹介します。
+  Activar la autenticación de dos pasos puede reducir el riesgo de acceso no autorizado a su cuenta y mejorar la seguridad. A continuación, te presentamos cómo configurar una contraseña de un solo uso.
 guides:
   - 
     _AUTOSELECT_TYPE_: "HARD_SMARTPHONE"
     _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
-    title: "スマートフォン"
+    title: "Smartphone"
     steps:
       - 
-        title: "2段階認証用アプリをダウンロード"
+        title: "Descarga una aplicación de autenticación en dos pasos."
         description: |
-          操作を始める前に、2段階認証用のワンタイムパスワードを生成するためのアプリをインストールしてください。以下にその例を示します：
+          Antes de empezar, instala una aplicación para generar contraseñas de un solo uso para la autenticación de dos factores. Aquí tienes algunos ejemplos:
 
           - Google Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) [App Store](https://apps.apple.com/app/google-authenticator/id388497605)
           - FreeOTP: [Google Play](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp) [App Store](https://apps.apple.com/app/freeotp-authenticator/id872559395)
       - 
-        title: "設定を開く"
+        title: "Abrir Configuración"
         image: "sp/1.png"
         description: |
-          Misskeyを開き、画面右下の「≡」ボタンをタップ、でてきたメニューの「設定」をタップします。
+          Abre Misskey, pulsa el botón «≡» en la parte inferior derecha de la pantalla y, a continuación, pulsa "Configuración" en el menú que aparece.
       - 
-        title: "「セキュリティ」をタップ"
+        title: "Pulsa en \"Seguridad\""
         image: "sp/2.png"
         description: |
-          設定カテゴリの中から「セキュリティ」を見つけてタップします。
+          Busque y pulse "Seguridad" dentro de la categoría de configuración.
       - 
-        title: "「認証アプリの設定を開始」をタップ"
+        title: "Pulsa en \"Registrar aplicación autenticadora\""
         image: "sp/3.png"
         description: |
-          「二要素認証」の中にある「認証アプリ」から、「認証アプリの設定を開始」をタップします。
+          Dentro de "Autenticación de doble factor", busca la sección "Aplicación autenticadora" y, a continuación, pulsa "Registrar aplicación autenticadora".
       - 
-        title: "パスワードを入力"
+        title: "Introduce la contraseña"
         image: "sp/4.png"
         description: |
-          セキュリティに関わる設定のため、確認のために、お使いのアカウントにログインする際に使用しているパスワードを入力します。
+          Para los ajustes relacionados con la seguridad, introduce la contraseña que utilizas para iniciar sesión en tu cuenta para confirmarla.
       - 
-        title: "認証アプリの設定を開始する"
+        title: "Empezar a configurar la aplicación de autenticación"
         image: "sp/8.png"
         description: |
-          2段階認証アプリを設定するためのコードが生成されます。以下のいずれかの方法で設定してください。
+          Se generará un código para configurar la aplicación de autenticación de dos factores. Configúrelo utilizando uno de los siguientes métodos:
 
-          ### 今お使いの端末で二段階認証アプリを設定する場合
+          ### Si configura la aplicación de autenticación en tu dispositivo actual
 
-          「アプリを起動」ボタンをタップします。このボタンがない場合は、**QRコードをタップするとアプリが起動します。**
+          Pulsa el botón "Iniciar aplicación". Si este botón no está disponible, **tocar el código QR iniciará la aplicación.
 
           :::tip
 
-          起動しない場合は、2段階認証用アプリが正しくインストールされているか確認してください。
+          Si no se inicia, asegúrate de que la aplicación de autenticación de dos factores está correctamente instalada.
 
           :::
 
-          ### 別の端末にインストールされた2段階認証アプリを設定する場合
+          ### Si configuras la aplicación de autenticación en otro dispositivo
 
-          2段階認証アプリを開き、アプリの指示に従って、ワンタイムパスワードの新規登録を行います。この際に、画面に表示されているQRコードをスキャンしてください。
+          Abre la aplicación de autenticación de dos factores en el otro dispositivo y sigue las instrucciones de la aplicación para registrar una nueva contraseña de un solo uso. Escanea el código QR que aparece en la pantalla durante este proceso.
       - 
-        title: "認証アプリで生成されたコードをコピーする"
+        title: "Copia el código generado por la aplicación de autenticación"
         image: "sp/9.png"
         description: |
-          このあとのMisskey側でのセットアップで、認証アプリが正しく設定されていたかの確認のために、アプリで生成されたワンタイムパスワードを入力する手順があります。
+          Más adelante en la configuración del lado de Misskey, habrá un paso para introducir la contraseña de un solo uso generada por la aplicación de autenticación para confirmar que se ha configurado correctamente.
 
-          アプリの指示に従い、ワンタイムパスワードを覚えておくか、コピーしておいてください。
+          Sigue las instrucciones de la aplicación para recordar o copiar la contraseña de un solo uso.
 
           :::warning
 
-          ワンタイムパスワードはすぐ（約30秒）失効します。ご注意ください。
+          La contraseña de un solo uso caduca rápidamente (unos 30 segundos), así que ten cuidado.
 
           :::
       - 
-        title: "ワンタイムパスワードを入力する"
+        title: "Introduce la contraseña de un solo uso"
         image: "sp/6.png"
         description: |
-          さきほどのワンタイムパスワードを入力し、「続ける」をタップします。
+          Introduzca la contraseña de un solo uso generada anteriormente y pulse "Continuar".
       - 
-        title: "バックアップコードをダウンロードする"
+        title: "Descarga los códigos de respaldo"
         image: "sp/7.png"
         description: |
-          **２段階認証の設定が完了しました。**
+          ** La configuración inicial de la verificación en dos pasos está completada.**
 
-          最後に、２段階認証が使えなくなった際に使用できる「バックアップコード」も生成されますので、必ずダウンロードしてから終了してください。
+          Finalmente descarga los "Códigos de recuperación", que pueden ser usados si el segundo factor de autenticación no está disponible 
 
           :::warning
 
-          バックアップコードは、ワンタイムパスワードが使用できなくなったときにアカウントにログインできる救済機能です。
+          Los códigos de recuperación son el último recurso para acceder a tu cuenta cuando no dispones de contraseñas de un solo uso.
 
-          このコードが無いとアカウントにログインすることができなくなるので、必ずダウンロードして安全な場所に保管しておいてください。
+          Si no tienes estos códigos, no podrás acceder a tu cuenta, así que asegúrate de descargarlos y guardarlos en un lugar seguro.
 
-          このコードは、これ以降 二度と表示されません。
+          Estos códigos no volverán a aparecer.
 
           :::
   - 
@@ -96,73 +96,64 @@ guides:
     title: "PC"
     steps:
       - 
-        title: "2段階認証用アプリをダウンロード"
+        title: "Descarga una aplicación de autenticación en dos pasos."
         description: |
-          操作を始める前に、2段階認証用のワンタイムパスワードを生成するためのアプリをお使いのスマートフォンなどにインストールしてください。以下にその例を示します：
-
-          - Google Authenticator: [Google Play](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) [App Store](https://apps.apple.com/app/google-authenticator/id388497605)
-          - FreeOTP: [Google Play](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp) [App Store](https://apps.apple.com/app/freeotp-authenticator/id872559395)
-
-          :::tip
-
-          PC用のワンタイムパスワード生成ソフトもありますが、ポータビリティの観点からスマホ用のアプリをおすすめします。
-
-          :::
+          Antes empezar, instala una aplicación en tu móvil u otro dispositivo para generar una contraseña de un solo uso para la autenticación de dos factores. Aquí tienes un ejemplo:
       - 
-        title: "設定を開く"
+        title: "Abrir Configuración"
         image: "pc/8.png"
         description: |
-          「設定」→「セキュリティ」と進み、「二要素認証」の中にある「認証アプリ」から、「認証アプリの設定を開始」をタップします。
+          Dentro de "Autenticación de doble factor", busca la sección "Aplicación autenticadora" y, a continuación, pulsa "Registrar aplicación autenticadora".
       - 
-        title: "パスワードを入力"
+        title: "Introduce la contraseña"
         image: "pc/3.png"
         description: |
-          セキュリティに関わる設定のため、確認のために、お使いのアカウントにログインする際に使用しているパスワードを入力します。
+          Para los ajustes relacionados con la seguridad, introduce la contraseña que utilizas para iniciar sesión en tu cuenta para confirmarla.
       - 
-        title: "認証アプリの設定を開始する"
+        title: "Empieza a configurar la aplicación de autenticación."
         image: "pc/7.png"
         description: |
-          2段階認証アプリを設定するためのコードが生成されます。以下のいずれかの方法で設定してください。
+          Se generará un código para configurar la aplicación de autenticación de dos factores. Configúralo utilizando uno de los siguientes métodos.
 
-          ### スマホの2段階認証アプリを設定する場合（推奨）
+          ### Si configuras la aplicación Authenticator en un smartphone (recomendado)
 
-          お使いのスマートフォンで2段階認証アプリを開き、アプリの指示に従って、ワンタイムパスワードの新規登録を行います。この際に、画面に表示されているQRコードをスキャンしてください。
+          Abre la aplicación de autenticación de dos factores en tu smartphone, sigue las instrucciones de la aplicación para registrar una nueva contraseña de un solo uso. Escanea el código QR que aparece en la pantalla durante este proceso.
 
-          ### PC上の2段階認証アプリを使用する場合
+          ### Si utilizas una aplicación de autenticación de dos factores en el PC
 
-          「アプリを起動」ボタンをタップします。このボタンがない場合は、QRコードをタップするとアプリが起動します。
+          Pulsa el botón «Iniciar aplicación». Si este botón no está disponible, pulsa el código QR para iniciar la aplicación.
       - 
-        title: "認証アプリで生成されたコードをコピーする"
+        title: "Copia el código generado por la aplicación de autenticación"
         image: "sp/9.png"
         description: |
-          このあとのMisskey側でのセットアップで、認証アプリが正しく設定されていたかの確認のために、アプリで生成されたワンタイムパスワードを入力する手順があります。
+          Más adelante en la configuración del lado de Misskey, habrá un paso para introducir la contraseña de un solo uso generada por la aplicación de autenticación para confirmar que se ha configurado correctamente.
 
-          アプリの指示に従い、ワンタイムパスワードを覚えておくか、コピーしておいてください。
+          Sigue las instrucciones de la aplicación para recordar o copiar la contraseña de un solo uso.
 
           :::warning
 
-          ワンタイムパスワードはすぐ（約30秒）失効します。ご注意ください。
+          La contraseña de un solo uso caduca rápidamente (unos 30 segundos), así que ten cuidado.
 
           :::
       - 
-        title: "ワンタイムパスワードを入力する"
+        title: "Introduce la contraseña de un solo uso"
         image: "pc/5.png"
         description: |
-          さきほどのワンタイムパスワードを入力し、「続ける」をタップします。
+          Introduzca la contraseña de un solo uso generada anteriormente y pulse "Continuar".
       - 
-        title: "バックアップコードをダウンロードする"
+        title: "Descarga los códigos de respaldo"
         image: "pc/6.png"
         description: |
-          **２段階認証の設定が完了しました。**
+          ** La configuración inicial de la verificación en dos pasos está completada.**
 
-          最後に、２段階認証が使えなくなった際に使用できる「バックアップコード」も生成されますので、必ずダウンロードしてから終了してください。
+          Finalmente descarga los "Códigos de recuperación", que pueden ser usados si el segundo factor de autenticación no está disponible 
 
           :::warning
 
-          バックアップコードは、ワンタイムパスワードが使用できなくなったときにアカウントにログインできる救済機能です。
+          Los códigos de recuperación son el último recurso para acceder a tu cuenta cuando no dispones de contraseñas de un solo uso.
 
-          このコードが無いとアカウントにログインすることができなくなるので、必ずダウンロードして安全な場所に保管しておいてください。
+          Si no tienes estos códigos, no podrás acceder a tu cuenta, así que asegúrate de descargarlos y guardarlos en un lugar seguro.
 
-          このコードは、これ以降 二度と表示されません。
+          Estos códigos no volverán a aparecer.
 
           :::

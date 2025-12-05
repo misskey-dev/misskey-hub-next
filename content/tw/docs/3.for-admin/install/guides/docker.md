@@ -1,5 +1,5 @@
 ---
-description: 本指南介紹如何使用 Docker 安裝設置 Misskey。
+description: '本指南介紹如何使用 Docker 安裝設置 Misskey。'
 ---
 
 # 使用 Docker Compose 建置 Misskey
@@ -36,7 +36,7 @@ cp .config/docker_example.env .config/docker.env
 cp ./compose_example.yml ./compose.yml
 ```
 
-按照檔案中的說明編輯 `default.yml` 和 `docker.env`。\
+按照檔案中的說明編輯 `default.yml` 和 `docker.env`。  
 如有必要，也請編輯 `compose.yml`。（例如，如果您想更改連接埠）
 
 ## 建構和初始化

@@ -1,8 +1,7 @@
-# サイレンス
+# Silenciado
 
-サイレンスは、アカウントに設定される状態のひとつです。
+Una cuenta puede estar en el estado Silenciado.
 
-アカウントがサイレンス状態になると、ノートの公開範囲をパブリックにできなくなります。
-ホーム、フォロワー、ダイレクトは選択可能なため、サイレンスを受けた場合でもフォロワーやあなたのユーザーページを直接訪れた場合は投稿を閲覧できますが、GTL(連合タイムライン)やLTL(ローカルタイムライン)には投稿が流れません。
+Cuando se silencia una cuenta, el usuario ya no podrá establecer la visibilidad de su nota en "Público".Un usuario silenciado puede seguir configurando la visibilidad de la nota en "Inicio", “Seguidores” y "Nota Directa", lo que muestra la nota a sus seguidores y en su página de perfil, pero sus publicaciones no serán visibles en la GTL (línea de tiempo federada) ni en la LTL (línea de tiempo local).
 
-アカウントのサイレンス状態は、サーバーのモデレーターによって有効化/無効化されます。
+Solo los administradores/moderadores pueden silenciar cuentas.

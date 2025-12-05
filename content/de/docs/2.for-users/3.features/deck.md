@@ -1,6 +1,6 @@
 # Deck
 
-Deck ist eines der in Misskey verwendbaren Benutzeroberflächen.Durch die Aneinanderreihung sogenannter "Spalten" wird ein hoher Anpassungsgrad sowie das Anzeigen vieler Informationen auf einmal ermöglicht.\
+Deck ist eines der in Misskey verwendbaren Benutzeroberflächen.Durch die Aneinanderreihung sogenannter "Spalten" wird ein hoher Anpassungsgrad sowie das Anzeigen vieler Informationen auf einmal ermöglicht.  
 Beachte, dass wenn eine Hauptspalte hinzugefügt wird, der Inhalt in der Hauptspalte angezeigt wird, wenn Notizen und Profile auf einer Seite angezeigt werden.
 
 ## Spalten hinzufügen

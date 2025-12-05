@@ -2,11 +2,11 @@
 
 This shell script was made to make the installation of Misskey easy!
 
-いくつかの質問に答えるだけで、UbuntuサーバーへMisskeyを簡単にインストールできます！
+By answering a couple of questions, you can easily install Misskey on an Ubuntu server!
 
-また、アップデートスクリプトもあります。
+There is also an update script.
 
-[v12の場合はこちら](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)
+The (older) v12 script is available here
 
 ## Requirements
 
@@ -20,11 +20,11 @@ Do not recreate the database with the domain/hostname of the server once you hav
 
 :::
 
-Let's Encryptの認証を試行できる回数が少ないので、サーバーのネットワークやDNSの設定を十分確認してからインストールを開始してください。
+Since Let's Encrypt's verification attempts are limited, please double-check your server's network and DNS settings prior to starting the installation.
 
-## Cloudflareの設定
+## Cloudflare Configuration
 
-Cloudflareを使う場合、Cloudflareのドメインの設定を完了してからインストールを開始するようにしてください。\
+Cloudflareを使う場合、Cloudflareのドメインの設定を完了してからインストールを開始するようにしてください。  
 ネームサーバーの適用には最大で3日程度かかる場合があります。
 
 また、nginxとCloudflareを設定する場合、Cloudflareの設定画面にて、
@@ -36,7 +36,7 @@ Cloudflareを使う場合、Cloudflareのドメインの設定を完了してか
 
 ### 1. SSH
 
-サーバーにSSH接続します。\
+サーバーにSSH接続します。  
 （サーバーのデスクトップを開いている方はシェルを開きましょう。）
 
 ### 2. 環境を最新にする
@@ -107,11 +107,11 @@ iptablesを使うようにしてください。
 
 v1から、インストールメソッドにsystemdとDockerとを選べるようにしました。
 
-Dockerと言っても、**MisskeyだけをDockerで実行**し、RedisやPostgresなどはホストで直接実行します。\
+Dockerと言っても、**MisskeyだけをDockerで実行**し、RedisやPostgresなどはホストで直接実行します。  
 [docker-composeですべての機能を動かす方法については、mamemonongaさんが作成したこちらの記事がおすすめです。](https://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0)
 
-Docker Hubイメージを使う設定であれば、Misskeyのビルドが不要になるため、**一番お勧めです**。\
-ただし、マイグレーションは必要なので、アップデート時にMisskeyを使えない時間がゼロになるわけではありません。\
+Docker Hubイメージを使う設定であれば、Misskeyのビルドが不要になるため、**一番お勧めです**。  
+ただし、マイグレーションは必要なので、アップデート時にMisskeyを使えない時間がゼロになるわけではありません。  
 また、Misskeyのビルド環境を準備しない(git pullしない)ので、フォークを動かしたくなった時に設定が面倒になります。
 
 ローカルでDockerをビルドする方式は、パフォーマンス面で非推奨です。
@@ -144,13 +144,13 @@ nginxをリバースプロキシとして採用することにより、画像フ
 
 万が一途中で失敗してもう一度スクリプトを動作させる場合、次のことに注意してください。
 
-- RedisやPostgresのインストールが終わっている場合、「install locally」はNoにしてください。\
+- RedisやPostgresのインストールが終わっている場合、「install locally」はNoにしてください。  
   host・port設定はそのままEnterを押します。
   ユーザー名やパスワードは、前回実行した際に指定したものを入力します。
 
 ## .envファイルについて
 
-インストールスクリプトは、2つの.envファイルを作成します。\
+インストールスクリプトは、2つの.envファイルを作成します。  
 アップデートの際に使用します。
 
 ### /root/.misskey.env
@@ -159,13 +159,13 @@ misskeyを実行するユーザーを覚えておくために必要です。
 
 ### /home/(misskeyユーザー)/.misskey.env
 
-systemdの場合に生成されます。\
+systemdの場合に生成されます。  
 主にディレクトリを覚えておくのに使用します。
 
 ### /home/(misskeyユーザー)/.misskey-docker.env
 
-Dockerの場合に生成されます。\
-実行されているコンテナとイメージの番号を保存しています。\
+Dockerの場合に生成されます。  
+実行されているコンテナとイメージの番号を保存しています。  
 コンテナの番号はアップデートの際に更新されます。古いイメージは削除されます。
 
 ## 自分で管理する
@@ -176,7 +176,7 @@ Dockerの場合に生成されます。\
 
 ### Misskeyディレクトリ
 
-Misskeyのソースは`/home/ユーザー/ディレクトリ`としてcloneされます。\
+Misskeyのソースは`/home/ユーザー/ディレクトリ`としてcloneされます。  
 （ユーザー、ディレクトリの初期値はともにmisskeyです。）
 
 Misskeyディレクトリへは、以下のように移動するとよいでしょう。
@@ -194,7 +194,7 @@ exit
 
 ### systemd
 
-systemdのプロセス名はexample.comです。\
+systemdのプロセス名はexample.comです。  
 たとえば再起動するには次のようにします。
 
 ```sh
@@ -249,7 +249,7 @@ requirepassとbindを`/etc/redis/misskey.conf`で設定しています。
 
 ## Q. アップデート後に502でアクセスできない
 
-Dockerでは、起動後にマイグレーションをするため、すぐにアクセスできません。\
+Dockerでは、起動後にマイグレーションをするため、すぐにアクセスできません。  
 マイグレーションが終わっているかどうか確認してみてください。
 
 systemdの場合では、pnpm installに失敗している可能性があります。
@@ -264,5 +264,5 @@ journalctlでログを確認すると、たいていre2が云々という記述�
 
 ## Q. 同じサーバーにもう1つMisskeyを建てたい
 
-スクリプトは同じサーバーに追加でMisskeyをインストールすることは想定していません。\
+スクリプトは同じサーバーに追加でMisskeyをインストールすることは想定していません。  
 幾つかの設定が上書きされるか、途中でエラーになってしまうでしょう。
