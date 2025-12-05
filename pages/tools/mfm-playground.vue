@@ -6,10 +6,10 @@
         <div class='rounded-lg grid md:grid-cols-2 gap-4'>
             <div>
                 {{ $t('_mfmPlayground.preview') }}
-                <div :class="$style.mfmRoot" class="mb-2 bg-white dark:bg-[#212529] border-gray-200 dark:border-gray-600">
+                <div :class="$style.mfmRoot" class="mb-2 bg-white dark:bg-[#212529] border-neutral-200 dark:border-neutral-600">
                     <MkMfm :text="mfmText ?? ''" :baseHost="mfmHost" />
                 </div>
-                <div class="text-xs text-gray-500">{{ $t('_mfmPlayground.disclaimer') }}</div>
+                <div class="text-xs text-neutral-500">{{ $t('_mfmPlayground.disclaimer') }}</div>
             </div>
             <div class="space-y-4">
                 <div>

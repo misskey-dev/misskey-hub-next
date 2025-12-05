@@ -1,7 +1,7 @@
 <template>
 	<div class="flex flex-col lg:flex-row justify-between items-center">
 		<div class="order-2 mt-4 lg:mt-0 lg:order-1 w-full lg:w-2/5">
-			<GNuxtLink v-if="prev && prev._path != null && prev._path.includes(currentDirectory)" :to="prev._path" class="rounded-lg transition-colors p-4 border dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-800 text-start flex justify-start items-center">
+			<GNuxtLink v-if="prev && prev._path != null && prev._path.includes(currentDirectory)" :to="prev._path" class="rounded-lg transition-colors p-4 border dark:border-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-800 text-start flex justify-start items-center">
 				<div class="mr-3"><LeftIco /></div>
 				<div>
 					<div class="mb-1 text-sm">{{ $t('_docs._prevNext.prev') }}</div>
@@ -10,7 +10,7 @@
 			</GNuxtLink>
 		</div>
 		<div class="order-1 lg:order-2 w-full lg:w-2/5">
-			<GNuxtLink v-if="next && next._path != null && next._path.includes(currentDirectory)" :to="next._path" class="rounded-lg transition-colors p-4 border dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-800 text-end flex justify-end items-center">
+			<GNuxtLink v-if="next && next._path != null && next._path.includes(currentDirectory)" :to="next._path" class="rounded-lg transition-colors p-4 border dark:border-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-800 text-end flex justify-end items-center">
 				<div>
 					<div class="mb-1 text-sm">{{ $t('_docs._prevNext.next') }}</div>
 					<div class="font-bold text-lg">{{ next.title }}</div>

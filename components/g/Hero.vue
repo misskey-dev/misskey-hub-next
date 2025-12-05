@@ -1,11 +1,11 @@
 <template>
-    <header>
-        <div class="container mx-auto max-w-screen-xl px-6 lg:min-h-[330px] py-4 space-y-6 lg:space-y-0 lg:flex items-center justify-between lg:space-x-6">
+    <header class="lg:py-12">
+        <div class="container mx-auto max-w-screen-xl p-6 lg:min-h-[330px] gap-6 flex flex-col lg:flex-row lg:items-center lg:justify-between">
             <div class="max-w-lg mx-auto lg:mx-0">
                 <h1 class="font-title font-bold text-center lg:text-start text-2xl lg:text-4xl !leading-relaxed mb-4"><slot name="title"></slot></h1>
                 <p class="opacity-90 text-center lg:text-start lg:text-lg lg:leading-relaxed max-w-lg"><slot name="description"></slot></p>
             </div>
-            <div>
+            <div class="hidden lg:block">
                 <slot name="icon"></slot>
             </div>
         </div>

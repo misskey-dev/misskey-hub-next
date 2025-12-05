@@ -5,8 +5,8 @@
         </h1>
 
         <div class="space-y-8">
-            <div class="p-6 space-y-4 rounded-lg bg-white dark:bg-slate-950">
-                <header class="-mt-6 -mx-6 px-6 py-3 font-bold text-lg border-b border-slate-300 dark:border-slate-800">
+            <div class="p-6 space-y-4 rounded-lg bg-white dark:bg-neutral-950">
+                <header class="-mt-6 -mx-6 px-6 py-3 font-bold text-lg border-b border-neutral-300 dark:border-neutral-800">
                     {{ $t('_avatarDecorationPreview.preview') }}
                 </header>
                 <div class="flex gap-8 items-center justify-center flex-wrap">
@@ -21,8 +21,8 @@
                 </div>
             </div>
 
-            <div class="p-6 rounded-lg bg-white dark:bg-slate-950">
-                <header class="-mt-6 -mx-6 px-6 py-3 border-b border-slate-300 dark:border-slate-800 flex items-center">
+            <div class="p-6 rounded-lg bg-white dark:bg-neutral-950">
+                <header class="-mt-6 -mx-6 px-6 py-3 border-b border-neutral-300 dark:border-neutral-800 flex items-center">
                     <h2 class="font-bold text-lg">{{ $t('_avatarDecorationPreview.settings') }}</h2>
                     <div class="ml-auto">
                         <button class="btn btn-primary" @click="addDecoration"><PlusIco class="mr-1" />{{ $t('add') }}</button>
@@ -30,8 +30,8 @@
                 </header>
 
                 <TransitionGroup v-if="decorations.length > 0" name="decorationList" tag="div">
-                    <div v-for="decoration, index in decorations" :key="decoration.id" class="mt-8 p-4 rounded-lg bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-800">
-                        <h3 class="-mt-7 font-bold flex items-center w-fit px-3 bg-white dark:bg-slate-950 mb-4">
+                    <div v-for="decoration, index in decorations" :key="decoration.id" class="mt-8 p-4 rounded-lg bg-white dark:bg-neutral-950 border border-neutral-300 dark:border-neutral-800">
+                        <h3 class="-mt-7 font-bold flex items-center w-fit px-3 bg-white dark:bg-neutral-950 mb-4">
                             <div class="btn-group mr-2" role="group" aria-label="Basic outlined example">
                                 <button type="button" @click="downDecorationOrder(index, decorations)"  :disabled="(index + 1) === decorations.length" class="btn btn-sm btn-outline-primary"><ChevronDownIco class="h-3.5 w-3.5 stroke-1 stroke-current" /></button>
                                 <button type="button" @click="upDecorationOrder(index, decorations)" :disabled="index === 0" class="btn btn-sm btn-outline-primary"><ChevronUpIco class="h-3.5 w-3.5 stroke-1 stroke-current" /></button>
@@ -40,8 +40,8 @@
                             <div>{{ $t('_avatarDecorationPreview.decoration', { number: (index + 1) }) }}</div>
                         </h3>
                         <div class="md:flex items-center justify-center space-y-4 md:space-y-0">
-                            <div class="w-full md:w-auto md:ml-8 md:order-2 border-slate-300 dark:border-slate-800 p-10 md:p-16 rounded-lg">
-                                <div class="w-24 h-24 mx-auto relative rounded-full bg-slate-50 dark:bg-slate-900">
+                            <div class="w-full md:w-auto md:ml-8 md:order-2 border-neutral-300 dark:border-neutral-800 p-10 md:p-16 rounded-lg">
+                                <div class="w-24 h-24 mx-auto relative rounded-full bg-neutral-50 dark:bg-neutral-900">
                                     <img class="w-full h-full object-cover rounded-full" :src="avatar" />
                                     <img
                                         :src="decoration.url"
@@ -84,7 +84,7 @@
                                             <input class="form-check-input" type="checkbox" role="switch" :id="`flipHSwitch_${index}`" v-model="decoration.flipH">
                                             <label class="form-check-label" :for="`flipHSwitch_${index}`">{{ $t('_avatarDecorationPreview._options.flip') }}</label>
                                         </div>
-                                        <div class="pt-1.5 w-full border-t border-slate-300 dark:border-slate-800 form-check form-switch">
+                                        <div class="pt-1.5 w-full border-t border-neutral-300 dark:border-neutral-800 form-check form-switch">
                                             <input class="form-check-input" type="checkbox" role="switch" :id="`overlayTemplate_${index}`" v-model="decoration.overlayTemplate">
                                             <label class="form-check-label" :for="`overlayTemplate_${index}`">{{ $t('_avatarDecorationPreview._options.overlayTemplate') }}</label>
                                         </div>

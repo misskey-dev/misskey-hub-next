@@ -5,7 +5,7 @@
         </h1>
         <div class='rounded-lg grid md:grid-cols-2 gap-4'>
             <div class="space-y-4">
-                <div class="p-6 space-y-4 rounded-lg bg-white dark:bg-slate-950">
+                <div class="p-6 space-y-4 rounded-lg bg-white dark:bg-neutral-950">
                     <header class="-mt-6 -mx-6 px-6 py-3 font-bold text-lg border-b">
                         {{ $t('preview') }}
                     </header>
@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="space-y-4">
-                <div class="p-6 space-y-4 rounded-lg bg-white dark:bg-slate-950">
+                <div class="p-6 space-y-4 rounded-lg bg-white dark:bg-neutral-950">
                     <header class="-mt-6 -mx-6 px-6 py-3 font-bold text-lg border-b">
                         {{ $t('settings') }}
                     </header>

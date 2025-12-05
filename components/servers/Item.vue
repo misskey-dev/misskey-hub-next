@@ -1,8 +1,8 @@
 <template>
-    <div class="border border-gray-300 dark:border-gray-800 dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden focus-within:ring-2 ring-accent-500 ring-offset-2">
+    <div class="border border-neutral-300 dark:border-neutral-800 dark:bg-neutral-800 rounded-lg shadow-lg overflow-hidden focus-within:ring-2 ring-accent-500 ring-offset-2">
         <GNuxtLink :to="`https://${instance.url}`" target="_blank" class="relative">
             <template v-if="view === 'grid'">
-                <div class="relative aspect-video bg-gray-200 dark:bg-gray-600">
+                <div class="relative aspect-video bg-neutral-200 dark:bg-neutral-600">
                     <img v-if="manualBackground" :src="manualBackground" class="w-full h-full object-cover" />
                     <img v-else-if="instance.background" loading="lazy" :src="`${runtimeConfig.public.serverListApiBaseUrl}/instance-backgrounds/${instance.url}.webp`" class="w-full h-full object-cover" />
                     <img v-else-if="instance.banner" loading="lazy" :src="`${runtimeConfig.public.serverListApiBaseUrl}/instance-banners/${instance.url}.webp`" class="w-full h-full object-cover" />
@@ -39,7 +39,7 @@
                 <div class="absolute h-full w-4/5 top-0 left-0 overflow-hidden">
                     <img v-if="instance.background" loading="lazy" :src="`${runtimeConfig.public.serverListApiBaseUrl}/instance-backgrounds/${instance.url}.webp`" class="h-full w-full object-cover object-center opacity-40 blur-md" />
                     <img v-else-if="instance.banner" loading="lazy" :src="`${runtimeConfig.public.serverListApiBaseUrl}/instance-banners/${instance.url}.webp`" class="h-full w-full object-cover object-center opacity-40 blur-md" />
-                    <div class="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-transparent to-white dark:to-slate-800"></div>
+                    <div class="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-transparent to-white dark:to-neutral-800"></div>
                 </div>
                 <div class="relative flex w-full items-center p-2">
                     <div class="h-14 w-14 min-w-0 flex-shrink-0 mr-4">

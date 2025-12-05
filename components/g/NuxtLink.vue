@@ -1,11 +1,11 @@
 <template>
-    <NuxtLink
-        :to="realHref"
-        :href="undefined"
-        :target="realTarget"
-    >
-        <slot></slot>
-    </NuxtLink>
+<NuxtLink
+	:to="realHref"
+	:href="undefined"
+	:target="realTarget"
+>
+	<slot></slot>
+</NuxtLink>
 </template>
 
 <script setup lang="ts">

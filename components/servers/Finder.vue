@@ -7,11 +7,11 @@
         ]"
     >
         <aside
-            class="fixed z-50 transition-transform -mx-6 w-full lg:w-[calc(100%+3rem)] bg-slate-200 dark:bg-slate-800 bottom-0 rounded-t-xl lg:translate-y-0 lg:shadow-none lg:bg-transparent dark:lg:bg-transparent lg:relative"
+            class="fixed z-50 transition-transform -mx-6 w-full lg:w-[calc(100%+3rem)] bg-neutral-200 dark:bg-neutral-800 bottom-0 rounded-t-xl lg:translate-y-0 lg:shadow-none lg:bg-transparent dark:lg:bg-transparent lg:relative"
             :class="sortOpen ? 'translate-y-0' : 'translate-y-[calc(100%-3rem)]'"
         >
             <button
-                class="transition-[height] block w-full font-bold text-lg leading-[3rem] overflow-hidden text-center rounded-t-xl hover:bg-slate-300 dark:hover:bg-slate-700 lg:hidden"
+                class="transition-[height] block w-full font-bold text-lg leading-[3rem] overflow-hidden text-center rounded-t-xl hover:bg-neutral-300 dark:hover:bg-neutral-700 lg:hidden"
                 :class="sortOpen ? 'h-0' : 'h-12'"
                 @click="sortOpen = true"
             >
@@ -20,7 +20,7 @@
             <div class="lg:sticky lg:top-24 lg:overflow-y-auto lg:max-h-[calc(100vh-6rem)] p-6 lg:py-2 space-y-4">
                 <div class="flex items-center">
                     <h3 class="text-xl font-bold">{{ $t('_servers._search.title') }}</h3>
-                    <button @click="sortOpen = false" class="ml-auto w-8 h-8 p-0.5 rounded-full bg-slate-100 dark:bg-slate-900 lg:hidden">
+                    <button @click="sortOpen = false" class="ml-auto w-8 h-8 p-0.5 rounded-full bg-neutral-100 dark:bg-neutral-900 lg:hidden">
                         <XIco class="w-7 h-7" />
                     </button>
                 </div>
@@ -97,7 +97,7 @@
                 <ServersItem v-if="filteredInstances.length > 0" v-for="item in filteredInstances.slice(0, f_limit)" :instance="item" :view="v_view" />
                 <div
                     v-else-if="data"
-                    class="rounded-lg p-6 min-h-[40vh] flex items-center bg-slate-100 dark:bg-slate-800"
+                    class="rounded-lg p-6 min-h-[40vh] flex items-center bg-neutral-100 dark:bg-neutral-800"
                     :class="[
                         (v_view === 'grid') && 'sm:col-span-2 xl:col-span-3 2xl:col-span-4 3xl:col-span-5'
                     ]"
@@ -109,7 +109,7 @@
                 </div>
                 <div
                     v-else
-                    class="rounded-lg p-6 min-h-[40vh] flex items-center bg-slate-100 dark:bg-slate-800"
+                    class="rounded-lg p-6 min-h-[40vh] flex items-center bg-neutral-100 dark:bg-neutral-800"
                     :class="[
                         (v_view === 'grid') && 'sm:col-span-2 xl:col-span-3 2xl:col-span-4 3xl:col-span-5'
                     ]"

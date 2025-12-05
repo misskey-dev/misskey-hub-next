@@ -16,17 +16,13 @@ Misskeyを手動で構築する
 :::tip{label='前提条件'}
 
 #### 以下のソフトウェアがインストール・設定されていること
-- **[Node.js](https://nodejs.org/en/)** (20.4.x以上)
-- **[PostgreSQL](https://www.postgresql.org/)** (15以上)
+- **[Node.js](https://nodejs.org/en/)** (v22.15.0 以降の v22 系 または v24.10.0 以降の v24 系)
+- **[pnpm](https://pnpm.io/)** (v10.16.0以上)
+- **[PostgreSQL](https://www.postgresql.org/)** (v15以上)
 - **[Redis](https://redis.io/)**
 - **[FFmpeg](https://www.ffmpeg.org/)**
 
 Debian/Ubuntuをお使いであれば、`build-essential`パッケージをインストールしておくと良いです。
-
-#### corepackが有効化されていること
-```sh
-sudo corepack enable
-```
 
 :::
 

@@ -1,7 +1,7 @@
 <template>
     <div class="flex gap-4 mb-4" :class="$style[direction]">
         <div class="flex-shrink-0" :class="direction === 'right' && 'order-2'">
-            <div class="w-14 h-14 rounded-full bg-slate-100 dark:bg-slate-800 border-[3px] border-slate-300 dark:border-slate-500">
+            <div class="w-14 h-14 rounded-full bg-neutral-100 dark:bg-neutral-800 border-[3px] border-neutral-300 dark:border-neutral-500">
                 <img :src="`/img/docs/fukidashi/${chara}.webp`" :class="direction === 'left' && '-scale-x-100'" class="w-full h-full rounded-full object-cover" />
             </div>
             <div v-if="charaName" class="mt-1 text-sm text-center">{{ charaName }}</div>
@@ -9,7 +9,7 @@
         <div class="flex-grow">
             <div
                 :class="[$style.fukidashiContent, direction === 'right' && 'order-1']"
-                class="relative rounded-lg border-[3px] p-4 bg-white dark:bg-slate-950 border-slate-300 dark:border-slate-500"
+                class="relative rounded-lg border-[3px] p-4 bg-white dark:bg-neutral-950 border-neutral-300 dark:border-neutral-500"
             >
                 <slot></slot>
             </div>
@@ -37,7 +37,7 @@ withDefaults(defineProps<{
     position: absolute;
     top: 14px;
     left: -12px;
-    @apply border-r-[12px] border-r-slate-300 dark:border-r-slate-500;
+    @apply border-r-[12px] border-r-neutral-300 dark:border-r-neutral-500;
     border-bottom: 12px solid transparent;
     border-top: 12px solid transparent;
 }
@@ -46,7 +46,7 @@ withDefaults(defineProps<{
     position: absolute;
     top: 14px;
     right: -12px;
-    @apply border-l-[12px] border-l-slate-300 dark:border-l-slate-500;
+    @apply border-l-[12px] border-l-neutral-300 dark:border-l-neutral-500;
     border-bottom: 12px solid transparent;
     border-top: 12px solid transparent;
 }
@@ -55,7 +55,7 @@ withDefaults(defineProps<{
     position: absolute;
     top: 18px;
     left: -8px;
-    @apply border-r-[8px] border-r-white dark:border-r-slate-950;
+    @apply border-r-[8px] border-r-white dark:border-r-neutral-950;
     border-bottom: 8px solid transparent;
     border-top: 8px solid transparent;
 }
@@ -64,7 +64,7 @@ withDefaults(defineProps<{
     position: absolute;
     top: 18px;
     right: -8px;
-    @apply border-l-[8px] border-l-white dark:border-l-slate-950;
+    @apply border-l-[8px] border-l-white dark:border-l-neutral-950;
     border-bottom: 8px solid transparent;
     border-top: 8px solid transparent;
 }
