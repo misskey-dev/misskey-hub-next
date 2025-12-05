@@ -141,9 +141,6 @@ export default defineNuxtConfig({
 		strategy: 'prefix_and_default',
 		trailingSlash: true,
 	},
-	colorMode: {
-		classSuffix: '',
-	},
 	postcss: {
 		plugins: {
 			autoprefixer: {},
@@ -207,7 +204,7 @@ export default defineNuxtConfig({
 		'build:before': async () => {
 			await Promise.all([
 				genLocalesJson().then(() => {
-					if (process.env.NODE_ENV === 'development') {
+					if (process.env.NODE_ENV === 'development' && process.argv[2] !== 'prepare') {
 						fsWatch('./locales/', (ev, filename) => {
 							if (filename && filename.endsWith('.yml')) {
 								genLocalesJson();

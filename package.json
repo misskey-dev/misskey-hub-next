@@ -13,46 +13,52 @@
   "devDependencies": {
     "@google/model-viewer": "^4.1.0",
     "@nuxt/content": "^2.13.4",
-    "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/i18n": "^10.0.5",
+    "@nuxtjs/color-mode": "^4.0.0",
+    "@nuxtjs/i18n": "^10.2.1",
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^22.17.1",
+    "@types/node": "^24.10.1",
     "@types/nprogress": "^0.2.3",
     "@types/random-seed": "^0.3.5",
-    "@types/three": "^0.179.0",
+    "@types/three": "^0.181.0",
     "@types/ua-parser-js": "^0.7.39",
-    "@unocss/reset": "^66.4.2",
+    "@unocss/reset": "^66.5.10",
     "aiscript-vscode": "github:aiscript-dev/aiscript-vscode#v0.1.16",
-    "bootstrap": "^5.3.7",
+    "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
     "github-markdown-css": "^5.8.1",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.1.1",
     "mfm-js": "^0.25.0",
     "misskey-hub-markdown-fixer": "file:scripts\\markdown-fixer",
-    "misskey-js": "2025.8.0-alpha.11",
+    "misskey-js": "2025.12.0-alpha.2",
     "nprogress": "^0.2.0",
-    "nuxt": "^3.18.1",
+    "nuxt": "^3.20.1",
     "random-seed": "^0.3.0",
-    "sass-embedded": "^1.90.0",
-    "schema-dts": "^1.1.2",
+    "sass-embedded": "^1.93.3",
+    "schema-dts": "^1.1.5",
     "scroll-hint": "^1.2.9",
-    "three": "0.177.0",
-    "ua-parser-js": "^2.0.4",
+    "three": "0.181.2",
+    "ua-parser-js": "^2.0.6",
     "ufo": "^1.6.1",
-    "unocss": "^66.4.2",
-    "vite-node": "^3.2.4",
+    "unocss": "^66.5.10",
+    "vite-node": "^5.2.0",
     "vite-svg-loader": "^5.1.0"
   },
-  "packageManager": "pnpm@9.15.7",
+  "packageManager": "pnpm@10.24.0",
   "dependencies": {
     "TagCloud": "^2.5.0",
-    "nanoid": "^5.1.5",
-    "swiper": "^11.2.10",
+    "nanoid": "^5.1.6",
+    "swiper": "^12.0.3",
     "tinycolor2": "^1.6.0"
   },
   "pnpm": {
     "overrides": {
       "@aiscript-dev/aiscript-languageserver": "-"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "better-sqlite3",
+      "esbuild",
+      "vue-demi"
+    ]
   }
 }
