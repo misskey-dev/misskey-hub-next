@@ -1,0 +1,51 @@
+name: Deploy
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["master"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: pnpm
+          node-version: "22"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build website
+        run: pnpm generate
+        env:
+          NODE_ENV: production
+          CROWDIN_INTG_API: ${{ secrets.CROWDIN_INTG_API }}
+          SERVER_LIST_API_BASE_URL: ${{ secrets.SERVER_LIST_API_BASE_URL }}
+
+      - name: Upload with ftp
+        uses: SamKirkland/FTP-Deploy-Action@4.3.6
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./.output/public/
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
