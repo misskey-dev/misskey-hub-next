@@ -1,47 +1,47 @@
-# Note Search
+# ノート検索
 
-Misskey has an ability to search notes.By enabling this feature, you can perform search on notes.
+Misskeyにはノートの検索機能があります。有効化することで、ノートの検索ができるようになります。
 
 :::tip
 
-Note search is disabled by default.
-To use it, enable “Enable Note Search” in the role settings.
+検索機能はデフォルトで無効となっています。
+利用する場合は、ロールの「ノート検索の利用」を有効にしてください。
 
 :::
 
-## Supported search engines
+## サポートしている検索エンジン
 
-Misskey has multiple algorithms available for note search.You can switch between them based on your server's scale and needs.
+Misskeyはノート検索に使用するアルゴリズムを複数ご用意しています。サーバーの規模やニーズに応じて切り替えることができます。
 
-- sqlLike ... Searches are performed using PostgreSQL's standard features.(Default)
-  - It's easy to use because it utilizes built-in database functionality.
-  - As the amount of data increases, searches tend to take longer.
+- sqlLike ... PostgreSQLの標準機能を用いて検索を行います。(デフォルト)
+  - データベース組み込みの機能を使用するためお手軽です。
+  - データの量が増えてくると検索に時間がかかりやすくなります。
 
-- sqlPgroonga ... Searches are performed using the full-text search engine [Pgroonga](https://pgroonga.github.io).
-  - You will need to install Pgroonga additionally.
-  - It enables faster search queries than sqlLike.
+- sqlPgroonga ... 全文検索エンジンの[Pgroonga](https://pgroonga.github.io)を用いて検索を行います。
+  - Pgroongaのインストールが必要です。
+  - sqlLikeより高速な検索が可能です。
 
-- meilisearch ... Searches are performed using the full-text search engine [Meilisearch](https://www.meilisearch.com).
-  - You will need to install Meilisearch additionally.
-  - It enables faster search queries than sqlLike.
-  - Only notes with a visibility setting of “Public” or “Home” will be included in the search.To include follower-only posts in your search, you must use `sqlLike` or `sqlPgroonga`.
+- meilisearch ... 全文検索エンジンの[Meilisearch](https://www.meilisearch.com)を用いて検索を行います。
+  - Meilisearchのインストールが必要です。
+  - sqlLikeより高速な検索が可能です。
+  - 検索対象のノートは、公開範囲が「パブリック」または「ホーム」です。フォロワー限定投稿も含めたい場合は`sqlLike`または`sqlPgroonga`を使用する必要があります。
 
-To change the search engine, edit the `provider` setting in the `fulltextSearch` section of the configuration file and restart the Misskey.
+検索エンジンを変更する場合は、設定ファイルの `fulltextSearch` の `provider` を書き換えて、Misskeyのプロセスを再起動してください。
 
-## Using Pgroonga
+## Pgroongaを使う
 
-### Installing Pgroonga
+### Pgroongaのインストール
 
 :::warning
 
-We recommend taking backup of your database.  
-Please make sure to stop Misskey before making any changes.
+作業前にデータベースのバックアップをおすすめします。  
+また、Misskeyを停止してから作業を開始してください。
 
 :::
 
-This is an example of installing Pgroonga on an Ubuntu 22.04, PostgreSQL 15 environment.
+Ubuntu 22.04、PostgreSQL 15の環境にPgroongaをインストールする例です。
 
-For details, please refer to the [official PostgreSQL installation guide](https://pgroonga.github.io/install/ubuntu.html).
+詳細は[公式PostgreSQL用のインストール方法](https://pgroonga.github.io/ja/install/ubuntu.html)をご確認ください。
 
 ```sh
 sudo apt install -y -V ca-certificates lsb-release wget
@@ -58,43 +58,43 @@ sudo apt update
 sudo apt install -y -V postgresql-15-pgdg-pgroonga
 ```
 
-If you want to use a MeCab-based tokenizer, also run the following:
+MeCabベースのトークナイザーを使いたい場合は、以下も実行します。
 
 ```sh
 sudo apt install -y -V groonga-tokenizer-mecab
 ```
 
-#### If you are using Docker
+#### Docker環境を使用している場合
 
-In a Docker environment, you can use a Docker image with Pgroonga already installed.
+Docker環境ではPGroonga導入済みのDockerイメージが使用できます。
 
-To use a PostgreSQL image with Pgroonga already installed, use `groonga/pgroonga:latest-alpine-15-slim` instead of `postgres:15-alpine`.
+PGroonga導入済みのPostgreSQLイメージを使用するには、`postgres:15-alpine`の代わりに`groonga/pgroonga:latest-alpine-15-slim`を使用してください。
 
-### Enable Pgroonga
+### Pgroongaの有効化
 
-Next, log in to your PostgreSQL server.
+次にPostgreSQLにログインします。
 
 ```sh
 sudo -u postgres psql
 ```
 
-After logging in, select the Misskey database.
+ログインをしたら、Misskeyのデータベースを選択します。
 
 ```sh
 \c "mk1"
 ```
 
-Enable Pgroonga.
+PGroongaを有効化します。
 
 ```sh
 CREATE EXTENSION pgroonga;
 ```
 
-Create indexes for Pgroonga.
+PGroonga用のインデックスを作成します。
 
 :::warning
 
-Indexing takes time.Please ensure you have sufficient time for the task.
+インデックス作成には時間がかかります。十分な作業時間を確保してください。
 
 :::
 
@@ -102,16 +102,16 @@ Indexing takes time.Please ensure you have sufficient time for the task.
 CREATE INDEX idx_note_text_with_pgroonga ON note USING pgroonga (text);
 ```
 
-When finished, type `exit` to log out of PostgreSQL.
+完了したら、`exit` と入力し、Postgresqlからログアウトします。
 
-### Change search engine
+### 検索エンジンの変更
 
-Edit the Misskey configuration file.  
-Change `fulltextSearch` to `sqlPgroonga`.
+Misskeyの設定ファイルを編集します。  
+`fulltextSearch` を `sqlPgroonga` に変更してください。
 
 ```sh
 fulltextSearch:
   provider: sqlPgroonga
 ```
 
-Once you start the Misskey process and can search for notes, the setup is complete.
+Misskeyのプロセスを起動し、ノートの検索ができれば完了です。

@@ -340,8 +340,8 @@ _content:
   danger: "Peligro"
   preview: "Preview"
 _other:
-  title: "¡Más!"
-  description: "¡Aquí tienes algunos recursos adicionales que te ayudarán a sacar más partido a Misskey!"
+  title: "Más!"
+  description: "Presentando recursos más agradables para Misskey!"
 _brandAssets:
   title: "Assets de la marca"
   description: "Una colección de logotipos, iconos y otros assets de Misskey. Siéntete libre de usar para literalmente cualquier cosa bajo la licencia CC BY-SA!"

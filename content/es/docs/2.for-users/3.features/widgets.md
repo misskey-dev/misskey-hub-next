@@ -127,7 +127,7 @@ Muestra una aplicación escrita en AiScript.Utiliza la misma interfaz de usuario
 
 ### Ai
 
-Muestra a AI Sigue tu cursor con su mirada.
+Muestra a AISigue tu cursor con su mirada.
 
 ### Lista de usuarios
 

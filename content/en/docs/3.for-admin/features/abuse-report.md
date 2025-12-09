@@ -1,38 +1,38 @@
-# Abuse Reports
+# 通報
 
-Misskey can receive abuse reports about content within the server from users both inside and outside the server.
+Misskeyでは、サーバー内外のユーザーからサーバー内のコンテンツに関する通報を受け取ることができます。
 
-Reports are sent to [Control Panel > Reports](x-mi-web://admin/abuses).**We recommend checking it frequently.**
+通報は[コントロールパネル > 通報](x-mi-web://admin/abuses)に届きます。**こまめに確認するようにしましょう。**
 
-## Handling abuse reports
+## 通報への対処
 
-The report contains the following information:
+通報には、
 
-- The user being reported
-- The details of the report
-- The reporter
+- 通報対象のユーザー
+- 通報内容
+- 通報者
 
 の情報が含まれています。
 
 :::tip
 
-Reports may be forwarded from remote servers.In such cases, the reporter may be the system account for that server (`@instance.actor`).
+リモートのサーバーから通報が転送されてくる場合があります。この場合、通報者はそのサーバーのシステムアカウント（`@instance.actor`）となっている可能性があります。
 
 :::
 
-If necessary, you can leave moderation notes to document the circumstances of the report. These notes can only be viewed by accounts with administrator and moderator privileges.
+必要に応じて、通報に関する状況をメモするために、管理者およびモデレーター権限を持つアカウントしか確認できないモデレーションノートを残すことができます。
 
-Once you've completed handling the report, mark it as complete.
+通報への対処が完了したら、完了としてマークしましょう。
 
-- If the content is legitimate and action has been taken, mark as “Resolved (Approved)”.
-- If the content is fraudulent and no specific action is taken, mark as “Resolved (Denied)”.
+- 内容が正当であり、何かしらのアクションを行った場合などには「解決（是認）」
+- 内容が不正で、特に対処を行わなかった場合などには「解決（否認）」
 
-In this way, you can differentiate the resolution status based on the outcome of the response and conclude the handling accordingly.
+という具合に、対処の結果に応じて解決のステータスを区別して対応を終了させることができます。
 
-## Forwarding abuse reports
+## リモートへ転送
 
-For reports concerning remote users, you can forward the report to the target server.When forwarding a report, the reporter is forwarded as an anonymous system account (`@instance.actor`).
+リモートのユーザーに関する通報の場合は、その通報を当該サーバーに転送することができます。通報を転送する際は、通報者が匿名のシステムアカウント（`@instance.actor`）という形で転送されます。
 
-## Notification of abuse report
+## 通報の通知
 
-You can receive notifications of reports via webhook or email.Open [Control Panel > Reports](x-mi-web://admin/abuses) and configure settings under “Notification Settings”.
+通報があったことは、Webhookまたはメール通知にて受け取ることができます。[コントロールパネル > 通報](x-mi-web://admin/abuses)を開き、「通知設定」から設定してください。
