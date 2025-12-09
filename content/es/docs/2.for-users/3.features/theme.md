@@ -102,6 +102,6 @@ props: {
 
 ## Distribuir temas
 
-desde la versión 2023.11.0, puedes instalar temas directamente desde un sitio web con un solo clic.
+A partir de la versión 2023.11.0, puedes instalar temas directamente desde un sitio web con un solo clic.
 
 Si desea proporcionar la funcionalidad de instalación de temas, tendrá que implementar una Api en su sitio.Para más información, consulte [aquí](../../for-developers/publish-on-your-website/).
