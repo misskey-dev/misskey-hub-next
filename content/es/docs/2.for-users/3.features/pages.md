@@ -4,7 +4,7 @@ Además de notas, puedes crear páginas en Misskey.v13 se especializa en página
 
 :::warning
 
-a partir de la v13, se puede utilizar Misskey Play en lugar de la creación dinámica de páginas.
+A partir de la v13, se puede utilizar Misskey Play en lugar de la creación dinámica de páginas.
 
 :::
 
