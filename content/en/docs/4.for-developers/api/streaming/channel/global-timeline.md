@@ -1,25 +1,25 @@
 ---
-description: "グローバルタイムラインのノートが流れるチャンネルです。"
+description: "This channel streams notes from the global timeline."
 ---
 
 # `globalTimeline`
 
-グローバルタイムラインのノートが流れるチャンネルです。
+This channel streams notes from the global timeline.
 
-## パラメータ
+## Parameters
 
-なし
+None
 
-## イベント
+## Events
 
 ### `note`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-グローバルタイムラインに新しいノートが追加されたときに発生します。
+This occurs when a new note is added to the global timeline.
 
-## 操作
+## Action
 
-なし
+None
