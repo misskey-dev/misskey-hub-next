@@ -55,7 +55,7 @@ sudo wget -O /usr/share/keyrings/pgdg.asc https://www.postgresql.org/media/keys/
    echo "Signed-By: /usr/share/keyrings/pgdg.asc") | \
     sudo tee /etc/apt/sources.list.d/pgdg.sources
 sudo apt update
-sudo apt install -y -V postgresql-15-pgdg-pgroonga
+sudo apt install -y -V postgresql-18-pgdg-pgroonga
 ```
 
 If you want to use a MeCab-based tokenizer, also run the following:
