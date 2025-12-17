@@ -39,7 +39,7 @@ Misskeyはノート検索に使用するアルゴリズムを複数ご用意し�
 
 :::
 
-Ubuntu 22.04、PostgreSQL 15の環境にPgroongaをインストールする例です。
+Ubuntu 22.04、PostgreSQL 18の環境にPgroongaをインストールする例です。
 
 詳細は[公式PostgreSQL用のインストール方法](https://pgroonga.github.io/ja/install/ubuntu.html)をご確認ください。
 
@@ -55,7 +55,7 @@ sudo wget -O /usr/share/keyrings/pgdg.asc https://www.postgresql.org/media/keys/
    echo "Signed-By: /usr/share/keyrings/pgdg.asc") | \
     sudo tee /etc/apt/sources.list.d/pgdg.sources
 sudo apt update
-sudo apt install -y -V postgresql-15-pgdg-pgroonga
+sudo apt install -y -V postgresql-18-pgdg-pgroonga
 ```
 
 MeCabベースのトークナイザーを使いたい場合は、以下も実行します。
@@ -68,7 +68,7 @@ sudo apt install -y -V groonga-tokenizer-mecab
 
 Docker環境ではPGroonga導入済みのDockerイメージが使用できます。
 
-PGroonga導入済みのPostgreSQLイメージを使用するには、`postgres:15-alpine`の代わりに`groonga/pgroonga:latest-alpine-15-slim`を使用してください。
+PGroonga導入済みのPostgreSQLイメージを使用するには、`postgres:18-alpine`の代わりに`groonga/pgroonga:latest-alpine-18-slim`を使用してください。
 
 ### Pgroongaの有効化
 
