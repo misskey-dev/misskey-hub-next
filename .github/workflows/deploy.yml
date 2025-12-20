@@ -14,6 +14,11 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   # Build job
   build:
@@ -41,11 +46,28 @@ jobs:
           CROWDIN_INTG_API: ${{ secrets.CROWDIN_INTG_API }}
           SERVER_LIST_API_BASE_URL: ${{ secrets.SERVER_LIST_API_BASE_URL }}
 
-      - name: Upload with ftp
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+      # - name: Upload with ftp
+      #   uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+      #   with:
+      #     server: ${{ secrets.FTP_SERVER }}
+      #     username: ${{ secrets.FTP_USERNAME }}
+      #     password: ${{ secrets.FTP_PASSWORD }}
+      #     local-dir: ./.output/public/
+      #     server-dir: ${{ secrets.FTP_SERVER_DIR }}
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./.output/public/
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          path: ./output/public/
+
+  # Deploy job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
