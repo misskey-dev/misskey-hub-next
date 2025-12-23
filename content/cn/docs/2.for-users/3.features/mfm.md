@@ -12,7 +12,7 @@ MFM，全称为 Markup language For Misskey，是可以在 Misskey 的各个地�
 
 :::
 
-## 可以使用 MFM 的地方
+## 可以使用 MFM 的地方示例
 
 - 帖子正文
 - CW 注释
@@ -23,7 +23,7 @@ MFM，全称为 Markup language For Misskey，是可以在 Misskey 的各个地�
 
 ### 提及
 
-可以使用 @+用户名 来指示特定用户。
+可以使用 `@`+用户名 来指示特定用户。
 :::tip
 
 关于提及的详情请看[这里](./mention.md)。
@@ -44,7 +44,8 @@ MFM，全称为 Markup language For Misskey，是可以在 Misskey 的各个地�
 
 ### 标签
 
-可以使用 # + 文字来表示话题标签。
+可以使用 `#`+文字 来表示话题标签。
+:::tip
 
 关于标签的详情请看[这里](./hashtag.md)。
 
@@ -76,7 +77,7 @@ https://example.com
 
 :::tip
 
-在文字前加上`?`可以不显示连接预览。
+在链接文字前加上`?`可以不显示链接预览。
 
 ```
 ?[example link](https://example.com)
@@ -107,7 +108,7 @@ https://example.com
 可以将文字显示为粗体来表示强调。
 
 ```
-**粗体**
+**太字**
 ```
 
 <MfmPreview text="**太字**"></MfmPreview>
