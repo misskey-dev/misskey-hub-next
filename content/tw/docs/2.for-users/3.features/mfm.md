@@ -8,11 +8,11 @@ MFM 代表 Markup language For Misskey，是一種專有的標記語言，可以
 
 :::tip
 
-某些語法與 Markdown 和 HTML 相容。
+現已推出可實際體驗 MFM 的 [MFM 試用專區](/tools/mfm-playground/)！
 
 :::
 
-## 可使用 MFM 的地方
+## 可使用 MFM 的地方範例
 
 - 貼文的正文
 - CW註釋
@@ -108,7 +108,7 @@ https://example.com
 您可以將文字加粗以強調它。
 
 ```
-**粗體**
+**太字**
 ```
 
 <MfmPreview text="**太字**"></MfmPreview>
