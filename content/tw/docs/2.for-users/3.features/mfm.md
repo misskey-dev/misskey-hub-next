@@ -143,7 +143,7 @@ https://example.com
 
 <MfmPreview text="<center>Misskey 擴展了聯邦宇宙的世界</center>"></MfmPreview>
 
-### 旁註標記 (ruby)
+### 旁註標記（ruby）
 
 旁註標記用於標示東亞文字的發音。
 
@@ -153,7 +153,7 @@ $[ruby Misskey ミスキー]
 
 <MfmPreview text="$[ruby Misskey ミスキー]"></MfmPreview>
 
-### 程式碼(内嵌)
+### 程式碼（内嵌）
 
 程式碼的行內語法突出顯示。
 
@@ -161,7 +161,7 @@ $[ruby Misskey ミスキー]
 `<: "Hello, world!"`
 ```
 
-### 程式碼(區塊)
+### 程式碼（區塊）
 
 在區塊中用突出顯示，例如複數行的程式碼語法。
 
@@ -184,9 +184,9 @@ $[ruby Misskey ミスキー]
 將內容上下或左右翻轉。
 
 ```
-$[flip Misskey擴展了聯邦宇宙的世界]
-$[flip.v Misskey擴展了聯邦宇宙的世界]
-$[flip.h,v Misskey擴展了聯邦宇宙的世界]
+$[flip MisskeyでFediverseの世界が広がります]
+$[flip.v MisskeyでFediverseの世界が広がります]
+$[flip.h,v MisskeyでFediverseの世界が広がります]
 ```
 
 <MfmPreview text="$[flip MisskeyでFediverseの世界が広がります]
@@ -198,10 +198,10 @@ $[flip.h,v MisskeyでFediverseの世界が広がります]"></MfmPreview>
 您可以設定顯示內容的字型
 
 ```
-$[font.serif Misskey擴展了聯邦宇宙的世界]
-$[font.monospace Misskey擴展了聯邦宇宙的世界]
-$[font.cursive Misskey擴展了聯邦宇宙的世界]
-$[font.fantasy Misskey擴展了聯邦宇宙的世界]
+$[font.serif MisskeyでFediverseの世界が広がります]
+$[font.monospace MisskeyでFediverseの世界が広がります]
+$[font.cursive MisskeyでFediverseの世界が広がります]
+$[font.fantasy MisskeyでFediverseの世界が広がります]
 ```
 
 <MfmPreview text="$[font.serif MisskeyでFediverseの世界が広がります]
@@ -214,7 +214,7 @@ $[font.fantasy MisskeyでFediverseの世界が広がります]"></MfmPreview>
 可以模糊內容。將滑鼠懸停在其上時可以清楚地看到它。
 
 ```
-$[blur Misskey擴展了聯邦宇宙的世界]
+$[blur MisskeyでFediverseの世界が広がります]
 ```
 
 <MfmPreview text="$[blur MisskeyでFediverseの世界が広がります]"></MfmPreview>
@@ -236,8 +236,8 @@ misskey search
 顏色使用 3、4 或 6 位顏色代碼表示。
 
 ```
-$[fg.color=f00 紅色字]
-$[bg.color=ff0 黃色背景]
+$[fg.color=f00 赤字]
+$[bg.color=ff0 黄背景]
 ```
 
 <MfmPreview text="$[fg.color=f00 赤字]
@@ -291,7 +291,7 @@ $[position.x=1.5 完全に理解した]]\
 $[border.radius=5,width=2,color=888,noclip $[position.x=1.5 ＣＳＳ]
 $[position.x=1.5 完全に理解した]]"></MfmPreview>
 
-### 角度變化
+### 旋轉
 
 以指定的角度旋轉。
 
@@ -301,7 +301,7 @@ $[rotate.deg=30 misskey]
 
 <MfmPreview text="$[rotate.deg=30 misskey]"></MfmPreview>
 
-### 變更位置
+### 位置調整
 
 可以移動位置。
 
@@ -311,9 +311,9 @@ $[rotate.deg=30 misskey]
 
 <MfmPreview text="😏$[position.x=0.8,y=0.5 🍮]😀"></MfmPreview>
 
-### 擴展
+### 拉伸
 
-透過拉伸顯示文字。
+將文字拉伸後顯示。
 
 ```
 $[scale.x=4,y=2 🍮]
@@ -331,7 +331,7 @@ $[x4 x4]
 $[x3 x3]
 $[x4 x4]"></MfmPreview>
 
-### 動畫(搖晃)
+### 動畫（果凍）
 
 ```
 $[jelly 🍮] $[jelly.speed=5s 🍮]
@@ -339,7 +339,7 @@ $[jelly 🍮] $[jelly.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[jelly 🍮] $[jelly.speed=5s 🍮]]"></MfmPreview>
 
-### 動畫(鏘～)
+### 動畫（鏘鏘）
 
 ```
 $[tada 🍮] $[tada.speed=5s 🍮]
@@ -347,7 +347,7 @@ $[tada 🍮] $[tada.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[tada 🍮] $[tada.speed=5s 🍮]]"></MfmPreview>
 
-### 動畫(跳動)
+### 動畫（跳動）
 
 ```
 $[jump 🍮] $[jump.speed=5s 🍮]
@@ -355,7 +355,7 @@ $[jump 🍮] $[jump.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[jump 🍮] $[jump.speed=5s 🍮]]"></MfmPreview>
 
-### 動畫(反彈)
+### 動畫（反彈）
 
 ```
 $[bounce 🍮] $[bounce.speed=5s 🍮]
@@ -363,7 +363,7 @@ $[bounce 🍮] $[bounce.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[bounce 🍮] $[bounce.speed=5s 🍮]]"></MfmPreview>
 
-### 動畫(旋轉)
+### 動畫（旋轉）
 
 ```
 $[spin 🍮] $[spin.left 🍮] $[spin.alternate 🍮]
@@ -378,7 +378,7 @@ $[spin.x 🍮] $[spin.x,left 🍮] $[spin.x,alternate 🍮]
 $[spin.y 🍮] $[spin.y,left 🍮] $[spin.y,alternate 🍮]
 $[spin.speed=5s 🍮]]"></MfmPreview>
 
-### 動畫(果凍)
+### 動畫（微抖）
 
 ```
 $[shake 🍮] $[shake.speed=5s 🍮]
@@ -386,7 +386,7 @@ $[shake 🍮] $[shake.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[shake 🍮] $[shake.speed=5s 🍮]]"></MfmPreview>
 
-### 動畫(顫抖)
+### 動畫（強抖）
 
 ```
 $[twitch 🍮] $[twitch.speed=5s 🍮]
@@ -414,7 +414,7 @@ $[sparkle 🍮]
 
 <MfmPreview text="$[x2 $[sparkle 🍮]]"></MfmPreview>
 
-### 簡化
+### 純文字
 
 將內部語法全部禁用。
 
@@ -426,10 +426,10 @@ $[sparkle 🍮]
 
 ## 為開發人員提供的資訊
 
-MFM 的解析器實作會作為函式庫發布，可以輕鬆地將 MFM 合併到客戶端。
+MFM 的解析器及渲染實作會作為函式庫發布，可以輕鬆地將 MFM 整合到客戶端。
 
 - [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - JavaScript 解析器實作
 - [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - Vue.js 的元件
 - [mfm.kt](https://github.com/samunohito/mfm.kt) - Kotlin 解析器實作
 - [mfm_parser](https://pub.dev/packages/mfm_parser) - Dart 解析器實作
-- [mfm](https://pub.dev/packages/mfm) - Flutter 的繪圖小工具
+- [mfm](https://pub.dev/packages/mfm) - Flutter 的渲染元件
