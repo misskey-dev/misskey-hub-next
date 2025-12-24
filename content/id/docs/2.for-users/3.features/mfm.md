@@ -224,7 +224,7 @@ $[blur Misskey membentangkan dunia Fediverse]
 Sebuah kotak pencarian dapat ditampilkan.
 
 ```
-misskey cari
+misskey search
 ```
 
 <MfmPreview text="misskey 検索"></MfmPreview>
