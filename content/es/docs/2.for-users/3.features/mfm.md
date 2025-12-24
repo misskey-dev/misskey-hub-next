@@ -226,7 +226,7 @@ $[blur Misskey amplía el mundo del Fediverso]
 Un cuadro de búsqueda puede ser mostrado.
 
 ```
-misskey 検索
+misskey search
 ```
 
 <MfmPreview text="misskey 検索"></MfmPreview>
