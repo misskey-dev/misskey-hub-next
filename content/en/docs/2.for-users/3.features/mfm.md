@@ -226,7 +226,7 @@ $[blur MisskeyでFediverseの世界が広がります]
 A search box can be displayed.
 
 ```
-misskey 検索
+misskey search
 ```
 
 <MfmPreview text="misskey 検索"></MfmPreview>
@@ -247,7 +247,7 @@ $[bg.color=ff0 黄背景]"></MfmPreview>
 
 ### Border
 
-Content can be surrounded borders.The borders can have various styles.
+Content can be surrounded with borders.The borders can have various styles.
 
 ```
 $[border.style=solid,width=4 Default]
@@ -313,9 +313,9 @@ The position can be shifted.
 
 <MfmPreview text="😏$[position.x=0.8,y=0.5 🍮]😀"></MfmPreview>
 
-### Expand
+### Stretch
 
-Displays enlarged text.
+Displays stretched text.
 
 ```
 $[scale.x=4,y=2 🍮]
