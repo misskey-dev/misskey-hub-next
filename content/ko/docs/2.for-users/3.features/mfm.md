@@ -222,7 +222,7 @@ $[blur Misskey로 연합 우주의 세계가 펼쳐집니다.]
 검색창을 표시할 수 있습니다.
 
 ```
-misskey 검색
+misskey search
 ```
 
 <MfmPreview text="misskey 検索"></MfmPreview>
