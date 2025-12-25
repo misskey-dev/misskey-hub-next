@@ -71,3 +71,16 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  # Purge Cloudflare Cache
+  purge-cache:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge Cloudflare Cache
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CF_ZONE_ID }}/purge_cache" \
+          -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}" \
+          -H "Content-Type: application/json" \
+          --data '{"hosts":["misskey-hub.net"]}'
+        continue-on-error: true
