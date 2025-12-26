@@ -35,7 +35,7 @@ The other person won't be notified that you've muted them, nor will they know th
 
 ## Mute Renotes
 
-You can mute only the user's renotes, in case the user is renoting many notes.The user's regular notes are not affected.
+If a user frequently renotes posts, you can hide only their renotes from your timeline. Their regular notes are not affected.The user's regular notes are not affected.
 
 ## Block
 
