@@ -16,9 +16,9 @@ description: '本指南介绍如何安裝和配置 Misskey。'
 
 #### 必须安装并配置以下软件：
 
-- **[Node.js](https://nodejs.org/en/)** (20.4.x以上)
-- **[PostgreSQL](https://www.postgresql.org/)** (15以上)
-- **[PostgreSQL](https://www.postgresql.org/)** (v15以上)
+- **[Node.js](https://nodejs.org/en/)** (v22.15.0 或更新的 v22 版本，v24.10.0 或更新的v24 版本)
+- **[pnpm](https://pnpm.io/)** (v10.16.0或更新的版本)
+- **[PostgreSQL](https://www.postgresql.org/)** (v15或更新的版本)
 - **[Redis](https://redis.io/)**
 - **[FFmpeg](https://www.ffmpeg.org/)**
 
@@ -111,7 +111,7 @@ WantedBy=multi-user.target
 
 :::
 
-systemdを再読み込みしmisskeyサービスを有効化
+重新加载systemd配置文件并启动misskey服务
 
 ```sh
 sudo systemctl daemon-reload
@@ -126,7 +126,7 @@ sudo systemctl start misskey
 
 :::tip
 
-`systemctl status misskey`と入力すると、サービスの状態を調べることができます。
+您可以通过运行命令`systemctl status misskey`来检查服务的运行状态。
 
 :::
 
