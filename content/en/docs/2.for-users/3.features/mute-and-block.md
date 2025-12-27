@@ -39,30 +39,30 @@ If a user frequently renotes posts, you can hide only their renotes from your ti
 
 ## Block
 
-Blocking a user prevents them from seeing your content and from taking any of the following actions against you:
+Blocking a user prevents them from seeing your content and from interacting with you in the following ways:
 
 - Following you
 - Adding you to their user list
-- Replying to you, renoting you
-- Reacting, voting in surveys
+- Replying to you, renoting your posts
+- Reacting to your posts, voting in surveys
 - Sending messages to you
 - etc.
 
 In addition:
 
-- If the user is already following you when you block them, their follow will be removed.
-- If the user already has you on their user list when you block them, you will be removed from it.
+- If the user is already following you when you block them, their follow will be undone.
+- If the user already has you on their user list when you block them, you will be removed from the list.
 
-To block a user on Misskey Web, open the menu on the target user's page and press the "Block" button.
+To block a user on Misskey Web, open the menu on the target user's profile page and press the "Block" button.
 
 :::warning
 
-The person will not be notified that you have blocked them, but they may be able to figure it out indirectly - as they will no longer be able to perform the actions listed above.
+The user will not be notified when you block them. However, since they will no longer be able to perform the actions listed above, they may be able to infer it indirectly.
 
 :::
 
 :::warning
 
-Your content will not be visible to the other user, but they may be able to if they switch accounts or log out.Please think of this as a simple and supplementary tool.
+Your content will not be visible to the other user. However, they may still be able to view it if they switch accounts or log out.Please consider this feature as a simple, supplementary measure.
 
 :::
