@@ -214,7 +214,7 @@ nginx是一款主要用于反向代理的Web服务器软件。虽然对于Misske
 
 :::
 
-nginx.orgのドキュメント http\://nginx.org/en/linux_packages.html#Ubuntu に従ってインストールする。
+请参照nginx.org文档进行安装http://nginx.org/en/linux_packages.html#Ubuntu 。
 
 ```sh
 sudo apt install -y curl ca-certificates gnupg2 lsb-release ubuntu-keyring
@@ -348,7 +348,7 @@ mkdir /etc/cloudflare
 nano /etc/cloudflare/cloudflare.ini
 ```
 
-dns_cloudflare_email（下の例ではbar\@fuga.foo）にはCloudFlareで登録しているメールアドレスを設定する。
+将 dns_cloudflare_email（以下示例中的 bar@fuga.foo）设置为在注册 CloudFlare 时使用的电子邮件地址。
 
 ```sh
 dns_cloudflare_email = bar@fuga.foo
