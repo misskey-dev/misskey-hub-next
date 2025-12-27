@@ -10,13 +10,13 @@ The name "note" comes from the ActivityPub object type `Note`, which in this con
 
 Once a note is created, it will be added to your [timeline](./timeline) and visible to your [followers](./follow) and other users on your instance.
 
-You can [react](./reaction),reply, or quote notes.
+You can [react](./reaction) to, reply to, or quote notes.
 
-You can find a note later by adding it to your [Favorites](./favorite)
+You can easily view a note again later by adding it to your [Favorites](./favorite).
 
 ## Composing a Note
 
-To compose a note, click the Note button (denoted by the pencil icon) to open the compose form.Enter your content, then click the Note button (denoted by the paper airplane icon) to submit the note. Notes can contain text, images, videos, and [polls](./poll).You can format your note using [Markup language For Misskey (MFM)](./mfm), [mention](./mention) other users, or include [hashtags](./hashtag). You can also add content warnings (CW) and change the visibility of the note (more on this below).
+To compose a note, click the Note button (denoted by the pencil icon) to open the compose form.Enter your content, then click the Note button (denoted by the paper airplane icon) to submit the note. Notes can contain text, images, videos, and [polls](./poll).You can format your note using [Markup language for Misskey (MFM)](./mfm), [mention](./mention) other users, or include [hashtags](./hashtag). You can also add content warnings (CW) and change the visibility of the note (more on this below).
 
 :::tip
 
