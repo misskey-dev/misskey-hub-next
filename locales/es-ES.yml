@@ -76,7 +76,7 @@ _landing:
       description: "Misskey ofrece una amplia variedad de características únicas! Aquí hay algunas destacadas."
     _note:
       title: "Notas"
-      description: "En Misskey, los posts de los usuarios se llaman 'Notas'. Responde, cita, añade emojis personalizados, texto animado, advertencias de contenido, adjunta múltiples imágenes, videos, GIFs, clips de audio o cualquier otra cosa!"
+      description: "Las publicaciones de los usuarios se denominan 'Notas'. Puedes citar otras notas, adjuntar imágenes, vídeos, archivos de audio o cualquier otro tipo de archivo, y añadir encuestas."
     _federation:
       title: "Federación"
       description: "¿No estás en Misskey? No hay problema. No solo pueden las instancias de Misskey comunicarse entre sí, sino que también puedes hacer amigos con personas en otras redes como Mastodon y Pixelfed!"
