@@ -1,33 +1,33 @@
 # 上線狀態
 
-使用者的**上線狀態**代表使用者對 Misskey 的使用狀態。
+使用者的**上線狀態**用來表示其 Misskey 的使用情況。
 上線狀態以指示器的形式顯示在使用者圖示的角落，例如在使用者頁面上。
 
 <table>
 	<tbody><tr>
 		<th>顏色</th>
 		<th>狀態</th>
-		<th>説明</th>
+		<th>說明</th>
 	</tr>
 	<tr>
 		<td>🟢綠</td>
 		<td>線上</td>
-		<td>可以被認定是正在使用 Misskey 的狀態。</td>
+		<td>被認為正在使用 Misskey 的狀態</td>
 	</tr>
 	<tr>
 		<td>🟡黃</td>
 		<td>最近活躍</td>
-		<td>最近使用過 Misskey ，但目前不在線上的狀態。</td>
+		<td>目前暫時離席，但 Misskey 的使用仍在進行中的狀態</td>
 	</tr>
 	<tr>
 		<td>🔴紅</td>
 		<td>離線</td>
-		<td>超過一段時間沒有使用 Misskey 的狀態。</td>
+		<td>被認為目前未在使用 Misskey 的狀態</td>
 	</tr>
 	<tr>
 		<td>⚫灰</td>
 		<td>未知</td>
-		<td>使用者來自遠端，狀態被隱藏或狀態未知。</td>
+		<td>狀態被設為隱藏，或因為是遠端使用者而無法判定的狀態</td>
 	</tr>
 </tbody></table>
 
