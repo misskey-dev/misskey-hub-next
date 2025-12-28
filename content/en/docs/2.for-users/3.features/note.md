@@ -32,80 +32,81 @@ You can also press <kbd class="key">Ctrl + Enter</kbd> within the text box to pu
 
 ## Renote
 
-The act of quoting an existing note, sharing an existing note, or the note created as a result of these acts are all called Renote (or "renoting" as verb).
-Most of the time, this is used when you want to share a note you like to your own followers, or when you want a share a note that you posted in the past once more.
-While it is possible to renote the same note multiple times, please be aware that doing so may be seen as annoying by others.
+Quoting an existing note, or sharing it as a new note, as well as the note created by these actions, is called a Renote.
+This is typically used when you want to share a note you like with your own followers, or when you want to share one of your past notes again.
+While it is possible to renote the same note multiple times, using it too frequently may be considered annoying, so please use it with care.
 
 :::warning
 
-If you've set your note's visibility to Followers-only or Direct, then renoting it will not be possible.
+Notes with visibility set to Followers-only or Direct cannot be renoted.
 
 :::
 
-To remove a renote in Misskey Web, press "..." next to the renote time display next to the time display of the renote and select "Unrenote".
+To remove a renote in Misskey Web, open the "..." menu next to the renote's timestamp and select "Unrenote".
 
 ## CW
 
-An abbreviation of "Content Warning", resulting in the content of a note being hidden unless explicitly requested to be shown by a viewing user.It is mainly used to hide the content of long notes or to prevent posting spoilers publicly.
-To enable Cw for a note, press the "Hide content" button (eye icon) in the post form.By doing so a new text input area will appear, where you can write a summary of the content hidden by the CW.
+An abbreviation of "Content Warning", which allows the content of a note to be hidden until the viewer chooses to reveal it.It is mainly used to hide long content or to prevent spoilers from being shown unintentionally.
+To enable CW for a note, select the "Hide content" button (eye icon) in the post form.A new input field will appear, where you can enter a summary of the hidden content.
 
 ## Visibility
 
-For each note, you can set the range within which the note will be made public.
-To set visibility in Misskey Web, click the icon to the left of the "Note" button on the compose form.
+You can set the visibility of each note individually.
+To set visibility in Misskey Web, select the icon to the left of the "Note" button on the compose form.
 There are the following types of visibility:
 
 ### Public
 
-Your note will be visible to all users and will show up on all timelines (home, local, social, global).
+Your note will be visible to everyone and will appear on all timelines available on the instance (home, local, social, global).
 
 :::warning
 
-If your account is [silenced](./silence), you cannot set your note visibility to public.
+If your account is [silenced](./silence), this visibility option cannot be used.
 
 :::
 
 ### Home
 
-Your note will be visible to all users, but will not show up on the local, social or global timeline for non-followers.
+Your note will be visible to everyone, but will only appear on the Home timeline of your followers. It will not appear on the local, social, or global timelines of non-followers.
 
 ### Followers
 
-Your note will only be visible to those that are following you.The note will show up on all timelines of your followers.
+Your note will only be visible to your followers, and will appear on all timelines available to them.
 
 ### Direct
 
-Your note will only be visible to individually specified users.The note will show up on all timelines of the specified users.
+Your note will only be visible to the specified users, and will appear on all timelines available to them.
 
 :::tip
 
-v2025.7.0までは「ダイレクト」と呼ばれていました。
+In Japanese, this option was called “ダイレクト” until v2025.7.0.
 
 :::
 
 ### Local Only
 
-If you enable this option, your note won't be federated to remote instances.
+When this option is enabled, your note will not be federated to remote instances.
 
 ### Visibility comparison
 
 <table>
-	<tbody><tr><th></th><th>Public</th><th>Home</th><th>Followers</th><th>指名</th></tr>
+	<tbody><tr><th></th><th>Public</th><th>Home</th><th>Followers</th><th>Direct</th></tr>
 	<tr><th>LTL/STL/GTL of Followers</th><td>✔</td><td>✔</td><td>✔</td><td></td></tr>
 	<tr><th>LTL/STL/GTL of Others</th><td>✔</td><td></td><td></td><td></td></tr>
 </tbody></table>
 
 ## Pin to profile
 
-By pinning a note to your profile it will be constantly displayed on your profile page.
+By pinning a note to your profile, it will always be displayed on your profile page.
 To pin a note, open the note menu and press "Pin to profile".
 
 :::tip
 
-You can pin multiple notes on your profile.
+You can have multiple notes pinned to your profile.
 
 :::
 
-## Notification on User's New Note
+## New Post Notifications
 
-Notification can be sent out when a user posts a new note.Go to the user page of the user you wish to receive notifications for, select the Details button next to the Follow button, and then click "Notify me of posts" to activate it.
+You can receive notifications when a user posts a new note.Go to the user's page, select the Details button next to the Follow button,
+and then click "Notify about new notes" to enable it.
