@@ -1,10 +1,10 @@
 # Reactions
 
-The reaction feature allows you to easily show your reactions to other people's notes using emoji.To react, click the + icon on the note and select an emoji from the picker. You can also react with [custom emojis](./custom-emoji.md).
+The reaction feature allows you to easily express your reactions to other people's notes using emoji.To react, click the + icon on a note and select an emoji from the picker. You can also use [custom emojis](./custom-emoji.md) for reactions.
 
-## Customizing the Emoji Picker
+## Customizing the Reaction Picker
 
-You can select which emojis are displayed in the emoji picker. These options are found under Settings > Emoji picker.
+In Misskey Web, you can customize the emojis displayed in the reaction picker to suit your preferences. These settings can be found under Settings > Emoji palette.
 
 ## Reactions to Remote Posts
 
