@@ -62,11 +62,11 @@ _landing:
     description: "Misskey es solo una plataforma para que los propietarios de servidores creen sus propias instancias de Misskey, y todas pueden comunicarse entre sí! Hay instancias grandes para las masas, instancias más pequeñas para grupos, fandoms y subculturas, e incluso instancias solo para individuos y sus amigos. ¿Quieres tener aún más control? Puedes crear tu propia instancia en tu servidor con facilidad, cortando los lazos con cualquier gran empresa que quiera espiarte y vender tus datos. Misskey se trata de comunidad y compartir, no de corporaciones y alta tecnología. ¿Tienes amigos que no están en Misskey? No hay problema. Debido a que Misskey está en el Fediverso ({0}), puedes interactuar con personas en otras plataformas como Mastodon, PixelFed, PeerTube y más."
     activityPub: "ActivityPub"
   _useCases:
-    title: "Se puede utilizar de esta manera."
-    single: "Servidor propio para la recopilación y difusión de información."
-    official: "Servidor dedicado para la creación de una cuenta de relaciones públicas de la empresa."
-    community: "Servidor para una comunidad para personas con intereses comunes."
-    inHouse: "Servidor privado como red social interna de una empresa"
+    title: "Así es como puedes utilizarlo"
+    single: "Un servidor personal para recopilar y difundir información"
+    official: "Un servidor exclusivo para las cuentas de comunicación de una empresa"
+    community: "Servidor comunitario para usuarios con intereses comunes"
+    inHouse: "Servidor privado para uso como red social corporativa"
   _free:
     title: "Misskey siempre ha sido gratuito y abierto."
     description: "Misskey es un software de código abierto (OSS) desde su desarrollo inicial en 2014 y seguirá siéndolo en el futuro. El código fuente del programa está disponible públicamente. Además, cualquiera puede utilizar el código fuente de forma gratuita y libre. Misskey puede seguir siendo un OSS gracias al apoyo de todos ustedes."
