@@ -8,24 +8,24 @@ In Misskey Web, you can customize the emojis displayed in the reaction picker to
 
 ## Reactions to Remote Posts
 
-Reactions are a feature original to Misskey. Platforms that do not support Misskey reactions will receive the reaction as a "like" activity.This might be called a "favourite" on some platforms.
+Reactions are a feature original to Misskey. When a reaction is sent to a remote server that does not run Misskey, it is, in most cases, delivered as a "Like" activity.Generally, Likes on such platforms are implemented as "favourites."
 
 ## Reactions from Remote Instances
 
-If a generic "like" activity is received from a remote server, Misskey will interpret it as a "❤" reaction.
+When a "Like" activity is received from a remote instance, Misskey interprets it as a "❤" reaction.
 
 ## Viewing Your Reactions
 
-On Misskey Web, you can view your past reactions by going to your profile and selecting the Reactions tab.You can change the privacy of your reactions by going to Settings > Privacy.
+On Misskey Web, you can view a list of your reactions by opening the Reactions tab on your profile page.You can change the privacy of your reactions by going to Settings > Privacy.
 
 ## Reaction Acceptance
 
 When posting a note, you can limit the types of reactions that will be accepted for that note.
 
-- All: All reactions are allowed
-- All (remote only likes): Allow all reactions from your server, but only accept reactions from other servers as likes (❤)
-- Non-sensitive only: All reactions are allowed, but you will not be able to react with reactions from your own server that are flagged as "sensitive"
-- Non-sensitive only (remote is like only): You will not be able to react using custom emojis flagged as “sensitive” from your own server, and all reactions from other servers are accepted as likes (❤)
-- Likes only: You can only react with a like (❤)
+- All: Allow all reactions
+- All (Only likes for remote instances): Allow all reactions from your server, but accept reactions from other servers only as likes (❤)
+- Non-sensitive only: Allow all reactions, but prevent reactions using custom emojis flagged as sensitive from your server
+- Non-sensitive only (Only likes from remote): Prevent reactions using custom emojis flagged as sensitive from your server, and accept reactions from other servers only as likes (❤)
+- Likes only: Only likes (❤) are allowed
 
-In this case, the reaction you specify will be accepted on your server.For example, if you view a note on another server with the “Like Only” option, the note may have an emoji reaction on that server.
+Note that the reaction acceptance settings you specify apply only to your own server.For example, if you view a note set to “Like Only” on another server, that server may still show emoji reactions.
