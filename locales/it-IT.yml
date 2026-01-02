@@ -20,7 +20,7 @@ threeDimensionModel: "Modello 3D"
 clickToShow: "Clicca per vedere"
 preview: "Anteprima"
 scrollable: "Puoi scorrere"
-serverListUnderMaintenance: "サーバー一覧は現在メンテナンス中です。"
+serverListUnderMaintenance: "La lista dei server è temporaneamente in manutenzione."
 _error:
   notFound: "Pagina non trovata"
   notFoundDesc: "La pagina che hai richiesto non è stata trovata. Per favore controlla l'indirizzo URL."
@@ -56,7 +56,7 @@ _landing:
   _introduction:
     title: "Facciamolo con Misskey"
     description: "Con Misskey puoi facilmente costruire la tua piattaforma senza problemi di implementazione. I servizi che crei con Misskey sono tuoi, quindi non si corre il rischio di affidarsi a piattaforme per la diffusione delle informazioni già esistenti."
-    tip: "Misskey non è \"un servizio web\" ma è un \"software di base\" per creare servizi di microblogging. Esattamente come WordPress è la base per creare un sito web."
+    tip: "Misskey non è \"una piattaforma web\" ma è una \"base software\" per creare servizi di microblogging. Esattamente come WordPress è la base per creare un weblog."
   _decenterized:
     title: "Misskey è {0}"
     description: "Misskey è un progetto opensource di software libero, chiunque può creare un social network utilizzando Misskey. \nPer questo motivo se ne trovano tanti, già pubblicati su Internet. \nTra le caratteristiche più importanti, Misskey implementa un protocollo di comunicazione decentralizzato chiamato {0}. \nQuindi, indipendentemente dal server che scegli, puoi interagire con altre persone iscritte su altri server che sfruttano lo stesso protocollo. \nQuesto lo rende completamente diverso da altri servizi come Twitter, che appartengono ad un unica azienda commerciale. \nGli argomenti, le comunità, il linguaggio, ecc. cambiano a seconda del server. \nTrovarne uno adatto a sé, fa parte del divertimento! (Ovviamente, anche creare il proprio server è divertente)."
@@ -146,83 +146,83 @@ _landing:
       description: "Misskey usa un backend in NodeJS, che assicura performance leggere e veloci."
     _postgresql:
       title: "PostgreSQL"
-      description: "メインのデータベースにはPostgreSQLを採用し、堅牢なデータ管理を実現しています。"
+      description: "Utilizza PostgreSQL come database principale, per una gestione garantita, stabile e robusta."
     _fullTextSearch:
-      title: "全文検索"
-      description: "PostgreSQLのほか、Meilisearchなどの全文検索エンジンを使用した全文検索を行うことができます。"
+      title: "Ricerca \"FullText\""
+      description: "Le ricerche \"FullText\" sfruttano gli strumenti inclusi a PostgreSQL o il sistema esterno Meilisearch."
     _jobQueue:
-      title: "高効率ジョブキュー"
-      description: "ジョブキューにBullMQを採用し、タスクを複数のサーバーで効率的に処理。また、Misskeyネイティブで実装されたインスペクタはコントロールパネルに統合され、外部ツールに頼ることなく管理が可能です。"
+      title: "Coda di lavoro efficiente"
+      description: "La coda di lavoro impiega BullMQ, che svolge i compiti in modo efficiente, spalmando le attività su più \"worker\". Il pannello di controllo amministrativo garantisce la gestione nativa, senza utilizzare strumenti terzi."
     _cdn:
-      title: "CDN対応"
-      description: "外部CDNによるリソースのキャッシュに対応しています。サーバーへのリクエストを減らすことで、負荷低減・コスト削減が可能です。"
+      title: "Supporto alle CDN"
+      description: "Il caching facoltativo delle risorse, tramite CDN esterne, permette di ridurre il carico sul server e limitare i costi di gestione."
     _ftt:
       title: "FTT"
-      description: "Fan-out Timeline Technology(FTT)により、タイムラインをRedis上に構築しパフォーマンスを向上させることができます。"
+      description: "L'implementazione delle Timeline in modalità Fan-Out (FTT), migliora le performance sfruttando Redis, preparandole prima che siano visualizzate."
     _rbt:
       title: "RBT"
-      description: "Reactions Buffering Technology(RBT)により、リアクション情報をRedis上にキャッシュしパフォーマンスを向上させることができます。"
+      description: "Tecnologia per reazioni in memoria (RBT) le reazioni immediate dispongono di un sistema di cache tramite Redis che migliora le performance."
     _scalable:
-      title: "スケーラブル"
-      description: "プロセスのクラスタリング、複数サーバーによるロードバランス、データベースのレプリケーションに対応しており、ユーザーの増加にも対応できます。"
+      title: "Scalabile"
+      description: "Progettato per scalare con il crescere dell'utenza, tramite la gestione di processi in cluster, carico distribuito su molteplici server, e replicazione del database."
     _seo:
       title: "SEO"
-      description: "一部のコンテンツのSSRを行い、検索エンジンへインデックスさせることができるほか、OGPに対応しているのでソーシャルメディア上で共有された際のプレビューも可能です。もちろん、インデックスされたくないシチュエーションではクローラーを拒否する設定も可能です。"
+      description: "La tecnologia di rendering sul server (SSR) permette l'indicizzibilità sui motori di ricerca di certi contenuti. Il supporto del protocollo OpenGraph (OGP) permette di condividere anteprime accattivanti condividendo su altri social network. Naturalmente, chi amministra può configurare il blocco dei crawler provenienti dai social network, se preferisce impedire l'indicizzazione."
     _ml:
-      title: "機械学習"
-      description: "組み込みの機械学習機能を利用して、自動的にセンシティブなメディアのフィルタリングを行うなど、運用の負担を軽減することも可能です。"
+      title: "Machine Learning"
+      description: "Approfitta della capacità nativa di impararare a filtrare immagini esplicite automaticamente, per ridurre il carico di lavoro allo staff di moderazione."
     _sentry:
-      title: "Sentryサポート"
-      description: "Sentryによるサーバーのメトリクス収集に対応しているため、サーバーリソースの監視、ヘルスチェック、メンテナンスに役立てることができます。"
+      title: "Supporto a Sentry"
+      description: "Colleziona metriche tramite Sentry, per monitorare le risorse del server, predisporre controlli di efficienza e semplificare la manutenzione."
   _featuresClient:
     _root:
-      title: "WebUI"
-      description: "Misskeyに付属する高機能なWebフロントエンド(Misskey Web)の特徴を紹介。"
+      title: "Interfaccia Web"
+      description: "Una introduzione a Misskey Web, l'interfaccia grafica (WebUI) inclusa con Misskey."
     _responsive:
-      title: "レスポンシブUI"
-      description: "UIは洗練された独自のデザインシステムを使用して設計され、デスクトップ・タブレット・スマートフォンそれぞれに最適な表示・動作となるように丁寧に実装されています。"
+      title: "Interfaccia adattabile"
+      description: "L'interfaccia grafica Web è progettata sfruttando un sistema che si adatta alle dimensioni del dispositivo in cui è ospitata. Che sia un PC desktop, un tablet o smartphone."
     _theme:
-      title: "テーマ"
-      description: "自分の好きな見た目でMisskeyを使えます。もちろんダークモードも完全サポート。自分で高度にテーマを作ることも可能です。"
+      title: "Temi"
+      description: "Puoi personalizzare l'uso di Misskey Web scegliendo composizioni cromatiche che ti soddisfano, siano chiare, scure o eventualmente personalizzate nei minimi dettagli."
     _mfm:
       title: "MFM"
-      description: "ノートにはMFMと呼ばれるMisskey専用のマークアップ言語が使用できます。太字にする・リンクを挿入する・動きを付けるといった、テキストの装飾がシンプルな構文で表現できます。"
+      description: "Tramite una sintassi semplice, la formattazione Markdown di Misskey (MFM) ti permette di decorare il testo delle Note con grassetto, link, animazioni, e tanto ancora."
     _widgets:
-      title: "ウィジェット"
-      description: "様々な種類のウィジェットを自由に配置し、必要な情報に素早くアクセス。"
+      title: "Riquadri"
+      description: "Utilizza i riquadri per tenere immediatamente sott'occhio le informazioni di cui hai più bisogno."
     _deck:
-      title: "デッキUI"
-      description: "デッキUIを使うと、UIをさらに深くカスタマイズ可能。自分だけのクライアントを作ることができます。"
+      title: "Interfaccia a colonne"
+      description: "La Deck UI ti garantisce il massimo della personalizzazione. Rendi unico il tuo client e adattalo alle tue esigenze."
     _embed:
-      title: "他サイトへの埋め込み"
-      description: "ノート、タイムラインなどを外部のサイトに埋め込んで表示可能です。"
+      title: "Incorpora"
+      description: "Puoi incorporare le Note, le Timeline e molto altro, nei siti web esterni."
     _realtimeMode:
-      title: "リアルタイムモード"
+      title: "Modalità in Tempo Reale"
       description: "サーバーとWebsocket接続することで、タイムラインなどのコンテンツをリアルタイムで受信することができます。"
     _pushNotification:
-      title: "プッシュ通知"
-      description: "プッシュ通知に対応しているため、リアルタイムでサーバーからの通知を受け取ることができます。"
+      title: "Notifiche push"
+      description: "Ricevi avvertimenti in tempo reale dal server al tuo dispositivo, per mezzo delle Notifiche Push."
     _multiAccounts:
-      title: "マルチアカウント対応"
-      description: "複数のアカウントを簡単に切り替えて使用可能です。"
+      title: "Profili multipli"
+      description: "Puoi cambiare profilo facilmente e usare account multipli."
     _watermark:
-      title: "ウォーターマーク付与機能"
-      description: "投稿する画像にウォーターマークを自動で付与して、簡単にクレジット情報を残すことができます。ウォーターマークは自由にカスタマイズ可能です。"
+      title: "Effetto filigrana"
+      description: "Proteggi il copyright delle tue immagini aggiungendo automaticamente una filigrana mentre carichi un file."
     _imageEditing:
-      title: "画像加工機能"
-      description: "画像にエフェクトを追加し、カラーグレーディングを行ったり、様々なクリエイティブな表現を行うことが可能です。"
+      title: "Modifica le immagini"
+      description: "Puoi aggiungere effetti, cambiare i colori e applicare effetti creativi che modificano le tue immagini, senza necessità di un software esterno."
     _achievements:
-      title: "実績"
-      description: "Misskeyの機能を体験するモチベーションになり、オンボーディングに役立ちます。"
+      title: "Conquiste"
+      description: "Facilita l'adozione e motiva le persone utilizzatrici tramite gamification, assegnando loro badge per attività particolari."
     _plugin:
-      title: "プラグイン"
-      description: "セキュアなAiScriptを用いたプラグインをインストールして、クライアントの機能を拡張可能です。"
+      title: "Plugin"
+      description: "Estendi le funzionalità del client Misskey Web installando Plugin scritti nel linguaggio sicuro AiScript, simile a JavaScript."
     _settingsManagement:
-      title: "柔軟な設定管理"
-      description: "アカウントごとに任意のクライアント設定を上書きできるほか、複数のデバイス間で設定を共有・同期することができます。さらに、設定情報は自動バックアップ可能です。"
+      title: "Gestione flessibile della configurazione"
+      description: "Personalizza la configurazione di ogni account e sincronizzala sui vari dispositivi, con la sicurezza dei backup automatici."
     _pwa:
       title: "PWA"
-      description: "Misskey WebはProgressive Web Apps(PWA)に準拠していて、デバイス上でネイティブアプリのように動作させることが可能です。"
+      description: "Misskey Web è una Web App Progressiva (PWA). Funziona come una app nativa nel tuo dispositivo mobile, non servono client esterni."
     _i18n:
       title: "Multilingua"
       description: "L'interfaccia web è disponibile in tantissime lingue."
@@ -551,10 +551,10 @@ _api:
       "write:user-groups": "ユーザーグループを操作する"
       "read:channels": "チャンネルを見る"
       "write:channels": "チャンネルを操作する"
-      "read:gallery": "ギャラリーを見る"
-      "write:gallery": "ギャラリーを操作する"
-      "read:gallery-likes": "ギャラリーのいいねを見る"
-      "write:gallery-likes": "ギャラリーのいいねを操作する"
+      "read:gallery": "Visualizzare la tua galleria"
+      "write:gallery": "Modificare la tua galleria"
+      "read:gallery-likes": "Visualizzare l'elenco di Gallerie preferite"
+      "write:gallery-likes": "Modificare l'elenco di Gallerie preferite"
       "read:flash": "Playを見る"
       "write:flash": "Playを操作する"
       "read:flash-likes": "Playのいいねを見る"
