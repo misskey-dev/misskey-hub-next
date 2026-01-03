@@ -46,7 +46,7 @@ Los marcadores de posición se reemplazan por lo siguiente:
 
 - `<HOST>`: Nombre de dominio del servidor Misskey
 - `<NOTE_ID>`: Id de la nota a incrustar
-- `<RANDOM>`: Cadena de texto aleatoria (Requerido si se usa embed.js.Si hay varios códigos de incrustación en la misma página, asegúrese de que no estén duplicados
+- `<RANDOM>`: Cadena de texto aleatoria (Requerido si se usa embed.js).Si hay varios códigos de incrustación en la misma página, asegúrese de que no estén duplicados
 
 ## Incrustar una lista de notas de un usuario
 
