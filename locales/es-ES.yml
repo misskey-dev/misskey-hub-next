@@ -82,7 +82,7 @@ _landing:
       description: "¿No estás en Misskey? No hay problema. No solo pueden las instancias de Misskey comunicarse entre sí, sino que también puedes hacer amigos con personas en otras redes como Mastodon y Pixelfed!"
     _reaction:
       title: "Reacciones"
-      description: "Puedes agregar reacciones con emojis a cualquier publicación! Ya no estás limitado por un botón de me gusta, muestra a todos exactamente cómo te sientes con solo un toque."
+      description: "¡Puedes agregar reacciones con emojis a cualquier publicación! Ya no estás limitado por un botón de me gusta, muestra a todos exactamente cómo te sientes con solo un toque."
     _customEmojis:
       title: "Emojis personalizados"
       description: "Es posible crear emojis de servidor originales para usarlos en varias partes de Misskey."
