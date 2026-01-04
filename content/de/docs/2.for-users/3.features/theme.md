@@ -54,8 +54,8 @@ Beachte, dass dieses „props“-Objekt vom Basisthema erbt.
 Das Basisthema ist [\_light.json5][_light.json5], wenn die `Basis` dieses Themas `light` ist und [\_dark.json5][_dark.json5], wenn es `dark` ist.
 Das bedeutet, dass, auch wenn es in diesem Thema keinen Schlüssel `props` mit `panel` gibt, angenommen wird, dass es ein `panel` des Basisthemas gibt.
 
-- [_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
-- [_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
+[_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend-shared/themes/_light.json5
+[_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend-shared/themes/_dark.json5
 
 #### Syntax für Wertangaben
 
@@ -81,7 +81,7 @@ Wird ein Wert mit einem <code>$</code>-Präfix versehen, so wird er nicht als CS
 
 #### Funktionen
 
-Funktionen sind nützlich, wenn du eine Farbe verwenden möchtest, die leicht von einer bestehenden Farbe abweicht, z. B. „Ich möchte die Farbe nur aufhellen, wenn ich den Mauszeiger über eine Schaltfläche bewege“.
+Sie kann in der Form `:{Funktionsname}<{Argumente}<{Verweis auf Farbe oder anderen Schlüssel}` verwendet werden.
 
 Sie kann in der Form `:{Funktionsname}<{Argumente}<{Verweis auf Farbe oder anderen Schlüssel}` verwendet werden.
 
