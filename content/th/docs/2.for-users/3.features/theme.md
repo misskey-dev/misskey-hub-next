@@ -49,8 +49,8 @@
 
 สไตล์ที่ใช้ในธีมจะถูกกำหนดไว้ในคุณสมบัติ `props`
 
-- [_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
-- [_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
+[_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend-shared/themes/_light.json5
+[_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend-shared/themes/_dark.json5
 
 #### ไวยากรณ์ที่สามารถใช้กับค่าได้
 
