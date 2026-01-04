@@ -49,8 +49,8 @@
 
 베이스 테마는 이 테마의 `base`가 `light`라면 [\\_light.json5][_light.json5]이고, `dark`라면 [\\_dark.json5][_dark.json5]입니다.
 
-- [_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
-- [_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
+[_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend-shared/themes/_light.json5
+[_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend-shared/themes/_dark.json5
 
 #### 값(Value)을 사용할 수 있는 구문
 
@@ -76,9 +76,9 @@
 
 #### 함수
 
-"버튼에 커서를 올렸을 때 밝게하고 싶은 경우" 등, 원래 색상 값에서 바뀐 색상 값을 사용하려면, 함수를 사용하시면 편리합니다.
-
 '버튼 위에 커서를 올렸을 때만 색상을 밝게 하고 싶다'와 같이 기존 색상에서 조금 변경된 색상을 사용하고 싶을 때 이 함수를 사용하면 편리합니다.
+
+`:{함수명}<{인수}<{색상이나 다른 키 참조}`의 형태로 사용할 수 있습니다.
 
 ```js
 props: {
