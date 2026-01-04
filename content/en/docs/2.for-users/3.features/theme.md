@@ -6,7 +6,7 @@ Themes can be used to change the look and feel of the Misskey client.
 
 [Settings > Themes](x-mi-web://settings/theme)
 
-## Creating a theme
+## Writing a theme
 
 Themes are described as JSON5 objects, written in the format shown below:
 
@@ -41,23 +41,26 @@ Themes are described as JSON5 objects, written in the format shown below:
 - `author` ... The author of the theme
 - `desc` ... The description of the theme (optional)
 - `base` ... Whether the theme is a light or dark theme
-  - If you set it to light the theme will be listed as a light mode theme, if you set it to dark it will be listed as a dark mode theme.
+  - If you set it to `light` the theme will be listed as a light mode theme, if you set it to `dark` it will be listed as a dark mode theme.
   - The theme will be inheriting the default values of the theme specified here.
 - `props` ... The style definitions of the theme.These will be explained below.
 
 ### Definitions Used in Theme Styles
 
-The styles used in a theme are defined in the `props` property.
+The styles used in a theme are defined in the `props` property.\
+The keys of this object correspond to CSS variable names, and the values specify their contents.\
+If the value of a variable is not defined in `props`, then it will be inherited from the base theme defined in the sibling property `base`. The base theme is [\_light.json5][_light.json5] if the `base` of this theme is `light` and [\_dark.json5][_dark.json5] if it is `dark`.\
+For example, if there is no key named `panel` in `props`, then the value from the base theme will be used instead.
 
-- [_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
-- [_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
+[_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend-shared/themes/_light.json5
+[_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend-shared/themes/_dark.json5
 
 #### Syntax for Values
 
-- Hexadecimal colours
+- Hexadecimal colors
   - e.g. `#00ff00`
 - RGB colors with `rgb(r, g, b)` syntax
-  - e.g. `rgb(0,255,0)`
+  - e.g. `rgb(0, 255, 0)`
 - RGBA colors with `rgb(r, g, b, a)` syntax
   - e.g. `rgba(0, 255, 0, 0.5)`
 - References to values of other keys
@@ -76,7 +79,7 @@ If you prefix the name of a key with a `$`, it will be not be used as a CSS vari
 
 #### Functions
 
-Functions are useful when you would like to use a slight variation of an existing color, for example, to brighten a button when hovering over it.
+Functions take the form: `:{function-name}<{argument}<{color}`
 
 Functions take the form: `:{function-name}<{argument}<{color}`
 
@@ -97,7 +100,7 @@ props: {
 - `hue` ... Return the color obtained by spinning the hue by the given amount (-360 to 360).
 - `saturate` ... Returns the color obtained by increasing the saturation by the given amount (0-100). The saturation of the color can range from 0-100.
 
-## Distributing Themes
+## Providing Theme Installation
 
 Since v2023.11.0, you can install themes directly from a website with one click.
 
