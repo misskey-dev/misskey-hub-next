@@ -14,11 +14,11 @@ This feature is experimental. It may be unstable and its specifications may be s
 
 Misskey provides webhooks.Using webhooks, you can receive events from Misskey in realtime.
 
-You can manage your webhooks in [Settings > Webhook](x-mi-web://settings/webhook)
+You can manage your webhooks in [Settings > Service integration](x-mi-web://settings/connect)
 
 Once a webhook is registered, Misskey will send an HTTP request to the specified URL when the specified event occurs.These requests are POST requests with a JSON body. The header field `X-Misskey-Hook-Secret` will contain the secret specified on creation.For security, you should verify the content of this field matches the secret provided during creation.
 
-The request payload contains the following properties: [TBA]
+The request payload contains the following properties: \[TBA\]
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -60,15 +60,7 @@ The following are the available events and their payloads.
 
 ### follow
 
-<MkSchemaViewerItemObject :schema="{
-type: 'object',
-properties: {
- user: {
- 	$ref: 'misskey://User',
- 	description: 'フォローを行ったユーザー',
- },
-}
-}"/>
+Occurs when you follow someone.
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -82,15 +74,7 @@ user: {
 
 ### followed
 
-<MkSchemaViewerItemObject :schema="{
-type: 'object',
-properties: {
- user: {
- 	$ref: 'misskey://User',
- 	description: 'フォロー解除したユーザー',
- },
-}
-}"/>
+Occurs when someone follows you.
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -104,15 +88,7 @@ user: {
 
 ### unfollow
 
-<MkSchemaViewerItemObject :schema="{
-type: 'object',
-properties: {
- note: {
- 	$ref: 'misskey://Note',
- 	description: '作成されたノート',
- },
-}
-}"/>
+Occurs when you unfollow someone.
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -126,15 +102,7 @@ user: {
 
 ### note
 
-<MkSchemaViewerItemObject :schema="{
-type: 'object',
-properties: {
- note: {
- 	$ref: 'misskey://Note',
- 	description: '返信',
- },
-}
-}"/>
+Occurs when you post a note.
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -148,15 +116,7 @@ note: {
 
 ### reply
 
-<MkSchemaViewerItemObject :schema="{
-type: 'object',
-properties: {
- note: {
- 	$ref: 'misskey://Note',
- 	description: 'Renote',
- },
-}
-}"/>
+Occurs when someone replies to your note.
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -170,15 +130,7 @@ note: {
 
 ### renote
 
-<MkSchemaViewerItemObject :schema="{
-type: 'object',
-properties: {
- note: {
- 	$ref: 'misskey://Note',
- 	description: 'メンションを含むノート',
- },
-}
-}"/>
+Occurs when your note is renoted.
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
