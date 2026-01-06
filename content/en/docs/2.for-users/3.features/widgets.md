@@ -87,7 +87,7 @@ Shows the current time in UNIX format.
 
 ### Federation
 
-Shows the most popular remote instances.
+Shows other servers that are primarily communicating with the server.
 
 ### Instance cloud
 
@@ -107,11 +107,11 @@ Displays the instance's CPU, memory, network traffic, and storage capacity.This 
 
 ### Online users
 
-Displays the number of users who are online.
+Displays the number of users currently online.
 
 ### Job Queue
 
-Displays the status of the federation job queue.
+Displays the queue status of notes being sent and received between servers in the federation.
 
 ### Button
 
