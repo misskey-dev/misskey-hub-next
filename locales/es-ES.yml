@@ -414,7 +414,7 @@ _aboutUs:
       title: "Miembros del Equipo Principal"
       description: "Estos miembros del equipo central están activamente manteniendo proyectos relacionados con Misskey."
     _coreEmeriti:
-      title: "Miembros Veteranos del Equipo Central"
+      title: "Miembros de Honor del Equipo Principal"
       description: "Estos son antiguos miembros del equipo central que han hecho contribuciones valiosas en el pasado."
     _contributors:
       title: "Colaboradores"
