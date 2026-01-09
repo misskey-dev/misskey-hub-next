@@ -53,7 +53,7 @@
 ::MiWebEmbed{src="https://0key.dev/embed/user-timeline/9tht7g9ki81f0002?maxHeight=500"}
 ::
 
-可以嵌入用户公开帖子（公开/主页）的列表。代码如下：
+可以嵌入用户公开帖子（可见性为“公开”或“首页”）的列表。代码如下：
 
 ```html
 <iframe
@@ -77,7 +77,7 @@
 ::MiWebEmbed{src="https://0key.dev/embed/clips/9y5mpno6871g00gv?maxHeight=500"}
 ::
 
-可以嵌入设置为公开的便签帖子列表。代码如下：
+可以嵌入设置为公开的便签的帖子列表。代码如下：
 
 ```html
 <iframe
