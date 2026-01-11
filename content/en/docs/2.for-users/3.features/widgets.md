@@ -9,6 +9,7 @@ To change which widgets are displayed, enter widget editing mode.The way widgets
 - Profile
 - Instance Information
 - Sticky notes
+- Notifications
 - Timeline
 - Calendar
 - RSS reader
@@ -32,6 +33,8 @@ To change which widgets are displayed, enter widget editing mode.The way widgets
 - Ai
 - User list
 - Clicker
+- Today's Birthdays
+- Chat with user
 
 ### Profile
 
@@ -44,6 +47,10 @@ Displays the instance name, domain, icon, and banner.
 ### Sticky notes
 
 A notepad for saving text.
+
+### Notifications
+
+Shows the latest notifications.
 
 ### Timeline
 
@@ -136,3 +143,11 @@ Shows a list of users.Head to "More!" > "Lists" to set the list.
 ### Clicker
 
 Shows a cookie.Click/tap the cookie.
+
+### Today's Birthdays
+
+Shows users you follow whose birthday is today.
+
+### Chat with user
+
+Shows the latest chat messages.
