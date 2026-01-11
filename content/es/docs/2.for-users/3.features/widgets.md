@@ -9,6 +9,7 @@ Para cambiar los widgets que se muestran, accede al modo de edición de widgets.
 - Perfil
 - Información de la instancia
 - Notas adhesivas
+- Notificaciones
 - Líneas de tiempo
 - Calendario
 - Lector RSS
@@ -32,6 +33,8 @@ Para cambiar los widgets que se muestran, accede al modo de edición de widgets.
 - Ai
 - Lista de usuarios
 - Cliqueador
+- Hoy cumplen años
+- Chat
 
 ### Perfil
 
@@ -44,6 +47,10 @@ Muestra el nombre de la instancia, el dominio, el icono y el banner.
 ### Notas adhesivas
 
 Un bloc de notas para guardar texto.
+
+### Notificaciones
+
+Muestra las últimas notificaciones.
 
 ### Líneas de tiempo
 
@@ -136,3 +143,11 @@ Muestra una lista.Más > "Listas" para establecer la lista.
 ### Cliqueador
 
 Muestra una galleta.Haz clic en la galleta.
+
+### Hoy cumplen años
+
+Muestra los usuarios a los que sigues y que cumplen años hoy.
+
+### Chat
+
+Muestra los últimos mensajes del chat.
