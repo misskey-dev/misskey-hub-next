@@ -10,6 +10,7 @@ Im Widget-Bearbeitungsmodus können Widgets hinzugefügt, gelöscht und neu ange
 - Profil
 - Serverinformationen
 - Notizen
+- 通知
 - Timeline
 - Kalender
 - RSS-Reader
@@ -33,6 +34,8 @@ Im Widget-Bearbeitungsmodus können Widgets hinzugefügt, gelöscht und neu ange
 - Ai
 - Benutzerliste
 - Klickzähler
+- 今日誕生日のユーザー
+- チャット
 
 ### Profil
 
@@ -45,6 +48,10 @@ Servername, Domain, Symbolbild und Banner
 ### Notizen
 
 Inhalt, welcher in die Notize geschrieben worden ist
+
+### 通知
+
+通知の最新の内容を表示します。
 
 ### Timeline
 
@@ -137,3 +144,11 @@ Liste anzeigenMehr! Lege es in der Liste fest.
 ### Cookies
 
 Cookies anzeigenKlicken/tippen Sie auf die Cookies
+
+### 今日誕生日のユーザー
+
+フォローしているユーザーのうち、今日が誕生日のユーザーを表示します。
+
+### チャット
+
+チャットの最新の内容を表示します。
