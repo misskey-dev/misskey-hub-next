@@ -20,7 +20,7 @@ Please use the official Misskey Web client instead.
 
 ## Is misskey.io the official server of the Misskey project?
 
-No, misskey.io is not the official server of the Misskey Project and is not affiliated with it.misskey.io is the largest server running Misskey, offering a general-purpose platform for easy registration without specific themes.
+No, misskey.io is not the official server of the Misskey Project and is not affiliated with it. misskey.io is the largest server running Misskey, offering a general-purpose platform for easy registration without specific themes.
 
 ## Is the any relationship with MisskeyHQ Inc.?
 
@@ -36,8 +36,9 @@ The name "Misskey" was inspired by the lyrics of May'n's song "Brain Diver," whi
 Select "Search" from the menu and enter the user's fully-qualified username in the format specified below.A fully-qualified username includes a username and the hostname of the server to which the user belongs.This format is common between ActivityPub platforms such as Misskey, Mastodon, and Pleroma.<br>
 
 The format of a fully-qualified username is as follows:  
-`username@hostname.example`Here's a live example:  
-`syuilo@misskey.io`
+`username@hostname.example`<br>
+Here's a live example:  
+`syuilo@misskey.io`<br>
 
 While this format is not universal across all distributed software, it allows you to follow users from other servers or platforms implemented with different decentralized software.
 
