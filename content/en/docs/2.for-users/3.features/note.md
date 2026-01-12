@@ -79,7 +79,7 @@ Your note will only be visible to the specified users, and will appear on all ti
 
 :::tip
 
-In Japanese, this option was called “ダイレクト” until v2025.7.0.
+In the Japanese UI, this option was called “ダイレクト” until v2025.7.0.
 
 :::
 
