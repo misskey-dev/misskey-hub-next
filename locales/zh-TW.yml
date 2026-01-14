@@ -20,7 +20,7 @@ threeDimensionModel: "3D 模型"
 clickToShow: "點擊以顯示"
 preview: "預覽"
 scrollable: "可以滾動"
-serverListUnderMaintenance: "サーバー一覧は現在メンテナンス中です。"
+serverListUnderMaintenance: "伺服器列表目前正在維護中。"
 _error:
   notFound: "找不到此頁面"
   notFoundDesc: "找不到此頁面，請確認網址是否正確。"
