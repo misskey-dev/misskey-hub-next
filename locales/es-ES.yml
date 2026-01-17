@@ -468,7 +468,7 @@ _shareLinkGenerator:
   here: "este enlace"
 _goToMisskey:
   title: "Ir a tu web Misskey"
-  heading: "Seleccione el servidor/instancia en el que desea abrir la página y continúe"
+  heading: "Selecciona el servidor, también llamado instancia, en el que deseas abrir la página"
 _avatarDecorationPreview:
   title: "Previsualización de la decoración del Avatar"
   description: "Puedes comprobar si la decoración del avatar se ajusta correctamente."
