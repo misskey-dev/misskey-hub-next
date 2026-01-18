@@ -1,7 +1,7 @@
-# 管理コマンド
+# 管理命令
 
-2025.8.0以降のMisskeyでは、サーバー管理コマンドを利用できます。
+从 Misskey 2025.8.0 版本起，可以使用服务器管理命令。
 
-`pnpm cli <コマンド>` の形式で使用可能です。
+管理命令可以通过 `pnpm cli <命令>` 的形式执行。
 
-- `reset-captcha` - CAPTCHA設定をリセットします
+- `reset-captcha` - 重置 CAPTCHA 设置
