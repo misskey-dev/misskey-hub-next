@@ -12,7 +12,7 @@ The report contains the following information:
 - The details of the report
 - The reporter
 
-の情報が含まれています。
+
 
 :::tip
 
