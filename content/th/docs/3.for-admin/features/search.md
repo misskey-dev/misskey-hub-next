@@ -17,8 +17,8 @@ Misskeyはノート検索に使用するアルゴリズムを複数ご用意し�
   - データベース組み込みの機能を使用するためお手軽です。
   - データの量が増えてくると検索に時間がかかりやすくなります。
 
-- sqlPgroonga ... 全文検索エンジンの[Pgroonga](https://pgroonga.github.io)を用いて検索を行います。
-  - Pgroongaのインストールが必要です。
+- sqlPgroonga ... 全文検索エンジンの[PGroonga](https://pgroonga.github.io)を用いて検索を行います。
+  - PGroongaのインストールが必要です。
   - sqlLikeより高速な検索が可能です。
 
 - meilisearch ... 全文検索エンジンの[Meilisearch](https://www.meilisearch.com)を用いて検索を行います。
@@ -28,9 +28,9 @@ Misskeyはノート検索に使用するアルゴリズムを複数ご用意し�
 
 検索エンジンを変更する場合は、設定ファイルの `fulltextSearch` の `provider` を書き換えて、Misskeyのプロセスを再起動してください。
 
-## Pgroongaを使う
+## PGroongaを使う
 
-### Pgroongaのインストール
+### PGroongaのインストール
 
 :::warning
 
@@ -39,7 +39,7 @@ Misskeyはノート検索に使用するアルゴリズムを複数ご用意し�
 
 :::
 
-Ubuntu 22.04、PostgreSQL 18の環境にPgroongaをインストールする例です。
+Ubuntu 22.04、PostgreSQL 18の環境にPGroongaをインストールする例です。
 
 詳細は[公式PostgreSQL用のインストール方法](https://pgroonga.github.io/ja/install/ubuntu.html)をご確認ください。
 
@@ -70,7 +70,7 @@ Docker環境ではPGroonga導入済みのDockerイメージが使用できます
 
 PGroonga導入済みのPostgreSQLイメージを使用するには、`postgres:18-alpine`の代わりに`groonga/pgroonga:latest-alpine-18-slim`を使用してください。
 
-### Pgroongaの有効化
+### PGroongaの有効化
 
 次にPostgreSQLにログインします。
 
