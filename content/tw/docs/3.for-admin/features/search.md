@@ -64,11 +64,11 @@ sudo apt install -y -V postgresql-18-pgdg-pgroonga
 sudo apt install -y -V groonga-tokenizer-mecab
 ```
 
-#### Docker環境を使用している場合
+#### 使用 Docker 環境時
 
-Docker環境ではPGroonga導入済みのDockerイメージが使用できます。
+在 Docker 環境中，可以使用已安裝 PGroonga 的 Docker 映像。
 
-PGroonga導入済みのPostgreSQLイメージを使用するには、`postgres:18-alpine`の代わりに`groonga/pgroonga:latest-alpine-18-slim`を使用してください。
+若要使用已安裝 PGroonga 的 PostgreSQL 映像，請將 `postgres:18-alpine` 替換為 `groonga/pgroonga:latest-alpine-18-slim`。
 
 ### 啟用 Pgroonga
 
