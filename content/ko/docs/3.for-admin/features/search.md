@@ -68,7 +68,7 @@ sudo apt install -y -V groonga-tokenizer-mecab
 
 Docker 환경에서는 PGroonga가 도입된 Docker 이미지를 사용할 수 있습니다.
 
-PGroonga가 도입된 PostgreSQL 이미지를 사용하려면 `postgres:15-alpine` 대신에 `groonga/pgroonga:latest-alpine-15-slim`을 사용해 주십시오.
+PGroonga가 도입된 PostgreSQL 이미지를 사용하려면 `postgres:18-alpine` 대신에 `groonga/pgroonga:latest-alpine-18-slim`을 사용해 주십시오.
 
 ### Pgroonga의 활성화
 
