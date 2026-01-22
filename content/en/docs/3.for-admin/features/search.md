@@ -1,6 +1,6 @@
 # Note Search
 
-Misskey has an ability to search notes.By enabling this feature, you can perform search on notes.
+Misskey has an ability to search notes.By enabling this feature, you can search notes.
 
 :::tip
 
@@ -68,7 +68,7 @@ sudo apt install -y -V groonga-tokenizer-mecab
 
 In a Docker environment, you can use a Docker image with Pgroonga already installed.
 
-To use a PostgreSQL image with Pgroonga already installed, use `groonga/pgroonga:latest-alpine-15-slim` instead of `postgres:15-alpine`.
+To use a PostgreSQL image with Pgroonga already installed, use `groonga/pgroonga:latest-alpine-18-slim` instead of `postgres:18-alpine`.
 
 ### Enable Pgroonga
 
