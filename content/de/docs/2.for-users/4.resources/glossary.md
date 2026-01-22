@@ -79,7 +79,7 @@ Sie ist das Maskottchen (offizieller Charakter) von Misskey.[Mehr Erfahren](http
 
 ## Instanzen
 
-To-do
+Misskeyのサービスをユーザーに提供する主体。各サーバーは独立して運営されており、他のサーバーと相互に接続して情報をやり取りすることができます。
 
 ## Benutzerdefinierte Emojis
 
