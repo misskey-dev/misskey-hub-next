@@ -28,9 +28,9 @@ Misskey ofrece varios algoritmos para la búsqueda de notas.Puedes cambiar de un
 
 Para cambiar el motor de búsqueda, reescriba el `provider` en `fulltextSearch` en el archivo de configuración y reinicie el proceso de Misskey.
 
-## Uso de Pgroonga
+## Uso de PGroonga
 
-### Instalación de Pgroonga
+### Instalación de PGroonga
 
 :::warning
 
@@ -39,7 +39,7 @@ Además, detenga a Misskey antes de empezar a trabajar.
 
 :::
 
-Este es un ejemplo de instalación de Pgroonga en un entorno Ubuntu 22.04, PostgreSQL 15.
+Este es un ejemplo de instalación de PGroonga en un entorno Ubuntu 22.04, PostgreSQL 18.
 
 Para más información, consulte [Cómo instalar para PostgreSQL oficial](https://pgroonga.github.io/ja/install/ubuntu.html).
 
@@ -70,7 +70,7 @@ En un entorno Docker, puede utilizar una imagen Docker con PGroonga ya instalado
 
 Para utilizar una imagen de PostgreSQL con PGroonga ya instalado, utilice `groonga/pgroonga:latest-alpine-18-slim` en lugar de `postgres:18-alpine`.
 
-### Habilitación de Pgroonga
+### Habilitación de PGroonga
 
 A continuación, inicie sesión en PostgreSQL.
 
