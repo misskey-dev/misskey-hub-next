@@ -21,7 +21,7 @@ guides:
         title: "Open Settings"
         image: "sp/1.png"
         description: |
-          Open Misskey, tap the "≡" button at the bottom right of the screen, then tap "Settings" from the menu that appears.
+          Open Misskey, tap the "≡" button at the bottom left of the screen, then tap "Settings" from the menu that appears.
       - 
         title: "Tap on \"Security\""
         image: "sp/2.png"
