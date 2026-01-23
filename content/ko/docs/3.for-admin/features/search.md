@@ -17,7 +17,7 @@ Misskey는 노트 검색에 사용하는 알고리즘을 여럿 준비했습니�
   - 내장 데이터베이스 기능을 사용하기에 편리합니다.
   - 데이터 사용량이 증가하면 검색에 시간이 걸릴 수 있습니다.
 
-- sqlPgroonga ... 전체 문장 검색 엔진인 [Pgroonga](https://pgroonga.github.io)를 사용해 검색합니다.
+- sqlPgroonga ... 전체 문장 검색 엔진인 [PGroonga](https://pgroonga.github.io)를 사용해 검색합니다.
   - Pgroonga의 설치가 필요합니다.
   - sqlLike보다 빠른 속도의 검색이 가능합니다.
 
@@ -28,9 +28,9 @@ Misskey는 노트 검색에 사용하는 알고리즘을 여럿 준비했습니�
 
 검색 엔진을 변경할 경우에는 설정 파일의 'fulltextSearch'의 'provider'를 교체해 Misskey 프로세스를 재기동해주십시오.
 
-## Pgroonga를 사용하기
+## PGroonga를 사용하기
 
-### Pgroonga의 설치
+### PGroonga의 설치
 
 :::warning
 
@@ -39,7 +39,7 @@ Misskey는 노트 검색에 사용하는 알고리즘을 여럿 준비했습니�
 
 :::
 
-Ubuntu 22.04, PostgreSQL 15의 환경에 Pgroonga를 설치하는 예시입니다.
+Ubuntu 22.04, PostgreSQL 18의 환경에 PGroonga를 설치하는 예시입니다.
 
 상세는 [공식 PostgreSQL용 설치 방법](https://pgroonga.github.io/ja/install/ubuntu.html)를 확인해주십시오.
 
@@ -70,7 +70,7 @@ Docker 환경에서는 PGroonga가 도입된 Docker 이미지를 사용할 수 �
 
 PGroonga가 도입된 PostgreSQL 이미지를 사용하려면 `postgres:18-alpine` 대신에 `groonga/pgroonga:latest-alpine-18-slim`을 사용해 주십시오.
 
-### Pgroonga의 활성화
+### PGroonga의 활성화
 
 다음으로 PostgreSQL에 로그인합니다.
 
