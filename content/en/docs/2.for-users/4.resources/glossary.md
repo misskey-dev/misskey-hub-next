@@ -72,7 +72,7 @@ Ai is Misskey's official mascot.[More information is available](https://xn--931a
 
 ## Server
 
-Misskeyのサービスをユーザーに提供する主体。各サーバーは独立して運営されており、他のサーバーと相互に接続して情報をやり取りすることができます。
+A server (also called an instance) is an entity that provides Misskey services to users.Each server is operated independently and can interconnect with other servers to exchange information.
 
 ## Custom Emoji
 
