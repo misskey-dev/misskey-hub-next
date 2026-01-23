@@ -38,7 +38,7 @@ Misskey 提供了多种用于搜索帖子的算法。你可以根据服务器规
 
 :::
 
-这是在 Ubuntu 22.04、PostgreSQL 15 环境中安装 PGroonga 的示例。
+这是在 Ubuntu 22.04、PostgreSQL 18 环境中安装 PGroonga 的示例。
 
 详细内容请参阅 [PGroonga 官方提供的 PostgreSQL 安装方法](https://pgroonga.github.io/ja/install/ubuntu.html)。
 
