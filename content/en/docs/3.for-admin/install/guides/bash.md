@@ -1,4 +1,4 @@
-# Misskey install shell script v3.0.0
+# Misskey Installation Shell Script v3.0.0
 
 This shell script was made to make the installation of Misskey easy!
 
@@ -6,7 +6,7 @@ By answering a couple of questions, you can easily install Misskey on an Ubuntu 
 
 There is also an update script.
 
-The (older) v12 script is available here
+[The (older) v12 script is available here](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)
 
 ## Requirements
 
