@@ -2,12 +2,11 @@
 
 現在可以透過 shell script 簡單安裝 Misskey！
 
-您可以只回答幾個問題，然後在 Ubuntu Server 上面簡單的安裝 Misskey (v12) ！
+您可以只回答幾個問題，然後在 Ubuntu Server 上面簡單的安裝 Misskey！
 
-另外，有可能有更新後的 Script.
+此外，也提供更新用的腳本。
 
-[v12 版在此處 (日語文件)](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)\
-[**English version**](./README.en.md)
+[v12 版在此處](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)
 
 ## 需要事前準備的東西
 
@@ -17,7 +16,7 @@
 
 :::danger
 
-一旦開始使用，請勿使用伺服器的域名以及主機名稱重新建立資料庫！
+一旦開始使用，請勿使用伺服器的網域名稱/主機名稱重新建立資料庫！
 
 :::
 
