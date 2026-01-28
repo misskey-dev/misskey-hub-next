@@ -24,24 +24,25 @@ Since Let's Encrypt's verification attempts are limited, please double-check you
 
 ## Cloudflare Configuration
 
-Cloudflareを使う場合、Cloudflareのドメインの設定を完了してからインストールを開始するようにしてください。  
-ネームサーバーの適用には最大で3日程度かかる場合があります。
+If you use Cloudflare, make sure you’ve finished setting up your domain on Cloudflare before starting the installation.  
+\
+It may take up to 3 days for the nameserver changes to take effect.
 
-また、nginxとCloudflareを設定する場合、Cloudflareの設定画面にて、
+Also, if you configure nginx together with Cloudflare, do the following in the Cloudflare dashboard:
 
-- DNSを設定してください。
-- SSL/TLS設定にて、暗号化モードを「フル」に設定してください。
+- Configure DNS.
+- Under SSL/TLS, set the encryption mode to "Full".
 
-## 操作
+## Procedure
 
 ### 1. SSH
 
-サーバーにSSH接続します。  
-（サーバーのデスクトップを開いている方はシェルを開きましょう。）
+Connect to the server via SSH.  
+(If you are using the server's desktop session, open a shell instead.)
 
-### 2. 環境を最新にする
+### 2. Update the system
 
-すべてのパッケージを最新にし、再起動します。
+Update all packages to the latest versions and reboot the server.
 
 ```sh
 sudo apt update; sudo apt full-upgrade -y; sudo reboot
@@ -49,144 +50,146 @@ sudo apt update; sudo apt full-upgrade -y; sudo reboot
 
 ### 3. Installation
 
-SSHを接続しなおして、Misskeyのインストールを始めましょう。
+Reconnect to the server via SSH and start the Misskey installation.
 
-ただ、インストール前に[Tips](#tips)を読むことを強くお勧めします。
+However, we strongly recommend reading the [Tips](#tips) before you proceed.
 
 ```sh
 wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/ubuntu.sh -O ubuntu.sh; sudo bash ubuntu.sh
 ```
 
-example.comは自分のドメインに置き換えてください。
+Please replace example.com with your own domain.
 
 ### 4. Update
 
-アップデートのためのスクリプトもあります。
+An update script is also available.
 
-アップデートスクリプトは、環境のアップデートは行いません。CHANGELOG（日本語）および[GitHubのリリース一覧（英語）](https://github.com/joinmisskey/bash-install/releases)を参考に、適宜マイグレーション操作を行なってください。
+The update script does not update the environment.Refer to the CHANGELOG (Japanese) and [the GitHub releases (English)](https://github.com/joinmisskey/bash-install/releases), and run migrations as needed.
 
-まずはダウンロードします。
+First, download the script.
 
 ```sh
 wget https://raw.githubusercontent.com/joinmisskey/bash-install/main/update.ubuntu.sh -O update.sh
 ```
 
-アップデートしたいときにスクリプトを実行してください。
+To update, run the script.
 
 ```sh
 sudo bash update.sh
 ```
 
-- systemd環境では、`-r`オプションでシステムのアップデートと再起動を行うことができます。
-- docker環境では、引数に更新後のリポジトリ名:タグ名を指定することができます。
+- In a systemd environment, you can use the -r option to update the system and reboot.
+- In a Docker environment, you can specify the target image as an argument in the form of `repo:tag`.
 
-## 動作を確認した環境
+## Tested environment
 
 ### Oracle Cloud Infrastructure
 
-このスクリプトは、Oracle Cloud InfrastructureのAlways Freeサービスで提供されている2種類のシェイプのいずれにおいても動作します。
+This script works on both shapes offered by Oracle Cloud Infrastructure (OCI) Always Free.
 
 - VM.Standard.E2.1.Micro (AMD)
 - VM.Standard.A1.Flex (ARM) [1OCPU RAM6GB or greater]
 
-iptablesを使うようにしてください。
+Please make sure to use iptables.
 
 ## Issues & PRs Welcome
 
-上記の環境で動作しない場合、バグの可能性があります。インストールの際に指定された条件を記載の上、GitHubのIssue機能にてご報告いただければ幸いです。
+If it doesn't work in the environment described above, it may be a bug.Please report it via GitHub Issues, and include the installation conditions/configuration you used.
 
-上記以外の環境についてのサポートは難しいですが、状況を詳しくお教えいただければ解決できる可能性があります。
+We may not be able to provide full support for environments other than those listed above, but if you share detailed information about your setup, we may still be able to help.
 
-機能の提案についても歓迎いたします。
+Feature suggestions are also welcome.
 
 # Tips
 
-選択肢の選び方や仕様についてなど。
+How to choose options, and notes on behavior/specifications.
 
 ## Systemd or Docker?
 
-v1から、インストールメソッドにsystemdとDockerとを選べるようにしました。
+Starting from v1, you can choose systemd or Docker as the installation method.
 
-Dockerと言っても、**MisskeyだけをDockerで実行**し、RedisやPostgresなどはホストで直接実行します。  
-[docker-composeですべての機能を動かす方法については、mamemonongaさんが作成したこちらの記事がおすすめです。](https://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0)
+Even when using Docker, only Misskey itself runs in Docker, while Redis, Postgres, etc. run directly on the host.  
+\
+[If you want to run the whole stack with docker-compose, we recommend this article written by mamemononga.](https://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0)
 
-Docker Hubイメージを使う設定であれば、Misskeyのビルドが不要になるため、**一番お勧めです**。  
-ただし、マイグレーションは必要なので、アップデート時にMisskeyを使えない時間がゼロになるわけではありません。  
-また、Misskeyのビルド環境を準備しない(git pullしない)ので、フォークを動かしたくなった時に設定が面倒になります。
+If you use the Docker Hub image, you won’t need to build Misskey yourself, so **this is the recommended option**.  
+However, migrations are still required, so downtime during updates won’t be zero.  
+Also, since you won’t be setting up a build environment for Misskey (i.e., you won’t be updating the source with git pull), configuration can get more complicated if you later decide to run a fork.
 
-ローカルでDockerをビルドする方式は、パフォーマンス面で非推奨です。
+Building Docker images locally is not recommended for performance reasons.
 
-systemdは、Docker Hubにイメージを上げるまでもないものの、フォークを使いたい場合にお勧めです。
+The systemd approach is recommended if you want to use a fork but don’t need to publish images to Docker Hub.
 
-お勧めする順番は次の通りです。
+The recommended order is as follows:
 
 1. Docker Hub
 2. systemd
-3. Dockerビルド
+3. Local Docker build
 
-## nginxを使うかどうか
+## Whether to use nginx
 
-以下のケースに該当する場合を除き、インターネットとMisskeyの仲立ちをするリバースプロキシとしてnginxの採用をおすすめしています。
+We recommend using nginx as a reverse proxy between the internet and Misskey, except in the following cases:
 
-- ユーザは自分のみ（いわゆるお一人様サーバー）or ごく少数
-- ロードバランサー等nginxのリバースプロキシ・キャッシュ機能を他の手段で賄う用意がある（上級者向け）
+- The server is for yourself only (a so-called single-user server) or has only a very small number of users
+- You have other means to handle reverse proxy and caching functions provided by nginx, such as a load balancer (advanced users)
 
-nginxをリバースプロキシとして採用することにより、画像ファイルなどの静的コンテンツをキャッシュしサーバーリソースの浪費を抑えることが出来ます。
-また、nginxにはキャッシュが無い状態での大量アクセスを上手くコントロールする機能が搭載されていますので、Misskeyの負荷増大を抑える効果を期待できます。
+Using nginx as a reverse proxy lets you cache static content such as image files and reduce unnecessary server resource usage.
+Additionally, nginx has features that help handle traffic spikes when the cache is cold (i.e., on cache misses), which can help keep load on Misskey under control.
 
-設定例は[nginxの設定](../resources/nginx/)ページにて記載しています。
+Example configurations are available on [the nginx configuration page](../resources/nginx/).
 
 ## Add more swaps!
 
-スワップを設定している場合、メモリが合計で3GB以上でなければスクリプトが動作しないようになっています。
+If you have swap configured, the script will not run unless the total available memory is at least 3 GB.
 
-## 途中で失敗してまたスクリプトを実行する場合
+## If the script fails and you run it again
 
-万が一途中で失敗してもう一度スクリプトを動作させる場合、次のことに注意してください。
+If it fails partway through and you need to run the script again, keep the following in mind:
 
-- RedisやPostgresのインストールが終わっている場合、「install locally」はNoにしてください。  
-  host・port設定はそのままEnterを押します。
-  ユーザー名やパスワードは、前回実行した際に指定したものを入力します。
+- If Redis and Postgres have already been installed, set "install locally" to No.  
+  \
+  For the host and port prompts, just press Enter to keep the current values.
+  For the username and password, enter the ones you specified the last time you ran the script.
 
-## .envファイルについて
+## About the .env files
 
-インストールスクリプトは、2つの.envファイルを作成します。  
-アップデートの際に使用します。
+The installation script creates two .env files.  
+They are used during updates.
 
 ### /root/.misskey.env
 
-misskeyを実行するユーザーを覚えておくために必要です。
+This file is required to keep track of which user runs Misskey.
 
-### /home/(misskeyユーザー)/.misskey.env
+### /home/(misskey user)/.misskey.env
 
-systemdの場合に生成されます。  
-主にディレクトリを覚えておくのに使用します。
+This file is generated when using systemd.  
+It is mainly used to store the directory path.
 
-### /home/(misskeyユーザー)/.misskey-docker.env
+### /home/(misskey user)/.misskey-docker.env
 
-Dockerの場合に生成されます。  
-実行されているコンテナとイメージの番号を保存しています。  
-コンテナの番号はアップデートの際に更新されます。古いイメージは削除されます。
+This file is generated when using Docker.  
+It stores the IDs of the running containers and images.  
+The container IDs are updated during updates, and old images are removed.
 
-## 自分で管理する
+## Self-managed
 
-インストール後、構成を変更する際に役立つかもしれないメモです。
+These notes may be helpful when you want to change the configuration after installation.
 
-"example.com"を自分のドメインに置き換えて読んでください。
+When reading this section, replace "example.com" with your own domain.
 
-### Misskeyディレクトリ
+### Misskey directory
 
-Misskeyのソースは`/home/ユーザー/ディレクトリ`としてcloneされます。  
-（ユーザー、ディレクトリの初期値はともにmisskeyです。）
+The Misskey source code is cloned into `/home/{{user}}/{{directory}}`.  
+(The default values for `{{user}}` and `{{directory}}` are both `misskey`.)
 
-Misskeyディレクトリへは、以下のように移動するとよいでしょう。
+To move to the Misskey directory, run:
 
 ```sh
-sudo -iu ユーザー
-cd ディレクトリ
+sudo -iu {{user}}
+cd {{directory}}
 ```
 
-もとのユーザーに戻るにはexitを実行します。
+To return to the previous user, run:
 
 ```sh
 exit
@@ -194,75 +197,78 @@ exit
 
 ### systemd
 
-systemdのプロセス名はexample.comです。  
-たとえば再起動するには次のようにします。
+The systemd service name is example.com.  
+For example, to restart the service, run:
 
 ```sh
 sudo systemctl restart example.com
 ```
 
-journalctlでログを確認できます。
+You can check the logs with journalctl:
 
 ```sh
 journalctl -t example.com
 ```
 
-設定ファイルは`/etc/systemd/system/example.com.service`として保存されています。
+The service file is stored at `/etc/systemd/system/example.com.service`.
 
 ### Docker
 
-DockerはMisskeyユーザーでrootless実行されています。
+Docker is running in rootless mode under the Misskey user.
 
-sudo でMisskeyユーザーに入るときは、`XDG_RUNTIME_DIR`と`DOCKER_HOST`を変更する必要があります。
+When becoming the Misskey user with sudo, you need to set `XDG_RUNTIME_DIR` and `DOCKER_HOST`:
 
 ```sh
-sudo -iu ユーザー
+# Replace {{user}} with the Misskey username.
+sudo -iu {{user}}
 export XDG_RUNTIME_DIR=/run/user/$UID
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 
-# プロセス一覧を表示
+# Show running containers
 docker ps
 
-# ビルド (リポジトリ: local/misskey:latest)
+# Build (repository: local/misskey:latest)
 docker build -t local/misskey:latest ./misskey
 
 # docker run
 docker run -d -p 3000:3000 --add-host=docker_host:10.0.0.1 -v /home/misskey/misskey/files:/misskey/files -v "/home/misskey/misskey/.config/default.yml":/misskey/.config/default.yml:ro --restart unless-stopped -t "local/misskey:latest"
 
-# ログを表示
-docker logs --tail 50 -f コンテナID
+# Show logs
+# Replace {{CONTAINER_ID}} with the container ID.
+docker logs --tail 50 -f {{CONTAINER_ID}}
 ```
 
-ワンライナーなら次のようにします。
+As a one-liner, you can run:
 
 ```sh
-sudo -u ユーザー XDG_RUNTIME_DIR=/run/user/$(id -u ユーザー) DOCKER_HOST=unix:///run/user/$(id -u ユーザー)/docker.sock docker ps
+# Replace {{user}} with the Misskey username.
+sudo -u {{user}} XDG_RUNTIME_DIR=/run/user/$(id -u {{user}}) DOCKER_HOST=unix:///run/user/$(id -u {{user}})/docker.sock docker ps
 ```
 
 ### nginx
 
-nginxの設定は`/etc/nginx/conf.d/example.com.conf`として保存されています。
+The nginx configuration is saved in `/etc/nginx/conf.d/example.com.conf`.
 
 ### Redis
 
-requirepassとbindを`/etc/redis/misskey.conf`で設定しています。
+requirepass and bind are configured in `/etc/redis/misskey.conf`.
 
-## Q. アップデート後に502でアクセスできない
+## Q. I get a 502 error and can’t access the site after an update
 
-Dockerでは、起動後にマイグレーションをするため、すぐにアクセスできません。  
-マイグレーションが終わっているかどうか確認してみてください。
+With Docker, Misskey runs migrations on startup, so it may not be accessible immediately.  
+Please check whether the migrations have finished.
 
-systemdの場合では、pnpm installに失敗している可能性があります。
+If you are using systemd, `pnpm install` might have failed.
 
-Misskeyディレクトリで次の内容を実行し、もう一度アップデートを実行してみてください。
+Run the following in the Misskey directory, then try running the update again:
 
 ```sh
 pnpm run clean-all
 ```
 
-journalctlでログを確認すると、たいていre2が云々という記述が見当たります。
+If you check the logs with `journalctl`, you will usually see log entries mentioning `re2`.
 
-## Q. 同じサーバーにもう1つMisskeyを建てたい
+## Q. I want to set up another Misskey instance on the same server
 
-スクリプトは同じサーバーに追加でMisskeyをインストールすることは想定していません。  
-幾つかの設定が上書きされるか、途中でエラーになってしまうでしょう。
+This script does not support installing an additional Misskey instance on the same server.  
+Some settings may be overwritten, or it may fail with an error partway through.
