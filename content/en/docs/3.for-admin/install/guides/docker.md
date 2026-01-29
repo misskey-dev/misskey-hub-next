@@ -4,7 +4,7 @@ description: 'This guide explains how to set up Misskey using Docker'
 
 # Building Misskey using Docker Compose
 
-This guide explains how to set up Misskey using Docker
+This guide explains how to set up Misskey using Docker Compose.
 
 :::danger
 
