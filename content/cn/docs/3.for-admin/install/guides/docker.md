@@ -57,7 +57,7 @@ sudo docker compose up -d
 ```
 
 大功告成，祝武运昌盛！
-GLHF✨
+GLHF✨ (译者注：Good Luck, Have Fun)
 
 ## 更新Misskey的方法
 
