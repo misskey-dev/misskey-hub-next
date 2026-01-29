@@ -17,7 +17,7 @@ description: '介绍一些用于使用 Misskey 的App应用。'
 - **MissRirica** (iOS, Android): Misskey 的 iOS、Android 客户端。UI 几乎与 Misskey Web(v13) 一致，可接收推送通知。[源码](https://github.com/fruitriin/missRirica-client)。
 - **Misscat** (iOS): 以在手机端提供更直观的操作体验为目标进行开发。[官网](https://yuiga.dev/misscat/)。[源码](https://github.com/YuigaWada/MissCat)。
 - **SocialHub** (iOS): 付费应用，同时支持 Misskey、Mastodon、Bluesky、Slack、Tumblr。[官网](https://uakihir0.github.io/socialhub/)。[App Store](https://apps.apple.com/us/app/socialhub-socialmedia-client/id1474451582)。
-- **ZonePane** (Android): 可将时间线、列表与频道以标签页形式管理；已读管理功能表现出色。是 Twitter 应用 TwitPane 的 Misskey 版，也支持 Mastodon 与 Bluesky。 [Google Play](https://play.google.com/store/apps/details?id=com.zonepane)。
-- **TootRain** (Mac): Mac 应用，可将时间线与列表中的帖子以评论弹幕式样实时显示在屏幕上。 [网站](https://b123400.net/tootrain/ja)、[源码](https://github.com/b123400/TootRain)。
+- **ZonePane** (iOS, Android): 可将时间线、列表与频道以标签页形式管理；已读管理功能表现出色。是 Twitter 应用 TwitPane 的 Misskey 版，也支持 Mastodon 与 Bluesky。[App Store](https://apps.apple.com/app/id6747976082)。[Google Play](https://play.google.com/store/apps/details?id=com.zonepane)。
+- **TootRain** (Mac): Mac 应用，可将时间线与列表中的帖子以评论弹幕式样实时显示在屏幕上。 [网站](https://b123400.net/tootrain/ja)。[源码](https://github.com/b123400/TootRain)。
 
 不过，由于 Misskey 的功能更新十分频繁，对最新功能的适配也可能会有所滞后。若没有特别偏好，建议使用 Misskey Web。
