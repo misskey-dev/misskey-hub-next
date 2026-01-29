@@ -17,7 +17,7 @@ description: '介紹用來使用 Misskey 的應用程式。'
 - **MissRirica** (iOS, Android): Misskey 用 iOS/Android 客戶端。UI 幾乎與 Misskey Web(v13) 相同，可接收推送通知。[原始碼](https://github.com/fruitriin/missRirica-client)。
 - **Misscat** (iOS): 以提供適合智慧型手機的直觀操作型為開發目標。[官方網站](https://yuiga.dev/misscat/)。[原始碼](https://github.com/YuigaWada/MissCat)。
 - **SocialHub** (iOS): 支援 Misskey, Mastodon, Bluesky, Slack, Tumblr 的付費 App。[官方網站](https://uakihir0.github.io/socialhub/)。[App Store](https://apps.apple.com/us/app/socialhub-socialmedia-client/id1474451582)。
-- **ZonePane(ぞーぺん)** (Android): 可將時間軸、清單、頻道分頁化。已讀管理功能表現出色。是 Twitter 客戶端 TwitPane 的 Misskey 版本，也支援 Mastodon 與 Bluesky。 [Google Play](https://play.google.com/store/apps/details?id=com.zonepane)。
-- **TootRain** (Mac): 一款 Mac 應用程式，可將時間軸或清單的貼文以即時、留言風格顯示在畫面上。 [官方網站](https://b123400.net/tootrain/ja)、[原始碼](https://github.com/b123400/TootRain)。
+- **ZonePane(ぞーぺん)** (iOS, Android): 可將時間軸、清單、頻道分頁化。已讀管理功能表現出色。是 Twitter 客戶端 TwitPane 的 Misskey 版本，也支援 Mastodon 與 Bluesky。[App Store](https://apps.apple.com/app/id6747976082)。[Google Play](https://play.google.com/store/apps/details?id=com.zonepane)。
+- **TootRain** (Mac): 一款 Mac 應用程式，可將時間軸或清單的貼文以即時、留言風格顯示在畫面上。 [官方網站](https://b123400.net/tootrain/ja)。[原始碼](https://github.com/b123400/TootRain)。
 
 不過，由於 Misskey 的功能更新相當頻繁，對最新功能的支援可能會跟得比較慢。如果您沒有特別的偏好，我們建議使用 Misskey Web。
