@@ -20,7 +20,7 @@ threeDimensionModel: "Model 3D"
 clickToShow: "Fes clic per mostrar"
 preview: "Vista prèvia"
 scrollable: "Això es pot desplaçar"
-serverListUnderMaintenance: "サーバー一覧は現在メンテナンス中です。"
+serverListUnderMaintenance: "La llista de servidors, actualment, està en manteniment."
 _error:
   notFound: "No s'ha trobat la pàgina"
   notFoundDesc: "La pàgina que cerques no s'ha pogut trobar, si us plau, comprova l'adreça."
@@ -173,34 +173,34 @@ _landing:
       description: "Les funcions d'aprenentatge automàtic incloses es poden fer servir per reduir les càrregues operatives. Per exemple es poden fer servir per filtrar automàticament els fitxers sensibles."
     _sentry:
       title: "Suport per a Sentry"
-      description: "Sentryによるサーバーのメトリクス収集に対応しているため、サーバーリソースの監視、ヘルスチェック、メンテナンスに役立てることができます。"
+      description: "Com és compatible amb la recollida de dades de Sentry, es pot fer servir per supervisar els recursos, fer comprovacions de l'estat i fer tasques de manteniment al servidor."
   _featuresClient:
     _root:
-      title: "WebUI"
-      description: "Misskeyに付属する高機能なWebフロントエンド(Misskey Web)の特徴を紹介。"
+      title: "Interfície web"
+      description: "Característiques de la interfície web d'alta funcionalitat (Misskey Web) inclosa a Misskey."
     _responsive:
-      title: "レスポンシブUI"
-      description: "UIは洗練された独自のデザインシステムを使用して設計され、デスクトップ・タブレット・スマートフォンそれぞれに最適な表示・動作となるように丁寧に実装されています。"
+      title: "Interfície d'usuari adaptativa"
+      description: "La interfície de l'usuari ha sigut dissenyada fent servir un disseny propi i ha sigut implementada amb molta cura per garantir una visualització i funcionalitat òptimes tant a ordinadors de sobretaula, tauletes i mòbils."
     _theme:
-      title: "テーマ"
-      description: "自分の好きな見た目でMisskeyを使えます。もちろんダークモードも完全サポート。自分で高度にテーマを作ることも可能です。"
+      title: "Temes"
+      description: "Pots fer servir Misskey amb la teva aparença preferida. Per descomptat la compatibilitat amb el mode fosc és inclosa. També pots crear els teus temes avançats."
     _mfm:
       title: "MFM"
-      description: "ノートにはMFMと呼ばれるMisskey専用のマークアップ言語が使用できます。太字にする・リンクを挿入する・動きを付けるといった、テキストの装飾がシンプルな構文で表現できます。"
+      description: "Les notes són compatibles amb MFM, un llenguatge de marcat exclusiu de Misskey. El format del text, l'ús de negreta, inserir enllaços i afegir animacions, es pot fer amb una sintaxi molt senzilla."
     _widgets:
-      title: "ウィジェット"
-      description: "様々な種類のウィジェットを自由に配置し、必要な情報に素早くアクセス。"
+      title: "Ginys"
+      description: "Organitza lliurement diferents tipus de ginys per accedir més ràpidament a la informació que necessites."
     _deck:
-      title: "デッキUI"
-      description: "デッキUIを使うと、UIをさらに深くカスタマイズ可能。自分だけのクライアントを作ることができます。"
+      title: "UI de l'escriptori"
+      description: "L'ús de la interfície d'usuari d'escriptori permet la personalització més a fons de la teva interfície. Ots crear el teu propi client."
     _embed:
-      title: "他サイトへの埋め込み"
-      description: "ノート、タイムラインなどを外部のサイトに埋め込んで表示可能です。"
+      title: "Incrustació a altres llocs web"
+      description: "Les notes, línies de temps i altres continguts poden integrar-se i mostrar-se en llocs web externs."
     _realtimeMode:
-      title: "リアルタイムモード"
+      title: "Mode en temps real"
       description: "サーバーとWebsocket接続することで、タイムラインなどのコンテンツをリアルタイムで受信することができます。"
     _pushNotification:
-      title: "プッシュ通知"
+      title: "Enviament de notificacions"
       description: "プッシュ通知に対応しているため、リアルタイムでサーバーからの通知を受け取ることができます。"
     _multiAccounts:
       title: "マルチアカウント対応"
