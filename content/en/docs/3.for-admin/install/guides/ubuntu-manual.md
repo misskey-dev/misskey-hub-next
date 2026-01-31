@@ -1,86 +1,87 @@
-# Ubuntu版Misskeyインストール方法詳説
+# Detailed guide to installing Misskey on Ubuntu
 
-## その他のMisskeyインストール方法
+## Other ways to install Misskey
 
-- [基本版 Misskey構築の手引き (manual)](./manual/)
-- [その他のインストール方法一覧](/docs/for-admin/install/guides/#インストール方法一覧)
+- [Basic guide to building Misskey (manual)](./manual/)
+- [List of alternative installation methods](/docs/for-admin/install/guides/#list-of-installation-methods)
 
-## シェルスクリプトのお知らせ
+## Shell Script Notice
 
-コピペばかりならシェルスクリプトでいいじゃん、と言うことで**シェルスクリプトでほぼ全部やってくれるやつを作ってみました！**\
-[**シェルスクリプトの詳細と使用方法はこちらから！**](./bash/)
-
-:::tip
-
-シェルスクリプトでの開発環境へのインストールは想定されていません。
-
-:::
+“It's basically all copy-and-paste—just use a shell script,” right?
+**So I went ahead and made one that does almost everything for you!**\
+[**You can find details and usage instructions for the shell script here.**](./bash/)
 
 :::tip
 
-ドメインの購入とCloudflareのセットアップ、サーバーの確保についてはご自身でご準備ください。
+The shell script is not intended for setting up a development environment.
 
 :::
 
-不具合があれば[ @aqz@p1.a9z.dev へのメンション](https://p1.a9z.dev/@aqz)にてお知らせいただければと思います。
+:::tip
 
-## この記事について
+Please note that you need to purchase a domain, set up Cloudflare, and provision a server on your own.
 
-この記事では、[Misskey構築の手引き (manual)](./manual/)で紹介されている通り、systemdでMisskeyを動作させています。
+:::
 
-[docker-compose](./docker/)なら、手作業でももうちょっと簡単に実行できるはずです。
+If you encounter any issues, please [mention @aqz@p1.a9z.dev](https://p1.a9z.dev/@aqz).
+
+## About this article
+
+As described in the [Misskey Setup Guide (manual)](./manual/), this article explains how to run Misskey using systemd.
+
+If you [use docker-compose](./docker/), it should be possible to run Misskey a bit more easily, even with a manual setup.
 
 :::danger
 
-一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
+Do not recreate the database for a domain/hostname that is already in use on a running server!
 
 :::
 
-## はじめに
+## Introduction
 
-この記事では、[Misskey構築の手引き (manual)](./manual/)を基に、一般的なUbuntuサーバーへMisskeyをインストールし公開する方法の一挙手一投足を解説する。
+In this article, based on the [Misskey setup guide (manual)](./manual/), I’ll walk you through every step of installing and hosting Misskey publicly on a typical Ubuntu server.
 
-Bashのコマンド入力、いくつかの設定ファイルの編集、そしてブラウザの操作だけで設定が完了するようにしている。インストールするソフトウェアについて簡単に説明しているが、気にする必要はない。
+The setup is designed to be completed using only Bash commands, a few configuration file edits, and basic browser steps.I provide brief explanations of the software you’ll install, but you don’t need to focus on the details.
 
-この記事では、具体性を重視し、特定の環境に特化した記述をしている。
+To keep things concrete, this article is written for a specific environment.
 
-OSの違い、Misskey本体や依存するソフトウェアのバージョンアップで変わってしまった部分等があるかもしれないが、ご容赦いただきたく思う。
+Some details may differ depending on your operating system, or may have changed due to updates to Misskey itself or its dependencies. Please keep that in mind.
 
-わからない単語については、[『「分かりそう」で「分からない」でも「分かった」気になれるIT用語辞典』](https://wa3.i-3-i.info/) で調べて分かった気になってほしい。
+For unfamiliar terms, I suggest looking them up in [“An IT Terminology Dictionary That Lets You Feel Like You Understand What You ‘Almost’ Understand but Don’t,”](https://wa3.i-3-i.info/) and enjoy the feeling of “getting it.”
 
-## 環境と条件
+## Environment and Requirements
 
-- OSは**Ubuntu 22.04 LTS**を利用する。
-- ハードウェア要件としては、CPUは最近のものなら最小限で動く。アーキテクチャはamd64及びarm64を想定している。
-- メモリは4GB程度あると良い。
-  - （従来Viteの導入により1.5GB程度でもビルド可能と説明していたが、最近またフロントエンドのビルドで要件が厳しくなってきた。）
-- 独自のドメインを購入し、Cloudflareを使用する。
-- ドメインは[Cloudflare Registrar](https://www.cloudflare.com/ja-jp/products/registrar/)などで予め用意しておくこと。
-- ここではドメインをexample.tldとして解説を進めるので、自分が買ったドメインに適宜置き換えて読むこと。開発環境の場合はlocalhostと読み替えます（設定ファイルの項で別途説明）
+- **Ubuntu 22.04 LTS** is used as the operating system.
+- Regarding hardware requirements, a recent CPU is sufficient to run the system with minimal resources.The supported architectures are amd64 and arm64.
+- It is recommended to have around 4 GB of memory.
+  - (Previously, it was explained that the build could be completed with approximately 1.5 GB of memory due to the introduction of Vite. However, the frontend build requirements have recently become more demanding again.)
+- Purchase your own domain and use Cloudflare.
+- Prepare the domain in advance using [Cloudflare Registrar](https://www.cloudflare.com/ja-jp/products/registrar/) or a similar service.
+- In this guide, the domain example.tld is used for explanation. Replace it with your own domain as appropriate.For development environments, use localhost instead (explained separately in the configuration section).
 
 :::danger
 
-一度使用を始めたサーバーのドメイン・ホスト名は、決して変更しないでください！
+Never change the domain name or hostname of a server once it has been put into use!
 
 :::
 
-## nanoの使い方
+## How to use nano
 
-今回はテキストエディターにnanoを使う。次のように起動する。
+In this guide, we will use nano as the text editor.Start it as follows:
 
 ```sh
 nano /path/to/file
 ```
 
-一般的な矢印ボタンやHome/Endなどを利用してカーソルを移動できる。
+You can move the cursor using the arrow keys as well as Home/End.
 
-終了はCtrl+Xで、変更を保存するか聞かれた場合Y(Yes)を入力しEnterすると保存できる。
+To exit, press Ctrl+X. If you are asked whether to save changes, type Y (Yes) and press Enter to save.
 
-下部にコマンド一覧が表示されるので、^をCtrl、M-をAltと読み替えて参考にしよう。
+A list of commands is shown at the bottom of the screen. Here, ^ means Ctrl and M- means Alt.
 
-## ユーザーの作成
+## Creating a user
 
-Misskeyはrootで実行しない方がよいため、専用のユーザーを作成する。
+Since Misskey should not be run as root, create a dedicated user.
 
 ```sh
 sudo adduser --disabled-password --disabled-login misskey
@@ -88,7 +89,7 @@ sudo adduser --disabled-password --disabled-login misskey
 
 :::tip
 
-開発環境の場合はユーザーを分ける必要はありません
+In a development environment, you do not need to create a separate user.
 
 :::
 
