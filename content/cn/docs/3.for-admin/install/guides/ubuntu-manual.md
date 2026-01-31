@@ -3,7 +3,7 @@
 ## 其他安装Misskey的方法
 
 - [普通安装Misskey的构建指南(手册)](./manual/)
-- [其他安装方法一览](/docs/for-admin/install/guides/#インストール方法一覧)
+- [其他安装方法一览](/docs/for-admin/install/guides/#安装方法一览)
 
 ## shell脚本提示
 
