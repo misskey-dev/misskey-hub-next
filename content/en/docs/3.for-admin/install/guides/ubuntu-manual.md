@@ -93,13 +93,13 @@ In a development environment, you do not need to create a separate user.
 
 :::
 
-## 基本的なソフトウェアのインストールと設定
+## Basic Software Installation and Configuration
 
-基本的なソフトウェアのインストールを行う。
+Install the basic software required.
 
 ### Node.js
 
-Node.jsは、サーバーサイドJavaScript環境であり、Misskeyの基本的な実行環境である。
+Node.js is a server-side JavaScript runtime and is the core runtime environment required to run Misskey.
 
 ```sh
 sudo rm /usr/share/keyrings/nodesource.gpg;
@@ -115,13 +115,13 @@ node -v
 sudo corepack enable
 ```
 
-v22.x.xなどと表示されればOK。v8.x.xのように低いバージョンが表示された場合は、正しくインストールが行えていないため、サーバーを再起動してもう一度インストールし直すなどしてみよう。
+If the output shows something like v22.x.x, the installation is successful.If a lower version such as v8.x.x is displayed, Node.js was not installed correctly. In that case, try rebooting the server and installing it again.
 
 ### pnpm
 
-pnpmは、Misskeyで使用しているパッケージ管理ツールであり、外部ライブラリを参照したり、その依存関係を管理したりするのに使用されている。
+pnpm is the package manager used by Misskey. It is used to install external libraries and manage their dependencies.
 
-ここでは、Node.jsに付属しているパッケージ管理ツール「npm」を使用してpnpmをインストールする方法を紹介しているが、[pnpmのウェブサイト](https://pnpm.io/installation)では他にも様々な方法でのインストール方法が紹介されているので、一度目を通したうえで、お使いの環境に最適な方法でインストールすることをお勧めする。
+This guide explains how to install pnpm using npm, the package manager bundled with Node.js. However, the pnpm website also offers several other installation methods. We recommend reviewing them and choosing the method that best suits your environment.
 
 ```sh
 npm i -g pnpm
@@ -129,11 +129,11 @@ npm i -g pnpm
 
 ### PostgreSQL
 
-PostgreSQLは、オブジェクト関係データベース管理システムであり、Misskeyの種々のデータを保存するために必要不可欠なソフトだ。
+PostgreSQL is an object-relational database management system and is essential for storing various types of data used by Misskey.
 
-#### インストール
+#### Installation
 
-シェルスクリプトを実行し、最新バージョン（v15）をインストールしよう。
+Run the shell script to install the latest version (v15).
 
 ```sh
 sudo apt install -y postgresql-common
@@ -144,25 +144,25 @@ sudo sh /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -i -v 15;
 systemctl status postgresql
 ```
 
-activeならOK。
+If the status is "active", you're good to go.
 
-#### ユーザーとデータベースの作成
+#### Create a user and database
 
-psqlを起動。
+Start psql:
 
 ```sh
 sudo -u postgres psql
 ```
 
-Misskeyで使うユーザーを作成する。\
-ユーザー名をmisskey、パスワードをhogeとする場合は次のようになる。\
-（LinuxのユーザーとPostgreSQLのユーザーは別物なので、混同しないよう注意すること。）
+Create a user for Misskey.\
+For example, to create a user named misskey with the password hoge, run the following commands.\
+(Note: Linux users and PostgreSQL roles/users are different. Be careful not to confuse them.)
 
 ```sql
 CREATE ROLE misskey LOGIN PASSWORD 'hoge';
 ```
 
-データベースを作成。データベース名をmk1としている。
+Create the database.The database name is mk1.
 
 ```sql
 CREATE DATABASE mk1 OWNER misskey;
@@ -171,33 +171,38 @@ CREATE DATABASE mk1 OWNER misskey;
 
 ### Redis
 
-Redisは、NoSQLのインメモリデータベースソフトであり、データベースや連合との通信を管理するなどのために必要だ。  
-redis.ioのドキュメントに従いインストールする。
+Redis is an in-memory NoSQL data store. It is required for tasks such as caching and managing internal communication, including database- and federation-related processing.  
+Install Redis by following the official documentation on redis.io:
 
 https\://redis.io/docs/getting-started/installation/install-redis-on-linux/
 
 ```sh
-sudo snap install redis
+sudo apt-get install lsb-release curl gpg
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+sudo chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+sudo apt-get update
+sudo apt-get install redis
 ```
 
-起動する
+Start Redis:
 
 ```sh
 sudo systemctl enable redis-server
 sudo systemctl start redis-server
 ```
 
-systemctlでデーモンの状態を確認。
+Check the daemon status with systemctl:
 
 ```sh
 systemctl status redis-server
 ```
 
-activeならOK。
+If it shows active, Redis is running correctly.
 
 ### FFmpeg
 
-FFmpegは、動画や音声に関する処理を担う。以下でインストールしておく。
+FFmpeg is used for processing video and audio.Install it with the following command.
 
 ```sh
 sudo apt install ffmpeg
@@ -205,15 +210,15 @@ sudo apt install ffmpeg
 
 ### nginx
 
-http\://localhost にアクセスし、\*Welcome to nginx!\*と表示されればOK。Misskeyには必須ではないが、キャッシュ等をするとパフォーマンスが向上したり、httpからhttpsへの転送などをするために、インストールしておこう。
+nginx is a web server mainly used as a reverse proxy.It is not strictly required for Misskey, but installing it is recommended, as it can improve performance with caching and can also redirect HTTP to HTTPS.
 
 :::tip
 
-開発環境の場合はnginxのセットアップは不要です
+If you're setting up a development environment, you don't need nginx.
 
 :::
 
-nginx.orgのドキュメント http\://nginx.org/en/linux_packages.html#Ubuntu に従ってインストールする。
+Follow the nginx.org documentation http\://nginx.org/en/linux_packages.html#Ubuntu to install nginx.
 
 ```sh
 sudo apt install -y curl ca-certificates gnupg2 lsb-release ubuntu-keyring
@@ -235,13 +240,13 @@ sudo apt update
 sudo apt install -y nginx
 ```
 
-systemctlでデーモンの状態を確認。
+Check the service status with systemctl:
 
 ```sh
 systemctl status nginx
 ```
 
-activeならOK。そうでなければ、次のコマンドを実行。
+If the status is active (running), you're all set.If not, run:
 
 ```sh
 sudo systemctl start nginx
@@ -249,16 +254,16 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
 
-http\://localhost にアクセスし、\*Welcome to nginx!\*と表示されればOK。\
-curlで確認するのもよいだろう。
+Access <http://localhost>. If you see \*Welcome to nginx!\*, it’s working.\
+You can also verify with curl:
 
 ```sh
 curl http://localhost
 ```
 
-### その他
+### Other
 
-Git（バージョン管理ソフト）およびbuild-essential（Misskeyのビルド時に必要）をインストールする。
+Install Git (a version control tool) and build-essential (required to build Misskey):
 
 ```sh
 sudo apt update
@@ -266,21 +271,21 @@ sudo apt update
 sudo apt install -y git build-essential
 ```
 
-## 追加の設定とインストール
+## Additional Configuration and Installation
 
-サーバーをインターネットに公開する準備をする。
+Prepare the server for public Internet access.
 
 :::tip
 
-開発環境の場合はファイヤーウォールやCloudflare、Certbotの設定は不要です
+For development environments, firewall, Cloudflare, and Certbot configuration are not required.
 
 :::
 
-### ファイヤーウォール
+### Firewall
 
-今回は、ファイヤーウォールとしてufwを使用する。
+In this setup, ufw is used as the firewall.
 
-次では、接続許可をホワイトリスト形式とし、22番SSHポートを接続回数制限を設けながら開放、80番HTTPポート及び443番HTTPSポートを開放とした。
+In the following setup, a whitelist-based policy is applied: the SSH port (22) is opened with connection rate limiting enabled, and the HTTP (80) and HTTPS (443) ports are opened.
 
 ```sh
 sudo ufw enable
@@ -300,7 +305,7 @@ Check the status of ufw.
 sudo ufw status
 ```
 
-systemctlで永続化する。
+Enable ufw to start automatically at boot using systemctl.
 
 ```sh
 sudo systemctl enable ufw
@@ -308,79 +313,79 @@ sudo systemctl enable ufw
 
 :::tip
 
-ufwは、netfilter(iptables)を人間が操作しやすいようにするアプリだ。インストールスクリプトは、OCI環境ではnetfilterを直接操作する。
+ufw is a tool that makes netfilter (iptables) easier to manage.In OCI environments, the installation script configures netfilter directly.
 
 :::
 
 ### Cloudflare
 
-Cloudflareは、自分のドメインに対してDNSサーバー・リバースプロキシ・CDNをいっぺんに提供してくれるたいへん便利なサービスである。\
-Cloudflareを経由せずにサーバーを公開することも可能だが、たいへん便利なので導入することをお勧めする。
-[**→ CDNの設定**](../resources/cdn/)
+Cloudflare is a very convenient service that provides DNS servers, a reverse proxy, and a CDN for your own domain all in one place.\
+While it is possible to make your server publicly accessible without Cloudflare, its convenience makes it highly recommended.
+[**→ CDN Configuration**](../resources/cdn/)
 
-[Cloudflareにサインアップ](https://dash.cloudflare.com/sign-up) し、購入したドメインを案内に従って登録する。
+[Sign up for Cloudflare](https://dash.cloudflare.com/sign-up) and register the domain you purchased by following the instructions.
 
-DNSの登録画面でサーバーのIPアドレスを入力しておくとよい。
+On the DNS settings page, it is recommended to enter your server’s IP address.
 
-ドメインを購入した所によっては適用に3日程度かかる場合がある。
+Depending on where you purchased the domain, it may take up to three days for the changes to take effect.
 
-### Certbot (Let’s Encrypt) の設定
+### Certbot (Let’s Encrypt) Setup
 
-HTTPS･WSS通信に使用する証明書をCloudflareを使う方式でLet’s Encryptから取得する。
+Obtain TLS certificates for HTTPS and WSS communication from Let’s Encrypt using Cloudflare.
 
-certbotとCloudflareプラグインをインストール
+Install Certbot and the Cloudflare plugin
 
 ```sh
 sudo apt install -y certbot python3-certbot-dns-cloudflare
 ```
 
-CloudflareのAPIキーを取得する。以下の手順で取得されたい。
+Obtain a Cloudflare API key.Follow the steps below to obtain the API key:
 
-1. <https://dash.cloudflare.com/profile/api-tokens> にアクセス
-2. Global API KeyのViewを選択
-3. パスワードを入力しhCaptchaを解除、Viewを選択
+1. Access <https://dash.cloudflare.com/profile/api-tokens>
+2. Select "View" next to Global API Key.
+3. Enter your password, complete the hCaptcha verification, and click "View".
 
-Cloudflareの情報を記載した設定ファイル/etc/cloudflare/cloudflare.iniを作成する。
+Create the file `/etc/cloudflare/cloudflare.ini` and add your Cloudflare credentials.
 
 ```sh
 mkdir /etc/cloudflare
 nano /etc/cloudflare/cloudflare.ini
 ```
 
-dns_cloudflare_email（下の例ではbar@fuga.foo）にはCloudflareで登録しているメールアドレスを設定する。
+Set the email address that is registered with Cloudflare in dns_cloudflare_email (in the example below, it's bar\@fuga.foo).
 
 ```sh
 dns_cloudflare_email = bar@fuga.foo
 dns_cloudflare_api_key = xxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-これを保存し、パーミッションを600に設定。
+Save this file and set the permissions to 600.
 
 ```sh
 sudo chmod 600 /etc/cloudflare/cloudflare.ini
 ```
 
-準備ができたのでコマンドを実行する。**途中の2箇所のexample.tldは自分のものに置き換えること**。
+Now that you're ready, execute the command.**Replace the two instances of `example.tld` with your actual domain.**
 
 ```sh
 sudo certbot certonly --dns-cloudflare --dns-cloudflare-credentials /etc/cloudflare/cloudflare.ini --dns-cloudflare-propagation-seconds 60 --server https://acme-v02.api.letsencrypt.org/directory -d example.tld -d *.example.tld
 ```
 
-\*Congratulations!\*と表示されたらOK。生成された.pemファイルのパスは今後使うので記録しておくこと。
+Once you see "\*Congratulations!\*", you're good to go.Note down the path to the generated .pem files, as you will need them in the next steps.
 
-自動更新の設定はインストールと同時に行われているため不要。
+Automatic renewal is configured during the Certbot installation, so no further action is required.
 
-## Misskeyのインストール
+## Installing Misskey
 
-これで前準備はあらかた終わったので、Misskeyを準備していく。
+Now that most of the preparations are complete, let's proceed with setting up Misskey.
 
-misskeyユーザーに変更。
+Switch to the misskey user.
 
 ```sh
 sudo su - misskey
 ```
 
-Gitでファイル類を展開。
+Clone the files using Git.
 
 ```sh
 git clone -b master https://github.com/misskey-dev/misskey.git --recurse-submodules
@@ -390,41 +395,41 @@ cd misskey
 git checkout master
 ```
 
-必要なnpmパッケージをインストール。
+Install the necessary npm packages.
 
 ```sh
 NODE_ENV=production pnpm install --frozen-lockfile
 ```
 
-## Misskeyを設定する
+## Configuring Misskey
 
 ### default.yml
 
-設定ファイル.config/default.ymlを作成。
+Create the configuration file .config/default.yml.
 
 ```sh
 nano .config/default.yml
 ```
 
-次の内容を貼り付け、適宜置き換える。設定値の変更が必要な箇所は●で、これまでの流れの中で設定した値を用いる箇所は〇で示した。
+Paste the following content and replace it as needed.The configuration values that need to be changed are marked with ●, and the values that should be used based on previous steps are marked with 〇.
 
-この設定ファイルはYAML形式で書かれており、行頭のスペースの数などを間違えるとMisskeyが動かないので、特に注意すること。
+This configuration file is written in YAML format, so be particularly careful with the number of spaces at the beginning of each line; if incorrect, Misskey will not work.
 
-設定できる値と記述方法は[.config/example.yml](https://github.com/syuilo/misskey/blob/develop/.config/example.yml)に書かれている。
+The configurable values and their notation methods are described in [.config/example.yml](https://github.com/syuilo/misskey/blob/develop/.config/example.yml).
 
 :::tip
 
-開発環境の場合、urlは`url: http://localhost:3000`と指定します。
+For a development environment, specify the URL as `url: http://localhost:3000`
 
 :::
 
 ```yml
-# ● Misskeyを公開するURL
+# ● URL to access Misskey
 url: https://example.tld/
-# ポートを3000とする。
+# Set the port to 3000
 port: 3000
 
-# ● PostgreSQLの設定。
+# ● PostgreSQL configuration
 db:
   host: localhost
   port: 5432
@@ -432,27 +437,27 @@ db:
   user: misskey # 〇 PostgreSQLのユーザー名
   pass: hoge # ● PostgreSQLのパスワード
 
-# 　 Redisの設定。
+# 　 Redis configuration
 redis:
   host: localhost
   port: 6379
 
-# 　 IDタイプの設定。
+# 　 ID type setting
 id: 'aidx'
 
-# 　 syslog
+# 　 syslog configuration
 syslog:
   host: localhost
   port: 514
 ```
 
-指定できたら保存する。
+Save the file once you are finished.
 
 ### nginx configuration
 
-nginxの設定を行う。
+Configure nginx with root privileges.
 
-ルート権限で行う。
+
 
 ```sh
 exit
@@ -464,43 +469,43 @@ Create `/etc/nginx/conf.d/misskey.conf`.
 sudo nano /etc/nginx/conf.d/misskey.conf
 ```
 
-[Misskey Hub](/docs/for-admin/install/resources/nginx/)の設定例をnanoへコピー＆ペーストし、次の部分を自分のものに書き換える。
+Copy and paste the [Misskey Hub configuration example](/docs/for-admin/install/resources/nginx/) into nano, and replace the following parts with your own:
 
-- 18行目と30行目のドメイン名
-- 34-35行目の証明書へのパスをCertbotで取得したものに (基本的にexample.tldを置き換えるだけでOK)
-- 56行目 (If it's behind another reverse proxy or CDN, remove the following.) から4行を削除
+- The domain names on lines 18 and 30
+- The certificate paths on lines 34-35, which should be the ones obtained through Certbot (essentially, just replace example.tld)
+- From line 56 (If it's behind another reverse proxy or CDN, remove the following.) remove the next 4 lines
 
-変更を保存する。
+Save the changes.
 
-設定ファイルがきちんと機能するか確認。
+Verify if the configuration file works correctly.
 
 ```sh
 sudo nginx -t
 ```
 
-OKならば、nginxデーモンを再起動。
+If it’s OK, restart the nginx daemon.
 
 ```sh
 sudo systemctl restart nginx
 ```
 
-ステータスを確認。
+Check the status.
 
 ```sh
 sudo systemctl status nginx
 ```
 
-activeであればOK。
+If it shows "active", it’s all set.
 
-## Misskeyのビルド
+## Building Misskey
 
-misskeyユーザーにログインし直す。
+Log in again as the misskey user.
 
 ```sh
 sudo su - misskey
 ```
 
-ビルドをする。yes we can…
+Start the build.Yes, we can…
 
 ```sh
 cd misskey
@@ -509,73 +514,73 @@ NODE_ENV=production pnpm run build
 
 :::tip
 
-開発環境の場合、`NODE_ENV=production`は不要です。以降のコマンドでも同様に削除してください。
+In development environments, `NODE_ENV=production` is not required.Please remove it in the subsequent commands as well.
 
 :::
 
-### サーバーでビルドできない場合
+### If the Build Fails on the Server
 
-RAMの不足が考えられる。
+Insufficient RAM may be the cause.
 
-Misskeyのビルドやデータベースのマイグレーション（初期化を含む）には、RAMが2GB以上必要になっている。\
-RAMが足りない場合、以下のような解決策が考えられる。
+Building Misskey and running database migrations (including initialization) require at least 2GB of RAM.\
+If the server does not have enough RAM, consider the following solutions:
 
-- サーバーにスワップを追加する
-- ローカルでビルドしたもの（builtディレクトリ）をsftpで転送する
+- Add swap space to the server.
+- Build locally and transfer the built files (the built directory) to the server via SFTP.
 
-## データベースの初期化
+## Database Initialization
 
 ```sh
 pnpm run init
 ```
 
-## Misskeyを起動する
+## Start Misskey
 
 ```sh
 NODE_ENV=production pnpm run start
 ```
 
-**Now listening on port 3000 on** [**http://example.tld**](http://example.tld) と表示されたら、設定したURLにアクセスする。
+If you see the message "**Now listening on port 3000 on** [**http://example.tld**](http://example.tld)", access the URL you set up.
 
-Misskeyのウェルカムページが表示されるはずだ。
+The Misskey welcome page should appear.
 
-アカウントの作成、ノートの作成やファイルのアップロードといった一通りの操作が正しく行えるか確認しよう。
+Check if you can correctly perform operations like creating an account, creating notes, and uploading files.
 
-### アクセスできない場合
+### If You Can't Access the Page
 
-#### CloudflareのDNSを確認する
+#### Check Cloudflare DNS Settings
 
-CloudflareのDNS設定が正しいIPアドレスになっているかもう一度確認しよう。
+Double-check that your Cloudflare DNS record points to the correct IP address.
 
-#### ルーターの設定を確認する
+#### Check Router Settings
 
-自宅サーバーの場合、ルーターがサーバーと外部との80ポート・443ポートの通信を許可する設定になっているかどうか確認しよう。
+If you are hosting on a home server, make sure your router allows inbound connections on ports 80 and 443 between the internet and your server.
 
-クラウドの場合でも、ネットワーク設定でポート開放が必要な場合が多い。
+Even on a cloud server, you may still need to open ports in your network or firewall settings.
 
-## Misskeyのデーモンを作成
+## Create a systemd service for Misskey
 
 :::tip
 
-開発環境の場合、デーモンの作成は不要です。
+This is not necessary in a development environment.
 
 :::
 
-いったんCtrl+Cでプロセスをキルし、Misskeyをデーモンで起動する設定をしよう。
+Press Ctrl+C to stop the current process, then set up Misskey to run as a daemon.
 
-ルート権限で行う。
+Run the following as root.
 
 ```sh
 exit
 ```
 
-/etc/systemd/system/misskey.serviceを作成する。
+Create `/etc/systemd/system/misskey.service`.
 
 ```sh
 sudo nano /etc/systemd/system/misskey.service
 ```
 
-次の内容を貼り付け、保存する。
+Paste the following content and save it.
 
 ```ini
 [Unit]
@@ -597,7 +602,7 @@ Restart=always
 WantedBy=multi-user.target
 ```
 
-systemdを設定し、misskeyデーモンを開始。
+Set up systemd and start the Misskey service.
 
 ```sh
 sudo systemctl daemon-reload
@@ -607,29 +612,29 @@ sudo systemctl enable misskey
 sudo systemctl start misskey
 ```
 
-systemctlでデーモンの状態を確認。起動に少し時間がかかるため、15秒程度待ってからのほうが良い。
+Check the status of the service using systemctl.It might take a few seconds to fully start, so wait about 15 seconds before checking.
 
 ```sh
 sudo systemctl status misskey
 ```
 
-activeならOK。
+If it shows as active, it’s working fine.
 
-**これでMisskeyのインストールはほぼ完了だ。**
+**At this point, the Misskey installation is almost complete.**
 
-Misskeyサーバーに自分のアカウントを登録・ログインし、設定を続けよう。
+Register and log in to your Misskey account, and continue with the setup.
 
-## Misskeyの設定を続ける
+## Continue with Misskey setup
 
-- [**Misskeyサーバーで最初に設定するべきサーバー設定とその他設定の説明**](https://hide.ac/articles/Y504SIabp)
-- [**Squidプロキシを設定してMisskeyを守る**](https://hide.ac/articles/MC7WsPDqw)
-- [**Misskeyのデータベースをバックアップしよう【OCIオブジェクトストレージ編】**](https://hide.ac/articles/E2Ea3cauk)
+- [**Explanation of the initial server configurations and other settings for Misskey**](https://hide.ac/articles/Y504SIabp)
+- [**Set up Squid proxy to secure Misskey**](https://hide.ac/articles/MC7WsPDqw)
+- [**Back up Misskey's database (OCI Object Storage version)**](https://hide.ac/articles/E2Ea3cauk)
 
-## Misskeyのアップデート
+## Misskey Update Process
 
-[Misskeyのアップデート方法](./manual/#misskeyのアップデート方法)
+[Updating Misskey](./manual/#updating-misskey)
 
-作業中はMisskeyを使うことができません。
+During the update, Misskey will be unavailable.
 
 ```sh
 sudo systemctl stop misskey
@@ -645,7 +650,7 @@ pnpm run migrate;
 exit
 ```
 
-### Case 1: apt upgradeをする場合
+### Case 1: When upgrading with apt
 
 ```sh
 sudo apt update -y
@@ -653,9 +658,9 @@ sudo apt full-upgrade -y
 sudo reboot
 ```
 
-再起動後はMisskeyは自動で起動します。
+After reboot, Misskey will start automatically.
 
-### Case 2: そのまま起動
+### Case 2: Start manually
 
 ```sh
 sudo systemctl start misskey
