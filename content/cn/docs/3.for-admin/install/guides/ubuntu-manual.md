@@ -7,32 +7,32 @@
 
 ## shell脚本提示
 
-如果只是复制粘贴，那么可以使用 shell 脚本来完成，所以我开发了一个几乎可以完成所有操作的 shell 脚本！\*\*\
+如果只是复制粘贴，那么可以使用 shell 脚本来完成，**所以我开发了一个几乎可以完成所有操作的 shell 脚本！**\
 [**更多关于shell脚本的信息和使用方法请点击此处！**](./bash/)
 
 :::tip
 
-不建议使用此 Shell 脚本將misskey安裝到开发环境中。
+此 Shell 脚本不适用于开发环境的安装。
 
 :::
 
 :::tip
 
-您需要自行购买域名、设置Cloudflare以及保护服务器。
+请自行准备域名的购买、Cloudflare 的设置以及服务器的获取。
 
 :::
 
-有任何问题，请通过[提及@aqz@p1.a9z.dev]（https://p1.a9z.dev/@aqz）通知我们。
+有任何问题，请在Misskey上[提及 (Mention) @aqz@p1.a9z.dev](https://p1.a9z.dev/@aqz) 来通知我们。
 
 ## 关于本文
 
 本文介绍了在systemd下运行Misskey，如[手动搭建Misskey（手册）]（./manual/）中所述。
 
-使用[docker-compose](./docker/)，手动完成这项操作应该会容易一些。
+如果是使用[docker-compose](./docker/)，手动完成这项操作应该会容易一些。
 
 :::danger
 
-请勿使用已启动的服务器的域主机名重新创建数据库！
+一旦你准备好的域名或主机名在 Misskey 服务器上投入使用过，请不要重建数据库！
 
 :::
 
@@ -40,13 +40,13 @@
 
 本文将根据[手动搭建Misskey（手册）](./manual/)，逐步解释如何在典型的Ubuntu服务器上安装并公开Misskey。
 
-安装过程中只需要输入Bash命令、编辑一些配置文件以及使用浏览器即可完成。安装过程中将会简要说明需要安装的软件，您无需担心。
+安装过程中只需要输入Bash命令、编辑一些配置文件以及使用浏览器即可完成。安装过程中将会简要说明需要安装的软件，但您不必过于在意这些细节。
 
-本文侧重与具体的细节，并且仅适用于特定环境。
+本文重视具体性，因此是针对特定环境编写的。
 
-由于操作系统差异，或者由于Misskey本身或相关软件的版本升级，在安装过程中可能会出现与本文不同的情况，尽情谅解。
+如果因为操作系统差异、Misskey 本体或依赖软件的版本更新导致部分内容有所不同，还请见谅。
 
-对于您不理解的词语，敬请参考[《看似能懂、其实不懂、但看完能让你感觉懂了的 IT 术语辞典》](https://wa3.i-3-i.info/) ，希望您能够在查阅资料后真正理解它。
+对于您不理解的词语，建议参考[《看似懂了，其实不懂，但感觉懂了的 IT 术语辞典》](https://wa3.i-3-i.info/) ，让自己觉得“原来如此”就行了。
 
 ## 系统要求
 
@@ -76,7 +76,7 @@ nano /path/to/file
 
 按Ctrl+X退出，如果询问是否保存更改，输入Y(Yes)并按Enter即可保存。
 
-在底部会显示命令列表，请将^视为Ctrl,将M-视为Alt以供参考。
+在底部会显示命令列表，请将^视为Ctrl，将M-视为Alt以供参考。
 
 ## 创建用户
 
@@ -348,7 +348,7 @@ mkdir /etc/cloudflare
 nano /etc/cloudflare/cloudflare.ini
 ```
 
-将 dns_cloudflare_email（以下示例中的 bar@fuga.foo）设置为在注册 CloudFlare 时使用的电子邮件地址。
+将 dns_cloudflare_email（以下示例中的 bar\@fuga.foo）设置为在注册 Cloudflare 时使用的电子邮件地址。
 
 ```sh
 dns_cloudflare_email = bar@fuga.foo
@@ -415,7 +415,7 @@ nano .config/default.yml
 
 :::tip
 
-在开发环境下，url 指定为 url: http://localhost:3000 。
+在开发环境下，url 指定为 `url: http://localhost:3000` 。
 
 :::
 
@@ -438,7 +438,7 @@ redis:
   host: localhost
   port: 6379
 
-# 　 IDタイプの設定。
+# 　 ID 类型设置。
 id: 'aidx'
 
 # 　 syslog
@@ -465,7 +465,7 @@ exit
 sudo nano /etc/nginx/conf.d/misskey.conf
 ```
 
-将 [Misskey Hub](/docs/for-admin/install/resources/nginx/) 的配置示例复制并粘贴到 nano 中，并将以下部分替换为您自己的内容。
+将 [Misskey Hub 的配置示例](/docs/for-admin/install/resources/nginx/) 复制并粘贴到 nano 中，并将以下部分替换为您自己的内容。
 
 - 第 18 行和第 30 行的域名
 - 将第 34-35 行的证书路径替换为通过 Certbot 获取的路径（基本上只需替换 example.tld 即可）
@@ -501,7 +501,7 @@ sudo systemctl status nginx
 sudo su - misskey
 ```
 
-进行构建。yes we can…
+进行构建。应该没问题…
 
 ```sh
 cd misskey
@@ -510,18 +510,18 @@ NODE_ENV=production pnpm run build
 
 :::tip
 
-在开发环境下，不需要 NODE_ENV=production 。在后续的命令中也请同样将其删除。
+在开发环境下，不需要 `NODE_ENV=production` 。在后续的命令中也请同样将其删除。
 
 :::
 
 ### 如果无法在服务器上构建
 
-可能是由于RAM不足。
+可能是由于内存 (RAM) 不足。
 
-构建 Misskey 以及进行数据库迁移（包括初始化）需要 2GB 以上的 RAM。如果内存不足，可以考虑以下解决方案。
+构建 Misskey 以及进行数据库迁移（包括初始化）需要 2GB 以上的 RAM。如果RAM不足，可以考虑以下解决方案。
 
 - 为服务器添加交换空间
-- 在本地构建的后，通过 sftp 传输构建的内容（built 目录）
+- 通过 sftp 传输在本地构建好的文件（built 目录）
 
 ## 初始化数据库
 
@@ -539,7 +539,7 @@ NODE_ENV=production pnpm run start
 
 应该会显示 Misskey 的欢迎页面。
 
-检查是否可以正常进行创建账号、发布便签以及上传文件等一系列操作。
+检查是否可以正常进行创建账号、发布帖子以及上传文件等一系列操作。
 
 ### 无法访问时
 
