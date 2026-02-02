@@ -22,7 +22,7 @@
 
 :::
 
-若遇到任何問題，歡迎透過提及 [@aqz@p1.a9z.dev](https://p1.a9z.dev/@aqz) 與我聯絡。
+若遇到任何問題，歡迎透過[提及 @aqz@p1.a9z.dev](https://p1.a9z.dev/@aqz) 與我聯絡。
 
 ## 關於本文
 
@@ -493,15 +493,15 @@ sudo systemctl status nginx
 
 若顯示 active 即代表 OK。
 
-## Misskeyのビルド
+## 建置 Misskey
 
-misskeyユーザーにログインし直す。
+重新登入為 misskey 使用者。
 
 ```sh
 sudo su - misskey
 ```
 
-ビルドをする。yes we can…
+開始建置。Yes we can…
 
 ```sh
 cd misskey
@@ -510,73 +510,73 @@ NODE_ENV=production pnpm run build
 
 :::tip
 
-開発環境の場合、`NODE_ENV=production`は不要です。以降のコマンドでも同様に削除してください。
+若是開發環境，則不需要 `NODE_ENV=production`。在之後的指令中也請同樣將其刪除。
 
 :::
 
-### サーバーでビルドできない場合
+### 若無法在伺服器上建置
 
-RAMの不足が考えられる。
+可能是記憶體 (RAM) 不足。
 
-Misskeyのビルドやデータベースのマイグレーション（初期化を含む）には、RAMが2GB以上必要になっている。\
-RAMが足りない場合、以下のような解決策が考えられる。
+Misskey 的建置與資料庫遷移（包含初始化），需要 2GB 以上的記憶體。\
+若記憶體不足，可考慮以下解決方案：
 
-- サーバーにスワップを追加する
-- ローカルでビルドしたもの（builtディレクトリ）をsftpで転送する
+- 為伺服器增加 Swap（置換空間）。
+- 將在本地端建置好的檔案（built 目錄）透過 sftp 傳輸過去。
 
-## データベースの初期化
+## 初始化資料庫
 
 ```sh
 pnpm run init
 ```
 
-## Misskeyを起動する
+## 啟動 Misskey
 
 ```sh
 NODE_ENV=production pnpm run start
 ```
 
-**Now listening on port 3000 on** [**http://example.tld**](http://example.tld) と表示されたら、設定したURLにアクセスする。
+當畫面上顯示 **Now listening on port 3000 on** [**http://example.tld**](http://example.tld) 時，請透過瀏覽器連線至您設定的網址。
 
-Misskeyのウェルカムページが表示されるはずだ。
+此時應該會顯示 Misskey 的歡迎頁面。
 
-アカウントの作成、ノートの作成やファイルのアップロードといった一通りの操作が正しく行えるか確認しよう。
+請確認建立帳號、發布貼文、上傳檔案等一連串操作是否能正常執行。
 
-### アクセスできない場合
+### 若無法連線
 
-#### CloudflareのDNSを確認する
+#### 確認 Cloudflare 的 DNS
 
-CloudflareのDNS設定が正しいIPアドレスになっているかもう一度確認しよう。
+請再次確認 Cloudflare 的 DNS 設定是否指向正確的 IP 位址。
 
-#### ルーターの設定を確認する
+#### 確認路由器的設定
 
-自宅サーバーの場合、ルーターがサーバーと外部との80ポート・443ポートの通信を許可する設定になっているかどうか確認しよう。
+若是架設在家用伺服器，請確認路由器是否已設定為允許伺服器與外部進行 80 Port 及 443 Port 的通訊。
 
-クラウドの場合でも、ネットワーク設定でポート開放が必要な場合が多い。
+即使是雲端主機，通常也需要在網路設定中開放連接埠。
 
-## Misskeyのデーモンを作成
+## 建立 Misskey 守護行程
 
 :::tip
 
-開発環境の場合、デーモンの作成は不要です。
+若是開發環境，則無需建立守護行程。
 
 :::
 
-いったんCtrl+Cでプロセスをキルし、Misskeyをデーモンで起動する設定をしよう。
+請先按下 Ctrl+C 中止目前的程序 (Process)，接著進行讓 Misskey 以守護行程方式啟動的設定。
 
-ルート権限で行う。
+需使用 root 權限執行。
 
 ```sh
 exit
 ```
 
-/etc/systemd/system/misskey.serviceを作成する。
+建立 /etc/systemd/system/misskey.service。
 
 ```sh
 sudo nano /etc/systemd/system/misskey.service
 ```
 
-次の内容を貼り付け、保存する。
+貼上以下內容並儲存。
 
 ```ini
 [Unit]
@@ -598,7 +598,7 @@ Restart=always
 WantedBy=multi-user.target
 ```
 
-systemdを設定し、misskeyデーモンを開始。
+設定 systemd 並啟動 misskey 守護行程。
 
 ```sh
 sudo systemctl daemon-reload
@@ -608,29 +608,29 @@ sudo systemctl enable misskey
 sudo systemctl start misskey
 ```
 
-systemctlでデーモンの状態を確認。起動に少し時間がかかるため、15秒程度待ってからのほうが良い。
+使用 systemctl 確認守護行程的狀態。由於啟動需要一點時間，建議等待約 15 秒後再執行。
 
 ```sh
 sudo systemctl status misskey
 ```
 
-activeならOK。
+若顯示 active 即代表 OK。
 
-**これでMisskeyのインストールはほぼ完了だ。**
+**至此 Misskey 的安裝已大致完成。**
 
-Misskeyサーバーに自分のアカウントを登録・ログインし、設定を続けよう。
+請在 Misskey 伺服器上註冊並登入您的帳號，繼續進行後續設定。
 
-## Misskeyの設定を続ける
+## 繼續設定 Misskey
 
-- [**Misskeyサーバーで最初に設定するべきサーバー設定とその他設定の説明**](https://hide.ac/articles/Y504SIabp)
-- [**Squidプロキシを設定してMisskeyを守る**](https://hide.ac/articles/MC7WsPDqw)
-- [**Misskeyのデータベースをバックアップしよう【OCIオブジェクトストレージ編】**](https://hide.ac/articles/E2Ea3cauk)
+- [**在 Misskey 伺服器上最初應進行的伺服器設定及其他相關設定說明**](https://hide.ac/articles/Y504SIabp)
+- [**設定 Squid 代理伺服器以保護 Misskey**](https://hide.ac/articles/MC7WsPDqw)
+- [**備份 Misskey 資料庫【OCI 物件儲存篇】**](https://hide.ac/articles/E2Ea3cauk)
 
-## Misskeyのアップデート
+## Misskey 的更新
 
-[Misskeyのアップデート方法](./manual/#misskeyのアップデート方法)
+[Misskey 的更新方法](./manual/#misskeyのアップデート方法)
 
-作業中はMisskeyを使うことができません。
+更新作業期間將無法使用 Misskey。
 
 ```sh
 sudo systemctl stop misskey
@@ -646,7 +646,7 @@ pnpm run migrate;
 exit
 ```
 
-### Case 1: apt upgradeをする場合
+### Case 1：執行系統更新 (apt upgrade)
 
 ```sh
 sudo apt update -y
@@ -654,9 +654,9 @@ sudo apt full-upgrade -y
 sudo reboot
 ```
 
-再起動後はMisskeyは自動で起動します。
+重新啟動後，Misskey 將會自動啟動。
 
-### Case 2: そのまま起動
+### Case 2：直接啟動
 
 ```sh
 sudo systemctl start misskey
