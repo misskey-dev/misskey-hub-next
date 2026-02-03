@@ -2,35 +2,35 @@
 
 [/.github/workflows/docker.yml](https://github.com/misskey-dev/misskey/blob/develop/.github/workflows/docker.yml) 描述了使用 GitHub Action 推送到 Docker Hub 的工作流程。
 
-オリジナルリポジトリでは、リリースされたタイミングで `latest`, `<リリース名>` それぞれのタグでDocker Hubにpushされます。  
+在原始儲存庫中，會在發布時，分別以 `latest` 及 `<發布名稱>` 為標籤推送至 Docker Hub。  
 \
 \
-※ Docker Hub に`<ブランチ名>`のようなタグがあるかもしれませんが、こちらは自動push対象ではありません。
+※ 雖然 Docker Hub 上可能會看到 `<分支名稱>` 之類的標籤，但這並非自動推送的對象。
 
-Fork先でこのワークフローを実行すると失敗します。
+若在 Fork 後的儲存庫執行此工作流程將會失敗。
 
-以下では、Fork先で自分のDocker Hubリポジトリにpushするようにする方法を記述します。
+以下將說明如何在 Fork 後的儲存庫中，設定推送到您自己的 Docker Hub 儲存庫的方法。
 
-## 自分のDocker Hubリポジトリにpushするように設定する方法
+## 設定推送到自己的 Docker Hub 儲存庫的方法
 
-1. Docker Hubでリポジトリを作成します。
-2. ワークフローファイルの [images](https://github.com/misskey-dev/misskey/blob/53f3b779bf16abcda4f6e026c51384f3b8fbcc62/.github/workflows/docker.yml#L20) を作成したリポジトリに置き換えます。
-3. GitHubにて [暗号化されたシークレット](https://docs.github.com/ja/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) を作成します。  
+1. 在 Docker Hub 建立儲存庫。
+2. 將工作流程檔案中的 [images](https://github.com/misskey-dev/misskey/blob/53f3b779bf16abcda4f6e026c51384f3b8fbcc62/.github/workflows/docker.yml#L20) 替換為您建立的儲存庫名稱。
+3. 在 GitHub 上建立[加密密鑰](https://docs.github.com/ja/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository)。  
    \
    \
-   作成が必要なのは `DOCKER_USERNAME` と `DOCKER_PASSWORD` で、それぞれDocker Hubのユーザーとパスワードになります。
+   需要建立的是 `DOCKER_USERNAME` 與 `DOCKER_PASSWORD`，分別對應 Docker Hub 的使用者名稱與密碼。
 
-## pushする方法
+## 推送的方法
 
-上記設定によりリリース時に自動的にDocker Hubにpushされるようになります。  
+完成上述設定後，將會在發布時自動推送至 Docker Hub。  
 \
 \
-具体的には、GitHubのリリース機能でリリースしたタイミングで `latest`, `<リリース名>` それぞれのタグでDocker Hubにpushされます。
+具體而言，當使用 GitHub 的 Release 功能進行發布時，會分別以 `latest` 及 `<發布名稱>` 為標籤推送至 Docker Hub。
 
-また、GitHub上から手動でpushすることも出来ます。  
+此外，也可以從 GitHub 上手動進行推送。  
 \
 \
-それを行うには、Actions => Publish Docker image => Run workflow からbranchを選択してワークフローを実行します。  
+若要手動推送，請前往 Actions => Publish Docker image => Run workflow，選擇分支後執行工作流程。  
 \
 \
-ただし、この場合作成されるタグは`<ブランチ名>`になります。
+不過，此時建立的標籤將會是 `<分支名稱>`。
