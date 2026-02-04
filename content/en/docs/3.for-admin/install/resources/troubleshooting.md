@@ -1,60 +1,60 @@
-# マニュアルインストール時のトラブルシューティング
+# Troubleshooting Manual Installation
 
-<small>2018年10月07日 / 2021年12月20日 最終更新 / 文責 aqz/tamaina</small>
+<small>October 7, 2018 / Last updated December 20, 2021 / Written by aqz/tamaina</small>
 
-MisskeyInstallBattle参加者が増えましたが、それに伴い時期を追うごとに重軽傷者が増加しています。\
-この記事ではそのような負傷者を減らすため、過去に事故が起きてしまった個所の傾向と対策をわかりやすく解説します。
+The number of participants in the "MisskeyInstallBattle" has increased, but consequently, the number of serious and minor injuries has risen over time.\
+In this article, to reduce such casualties, I will explain the trends and countermeasures for accidents that have occurred in the past in an easy-to-understand manner.
 
-**まず最初に、[構築の手引き](../guides/manual/)を熟読してください。**
+**First of all, please read the [Setup Guide](../guides/manual/) thoroughly.**
 
-また、拙著の[Ubuntu向けsystemd版解説](https://hide.ac/articles/iFwm5HDvH)、[Oracle Cloud版詳細解説](https://hide.ac/articles/csERs-7SU)も参考までにお読みいただけると幸いです。
+Also, I would appreciate it if you could read my other articles for reference: [the systemd version guide for Ubuntu](https://hide.ac/articles/iFwm5HDvH) and [the detailed explanation for the Oracle Cloud version](https://hide.ac/articles/csERs-7SU).
 
-# Ubuntu向けシェルスクリプトのお知らせ
+# Notice regarding the Shell Script for Ubuntu
 
-Ubuntu向け解説はコピペばかりでつまらない！時間がかかる！とにかく面倒！
+"The guide for Ubuntu is just copy-pasting and it's boring!It takes time!It's just a hassle!"
 
-……あれ、コピペだけでできるなら、つまり完全自動化できるのでは？
+……Wait, if it can be done just by copy-pasting, doesn't that mean it can be fully automated?
 
-というわけで、**シェルスクリプトでほぼ全部やってくれるやつを作ってみました！**\
-[**詳細と使用方法はこちらから！** https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
+So, **I made a shell script that does almost everything for you!**\
+[**Check here for details and usage!** https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
 
-ドメインの購入とCloudflareのセットアップ、サーバーの確保についてはご自身でご準備ください。
+Please prepare the domain purchase, Cloudflare setup, and server acquisition yourself.
 
-シェルスクリプトに不具合があれば[製作者(aqz)](https://p1.a9z.dev/@aqz)にお知らせいただければと思います。
+If there are any bugs in the shell script, please let the [creator (aqz)](https://p1.a9z.dev/@aqz) know.
 
-# インストールとビルド
+# Installation and Build
 
-[構築の手引き](../guides/manual/)をよく読みましょう。
+Let's read the [Setup Guide](../guides/manual/) carefully.
 
-## ImageMagick関連
+## ImageMagick related
 
-_**ImageMagickは不要です！**_
+_**ImageMagick is not required!**_
 
-## ビルドが失敗する
+## Build fails
 
-Misskeyのビルドには、経験則上、最低でも2GBのメモリが必要となっています。\
-サーバーをスケールアップする手もありますが、お使いのPCでビルドしてサーバーにデプロイするという手もあります。
+Empirically, Misskey requires at least 2GB of memory to build.\
+You can scale up the server, or there is also the option of building on your own PC and deploying it to the server.
 
-## なんだかうまくいかない
+## Something isn't working right
 
-- [構築の手引き](../guides/manual/)をよく読みましょう。
-- node.jsのバージョンが古いかも？
-  - 新しめのバージョンにしましょう。
-- インストールやビルドの際にErrorとかWARNとかが出てくることがありますが、問題ない場合もあります。とりあえず`npm start`して動作確認しちゃいましょう。
-- node-gypがインストールされていないかも？
-  - `apt install build-essential`を試す。
-  - Windowsは[この記事](https://qiita.com/AkihiroTakamura/items/25ba516f8ec624e66ee7)も参考にしてみる。
-- これでもだめそうだったら、最初から[構築の手引き](../guides/manual/)の手順に従ってやり直してみてください。
+- Let's read the [Setup Guide](../guides/manual/) carefully.
+- Node.js version might be old?
+  - Try using a newer version.
+- Errors or WARNs might appear during installation or build, but sometimes it's not a problem.Just try `npm start` to check if it works.
+- Maybe node-gyp isn't installed?
+  - Try `apt install build-essential`.
+  - For Windows, try referring to [this article](https://qiita.com/AkihiroTakamura/items/25ba516f8ec624e66ee7) as well.
+- If it still doesn't work, try starting over from the beginning following the steps in the [Setup Guide](../guides/manual/).
 
-## バージョンアップ後に不具合が発生した
+## Issues occurred after an update
 
-- [構築の手引き](../guides/manual/)およびリリースノートをよく読みましょう。
-- Misskeyのバージョンアップ時にはしっかり`pnpm install`や`pnpm run migrate`してください。それでも直らない場合、`pnpm run clean-all && pnpm install`を試し、`pnpm run build && pnpm run migrate && pnpm start`してみてください。
-- これでもだめそうだったら、最初から[構築の手引き](../guides/manual/)の手順に従ってやり直してみてください。
+- Let's read the [Setup Guide](../guides/manual/) and Release Notes carefully.
+- When updating Misskey, please make sure to run `pnpm install` and `pnpm run migrate` properly.If that doesn't fix it, try `pnpm run clean-all` && `pnpm install`, then try `pnpm run build && pnpm run migrate && pnpm start`.
+- If it still doesn't work, try starting over from the beginning following the steps in the [Setup Guide](../guides/manual/).
 
 ---
 
-# 設定
+# Configuration
 
 [構築の手引き](../guides/manual/)をよく読みましょう。
 
