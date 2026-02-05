@@ -56,39 +56,34 @@ You can scale up the server, or there is also the option of building on your own
 
 # Configuration
 
-[構築の手引き](../guides/manual/)をよく読みましょう。
+Let's read the [Setup Guide](../guides/manual/) carefully.
 
-`.config/default.yml`で設定を行います。
-[`.config/example.yml`](https://github.com/misskey-dev/misskey/blob/develop/.config/example.yml)をコピーし、コメントに従って記述します。
+Settings are done in `.config/default.yml`. Copy [`.config/example.yml`](https://github.com/misskey-dev/misskey/blob/develop/.config/example.yml) and write according to the comments.
 
-（YAML形式では、`#`から行末まではコメントとして扱われます。）
+(In YAML format, everything from # to the end of the line is treated as a comment.)
 
-## URLとポート番号
+## URL and Port Number
 
-URLとポート番号のしくみは、少し分かりにくいと思います。
+I think the mechanism for URLs and port numbers can be a bit confusing.
 
-`.config/example.yml`に「Port and TLS settings」として説明図付きで順に書かれていますので、それに沿って設定をしていきましょう。
-本文の解説を日本語訳しながらやっていきます。
+It is written in order with diagrams in .config/example.yml under "Port and TLS settings", so let's configure it following that. I will explain the content.
 
-### URLの設定
+### URL Setting
 
 ```yml
 # Final accessible URL seen by a user.
-# 最終的にユーザーがアクセスするURL
 url: https://example.tld/
 ```
 
-**`url`には、サーバーにブラウザでアクセスしたときアドレスバーに表示される**(したい)**URLを書きます。**
+**In `url`, write the URL that is **(or you want to be)** displayed in the address bar when accessing the server via a browser.**
 
-### ポートの設定
+### Port Setting
 
 ```yml
 #   ┌───────────────────────┐
 #───┘ Port and TLS settings └───────────────────────────────────
-#### ポートとTLSの設定         ####################################
 
 # Misskey requires a reverse proxy to support HTTPS connections.
-# MisskeyでHTTPS接続をサポートするにはリバースプロキシが必須です。
 #
 #                 +----- https://example.tld/ ------------+
 #   +------+      |+-------------+      +----------------+|
@@ -97,100 +92,94 @@ url: https://example.tld/
 #                 +---------------------------------------+
 #
 #   You need to set up a reverse proxy. (e.g. nginx)
-#   この方法では、リバースプロキシ（例: nginx）をセットアップする必要があります。
 #   An encrypted connection with HTTPS is highly recommended
 #   because tokens may be transferred in GET requests.
-#   GETリクエストでトークンがURLに含まれる可能性があるため、
-#   HTTPSによる暗号化を強く推奨します。
 ```
 
 ```yml
 # The port that your Misskey server should listen on.
-# Misskeyサーバがリッスンするポート
 port: 3000
 ```
 
-この例では、Misskeyはポート3000で通信します。
-リバースプロキシでは、ローカル側の宛先にこのポート番号を指定します。
+In this example, Misskey communicates on port 3000.
+In the reverse proxy settings, specify this port number as the local destination.
 
 ----
 
-# `npm start`やアクセス時によく遭遇するエラー
+# Common errors encountered during `npm start` or access
 
-`npm start`でサーバーを立てられたものの、その後不具合に遭遇してしまう場合もあります。
+Even if you managed to start the server with npm start, you might encounter issues afterward.
 
-まず、[構築の手引き](../guides/manual/)をよく読みましょう。
+First, let's read the [Setup Guide](../guides/manual/) carefully.
 
-## YAMLのエラーが出る
+## YAML Error occurs
 
-`default.yml`の構文にミスがある可能性があります。
-行頭に余分なスペースはありませんか？
+There might be a syntax error in default.yml.
+Are there any extra spaces at the beginning of a line?
 
-## redisに接続できない
+## Cannot connect to redis
 
-redis-serverは起動していますか？
-何らかの接続数の上限に達していませんか？
+Is redis-server running?
+Have you reached some connection limit?
 
-11.20.2より前のバージョンのMisskeyはredisのパスワードを解くことができません。以下の2点を確認してください。
+Misskey versions prior to 11.20.2 cannot resolve redis passwords.Please check the following two points:
 
-- redisにパスワードを設定しない。
-- `default.yml`の`redis:`の`pass:`の行をコメントアウトする。
+- Do not set a password for redis.
+- Comment out the `pass:` line under `redis:` in `default.yml`.
 
-## 上部に「開発ビルドです」と書かれた赤いバーが表示される
+## A red bar saying "This is a development build" appears at the top
 
-サーバーを公開する場合は必ずproductionビルドを使いましょう。
+When making the server public, always use the production build.
 
-製品ビルドにするには、環境変数が`NODE_ENV=production`になるように設定し`npm run build && npm start`します。
+To make it a product build, set the environment variable to `NODE_ENV=production` and `run npm run build && npm start`.
 
-## 新規登録できない
+## Cannot Sign Up
 
-APIに接続できないようです。
-`default.yml`の冒頭の`url:`が正しく設定されているか確認しましょう。
-Node.jsのバージョンや、インストールの設定ももう一度よく確認しましょう。
+It seems like it cannot connect to the API.
+Check if the `url:` at the beginning of `default.yml` is set correctly. Check the Node.js version and installation settings again carefully.
 
-また、正しく`default.yml`が書かれていますか？
+Also, is `default.yml` written correctly?
 
-## タイムラインの表示に問題が発生する、リアルタイムでTLが更新されない
+## Problems with Timeline display, TL does not update in real-time
 
-タイムラインの読み込みに失敗する場合、mongoDBやPostgreSQLのバージョンが古い可能性があります。
-PostgreSQLはなるべくv13にしてください。
+If loading the timeline fails, the MongoDB or PostgreSQL version might be old.
+Please use PostgreSQL v13 or higher if possible.
 
-redisの接続も確認した方がよいでしょう。 [→ redisに接続できない？ を参照](#redisに接続できない？)
+You should also check the redis connection. [→ See "Cannot connect to redis?" ](#cannot-connect-to-redis)
 
-## 永遠に「再接続中」と右下に表示される、リアルタイムでTLが更新されない
+## "Reconnecting" is displayed forever in the bottom right, TL does not update in real-time
 
-プロキシを利用している場合、それがWebSocket通信を阻害している可能性が考えられます。
+If you are using a proxy, it is possible that it is blocking WebSocket communication.
 
-## オブジェクトストレージ使用時、不具合が出る
+## Issues occur when using Object Storage
 
-オブジェクトストレージの権限の設定が厳しくなっている可能性があります。「ファイル（オブジェクト）が誰でも取得可能」なように権限を設定してみてください。
-また、`default.yml`をもう一度確認してみてください。
+The permission settings for the object storage might be too strict.Try setting the permissions so that "files (objects) are retrievable by anyone".
+Also, check `default.yml` again.
 
 ### S3 example (with CDN, custom domain)
 
-S3 example (with CDN, custom domain)は、AWSのデフォルトのドメインではなく独自ドメインでストレージを公開したい場合の設定です。
-endpointと公開ドメインが同じサービスの場合はS3 exampleのように`baseUrl`は明記しなくてよく、さらにregionの概念がないサービスの場合はregionの行は必要ありません。
+`S3 example (with CDN, custom domain)` is a setting for when you want to publish storage using your own domain instead of the default AWS domain.
+If the endpoint and the public domain are the same service, `baseUrl` does not need to be specified (like in the standard S3 example), and if the service does not have the concept of regions, the `region` line is not necessary.
 
-### S3互換サービスでの設定
+### Settings for S3 compatible services
 
-Misskeyではオブジェクトストレージの接続に[aws-sdk](https://www.npmjs.com/package/aws-sdk)を利用しています。
-Amazon S3に互換性のあるオブジェクトストレージであれば利用できる可能性があります。
+Misskey uses [aws-sdk](https://www.npmjs.com/package/aws-sdk) to connect to object storage. If the object storage is compatible with Amazon S3, it might work.
 
-各サービス/ソフトウェアのドキュメントをよく読み、設定してみてください。
+Read the documentation for each service/software carefully and try configuring it.
 
-### ローディングが終わらない
+### Loading never finishes
 
-Cloudflare を使用している場合は、Rocket LoaderやAuto Minifyが有効になっていないか確認してください。有効になっている場合は無効にすることで解決する場合があります。
+If you are using Cloudflare, check if Rocket Loader or Auto Minify is enabled.If they are enabled, disabling them might solve the problem.
 
 ---
 
-# まったく解決しなかった場合
+# If nothing solves the problem
 
-以下の順序を試してみてください。
+Try the following order:
 
-1. Misskeyのドキュメントをよく読む。
-2. Googleで検索してみる。
-3. [MisskeyリポジトリのIssues](https://github.com/misskey-dev/misskey/issues)を検索してみる（同じエラーに遭遇している場合や、Misskeyのバグの可能性もあります）。
-4. 検索してどうしても見つからなかったら、専門家に質問してみてください。
-   1. [MisskeyのDiscordサーバー](https://discord.gg/P4yYqYBjEp)などで聞いてみる
-   2. 開発者（[aqz](https://p1.a9z.dev/@aqz)やしゅいろ）にリプライや指名投稿を送信して聞いてみる
+1. Read the Misskey documentation carefully.
+2. Try searching on Google.
+3. Try searching [Issues in the Misskey repository](https://github.com/misskey-dev/misskey/issues) (you might find others encountering the same error, or it could be a Misskey bug).
+4. If you really can't find it after searching, try asking an expert.
+   1. Try asking on the [Misskey Discord server](https://discord.gg/P4yYqYBjEp), etc.
+   2. Try asking the developers ([aqz](https://p1.a9z.dev/@aqz) or syuilo) by sending a reply or a mention post.
