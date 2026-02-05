@@ -16,7 +16,7 @@ Ubuntu向け解説はコピペばかりでつまらない！時間がかかる�
 ……あれ、コピペだけでできるなら、つまり完全自動化できるのでは？
 
 というわけで、**シェルスクリプトでほぼ全部やってくれるやつを作ってみました！**\
-[**詳細と使用方法はこちらから！** https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
+[**詳細內容與使用方法請看這裡！** https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
 
 ドメインの購入とCloudflareのセットアップ、サーバーの確保についてはご自身でご準備ください。
 
@@ -28,7 +28,7 @@ Ubuntu向け解説はコピペばかりでつまらない！時間がかかる�
 
 ## ImageMagick関連
 
-_**ImageMagickは不要です！**_
+_**不需要 ImageMagick！**_
 
 ## ビルドが失敗する
 
