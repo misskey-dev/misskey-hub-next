@@ -60,7 +60,7 @@ Let's read the [Setup Guide](../guides/manual/) carefully.
 
 Settings are done in `.config/default.yml`. Copy [`.config/example.yml`](https://github.com/misskey-dev/misskey/blob/develop/.config/example.yml) and write according to the comments.
 
-(In YAML format, everything from # to the end of the line is treated as a comment.)
+(In YAML format, everything from `#` to the end of the line is treated as a comment.)
 
 ## URL and Port Number
 
