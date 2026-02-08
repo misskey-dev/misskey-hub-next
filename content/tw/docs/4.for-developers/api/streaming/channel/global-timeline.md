@@ -1,10 +1,10 @@
 ---
-description: "グローバルタイムラインのノートが流れるチャンネルです。"
+description: "流動著公開時間軸貼文的頻道。"
 ---
 
 # `globalTimeline`
 
-漂流 global timeline 的貼文的頻道。
+流動著公開時間軸貼文的頻道。
 
 ## 參數
 
@@ -15,10 +15,10 @@ description: "グローバルタイムラインのノートが流れるチャン
 ### `note`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-グローバルタイムラインに新しいノートが追加されたときに発生します。
+當全域時間軸新增貼文時發生。
 
 ## 操作
 
