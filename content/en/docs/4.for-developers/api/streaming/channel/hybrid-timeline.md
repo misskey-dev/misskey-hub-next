@@ -1,25 +1,25 @@
 ---
-description: "ソーシャルタイムラインのノートが流れるチャンネルです。"
+description: "This channel streams notes from the Social Timeline."
 ---
 
 # `hybridTimeline`
 
-ソーシャルタイムラインのノートが流れるチャンネルです。
+This channel streams notes from the Social Timeline.
 
-## パラメータ
+## Parameters
 
-なし
+None
 
-## イベント
+## Events
 
 ### `note`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-ソーシャルタイムラインに新しいノートが追加されたときに発生します。
+Triggered when a new note is added to the Social Timeline.
 
-## 操作
+## Operations
 
-なし
+None
