@@ -1,10 +1,10 @@
 ---
-description: "This channel streams notes from the global timeline."
+description: "This channel streams notes from the Global Timeline."
 ---
 
 # `globalTimeline`
 
-This channel streams notes from the global timeline.
+This channel streams notes from the Global Timeline.
 
 ## Parameters
 
@@ -18,8 +18,8 @@ None
  $ref: 'misskey://Note'
 }"/>
 
-This occurs when a new note is added to the global timeline.
+Triggered when a new note is added to the Global Timeline.
 
-## Action
+## Operations
 
 None
