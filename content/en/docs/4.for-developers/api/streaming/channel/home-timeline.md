@@ -1,10 +1,10 @@
 ---
-description: "This is the channel where notes from the home timeline appear."
+description: "This channel streams notes from the Home Timeline."
 ---
 
 # `homeTimeline`
 
-This is the channel where notes from the home timeline appear.
+This channel streams notes from the Home Timeline.
 
 ## Parameters
 
@@ -18,8 +18,8 @@ None
  $ref: 'misskey://Note'
 }"/>
 
-This occurs when a new note is added to the home timeline.
+Triggered when a new note is added to the Home Timeline.
 
-## Actions
+## Operations
 
 None
