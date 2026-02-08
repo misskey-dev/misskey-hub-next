@@ -285,50 +285,50 @@ _servers:
     orderBy: "Ordena per"
     recomendded: "Predeterminat"
     notesCount: "Nombre de notes"
-    notesPer15Days: "1日あたりのノート数（15日平均）"
-    usersCount: "ユーザー数"
+    notesPer15Days: "Nombre de notes diàries (mitjana dels darrers quinze dies)"
+    usersCount: "Nombre d'usuaris"
   _registerAcceptance:
-    title: "新規登録"
-    public: "開放"
-    inviteOnly: "招待のみ"
+    title: "Accepta registres"
+    public: "Obert"
+    inviteOnly: "Només per invitació"
   _list:
-    notFound: "指定された条件に合致するサーバーは見つかりませんでした。"
-    showMore: "もっと見る"
+    notFound: "No es troben servidors que coincideixin amb el criteri especificat."
+    showMore: "Veure més"
   _view:
-    title: "表示形式"
-    list: "リスト"
-    grid: "グリッド"
+    title: "Format de visualització"
+    list: "Llista"
+    grid: "Graella"
 _docs:
-  title: "ドキュメント"
-  description: "Misskeyはオープンソースの分散型ソーシャルネットワーキングプラットフォームです。Misskeyの上手な使い方から、サーバーの運営者・プログラムの開発者向けの情報まで網羅しています。"
-  indexTitle: "目次ページ"
+  title: "Documentació"
+  description: "Misskey és una plataforma de xarxa social descentralitzada i codi obert. Abarca tot, des de l'ús eficaç de Misskey fins informació per administradors d'instàncies i desenvolupadors de programes."
+  indexTitle: "Índex"
   _contribute:
-    editThis: "このページを編集"
-    translateThis: "このページを翻訳"
+    editThis: "Editar aquesta pàgina"
+    translateThis: "Traduir aquesta pàgina"
   _aboutMisskey:
-    title: "Misskeyについて"
-    description: "Misskeyをはじめて知ったかたや、これから使うかた向け！基本的なしくみや機能を見ていきましょう。"
+    title: "Quant a Misskey"
+    description: "Per aquells que on nous en fer servir Misskey o pensen en en fer-lo servir! Explorem la seva estructura bàsica i les seves característiques."
   _changelog:
-    title: "リリースノート"
-    description: "Misskeyのバージョンアップ履歴をご覧いただけます。最新のバージョンで何が変わったのかを確認しましょう！"
+    title: "Notes de la versió"
+    description: "Pots veure l'historial de versions de Misskey. Veiem que ha canviat a l'última versió!"
   _donate:
-    title: "プロジェクトへの寄付"
-    description: "Misskeyは無料で使えるオープンソースのソフトウェアです。気に入っていただけたら、今後も開発を続けられるようにぜひ寄付をご検討ください。"
+    title: "Donacions al projecte"
+    description: "A fem servir el software lliure Misskey. Considera fer un donatiu a Misskey perquè pugui continuar el seu desenvolupament."
   _forUsers:
-    title: "Misskeyユーザー向け"
+    title: "Per als usuaris de Misskey"
   _forAdmin:
-    title: "サーバー運営者向け"
+    title: "Documentació per administradors"
   _forDevelopers:
-    title: "開発者向け"
+    title: "Per desenvolupadors"
   _prevNext:
-    prev: "前へ"
-    next: "次へ"
+    prev: "Enrere"
+    next: "Següent"
   _toc:
-    title: "このページの内容"
-    toPageTop: "ページ上部に戻る"
+    title: "En aquesta pàgina"
+    toPageTop: "Tornar a l'inici"
   _steppedGuide:
-    selectCourse: "ガイドを選ぶ"
-    noImageInThisStep: "このステップには画像がありません"
+    selectCourse: "Seleccionar una guia"
+    noImageInThisStep: "En aquest pas no hi ha imatge"
     aiWellDone: "操作はこれで完了です。お疲れ様でした♪"
 _blog:
   title: "ブログ"
