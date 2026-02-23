@@ -81,7 +81,7 @@ if (response) {
 
 ### `Mk:api(endpoint, params, token?)`
 
-Make a request to the Misskey API.Make a request to the Misskey API.Passes the endpoint name as the first argument and the parameter object as the second argument.
+Make a request to the Misskey API.Passes the endpoint name as the first argument and the parameter object as the second argument.
 
 You can also include API token as the third argument.When called within a plugin, if `permissions` are specified in the metadata block, the token with the specified permission(s) will be used if the third argument is not specified.
 
@@ -93,10 +93,10 @@ Refer to [this document](/docs/for-developers/api/permission/) for a list of per
 
 ```AiScript
 ### {
-  name: "プラグイン名",
+  name: "Plugin name",
   version: "4.2.1",
-  author: "作者名",
-  description: "説明文",
+  author: "Author name",
+  description: "Description",
   permissions: ['write:notes'],
 }
 
@@ -109,7 +109,7 @@ Refer to [this document](/docs/for-developers/api/permission/) for a list of per
 
 ### `Mk:save(key, value)`
 
-Persistently saves an arbitrary key with any given value.Persistently saves an arbitrary key with any given value.The saved value will remain after the AiScript context ends and can be loaded with Mk:load.
+Persistently saves an arbitrary key with any given value.The saved value will remain after the AiScript context ends and can be loaded with Mk:load.
 
 ### `Mk:load(key)`
 
@@ -244,7 +244,7 @@ Opens the URL given as the first parameter in a new browser tab.
 
 ### `Plugin:config`
 
-An object containing the plugin settings.The values set in the plugin definition's config are saved in the object keys.The values set in the plugin definition's config are saved in the object keys.
+An object containing the plugin settings.The values set in the plugin definition's config are saved in the object keys.
 
 ## Constants only available for Play
 
@@ -295,20 +295,20 @@ Outer frame (container) with formatting for text alignment, color, etc.
 ```AiScript
 Ui:C:container({
   children: [
-    // コンテナの中に入れたいコンポーネントの配列
+    // Array of components you want to put inside the container
     Ui:C:text({text: "A"})
   ]
-  align: 'center' // 幅寄せ left,center,right
-  bgColor: '#000' // 背景色
-  fgColor: '#00f' // 文字色
-  font: 'serif' // フォント serif,sans-serif,monospace
-  borderWidth: 1 // 枠幅
-  borderColor: '#f00' // 枠の色
-  borderStyle: 'solid' // 枠の柄
-  padding: 1 // 余白幅
-  rounded: false // 角を丸く
-  borderRadius: 1 // 角を丸く（丸みの度合いを数値指定）
-  hidden: false // 隠す
+  align: 'center' // Alignment: left, center, right
+  bgColor: '#000' // Background color
+  fgColor: '#00f' // Text color
+  font: 'serif' // Font: serif, sans-serif, monospace
+  borderWidth: 1 // Border width
+  borderColor: '#f00' // Border color
+  borderStyle: 'solid' // Border style
+  padding: 1 // Padding width
+  rounded: false // Make corners rounded
+  borderRadius: 1 // Border radius (Specify the degree of roundness numerically)
+  hidden: false // Hide
 })
 ```
 
@@ -319,11 +319,11 @@ Accordion components (containers that users can open and close)
 ```AiScript
 Ui:C:folder({
   children: [
-    // コンテナの中に入れたいコンポーネントの配列
+    // Array of components you want to put inside the container
     Ui:C:text({text: "A"})
   ]
-  title: "タイトル" // フォルダの開閉部分に記載するタイトル
-  opened: true // はじめから開いているか
+  title: "Title" // Title displayed on the folder's toggle section
+  opened: true // Whether it is opened by default
 })
 ```
 
@@ -335,11 +335,11 @@ Plain text
 
 ```AiScript
 Ui:C:text({
-  text: "内容" // 表示するテキスト
-  size: 1 // 文字サイズ
-  bold: false // ボールド
-  color: '#000' // 色
-  font: 'monospace' // フォント serif,sans-serif,monospace
+  text: "Content" // Text to display
+  size: 1 // Text size
+  bold: false // Bold
+  color: '#000' // Color
+  font: 'monospace' // Font: serif, sans-serif, monospace
 })
 ```
 
@@ -349,13 +349,13 @@ MFM-enabled text
 
 ```AiScript
 Ui:C:mfm({
-  text: "内容" // 表示するテキスト
-  size: 1 // 文字サイズ
-  bold: false // ボールド
-  color: '#000' // 色
-  font: 'monospace' // フォント serif,sans-serif,monospace
+  text: "Content" // Text to display
+  size: 1 // Text size
+  bold: false // Bold
+  color: '#000' // Color
+  font: 'monospace' // Font: serif, sans-serif, monospace
   onClickEv: @(id) {
-    // $[clickable.ev=eventId TEXT] のMFM構文のハンドラ
+    // Handler for the MFM syntax $[clickable.ev=eventId TEXT]
     <: `{id} clicked`
   }
 })
@@ -369,13 +369,13 @@ Button
 
 ```AiScript
 Ui:C:button({
-  text: "ボタン" // ボタンに表示するテキスト
+  text: "Button" // Text displayed on the button
   onClick: @() {
-    // 押したときのイベント
+    // Event triggered when clicked
   }
-  primary: false // 色を付けるか？
-  rounded: false // 角を丸くするか？
-  disabled: false // 無効化するか？
+  primary: false // Whether to apply the primary color style?
+  rounded: false // Whether to make corners rounded?
+  disabled: false // Whether to disable it?
 })
 ```
 
@@ -385,7 +385,7 @@ Horizontally stacked buttons
 
 ```AiScript
 Ui:C:buttons({
-  buttons: [ // ボタン定義の配列。propsの指定形式は Ui:C:button と同じ
+  buttons: [ // Array of button definitions. The format for specifying props is the same as Ui:C:button
     {text: "a", onClick: @(){...}}
     {text: "b", onClick: @(){...}}
   ]
@@ -397,11 +397,11 @@ Ui:C:buttons({
 ```AiScript
 Ui:C:switch({
   onChange: @(enabled) { 
-    // 変更された時のイベント。第1引数に変更後の状態（boolean）
+    // Event triggered when changed. The first argument is the new state (boolean)
   }
-  default: false // デフォルト値
-  label: "ラベル" // スイッチ横のテキスト
-  caption: "キャプション" // スイッチ下に表示する補助テキスト
+  default: false // Default value
+  label: "Label" // Text next to the switch
+  caption: "Caption" // Helper text displayed below the switch
 })
 ```
 
@@ -412,11 +412,11 @@ Single line text input
 ```AiScript
 Ui:C:textInput({
   onInput: @(text) {
-    // 入力された時のイベント。第1引数に変更後の値
+    // Event triggered when input is provided. The first argument is the new value
   }
-  default: "デフォルト" // デフォルト値
-  label: "ラベル" // 入力欄上のテキスト
-  caption: "キャプション" // 入力欄下に表示する補助テキスト
+  default: "Default" // Default value
+  label: "Label" // Text above the input field
+  caption: "Caption" // Helper text displayed below the input field
 })
 ```
 
@@ -427,11 +427,11 @@ Single line number input
 ```AiScript
 Ui:C:numberInput({
   onInput: @(number) {
-    // 入力された時のイベント。第1引数に変更後の値
+    // Event triggered when input is provided. The first argument is the new value
   }
-  default: "デフォルト" // デフォルト値
-  label: "ラベル" // 入力欄上のテキスト
-  caption: "キャプション" // 入力欄下に表示する補助テキスト
+  default: "Default" // Default value
+  label: "Label" // Text above the input field
+  caption: "Caption" // Helper text displayed below the input field
 })
 ```
 
@@ -442,11 +442,11 @@ Multiline text input
 ```AiScript
 Ui:C:textarea({
   onInput: @(text) {
-    // 入力された時のイベント。第1引数に変更後の値
+    // Event triggered when input is provided. The first argument is the new value
   }
-  default: "デフォルト" // デフォルト値
-  label: "ラベル" // 入力欄上のテキスト
-  caption: "キャプション" // 入力欄下に表示する補助テキスト
+  default: "Default" // Default value
+  label: "Label" // Text above the input field
+  caption: "Caption" // Helper text displayed below the input field
 })
 ```
 
@@ -456,16 +456,16 @@ Select one of several values
 
 ```AiScript
 Ui:C:select({
-  items: [ // 選択肢の配列。textには表示するテキストを、valueには変更時のイベントで渡す値を入力
+  items: [ // Array of choices. Enter the text to display in 'text', and the value to pass in the change event in 'value'
     {text: "A", value: "v1"}
     {text: "B", value: "v2"}
   ]
   onChange: @(value){
-    // 変更された時のイベント。第1引数に変更後のvalue
+    // Event triggered when changed. The first argument is the new value
   }
-  default: "v1" // デフォルトのvalue
-  label: "ラベル" // 入力欄上のテキスト
-  caption: "キャプション" // 入力欄下に表示する補助テキスト
+  default: "v1" // Default value
+  label: "Label" // Text above the input field
+  caption: "Caption" // Helper text displayed below the input field
 })
 ```
 
@@ -478,12 +478,12 @@ Embed the post form directly into Play
 ```AiScript
 Ui:C:postForm({
   form: {
-    cw: "CW注釈" // CWを指定する場合の「要約」テキスト
-    text: "投稿内容" // 投稿フォームのデフォルト文字列
+    cw: "CW Annotation" // "Summary" text when specifying a CW (Content Warning)
+    text: "Post content" // Default string for the post form
 
-    // 以下はMisskey v2024.5.0以降で指定可能となります
-    visibility: "home" // デフォルトの投稿の公開範囲（未指定の場合はpublic）
-    localOnly: false // デフォルトで連合無しかどうか（未指定の場合はfalse）
+    // The following can be specified in Misskey v2024.5.0 and later
+    visibility: "home" // Default post visibility (public if not specified)
+    localOnly: false // Whether the post is local-only by default (false if not specified)
   }
 })
 ```
@@ -494,16 +494,16 @@ Special button to launch the post form modal
 
 ```AiScript
 Ui:C:postFormButton({
-  text: "投稿！" // ボタンに表示するテキスト
-  primary: false // 色を付けるか？
-  rounded: false // 角を丸くするか？
+  text: "Post!" // Text displayed on the button
+  primary: false // Whether to apply the primary color style?
+  rounded: false // Whether to make corners rounded?
   form: {
-    cw: "CW注釈" // CWを指定する場合の「要約」テキスト
-    text: "投稿内容" // 投稿フォームのデフォルト文字列
+    cw: "CW Annotation" // "Summary" text when specifying a CW (Content Warning)
+    text: "Post content" // Default string for the post form
 
-    // 以下はMisskey v2024.5.0以降で指定可能となります
-    visibility: "home" // デフォルトの投稿の公開範囲（未指定の場合はpublic）
-    localOnly: false // デフォルトで連合無しかどうか（未指定の場合はfalse）
+    // The following can be specified in Misskey v2024.5.0 and later
+    visibility: "home" // Default post visibility (public if not specified)
+    localOnly: false // Whether the post is local-only by default (false if not specified)
   }
 })
 ```
