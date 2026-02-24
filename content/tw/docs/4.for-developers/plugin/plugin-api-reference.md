@@ -1,30 +1,30 @@
-# AiScript Misskey拡張API リファレンス
+# AiScript Misskey 擴充 API 參考文件
 
-ここでは、Misskeyで独自に拡張されたAiScript APIについて紹介しています。
+這裡介紹 Misskey 獨自擴充的 AiScript API。
 
 :::tip
 
-標準装備のAiScript APIは[こちら](https://aiscript-dev.github.io/guides/get-started.html)からご覧いただけます。
+關於標準內建的 AiScript API 請參閱[此處](https://aiscript-dev.github.io/guides/get-started.html)。
 
 :::
 
-## 全分野共通定数
+## 全領域共通常數
 
 ### `USER_ID`
 
-現在のユーザーのID
+目前使用者的 ID
 
 ### `USER_NAME`
 
-現在のユーザーの名前
+目前使用者的名稱
 
 ### `USER_USERNAME`
 
-現在のユーザーのハンドル（`@`より後ろの部分。例: `@ai@example.com` → `ai`）
+目前使用者的帳號名稱（`@` 後面的部分。例如：`@ai@example.com` → `ai`）
 
 ### `CUSTOM_EMOJIS`
 
-カスタム絵文字の一覧。以下のようなオブジェクトが配列で格納されています
+自訂表情符號列表。包含以下物件格式的陣列：
 
 ```ts
 type EmojiSimple = {
@@ -40,63 +40,63 @@ type EmojiSimple = {
 
 ### `LOCALE`
 
-現在のMisskey Webの設定言語。RFC4646互換の形式（`ja-JP`など）で表されます
+目前 Misskey Web 設定的語言。以 RFC4646 相容格式表示（例如：`zh-TW`、`ja-JP` 等）
 
 ### `SERVER_URL`
 
-現在のサーバーのURL。`https://www.example.com` のようにオリジンで表されます
+目前伺服器的 URL。以 Origin 的形式表示，例如：`https://www.example.com`
 
-## 全分野共通関数
+## 全領域共通函數
 
 ### `Mk:dialog(title, text, type)`
 
-ダイアログを表示します。typeには以下の値が設定できます。\
+顯示對話框。type 可設定以下值：\
 `info` `success` `warning` `error` `question`\
-省略すると `info` になります。
+若省略則預設為 `info`。
 
 ### `Mk:toast(text)`
 
-トーストを表示します。ダイアログと違い、ユーザーがダイアログを閉じる操作が必要ないため、何らかの操作が完了したなどの単純なお知らせに使用できます。
+顯示 Toast（浮動提示）。與對話框不同，不需要使用者手動關閉，可用於通知「某項操作已完成」等簡單訊息。
 
 ### `Mk:confirm(title, text, type)`
 
-確認ダイアログを表示します。typeには以下の値が設定できます。\
+顯示確認對話框。type 可設定以下值：\
 `info` `success` `warning` `error` `question`\
-省略すると `question` になります。\
-ユーザーが"OK"を選択した場合は `true` を、"キャンセル"を選択した場合は `false` が返ります。
+若省略則預設為 `question`。\
+當使用者選擇「OK」時會回傳 `true`，選擇「取消」時會回傳 `false`。
 
 ```AiScript
 let response = Mk:confirm(
-  '操作を続行しますか？'
-  'この操作は取り消せません。よく確認してください。'
+  '確定要繼續操作嗎？'
+  '此操作無法撤銷。請仔細確認。'
   'warning'
 )
 
 if (response) {
-  // OKした場合
+  // 點擊 OK 時
 } else {
-  // キャンセルした場合
+  // 點擊取消時
 }
 ```
 
 ### `Mk:api(endpoint, params, token?)`
 
-Misskey APIにリクエストします。第一引数にエンドポイント名、第二引数にパラメータオブジェクトを渡します。
+向 Misskey API 發送請求。第一參數為端點名稱，第二參數傳遞參數物件。
 
-第三引数にtokenを入れることもできます。プラグインで動作するとき、メタデータブロックにて`permissions`が指定されている場合、第三引数を指定しないことでそのpermissionが付与されたtokenが使用されます。
+第三參數可以選擇性放入 token。在作為插件執行時，若在中繼資料區塊中有指定 `permissions`，只要不指定第三參數，就會自動使用具備該權限的 token。
 
 :::tip
 
-permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+permission 的列表請參閱[此處](/docs/for-developers/api/permission/)。
 
 :::
 
 ```AiScript
 ### {
-  name: "プラグイン名",
+  name: "插件名稱",
   version: "4.2.1",
-  author: "作者名",
-  description: "説明文",
+  author: "作者名稱",
+  description: "說明文字",
   permissions: ['write:notes'],
 }
 
@@ -109,50 +109,50 @@ permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧
 
 ### `Mk:save(key, value)`
 
-任意の値に任意の名前を付けて永続化します。永続化した値は、AiScriptコンテキストが終了しても残り、Mk:loadで読み取ることができます。
+將任意值賦予任意名稱並永久保存。保存的值即使在 AiScript 上下文結束後依然存在，並可透過 Mk:load 讀取。
 
 ### `Mk:load(key)`
 
-Mk:saveで永続化した指定の名前の値を読み取ります。
+讀取透過 Mk:save 保存的指定名稱的值。
 
 ### `Mk:remove(key)`
 
-※v2025.1.0（仮称）以降で使用可能
+※v2025.1.0（暫定）及後續版本可用
 
-Mk:saveで永続化した指定の名前の値を削除します。指定の名前の値が存在しない場合は何もしません。
+刪除透過 Mk:save 保存的指定名稱的值。若指定名稱的值不存在則不執行任何操作。
 
 ### `Mk:url()`
 
-現在開いているページのURL（現在ブラウザのアドレスバーに表示されているURL）を取得します。
+取得目前開啟頁面的 URL（目前瀏覽器網址列顯示的 URL）。
 
 ### `Mk:nyaize(text)`
 
-指定されたテキストをNyaizeします。MFMの構文などは考慮されません。
+將指定的文字 Nyaize（貓語化）。此處理不考慮 MFM 等語法。
 
-## プラグイン専用
+## 插件專用
 
 ### `Plugin:register_post_form_action(title, fn)`
 
-投稿フォームにアクションを追加します。第一引数にアクション名、第二引数にアクションが選択された際のコールバック関数を渡します。\
-コールバック関数には、第一引数に投稿フォームオブジェクトのうち`text`と`cw`が、第二引数にそれらを書き換えるための関数が渡されます。
+在發布表單新增動作。第一參數為動作名稱，第二參數為選擇動作時觸發的回呼函數。\
+回呼函數的第一參數會接收到發布表單物件（包含 `text` 與 `cw`），第二參數則會接收用於覆寫這些內容的函數。
 
 ```AiScript
-Plugin:register_post_form_action('メニューに表示される項目名', @(note, rewrite) {
+Plugin:register_post_form_action('選單中顯示的項目名稱', @(note, rewrite) {
 
-  // ノートに何らかの変更を加える
-  rewrite('text', `{note.text}{Str:lf}#ハッシュタグ`)
+  // 對貼文進行某些修改
+  rewrite('text', `{note.text}{Str:lf}#主題標籤`)
 })
 ```
 
 ### `Plugin:register_note_action(title, fn)`
 
-ノートメニューに項目を追加します。第一引数に項目名、第二引数に項目が選択された際のコールバック関数を渡します。\
-コールバック関数には、第一引数に対象のノートオブジェクトが渡されます。
+在貼文選單新增項目。第一參數為項目名稱，第二參數為選擇項目時的回呼函數。\
+回呼函數的第一參數會接收目標的貼文物件。
 
 ```AiScript
-Plugin:register_note_action('メニューに表示される項目名', @(note) {
+Plugin:register_note_action('選單中顯示的項目名稱', @(note) {
 
-  // ノートを使って何かする
+  // 使用該貼文執行某些操作
   Mk:api('notes/create', {
     text: '引用'
     renoteId: note.id
@@ -163,15 +163,15 @@ Plugin:register_note_action('メニューに表示される項目名', @(note) {
 
 ### `Plugin:register_user_action(title, fn)`
 
-ユーザーメニューに項目を追加します。第一引数に項目名、第二引数に項目が選択された際のコールバック関数を渡します。\
-コールバック関数には、第一引数に対象のユーザーオブジェクトが渡されます。
+在使用者選單新增項目。第一參數為項目名稱，第二參數為選擇項目時的回呼函數。\
+回呼函數的第一參數會接收目標的使用者物件。
 
 ```AiScript
-Plugin:register_user_action('メニューに表示される項目名', @(user) {
+Plugin:register_user_action('選單中顯示的項目名稱', @(user) {
 
-  // ユーザー情報を使って何かする
+  // 使用使用者資訊執行某些操作
   Mk:api('notes/create', {
-    text: `{user.name}さん、ようこそ！`
+    text: `歡迎，{user.name}！`
   })
 
 })
@@ -179,27 +179,26 @@ Plugin:register_user_action('メニューに表示される項目名', @(user) {
 
 ### `Plugin:register_note_view_interruptor(fn)`
 
-UIに表示されるノート情報を書き換えます。\
-コールバック関数には、第一引数に対象のノートオブジェクトが渡されます。\
-コールバック関数の返り値でノートが書き換えられます。\
-`null` を返すとそのノートを非表示にします。
+覆寫顯示在 UI 上的貼文資訊。\
+回呼函數的第一參數會接收目標的貼文物件。\
+透過回呼函數的傳回值來覆寫貼文。\
+若回傳 `null` 則會隱藏該貼文。
 
 :::warning
 
-v2025.8.0以降では、この関数は**同期的に実行**されます。
-内部的に非同期な処理が実行される関数（`Mk:api`など）は実行できず、エラーとなります。
+在 v2025.8.0 及後續版本中，此函數為**同步執行**。無法執行內部包含非同步處理的函數（如 `Mk:api` 等），否則會發生錯誤。
 
-また、同期的に実行されるということは、プラグインの実行中はほかのJavaScriptの処理がすべて停止するということを意味します。これにより、ほかのプラグインフックと比べ、問題のあるスクリプト（無限ループなど）が実行された場合、ホストのJavascript環境に重大な影響を及ぼす可能性があります。十分注意してください。
+此外，同步執行意味著在插件執行期間，其他所有 JavaScript 的處理都會停止。因此，與其他插件鉤子 (Hook) 相比，若執行了有問題的腳本（例如無限迴圈），可能會對主機端的 Javascript 環境造成嚴重影響。請務必小心使用。
 
 :::
 
 ```AiScript
 Plugin:register_note_view_interruptor(@(note) {
   
-  // ノートの中身を書き換える
-  note.text = note.text.replace('リンゴ', 'バナナ')
+  // 修改貼文內容
+  note.text = note.text.replace('蘋果', '香蕉')
 
-  // nullを返すと非表示
+  // 回傳 null 則隱藏貼文
   if (note.text.incl('納豆')) {
     return null
   }
@@ -210,15 +209,15 @@ Plugin:register_note_view_interruptor(@(note) {
 
 ### `Plugin:register_note_post_interruptor(fn)`
 
-ノート投稿時にノート情報を書き換えます。\
-コールバック関数には、第一引数に対象のノートオブジェクトが渡されます。\
-コールバック関数の返り値でノートが書き換えられます。
+發布筆記時覆寫貼文資訊。\
+回呼函數的第一參數會接收目標的貼文物件。\
+透過回呼函數的傳回值來覆寫貼文。
 
 ```AiScript
 Plugin:register_note_post_interruptor(@(note) {
   
-  // ノートの中身を書き換える
-  note.text = note.text.replace('リンゴ', 'バナナ')
+  // 修改貼文內容
+  note.text = note.text.replace('蘋果', '香蕉')
 
   return note
 })
@@ -226,14 +225,14 @@ Plugin:register_note_post_interruptor(@(note) {
 
 ### `Plugin:register_page_view_interruptor(fn)`
 
-Page閲覧時にPage情報を書き換えます。\
-コールバック関数には、第一引数に対象のPageオブジェクトが渡されます。\
-コールバック関数の返り値でPageが書き換えられます。
+瀏覽 Page 時覆寫 Page 資訊。\
+回呼函數的第一參數會接收目標的 Page 物件。\
+透過回呼函數的傳回值來覆寫 Page。
 
 ```AiScript
 Plugin:register_page_view_interruptor(@(page) {
   
-  // ページの中身を書き換える（省略）
+  // 修改頁面內容（省略）
 
   return page
 })
@@ -241,31 +240,31 @@ Plugin:register_page_view_interruptor(@(page) {
 
 ### `Plugin:open_url(url)`
 
-第一引数に渡されたURLをブラウザの新しいタブで開きます。
+在瀏覽器的新分頁開啟第一參數傳遞的 URL。
 
 ### `Plugin:config`
 
-プラグインの設定が格納されるオブジェクト。プラグイン定義のconfigで設定したキーで値が入ります。
+儲存插件設定的物件。會將插件定義 config 中設定的 Key 作為鍵值來儲存。
 
-## Play専用 定数
+## Play 專用常數
 
 ### `THIS_ID`
 
-PlayのID
+Play 的 ID
 
 ### `THIS_URL`
 
-PlayのURL
+Play 的 URL
 
-## UI制御関数（Play・AiScript Appウィジェットで使用可能）
+## UI 控制函數（可用於 Play・AiScript App 小工具）
 
 ### `Ui:root`
 
-UIのルート要素。
+UI 的根元素。
 
 ### `Ui:render([ ...components ])`
 
-`Ui:root.update({ children: [ ...components ] })` の糖衣構文。UIのルート要素を書き換えます。
+`Ui:root.update({ children: [ ...components ] })` 的語法糖。用於覆寫 UI 的根元素。
 
 ```AiScript
 Ui:render([
@@ -276,117 +275,117 @@ Ui:render([
 
 ### `Ui:get(id)`
 
-IDを付与したコンポーネントを取得し、操作を行えます。
+取得賦予了 ID 的元件，並進行操作。
 
 ```AiScript
 Ui:C:text({text: "A"}, "text1")
 Ui:get("text1").update({text: "B"})
 ```
 
-## コンポーネント関数（Play・AiScript Appウィジェットで使用可能）
+## 元件函數（可用於 Play・AiScript App 小工具）
 
-以下の要素では、初期化の際に `Ui:C:xxx(props id)` のように第2引数にコンポーネントのidを指定することができます（以下のリファレンスではすべて省略しています）。指定したidは `Ui:get(id)` 関数で取得でき、`update` 関数でコンポーネントの中身を直接変更することができます（詳しくは `Ui:get(id)` のリファレンスをご覧ください）。
+在以下的元素中，初始化時可以在第二參數指定元件的 id，如 `Ui:C:xxx(props, id)`（在下方參考列表中皆省略）。指定的 id 可透過 `Ui:get(id)` 函數取得，並能使用 `update` 函數直接變更元件內容（詳情請參閱 `Ui:get(id)` 參考文件）。
 
-### レイアウト
+### 版面配置
 
 #### `Ui:C:container`
 
-幅寄せ、色などの書式設定ができる外枠（コンテナ）
+可設定靠齊位置、顏色等格式的外框（容器）
 
 ```AiScript
 Ui:C:container({
   children: [
-    // コンテナの中に入れたいコンポーネントの配列
+    // 想要放入容器中的元件陣列
     Ui:C:text({text: "A"})
   ]
-  align: 'center' // 幅寄せ left,center,right
-  bgColor: '#000' // 背景色
-  fgColor: '#00f' // 文字色
-  font: 'serif' // フォント serif,sans-serif,monospace
-  borderWidth: 1 // 枠幅
-  borderColor: '#f00' // 枠の色
-  borderStyle: 'solid' // 枠の柄
-  padding: 1 // 余白幅
-  rounded: false // 角を丸く
-  borderRadius: 1 // 角を丸く（丸みの度合いを数値指定）
-  hidden: false // 隠す
+  align: 'center' // 對齊方式 left, center, right
+  bgColor: '#000' // 背景顏色
+  fgColor: '#00f' // 文字顏色
+  font: 'serif' // 字體 serif, sans-serif, monospace
+  borderWidth: 1 // 邊框寬度
+  borderColor: '#f00' // 邊框顏色
+  borderStyle: 'solid' // 邊框樣式
+  padding: 1 // 內邊距寬度
+  rounded: false // 是否為圓角
+  borderRadius: 1 // 圓角（指定圓角的數值）
+  hidden: false // 是否隱藏
 })
 ```
 
 #### `Ui:C:folder`
 
-アコーディオン要素（ユーザーが開けたり閉めたりできるコンテナ）
+手風琴元素（使用者可展開或收起內容的容器）
 
 ```AiScript
 Ui:C:folder({
   children: [
-    // コンテナの中に入れたいコンポーネントの配列
+    // 想要放入容器中的元件陣列
     Ui:C:text({text: "A"})
   ]
-  title: "タイトル" // フォルダの開閉部分に記載するタイトル
-  opened: true // はじめから開いているか
+  title: "標題" // 顯示於資料夾展開/折疊處的標題
+  opened: true // 預設是否展開
 })
 ```
 
-### テキスト
+### 文字
 
 #### `Ui:C:text`
 
-プレーンテキスト
+純文字
 
 ```AiScript
 Ui:C:text({
-  text: "内容" // 表示するテキスト
-  size: 1 // 文字サイズ
-  bold: false // ボールド
-  color: '#000' // 色
-  font: 'monospace' // フォント serif,sans-serif,monospace
+  text: "內容" // 要顯示的文字
+  size: 1 // 文字大小
+  bold: false // 是否粗體
+  color: '#000' // 顏色
+  font: 'monospace' // 字體 serif, sans-serif, monospace
 })
 ```
 
 #### `Ui:C:mfm`
 
-MFMテキスト
+MFM 文字
 
 ```AiScript
 Ui:C:mfm({
-  text: "内容" // 表示するテキスト
-  size: 1 // 文字サイズ
-  bold: false // ボールド
-  color: '#000' // 色
-  font: 'monospace' // フォント serif,sans-serif,monospace
+  text: "內容" // 要顯示的文字
+  size: 1 // 文字大小
+  bold: false // 是否粗體
+  color: '#000' // 顏色
+  font: 'monospace' // 字體 serif, sans-serif, monospace
   onClickEv: @(id) {
-    // $[clickable.ev=eventId TEXT] のMFM構文のハンドラ
+    // $[clickable.ev=eventId TEXT] MFM 語法的處理常式 (Handler)
     <: `{id} clicked`
   }
 })
 ```
 
-### フォーム
+### 表單
 
 #### `Ui:C:button`
 
-ボタン
+按鈕
 
 ```AiScript
 Ui:C:button({
-  text: "ボタン" // ボタンに表示するテキスト
+  text: "按鈕" // 顯示於按鈕上的文字
   onClick: @() {
-    // 押したときのイベント
+    // 點擊時的事件
   }
-  primary: false // 色を付けるか？
-  rounded: false // 角を丸くするか？
-  disabled: false // 無効化するか？
+  primary: false // 是否套用主色調？
+  rounded: false // 是否為圓角？
+  disabled: false // 是否停用？
 })
 ```
 
 #### `Ui:C:buttons`
 
-ボタン（横並び）
+按鈕（橫向排列）
 
 ```AiScript
 Ui:C:buttons({
-  buttons: [ // ボタン定義の配列。propsの指定形式は Ui:C:button と同じ
+  buttons: [ // 按鈕定義陣列。props 的指定格式與 Ui:C:button 相同
     {text: "a", onClick: @(){...}}
     {text: "b", onClick: @(){...}}
   ]
@@ -398,113 +397,113 @@ Ui:C:buttons({
 ```AiScript
 Ui:C:switch({
   onChange: @(enabled) { 
-    // 変更された時のイベント。第1引数に変更後の状態（boolean）
+    // 變更時的事件。第一個參數為變更後的狀態（布林值 boolean）
   }
-  default: false // デフォルト値
-  label: "ラベル" // スイッチ横のテキスト
-  caption: "キャプション" // スイッチ下に表示する補助テキスト
+  default: false // 預設值
+  label: "標籤" // 開關旁的文字
+  caption: "說明" // 顯示於開關下方的輔助文字
 })
 ```
 
 #### `Ui:C:textInput`
 
-１行のテキスト入力
+單行文字輸入
 
 ```AiScript
 Ui:C:textInput({
   onInput: @(text) {
-    // 入力された時のイベント。第1引数に変更後の値
+    // 輸入時的事件。第一個參數為變更後的值
   }
-  default: "デフォルト" // デフォルト値
-  label: "ラベル" // 入力欄上のテキスト
-  caption: "キャプション" // 入力欄下に表示する補助テキスト
+  default: "預設值" // 預設值
+  label: "標籤" // 輸入欄位上方的文字
+  caption: "說明" // 顯示於輸入欄位下方的輔助文字
 })
 ```
 
 #### `Ui:C:numberInput`
 
-１行のテキスト入力
+單行數字輸入
 
 ```AiScript
 Ui:C:numberInput({
   onInput: @(number) {
-    // 入力された時のイベント。第1引数に変更後の値
+    // 輸入時的事件。第一個參數為變更後的值
   }
-  default: "デフォルト" // デフォルト値
-  label: "ラベル" // 入力欄上のテキスト
-  caption: "キャプション" // 入力欄下に表示する補助テキスト
+  default: "預設值" // 預設值
+  label: "標籤" // 輸入欄位上方的文字
+  caption: "說明" // 顯示於輸入欄位下方的輔助文字
 })
 ```
 
 #### `Ui:C:textarea`
 
-複数行のテキスト入力
+多行文字輸入
 
 ```AiScript
 Ui:C:textarea({
   onInput: @(text) {
-    // 入力された時のイベント。第1引数に変更後の値
+    // 輸入時的事件。第一個參數為變更後的值
   }
-  default: "デフォルト" // デフォルト値
-  label: "ラベル" // 入力欄上のテキスト
-  caption: "キャプション" // 入力欄下に表示する補助テキスト
+  default: "預設值" // 預設值
+  label: "標籤" // 輸入欄位上方的文字
+  caption: "說明" // 顯示於輸入欄位下方的輔助文字
 })
 ```
 
 #### `Ui:C:select`
 
-複数の値から一つ選ぶ形式
+從多個選項中選取一個的下拉式選單
 
 ```AiScript
 Ui:C:select({
-  items: [ // 選択肢の配列。textには表示するテキストを、valueには変更時のイベントで渡す値を入力
+  items: [ // 選項陣列。text 填入要顯示的文字，value 填入變更事件中要傳遞的值
     {text: "A", value: "v1"}
     {text: "B", value: "v2"}
   ]
   onChange: @(value){
-    // 変更された時のイベント。第1引数に変更後のvalue
+    // 變更時的事件。第一個參數為變更後的 value
   }
-  default: "v1" // デフォルトのvalue
-  label: "ラベル" // 入力欄上のテキスト
-  caption: "キャプション" // 入力欄下に表示する補助テキスト
+  default: "v1" // 預設的 value
+  label: "標籤" // 輸入欄位上方的文字
+  caption: "說明" // 顯示於輸入欄位下方的輔助文字
 })
 ```
 
-### ノート投稿関連
+### 貼文發布相關
 
 #### `Ui:C:postForm`
 
-投稿フォームをPlayに直接埋め込む
+將發布表單直接嵌入 Play
 
 ```AiScript
 Ui:C:postForm({
   form: {
-    cw: "CW注釈" // CWを指定する場合の「要約」テキスト
-    text: "投稿内容" // 投稿フォームのデフォルト文字列
+    cw: "CW 註釋" // 指定 CW（內容警告）時的「摘要」文字
+    text: "貼文內容" // 發文表單的預設字串
 
-    // 以下はMisskey v2024.5.0以降で指定可能となります
-    visibility: "home" // デフォルトの投稿の公開範囲（未指定の場合はpublic）
-    localOnly: false // デフォルトで連合無しかどうか（未指定の場合はfalse）
+    // 以下參數在 Misskey v2024.5.0 及後續版本中可用
+    visibility: "home" // 預設的貼文公開範圍（未指定時為 public）
+    localOnly: false // 預設是否僅限本站（不跨站聯邦傳送）（未指定時為 false）
   }
 })
 ```
 
 #### `Ui:C:postFormButton`
 
-投稿フォームを呼び出せる特殊ボタン
+可呼叫發布表單的特殊按鈕
 
 ```AiScript
 Ui:C:postFormButton({
-  text: "投稿！" // ボタンに表示するテキスト
-  primary: false // 色を付けるか？
-  rounded: false // 角を丸くするか？
+  text: "發佈！" // 顯示於按鈕上的文字
+  primary: false // 是否套用主色調？
+  rounded: false // 是否為圓角？
   form: {
-    cw: "CW注釈" // CWを指定する場合の「要約」テキスト
-    text: "投稿内容" // 投稿フォームのデフォルト文字列
+    cw: "CW 註釋" // 指定 CW（內容警告）時的「摘要」文字
+    text: "貼文內容" // 發文表單的預設字串
 
-    // 以下はMisskey v2024.5.0以降で指定可能となります
-    visibility: "home" // デフォルトの投稿の公開範囲（未指定の場合はpublic）
-    localOnly: false // デフォルトで連合無しかどうか（未指定の場合はfalse）
+    // 以下參數在 Misskey v2024.5.0 及後續版本中可用
+    visibility: "home" // 預設的貼文公開範圍（未指定時為 public）
+    localOnly: false // 預設是否僅限本站（不跨站聯邦傳送）（未指定時為 false）
   }
 })
 ```
