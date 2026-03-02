@@ -37,3 +37,7 @@ description: 'Misskey APIに関連するライブラリの一覧'
 ## Rust
 
 - [misskey-rs](https://github.com/coord-e/misskey-rs)
+
+## ReScript
+
+- [rescript-misskey-api](https://github.com/f3liz-dev/rescript-misskey-api)
