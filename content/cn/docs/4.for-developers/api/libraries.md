@@ -37,3 +37,7 @@ description: '与 Misskey API 相关的库列表'
 ## Rust
 
 - [misskey-rs](https://github.com/coord-e/misskey-rs)
+
+## ReScript
+
+- [rescript-misskey-api](https://github.com/f3liz-dev/rescript-misskey-api)
