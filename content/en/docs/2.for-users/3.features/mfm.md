@@ -121,7 +121,7 @@ Displays content smaller and thinner.
 <small>MisskeyでFediverseの世界が広がります</small>
 ```
 
-<MfmPreview text="<small>MisskeyでFediverseの世界が広がります</small>"></MfmPreview>
+<MfmPreview text="<small>Expands the world of the Fediverse with Misskey</small>"></MfmPreview>
 
 ### Quote
 
