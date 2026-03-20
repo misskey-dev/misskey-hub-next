@@ -108,7 +108,7 @@ https://example.com
 可以将文字显示为粗体来表示强调。
 
 ```
-**太字**
+**粗体**
 ```
 
 <MfmPreview text="**太字**"></MfmPreview>
