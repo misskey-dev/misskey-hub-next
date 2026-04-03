@@ -348,6 +348,28 @@ _content:
   danger: "警告"
   preview: "プレビュー"
 
+_mk:
+  _ago:
+    future: "未来"
+    justNow: "たった今"
+    secondsAgo: "{n}秒前"
+    minutesAgo: "{n}分前"
+    hoursAgo: "{n}時間前"
+    daysAgo: "{n}日前"
+    weeksAgo: "{n}週間前"
+    monthsAgo: "{n}ヶ月前"
+    yearsAgo: "{n}年前"
+    invalid: "日時の解析に失敗"
+
+  _timeIn:
+    seconds: "{n}秒後"
+    minutes: "{n}分後"
+    hours: "{n}時間後"
+    days: "{n}日後"
+    weeks: "{n}週間後"
+    months: "{n}ヶ月後"
+    years: "{n}年後"
+
 _other:
   title: "もっと！"
   description: "Misskeyをもっと楽しめるその他のリソースをご紹介しています。"
