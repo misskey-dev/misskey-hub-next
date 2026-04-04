@@ -339,6 +339,27 @@ _content:
   warning: "주의"
   danger: "경고"
   preview: "미리보기"
+_mk:
+  searchByGoogle: "검색"
+  _ago:
+    future: "미래"
+    justNow: "방금 전"
+    secondsAgo: "{n}초 전"
+    minutesAgo: "{n}분 전"
+    hoursAgo: "{n}시간 전"
+    daysAgo: "{n}일 전"
+    weeksAgo: "{n}주 전"
+    monthsAgo: "{n}개월 전"
+    yearsAgo: "{n}년 전"
+    invalid: "없음"
+  _timeIn:
+    seconds: "{n}초 후"
+    minutes: "{n}분 후"
+    hours: "{n}시간 후"
+    days: "{n}일 후"
+    weeks: "{n}주 후"
+    months: "{n}개월 후"
+    years: "{n}년 후"
 _other:
   title: "더 보기!"
   description: "Misskey를 좀 더 즐기실 수 있는 다른 리소스도 소개합니다."
