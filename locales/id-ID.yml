@@ -339,6 +339,27 @@ _content:
   warning: "Peringatan"
   danger: "Bahaya"
   preview: "Pratinjau"
+_mk:
+  searchByGoogle: "Penelusuran"
+  _ago:
+    future: "Masa depan"
+    justNow: "Baru saja"
+    secondsAgo: "{n} detik lalu"
+    minutesAgo: "{n} menit lalu"
+    hoursAgo: "{n} jam lalu"
+    daysAgo: "{n} hari lalu"
+    weeksAgo: "{n} minggu lalu"
+    monthsAgo: "{n} bulan lalu"
+    yearsAgo: "{n} tahun lalu"
+    invalid: "Tidak ada sama sekali disini"
+  _timeIn:
+    seconds: "dalam {n} detik"
+    minutes: "dalam {n} menit"
+    hours: "dalam {n} jam"
+    days: "dalam {n} hari"
+    weeks: "dalam {n} minggu"
+    months: "dalam {n} bulan"
+    years: "dalam {n} tahun"
 _other:
   title: "Lainnya"
   description: "Memperkenalkan sumber daya yang menyenangkan untuk Misskey!"
