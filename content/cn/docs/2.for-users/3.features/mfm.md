@@ -153,6 +153,16 @@ $[ruby Misskey ミスキー]
 
 <MfmPreview text="$[ruby Misskey ミスキー]"></MfmPreview>
 
+### 日時
+
+UNIX時間を指定して日時を表示できます。
+
+```
+$[unixtime 1701356400]
+```
+
+<MfmPreview text="$[unixtime 1701356400]"></MfmPreview>
+
 ### 代码（内嵌）
 
 将文字中的程序代码语法高亮显示。
