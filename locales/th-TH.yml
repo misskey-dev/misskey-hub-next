@@ -339,6 +339,27 @@ _content:
   warning: "ข้อควรระวัง"
   danger: "คำเตือน"
   preview: "แสดงตัวอย่าง"
+_mk:
+  searchByGoogle: "ค้นหา"
+  _ago:
+    future: "อนาคต"
+    justNow: "เมื่อกี๊นี้"
+    secondsAgo: "{n} วินาทีที่แล้ว"
+    minutesAgo: "{n} นาทีที่แล้ว"
+    hoursAgo: "{n} ชั่วโมงที่แล้ว"
+    daysAgo: "{n} วันที่ผ่านมา"
+    weeksAgo: "{n} สัปดาห์ที่แล้ว"
+    monthsAgo: "{n} เดือนที่แล้ว"
+    yearsAgo: "{n} ปีที่ผ่านมา"
+    invalid: "ไม่พบผลลัพธ์"
+  _timeIn:
+    seconds: "ใน {n} วินาที"
+    minutes: "ใน {n} นาที"
+    hours: "ใน {n} ชั่วโมง"
+    days: "ใน {n} วัน"
+    weeks: "ใน {n} สัปดาห์"
+    months: "ใน {n} เดือน"
+    years: "ใน {n} ปี"
 _other:
   title: "เพิ่มเติม!"
   description: "แนะนำทรัพยากรอื่นๆ ที่จะทำให้สนุกกับ Misskey มากขึ้น"
