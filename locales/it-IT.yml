@@ -339,6 +339,27 @@ _content:
   warning: "Avvertimento"
   danger: "Pericolo"
   preview: "Anteprima"
+_mk:
+  searchByGoogle: "Cerca"
+  _ago:
+    future: "Futuro"
+    justNow: "Adesso"
+    secondsAgo: "{n} sec fa"
+    minutesAgo: "{n} min fa"
+    hoursAgo: "{n} ore fa"
+    daysAgo: "{n} gg fa"
+    weeksAgo: "{n} sett. fa"
+    monthsAgo: "{n} mesi fa"
+    yearsAgo: "{n} anni fa"
+    invalid: "Niente da visualizzare"
+  _timeIn:
+    seconds: "Tra {n} secondi"
+    minutes: "Tra {n} minuti"
+    hours: "Tra {n} ore"
+    days: "Tra {n} giorni"
+    weeks: "Tra {n} settimane"
+    months: "Tra {n} mesi"
+    years: "Tra {n} anni"
 _other:
   title: "Di più!"
   description: "Ecco altre risorse informative che aiutano a goderti Misskey sempre di più."
