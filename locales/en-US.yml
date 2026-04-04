@@ -339,6 +339,27 @@ _content:
   warning: "Warning"
   danger: "Danger"
   preview: "Preview"
+_mk:
+  searchByGoogle: "Search"
+  _ago:
+    future: "Future"
+    justNow: "Just now"
+    secondsAgo: "{n}s ago"
+    minutesAgo: "{n}m ago"
+    hoursAgo: "{n}h ago"
+    daysAgo: "{n}d ago"
+    weeksAgo: "{n}w ago"
+    monthsAgo: "{n}mo ago"
+    yearsAgo: "{n}y ago"
+    invalid: "None"
+  _timeIn:
+    seconds: "In {n}s"
+    minutes: "In {n}m"
+    hours: "In {n}h"
+    days: "In {n}d"
+    weeks: "In {n}w"
+    months: "In {n}mo"
+    years: "In {n}y"
 _other:
   title: "More!"
   description: "Introducing more enjoyable resources for Misskey!"
