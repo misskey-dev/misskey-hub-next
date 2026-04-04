@@ -339,6 +339,27 @@ _content:
   warning: "Achtung"
   danger: "WARNUNG"
   preview: "Vorschau"
+_mk:
+  searchByGoogle: "Suchen"
+  _ago:
+    future: "Zukunft"
+    justNow: "Gerade eben"
+    secondsAgo: "vor {n} Sekunde(n)"
+    minutesAgo: "vor {n} Minute(n)"
+    hoursAgo: "vor {n} Stunde(n)"
+    daysAgo: "vor {n} Tag(en)"
+    weeksAgo: "vor {n} Woche(n)"
+    monthsAgo: "vor {n} Monat(en)"
+    yearsAgo: "vor {n} Jahr(en)"
+    invalid: "Ungültig"
+  _timeIn:
+    seconds: "In {n}s"
+    minutes: "In {n} Min."
+    hours: "In {n} Std."
+    days: "In {n} Tagen"
+    weeks: "In {n} Wochen"
+    months: "In {n} Monaten"
+    years: "In {n} Jahren"
 _other:
   title: "Mehr!"
   description: "Hier sind einige andere Ressourcen."
