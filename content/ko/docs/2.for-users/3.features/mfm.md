@@ -151,6 +151,16 @@ $[ruby Misskey 미스키]
 
 <MfmPreview text="$[ruby Misskey ミスキー]"></MfmPreview>
 
+### 日時
+
+UNIX時間を指定して日時を表示できます。
+
+```
+$[unixtime 1701356400]
+```
+
+<MfmPreview text="$[unixtime 1701356400]"></MfmPreview>
+
 ### 코드 (인라인)
 
 프로그래밍 코드 등에 대해 인라인 구문 강조를 할 수 있습니다.
