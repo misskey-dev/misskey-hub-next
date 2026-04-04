@@ -339,6 +339,27 @@ _content:
   warning: "Atenció"
   danger: "Alerta"
   preview: "Vista prèvia"
+_mk:
+  searchByGoogle: "Cercar"
+  _ago:
+    future: "Futur "
+    justNow: "Ara mateix"
+    secondsAgo: "Fa {n} segons"
+    minutesAgo: "Fa {n} minuts"
+    hoursAgo: "Fa {n} hores"
+    daysAgo: "Fa {n} dies"
+    weeksAgo: "Fa {n} setmanes"
+    monthsAgo: "Fa {n} mesos"
+    yearsAgo: "Fa {n} anys"
+    invalid: "Res"
+  _timeIn:
+    seconds: "En {n} segons"
+    minutes: "En {n} minuts"
+    hours: "En {n} hores"
+    days: "En {n} dies"
+    weeks: "En {n} setmanes"
+    months: "En {n} mesos"
+    years: "En {n} anys"
 _other:
   title: "Més!"
   description: "Aquí tens més recursos que t'ajudaran a treure més profit de Misskey."
