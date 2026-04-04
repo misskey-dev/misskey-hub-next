@@ -339,6 +339,27 @@ _content:
   warning: "Advertencia"
   danger: "Peligro"
   preview: "Preview"
+_mk:
+  searchByGoogle: "Buscar"
+  _ago:
+    future: "Futuro"
+    justNow: "Justo ahora"
+    secondsAgo: "Hace {n} segundos"
+    minutesAgo: "Hace {n} minutos"
+    hoursAgo: "Hace {n} horas"
+    daysAgo: "Hace {n} días"
+    weeksAgo: "Hace {n} semanas"
+    monthsAgo: "Hace {n} meses"
+    yearsAgo: "Hace {n} años"
+    invalid: "No hay nada que ver aqui"
+  _timeIn:
+    seconds: "En {n} segundos"
+    minutes: "En {n}m"
+    hours: "En {n}h"
+    days: "En {n}d"
+    weeks: "En {n}sem."
+    months: "En {n}M"
+    years: "En {n} años"
 _other:
   title: "¡Más!"
   description: "¡Aquí tienes algunos recursos adicionales que te ayudarán a sacar más partido a Misskey!"
