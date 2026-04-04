@@ -339,6 +339,27 @@ _content:
   warning: "注意"
   danger: "警告"
   preview: "預覽"
+_mk:
+  searchByGoogle: "搜尋"
+  _ago:
+    future: "未來"
+    justNow: "剛剛"
+    secondsAgo: "{n}秒前"
+    minutesAgo: "{n}分鐘前"
+    hoursAgo: "{n}小時前"
+    daysAgo: "{n}天前"
+    weeksAgo: "{n}周前"
+    monthsAgo: "{n}個月前"
+    yearsAgo: "{n}年前"
+    invalid: "無"
+  _timeIn:
+    seconds: "{n}秒後"
+    minutes: "{n}分鐘後"
+    hours: "{n}小時後"
+    days: "{n}天後"
+    weeks: "{n}週後"
+    months: "{n}個月後"
+    years: "{n}年後"
 _other:
   title: "更多！"
   description: "其他可以幫助您更好地享受 Misskey 的資源。"
