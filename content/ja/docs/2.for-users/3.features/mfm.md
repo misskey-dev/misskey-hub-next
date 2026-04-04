@@ -292,14 +292,14 @@ $[scale.x=4,y=2 🍮]
 <MfmPreview text="$[scale.x=4,y=2 🍮]"></MfmPreview>
 
 ```
-$[x2 x2]
-$[x3 x3]
-$[x4 x4]
+$[x2 すこし大きい]
+$[x3 大きい]
+$[x4 とても大きい]
 ```
 
-<MfmPreview text="$[x2 x2]
-$[x3 x3]
-$[x4 x4]"></MfmPreview>
+<MfmPreview text="$[x2 すこし大きい]
+$[x3 大きい]
+$[x4 とても大きい]"></MfmPreview>
 
 ### アニメーション(びよんびよん)
 
