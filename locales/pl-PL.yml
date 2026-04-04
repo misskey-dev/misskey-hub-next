@@ -339,6 +339,27 @@ _content:
   warning: "注意"
   danger: "警告"
   preview: "プレビュー"
+_mk:
+  searchByGoogle: "Szukaj"
+  _ago:
+    future: "W przyszłości"
+    justNow: "Przed chwilą"
+    secondsAgo: "{n} sek. temu"
+    minutesAgo: "{n} min. temu"
+    hoursAgo: "{n} godz. temu"
+    daysAgo: "{n} dni temu"
+    weeksAgo: "{n} tyg. temu"
+    monthsAgo: "{n} mies. temu"
+    yearsAgo: "{n} lat temu"
+    invalid: "Nie ma tu niczego"
+  _timeIn:
+    seconds: "{n}秒後"
+    minutes: "{n}分後"
+    hours: "{n}時間後"
+    days: "{n}日後"
+    weeks: "{n}週間後"
+    months: "{n}ヶ月後"
+    years: "{n}年後"
 _other:
   title: "もっと！"
   description: "Misskeyをもっと楽しめるその他のリソースをご紹介しています。"
