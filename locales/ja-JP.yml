@@ -348,6 +348,9 @@ _content:
   danger: "警告"
   preview: "プレビュー"
 
+_mk:
+  searchByGoogle: "検索"
+
 _other:
   title: "もっと！"
   description: "Misskeyをもっと楽しめるその他のリソースをご紹介しています。"

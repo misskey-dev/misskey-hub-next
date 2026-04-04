@@ -1,7 +1,7 @@
 <template>
     <div :class="$style.root">
         <input v-model="query" :class="$style.input" type="search" :placeholder="q">
-        <button :class="$style.button" @click="search"><SearchIco /> 検索</button>
+        <button :class="$style.button" @click="search"><SearchIco /> {{ $t('_mk.searchByGoogle') }}</button>
     </div>
 </template>
 
