@@ -349,6 +349,7 @@ _content:
   preview: "プレビュー"
 
 _mk:
+  searchByGoogle: "検索"
   _ago:
     future: "未来"
     justNow: "たった今"
@@ -360,7 +361,6 @@ _mk:
     monthsAgo: "{n}ヶ月前"
     yearsAgo: "{n}年前"
     invalid: "日時の解析に失敗"
-
   _timeIn:
     seconds: "{n}秒後"
     minutes: "{n}分後"
