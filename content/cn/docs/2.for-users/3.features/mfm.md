@@ -153,9 +153,9 @@ $[ruby Misskey ミスキー]
 
 <MfmPreview text="$[ruby Misskey ミスキー]"></MfmPreview>
 
-### 日時
+### 日期和时间
 
-UNIX時間を指定して日時を表示できます。
+可以通过指定 UNIX 时间来显示日期和时间。
 
 ```
 $[unixtime 1701356400]
