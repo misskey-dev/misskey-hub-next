@@ -1,71 +1,71 @@
 # Charts
 
-Misskey has a feature that displays and generates charts from various server data sources.
+Misskey has a feature that displays and generates charts from various instance data sources. Using charts, you can visually comprehend the state of the instance's usage, the federation, and user activity, among other things.
 
-The server chart can be displayed on the Server Information page.
+The instance's charts can be displayed on the Instance Information page.
 
 Below is a description of each chart and each of its elements.
 
 ## Federation Charts
 
-Charts about federated servers.
+Charts regarding federated instances.
 
 ### Pub
 
-Unique number of self-server that has sent activities to remote servers.
+Number of instances providing activity. In other words, it displays the number of instances whose users follow users on your instance.
 
 ### Sub
 
-Unique number of remote servers that have sent activity to the self-server.
+Number of instances receiving activity. In other words, it is the number of instances whose users are followed by your instance's users.
 
 ### Received
 
-The number of users receiving activities.
+Number of instances receiving activities.
 
 ### Delivered
 
-The number of servers providing activity.
+Number of instances providing activity.
 
 ### Stalled
 
-Unique number of failures when the self-server attempted to deliver activities to remote servers.
+Number of instances that returned errors while sending activity.
 
 ## Active users charts
 
-Self-server user usage charts.
+Your instance's user usage charts.
 
 ### Read & Write
 
-Unique number of users who have browsed and written.
+Number of users who have both read and wrote posts.
 
 ### Read
 
-Unique number of users who have browsed.
+Number of users who have read posts.
 
 ### Write
 
-Unique number of users who have written.
+Number of users who have written posts.
 
 ### < Week
 
-The number of users who have browsed and whose account creation date and time is less than one week.
+Number of users who have read a post and whose account creation date and time is less than one week ago.
 
 ### < Month
 
-The number of users who have browsed and whose account creation date and time is less than one month.
+Number of users who have read and whose account creation date and time is less than one month ago.
 
 ### < Year
 
-The number of users who have read and whose account creation date and time is less than one year.
+Number of users who have read and whose account creation date and time is less than one year ago.
 
-### Week
+### > Week
 
-The number of users who have read and whose account creation date and time is one week ago.
+The number of users who have read and whose account creation date and time is more than a week ago.
 
-### Month
+### > Month
 
-The number of users who have read and whose account creation date and time is one month ago.
+The number of users who have read and whose account creation date and time is more than one month ago.
 
-### Year
+### > Year
 
-The number of users who have read and whose account creation date and time is one year ago.
+The number of users who have read and whose account creation date and time is more than one year ago.
