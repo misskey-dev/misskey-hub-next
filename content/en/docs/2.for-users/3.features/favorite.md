@@ -1,7 +1,7 @@
-# Bookmarks
+# Favorites
 
-This function allows you to save [notes](./note) as bookmarks.
+This function allows you to save [notes](./note) as favorites.
 
-You can view your saved notes on the [Bookmarks page](x-mi-web://my/favorites). The note's author is not notified when you bookmark a note, and only you can see your bookmarks.
+You can view your saved notes on the [Favorites page](x-mi-web://my/favorites). The note's author is not notified when you add a note to favorites, and only you can see your favorites.
 
-To bookmark a note, select "Bookmark" in the Notes menu.To remove a bookmark, select "Remove bookmark."
+To add a note to favorites, select "Add to favorites" in the note's Menu.To remove a bookmark, select "Remove from favorites."
