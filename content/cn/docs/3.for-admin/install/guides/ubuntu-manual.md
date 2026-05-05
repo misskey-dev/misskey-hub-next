@@ -167,7 +167,7 @@ CREATE DATABASE mk1 OWNER misskey;
 
 ### Redis
 
-Redis 是一款 NoSQL 内存数据库软件，用于管理数据库及联合之间的通信等，是必不可少的。  
+Redis 是一款 NoSQL 内存数据库软件，用于管理数据库及联邦之间的通信等，是必不可少的。  
 按照 redis.io 的文档进行安装。
 
 https\://redis.io/docs/getting-started/installation/install-redis-on-linux/
