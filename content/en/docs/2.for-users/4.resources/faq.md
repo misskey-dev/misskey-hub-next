@@ -1,5 +1,5 @@
 ---
-description: This document contains frequently asked questions about using Misskey.
+description: 'This document contains frequently asked questions about using Misskey.'
 ---
 
 # Frequently Asked Questions
@@ -35,8 +35,8 @@ The name "Misskey" was inspired by the lyrics of May'n's song "Brain Diver," whi
 
 Select "Search" from the menu and enter the user's fully-qualified username in the format specified below.A fully-qualified username includes a username and the hostname of the server to which the user belongs.This format is common between ActivityPub platforms such as Misskey, Mastodon, and Pleroma.<br>
 
-The format of a fully-qualified username is as follows:\
-`username@hostname.example`Here's a live example:\
+The format of a fully-qualified username is as follows:  
+`username@hostname.example`Here's a live example:  
 `syuilo@misskey.io`
 
 While this format is not universal across all distributed software, it allows you to follow users from other servers or platforms implemented with different decentralized software.
@@ -62,6 +62,22 @@ Anyone can develop a Misskey bot using the Misskey API.For more information, see
 
 We use [DeepL Translation](https://www.deepl.com/), the machine translation service.
 
+## I want to inquire about your service.
+
+"Misskey" is the name of software used to operate social media services, as well as the development project of this software."Misskey" itself is not a social media service.The Misskey Project does not operate or manage any social media services itself. Any inquiries about services using Misskey software should be directed to their respective service.Note that colloquially, "Misskey" is often used to refer to social media services using Misskey software.
+
+## How will we use your donations?
+
+Your donations will be used to support the continuous development of Misskey.
+
+Specifically, your donations will primarily go towards the salary of a full-time developer (currently @syuilo). The Misskey Project could not be possible without our full-time developer. From time to time the funds may also be used to pay for contract work, as well as stipends.
+
+A small proportion of our expenses may include hospitality, donations to other open source software, domain registration, development software and services, materials (e.g. books), hardware (e.g. test benches), fees for trademarks and other rights, accounting fees, merchandise costs (production, shipping, etc. for Misskey cards, etc.), purchasing art assets (logos, icons, illustrations, sounds, etc.), virtual office fees, etc.
+
+We are not currently advertising, so we do not have any advertising expenses.
+
+Please note that donations to us are considered "sales" for tax purposes and will be subject to sales tax. Additionally, donations are subject to payment processor fees, meaning a portion of your donations will not go to us.
+
 ## Do I need to register with the Ministry of Internal Affairs and Communications if I create a server? (For servers in Japan)
 
 ### Short answer
@@ -72,6 +88,10 @@ We use [DeepL Translation](https://www.deepl.com/), the machine translation serv
 
 The definition of "operator," according to [documents from the Ministry of Internal Affairs and Communications](https://www.soumu.go.jp/main_content/000477428.pdf), is "a person who seeks to make a profit by providing services and collecting fees as compensation for the provision of those services."Therefore, unless you are operating the server for the purpose of making a profit as a business, registration is not necessary.Thus, even if there is revenue from sources like donations or advertising, as long as it is used solely for operating costs, it does not fall under the category of operators requiring registration (confirmed with the Ministry of Internal Affairs and Communications).<br>
 For more details, please refer to the Ministry of Internal Affairs and Communications' [Entry Manual for Telecommunications Businesses](https://www.soumu.go.jp/main_content/000477428.pdf) or contact the ministry directly.
+
+## Since Misskey has a DM function, don't I need to register as a telecommunications business to run a server?
+
+As mentioned in ["Do I need to register with the Ministry of Internal Affairs and Communications if I create a server? (For servers in Japan)"](#Do I need to register with the Ministry of Internal Affairs and Communications if I create a server? (For servers in Japan)), any service operating on a non-profit basis does not require registration, regardless of the services offered.
 
 ## Can I release services containing the name "Misskey"?
 

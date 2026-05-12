@@ -1,7 +1,7 @@
 <template>
     <ul class="flex flex-wrap p-4" :class="$style.localNavRoot">
         <li v-for="item in items">
-            <button v-if="item.anchor" class="hover:text-slate-950 focus:text-slate-950 dark:hover:text-slate-200 dark:focus:text-slate-200 " @click="scrollTo(item.anchor)">
+            <button v-if="item.anchor" class="hover:text-neutral-950 focus:text-neutral-950 dark:hover:text-neutral-200 dark:focus:text-neutral-200 " @click="scrollTo(item.anchor)">
                 {{ item.name }}
                 <ArrowIco class="ml-2 stroke-1 stroke-current" />
             </button>
@@ -26,7 +26,7 @@ const props = defineProps<{
 <style module>
 .localNavRoot li a,
 .localNavRoot li button {
-    @apply font-bold tracking-wide relative px-2 py-4 text-slate-400 transition-colors;
+    @apply font-bold tracking-wide relative px-2 py-4 text-neutral-400 transition-colors;
 }
 .localNavRoot li:not(:last-child) {
     @apply mr-4;

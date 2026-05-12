@@ -2,7 +2,7 @@
 	<div :class="['grid grid-cols-1 md:grid-cols-2 gap-4', wide && 'lg:grid-cols-3']">
 	    <GNuxtLink
 	    	class="block p-4 rounded-lg border transition-colors hover:!no-underline"
-			:class="gray ? 'hover:bg-white dark:hover:bg-slate-950 border-slate-300 dark:border-accent-800' : 'hover:bg-slate-100 dark:hover:bg-slate-800 border-slate-200 dark:border-slate-700'"
+			:class="gray ? 'hover:bg-white dark:hover:bg-neutral-950 border-neutral-300 dark:border-accent-800' : 'hover:bg-neutral-100 dark:hover:bg-neutral-800 border-neutral-200 dark:border-neutral-700'"
 	    	v-for="item in items"
 	    	:key="item.to"
 	    	:to="item.to"
@@ -11,7 +11,7 @@
 	    	<h3 class="font-bold !text-lg !mt-0 !mb-2">
 	    		{{ item.title }}<ArrowRightIco v-if="isLocalPath(item.to)" class="ml-1.5" /><ArrowUpRightIco v-else class="ml-1.5" />
 	    	</h3>
-	    	<p class="text-sm text-slate-500 dark:text-slate-400 !mb-0 line-clamp-2">
+	    	<p class="text-sm text-neutral-500 dark:text-neutral-400 !mb-0 line-clamp-2">
 	    		{{ item.description ?? "" }}
 	    	</p>
 	    </GNuxtLink>

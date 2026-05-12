@@ -1,5 +1,5 @@
 ---
-description: MFM 是一种专用的标记语言，可以在 Misskey 的各个地方使用。
+description: 'MFM 是一种专用的标记语言，可以在 Misskey 的各个地方使用。'
 ---
 
 # MFM

@@ -1,8 +1,8 @@
 <template>
-    <div class="rounded-xl h-auto w-72 border border-slate-300 dark:border-slate-800 bg-slate-200 dark:bg-slate-700">
-        <div class="mt-[84px] bg-white dark:bg-slate-950 rounded-b-xl divide-y divide-slate-200 dark:divide-slate-900">
+    <div class="rounded-xl h-auto w-72 border border-neutral-300 dark:border-neutral-800 bg-neutral-200 dark:bg-neutral-700">
+        <div class="mt-[84px] bg-white dark:bg-neutral-950 rounded-b-xl divide-y divide-neutral-200 dark:divide-neutral-900">
             <div class="flex items-center space-x-2 px-4 py-2">
-                <div class="w-[66px] h-[66px] relative -mt-8 rounded-full border-4 border-white dark:border-slate-950 bg-slate-50 dark:bg-slate-900">
+                <div class="w-[66px] h-[66px] relative -mt-8 rounded-full border-4 border-white dark:border-neutral-950 bg-neutral-50 dark:bg-neutral-900">
                     <img class="w-full h-full object-cover rounded-full" :src="avatar" />
                     <img
                         v-for="decoration in decorations"

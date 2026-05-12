@@ -20,6 +20,7 @@ threeDimensionModel: "3D模型"
 clickToShow: "点击以显示"
 preview: "预览"
 scrollable: "可以滚动"
+serverListUnderMaintenance: "服务器列表当前正在维护中。"
 _error:
   notFound: "找不到页面"
   notFoundDesc: "找不到您要查找的页面，请检查 URL。"
@@ -35,7 +36,7 @@ _seo:
 _nav:
   servers: "服务器"
   docs: "文档"
-  blog: "博客"
+  news: "新闻"
   other: "更多！"
   switchLang: "语言设置"
 _landing:
@@ -49,17 +50,26 @@ _landing:
     _federated:
       title: "去中心化"
       description: "Misskey 采用去中心化协议，将不同服务器上的社区连接起来。"
-    _multifunction:
-      title: "功能丰富"
-      description: "Misskey 拥有多种独特的功能，让您可更专业地发帖。"
-    _customizable:
-      title: "高度可定制"
-      description: "Misskey 有灵活的 Web 界面，你可以按喜好自己定制页面的样式。"
+    _powerful:
+      title: "功能强大"
+      description: "Misskey具备着多种多样的产品级功能，可依照需求进行精细化定制。无论人数多少，都是最合适您的解决方案。"
+  _introduction:
+    title: "用 Misskey 创作吧"
+    description: "使用 Misskey，您无需进行繁琐的开发，即可轻松构建自己的专属平台。通过 Misskey 创建的服务完全归您所有，因此也无需承担在信息发布方面对现有平台的依赖风险。"
+    tip: "Misskey 并非“一项网络服务本身”，而是用于构建微型博客服务的“基础软件”。这就好比您使用 WordPress 这类软件来创建网站一样。"
   _decenterized:
     title: "Misskey 是{0}"
-    decenterizedPlatform: "去中心化平台"
     description: "Misskey 是一个自由开放的项目，任何人都可以自由地使用 Misskey 创建服务器，因此互联网上已经诞生了各种各样的服务器。 此外，Misskey 实现了一个名叫{0}的分布式通信协议。因此，无论您选择哪台服务器，都可以与其他服务器上的用户交互。 这就是它被称为去中心化的原因，也是它与 Twitter 等其他服务的根本不同之处。 不同服务器的主要话题、用户群和语言各不相同，找到适合自己的服务器也是乐趣之一（当然，创建自己的服务器也很有趣哦）。"
     activityPub: "ActivityPub"
+  _useCases:
+    title: "可以这样使用"
+    single: "用于信息收集与发布的个人专属服务器"
+    official: "用于开设公司宣传账号的专属服务器"
+    community: "面向有相同兴趣用户的社区服务器"
+    inHouse: "用作内部社交网络的私有服务器"
+  _free:
+    title: "Misskey 永久免费且开放"
+    description: "自2014年开发之初，直至未来，Misskey始终是一款公开程序源代码的开源软件（OSS）。此外，任何人都可以免费、自由地使用其源代码。Misskey能够持续作为开源软件，离不开大家的支持。"
   _features:
     _root:
       title: "主要功能"
@@ -73,21 +83,162 @@ _landing:
     _reaction:
       title: "回应"
       description: "您可以在帖子中添加 \"回应\"，轻松传达和交流您的感受。"
+    _customEmojis:
+      title: "自定义表情"
+      description: "可制作服务器专属的的自定义表情，并在Misskey内的各处使用。"
+    _channel:
+      title: "频道"
+      description: "创建频道后，即可围绕共同主题在实例内建立专属社区。"
+    _antenna:
+      title: "天线功能"
+      description: "创建仅收集包含特定词汇的帖子的时间线。"
     _drive:
       title: "网盘"
       description: "Misskey 的网盘功能可以让你轻松地将收藏收藏的图片上传到网盘、整理到文件夹中，以供分享。"
-    _theme:
-      title: "主题"
-      description: "您可以将 Misskey 定制为喜欢的主题。 Misskey 完全支持深色模式，此外，您还可以创建自己的高级主题。"
-    _thread:
-      title: "话题"
-      description: "您可以将帖子串起来，形成一个长长的串，持续交流，直到满意为止。"
+    _2fa:
+      title: "多要素验证"
+      description: "支持通过一次性密码多因素认证及物理密钥通行密钥认证等多种技术增强账户安全性。"
     _charts:
       title: "图表"
       description: "Misskey 内置图表引擎，可轻松实现服务器的使用情况和其他信息的可视化。"
+    _branding:
+      title: "品牌化"
+      description: "通过定制实例标识、图标及主题，轻松实现社交平台品牌打造。"
+    _roles:
+      title: "角色"
+      description: "通过角色功能可精细化配置用户权限；使用条件角色还能自动为匹配用户分配角色，并设置角色徽章助力实例变现。"
+    _moderation:
+      title: "内容审查"
+      description: "原生内置完备的内容审查功能，助力实例高效运维。"
+    _privacy:
+      title: "隐私"
+      description: "凭借丰富的隐私设置，灵活控制内容的公开范围。"
+    _multiPurpose:
+      title: "独自一人，或与众人同在"
+      description: "既支持作为多用户社交平台的运营，也可用作个人实例。它将成为您在联邦宇宙中专属的枢纽节点。"
+    _monetization:
+      title: "收益化"
+      description: "提供广告展示等实例变现辅助功能，助您实现可持续运营。"
+    _oss:
+      title: "我们❤开源"
+      description: "Misskey始终并将持续开源，允许任何人免费自由使用源代码；同时Misskey项目积极为其他开源软件提供支援。"
+    _battleTested:
+      title: "可靠性"
+      description: "Misskey历经逾十年实战环境检验，自信具备卓越可靠性。"
+  _featuresServer:
+    _root:
+      title: "服务器功能"
+      description: "支撑 Misskey 的后端实现特点。"
+    _easyInstall:
+      title: "轻松安装"
+      description: "支持简单命令行安装，亦可选用托管服务，省去管理维护成本。"
+    _easySetup:
+      title: "设置也同样简单"
+      description: "Misskey实例部署无需复杂配置，即可即刻投入运营；亦支持按需进行高级定制。"
+    _api:
+      title: "API"
+      description: "Misskey所有功能均可通过HTTP API操作，便于第三方应用集成；更支持Webhook与WebSocket连接，实时获取事件推送。"
+    _relay:
+      title: "中继支持"
+      description: "支持连接联邦宇宙中继服务器，自动同步全网活动数据，无需手动关联多个实例。"
+    _nodejs:
+      title: "Node.js 后端"
+      description: "Misskey 后端采用 Node.js，运行高速且轻量。"
+    _postgresql:
+      title: "PostgreSQL"
+      description: "主数据库采用 PostgreSQL，实现了稳健可靠的数据管理。"
+    _fullTextSearch:
+      title: "全文搜索"
+      description: "除了 PostgreSQL，还可以使用 Meilisearch 等全文搜索引擎进行全文搜索。"
+    _jobQueue:
+      title: "高效任务队列"
+      description: "采用 BullMQ 任务队列支持跨实例高效处理任务；深度集成的原生队列检视器可直接在控制台管理，无需第三方工具。"
+    _cdn:
+      title: "支持 CDN"
+      description: "支持通过外部 CDN 缓存资源。通过减少服务器的请求，可以降低负载并削减成本。"
+    _ftt:
+      title: "FTT"
+      description: "通过 Fan-out Timeline Technology (FTT)，可在 Redis 上构建时间线，从而提升性能。"
+    _rbt:
+      title: "RBT"
+      description: "通过 Reactions Buffering Technology (RBT)，可将反应（Reaction）信息缓存在 Redis 上，从而提升性能。"
+    _scalable:
+      title: "可扩展"
+      description: "支持进程集群、多服务器负载均衡以及数据库复制，能够应对用户增长。"
+    _seo:
+      title: "SEO"
+      description: "可对部分内容进行服务端渲染（SSR），以便被搜索引擎收录。同时，也支持开放图谱协议（OGP），因此能在社交媒体上分享时显示预览。当然，在不想被收录的情况下，也可以设置拒绝爬虫访问。"
+    _ml:
+      title: "机器学习"
+      description: "还可以利用内置的机器学习功能，自动过滤敏感媒体等内容，从而减轻运营负担。"
+    _sentry:
+      title: "支持 Sentry"
+      description: "支持通过 Sentry 收集服务器指标，可用于服务器资源监控、健康检查和维护。"
+  _featuresClient:
+    _root:
+      title: "WebUI"
+      description: "为您介绍 Misskey 附带的高性能 Web 前端（Misskey Web）的特点。"
+    _responsive:
+      title: "响应式 UI"
+      description: "UI 采用精致的原创设计系统，经过精心实现，可在桌面、平板和智能手机上提供最佳的显示效果和操作体验。"
+    _theme:
+      title: "主题"
+      description: "可自由定制界面风格，完整支持深色模式，更能深度创作个性化主题。"
+    _mfm:
+      title: "MFM"
+      description: "笔记可以使用一种名为 MFM 的 Misskey 专用标记语言。加粗、插入链接、添加动态效果等文本装饰，都可以通过简单的语法来实现。"
     _widgets:
-      title: "小组件"
-      description: "你可以放置各种类型的小部件，根据喜好定制界面。"
+      title: "小部件"
+      description: "您可以自由地摆放各种类型的小部件，快速访问所需信息。"
+    _deck:
+      title: "Deck UI"
+      description: "启用Deck界面可深度自定义UI，构建专属客户端。"
+    _embed:
+      title: "嵌入其他网站"
+      description: "可以将笔记、时间线等内容嵌入到外部网站中进行显示。"
+    _realtimeMode:
+      title: "实时模式"
+      description: "サーバーとWebsocket接続することで、タイムラインなどのコンテンツをリアルタイムで受信することができます。"
+    _pushNotification:
+      title: "推送通知"
+      description: "支持推送通知，可以实时接收来自服务器的通知。"
+    _multiAccounts:
+      title: "支持多账户"
+      description: "可以轻松切换并使用多个账户。"
+    _watermark:
+      title: "水印添加功能"
+      description: "可为发布的图片自动添加水印，轻松保留版权信息。水印可自由自定义。"
+    _imageEditing:
+      title: "图片编辑功能"
+      description: "可以为图片添加特效、进行色彩分级，或实现各种富有创意的表达。"
+    _achievements:
+      title: "成就"
+      description: "这能激励用户体验 Misskey 的各项功能，并有助于新用户快速上手。"
+    _plugin:
+      title: "插件"
+      description: "可安装使用安全 AiScript 的插件，以扩展客户端功能。"
+    _settingsManagement:
+      title: "灵活的设置管理"
+      description: "除了可以为每个账户单独覆盖任意客户端设置外，还可以在多个设备之间共享和同步设置。此外，设置信息也可以自动备份。"
+    _pwa:
+      title: "PWA"
+      description: "Misskey Web 遵循渐进式网络应用（PWA）标准，可在设备上像原生应用一样运行。"
+    _i18n:
+      title: "多语言支持"
+      description: "客户端支持多种语言。"
+  _featuresUpcoming:
+    _root:
+      title: "即将发布"
+      description: "介绍即将推出的功能。"
+    _jwt:
+      title: "JWT 认证"
+      description: "将采用 JSON Web Token (JWT) 实现无状态认证，以实现更安全、更快速的请求验证。"
+    _newBackend:
+      title: "更轻量的后端"
+      description: "我们将对后端架构进行革新，旨在打造一个更轻量、更具扩展性的系统。"
+    _vueVapor:
+      title: "支持 Vapor 模式"
+      description: "将支持前端框架 Vue 的新编译策略，以实现更轻量的 Web UI。"
   _getStarted:
     title: "开始使用 Misskey"
     _find:
@@ -99,9 +250,11 @@ _landing:
     _docs:
       title: "了解更多信息"
       docs: "阅读文档"
+    _dev:
+      title: "参与开发"
   _donation:
     title: "请求捐助"
-    description: "Misskey 是非营利的，我们依靠您的捐款来资助它的发展。所以如果您喜欢 Misskey，请支持我们，以便我们能够继续开发它。"
+    description: "Misskey 是非营利的，我们依靠您的捐款来资助它的发展。所以如果您喜欢 Misskey，请支持我们，以便我们能够继续开发它！"
   _sponsors:
     title: "赞助者"
     becomeASponsor: "成为赞助商"
@@ -339,7 +492,7 @@ _customEmojiPreview:
   preview: "预览"
   emoji: "Emoji #{number}"
   placeholder: "你可以通过“添加”按钮来进行添加和预览自定义emoji表情。"
-  limitReactionLength: "リアクションの最大横幅を制限し、縮小して表示する"
+  limitReactionLength: "限制反应的最大宽度并缩小显示"
   _options:
     text: "帖子内容"
     textDescription: "你可以使用 {emoji_id} 来添加自定义emoji表情"
@@ -454,3 +607,5 @@ _api:
       "read:clip-favorite": "查看喜欢的便签"
       "read:federation": "查看联邦相关信息"
       "write:report-abuse": "举报用户"
+      "write:chat": "操作聊天"
+      "read:chat": "浏览聊天"

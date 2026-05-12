@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import svgLoader from 'vite-svg-loader';
+import unocss from 'unocss/vite';
 import { readFileSync, watch as fsWatch } from 'fs';
 import { getOldHubRedirects } from './scripts/get-old-hub-redirects';
 import { genLocalesJson } from './scripts/gen-locales';
@@ -78,9 +79,10 @@ export default defineNuxtConfig({
 		CROWDIN_INTG_API: process.env.CROWDIN_INTG_API,
 	},
 	css: [
+		"@unocss/reset/tailwind.css",
+		"@/assets/css/global.css",
 		"github-markdown-css/github-markdown.css",
 		"@/assets/css/nprogress.css",
-		"@/assets/css/tailwind.css",
 		"@/assets/css/mfm.scss",
 		"@/assets/css/bootstrap-forms.scss",
 	],
@@ -100,6 +102,7 @@ export default defineNuxtConfig({
 				{ rel: 'me', href: 'https://mastodon.social/@misskey' },
 			],
 			meta: [
+				{ name: 'theme-color', content: '#9ad11b' },
 				{ name: 'twitter:card', content: 'summary_large_image' },
 			]
 		},
@@ -131,26 +134,15 @@ export default defineNuxtConfig({
 		baseUrl,
 		vueI18n: 'i18n.config.ts',
 		locales,
-		lazy: true,
 		langDir: '../locales_dist',
 		defaultLocale: 'ja',
 		// ▼ Defaultルートは、nitroプラグインでオーバーライドする
 		// 　 リンクはuseGLocalePath（ラッパー）を使う
 		strategy: 'prefix_and_default',
 		trailingSlash: true,
-		experimental: {
-			generatedLocaleFilePathFormat: 'relative',
-		},
-		bundle: {
-			optimizeTranslationDirective: true,
-		}
-	},
-	colorMode: {
-		classSuffix: '',
 	},
 	postcss: {
 		plugins: {
-			tailwindcss: {},
 			autoprefixer: {},
 		},
 	},
@@ -160,6 +152,7 @@ export default defineNuxtConfig({
 	},
 	vite: {
 		plugins: [
+			unocss(),
 			svgLoader({
 				defaultImport: 'component',
 				svgoConfig: {
@@ -211,7 +204,7 @@ export default defineNuxtConfig({
 		'build:before': async () => {
 			await Promise.all([
 				genLocalesJson().then(() => {
-					if (process.env.NODE_ENV === 'development') {
+					if (process.env.NODE_ENV === 'development' && process.argv[2] !== 'prepare') {
 						fsWatch('./locales/', (ev, filename) => {
 							if (filename && filename.endsWith('.yml')) {
 								genLocalesJson();

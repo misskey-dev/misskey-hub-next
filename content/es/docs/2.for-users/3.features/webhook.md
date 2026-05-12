@@ -1,25 +1,24 @@
-# Webhook
+#
 
 :::tip
 
-バージョン 12.109.0 以降の機能です。
+Esta función está disponible a partir de la versión 12.109.0 y superiores.
 
 :::
 
 :::warning
 
-実験的な機能であるため、動作が不安定だったり今後仕様が変更される可能性があります。
+Esta función es experimental. Puede ser inestable y sus especificaciones pueden estar sujetas a cambios.
 
 :::
 
-MisskeyにはWebhookが用意されています。Webhookを利用すると、Misskey上の様々なイベントをリアルタイムに受け取ることが可能です。
+Misskey proporciona webhooks.Usando webhooks, puedes recibir eventos de Misskey en tiempo real.
 
-[設定 > Webhook](x-mi-web://settings/webhook)でWebhookの管理を行えます。
+Puedes gestionar tus webhooks en [Ajustes > Webhook](x-mi-web://settings/webhook)
 
-Webhookが登録されると、指定したイベントが発生した際に、指定したURLにHTTPリクエストが送信されます。リクエストのメソッドはPOSTで、ボディはJSONです。
-さらに、リクエストヘッダーには`X-Misskey-Hook-Secret`という名前で、登録時に設定したシークレットが含まれます。このシークレットが正しいか検証することで、リクエストが正規のものか判定することができます。
+Una vez registrado un webhook, Misskey enviará una petición Http a la Url especificada cuando ocurra el evento especificado.Estas peticiones son peticiones Post con un cuerpo Json. El campo de cabecera `X-Misskey-Hook-Secret` contendrá el secreto especificado en la creación.Por seguridad, debes verificar que el contenido de este campo coincide con el secreto proporcionado durante la creación.
 
-リクエストペイロードは以下のプロパティが入ります。
+La carga útil de la solicitud contiene las siguientes propiedades: [TBA].
 
 <MkSchemaViewerItemObject :schema="{
  type: 'object',
@@ -51,17 +50,17 @@ Webhookが登録されると、指定したイベントが発生した際に、�
  }
 }"/>
 
-送信先サーバーが5xxエラーを返すか、応答しなかった場合は時間を開けてリクエストが再送されます。
+Si el servidor de destino devuelve un error 5xx o no responde, la solicitud se vuelve a enviar tras un tiempo de espera.
 
-Webhookは管理画面から個別にアクティブ状態を設定でき、一時的にリクエストの送信を停止させることができます。
+Los webhooks pueden activarse o desactivarse temporalmente desde su página de configuración.
 
-## イベント
+## Eventos
 
-イベントごとに説明とペイロードを示します。
+A continuación se indican los eventos disponibles y su carga útil.
 
-### follow
+### seguir
 
-自分が誰かをフォローした際に発生します。
+Ocurre cuando sigues a alguien.
 
 <MkSchemaViewerItemObject :schema="{
  type: 'object',
@@ -73,9 +72,9 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
  }
 }"/>
 
-### followed
+### seguido
 
-自分が誰かからフォローされた際に発生します。
+Se produce cuando te sigue otra persona.
 
 <MkSchemaViewerItemObject :schema="{
  type: 'object',
@@ -87,9 +86,9 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
  }
 }"/>
 
-### unfollow
+### dejar de seguir
 
-自分が誰かをフォロー解除した際に発生します。
+Ocurre cuando dejas de seguir a alguien.
 
 <MkSchemaViewerItemObject :schema="{
  type: 'object',
@@ -101,9 +100,9 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
  }
 }"/>
 
-### note
+### nota
 
-自分がノートを投稿した際に発生します。
+Ocurre cuando envías una nota.
 
 <MkSchemaViewerItemObject :schema="{
  type: 'object',
@@ -115,9 +114,9 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
  }
 }"/>
 
-### reply
+### responder
 
-自分のノートに返信された際に発生します。
+Esto ocurre cuando se responde a una nota propia.
 
 <MkSchemaViewerItemObject :schema="{
  type: 'object',
@@ -129,9 +128,9 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
  }
 }"/>
 
-### renote
+### renota
 
-自分のノートがRenoteされた際に発生します。
+Esto ocurre cuando su nota es renotada.
 
 <MkSchemaViewerItemObject :schema="{
  type: 'object',
@@ -143,9 +142,9 @@ Webhookは管理画面から個別にアクティブ状態を設定でき、一�
  }
 }"/>
 
-### mention
+### mención
 
-自分にメンションされた際に発生します。
+Ocurre cuando te mencionan.
 
 <MkSchemaViewerItemObject :schema="{
  type: 'object',

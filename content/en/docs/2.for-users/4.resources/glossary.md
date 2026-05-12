@@ -1,5 +1,5 @@
 ---
-description: A glossary of terms related to Misskey.
+description: 'A glossary of terms related to Misskey.'
 ---
 
 # Glossary
@@ -48,7 +48,7 @@ An abbreviation for "Local TimeLine".See the documentation on the [timelines.](.
 
 ## MFM
 
-Abbreviation for Markup language for Misskey. The markup language used on Misskey.[Documentation is available](../features/mfm)
+Abbreviation for Markup Language for Misskey (Misskey Flavored Markdown). The markup language used on Misskey. [Documentation is available](../features/mfm)
 
 ## Misskey Web
 
@@ -82,6 +82,10 @@ Emoji created by administrators and users unique to each instance.Emoji that are
 
 The configuration page of a Misskey instance.
 
+## System Account
+
+The system account is a service account used to communicate with remote instances.It is built into Misskey, and Misskey can operate it automatically as needed.
+
 ## Suspension
 
 The state of an account when it is disabled.
@@ -93,6 +97,10 @@ The file manager for user-uploaded files on Misskey, such as images and music.[D
 ## Note
 
 Messages posted by Misskey users.Notes can contain a variety of original content including images, music, and polls.[Documentation is available](../features/note)
+
+## Proxy Account
+
+The proxy account is a service account used by Misskey to retrieve posts from remote instances in special circumstances.If a remote user is not followed by anyone on the local instance, the proxy account may follow the remote user to allow the remote user to continue sending notes to the local instance.
 
 ## Misskist
 

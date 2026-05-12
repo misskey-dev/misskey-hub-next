@@ -114,7 +114,17 @@ node -v
 sudo corepack enable
 ```
 
-v20.x.xなどと表示されればOK。v8.x.xのように低いバージョンが表示された場合は、正しくインストールが行えていないため、サーバーを再起動してもう一度インストールし直すなどしてみよう。
+v22.x.xなどと表示されればOK。v8.x.xのように低いバージョンが表示された場合は、正しくインストールが行えていないため、サーバーを再起動してもう一度インストールし直すなどしてみよう。
+
+### pnpm
+
+pnpmは、Misskeyで使用しているパッケージ管理ツールであり、外部ライブラリを参照したり、その依存関係を管理したりするのに使用されている。
+
+ここでは、Node.jsに付属しているパッケージ管理ツール「npm」を使用してpnpmをインストールする方法を紹介しているが、[pnpmのウェブサイト](https://pnpm.io/installation)では他にも様々な方法でのインストール方法が紹介されているので、一度目を通したうえで、お使いの環境に最適な方法でインストールすることをお勧めする。
+
+```sh
+npm i -g pnpm
+```
 
 ### PostgreSQL
 
@@ -160,13 +170,20 @@ CREATE DATABASE mk1 OWNER misskey;
 
 ### Redis
 
-Redisは、NoSQLのインメモリデータベースソフトであり、データベースや連合との通信を管理するなどのために必要だ。\
-redis.ioのドキュメントに従い、snapでインストールする。
+Redisは、NoSQLのインメモリデータベースソフトであり、データベースや連合との通信を管理するなどのために必要だ。  
+redis.ioのドキュメントに従いインストールする。
 
 https\://redis.io/docs/getting-started/installation/install-redis-on-linux/
 
 ```sh
 sudo snap install redis
+```
+
+起動する
+
+```sh
+sudo systemctl enable redis-server
+sudo systemctl start redis-server
 ```
 
 systemctlでデーモンの状態を確認。
@@ -176,6 +193,14 @@ systemctl status redis-server
 ```
 
 activeならOK。
+
+### FFmpeg
+
+FFmpegは、動画や音声に関する処理を担う。以下でインストールしておく。
+
+```sh
+sudo apt install ffmpeg
+```
 
 ### nginx
 

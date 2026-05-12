@@ -1,6 +1,6 @@
 # Antarmuka Deck
 
-Antarmuka Deck merupakan salah satu antarmuka yang tersedia di dalam Misskey.Antarmuka ini dikarakterisasikan dengan kemampuannya untuk membuat antarmuka yang informatif dan sangat disesuaikan dengan menampilkan beberapa tampilan yang disebut "kolom" secara berdampingan.\
+Antarmuka Deck merupakan salah satu antarmuka yang tersedia di dalam Misskey.Antarmuka ini dikarakterisasikan dengan kemampuannya untuk membuat antarmuka yang informatif dan sangat disesuaikan dengan menampilkan beberapa tampilan yang disebut "kolom" secara berdampingan.  
 Opsi deck hanya tersedia pada layar yang membutuhkan ukuran besar seperti komputer/laptop.
 
 ## Menambahkan Kolom

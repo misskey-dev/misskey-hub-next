@@ -24,7 +24,7 @@ Die Anzahl der Authentifizierungsversuche von Let’s Encrypt sind begrenzt. Üb
 
 ## Cloudflare-Einstellungen
 
-Um Cloudflare zu verwenden, stelle sicher, dass die Cloudflare-Domäne eingerichtet ist, bevor es weitergeht!\
+Um Cloudflare zu verwenden, stelle sicher, dass die Cloudflare-Domäne eingerichtet ist, bevor es weitergeht!  
 Der Nameserver(DNS) kann bis zu 3 Tage brauchen, bis die Änderung in Kraft tritt.
 
 Gehe zum Einrichten von **nginx** und **Cloudflare** zu den **Cloudflare-Einstellungen**.
@@ -36,7 +36,7 @@ Gehe zum Einrichten von **nginx** und **Cloudflare** zu den **Cloudflare-Einstel
 
 ### 1. SSH
 
-Melde dich über SSH in deinem Server an.\
+Melde dich über SSH in deinem Server an.  
 (Sollte es sich um einen Server-Desktop handeln, öffne eine Shell.).
 
 ### 2. Einrichten einer Umgebung
@@ -107,11 +107,11 @@ So wählst du die richtigen Optionen & Spezifikationen aus.
 
 Seit Version1 kann zwischen Docker und Systemd gewählt werden.
 
-Obwohl es Docker heißt, wird nur **Misskey auf Docker ausgeführt**. Redis, Postgres usw. werden direkt auf dem Host ausgeführt.\
+Obwohl es Docker heißt, wird nur **Misskey auf Docker ausgeführt**. Redis, Postgres usw. werden direkt auf dem Host ausgeführt.  
 [Für Informationen, wie man mit Docker-Compose alles zum Laufen bekommt, empfehle ich diesen Artikel von [mamemononga](https://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0).
 
-Solltest du das Docker Hub-Image verwenden, ist dies die am meisten empfohlene Option, da dadurch die Erstellung von Misskey entfällt.\
-Da jedoch eine Migration erforderlich ist, kann es während der Aktualisierung dennoch vorkommen, dass Misskey nicht verwendet werden kann.\
+Solltest du das Docker Hub-Image verwenden, ist dies die am meisten empfohlene Option, da dadurch die Erstellung von Misskey entfällt.  
+Da jedoch eine Migration erforderlich ist, kann es während der Aktualisierung dennoch vorkommen, dass Misskey nicht verwendet werden kann.  
 Da außerdem die Misskey-Build-Umgebung nicht vorbereitet ist (Git Pull wird nicht ausgeführt), wird die Einrichtung mühsam, falls du einen Fork verwenden möchtest.
 
 Aufgrund von Leistungsproblemen wird das lokale Erstellen von Docker nicht empfohlen.
@@ -144,12 +144,12 @@ Swap muss so konfiguriert werden, das **mindestens 3GB oder mehr** zur Verfügun
 
 Sollte das Skript zwischendurch abrechen, versuche folgendes:
 
-- Sollte Redis oder Postgres bereits installiert sein, wähle „Nein“ bei „lokal installieren“.\
+- Sollte Redis oder Postgres bereits installiert sein, wähle „Nein“ bei „lokal installieren“.  
   Lasse die Host und Porteinstellung und drücke die "Enter"-Taste. Versuche dich mit den letzen Zugangsdaten anzumelden, die du bei der Installation angegeben hattest.
 
 ## .env-Datei
 
-Das Installationsskript erstellt zwei .env-Dateien:\
+Das Installationsskript erstellt zwei .env-Dateien:  
 Wird beim Aktualisieren verwendet.
 
 ### /root/.misskey.env
@@ -158,13 +158,13 @@ Dies ist erforderlich, um sich den User zu merken, der misskey ausführt.
 
 ### /home/(misskeyユーザー)/.misskey.env
 
-Wird generiert, wenn systemd verwendet wird.\
+Wird generiert, wenn systemd verwendet wird.  
 Hauptsächlich zum Speichern von Verzeichnissen.
 
 ### /home/(misskeyユーザー)/.misskey-docker.env
 
-Wird erstellt, wenn die Docker Version verwendet wird.\
-Es speichert den Container und die Imagenummer, die ausgeführt wird.\
+Wird erstellt, wenn die Docker Version verwendet wird.  
+Es speichert den Container und die Imagenummer, die ausgeführt wird.  
 Die Containernummer wird beim Update aktualisiert.Der alte Build wird hierbei gelöscht.
 
 ## Übernehme die Kontrolle
@@ -175,7 +175,7 @@ Ersetze example.com durch deine eigene Domain
 
 ### Misskey-Verzeichnis
 
-Die Quelle von Misskey wird als „/home/user/directory“ geklont.\
+Die Quelle von Misskey wird als „/home/user/directory“ geklont.  
 (Der Standardwert für **Benutzer** und **Verzeichnis** ist „misskey“.)
 
 Um zum Misskey-Verzeichnis zu gelangen, gebe folgendes in die Kommandozeile ein:
@@ -193,7 +193,7 @@ exit
 
 ### systemd
 
-Der Systemd-Prozessname ist example.com.\
+Der Systemd-Prozessname ist example.com.  
 Beispiel für einen Neustart:
 
 ```sh
@@ -248,7 +248,7 @@ Die Nginx-Konfiguration wird als „/etc/nginx/conf.d/example.com.conf“ gespei
 
 ## Q. Zugriff nach Update mit 502-Fehler nicht möglich
 
-In Docker erfolgt die Migration nach dem Start, der Zugriff geht nich sofort.\
+In Docker erfolgt die Migration nach dem Start, der Zugriff geht nich sofort.  
 Überprüfe, ob die Migration abgeschlossen ist.
 
 Im Fall von systemd ist die pnpm-Installation möglicherweise fehlgeschlagen.
@@ -263,5 +263,5 @@ Beim ausführen von jounalctl sollte "re2" irgendwo stehen.
 
 ## Q. Ich möchte auf demselbsen Server eine weitere Misskey-Instanz erstellen
 
-Das Skript geht nicht davon aus, dass zusätzliche Misskeys auf demselben Server installiert werden.\
+Das Skript geht nicht davon aus, dass zusätzliche Misskeys auf demselben Server installiert werden.  
 Einige Einstellungen werden überschrieben oder es treten unterwegs Fehlermeldungen auf.

@@ -1,5 +1,5 @@
-# プラグイン
+# 插件
 
-Misskey Webにはプラグイン機能があり、ユーザーがMisskey Webの機能を拡張することができます。
+Misskey Web 具备插件功能，用户可以借此扩展 Misskey Web 的功能。
 
-プラグインの作成方法については[こちらのドキュメント](../../for-developers/plugin/create-plugin)を参照してください。
+关于插件的创建方法，请参阅[此文档](../../for-developers/plugin/create-plugin)。

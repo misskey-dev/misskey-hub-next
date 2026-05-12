@@ -1,5 +1,5 @@
 ---
-description: This guide explains how to set up Misskey using Docker
+description: 'This guide explains how to set up Misskey using Docker'
 ---
 
 # Building Misskey using Docker Compose
@@ -37,7 +37,7 @@ cp ./compose_example.yml ./compose.yml
 ```
 
 Please edit `default.yml` and `docker.env` file as per the description.\
-Also edit `compose.yml` as needed.(If you want to change the port etc.)\
+Also edit `compose.yml` as needed.(If you want to change the port etc.)  
 Please make sure to check in advance for any changes that may be required.(If you want to change the port etc.)
 
 ## Build & Initialize

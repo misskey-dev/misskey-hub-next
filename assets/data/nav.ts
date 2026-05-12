@@ -35,16 +35,16 @@ export default <{
 }> {
     center: [
         {
-            i18n: '_nav.servers',
-            to: '/servers/',
-        },
-        {
             i18n: '_nav.docs',
             to: '/docs/',
         },
         {
-            i18n: '_nav.blog',
+            i18n: '_nav.news',
             to: '/blog/',
+        },
+				{
+            i18n: '_nav.servers',
+            to: '/servers/',
         },
         {
             i18n: '_nav.other',
@@ -54,7 +54,7 @@ export default <{
     right: [
         {
             icon: GHIcon,
-            to: 'https://github.com/misskey-dev/misskey-hub-next',
+            to: 'https://github.com/misskey-dev/misskey',
         },
     ]
 };

@@ -1,5 +1,5 @@
 ---
-description: Dies ist ein Kanal, in dem die Notizen der lokalen Timeline durchlaufen.
+description: "Dies ist ein Kanal, in dem die Notizen der lokalen Timeline durchlaufen."
 ---
 
 # `localTimeline`

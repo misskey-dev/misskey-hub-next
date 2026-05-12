@@ -1,70 +1,68 @@
-# ミュートとブロック
+# Silenciar y Bloquear
 
-好みではないユーザーがいる場合は、ミュートを行うことでそのユーザーが自分から見えないようにすることができます。
-また、より強力な措置として、ブロックを行うことでそのユーザーから自分のコンテンツが見えないようになるほか、自分に対して関わることができないようにすることができます。
-ミュートされていることは相手は分かりませんが、ブロックされていることは相手に分かります。どちらを選ぶかはご自身の判断で行ってください。
+Si no te gusta alguien, puedes silenciarlo para que deje de ser visible para ti. O, como medida más contundente, puedes bloquear a alguien para que no pueda ver tus contenidos ni interactuar contigo. La otra persona no sabrá que está silenciada, pero sí que está bloqueada.Tú decides cuál utilizar.
 
 :::tip
 
-ミュートとブロックは併用できます。
+Silenciar y bloquear pueden usarse juntos.
 
 :::
 
 :::warning
 
-利用規約に違反するような、迷惑なユーザーがいる場合は運営者に報告することも検討してください。
+Si hay algún usuario problemático que infrinja las condiciones del servicio, por favor, considera informar de ello al administrador.
 
 :::
 
-Misskey Webでは、設定>ミュートとブロック から、自分がミュートまたはブロックしているユーザー一覧を確認することができます。
+En la web de tu instancia Misskey, puedes ver los usuarios que has silenciado o bloqueado yendo a Ajustes > Silenciados y Bloqueados.
 
-## ミュート
+## Silenciar
 
-ユーザーをミュートすると、そのユーザーに関する次のコンテンツがMisskeyに表示されなくなります:
+Cuando silencias a un usuario, el siguiente contenido sobre ese usuario ya no aparecerá en Misskey:
 
-- タイムラインや投稿の検索結果内の、そのユーザーの投稿(およびそれらの投稿に対する返信やRenote)
-- そのユーザーからの通知
-- メッセージ履歴一覧内の、そのユーザーとのメッセージ履歴
-- など
+- Sus notas en tu cronología y resultados de búsqueda (incluidas sus respuestas y renotas)
+- Sus notificaciones
+- Historial de mensajes con él/ella
+- etc
 
-Misskey Webでユーザーをミュートするには、対象のユーザーのユーザーページのメニューを開き、「ミュート」ボタンを押します。
+Para silenciar a un usuario en Misskey Web, abra el menú de la página del usuario en cuestión y pulse el botón «Silenciar».
 
 :::tip
 
-ミュートを行ったことは相手に通知されず、ミュートされていることを知ることもできません。
+La otra persona no será notificada de que la has silenciado, ni sabrá que ha sido silenciada.
 
 :::
 
-## リノートをミュート
+## Silenciar renota
 
-ユーザーがノートのリノートを大量に行う場合などに、そのユーザーのリノートのみをタイムラインから除くことができます。ユーザーの通常のノートには影響はありません。
+Puedes silenciar sólo las renotas del usuario, en caso de que el usuario esté renotando muchas notas.Las notas normales del usuario no se ven afectadas.
 
-## ブロック
+## Bloquear
 
-ユーザーをブロックすると、そのユーザーからあなたのコンテンツが見えないようになり、またあなたに対して以下のようなアクションをすることができなくなります。
+Bloquear a un usuario le impide ver tus contenidos y realizar cualquiera de las siguientes acciones contra ti.
 
-- フォローする
-- ユーザーリストに追加する
-- 返信する、Renoteする
-- リアクションする、アンケートに投票する
-- メッセージを送信する
-- など
+- Seguirte
+- Añadirte a listas de usuarios
+- Contestarte, renotar tus notas
+- Reaccionar, votar en tus encuestas
+- Enviarte un mensaje
+- etc
 
-また、
+Además:
 
-- ブロックする際に既にそのユーザーからフォローされていた場合はフォローが解除されます。
-- ブロックする際に既にそのユーザーがあなたをユーザーリストに入れていた場合はそのリストからあなたが削除されます。
+- Si el usuario ya te sigue cuando lo bloqueas, se eliminará su seguimiento.
+- Si el usuario ya te tiene en su lista de usuarios cuando lo bloquees, serás eliminado de ella.
 
-Misskey Webでユーザーをブロックするには、対象のユーザーのユーザーページのメニューを開き、「ブロック」ボタンを押します。
+Para silenciar a un usuario en Misskey Web, abre el menú de la página del usuario en cuestión y pulsa el botón «Silenciar».
 
 :::warning
 
-ブロックを行ったこと自体は相手に通知されませんが、フォローを行ったりなどの上記のアクションが行えなくなるので間接的にブロックされていることは分かります。
+La persona no será notificada de que la has bloqueado, pero podrá darse cuenta indirectamente, ya que no podrá realizar las acciones mencionadas anteriormente.
 
 :::
 
 :::warning
 
-相手から自分のコンテンツが見えなくなりますが、相手がアカウントを切り替えたりログアウト状態になれば見ることができます。あくまで簡易的、補助的なものとしてお考えください。
+Tu contenido no será visible para el otro usuario, pero puede serlo si cambia de cuenta o cierra la sesión.Considera estas herramientas como una herramienta sencilla y complementaria.
 
 :::

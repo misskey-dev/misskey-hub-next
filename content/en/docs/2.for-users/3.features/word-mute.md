@@ -1,7 +1,9 @@
 # Word Mute
 
-When a note is filtered using word mute, the note will be collapsed and the text "[Name] said something" will be displayed in its place.
+When Word Mute is configured, a note that matches the conditions set in Word Mute will be minimized and shown as "[Username] said something".The contents of the note can be seen by clicking on the minimized note.
 
-The word mute filter can be configured in [Settings > Mutes and Blocks](x-mi-web://settings/mute-block).
+The Word Mute filter can be configured in [Settings > Mutes and Blocks](x-mi-web://settings/mute-block).
 
-It is also possible to hide notes filtered by word mute completely.In [Settings > General](x-mi-web://settings/general), in the "Note display" section, select "Hide notes containing muted words".
+## Hard Word Mute
+
+Notes filtered by the Hard Word Mute filter will be invisible.This differs from Word Mute in that notes filtered by Hard Word Mute will not be displayed at all.

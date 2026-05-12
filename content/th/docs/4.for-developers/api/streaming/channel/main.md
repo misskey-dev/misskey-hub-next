@@ -1,5 +1,5 @@
 ---
-description: 基本的な情報が流れるチャンネルです。
+description: "基本的な情報が流れるチャンネルです。"
 ---
 
 # `main`
@@ -94,11 +94,11 @@ Renoteされたときに発生します。
 
 ### `unreadSpecifiedNote`
 
-新しいダイレクト投稿があるときに発生します。
+新しい指名ノートがあるときに発生します。
 
 ### `readAllUnreadSpecifiedNotes`
 
-全てのダイレクト投稿が既読になったときに発生します。
+全ての指名ノートが既読になったときに発生します。
 
 ### `unreadMessagingMessage`
 

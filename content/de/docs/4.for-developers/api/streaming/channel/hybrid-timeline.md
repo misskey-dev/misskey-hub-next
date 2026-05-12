@@ -1,5 +1,5 @@
 ---
-description: Dies ist ein Kanal, in dem die Notizen der sozialen Timeline durchlaufen.
+description: "Dies ist ein Kanal, in dem die Notizen der sozialen Timeline durchlaufen."
 ---
 
 # `hybridTimeline`

@@ -1,32 +1,31 @@
-# Nginxの設定
+# Configuración de Nginx
 
-[nginx](https://nginx.org/)をリバースプロキシとして活用し、Misskeyサーバーを直接インターネットに公開せず運用することをお勧めします。
-これにより、以下のようなメリットが得られます。
+Recomendamos utilizar [nginx](https://nginx.org/) como proxy inverso y operar el servidor Misskey sin exponerlo directamente a Internet.
+Esto proporciona las siguientes ventajas:
 
-- セキュリティ強化：リバースプロキシを通じてアクセスを制御することで、Misskeyサーバーに直接攻撃が及ぶリスクを軽減します。
-- 柔軟な設定：nginxは柔軟な設定オプションを提供しており、リバースプロキシとしての機能だけでなく、キャッシュ[^1]やセキュリティポリシーの設定も行えます。
+- Mayor seguridad: Al controlar el acceso a través de un proxy inverso, puede reducir el riesgo de ataques directos al servidor Misskey.
+- Configuración flexible: nginx ofrece opciones de configuración flexibles, que permiten configurar no sólo la función de proxy inverso, sino también las políticas de caché[^1] y seguridad.
 
-これらの利点を活かして、Misskeyサーバーをより安全かつ効率的に運用することが可能です。
-また、CloudflareなどのCDNと併せて設定することで、さらなる効果を見込めます。
+Si aprovechas estos puntos, podrás operar tu servidor Misskey de forma más segura y eficiente.
+También puedes configurar tu infraestructura con una CDN como Cloudflare para obtener aún mayores beneficios.
 
-[^1]: nginxの機能である[proxy_cache_lock](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_lock)と[proxy_cache_use_stale](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_use_stale)を活用することで、キャッシュ未作成の状態で大量アクセスがあってもMisskeyサーバーの負荷増大を抑える効果が期待できます。
+[^1]: Utilizando las funciones de nginx [proxy_cache_lock](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_lock) y [proxy_cache_use_stale](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_use_stale), puede esperar reducir la carga en el servidor Misskey incluso si hay una gran cantidad de accesos cuando la caché no ha sido creada.
 
-## 設定方法の一例
+## Ejemplo de configuración
 
-以下はサーバーマシン（VPSなど）に直接nginxをインストールし、認証局として[Let's Encrypt](https://letsencrypt.org/)を採用したケースでの設定例です。
+A continuación se muestra un ejemplo de configuración para cuando nginx se instala directamente en una máquina servidor (como un VPS) y se utiliza [Let's Encrypt](https://letsencrypt.org/) como autoridad de certificación.
 
-1. `/etc/nginx/conf.d/misskey.conf`もしくは`/etc/nginx/sites-available/misskey.conf`を作成し、下の設定例をコピーします。\
-   （ファイル名はmisskeyでなくても構いません。）
-2. 次のように編集します。
-   1. example.tldを自分が用意したドメインに置き換えます。\
-      `ssl_certificate`と`ssl_certificate_key`はLet's Encryptで取得した証明書のパスになるようにします。
-   2. CloudflareなどのCDNを使う場合は、「If it's behind another reverse proxy or CDN, remove the following.」から4行を削除します。
-3. `/etc/nginx/sites-available/misskey.conf`を作成した場合は、`/etc/nginx/sites-enabled/misskey.conf`としてシンボリックリンクを作成します。\
+1. Crea `/etc/nginx/conf.d/misskey.conf` o `/etc/nginx/sites-available/misskey.conf` y copia la configuración de ejemplo que aparece a continuación.\
+   (El nombre del archivo no tiene por qué ser Misskey.)
+2. Editalo como sigue:
+   1. Sustituye example.tld por el dominio que has preparado.`ssl_certificate` y `ssl_certificate_key` deben ser la ruta al certificado obtenido de Let's Encrypt.
+   2. Si utilizas una CDN como Cloudflare, elimina 4 líneas de "Si está detrás de otro proxy inverso o CDN, elimina lo siguiente".
+3. Si creaste `/etc/nginx/sites-available/misskey.conf`, crea un enlace simbólico como `/etc/nginx/sites-enabled/misskey.conf`.\
    `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`
-4. `sudo nginx -t` で設定ファイルが正常に読み込まれるか確認します。
-5. `sudo systemctl restart nginx` でnginxを再起動します。
+4. Ejecuta `sudo nginx -t` para verificar que el archivo de configuración se cargará correctamente.
+5. Reinicia nginx con `sudo systemctl restart nginx`.
 
-## 設定例
+## Ejemplos
 
 ```nginx
 # For WebSocket

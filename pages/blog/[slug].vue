@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="mx-auto container max-w-screen-md relative px-6 py-5">
-            <GNuxtLink :to="localePath('/blog/', originalLocale)" class="absolute top-2.5 left-6 p-2.5 opacity-40 hover:opacity-100 hover:-translate-x-2.5 group transition-[opacity,transform] flex items-center">
+        <div class="mx-auto container max-w-screen-md relative px-6 py-12">
+            <GNuxtLink :to="localePath('/blog/', originalLocale)" class="absolute top-8.5 left-6 p-2.5 opacity-40 hover:opacity-100 hover:-translate-x-2.5 group transition-[opacity,transform] flex items-center">
                 <LeftIco class="mr-2 stroke-1 stroke-current" />
                 <div class="font-bold opacity-0 group-hover:opacity-100 transition-opacity">{{ $t('_blog.back') }}</div>
             </GNuxtLink>
@@ -9,11 +9,11 @@
             <h1 class="text-center font-bold text-2xl lg:text-3xl mb-4">{{ data?.title }}</h1>
             <p class="text-center">{{ $d(new Date(data?.date)) }}</p>
         </div>
-        <div class="bg-white dark:bg-slate-950 pb-12 lg:mt-12 pt-6 px-6">
+        <div class="bg-white dark:bg-neutral-950 pb-12 pt-6 px-6">
             <div class="mx-auto container max-w-screen-md markdown-body">
                 <ContentRenderer :value="data" />
             </div>
-            <div class="text-center mt-6 lg:mt-12">
+            <div class="text-center mt-6">
                 <GSocialShare
                     :url="`${runtimeConfig.public.baseUrl}/ja/blog/${route.params.slug}/`"
                 ></GSocialShare>

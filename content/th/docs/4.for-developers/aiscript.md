@@ -22,7 +22,7 @@ AiScript標準の構文や組み込み関数などが使用できます。
 
 :::tip
 
-ドキュメントは[こちら](https://aiscript-dev.github.io/)\
+ドキュメントは[こちら](https://aiscript-dev.github.io/)  
 Misskey本体のバージョンにより、使用できるAiScriptのバージョンが異なる場合があります。バージョンの確認には`<: Core:v`をScratchpadなどで実行してください。
 
 :::
@@ -31,19 +31,19 @@ Misskey本体のバージョンにより、使用できるAiScriptのバージ�
 
 ### Misskey AiScript API
 
-接頭辞: `Mk:`\
+接頭辞: `Mk:`  
 Misskey内の全てのAiScript環境で使用できる定関数群です。
 詳しくは[AiScript Misskey拡張API リファレンス](./plugin/plugin-api-reference/)の`Mk:`とついた部分を参照して下さい。
 
 ### プラグインAPI
 
-接頭辞: `Plugin:`\
+接頭辞: `Plugin:`  
 [プラグイン](./plugin/)でのみ使用できる定関数群です。
 詳しくは[AiScript Misskey拡張API リファレンス](./plugin/plugin-api-reference/)の`Plugin:`とついた部分を参照して下さい。
 
 ### UI API
 
-接頭辞: `Ui:`\
+接頭辞: `Ui:`  
 [ウィジェット](/docs/for-users/features/widgets/)（AiScript App）、[Misskey Play](./plugin/create-play/)、Scratchpadで使用できます。
 詳しくは[AiScript Misskey拡張API リファレンス](./plugin/plugin-api-reference/)の`Ui:`とついた部分を参照して下さい。
 
@@ -53,15 +53,15 @@ AiScript標準で定義されている`readline`関数と`print`関数（およ�
 
 #### readline(message)
 
-`message`: `str`\
-返り値: `str`\
-Misskey内の全てのAiScript環境で使用できます。\
+`message`: `str`  
+返り値: `str`  
+Misskey内の全てのAiScript環境で使用できます。  
 文字列の入力を求めるポップアップを表示します。
 
 #### print(message)
 
-`message`: `any`\
-返り値: `null`\
-[ウィジェット](/docs/for-users/features/widgets/)（AiScriptコンソール）、Scratchpadで使用できます。\
-コンソールに文字列を出力します。\
+`message`: `any`  
+返り値: `null`  
+[ウィジェット](/docs/for-users/features/widgets/)（AiScriptコンソール）、Scratchpadで使用できます。  
+コンソールに文字列を出力します。  
 `<:`構文も同様の働きをします。

@@ -28,7 +28,7 @@
                 <div><ChartsCircGraph class="max-w-xs mx-auto" :data="langStats" :focusedIndex="langFocus" /></div>
                 <div>
                     <ul class="space-y-1">
-                        <li v-for="value, key, index in trunc(langStats)" class="grid py-1 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" :class="$style.kvRoot" @mouseenter.passive="langFocus = index" @mouseleave.passive="langFocus = undefined">
+                        <li v-for="value, key, index in trunc(langStats)" class="grid py-1 px-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800" :class="$style.kvRoot" @mouseenter.passive="langFocus = index" @mouseleave.passive="langFocus = undefined">
                             <div v-if="key === '__others'">{{ $t('other') }}</div>
                             <div v-else>{{ key }} {{ langs[key] ? `(${langs[key]})` : '' }}</div>
                             <div class="font-bold font-mono text-accent-600">{{ $n(value) }}</div>
@@ -43,7 +43,7 @@
                 <div><ChartsCircGraph class="max-w-xs mx-auto" :data="regAcceptanceStats" :focusedIndex="regAcceptanceFocus" :truncMinor="false" /></div>
                 <div>
                     <ul class="space-y-1">
-                        <li v-for="value, key, index in regAcceptanceStats" class="grid py-1 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" :class="$style.kvRoot" @mouseenter.passive="regAcceptanceFocus = index" @mouseleave.passive="regAcceptanceFocus = undefined">
+                        <li v-for="value, key, index in regAcceptanceStats" class="grid py-1 px-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800" :class="$style.kvRoot" @mouseenter.passive="regAcceptanceFocus = index" @mouseleave.passive="regAcceptanceFocus = undefined">
                             <div>{{ $t(`_servers._registerAcceptance.${key}`) }}</div>
                             <div class="font-bold font-mono text-accent-600">{{ $n(value) }}</div>
                         </li>
@@ -57,7 +57,7 @@
                 <div><ChartsCircGraph class="max-w-xs mx-auto" :data="notesCountStats" :focusedIndex="notesCountFocus" /></div>
                 <div>
                     <ul class="space-y-1">
-                        <li v-for="value, key, index in trunc(notesCountStats)" class="grid py-1 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" :class="$style.kvRoot" @mouseenter.passive="notesCountFocus = index" @mouseleave.passive="notesCountFocus = undefined">
+                        <li v-for="value, key, index in trunc(notesCountStats)" class="grid py-1 px-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800" :class="$style.kvRoot" @mouseenter.passive="notesCountFocus = index" @mouseleave.passive="notesCountFocus = undefined">
                             <div v-if="key === '__others'">{{ $t('other') }}</div>
                             <div v-else>{{ key }}</div>
                             <div class="font-bold font-mono text-accent-600">{{ $n(value) }}</div>
@@ -72,7 +72,7 @@
                 <div><ChartsCircGraph class="max-w-xs mx-auto" :data="usersCountStats" :truncMinor="0.008" :focusedIndex="usersCountFocus" /></div>
                 <div>
                     <ul class="space-y-1">
-                        <li v-for="value, key, index in trunc(usersCountStats, 0.008)" class="grid py-1 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" :class="$style.kvRoot" @mouseenter.passive="usersCountFocus = index" @mouseleave.passive="usersCountFocus = undefined">
+                        <li v-for="value, key, index in trunc(usersCountStats, 0.008)" class="grid py-1 px-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800" :class="$style.kvRoot" @mouseenter.passive="usersCountFocus = index" @mouseleave.passive="usersCountFocus = undefined">
                             <div v-if="key === '__others'">{{ $t('other') }}</div>
                             <div v-else>{{ key }}</div>
                             <div class="font-bold font-mono text-accent-600">{{ $n(value) }}</div>
@@ -87,7 +87,7 @@
                 <div><ChartsCircGraph class="max-w-xs mx-auto" :data="avgVersionStats" :truncMinor="0.005" :focusedIndex="avgVersionFocus" /></div>
                 <div>
                     <ul class="space-y-1">
-                        <li v-for="value, key, index in trunc(avgVersionStats, 0.005)" class="grid py-1 px-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" :class="$style.kvRoot" @mouseenter.passive="avgVersionFocus = index" @mouseleave.passive="avgVersionFocus = undefined">
+                        <li v-for="value, key, index in trunc(avgVersionStats, 0.005)" class="grid py-1 px-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800" :class="$style.kvRoot" @mouseenter.passive="avgVersionFocus = index" @mouseleave.passive="avgVersionFocus = undefined">
                             <div v-if="key === '__others'">{{ $t('other') }}</div>
                             <div v-else>{{ key }}</div>
                             <div class="font-bold font-mono text-accent-600">{{ $n(value) }}</div>

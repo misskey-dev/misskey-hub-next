@@ -1,52 +1,69 @@
 <template>
-    <GNuxtLink v-if="buttonType == 'link'" :to="to" :class="[$style.button, color == 'accent' ? $style.buttonAccent : $style.buttonPlain]">
-        <slot></slot>
-    </GNuxtLink>
-    <button v-else-if="buttonType == 'button'" @click="onClick()" :class="[$style.button, color == 'accent' ? $style.buttonAccent : $style.buttonPlain]">
-        <slot></slot>
-    </button>
+<GNuxtLink v-if="buttonType == 'link'" :to="to" class="_plainLink" :class="[$style.button, shadow ? $style.shadow : null, color == 'accent' ? $style.buttonAccent : $style.buttonPlain]">
+	<slot></slot>
+</GNuxtLink>
+<button v-else-if="buttonType == 'button'" class="_plainButton" @click="onClick()" :class="[$style.button, shadow ? $style.shadow : null, color == 'accent' ? $style.buttonAccent : $style.buttonPlain]">
+	<slot></slot>
+</button>
 </template>
 
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-    /** ボタンのタイプ */
-    buttonType: 'button' | 'link';
-    /** 移動先 */
-    to?: string;
-    /** 色設定 */
-    color?: 'accent' | 'plain';
+	/** ボタンのタイプ */
+	buttonType: 'button' | 'link';
+	/** 移動先 */
+	to?: string;
+	/** 色設定 */
+	color?: 'accent' | 'plain';
+	/** 影の有無 */
+	shadow?: boolean;
 }>(), {
-    color: 'plain',
+	color: 'plain',
 });
 
 const emits = defineEmits<{
-    (e: 'click'): void;
+	(e: 'click'): void;
 }>();
 
 function onClick() {
-    emits('click');
+	emits('click');
 }
 </script>
 
 <style module>
 .button {
-    @apply py-3 px-6 text-lg font-bold rounded-full transition-all;
-    box-shadow: 0 8px 20px -5px rgba(0, 0, 0, .2);
+	display: inline-flex;
+	align-items: center;
+	padding: 0.5em 1.5em;
+	border-radius: 999px;
 }
 
 .buttonAccent {
-    @apply text-white;
-    box-shadow: 0 8px 20px -5px rgba(134, 179, 0, .4);
-    background-image: linear-gradient(90deg, #86b300, #4ab300, #4ab300);
-    background-size: 200% 100%;
-    background-position-x: 0%;
+	background-image: linear-gradient(90deg, #86b300, #4ab300, #4ab300);
+	background-size: 200% 100%;
+	background-position-x: 0%;
+	color: #fff;
 }
 
 .buttonAccent:hover {
-    background-position-x: 100%;
+	background-position-x: 100%;
 }
 
 .buttonPlain {
-    @apply text-accent-600 bg-white hover:text-accent-700 hover:bg-lime-100;
+	background: #fff;
+}
+
+:global(html.dark) {
+	.buttonPlain {
+		background: #333;
+	}
+}
+
+.shadow.button {
+	box-shadow: 0 8px 20px -5px rgba(0, 0, 0, .2);
+}
+
+.shadow.buttonAccent {
+	box-shadow: 0 8px 20px -5px rgba(134, 179, 0, .4);
 }
 </style>

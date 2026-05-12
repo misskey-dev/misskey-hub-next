@@ -10,6 +10,12 @@ Technically speaking, all files are centrally managed on Misskey's system, and t
 
 In addition to being able to upload any file from Misskey Web's [Drive page](x-mi-web://my/drive), images set as avatars and files attached to notes will all be uploaded to Drive.
 
+:::tip
+
+ロールでアップロード可能なファイル種別を設定可能で、デフォルトではテキスト、JSON、画像、動画、音声ファイルがアップロード可能です。
+
+:::
+
 Not only can files uploaded to Drive be downloaded at any time, but they can also be reused by selecting "Attach Files from Drive" when creating notes.
 
 In addition, folders can be created within Drive to organize multiple files together.

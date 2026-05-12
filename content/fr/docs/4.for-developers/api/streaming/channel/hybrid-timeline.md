@@ -1,5 +1,5 @@
 ---
-description: ソーシャルタイムラインのノートが流れるチャンネルです。
+description: "ソーシャルタイムラインのノートが流れるチャンネルです。"
 ---
 
 # `hybridTimeline`

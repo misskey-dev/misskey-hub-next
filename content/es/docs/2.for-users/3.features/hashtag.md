@@ -1,9 +1,11 @@
-# ハッシュタグ
+# Hashtags
 
-ハッシュタグとは、投稿に検索可能なタグをつけることができる機能の一つです。
+Los hashtags son una característica que te permite añadir etiquetas a tus notas para que puedan ser buscadas.
 
-世界ではじめてのハッシュタグ── #barcamp は、[2007年8月24日の午前4:25](https://twitter.com/chrismessina/status/223115412?lang=en)にクリス・メッシナ氏[@chrismessina@mastodon.xyz](https://mastodon.xyz/@chrismessina)によって考案されました。後にこの「ポンド記号`#`を用いて検索を容易にする」という案は、英語で「刻む、ハックする」を意味する「ハッシュ」と、「札」を意味する「タグ」を合わせた造語──「ハッシュタグ」として生まれ変わり、当時のTwitter社に公式採用されました。ちなみにクリス・メッシナ氏が`#`を選んだ理由は、IRCのチャンネル名が`#`で始まることからの連想だからだそうです。
+El primer hashtag del mundo, #barcamp, fue creado por Chris Messina [@chrismessina@mastodon.xyz](https://mastodon.xyz/@chrismessina) el [24 de agosto, 2007 a las 4:25](https://twitter.com/chrismessina/status/223115412?lang=en).Más tarde, esa idea de usar el símbolo de la almohadilla '#' para hacer búsquedas más fácilmente fue renacida como "hashtag," una palabra combinada del Inglés "hash", que significa "trocear o "triturar" y "tag", que significa "etiqueta", y fue oficialmente adoptado por Twitter al mismo tiempo.Por cierto, Chris Messina eligió `#` porque le recordaba a los nombres de los canales de IRC que empiezan por `#`.
 
-![Screenshot of Chris Messina's first hashtag tweet that says "how do you feel about using # (pound) for groups. As in #barcamp \[msg\]?"](/img/docs/for-users/features/hashtag/1.ja.png)
+Captura de pantalla del primer tuit de Chris Messina con un hashtag que dice «qué te parece usar # (pound) para los grupos». Como en #barcamp [msg]?"](/img/docs/for-users/features/hashtag/1.ja.png)
 
-FediverseでのハッシュタグはXやInstagramなどといった中央集権的なサービスとでのものと多少仕様が異なります。Fediverseでは全文検索が難しい場合などがあり、特定の投稿を探し出すのは困難ですが、投稿にハッシュタグがついていれば、その投稿をハッシュタグをたどって容易に見つけ出すことができます。また、投稿にハッシュタグをつけるだけで様々なサイトに自動で届けてくれるハッシュタグリレーと呼ばれるサービスなどが連合宇宙には存在し、ここではハッシュタグにそこそこの重みがあったりするのです。
+La forma de utilizar los hashtags en el Fediverso es ligeramente diferente de cómo se utiliza en servicios centralizados como X e Instagram.En el fediverso, la búsqueda de texto completo es a veces difícil, lo que dificulta encontrar una publicación concreta, pero si una publicación contiene un hashtag, puedes localizarla fácilmente siguiendo el hashtag.Además, existen servicios en Fediverse llamados hashtag relays que envían automáticamente las publicaciones a varios sitios con solo añadirles hashtags, por lo que estos son bastante importantes.
+
+

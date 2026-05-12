@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import 'virtual:uno.css';
 import sections from '@/assets/data/toolsNav';
 import { isSamePath } from 'ufo';
 
@@ -26,7 +27,7 @@ const route = useRoute();
 </script>
 
 <template>
-    <div class="bg-white dark:bg-slate-950">
+    <div class="bg-white dark:bg-neutral-950">
         <GNav @toggleNav="isNavOpen = !isNavOpen" :is-open="isNavOpen" :slim="true" :disable-shadow="true" :hasBorder="true" />
         <div :class="$style.slimPageRoot" class="overflow-x-hidden">
             <aside
@@ -45,15 +46,15 @@ const route = useRoute();
                     <hr class="mb-1 mt-2" />
                     <ToolsAsideNavSection :d="section" @toggleNav="clickNav()" v-for="section in sections" />
                 </nav>
-                <div class="lg:hidden bg-slate-100 dark:bg-slate-900">
-                    <button @click="isAsideNavOpen = !isAsideNavOpen" class="bg-slate-300 dark:bg-slate-800 hover:bg-slate-400 dark:hover:bg-slate-700" :class="$style.toolsMenuToggle"><span>{{ $t('_tools.menuToggle') }}</span></button>
+                <div class="lg:hidden bg-neutral-100 dark:bg-neutral-900">
+                    <button @click="isAsideNavOpen = !isAsideNavOpen" class="bg-neutral-300 dark:bg-neutral-800 hover:bg-neutral-400 dark:hover:bg-neutral-700" :class="$style.toolsMenuToggle"><span>{{ $t('_tools.menuToggle') }}</span></button>
                 </div>
             </aside>
-            <main class="ml-8 lg:ml-72 lg:translate-x-0 transition-transform bg-slate-100 dark:bg-slate-900" :class="[isAsideNavOpen ? 'translate-x-72' : 'translate-x-0']">
+            <main class="ml-8 lg:ml-72 lg:translate-x-0 transition-transform bg-neutral-100 dark:bg-neutral-900" :class="[isAsideNavOpen ? 'translate-x-72' : 'translate-x-0']">
                 <div :class="$style.slimPageRoot">
                     <slot />
                 </div>
-                <GFooter class="mt-12 rounded-tl-3xl lg:rounded-tl-none bg-white dark:bg-slate-950" />
+                <GFooter class="mt-12 rounded-tl-3xl lg:rounded-tl-none bg-white dark:bg-neutral-950" />
             </main>
         </div>
     </div>

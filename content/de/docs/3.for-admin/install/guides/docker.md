@@ -1,5 +1,5 @@
 ---
-description: Diese Anleitung erklärt, wie man Misskey mit Docker einrichtet.
+description: 'Diese Anleitung erklärt, wie man Misskey mit Docker einrichtet.'
 ---
 
 # Misskey-Setup mit Docker Compose
@@ -36,7 +36,7 @@ cp .config/docker_example.env .config/docker.env
 cp ./compose_example.yml ./compose.yml
 ```
 
-Bearbeite `default.yml` und `docker.env` gemäß den Anweisungen in den Dateien.\
+Bearbeite `default.yml` und `docker.env` gemäß den Anweisungen in den Dateien.  
 Bearbeite `compose.yml` nach Bedarf.(Zum Beispiel, wenn du den Port ändern möchtest)
 
 ## Build und Initialisierung

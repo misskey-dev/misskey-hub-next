@@ -22,7 +22,7 @@
 
 :::
 
-문제가 있으면 [@aqz@p1.a9z.dev 에 멘션](https://p1.a9z.dev/@aqz)으로 알려주시면 감사하겠습니다.
+문제가 있으면 [@aqz@p1.a9z.dev에 멘션](https://p1.a9z.dev/@aqz)으로 알려주시면 감사하겠습니다.
 
 ## 소개
 
@@ -116,6 +116,16 @@ sudo corepack enable
 
 v20.x.x 등으로 표시되면 OK.v8.x.x와 같이 낮은 버전이 표시되면 제대로 설치가 되지 않은 것이므로 서버를 재부팅하고 다시 설치하는 등 다시 한 번 시도해 봅니다.
 
+### pnpm
+
+pnpm은 Misskey에서 사용하는 패키지 관리 툴로, 외부 라이브러리를 참조하거나 종속성을 관리하는 경우 등에 사용합니다.
+
+여기에서는, Node.js에 포함되어 있는 패키지 관리 툴 "npm"을 사용해서 pnpm을 설치하는 방법을 소개하는데, [pnpmのウェブサイト](https://pnpm.io/installation)에서는 다른 방법으로도 설치하는 방법을 소개하고 있으므로, 한 번 보신 다음에 사용할 환경에 알맞는 방법으로 설치하는 것을 추천합니다.
+
+```sh
+npm i -g pnpm
+```
+
 ### PostgreSQL
 
 PostgreSQL은 객체 관계형 데이터베이스 관리 시스템이며, 미스키의 다양한 데이터를 저장하는 데 필수적인 소프트웨어입니다.
@@ -160,13 +170,20 @@ CREATE DATABASE mk1 OWNER misskey;
 
 ### Redis
 
-Redis는 NoSQL의 인메모리 데이터베이스 소프트웨어로, 데이터베이스 및 연합과의 통신 관리 등을 위해 필요합니다.\
+Redis는 NoSQL의 인메모리 데이터베이스 소프트웨어로, 데이터베이스 및 연합과의 통신 관리 등을 위해 필요합니다.  
 redis.io의 문서에 따라, snap을 이용해 설치합니다.
 
 https://redis.io/docs/getting-started/installation/install-redis-on-linux/
 
 ```sh
 sudo snap install redis
+```
+
+시작
+
+```sh
+sudo systemctl enable redis-server
+sudo systemctl start redis-server
 ```
 
 systemctl로 데몬 상태 확인.
@@ -176,6 +193,14 @@ systemctl status nginx
 ```
 
 active이면 OK.
+
+### FFmpeg
+
+FFmpeg는 영상이나 음성에 관한 처리를 담당합니다.아래로 설치합니다.
+
+```sh
+sudo apt install ffmpeg
+```
 
 ### nginx
 

@@ -116,6 +116,16 @@ sudo corepack enable
 
 Wenn `v20.x.x` oder ähnlich angezeigt wird, ist alles in Ordnung.Wenn eine niedrigere Version wie `v8.x.x` angezeigt wird, ist die Installation nicht korrekt durchgeführt worden. Starten den Server neu und versuche, die Installation erneut durchzuführen.
 
+### pnpm
+
+pnpmは、Misskeyで使用しているパッケージ管理ツールであり、外部ライブラリを参照したり、その依存関係を管理したりするのに使用されている。
+
+ここでは、Node.jsに付属しているパッケージ管理ツール「npm」を使用してpnpmをインストールする方法を紹介しているが、[pnpmのウェブサイト](https://pnpm.io/installation)では他にも様々な方法でのインストール方法が紹介されているので、一度目を通したうえで、お使いの環境に最適な方法でインストールすることをお勧めする。
+
+```sh
+npm i -g pnpm
+```
+
 ### PostgreSQL
 
 PostgreSQL ist ein objektrelationales Datenbankmanagementsystem und eine unverzichtbare Software zur Speicherung der verschiedenen Daten von Misskey.
@@ -160,13 +170,25 @@ CREATE DATABASE mk1 OWNER misskey;
 
 ### Redis
 
-Redisは、NoSQLのインメモリデータベースソフトであり、データベースや連合との通信を管理するなどのために必要だ。\
-redis.ioのドキュメントに従い、snapでインストールする。
+Redisは、NoSQLのインメモリデータベースソフトであり、データベースや連合との通信を管理するなどのために必要だ。  
+redis.ioのドキュメントに従いインストールする。
 
-https://redis.io/docs/getting-started/installation/install-redis-on-linux/
+https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-linux/
 
 ```sh
-sudo snap install redis
+sudo apt-get install lsb-release curl gpg
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+sudo chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+sudo apt-get update
+sudo apt-get install redis
+```
+
+起動する
+
+```sh
+sudo systemctl enable redis-server
+sudo systemctl start redis-server
 ```
 
 systemctlでデーモンの状態を確認。
@@ -176,6 +198,14 @@ systemctl status redis-server
 ```
 
 activeならOK。
+
+### FFmpeg
+
+FFmpegは、動画や音声に関する処理を担う。以下でインストールしておく。
+
+```sh
+sudo apt install ffmpeg
+```
 
 ### nginx
 

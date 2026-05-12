@@ -1,7 +1,7 @@
 <template>
     <div :class="$style.root">
         <input v-model="query" :class="$style.input" type="search" :placeholder="q">
-        <button :class="$style.button" @click="search"><SearchIco /> 検索</button>
+        <button :class="$style.button" @click="search"><SearchIco /> {{ $t('_mk.searchByGoogle') }}</button>
     </div>
 </template>
 
@@ -27,7 +27,7 @@ const search = () => {
 }
 
 .input {
-    @apply border-slate-200;
+    @apply border-neutral-200;
     flex-shrink: 1;
     padding: 10px;
     width: 100%;
@@ -39,7 +39,7 @@ const search = () => {
 }
 
 .button {
-    @apply border-slate-200;
+    @apply border-neutral-200;
     flex-shrink: 0;
     margin: 0;
     padding: 0 16px;

@@ -6,7 +6,7 @@ Kamu dapat memasang misskey pada peladen Ubuntu hanya dengan menjawab beberapa p
 
 Terdapat juga script untuk memutakhirkan.
 
-[Untuk v12](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)\
+[Untuk v12](https://github.com/joinmisskey/bash-install/blob/a096e874f93d493aa68975a31be9ce12d644e767/README.md)  
 [**Versi Bahasa Inggris**](./README.en.md)
 
 ## Bahan Yang Perlu Disiapkan
@@ -25,7 +25,7 @@ Pastikan pengaturan jaringan peladen DNS anda telah benar secara menyeluruh sebe
 
 ## Pengaturan Cloudflare
 
-Cloudflareを使う場合、Cloudflareのドメインの設定を完了してからインストールを開始するようにしてください。\
+Cloudflareを使う場合、Cloudflareのドメインの設定を完了してからインストールを開始するようにしてください。  
 ネームサーバーの適用には最大で3日程度かかる場合があります。
 
 Jika kamu menggunakan nginx dan Cloudflare, kamu harus mengatur Cloudflare terlebih dahulu untuk:
@@ -37,7 +37,7 @@ Jika kamu menggunakan nginx dan Cloudflare, kamu harus mengatur Cloudflare terle
 
 ### 1. SSH
 
-Menyambung ke peladen melalui SSH.\
+Menyambung ke peladen melalui SSH.  
 (Jika kamu memiliki peladen dengan lingkungan desktop terpasang, buka Terminal/shell）
 
 ### 2. Perbaharui Lingkungan Peladen
@@ -108,11 +108,11 @@ Cara memilih opsi dan spesifikasi.
 
 Mulai dari v1, terdapat metode pemasangan systemd atau Docker yang dapat dipilih.
 
-Ketika memilih metode pemasangan Docker, **Misskey akan dipasang dan dijalankan melalui Docker** sedangkan Redis, Postgres dan sebagainya akan dipasang dan dijalankan pada host peladen langsung.\
+Ketika memilih metode pemasangan Docker, **Misskey akan dipasang dan dijalankan melalui Docker** sedangkan Redis, Postgres dan sebagainya akan dipasang dan dijalankan pada host peladen langsung.  
 [docker-composeですべての機能を動かす方法については、mamemonongaさんが作成したこちらの記事がおすすめです。](https://gist.github.com/mamemomonga/5549bb69cad8e5618e5527593d4890e0)
 
-Apabila kamu memilih menggunakan image dari Docker Hub, kebutuhan untuk build Misskey tidak diperlukan dan pilihan ini merupakan **rekomendasi dari kami**.\
-Namun ketika melakukan pemutakhiran, migrasi tetap dibutuhkan dan downtime tetap tidak dapat terhindarkan.\
+Apabila kamu memilih menggunakan image dari Docker Hub, kebutuhan untuk build Misskey tidak diperlukan dan pilihan ini merupakan **rekomendasi dari kami**.  
+Namun ketika melakukan pemutakhiran, migrasi tetap dibutuhkan dan downtime tetap tidak dapat terhindarkan.  
 Selain itu, dengan menggunakan image dari Docker Hub tidak perlu lagi menyiapkan lingkungan untuk build Misskey (tidak ada `git pull`). Dengan kata lain, apabila ingin menyiapkan dan menjalankan fork akan lebih merepotkan.
 
 Karena alasan performa, metode build Docker secara lokal tidak dipergunakan lagi.
@@ -145,12 +145,12 @@ Apabila kamu menggunakan swap, pastikan swap kamu memiliki hingga ruang hingga 3
 
 Perhatikan arahan berikut ini:
 
-- Apabila Redis atau Postgres telah terpasang, atur `install locally` ke "No".\
+- Apabila Redis atau Postgres telah terpasang, atur `install locally` ke "No".  
   Biarkan pengaturan `host・port` apa adanya lalu tekan Enter. Masukkan nama pengguna dan kata sandi seperti yang telah ditentukan pada proses sebelumnya.
 
 ## Mengenai berkas .env
 
-Script pemasangan membuat dua berkas.env yang dipergunakan untuk memutakhirkan Misskey.\
+Script pemasangan membuat dua berkas.env yang dipergunakan untuk memutakhirkan Misskey.  
 Berkas ini dipergunakan pada saat memutakhirkan.
 
 ### /root/.misskey.env
@@ -159,13 +159,13 @@ Diperlukan untuk mengingat pengguna yang menjalankan proses misskey
 
 ### /home/(pengguna_misskey)/.misskey.env
 
-Dibuat untuk systemd yang dipertujukan mengingat direktori\
+Dibuat untuk systemd yang dipertujukan mengingat direktori  
 .
 
 ### /home/(pengguna_misskey)/.misskey-docker.env
 
-Dibuat untuk Docker dengan tujuan menyimpan nomor kontainer beserta image yang sedang berjalan.\
-Nomor kontainer akan diperbarui selama pemutakhiran.\
+Dibuat untuk Docker dengan tujuan menyimpan nomor kontainer beserta image yang sedang berjalan.  
+Nomor kontainer akan diperbarui selama pemutakhiran.  
 Image lama akan dihapus.
 
 ## Manajemen Mandiri
@@ -176,7 +176,7 @@ Ganti domain "example.com" dengan domain kamu sendiri.
 
 ### Direktori Misskey
 
-Sumber kode akan diklon pada direktori `/home/pengguna/direktori`.\
+Sumber kode akan diklon pada direktori `/home/pengguna/direktori`.  
 (nilai default untuk pengguna dan direktori adalah misskey）
 
 Kamu dapat menavigasi ke direktori Misskey dengan melakukan perintah berikut.
@@ -194,7 +194,7 @@ exit
 
 ### systemd
 
-Nama proses dalam systemd adalah `example.com`.\
+Nama proses dalam systemd adalah `example.com`.  
 Sebagai contoh untuk memulai ulang proses, jalankan perintah berikut.
 
 ```sh
@@ -249,7 +249,7 @@ Parameter `requirepass` dan `bind` diatur di `/etc/redis/misskey.conf`.
 
 ## Q. Error 502 tidak dapat diakses setelah melakukan pemutakhiran
 
-Apabila proses migrasi sedang berlangsung, Docker tidak dapat memberikan izin akses langsung.\
+Apabila proses migrasi sedang berlangsung, Docker tidak dapat memberikan izin akses langsung.  
 Pastikan dan periksa apakah proses migrasi telah selesai.
 
 Pada kasus menggunankan systemd, perintah `pnpm install` kemungkinan gagal.
@@ -264,5 +264,5 @@ Apabila kamu memeriksa log dengan `journalctl`, umumnya kamu akan menemukan pern
 
 ## Q. Membangun instansi Misskey lebih dari 1 di peladen yang sama
 
-Script ini tidak dapat melakukan pemasangan instansi Misskey lebih dari 1 pada peladen yang sama.\
+Script ini tidak dapat melakukan pemasangan instansi Misskey lebih dari 1 pada peladen yang sama.  
 Hal ini dikarenakan beberapa pengaturan nantinya akan ditimpa dan kamu akan mendapatkan banyak galat dan kesalahan dalam proses menjalankan script ini.

@@ -1,9 +1,9 @@
-# エンドポイント一覧
+# Endpoints
 
 :::tip
 
-現在、エンドポイント一覧は準備中です。提供が開始されるまでの間は、各Misskeyサーバーで [`/api-doc` ページ](x-mi-web://api-doc)にアクセスするか、[Misskeyのソースコード](https://github.com/misskey-dev/misskey/tree/develop/packages/backend/src/server/api/endpoints)を参照してください。
+La lista de endpoints está actualmente en construcción.Mientras tanto, consulta la página [`/api-doc`](x-mi-web://api-doc) de cada servidor de Misskey o accede al [código fuente de Misskey](https://github.com/misskey-dev/misskey/tree/develop/packages/backend/src/server/api/endpoints) para obtener más información.
 
-また、少し情報が古いですが[従来のMisskey Hub](https://legacy.misskey-hub.net/docs/api/endpoints.html)もご利用いただけます。
+La [versión heredada de Misskey Hub](https://legacy.misskey-hub.net/docs/api/endpoints.html) también está disponible, aunque parte de la información está desactualizada.
 
 :::

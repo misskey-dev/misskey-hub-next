@@ -10,12 +10,12 @@
                     <GDots class="absolute top-0 left-0 w-32 h-32 text-accent-600" />
                     <GDots class="absolute bottom-0 right-0 w-32 h-32 text-accent-600" />
                     <div class="relative lg:w-64 h-64 flex items-center">
-                        <img class="drop-shadow-xl hoverRubber" src="/img/emojis/custard_3d.png" />
+                        <img class="drop-shadow-xl _hoverRubber" src="/img/emojis/custard_3d.png" />
                     </div>
                 </div>
             </template>
         </GHero>
-        <div class="pb-12 lg:mt-12 pt-6 bg-white dark:bg-slate-950">
+        <div class="pb-12 pt-6 bg-white dark:bg-neutral-950">
             <div class="container mx-auto max-w-screen-xl px-6 space-y-6 lg:space-y-8">
                 <GLargeLinks :items="[
                     {

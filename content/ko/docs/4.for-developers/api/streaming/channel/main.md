@@ -1,5 +1,5 @@
 ---
-description: 기본적인 정보가 흐르는 채널입니다.
+description: "기본적인 정보가 흐르는 채널입니다."
 ---
 
 # `main`

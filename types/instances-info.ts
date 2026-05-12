@@ -26,6 +26,11 @@ export type InstanceItem = {
     meta: Partial<MisskeyEntities.MetaLite> | null,
     /** Number of Notes per Day (15-day average) */
     npd15: number, 
+    /** Number of Daily Read Users (15-day average) */
+    dru15?: number,
+    /** Yesterday's Daily Read Users */
+    druYesterday?: number,
+    /** Stats (deprecated) */
     stats?: MisskeyEntities.StatsResponse,   //  deprecated (result of api/stats)
 };
 
@@ -39,8 +44,14 @@ export type InstanceInfo = {
         notesCount: number;
         /** Total Users */
         usersCount: number;
-        /** Total MAUs */
-        mau: number;
+        /** Average of notes per day in the last 15 days */
+        npd15: number;
+        /** Average of daily read users in the last 15 days */
+        dru15?: number;
+        /** Yesterday's daily read users */
+        druYesterday?: number;
+        /** Total MAUs (deprecated) */
+        mau?: number;
         /** Servers counter */
         instancesCount: number;
     },

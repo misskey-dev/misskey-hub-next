@@ -10,6 +10,12 @@ Secara teknis, drive dapat dilihat sebagai antarmuka dimana semua berkas secara 
 
 Kamu dapat mengunggah berkas apapun secara langsung ke [halaman Drive](x-mi-web://my/drive) pada Misskey Web, dan gambar apapun yang kamu atur sebagai avatarmu atau berkas yang kamu lampirkan pada catatanmu juga akan diunggahkan ke Drive.
 
+:::tip
+
+ロールでアップロード可能なファイル種別を設定可能で、デフォルトではテキスト、JSON、画像、動画、音声ファイルがアップロード可能です。
+
+:::
+
 Berkas yang diunggah ke drive dapat diunduh kapan saja, atau berkas dapat digunakan kembali dengan menggunakan 'lampirkan berkas dari drive' ketika membuat catatan.
 
 Kamu juga dapat membuat folder di dalam drivemu untuk mengorganisir banyak berkas secara bersamaan.
