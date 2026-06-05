@@ -49,16 +49,5 @@
     "nanoid": "^5.1.6",
     "swiper": "^12.0.3",
     "tinycolor2": "^1.6.0"
-  },
-  "pnpm": {
-    "overrides": {
-      "@aiscript-dev/aiscript-languageserver": "-"
-    },
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "better-sqlite3",
-      "esbuild",
-      "vue-demi"
-    ]
   }
 }
