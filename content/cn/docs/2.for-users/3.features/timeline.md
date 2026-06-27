@@ -1,111 +1,109 @@
-# タイムライン
+# 时间线
 
-タイムラインは、[ノート](/docs/for-users/features/note/)が時系列で表示される機能です。
-タイムラインには以下で示す種類があり、種類によって表示されるノートも異なります。
-なお、タイムラインの種類によってはサーバーにより無効になっている場合があります。
+时间线按时间顺序显示[帖子](/docs/for-users/features/note/)。时间线有多种类型，如下所示。不同类型的时间线，显示的帖子也会有所不同。请注意，某些类型的时间线可能已被服务器禁用。
 
-## ホーム
+## 首页
 
-自分のフォローしているユーザーの投稿が流れます。HTLと略されます。
+这个时间线包含您关注的用户发布的帖子。缩写为HTL。
 
-## ローカル
+## 本地
 
-全てのローカルユーザーの「ホーム」指定されていない投稿が流れます。LTLと略されます。
+这个时间线包含所有本地用户发布的，不在「首页」的帖子。缩写为 LTL。
 
-## ソーシャル
+## 社交
 
-自分のフォローしているユーザーの投稿と、全てのローカルユーザーの「ホーム」指定されていない投稿が流れます。STLと略されます。
+这个时间线包含您关注的用户发布的帖子，和所有本地用户发布的且不在「首页」的帖子。缩写为 STL。
 
-## グローバル
+## 全局
 
-全てのローカルユーザーの「ホーム」指定されていない投稿と、サーバーに届いた全てのリモートユーザーの「ホーム」指定されていない投稿が流れます。GTLと略されます。
+这个时间线包含所有本地用户和其它服务器上的用户发布的不在「首页」的帖子。缩写为 GTL。
 
-## 比較
+## 对比
 
 <table>
     <thead>
         <tr>
-            <th scope="col" rowspan="2">ソース</th>
-            <th scope="col" rowspan="2">公開範囲</th>
-            <th scope="col" colspan="4">タイムライン</th>
+            <th scope="col" rowspan="2">用户来源</th>
+            <th scope="col" rowspan="2">可见性</th>
+            <th scope="col" colspan="4">时间线</th>
         </tr>
         <tr>
-            <th scope="col">ホーム</th>
-            <th scope="col">ローカル</th>
-            <th scope="col">ソーシャル</th>
-            <th scope="col">グローバル</th>
+            <th scope="col">首页</th>
+            <th scope="col">本地</th>
+            <th scope="col">社交</th>
+            <th scope="col">全局</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <th scope="row" rowspan="3">ローカル（フォロー）</th>
-            <th scope="row">公開</th>
+            <th scope="row" rowspan="3">本地（已关注）</th>
+            <th scope="row">公开</th>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <th scope="row">ホーム</th>
+            <th scope="row">首页</th>
             <td>✔</td>
             <td></td>
             <td>✔</td>
             <td></td>
         </tr>
         <tr>
-            <th scope="row">フォロワー</th>
+            <th scope="row">仅关注者</th>
             <td>✔</td>
             <td></td>
             <td>✔</td>
             <td></td>
         </tr>
         <tr>
-            <th scope="row" rowspan="3">リモート（フォロー）</th>
-            <th scope="row">公開</th>
+            <th scope="row" rowspan="3">远程（已关注）</th>
+            <th scope="row">公开</th>
             <td>✔</td>
             <td></td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <th scope="row">ホーム</th>
+            <th scope="row">首页</th>
             <td>✔</td>
             <td></td>
             <td>✔</td>
             <td></td>
         </tr>
         <tr>
-            <th scope="row">フォロワー</th>
+            <th scope="row">仅关注者</th>
             <td>✔</td>
             <td></td>
             <td>✔</td>
             <td></td>
         </tr>
         <tr>
-            <th scope="row" rowspan="3">ローカル（未フォロー）</th>
-            <th scope="row">公開</th>
+            <th scope="row" rowspan="3">本地（未关注）</th>
+            <th scope="row">公开</th>
             <td></td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <th scope="row">ホーム</th>
+            <th scope="row">首页</th>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
-            <th scope="row">フォロワー</th>
+            <th scope="row">仅关注者</th>
             <td></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
-            <th scope="row">リモート（未フォロー）</th>
-            <th scope="row">公開</th>
+            <th scope="row">远程（未关注）</th>
+            <th scope="row">公开</th>
             <td></td>
             <td></td>
             <td></td>

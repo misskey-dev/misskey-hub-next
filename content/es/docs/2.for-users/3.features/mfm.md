@@ -131,7 +131,7 @@ Muestra el contenido como una cita.
 > Misskey amplía el mundo del Fediverso
 ```
 
-<MfmPreview text="> MisskeyでFediverseの世界が広がります"></MfmPreview>
+<0> MisskeyでFediverseの世界が広がります"></0>
 
 ### Centrar
 
@@ -152,6 +152,16 @@ $[ruby Misskey ミスキー]
 ```
 
 <MfmPreview text="$[ruby Misskey ミスキー]"></MfmPreview>
+
+### Fecha y hora
+
+Se puede mostrar la fecha y la hora especificando la hora UNIX.
+
+```
+$[unixtime 1701356400]
+```
+
+<MfmPreview text="$[unixtime 1701356400]"></MfmPreview>
 
 ### Código fuente (insertado)
 
@@ -226,7 +236,7 @@ $[blur Misskey amplía el mundo del Fediverso]
 Un cuadro de búsqueda puede ser mostrado.
 
 ```
-misskey 検索
+misskey search
 ```
 
 <MfmPreview text="misskey 検索"></MfmPreview>

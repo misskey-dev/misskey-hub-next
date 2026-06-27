@@ -96,7 +96,7 @@ The placeholder is replaced by the following:
 - `<CLIP_ID>`: ID of the clip to embed
 - `<RANDOM>`: Random string (Required if provided embed.js is used.If there are multiple embed codes on the same page, make sure they are not duplicated.)
 
-## Embedding a list of hashtag notes
+## Embedding a list of hashtagged notes
 
 ::MiWebEmbed{src="https://0key.dev/embed/tags/misskey?maxHeight=500"}
 ::
@@ -132,7 +132,7 @@ You can customize the appearance of the embed widget by specifying a specific va
 	</tr>
     <tr>
 		<td><code>maxHeight</code></td>
-		<td>Number above 0</td>
+		<td>A value of 0 or greater</td>
 		<td>
             Specifies the max height of the widget in pixels.If the content is longer than that vertically, it can be scrolled inside the widget.<br>
             If <code>0</code> is specified, the height of the embedded element will automatically extend to match the internal height <b>(deprecated)</b>.<br>

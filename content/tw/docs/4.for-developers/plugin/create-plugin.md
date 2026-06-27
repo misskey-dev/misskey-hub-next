@@ -1,30 +1,30 @@
-# プラグインの作成
+# 建立插件
 
-Misskey Webクライアントのプラグイン機能を使うと、クライアントを拡張し、様々な機能を追加できます。
-このドキュメントではプラグインの作成方法について説明します。
+透過 Misskey Web 客戶端的插件功能，您可以擴展客戶端並新增各種功能。
+本文件將說明如何建立插件。
 
-## プラグインの例
+## 插件範例
 
-以下に完全なプラグインの例を示します。このプラグインは、[`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn)を使用して、投稿フォームに「フグパンチボタン」を追加するものです。
+以下提供一個完整的插件範例。此插件使用 [`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn) 在發布表單中新增一個「河豚拳按鈕」。
 
-このプラグインをインストールすると、投稿フォーム上のプラグインメニューに「フグパンチ」の項目が追加されます。クリックすると、投稿フォーム上のテキストに `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )` が追加されます。
+安裝此插件後，發布表單上的插件選單會新增一個「河豚拳」選項。點擊後，發布表單的文字區塊中就會加入 `河豚拳!!!!🐡( '-' 🐡 )`。
 
 ```ais
 /// @ 0.12.4
 ### {
-  name: "フグパンチボタン"
+  name: "河豚拳按鈕"
   version: "0.0.1"
   author: "Misskey Project"
 }
 
-Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
-  let fugu = "ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )"
+Plugin:register_post_form_action('河豚拳', @(note, rewrite) {
+  let fugu = "河豚拳!!!!🐡( '-' 🐡 )"
 
   if (note.text.trim() == '') {
-    // ノートの中身がない場合はフグパンチに置き換え
+    // 如果貼文內容為空，則替換為河豚拳
     rewrite('text', fugu)
   } else {
-    // ノートの中身がある場合は冒頭にフグパンチを追加して改行
+    // 如果貼文有內容，則在開頭加入河豚拳並換行
     rewrite('text', `{fugu}{Str:lf}{note.text}`)
   }
 })
@@ -32,81 +32,80 @@ Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
 
 ## AiScript
 
-プラグインはAiScriptを使って記述されるスクリプトです。
+插件是使用 AiScript 撰寫的腳本。
 
-## メタデータ
+## 中繼資料 (Metadata)
 
-プラグインは、AiScriptのメタデータ埋め込み機能を使って、デフォルトとしてプラグインのメタデータを定義する必要があります。メタデータの例は以下の通りです。
+插件必須使用 AiScript 的中繼資料嵌入功能，預設定義插件的中繼資料。中繼資料的範例如下：
 
 ```AiScript
 /// @ 0.12.4
 ### {
-  name: "プラグイン名"
+  name: "插件名稱"
   version: "4.2.1"
-  author: "作者名"
-  description: "説明文"
+  author: "作者名稱"
+  description: "說明文字"
 }
 ```
 
-メタデータは次のプロパティを含むオブジェクトです。
+中繼資料是包含以下屬性的物件：
 
 ### name
 
-プラグイン名
+插件名稱
 
 ### author
 
-プラグイン作者
+插件作者
 
 ### version
 
-プラグインバージョン。数値を指定してください。
+插件版本。請指定數值。
 
 ### description
 
-プラグインの説明
+插件的說明
 
 ### permissions
 
-プラグインが要求する権限。MisskeyAPIにリクエストする際に用いられます。
+插件所需的權限。在向 Misskey API 發送請求時使用。
 
-APIのリクエスト方法については、[AiScript Misskey拡張API リファレンス](/docs/for-developers/plugin/plugin-api-reference/)をご覧ください。
+關於 API 的請求方法，請參閱 [AiScript Misskey 擴展 API 參考文件](/docs/for-developers/plugin/plugin-api-reference/)。
 
 :::tip
 
-permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+permission 的列表請參閱[此處](/docs/for-developers/api/permission/)。
 
 :::
 
 ### config
 
-プラグインの設定情報を表すオブジェクト。
-キーに設定名、値に以下のプロパティを含めます。
+表示插件配置資料的對象。
+在鍵中包含設置名稱，在值中包含以下屬性。
 
 #### type
 
-設定値の種類を表す文字列。以下から選択します。
+表示設置值類型的字串。從以下選擇。
 string number boolean
 
 #### label
 
-ユーザーに表示する設定名
+設置顯示給用戶的名稱
 
 #### description
 
-設定の説明
+設定的說明
 
 #### default
 
-設定のデフォルト値
+設定的預設値
 
 ## API
 
-Misskey Webはプラグインに対してAPIを公開していて、それらを利用することでクライアントの機能を拡張できます。
-どのようなAPIがあるかは[AiScript Misskey拡張API リファレンス](./plugin-api-reference/)を参照してください。
+Misskey Web 會對外提供插件（外掛）可使用的 API，透過這些 API，便能擴充客戶端的各項功能。若想了解可使用的 API，請參考 [AiScript Misskey 擴充 API](./plugin-api-reference/) 參考文件。
 
-## プラグインを配布する
+## 分發插件
 
-v2023.11.0以降では、あなたのウェブサイトからワンクリックでプラグインを直接インストールできるようになっています。
+在 v2023.11.0 及更高版本中，使用者已經可以從您的網站直接一鍵安裝插件。
 
-プラグインのインストール機能を提供する場合は、あなたのサイト上にAPIを実装する必要があります。詳しくは[こちら](../publish-on-your-website.md)をご覧ください。
+如果您想提供插件安裝功能，您必須在您的網站上實作相應的 API。詳情請參閱[此處](../publish-on-your-website.md)。

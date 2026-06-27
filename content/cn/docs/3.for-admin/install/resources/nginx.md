@@ -1,32 +1,32 @@
-# Nginxの設定
+# Nginx 的设置
 
-[nginx](https://nginx.org/)をリバースプロキシとして活用し、Misskeyサーバーを直接インターネットに公開せず運用することをお勧めします。
-これにより、以下のようなメリットが得られます。
+建议将 [nginx](https://nginx.org/) 用作反向代理，不要直接将 Misskey 服务器公开到互联网上。
+这样做有以下优点：
 
-- セキュリティ強化：リバースプロキシを通じてアクセスを制御することで、Misskeyサーバーに直接攻撃が及ぶリスクを軽減します。
-- 柔軟な設定：nginxは柔軟な設定オプションを提供しており、リバースプロキシとしての機能だけでなく、キャッシュ[^1]やセキュリティポリシーの設定も行えます。
+- 安全性增强：通过反向代理控制访问，降低 Misskey 服务器直接遭到攻击的风险。
+- 灵活的设置：nginx 提供灵活的配置选项，不仅可以作为反向代理，还可以设置缓存 [^1] 和安全策略。
 
-これらの利点を活かして、Misskeyサーバーをより安全かつ効率的に運用することが可能です。
-また、CloudflareなどのCDNと併せて設定することで、さらなる効果を見込めます。
+利用这些优势，可以更安全、高效地运行 Misskey 服务器。
+此外，配合 Cloudflare 等 CDN 一起设置，可以获得更好的效果。
 
-[^1]: nginxの機能である[proxy_cache_lock](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_lock)と[proxy_cache_use_stale](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_use_stale)を活用することで、キャッシュ未作成の状態で大量アクセスがあってもMisskeyサーバーの負荷増大を抑える効果が期待できます。
+[^1]: 通过利用 nginx 的 [proxy_cache_lock](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_lock) 和 [proxy_cache_use_stale](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_use_stale)功能，即使在未建立缓存的状态下遭遇大量访问，也能预期达到抑制 Misskey 服务器负载增加的效果。
 
-## 設定方法の一例
+## 设置方法示例
 
-以下はサーバーマシン（VPSなど）に直接nginxをインストールし、認証局として[Let's Encrypt](https://letsencrypt.org/)を採用したケースでの設定例です。
+以下是在服务器主机（如 VPS）上直接安装 nginx，并采用 [Let's Encrypt](https://letsencrypt.org/) 作为证书颁发机构 (CA) 的设置示例。
 
-1. `/etc/nginx/conf.d/misskey.conf`もしくは`/etc/nginx/sites-available/misskey.conf`を作成し、下の設定例をコピーします。\
-   （ファイル名はmisskeyでなくても構いません。）
-2. 次のように編集します。
-   1. example.tldを自分が用意したドメインに置き換えます。\
-      `ssl_certificate`と`ssl_certificate_key`はLet's Encryptで取得した証明書のパスになるようにします。
-   2. CloudflareなどのCDNを使う場合は、「If it's behind another reverse proxy or CDN, remove the following.」から4行を削除します。
-3. `/etc/nginx/sites-available/misskey.conf`を作成した場合は、`/etc/nginx/sites-enabled/misskey.conf`としてシンボリックリンクを作成します。\
+1. 请创建 `/etc/nginx/conf.d/misskey.conf` 或 `/etc/nginx/sites-available/misskey.conf`，并复制下方的设置示例。\
+   （文件名不一定要是 misskey。）
+2. 请进行如下编辑：
+   1. 将 example.tld 替换为你准备的域名。\
+      `ssl_certificate` 和 `ssl_certificate_key` 请设置为从 Let's Encrypt 获取的证书路径。
+   2. 如果使用 Cloudflare 等 CDN，请删除从 “If it's behind another reverse proxy or CDN, remove the following.” 开始的 4 行内容。
+3. 如果创建的是 `/etc/nginx/sites-available/misskey.conf`，请创建如下指向 `/etc/nginx/sites-enabled/misskey.conf` 的符号链接。\
    `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`
-4. `sudo nginx -t` で設定ファイルが正常に読み込まれるか確認します。
-5. `sudo systemctl restart nginx` でnginxを再起動します。
+4. 使用 `sudo nginx -t` 确认配置文件是否能正常读取。
+5. 使用 `sudo systemctl restart nginx` 重启 nginx。
 
-## 設定例
+## 设置示例
 
 ```nginx
 # For WebSocket

@@ -339,6 +339,27 @@ _content:
   warning: "Attention"
   danger: "Avertissement"
   preview: "Aperçu"
+_mk:
+  searchByGoogle: "Google"
+  _ago:
+    future: "Futur"
+    justNow: "à l'instant"
+    secondsAgo: "Il y a {n}s"
+    minutesAgo: "Il y a {n}min"
+    hoursAgo: "Il y a {n} heures"
+    daysAgo: "Il y a {n} jours"
+    weeksAgo: "Il y a {n} semaines"
+    monthsAgo: "Il y a {n} mois"
+    yearsAgo: "Il y a {n} ans"
+    invalid: "Il n'y a rien à voir ici"
+  _timeIn:
+    seconds: "Dans {n}s"
+    minutes: "Dans {n}min"
+    hours: "Dans {n}h"
+    days: "Dans {n}j"
+    weeks: "Dans {n} sem."
+    months: "Dans {n} mois"
+    years: "Dans {n}a"
 _other:
   title: "Plus !"
   description: "D'autres ressources pour vous aider à mieux apprécier Misskey."

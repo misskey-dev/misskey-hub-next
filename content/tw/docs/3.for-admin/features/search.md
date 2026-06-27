@@ -17,8 +17,8 @@ Misskey 提供了多種用於貼文搜尋的演算法。可依伺服器規模或
   - 由於使用資料庫內建功能，因此操作簡便。
   - 隨著資料量增加，搜尋可能會變得較慢。
 
-- sqlPgroonga ... 使用全文搜尋引擎 [Pgroonga](https://pgroonga.github.io) 進行搜尋。
-  - 需要安裝 Pgroonga。
+- sqlPgroonga ... 使用全文搜尋引擎 [PGroonga](https://pgroonga.github.io) 進行搜尋。
+  - 需要安裝 PGroonga。
   - 比 sqlLike 提供更高速的搜尋。
 
 - meilisearch ... 使用全文搜尋引擎 [Meilisearch](https://www.meilisearch.com) 進行搜尋。
@@ -28,9 +28,9 @@ Misskey 提供了多種用於貼文搜尋的演算法。可依伺服器規模或
 
 若要更換搜尋引擎，請修改設定檔中 `fulltextSearch` 的 `provider`，並重新啟動 Misskey 。
 
-## 使用 Pgroonga
+## 使用 PGroonga
 
-### 安裝 Pgroonga
+### 安裝 PGroonga
 
 :::warning
 
@@ -39,7 +39,7 @@ Misskey 提供了多種用於貼文搜尋的演算法。可依伺服器規模或
 
 :::
 
-以下是在 Ubuntu 22.04、PostgreSQL 15 環境下安裝 Pgroonga 的範例。
+以下是在 Ubuntu 22.04、PostgreSQL 18 環境下安裝 PGroonga 的範例。
 
 詳細請參考 [官方 PostgreSQL 安裝方法](https://pgroonga.github.io/ja/install/ubuntu.html)。
 
@@ -55,7 +55,7 @@ sudo wget -O /usr/share/keyrings/pgdg.asc https://www.postgresql.org/media/keys/
    echo "Signed-By: /usr/share/keyrings/pgdg.asc") | \
     sudo tee /etc/apt/sources.list.d/pgdg.sources
 sudo apt update
-sudo apt install -y -V postgresql-15-pgdg-pgroonga
+sudo apt install -y -V postgresql-18-pgdg-pgroonga
 ```
 
 如要使用基於 MeCab 的分詞器，請同時執行以下操作。
@@ -64,13 +64,13 @@ sudo apt install -y -V postgresql-15-pgdg-pgroonga
 sudo apt install -y -V groonga-tokenizer-mecab
 ```
 
-#### Docker環境を使用している場合
+#### 使用 Docker 環境時
 
-Docker環境ではPGroonga導入済みのDockerイメージが使用できます。
+在 Docker 環境中，可以使用已安裝 PGroonga 的 Docker 映像。
 
-PGroonga導入済みのPostgreSQLイメージを使用するには、`postgres:15-alpine`の代わりに`groonga/pgroonga:latest-alpine-15-slim`を使用してください。
+若要使用已安裝 PGroonga 的 PostgreSQL 映像，請將 `postgres:18-alpine` 替換為 `groonga/pgroonga:latest-alpine-18-slim`。
 
-### 啟用 Pgroonga
+### 啟用 PGroonga
 
 接著登入 PostgreSQL。
 

@@ -1,113 +1,113 @@
 ---
-description: "基本的な情報が流れるチャンネルです。"
+description: "This channel streams basic information."
 ---
 
 # `main`
 
-基本的な情報が流れるチャンネルです。
+This channel streams basic information.
 
-## パラメータ
+## Parameters
 
-なし
+None
 
-## イベント
+## Events
 
 ### `notification`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Notification'
+ $ref: 'misskey://Notification'
 }"/>
 
-通知を受け取ったときに発生します。
+Triggered when a notification is received.
 
 ### `mention`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-メンションされたときに発生します。
+Triggered when you are mentioned.
 
 ### `reply`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-返信されたときに発生します。
+Triggered when you receive a reply.
 
 ### `renote`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-Renoteされたときに発生します。
+Triggered when you are Renoted.
 
 ### `follow`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://User'
+ $ref: 'misskey://User'
 }"/>
 
-自分が他のユーザーをフォローしたときに発生します。
+Triggered when you follow another user.
 
 ### `followed`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://User'
+ $ref: 'misskey://User'
 }"/>
 
-他のユーザーが自分をフォローしたときに発生します。
+Triggered when another user follows you.
 
 ### `unfollow`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://User'
+ $ref: 'misskey://User'
 }"/>
 
-自分が他のユーザーをフォロー解除したときに発生します。
+Triggered when you unfollow another user.
 
 ### `messagingMessage`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://MessagingMessage'
+ $ref: 'misskey://MessagingMessage'
 }"/>
 
-メッセージを受け取ったときに発生します。
+Triggered when a chat message is received.
 
 ### `readAllNotifications`
 
-全ての通知が既読になったときに発生します。
+Triggered when all notifications are marked as read.
 
 ### `unreadNotification`
 
-新しい通知があるときに発生します。
+Triggered when there is a new notification.
 
 ### `unreadMention`
 
-新しいメンションがあるときに発生します。
+Triggered when there is a new mention.
 
 ### `readAllUnreadMentions`
 
-全てのメンションが既読になったときに発生します。
+Triggered when all mentions are marked as read.
 
 ### `unreadSpecifiedNote`
 
-新しい指名ノートがあるときに発生します。
+Triggered when there is a new specified note (direct note).
 
 ### `readAllUnreadSpecifiedNotes`
 
-全ての指名ノートが既読になったときに発生します。
+Triggered when all specified notes are marked as read.
 
 ### `unreadMessagingMessage`
 
-新しいメッセージがあるときに発生します。
+Triggered when there is a new chat message.
 
 ### `readAllMessagingMessages`
 
-全てのメッセージが既読になったときに発生します。
+Triggered when all chat messages are marked as read.
 
-## 操作
+## Operations
 
-なし
+None

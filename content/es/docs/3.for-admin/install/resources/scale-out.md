@@ -9,7 +9,7 @@ Para más información sobre la replicación, consulta la documentación de Post
 Misskey soporta replicación PostgreSQL y puede ser configurado en el archivo de configuración como se indica a continuación.(Extracto)
 
 ```yml
-# Establece a true if replication is used
+# Establece a true si se usa la replicación
 dbReplications: true
 
 # Configura todos los esclavos (slaves) para replicar la BD

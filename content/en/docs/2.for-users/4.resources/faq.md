@@ -20,7 +20,7 @@ Please use the official Misskey Web client instead.
 
 ## Is misskey.io the official server of the Misskey project?
 
-No, misskey.io is not the official server of the Misskey Project and is not affiliated with it.misskey.io is the largest server running Misskey, offering a general-purpose platform for easy registration without specific themes.
+No, misskey.io is not the official server of the Misskey Project and is not affiliated with it. misskey.io is the largest server running Misskey, offering a general-purpose platform for easy registration without specific themes.
 
 ## Is the any relationship with MisskeyHQ Inc.?
 
@@ -36,8 +36,9 @@ The name "Misskey" was inspired by the lyrics of May'n's song "Brain Diver," whi
 Select "Search" from the menu and enter the user's fully-qualified username in the format specified below.A fully-qualified username includes a username and the hostname of the server to which the user belongs.This format is common between ActivityPub platforms such as Misskey, Mastodon, and Pleroma.<br>
 
 The format of a fully-qualified username is as follows:  
-`username@hostname.example`Here's a live example:  
-`syuilo@misskey.io`
+`username@hostname.example`<br>
+Here's a live example:  
+`syuilo@misskey.io`<br>
 
 While this format is not universal across all distributed software, it allows you to follow users from other servers or platforms implemented with different decentralized software.
 
@@ -88,10 +89,11 @@ Please note that donations to us are considered "sales" for tax purposes and wil
 
 The definition of "operator," according to [documents from the Ministry of Internal Affairs and Communications](https://www.soumu.go.jp/main_content/000477428.pdf), is "a person who seeks to make a profit by providing services and collecting fees as compensation for the provision of those services."Therefore, unless you are operating the server for the purpose of making a profit as a business, registration is not necessary.Thus, even if there is revenue from sources like donations or advertising, as long as it is used solely for operating costs, it does not fall under the category of operators requiring registration (confirmed with the Ministry of Internal Affairs and Communications).<br>
 For more details, please refer to the Ministry of Internal Affairs and Communications' [Entry Manual for Telecommunications Businesses](https://www.soumu.go.jp/main_content/000477428.pdf) or contact the ministry directly.
+Also, even if registration is not required, you can still register voluntarily.
 
 ## Since Misskey has a DM function, don't I need to register as a telecommunications business to run a server?
 
-As mentioned in ["Do I need to register with the Ministry of Internal Affairs and Communications if I create a server? (For servers in Japan)"](#Do I need to register with the Ministry of Internal Affairs and Communications if I create a server? (For servers in Japan)), any service operating on a non-profit basis does not require registration, regardless of the services offered.
+As mentioned in ["Do I need to register with the Ministry of Internal Affairs and Communications if I create a server? (For servers in Japan)"](#do-i-need-to-register-with-the-ministry-of-internal-affairs-and-communications-if-i-create-a-server-for-servers-in-japan), any service operating on a non-profit basis does not require registration, regardless of the services offered.
 
 ## Can I release services containing the name "Misskey"?
 

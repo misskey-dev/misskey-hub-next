@@ -16,9 +16,9 @@ description: '本指南介紹如何安裝和設定 Misskey。'
 
 #### 必須安裝並設定以下軟體
 
-- **[Node.js](https://nodejs.org/en/)** (20.4.x以上)
-- **[pnpm](https://pnpm.io/)** (v10以上)
-- **[PostgreSQL](https://www.postgresql.org/)** (v15以上)
+- **[Node.js](https://nodejs.org/en/)** (v22 系列：v22.15.0 以上，或 v24 系列：v24.10.0 以上)
+- **[pnpm](https://pnpm.io/)** (v10.16.0 以上)
+- **[PostgreSQL](https://www.postgresql.org/)** (v15 以上)
 - **[Redis](https://redis.io/)**
 - **[FFmpeg](https://www.ffmpeg.org/)**
 
@@ -165,6 +165,5 @@ sudo systemctl restart misskey
 
 - `pnpm run clean` 或 `pnpm run clean-all`
 - `pnpm rebuild`
-  :::
 
 :::

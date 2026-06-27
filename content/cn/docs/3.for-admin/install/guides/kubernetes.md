@@ -1,50 +1,49 @@
-# Kubernetes/TrueNASを使ったMisskey構築
+# 使用 Kubernetes / TrueNAS 构建 Misskey
 
-このガイドでは、Kubernetes と HelmChartを使用したMisskeyセットアップ方法について説明します。
+本指南介绍如何使用 Kubernetes 和 Helm Chart 来设置 Misskey。
 
 :::danger
 
-一度使用を始めたサーバーのドメイン・ホスト名では、データベースを作り直さないでください！
+请勿在已经投入使用的服务器上，于同一域名或主机名下重新创建数据库！
 
 :::
 
-## TrueCharts と TrueNAS Scale
+## TrueCharts 与 TrueNAS Scale
 
-MisskeyのHelmChartsはTrueNAS Scaleで使用するためのTrueChartsで公開されていますが、HelmChartsとしてインストールすることもできます。
+Misskey 的 Helm Chart 由 TrueCharts 发布，供 TrueNAS Scale 使用，但也可以作为常规的 Helm Chart 进行安装。
 
-[TrueCharts](https://truecharts.org/charts/description_list) のサイトには利用可能なすべてのChartsやインストール方法などのドキュメントがあります。
+[TrueCharts](https://truecharts.org/charts/description_list) 网站提供所有可用 Charts 以及安装方法等文档。
 
-また、不明な点があればTrueChartsの[Discord](https://discord.gg/Ax9ZgzKx9t)サーバーで質問をすることもできます。
+如果有不清楚的地方，也可以在 TrueCharts 的 [Discord](https://discord.gg/Ax9ZgzKx9t) 服务器上提问。
 
-現在、Misskeyは_incubator_ trainで進行中です。
+目前 Misskey 正在 _incubator_ train 中。
 
 :::tip{label='前提条件'}
 
-- TrueNAS Scale
-  または
-- KubernetesクラスターとHelm
+- TrueNAS Scale，或
+- 已安装 Helm 的 Kubernetes 集群
 
 :::
 
 ## TrueNAS Scale
 
-[TrueCharts Guide](https://truecharts.org/manual/guides/Adding-TrueCharts/)の手順に従ってください。
+请按照 [TrueCharts Guide](https://truecharts.org/manual/guides/Adding-TrueCharts/) 的步骤进行。
 
-_incubator_ trainを追加し、Misskeyをインストールします。
+添加 _incubator_ train，并安装 Misskey。
 
-設定の URL の欄は必ず変更してください。
+请务必修改设置中的 URL 字段。
 
-TrueChartsはデフォルトでTraefikを使用してサービスをHTTPSで外部に公開しますが、手動ですることにより他のソフトウェアを使用することもできます。
+TrueCharts 默认使用 Traefik 通过 HTTPS 将服务对外公开，但也可以通过手动配置来改用其他软件。
 
-## Helmを使用して手動で構築
+## 使用 Helm 手动构建
 
-TrueNAS Scaleを使用していない場合はHelmを使用して、Misskeyをインストールすることができます。
+如果你未使用 TrueNAS SCALE，也可以通过 Helm 安装 Misskey。
 
-values.yamlの `misskey:` の `url:` を必ず書き換えてください。
+请务必修改 `values.yaml` 中 `misskey:` 下的 `url:` 设置。
 
-他の個所は、必要に応じて書き換えてください。
+其他部分请根据需要自行修改。
 
-このChartでは現在Misskeyコンテナ内でTLSを有効にすることに対応していないので、サーバーへのアクセスを保護したい場合はリバースプロキシを使用することが推奨されています。
+该 Chart 目前不支持在 Misskey 容器内启用 TLS，因此如果你希望保护对服务器的访问，建议使用反向代理（reverse proxy）。
 
 ```
 helm repo add TrueCharts https://charts.truecharts.org
@@ -52,8 +51,8 @@ helm repo update
 helm install misskey TrueCharts/misskey
 ```
 
-## Misskey のアップグレード
+## Misskey 的升级
 
-Misskey をアップグレードするには、TrueNAS Scale に内蔵されているアップグレード機能を使用するか、kubernetes を手動で実行している場合は [helm repo update](https://helm.sh/docs/helm/helm_repo_update/) または [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) を使用することができます。
+要升级 Misskey，可以使用 TrueNAS Scale 内置的升级功能；如果是手动运行 Kubernetes，则可以使用 [helm repo update](https://helm.sh/docs/helm/helm_repo_update/) 或 [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/)。
 
-問題が発生する可能性も考え、アップグレード前にデータをバックアップすることを強くお勧めします。
+考虑到可能会出现问题，强烈建议在升级前先备份数据。

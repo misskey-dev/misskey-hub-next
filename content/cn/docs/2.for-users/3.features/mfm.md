@@ -12,7 +12,7 @@ MFM，全称为 Markup language For Misskey，是可以在 Misskey 的各个地�
 
 :::
 
-## 可以使用 MFM 的地方
+## 可以使用 MFM 的地方示例
 
 - 帖子正文
 - CW 注释
@@ -23,7 +23,7 @@ MFM，全称为 Markup language For Misskey，是可以在 Misskey 的各个地�
 
 ### 提及
 
-可以使用 @+用户名 来指示特定用户。
+可以使用 `@`+用户名 来指示特定用户。
 :::tip
 
 关于提及的详情请看[这里](./mention.md)。
@@ -44,7 +44,8 @@ MFM，全称为 Markup language For Misskey，是可以在 Misskey 的各个地�
 
 ### 标签
 
-可以使用 # + 文字来表示话题标签。
+可以使用 `#`+文字 来表示话题标签。
+:::tip
 
 关于标签的详情请看[这里](./hashtag.md)。
 
@@ -76,7 +77,7 @@ https://example.com
 
 :::tip
 
-在文字前加上`?`可以不显示连接预览。
+在链接文字前加上`?`可以不显示链接预览。
 
 ```
 ?[example link](https://example.com)
@@ -152,6 +153,16 @@ $[ruby Misskey ミスキー]
 
 <MfmPreview text="$[ruby Misskey ミスキー]"></MfmPreview>
 
+### 日期和时间
+
+可以通过指定 UNIX 时间来显示日期和时间。
+
+```
+$[unixtime 1701356400]
+```
+
+<MfmPreview text="$[unixtime 1701356400]"></MfmPreview>
+
 ### 代码（内嵌）
 
 将文字中的程序代码语法高亮显示。
@@ -212,7 +223,7 @@ $[font.fantasy MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
 ### 模糊
 
-可以使内容模糊。将指针移到上面就可以清晰看见。
+可以使内容模糊。将鼠标移到上面就可以清晰看见。
 
 ```
 $[blur MisskeyでFediverseの世界が広がります]
@@ -225,7 +236,7 @@ $[blur MisskeyでFediverseの世界が広がります]
 可以显示搜索框。
 
 ```
-misskey 検索
+misskey search
 ```
 
 <MfmPreview text="misskey 検索"></MfmPreview>
@@ -246,7 +257,7 @@ $[bg.color=ff0 黄背景]"></MfmPreview>
 
 ### 边框
 
-可以将内容用边框围起来。还可以指定各种格式。
+可以将内容用边框围起来。还可以指定各种样式。
 
 ```
 $[border.style=solid,width=4 Default]
@@ -292,7 +303,7 @@ $[position.x=1.5 完全に理解した]]\
 $[border.radius=5,width=2,color=888,noclip $[position.x=1.5 ＣＳＳ]
 $[position.x=1.5 完全に理解した]]"></MfmPreview>
 
-### 更改角度
+### 旋转
 
 旋转指定的角度。
 
@@ -302,7 +313,7 @@ $[rotate.deg=30 misskey]
 
 <MfmPreview text="$[rotate.deg=30 misskey]"></MfmPreview>
 
-### 更改位置
+### 位置偏移
 
 可以移动位置。
 
@@ -312,7 +323,7 @@ $[rotate.deg=30 misskey]
 
 <MfmPreview text="😏$[position.x=0.8,y=0.5 🍮]😀"></MfmPreview>
 
-### 放大
+### 拉伸
 
 通过拉伸显示文本。
 
@@ -356,7 +367,7 @@ $[jump 🍮] $[jump.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[jump 🍮] $[jump.speed=5s 🍮]]"></MfmPreview>
 
-### 动画（弹性）
+### 动画（回弹）
 
 ```
 $[bounce 🍮] $[bounce.speed=5s 🍮]
@@ -379,7 +390,7 @@ $[spin.x 🍮] $[spin.x,left 🍮] $[spin.x,alternate 🍮]
 $[spin.y 🍮] $[spin.y,left 🍮] $[spin.y,alternate 🍮]
 $[spin.speed=5s 🍮]]"></MfmPreview>
 
-### 动画（摇晃）
+### 动画（微抖）
 
 ```
 $[shake 🍮] $[shake.speed=5s 🍮]
@@ -387,7 +398,7 @@ $[shake 🍮] $[shake.speed=5s 🍮]
 
 <MfmPreview text="$[x2 $[shake 🍮] $[shake.speed=5s 🍮]]"></MfmPreview>
 
-### 动画（颤抖）
+### 动画（强抖）
 
 ```
 $[twitch 🍮] $[twitch.speed=5s 🍮]
@@ -407,7 +418,7 @@ $[rainbow $[fg.color=f0f 色付き文字]]
 $[rainbow 色なし文字]
 $[rainbow $[fg.color=f0f 色付き文字]]"></MfmPreview>
 
-### 闪光
+### 闪闪发光
 
 ```
 $[sparkle 🍮]
@@ -415,7 +426,7 @@ $[sparkle 🍮]
 
 <MfmPreview text="$[x2 $[sparkle 🍮]]"></MfmPreview>
 
-### 简化
+### 纯文本
 
 禁用内部全部语法。
 
@@ -427,10 +438,10 @@ $[sparkle 🍮]
 
 ## 面向开发者的信息
 
-MFM 的解析器实现和绘图作为库发布，可以轻松地将 MFM 嵌入到客户端中。
+MFM 的解析器和渲染的实现以库的形式发布，可以轻松地将 MFM 集成到客户端。
 
 - [misskey-dev/mfm.js](https://github.com/misskey-dev/mfm.js) - JavaScript 的解析器实现
-- [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - Vue.js 用组件
+- [mfm-renderer](https://www.npmjs.com/package/mfm-renderer) - 用于 Vue.js 的组件
 - [mfm.kt](https://github.com/samunohito/mfm.kt) - Kotlin 解析器实现
 - [mfm_parser](https://pub.dev/packages/mfm_parser) - Dart 解析器实现
-- [mfm](https://pub.dev/packages/mfm) - Flutter 用绘图小工具
+- [mfm](https://pub.dev/packages/mfm) - 用于 Flutter 的渲染组件

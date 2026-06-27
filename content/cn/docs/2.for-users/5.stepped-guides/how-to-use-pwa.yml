@@ -1,79 +1,80 @@
-title: "Misskey Webをアプリ化して使う方法"
-description: "Misskey WebをPWAアプリ化する方法をご紹介します。スマートフォンでMisskeyを利用する際のおすすめの方法です。"
+title: "将 Misskey Web 作为App应用使用"
+description: "本文将介绍如何将 Misskey Web 安装为 PWA 应用。这是在智能手机上使用 Misskey 的推荐方式。"
 #Do not translate any keys that includes underscore
 _TYPE_: "STEPPED_GUIDE"
 body: |
-  ここでは、Misskey WebをPWAアプリ化する方法をご紹介します。スマートフォンでMisskeyを利用する際のおすすめの方法です。
+  这里将介绍如何将 Misskey Web 安装为PWA应用。这是在只能手机上使用 Misskey 的推荐方式。
 
-  ## PWAとは？
+  ## 什么是PWA？
 
-  PWAは、Progressive Web Appの略で、ウェブページをアプリのように扱うことができる技術です。Misskeyは、標準でPWAに対応しています。
+  PWA 是 Progressive Web App 的缩写，是一种可以将网页像App应用一样使用的技术。Misskey 原生支持PWA。
 
-  ここでは、PWAの設定方法を端末のOS別に紹介しています。以下からお使いのOSを選んで進んでください！
+  以下依照手机操作系统介绍 PWA 的使用方法。请从下方选择您所使用的操作系统并继续。
 guides:
   - 
     _AUTOSELECT_TYPE_: "OS_ANDROID"
     _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
     title: "Android (Google Chrome)"
     description: |
-      AndroidでPWAをお使いになる際は、Google Chromeがおすすめです。
+      在 Android 上使用 PWA 時，建议使用 Google Chrome。
 
-      ここでは、Google Chromeを使用した設定方法について解説します。
+      这里将说明使用 Google Chrome 进行设置的方法。
     steps:
       - 
-        title: "PWAにしたいMisskeyサーバーを開く"
+        title: "打开要安装为 PWA 的 Misskey 服务器"
         image: "android/sp_0.png"
         description: |
-          PWAとして端末にインストールしたいMisskeyサーバーにアクセスし、ログインしてください。
+          请前往您想要以 PWA 形式安装到手机上的 Misskey 服务器，并先登入账号。
       - 
-        title: "詳細設定メニューを開く"
+        title: "打开详细设置菜单"
         image: "android/sp_1.png"
         description: |
-          Misskeyサーバーの任意のページを開いたまま、右上にある「︙」ボタンをタップします。
+          处于 Misskey 服务器任意一页面的状态时，点右上角“︙”按钮。
       - 
-        title: "「ホーム画面に追加」または「アプリをインストール」をタップ"
+        title: "点“添加到主屏幕”或“安装应用”"
         image: "android/sp_2.png"
         description: |
-          メニュー内にある「ホーム画面に追加」もしくは「アプリをインストール」の項目をタップし、出てきたダイアログの指示に従ってください。
+          在菜单中点“添加到主屏幕”或“安装应用”，并依照显示的对话框指示完成操作。
       - 
-        title: "ホーム画面を確認する"
+        title: "查看主屏幕"
         image: "android/sp_3.png"
         description: |
-          しばらくすると、ホーム画面に、サーバーのアイコンもしくはMisskeyのアイコンが追加されます。
+          稍等片刻后，主屏幕会新增服务器图标或 Misskey 图标。
 
-          このアイコンをタップすることで、Misskeyはアプリモードで起動します。
+          点此图标后，Misskey 会以App应用模式启动。
   - 
     _AUTOSELECT_TYPE_: "OS_IOS"
     _LAYOUT_TYPE_: "IMAGE_PORTRAIT_FIXED"
     title: "iOS / iPadOS"
     description: |
-      iOS または iPadOS でPWAをお使いになる際は、Safariをご利用ください。
+      在 iOS 或 iPadOS 上使用PWA时，请使用Safari。
 
-      開始する前に、お使いの端末に搭載されているOSが最新のものかどうかを確認してください。最新ではない場合は、[こちら](https://support.apple.com/ja-jp/ios/update)を参考にしてアップデートしてください。
+      开始前，请先确认您手机上的操作系统是否为最新版本。
+      如果不是，请参考[此页面](https://support.apple.com/ja-jp/ios/update)进行更新。
     steps:
       - 
-        title: "PWAにしたいMisskeyサーバーを開く"
+        title: "打开要安装为 PWA 的 Misskey 服务器"
         image: "ios/sp_0.png"
         description: |
-          PWAとして端末にインストールしたいMisskeyサーバーにアクセスし、ログインしてください。
+          请前往您想要以 PWA 形式安装到手机上的 Misskey 服务器，并先登入账号。
       - 
-        title: "共有ボタンをタップして開く"
+        title: "点分享按钮来打开菜单"
         image: "ios/sp_1.png"
         description: |
-          Misskeyサーバーの任意のページを開いたまま、メニューバーの共有ボタンをタップします。
+          处于 Misskey 服务器任意一页面的状态时，点菜单中的分享按钮。
       - 
-        title: "「ホーム画面に追加」をタップ"
+        title: "点“添加到主屏幕”"
         image: "ios/sp_2.png"
         description: |
-          オプションのリストを下にスクロールしてから、「ホーム画面に追加」をタップします。
+          向下滚动选项列表，然后点击“添加到主屏幕”。
 
-          この後、通知の送信許可を求められることがありますので、画面の指示に従い、必要に応じて許可してください。
+          之后，系统可能会请求发送通知的权限，请按照屏幕上的提示操作，并根据需要予以允许。
 
-          「ホーム画面に追加」が表示されない場合は、設定項目が非表示になっている可能性があります。表示するには、リストの一番下までスクロールし、「アクションを編集」から「ホーム画面に追加」の項目を追加してください。詳しくは[Appleのサポートページ](https://support.apple.com/ja-jp/guide/iphone/iph42ab2f3a7/ios)をご覧ください。
+          如果没有显示“添加到主屏幕”，可能是该设置项被隐藏了。要显示该选项，请滚动到列表最底部，在“编辑操作”中添加“添加到主屏幕”。详情请见 [Apple 支持页面](https://support.apple.com/ja-jp/guide/iphone/iph42ab2f3a7/ios)。
       - 
-        title: "ホーム画面を確認する"
+        title: "查看主屏幕"
         image: "ios/sp_3.png"
         description: |
-          しばらくすると、ホーム画面に、サーバーのアイコンもしくはMisskeyのアイコンが追加されます。
+          稍等片刻后，主屏幕会新增服务器图标或 Misskey 图标。
 
-          このアイコンをタップすることで、Misskeyはアプリモードで起動します。
+          点此图标后，Misskey 会以App应用模式启动。

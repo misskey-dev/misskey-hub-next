@@ -1,25 +1,25 @@
 # Safe Mode
 
-Since Misskey Web v2025.8.0, Misskey features a Safe Mode which disables custom CSS, plugins, and themes. This is for cases where these features interfere with the normal operation of the app.
+Since Misskey Web v2025.8.0, Misskey features a safe mode which disables custom CSS, plugins, and themes. This is intended for troubleshooting cases where these customizations interfere with the normal operation of the client.
 
-Safe Mode can be activated in the following ways:
+Safe mode can be activated in the following ways:
 
-- If an error appears on startup: Click the "Launch Misskey in safe mode" button on the error screen.
+- If an error appears on startup: Click the "Launch Misskey in safe mode" button on the error screen
 - If using a keyboard: Press the G key repeatedly
 - Add `?safemode=true` to the URL
-- If using the PWA: Use the Safe Mode shortcut to launch the app
+- If using the PWA: Select "Safemode" from the shortcut menu to launch the app
 
-When Safe Mode is enabled, the following limitations will apply:
+When safe mode is enabled, the following limitations apply:
 
-- All plugins will be disabled regardless of whether they are configured to be enabled or disabled, and new plugins cannot be installed.
-- Custom CSS will not be applied.
-- The default theme will be applied regardless of settings, and theme changes will be disabled. Themes can still be deleted from the Theme settings page.
-- A "Safe Mode" message will always be displayed on screen.
+- All plugins are disabled regardless of their enabled or disabled settings, and new plugins cannot be installed.
+- Custom CSS is not applied.
+- The default theme is used regardless of settings, and theme changes are disabled. Themes can still be deleted from the theme management page.
+- A “safe mode” indicator is always displayed on screen.
 
-Use Safe Mode to troubleshoot issues.Once you have resolved your issues, click "Turn off" in the Safe Mode menu to return to normal operation.
+Use safe mode to troubleshoot issues.Once the issue has been resolved, click "Turn off" in the safe mode menu to disable safe mode.
 
 :::tip
 
-Safe Mode is not intended for normal use.Once you have finished troubleshooting your issue, disable Safe Mode and resume normal operation.
+Safe mode is not intended for regular use.Once troubleshooting is complete, disable it and start the app in normal mode.
 
 :::

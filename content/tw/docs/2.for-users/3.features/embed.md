@@ -28,7 +28,7 @@
 ::MiWebEmbed{src="https://0key.dev/embed/notes/9tht7ungi81f0005"}
 ::
 
-您可以將來自嵌入來源伺服器的單一貼文（無法使用其他伺服器來嵌入遠端伺服器的貼文）。代碼如下所示：
+您可以將來自嵌入來源伺服器的單一貼文進行嵌入（無法透過其他伺服器來嵌入遠端伺服器的貼文）。代碼如下所示：
 
 ```html
 <iframe
@@ -184,7 +184,7 @@
 	</tr>
 </tbody></table>
 
-:::g-details{summary="maxHeight=0 的使用方式
+:::g-details{summary="maxHeight=0 的使用方式"}
 
 基本上不建議將 `maxHeight` 設為 `0`，但在某些特殊情況下，例如希望滾動容器由嵌入網站而非 iframe 內提供，這可能會有所幫助。範例如下：
 

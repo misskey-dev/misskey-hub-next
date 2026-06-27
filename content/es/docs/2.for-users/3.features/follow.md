@@ -22,6 +22,6 @@ El mensaje también se mostrará en tu perfil.
 
 :::warning
 
-El mensaje cuando te siguen es accesible públicamente, incluso para no seguidores.No incluyas información privada en el mensaje.
+El mensaje para nuevos seguidores es accesible públicamente, incluso para no seguidores.No incluyas información privada en el mensaje.
 
 :::

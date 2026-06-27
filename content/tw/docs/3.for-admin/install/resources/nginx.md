@@ -1,19 +1,19 @@
 # 設定 Nginx
 
-[nginx](https://nginx.org/)をリバースプロキシとして活用し、Misskeyサーバーを直接インターネットに公開せず運用することをお勧めします。
-これにより、以下のようなメリットが得られます。
+建議將 [nginx](https://nginx.org/) 作為反向代理伺服器使用，避免將 Misskey 伺服器直接公開於網際網路上。
+這樣做有以下優點：
 
-- セキュリティ強化：リバースプロキシを通じてアクセスを制御することで、Misskeyサーバーに直接攻撃が及ぶリスクを軽減します。
-- 柔軟な設定：nginxは柔軟な設定オプションを提供しており、リバースプロキシとしての機能だけでなく、キャッシュ[^1]やセキュリティポリシーの設定も行えます。
+- 強化安全性：透過反向代理控制存取，降低 Misskey 伺服器直接遭受攻擊的風險。
+- 設定靈活：nginx 提供靈活的設定選項，不僅能作為反向代理，還能設定快取 [^1] 及安全策略。
 
-これらの利点を活かして、Misskeyサーバーをより安全かつ効率的に運用することが可能です。
-また、CloudflareなどのCDNと併せて設定することで、さらなる効果を見込めます。
+利用這些優點，可以更安全且有效率地運作 Misskey 伺服器。
+此外，若搭配 Cloudflare 等 CDN 一併設定，預期會有更好的效果。
 
-[^1]: nginxの機能である[proxy_cache_lock](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_lock)と[proxy_cache_use_stale](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_use_stale)を活用することで、キャッシュ未作成の状態で大量アクセスがあってもMisskeyサーバーの負荷増大を抑える効果が期待できます。
+[^1]: 透過運用 Nginx 的 [proxy_cache_lock](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_lock) 與 [proxy_cache_use_stale](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_cache_use_stale) 功能，即使在未建立快取的狀態下遭遇大量存取，也能預期達到抑制 Misskey 伺服器負載增加的效果。
 
-## 設定方法の一例
+## 設定方法範例
 
-以下はサーバーマシン（VPSなど）に直接nginxをインストールし、認証局として[Let's Encrypt](https://letsencrypt.org/)を採用したケースでの設定例です。
+以下是在伺服器主機（如 VPS）上直接安裝 nginx，並採用 [Let's Encrypt](https://letsencrypt.org/) 作為憑證授權單位 (CA) 的設定範例。
 
 1. 建立 `/etc/nginx/conf.d/misskey.conf` 或 `/etc/nginx/sites-available/misskey.conf` 並複製下面的設定範例。（檔名不必是misskey。）
 2. 編輯內容如下

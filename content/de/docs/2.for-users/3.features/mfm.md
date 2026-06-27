@@ -151,6 +151,16 @@ $[ruby Misskey ミスキー]
 
 </MfmPreview></0>
 
+### 日時
+
+UNIX時間を指定して日時を表示できます。
+
+```
+$[unixtime 1701356400]
+```
+
+<MfmPreview text="$[unixtime 1701356400]"></MfmPreview>
+
 ### Code (Eingebettet)
 
 Syntax-Hervorhebung für (Programm-)Code eingebettet anzeigen.

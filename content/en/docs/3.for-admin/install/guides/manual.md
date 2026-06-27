@@ -16,7 +16,7 @@ Do not recreate the database with the domain/hostname of the server after you ha
 
 #### You need to install the follow packages:
 
-- **[Node.js](https://nodejs.org/en/)** (v22.15.0 or higher within the v22 series)
+- **[Node.js](https://nodejs.org/en/)** (v22.15.0 or higher in the v22 series, or v24.10.0 or higher in the v24 series)
 - **[pnpm](https://pnpm.io/)** (v10.16.0 or higher)
 - **[PostgreSQL](https://www.postgresql.org/)** (v15 or higher)
 - **[Redis](https://redis.io/)**

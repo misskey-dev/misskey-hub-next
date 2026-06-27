@@ -52,7 +52,7 @@ guides:
         title: "เปิดตั้งค่า"
         image: "sp/1.png"
         description: |
-          Misskeyを開き、画面右下の「≡」ボタンをタップ、でてきたメニューの「設定」をタップします。
+          Misskeyを開き、画面左下の「≡」ボタンをタップ、でてきたメニューの「設定」をタップします。
       - 
         title: "「その他」をタップ"
         image: "sp/2.png"

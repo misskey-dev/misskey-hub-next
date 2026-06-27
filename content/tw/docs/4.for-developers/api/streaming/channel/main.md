@@ -1,113 +1,113 @@
 ---
-description: "基本的な情報が流れるチャンネルです。"
+description: "流動著基本資訊的頻道。"
 ---
 
 # `main`
 
-基本的な情報が流れるチャンネルです。
+流動著基本資訊的頻道。
 
-## パラメータ
+## 參數
 
-なし
+無
 
-## イベント
+## 事件
 
 ### `notification`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Notification'
+ $ref: 'misskey://Notification'
 }"/>
 
-通知を受け取ったときに発生します。
+收到通知時發生。
 
 ### `mention`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-メンションされたときに発生します。
+被提及時發生。
 
 ### `reply`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-返信されたときに発生します。
+被回覆時發生。
 
 ### `renote`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-Renoteされたときに発生します。
+被轉發時發生。
 
 ### `follow`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://User'
+ $ref: 'misskey://User'
 }"/>
 
-自分が他のユーザーをフォローしたときに発生します。
+自己追隨其他使用者時發生。
 
 ### `followed`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://User'
+ $ref: 'misskey://User'
 }"/>
 
-他のユーザーが自分をフォローしたときに発生します。
+其他使用者追隨自己時發生。
 
 ### `unfollow`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://User'
+ $ref: 'misskey://User'
 }"/>
 
-自分が他のユーザーをフォロー解除したときに発生します。
+自己解除追隨其他使用者時發生。
 
 ### `messagingMessage`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://MessagingMessage'
+ $ref: 'misskey://MessagingMessage'
 }"/>
 
-メッセージを受け取ったときに発生します。
+收到聊天訊息時發生。
 
 ### `readAllNotifications`
 
-全ての通知が既読になったときに発生します。
+所有通知標記為已讀時發生。
 
 ### `unreadNotification`
 
-新しい通知があるときに発生します。
+有新通知時發生。
 
 ### `unreadMention`
 
-新しいメンションがあるときに発生します。
+有新提及時發生。
 
 ### `readAllUnreadMentions`
 
-全てのメンションが既読になったときに発生します。
+所有提及標記為已讀時發生。
 
 ### `unreadSpecifiedNote`
 
-新しい指名ノートがあるときに発生します。
+有新的指定使用者貼文時發生。
 
 ### `readAllUnreadSpecifiedNotes`
 
-全ての指名ノートが既読になったときに発生します。
+所有指定使用者貼文標記為已讀時發生。
 
 ### `unreadMessagingMessage`
 
-新しいメッセージがあるときに発生します。
+有新聊天訊息時發生。
 
 ### `readAllMessagingMessages`
 
-全てのメッセージが既読になったときに発生します。
+所有聊天訊息標記為已讀時發生。
 
 ## 操作
 
-なし
+無

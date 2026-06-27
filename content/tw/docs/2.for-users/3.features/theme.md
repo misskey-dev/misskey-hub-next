@@ -6,7 +6,7 @@
 
 [設定 > 佈景主題](x-mi-web://settings/theme)
 
-## 建立佈景主題
+## 編寫佈景主題
 
 佈景主題程式碼是用 JSON5 寫的物件。
 以下是範例。
@@ -51,11 +51,11 @@
 在 `props` 下定義佈景主題的風格。
 鍵為 CSS 的變數名稱，值指定內容。
 請注意，這個 `props` 物件是由基本佈景主題繼承而來的。
-如果佈景主題的 `base` 為 `light`，則基本佈景主題為 [\\_light.json5][_light.json5]，若為 `dark` 則為 [\\_dark.json5][_dark.json5]。
-換句話說，即使該主題中的 `props` 中沒有名為 `panel` 的鍵，也假定基本佈景主題中存在 `panel`。
+如果佈景主題的 `base` 為 `light`，則基本佈景主題為 [\_light.json5][_light.json5]，若為 `dark` 則為 [\_dark.json5][_dark.json5]。
+也就是說，即使此主題的 `props` 中沒有名為 `panel` 的鍵，也會視為已存在基礎主題中的 `panel`。
 
-- [_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_light.json5
-- [_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend/src/themes/_dark.json5
+[_light.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend-shared/themes/_light.json5
+[_dark.json5]: https://github.com/misskey-dev/misskey/blob/develop/packages/frontend-shared/themes/_dark.json5
 
 #### Value 的格式
 
@@ -68,8 +68,8 @@
 - 參照其他的鍵值
   - 如果寫上 `@{keyname}` 的話，會參照其他的鍵值。`{keyname}` 請換成想要參照的鍵的名字。
   - 例: `@panel`
-- 參照引述(後述)
-  - 如果寫上 `${const}` 的話，會參照其他常數值。`{const}` 請換成想要參照的函數的名字。
+- 參照常數（後述）
+  - 如果寫上 `${const}` 的話，會參照其他常數值。`{const}` 請換成想要參照的常數的名字。
   - 例: `$main`
 - 函數(後述)
   - `{函數} < {參數} < {顏色}`
@@ -102,7 +102,7 @@ props: {
 - `hue` ... 回傳傳入的顏色的色相 (-360 ~ 360) 再依照參數 (-360 ～ 360) 進行旋轉的顏色。
 - `saturate` ... 回傳傳入的顏色的彩度 (0 ~ 100) 加上參數 (0 ～ 100) 的顏色。
 
-## 轉散發佈景主題
+## 提供佈景主題
 
 從 v2023.11.0 開始，您可以從您的網站，直接一鍵安裝佈景主題。
 

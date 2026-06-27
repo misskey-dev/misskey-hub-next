@@ -1,94 +1,89 @@
-# マニュアルインストール時のトラブルシューティング
+# Troubleshooting Manual Installation
 
-<small>2018年10月07日 / 2021年12月20日 最終更新 / 文責 aqz/tamaina</small>
+<small>October 7, 2018 / Last updated December 20, 2021 / Written by aqz/tamaina</small>
 
-MisskeyInstallBattle参加者が増えましたが、それに伴い時期を追うごとに重軽傷者が増加しています。\
-この記事ではそのような負傷者を減らすため、過去に事故が起きてしまった個所の傾向と対策をわかりやすく解説します。
+The number of participants in the "MisskeyInstallBattle" has increased, but consequently, the number of serious and minor injuries has risen over time.\
+In this article, to reduce such casualties, I will explain the trends and countermeasures for accidents that have occurred in the past in an easy-to-understand manner.
 
-**まず最初に、[構築の手引き](../guides/manual/)を熟読してください。**
+**First of all, please read the [Setup Guide](../guides/manual/) thoroughly.**
 
-また、拙著の[Ubuntu向けsystemd版解説](https://hide.ac/articles/iFwm5HDvH)、[Oracle Cloud版詳細解説](https://hide.ac/articles/csERs-7SU)も参考までにお読みいただけると幸いです。
+Also, I would appreciate it if you could read my other articles for reference: [the systemd version guide for Ubuntu](https://hide.ac/articles/iFwm5HDvH) and [the detailed explanation for the Oracle Cloud version](https://hide.ac/articles/csERs-7SU).
 
-# Ubuntu向けシェルスクリプトのお知らせ
+# Notice regarding the Shell Script for Ubuntu
 
-Ubuntu向け解説はコピペばかりでつまらない！時間がかかる！とにかく面倒！
+"The guide for Ubuntu is just copy-pasting and it's boring!It takes time!It's just a hassle!"
 
-……あれ、コピペだけでできるなら、つまり完全自動化できるのでは？
+……Wait, if it can be done just by copy-pasting, doesn't that mean it can be fully automated?
 
-というわけで、**シェルスクリプトでほぼ全部やってくれるやつを作ってみました！**\
-[**詳細と使用方法はこちらから！** https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
+So, **I made a shell script that does almost everything for you!**\
+[**Check here for details and usage!** https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
 
-ドメインの購入とCloudflareのセットアップ、サーバーの確保についてはご自身でご準備ください。
+Please prepare the domain purchase, Cloudflare setup, and server acquisition yourself.
 
-シェルスクリプトに不具合があれば[製作者(aqz)](https://p1.a9z.dev/@aqz)にお知らせいただければと思います。
+If there are any bugs in the shell script, please let the [creator (aqz)](https://p1.a9z.dev/@aqz) know.
 
-# インストールとビルド
+# Installation and Build
 
-[構築の手引き](../guides/manual/)をよく読みましょう。
+Let's read the [Setup Guide](../guides/manual/) carefully.
 
-## ImageMagick関連
+## ImageMagick related
 
-_**ImageMagickは不要です！**_
+_**ImageMagick is not required!**_
 
-## ビルドが失敗する
+## Build fails
 
-Misskeyのビルドには、経験則上、最低でも2GBのメモリが必要となっています。\
-サーバーをスケールアップする手もありますが、お使いのPCでビルドしてサーバーにデプロイするという手もあります。
+Empirically, Misskey requires at least 2GB of memory to build.\
+You can scale up the server, or there is also the option of building on your own PC and deploying it to the server.
 
-## なんだかうまくいかない
+## Something isn't working right
 
-- [構築の手引き](../guides/manual/)をよく読みましょう。
-- node.jsのバージョンが古いかも？
-  - 新しめのバージョンにしましょう。
-- インストールやビルドの際にErrorとかWARNとかが出てくることがありますが、問題ない場合もあります。とりあえず`npm start`して動作確認しちゃいましょう。
-- node-gypがインストールされていないかも？
-  - `apt install build-essential`を試す。
-  - Windowsは[この記事](https://qiita.com/AkihiroTakamura/items/25ba516f8ec624e66ee7)も参考にしてみる。
-- これでもだめそうだったら、最初から[構築の手引き](../guides/manual/)の手順に従ってやり直してみてください。
+- Let's read the [Setup Guide](../guides/manual/) carefully.
+- Node.js version might be old?
+  - Try using a newer version.
+- Errors or WARNs might appear during installation or build, but sometimes it's not a problem.Just try `npm start` to check if it works.
+- Maybe node-gyp isn't installed?
+  - Try `apt install build-essential`.
+  - For Windows, try referring to [this article](https://qiita.com/AkihiroTakamura/items/25ba516f8ec624e66ee7) as well.
+- If it still doesn't work, try starting over from the beginning following the steps in the [Setup Guide](../guides/manual/).
 
-## バージョンアップ後に不具合が発生した
+## Issues occurred after an update
 
-- [構築の手引き](../guides/manual/)およびリリースノートをよく読みましょう。
-- Misskeyのバージョンアップ時にはしっかり`pnpm install`や`pnpm run migrate`してください。それでも直らない場合、`pnpm run clean-all && pnpm install`を試し、`pnpm run build && pnpm run migrate && pnpm start`してみてください。
-- これでもだめそうだったら、最初から[構築の手引き](../guides/manual/)の手順に従ってやり直してみてください。
+- Let's read the [Setup Guide](../guides/manual/) and Release Notes carefully.
+- When updating Misskey, please make sure to run `pnpm install` and `pnpm run migrate` properly.If that doesn't fix it, try `pnpm run clean-all` && `pnpm install`, then try `pnpm run build && pnpm run migrate && pnpm start`.
+- If it still doesn't work, try starting over from the beginning following the steps in the [Setup Guide](../guides/manual/).
 
 ---
 
-# 設定
+# Configuration
 
-[構築の手引き](../guides/manual/)をよく読みましょう。
+Let's read the [Setup Guide](../guides/manual/) carefully.
 
-`.config/default.yml`で設定を行います。
-[`.config/example.yml`](https://github.com/misskey-dev/misskey/blob/develop/.config/example.yml)をコピーし、コメントに従って記述します。
+Settings are done in `.config/default.yml`. Copy [`.config/example.yml`](https://github.com/misskey-dev/misskey/blob/develop/.config/example.yml) and write according to the comments.
 
-（YAML形式では、`#`から行末まではコメントとして扱われます。）
+(In YAML format, everything from `#` to the end of the line is treated as a comment.)
 
-## URLとポート番号
+## URL and Port Number
 
-URLとポート番号のしくみは、少し分かりにくいと思います。
+I think the mechanism for URLs and port numbers can be a bit confusing.
 
-`.config/example.yml`に「Port and TLS settings」として説明図付きで順に書かれていますので、それに沿って設定をしていきましょう。
-本文の解説を日本語訳しながらやっていきます。
+It is written in order with diagrams in .config/example.yml under "Port and TLS settings", so let's configure it following that. I will explain the content.
 
-### URLの設定
+### URL Setting
 
 ```yml
 # Final accessible URL seen by a user.
-# 最終的にユーザーがアクセスするURL
 url: https://example.tld/
 ```
 
-**`url`には、サーバーにブラウザでアクセスしたときアドレスバーに表示される**(したい)**URLを書きます。**
+**In `url`, write the URL that is **(or you want to be)** displayed in the address bar when accessing the server via a browser.**
 
-### ポートの設定
+### Port Setting
 
 ```yml
 #   ┌───────────────────────┐
 #───┘ Port and TLS settings └───────────────────────────────────
-#### ポートとTLSの設定         ####################################
 
 # Misskey requires a reverse proxy to support HTTPS connections.
-# MisskeyでHTTPS接続をサポートするにはリバースプロキシが必須です。
 #
 #                 +----- https://example.tld/ ------------+
 #   +------+      |+-------------+      +----------------+|
@@ -97,100 +92,94 @@ url: https://example.tld/
 #                 +---------------------------------------+
 #
 #   You need to set up a reverse proxy. (e.g. nginx)
-#   この方法では、リバースプロキシ（例: nginx）をセットアップする必要があります。
 #   An encrypted connection with HTTPS is highly recommended
 #   because tokens may be transferred in GET requests.
-#   GETリクエストでトークンがURLに含まれる可能性があるため、
-#   HTTPSによる暗号化を強く推奨します。
 ```
 
 ```yml
 # The port that your Misskey server should listen on.
-# Misskeyサーバがリッスンするポート
 port: 3000
 ```
 
-この例では、Misskeyはポート3000で通信します。
-リバースプロキシでは、ローカル側の宛先にこのポート番号を指定します。
+In this example, Misskey communicates on port 3000.
+In the reverse proxy settings, specify this port number as the local destination.
 
 ----
 
-# `npm start`やアクセス時によく遭遇するエラー
+# Common errors encountered during `npm start` or access
 
-`npm start`でサーバーを立てられたものの、その後不具合に遭遇してしまう場合もあります。
+Even if you managed to start the server with npm start, you might encounter issues afterward.
 
-まず、[構築の手引き](../guides/manual/)をよく読みましょう。
+First, let's read the [Setup Guide](../guides/manual/) carefully.
 
-## YAMLのエラーが出る
+## YAML Error occurs
 
-`default.yml`の構文にミスがある可能性があります。
-行頭に余分なスペースはありませんか？
+There might be a syntax error in default.yml.
+Are there any extra spaces at the beginning of a line?
 
-## redisに接続できない
+## Cannot connect to redis
 
-redis-serverは起動していますか？
-何らかの接続数の上限に達していませんか？
+Is redis-server running?
+Have you reached some connection limit?
 
-11.20.2より前のバージョンのMisskeyはredisのパスワードを解くことができません。以下の2点を確認してください。
+Misskey versions prior to 11.20.2 cannot resolve redis passwords.Please check the following two points:
 
-- redisにパスワードを設定しない。
-- `default.yml`の`redis:`の`pass:`の行をコメントアウトする。
+- Do not set a password for redis.
+- Comment out the `pass:` line under `redis:` in `default.yml`.
 
-## 上部に「開発ビルドです」と書かれた赤いバーが表示される
+## A red bar saying "This is a development build" appears at the top
 
-サーバーを公開する場合は必ずproductionビルドを使いましょう。
+When making the server public, always use the production build.
 
-製品ビルドにするには、環境変数が`NODE_ENV=production`になるように設定し`npm run build && npm start`します。
+To make it a product build, set the environment variable to `NODE_ENV=production` and `run npm run build && npm start`.
 
-## 新規登録できない
+## Cannot Sign Up
 
-APIに接続できないようです。
-`default.yml`の冒頭の`url:`が正しく設定されているか確認しましょう。
-Node.jsのバージョンや、インストールの設定ももう一度よく確認しましょう。
+It seems like it cannot connect to the API.
+Check if the `url:` at the beginning of `default.yml` is set correctly. Check the Node.js version and installation settings again carefully.
 
-また、正しく`default.yml`が書かれていますか？
+Also, is `default.yml` written correctly?
 
-## タイムラインの表示に問題が発生する、リアルタイムでTLが更新されない
+## Problems with Timeline display, TL does not update in real-time
 
-タイムラインの読み込みに失敗する場合、mongoDBやPostgreSQLのバージョンが古い可能性があります。
-PostgreSQLはなるべくv13にしてください。
+If loading the timeline fails, the MongoDB or PostgreSQL version might be old.
+Please use PostgreSQL v13 or higher if possible.
 
-redisの接続も確認した方がよいでしょう。 [→ redisに接続できない？ を参照](#redisに接続できない？)
+You should also check the redis connection. [→ See "Cannot connect to redis?" ](#cannot-connect-to-redis)
 
-## 永遠に「再接続中」と右下に表示される、リアルタイムでTLが更新されない
+## "Reconnecting" is displayed forever in the bottom right, TL does not update in real-time
 
-プロキシを利用している場合、それがWebSocket通信を阻害している可能性が考えられます。
+If you are using a proxy, it is possible that it is blocking WebSocket communication.
 
-## オブジェクトストレージ使用時、不具合が出る
+## Issues occur when using Object Storage
 
-オブジェクトストレージの権限の設定が厳しくなっている可能性があります。「ファイル（オブジェクト）が誰でも取得可能」なように権限を設定してみてください。
-また、`default.yml`をもう一度確認してみてください。
+The permission settings for the object storage might be too strict.Try setting the permissions so that "files (objects) are retrievable by anyone".
+Also, check `default.yml` again.
 
 ### S3 example (with CDN, custom domain)
 
-S3 example (with CDN, custom domain)は、AWSのデフォルトのドメインではなく独自ドメインでストレージを公開したい場合の設定です。
-endpointと公開ドメインが同じサービスの場合はS3 exampleのように`baseUrl`は明記しなくてよく、さらにregionの概念がないサービスの場合はregionの行は必要ありません。
+`S3 example (with CDN, custom domain)` is a setting for when you want to publish storage using your own domain instead of the default AWS domain.
+If the endpoint and the public domain are the same service, `baseUrl` does not need to be specified (like in the standard S3 example), and if the service does not have the concept of regions, the `region` line is not necessary.
 
-### S3互換サービスでの設定
+### Settings for S3 compatible services
 
-Misskeyではオブジェクトストレージの接続に[aws-sdk](https://www.npmjs.com/package/aws-sdk)を利用しています。
-Amazon S3に互換性のあるオブジェクトストレージであれば利用できる可能性があります。
+Misskey uses [aws-sdk](https://www.npmjs.com/package/aws-sdk) to connect to object storage. If the object storage is compatible with Amazon S3, it might work.
 
-各サービス/ソフトウェアのドキュメントをよく読み、設定してみてください。
+Read the documentation for each service/software carefully and try configuring it.
 
-### ローディングが終わらない
+### Loading never finishes
 
-Cloudflare を使用している場合は、Rocket LoaderやAuto Minifyが有効になっていないか確認してください。有効になっている場合は無効にすることで解決する場合があります。
+If you are using Cloudflare, check if Rocket Loader or Auto Minify is enabled.If they are enabled, disabling them might solve the problem.
 
 ---
 
-# まったく解決しなかった場合
+# If nothing solves the problem
 
-以下の順序を試してみてください。
+Try the following order:
 
-1. Misskeyのドキュメントをよく読む。
-2. Googleで検索してみる。
-3. [MisskeyリポジトリのIssues](https://github.com/misskey-dev/misskey/issues)を検索してみる（同じエラーに遭遇している場合や、Misskeyのバグの可能性もあります）。
-4. 検索してどうしても見つからなかったら、専門家に質問してみてください。
-   1. [MisskeyのDiscordサーバー](https://discord.gg/P4yYqYBjEp)などで聞いてみる
-   2. 開発者（[aqz](https://p1.a9z.dev/@aqz)やしゅいろ）にリプライや指名投稿を送信して聞いてみる
+1. Read the Misskey documentation carefully.
+2. Try searching on Google.
+3. Try searching [Issues in the Misskey repository](https://github.com/misskey-dev/misskey/issues) (you might find others encountering the same error, or it could be a Misskey bug).
+4. If you really can't find it after searching, try asking an expert.
+   1. Try asking on the [Misskey Discord server](https://discord.gg/P4yYqYBjEp), etc.
+   2. Try asking the developers ([aqz](https://p1.a9z.dev/@aqz) or syuilo) by sending a reply or a mention post.

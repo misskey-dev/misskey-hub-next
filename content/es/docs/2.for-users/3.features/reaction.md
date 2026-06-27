@@ -4,7 +4,7 @@ La función de reacción te permite mostrar fácilmente tus reacciones a las not
 
 ## Personalizando el selector de Emojis
 
-Puedes seleccionar qué emojis se muestran en el selector de emoji. Estas opciones se encuentran en Ajustes > Paleta emoji.
+Puedes seleccionar qué emojis se muestran en el selector de emojis. Estas opciones se encuentran en Ajustes > Paleta emoji.
 
 ## Reacciones a Posts Remotos
 

@@ -1,8 +1,8 @@
 # 创建 Play
 
-Play 是一种使用 AiScript 组装独特 Ui 的功能，用户可以创建迷你应用程序或游戏。制作的 Play 可以在 Misskey 服务器上公开，任何人都可以玩你制作的 Play。
+Play 是一种使用 AiScript 组装独特 UI 的功能，用户可以创建迷你应用程序或游戏。制作的 Play 可以在 Misskey 服务器上公开，任何人都可以玩你制作的 Play。
 
-##
+## AiScript
 
 Play 可以用 AiScript 创建。
 

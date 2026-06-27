@@ -1,10 +1,10 @@
 ---
-description: "基本的な情報が流れるチャンネルです。"
+description: "提供着基本信息的频道。"
 ---
 
 # `main`
 
-这是一个提供基本信息的频道。
+提供着基本信息的频道。
 
 ## 参数
 
@@ -15,99 +15,99 @@ description: "基本的な情報が流れるチャンネルです。"
 ### `notification`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Notification'
+ $ref: 'misskey://Notification'
 }"/>
 
-收到通知时触发。
+收到通知时发生。
 
 ### `mention`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-当有人提到你时触发。
+被提及时发生。
 
 ### `reply`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-收到回复时触发。
+收到回复时发生。
 
 ### `renote`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-Renoteされたときに発生します。
+被转发时发生。
 
 ### `follow`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://User'
+ $ref: 'misskey://User'
 }"/>
 
-自分が他のユーザーをフォローしたときに発生します。
+自己关注其他用户时发生。
 
 ### `followed`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://User'
+ $ref: 'misskey://User'
 }"/>
 
-他のユーザーが自分をフォローしたときに発生します。
+其他用户关注自己时发生。
 
 ### `unfollow`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://User'
+ $ref: 'misskey://User'
 }"/>
 
-自分が他のユーザーをフォロー解除したときに発生します。
+自己取消关注其他用户时发生。
 
 ### `messagingMessage`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://MessagingMessage'
+ $ref: 'misskey://MessagingMessage'
 }"/>
 
-メッセージを受け取ったときに発生します。
+收到聊天消息时发生。
 
 ### `readAllNotifications`
 
-全ての通知が既読になったときに発生します。
+所有通知标记为已读时发生。
 
 ### `unreadNotification`
 
-新しい通知があるときに発生します。
+有新通知时发生。
 
 ### `unreadMention`
 
-新しいメンションがあるときに発生します。
+有新提及时发生。
 
 ### `readAllUnreadMentions`
 
-全てのメンションが既読になったときに発生します。
+所有提及标记为已读时发生。
 
 ### `unreadSpecifiedNote`
 
-新しい指名ノートがあるときに発生します。
+有新的指定用户帖子时发生。
 
 ### `readAllUnreadSpecifiedNotes`
 
-全ての指名ノートが既読になったときに発生します。
+所有指定用户帖子标记为已读时发生。
 
 ### `unreadMessagingMessage`
 
-新しいメッセージがあるときに発生します。
+有新聊天消息时发生。
 
 ### `readAllMessagingMessages`
 
-全てのメッセージが既読になったときに発生します。
+所有聊天消息标记为已读时发生。
 
 ## 操作
 
-なし
+无

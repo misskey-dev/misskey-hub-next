@@ -2,24 +2,24 @@
 
 :::tip
 
-バージョン 12.109.0 以降の機能です。
+此功能为 v12.109.0 及以上版本功能。
 
 :::
 
 :::warning
 
-実験的な機能であるため、動作が不安定だったり今後仕様が変更される可能性があります。
+这是一项实验性功能，因此运作可能不够稳定，且未来规范可能会发生变更。
 
 :::
 
-MisskeyにはWebhookが用意されています。Webhookを利用すると、Misskey上の様々なイベントをリアルタイムに受け取ることが可能です。
+Misskey 提供了 Webhook 功能。利用 Webhook，您可以实时接收 Misskey 上发生的各种事件。
 
-[設定 > Webhook](x-mi-web://settings/webhook)でWebhookの管理を行えます。
+您可以在 [设置 > 连接服务](x-mi-web://settings/connect) 中对 Webhook 进行管理。
 
-Webhookが登録されると、指定したイベントが発生した際に、指定したURLにHTTPリクエストが送信されます。リクエストのメソッドはPOSTで、ボディはJSONです。
-さらに、リクエストヘッダーには`X-Misskey-Hook-Secret`という名前で、登録時に設定したシークレットが含まれます。このシークレットが正しいか検証することで、リクエストが正規のものか判定することができます。
+注册 Webhook 后，当指定事件发生时，系统会向您指定的 URL 发送 HTTP 请求。请求方法为 POST，请求体为 JSON 格式。
+此外，请求头中包含名为`X-Misskey-Hook-Secret`的字段，其中含有您在注册时设置的密钥。通过验证该密钥是否正确，您可以判断该请求是否为合法的请求。
 
-リクエストペイロードは以下のプロパティが入ります。
+请求负载包含以下属性：（尚未公布）
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -51,17 +51,17 @@ properties: {
 }
 }"/>
 
-送信先サーバーが5xxエラーを返すか、応答しなかった場合は時間を開けてリクエストが再送されます。
+如果目标服务器返回 5xx 错误或未响应，系统将在一段时间后尝试重新发送请求。
 
-Webhookは管理画面から個別にアクティブ状態を設定でき、一時的にリクエストの送信を停止させることができます。
+您可以在管理页面单独设置 Webhook 的激活状态，以便暂时停止发送请求。
 
-## イベント
+## 事件
 
-イベントごとに説明とペイロードを示します。
+以下是各事件的说明及负载（尚未公布）。
 
 ### follow
 
-自分が誰かをフォローした際に発生します。
+当自己关注某人时触发。
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -75,7 +75,7 @@ properties: {
 
 ### followed
 
-自分が誰かからフォローされた際に発生します。
+当自己被某人关注时触发。
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -89,7 +89,7 @@ properties: {
 
 ### unfollow
 
-自分が誰かをフォロー解除した際に発生します。
+当自己取消关注某人时触发。
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -103,7 +103,7 @@ properties: {
 
 ### note
 
-自分がノートを投稿した際に発生します。
+当自己发布帖子时触发。
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -117,7 +117,7 @@ properties: {
 
 ### reply
 
-自分のノートに返信された際に発生します。
+当自己的帖子收到回复时触发。
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -131,7 +131,7 @@ properties: {
 
 ### renote
 
-自分のノートがRenoteされた際に発生します。
+当自己的帖子被转发时触发。
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',
@@ -145,7 +145,7 @@ properties: {
 
 ### mention
 
-自分にメンションされた際に発生します。
+当自己被提及时触发。
 
 <MkSchemaViewerItemObject :schema="{
 type: 'object',

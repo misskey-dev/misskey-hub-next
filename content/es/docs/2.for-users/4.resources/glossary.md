@@ -72,7 +72,7 @@ La mascota oficial de Misskey.Para más información, consulta [aquí.](https://
 
 ## Servidores
 
-(Servidor o también llamado Instancia)Entidad que proporciona el servicio Misskey a los usuarios.
+La entidad que presta el servicio Misskey a los usuarios.Cada servidor funciona de forma independiente y puede conectarse a otros servidores para intercambiar información.
 
 ## Emojis personalizados
 
@@ -88,7 +88,7 @@ Una cuenta especial utilizada por el servidor Misskey, por ejemplo cuando se int
 
 ## Suspensión o Congelación
 
-Se refiere a un estado en el que la cuenta está desactivada.
+
 
 ## Drive
 

@@ -59,7 +59,7 @@ sudo docker compose up -d
 
 GLHF✨
 
-## 如何更新Miskey
+## 如何更新 Misskey
 
 :::warning
 

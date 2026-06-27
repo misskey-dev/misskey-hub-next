@@ -1,6 +1,6 @@
 # ノート検索
 
-Misskeyにはノートの検索機能があります。有効化することで、ノートの検索ができるようになります。
+Misskey has an ability to search notes.By enabling this feature, you can search notes.
 
 :::tip
 
@@ -17,9 +17,9 @@ Misskeyはノート検索に使用するアルゴリズムを複数ご用意し�
   - データベース組み込みの機能を使用するためお手軽です。
   - データの量が増えてくると検索に時間がかかりやすくなります。
 
-- sqlPgroonga ... 全文検索エンジンの[Pgroonga](https://pgroonga.github.io)を用いて検索を行います。
-  - Pgroongaのインストールが必要です。
-  - sqlLikeより高速な検索が可能です。
+- sqlPgroonga ... Searches are performed using the full-text search engine [PGroonga](https://pgroonga.github.io).
+  - You will need to install PGroonga additionally.
+  - It enables faster search queries than sqlLike.
 
 - meilisearch ... 全文検索エンジンの[Meilisearch](https://www.meilisearch.com)を用いて検索を行います。
   - Meilisearchのインストールが必要です。
@@ -28,9 +28,9 @@ Misskeyはノート検索に使用するアルゴリズムを複数ご用意し�
 
 検索エンジンを変更する場合は、設定ファイルの `fulltextSearch` の `provider` を書き換えて、Misskeyのプロセスを再起動してください。
 
-## Pgroongaを使う
+## Using PGroonga
 
-### Pgroongaのインストール
+### Installing PGroonga
 
 :::warning
 
@@ -39,7 +39,7 @@ Misskeyはノート検索に使用するアルゴリズムを複数ご用意し�
 
 :::
 
-Ubuntu 22.04、PostgreSQL 15の環境にPgroongaをインストールする例です。
+This is an example of installing PGroonga on an Ubuntu 22.04, PostgreSQL 18 environment.
 
 詳細は[公式PostgreSQL用のインストール方法](https://pgroonga.github.io/ja/install/ubuntu.html)をご確認ください。
 
@@ -55,7 +55,7 @@ sudo wget -O /usr/share/keyrings/pgdg.asc https://www.postgresql.org/media/keys/
    echo "Signed-By: /usr/share/keyrings/pgdg.asc") | \
     sudo tee /etc/apt/sources.list.d/pgdg.sources
 sudo apt update
-sudo apt install -y -V postgresql-15-pgdg-pgroonga
+sudo apt install -y -V postgresql-18-pgdg-pgroonga
 ```
 
 MeCabベースのトークナイザーを使いたい場合は、以下も実行します。
@@ -66,11 +66,11 @@ sudo apt install -y -V groonga-tokenizer-mecab
 
 #### Docker環境を使用している場合
 
-Docker環境ではPGroonga導入済みのDockerイメージが使用できます。
+In a Docker environment, you can use a Docker image with PGroonga already installed.
 
-PGroonga導入済みのPostgreSQLイメージを使用するには、`postgres:15-alpine`の代わりに`groonga/pgroonga:latest-alpine-15-slim`を使用してください。
+To use a PostgreSQL image with PGroonga already installed, use `groonga/pgroonga:latest-alpine-18-slim` instead of `postgres:18-alpine`.
 
-### Pgroongaの有効化
+### Enable PGroonga
 
 次にPostgreSQLにログインします。
 
@@ -84,13 +84,13 @@ sudo -u postgres psql
 \c "mk1"
 ```
 
-PGroongaを有効化します。
+Enable PGroonga.
 
 ```sh
 CREATE EXTENSION pgroonga;
 ```
 
-PGroonga用のインデックスを作成します。
+Create indexes for PGroonga.
 
 :::warning
 

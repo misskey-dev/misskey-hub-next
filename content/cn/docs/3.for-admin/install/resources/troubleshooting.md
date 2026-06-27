@@ -1,94 +1,93 @@
-# マニュアルインストール時のトラブルシューティング
+# 手动安装时的故障排除
 
-<small>2018年10月07日 / 2021年12月20日 最終更新 / 文責 aqz/tamaina</small>
+<small>2018年10月07日 / 2021年12月20日 最终更新 / 撰文 aqz/tamaina</small>
 
-MisskeyInstallBattle参加者が増えましたが、それに伴い時期を追うごとに重軽傷者が増加しています。\
-この記事ではそのような負傷者を減らすため、過去に事故が起きてしまった個所の傾向と対策をわかりやすく解説します。
+虽然参加“MisskeyInstallBattle（Misskey 安装大作战）”的人变多了，但随之而来的是，随着时间推移，受轻重伤的人也越来越多了。\
+为了减少这类伤员，本文将通俗易懂地解说过去发生事故的地点倾向以及对策。
 
-**まず最初に、[構築の手引き](../guides/manual/)を熟読してください。**
+**首先，请务必熟读[搭建指南](../guides/manual/)。**
 
-また、拙著の[Ubuntu向けsystemd版解説](https://hide.ac/articles/iFwm5HDvH)、[Oracle Cloud版詳細解説](https://hide.ac/articles/csERs-7SU)も参考までにお読みいただけると幸いです。
+另外，若能参考鄙人拙作 [Ubuntu 版 systemd 解说](https://hide.ac/articles/iFwm5HDvH)以及 [Oracle Cloud 版详细解说](https://hide.ac/articles/csERs-7SU)，我也将不胜荣幸。
 
-# Ubuntu向けシェルスクリプトのお知らせ
+# 关于 Ubuntu 专用 Shell 脚本的通知
 
-Ubuntu向け解説はコピペばかりでつまらない！時間がかかる！とにかく面倒！
+“针对 Ubuntu 的解说全都是复制粘贴，太无聊了！太花时间了！总之就是麻烦！”
 
-……あれ、コピペだけでできるなら、つまり完全自動化できるのでは？
+……咦，如果靠复制粘贴就能搞定，那不就代表可以完全自动化吗？
 
-というわけで、**シェルスクリプトでほぼ全部やってくれるやつを作ってみました！**\
-[**詳細と使用方法はこちらから！** https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
+所以，**我制作了一个可以用 Shell 脚本帮你几乎搞定所有事情的东西！**\
+[**详细内容与使用方法请看这里！** https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
 
-ドメインの購入とCloudflareのセットアップ、サーバーの確保についてはご自身でご準備ください。
+关于域名的购买、Cloudflare 的设置以及服务器的准备，请自行处理。
 
-シェルスクリプトに不具合があれば[製作者(aqz)](https://p1.a9z.dev/@aqz)にお知らせいただければと思います。
+如果 Shell 脚本有任何 Bug，请通知[制作者 (aqz)](https://p1.a9z.dev/@aqz)。
 
-# インストールとビルド
+# 安装与构建
 
-[構築の手引き](../guides/manual/)をよく読みましょう。
+请仔细阅读[搭建指南](../guides/manual/)。
 
-## ImageMagick関連
+## ImageMagick 相关
 
-_**ImageMagickは不要です！**_
+_**不需要 ImageMagick！**_
 
-## ビルドが失敗する
+## 构建失败
 
-Misskeyのビルドには、経験則上、最低でも2GBのメモリが必要となっています。\
-サーバーをスケールアップする手もありますが、お使いのPCでビルドしてサーバーにデプロイするという手もあります。
+根据经验，Misskey 的构建至少需要 2GB 的内存。\
+您可以选择升级服务器规格，或者也可以在自己的电脑上构建好后再部署到服务器上。
 
-## なんだかうまくいかない
+## 总觉得不太顺利
 
-- [構築の手引き](../guides/manual/)をよく読みましょう。
-- node.jsのバージョンが古いかも？
-  - 新しめのバージョンにしましょう。
-- インストールやビルドの際にErrorとかWARNとかが出てくることがありますが、問題ない場合もあります。とりあえず`npm start`して動作確認しちゃいましょう。
-- node-gypがインストールされていないかも？
-  - `apt install build-essential`を試す。
-  - Windowsは[この記事](https://qiita.com/AkihiroTakamura/items/25ba516f8ec624e66ee7)も参考にしてみる。
-- これでもだめそうだったら、最初から[構築の手引き](../guides/manual/)の手順に従ってやり直してみてください。
+- 请仔细阅读[搭建指南](../guides/manual/)。
+- Node.js 的版本可能太旧？
+  - 换个新一点的版本吧。
+- 安装或构建时虽然会出现 Error 或 WARN，但有时候其实没问题。总之先 `npm start` 确认能不能跑再说。
+- 可能没安装 node-gyp？
+  - 试试 `apt install build-essential`。
+  - Windows 用户也可以参考[这篇文章](https://qiita.com/AkihiroTakamura/items/25ba516f8ec624e66ee7)。
+- 如果这样还是不行，请试着从头开始，按照[搭建指南](../guides/manual/)的步骤重做一次。
 
-## バージョンアップ後に不具合が発生した
+## 版本更新后发生故障
 
-- [構築の手引き](../guides/manual/)およびリリースノートをよく読みましょう。
-- Misskeyのバージョンアップ時にはしっかり`pnpm install`や`pnpm run migrate`してください。それでも直らない場合、`pnpm run clean-all && pnpm install`を試し、`pnpm run build && pnpm run migrate && pnpm start`してみてください。
-- これでもだめそうだったら、最初から[構築の手引き](../guides/manual/)の手順に従ってやり直してみてください。
+- 请仔细阅读[搭建指南](../guides/manual/)以及发行说明。
+- 更新 Misskey 版本时，请确实执行 `pnpm install` 和 `pnpm run migrate`。如果还是没修好，请试试 `pnpm run clean-all && pnpm install`，接着再试试 `pnpm run build && pnpm run migrate && pnpm start`。
+- 如果这样还是不行，请试着从头开始，按照[搭建指南](../guides/manual/)的步骤重做一次。
 
 ---
 
-# 設定
+# 设置
 
-[構築の手引き](../guides/manual/)をよく読みましょう。
+请仔细阅读[搭建指南](../guides/manual/)。
 
-`.config/default.yml`で設定を行います。
-[`.config/example.yml`](https://github.com/misskey-dev/misskey/blob/develop/.config/example.yml)をコピーし、コメントに従って記述します。
+设置是在 `.config/default.yml` 中进行。请复制 [`.config/example.yml`](https://github.com/misskey-dev/misskey/blob/develop/.config/example.yml) 并依照注释进行撰写。
 
-（YAML形式では、`#`から行末まではコメントとして扱われます。）
+（在 YAML 格式中，从 `#` 到行尾都会被视为注释。）
 
-## URLとポート番号
+## URL 与端口号
 
-URLとポート番号のしくみは、少し分かりにくいと思います。
+我想 URL 和端口号的运作机制可能有点难懂。
 
-`.config/example.yml`に「Port and TLS settings」として説明図付きで順に書かれていますので、それに沿って設定をしていきましょう。
-本文の解説を日本語訳しながらやっていきます。
+在 `.config/example.yml` 中的“Port and TLS settings”部分有附上图解说明，请依照该说明进行设置。
+这里我会一边翻译正文解说一边进行。
 
-### URLの設定
+### URL 的设置
 
 ```yml
 # Final accessible URL seen by a user.
-# 最終的にユーザーがアクセスするURL
+# 最终用户访问的 URL
 url: https://example.tld/
 ```
 
-**`url`には、サーバーにブラウザでアクセスしたときアドレスバーに表示される**(したい)**URLを書きます。**
+**在 `url` 处，填写用浏览器访问服务器时，地址栏上显示**（或你想让它显示）**的 URL。**
 
-### ポートの設定
+### 端口的设置
 
 ```yml
 #   ┌───────────────────────┐
 #───┘ Port and TLS settings └───────────────────────────────────
-#### ポートとTLSの設定         ####################################
+#### 端口与 TLS 设置         ####################################
 
 # Misskey requires a reverse proxy to support HTTPS connections.
-# MisskeyでHTTPS接続をサポートするにはリバースプロキシが必須です。
+# Misskey 必须通过反向代理服务器来支持 HTTPS 连接。
 #
 #                 +----- https://example.tld/ ------------+
 #   +------+      |+-------------+      +----------------+|
@@ -97,100 +96,98 @@ url: https://example.tld/
 #                 +---------------------------------------+
 #
 #   You need to set up a reverse proxy. (e.g. nginx)
-#   この方法では、リバースプロキシ（例: nginx）をセットアップする必要があります。
+#   此方法需要设置反向代理（例如：nginx）。
 #   An encrypted connection with HTTPS is highly recommended
 #   because tokens may be transferred in GET requests.
-#   GETリクエストでトークンがURLに含まれる可能性があるため、
-#   HTTPSによる暗号化を強く推奨します。
+#   由于 Token 可能会包含在 GET 请求的 URL 中传输，
+#   强烈建议使用 HTTPS 加密连接。
 ```
 
 ```yml
 # The port that your Misskey server should listen on.
-# Misskeyサーバがリッスンするポート
+# Misskey 服务器监听的端口
 port: 3000
 ```
 
-この例では、Misskeyはポート3000で通信します。
-リバースプロキシでは、ローカル側の宛先にこのポート番号を指定します。
+在这个示例中，Misskey 使用端口 3000 进行通信。
+在反向代理的设置中，本地端的转发目标请指定这个端口号。
 
 ----
 
-# `npm start`やアクセス時によく遭遇するエラー
+# `npm start`或访问时常见的错误
 
-`npm start`でサーバーを立てられたものの、その後不具合に遭遇してしまう場合もあります。
+虽然用 `npm start` 成功架起服务器了，但之后可能会遇到故障。
 
-まず、[構築の手引き](../guides/manual/)をよく読みましょう。
+首先，请仔细阅读[搭建指南](../guides/manual/)。
 
-## YAMLのエラーが出る
+## 出现 YAML 错误
 
-`default.yml`の構文にミスがある可能性があります。
-行頭に余分なスペースはありませんか？
+可能是 `default.yml` 的语法有误。
+行首是否有多余的空格？
 
-## redisに接続できない
+## 无法连接 redis
 
-redis-serverは起動していますか？
-何らかの接続数の上限に達していませんか？
+redis-server 启动了吗？
+是否达到某种连接数上限？
 
-11.20.2より前のバージョンのMisskeyはredisのパスワードを解くことができません。以下の2点を確認してください。
+11.20.2 版本之前的 Misskey 无法解析 redis 的密码。请确认以下两点：
 
-- redisにパスワードを設定しない。
-- `default.yml`の`redis:`の`pass:`の行をコメントアウトする。
+- 不要为 redis 设置密码。
+- 将 `default.yml` 中 `redis:` 下方的 `pass:` 那一行注释掉。
 
-## 上部に「開発ビルドです」と書かれた赤いバーが表示される
+## 顶部显示写着“这是开发构建”的红色横条
 
-サーバーを公開する場合は必ずproductionビルドを使いましょう。
+如果要公开服务器，请务必使用 production 构建。
 
-製品ビルドにするには、環境変数が`NODE_ENV=production`になるように設定し`npm run build && npm start`します。
+要使用产品 (Product) 构建，请将环境变量设置为 `NODE_ENV=production` 并执行 `npm run build && npm start`。
 
-## 新規登録できない
+## 无法注册新账号
 
-APIに接続できないようです。
-`default.yml`の冒頭の`url:`が正しく設定されているか確認しましょう。
-Node.jsのバージョンや、インストールの設定ももう一度よく確認しましょう。
+似乎无法连接 API。
+请确认 `default.yml` 开头的 `url:` 是否设置正确。也请再次仔细确认 Node.js 的版本和安装设置。
 
-また、正しく`default.yml`が書かれていますか？
+另外，`default.yml` 的内容写对了吗？
 
-## タイムラインの表示に問題が発生する、リアルタイムでTLが更新されない
+## 时间轴显示出现问题，TL 无法实时更新
 
-タイムラインの読み込みに失敗する場合、mongoDBやPostgreSQLのバージョンが古い可能性があります。
-PostgreSQLはなるべくv13にしてください。
+如果加载时间轴失败，可能是 mongoDB 或 PostgreSQL 的版本太旧。
+PostgreSQL 请尽量使用 v13 以上版本。
 
-redisの接続も確認した方がよいでしょう。 [→ redisに接続できない？ を参照](#redisに接続できない？)
+最好也确认一下 redis 的连接。 [→ 请参阅“无法连接 redis？”。 ](#无法连接-redis)
 
-## 永遠に「再接続中」と右下に表示される、リアルタイムでTLが更新されない
+## 右下角永远显示“重新连接中”，TL 无法实时更新
 
-プロキシを利用している場合、それがWebSocket通信を阻害している可能性が考えられます。
+如果您有使用代理服务器 (Proxy)，可能是它阻挡了 WebSocket 通信。
 
-## オブジェクトストレージ使用時、不具合が出る
+## 使用对象存储 (Object Storage) 时出现故障
 
-オブジェクトストレージの権限の設定が厳しくなっている可能性があります。「ファイル（オブジェクト）が誰でも取得可能」なように権限を設定してみてください。
-また、`default.yml`をもう一度確認してみてください。
+可能是对象存储的权限设置太严格了。请试着将权限设置为“任何人皆可获取文件（对象）”。
+另外，请再次确认 `default.yml`。
 
 ### S3 example (with CDN, custom domain)
 
-S3 example (with CDN, custom domain)は、AWSのデフォルトのドメインではなく独自ドメインでストレージを公開したい場合の設定です。
-endpointと公開ドメインが同じサービスの場合はS3 exampleのように`baseUrl`は明記しなくてよく、さらにregionの概念がないサービスの場合はregionの行は必要ありません。
+`S3 example (with CDN, custom domain)` 是当您不想使用 AWS 的默认域名，而是想用独立域名公开存储空间时的设置。
+如果 Endpoint 和公开域名是同一个服务，不需要像 S3 example 那样特别写明 `baseUrl`；此外，如果该服务没有 Region 的概念，也不需要写 `region` 那一行。
 
-### S3互換サービスでの設定
+### S3 兼容服务的设置
 
-Misskeyではオブジェクトストレージの接続に[aws-sdk](https://www.npmjs.com/package/aws-sdk)を利用しています。
-Amazon S3に互換性のあるオブジェクトストレージであれば利用できる可能性があります。
+Misskey 使用 [aws-sdk](https://www.npmjs.com/package/aws-sdk) 来连接对象存储。只要是与 Amazon S3 兼容的对象存储服务，都有可能可以使用。
 
-各サービス/ソフトウェアのドキュメントをよく読み、設定してみてください。
+请详读各服务/软件的文档并尝试设置。
 
-### ローディングが終わらない
+### 加载 (Loading) 跑不完
 
-Cloudflare を使用している場合は、Rocket LoaderやAuto Minifyが有効になっていないか確認してください。有効になっている場合は無効にすることで解決する場合があります。
+如果您使用 Cloudflare，请确认 Rocket Loader 或 Auto Minify 是否已启用。如果已启用，将其关闭或许能解决问题。
 
 ---
 
-# まったく解決しなかった場合
+# 如果完全无法解决
 
-以下の順序を試してみてください。
+请尝试以下顺序：
 
-1. Misskeyのドキュメントをよく読む。
-2. Googleで検索してみる。
-3. [MisskeyリポジトリのIssues](https://github.com/misskey-dev/misskey/issues)を検索してみる（同じエラーに遭遇している場合や、Misskeyのバグの可能性もあります）。
-4. 検索してどうしても見つからなかったら、専門家に質問してみてください。
-   1. [MisskeyのDiscordサーバー](https://discord.gg/P4yYqYBjEp)などで聞いてみる
-   2. 開発者（[aqz](https://p1.a9z.dev/@aqz)やしゅいろ）にリプライや指名投稿を送信して聞いてみる
+1. 详读 Misskey 的官方文档。
+2. 试着用 Google 搜索。
+3. 搜索 [Misskey 仓库的 Issues](https://github.com/misskey-dev/misskey/issues)（可能有人遇到相同的错误，或是 Misskey 本身的 Bug）。
+4. 如果搜索后实在找不到解法，请向专家提问。
+   1. 试着在 [Misskey 的 Discord 服务器](https://discord.gg/P4yYqYBjEp)等地方询问。
+   2. 发送回复或指名帖子询问开发者 ([aqz](https://p1.a9z.dev/@aqz) 或 syuilo)。

@@ -151,6 +151,16 @@ $[ruby Misskey 미스키]
 
 <MfmPreview text="$[ruby Misskey ミスキー]"></MfmPreview>
 
+### 날짜
+
+UNIX 시간을 설정해 날짜를 표시할 수 있습니다.
+
+```
+$[unixtime 1701356400]
+```
+
+<MfmPreview text="$[unixtime 1701356400]"></MfmPreview>
+
 ### 코드 (인라인)
 
 프로그래밍 코드 등에 대해 인라인 구문 강조를 할 수 있습니다.
@@ -222,7 +232,7 @@ $[blur Misskey로 연합 우주의 세계가 펼쳐집니다.]
 검색창을 표시할 수 있습니다.
 
 ```
-misskey 검색
+misskey search
 ```
 
 <MfmPreview text="misskey 検索"></MfmPreview>

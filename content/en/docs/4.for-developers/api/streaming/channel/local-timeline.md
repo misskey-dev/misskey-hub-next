@@ -1,25 +1,25 @@
 ---
-description: "ローカルタイムラインのノートが流れるチャンネルです。"
+description: "This channel streams notes from the Local Timeline."
 ---
 
 # `localTimeline`
 
-ローカルタイムラインのノートが流れるチャンネルです。
+This channel streams notes from the Local Timeline.
 
-## パラメータ
+## Parameters
 
-なし
+None
 
-## イベント
+## Events
 
 ### `note`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-ローカルタイムラインに新しいノートが追加されたときに発生します。
+Triggered when a new note is added to the Local Timeline.
 
-## 操作
+## Operations
 
-なし
+None

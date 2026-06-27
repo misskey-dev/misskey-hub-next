@@ -1,25 +1,25 @@
 ---
-description: "ホームタイムラインのノートが流れるチャンネルです。"
+description: "This channel streams notes from the Home Timeline."
 ---
 
 # `homeTimeline`
 
-ホームタイムラインのノートが流れるチャンネルです。
+This channel streams notes from the Home Timeline.
 
-## パラメータ
+## Parameters
 
-なし
+None
 
-## イベント
+## Events
 
 ### `note`
 
 <MkSchemaViewer :schema="{
-$ref: 'misskey://Note'
+ $ref: 'misskey://Note'
 }"/>
 
-ホームタイムラインに新しいノートが追加されたときに発生します。
+Triggered when a new note is added to the Home Timeline.
 
-## 操作
+## Operations
 
-なし
+None

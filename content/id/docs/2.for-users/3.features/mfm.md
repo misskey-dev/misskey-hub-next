@@ -153,6 +153,16 @@ $[ruby Misskey ミスキー]
 
 <MfmPreview text="$[ruby Misskey ミスキー]"></MfmPreview>
 
+### 日時
+
+UNIX時間を指定して日時を表示できます。
+
+```
+$[unixtime 1701356400]
+```
+
+<MfmPreview text="$[unixtime 1701356400]"></MfmPreview>
+
 ### Kode (Dalam baris)
 
 Menampilkan sorotan sintaks untuk kode program secara dalam baris.
@@ -224,7 +234,7 @@ $[blur Misskey membentangkan dunia Fediverse]
 Sebuah kotak pencarian dapat ditampilkan.
 
 ```
-misskey cari
+misskey search
 ```
 
 <MfmPreview text="misskey 検索"></MfmPreview>

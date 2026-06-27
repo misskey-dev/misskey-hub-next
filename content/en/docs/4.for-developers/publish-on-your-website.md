@@ -1,6 +1,6 @@
 # Distributing Plugins and Themes
 
-Starting with Misskey v2023.11.0, you can now install various additional resources directly from your website.This feature is especially useful for those who produce a lot of plugins and themes, and for those who want to create a plugin distribution website.This feature is especially useful for those who produce a lot of plugins and themes, and for those who want to create a plugin distribution website.
+Starting with Misskey v2023.11.0, you can now install various additional resources directly from your website.This feature is especially useful for those who produce a lot of plugins and themes, and for those who want to create a plugin distribution website.
 
 ## Resources that support external installation
 
@@ -15,21 +15,21 @@ If the hash value cannot be matched, the resource cannot be installed.
 
 ## How to Implement
 
-### 配布ページ側
+### Distribution page side
 
-「インストール」ボタンに、以下のようなURLを持つリンクを作成する
+Create a link for the "Install" button with a URL structured like the following:
 
 ```
 https://{HOST}/install-extensions?url={API_URL}&hash={HASH}
 ```
 
-- `{HOST}`: ユーザーのサーバーのホストに置き換えます。ホストはユーザーが入力できるようにすることが一般的です。
-- `{API_URL}`: リソース配布用API（後述）のURLに置き換えます。相対パスは不可
-- `{HASH}`: 配布するリソースのSHA-512ハッシュに置き換えます。**リソース内での改行コードはLFに統一してください。**
+- `{HOST}`: Replace with the host of the user's server.It is common practice to provide an input field so the user can enter their host.
+- `{API_URL}`: Replace with the URL of the resource distribution API (described below).Relative paths are not allowed.
+- `{HASH}`: Replace with the SHA-512 hash of the resource to be distributed.**Please unify all line breaks within the resource to LF.**
 
-### リソース配布用API側
+### Resource distribution API side
 
-上記 `{API_URL}` で指定したエンドポイントから、以下のようなJSONオブジェクトを返してください。
+Return a JSON object like the following from the endpoint specified by the `{API_URL}` above.
 
 ```json
 {
@@ -38,6 +38,6 @@ https://{HOST}/install-extensions?url={API_URL}&hash={HASH}
 }
 ```
 
-- `type`: 上記「外部からのインストールに対応しているリソース」のコードを参照して入力してください。
-- `data`: リソースのソースコードを**文字列で**入力
-  - この際、改行コードは**LF**としてください
+- `type`: Enter the appropriate type by referring to the codes in the "Resources supported for external installation" section above.
+- `data`: Enter the source code of the resource as a **string**.
+  - Please ensure that the line break code is set to LF.

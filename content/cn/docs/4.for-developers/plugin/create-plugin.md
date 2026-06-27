@@ -3,40 +3,40 @@
 Misskey Web 客户端的插件功能将允许您扩展客户端并添加各种功能。\
 本文档介绍如何创建插件
 
-## プラグインの例
+## 插件示例
 
-以下に完全なプラグインの例を示します。このプラグインは、[`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn)を使用して、投稿フォームに「フグパンチボタン」を追加するものです。
+以下展示一个完整的插件示例。这个插件使用了 [`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn)，在发帖表单中添加了一个“河豚拳按钮”。
 
-このプラグインをインストールすると、投稿フォーム上のプラグインメニューに「フグパンチ」の項目が追加されます。クリックすると、投稿フォーム上のテキストに `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )` が追加されます。
+安装此插件后，发帖表单上的插件菜单中将增加“河豚拳”这一项。点击后，会在发帖表单的文本中添加 `河豚拳!!!!🐡( '-' 🐡 )`。
 
 ```ais
 /// @ 0.12.4
 ### {
-  name: "フグパンチボタン"
+  name: "河豚拳按钮"
   version: "0.0.1"
   author: "Misskey Project"
 }
 
-Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
-  let fugu = "ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )"
+Plugin:register_post_form_action('河豚拳', @(note, rewrite) {
+  let fugu = "河豚拳!!!!🐡( '-' 🐡 )"
 
   if (note.text.trim() == '') {
-    // ノートの中身がない場合はフグパンチに置き換え
+    // 如果帖子内容为空，则替换为河豚拳
     rewrite('text', fugu)
   } else {
-    // ノートの中身がある場合は冒頭にフグパンチを追加して改行
+    // 如果帖子内有内容，则在开头加上河豚拳并换行
     rewrite('text', `{fugu}{Str:lf}{note.text}`)
   }
 })
 ```
 
-##
+## AiScript
 
 插件是指使用 AiScript 编写的脚本。
 
 ## 元数据
 
-插件必须使用AiScript的元数据嵌入功能将插件的元数据定义为默认值。示例：
+插件必须使用 AiScript 的元数据嵌入功能来默认定义插件的元数据。示例：
 
 ```AiScript
 /// @ 0.12.4
@@ -50,61 +50,62 @@ Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
 
 元数据属性（metadata property）：
 
-###
+### name
 
 插件名称
 
-###
+### author
 
 插件作者
 
-###
+### version
 
-插件版本具体规范详见：https://semver.org/lang/zh-CN/
+插件版本。请指定数字（字符串格式）。
 
-###
+### description
 
 插件说明
 
-###
+### permissions
 
-插件要求的权限。需要在发送Misskey API请求时使用。
+插件要求的权限。在向 Misskey API 发起请求时使用。
 
-APIのリクエスト方法については、[AiScript Misskey拡張API リファレンス](/docs/for-developers/plugin/plugin-api-reference/)をご覧ください。
+关于 API 的请求方法，请参考[《AiScript Misskey 扩展 API 参考》](/docs/for-developers/plugin/plugin-api-reference/)。
 
 :::tip
 
-permissionの一覧は[こちら](/docs/for-developers/api/permission/)をご覧ください。
+关于 permission 的完整列表，请查看[此处](/docs/for-developers/api/permission/)。
 
 :::
 
-###
+### config
 
-插件配置文件。键值Key支持下列属性：
+表示插件配置信息的对象。
+以配置名作为键 (Key)，其值包含以下属性：
 
-####
+#### type
 
-设置值类型选择一项：string number boolean
+表示配置值类型的字符串。请从以下选项中选择：`string`、`number`、`boolean`
 
-####
+#### label
 
-设置 向用户显示的名称
+向用户显示的配置名称
 
-####
+#### description
 
-设置描述
+配置的说明
 
-####
+#### default
 
-默认值
+配置的默认值
 
-##
+## API
 
-Misskey Web 为插件公开了API，您可以通过使用这些 API 来扩展客户端的功能。
-您可以在 [AiScript Misskey扩展API](./plugin-api-reference/) 参考。
+Misskey Web 向插件开放了 API，通过利用这些 API 可以扩展客户端的功能。
+关于具体包含哪些 API，请参考[《AiScript Misskey 扩展 API 参考》](./plugin-api-reference/)。
 
-## 发布插件
+## 分发插件
 
-在v2023.11.0或更高版本中，只需单击一下即可直接从您的网站安装插件。
+在 v2023.11.0 及后续版本中，用户可以直接从你的网站一键安装插件。
 
-如果您提供插件安装功能，则需要在您的网站上实现此 API。详细见 [发布你的网站](../publish-on-your-website.md) 。
+如果您提供插件安装功能，则需要在您的网站上实现此 API。详情请查看[此处](../publish-on-your-website.md)。

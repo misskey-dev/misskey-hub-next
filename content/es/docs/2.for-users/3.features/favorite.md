@@ -1,6 +1,6 @@
 # Marcadores
 
-Esta función te permite guardar notas [notes](./note) como marcadores.
+Esta función te permite guardar [notas](./note) como marcadores.
 
 Puedes ver tus notas guardadas en la [Página de Marcadores](x-mi-web://my/favorites). El autor de una nota no será notificado cuando añadas una nota como marcador, y solo tú puedes ver tus marcadores.
 

@@ -8,7 +8,7 @@ description: '本指南介绍如何安裝和配置 Misskey。'
 
 :::danger
 
-请勿使用已启动的服务器的域主机名重新创建数据库！
+请绝对不要更改已经开始使用的服务器域名或主机名！
 
 :::
 
@@ -16,9 +16,9 @@ description: '本指南介绍如何安裝和配置 Misskey。'
 
 #### 必须安装并配置以下软件：
 
-- **[Node.js](https://nodejs.org/en/)** (20.4.x以上)
-- **[PostgreSQL](https://www.postgresql.org/)** (15以上)
-- **[PostgreSQL](https://www.postgresql.org/)** (v15以上)
+- **[Node.js](https://nodejs.org/en/)** (v22 系列：v22.15.0 及以上；或 v24 系列：v24.10.0 及以上)
+- **[pnpm](https://pnpm.io/)** (v10.16.0 及以上)
+- **[PostgreSQL](https://www.postgresql.org/)** (v15 及以上)
 - **[Redis](https://redis.io/)**
 - **[FFmpeg](https://www.ffmpeg.org/)**
 
@@ -74,7 +74,7 @@ NODE_ENV=production pnpm run start
 ```
 
 大功告成，祝武运昌盛！
-GLHF✨
+GLHF✨ (译者注：Good Luck, Have Fun)
 
 ::::g-details{summary="使用 systemd 进行管理"}
 
@@ -111,7 +111,7 @@ WantedBy=multi-user.target
 
 :::
 
-systemdを再読み込みしmisskeyサービスを有効化
+重新加载systemd配置文件并启动misskey服务
 
 ```sh
 sudo systemctl daemon-reload
@@ -126,7 +126,7 @@ sudo systemctl start misskey
 
 :::tip
 
-`systemctl status misskey`と入力すると、サービスの状態を調べることができます。
+您可以通过运行命令`systemctl status misskey`来检查服务的运行状态。
 
 :::
 
@@ -140,7 +140,7 @@ sudo systemctl start misskey
 
 :::
 
-拉取 master，安裝、构建和迁移数据库：
+重新拉取 master，并执行安装、构建以及数据库迁移：
 
 ```sh
 git checkout master

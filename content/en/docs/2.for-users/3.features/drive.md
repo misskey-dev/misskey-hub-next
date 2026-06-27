@@ -12,7 +12,7 @@ In addition to being able to upload any file from Misskey Web's [Drive page](x-m
 
 :::tip
 
-ロールでアップロード可能なファイル種別を設定可能で、デフォルトではテキスト、JSON、画像、動画、音声ファイルがアップロード可能です。
+Uploadable file types can be configured per role. By default, text, JSON, image, video, and audio files can be uploaded.
 
 :::
 

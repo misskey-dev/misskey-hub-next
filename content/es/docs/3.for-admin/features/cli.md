@@ -1,4 +1,4 @@
-# comandos de administrador
+# Comandos de Administrador
 
 A partir de la versión 2025.8.0, los comandos de administración del servidor estarán disponibles en Misskey.
 
