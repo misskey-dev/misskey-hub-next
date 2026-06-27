@@ -3,7 +3,7 @@
 Misskey Hub es el sitio web oficial del Proyecto Misskey, que proporciona conocimientos y otra documentación sobre Misskey, un blog de desarrollo, y una tienda de plugins.
 Su objetivo es ser "el lugar donde estar para todo lo relacionado con Misskey".
 
-Misskey Hub es también [código abierto y está disponible públicamente.] (https://github.com/misskey-dev/misskey-hub)
+Misskey Hub es también [código abierto y está disponible públicamente.
 
 :::tip
 

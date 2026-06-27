@@ -185,10 +185,10 @@ Return `null` to make it hidden.
 
 :::warning
 
-Starting with v2025.8.0, this function will be executed **synchronously**.
-Functions that internally perform asynchronous processing (such as `Mk:api`) cannot be executed and will result in an error.
+v2025.8.0以降では、この関数は**同期的に実行**されます。
+内部的に非同期な処理が実行される関数（`Mk:api`など）は実行できず、エラーとなります。
 
-Additionally, synchronous execution means that all other JavaScript processing stops while the plugin is running.This means that compared to other plugin hooks, if problematic scripts (such as infinite loops) are executed, they could have a significant impact on the host JavaScript environment.Please use this with caution.
+また、同期的に実行されるということは、プラグインの実行中はほかのJavaScriptの処理がすべて停止するということを意味します。これにより、ほかのプラグインフックと比べ、問題のあるスクリプト（無限ループなど）が実行された場合、ホストのJavascript環境に重大な影響を及ぼす可能性があります。十分注意してください。
 
 :::
 

@@ -1,6 +1,6 @@
 # Líneas de tiempo
 
-Las [Notas](/docs/for-users/features/note/) se muestran en las líneas de tiempo. Hay varios tipos de líneas de tiempo como se menciona a continuación y cada uno de ellos muestra un conjunto diferente de notas. Los servidores pueden desactivar algunas de ellas.
+[Notas](/docs/for-users/features/note/) se muestran en las líneas de tiempo. Hay varios tipos de líneas de tiempo como se menciona a continuación y cada uno de ellos muestra un conjunto diferente de notas. Los servidores pueden desactivar algunas de ellas.
 
 ## Inicio
 

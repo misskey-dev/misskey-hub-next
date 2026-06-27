@@ -25,19 +25,19 @@ You can select from the following types of display formats.
 
 ## Creating Announcements
 
-### General Announcement
+### 全体お知らせ
 
-1. Access [Control Panel > Announcements](x-mi-web://admin/announcements) using an account with administrator or moderator privileges.
-2. Click the “Add” button to add a new announcement item.
-3. After editing the content, click “Save” to publish the announcement.
+1. 管理者もしくはモデレーター権限を持つアカウントで[コントロールパネル > お知らせ](x-mi-web://admin/announcements)にアクセスします。
+2. 「追加」ボタンをクリックすると、新しいお知らせの項目が追加されます。
+3. 内容を編集して「保存」をクリックすると、お知らせが公開されます。
 
-### Announcement for Individual Users
+### ユーザーへの個別お知らせ
 
-1. Open the moderation page for the user to whom you want to send the announcement.
+1. お知らせを配信したいユーザーのモデレーションページを開きます。
 
-- Open the user's profile page using an account with administrator or moderator privileges, click the “...” next to the ‘Follow’ button, then click “Moderation”.
-- Access [Control Panel > Users](x-mi-web://admin/users) using an account with administrator or moderator privileges, then search for and click the account.
+- 管理者もしくはモデレーター権限を持つアカウントでユーザーのプロフィールページを開き、「フォロー」ボタン横の「…」をクリックし、「モデレーション」をクリック
+- 管理者もしくはモデレーター権限を持つアカウントで[コントロールパネル > ユーザー](x-mi-web://admin/users)にアクセスし、アカウントを検索してクリック
 
-2. Click the “Announcements” tab at the top.
-3. Clicking the “+” button will display the dialog for adding a new announcement.
-4. After editing the content, click “Save” to publish the announcement to the user.
+2. 上部タブの「お知らせ」をクリックします。
+3. 「＋」ボタンをクリックすると、お知らせの新規追加ダイアログが表示されます。
+4. 内容を編集して「保存」をクリックすると、ユーザーにお知らせが配信されます。

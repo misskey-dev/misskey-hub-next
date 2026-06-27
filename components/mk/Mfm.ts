@@ -8,10 +8,12 @@ import type { VNode } from 'vue';
 import * as mfm from 'mfm-js';
 import MkGoogle from '@/components/mk/Google.vue';
 import MkSparkle from '@/components/mk/Sparkle.vue';
+import MkTime from '@/components/mk/Time.vue';
 import MkCustomEmoji from '@/components/mk/CustomEmoji.vue';
 import MkMention from '@/components/mk/Mention.vue';
 import NuxtLink from '@/components/g/NuxtLink.vue';
 import ProseAVue from '@/components/content/ProseA.vue';
+import ClockIco from 'bi/clock.svg';
 
 const QUOTE_STYLE = `
 display: block;
@@ -247,6 +249,22 @@ export default function(props: {
 							let text = rt.type === 'text' ? rt.props.text : '';
 							return h('ruby', {}, [...genEl(token.children.slice(0, token.children.length - 1), scale), h('rt', text.trim())]);
 						}
+					}
+					case 'unixtime': {
+						const child = token.children[0];
+						const unixtime = parseInt(child.type === 'text' ? child.props.text : '');
+						return h('span', {
+							style: 'display: inline-block; font-size: 90%; border: solid 1px light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)); border-radius: 999px; padding: 4px 10px 4px 6px;',
+						}, [
+							h(ClockIco, {
+								style: 'margin-right: 0.25em;',
+							}),
+							h(MkTime, { 
+								key: Math.random(),
+								time: unixtime * 1000, 
+								mode: 'detail',
+							}),
+						]);
 					}
 				}
 				if (style == null) {

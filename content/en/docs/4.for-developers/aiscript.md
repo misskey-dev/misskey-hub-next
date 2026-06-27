@@ -18,50 +18,50 @@ The implementation of AiScript is in a separate repository from Misskey and is [
 
 ## Usage
 
-You can use AiScript standard syntax and built-in functions.
+AiScript標準の構文や組み込み関数などが使用できます。
 
 :::tip
 
-The document is [here](https://aiscript-dev.github.io/)  
-The available AiScript version may differ depending on the version of the Misskey.To check the version, run `<: Core:v` in Scratchpad.
+ドキュメントは[こちら](https://aiscript-dev.github.io/)  
+Misskey本体のバージョンにより、使用できるAiScriptのバージョンが異なる場合があります。バージョンの確認には`<: Core:v`をScratchpadなどで実行してください。
 
 :::
 
-In addition to these, Misskey-specific additional constants and functions are provided in three groups.
+これらに加え、Misskey専用の組み込み定数・関数が３グループに分けて提供されています。
 
 ### Misskey AiScript API
 
-Prefix: `Mk:`  
-These are a set of constant functions available in all AiScript environments within Misskey.  
-For details, please refer to the sections marked `Mk:` in the [AiScript Misskey Extension API Reference](./plugin/plugin-api-reference/).
+接頭辞: `Mk:`  
+Misskey内の全てのAiScript環境で使用できる定関数群です。
+詳しくは[AiScript Misskey拡張API リファレンス](./plugin/plugin-api-reference/)の`Mk:`とついた部分を参照して下さい。
 
-### Plugin API
+### プラグインAPI
 
-Prefix: `Plugin:`  
-These are constant functions available only within [plugins](./plugin/).  
-For details, refer to the sections marked `Plugin:` in the [AiScript Misskey Extension API Reference](./plugin/plugin-api-reference/).
+接頭辞: `Plugin:`  
+[プラグイン](./plugin/)でのみ使用できる定関数群です。
+詳しくは[AiScript Misskey拡張API リファレンス](./plugin/plugin-api-reference/)の`Plugin:`とついた部分を参照して下さい。
 
 ### UI API
 
-Prefix: `Ui:`  
-Available in [Widgets](/docs/for-users/features/widgets/) (AiScript App), [Misskey Play](./plugin/create-play/), and Scratchpad.  
-For details, refer to the sections marked `Ui:` in the [AiScript Misskey Extension API Reference](./plugin/plugin-api-reference/).
+接頭辞: `Ui:`  
+[ウィジェット](/docs/for-users/features/widgets/)（AiScript App）、[Misskey Play](./plugin/create-play/)、Scratchpadで使用できます。
+詳しくは[AiScript Misskey拡張API リファレンス](./plugin/plugin-api-reference/)の`Ui:`とついた部分を参照して下さい。
 
-### Standard Input/Output
+### 標準入出力
 
-The internal implementation of the `readline` function and `print` function (and the `<:` sugar syntax) defined in the AiScript standard is provided independently by the Misskey side.
+AiScript標準で定義されている`readline`関数と`print`関数（および`<:`構文）の内部実装は、Misskey側で独自に提供されています。
 
 #### readline(message)
 
 `message`: `str`  
-Return value: `str`  
-Can be used in all AiScript environments within Misskey.  
-Display a pop-up prompting for string input.
+返り値: `str`  
+Misskey内の全てのAiScript環境で使用できます。  
+文字列の入力を求めるポップアップを表示します。
 
 #### print(message)
 
 `message`: `any`  
-Return value: `null`  
-Available in [Widgets](/docs/for-users/features/widgets/) (AiScript Console) and Scratchpad.  
-Outputs a string to the console.  
-The `<:` syntax performs the same function.
+返り値: `null`  
+[ウィジェット](/docs/for-users/features/widgets/)（AiScriptコンソール）、Scratchpadで使用できます。  
+コンソールに文字列を出力します。  
+`<:`構文も同様の働きをします。
