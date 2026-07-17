@@ -29,6 +29,7 @@ function getRouteRules(): NuxtConfig['routeRules'] | undefined {
 
 	// 言語ごとに割り当てる必要のないRouteRules
 	const staticRules: NuxtConfig['routeRules'] = {
+		// SSG のビルド中のみ有効になることを意図したキャッシュ
 		'/api/_content/**': { cache: { maxAge: 60 * 60 } },
 		'/ja/blog/**': { isr: true },
 		'/ns/': { prerender: true },
