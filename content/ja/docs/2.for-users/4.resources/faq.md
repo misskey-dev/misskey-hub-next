@@ -38,7 +38,7 @@ Renoteの時刻表示の隣にある「...」を押し、「Renote解除」を�
 Renoteについて詳しくは[こちら](../features/note/#renote)をご覧ください。
 
 ## ノート内のURLのプレビューを表示させたくない
-MFM(Markup language For Misskey)というMisskey独自のマークアップ言語には、URLのプレビューを無効にする構文があります。詳しくはMFMチートシートをご覧ください。MFMチートシートは、あなたが属するサーバーで次のアドレスを入力すると見ることができます。`https://あなたのサーバーのホスト名/mfm-cheat-sheet`
+MFM(Markup language For Misskey)というMisskey独自のマークアップ言語には、URLのプレビューを無効にする構文があります。詳しくは [こちら](/docs/for-users/features/mfm/)をご覧ください。
 
 ## カスタム絵文字を追加、編集、削除したい
 あなたが属するサーバーの管理者のみが、カスタム絵文字を追加、編集、削除できます。それらを希望する場合は、サーバー管理者に直接連絡してください。
