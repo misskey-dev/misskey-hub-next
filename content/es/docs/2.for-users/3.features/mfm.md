@@ -259,11 +259,11 @@ $[bg.color=ff0 黄背景]"></MfmPreview>
 
 El contenido puede rodear los bordes.Los bordes pueden tener varios estilos.
 
-- `style`: 枠線のスタイルを指定します。
-- `width`: 枠線の太さを指定します。
-- `color`: 枠線の色を指定します。
-- `radius`: 枠線の角の丸みを指定します。
-- `noclip`: 指定時、枠線の内側にある内容を枠線の外側にはみ出させます。
+- `style`: Especifica el estilo del borde.
+- `width`: Especifica el grosor del borde.
+- `color`: Especifica el color del borde.
+- `radius`: Especifica el redondeo de las esquinas del borde.
+- `noclip`: Cuando se especifica, el contenido que se encuentra dentro del borde sobresale fuera de este.
 
 ```
 border.style=solid,width=4 Default]
@@ -414,7 +414,7 @@ $[twitch 🍮] $[twitch.speed=5s 🍮]
 
 ### Arcoíris
 
-囲んだ中身の彩度を変化させて虹色にします。内容が黒や白の場合は、彩度が変化しても色が変わらないため、色を指定する必要があります。
+Cambia la saturación del contenido del recuadro para darle un aspecto iridiscente.Si el contenido es blanco o negro, el color no cambia aunque varíe la saturación, por lo que es necesario especificar el color.
 
 ```
 $[rainbow 🍮] $[rainbow.speed=5s 🍮]
