@@ -259,6 +259,12 @@ $[bg.color=ff0 黄背景]"></MfmPreview>
 
 El contenido puede rodear los bordes.Los bordes pueden tener varios estilos.
 
+- `style`: Especifica el estilo del borde.
+- `width`: Especifica el grosor del borde.
+- `color`: Especifica el color del borde.
+- `radius`: Especifica el redondeo de las esquinas del borde.
+- `noclip`: Cuando se especifica, el contenido que se encuentra dentro del borde sobresale fuera de este.
+
 ```
 border.style=solid,width=4 Default]
 
@@ -407,6 +413,8 @@ $[twitch 🍮] $[twitch.speed=5s 🍮]
 <MfmPreview text="$[x2 $[twitch 🍮] $[twitch.speed=5s 🍮]]"></MfmPreview>
 
 ### Arcoíris
+
+Cambia la saturación del contenido del recuadro para darle un aspecto iridiscente.Si el contenido es blanco o negro, el color no cambia aunque varíe la saturación, por lo que es necesario especificar el color.
 
 ```
 $[rainbow 🍮] $[rainbow.speed=5s 🍮]

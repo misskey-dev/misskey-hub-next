@@ -257,6 +257,12 @@ $[bg.color=ff0 黄背景]"></MfmPreview>
 
 Konten dapat dikelilingi oleh tepian/bingkai.Gaya dari tepian/bingkai juga dapat ditampilkan bermacam-macam.
 
+- `style`: 枠線のスタイルを指定します。
+- `width`: 枠線の太さを指定します。
+- `color`: 枠線の色を指定します。
+- `radius`: 枠線の角の丸みを指定します。
+- `noclip`: 指定時、枠線の内側にある内容を枠線の外側にはみ出させます。
+
 ```
 $[border.style=solid,width=4 Bawaan]
 
@@ -405,6 +411,8 @@ $[twitch 🍮] $[twitch.speed=5s 🍮]
 <MfmPreview text="$[x2 $[twitch 🍮] $[twitch.speed=5s 🍮]]"></MfmPreview>
 
 ### Pelangi
+
+囲んだ中身の彩度を変化させて虹色にします。内容が黒や白の場合は、彩度が変化しても色が変わらないため、色を指定する必要があります。
 
 ```
 $[rainbow 🍮] $[rainbow.speed=5s 🍮]

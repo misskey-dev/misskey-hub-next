@@ -47,7 +47,7 @@ Weitere Informationen zu [Renote](../features/note/#renote).
 
 ## Ich möchte keine Vorschau der URL in der Notiz
 
-Misskeys eigene Auszeichnungssprache namens MFM (Markup language For Misskey) hat eine Syntax, die die URL-Vorschau deaktiviert.Weitere Einzelheiten finden Sie im MFM-Leitfaden.Den MFM-Leitfaden finden Sie, indem Sie die folgende Adresse auf Ihrem Server eingeben:`https://あなたのサーバーのホスト名/mfm-cheat-sheet`
+Misskeys eigene Auszeichnungssprache namens MFM (Markup language For Misskey) hat eine Syntax, die die URL-Vorschau deaktiviert.Weitere Einzelheiten finden Sie im MFM-Leitfaden.
 
 ## Ich möchte benutzerdefinierte Emojis hinzufügen, bearbeiten oder löschen.
 
