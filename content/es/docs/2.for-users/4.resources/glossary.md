@@ -88,7 +88,7 @@ Una cuenta especial utilizada por el servidor Misskey, por ejemplo cuando se int
 
 ## Suspensión o Congelación
 
-
+Se refiere a un estado en el que la cuenta está desactivada.
 
 ## Drive
 
