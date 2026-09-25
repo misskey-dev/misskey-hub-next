@@ -47,7 +47,7 @@ Renoteについて詳しくは[こちら](../features/note/#renote)をご覧く�
 
 ## ノート内のURLのプレビューを表示させたくない
 
-MFM(Markup language For Misskey)というMisskey独自のマークアップ言語には、URLのプレビューを無効にする構文があります。詳しくはMFMチートシートをご覧ください。MFMチートシートは、あなたが属するサーバーで次のアドレスを入力すると見ることができます。`https://あなたのサーバーのホスト名/mfm-cheat-sheet`
+MFM(Markup language For Misskey)というMisskey独自のマークアップ言語には、URLのプレビューを無効にする構文があります。詳しくは [こちら](/docs/for-users/features/mfm/)をご覧ください。
 
 ## カスタム絵文字を追加、編集、削除したい
 
