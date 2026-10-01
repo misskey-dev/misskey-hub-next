@@ -546,8 +546,8 @@ _api:
     _types:
       "read:account": "查看账户信息"
       "write:account": "更改帐户信息"
-      "read:blocks": "查看黑名单"
-      "write:blocks": "编辑黑名单"
+      "read:blocks": "查看屏蔽列表"
+      "write:blocks": "编辑屏蔽列表"
       "read:drive": "查看网盘"
       "write:drive": "管理网盘文件"
       "read:favorites": "查看收藏夹"
