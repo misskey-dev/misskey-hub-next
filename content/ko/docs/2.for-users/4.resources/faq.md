@@ -46,7 +46,7 @@ Renote에 대한 자세한 내용은 [여기](../features/note/#renote)에서 �
 
 ## 노트 내 URL의 미리보기를 표시하고 싶지 않습니다.
 
-MFM(Markup language For Misskey)이라는 Misskey의 자체 마크업 언어에는 URL의 미리보기를 비활성화하는 구문이 있습니다.자세한 내용은 MFM 치트시트를 참고하세요.MFM 치트시트는 여러분이 속한 서버에서 다음 주소를 입력하면 볼 수 있습니다.`https://서버 호스트 이름/mfm-cheat-sheet`
+MFM(Markup language For Misskey)이라는 Misskey의 자체 마크업 언어에는 URL의 미리보기를 비활성화하는 구문이 있습니다.자세한 내용은 MFM 치트시트를 참고하세요.
 
 ## 사용자 지정 이모티콘을 추가, 편집, 삭제하고 싶습니다.
 

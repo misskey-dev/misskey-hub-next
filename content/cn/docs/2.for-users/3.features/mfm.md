@@ -259,6 +259,12 @@ $[bg.color=ff0 黄背景]"></MfmPreview>
 
 可以将内容用边框围起来。还可以指定各种样式。
 
+- `style`: 指定边框样式。
+- `width`: 指定边框的粗细。
+- `color`: 指定边框的颜色。
+- `radius`: 指定边框的圆角大小。
+- `noclip`: 指定时，允许边框内部的内容溢出至边框外。
+
 ```
 $[border.style=solid,width=4 Default]
 
@@ -407,6 +413,8 @@ $[twitch 🍮] $[twitch.speed=5s 🍮]
 <MfmPreview text="$[x2 $[twitch 🍮] $[twitch.speed=5s 🍮]]"></MfmPreview>
 
 ### 彩虹
+
+通过改变所包围内容的饱和度，使其呈现彩虹效果。如果内容为黑色或白色，即使饱和度发生变化，颜色也不会改变，因此必须为其指定颜色。
 
 ```
 $[rainbow 🍮] $[rainbow.speed=5s 🍮]

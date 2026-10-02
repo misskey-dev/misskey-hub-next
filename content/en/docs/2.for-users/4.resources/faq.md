@@ -49,7 +49,7 @@ For more details about Renote, see [here](../features/note/#renote).
 
 ## How can I disable URL previews in a note?
 
-Misskey's Markup language For Misskey (MFM) includes syntax to disable URL previews.For more details, refer to the MFM cheat sheet, which you can access by entering the following address on your server:`https://yourservername/mfm-cheat-sheet`.
+Misskey's Markup language For Misskey (MFM) includes syntax to disable URL previews.For more details, refer to the MFM cheat sheet,
 
 ## How can I add, edit, or delete custom emojis?
 

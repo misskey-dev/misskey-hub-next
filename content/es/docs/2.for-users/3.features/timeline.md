@@ -1,6 +1,6 @@
 # Líneas de tiempo
 
-[Notas](/docs/for-users/features/note/) se muestran en las líneas de tiempo. Hay varios tipos de líneas de tiempo como se menciona a continuación y cada uno de ellos muestra un conjunto diferente de notas. Los servidores pueden desactivar algunas de ellas.
+Las [Notas](/docs/for-users/features/note/) se muestran en las líneas de tiempo. Hay varios tipos de líneas de tiempo como se menciona a continuación y cada uno de ellos muestra un conjunto diferente de notas. Los servidores pueden desactivar algunas de ellas.
 
 ## Inicio
 
@@ -12,11 +12,11 @@ Aquí es donde se ven todos los mensajes de los usuarios locales, excepto aquell
 
 ## Social
 
-Aquí es donde ves las publicaciones de los usuarios a los que sigues Y todas las publicaciones de los usuarios locales, excepto las que tienen visibilidad de "Inicio".A menudo abreviado como STL (En inglés Social Time Line).
+Aquí es donde ves las publicaciones de los usuarios a los que sigues Y todas las publicaciones de los usuarios locales, excepto las que tienen visibilidad de "Inicio".A menudo abreviado como STL (En inglés: Social Time Line).
 
 ## Global
 
-Aquí es donde se ven los mensajes de los usuarios locales y de los usuarios remotos en servidores federados, excepto los que tienen visibilidad "Inicio".A menudo abreviado como GTL (En inglés Global Time Line).
+Aquí es donde se ven los mensajes de los usuarios locales y de los usuarios remotos en servidores federados, excepto los que tienen visibilidad "Inicio".A menudo abreviado como GTL (En inglés: Global Time Line).
 
 ## Comparación
 
