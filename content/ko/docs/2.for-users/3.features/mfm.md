@@ -255,6 +255,12 @@ $[bg.color=ff0 黄背景]"></MfmPreview>
 
 내용에 테두리를 씌울 수 있습니다.스타일을 다양하게 지정하는 것도 가능합니다.
 
+- `style`: 테두리의 스타일을 지정합니다.
+- `width`: 테두리의 굵기를 지정합니다.
+- `color`: 테두리의 색을 지정합니다.
+- `radius`: 테두리의 귀퉁이의 둥근 정도를 지정합니다.
+- `noclip`: 지정 시, 테두리의 안쪽에 있는 내용을 테두리 바깥 쪽으로 빠져나오게 합니다.
+
 ```
 $[border.style=solid,width=4 Default]
 
@@ -403,6 +409,8 @@ $[twitch 🍮] $[twitch.speed=5s 🍮]
 <MfmPreview text="$[x2 $[twitch 🍮] $[twitch.speed=5s 🍮]]"></MfmPreview>
 
 ### 무지개 효과
+
+둘러싼 내용의 채도를 변화시켜 무지개색으로 합니다.내용이 검은색이나 흰색인 경우에는 채도가 변화해도 색이 바뀌지 않기에 색을 지정할 필요가 있습니다.
 
 ```
 $[rainbow 🍮] $[rainbow.speed=5s 🍮]
