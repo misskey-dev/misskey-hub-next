@@ -12,7 +12,7 @@
 
 :::
 
-MisskeyにはWebhookが用意されています。Webhookを利用すると、Misskey上の様々なイベントをリアルタイムに受け取ることが可能です。
+MisskeyにはWebhookが用意されています。 Webhookを利用すると、Misskey上の様々なイベントをリアルタイムに受け取ることが可能です。
 
 [設定 > サービス連携](x-mi-web://settings/connect)でWebhookの管理を行えます。
 
