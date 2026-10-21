@@ -66,7 +66,7 @@ pnpm run init
 
 ## Jalankan
 
-Selamat!Kamu sudah dapat memulai peladen Misskey dengan perintah berikut.
+Selamat! Kamu sudah dapat memulai peladen Misskey dengan perintah berikut.
 
 ```sh
 NODE_ENV=production pnpm run start
