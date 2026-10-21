@@ -68,7 +68,7 @@ pnpm run init
 
 ## Launch
 
-You did it.Please start Misskey with the following command.
+You did it. Please start Misskey with the following command.
 
 ```sh
 NODE_ENV=production pnpm run start
