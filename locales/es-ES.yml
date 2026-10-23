@@ -332,7 +332,7 @@ _docs:
     aiWellDone: "Eso es todo el procedimiento. Bien hecho!"
 _blog:
   title: "Blog"
-  description: "Obtenga la última información sobre Misskey directamente de el proyecto Misskey (sólo en japonés)"
+  description: "Obtén la última información sobre Misskey directamente del proyecto Misskey (solo en japonés)"
   back: "Atrás"
 _content:
   tip: "Consejos"
@@ -361,8 +361,8 @@ _mk:
     months: "En {n}M"
     years: "En {n} años"
 _other:
-  title: "Más!"
-  description: "Presentando recursos más agradables para Misskey!"
+  title: "¡Más!"
+  description: "¡Aquí tienes algunos recursos adicionales que te ayudarán a sacar más partido a Misskey!"
 _brandAssets:
   title: "Assets de la marca"
   description: "Una colección de logotipos, iconos y otros assets de Misskey. Siéntete libre de usar para literalmente cualquier cosa bajo la licencia CC BY-SA!"

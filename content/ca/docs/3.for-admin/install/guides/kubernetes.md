@@ -16,7 +16,7 @@ MisskeyのHelmChartsはTrueNAS Scaleで使用するためのTrueChartsで公開�
 
 また、不明な点があればTrueChartsの[Discord](https://discord.gg/Ax9ZgzKx9t)サーバーで質問をすることもできます。
 
-現在、Misskeyは_incubator_ trainで進行中です。
+現在、Misskey&#x306F;_&#x69;ncubator_ trainで進行中です。
 
 :::tip{label='前提条件'}
 

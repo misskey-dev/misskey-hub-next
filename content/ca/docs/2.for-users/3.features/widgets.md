@@ -131,7 +131,7 @@ AiScript を実行できるコンソールを表示します。
 
 ### AiScript App
 
-AIScript ソースを用いてアプリを表示します。Misskey Play と同じ UI を使用できます。v13 より追加されています。
+AIScript ソースを用いてアプリを表示します。 Misskey Play と同じ UI を使用できます。 v13 より追加されています。
 
 ### 藍
 
