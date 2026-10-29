@@ -68,7 +68,7 @@ Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
 
 ### permissions
 
-プラグインが要求する権限。MisskeyAPIにリクエストする際に用いられます。
+プラグインが要求する権限。 MisskeyAPIにリクエストする際に用いられます。
 
 APIのリクエスト方法については、[AiScript Misskey拡張API リファレンス](/docs/for-developers/plugin/plugin-api-reference/)をご覧ください。
 

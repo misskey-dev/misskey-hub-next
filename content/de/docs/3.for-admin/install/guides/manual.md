@@ -66,7 +66,7 @@ pnpm run init
 
 ## Ausführen
 
-Gut gemacht!Mit dem folgenden Befehl kannst du Misskey starten.
+Gut gemacht! Mit dem folgenden Befehl kannst du Misskey starten.
 
 ```sh
 NODE_ENV=production pnpm run start
