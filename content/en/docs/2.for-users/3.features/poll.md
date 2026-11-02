@@ -4,11 +4,11 @@ Polls are a feature that allow you to solicit opinions from others.
 
 ## Attach a Poll to a Note
 
-Polls can be published by attaching them to a [note](/docs/for-users/features/note).To attach a poll to your note, select the "Poll" icon at the bottom of the posting form.
+Polls can be published by attaching them to a [note](/docs/for-users/features/note). To attach a poll to your note, select the "Poll" icon at the bottom of the posting form.
 
 ## Adding Options
 
-A poll can have up to 10 options.To add an option, click the "Add" button.
+A poll can have up to 10 options. To add an option, click the "Add" button.
 
 If you have too many options, you can delete one using the "X" button next to the option.
 
@@ -34,9 +34,9 @@ To remove a deadline, select "Never" in the "End poll" dropdown.
 
 When you see a note with a poll fly by in your timeline, vote!
 
-To vote in a poll, click on your desired option.If the user who created the poll did not allow multiple choices, the current results will be displayed immediately.
+To vote in a poll, click on your desired option. If the user who created the poll did not allow multiple choices, the current results will be displayed immediately.
 
-If the user who created the poll allowed multiple choices, you can vote for additional options.In this case, the results will not be displayed immediately.
+If the user who created the poll allowed multiple choices, you can vote for additional options. In this case, the results will not be displayed immediately.
 
 To view the results of the poll before or after voting, click the "View results" button below the options.
 
