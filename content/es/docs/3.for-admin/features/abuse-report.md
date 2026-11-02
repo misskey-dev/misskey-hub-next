@@ -2,7 +2,7 @@
 
 Misskey puede recibir informes sobre el contenido en el servidor de los usuarios dentro y fuera del servidor.
 
-El informe se entrega en [panel de control > informe] (x-mi-web://admin/abuses).**Compruébalo con frecuencia.**
+El informe se entrega en [panel de control > informe] (x-mi-web://admin/abuses). **Compruébalo con frecuencia.**
 
 ## Tramitación de informes.
 
@@ -16,7 +16,7 @@ La información incluye.
 
 :::tip
 
-El informe puede ser reenviado desde un servidor remoto.En este caso, el invocador puede ser la cuenta del sistema (`@instance.actor`) para ese servidor.
+El informe puede ser reenviado desde un servidor remoto. En este caso, el invocador puede ser la cuenta del sistema (`@instance.actor`) para ese servidor.
 
 :::
 
@@ -31,8 +31,8 @@ la respuesta puede terminarse distinguiendo el estado de la resolución en funci
 
 ## Reenviar a la instancia  remota
 
-En el caso de un informe relativo a un usuario remoto, el informe puede reenviarse al servidor en cuestión.Al reenviar un informe, la persona que llama se reenvía en forma de cuenta anónima del sistema (`@instance.actor`).
+En el caso de un informe relativo a un usuario remoto, el informe puede reenviarse al servidor en cuestión. Al reenviar un informe, la persona que llama se reenvía en forma de cuenta anónima del sistema (`@instance.actor`).
 
 ## Notificación del informe.
 
-Puede recibir una notificación de que se ha realizado un informe mediante un webhook o una notificación por correo electrónico.Abra [Panel de control > Informes] (x-mi-web://admin/abuses) y vaya a 'Configuración de notificaciones'.
+Puede recibir una notificación de que se ha realizado un informe mediante un webhook o una notificación por correo electrónico. Abra [Panel de control > Informes] (x-mi-web://admin/abuses) y vaya a 'Configuración de notificaciones'.
