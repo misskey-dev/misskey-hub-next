@@ -4,19 +4,19 @@
 
 ## Home
 
-This is where you see posts from users you follow.Often abbreviated as HTL.
+This is where you see posts from users you follow. Often abbreviated as HTL.
 
 ## Local
 
-This is where you see all the posts from the local users, except those with "Home" visibility.Often abbreviated as LTL.
+This is where you see all the posts from the local users, except those with "Home" visibility. Often abbreviated as LTL.
 
 ## Social
 
-This is where you see the posts from users you follow AND all the posts from the local users, except those with "Home" visibility.Often abbreviated as STL.
+This is where you see the posts from users you follow AND all the posts from the local users, except those with "Home" visibility. Often abbreviated as STL.
 
 ## Global
 
-This is where you see the posts from the local users and the remote users in federated servers, except those with "Home" visibility.Often abbreviated as GTL.
+This is where you see the posts from the local users and the remote users in federated servers, except those with "Home" visibility. Often abbreviated as GTL.
 
 ## Comparison
 
