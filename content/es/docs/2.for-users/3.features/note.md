@@ -1,6 +1,6 @@
 # Notas
 
-Las notas son el contenido principal de Misskey. Pueden consistir en imágenes, textos, encuestas y más.En otras plataformas, las notas se conocen como posts.
+Las notas son el contenido principal de Misskey. Pueden consistir en imágenes, textos, encuestas y más. En otras plataformas, las notas se conocen como posts.
 
 :::tip
 
@@ -10,13 +10,13 @@ El nombre «nota» proviene del tipo de objeto ActivityPub `Note`, que en este c
 
 Una vez creada una nota, se añadirá a tu [Línea del Tiempo](./timeline) y será visible para tus [seguidores](./follow) y otros usuarios de tu instancia.
 
-Puedes [reaccionar](./reaction),contestar o citar notas.
+Puedes [reaccionar](./reaction), contestar o citar notas.
 
 Puedes encontrar una nota más tarde añadiéndola a tus [Favoritos](./favorite).
 
 ## Redactar una nota
 
-Para redactar una nota, haz clic en el botón Nota (representado por el icono de un lápiz) para abrir el formulario de redacción.Introduce el contenido y haz clic en el botón Nota (con el icono de un avión de papel) para enviar la nota. Las notas pueden contener texto, imágenes, vídeos y [encuestas](./poll).Puedes formatear tu nota usando [Markup language For Misskey (MFM)](./mfm), [mencionar](./mention) otros usuarios, o incluir [hashtags](./hashtag). También puedes añadir advertencias de contenido (CW) y cambiar la visibilidad de la nota (más sobre esto debajo).
+Para redactar una nota, haz clic en el botón Nota (representado por el icono de un lápiz) para abrir el formulario de redacción. Introduce el contenido y haz clic en el botón Nota (con el icono de un avión de papel) para enviar la nota. Las notas pueden contener texto, imágenes, vídeos y [encuestas](./poll). Puedes formatear tu nota usando [Markup language For Misskey (MFM)](./mfm), [mencionar](./mention) otros usuarios, o incluir [hashtags](./hashtag). También puedes añadir advertencias de contenido (CW) y cambiar la visibilidad de la nota (más sobre esto debajo).
 
 :::tip
 
@@ -46,8 +46,8 @@ Para eliminar una renota en la web de Misskey, presiona "..." junto a la hora de
 
 ## CW Advertencia de Contenido
 
-Abreviatura de "Advertencia de contenido", en inglés Content Warning, que hace que el contenido de una nota quede oculto a menos que el usuario que la ve solicite explícitamente que se muestre.Se utiliza principalmente para ocultar el contenido de notas largas o para evitar publicar spoilers públicamente.
-Para activar el Cw de una nota, pulsa el botón «Esconder contenidos» (icono del ojo) en el formulario de publicación.Al hacerlo, aparecerá una nueva área de introducción de texto, donde podrás escribir un resumen del contenido oculto por el CW.
+Abreviatura de "Advertencia de contenido", en inglés Content Warning, que hace que el contenido de una nota quede oculto a menos que el usuario que la ve solicite explícitamente que se muestre. Se utiliza principalmente para ocultar el contenido de notas largas o para evitar publicar spoilers públicamente.
+Para activar el Cw de una nota, pulsa el botón «Esconder contenidos» (icono del ojo) en el formulario de publicación. Al hacerlo, aparecerá una nueva área de introducción de texto, donde podrás escribir un resumen del contenido oculto por el CW.
 
 ## Visibilidad
 
@@ -71,11 +71,11 @@ Tu nota será visible para todos los usuarios, pero no aparecerá en la cronolog
 
 ### Seguidores
 
-Tu nota solo será visible para quienes te sigan.La nota aparecerá en todas las líneas de tiempo de tus seguidores.
+Tu nota solo será visible para quienes te sigan. La nota aparecerá en todas las líneas de tiempo de tus seguidores.
 
 ### Nota Directa
 
-Tu nota solo será visible para los usuarios especificados individualmente.La nota aparecerá en todas las líneas de tiempo de los usuarios especificados.
+Tu nota solo será visible para los usuarios especificados individualmente. La nota aparecerá en todas las líneas de tiempo de los usuarios especificados.
 
 :::tip
 
@@ -108,4 +108,4 @@ Puedes fijar múltiples notas en tu perfil.
 
 ## Notificación sobre una nueva nota de usuario
 
-Se puede enviar una notificación cuando un usuario publique una nueva nota.Ve a la página del usuario del que deseas recibir notificaciones, selecciona el botón Detalles situado junto al botón Seguir y, a continuación, haz clic en "Notificar nuevas notas" para activarlo.
+Se puede enviar una notificación cuando un usuario publique una nueva nota. Ve a la página del usuario del que deseas recibir notificaciones, selecciona el botón Detalles situado junto al botón Seguir y, a continuación, haz clic en "Notificar nuevas notas" para activarlo.
