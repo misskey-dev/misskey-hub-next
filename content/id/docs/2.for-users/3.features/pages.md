@@ -1,6 +1,6 @@
 # Halaman
 
-Kamu dapat membuat Halaman di Misskey yang terpisah dari Catatan.Pada versi 13 kami membuat Halaman menjadi halaman statis.
+Kamu dapat membuat Halaman di Misskey yang terpisah dari Catatan. Pada versi 13 kami membuat Halaman menjadi halaman statis.
 
 :::warning
 
@@ -22,11 +22,11 @@ Mulai dari versi 13, Misskey Play dapat digunakan untuk menggantikan halaman din
 
 ### Judul
 
-Masukkan judul dari halaman.Akan tampil dalam daftar.
+Masukkan judul dari halaman. Akan tampil dalam daftar.
 
 ### Ringkasan Halaman
 
-Masukkan deskripsi singkat.Akan tampil dalam daftar.
+Masukkan deskripsi singkat. Akan tampil dalam daftar.
 
 ### URL Halaman
 
@@ -46,11 +46,11 @@ Menyembunyikan judul halaman saat disematkan.
 
 ### Gambar yang menarik
 
-Kamu dapat mengatur sebuah gambar dari **Pengaturan Gambar Unggulan**.Dapat ditampilkan dalam tampilan daftar, dll.
+Kamu dapat mengatur sebuah gambar dari **Pengaturan Gambar Unggulan**. Dapat ditampilkan dalam tampilan daftar, dll.
 
 ## Konten
 
-Sunting badan halaman.Halaman dapat dihasilkan dengan menggabungkan salah satu blok berikut atau lebih.
+Sunting badan halaman. Halaman dapat dihasilkan dengan menggabungkan salah satu blok berikut atau lebih.
 
 - Bagian
 - Teks
@@ -59,16 +59,16 @@ Sunting badan halaman.Halaman dapat dihasilkan dengan menggabungkan salah satu b
 
 ### Bagian
 
-Ketika mengatur judul, akan ditampilkan sebagai heading.Selanjutnya, blok dapat diatur di dalam.
+Ketika mengatur judul, akan ditampilkan sebagai heading. Selanjutnya, blok dapat diatur di dalam.
 
 ### Teks
 
-Masukkan badan teks.MFM serta emoji kustom dapat digunakan.
+Masukkan badan teks. MFM serta emoji kustom dapat digunakan.
 
 ### Gambar
 
-Menampilkan gambarMenampilkan gambar dari Drive
+Menampilkan gambar Menampilkan gambar dari Drive
 
 ### Catatan yang ditanam
 
-Dengan memasukkan ID catatan, konten dari catatan dapat ditampilkan.Apabila kamu ingin menanamkan catatan dari peladen lain, masukkan URL-nya ke dalam pencarian dan tempelkan ID catatan yang ditampilkan.
+Dengan memasukkan ID catatan, konten dari catatan dapat ditampilkan. Apabila kamu ingin menanamkan catatan dari peladen lain, masukkan URL-nya ke dalam pencarian dan tempelkan ID catatan yang ditampilkan.
