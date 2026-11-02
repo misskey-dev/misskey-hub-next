@@ -15,12 +15,12 @@ También puedes configurar tu infraestructura con una CDN como Cloudflare para o
 
 A continuación se muestra un ejemplo de configuración para cuando nginx se instala directamente en una máquina servidor (como un VPS) y se utiliza [Let's Encrypt](https://letsencrypt.org/) como autoridad de certificación.
 
-1. Crea `/etc/nginx/conf.d/misskey.conf` o `/etc/nginx/sites-available/misskey.conf` y copia la configuración de ejemplo que aparece a continuación.\
+1. Crea `/etc/nginx/conf.d/misskey.conf` o `/etc/nginx/sites-available/misskey.conf` y copia la configuración de ejemplo que aparece a continuación. \
    (El nombre del archivo no tiene por qué ser Misskey.)
 2. Editalo como sigue:
-   1. Sustituye example.tld por el dominio que has preparado.`ssl_certificate` y `ssl_certificate_key` deben ser la ruta al certificado obtenido de Let's Encrypt.
+   1. Sustituye example.tld por el dominio que has preparado. `ssl_certificate` y `ssl_certificate_key` deben ser la ruta al certificado obtenido de Let's Encrypt.
    2. Si utilizas una CDN como Cloudflare, elimina 4 líneas de "Si está detrás de otro proxy inverso o CDN, elimina lo siguiente".
-3. Si creaste `/etc/nginx/sites-available/misskey.conf`, crea un enlace simbólico como `/etc/nginx/sites-enabled/misskey.conf`.\
+3. Si creaste `/etc/nginx/sites-available/misskey.conf`, crea un enlace simbólico como `/etc/nginx/sites-enabled/misskey.conf`. \
    `sudo ln -s /etc/nginx/sites-available/misskey.conf /etc/nginx/sites-enabled/misskey.conf`
 4. Ejecuta `sudo nginx -t` para verificar que el archivo de configuración se cargará correctamente.
 5. Reinicia nginx con `sudo systemctl restart nginx`.
