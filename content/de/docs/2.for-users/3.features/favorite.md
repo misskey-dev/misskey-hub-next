@@ -5,4 +5,4 @@
 Sie können Ihre favorisierten Notizen auf Ihrer [Favoritenseite](x-mi-web://my/favorites) einsehen.
 Notizersteller erhalten keine Benachrichtigung, sollte der Beitrag favorisiert werden.
 
-Um eine Notiz als Favorit zu speichern, drücke im Notizen-Menü auf „Favoriten“.Zum aufheben, drücke im Notizen-Menü auf "Aufhebung der Favorisierung" (dieser befindet sich auf der gleichen Höhe, nach Favorisierung).
+Um eine Notiz als Favorit zu speichern, drücke im Notizen-Menü auf „Favoriten“. Zum aufheben, drücke im Notizen-Menü auf "Aufhebung der Favorisierung" (dieser befindet sich auf der gleichen Höhe, nach Favorisierung).
