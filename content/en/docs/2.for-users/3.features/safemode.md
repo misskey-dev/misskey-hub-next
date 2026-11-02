@@ -16,10 +16,10 @@ When safe mode is enabled, the following limitations apply:
 - The default theme is used regardless of settings, and theme changes are disabled. Themes can still be deleted from the theme management page.
 - A “safe mode” indicator is always displayed on screen.
 
-Use safe mode to troubleshoot issues.Once the issue has been resolved, click "Turn off" in the safe mode menu to disable safe mode.
+Use safe mode to troubleshoot issues. Once the issue has been resolved, click "Turn off" in the safe mode menu to disable safe mode.
 
 :::tip
 
-Safe mode is not intended for regular use.Once troubleshooting is complete, disable it and start the app in normal mode.
+Safe mode is not intended for regular use. Once troubleshooting is complete, disable it and start the app in normal mode.
 
 :::
