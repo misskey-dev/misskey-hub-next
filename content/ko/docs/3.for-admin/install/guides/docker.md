@@ -37,7 +37,7 @@ cp ./docker-compose_example.yml ./docker-compose.yml
 ```
 
 `default.yml`과 `docker.env`를 파일 내 설명에 따라 편집합니다.  
-또한, 필요에 의해서 `docker-compose.yml`을 편집합니다.(포트를 변경하고 싶은 경우 등)
+또한, 필요에 의해서 `docker-compose.yml`을 편집합니다. (포트를 변경하고 싶은 경우 등)
 
 ## 빌드 및 초기화
 
@@ -51,7 +51,7 @@ sudo docker compose run --rm web pnpm run init
 
 ## 실행
 
-수고하셨습니다.아래 명령어로 Misskey를 실행할 수 있습니다.
+수고하셨습니다. 아래 명령어로 Misskey를 실행할 수 있습니다.
 
 ```sh
 sudo docker compose up -d
