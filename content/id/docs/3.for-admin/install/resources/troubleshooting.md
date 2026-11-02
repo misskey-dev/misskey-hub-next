@@ -2,7 +2,7 @@
 
 <small>2018年10月07日 / 2021年12月20日 最終更新 / 文責 aqz/tamaina</small>
 
-MisskeyInstallBattle参加者が増えましたが、それに伴い時期を追うごとに重軽傷者が増加しています。\
+MisskeyInstallBattle参加者が増えましたが、それに伴い時期を追うごとに重軽傷者が増加しています。 \
 この記事ではそのような負傷者を減らすため、過去に事故が起きてしまった個所の傾向と対策をわかりやすく解説します。
 
 **まず最初に、[構築の手引き](../guides/manual/)を熟読してください。**
@@ -15,8 +15,8 @@ Ubuntu向け解説はコピペばかりでつまらない！時間がかかる�
 
 ……あれ、コピペだけでできるなら、つまり完全自動化できるのでは？
 
-というわけで、**シェルスクリプトでほぼ全部やってくれるやつを作ってみました！**  
-[**詳細と使用方法はこちらから！** https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
+というわけで、\*\*シェルスクリプトでほぼ全部やってくれるやつを作ってみました！ \*\*  
+[\*\*詳細と使用方法はこちらから！ \*\* https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
 
 ドメインの購入とCloudflareのセットアップ、サーバーの確保についてはご自身でご準備ください。
 
@@ -32,7 +32,7 @@ _**ImageMagickは不要です！**_
 
 ## ビルドが失敗する
 
-Misskeyのビルドには、経験則上、最低でも2GBのメモリが必要となっています。\
+Misskeyのビルドには、経験則上、最低でも2GBのメモリが必要となっています。 \
 サーバーをスケールアップする手もありますが、お使いのPCでビルドしてサーバーにデプロイするという手もあります。
 
 ## なんだかうまくいかない
