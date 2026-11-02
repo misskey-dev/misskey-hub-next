@@ -36,7 +36,7 @@ Plugin merupakan script yang dituliskan menggunakan bahasa pemrograman AiScript.
 
 ## Metadata
 
-Plugin harus mendefinisikan metadata plugin dengan menggunakan bawaan fitur sematan metadata AiScript.Contoh Metadata dapat dilihat pada kode di bawah ini.
+Plugin harus mendefinisikan metadata plugin dengan menggunakan bawaan fitur sematan metadata AiScript. Contoh Metadata dapat dilihat pada kode di bawah ini.
 
 ```AiScript
 /// @ 0.12.4
@@ -60,7 +60,7 @@ Pembuat Plugin
 
 ### version
 
-Versi Plugin.Mohon tentukan nilai numerik.
+Versi Plugin. Mohon tentukan nilai numerik.
 
 ### description
 
@@ -68,7 +68,7 @@ Deskripsi Plugin
 
 ### permissions
 
-Izin yang dibutuhkan oleh plugin.Digunakan ketika membuat permintaan ke Misskey API.
+Izin yang dibutuhkan oleh plugin. Digunakan ketika membuat permintaan ke Misskey API.
 
 APIのリクエスト方法については、[AiScript Misskey拡張API リファレンス](/docs/for-developers/plugin/plugin-api-reference/)をご覧ください。
 
@@ -85,7 +85,7 @@ Objek merepresentasikan informasi konfigurasi plugin.
 
 #### type
 
-String yang merepresentasikan tipe dari nilai konfigurasi.Pilih salah satu dari berikut.
+String yang merepresentasikan tipe dari nilai konfigurasi. Pilih salah satu dari berikut.
 string number boolean
 
 #### label
