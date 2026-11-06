@@ -6,7 +6,7 @@ Dies ist eine Funktion ab Version 12.95.0.
 
 :::
 
-Thread Mute schaltet den Thread der angegebenen Notiz stumm.Ein Thread besteht aus allen Antworten, die ausgehend von einer Startnotiz miteinander verbunden sind.
+Thread Mute schaltet den Thread der angegebenen Notiz stumm. Ein Thread besteht aus allen Antworten, die ausgehend von einer Startnotiz miteinander verbunden sind.
 
 Wenn ein Thema stummgeschalten wird, wird nicht mehr über neue Antworten auf das Thema und an dich gerichtete Erwähnungen in den Antworten benachrichtigt, und sie erscheinen auch nicht mehr im Abschnitt „an dich gerichtet“.
 

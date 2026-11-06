@@ -39,7 +39,7 @@ Misskey 將 Redis 用於多種目的，包括：
 - 儲存通知等訊息
 - 全域事件的Pub/Sub
 
-在 Misskey 中，您可以為不同的用途配置不同的 Redis 伺服器，從而將負擔分散到多台伺服器上。（摘錄一部分）
+在 Misskey 中，您可以為不同的用途配置不同的 Redis 伺服器，從而將負擔分散到多台伺服器上。在 config 文件中進行以下配置。（摘錄一部分）
 
 ```yml
 redisForPubsub:

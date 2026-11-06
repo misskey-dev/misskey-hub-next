@@ -38,7 +38,7 @@ cp ./compose_example.yml ./compose.yml
 
 Por favor edita `default.yml` y `docker.env` así como su descripción.\
 También edita `compose.yml` si es necesario( Por si quieres cambiar el puerto etc.).  
-Asegúrate de comprobar con antelación cualquier cambio que pueda ser necesario.(Si deseas cambiar el puerto etc.)
+Asegúrate de comprobar con antelación cualquier cambio que pueda ser necesario. (Si deseas cambiar el puerto etc.)
 
 ## Construir y inicializar
 
@@ -51,7 +51,7 @@ sudo docker compose run --rm web pnpm run init
 
 ## Iniciar
 
-¡Felicidades!Puedes ejecutar Misskey con el siguiente comando.
+¡Felicidades! Puedes ejecutar Misskey con el siguiente comando.
 
 ```sh
 sudo docker compose up -d

@@ -2,7 +2,7 @@
 
 FTT es una de las funciones de servidor disponibles en Misskey.
 
-Cuando se activa, el rendimiento de la recuperación de varias líneas de tiempo puede mejorar significativamente y la carga de la base de datos puede reducirse.Sin embargo, el uso de memoria en Redis aumentará.Puede desactivarse si la capacidad de memoria del servidor es baja o si el funcionamiento es inestable.
+Cuando se activa, el rendimiento de la recuperación de varias líneas de tiempo puede mejorar significativamente y la carga de la base de datos puede reducirse. Sin embargo, el uso de memoria en Redis aumentará. Puede desactivarse si la capacidad de memoria del servidor es baja o si el funcionamiento es inestable.
 
 Puede configurar los ajustes a través de [Panel de control > Rendimiento] (x-mi-web://admin/performance).
 

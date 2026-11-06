@@ -40,17 +40,17 @@ type EmojiSimple = {
 
 ### `LOCALE`
 
-現在のMisskey Webの設定言語。RFC4646互換の形式（`ja-JP`など）で表されます
+現在のMisskey Webの設定言語。 RFC4646互換の形式（`ja-JP`など）で表されます
 
 ### `SERVER_URL`
 
-現在のサーバーのURL。`https://www.example.com` のようにオリジンで表されます
+現在のサーバーのURL。 `https://www.example.com` のようにオリジンで表されます
 
 ## 全分野共通関数
 
 ### `Mk:dialog(title, text, type)`
 
-ダイアログを表示します。typeには以下の値が設定できます。\
+ダイアログを表示します。 typeには以下の値が設定できます。 \
 `info` `success` `warning` `error` `question`\
 省略すると `info` になります。
 
@@ -60,9 +60,9 @@ type EmojiSimple = {
 
 ### `Mk:confirm(title, text, type)`
 
-確認ダイアログを表示します。typeには以下の値が設定できます。\
+確認ダイアログを表示します。 typeには以下の値が設定できます。 \
 `info` `success` `warning` `error` `question`\
-省略すると `question` になります。\
+省略すると `question` になります。 \
 ユーザーが"OK"を選択した場合は `true` を、"キャンセル"を選択した場合は `false` が返ります。
 
 ```AiScript
@@ -127,13 +127,13 @@ Mk:saveで永続化した指定の名前の値を削除します。指定の名�
 
 ### `Mk:nyaize(text)`
 
-指定されたテキストをNyaizeします。MFMの構文などは考慮されません。
+指定されたテキストをNyaizeします。 MFMの構文などは考慮されません。
 
 ## プラグイン専用
 
 ### `Plugin:register_post_form_action(title, fn)`
 
-投稿フォームにアクションを追加します。第一引数にアクション名、第二引数にアクションが選択された際のコールバック関数を渡します。\
+投稿フォームにアクションを追加します。第一引数にアクション名、第二引数にアクションが選択された際のコールバック関数を渡します。 \
 コールバック関数には、第一引数に投稿フォームオブジェクトのうち`text`と`cw`が、第二引数にそれらを書き換えるための関数が渡されます。
 
 ```AiScript
@@ -146,7 +146,7 @@ Plugin:register_post_form_action('メニューに表示される項目名', @(no
 
 ### `Plugin:register_note_action(title, fn)`
 
-ノートメニューに項目を追加します。第一引数に項目名、第二引数に項目が選択された際のコールバック関数を渡します。\
+ノートメニューに項目を追加します。第一引数に項目名、第二引数に項目が選択された際のコールバック関数を渡します。 \
 コールバック関数には、第一引数に対象のノートオブジェクトが渡されます。
 
 ```AiScript
@@ -163,7 +163,7 @@ Plugin:register_note_action('メニューに表示される項目名', @(note) {
 
 ### `Plugin:register_user_action(title, fn)`
 
-ユーザーメニューに項目を追加します。第一引数に項目名、第二引数に項目が選択された際のコールバック関数を渡します。\
+ユーザーメニューに項目を追加します。第一引数に項目名、第二引数に項目が選択された際のコールバック関数を渡します。 \
 コールバック関数には、第一引数に対象のユーザーオブジェクトが渡されます。
 
 ```AiScript
@@ -179,9 +179,9 @@ Plugin:register_user_action('メニューに表示される項目名', @(user) {
 
 ### `Plugin:register_note_view_interruptor(fn)`
 
-UIに表示されるノート情報を書き換えます。\
-コールバック関数には、第一引数に対象のノートオブジェクトが渡されます。\
-コールバック関数の返り値でノートが書き換えられます。\
+UIに表示されるノート情報を書き換えます。 \
+コールバック関数には、第一引数に対象のノートオブジェクトが渡されます。 \
+コールバック関数の返り値でノートが書き換えられます。 \
 `null` を返すとそのノートを非表示にします。
 
 :::warning
@@ -210,8 +210,8 @@ Plugin:register_note_view_interruptor(@(note) {
 
 ### `Plugin:register_note_post_interruptor(fn)`
 
-ノート投稿時にノート情報を書き換えます。\
-コールバック関数には、第一引数に対象のノートオブジェクトが渡されます。\
+ノート投稿時にノート情報を書き換えます。 \
+コールバック関数には、第一引数に対象のノートオブジェクトが渡されます。 \
 コールバック関数の返り値でノートが書き換えられます。
 
 ```AiScript
@@ -226,8 +226,8 @@ Plugin:register_note_post_interruptor(@(note) {
 
 ### `Plugin:register_page_view_interruptor(fn)`
 
-Page閲覧時にPage情報を書き換えます。\
-コールバック関数には、第一引数に対象のPageオブジェクトが渡されます。\
+Page閲覧時にPage情報を書き換えます。 \
+コールバック関数には、第一引数に対象のPageオブジェクトが渡されます。 \
 コールバック関数の返り値でPageが書き換えられます。
 
 ```AiScript
@@ -265,7 +265,7 @@ UIのルート要素。
 
 ### `Ui:render([ ...components ])`
 
-`Ui:root.update({ children: [ ...components ] })` の糖衣構文。UIのルート要素を書き換えます。
+`Ui:root.update({ children: [ ...components ] })` の糖衣構文。 UIのルート要素を書き換えます。
 
 ```AiScript
 Ui:render([

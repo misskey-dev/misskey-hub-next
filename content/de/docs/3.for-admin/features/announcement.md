@@ -6,7 +6,7 @@ Die Ankündigungsfunktion ermöglicht es den Benutzern, serverweite Ankündigung
 
 :::warning
 
-Eine große Anzahl aktiver Benachrichtigungen kann den Bestätigungsprozess verlängern, insbesondere für neue Benutzer, und die Benutzerfreundlichkeit beeinträchtigen.In solchen Fällen können die folgenden Optionen in Betracht gezogen werden:
+Eine große Anzahl aktiver Benachrichtigungen kann den Bestätigungsprozess verlängern, insbesondere für neue Benutzer, und die Benutzerfreundlichkeit beeinträchtigen. In solchen Fällen können die folgenden Optionen in Betracht gezogen werden:
 
 - Erstelle eine Mitteilung mit der Option „nur für bestehende Benutzer“.
 - Erstelle eine Mitteilung mit der Option „Nicht benachrichtigen“.

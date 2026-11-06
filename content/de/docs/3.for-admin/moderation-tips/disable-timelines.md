@@ -1,6 +1,6 @@
 # LTL/STL/GTL Chronik deaktivieren
 
-Misskey erlaubt es, die lokale, soziale und globale Chronik jeweils zu deaktivieren.Die Chroniken können in den Instanzeinstellungen aktiviert bzw. deaktiviert werden.
+Misskey erlaubt es, die lokale, soziale und globale Chronik jeweils zu deaktivieren. Die Chroniken können in den Instanzeinstellungen aktiviert bzw. deaktiviert werden.
 
 Dass alle Notizen auf deiner Instanz auf der lokalen und sozialen Chronik erscheinen, erleichtert es neuen Nutzern, andere zu finden, ohne dafür die Suche benutzen zu müssen. Es bedeutet jedoch auch, dass es nicht unbedingt nötig ist, Nutzern zu folgen, um ihre Posts zu sehen, und dass häufiger unangebrachte Inhalte zu sehen sein könnten. Die Nutzung gleicht zudem eher der eines Chatrooms, was es neuen Nutzern wiederum erschweren könnte, in Gespräche unter Langzeitnutzern einzusteigen. Diese Vor- und Nachteile wiegen je nach Instanz unterschiedlich schwer, weshalb die Wahl letztendlich den Betreibern überlassen ist. Falls die Nachteile also in deinem Fall überwiegen, kannst du die jeweiligen Chroniken auch deaktivieren.
 

@@ -2,7 +2,7 @@
 
 Wenn einen Nutzer nicht gewollt ist, kann dieser unsichtbar gemacht werden, indem er stummgeschalten wird.
 Als noch wirkungsvollere Maßnahme können Nutzer auch blockieren, so dass er eigene Inhalte nicht sehen und nicht mit Ihnen interagieren kann.
-Die andere Person wird nicht wissen, dass sie stummgeschaltet wurde, aber sie wird unter Umständen wissen, dass sie blockiert wurde.Diese Entscheidung liegt beim jeweiligen Nutzer selbst.
+Die andere Person wird nicht wissen, dass sie stummgeschaltet wurde, aber sie wird unter Umständen wissen, dass sie blockiert wurde. Diese Entscheidung liegt beim jeweiligen Nutzer selbst.
 
 :::tip
 
@@ -37,7 +37,7 @@ Der stummgeschaltete Benutzer erhält hierüber keine Benachrichtung, und erhäl
 
 ## Renotes stummschalten
 
-Nur die Notizen des Benutzers können von der Timeline ausgeschlossen werden, z. B. wenn der Benutzer eine große Anzahl von Notizen hat, die er neu notieren muss.Die normalen Notizen des Benutzers sind davon nicht betroffen.
+Nur die Notizen des Benutzers können von der Timeline ausgeschlossen werden, z. B. wenn der Benutzer eine große Anzahl von Notizen hat, die er neu notieren muss. Die normalen Notizen des Benutzers sind davon nicht betroffen.
 
 ## Sperren
 
@@ -65,6 +65,6 @@ Der Nutzer wird bei einer Sperrung nicht benachrichtigt, erfährt aber, dass er 
 
 :::warning
 
-Die Sperrung greift nicht im "abgemeldeten Modus", sowie bei einem etwaigen 2.-Account.Die Sperrung dient zur einfachen und ergänzenden Maßnahme und sollte auch nur als solche angesehen werden.
+Die Sperrung greift nicht im "abgemeldeten Modus", sowie bei einem etwaigen 2.-Account. Die Sperrung dient zur einfachen und ergänzenden Maßnahme und sollte auch nur als solche angesehen werden.
 
 :::

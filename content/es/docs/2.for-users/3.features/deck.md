@@ -1,6 +1,6 @@
 # Deck
 
-Deck es una de las interfaces de usuario disponible.Ofrece la posibilidad de crear interfaces de usuario muy personalizables y densas mostrando varias vistas una al lado de la otra llamadas «columnas».  
+Deck es una de las interfaces de usuario disponible. Ofrece la posibilidad de crear interfaces de usuario muy personalizables y densas mostrando varias vistas una al lado de la otra llamadas «columnas».  
 Además, cuando se muestren notas o perfiles en la página, si se añade una columna principal, su contenido se mostrará dentro de ella.
 
 ## Agregar Columnas
@@ -17,7 +17,7 @@ Las columnas pueden ordenarse no solo horizontalmente, sino también verticalmen
 
 ## Ajustes de columna
 
-Los ajustes de la columna pueden ser editados seleccionando "Editar" desde el menú de la columna.Las columnas pueden renombrarse y su anchura modificarse.
+Los ajustes de la columna pueden ser editados seleccionando "Editar" desde el menú de la columna. Las columnas pueden renombrarse y su anchura modificarse.
 
 ## Ajustes del Deck
 

@@ -4,7 +4,7 @@ description: 'MFM is a proprietary markup language that can be used in various l
 
 # MFM
 
-MFM, short for Markup language For Misskey, is a proprietary markup language that can be used in various locations in Misskey.Some of its syntax is compatible with Markdown and HTML.
+MFM, short for Markup language For Misskey, is a proprietary markup language that can be used in various locations in Misskey. Some of its syntax is compatible with Markdown and HTML.
 
 :::tip
 
@@ -108,7 +108,7 @@ For more information about custom emoji, see [here](./custom-emoji.md).
 Bolds text for emphasis.
 
 ```
-**太字**
+**bold**
 ```
 
 <MfmPreview text="**太字**"></MfmPreview>
@@ -175,7 +175,7 @@ Displays syntax highlighting for code from programs inline.
 
 Displays multi-line syntax highlighting for code from programs in a block.
 
-By specifying the programming language by ID, you can apply syntax highlighting in that language.Available languages are:
+By specifying the programming language by ID, you can apply syntax highlighting in that language. Available languages are:
 
 - [Languages supported by Shiki (200+)](https://shiki.style/languages)
 - AiScript: Specify one of `aiscript`, `ais`, or `is` to use.
@@ -223,7 +223,7 @@ $[font.fantasy MisskeyでFediverseの世界が広がります]"></MfmPreview>
 
 ### Blur
 
-Content can be blurred.When hovering the mouse over the content, it will be displayed clearly.
+Content can be blurred. When hovering the mouse over the content, it will be displayed clearly.
 
 ```
 $[blur MisskeyでFediverseの世界が広がります]
@@ -257,7 +257,13 @@ $[bg.color=ff0 黄背景]"></MfmPreview>
 
 ### Border
 
-Content can be surrounded with borders.The borders can have various styles.
+Content can be surrounded with borders. The borders can have various styles.
+
+- `style`: 枠線のスタイルを指定します。
+- `width`: 枠線の太さを指定します。
+- `color`: 枠線の色を指定します。
+- `radius`: 枠線の角の丸みを指定します。
+- `noclip`: 指定時、枠線の内側にある内容を枠線の外側にはみ出させます。
 
 ```
 $[border.style=solid,width=4 Default]
@@ -407,6 +413,8 @@ $[twitch 🍮] $[twitch.speed=5s 🍮]
 <MfmPreview text="$[x2 $[twitch 🍮] $[twitch.speed=5s 🍮]]"></MfmPreview>
 
 ### Rainbow
+
+囲んだ中身の彩度を変化させて虹色にします。内容が黒や白の場合は、彩度が変化しても色が変わらないため、色を指定する必要があります。
 
 ```
 $[rainbow 🍮] $[rainbow.speed=5s 🍮]

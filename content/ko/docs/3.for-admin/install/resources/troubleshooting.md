@@ -2,7 +2,7 @@
 
 <small>2018년 10월 07일 / 2021년 12월 20일 최종 업데이트 / 문책 aqz/tamaina</small>
 
-MisskeyInstallBattle 참가자가 늘어났지만, 그에 따라 시간이 지날수록 중경상자가 증가하고 있습니다.\
+MisskeyInstallBattle 참가자가 늘어났지만, 그에 따라 시간이 지날수록 중경상자가 증가하고 있습니다. \
 이 글에서는 이러한 부상을 줄이기 위해 과거에 사고가 발생했던 부분의 경향과 대책을 알기 쉽게 설명합니다.
 
 **먼저, [구축 안내서](../guides/manual/)를 숙지하시기 바랍니다.**
@@ -11,12 +11,12 @@ MisskeyInstallBattle 참가자가 늘어났지만, 그에 따라 시간이 지�
 
 # 우분투용 쉘 스크립트 안내
 
-우분투에 대한 설명은 복사, 붙여넣기로만 이루어져 있어 재미없어요!시간이 걸린다!어쨌든 귀찮다!
+우분투에 대한 설명은 복사, 붙여넣기로만 이루어져 있어 재미없어요! 시간이 걸린다! 어쨌든 귀찮다!
 
-……어라, 복사-붙여넣기만으로 할 수 있다면 완전 자동화가 가능하지 않을까?
+…… 어라, 복사-붙여넣기만으로 할 수 있다면 완전 자동화가 가능하지 않을까?
 
-그래서 **쉘 스크립트로 거의 모든 것을 해주는 것을 만들어 보았습니다!**\
-[\*\*자세한 내용 및 사용법은 여기에서 확인하세요!]\*\*https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
+그래서 \*\*쉘 스크립트로 거의 모든 것을 해주는 것을 만들어 보았습니다! \*\*\
+[\*\*자세한 내용 및 사용법은 여기에서 확인하세요!] \*\*https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
 
 도메인 구매 및 Cloudflare 설정, 서버 확보는 여러분이 직접 준비해 주시기 바랍니다.
 
@@ -32,7 +32,7 @@ _**ImageMagick이 필요하지 않습니다!**_
 
 ## 빌드가 실패하는 경우
 
-Misskey를 빌드하기 위해서는 최소 2GB의 메모리가 필요하다는 것이 경험상 권장됩니다.\
+Misskey를 빌드하기 위해서는 최소 2GB의 메모리가 필요하다는 것이 경험상 권장됩니다. \
 서버를 확장하는 방법도 있지만, PC에서 빌드하여 서버에 배포하는 방법도 있습니다.
 
 ## 왠지 잘 안 풀린다
@@ -40,7 +40,7 @@ Misskey를 빌드하기 위해서는 최소 2GB의 메모리가 필요하다는 
 - [구축 안내서](../guides/manual/)을 잘 읽어보세요.
 - node.js의 버전이 오래되었나요?
   - 새로운 버전으로 해봅시다.
-- 설치나 빌드시 Error나 WARN 같은 것이 나올 수 있지만, 문제가 없는 경우도 있습니다.일단 `npm start`로 동작을 확인해 봅시다.
+- 설치나 빌드시 Error나 WARN 같은 것이 나올 수 있지만, 문제가 없는 경우도 있습니다. 일단 `npm start`로 동작을 확인해 봅시다.
 - node-gyp이 설치되지 않았나요?
   - `apt install build-essential`을 시도합니다.
   - 윈도우는 [이 글](https://qiita.com/AkihiroTakamura/items/25ba516f8ec624e66ee7)도 참고해 보세요.
@@ -49,7 +49,7 @@ Misskey를 빌드하기 위해서는 최소 2GB의 메모리가 필요하다는 
 ## 버전업 후 문제 발생
 
 - [구축 가이드](../guides/manual/) 및 릴리즈 노트를 잘 읽어보세요.
-- Misskey 버전업 시에는 반드시 `pnpm install`이나 `pnpm run migrate`를 해주시기 바랍니다.그래도 해결되지 않으면 `pnpm run clean-all && pnpm install`을 시도하고, `pnpm run build && pnpm run migrate && pnpm start`를 시도해 보십시오.
+- Misskey 버전업 시에는 반드시 `pnpm install`이나 `pnpm run migrate`를 해주시기 바랍니다. 그래도 해결되지 않으면 `pnpm run clean-all && pnpm install`을 시도하고, `pnpm run build && pnpm run migrate && pnpm start`를 시도해 보십시오.
 - 그래도 안 되면 처음부터 다시 [구축 가이드](../guides/manual/)의 절차에 따라 다시 시도해 보세요.
 
 ---
@@ -164,7 +164,7 @@ url: https://example.tld/
 redis-server가 실행되고 있습니까?
 어떤 연결 수 제한에 도달하지 않았습니까?
 
-11.20.2 이전 버전의 Misskey는 redis의 비밀번호를 풀 수 없습니다.다음 두 가지 사항을 확인하시기 바랍니다.
+11.20.2 이전 버전의 Misskey는 redis의 비밀번호를 풀 수 없습니다. 다음 두 가지 사항을 확인하시기 바랍니다.
 
 - redis에 비밀번호를 설정하지 않는다.
 - `default.yml`의 `redis:`의 `pass:` 행을 주석 처리한다.
@@ -196,7 +196,7 @@ redis의 연결도 확인하는 것이 좋습니다. [→ redis에 접속할 수
 
 ## 오브젝트 스토리지 사용 시 오류 발생
 
-오브젝트 스토리지의 권한 설정이 엄격하게 설정되어 있을 수 있습니다.'누구나 파일(객체)을 가져올 수 있음'으로 권한을 설정해 보시기 바랍니다.
+오브젝트 스토리지의 권한 설정이 엄격하게 설정되어 있을 수 있습니다. '누구나 파일(객체)을 가져올 수 있음'으로 권한을 설정해 보시기 바랍니다.
 또한, `default.yml`을 다시 한 번 확인해보시기 바랍니다.
 
 ### S3 example (with CDN, custom domain)
@@ -213,7 +213,7 @@ Misskey에서는 오브젝트 스토리지 연결에 [aws-sdk](https://www.npmjs
 
 ### 로딩이 끝나지 않음
 
-Cloudflare를 사용하는 경우, Rocket Loader 또는 Auto Minify가 활성화되어 있는지 확인하십시오.활성화된 경우 비활성화하면 해결될 수 있습니다.
+Cloudflare를 사용하는 경우, Rocket Loader 또는 Auto Minify가 활성화되어 있는지 확인하십시오. 활성화된 경우 비활성화하면 해결될 수 있습니다.
 
 ---
 

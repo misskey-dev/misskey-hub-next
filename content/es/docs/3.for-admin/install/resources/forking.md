@@ -2,7 +2,7 @@
 
 La Licencia Pública General Affero GNU v3.0 (AGPL-3.0), adoptada por Misskey, obliga a revelar cualquier modificación realizada en el código fuente de Misskey.
 
-A partir de Misskey v2024.2.0, se ha implementado una función para facilitar el cumplimiento de esta licencia.A continuación, presentamos cómo configurar esta función.
+A partir de Misskey v2024.2.0, se ha implementado una función para facilitar el cumplimiento de esta licencia. A continuación, presentamos cómo configurar esta función.
 
 :::warning
 
@@ -28,7 +28,7 @@ Procedamos con la configuración.
 
 ## Si realiza algunos cambios en el código de Misskey, pero no publicas (o no puedes publicar) la versión modificada en GitHub o en otro lugar
 
-En este caso, el código fuente debe seguir siendo accesible directamente en la interfaz de Misskey.En Misskey v2024.2.0 y posteriores, se ha implementado la capacidad de compilar automáticamente el código fuente en ficheros de archivo en tiempo de compilación.
+En este caso, el código fuente debe seguir siendo accesible directamente en la interfaz de Misskey. En Misskey v2024.2.0 y posteriores, se ha implementado la capacidad de compilar automáticamente el código fuente en ficheros de archivo en tiempo de compilación.
 
 :::tip
 
@@ -48,6 +48,6 @@ Procedamos con la configuración.
 
 :::warning
 
-La generación del tarball del código fuente se produce durante el proceso de compilación.Asegúrese de reconstruir cada vez que se realicen cambios en `scripts/tarball.mjs`.
+La generación del tarball del código fuente se produce durante el proceso de compilación. Asegúrese de reconstruir cada vez que se realicen cambios en `scripts/tarball.mjs`.
 
 :::

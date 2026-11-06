@@ -1,6 +1,6 @@
 # Distributing Plugins and Themes
 
-Starting with Misskey v2023.11.0, you can now install various additional resources directly from your website.This feature is especially useful for those who produce a lot of plugins and themes, and for those who want to create a plugin distribution website.
+Starting with Misskey v2023.11.0, you can now install various additional resources directly from your website. This feature is especially useful for those who produce a lot of plugins and themes, and for those who want to create a plugin distribution website.
 
 ## Resources that support external installation
 
@@ -23,9 +23,9 @@ Create a link for the "Install" button with a URL structured like the following:
 https://{HOST}/install-extensions?url={API_URL}&hash={HASH}
 ```
 
-- `{HOST}`: Replace with the host of the user's server.It is common practice to provide an input field so the user can enter their host.
-- `{API_URL}`: Replace with the URL of the resource distribution API (described below).Relative paths are not allowed.
-- `{HASH}`: Replace with the SHA-512 hash of the resource to be distributed.**Please unify all line breaks within the resource to LF.**
+- `{HOST}`: Replace with the host of the user's server. It is common practice to provide an input field so the user can enter their host.
+- `{API_URL}`: Replace with the URL of the resource distribution API (described below). Relative paths are not allowed.
+- `{HASH}`: Replace with the SHA-512 hash of the resource to be distributed. **Please unify all line breaks within the resource to LF.**
 
 ### Resource distribution API side
 

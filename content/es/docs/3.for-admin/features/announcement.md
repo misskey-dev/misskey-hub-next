@@ -6,7 +6,7 @@ Utilizando la función de avisos, puedes publicar avisos en todo el servidor par
 
 :::warning
 
-Un gran número de avisos activos puede causar una mala experiencia de usuario, debido a las excesivas solicitudes de confirmación, especialmente para los nuevos usuarios.Deben considerarse las siguientes opciones:
+Un gran número de avisos activos puede causar una mala experiencia de usuario, debido a las excesivas solicitudes de confirmación, especialmente para los nuevos usuarios. Deben considerarse las siguientes opciones:
 
 - Crear un aviso con la opción "Sólo usuarios existentes" activada
 - Crear un aviso con la opción "no notificar" activada
@@ -35,7 +35,7 @@ Puede seleccionar entre los siguientes tipos de formatos de visualización.
 
 1. Abre la página de moderación del usuario al que deseas notificar.
 
-- Abre la página de perfil del usuario con una cuenta que tenga derechos de administrador o moderador y haz clic en el botón "Seguir" situado junto al icono...Haga clic en "Moderación" y luego en "Moderación".
+- Abre la página de perfil del usuario con una cuenta que tenga derechos de administrador o moderador y haz clic en el botón "Seguir" situado junto al icono... Haga clic en "Moderación" y luego en "Moderación".
 - Ve a [Panel de control > Usuarios] (x-mi-web://admin/users) con una cuenta con derechos de administrador o moderador, busca su cuenta y haga clic en
 
 2. Haz clic en "Avisos" en la pestaña superior.

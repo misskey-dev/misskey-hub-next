@@ -4,9 +4,9 @@ The plugin feature of the Misskey Web Client allows you to extend the client and
 
 ## Example
 
-This is a complete example of plugin.This plugin adds a "Fugu Punch Button" to the post form by utilizing [`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn).
+This is a complete example of plugin. This plugin adds a "Fugu Punch Button" to the post form by utilizing [`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn).
 
-By installing this plugin, you will find additional item named "Fugu Punch" in plugin section of the post form.And if you click the button, `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )` will be appended in the body text.
+By installing this plugin, you will find additional item named "Fugu Punch" in plugin section of the post form. And if you click the button, `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )` will be appended in the body text.
 
 ```ais
 /// @ 0.12.4
@@ -35,7 +35,7 @@ Plugins are scripts written using AiScript.
 
 ## Metadata
 
-Plugins must use AiScript's metadata feature to define the plugin's metadata as the default.Example of some metadata are:Example of some metadata are:
+Plugins must use AiScript's metadata feature to define the plugin's metadata as the default. Example of some metadata are:
 
 ```AiScript
 /// @ 0.12.4
@@ -59,7 +59,7 @@ Plugin author
 
 ### version
 
-Plugin version.A number must be specified.A number must be specified.
+Plugin version. A number must be specified.
 
 ### description
 
@@ -67,7 +67,7 @@ Plugin description
 
 ### permissions
 
-Permissions required by the plugin.Permissions required by the plugin.Used when making requests to the Misskey API.
+Permissions required by the plugin. Used when making requests to the Misskey API.
 
 Please refer to [AiScript Misskey Extension API Reference](/docs/for-developers/plugin/plugin-api-reference/) for how to make a request to the API.
 
@@ -83,7 +83,7 @@ An object representing the plugin's settings. Keys are setting names and values 
 
 #### type
 
-A string representing the setting's value type.Can be either a string, number, or boolean.Can be either a string, number, or boolean.
+A string representing the setting's value type. Can be either a string, number, or boolean.
 
 #### label
 
@@ -105,4 +105,4 @@ Misskey Web exposes APIs for Plugins, which can be used to extend client functio
 
 Starting with v2023.11.0, you can install plugins directly from your website with one click.
 
-If you want to provide plugin installation functionality, you will need to implement an API on your site.For more information, please see [here](../publish-on-your-website.md).
+If you want to provide plugin installation functionality, you will need to implement an API on your site. For more information, please see [here](../publish-on-your-website.md).

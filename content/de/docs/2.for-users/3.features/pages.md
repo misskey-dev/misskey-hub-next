@@ -1,6 +1,6 @@
 # Seiten
 
-Abseits von Notizen, können Seiten erstellt werden.V13 sind für statische Seiten bestimmt.
+Abseits von Notizen, können Seiten erstellt werden. V13 sind für statische Seiten bestimmt.
 
 :::warning
 
@@ -10,7 +10,7 @@ Ab v13 kann Misskey Play anstelle der dynamischen Seitenerstellung durch Seiten 
 
 ## Seiteneinstellungen
 
-Mit der Seite verknüpfte Inhalte einstellen.Die folgenden Felder können eingegeben werden:
+Mit der Seite verknüpfte Inhalte einstellen. Die folgenden Felder können eingegeben werden:
 
 - Titel
 - Zusammenfassung
@@ -22,11 +22,11 @@ Mit der Seite verknüpfte Inhalte einstellen.Die folgenden Felder können eingeg
 
 ### Titel
 
-Gebe den Titel dieser Seite ein.Der Titel wird in einer Liste angezeigt.
+Gebe den Titel dieser Seite ein. Der Titel wird in einer Liste angezeigt.
 
 ### Zusammenfassung
 
-Geben Sie eine kurze Beschreibung an.Die Zusammenfassung wird in einer Liste angezeigt.
+Geben Sie eine kurze Beschreibung an. Die Zusammenfassung wird in einer Liste angezeigt.
 
 ### Seiten-URL
 
@@ -50,7 +50,7 @@ Blendet den Titel aus, wenn er gepinnt ist.
 
 ## Inhalte
 
-Der Seiteninhalt kann bearbeitet werden.Seiten können durch Kombination eines oder mehrerer der folgenden Blöcke erstellt werden.
+Der Seiteninhalt kann bearbeitet werden. Seiten können durch Kombination eines oder mehrerer der folgenden Blöcke erstellt werden.
 
 - Abschnitt
 - Text
@@ -59,16 +59,16 @@ Der Seiteninhalt kann bearbeitet werden.Seiten können durch Kombination eines o
 
 ### Abschnitt
 
-Wird ein Titel festgelegt, so wird dieser als Überschrift behandelt.Es können ebenfalls zusätzlich Blöcke plaziert werden.
+Wird ein Titel festgelegt, so wird dieser als Überschrift behandelt. Es können ebenfalls zusätzlich Blöcke plaziert werden.
 
 ### Text
 
-Gebe hier Text ein.MFM und benutzerdefinierte Emojis können verwendet werden.
+Gebe hier Text ein. MFM und benutzerdefinierte Emojis können verwendet werden.
 
 ### Bild
 
-Zeigt ein Bild an.Lade die Daten via "Drive" hoch um diese in Misskey verwenden zu können.
+Zeigt ein Bild an. Lade die Daten via "Drive" hoch um diese in Misskey verwenden zu können.
 
 ### Eingebettete Notiz
 
-Eingebettete Notizen sind mit einer Notiz-ID gekennzeichnet, diese kann gesucht werden.Sollte ein anderer Server eingebettet werden, so ist dessen URL einzutragen.
+Eingebettete Notizen sind mit einer Notiz-ID gekennzeichnet, diese kann gesucht werden. Sollte ein anderer Server eingebettet werden, so ist dessen URL einzutragen.

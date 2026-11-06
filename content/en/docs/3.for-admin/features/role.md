@@ -16,9 +16,9 @@ You can set the role template in the control panel under "Roles > Role Template"
 
 You can set a role to be assigned manually or automatically.
 
-- **Manual:** Manually assign and unassign users.(Manual Role)
+- **Manual:** Manually assign and unassign users. (Manual Role)
   - You can also set a length of time for the assignment.
-- **Conditional:** Set conditions for assignment. Users who meet the conditions will be assigned automatically.(Automatic Role)
+- **Conditional:** Set conditions for assignment. Users who meet the conditions will be assigned automatically. (Automatic Role)
 
 :::warning
 
@@ -49,7 +49,7 @@ Policies can also be set to inherit the values from the role template.
 
 If multiple roles are assigned and the same policy is defined with different values for each role, priorities can be assigned to each policy to determine which policy prevails. Policies with higher priority override those with lower priority.
 
-Priority is assigned by policy, not by role.Role templates cannot have priorities.
+Priority is assigned by policy, not by role. Role templates cannot have priorities.
 
 **If the priorities for a policy are the same, the largest or most permissive value prevails by default.**
 
