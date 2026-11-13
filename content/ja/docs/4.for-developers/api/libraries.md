@@ -7,6 +7,7 @@ description: 'Misskey APIに関連するライブラリの一覧'
 ## JavaScript
 
 - [misskey.js](https://github.com/misskey-dev/misskey/tree/develop/packages/misskey-js)
+- [rescript-misskey-api](https://github.com/f3liz-casa/rescript-misskey-api)
 
 ## Java
 
@@ -40,4 +41,4 @@ description: 'Misskey APIに関連するライブラリの一覧'
 
 ## ReScript
 
-- [rescript-misskey-api](https://github.com/f3liz-dev/rescript-misskey-api)
+- [rescript-misskey-api](https://github.com/f3liz-casa/rescript-misskey-api)
