@@ -38,7 +38,7 @@ cp ./compose_example.yml ./compose.yml
 
 Please edit `default.yml` and `docker.env` file as per the description.  
 \
-Also edit `compose.yml` as needed.(If you want to change the port etc.)
+Also edit `compose.yml` as needed. (If you want to change the port etc.)
 
 ## Build & Initialize
 
@@ -51,7 +51,7 @@ sudo docker compose run --rm web pnpm run init
 
 ## Startup
 
-Congraturations!You can launch Misskey with the following command.
+Congraturations! You can launch Misskey with the following command.
 
 ```sh
 sudo docker compose up -d

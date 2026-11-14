@@ -16,9 +16,9 @@ Basisrollen können in der Systemsteuerung unter Rollen → Basisrollen eingeste
 
 Die Zuweisungsmethode kann zwischen Manuell und automatisch gewählt werden.
 
-- **Manuell** ... Manuelle Zuweisung und Aufhebung der Zuweisung von Benutzern.(Manuelle Rollen)
+- **Manuell** ... Manuelle Zuweisung und Aufhebung der Zuweisung von Benutzern. (Manuelle Rollen)
   - Es ist auch möglich, die Dauer der Rolle festzulegen.
-- **Automatisch** ... Bedingungen festlegen, und Benutzer, die diese Bedingungen erfüllen, werden automatisch berücksichtigt.(Automatische Rolle)
+- **Automatisch** ... Bedingungen festlegen, und Benutzer, die diese Bedingungen erfüllen, werden automatisch berücksichtigt. (Automatische Rolle)
 
 :::warning
 
@@ -50,7 +50,7 @@ Richtlinien können auch so eingestellt werden, dass sie die für die Basisrolle
 Wenn mehrere Rollen zugewiesen sind und dieselbe Richtlinie mit unterschiedlichen Werten für jede definiert ist, können Sie festlegen, wie viel Priorität sie gegenüber anderen Definitionen haben.
 Je höher Sie die Priorität einstellen, desto mehr Vorrang hat sie vor anderen Definitionen.
 
-Die Vorrangstellung ist eine Einstellung pro Richtlinie, nicht pro Rolle.Sie kann auch nicht in der Basisrolle eingestellt werden.
+Die Vorrangstellung ist eine Einstellung pro Richtlinie, nicht pro Rolle. Sie kann auch nicht in der Basisrolle eingestellt werden.
 
 **Wenn die Prioritäten gleich sind, wird standardmäßig der größte oder maßgebliche Wert ausgewählt.**
 

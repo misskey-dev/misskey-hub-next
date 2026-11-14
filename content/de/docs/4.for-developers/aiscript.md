@@ -23,7 +23,7 @@ Die Standard-Syntax und eingebauten Funktionen von AiScript können verwendet we
 :::tip
 
 Die Dokumentation findest du [hier](https://aiscript-dev.github.io/).
-Die verwendbare AiScript-Version kann je nach Misskey-Hauptversion variieren.Um die Version zu überprüfen, führe bitte `<: Core:v` im Scratchpad oder einem ähnlichen Bereich aus.
+Die verwendbare AiScript-Version kann je nach Misskey-Hauptversion variieren. Um die Version zu überprüfen, führe bitte `<: Core:v` im Scratchpad oder einem ähnlichen Bereich aus.
 
 :::
 

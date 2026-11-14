@@ -1,6 +1,6 @@
 # Veröffentlichen von Plug-ins und Themen
 
-Ab Misskey v2023.11.0 können verschiedene zusätzliche Ressourcen direkt von der Website aus installiert werden.Dies ist besonders nützlich für diejenigen, die viele Plug-ins und Themes herstellen oder eine Plug-in-Vertriebsseite einrichten wollen.
+Ab Misskey v2023.11.0 können verschiedene zusätzliche Ressourcen direkt von der Website aus installiert werden. Dies ist besonders nützlich für diejenigen, die viele Plug-ins und Themes herstellen oder eine Plug-in-Vertriebsseite einrichten wollen.
 
 ## Ressourcen für externe Installation
 
@@ -23,9 +23,9 @@ Erstelle einen Link mit der Schaltfläche „Installieren“ und einer URL mit f
 https://{HOST}/install-extensions?url={API_URL}&hash={HASH}
 ```
 
-- `{HOST}`:  Setzt den Benutzer-HostHosts müssen generell Benutzereingaben zulassen.
-- `{API_URL}`:setzt durch die URL der API für die Ressourcenverteilung (siehe unten).Relative Pfade sind nicht erlaubt
-- `{HASH}`: setzt den SHA-512-Hash der zu verteilenden Ressource.**Zeilenumbruchcodes innerhalb der Ressource sollten mit LF übereinstimmen.**
+- `{HOST}`:  Setzt den Benutzer-Host Hosts müssen generell Benutzereingaben zulassen.
+- `{API_URL}`:setzt durch die URL der API für die Ressourcenverteilung (siehe unten). Relative Pfade sind nicht erlaubt
+- `{HASH}`: setzt den SHA-512-Hash der zu verteilenden Ressource. **Zeilenumbruchcodes innerhalb der Ressource sollten mit LF übereinstimmen.**
 
 ### API-Seite für die Ressourcenveröffentlichung
 

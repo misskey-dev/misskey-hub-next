@@ -63,7 +63,7 @@ Ersetze example.com durch deine eigene Domain
 
 Wir haben ein Update-Skript implementiert.
 
-Das Update-Skript aktualisiert **nicht** deine Linux-Umgebung.Beachte die CHANGELOG (Japanisch) und das [GitHub-Release (Englisch)](https://github.com/joinmisskey/bash-install/releases) und führe die entsprechenden Migrationsvorgänge durch.
+Das Update-Skript aktualisiert **nicht** deine Linux-Umgebung. Beachte die CHANGELOG (Japanisch) und das [GitHub-Release (Englisch)](https://github.com/joinmisskey/bash-install/releases) und führe die entsprechenden Migrationsvorgänge durch.
 
 Lade die Repository herunter
 
@@ -93,7 +93,7 @@ Stelle sicher, das iptables verwendet wird.
 
 ## Fehlermeldungen und PR's sind hier Willkommen
 
-Wenn es in der oben genannten Umgebung nicht funktioniert, liegt möglicherweise ein Fehler vor.Wir wären dankbar, wenn das Problem mithilfe der Issue-Funktion von GitHub gemeldet wird und dabei die bei der Installation angegebenen Bedingungen angeben werden können.
+Wenn es in der oben genannten Umgebung nicht funktioniert, liegt möglicherweise ein Fehler vor. Wir wären dankbar, wenn das Problem mithilfe der Issue-Funktion von GitHub gemeldet wird und dabei die bei der Installation angegebenen Bedingungen angeben werden können.
 
 Dezeit ist es schwierig, Support für andere als die oben aufgeführten Umgebungen bereitzustellen. Wenn wir jedoch weitere Informationen zur Situation haben, können wir das Problem möglicherweise lösen.
 
@@ -165,7 +165,7 @@ Hauptsächlich zum Speichern von Verzeichnissen.
 
 Wird erstellt, wenn die Docker Version verwendet wird.  
 Es speichert den Container und die Imagenummer, die ausgeführt wird.  
-Die Containernummer wird beim Update aktualisiert.Der alte Build wird hierbei gelöscht.
+Die Containernummer wird beim Update aktualisiert. Der alte Build wird hierbei gelöscht.
 
 ## Übernehme die Kontrolle
 

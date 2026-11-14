@@ -5,9 +5,9 @@ Este documento explica cómo crear plugins.
 
 ## Creando un Plugin
 
-Este es un ejemplo completo de plugin.Este plugin añade un «Botón Fugu Punch» al formulario de la entrada utilizando [`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn).
+Este es un ejemplo completo de plugin. Este plugin añade un «Botón Fugu Punch» al formulario de la entrada utilizando [`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn).
 
-Al instalar este plugin, encontrará un elemento adicional llamado "Fugu Punch" en la sección de plugins del formulario de la entrada.Y si hace clic en el botón, `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )` se añadirá en el cuerpo del texto.
+Al instalar este plugin, encontrará un elemento adicional llamado "Fugu Punch" en la sección de plugins del formulario de la entrada. Y si hace clic en el botón, `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )` se añadirá en el cuerpo del texto.
 
 ```ais
 /// @ 0.12.4
@@ -36,7 +36,7 @@ Los plugins son scripts escritos con AiScript.
 
 ## Metadatos
 
-Los plugins deben definir los metadatos del plugin como predeterminados utilizando la función de incrustación de metadatos de AiScript.Algunos ejemplos de metadatos son:
+Los plugins deben definir los metadatos del plugin como predeterminados utilizando la función de incrustación de metadatos de AiScript. Algunos ejemplos de metadatos son:
 
 ```AiScript
 /// @ 0.12.4
@@ -60,7 +60,7 @@ Autor del plugin
 
 ### version
 
-Versión del plugin.Debe ser un número.
+Versión del plugin. Debe ser un número.
 
 ### description
 
@@ -68,7 +68,7 @@ Descripción del plugin.
 
 ### permissions
 
-Permisos requeridos por el plugin.Se utiliza para realizar peticiones a la MisskeyAPI.
+Permisos requeridos por el plugin. Se utiliza para realizar peticiones a la MisskeyAPI.
 
 Para obtener información sobre cómo solicitar la API, consulta [AiScript Misskey Extension API Reference](/docs/for-developers/plugin/plugin-api-reference/).
 
@@ -84,7 +84,7 @@ Un objeto que representa la configuración del plugin. Las claves son los nombre
 
 #### type
 
-A string representing the setting's value type.Can be either a string, number, or boolean.Can be either a string, number, or boolean.
+A string representing the setting's value type.Can be either a string, number, or boolean. Can be either a string, number, or boolean.
 
 #### label
 
@@ -107,4 +107,4 @@ Por favor, consulte [AiScript Misskey Extension API Reference](./plugin-api-refe
 
 A partir de la versión 2023.11.0, puedes instalar el plugin directamente desde tu sitio web con un solo clic.
 
-Si deseas proporcionar la funcionalidad de instalación de plugins, tendrás que implementar una API en tu sitio.Para más información, consulta [aquí](../publish-on-your-website.md).
+Si deseas proporcionar la funcionalidad de instalación de plugins, tendrás que implementar una API en tu sitio. Para más información, consulta [aquí](../publish-on-your-website.md).

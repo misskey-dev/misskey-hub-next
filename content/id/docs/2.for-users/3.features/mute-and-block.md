@@ -1,6 +1,6 @@
 # Bisukan dan Blokir
 
-Jika kamu tidak menyukai seorang pengguna, kamu dapat membisukan mereka untuk membuat mereka hilang dari lini masamu. Sebagai alternatif, kamu juga dapat memblokir pengguna untuk mencegah mereka melihat kontenmu atau berinteraksi dengan kamu dalam cara apapun. Orang tidak akan tahu bahwa kamu telah membisukan mereka, tetapi mereka tahu jika kamu memblokir mereka.Semua terserah pada keputusanmu untuk memilih opsi mana yang akan kamu pilih.
+Jika kamu tidak menyukai seorang pengguna, kamu dapat membisukan mereka untuk membuat mereka hilang dari lini masamu. Sebagai alternatif, kamu juga dapat memblokir pengguna untuk mencegah mereka melihat kontenmu atau berinteraksi dengan kamu dalam cara apapun. Orang tidak akan tahu bahwa kamu telah membisukan mereka, tetapi mereka tahu jika kamu memblokir mereka. Semua terserah pada keputusanmu untuk memilih opsi mana yang akan kamu pilih.
 
 :::tip
 
@@ -63,6 +63,6 @@ Kamu tidak akan diberitahu bahwa kamu telah diblokir oleh seseorang, namun kamu 
 
 :::warning
 
-Orang lain tidak dapat melihat konten kamu, namun mereka akan tetap dapat melihat konten kamu jika mereka beralih akun atau keluar.Mohon pertimbangkan aksi ini hanya sebagai tindakan pencegahan tambahan dan sederhana.
+Orang lain tidak dapat melihat konten kamu, namun mereka akan tetap dapat melihat konten kamu jika mereka beralih akun atau keluar. Mohon pertimbangkan aksi ini hanya sebagai tindakan pencegahan tambahan dan sederhana.
 
 :::

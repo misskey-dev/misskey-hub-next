@@ -1,6 +1,6 @@
 # Deck
 
-Deck is one of the available UIs.It features the ability to create highly customizable and dense UIs by displaying multiple views side by side called "columns."  
+Deck is one of the available UIs. It features the ability to create highly customizable and dense UIs by displaying multiple views side by side called "columns."  
 In addition, when notes or profiles are displayed on the page, if a main column is added then their contents will be displayed inside it.
 
 ## Adding columns
@@ -17,7 +17,7 @@ Columns can be arranged not only horizontally but also vertically. Open the colu
 
 ## Column settings
 
-Column settings can be edited by selecting "Edit" from the column menu.Columns can be renamed and their widths can be changed.
+Column settings can be edited by selecting "Edit" from the column menu. Columns can be renamed and their widths can be changed.
 
 ## Deck settings
 

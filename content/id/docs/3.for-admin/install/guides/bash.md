@@ -64,7 +64,7 @@ Ubah domain example.com menjadi domain milik kamu.
 
 Terdapat juga script untuk memutakhirkan peladen Misskey.
 
-Script pemutakhiran tidak memutakhirkan lingkungan peladen.Mohon untuk merujuk ke CHANGELOG (Bahasa Jepang) dan [Daftar rilis di GitHub (Bahasa Inggris)](https://github.com/joinmisskey/bash-install/releases) serta lakukan operasi migrasi sesuai arahan.
+Script pemutakhiran tidak memutakhirkan lingkungan peladen. Mohon untuk merujuk ke CHANGELOG (Bahasa Jepang) dan [Daftar rilis di GitHub (Bahasa Inggris)](https://github.com/joinmisskey/bash-install/releases) serta lakukan operasi migrasi sesuai arahan.
 
 Pertama, unduh script.
 
@@ -94,7 +94,7 @@ Pastikan untuk menggunakan iptables.
 
 ## Isu & PRs Dipersilahkan
 
-Apabila script ini tidak dapat bekerja pada lingkungan diatas, kemungkinan karena bug.Kami mengapresiasi apabila kamu dapat melaporkan hal tersebut sebagai isu dengan syarat tertentu yang telah kamu input ke dalam script.
+Apabila script ini tidak dapat bekerja pada lingkungan diatas, kemungkinan karena bug. Kami mengapresiasi apabila kamu dapat melaporkan hal tersebut sebagai isu dengan syarat tertentu yang telah kamu input ke dalam script.
 
 Sangat sulit untuk memberikan bantuan untuk lingkungan selain yang disebutkan di atas, namun kami masih dapat membantu mencarikan solusi dari masalah kamu apabila kamu memberikan informasi detil mengenai lingkungan peladenmu.
 

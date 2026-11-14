@@ -6,19 +6,19 @@ Beachten Sie, dass einige Zeitleisten-Typen auf manchen Servern deaktiviert sein
 
 ## Startseite
 
-Alle Beiträge von Benutzern, denen gefolgt wird。(Abgekürzt als HTL)
+Alle Beiträge von Benutzern, denen gefolgt wird。 (Abgekürzt als HTL)
 
 ## Lokal
 
-Alle Beiträge von lokalen Benutzern, die nicht auf "Startseite" gesetzt sind。(Abgekürzt als LTL)
+Alle Beiträge von lokalen Benutzern, die nicht auf "Startseite" gesetzt sind。 (Abgekürzt als LTL)
 
 ## Sozial
 
-Alle Beiträge von Benutzern, denen gefolgt wird sowie alle Beiträge von lokalen Benutzern, die nicht auf "Startseite" gesetzt sind。(Abgekürzt als STL)
+Alle Beiträge von Benutzern, denen gefolgt wird sowie alle Beiträge von lokalen Benutzern, die nicht auf "Startseite" gesetzt sind。 (Abgekürzt als STL)
 
 ## Global
 
-Alle Beiträge von lokalen Benutzern, die nicht auf "Startseite" gesetzt sind sowie alle nicht auf "Startseite" gesetzen Beiträge von Benutzern entfernter Server, die den verwendeten Server erreichen.(Abgekürzt als GLT)
+Alle Beiträge von lokalen Benutzern, die nicht auf "Startseite" gesetzt sind sowie alle nicht auf "Startseite" gesetzen Beiträge von Benutzern entfernter Server, die den verwendeten Server erreichen. (Abgekürzt als GLT)
 
 ## Vergleich
 

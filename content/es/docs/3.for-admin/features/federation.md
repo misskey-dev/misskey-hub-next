@@ -14,12 +14,12 @@ Puede configurarse en la sección "Federación" del [Panel de control > General]
 
 ### Todo
 
-Federación con todos los servidores (excluyendo servidores bloqueados, etc.).Esta es la opción por defecto.
+Federación con todos los servidores (excluyendo servidores bloqueados, etc.). Esta es la opción por defecto.
 
 ### Especificar Host
 
-Sólo se federa con servidores específicos (lista blanca).Introduzca los nombres de host de los servidores que pueden federarse, separados por nuevas líneas, en "Servidores que pueden federarse".
+Sólo se federa con servidores específicos (lista blanca). Introduzca los nombres de host de los servidores que pueden federarse, separados por nuevas líneas, en "Servidores que pueden federarse".
 
 ### Ninguno
 
-No hay federación con otros servidores.Se omiten algunas pantallas y elementos de configuración relacionados con la federación.
+No hay federación con otros servidores. Se omiten algunas pantallas y elementos de configuración relacionados con la federación.

@@ -45,7 +45,7 @@ MisskeyHQ 股份有限公司是一家以运营 misskey.io 为目的的公司。�
 
 ## 不希望显示帖子中的 URL 预览
 
-Misskey 的专用标记语言 MFM（Markup language For Misskey）提供了用于禁用 URL 预览的语法。详情请参见 MFM 速查表。您可以在您所属的服务器中输入以下地址查看 MFM 速查表：`https://您的服务器域名/mfm-cheat-sheet`
+Misskey 的专用标记语言 MFM（Markup language For Misskey）提供了用于禁用 URL 预览的语法。详情请参见 MFM 速查表。
 
 ## 我如何添加、编辑或删除自定义表情？
 

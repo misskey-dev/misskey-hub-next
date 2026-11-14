@@ -5,9 +5,9 @@ Hier erklären wir, wie man Plugins erstellt.
 
 ## Plug-in Beispiele
 
-Ein Beispiel für ein vollständiges Plugin ist unten abgebildet.Dieses Plugin [`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn), um dem Beitragsformular eine "Fugu Punch"-Schaltfläche hinzuzufügen.
+Ein Beispiel für ein vollständiges Plugin ist unten abgebildet. Dieses Plugin [`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn), um dem Beitragsformular eine "Fugu Punch"-Schaltfläche hinzuzufügen.
 
-Durch die Installation dieses Plugins wird dem Plugin-Menü auf dem Anmeldeformular ein Eintrag „Fugu Punch“ hinzugefügt.Klicke, um „Fugu Punch“ hinzuzufügen !!!! 🐡( ‚-‘ 🐡 )\` wird hinzugefügt.
+Durch die Installation dieses Plugins wird dem Plugin-Menü auf dem Anmeldeformular ein Eintrag „Fugu Punch“ hinzugefügt. Klicke, um „Fugu Punch“ hinzuzufügen !!!! 🐡( ‚-‘ 🐡 )\` wird hinzugefügt.
 
 ```ais
 /// @ 0.12.4
@@ -37,7 +37,7 @@ Plug-ins sind mit AiScript geschriebene Skripte.
 ## Metadaten
 
 Plugins müssen benötigte Metadaten im AiScript Metadata-Format angeben.
-Bei diesen Metadaten handelt es sich um ein Objekt mit folgenden Attributen:Beispiele für Metadaten sind.
+Bei diesen Metadaten handelt es sich um ein Objekt mit folgenden Attributen: Beispiele für Metadaten sind.
 
 ```AiScript
 /// @ 0.12.4
@@ -61,7 +61,7 @@ Name des Plugin-Erstellers
 
 ### version
 
-Version des Plugins.Muss eine Zahl sein.
+Version des Plugins. Muss eine Zahl sein.
 
 ### description
 
@@ -69,7 +69,7 @@ Beschreibung des Plugins
 
 ### Berechtigungen
 
-Die vom Plugin geforderten Berechtigungen.Werden bei Anfragen der Misskey API verwendet.
+Die vom Plugin geforderten Berechtigungen. Werden bei Anfragen der Misskey API verwendet.
 
 Informationen zur Anforderung der API gibt es unter [AiScript Misskey Extension API Reference](/docs/for-developers/plugin/plugin-api-reference/).
 
@@ -86,7 +86,7 @@ Schlüssel representieren Namen von Einstellungen, und Werte sind einer der unte
 
 #### type
 
-Der Typ eines Einstellungswertes.Muss aus einem dieser Typen gewählt sein:
+Der Typ eines Einstellungswertes. Muss aus einem dieser Typen gewählt sein:
 string number boolean
 
 #### label
@@ -110,4 +110,4 @@ Um herauszufinden, welche APIs verfügbar sind, lese die [AiScript Misskey Erwei
 
 Ab v2023.11.0 können Themes mit einem einzigen Klick direkt von Ihrer Website aus installieren.
 
-Falls Funktionen zur Installation von Themen angeboten werden, muss eine API auf Ihrer Website implementiert werden.Informationen über die Einrichtung einer PWA gibt es [hier](../publish-on-your-website.md).
+Falls Funktionen zur Installation von Themen angeboten werden, muss eine API auf Ihrer Website implementiert werden. Informationen über die Einrichtung einer PWA gibt es [hier](../publish-on-your-website.md).
