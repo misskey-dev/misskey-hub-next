@@ -2,7 +2,7 @@
 
 :::warning
 
-This documentation is currently under confirmation.Some information might be out of date, so please be careful when you refer to.
+This documentation is currently under confirmation. Some information might be out of date, so please be careful when you refer to.
 
 :::
 
@@ -13,7 +13,7 @@ By default you will see a list of the current locally installed emoji. At the st
 
 Emoji can be easily copied from another instance.
 
-To do this, switch to the "remote" tab in the custom emoji settings.You can search emoji by name and/or host they are from.
+To do this, switch to the "remote" tab in the custom emoji settings. You can search emoji by name and/or host they are from.
 
 When you have found an emoji you want, click it to open a small menu which will allow you to import the emoji.
 
@@ -80,13 +80,13 @@ The fields of `Meta` are currently not used or checked when importing emoji, exc
 
 For each `Emoji`:
 
-- `downloaded`: should always be true.If the field is missing or not truthy, the emoji will not be imported.
+- `downloaded`: should always be true. If the field is missing or not truthy, the emoji will not be imported.
 - `fileName`: name of the image file inside the packed file.
-- `emoji`: data associated with the emoji as it was stored in the database.The following are currently used:
+- `emoji`: data associated with the emoji as it was stored in the database. The following are currently used:
   - `name`: name of the emoji for the user, e.g. `blobfox` if a user should type in `:blobfox:` to get the emoji.  
     If a previous emoji with the same name exists, **it will be overwritten!**
   - `category`: category of the emoji
-  - `aliases`: list of strings that should be added as aliases.The admin UI calls these "tags".
+  - `aliases`: list of strings that should be added as aliases. The admin UI calls these "tags".
 
 ## Editing and Deleting Emoji
 

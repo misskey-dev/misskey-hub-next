@@ -2,7 +2,7 @@
 
 FTT is one of the major server features available in Misskey.
 
-When enabled, the performance of retrieving various timelines can be greatly improved and the load on the database can be reduced.Instead, memory usage of Redis will increase.It can be disabled if the server's memory capacity is low or if the Misskey backend is unstable.
+When enabled, the performance of retrieving various timelines can be greatly improved and the load on the database can be reduced. Instead, memory usage of Redis will increase. It can be disabled if the server's memory capacity is low or if the Misskey backend is unstable.
 
 The settings can be configured in the General section of the Control Panel.
 

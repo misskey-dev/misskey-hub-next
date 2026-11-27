@@ -1,10 +1,10 @@
 # Scaling Misskey
 
-As the number of your users increase, it becomes necessary to improve the specs of the server or increase the number of servers to handle the load.This article introduces tips on how to scale your Misskey server.
+As the number of your users increase, it becomes necessary to improve the specs of the server or increase the number of servers to handle the load. This article introduces tips on how to scale your Misskey server.
 
 ## PostgreSQL Replication
 
-PostgreSQL replication allows you to distribute the database load across multiple servers. Please refer to the PostgreSQL documentation for details on replication. Misskey supports PostgreSQL replication which can be configured in the config file as follows.(excerpt)
+PostgreSQL replication allows you to distribute the database load across multiple servers. Please refer to the PostgreSQL documentation for details on replication. Misskey supports PostgreSQL replication which can be configured in the config file as follows. (excerpt)
 
 ```yml
 # Set to true if replication is used
@@ -39,7 +39,7 @@ Misskey uses Redis for a variety of purposes, including
 - Pub/Sub for global events
 
 Misskey can be configured to use a different Redis server for each of these uses, allowing the load to be distributed across multiple servers.
-Simply configure the following in the config file.(excerpt)
+Simply configure the following in the config file. (excerpt)
 
 ```yml
 redisForPubsub:

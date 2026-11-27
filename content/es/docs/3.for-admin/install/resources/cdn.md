@@ -9,7 +9,7 @@ El uso de una CDN ofrece las siguientes ventajas
 
 ## Caché
 
-El Cliente Misskey es completamente estático y no requiere un servidor para funcionar.Por lo tanto, todo el Cliente Misskey puede ser almacenado en caché por la CDN con la excepción de la API Misskey que no puede ser almacenada en caché.
+El Cliente Misskey es completamente estático y no requiere un servidor para funcionar. Por lo tanto, todo el Cliente Misskey puede ser almacenado en caché por la CDN con la excepción de la API Misskey que no puede ser almacenada en caché.
 
 Por favor configura tu CDN de la siguiente manera:
 

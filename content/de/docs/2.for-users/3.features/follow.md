@@ -1,9 +1,9 @@
 # Follower
 
-Folgst du einem Benutzer, so werden dessen Beiträge auf deiner Chronik angezeigt.Antworten dieses Benutzers auf Beiträge Anderer werden jedoch nicht angezeigt.
+Folgst du einem Benutzer, so werden dessen Beiträge auf deiner Chronik angezeigt. Antworten dieses Benutzers auf Beiträge Anderer werden jedoch nicht angezeigt.
 Um einem Benutzer zu folgen, drücke den "Folgen"-Knopf auf dessen Profil.
 
-ユーザーをフォローするには、ユーザーページの「フォロー」ボタンをクリックします。Um einem Benutzer nicht mehr zu folgen, drücke den selben Knopf erneut.
+ユーザーをフォローするには、ユーザーページの「フォロー」ボタンをクリックします。 Um einem Benutzer nicht mehr zu folgen, drücke den selben Knopf erneut.
 
 フォローが承認制になっている場合や、外部サーバーのユーザーをフォローする場合は、フォローボタンをクリックした後に「処理中」となります。フォローが承認されると、クライアントに通知が届きます。
 

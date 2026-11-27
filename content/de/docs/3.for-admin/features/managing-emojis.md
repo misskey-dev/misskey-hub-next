@@ -2,7 +2,7 @@
 
 :::warning
 
-Derzeit wird dieses Dokument aktualisiert.Bitte beachte, dass veraltete Informationen enthalten sein können.
+Derzeit wird dieses Dokument aktualisiert. Bitte beachte, dass veraltete Informationen enthalten sein können.
 
 :::
 
@@ -12,7 +12,7 @@ Individuelle-Emojis können von Administratoren, Moderatoren und Benutzern mit d
 
 Emojis können einfach von anderen Instanzen kopiert werden.
 
-Wechsle zunächst zum Tab „Remote” in den Custom-Emoji-Einstellungen.Emojis können nach Namen oder Host durchsucht werden.
+Wechsle zunächst zum Tab „Remote” in den Custom-Emoji-Einstellungen. Emojis können nach Namen oder Host durchsucht werden.
 
 Wenn du das gewünschte Emoji gefunden hast, klicke darauf, um das Menü zu öffnen und das Emoji zu importieren.
 
@@ -81,13 +81,13 @@ Die Felder von `Meta` werden derzeit beim Import von Emojis nicht verwendet oder
 
 Für jedes `Emoji`:
 
-- `downloaded`: Immer auf true setzen.Wenn dieses Feld fehlt oder nicht auf true gesetzt ist, wird das Emoji nicht importiert.
+- `downloaded`: Immer auf true setzen. Wenn dieses Feld fehlt oder nicht auf true gesetzt ist, wird das Emoji nicht importiert.
 - `fileName`: Der Name der Bilddatei im paketierten Archiv.
-- `emoji`: Daten, die mit dem in der Datenbank gespeicherten Emoji verknüpft sind.Die folgenden Felder werden derzeit verwendet:
+- `emoji`: Daten, die mit dem in der Datenbank gespeicherten Emoji verknüpft sind. Die folgenden Felder werden derzeit verwendet:
   - `name`: Der Name des Emojis, den der Benutzer eingibt, z.B.: `blobfox` (wenn der Benutzer `:blobfox:` eingibt, wird dieses Emoji angezeigt).  
     Falls ein Emoji mit demselben Namen bereits existiert, wird es **überschrieben**.
   - `category`: Die Kategorie des Emojis.
-  - `aliases`: Eine Liste von Zeichenfolgen, die als alternative Namen hinzugefügt werden.In der Administrator-Oberfläche wird dies als „Tags” bezeichnet.
+  - `aliases`: Eine Liste von Zeichenfolgen, die als alternative Namen hinzugefügt werden. In der Administrator-Oberfläche wird dies als „Tags” bezeichnet.
 
 ## Bearbeiten und Löschen von Emojis
 

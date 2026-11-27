@@ -1,12 +1,12 @@
 # Escalando Misskey
 
-A medida que aumenta el número de usuarios, se hace necesario mejorar las especificaciones del servidor o aumentar el número de servidores para gestionar la carga.Este artículo presenta consejos sobre cómo escalar tu servidor o instancia de Misskey.
+A medida que aumenta el número de usuarios, se hace necesario mejorar las especificaciones del servidor o aumentar el número de servidores para gestionar la carga. Este artículo presenta consejos sobre cómo escalar tu servidor o instancia de Misskey.
 
 ## Replicación PostgreSQL
 
 La replicación PostgreSQL le permite distribuir la carga de la base de datos entre varios servidores
 Para más información sobre la replicación, consulta la documentación de PostgreSQL.
-Misskey soporta replicación PostgreSQL y puede ser configurado en el archivo de configuración como se indica a continuación.(Extracto)
+Misskey soporta replicación PostgreSQL y puede ser configurado en el archivo de configuración como se indica a continuación. (Extracto)
 
 ```yml
 # Establece a true si se usa la replicación
@@ -41,7 +41,7 @@ Misskey utiliza Redis para una variedad de propósitos, incluyendo:
 - Publicación y suscripción de los eventos globales
 
 Misskey puede ser configurado para usar un servidor Redis diferente para cada uno de estos usos, permitiendo que la carga sea distribuida a través de múltiples  servidores.
-Configura lo siguiente en el archivo de configuración.(Extracto)
+Configura lo siguiente en el archivo de configuración. (Extracto)
 
 ```yml
 redisForPubsub:

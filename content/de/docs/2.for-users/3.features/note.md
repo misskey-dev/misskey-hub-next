@@ -1,6 +1,6 @@
 # Notiz
 
-Das Zentrale Konzept hinter Misskey, sind die Notizen. Hierbei werden wie z.B. Texte, Dateien, Umfragen, usw. veröffentlicht.Das Erstellen einer Notiz wird ebenfalls als Notiz benannt.
+Das Zentrale Konzept hinter Misskey, sind die Notizen. Hierbei werden wie z.B. Texte, Dateien, Umfragen, usw. veröffentlicht. Das Erstellen einer Notiz wird ebenfalls als Notiz benannt.
 
 :::tip
 
@@ -10,14 +10,14 @@ Der Name Notiz leitet sich von dem englischen Wort Note ab, was so viel wie „k
 
 Wenn eine Notiz erstellt wird, wird sie zur [Timeline](./timeline) hinzugefügt und ist für [Follower](./follow) und User auf dem Server sichtbar.
 
-Die Notiz kann mit [Reaktionen](./reaction) versehen werden.Hierbei sind auch das Antworten oder das Zitieren der Notiz möglich.
+Die Notiz kann mit [Reaktionen](./reaction) versehen werden. Hierbei sind auch das Antworten oder das Zitieren der Notiz möglich.
 
 Notizen können auch als [favorit](./favorite) hinterlegt werden, um sie so später wiederfinden zu können, um z.B. vor deinen Freunden angeben zu können.
 
 ## Notizen schreiben oder löschen
 
-Um eine Notiz in Misskey Web zu erstellen, drücke auf die Schaltfläche mit dem Bleistiftsymbol auf dem Bildschirm, um das Erstellungsfenster zu öffnen.Eine Notiz wird erstellt, indem der Inhalt in das Erstellungsfenster eingegeben und die Schaltfläche [Notiz] gedrückt wird.
-Die Notiz kann eine beliebige Datei enthalten, z. B. ein Bild oder ein Video, oder eine [Umfrage](./poll) kann an die Notiz angehängt werden.Darüber hinaus können [MFM](./mfm) im Text verwendet werden, [Erwähnungen](./mention), sowie [hashtags](./hashtag) eingefügt werden.
+Um eine Notiz in Misskey Web zu erstellen, drücke auf die Schaltfläche mit dem Bleistiftsymbol auf dem Bildschirm, um das Erstellungsfenster zu öffnen. Eine Notiz wird erstellt, indem der Inhalt in das Erstellungsfenster eingegeben und die Schaltfläche [Notiz] gedrückt wird.
+Die Notiz kann eine beliebige Datei enthalten, z. B. ein Bild oder ein Video, oder eine [Umfrage](./poll) kann an die Notiz angehängt werden. Darüber hinaus können [MFM](./mfm) im Text verwendet werden, [Erwähnungen](./mention), sowie [hashtags](./hashtag) eingefügt werden.
 Es können auch andere Einstellungen wie Inhaltswarnungen und Publikationsbereich festgelegt werden (Mehr dazu weiter unten).
 
 :::tip
@@ -48,8 +48,8 @@ Um in Misskey Web ein erneutes Zitat zu enfernen, klicke auf den Beitrag die dre
 
 ## Inhaltswarnung oder auch CW
 
-Eine Funktion, mit der der Inhalt einer Notiz für alle ausgeblendet werden kann.Sie kann vor allem verwendet werden, um längere Inhalte auszublenden oder um Spoiler zu verhindern.
-Um eine CW auf Misskey Web einzurichten, klicke auf die Schaltfläche „Inhalt ausblenden“ (Augensymbol).Daraufhin wird ein neuer Eingabebereich angezeigt, in der eine Zusammenfassung des Inhalts eingegeben werden kann.
+Eine Funktion, mit der der Inhalt einer Notiz für alle ausgeblendet werden kann. Sie kann vor allem verwendet werden, um längere Inhalte auszublenden oder um Spoiler zu verhindern.
+Um eine CW auf Misskey Web einzurichten, klicke auf die Schaltfläche „Inhalt ausblenden“ (Augensymbol). Daraufhin wird ein neuer Eingabebereich angezeigt, in der eine Zusammenfassung des Inhalts eingegeben werden kann.
 
 ## Sichtbarkeit
 
@@ -73,11 +73,11 @@ Die Notiz ist für alle öffentlich, wird aber nicht in lokale, soziale oder glo
 
 ### Follower
 
-Macht Notizen nur für eigene Follower zugänglich.Es wird an alle Timelines der Follower weitergeleitet.
+Macht Notizen nur für eigene Follower zugänglich. Es wird an alle Timelines der Follower weitergeleitet.
 
 ### Direktnachrichten
 
-Die Notiz ist nur für den/die angegebenen Benutzer zugänglich.Sie fließt in die Timeline des angegebenen Benutzers.
+Die Notiz ist nur für den/die angegebenen Benutzer zugänglich. Sie fließt in die Timeline des angegebenen Benutzers.
 
 :::tip
 
@@ -110,4 +110,4 @@ Es ist auch möglich, mehrere Noten gleichzeitig zu pinnen.
 
 ## Benachrichtigung über neue Beiträge
 
-Es können Benachrichtigungen verschickt werden, wenn ein Benutzer eine neue Notiz einstellt.Öffne die Benutzerseite, wähle die Schaltfläche „Details“ neben der Schaltfläche ‚Folgen‘ aus und klicke auf „Über Beiträge benachrichtigen“, um sie zu aktivieren.
+Es können Benachrichtigungen verschickt werden, wenn ein Benutzer eine neue Notiz einstellt. Öffne die Benutzerseite, wähle die Schaltfläche „Details“ neben der Schaltfläche ‚Folgen‘ aus und klicke auf „Über Beiträge benachrichtigen“, um sie zu aktivieren.

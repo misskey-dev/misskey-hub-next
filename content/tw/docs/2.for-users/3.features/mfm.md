@@ -257,6 +257,12 @@ $[bg.color=ff0 黄背景]"></MfmPreview>
 
 您可以用邊框包圍內容。可以指定各種樣式。
 
+- `style`：指定邊框樣式。
+- `width`：指定邊框寬度。
+- `color`：指定邊框顏色。
+- `radius`：指定邊框圓角程度。
+- `noclip`：指定時，允許框線內的內容超出框線範圍顯示。
+
 ```
 $[border.style=solid,width=4 Default]
 
@@ -405,6 +411,8 @@ $[twitch 🍮] $[twitch.speed=5s 🍮]
 <MfmPreview text="$[x2 $[twitch 🍮] $[twitch.speed=5s 🍮]]"></MfmPreview>
 
 ### 彩虹
+
+改變所包圍內容的彩度，使其呈現彩虹色。若內容為黑色或白色，由於其飽和度變化不會導致顏色改變，因此必須指定顏色。
 
 ```
 $[rainbow 🍮] $[rainbow.speed=5s 🍮]

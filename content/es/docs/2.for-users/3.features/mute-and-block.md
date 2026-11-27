@@ -1,6 +1,6 @@
 # Silenciar y Bloquear
 
-Si no te gusta alguien, puedes silenciarlo para que deje de ser visible para ti. O, como medida más contundente, puedes bloquear a alguien para que no pueda ver tus contenidos ni interactuar contigo. La otra persona no sabrá que está silenciada, pero sí que está bloqueada.Tú decides cuál utilizar.
+Si no te gusta alguien, puedes silenciarlo para que deje de ser visible para ti. O, como medida más contundente, puedes bloquear a alguien para que no pueda ver tus contenidos ni interactuar contigo. La otra persona no sabrá que está silenciada, pero sí que está bloqueada. Tú decides cuál utilizar.
 
 :::tip
 
@@ -35,7 +35,7 @@ La otra persona no será notificada de que la has silenciado, ni sabrá que ha s
 
 ## Silenciar renota
 
-Puedes silenciar sólo las renotas del usuario, en caso de que el usuario esté renotando muchas notas.Las notas normales del usuario no se ven afectadas.
+Puedes silenciar sólo las renotas del usuario, en caso de que el usuario esté renotando muchas notas. Las notas normales del usuario no se ven afectadas.
 
 ## Bloquear
 
@@ -63,6 +63,6 @@ La persona no será notificada de que la has bloqueado, pero podrá darse cuenta
 
 :::warning
 
-Tu contenido no será visible para el otro usuario, pero puede serlo si cambia de cuenta o cierra la sesión.Considera estas herramientas como una herramienta sencilla y complementaria.
+Tu contenido no será visible para el otro usuario, pero puede serlo si cambia de cuenta o cierra la sesión. Considera estas herramientas como una herramienta sencilla y complementaria.
 
 :::

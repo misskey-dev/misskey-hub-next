@@ -63,7 +63,7 @@ example.comは自分のドメインに置き換えてください。
 
 アップデートのためのスクリプトもあります。
 
-アップデートスクリプトは、環境のアップデートは行いません。CHANGELOG（日本語）および[GitHubのリリース一覧（英語）](https://github.com/joinmisskey/bash-install/releases)を参考に、適宜マイグレーション操作を行なってください。
+アップデートスクリプトは、環境のアップデートは行いません。 CHANGELOG（日本語）および[GitHubのリリース一覧（英語）](https://github.com/joinmisskey/bash-install/releases)を参考に、適宜マイグレーション操作を行なってください。
 
 まずはダウンロードします。
 

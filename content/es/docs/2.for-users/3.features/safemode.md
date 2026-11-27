@@ -16,10 +16,10 @@ Las siguientes funciones están restringidas mientras se ejecuta en modo seguro.
 - Se iniciará utilizando el tema predeterminado independientemente de la configuración, y no podrás cambiar el tema (aunque se puede eliminar a través de la página de gestión de temas).
 - El mensaje «Modo seguro» se muestra constantemente en la pantalla.
 
-Utiliza el modo seguro para identificar y solucionar el problema causado por algún componente.Una vez completado el procedimiento, desactiva el modo seguro haciendo clic en «Desactivar» en el menú que se muestra siempre durante el funcionamiento del modo seguro.
+Utiliza el modo seguro para identificar y solucionar el problema causado por algún componente. Una vez completado el procedimiento, desactiva el modo seguro haciendo clic en «Desactivar» en el menú que se muestra siempre durante el funcionamiento del modo seguro.
 
 :::tip
 
-El modo seguro no está diseñado para un uso regularUna vez completado el procedimiento, apágalo y reinicia  en modo normal.
+El modo seguro no está diseñado para un uso regular Una vez completado el procedimiento, apágalo y reinicia  en modo normal.
 
 :::

@@ -20,11 +20,11 @@ Nombre del usuario actual.
 
 ### `USER_USERNAME`
 
-Handle (Nombre de usuario)  del usuario actual (la parte después de la `@`.e.g. `@ai@example.com` → `ai`)
+Handle (Nombre de usuario)  del usuario actual (la parte después de la `@`. e.g. `@ai@example.com` → `ai`)
 
 ### `CUSTOM_EMOJIS`
 
-La matriz de los emojis personalizados.Una matriz de objetos de los siguientes tipos:
+La matriz de los emojis personalizados. Una matriz de objetos de los siguientes tipos:
 
 ```ts
 type EmojiSimple = {
@@ -40,29 +40,29 @@ type EmojiSimple = {
 
 ### `LOCALE`
 
-El idioma actual de visualización de Misskey Web.Formato RFC4646 compatible  (e.j. `ja-JP`)
+El idioma actual de visualización de Misskey Web. Formato RFC4646 compatible  (e.j. `ja-JP`)
 
 ### `SERVER_URL`
 
-La URL del servidor actual.Se representa mediante un origen, como `https://www.example.com`.
+La URL del servidor actual. Se representa mediante un origen, como `https://www.example.com`.
 
 ## Funciones comunes para todos los casos de uso
 
 ### `Mk:dialog(title, text, type)`
 
-Mostrar un cuadro de diálogo.Se pueden establecer los siguientes valores para el tipo.\
+Mostrar un cuadro de diálogo. Se pueden establecer los siguientes valores para el tipo. \
 `info` `success` `warning` `error` `question`\
 Si se omite será `info`.
 
 ### `Mk:toast(text)`
 
-Muestra un toast.A diferencia de los diálogos, no requiere que el usuario cierre el diálogo, por lo que puede utilizarse para notificaciones sencillas, como cuando se ha completado alguna operación.
+Muestra un toast. A diferencia de los diálogos, no requiere que el usuario cierre el diálogo, por lo que puede utilizarse para notificaciones sencillas, como cuando se ha completado alguna operación.
 
 ### `Mk:confirm(title, text, type)`
 
-Muestra un diálogo de confirmación.Se pueden establecer los siguientes valores para el tipo.\
+Muestra un diálogo de confirmación. Se pueden establecer los siguientes valores para el tipo. \
 `info` `success` `warning` `error` `question`\
-Si se omite será `question`.\
+Si se omite será `question`. \
 Devuelve `true` si el usuario selecciona "OK" o `false` si el usuario selecciona "cancel".
 
 ```AiScript
@@ -81,9 +81,9 @@ if (response) {
 
 ### `Mk:api(endpoint, params, token?)`
 
-Realiza una solicitud a la API de Misskey.Realiza una petición a la API de Misskey.Pasa el nombre del endpoint como primer argumento y el objeto parámetro como segundo argumento.
+Realiza una solicitud a la API de Misskey. Realiza una petición a la API de Misskey.Pasa el nombre del endpoint como primer argumento y el objeto parámetro como segundo argumento.
 
-También puedes incluir el token de API como tercer argumento.Cuando se llama dentro de un plugin, si se especifica `permissions` en el bloque de metadatos, se utilizará el token con los permisos especificados si no se especifica el tercer argumento.
+También puedes incluir el token de API como tercer argumento. Cuando se llama dentro de un plugin, si se especifica `permissions` en el bloque de metadatos, se utilizará el token con los permisos especificados si no se especifica el tercer argumento.
 
 :::tip
 
@@ -109,7 +109,7 @@ Consulta [la documentación](/docs/for-developers/api/permission/) para obtener 
 
 ### `Mk:save(key, value)`
 
-Guarda de forma persistente una clave arbitraria con cualquier valor dado.Guarda de forma persistente una clave arbitraria con cualquier valor dado. El valor guardado permanecerá después de que finalice el contexto AiScript y puede cargarse con Mk:load.
+Guarda de forma persistente una clave arbitraria con cualquier valor dado. Guarda de forma persistente una clave arbitraria con cualquier valor dado. El valor guardado permanecerá después de que finalice el contexto AiScript y puede cargarse con Mk:load.
 
 ### `Mk:load(key)`
 
@@ -119,7 +119,7 @@ Lee el valor del nombre especificado guardado por Mk:save.
 
 NOTA: Esta función estará disponible en Misskey v2025.1.0 (nombre provisional) o posterior.
 
-Elimina el valor del nombre especificado y guardado por Mk:save.Si el valor con el nombre especificado no existe, no se hace nada.
+Elimina el valor del nombre especificado y guardado por Mk:save. Si el valor con el nombre especificado no existe, no se hace nada.
 
 ### `Mk:url()`
 
@@ -127,13 +127,13 @@ Obtiene la URL de la página abierta actualmente (la URL que aparece en la barra
 
 ### `Mk:nyaize(text)`
 
-Nyatiniza el texto especificadoNo se tiene en cuenta la sintaxis MFM, etc.
+Nyatiniza el texto especificado No se tiene en cuenta la sintaxis MFM, etc.
 
 ## Funciones/Constantes sólo disponibles para plugins
 
 ### `Plugin:register_post_form_action(title, fn)`
 
-Añade una acción en el formulario del post.Pasa el nombre de la acción como primer argumento y la función de devolución de llamada cuando se selecciona la acción como segundo argumento.\
+Añade una acción en el formulario del post. Pasa el nombre de la acción como primer argumento y la función de devolución de llamada cuando se selecciona la acción como segundo argumento. \
 A la función callback se le pasa el `text` y `cw` del objeto formulario enviado como primer argumento, y la función para reescribirlos como segundo argumento.
 
 ```AiScript
@@ -146,7 +146,7 @@ Plugin:register_post_form_action('Nombre del elementos que aparece en el menú',
 
 ### `Plugin:register_note_action(title, fn)`
 
-Añade una acción en el menú de notas.El primer argumento es el nombre del elemento y el segundo es la función de devolución de llamada cuando se selecciona el elemento.\
+Añade una acción en el menú de notas. El primer argumento es el nombre del elemento y el segundo es la función de devolución de llamada cuando se selecciona el elemento. \
 A la función callback se le pasa un objeto nota destino como primer argumento.
 
 ```AiScript
@@ -163,7 +163,7 @@ Plugin:register_note_action('Nombre del elemento que aparece en el menú', @(not
 
 ### `Plugin:register_user_action(title, fn)`
 
-Añade una acción en el menú de usuario.El primer argumento es el nombre del elemento y el segundo es la función de devolución de llamada cuando se selecciona el elemento.\
+Añade una acción en el menú de usuario. El primer argumento es el nombre del elemento y el segundo es la función de devolución de llamada cuando se selecciona el elemento. \
 A la función callback se le pasa un objeto de usuario destino como primer argumento.
 
 ```AiScript
@@ -179,9 +179,9 @@ Plugin:register_note_action('Nombre del elemento que aparece en el menú', @(use
 
 ### `Plugin:register_note_view_interruptor(fn)`
 
-Reescribe la información de la nota mostrada en la interfaz de usuario.\
-A la función callback se le pasa un objeto nota destino como primer argumento.\
-La nota se reescribirá con el valor de retorno de la función callback.\
+Reescribe la información de la nota mostrada en la interfaz de usuario. \
+A la función callback se le pasa un objeto nota destino como primer argumento. \
+La nota se reescribirá con el valor de retorno de la función callback. \
 Devuelve `null` para ocultarlo.
 
 :::warning
@@ -189,7 +189,7 @@ Devuelve `null` para ocultarlo.
 En la versión 2025.8.0 y posteriores, esta función se ejecuta de forma sincrónica.
 Las funciones que ejecutan procesamiento asincrónico internamente (como `Mk:api`) no se pueden ejecutar y darán lugar a un error.
 
-Además, la ejecución sincrónica significa que todo el resto del procesamiento de JavaScript se suspende mientras el complemento está en funcionamiento.Esto significa que, en comparación con otros ganchos de complementos, los scripts problemáticos (como los bucles infinitos) podrían tener un impacto significativo en el entorno JavaScript del host si se ejecutan.Por favor, tenga cuidado.
+Además, la ejecución sincrónica significa que todo el resto del procesamiento de JavaScript se suspende mientras el complemento está en funcionamiento. Esto significa que, en comparación con otros ganchos de complementos, los scripts problemáticos (como los bucles infinitos) podrían tener un impacto significativo en el entorno JavaScript del host si se ejecutan. Por favor, tenga cuidado.
 
 :::
 
@@ -210,8 +210,8 @@ Plugin:register_note_view_interruptor(@(note) {
 
 ### `Plugin:register_note_post_interruptor(fn)`
 
-Reescribir la información de las notas al publicarlas.\
-El objeto de nota de destino se pasa a la función de callback como primer argumento.\
+Reescribir la información de las notas al publicarlas. \
+El objeto de nota de destino se pasa a la función de callback como primer argumento. \
 La nota se reescribirá con el valor de retorno de la función callback.
 
 ```AiScript
@@ -226,8 +226,8 @@ Plugin:register_note_post_interruptor(@(note) {
 
 ### `Plugin:register_page_view_interruptor(fn)`
 
-Reescribe la información de la página mostrada en la interfaz de usuario.\
-A la función callback se le pasa un objeto Page de destino como primer argumento.\
+Reescribe la información de la página mostrada en la interfaz de usuario. \
+A la función callback se le pasa un objeto Page de destino como primer argumento. \
 La Página se reescribe con el valor de retorno de la función callback.
 
 ```AiScript
@@ -245,7 +245,7 @@ Abre la URL dada como primer parámetro en una nueva pestaña del navegador.
 
 ### `Plugin:config`
 
-Un objeto que contiene la configuración del plugin.Los valores establecidos en la configuración de la definición del plugin se guardan en las claves del objeto.
+Un objeto que contiene la configuración del plugin. Los valores establecidos en la configuración de la definición del plugin se guardan en las claves del objeto.
 
 ## Constantes sólo disponibles para Play
 
@@ -265,7 +265,7 @@ El componente raíz de la interfaz de usuario.
 
 ### `Ui:render([ ...components ])`
 
-Azúcar sintáctico para `Ui:root.update({ children: [ ...components ] })`Reescribe el root de la interfaz de usuario.
+Azúcar sintáctico para `Ui:root.update({ children: [ ...components ] })` Reescribe el root de la interfaz de usuario.
 
 ```AiScript
 Ui:render([
@@ -285,7 +285,7 @@ Ui:get("text1").update({text: "B"})
 
 ## Funciones de los componentes (disponibles en los widgets Play y AiScript App)
 
-En todas las funciones siguientes, el ID del componente puede especificarse como segundo argumento durante la inicialización, como en `Ui:C:xxx(props id)` (esta declaración se omite en la siguiente referencia).El id dado puede recuperarse con la función `Ui:get(id)` y el contenido del componente puede cambiarse directamente con la función `update` (véase la referencia `Ui:get(id)` para más información).
+En todas las funciones siguientes, el ID del componente puede especificarse como segundo argumento durante la inicialización, como en `Ui:C:xxx(props id)` (esta declaración se omite en la siguiente referencia). El id dado puede recuperarse con la función `Ui:get(id)` y el contenido del componente puede cambiarse directamente con la función `update` (véase la referencia `Ui:get(id)` para más información).
 
 ### Layout
 

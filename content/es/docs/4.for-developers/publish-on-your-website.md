@@ -1,6 +1,6 @@
 # Distribuyendo Plugins y Temas
 
-A partir de Misskey v2023.11.0, varios recursos adicionales pueden ser instalados directamente desde su página web.Esto es especialmente útil para quienes producen muchos plug-ins y temas, o para quienes desean crear un sitio de distribución de plug-ins.
+A partir de Misskey v2023.11.0, varios recursos adicionales pueden ser instalados directamente desde su página web. Esto es especialmente útil para quienes producen muchos plug-ins y temas, o para quienes desean crear un sitio de distribución de plug-ins.
 
 ## Recursos para la instalación externa.
 
@@ -23,9 +23,9 @@ Cree un enlace en el botón "Instalar" con una URL como la siguiente
 https://{HOST}/install-extensions?url={API_URL}&hash={HASH}
 ```
 
-- Sustituye `{HOST}` por el nombre  del servidor del usuario.Es habitual que el host permita la entrada del usuario.
-- `{API_URL}`: se sustituye por la URL de la API para la distribución de recursos (véase más abajo).Las rutas relativas no se aceptan.
-- `{HASH}`: sustituye el hash SHA-512 del recurso a distribuir.**Los códigos de salto de línea dentro del recurso deben ser coherentes con LF.**
+- Sustituye `{HOST}` por el nombre  del servidor del usuario. Es habitual que el host permita la entrada del usuario.
+- `{API_URL}`: se sustituye por la URL de la API para la distribución de recursos (véase más abajo). Las rutas relativas no se aceptan.
+- `{HASH}`: sustituye el hash SHA-512 del recurso a distribuir. **Los códigos de salto de línea dentro del recurso deben ser coherentes con LF.**
 
 ### API para la distribución de recursos
 

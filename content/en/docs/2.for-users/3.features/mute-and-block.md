@@ -1,6 +1,6 @@
 # Mutes and Blocks
 
-If you don't like someone, you can mute them so they're no longer visible to you. Or, as a more powerful measure, you can block someone so they can't see your content or interact with you. The other person won't know that they are muted, but they will know that they are blocked.It is up to you to decide which one to use.
+If you don't like someone, you can mute them so they're no longer visible to you. Or, as a more powerful measure, you can block someone so they can't see your content or interact with you. The other person won't know that they are muted, but they will know that they are blocked. It is up to you to decide which one to use.
 
 :::tip
 
@@ -35,7 +35,7 @@ The other person won't be notified that you've muted them, nor will they know th
 
 ## Mute Renotes
 
-If a user frequently renotes posts, you can hide only their renotes from your timeline. Their regular notes are not affected.The user's regular notes are not affected.
+If a user frequently renotes posts, you can hide only their renotes from your timeline. Their regular notes are not affected. The user's regular notes are not affected.
 
 ## Block
 
@@ -63,6 +63,6 @@ The user will not be notified when you block them. However, since they will no l
 
 :::warning
 
-Your content will not be visible to the other user. However, they may still be able to view it if they switch accounts or log out.Please consider this feature as a simple, supplementary measure.
+Your content will not be visible to the other user. However, they may still be able to view it if they switch accounts or log out. Please consider this feature as a simple, supplementary measure.
 
 :::

@@ -29,7 +29,7 @@ If you have no particular reason to get the code manually, we recommend you to u
 ::MiWebEmbed{src="https://0key.dev/embed/notes/9tht7ungi81f0005"}
 ::
 
-A single local note can be embedded (notes on a remote server cannot be embedded using another server).Your code should look like this:
+A single local note can be embedded (notes on a remote server cannot be embedded using another server). Your code should look like this:
 
 ```html
 <iframe
@@ -46,14 +46,14 @@ The placeholder is replaced by the following:
 
 - `<HOST>`: Hostname of the Misskey server
 - `<NOTE_ID>`: ID of the note to embed
-- `<RANDOM>`: Random string (Required if provided embed.js is used.If there are multiple embed codes on the same page, make sure they are not duplicated.)
+- `<RANDOM>`: Random string (Required if provided embed.js is used. If there are multiple embed codes on the same page, make sure they are not duplicated.)
 
 ## Embedding a list of user's note
 
 ::MiWebEmbed{src="https://0key.dev/embed/user-timeline/9tht7g9ki81f0002?maxHeight=500"}
 ::
 
-You can embed a list of users' public notes (public or home visibility).Your code should look like this:
+You can embed a list of users' public notes (public or home visibility). Your code should look like this:
 
 ```html
 <iframe
@@ -70,14 +70,14 @@ The placeholder is replaced by the following:
 
 - `<HOST>`: Hostname of the Misskey server
 - `<USER_ID>`: ID of the user to embed (not the username starting with `@`)
-- `<RANDOM>`: Random string (Required if provided embed.js is used.If there are multiple embed codes on the same page, make sure they are not duplicated.)
+- `<RANDOM>`: Random string (Required if provided embed.js is used. If there are multiple embed codes on the same page, make sure they are not duplicated.)
 
 ## Embedding the list of notes in a clip
 
 ::MiWebEmbed{src="https://0key.dev/embed/clips/9y5mpno6871g00gv?maxHeight=500"}
 ::
 
-You can embed a list of notes of clips where visibility is public.Your code should look like this:
+You can embed a list of notes of clips where visibility is public. Your code should look like this:
 
 ```html
 <iframe
@@ -94,14 +94,14 @@ The placeholder is replaced by the following:
 
 - `<HOST>`: Hostname of the Misskey server
 - `<CLIP_ID>`: ID of the clip to embed
-- `<RANDOM>`: Random string (Required if provided embed.js is used.If there are multiple embed codes on the same page, make sure they are not duplicated.)
+- `<RANDOM>`: Random string (Required if provided embed.js is used. If there are multiple embed codes on the same page, make sure they are not duplicated.)
 
 ## Embedding a list of hashtagged notes
 
 ::MiWebEmbed{src="https://0key.dev/embed/tags/misskey?maxHeight=500"}
 ::
 
-You can embed a list of notes with a specific hashtag.Your code should look like this:
+You can embed a list of notes with a specific hashtag. Your code should look like this:
 
 ```html
 <iframe
@@ -118,7 +118,7 @@ The placeholder is replaced by the following:
 
 - `<HOST>`: Hostname of the Misskey server
 - `<TAG>`: Hashtag name (without `#`)
-- `<RANDOM>`: Random string (Required if provided embed.js is used.If there are multiple embed codes on the same page, make sure they are not duplicated.)
+- `<RANDOM>`: Random string (Required if provided embed.js is used. If there are multiple embed codes on the same page, make sure they are not duplicated.)
 
 ## Parameters for customization
 
@@ -134,9 +134,9 @@ You can customize the appearance of the embed widget by specifying a specific va
 		<td><code>maxHeight</code></td>
 		<td>A value of 0 or greater</td>
 		<td>
-            Specifies the max height of the widget in pixels.If the content is longer than that vertically, it can be scrolled inside the widget.<br>
-            If <code>0</code> is specified, the height of the embedded element will automatically extend to match the internal height <b>(deprecated)</b>.<br>
-            If not specified, it will be fall back to <code>700</code>.<br>
+            Specifies the max height of the widget in pixels. If the content is longer than that vertically, it can be scrolled inside the widget. <br>
+            If <code>0</code> is specified, the height of the embedded element will automatically extend to match the internal height <b>(deprecated)</b>. <br>
+            If not specified, it will be fall back to <code>700</code>. <br>
             This parameter won't work for single note embedding.        
 </td>
 	</tr>
@@ -148,7 +148,7 @@ You can customize the appearance of the embed widget by specifying a specific va
                 <li><code>dark</code></li>
             </ul>
         </td>
-		<td>Forces the color mode to light or dark.<br>If unspecified, it will sync with the device dark mode setting.</td>
+		<td>Forces the color mode to light or dark. <br>If unspecified, it will sync with the device dark mode setting.</td>
 	</tr>
 	<tr>
 		<td><code>border</code></td>
@@ -158,7 +158,7 @@ You can customize the appearance of the embed widget by specifying a specific va
                 <li><code>false</code></li>
             </ul>
         </td>
-		<td>Specifies whether or not a border is attached to the outer frame.<code>true</code> if not specified.</td>
+		<td>Specifies whether or not a border is attached to the outer frame. <code>true</code> if not specified.</td>
 	</tr>
 	<tr>
 		<td><code>rounded</code></td>
@@ -168,7 +168,7 @@ You can customize the appearance of the embed widget by specifying a specific va
                 <li><code>false</code></li>
             </ul>
         </td>
-		<td>Specifies whether or not the corners should be rounded.<code>true</code> if not specified.</td>
+		<td>Specifies whether or not the corners should be rounded. <code>true</code> if not specified.</td>
 	</tr>
 	<tr>
 		<td><code>showHeader</code></td>
@@ -179,7 +179,7 @@ You can customize the appearance of the embed widget by specifying a specific va
             </ul>
         </td>
 		<td>
-            Specifies whether the top header should be displayed.<code>true</code> if not specified.<br>
+            Specifies whether the top header should be displayed. <code>true</code> if not specified.<br>
             This parameter won't work for single note embedding.    
         </td>
 	</tr>
@@ -187,7 +187,7 @@ You can customize the appearance of the embed widget by specifying a specific va
 
 :::g-details{summary="maxHeight=0 is used how?"}
 
-Setting `maxHeight` to `0` is not recommended, but can be useful for special purposes, such as when you want to provide a scroll container on the embedding site rather than inside an iframe.Here's an example:
+Setting `maxHeight` to `0` is not recommended, but can be useful for special purposes, such as when you want to provide a scroll container on the embedding site rather than inside an iframe. Here's an example:
 
 ```html
 <div class="misskey-embed">

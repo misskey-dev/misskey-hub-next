@@ -23,7 +23,7 @@ Se puede utilizar la sintaxis estándar de AiScript y las funciones incorporadas
 :::tip
 
 La documentación está disponible [aquí](https://aiscript-dev.github.io/)
-La versión de AiScript que se puede utilizar puede diferir dependiendo de la versión del propio Misskey.Para comprobar la versión, ejecute `<: Core:v` con Scratchpad o similar.
+La versión de AiScript que se puede utilizar puede diferir dependiendo de la versión del propio Misskey. Para comprobar la versión, ejecute `<: Core:v` con Scratchpad o similar.
 
 :::
 

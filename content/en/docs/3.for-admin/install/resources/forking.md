@@ -2,7 +2,7 @@
 
 The GNU Affero General Public License v3.0 (AGPL-3.0), adopted by Misskey, mandates the disclosure of any modifications made to the Misskey source code.
 
-Starting from Misskey v2024.2.0, a feature has been implemented to facilitate compliance with this license.Here, we introduce how to configure this feature.
+Starting from Misskey v2024.2.0, a feature has been implemented to facilitate compliance with this license. Here, we introduce how to configure this feature.
 
 :::warning
 
@@ -28,7 +28,7 @@ Let's proceed with the setup.
 
 ## Making Changes to Misskey's Code but Not Publishing the Modified Version (or Unable to)
 
-Even in this case, you need to provide direct access to the source code from the Misskey interface.Starting from Misskey v2024.2.0, a feature has been implemented to automatically package the source code into a tarball during the build process.
+Even in this case, you need to provide direct access to the source code from the Misskey interface. Starting from Misskey v2024.2.0, a feature has been implemented to automatically package the source code into a tarball during the build process.
 
 :::tip
 
@@ -48,6 +48,6 @@ Let's proceed with the setup.
 
 :::warning
 
-The generation of the source code tarball occurs during the build process.Be sure to rebuild whenever changes are made to `scripts/tarball.mjs`.
+The generation of the source code tarball occurs during the build process. Be sure to rebuild whenever changes are made to `scripts/tarball.mjs`.
 
 :::

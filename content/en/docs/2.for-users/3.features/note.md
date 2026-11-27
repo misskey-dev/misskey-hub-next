@@ -1,6 +1,6 @@
 # Notes
 
-Notes are the main content of Misskey. They can consist of images, texts, polls, and more.On other platforms, notes are known as posts.
+Notes are the main content of Misskey. They can consist of images, texts, polls, and more. On other platforms, notes are known as posts.
 
 :::tip
 
@@ -16,7 +16,7 @@ You can easily view a note again later by adding it to your [Favorites](./favori
 
 ## Composing a Note
 
-To compose a note, click the Note button (denoted by the pencil icon) to open the compose form.Enter your content, then click the Note button (denoted by the paper airplane icon) to submit the note. Notes can contain text, images, videos, and [polls](./poll).You can format your note using [Markup language for Misskey (MFM)](./mfm), [mention](./mention) other users, or include [hashtags](./hashtag). You can also add content warnings (CW) and change the visibility of the note (more on this below).
+To compose a note, click the Note button (denoted by the pencil icon) to open the compose form. Enter your content, then click the Note button (denoted by the paper airplane icon) to submit the note. Notes can contain text, images, videos, and [polls](./poll). You can format your note using [Markup language for Misskey (MFM)](./mfm), [mention](./mention) other users, or include [hashtags](./hashtag). You can also add content warnings (CW) and change the visibility of the note (more on this below).
 
 :::tip
 
@@ -46,8 +46,8 @@ To remove a renote in Misskey Web, open the "..." menu next to the renote's time
 
 ## CW
 
-An abbreviation of "Content Warning", which allows the content of a note to be hidden until the viewer chooses to reveal it.It is mainly used to hide long content or to prevent spoilers from being shown unintentionally.
-To enable CW for a note, select the "Hide content" button (eye icon) in the post form.A new input field will appear, where you can enter a summary of the hidden content.
+An abbreviation of "Content Warning", which allows the content of a note to be hidden until the viewer chooses to reveal it. It is mainly used to hide long content or to prevent spoilers from being shown unintentionally.
+To enable CW for a note, select the "Hide content" button (eye icon) in the post form. A new input field will appear, where you can enter a summary of the hidden content.
 
 ## Visibility
 
@@ -108,5 +108,5 @@ You can have multiple notes pinned to your profile.
 
 ## New Post Notifications
 
-You can receive notifications when a user posts a new note.Go to the user's page, select the Details button next to the Follow button,
+You can receive notifications when a user posts a new note. Go to the user's page, select the Details button next to the Follow button,
 and then click "Notify about new notes" to enable it.

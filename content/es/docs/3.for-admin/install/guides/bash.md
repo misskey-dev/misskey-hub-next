@@ -63,7 +63,7 @@ sustituye ejemplo.com por tu propio dominio.
 
 También hay disponibles comandos para la actualización.
 
-Los scripts de actualización no actualizan el entorno.Consulta CHANGELOG (en japonés) y [GitHub release list (Inglés)](https://github.com/joinmisskey/bash-install/releases) y realiza las operaciones de migración en consecuencia.
+Los scripts de actualización no actualizan el entorno. Consulta CHANGELOG (en japonés) y [GitHub release list (Inglés)](https://github.com/joinmisskey/bash-install/releases) y realiza las operaciones de migración en consecuencia.
 
 Primero, descarga.
 
@@ -93,7 +93,7 @@ utiliza iptables.
 
 ## Reportes de bugs (Issues) y PRs son bienvenidos
 
-Si no funciona en los entornos mencionados, puede tratarse de un error.Te agradeceríamos que informaras de ello a través de la función Issue de GitHub, indicando las condiciones especificadas para la instalación.
+Si no funciona en los entornos mencionados, puede tratarse de un error. Te agradeceríamos que informaras de ello a través de la función Issue de GitHub, indicando las condiciones especificadas para la instalación.
 
 Es difícil prestar asistencia en entornos distintos de los indicados anteriormente, pero si nos facilitas detalles de tu situación, es posible que podamos resolver el problema.
 
@@ -166,7 +166,7 @@ Se utiliza principalmente para recordar directorios.
 
 Generado para Docker.  
 Almacena el número del contenedor y de la imagen que se está ejecutando.  
-Los números de contenedor se actualizan durante las actualizaciones.Las imágenes antiguas se borran.
+Los números de contenedor se actualizan durante las actualizaciones. Las imágenes antiguas se borran.
 
 ## Gestionar por su cuenta
 

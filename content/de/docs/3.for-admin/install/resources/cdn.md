@@ -9,7 +9,7 @@ Durch die Verwendung eines CDN ergeben sich die folgenden Vorteile:
 
 ## Zwischenspeicher
 
-Misskey Web ist komplett statisch und benötigt keinen Server zum Betrieb.Daher kann der gesamte Misskey-Webinhalt von einem CDN gecacht werden.
+Misskey Web ist komplett statisch und benötigt keinen Server zum Betrieb. Daher kann der gesamte Misskey-Webinhalt von einem CDN gecacht werden.
 Die Misskey-API kann jedoch nicht gecacht werden.
 
 Bitte führe die folgenden Einstellungen für das CDN durch:

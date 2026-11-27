@@ -64,7 +64,7 @@ Please replace example.com with your own domain.
 
 An update script is also available.
 
-The update script does not update the environment.Refer to the CHANGELOG (Japanese) and [the GitHub releases (English)](https://github.com/joinmisskey/bash-install/releases), and run migrations as needed.
+The update script does not update the environment. Refer to the CHANGELOG (Japanese) and [the GitHub releases (English)](https://github.com/joinmisskey/bash-install/releases), and run migrations as needed.
 
 First, download the script.
 
@@ -94,7 +94,7 @@ Please make sure to use iptables.
 
 ## Issues & PRs Welcome
 
-If it doesn't work in the environment described above, it may be a bug.Please report it via GitHub Issues, and include the installation conditions/configuration you used.
+If it doesn't work in the environment described above, it may be a bug. Please report it via GitHub Issues, and include the installation conditions/configuration you used.
 
 We may not be able to provide full support for environments other than those listed above, but if you share detailed information about your setup, we may still be able to help.
 

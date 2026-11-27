@@ -4,9 +4,9 @@ Misskey 웹 클라이언트의 플러그인 기능을 사용하면 클라이언�
 
 ## 플러그인 예시
 
-다음은 완전한 플러그인의 예시입니다.이 플러그인은 [`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn)를 사용하여, 게시 폼에 "복어 펀치 버튼"(フグパンチボタン)을 추가하는 내용입니다.
+다음은 완전한 플러그인의 예시입니다. 이 플러그인은 [`Plugin:register_post_form_action`](/docs/for-developers/plugin/plugin-api-reference/#pluginregister_post_form_actiontitle-fn)를 사용하여, 게시 폼에 "복어 펀치 버튼"(フグパンチボタン)을 추가하는 내용입니다.
 
-이 플러그인을 설치하면, 게시 폼에 있는 플러그인 메뉴에 "복어 펀지" 항목이 추가됩니다.클릭 후, 게시 폼에 있는 텍스트에 `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )`(복어펀치!!!!)가 추가됩니다.
+이 플러그인을 설치하면, 게시 폼에 있는 플러그인 메뉴에 "복어 펀지" 항목이 추가됩니다. 클릭 후, 게시 폼에 있는 텍스트에 `ﾌｸﾞﾊﾟﾝﾁ!!!!🐡( '-' 🐡 )`(복어펀치!!!!)가 추가됩니다.
 
 ```ais
 /// @ 0.12.4
@@ -35,7 +35,7 @@ Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
 
 ## 메타데이터
 
-플러그인은 AiScript의 메타데이터 임베딩 기능을 사용하여 기본적으로 플러그인의 메타데이터를 정의해야 합니다.메타데이터의 예는 다음과 같습니다.메타데이터의 예는 다음과 같습니다.
+플러그인은 AiScript의 메타데이터 임베딩 기능을 사용하여 기본적으로 플러그인의 메타데이터를 정의해야 합니다.메타데이터의 예는 다음과 같습니다. 메타데이터의 예는 다음과 같습니다.
 
 ```AiScript
 /// @ 0.12.4
@@ -59,7 +59,7 @@ Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
 
 ### version
 
-플러그인 버전.숫자를 지정해 주세요.숫자를 지정해 주세요.
+플러그인 버전.숫자를 지정해 주세요. 숫자를 지정해 주세요.
 
 ### description
 
@@ -67,7 +67,7 @@ Plugin:register_post_form_action('フグパンチ', @(note, rewrite) {
 
 ### permissions
 
-플러그인이 요구하는 권한.플러그인이 요구하는 권한.MisskeyAPI에 요청할 때 사용됩니다.
+플러그인이 요구하는 권한. 플러그인이 요구하는 권한.MisskeyAPI에 요청할 때 사용됩니다.
 
 API 요청 방법은 [AiScript Misskey 확장 API 레퍼런스](/docs/for-developers/plugin/plugin-api-reference/)에서 확인할 수 있습니다.
 
@@ -83,7 +83,7 @@ permission 목록은 [여기](/docs/for-developers/api/permission/)에서 확인
 
 #### type
 
-설정값의 종류를 나타내는 문자열.아래에서 선택하세요.string number boolean
+설정값의 종류를 나타내는 문자열.아래에서 선택하세요. string number boolean
 
 #### label
 
@@ -105,4 +105,4 @@ Misskey Web은 플러그인에 대해 API를 공개하고 있으며, 이를 이�
 
 v2023.11.0 이상에서는 웹 사이트에서 한 번의 클릭으로 플러그인을 직접 설치할 수 있습니다.
 
-플러그인 설치 기능을 제공하는 경우, 사이트에 API를 구현해야 합니다.자세한 내용은 [여기](./publish-on-your-website.md)에서 확인할 수 있습니다.자세한 내용은 [여기](../publish-on-your-website.md)에서 확인할 수 있습니다.
+플러그인 설치 기능을 제공하는 경우, 사이트에 API를 구현해야 합니다.자세한 내용은 [여기](./publish-on-your-website.md)에서 확인할 수 있습니다. 자세한 내용은 [여기](../publish-on-your-website.md)에서 확인할 수 있습니다.

@@ -2,7 +2,7 @@
 
 <small>October 7, 2018 / Last updated December 20, 2021 / Written by aqz/tamaina</small>
 
-The number of participants in the "MisskeyInstallBattle" has increased, but consequently, the number of serious and minor injuries has risen over time.\
+The number of participants in the "MisskeyInstallBattle" has increased, but consequently, the number of serious and minor injuries has risen over time. \
 In this article, to reduce such casualties, I will explain the trends and countermeasures for accidents that have occurred in the past in an easy-to-understand manner.
 
 **First of all, please read the [Setup Guide](../guides/manual/) thoroughly.**
@@ -11,12 +11,12 @@ Also, I would appreciate it if you could read my other articles for reference: [
 
 # Notice regarding the Shell Script for Ubuntu
 
-"The guide for Ubuntu is just copy-pasting and it's boring!It takes time!It's just a hassle!"
+"The guide for Ubuntu is just copy-pasting and it's boring! It takes time! It's just a hassle!"
 
-……Wait, if it can be done just by copy-pasting, doesn't that mean it can be fully automated?
+…… Wait, if it can be done just by copy-pasting, doesn't that mean it can be fully automated?
 
-So, **I made a shell script that does almost everything for you!**\
-[**Check here for details and usage!** https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
+So, \*\*I made a shell script that does almost everything for you! \*\*\
+[\*\*Check here for details and usage! \*\* https://github.com/joinmisskey/bash-install#readme](https://github.com/joinmisskey/bash-install#readme)
 
 Please prepare the domain purchase, Cloudflare setup, and server acquisition yourself.
 
@@ -32,7 +32,7 @@ _**ImageMagick is not required!**_
 
 ## Build fails
 
-Empirically, Misskey requires at least 2GB of memory to build.\
+Empirically, Misskey requires at least 2GB of memory to build. \
 You can scale up the server, or there is also the option of building on your own PC and deploying it to the server.
 
 ## Something isn't working right
@@ -40,7 +40,7 @@ You can scale up the server, or there is also the option of building on your own
 - Let's read the [Setup Guide](../guides/manual/) carefully.
 - Node.js version might be old?
   - Try using a newer version.
-- Errors or WARNs might appear during installation or build, but sometimes it's not a problem.Just try `npm start` to check if it works.
+- Errors or WARNs might appear during installation or build, but sometimes it's not a problem. Just try `npm start` to check if it works.
 - Maybe node-gyp isn't installed?
   - Try `apt install build-essential`.
   - For Windows, try referring to [this article](https://qiita.com/AkihiroTakamura/items/25ba516f8ec624e66ee7) as well.
@@ -49,7 +49,7 @@ You can scale up the server, or there is also the option of building on your own
 ## Issues occurred after an update
 
 - Let's read the [Setup Guide](../guides/manual/) and Release Notes carefully.
-- When updating Misskey, please make sure to run `pnpm install` and `pnpm run migrate` properly.If that doesn't fix it, try `pnpm run clean-all` && `pnpm install`, then try `pnpm run build && pnpm run migrate && pnpm start`.
+- When updating Misskey, please make sure to run `pnpm install` and `pnpm run migrate` properly. If that doesn't fix it, try `pnpm run clean-all` && `pnpm install`, then try `pnpm run build && pnpm run migrate && pnpm start`.
 - If it still doesn't work, try starting over from the beginning following the steps in the [Setup Guide](../guides/manual/).
 
 ---
@@ -122,7 +122,7 @@ Are there any extra spaces at the beginning of a line?
 Is redis-server running?
 Have you reached some connection limit?
 
-Misskey versions prior to 11.20.2 cannot resolve redis passwords.Please check the following two points:
+Misskey versions prior to 11.20.2 cannot resolve redis passwords. Please check the following two points:
 
 - Do not set a password for redis.
 - Comment out the `pass:` line under `redis:` in `default.yml`.
@@ -153,7 +153,7 @@ If you are using a proxy, it is possible that it is blocking WebSocket communica
 
 ## Issues occur when using Object Storage
 
-The permission settings for the object storage might be too strict.Try setting the permissions so that "files (objects) are retrievable by anyone".
+The permission settings for the object storage might be too strict. Try setting the permissions so that "files (objects) are retrievable by anyone".
 Also, check `default.yml` again.
 
 ### S3 example (with CDN, custom domain)
@@ -169,7 +169,7 @@ Read the documentation for each service/software carefully and try configuring i
 
 ### Loading never finishes
 
-If you are using Cloudflare, check if Rocket Loader or Auto Minify is enabled.If they are enabled, disabling them might solve the problem.
+If you are using Cloudflare, check if Rocket Loader or Auto Minify is enabled. If they are enabled, disabling them might solve the problem.
 
 ---
 

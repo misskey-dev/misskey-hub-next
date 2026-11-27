@@ -20,11 +20,11 @@ Name des aktuellen Benutzers.
 
 ### `USER_USERNAME`
 
-Das Handle des aktuellen Benutzers (der Teil nach dem `@`.(z. B. `@ai@example.com` → `ai`)
+Das Handle des aktuellen Benutzers (der Teil nach dem `@`. (z. B. `@ai@example.com` → `ai`)
 
 ### `CUSTOM_EMOJIS`
 
-Liste der benutzerdefinierten EmojiDie folgenden Objekte werden in Arrays gespeichert
+Liste der benutzerdefinierten Emoji Die folgenden Objekte werden in Arrays gespeichert
 
 ```ts
 type EmojiSimple = {
@@ -40,17 +40,17 @@ type EmojiSimple = {
 
 ### `LOCALE`
 
-Aktuelle Misskey Web Einrichtungssprache.Darstellung in einem RFC4646-kompatiblen Format (z.B. `ja-JP`)
+Aktuelle Misskey Web Einrichtungssprache. Darstellung in einem RFC4646-kompatiblen Format (z.B. `ja-JP`)
 
 ### `SERVER_URL`
 
-Aktuelle Server-URLRepräsentiert durch z. B. `https://www.example.com`.
+Aktuelle Server-URL Repräsentiert durch z. B. `https://www.example.com`.
 
 ## Gemeinsame Funktionen in allen Bereichen
 
 ### `Mk:dialog(title, text, type)`
 
-Zeigt ein Dialogfenster an.Die folgenden Werte können für ype eingestellt werden.\
+Zeigt ein Dialogfenster an. Die folgenden Werte können für ype eingestellt werden. \
 `info` `success` `warning` `error` `question`\
 Standard ist `info`¸ wenn kein anderes Attribut erstellt wurde.
 
@@ -60,9 +60,9 @@ Standard ist `info`¸ wenn kein anderes Attribut erstellt wurde.
 
 ### `Mk:confirm(title, text, type)`
 
-Zeigt ein Dialogfenster an.Für type können die folgenden Werte eingestellt werden.\
+Zeigt ein Dialogfenster an. Für type können die folgenden Werte eingestellt werden. \
 `info` `success` `warning` `error` `question`\
-Standard ist `question`¸ wenn kein anderes Attribut erstellt wurde.\
+Standard ist `question`¸ wenn kein anderes Attribut erstellt wurde. \
 Gibt `true` zurück, wenn der Benutzer „OK“ wählt oder `false`, wenn der Benutzer „Cancel“ wählt.
 
 ```AiScript
@@ -81,9 +81,9 @@ if (response) {
 
 ### `Mk:api(endpoint, params, token?)`
 
-Sendet eine Misskey API-Anfrage.Der erste Parameter gibt den API-Endpunkt an, der zweite die Anfrageparameter als Objekt.
+Sendet eine Misskey API-Anfrage. Der erste Parameter gibt den API-Endpunkt an, der zweite die Anfrageparameter als Objekt.
 
-Als drittes Argument kann auch ein token angegeben werden.Bei der Arbeit mit Plugins wird, wenn im Metadatenblock „Berechtigungen“ angegeben sind, das Token mit der Berechtigung verwendet, wenn das dritte Argument nicht angegeben ist.
+Als drittes Argument kann auch ein token angegeben werden. Bei der Arbeit mit Plugins wird, wenn im Metadatenblock „Berechtigungen“ angegeben sind, das Token mit der Berechtigung verwendet, wenn das dritte Argument nicht angegeben ist.
 
 :::tip
 
@@ -109,7 +109,7 @@ Eine Liste der Berechtigungen gibt es [hier](/docs/for-developers/api/permission
 
 ### `Mk:save(key, value)`
 
-Speichert einen beliebigen Wert dauerhaft unter einem beliebigen Namen.Der gespeicherte Wert bleibt auch nach Verlassen des AiScript-Kontexts erhalten und kann mit Mk:load ausgelesen werden.
+Speichert einen beliebigen Wert dauerhaft unter einem beliebigen Namen. Der gespeicherte Wert bleibt auch nach Verlassen des AiScript-Kontexts erhalten und kann mit Mk:load ausgelesen werden.
 
 ### `Mk:load(key)`
 
@@ -119,7 +119,7 @@ Läd den Wert des gegebenen Schlüssels, der zuvor mit Mk:save gespeichert wurde
 
 \*Verfügbar ab v2025.1.0 (vorläufig).
 
-Läd den Wert des gegebenen Schlüssels, der zuvor mit Mk:save gespeichert wurdeWenn der Wert mit dem angegebenen Namen nicht existiert, wird nichts unternommen.
+Läd den Wert des gegebenen Schlüssels, der zuvor mit Mk:save gespeichert wurde Wenn der Wert mit dem angegebenen Namen nicht existiert, wird nichts unternommen.
 
 ### `Mk:url()`
 
@@ -127,13 +127,13 @@ Ermittelt die URL der aktuell geöffneten Seite (die URL, die in der Adressleist
 
 ### `Mk:nyaize(text)`
 
-Verkleinert den angegebenen Text.MFM-Syntax etc. werden nicht berücksichtigt.
+Verkleinert den angegebenen Text. MFM-Syntax etc. werden nicht berücksichtigt.
 
 ## Plug-in Beispiele
 
 ### `Plugin:register_post_form_action(title, fn)`
 
-Fügt dem Beitragsfenster eine Aktion hinzu.Das erste Argument ist der Name der Aktion und das zweite Argument ist die Callback-Funktion, wenn die Aktion ausgewählt wird.\
+Fügt dem Beitragsfenster eine Aktion hinzu. Das erste Argument ist der Name der Aktion und das zweite Argument ist die Callback-Funktion, wenn die Aktion ausgewählt wird. \
 Die Callback-Funktion erhält als erstes Argument den `Text` und `cw` der übermittelten Formularobjekte und als zweites Argument die Funktion, die sie umschreiben soll.
 
 ```AiScript
@@ -146,7 +146,7 @@ Plugin:register_post_form_action('メニューに表示される項目名', @(no
 
 ### `Plugin:register_note_action(title, fn)`
 
-Fügt dem Notiz-Menü ein Listenelement hinzu.Das erste Argument ist der Name des Elements und das zweite Argument ist die Callback-Funktion, wenn das Element ausgewählt ist.\
+Fügt dem Notiz-Menü ein Listenelement hinzu. Das erste Argument ist der Name des Elements und das zweite Argument ist die Callback-Funktion, wenn das Element ausgewählt ist. \
 Der Callback-Funktion wird als erstes Argument ein Ziel-notizen-Objekt übergeben.
 
 ```AiScript
@@ -162,7 +162,7 @@ Plugin:register_note_action('メニューに表示される項目名', @(note) {
 
 ### `Plugin:register_user_action(title, fn)`
 
-Fügt dem Benutzer-Menü ein Listenelement hinzu.Das erste Argument ist der Name des Elements und das zweite Argument ist die Callback-Funktion, wenn das Element ausgewählt ist.\
+Fügt dem Benutzer-Menü ein Listenelement hinzu. Das erste Argument ist der Name des Elements und das zweite Argument ist die Callback-Funktion, wenn das Element ausgewählt ist. \
 Der Callback-Funktion wird ein Zielbenutzerobjekt als erstes Argument übergeben.
 
 ```AiScript
@@ -178,9 +178,9 @@ Plugin:register_note_action('メニューに表示される項目名', @(note) {
 
 ### `Plugin:register_note_view_interruptor(fn)`
 
-Schreibt die in der Benutzeroberfläche angezeigten Notizinformationen um.\
-Der Callback-Funktion wird als erstes Argument ein Ziel-notizen-Objekt übergeben.\
-Die Notiz wird in den Rückgabewert der Callback-Funktion umgeschrieben.\
+Schreibt die in der Benutzeroberfläche angezeigten Notizinformationen um. \
+Der Callback-Funktion wird als erstes Argument ein Ziel-notizen-Objekt übergeben. \
+Die Notiz wird in den Rückgabewert der Callback-Funktion umgeschrieben. \
 Die Rückgabe von `null` blendet die Notiz aus.
 
 :::warning
@@ -209,8 +209,8 @@ Plugin:register_note_view_interruptor(@(note) {
 
 ### `Plugin:register_note_post_interruptor(fn)`
 
-Die Informationen zur Notiz werden beim Einreichen der Notiz neu geschrieben.\
-Der Callback-Funktion wird als erstes Argument ein Ziel-notizen-Objekt übergeben.\
+Die Informationen zur Notiz werden beim Einreichen der Notiz neu geschrieben. \
+Der Callback-Funktion wird als erstes Argument ein Ziel-notizen-Objekt übergeben. \
 Die Notiz wird in den Rückgabewert der Callback-Funktion umgeschrieben.
 
 ```AiScript
@@ -225,8 +225,8 @@ Plugin:register_note_post_interruptor(@(note) {
 
 ### `Plugin:register_page_view_interruptor(fn)`
 
-Die Seiteninformationen werden neu geschrieben, wenn die Seite angezeigt wird.\
-Der Callback-Funktion wird ein Ziel-Seitenobjekt als erstes Argument übergeben.\
+Die Seiteninformationen werden neu geschrieben, wenn die Seite angezeigt wird. \
+Der Callback-Funktion wird ein Ziel-Seitenobjekt als erstes Argument übergeben. \
 Die Seite wird mit dem Rückgabewert der Callback-Funktion neu geschrieben.
 
 ```AiScript
@@ -244,7 +244,7 @@ Die als erstes Argument übergebene URL wird in einer neuen Registerkarte des Br
 
 ### `Plugin:config`
 
-Ein Objekt, dass die Plugin-Einstellungen enthält.Die in den Plugin-Einstellung eingetragenen Werte sind hier unter den Einstellungsnamen gespeichert.
+Ein Objekt, dass die Plugin-Einstellungen enthält. Die in den Plugin-Einstellung eingetragenen Werte sind hier unter den Einstellungsnamen gespeichert.
 
 ## Play Attribute
 
@@ -264,7 +264,7 @@ Stammelement der Benutzeroberfläche.
 
 ### `Ui:render([ ...components ])`
 
-Syntaktischer Zucker für `Ui:root.update({ children: [ ...components ] })`.Das UI-Root-Element wird überschrieben.
+Syntaktischer Zucker für `Ui:root.update({ children: [ ...components ] })`. Das UI-Root-Element wird überschrieben.
 
 ```AiScript
 Ui:render([
@@ -284,7 +284,7 @@ Ui:get("text1").update({text: "B"})
 
 ## Komponentenfunktionen (verwendbar mit Play und AiScript App-Widgets)
 
-In den folgenden Elementen kann beim Initialisieren die ID der Komponente als zweites Argument wie `Ui:C:xxx(props id)` angegeben werden (in den folgenden Referenzen wird dies überall weggelassen).Die angegebene ID kann mit der Funktion `Ui:get(id)` abgerufen und mit der `update`-Funktion direkt geändert werden (weitere Informationen findest du in der Referenz zu `Ui:get(id)`).
+In den folgenden Elementen kann beim Initialisieren die ID der Komponente als zweites Argument wie `Ui:C:xxx(props id)` angegeben werden (in den folgenden Referenzen wird dies überall weggelassen). Die angegebene ID kann mit der Funktion `Ui:get(id)` abgerufen und mit der `update`-Funktion direkt geändert werden (weitere Informationen findest du in der Referenz zu `Ui:get(id)`).
 
 ### Listenmodus
 

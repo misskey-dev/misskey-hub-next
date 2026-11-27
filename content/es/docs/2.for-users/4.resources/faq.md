@@ -47,7 +47,7 @@ Para más información sobre las Renotas mira  [aquí](../features/note/#renote)
 
 ## ¿Cómo puedo deshabilitar la vista previa de las URL?
 
-El lenguaje de marcado para Misskey (MFM) incluye sintaxis para deshabilitar la vista previa de las URL.Para más detalles, consulta la hoja de trucos de MFM,.A la cual puedes acceder introduciendo la siguiente dirección en tu servidor:`https://nombredetuservidor/mfm-cheat-sheet`.
+El lenguaje de marcado para Misskey (MFM) incluye sintaxis para deshabilitar la vista previa de las URL.Para más detalles, consulta la hoja de trucos de MFM,.
 
 ## ¿Cómo puedo añadir, editar o borrar emojis personalizados?
 

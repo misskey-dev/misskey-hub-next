@@ -1,6 +1,6 @@
 # Antarmuka Deck
 
-Antarmuka Deck merupakan salah satu antarmuka yang tersedia di dalam Misskey.Antarmuka ini dikarakterisasikan dengan kemampuannya untuk membuat antarmuka yang informatif dan sangat disesuaikan dengan menampilkan beberapa tampilan yang disebut "kolom" secara berdampingan.  
+Antarmuka Deck merupakan salah satu antarmuka yang tersedia di dalam Misskey. Antarmuka ini dikarakterisasikan dengan kemampuannya untuk membuat antarmuka yang informatif dan sangat disesuaikan dengan menampilkan beberapa tampilan yang disebut "kolom" secara berdampingan.  
 Opsi deck hanya tersedia pada layar yang membutuhkan ukuran besar seperti komputer/laptop.
 
 ## Menambahkan Kolom
@@ -17,7 +17,7 @@ Kolom dapat disusun secara vertikal maupun horisontal. Buka menu kolom dan pilih
 
 ## Atur Tata Letak Kolom
 
-Pilih "Atur Kolom" dalam menu kolom untuk menyunting aturan tata letak kolom. Jika kolom diatur ke fleksibel, maka kolom akan memperluas di luar aturan lebar untuk mengisi ruang horisontal pada layar.Dalam pengaturan ini kamu juga dapat mengubah nama dan lebar kolom.
+Pilih "Atur Kolom" dalam menu kolom untuk menyunting aturan tata letak kolom. Jika kolom diatur ke fleksibel, maka kolom akan memperluas di luar aturan lebar untuk mengisi ruang horisontal pada layar. Dalam pengaturan ini kamu juga dapat mengubah nama dan lebar kolom.
 
 ## Pengaturan Deck
 

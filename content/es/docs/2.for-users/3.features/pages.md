@@ -1,6 +1,6 @@
 # Páginas
 
-Además de notas, puedes crear páginas en Misskey.v13 se especializa en páginas estáticas.
+Además de notas, puedes crear páginas en Misskey. v13 se especializa en páginas estáticas.
 
 :::warning
 
@@ -10,7 +10,7 @@ A partir de la v13, se puede utilizar Misskey Play en lugar de la creación din�
 
 ## Configuración de páginas
 
-Establece los elementos relacionados con la página.Puedes introducir los siguientes elementos.
+Establece los elementos relacionados con la página. Puedes introducir los siguientes elementos.
 
 - Título
 - Resumen de la página
@@ -22,11 +22,11 @@ Establece los elementos relacionados con la página.Puedes introducir los siguie
 
 ### Título
 
-Introduce el título de la página.Aparecerá en la lista.
+Introduce el título de la página. Aparecerá en la lista.
 
 ### Resumen de la página
 
-Introduce una breve descripción.Aparecerá en la lista.
+Introduce una breve descripción. Aparecerá en la lista.
 
 ### Url de la página
 
@@ -46,11 +46,11 @@ Oculta el título cuando se fija.
 
 ### Elegir imagen llamativa
 
-Puedes configurar una imagen desde los **Ajustes de imagen**.Es posible mostrar la vista previa, por ejemplo, en una vista de lista.
+Puedes configurar una imagen desde los **Ajustes de imagen**. Es posible mostrar la vista previa, por ejemplo, en una vista de lista.
 
 ## Contenidos
 
-Edita el cuerpo de la página.Las páginas pueden generarse combinando uno o varios de los siguientes bloques.
+Edita el cuerpo de la página. Las páginas pueden generarse combinando uno o varios de los siguientes bloques.
 
 - Sección
 - Texto
@@ -59,16 +59,16 @@ Edita el cuerpo de la página.Las páginas pueden generarse combinando uno o var
 
 ### Sección
 
-Al establecer un título, éste aparece como encabezado.Además, se pueden colocar bloques en su interior.
+Al establecer un título, éste aparece como encabezado. Además, se pueden colocar bloques en su interior.
 
 ### Texto
 
-Introduce el cuerpo del texto.Se puede usar MFM y emojis personalizados.
+Introduce el cuerpo del texto. Se puede usar MFM y emojis personalizados.
 
 ### Imagen
 
-Muestra una imagen.Establece una imagen desde Drive.
+Muestra una imagen. Establece una imagen desde Drive.
 
 ### Nota embebida
 
-Al introducir el ID de una nota, se muestra su contenido.Si quieres incrustar otro servidor, pon su Url en la búsqueda y pega el Id que aparece.
+Al introducir el ID de una nota, se muestra su contenido. Si quieres incrustar otro servidor, pon su Url en la búsqueda y pega el Id que aparece.

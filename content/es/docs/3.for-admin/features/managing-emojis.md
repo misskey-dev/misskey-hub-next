@@ -2,7 +2,7 @@
 
 :::warning
 
-Esta documentación está actualmente en fase de confirmación.Es posible que parte de la información no esté actualizada, por lo que le rogamos tenga cuidado al consultarla.
+Esta documentación está actualmente en fase de confirmación. Es posible que parte de la información no esté actualizada, por lo que le rogamos tenga cuidado al consultarla.
 
 :::
 
@@ -13,7 +13,7 @@ Por defecto verás una lista de los emoji instalados localmente. Al principio es
 
 Los emoji pueden copiarse fácilmente de otra instancia.
 
-Para ello, cambia a la pestaña "remoto" en la configuración de emoji personalizados.Puedes buscar emoji por su nombre y/o por el host del que proceden.
+Para ello, cambia a la pestaña "remoto" en la configuración de emoji personalizados. Puedes buscar emoji por su nombre y/o por el host del que proceden.
 
 Cuando hayas encontrado el emoji que deseas, haz clic en él para abrir un pequeño menú que te permitirá importarlo.
 
@@ -80,13 +80,13 @@ Actualmente, los campos de `Meta` no se utilizan ni se comprueban al importar em
 
 Para cada 'Emoji':
 
-- `downloaded`: debe ser siempre true.Si el campo falta o no es true, el emoji no se importará.
+- `downloaded`: debe ser siempre true. Si el campo falta o no es true, el emoji no se importará.
 - `fileName`: nombre del archivo de imagen dentro del archivo empaquetado.
-- `emoji`: datos asociados al emoji tal y como estaban almacenados en la base de datos.Actualmente se utilizan los siguientes:
+- `emoji`: datos asociados al emoji tal y como estaban almacenados en la base de datos. Actualmente se utilizan los siguientes:
   - `name`: nombre del emoji para el usuario,, ej. `blobfox` si un usuario debe escribir `:blobfox:` para obtener el emoji.  
     Si existe un emoji anterior con el mismo nombre, **se sobrescribirá!**
   - `category`: categoría del emoji
-  - `aliases`: lista de cadena de caracteres que deben añadirse como alias.La interfaz de administración las denomina "etiquetas (en inglés: tags)".
+  - `aliases`: lista de cadena de caracteres que deben añadirse como alias. La interfaz de administración las denomina "etiquetas (en inglés: tags)".
 
 ## Editando y Borrando Emojis
 

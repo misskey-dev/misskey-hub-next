@@ -16,9 +16,9 @@ Puede configurar la plantilla de funciones en el panel de control, en "Funciones
 
 Puedes configurar un rol para que se asigne manual o automáticamente.
 
-- **Manual:**... Asignar y desasignar usuarios manualmente.(Roles manuales)
+- **Manual:**... Asignar y desasignar usuarios manualmente. (Roles manuales)
   - También puede establecer una duración para el rol.
-- **Condicional:** Establezca las condiciones para la asignación. Los usuarios que cumplan las condiciones se asignarán automáticamente.(Rol Automático)
+- **Condicional:** Establezca las condiciones para la asignación. Los usuarios que cumplan las condiciones se asignarán automáticamente. (Rol Automático)
 
 :::warning
 
@@ -49,7 +49,7 @@ Las políticas también pueden configurarse para que hereden los valores de la p
 
 Si se asignan varios roles y se define la misma política con valores diferentes para cada rol, se pueden asignar prioridades a cada política para determinar cuál prevalece. Las políticas con mayor prioridad prevalecen sobre las de menor prioridad.
 
-La prioridad se asigna por política, no por rol.Las plantillas de rol no pueden tener prioridad
+La prioridad se asigna por política, no por rol. Las plantillas de rol no pueden tener prioridad
 
 **Si las prioridades de una política son las mismas, prevalece por defecto el valor mayor o más permisivo.**
 
